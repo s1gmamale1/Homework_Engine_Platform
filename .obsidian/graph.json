@@ -6,7 +6,16 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    { "query": "path:HOME", "color": { "a": 1, "rgb": 16777215 } },
+    { "query": "path:standards/framework/", "color": { "a": 1, "rgb": 4494847 } },
+    { "query": "path:standards/system/", "color": { "a": 1, "rgb": 3394815 } },
+    { "query": "path:standards/library/", "color": { "a": 1, "rgb": 3916845 } },
+    { "query": "path:standards/subject-family/", "color": { "a": 1, "rgb": 16765440 } },
+    { "query": "path:research/", "color": { "a": 1, "rgb": 16744272 } },
+    { "query": "path:agents/", "color": { "a": 1, "rgb": 16711782 } },
+    { "query": "path:references/", "color": { "a": 1, "rgb": 10040115 } }
+  ],
   "collapse-display": true,
   "showArrow": true,
   "textFadeMultiplier": 0,
@@ -17,6 +26,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.999999999999989,
+  "scale": 0.9999999999999867,
   "close": false
 }

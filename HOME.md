@@ -51,10 +51,7 @@
 
 ## Research
 
-- [[research/proposal/NETS_PROPOSAL_SUMMARY|Proposal Summary]]
-- [[research/TMN-42-App-Engagement-Gamification-Hooks|Gamification Hooks]]
-- [[research/hooks/Neuroscience_Psychology_Attention_Hooks|Neuroscience & Attention Hooks]]
-- [[research/assessments/assessment_splinter_synthesis|Synthesis Assessment]]
+- [[research/INDEX|Research Index]] — all research grouped by topic, linked to system nodes
 
 ---
 
