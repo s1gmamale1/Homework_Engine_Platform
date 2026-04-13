@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Final Boss — Game Mechanic Spec</title>
+<style>
+  :root { --bg:#0d1117; --s:#161b22; --s2:#21262d; --b:#30363d; --t:#e6edf3; --m:#8b949e; --a:#58a6ff; --g:#ffd740; --r:#f85149; --gr:#3fb950; --p:#bc8cff; --pk:#ff6ec7; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--t);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6;padding:2rem;max-width:1000px;margin:0 auto}
+  h1{font-size:1.8rem;text-align:center;background:linear-gradient(135deg,var(--g),#ff6e40);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.3rem}
+  .sub{text-align:center;color:var(--m);margin-bottom:2rem;font-size:.9rem}
+  h2{font-size:1.3rem;color:var(--g);border-bottom:1px solid var(--b);padding-bottom:.3rem;margin:2rem 0 .8rem}
+  h3{font-size:1.05rem;color:var(--a);margin:1.2rem 0 .5rem}
+  table{width:100%;border-collapse:collapse;margin:.8rem 0;background:var(--s);border-radius:8px;overflow:hidden}
+  th{background:var(--s2);color:var(--a);text-align:left;padding:.5rem .8rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px}
+  td{padding:.4rem .8rem;border-top:1px solid var(--b);font-size:.9rem}
+  .card{background:var(--s);border:1px solid var(--b);border-radius:8px;padding:1rem;margin:.8rem 0}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:.8rem 0}
+  .tag{display:inline-block;padding:.1rem .4rem;border-radius:10px;font-size:.7rem;font-weight:600}
+  .tag-gr{background:rgba(63,185,80,.2);color:var(--gr)} .tag-g{background:rgba(255,215,64,.2);color:var(--g)} .tag-pk{background:rgba(255,110,199,.2);color:var(--pk)} .tag-r{background:rgba(248,81,73,.2);color:var(--r)}
+  pre{background:var(--s2);border:1px solid var(--b);border-radius:6px;padding:.8rem;font-size:.85rem;overflow-x:auto;margin:.5rem 0}
+  code{font-family:'Cascadia Code',monospace}
+  .locked{background:rgba(248,81,73,.08);border:1px solid rgba(248,81,73,.25);border-radius:6px;padding:.6rem .8rem;margin:.5rem 0;font-size:.85rem}
+  .locked::before{content:"LOCKED";color:var(--r);font-weight:700;font-size:.7rem;letter-spacing:1px;display:block;margin-bottom:.2rem}
+  .buzan{background:rgba(188,140,255,.08);border:1px solid rgba(188,140,255,.25);border-radius:6px;padding:.6rem .8rem;margin:.5rem 0;font-size:.85rem}
+  .buzan::before{content:"BUZAN / TEFCAS";color:var(--p);font-weight:700;font-size:.7rem;letter-spacing:1px;display:block;margin-bottom:.2rem}
+  .note{background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:6px;padding:.6rem .8rem;margin:.5rem 0;font-size:.85rem}
+  .note::before{content:"NOTE";color:var(--a);font-weight:700;font-size:.7rem;letter-spacing:1px;display:block;margin-bottom:.2rem}
+  footer{text-align:center;color:var(--m);font-size:.8rem;margin-top:3rem;padding-top:1rem;border-top:1px solid var(--b)}
+</style>
+</head>
+<body>
+
+<h1>NETS Final Boss</h1>
+<div class="sub">v1.1 — 2026-04-12 | Layer 0 Mechanic #14 | Phase 6 | Constitution: UNIFIED v2.0</div>
+
+<!-- 3 BOSS TYPES -->
+<h2>The 3 Boss Types</h2>
+<div class="grid">
+  <div class="card" style="border-left:3px solid var(--gr)">
+    <div><span class="tag tag-gr">DAILY</span> <strong>Sub Boss</strong></div>
+    <div style="color:var(--m);font-size:.85rem;margin-top:.3rem">Every session. Current lesson. Hints available.<br><strong>Basic: 2 attempts max.</strong> Premium: unlimited.</div>
+  </div>
+  <div class="card" style="border-left:3px solid var(--g)">
+    <div><span class="tag tag-g">WEEKLY</span> <strong>Big Boss</strong></div>
+    <div style="color:var(--m);font-size:.85rem;margin-top:.3rem">Cross-subject (weakest 3 standards). One PISA tier harder.<br><strong>1 attempt default.</strong> Extendable via bonuses (TBD). 2x XP.</div>
+  </div>
+  <div class="card" style="border-left:3px solid var(--pk)">
+    <div><span class="tag tag-pk">ELITE</span> <strong>Mythical Boss</strong></div>
+    <div style="color:var(--m);font-size:.85rem;margin-top:.3rem">Random / easter egg / bonus credits (Basic) / Mystery Box (Premium).<br>PISA L5-6. Zero hints. One attempt. 5x XP + exclusive rewards.</div>
+  </div>
+</div>
+
+<h3>Mythical Boss Access</h3>
+<table>
+  <tr><th>Tier</th><th>Access</th></tr>
+  <tr><td>Basic</td><td>Random events / easter eggs + <strong>purchasable with bonus credits</strong></td></tr>
+  <tr><td>Premium</td><td>Random events / easter eggs + <strong>Mystery Box drops</strong>. Weekly limit (TBD).</td></tr>
+</table>
+<div class="note">Spec divergence: UNIFIED v2.0 defines Mythical as "&lt;5% random, cannot be farmed." This spec adds bonus credit purchase (Basic) and Mystery Box triggers (Premium). Requires ADR update.</div>
+
+<!-- TIER OVERLAY -->
+<h2>Tier Overlay (Basic vs Premium)</h2>
+<table>
+  <tr><th>Dimension</th><th>Basic</th><th>Premium</th></tr>
+  <tr><td>Content source</td><td>Textbook only (L1 national curriculum)</td><td>Textbook + extended materials (L1-L2+)</td></tr>
+  <tr><td>Difficulty</td><td>Standard — textbook scope</td><td>AI adjusts harder with supplementary materials</td></tr>
+  <tr><td>Sub Boss attempts</td><td><strong>2 max.</strong> Both fail → FAILED → Duolingo Mode</td><td><strong>Unlimited.</strong> Regenerated each attempt.</td></tr>
+  <tr><td>Big Boss attempts</td><td>1 default (extendable via bonuses)</td><td>Same</td></tr>
+  <tr><td>Mythical access</td><td>Random/easter egg + <strong>bonus credits</strong></td><td>Random/easter egg + <strong>Mystery Box drops</strong> (weekly limit)</td></tr>
+  <tr><td>AI evaluation</td><td>Tier 1 + Tier 2</td><td>Tier 1 + Tier 2 + <strong>Tier 3 Socratic</strong></td></tr>
+  <tr><td>Socratic tutoring</td><td>Stored hint arrays + basic LLM</td><td>Personalized, textbook-referenced, cause/effect</td></tr>
+  <tr><td>Question format</td><td colspan="2" style="text-align:center">Same (no MC for G6+ — Layer 0 locked)</td></tr>
+  <tr><td>Boss HP</td><td colspan="2" style="text-align:center">Same (50/100/150)</td></tr>
+  <tr><td>Duolingo Mode</td><td colspan="2" style="text-align:center">Always active (both tiers)</td></tr>
+</table>
+
+<h3>Basic Sub Boss Failure Flow</h3>
+<pre><code>Attempt 1 → FAIL (HP > 0)
+  → Socratic tutoring (Tier 2). Questions regenerated.
+Attempt 2 → FAIL (HP > 0)
+  → Homework marked FAILED.
+  → Duolingo Mode: task-by-task review, -1 difficulty tier, repeat until 60%.
+  → Teacher flagged after 3 failed sessions on same topic.
+  → No more boss attempts this session.</code></pre>
+
+<h3>Premium Sub Boss Failure Flow</h3>
+<pre><code>Attempt N → FAIL (HP > 0)
+  → Socratic tutoring (Tier 3 — personalized, textbook-referenced).
+  → Questions regenerated. Student re-attempts.
+  → Unlimited until defeated.
+  → Duolingo Mode still triggers if session < 60%.</code></pre>
+
+<!-- HP & DAMAGE -->
+<h2>HP &amp; Damage</h2>
+<table>
+  <tr><th>Grade Band</th><th>HP</th><th>Hint Cost</th><th>Question Format</th></tr>
+  <tr><td>Grades 1-4</td><td>50</td><td>+5 HP to boss</td><td>MC + short answer</td></tr>
+  <tr><td>Grade 5</td><td>100</td><td>+10 HP</td><td>Mixed (30% MC, ADR-005)</td></tr>
+  <tr><td>Grades 6-8</td><td>100</td><td>+10 HP</td><td>Open reasoning only, no MC</td></tr>
+  <tr><td>Grades 9-11</td><td>150</td><td>+15 HP</td><td>Extended response, proofs, essays</td></tr>
+</table>
+
+<table>
+  <tr><th>Difficulty</th><th>Damage</th><th>PISA</th><th>Bloom's</th></tr>
+  <tr><td>Easy</td><td>-10 HP</td><td>L3</td><td>Apply</td></tr>
+  <tr><td>Medium</td><td>-20 HP</td><td>L4</td><td>Analyze</td></tr>
+  <tr><td>Hard</td><td>-30 HP</td><td>L5-6</td><td>Evaluate/Create</td></tr>
+</table>
+
+<h3>Question Distribution by Tier</h3>
+<table>
+  <tr><th>Tier</th><th>Easy</th><th>Medium</th><th>Hard</th><th>Source</th></tr>
+  <tr><td>Basic</td><td>45%</td><td>40%</td><td>15%</td><td>Textbook content only (L1)</td></tr>
+  <tr><td>Premium</td><td>35%</td><td>40%</td><td>25%</td><td>Textbook + extended materials (L1-L2+)</td></tr>
+</table>
+<pre><code>Combo: 3 consecutive correct = 2x next damage. Hint/wrong resets combo.
+Min pool: Basic 15 questions (5/5/5). Premium 20+ (extended materials).</code></pre>
+
+<!-- EVALUATION -->
+<h2>Answer Evaluation</h2>
+<table>
+  <tr><th>Feature</th><th>Basic</th><th>Premium</th></tr>
+  <tr><td>Rule-based (Tier 1)</td><td>Yes</td><td>Yes</td></tr>
+  <tr><td>LLM evaluation (Tier 2)</td><td>Yes (open reasoning)</td><td>Yes</td></tr>
+  <tr><td>Deep Socratic (Tier 3)</td><td>No — stored hints + Tier 2</td><td>Yes — personalized, textbook-referenced</td></tr>
+  <tr><td>Partial credit</td><td colspan="2" style="text-align:center">Both: 90%+ full | 50-89% half | &lt;50% zero</td></tr>
+  <tr><td>Feedback</td><td>Generic one-sentence</td><td>Personalized to error pattern</td></tr>
+</table>
+
+<!-- HINTS -->
+<h2>Hints (Sub &amp; Big only)</h2>
+<pre><code>3 hints per question: vague → specific → directed. Each costs HP.
+Basic: Hints from pre-written socratic_hints arrays.
+Premium: Tier 3 AI — dynamically generated based on student's specific error.
+Mythical: ZERO hints. Both tiers. No scaffolding.</code></pre>
+
+<!-- FAILURE & SCORING -->
+<h2>Failure &amp; Scoring</h2>
+
+<h3>Sub Boss Attempts</h3>
+<table>
+  <tr><th>Tier</th><th>Attempt 1 Fail</th><th>Attempt 2 Fail</th><th>Beyond</th></tr>
+  <tr><td>Basic</td><td>Tutoring (T2) → regenerate → retry</td><td><strong>FAILED → Duolingo Mode</strong></td><td>No more attempts</td></tr>
+  <tr><td>Premium</td><td>Tutoring (T3) → regenerate → retry</td><td>Tutoring → regenerate → retry</td><td>Unlimited</td></tr>
+</table>
+
+<h3>Big Boss: 1 attempt default. Extendable via bonuses (TBD).</h3>
+<h3>Mythical: 1 attempt. Premium can re-trigger via bonus credits (weekly limit).</h3>
+
+<h3>Mastery Stars</h3>
+<table>
+  <tr><th>Stars</th><th>Criteria</th><th>XP (Sub / Big / Mythical)</th></tr>
+  <tr><td>1 Star</td><td>Defeated (any attempts)</td><td>500 / 1000 / —</td></tr>
+  <tr><td>2 Stars</td><td>≤2 attempts, >50% HP left</td><td>700 / 1400 / —</td></tr>
+  <tr><td>3 Stars</td><td>1st attempt, no hints, >80% HP</td><td>1000 / 2000 / —</td></tr>
+  <tr><td>Mythical</td><td>Defeated</td><td>— / — / 5000 + title + frame</td></tr>
+</table>
+
+<h3>Duolingo Mode (Always Active, Both Tiers)</h3>
+<pre><code>Triggers: session < 60% OR Basic Sub Boss fails both attempts
+→ Task-by-task review, -1 difficulty tier, repeat until 60%
+→ Teacher flagged after 3 fails on same topic. No XP until 60%.</code></pre>
+
+<!-- FAMILY VARIATIONS -->
+<h2>Subject Family Variations</h2>
+<table>
+  <tr><th>Family</th><th>Boss Format</th><th>Basic Content</th><th>Premium Content</th></tr>
+  <tr><td><strong>Aniq Fanlar</strong></td><td>Open derivation/numeric</td><td>Textbook problems</td><td>Extended (Kirchhoff, limits, etc.)</td></tr>
+  <tr><td><strong>Til Fanlari</strong></td><td>Writing production</td><td>Curriculum writing tasks</td><td>IELTS/CEFR-level prompts</td></tr>
+  <tr><td><strong>Tabiat Fanlari</strong></td><td>Explain + Notebook Capture</td><td>Textbook processes</td><td>Experimental design, modeling</td></tr>
+  <tr><td><strong>Ijtimoiy Fanlari</strong></td><td>Case reasoning + sources</td><td>Single-source analysis</td><td>Multi-source, historiography</td></tr>
+  <tr><td><strong>Tarbiya/Sanat</strong></td><td>Formative only. No scoring.</td><td colspan="2" style="text-align:center">Same (no competitive pressure)</td></tr>
+</table>
+
+<!-- ANTI-CHEAT -->
+<h2>Anti-Cheat</h2>
+<pre><code>1. Question Regeneration — fresh every attempt
+2. Response Time — faster than reading pace = flag
+3. Pattern Analysis — perfect Hard + fail Easy = flag
+4. Socratic Verification — 1 post-defeat follow-up (not scored, flagged if failed)
+5. Copy-Paste Detection — paste events flagged
+6. Radiance Score — 0.0-1.0 authenticity check
+Escalation: soft warn → parent → teacher → admin</code></pre>
+
+<!-- BUZAN -->
+<h2>Buzan Cognitive Science Integration</h2>
+
+<h3>TEFCAS Cycle</h3>
+<div class="buzan">
+  Boss = ultimate <strong>Trial</strong>. <strong>T</strong>(face question) → <strong>E</strong>(HP changes) → <strong>F</strong>(Socratic hint, IRT adjusts) → <strong>C</strong>(theta vs difficulty) → <strong>A</strong>(next Q adapts) → <strong>S</strong>(boss defeated).
+  <br><br>On fail: <em>"Hali emas! Miyangiz Feedback oldi. Qaysi tarmoqqa yangi Adjust kerak?"</em>
+</div>
+
+<h3>MIG (Memory Graph)</h3>
+<table>
+  <tr><th>Effect</th><th>Implementation</th></tr>
+  <tr><td><strong>Primacy</strong></td><td>Phase 5 locks concepts BEFORE boss — primacy reset</td></tr>
+  <tr><td><strong>Recency</strong></td><td>Boss near session end = highest recall. Phase 7 captures insights.</td></tr>
+  <tr><td><strong>Association</strong></td><td>Questions link to Phase 2 Story Mode narratives</td></tr>
+  <tr><td><strong>Von Restorff</strong></td><td>Boss is the most emotionally unique moment. Dramatic = deep encoding.</td></tr>
+  <tr><td><strong>Sag</strong></td><td>7-phase resets prevent sag by Phase 6</td></tr>
+</table>
+
+<h3>Memory Systems + Mind Mapping + BOST</h3>
+<table>
+  <tr><th>System</th><th>Application</th></tr>
+  <tr><td>Link System</td><td>Boss questions follow causal chains from earlier phases</td></tr>
+  <tr><td>Memory Palace</td><td>Phase 5 Registan Square → Boss tests retrieval from same loci</td></tr>
+  <tr><td>SMASHIN' SCOPE</td><td>Failure: Synaesthesia (sound) + Movement (HP shake) + Exaggeration (flash)</td></tr>
+  <tr><td>Mind Map</td><td>Pre-Boss: Radiant Summary. Post-Boss: weak branch reflection. Big Boss: cross-subject map.</td></tr>
+  <tr><td>BOST Intervals</td><td>10min (Phase 5/7) → 24h (Memory Sprint) → 1wk (Big Boss) → 1mo (Champion's Arena)</td></tr>
+</table>
+
+<!-- EDGE CASES -->
+<h2>Edge Cases</h2>
+<pre><code>Catch-Up (>7d absent): HP 50%, hints free (both tiers). Basic still 2 attempts.
+Recovery: Boss unchanged — full integrity.
+AI down: Tier 1 fallback. Session never terminates.
+Mythical + Recovery: Suppressed (both tiers).
+Teacher HP modifier: 50%-150%. Custom boss questions allowed.</code></pre>
+
+<!-- LOCKED -->
+<div class="locked">
+  3-tier system | HP 50/100/150 | No MC G6+ | Non-skippable | transition_skill tag | 60% floor | Hidden labels | No pay-to-win | Textbook traceability | Phase 6 always | Duolingo always active | Basic = full educational mission
+</div>
+
+<footer>
+  NETS Final Boss Spec v1.1 — Sources: UNIFIED v2.0, System Design v1.0, Library Framework v0.4
+</footer>
+
+</body>
+</html>

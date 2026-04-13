@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Tier Overlay Specification — Layer 3</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #232735;
+    --border: #2e3345;
+    --text: #e2e4eb;
+    --text-dim: #8b8fa3;
+    --basic: #3b82f6;
+    --basic-bg: #1e3a5f;
+    --premium: #f59e0b;
+    --premium-bg: #4a3519;
+    --accent: #10b981;
+    --red: #ef4444;
+    --red-bg: #3b1c1c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+    background: linear-gradient(135deg, var(--basic), var(--premium));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .meta { color: var(--text-dim); font-size: .8rem; margin-bottom: 2rem; line-height: 1.8; }
+  .meta span { background: var(--surface2); padding: .15rem .5rem; border-radius: 4px; margin-right: .5rem; }
+
+  /* Section headers */
+  .section { margin-bottom: 2.5rem; }
+  .section h2 {
+    font-size: 1.25rem;
+    color: var(--text);
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  .sec-num {
+    background: var(--surface2);
+    color: var(--text-dim);
+    font-size: .7rem;
+    font-weight: 700;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+    min-width: 1.8rem;
+    text-align: center;
+  }
+  .section h3 { font-size: 1.05rem; color: var(--text); margin: 1.2rem 0 .6rem; }
+
+  /* Design principle box */
+  .principle {
+    background: linear-gradient(135deg, var(--basic-bg), var(--premium-bg));
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .principle h2 { border: none; padding: 0; margin-bottom: .8rem; }
+  .principle p { margin-bottom: .6rem; }
+  .principle .test {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    padding: .8rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin-top: 1rem;
+    font-size: .9rem;
+  }
+
+  /* Tier labels */
+  .tier-basic {
+    background: var(--basic-bg);
+    color: var(--basic);
+    padding: .15rem .6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: .8rem;
+  }
+  .tier-premium {
+    background: var(--premium-bg);
+    color: var(--premium);
+    padding: .15rem .6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: .8rem;
+  }
+
+  /* Comparison table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: .85rem;
+  }
+  thead th {
+    background: var(--surface2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: .6rem .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: .05em;
+  }
+  tbody td {
+    padding: .6rem .8rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody tr:hover { background: var(--surface); }
+  .col-dim { width: 15%; font-weight: 600; }
+  .col-basic { width: 40%; }
+  .col-premium { width: 45%; }
+  td.basic-cell { border-left: 3px solid var(--basic); }
+  td.premium-cell { border-left: 3px solid var(--premium); }
+
+  /* Dimension cards */
+  .dim-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+  }
+  .dim-header {
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .dim-header:hover { background: var(--surface2); }
+  .dim-header h3 { margin: 0; font-size: 1rem; }
+  .dim-arrow { transition: transform .2s; color: var(--text-dim); }
+  .dim-body {
+    display: none;
+    padding: 0 1.2rem 1.2rem;
+  }
+  .dim-body.open { display: block; }
+  .dim-arrow.open { transform: rotate(180deg); }
+
+  .tier-block {
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    margin-bottom: .8rem;
+  }
+  .tier-block.basic { background: var(--basic-bg); border-left: 3px solid var(--basic); }
+  .tier-block.premium { background: var(--premium-bg); border-left: 3px solid var(--premium); }
+  .tier-block-label { font-weight: 700; font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .4rem; }
+  .tier-block.basic .tier-block-label { color: var(--basic); }
+  .tier-block.premium .tier-block-label { color: var(--premium); }
+  .tier-block ul { margin: .4rem 0 0 1.2rem; }
+  .tier-block li { margin-bottom: .3rem; font-size: .88rem; }
+  .rule {
+    background: var(--surface2);
+    border-left: 3px solid var(--accent);
+    padding: .6rem 1rem;
+    border-radius: 0 6px 6px 0;
+    font-size: .85rem;
+    margin-top: .6rem;
+    color: var(--text-dim);
+  }
+  .rule strong { color: var(--accent); }
+
+  /* Immutables grid */
+  .immutable-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: .6rem;
+    margin: 1rem 0;
+  }
+  .immutable-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: .6rem .8rem;
+    font-size: .83rem;
+  }
+  .immutable-item strong { color: var(--red); font-size: .75rem; display: block; margin-bottom: .2rem; }
+  .immutable-item span { color: var(--text-dim); font-size: .78rem; }
+
+  /* Upsell table */
+  .upsell-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: .8rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: .88rem;
+  }
+  .upsell-trigger { flex: 0 0 35%; color: var(--text-dim); }
+  .upsell-prompt { flex: 1; font-style: italic; }
+  .upsell-link { flex: 0 0 20%; color: var(--premium); font-size: .8rem; }
+
+  /* Cost model */
+  .cost-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: .8rem;
+  }
+  .cost-card {
+    flex: 1;
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-align: center;
+  }
+  .cost-card.basic { background: var(--basic-bg); border: 1px solid var(--basic); }
+  .cost-card.premium { background: var(--premium-bg); border: 1px solid var(--premium); }
+  .cost-price { font-size: 1.8rem; font-weight: 700; margin: .5rem 0; }
+  .cost-card.basic .cost-price { color: var(--basic); }
+  .cost-card.premium .cost-price { color: var(--premium); }
+  .cost-detail { font-size: .78rem; color: var(--text-dim); }
+
+  /* Open questions */
+  .oq {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    margin-bottom: .6rem;
+    font-size: .88rem;
+  }
+  .oq-num {
+    display: inline-block;
+    background: var(--red-bg);
+    color: var(--red);
+    font-weight: 700;
+    font-size: .7rem;
+    padding: .15rem .5rem;
+    border-radius: 4px;
+    margin-right: .5rem;
+  }
+  .oq-title { font-weight: 600; }
+
+  /* Implementation */
+  .impl-point {
+    display: flex;
+    gap: .8rem;
+    padding: .5rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: .88rem;
+  }
+  .impl-trigger { flex: 0 0 30%; color: var(--text-dim); }
+  .impl-basic { flex: 0 0 30%; }
+  .impl-premium { flex: 1; }
+
+  code {
+    background: var(--surface2);
+    padding: .1rem .4rem;
+    border-radius: 3px;
+    font-size: .82rem;
+    color: var(--accent);
+  }
+
+  p { margin-bottom: .6rem; font-size: .92rem; }
+  ul { margin: .4rem 0 .8rem 1.2rem; }
+  li { margin-bottom: .3rem; font-size: .88rem; }
+
+  @media (max-width: 700px) {
+    body { padding: 1rem; }
+    .cost-row { flex-direction: column; }
+    .immutable-grid { grid-template-columns: 1fr; }
+    table { font-size: .75rem; }
+  }
+</style>
+</head>
+<body>
+
+<h1>NETS Tier Overlay Specification</h1>
+<div class="meta">
+  <span>Layer 3</span>
+  <span>v1.0</span>
+  <span>2026-04-10</span>
+  <span>Draft</span>
+  <br>
+  Parent: NETS-System-Design-v1.md Section 4 &middot; Constitution: UNIFIED v2.0
+</div>
+
+<!-- Section 0: Design Principle -->
+<div class="principle">
+  <h2><span class="sec-num">00</span> Design Principle</h2>
+  <p>Both Basic and Premium are <strong>paid tiers</strong>. There is no free tier.</p>
+  <p><span class="tier-basic">BASIC</span> delivers the <strong>full product</strong> &mdash; everything in UNIFIED v2.0 and all subject frameworks. Complete, gamified, AI-supported, full national curriculum.</p>
+  <p><span class="tier-premium">PREMIUM</span> delivers <strong>everything in Basic plus more</strong> &mdash; more games, more resources, harder difficulty, richer AI, specialized courses. Premium is enrichment, not the "real" product.</p>
+  <div class="test"><strong>The test:</strong> If removing Premium would leave Basic students with an incomplete education, the tier split is wrong. Basic alone must be sufficient to hit the PISA mission targets.</div>
+</div>
+
+<!-- Section 1: Comparison Matrix -->
+<div class="section">
+  <h2><span class="sec-num">01</span> Tier Comparison Matrix</h2>
+  <table>
+    <thead>
+      <tr><th class="col-dim">Dimension</th><th class="col-basic"><span class="tier-basic">Basic</span></th><th class="col-premium"><span class="tier-premium">Premium</span> adds</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Content</strong></td><td class="basic-cell">Full textbook canon, on-curriculum, all chapters, all assigned subjects</td><td class="premium-cell">Beyond-textbook extensions, exam prep tracks, elective modules</td></tr>
+      <tr><td><strong>Homework</strong></td><td class="basic-cell">Full 7-phase sessions, all 28 mechanics, dual-catalog rule</td><td class="premium-cell">Expanded difficulty band (L5-L6 stretch), richer AI feedback per phase, session replay with analysis</td></tr>
+      <tr><td><strong>Games</strong></td><td class="basic-cell">Phase 3 Game Breaks per dual-catalog rule every session</td><td class="premium-cell">On-demand games from Library, higher-polish variants, exclusive game modes</td></tr>
+      <tr><td><strong>AI Tier</strong></td><td class="basic-cell">Tier 1 (rule-based) + Tier 2 (small LLM): Boss eval (2 attempts, fail = marked), anti-cheat</td><td class="premium-cell">+ Tier 3 personal AI tutor on Boss failure (unlimited guided retries + question regen), Socratic tutoring on any question, study plans, writing feedback, exam prep</td></tr>
+      <tr><td><strong>Notebook Capture</strong></td><td class="basic-cell">Per framework frequency; Tier 2 pass/fail + tip</td><td class="premium-cell">Same frequency + Tier 3 detailed rubric feedback + portfolio</td></tr>
+      <tr><td><strong>Courses</strong></td><td class="basic-cell">Not available</td><td class="premium-cell">AI Literacy, Critical Thinking, Economy, Law, IT, Language, PISA Prep</td></tr>
+      <tr><td><strong>PISA Events</strong></td><td class="basic-cell">Monthly checkpoints</td><td class="premium-cell">+ Weekly PISA lesson (~20 min, async 7-day window)</td></tr>
+      <tr><td><strong>Metagame</strong></td><td class="basic-cell">Full Bilim Bazasi, BT earning, heroes, streaks, class tournaments</td><td class="premium-cell">Faster BT, extra cosmetics, seasonal events, school/regional tournaments</td></tr>
+      <tr><td><strong>Parent Dashboard</strong></td><td class="basic-cell">Weekly static summary (3-5 lines)</td><td class="premium-cell">Full interactive: PISA trajectory, skill heatmap, AI narrative report</td></tr>
+      <tr><td><strong>Teacher Dashboard</strong></td><td class="basic-cell">Full: heatmap, mastery map, anti-cheat, session metrics</td><td class="premium-cell">+ PISA tracker, class analytics, exportable reports</td></tr>
+      <tr><td><strong>Offline Mode</strong></td><td class="basic-cell">Not available</td><td class="premium-cell">Downloadable session packs, sync on reconnect</td></tr>
+      <tr><td><strong>Session Modes</strong></td><td class="basic-cell">Standard + Recovery; Extended via teacher override only</td><td class="premium-cell">+ Extended on-demand at home</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 2: Detailed Specs (collapsible) -->
+<div class="section">
+  <h2><span class="sec-num">02</span> Detailed Specifications</h2>
+  <p style="color:var(--text-dim);font-size:.85rem;margin-bottom:1rem;">Click any dimension to expand details.</p>
+
+  <!-- 2.1 Content -->
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.1 Content</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic</div>Every chapter, topic, and standard in the Uzbek textbook canon. 100% curriculum coverage. All content tagged with dual codes (<code>UZ-MATH-5-FRAC-01</code> / <code>MAT.5.3.4.1</code>), PISA levels, and <code>transition_skill</code> tags.</div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds</div>
+        <ul>
+          <li><strong>Beyond-textbook extensions</strong> &mdash; deeper explorations past textbook scope (e.g. Solar System &rarr; space exploration module with L4-L5 tasks)</li>
+          <li><strong>Exam preparation tracks</strong> &mdash; structured revision calibrated to current PISA level</li>
+          <li><strong>Elective modules</strong> &mdash; cross-subject enrichment (see Specialized Courses)</li>
+        </ul>
+      </div>
+      <div class="rule"><strong>Rule:</strong> No curriculum-required content is Premium-exclusive. If the textbook teaches it, Basic has it.</div>
+    </div>
+  </div>
+
+  <!-- 2.2 Homework Sessions -->
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.2 Homework Sessions</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic</div>Full 7-phase session (0-A, 0-B, 1-7). All session parameters per subject framework: duration, flow targets, mechanic bans, Notebook Capture frequency, Boss HP tiers, Why Chain caps.</div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds</div>
+        <ul>
+          <li><strong>Expanded difficulty band</strong> &mdash; L5-L6 stretch tasks after consistent 85%+ scores. Basic caps at current+1; Premium allows current+2</li>
+          <li><strong>Richer per-phase AI feedback</strong> &mdash; Tier 3 narrative branching in Story Mode, connection maps in Consolidation, personalized Reflection summary</li>
+          <li><strong>Session replay</strong> &mdash; replay completed sessions with AI commentary on strengths/weaknesses</li>
+        </ul>
+      </div>
+      <div class="rule"><strong>Rule:</strong> 7-phase structure, immutables (Stranger Test, transition_skill, cosmetics rule, 0-A/0-B), and all subject framework overrides apply identically to both tiers.</div>
+    </div>
+  </div>
+
+  <!-- 2.3 Games -->
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.3 Games</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic</div>Phase 3 Game Breaks every session: 3 games (&ge;1 Interactive Catalog + &ge;2 Default Pool), selected by subject + Bloom's + PISA level. All 28 mechanics available per subject framework.</div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds</div>
+        <ul>
+          <li><strong>On-demand game access</strong> &mdash; launch any unlocked game from Library anytime outside sessions</li>
+          <li><strong>Higher-polish variants</strong> &mdash; enhanced visuals/audio, same gameplay and learning outcomes</li>
+          <li><strong>Exclusive game modes</strong> &mdash; timed challenges, head-to-head, Master Mode</li>
+        </ul>
+      </div>
+      <div class="rule"><strong>Rule:</strong> Within a session, both tiers get the same Phase 3. Dual-catalog rule is never violated. Premium's advantage is access <em>outside</em> sessions.</div>
+    </div>
+  </div>
+
+  <!-- 2.4 AI Tier -->
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.4 AI Tier</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic &mdash; $3-5/student/year</div>Tier 1 (rule-based, ~$0) handles ~80% of tasks. Tier 2 (small LLM) handles Boss evaluation (2 attempts max), anti-cheat, story checkpoints. <strong>Fail Boss twice &rarr; marked as failed, next session continues.</strong></div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds &mdash; $8-15/student/year est.</div>
+        <ul>
+          <li><strong>Personal AI Tutor on Boss failure</strong> &mdash; Tier 3 Socratic tutor activates after 2 fails. Guides student through with dialogue (no answer reveal) + question regeneration. Unlimited retries until Boss is defeated. Like having a personal teacher.</li>
+          <li><strong>Tier 3 on any question</strong> &mdash; ask "why?" anywhere, get guided dialogue</li>
+          <li>Personalized cross-subject study plans</li>
+          <li>Detailed writing feedback</li>
+          <li>Exam prep adaptation</li>
+        </ul>
+      </div>
+      <div class="rule"><strong>Rule:</strong> Tier 2 anti-cheat runs for both tiers. Fallback: T3/T2 unreachable &rarr; T1 takes over. No session ever fails because AI is unavailable.</div>
+    </div>
+  </div>
+
+  <!-- 2.5 Notebook Capture -->
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.5 Notebook Capture</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic</div>Frequency per subject framework (Science 1-in-3, Texnologiya 1-in-2, Tasviriy Sanat every session, Geografiya 1-in-4). Tier 2 evaluation: pass/fail + one tip.</div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds</div>
+        <ul>
+          <li><strong>Tier 3 vision feedback</strong> &mdash; detailed rubric (diagram accuracy, technique analysis, safety compliance)</li>
+          <li><strong>Portfolio</strong> &mdash; AI-curated gallery of best captures with progression commentary</li>
+        </ul>
+      </div>
+      <div class="rule"><strong>Rule:</strong> Frequency is NOT tier-gated. If the framework says 1-in-3, both tiers do 1-in-3. Difference is feedback depth.</div>
+    </div>
+  </div>
+
+  <!-- 2.6 Specialized Courses -->
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.6 Specialized Courses (Premium-exclusive)</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <table>
+        <thead><tr><th>Course</th><th>Description</th><th>PISA Domain</th></tr></thead>
+        <tbody>
+          <tr><td>AI Literacy</td><td>How AI works, prompt thinking, ethics</td><td>Creative Thinking + Reading</td></tr>
+          <tr><td>Critical Thinking</td><td>Argument analysis, logical fallacies</td><td>Reading + Science</td></tr>
+          <tr><td>Economy &amp; Finance</td><td>Personal finance, market basics</td><td>Math + Reading</td></tr>
+          <tr><td>Law &amp; Civic Rights</td><td>Constitutional basics, case analysis</td><td>Reading</td></tr>
+          <tr><td>IT &amp; Programming</td><td>Computational thinking, algorithms</td><td>Math + Creative Thinking</td></tr>
+          <tr><td>Language Enrichment</td><td>Beyond-curriculum vocabulary &amp; grammar</td><td>Reading</td></tr>
+          <tr><td>Extended PISA Prep</td><td>Intensive PISA practice across domains</td><td>All domains</td></tr>
+        </tbody>
+      </table>
+      <div class="rule"><strong>Rule:</strong> These follow UNIFIED 100% (7 phases, tagging, immutables). Content is not textbook-derived (Principle 1 exception). Every task still needs a <code>transition_skill</code> tag.</div>
+    </div>
+  </div>
+
+  <!-- 2.7-2.12 remaining dimensions -->
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.7 PISA Events</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic</div>Monthly PISA checkpoint &mdash; standard session with PISA-style tasks. Auto-scheduled. Results visible to student and teacher.</div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds</div>
+        <ul>
+          <li><strong>Weekly PISA lesson</strong> &mdash; ~20 min, 7-phase session, async 7-day window, teacher-tracked</li>
+          <li><strong>Strict-deadline enforcement</strong> (future option, not launch default)</li>
+        </ul>
+      </div>
+      <div class="rule"><strong>Rule:</strong> Monthly checkpoints identical for both. Premium's weekly lesson is additional.</div>
+    </div>
+  </div>
+
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.8 Metagame (Bilim Bazasi)</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic</div>Full Bilim Bazasi: visual base, BT earning (sessions/skills/Bosses/streaks), hero unlocks (Al-Khwarizmi, Ibn Sina, Ulugh Beg, Beruniy), Mystery Boxes (BT-only), streaks with earned freeze, class tournaments.</div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds</div>
+        <ul>
+          <li>Faster BT earning in tournaments (multiplier TBD via playtesting)</li>
+          <li>Additional cosmetic collections, seasonal sets</li>
+          <li>Seasonal events with unique cosmetic rewards</li>
+          <li>School-level and regional tournament tiers (opt-in)</li>
+        </ul>
+      </div>
+      <div class="rule"><strong>Rule:</strong> BT has no real-money entry. No academic advantage purchasable. Basic base can grow just as large &mdash; Premium has more decorating options.</div>
+    </div>
+  </div>
+
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.9 Parent Dashboard</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic</div>Weekly auto-generated summary: sessions completed, streak, subjects active, one-line performance trend.</div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds</div>
+        <ul>
+          <li>PISA level trajectory graph per domain</li>
+          <li>Transition-skill heatmap</li>
+          <li>Weekly AI-written narrative report (Tier 3)</li>
+          <li>"What to practice this weekend" recommendations</li>
+          <li>Cross-subject weakness analysis</li>
+          <li>Historical month-over-month progress view</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.10 Teacher Dashboard</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic</div>Full dashboard: attendance heatmap, per-student mastery map, anti-cheat log, session metrics. Mobile-first.</div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds</div>
+        <ul>
+          <li>Weekly PISA lesson completion tracker</li>
+          <li>Class-level PISA trajectory and skill gap analytics</li>
+          <li>Exportable reports (CSV/PDF)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.11 Offline Mode</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic</div>Not available. Sessions require internet for Tier 2 AI and anti-cheat.</div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds</div>
+        <ul>
+          <li>Downloadable session packs (Tier 1 evaluation only)</li>
+          <li>Offline phases: Memory Sprint, Story Mode, Game Breaks (Default only), Consolidation, Reflection</li>
+          <li>Boss and RLC queued for next online session</li>
+          <li>Anti-cheat: behavioral timing only, flagged on sync</li>
+        </ul>
+      </div>
+      <div class="rule"><strong>Rule:</strong> Offline mode serves rural students with unreliable internet. Access equity feature gated by Premium due to engineering cost.</div>
+    </div>
+  </div>
+
+  <div class="dim-card">
+    <div class="dim-header" onclick="toggle(this)">
+      <h3>2.12 Session Modes</h3><span class="dim-arrow">&#9660;</span>
+    </div>
+    <div class="dim-body">
+      <div class="tier-block basic"><div class="tier-block-label">Basic</div>Standard (30-45 min) + Recovery (15-20 min, auto-triggered). Extended (45-60 min) via teacher override only.</div>
+      <div class="tier-block premium"><div class="tier-block-label">Premium adds</div>
+        <ul>
+          <li><strong>Extended on-demand</strong> &mdash; 45-60 min sessions at home without teacher override</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: Immutables -->
+<div class="section">
+  <h2><span class="sec-num">03</span> What Is NOT Tier-Gated</h2>
+  <p style="color:var(--text-dim);font-size:.85rem;margin-bottom:1rem;">These are identical in both tiers and can never be moved to Premium.</p>
+  <div class="immutable-grid">
+    <div class="immutable-item"><strong>7-phase structure</strong><span>Core learning loop &mdash; removing phases breaks pedagogy</span></div>
+    <div class="immutable-item"><strong>Phase 0-A / 0-B</strong><span>Pre-homework priming is foundational</span></div>
+    <div class="immutable-item"><strong>Full curriculum coverage</strong><span>Students pay &mdash; curriculum is not Premium</span></div>
+    <div class="immutable-item"><strong>All 28 mechanics</strong><span>Pedagogical tools, not entertainment</span></div>
+    <div class="immutable-item"><strong>Dual-catalog rule</strong><span>Session game selection = learning design</span></div>
+    <div class="immutable-item"><strong>Stranger Test</strong><span>Universal safety requirement</span></div>
+    <div class="immutable-item"><strong>transition_skill tags</strong><span>Quality control on all content</span></div>
+    <div class="immutable-item"><strong>Flow state targets</strong><span>Adaptive difficulty is core</span></div>
+    <div class="immutable-item"><strong>Boss must be defeated</strong><span>Mastery requirement is universal</span></div>
+    <div class="immutable-item"><strong>Remediation routing</strong><span>Support for struggling students is not gated</span></div>
+    <div class="immutable-item"><strong>Anti-cheat (Tier 2)</strong><span>Academic integrity is universal</span></div>
+    <div class="immutable-item"><strong>Notebook Capture freq</strong><span>Frequency is pedagogical, not tier-based</span></div>
+    <div class="immutable-item"><strong>Custom tracks</strong><span>MR, TR, VA, ML are core curriculum</span></div>
+    <div class="immutable-item"><strong>Cosmetics rule</strong><span>BT-earned only, both tiers</span></div>
+    <div class="immutable-item"><strong>Uzbek-first framing</strong><span>Universal design principle</span></div>
+    <div class="immutable-item"><strong>"Hali emas" framing</strong><span>G5 psychology &mdash; universal</span></div>
+    <div class="immutable-item"><strong>Scholar pairing</strong><span>Cultural representation &mdash; universal</span></div>
+  </div>
+</div>
+
+<!-- Section 4: Upsell -->
+<div class="section">
+  <h2><span class="sec-num">04</span> Premium Upsell Surfaces</h2>
+  <p style="color:var(--text-dim);font-size:.85rem;margin-bottom:1rem;">Contextual, soft, never blocking. After session completion only.</p>
+  <div class="upsell-row"><div class="upsell-trigger">Student scores &gt;85%</div><div class="upsell-prompt">"Want to try the harder version?"</div><div class="upsell-link">Difficulty band preview</div></div>
+  <div class="upsell-row"><div class="upsell-trigger">Boss failed twice</div><div class="upsell-prompt">"Want 5 minutes with the AI tutor?"</div><div class="upsell-link">Tier 3 preview</div></div>
+  <div class="upsell-row"><div class="upsell-trigger">After PISA checkpoint</div><div class="upsell-prompt">"Premium students get weekly PISA practice"</div><div class="upsell-link">Weekly lesson info</div></div>
+  <div class="upsell-row"><div class="upsell-trigger">Browsing Library</div><div class="upsell-prompt">Locked chapters with one-sentence preview</div><div class="upsell-link">Course preview</div></div>
+  <div class="upsell-row"><div class="upsell-trigger">End of session (1 in 5)</div><div class="upsell-prompt">"Your parent can see your full progress with Premium"</div><div class="upsell-link">Dashboard info</div></div>
+  <div style="margin-top:1rem;">
+    <div class="rule"><strong>Rules:</strong> Max 1 per session. Never during phases. Dismissible permanently. No anxiety/FOMO language. "You need Premium to succeed" is forbidden.</div>
+  </div>
+</div>
+
+<!-- Section 5: Cost Model -->
+<div class="section">
+  <h2><span class="sec-num">05</span> Cost Model</h2>
+  <div class="cost-row">
+    <div class="cost-card basic">
+      <div class="tier-block-label" style="color:var(--basic)">Basic</div>
+      <div class="cost-price">$3-5</div>
+      <div class="cost-detail">per student / year</div>
+      <div class="cost-detail" style="margin-top:.5rem">80% Tier 1 ($0) + 15% Tier 2 (cents) + 5% Tier 3 (Boss fail only)</div>
+    </div>
+    <div class="cost-card premium">
+      <div class="tier-block-label" style="color:var(--premium)">Premium</div>
+      <div class="cost-price">$8-15</div>
+      <div class="cost-detail">per student / year (estimate)</div>
+      <div class="cost-detail" style="margin-top:.5rem">Unlimited Tier 3 + specialized courses + offline infra + vision feedback</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 6: Implementation -->
+<div class="section">
+  <h2><span class="sec-num">06</span> Implementation</h2>
+  <h3>Platform Decision Points</h3>
+  <p style="color:var(--text-dim);font-size:.85rem;margin-bottom:.8rem;">Same engine, same frameworks. Tier checked at these moments:</p>
+  <div class="impl-point"><div class="impl-trigger">Before Phase 3</div><div class="impl-basic"><span class="tier-basic">B</span> Session games only</div><div class="impl-premium"><span class="tier-premium">P</span> + Library on-demand</div></div>
+  <div class="impl-point"><div class="impl-trigger">On Boss failure (2x)</div><div class="impl-basic"><span class="tier-basic">B</span> Marked as failed, next session</div><div class="impl-premium"><span class="tier-premium">P</span> T3 personal tutor + unlimited retries</div></div>
+  <div class="impl-point"><div class="impl-trigger">On "why?" tap</div><div class="impl-basic"><span class="tier-basic">B</span> Static hint bank</div><div class="impl-premium"><span class="tier-premium">P</span> Tier 3 live dialogue</div></div>
+  <div class="impl-point"><div class="impl-trigger">Session complete</div><div class="impl-basic"><span class="tier-basic">B</span> Static summary</div><div class="impl-premium"><span class="tier-premium">P</span> Tier 3 analysis</div></div>
+  <div class="impl-point"><div class="impl-trigger">Notebook Capture</div><div class="impl-basic"><span class="tier-basic">B</span> Tier 2 pass/fail + tip</div><div class="impl-premium"><span class="tier-premium">P</span> Tier 3 rubric feedback</div></div>
+  <div class="impl-point"><div class="impl-trigger">Library browse</div><div class="impl-basic"><span class="tier-basic">B</span> Curriculum content</div><div class="impl-premium"><span class="tier-premium">P</span> + courses + games</div></div>
+  <div class="impl-point"><div class="impl-trigger">Parent login</div><div class="impl-basic"><span class="tier-basic">B</span> Static weekly summary</div><div class="impl-premium"><span class="tier-premium">P</span> Full dashboard</div></div>
+
+  <h3 style="margin-top:1.5rem;">Data Model Additions</h3>
+  <p><code>student.tier</code> enum (BASIC, PREMIUM) &middot; <code>student.tier_start_date</code> &middot; <code>student.tier_end_date</code> &middot; <code>session.tier_at_time</code> (snapshot) &middot; <code>premium_game_access_log</code> &middot; <code>premium_pisa_weekly</code> &middot; <code>offline_session_pack</code> &middot; <code>parent_dashboard_access</code></p>
+
+  <h3 style="margin-top:1.5rem;">Migration</h3>
+  <p>Existing 5 G5 frameworks (Science, Tarbiya, Texnologiya, Tasviriy Sanat, Geografiya): <strong>no changes needed</strong>. They describe the full experience = Basic tier. Premium layers on top via feature flags.</p>
+</div>
+
+<!-- Section 7: Open Questions -->
+<div class="section">
+  <h2><span class="sec-num">07</span> Open Questions</h2>
+  <div class="oq"><span class="oq-num">1</span><span class="oq-title">Premium pricing model</span> &mdash; family-paid, school-licensed, government-sponsored, corporate, or hybrid. Affects upsell copy, teacher features, everything.</div>
+  <div class="oq"><span class="oq-num">2</span><span class="oq-title">BT tournament multiplier</span> &mdash; how much faster? Too high = pay-to-win violation. Needs playtesting.</div>
+  <div class="oq"><span class="oq-num">3</span><span class="oq-title">Premium cost validation</span> &mdash; $8-15 estimate assumes 2-3 Tier 3 calls/session. Needs real usage data.</div>
+  <div class="oq"><span class="oq-num">4</span><span class="oq-title">Offline mode engineering</span> &mdash; session pre-gen is easy; sync, Boss queue, offline anti-cheat are hard.</div>
+  <div class="oq"><span class="oq-num">5</span><span class="oq-title">Specialized course content pipeline</span> &mdash; no textbook source. Who writes these? Quality bar?</div>
+  <div class="oq"><span class="oq-num">6</span><span class="oq-title">Parent dashboard Tier 3 cost</span> &mdash; weekly AI narrative reports at scale. Batch generation needed?</div>
+  <div class="oq"><span class="oq-num">7</span><span class="oq-title">Upsell localization</span> &mdash; Uzbek + Russian. Culturally appropriate tone.</div>
+  <div class="oq"><span class="oq-num">8</span><span class="oq-title">Extended mode learning impact</span> &mdash; 45-60 min at home risks attention fatigue. Break prompt at 35 min?</div>
+  <div class="oq"><span class="oq-num">9</span><span class="oq-title">RESOLVED &mdash; Tier 3 Boss failure</span> &mdash; Basic: 2 attempts, fail = marked, next session. Premium: T3 personal tutor with unlimited retries. UNIFIED needs a versioned note for this Layer 3 override.</div>
+</div>
+
+<div style="text-align:center;color:var(--text-dim);font-size:.75rem;margin-top:3rem;padding-top:1rem;border-top:1px solid var(--border);">
+  NETS Tier Overlay Spec v1.0 &middot; Layer 3 &middot; 2026-04-10<br>
+  Parent: NETS-System-Design-v1.md &middot; Constitution: UNIFIED v2.0
+</div>
+
+<script>
+function toggle(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.dim-arrow');
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+</script>
+</body>
+</html>

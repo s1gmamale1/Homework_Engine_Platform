@@ -1,0 +1,16 @@
+{
+  "userIgnoreFilters": [
+    "node_modules",
+    ".venv",
+    ".claude",
+    ".qwen",
+    ".gemini",
+    ".codex",
+    "platform/frontend/node_modules",
+    "platform/backend/.venv",
+    "textbooks",
+    "scripts"
+  ],
+  "newFileLocation": "current",
+  "attachmentFolderPath": "visuals"
+}

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NETS Library Framework vs System Design v1 — Assessment</title>
+  <style>
+    :root {
+      --bg: #070b14;
+      --bg-2: #0d1324;
+      --panel: rgba(13, 19, 36, 0.86);
+      --panel-2: rgba(17, 26, 48, 0.88);
+      --text: #e6f7ff;
+      --muted: #8fb6c9;
+      --cyan: #4df6ff;
+      --pink: #ff4fd8;
+      --purple: #9b6bff;
+      --green: #65ffb3;
+      --yellow: #ffe66d;
+      --red: #ff6b8a;
+      --border: rgba(77, 246, 255, 0.28);
+      --glow: 0 0 12px rgba(77, 246, 255, 0.35), 0 0 28px rgba(155, 107, 255, 0.15);
+      --shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(77, 246, 255, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(255, 79, 216, 0.10), transparent 22%),
+        radial-gradient(circle at bottom center, rgba(155, 107, 255, 0.12), transparent 32%),
+        linear-gradient(180deg, #05070d 0%, #08101e 48%, #05070d 100%);
+      line-height: 1.65;
+      padding: 32px 18px 80px;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(14, 22, 40, 0.9), rgba(8, 12, 24, 0.92));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 34px 30px;
+      box-shadow: var(--shadow), var(--glow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: 24px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(77,246,255,0.6), rgba(155,107,255,0.18), rgba(255,79,216,0.45));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--cyan);
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(77,246,255,0.55);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      max-width: 900px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(77,246,255,0.26);
+      background: rgba(77,246,255,0.08);
+      color: var(--text);
+      font-size: 13px;
+      box-shadow: inset 0 0 12px rgba(77,246,255,0.06);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: var(--panel);
+      border: 1px solid rgba(155,107,255,0.2);
+      border-radius: 20px;
+      padding: 24px 22px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 24px;
+      color: var(--cyan);
+      text-shadow: 0 0 10px rgba(77,246,255,0.28);
+    }
+
+    .card h3 {
+      color: #ffffff;
+      margin-top: 22px;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .summary {
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .metric {
+      background: var(--panel-2);
+      border: 1px solid rgba(77,246,255,0.18);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .metric .label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    .metric .value {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .metric .note {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .good { color: var(--green); text-shadow: 0 0 12px rgba(101,255,179,0.25); }
+    .warn { color: var(--yellow); text-shadow: 0 0 12px rgba(255,230,109,0.18); }
+    .pink { color: var(--pink); text-shadow: 0 0 12px rgba(255,79,216,0.22); }
+    .purple { color: #b694ff; text-shadow: 0 0 12px rgba(155,107,255,0.22); }
+
+    ul { margin: 10px 0 0 0; padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    p { margin: 10px 0; }
+    strong { color: #ffffff; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid rgba(77,246,255,0.15);
+    }
+
+    th, td {
+      text-align: left;
+      padding: 14px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      vertical-align: top;
+    }
+
+    th {
+      background: rgba(77,246,255,0.08);
+      color: var(--cyan);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(255,255,255,0.015);
+    }
+
+    .verdict {
+      border-left: 4px solid var(--pink);
+      padding-left: 16px;
+      margin-top: 14px;
+      color: #f5fbff;
+    }
+
+    .footer {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .summary { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 18px 12px 60px; }
+      .hero { padding: 24px 18px; }
+      .card { padding: 20px 16px; }
+      .summary { grid-template-columns: 1fr; }
+      th, td { padding: 12px 10px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Architecture Assessment / Neon Review</div>
+      <h1>NETS Library Framework vs System Design v1</h1>
+      <p class="subtitle">
+        Comparative assessment of <strong>NETS-Library-Framework.md</strong> against <strong>NETS-System-Design-v1.md</strong>, with focus on <strong>Subject Classification alignment</strong>, architectural scope, and overall framework quality.
+      </p>
+      <div class="chips">
+        <span class="chip">5 Subject Families</span>
+        <span class="chip">Layer 1 Alignment</span>
+        <span class="chip">Library Architecture</span>
+        <span class="chip">Scope Discipline Review</span>
+        <span class="chip">Dark Neon Format</span>
+      </div>
+    </section>
+
+    <section class="summary">
+      <div class="metric">
+        <div class="label">Subject Classification Alignment</div>
+        <div class="value good">8.5 / 10</div>
+        <div class="note">Very strong alignment with the 5-family architecture.</div>
+      </div>
+      <div class="metric">
+        <div class="label">Library Architecture Quality</div>
+        <div class="value good">8 / 10</div>
+        <div class="note">Strong catalog logic, addressing, and production orientation.</div>
+      </div>
+      <div class="metric">
+        <div class="label">Specification Discipline</div>
+        <div class="value warn">6.5 / 10</div>
+        <div class="note">Useful, but scope drifts into product/platform/research territory.</div>
+      </div>
+      <div class="metric">
+        <div class="label">Replacement for System Design v1?</div>
+        <div class="value pink">No</div>
+        <div class="note">This is a child/companion document, not the parent architecture.</div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <article class="card">
+        <h2>Executive Verdict</h2>
+        <p>
+          <strong>NETS-Library-Framework.md</strong> is a strong and useful <strong>partial framework</strong>. Its best contribution is that it turns the abstract Subject Classification logic from System Design v1 into a <strong>real library and catalog architecture</strong> for production.
+        </p>
+        <p class="verdict">
+          It is <strong>well aligned</strong> with the Subject Classification vision in <strong>NETS-System-Design-v1.md</strong>, especially around the five family model, family-specific mechanics, Boss patterns, and locked membership rules. But it does <strong>not</strong> replace the broader system design, and it needs <strong>tighter scope boundaries</strong> to avoid becoming an everything-document.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Where It Aligns with Subject Classification</h2>
+        <h3>1. Full structural alignment with the five-family model</h3>
+        <ul>
+          <li>Aniq Fanlar</li>
+          <li>Til Fanlari</li>
+          <li>Tabiat Fanlari</li>
+          <li>Ijtimoiy Fanlari</li>
+          <li>Tarbiya / Sanat</li>
+        </ul>
+
+        <h3>2. Same Layer 1 purpose as System Design v1</h3>
+        <p>The Library Framework preserves the intended function of Subject Family Frameworks:</p>
+        <ul>
+          <li>reduce the content production bottleneck</li>
+          <li>define family-level cognitive demands</li>
+          <li>define mechanic emphasis</li>
+          <li>define Boss format rules</li>
+          <li>guide subject frameworks beneath the family layer</li>
+        </ul>
+
+        <h3>3. Locked membership rule is preserved</h3>
+        <p>
+          System Design v1 says family membership is locked and subject reclassification requires an ADR. The Library Framework carries that forward explicitly.
+        </p>
+
+        <h3>4. Same edge-case placements</h3>
+        <ul>
+          <li><strong>Informatics</strong> defaults to <strong>Aniq Fanlar</strong>, ADR-pending if it proves more constructive/creative than derivation-based.</li>
+          <li><strong>Literature</strong> defaults to <strong>Til Fanlari</strong>, ADR-pending if a future humanities subfamily is created.</li>
+          <li><strong>Combined Science</strong> remains transitional under <strong>Tabiat Fanlari</strong>.</li>
+          <li><strong>Tarbiya/Sanat</strong> remains intentionally low-gamification and formative-first.</li>
+        </ul>
+
+        <h3>5. Family-specific mechanic identity is preserved</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Family</th>
+              <th>System Design v1 Alignment</th>
+              <th>Assessment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Aniq Fanlar</strong></td>
+              <td>CPA, worked examples, derivation logic, error analysis, notebook capture</td>
+              <td class="good"><strong>Very High</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Til Fanlari</strong></td>
+              <td>Spaced repetition, grammar in context, guided writing, language production</td>
+              <td class="good"><strong>Very High</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Tabiat Fanlari</strong></td>
+              <td>Diagram-first logic, classification, discovery narrative, Uzbek-context anchoring</td>
+              <td class="good"><strong>Very High</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Ijtimoiy Fanlari</strong></td>
+              <td>Story mode, source comparison, case reasoning, interpretive analysis</td>
+              <td class="good"><strong>High</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Tarbiya / Sanat</strong></td>
+              <td>Minimal gamification, formative prompts, expressive output, anti-extrinsic-reward stance</td>
+              <td class="good"><strong>High</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card">
+        <h2>What the Library Framework Adds Beyond Classification</h2>
+        <h3>1. It operationalizes the family model</h3>
+        <p>
+          System Design v1 explains why family frameworks matter. The Library Framework shows how those families become the backbone of a national content catalog.
+        </p>
+
+        <h3>2. It solves the “what lives where?” problem</h3>
+        <ul>
+          <li>Families</li>
+          <li>Subjects</li>
+          <li>Grades</li>
+          <li>Chapters</li>
+          <li>Levels</li>
+          <li>Paths</li>
+          <li>Item types</li>
+          <li>Addressing and tagging</li>
+        </ul>
+
+        <h3>3. It introduces a strong organizing distinction</h3>
+        <ul>
+          <li><strong>Levels</strong> = how hard the content is</li>
+          <li><strong>Paths</strong> = why the student is learning it</li>
+        </ul>
+        <p>
+          That distinction is clean, useful, and scalable. It helps Subject Classification become a production system rather than just a taxonomy.
+        </p>
+
+        <h3>4. It makes family classification extensible</h3>
+        <p>The family layer becomes the generator for:</p>
+        <ul>
+          <li>standard curriculum paths</li>
+          <li>DTM exam prep</li>
+          <li>Olympiad tracks</li>
+          <li>PISA pathways</li>
+          <li>certifications</li>
+          <li>cross-subject courses</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Where Scope Starts to Blur</h2>
+        <h3>1. It is not a replacement for System Design v1</h3>
+        <p>
+          System Design v1 defines the broader architecture: Layer 1, Layer 2 framing, Tier Overlay, Metagame, app surfaces, roadmap, and core product philosophy. The Library Framework does not supersede that.
+        </p>
+
+        <h3>2. It overreaches beyond “library” in several sections</h3>
+        <ul>
+          <li>Cross-subject premium course strategy</li>
+          <li>Placement on Today surface and Teacher Dashboard</li>
+          <li>DTM practice exam UX and ADR framing</li>
+          <li>Radiance Score anti-cheat implementation contract</li>
+          <li>Buzan speed reading UI rules</li>
+          <li>Broader cognitive operating system behavior</li>
+        </ul>
+        <p>
+          These are not bad ideas. The issue is document discipline: too many jobs in one file.
+        </p>
+
+        <h3>3. It is stronger as a classification framework than as a formal family framework contract</h3>
+        <p>
+          It expands family definitions very well, but it is still lighter than a fully formal Layer 1 spec in places where System Design v1 implied stricter contracts, such as family-level bans, notebook capture frequency, phase-weight overrides, and standardized inheritance rules.
+        </p>
+
+        <h3>4. It locks in downstream assumptions early</h3>
+        <ul>
+          <li>Specific cross-subject course inventory</li>
+          <li>Broad level/path system commitments</li>
+          <li>Detailed placement and UX assumptions</li>
+          <li>Large production estimates and operational projections</li>
+          <li>Buzan-heavy doctrine becoming near-core architecture</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Overall Assessment</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th>Assessment</th>
+              <th>Rationale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Subject Classification Alignment</td>
+              <td class="good"><strong>8.5 / 10</strong></td>
+              <td>Faithful to the five-family model, family identities, edge cases, and mechanic logic from System Design v1.</td>
+            </tr>
+            <tr>
+              <td>Library Architecture</td>
+              <td class="good"><strong>8 / 10</strong></td>
+              <td>Strong catalog hierarchy, addressing schema, tagging logic, and production orientation.</td>
+            </tr>
+            <tr>
+              <td>Specification Discipline</td>
+              <td class="warn"><strong>6.5 / 10</strong></td>
+              <td>Useful, but scope stretches across taxonomy, curriculum, UX, product, platform, and pedagogy research.</td>
+            </tr>
+            <tr>
+              <td>As Layer 1 Partial Realization</td>
+              <td class="purple"><strong>Yes</strong></td>
+              <td>It meaningfully extends Layer 1 and helps make Subject Classification operational.</td>
+            </tr>
+            <tr>
+              <td>As Replacement for System Design v1</td>
+              <td class="pink"><strong>No</strong></td>
+              <td>It is a child/companion spec, not the parent architecture document.</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card">
+        <h2>Final Judgment</h2>
+        <p>
+          <strong>NETS-Library-Framework.md</strong> is best understood as a <strong>library-operating extension</strong> of the architecture, not a competitor to it.
+        </p>
+        <p>
+          Its strongest move is that it converts Subject Classification from a conceptual scaling idea into a <strong>navigable content system</strong>. That is real value.
+        </p>
+        <p class="verdict">
+          Final judgment: <strong>keep it</strong>, because it is strategically useful — but <strong>revise and tighten it</strong> so it stays a disciplined library/classification framework instead of absorbing every adjacent concern.
+        </p>
+      </article>
+    </div>
+
+    <div class="footer">
+      Generated for NETS review • Dark neon assessment format • File: NETS-Library-vs-System-Design-Assessment.html
+    </div>
+  </div>
+</body>
+</html>

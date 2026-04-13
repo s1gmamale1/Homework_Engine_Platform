@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETS Real-Life Challenge Demo</title>
+  <style>
+    :root {
+      --bg: #f5efe3;
+      --paper: #fffaf0;
+      --ink: #1f2a2a;
+      --muted: #5a6a67;
+      --accent: #0f766e;
+      --accent-2: #d97706;
+      --line: #d6ccb8;
+      --good: #166534;
+      --warn: #92400e;
+      --bad: #991b1b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(217,119,6,.18), transparent 24rem),
+        radial-gradient(circle at bottom right, rgba(15,118,110,.18), transparent 22rem),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    .shell {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero,
+    .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 12px 32px rgba(31, 42, 42, 0.08);
+    }
+
+    .hero {
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.12);
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 10px;
+      line-height: 1.1;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .hero-grid,
+    .main-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-grid {
+      grid-template-columns: 1.25fr .95fr;
+      margin-top: 16px;
+    }
+
+    .main-grid {
+      grid-template-columns: 1.2fr .8fr;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      background: rgba(255,255,255,0.7);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    th {
+      color: var(--ink);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(217,119,6,.12);
+      color: var(--warn);
+      font-size: 13px;
+    }
+
+    .panel {
+      padding: 20px;
+    }
+
+    .question {
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .question:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0;
+      color: var(--ink);
+    }
+
+    textarea,
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #c8bca3;
+      border-radius: 12px;
+      background: #fffdfa;
+      color: var(--ink);
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 16px;
+      background: var(--accent);
+      color: #fff;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #115e59;
+    }
+
+    .result {
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #f8f5ed;
+      border: 1px solid var(--line);
+      display: none;
+    }
+
+    .score {
+      font-size: 28px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .good { color: var(--good); }
+    .bad { color: var(--bad); }
+
+    .sidebar-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .sidebar-list li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <span class="eyebrow">Phase 4 Demo</span>
+      <h1>NETS Real-Life Challenge</h1>
+      <p>This is a simple demo of the first-person expert mechanic. It follows the source rules: local context, structured evidence, a real decision, and explanation as a required part of scoring.</p>
+
+      <div class="hero-grid">
+        <div class="card">
+          <h2>Your Role</h2>
+          <p><strong>You are a transport pricing advisor</strong> helping a Tashkent district office compare two taxi pricing proposals for local commuters.</p>
+          <p>A council member says: “Plan B is clearly better for everyone.” Your job is to check whether that claim is true and write a recommendation.</p>
+          <div class="pill-row">
+            <span class="pill">Math transfer</span>
+            <span class="pill">PISA L2->L3</span>
+            <span class="pill">Evaluate with explanation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Case Facts</h2>
+          <table>
+            <tr>
+              <th>Plan</th>
+              <th>Base Fare</th>
+              <th>Per km</th>
+            </tr>
+            <tr>
+              <td>Company A</td>
+              <td>2,000 UZS</td>
+              <td>1,500 UZS</td>
+            </tr>
+            <tr>
+              <td>Company B</td>
+              <td>3,000 UZS</td>
+              <td>1,000 UZS</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="main-grid">
+      <section class="panel">
+        <h2>Challenge</h2>
+
+        <div class="question">
+          <h3>1. At what distance do the two plans cost the same?</h3>
+          <p>Enter a number in kilometers.</p>
+          <input id="distance" type="text" placeholder="Example: 2" />
+        </div>
+
+        <div class="question">
+          <h3>2. Which statement is most accurate?</h3>
+          <label><input type="radio" name="claim" value="a"> Company A is always cheaper.</label>
+          <label><input type="radio" name="claim" value="b"> Company B is always cheaper.</label>
+          <label><input type="radio" name="claim" value="c"> Company A is cheaper for short trips, and Company B becomes cheaper after a certain distance.</label>
+        </div>
+
+        <div class="question">
+          <h3>3. Write your recommendation</h3>
+          <p>Explain which plan is better for short commuters and which is better for longer trips. Use the numbers from the case.</p>
+          <textarea id="explanation" placeholder="I recommend... because..."></textarea>
+        </div>
+
+        <button id="submit">Evaluate Response</button>
+
+        <div id="result" class="result" aria-live="polite"></div>
+      </section>
+
+      <aside class="panel">
+        <h2>Why This Demo Matches NETS</h2>
+        <ul class="sidebar-list">
+          <li>The student is the expert, not a spectator.</li>
+          <li>The case uses local context without needing outside knowledge.</li>
+          <li>The task moves from calculation to decision to explanation.</li>
+          <li>The explanation matters more than the raw choice.</li>
+          <li>The wrong options are plausible enough to expose shallow reasoning.</li>
+        </ul>
+
+        <div class="card">
+          <h3>Expected Strong Answer</h3>
+          <p>The plans are equal at <strong>2 km</strong>. For trips shorter than 2 km, Company A is cheaper because its lower base fare matters more. For trips longer than 2 km, Company B becomes cheaper because the lower per-kilometer price overtakes the higher base fare.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const submit = document.getElementById("submit");
+    const result = document.getElementById("result");
+
+    function scoreExplanation(text) {
+      const normalized = text.toLowerCase();
+      let score = 0;
+
+      if (normalized.includes("2 km") || normalized.includes("2km") || normalized.includes("2")) {
+        score += 1;
+      }
+      if (normalized.includes("short") || normalized.includes("qisqa")) {
+        score += 1;
+      }
+      if (normalized.includes("long") || normalized.includes("uzoq")) {
+        score += 1;
+      }
+      if (normalized.includes("base") || normalized.includes("boshlang")) {
+        score += 1;
+      }
+      if (normalized.includes("per km") || normalized.includes("kilometer") || normalized.includes("km")) {
+        score += 1;
+      }
+
+      return score;
+    }
+
+    submit.addEventListener("click", () => {
+      const distanceRaw = document.getElementById("distance").value.trim();
+      const claim = document.querySelector('input[name="claim"]:checked');
+      const explanation = document.getElementById("explanation").value.trim();
+
+      let decisionScore = 0;
+      let feedback = [];
+
+      const numericDistance = Number(distanceRaw.replace(",", "."));
+      if (numericDistance === 2) {
+        decisionScore += 1;
+        feedback.push('<div class="good">Distance check: correct. The break-even point is 2 km.</div>');
+      } else {
+        feedback.push('<div class="bad">Distance check: not correct yet. Set 2000 + 1500x equal to 3000 + 1000x.</div>');
+      }
+
+      if (claim && claim.value === "c") {
+        decisionScore += 1;
+        feedback.push('<div class="good">Decision check: correct. Neither plan is always better.</div>');
+      } else {
+        feedback.push('<div class="bad">Decision check: the strongest answer recognizes that the better plan changes with trip length.</div>');
+      }
+
+      const reasoningSignals = scoreExplanation(explanation);
+      let reasoningBand = "Off-track";
+      if (reasoningSignals >= 4) {
+        reasoningBand = "Strong transfer";
+      } else if (reasoningSignals >= 3) {
+        reasoningBand = "Solid";
+      } else if (reasoningSignals >= 2) {
+        reasoningBand = "Partial";
+      }
+
+      const total = Math.round(((decisionScore / 2) * 40) + ((Math.min(reasoningSignals, 5) / 5) * 60));
+
+      feedback.push("<hr>");
+      feedback.push("<div><strong>Reasoning band:</strong> " + reasoningBand + "</div>");
+      feedback.push("<div><strong>Decision score:</strong> " + Math.round((decisionScore / 2) * 40) + "/40</div>");
+      feedback.push("<div><strong>Reasoning score:</strong> " + Math.round((Math.min(reasoningSignals, 5) / 5) * 60) + "/60</div>");
+
+      result.style.display = "block";
+      result.innerHTML =
+        '<div class="score">Total Score: ' + total + '/100</div>' +
+        '<p>This demo uses a simplified rubric: 40% decision accuracy, 60% explanation quality.</p>' +
+        feedback.join("");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Final Boss — Interactive Demo</title>
+<style>
+  :root {
+    --bg: #0a0e17; --surface: #131a2b; --surface2: #1a2340;
+    --border: #2a3555; --text: #e0e8f5; --muted: #6b7fa0;
+    --hp-green: #00e676; --hp-yellow: #ffab00; --hp-red: #ff1744;
+    --gold: #ffd740; --blue: #448aff; --purple: #b388ff;
+    --mythical-pink: #ff4081; --mythical-glow: #ff80ab;
+    --combo: #76ff03;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+
+  /* Setup Screen */
+  .setup { max-width: 700px; width: 100%; padding: 2rem; margin-top: 2rem; }
+  .setup h1 { text-align: center; font-size: 2rem; background: linear-gradient(135deg, var(--gold), #ff6e40); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+  .setup .subtitle { text-align: center; color: var(--muted); margin-bottom: 2rem; }
+  .form-group { margin-bottom: 1.5rem; }
+  .form-group label { display: block; color: var(--blue); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .form-group select, .form-group input { width: 100%; padding: 0.7rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 1rem; outline: none; }
+  .form-group select:focus, .form-group input:focus { border-color: var(--blue); }
+
+  .boss-type-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+  .boss-type-card { background: var(--surface); border: 2px solid var(--border); border-radius: 10px; padding: 1.2rem; cursor: pointer; text-align: center; transition: all 0.3s; }
+  .boss-type-card:hover { transform: translateY(-2px); }
+  .boss-type-card.selected { border-color: var(--gold); background: var(--surface2); }
+  .boss-type-card.sub.selected { border-color: var(--hp-green); }
+  .boss-type-card.big.selected { border-color: var(--gold); }
+  .boss-type-card.mythical.selected { border-color: var(--mythical-pink); }
+  .boss-type-card .icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .boss-type-card .name { font-weight: 700; font-size: 1.1rem; }
+  .boss-type-card .desc { color: var(--muted); font-size: 0.8rem; margin-top: 0.3rem; }
+
+  .btn { display: block; width: 100%; padding: 1rem; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+  .btn-start { background: linear-gradient(135deg, var(--gold), #ff6e40); color: #000; }
+  .btn-start:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(255,215,64,0.3); }
+  .btn-start:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  /* Battle Screen */
+  .battle { display: none; max-width: 800px; width: 100%; padding: 1.5rem; }
+  .battle-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+  .boss-info { display: flex; align-items: center; gap: 1rem; }
+  .boss-avatar { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; border: 3px solid var(--border); }
+  .boss-avatar.sub { border-color: var(--hp-green); background: rgba(0,230,118,0.1); }
+  .boss-avatar.big { border-color: var(--gold); background: rgba(255,215,64,0.1); }
+  .boss-avatar.mythical { border-color: var(--mythical-pink); background: rgba(255,64,129,0.1); animation: mythical-pulse 2s infinite; }
+  @keyframes mythical-pulse { 0%,100% { box-shadow: 0 0 10px var(--mythical-pink); } 50% { box-shadow: 0 0 30px var(--mythical-glow); } }
+  .boss-name { font-size: 1.3rem; font-weight: 700; }
+  .boss-tier-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.2rem 0.6rem; border-radius: 4px; }
+  .boss-tier-label.sub { background: rgba(0,230,118,0.2); color: var(--hp-green); }
+  .boss-tier-label.big { background: rgba(255,215,64,0.2); color: var(--gold); }
+  .boss-tier-label.mythical { background: rgba(255,64,129,0.2); color: var(--mythical-pink); }
+
+  .battle-stats { text-align: right; font-size: 0.85rem; color: var(--muted); }
+  .combo-indicator { color: var(--combo); font-weight: 700; font-size: 1rem; }
+
+  /* HP Bar */
+  .hp-section { margin-bottom: 1.5rem; }
+  .hp-label { display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.85rem; }
+  .hp-bar-bg { background: var(--surface2); border-radius: 12px; height: 28px; overflow: hidden; border: 1px solid var(--border); position: relative; }
+  .hp-bar { height: 100%; border-radius: 12px; transition: width 0.8s ease, background 0.5s; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: #000; min-width: 40px; }
+  .hp-bar.high { background: linear-gradient(90deg, #00c853, var(--hp-green)); }
+  .hp-bar.mid { background: linear-gradient(90deg, #ff8f00, var(--hp-yellow)); }
+  .hp-bar.low { background: linear-gradient(90deg, #d50000, var(--hp-red)); }
+
+  /* Damage Float */
+  .damage-float { position: fixed; font-size: 2rem; font-weight: 900; pointer-events: none; z-index: 100; animation: float-up 1.5s forwards; }
+  @keyframes float-up { 0% { opacity: 1; transform: translateY(0) scale(1); } 100% { opacity: 0; transform: translateY(-80px) scale(1.3); } }
+
+  /* Question Card */
+  .question-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+  .question-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .q-tag { padding: 0.15rem 0.5rem; border-radius: 6px; font-size: 0.7rem; font-weight: 600; }
+  .q-tag.pisa { background: rgba(68,138,255,0.2); color: var(--blue); }
+  .q-tag.blooms { background: rgba(179,136,255,0.2); color: var(--purple); }
+  .q-tag.family { background: rgba(255,215,64,0.2); color: var(--gold); }
+  .question-num { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.5rem; }
+  .question-text { font-size: 1.15rem; line-height: 1.6; margin-bottom: 1.2rem; }
+
+  .answer-area { display: flex; gap: 0.8rem; }
+  .answer-input { flex: 1; padding: 0.8rem 1rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 1rem; outline: none; resize: vertical; min-height: 50px; }
+  .answer-input:focus { border-color: var(--blue); }
+  .btn-submit { padding: 0.8rem 1.5rem; background: var(--blue); color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; white-space: nowrap; }
+  .btn-submit:hover { background: #2979ff; }
+  .btn-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .btn-hint { display: inline-block; padding: 0.5rem 1rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; color: var(--gold); font-size: 0.85rem; margin-top: 0.8rem; transition: all 0.2s; }
+  .btn-hint:hover { border-color: var(--gold); background: rgba(255,215,64,0.1); }
+  .btn-hint:disabled { opacity: 0.3; cursor: not-allowed; }
+  .hint-box { background: rgba(255,215,64,0.08); border: 1px solid rgba(255,215,64,0.2); border-radius: 8px; padding: 0.8rem 1rem; margin-top: 0.8rem; color: var(--gold); font-size: 0.95rem; }
+
+  /* Feedback */
+  .feedback { border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 1rem; animation: fade-in 0.3s; }
+  @keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .feedback.correct { background: rgba(0,230,118,0.1); border: 1px solid rgba(0,230,118,0.3); }
+  .feedback.partial { background: rgba(255,171,0,0.1); border: 1px solid rgba(255,171,0,0.3); }
+  .feedback.wrong { background: rgba(255,23,68,0.1); border: 1px solid rgba(255,23,68,0.3); }
+  .feedback-header { font-weight: 700; margin-bottom: 0.3rem; }
+  .feedback.correct .feedback-header { color: var(--hp-green); }
+  .feedback.partial .feedback-header { color: var(--hp-yellow); }
+  .feedback.wrong .feedback-header { color: var(--hp-red); }
+
+  /* Victory / Defeat */
+  .result-screen { display: none; text-align: center; padding: 3rem 2rem; max-width: 600px; width: 100%; }
+  .result-screen h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+  .result-screen.victory h2 { background: linear-gradient(135deg, var(--gold), var(--hp-green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .result-screen.defeat h2 { color: var(--hp-red); }
+  .result-screen.mythical-victory h2 { background: linear-gradient(135deg, var(--mythical-pink), var(--purple), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .stars { font-size: 3rem; margin: 1rem 0; }
+  .stars .earned { color: var(--gold); }
+  .stars .empty { color: var(--border); }
+  .result-stats { background: var(--surface); border-radius: 10px; padding: 1.2rem; margin: 1.5rem 0; text-align: left; }
+  .result-stats div { display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid var(--border); }
+  .result-stats div:last-child { border: none; }
+  .btn-restart { display: inline-block; padding: 0.8rem 2rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); cursor: pointer; font-size: 1rem; margin-top: 1rem; }
+  .btn-restart:hover { border-color: var(--blue); }
+
+  /* Loading */
+  .loading { display: inline-block; width: 20px; height: 20px; border: 2px solid var(--border); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.6s linear infinite; vertical-align: middle; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* AI Config */
+  .ai-config { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; margin-bottom: 1.5rem; }
+  .ai-config summary { cursor: pointer; color: var(--blue); font-weight: 600; }
+  .ai-config .config-fields { margin-top: 1rem; display: grid; gap: 0.8rem; }
+  .ai-config input, .ai-config select { padding: 0.5rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 0.9rem; }
+  .ai-status { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-left: 0.5rem; }
+  .ai-status.connected { background: var(--hp-green); }
+  .ai-status.disconnected { background: var(--hp-red); }
+</style>
+</head>
+<body>
+
+<!-- SETUP SCREEN -->
+<div class="setup" id="setupScreen">
+  <h1>NETS Final Boss</h1>
+  <div class="subtitle">Interactive Demo &mdash; All 3 Boss Types</div>
+
+  <details class="ai-config">
+    <summary>AI Configuration <span class="ai-status disconnected" id="aiStatus"></span></summary>
+    <div class="config-fields">
+      <div>
+        <label style="color:var(--muted);font-size:0.8rem;">AI Provider</label>
+        <select id="aiProvider" onchange="toggleAIConfig()">
+          <option value="ollama">Ollama (Local)</option>
+          <option value="demo">Demo Mode (No AI — Hardcoded Evaluation)</option>
+        </select>
+      </div>
+      <div id="ollamaConfig">
+        <label style="color:var(--muted);font-size:0.8rem;">Ollama Endpoint</label>
+        <input type="text" id="ollamaUrl" value="http://192.168.1.15:11434/api/chat" placeholder="http://localhost:11434/api/chat">
+        <label style="color:var(--muted);font-size:0.8rem;margin-top:0.5rem;">Model</label>
+        <input type="text" id="ollamaModel" value="huihui_ai/qwen3.5-abliterated:9b-Claude">
+        <button onclick="testOllama()" style="margin-top:0.5rem;padding:0.4rem 1rem;background:var(--blue);color:#fff;border:none;border-radius:6px;cursor:pointer;">Test Connection</button>
+        <div id="ollamaTestResult" style="font-size:0.8rem;margin-top:0.3rem;color:var(--muted);"></div>
+      </div>
+    </div>
+  </details>
+
+  <div class="form-group">
+    <label>Boss Type</label>
+    <div class="boss-type-cards">
+      <div class="boss-type-card sub" onclick="selectBoss('sub')" id="card-sub">
+        <div class="icon">&#129413;</div>
+        <div class="name">Sub Boss</div>
+        <div class="desc">Daily. Current lesson. Hints available.</div>
+      </div>
+      <div class="boss-type-card big" onclick="selectBoss('big')" id="card-big">
+        <div class="icon">&#128293;</div>
+        <div class="name">Big Boss</div>
+        <div class="desc">Weekly. Cross-subject. 2&times; XP.</div>
+      </div>
+      <div class="boss-type-card mythical" onclick="selectBoss('mythical')" id="card-mythical">
+        <div class="icon">&#128128;</div>
+        <div class="name">Mythical Boss</div>
+        <div class="desc">Elite. PISA L5-6. No hints. One shot.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Grade Band</label>
+    <select id="gradeBand">
+      <option value="1-4">Grades 1-4 (50 HP)</option>
+      <option value="5-8" selected>Grades 5-8 (100 HP)</option>
+      <option value="9-11">Grades 9-11 (150 HP)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Subject Family</label>
+    <select id="subjectFamily">
+      <option value="aniq">Aniq Fanlar (Exact Sciences — Math, Physics)</option>
+      <option value="til">Til Fanlari (Languages — Uzbek, English)</option>
+      <option value="tabiat">Tabiat Fanlari (Natural Sciences — Biology, Geography)</option>
+      <option value="ijtimoiy">Ijtimoiy Fanlari (Social Sciences — History, Law)</option>
+      <option value="tarbiya">Tarbiya/Sanat (Formative — Art, Music, PE)</option>
+    </select>
+  </div>
+
+  <button class="btn btn-start" id="btnStart" onclick="startBattle()" disabled>Jangga Tayyor! (Ready to Fight!)</button>
+</div>
+
+<!-- BATTLE SCREEN -->
+<div class="battle" id="battleScreen">
+  <div class="battle-header">
+    <div class="boss-info">
+      <div class="boss-avatar" id="bossAvatar">&#129413;</div>
+      <div>
+        <div class="boss-name" id="bossName">Sub Boss</div>
+        <span class="boss-tier-label sub" id="bossTierLabel">DAILY</span>
+      </div>
+    </div>
+    <div class="battle-stats">
+      <div>Savol: <strong id="questionCount">1/6</strong></div>
+      <div class="combo-indicator" id="comboIndicator" style="display:none">COMBO x<span id="comboCount">0</span> &#9889;</div>
+    </div>
+  </div>
+
+  <div class="hp-section">
+    <div class="hp-label">
+      <span>Boss HP</span>
+      <span id="hpText">100 / 100</span>
+    </div>
+    <div class="hp-bar-bg">
+      <div class="hp-bar high" id="hpBar" style="width:100%">100%</div>
+    </div>
+  </div>
+
+  <div id="feedbackArea"></div>
+
+  <div class="question-card" id="questionCard">
+    <div class="question-meta" id="questionMeta"></div>
+    <div class="question-num" id="questionNum">Savol 1</div>
+    <div class="question-text" id="questionText"></div>
+    <div class="answer-area">
+      <textarea class="answer-input" id="answerInput" placeholder="Javobingizni yozing..." rows="2"></textarea>
+      <button class="btn-submit" id="btnSubmit" onclick="submitAnswer()">Yuborish</button>
+    </div>
+    <div id="hintArea">
+      <button class="btn-hint" id="btnHint" onclick="useHint()">&#128161; Ko'rsatma olish (<span id="hintCost">-10</span> HP)</button>
+    </div>
+    <div id="hintDisplay"></div>
+  </div>
+</div>
+
+<!-- RESULT SCREEN -->
+<div class="result-screen" id="resultScreen">
+  <h2 id="resultTitle"></h2>
+  <div class="stars" id="resultStars"></div>
+  <p id="resultMessage" style="color:var(--muted);font-size:1.1rem;"></p>
+  <div class="result-stats" id="resultStats"></div>
+  <button class="btn-restart" onclick="restart()">Qayta boshlash (Restart)</button>
+</div>
+
+<script>
+// ===== STATE =====
+let state = {
+  bossType: null, gradeBand: '5-8', family: 'aniq',
+  maxHP: 100, currentHP: 100, hintCost: 10,
+  questions: [], currentQ: 0, combo: 0,
+  correct: 0, partial: 0, wrong: 0, hintsUsed: 0, attempts: 1,
+  totalDamage: 0, aiProvider: 'ollama'
+};
+
+// ===== QUESTION BANKS =====
+const QUESTIONS = {
+  aniq: {
+    sub: [
+      { text: "Agar 3x + 7 = 22 bo'lsa, x ning qiymatini toping.", answer: "5", rubric: "x = 5. Yechish: 3x = 15, x = 5", pisa: "L3", blooms: "Apply", difficulty: "easy", hints: ["Avval 7 ni ikki tomondan ayiring.", "3x = 15 hosil bo'ladi. Endi x ni toping.", "15 ni 3 ga bo'ling."] },
+      { text: "Uchburchakning ikki tomoni 5 cm va 12 cm. Gipotenuzani toping.", answer: "13", rubric: "Pifagor teoremasi: sqrt(25+144) = sqrt(169) = 13 cm", pisa: "L3", blooms: "Apply", difficulty: "easy", hints: ["Pifagor teoremasini eslang: a² + b² = c²", "5² + 12² = 25 + 144 = 169", "√169 = ?"] },
+      { text: "Doira yuzasi 154 cm². Radiusini toping (π ≈ 22/7).", answer: "7", rubric: "πr² = 154, r² = 154 × 7/22 = 49, r = 7 cm", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["S = πr² formulasidan foydalaning.", "r² = S/π = 154 ÷ (22/7)", "r² = 49. r = ?"] },
+      { text: "Ikki son yig'indisi 48, ularning nisbati 3:5. Katta sonni toping.", answer: "30", rubric: "3k + 5k = 48, 8k = 48, k = 6. Katta son = 5×6 = 30", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["Sonlarni 3k va 5k deb belgilang.", "3k + 5k = 48 tenglamani yeching.", "k = 6. Katta son = 5 × 6."] },
+      { text: "Funktsiya f(x) = 2x² - 8x + 6 ning minimumini toping va isbotlang.", answer: "-2", rubric: "f'(x) = 4x - 8 = 0, x = 2. f(2) = 8 - 16 + 6 = -2. f''(2) = 4 > 0, min.", pisa: "L5", blooms: "Evaluate", difficulty: "hard", hints: ["Hosilani toping va 0 ga tenglang.", "f'(x) = 4x - 8. x = 2 da.", "f(2) = 2(4) - 8(2) + 6 = ?"] },
+      { text: "Zavod kuniga 1200 ta mahsulot ishlab chiqaradi. Har oyda 5% ko'payadi. 3 oydan keyin kunlik ishlab chiqarish qancha?", answer: "1389", rubric: "1200 × 1.05³ = 1200 × 1.157625 ≈ 1389", pisa: "L5", blooms: "Evaluate", difficulty: "hard", hints: ["Murakkab foiz formulasini ishlating.", "A = 1200 × (1.05)³", "1.05³ ≈ 1.1576. 1200 × 1.1576 = ?"] }
+    ],
+    big: [
+      { text: "Fizika: 5 kg jism 2 m/s² tezlanish bilan harakatlanmoqda. Kuchni toping. Keyin shu kuch bilan 10 kg jismning tezlanishini hisoblang.", answer: "10 N; 1 m/s²", rubric: "F = ma = 5×2 = 10 N. a = F/m = 10/10 = 1 m/s²", pisa: "L4", blooms: "Apply", difficulty: "medium", hints: ["Nyutonning ikkinchi qonuni: F = ma", "F = 5 × 2 = 10 N topildi.", "Endi a = F/m = 10/10 = ?"] },
+      { text: "Kimyo: Suvning (H₂O) molyar massasi 18 g/mol. 90 g suvda necha mol bor? Agar har bir molekulada 10 elektron bo'lsa, jami necha elektron?", answer: "5 mol; 5 × 6.022×10²³ × 10", rubric: "n = m/M = 90/18 = 5 mol. Elektronlar: 5 × 6.022×10²³ × 10 ≈ 3.01×10²⁵", pisa: "L5", blooms: "Analyze", difficulty: "hard", hints: ["n = m/M formulasini ishlating.", "90/18 = 5 mol.", "Har bir molda Avogadro soni molekula bor."] },
+      { text: "Matematika: Ketma-ketlik: 2, 6, 18, 54, ... n-chi hadni toping va 8-hadni hisoblang.", answer: "aₙ = 2·3ⁿ⁻¹; a₈ = 4374", rubric: "Geometrik ketma-ketlik, q=3. aₙ = 2·3^(n-1). a₈ = 2·3⁷ = 2·2187 = 4374", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["Bu geometrik ketma-ketlik. q ni toping.", "q = 6/2 = 3. Umumiy formula: aₙ = a₁·qⁿ⁻¹", "a₈ = 2 × 3⁷ = 2 × 2187 = ?"] },
+      { text: "Algebra: |2x - 5| > 3 tengsizlikni yeching va son o'qida tasvirlang.", answer: "x < 1 yoki x > 4", rubric: "2x-5 > 3 → x > 4; 2x-5 < -3 → x < 1. Javob: (-∞, 1) ∪ (4, +∞)", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["Modul tengsizligini ikki holatga ajrating.", "1-holat: 2x-5 > 3. 2-holat: 2x-5 < -3", "x > 4 yoki x < 1"] },
+      { text: "Geometriya: Silindrning balandligi 10 cm, asosining radiusi 3 cm. To'liq sirt yuzasini toping.", answer: "78π ≈ 245.04 cm²", rubric: "S = 2πr(r+h) = 2π·3·(3+10) = 78π ≈ 245.04 cm²", pisa: "L4", blooms: "Apply", difficulty: "medium", hints: ["Silindr sirt yuzasi: S = 2πr(r+h)", "S = 2π × 3 × (3+10)", "S = 6π × 13 = 78π"] },
+      { text: "Fizika: Rezistor 12 Ω, tok kuchi 0.5 A. Quvvatni va 2 daqiqada ajraladigan issiqlik miqdorini toping.", answer: "P = 3 W; Q = 360 J", rubric: "P = I²R = 0.25×12 = 3 W. Q = Pt = 3×120 = 360 J", pisa: "L5", blooms: "Evaluate", difficulty: "hard", hints: ["P = I²R formulasini ishlating.", "P = (0.5)² × 12 = 3 W", "Q = P × t (sekundlarda!)"] }
+    ],
+    mythical: [
+      { text: "Shahar suv ta'minoti ifloslanmoqda. Kimyo (filtratsiya usullari), matematika (oqim tezligi), va biologiya (bakteriya ko'payishi) yordamida 50,000 aholi uchun 72 soat ichida tozalash rejasini tuzing. Har bir bosqichni hisob-kitob bilan asoslang.", answer: "", rubric: "Multi-disciplinary: filtration method + flow rate calc + bacterial doubling time analysis + feasibility within 72h constraint", pisa: "L6", blooms: "Create", difficulty: "hard", hints: [] },
+      { text: "n tomonli qavariq ko'pburchakning ichki burchaklari yig'indisi (n-2)×180° ekanini isbotlang. Keyin 24 m² yuzali muntazam oltiburchakli polni plitka qilish uchun kerakli minimal materialni hisoblang.", answer: "", rubric: "Proof by triangulation from vertex + hexagonal tiling calculation using A = (3√3/2)s²", pisa: "L6", blooms: "Create", difficulty: "hard", hints: [] },
+      { text: "Bir fermada 100 gektar yer bor. Bug'doy har gektardan 3 tonna, paxtadan 1.5 tonna hosil beradi. Bug'doyga 500 litr, paxtaga 800 litr suv kerak gektariga. Jami suv 60,000 litr. Bug'doy narxi 2,000,000 so'm/tonna, paxta 4,000,000 so'm/tonna. Maksimal foyda uchun optimallashtirish masalasini yeching (chiziqli dasturlash).", answer: "", rubric: "LP: maximize 6M·x + 6M·y subject to x+y≤100, 500x+800y≤60000, x,y≥0. Graphical or simplex solution.", pisa: "L6", blooms: "Create", difficulty: "hard", hints: [] }
+    ]
+  },
+  til: {
+    sub: [
+      { text: "Quyidagi gapni to'ldiring: 'Agar men o'qituvchi ___ (bo'lmoq), barcha bolalarga kitob ___ (bermoq) edi.'", answer: "bo'lganimda, bergan", rubric: "Shart mayli: bo'lganimda, bergan bo'lardim", pisa: "L3", blooms: "Apply", difficulty: "easy", hints: ["Shart mayli (conditional) shaklini ishlating.", "bo'lmoq → bo'lganimda", "bermoq → bergan bo'lardim"] },
+      { text: "Write a paragraph (5-7 sentences) about your favorite season. Use at least 3 adjectives and 2 comparative forms.", answer: "", rubric: "5-7 sentences, 3+ adjectives, 2+ comparatives, coherent structure, grammatically correct", pisa: "L4", blooms: "Apply", difficulty: "medium", hints: ["Start with which season and why.", "Use adjectives like: warm, beautiful, colorful...", "Comparatives: warmer than, more beautiful than..."] },
+      { text: "'Mehr va shafqat' mavzusida 80-100 so'zli insho yozing. Kirish, asosiy qism va xulosa bo'lishi shart.", answer: "", rubric: "80-100 words, 3-part structure (intro/body/conclusion), coherent argument, correct grammar", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["Kirish: mavzuni tanishtiring.", "Asosiy qism: misollar keltiring.", "Xulosa: fikringizni yakunlang."] },
+      { text: "Read and respond: 'The global temperature has risen by 1.1°C since pre-industrial times.' In 3-4 sentences, explain what this means for agriculture in Central Asia.", answer: "", rubric: "Demonstrates comprehension, links to agriculture, mentions Central Asia context, analytical reasoning", pisa: "L5", blooms: "Evaluate", difficulty: "hard", hints: ["What does temperature rise affect?", "Think about water, crops, seasons.", "How is Central Asia specifically affected?"] }
+    ],
+    big: [
+      { text: "Ingliz tilida: 'Education is the most powerful weapon which you can use to change the world.' (Mandela) — Ushbu iqtibosni sharhlang va O'zbekiston kontekstida 60-80 so'zda fikringizni bildiring.", answer: "", rubric: "Quote interpretation + Uzbekistan context + personal opinion + coherent structure", pisa: "L4", blooms: "Evaluate", difficulty: "medium", hints: ["First explain what Mandela meant.", "Then connect to Uzbekistan's education.", "Share your personal view."] },
+      { text: "O'zbek tili: 'Kitob — bilim manbai' mavzusida 3 ta dalil keltiring va har birini tushuntiring.", answer: "", rubric: "3 distinct arguments, each with explanation, logical flow, correct Uzbek grammar", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["Birinchi dalil: bilim olish.", "Ikkinchi dalil: dunyoqarash kengayishi.", "Uchinchi dalil: til boyishi."] }
+    ],
+    mythical: [
+      { text: "Ikki tildan foydalanib (O'zbek + Ingliz), 150-200 so'zli esse yozing: 'Kelajakda sun'iy intellekt ta'limni qanday o'zgartiradi?' Har bir tilni kamida 40% ishlating. Dalillar, misollar va shaxsiy fikr bo'lishi shart.", answer: "", rubric: "Bilingual essay, 150-200 words, 40%+ each language, AI education arguments, examples, personal opinion, coherent structure", pisa: "L6", blooms: "Create", difficulty: "hard", hints: [] }
+    ]
+  },
+  tabiat: {
+    sub: [
+      { text: "Fotosintez jarayonini 3-4 gapda tushuntiring. Qanday moddalar kerak va qanday mahsulotlar hosil bo'ladi?", answer: "", rubric: "CO₂ + H₂O + light → C₆H₁₂O₆ + O₂. Process description in 3-4 sentences.", pisa: "L3", blooms: "Understand", difficulty: "easy", hints: ["O'simlik nima yutadi? (CO₂, suv, yorug'lik)", "Nima hosil bo'ladi? (glyukoza, kislorod)", "Bu jarayon qayerda sodir bo'ladi? (xloroplast)"] },
+      { text: "Nima uchun bahor va kuzda kun va tun teng bo'ladi? Yerning o'q atrofidagi harakati bilan tushuntiring.", answer: "", rubric: "Earth's axial tilt + equinox explanation + day/night equality at equator", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["Yer o'qi 23.5° og'ma.", "Ekvinoks vaqtida quyosh ekvator ustida.", "Shuning uchun kun va tun teng."] },
+      { text: "Orol dengizining qurishi ekologik, iqtisodiy va ijtimoiy qanday oqibatlarga olib keldi? Kamida 3 ta soha bo'yicha tahlil qiling.", answer: "", rubric: "3+ areas analyzed (ecological: biodiversity loss, economic: fishing industry collapse, social: health/migration), causal chains", pisa: "L5", blooms: "Evaluate", difficulty: "hard", hints: ["Ekologik: hayvonot va o'simlik dunyosi.", "Iqtisodiy: baliqchilik, turizm.", "Ijtimoiy: sog'liq, migratsiya."] }
+    ],
+    big: [
+      { text: "Biologiya: Hujayra bo'linishining (mitoz) bosqichlarini tartib bilan tushuntiring va har bir bosqichda nima sodir bo'lishini yozing.", answer: "", rubric: "Prophase, Metaphase, Anaphase, Telophase + Cytokinesis. Each stage described accurately.", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["4 ta asosiy bosqich bor.", "Profaza: xromosomalar ko'rinadi.", "Metafaza: xromosomalar markazga joylashadi."] },
+      { text: "Geografiya: O'zbekistondagi cho'l iqlimining xususiyatlarini tushuntiring va qanday moslashish strategiyalari borligini 4-5 gapda yozing.", answer: "", rubric: "Desert climate characteristics + adaptation strategies (irrigation, drought-resistant crops, etc.)", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["Cho'l iqlimi: issiq, quruq.", "Sug'orish tizimlari haqida o'ylang.", "Qurg'oqchilikka chidamli ekinlar."] }
+    ],
+    mythical: [
+      { text: "Yangi virusli kasallik tarqalmoqda. Biologiya (virusning ko'payishi), geografiya (tarqalish yo'llari), va kimyo (dezinfeksiya usullari) fanlaridan foydalanib, 100,000 aholiga ega shahar uchun 30 kunlik epidemiologik javob rejasini tuzing.", answer: "", rubric: "Multi-disciplinary epidemic response: viral reproduction cycle + geographic spread modeling + chemical disinfection protocols + 30-day timeline", pisa: "L6", blooms: "Create", difficulty: "hard", hints: [] }
+    ]
+  },
+  ijtimoiy: {
+    sub: [
+      { text: "O'zbekiston Konstitutsiyasining 1-moddasi nimani belgilaydi? Buning amaliy ahamiyatini tushuntiring.", answer: "", rubric: "Article 1: Uzbekistan is sovereign democratic republic. Practical significance: independence, self-governance", pisa: "L3", blooms: "Understand", difficulty: "easy", hints: ["1-modda: mustaqillik va suverenitret.", "Demokratik respublika degani nima?", "Amaliy ahamiyati: o'z yo'lini belgilash."] },
+      { text: "Amir Temur davrida qurilgan 2 ta me'moriy obidani nomlang va ularning madaniy ahamiyatini tahlil qiling.", answer: "", rubric: "2 monuments (e.g., Registan, Gur-i Amir) + cultural significance analysis", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["Registan va Gur-i Amir haqida o'ylang.", "Nima uchun ular muhim?", "Madaniy meros va turizm."] },
+      { text: "Fuqarolik jamiyati nima? O'zbekistondagi fuqarolik jamiyati institutlarining rolini baholang va kamida 2 ta misol keltiring.", answer: "", rubric: "Civil society definition + role assessment + 2 examples from Uzbekistan context", pisa: "L5", blooms: "Evaluate", difficulty: "hard", hints: ["Fuqarolik jamiyati = davlatdan mustaqil tashkilotlar.", "Mahalla, NNT'lar...", "Ularning ta'lim va ijtimoiy hayotdagi roli."] }
+    ],
+    big: [
+      { text: "Tarix: Buyuk Ipak yo'lining O'rta Osiyo iqtisodiyoti va madaniyatiga ta'sirini 5-6 gapda tahlil qiling.", answer: "", rubric: "Silk Road economic impact (trade, wealth) + cultural impact (knowledge exchange, religion, art) on Central Asia", pisa: "L4", blooms: "Analyze", difficulty: "medium", hints: ["Savdo va boylik haqida.", "Madaniy almashish: din, san'at, fan.", "Samarqand va Buxoro roli."] }
+    ],
+    mythical: [
+      { text: "Siz yangi tashkil etilgan davlatning bosh vaziri sifatida tayinlandingiz. Davlat 5 million aholi, cheklangan resurslar, 3 ta qo'shni davlat bilan chegaradosh. Konstitutsiya, iqtisodiy tizim va tashqi siyosat asoslarini loyihalang. Har bir qarorni tarixiy misollar bilan asoslang.", answer: "", rubric: "Constitution design + economic system + foreign policy, each justified with historical examples. Multi-disciplinary reasoning.", pisa: "L6", blooms: "Create", difficulty: "hard", hints: [] }
+    ]
+  },
+  tarbiya: {
+    sub: [
+      { text: "Bu hafta nima yaratdingiz yoki nimani o'rgandingiz? Erkin yozing — to'g'ri yoki noto'g'ri javob yo'q.", answer: "", rubric: "FORMATIVE ONLY — no scoring, encouraging response", pisa: "N/A", blooms: "Reflect", difficulty: "easy", hints: ["Istalgan narsani yozing!", "San'at, musiqa, sport — har qanday mavzu.", "Bu baholash emas, shunchaki ulashish."] }
+    ],
+    big: [
+      { text: "O'zingiz haqingizda bir narsani ulashing: bu hafta qanday his qildingiz va nima sizni ilhomlantirdi?", answer: "", rubric: "FORMATIVE ONLY — no scoring", pisa: "N/A", blooms: "Reflect", difficulty: "easy", hints: [] }
+    ],
+    mythical: [
+      { text: "Agar dunyoni bir kunga o'zgartirish imkoniyatingiz bo'lsa, nima qilgan bo'lardingiz va nega? Ijodiy fikrlang.", answer: "", rubric: "FORMATIVE ONLY — encouraging response, no scoring", pisa: "N/A", blooms: "Create", difficulty: "easy", hints: [] }
+    ]
+  }
+};
+
+// ===== BOSS CONFIG =====
+const BOSS_CONFIG = {
+  sub: { name: "Sub Boss", icon: "\u{1F985}", label: "DAILY", labelClass: "sub" },
+  big: { name: "Big Boss", icon: "\u{1F525}", label: "WEEKLY", labelClass: "big" },
+  mythical: { name: "Mythical Boss", icon: "\u{1F480}", label: "ELITE", labelClass: "mythical" }
+};
+
+const HP_MAP = { '1-4': { hp: 50, hintCost: 5 }, '5-8': { hp: 100, hintCost: 10 }, '9-11': { hp: 150, hintCost: 15 } };
+const DAMAGE = { easy: 10, medium: 20, hard: 30 };
+
+// ===== SETUP =====
+function selectBoss(type) {
+  state.bossType = type;
+  document.querySelectorAll('.boss-type-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('card-' + type).classList.add('selected');
+  document.getElementById('btnStart').disabled = false;
+
+  // Hide hints for mythical
+  if (type === 'mythical') {
+    document.getElementById('btnHint').style.display = 'none';
+  }
+}
+
+function toggleAIConfig() {
+  const provider = document.getElementById('aiProvider').value;
+  document.getElementById('ollamaConfig').style.display = provider === 'ollama' ? 'block' : 'none';
+  state.aiProvider = provider;
+}
+
+async function testOllama() {
+  const url = document.getElementById('ollamaUrl').value;
+  const model = document.getElementById('ollamaModel').value;
+  const result = document.getElementById('ollamaTestResult');
+  const status = document.getElementById('aiStatus');
+  result.textContent = 'Testing...';
+  try {
+    const resp = await fetch(url, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model, messages: [{ role: 'user', content: 'Say OK' }], stream: false })
+    });
+    if (resp.ok) {
+      result.innerHTML = '<span style="color:var(--hp-green)">Connected!</span>';
+      status.className = 'ai-status connected';
+    } else {
+      result.innerHTML = '<span style="color:var(--hp-red)">Error: ' + resp.status + '</span>';
+      status.className = 'ai-status disconnected';
+    }
+  } catch (e) {
+    result.innerHTML = '<span style="color:var(--hp-red)">Failed: ' + e.message + '</span>';
+    status.className = 'ai-status disconnected';
+  }
+}
+
+// ===== START BATTLE =====
+function startBattle() {
+  state.gradeBand = document.getElementById('gradeBand').value;
+  state.family = document.getElementById('subjectFamily').value;
+  const hpConfig = HP_MAP[state.gradeBand];
+  state.maxHP = hpConfig.hp;
+  state.currentHP = hpConfig.hp;
+  state.hintCost = hpConfig.hintCost;
+  state.currentQ = 0;
+  state.combo = 0;
+  state.correct = 0; state.partial = 0; state.wrong = 0;
+  state.hintsUsed = 0; state.totalDamage = 0;
+
+  // Load questions
+  const bank = QUESTIONS[state.family];
+  state.questions = [...(bank[state.bossType] || bank.sub)];
+
+  // Setup UI
+  document.getElementById('setupScreen').style.display = 'none';
+  document.getElementById('battleScreen').style.display = 'block';
+  document.getElementById('resultScreen').style.display = 'none';
+
+  const config = BOSS_CONFIG[state.bossType];
+  document.getElementById('bossAvatar').textContent = config.icon;
+  document.getElementById('bossAvatar').className = 'boss-avatar ' + state.bossType;
+  document.getElementById('bossName').textContent = config.name;
+  document.getElementById('bossTierLabel').textContent = config.label;
+  document.getElementById('bossTierLabel').className = 'boss-tier-label ' + config.labelClass;
+
+  document.getElementById('hintCost').textContent = '-' + state.hintCost;
+  if (state.bossType === 'mythical') {
+    document.getElementById('btnHint').style.display = 'none';
+  } else {
+    document.getElementById('btnHint').style.display = 'inline-block';
+  }
+
+  updateHP();
+  loadQuestion();
+}
+
+// ===== QUESTION LOADING =====
+function loadQuestion() {
+  if (state.currentQ >= state.questions.length) {
+    // All questions done — check if boss is defeated
+    if (state.currentHP > 0) {
+      endBattle(false);
+    } else {
+      endBattle(true);
+    }
+    return;
+  }
+
+  const q = state.questions[state.currentQ];
+  document.getElementById('questionNum').textContent = `Savol ${state.currentQ + 1}`;
+  document.getElementById('questionCount').textContent = `${state.currentQ + 1}/${state.questions.length}`;
+  document.getElementById('questionText').textContent = q.text;
+
+  // Meta tags
+  const meta = document.getElementById('questionMeta');
+  meta.innerHTML = `
+    <span class="q-tag pisa">PISA ${q.pisa}</span>
+    <span class="q-tag blooms">${q.blooms}</span>
+    <span class="q-tag family">${state.family.charAt(0).toUpperCase() + state.family.slice(1)}</span>
+  `;
+
+  document.getElementById('answerInput').value = '';
+  document.getElementById('answerInput').focus();
+  document.getElementById('feedbackArea').innerHTML = '';
+  document.getElementById('hintDisplay').innerHTML = '';
+  document.getElementById('btnSubmit').disabled = false;
+  document.getElementById('btnHint').disabled = false;
+  state._hintIndex = 0;
+}
+
+// ===== ANSWER SUBMISSION =====
+async function submitAnswer() {
+  const answer = document.getElementById('answerInput').value.trim();
+  if (!answer) return;
+
+  document.getElementById('btnSubmit').disabled = true;
+  document.getElementById('btnSubmit').innerHTML = '<span class="loading"></span>';
+
+  const q = state.questions[state.currentQ];
+  let score, feedback;
+
+  if (state.family === 'tarbiya') {
+    // Formative only — always encouraging
+    score = 100;
+    feedback = "Ajoyib! Fikringiz uchun rahmat. Bu yerda to'g'ri yoki noto'g'ri javob yo'q — sizning ovozingiz muhim.";
+  } else if (state.aiProvider === 'ollama') {
+    try {
+      const result = await evaluateWithOllama(q, answer);
+      score = result.score;
+      feedback = result.feedback;
+    } catch (e) {
+      // Fallback to keyword matching
+      const result = fallbackEvaluate(q, answer);
+      score = result.score;
+      feedback = result.feedback + ' (AI mavjud emas — kalit so\'z baholash)';
+    }
+  } else {
+    const result = fallbackEvaluate(q, answer);
+    score = result.score;
+    feedback = result.feedback;
+  }
+
+  // Calculate damage
+  let damage = 0;
+  let category;
+  if (score >= 90) {
+    damage = DAMAGE[q.difficulty];
+    category = 'correct';
+    state.correct++;
+    state.combo++;
+  } else if (score >= 50) {
+    damage = Math.floor(DAMAGE[q.difficulty] * 0.5);
+    category = 'partial';
+    state.partial++;
+    state.combo = 0;
+  } else {
+    damage = 0;
+    category = 'wrong';
+    state.wrong++;
+    state.combo = 0;
+  }
+
+  // Combo bonus
+  if (state.combo >= 3 && damage > 0) {
+    damage *= 2;
+    showDamageFloat(damage, true);
+  } else if (damage > 0) {
+    showDamageFloat(damage, false);
+  }
+
+  // Apply damage
+  state.currentHP = Math.max(0, state.currentHP - damage);
+  state.totalDamage += damage;
+  updateHP();
+  updateCombo();
+
+  // Show feedback
+  const feedbackArea = document.getElementById('feedbackArea');
+  feedbackArea.innerHTML = `
+    <div class="feedback ${category}">
+      <div class="feedback-header">${category === 'correct' ? 'To\'g\'ri! ✓' : category === 'partial' ? 'Qisman to\'g\'ri ~' : 'Noto\'g\'ri ✗'} ${damage > 0 ? '(-' + damage + ' HP)' : ''}</div>
+      <div>${feedback}</div>
+      ${score < 90 && q.rubric ? '<div style="margin-top:0.5rem;color:var(--muted);font-size:0.85rem;">Kutilgan: ' + q.rubric + '</div>' : ''}
+    </div>
+  `;
+
+  document.getElementById('btnSubmit').textContent = 'Yuborish';
+
+  // Check if boss defeated
+  if (state.currentHP <= 0) {
+    setTimeout(() => endBattle(true), 1500);
+    return;
+  }
+
+  // Next question after delay
+  setTimeout(() => {
+    state.currentQ++;
+    loadQuestion();
+  }, 2000);
+}
+
+// ===== OLLAMA EVALUATION =====
+async function evaluateWithOllama(question, studentAnswer) {
+  const url = document.getElementById('ollamaUrl').value;
+  const model = document.getElementById('ollamaModel').value;
+
+  const prompt = `You are an exam evaluator for NETS education system. Evaluate the student's answer.
+
+Question: ${question.text}
+Expected answer/rubric: ${question.rubric}
+Correct answer: ${question.answer || 'Open-ended — use rubric'}
+Student's answer: ${studentAnswer}
+
+Respond in this EXACT JSON format only, nothing else:
+{"score": <0-100>, "feedback": "<one sentence feedback in Uzbek>"}
+
+Score guide: 90-100 = fully correct, 50-89 = partially correct (right method, minor errors), 0-49 = incorrect.
+NEVER reveal the correct answer in feedback. Only guide.`;
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+
+  try {
+    const resp = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model, messages: [{ role: 'user', content: prompt }], stream: false }),
+      signal: controller.signal
+    });
+    clearTimeout(timeout);
+    const data = await resp.json();
+    const content = data.message?.content || '';
+    // Extract JSON from response (handle markdown wrapping)
+    const jsonMatch = content.match(/\{[\s\S]*?"score"[\s\S]*?"feedback"[\s\S]*?\}/);
+    if (jsonMatch) {
+      const parsed = JSON.parse(jsonMatch[0]);
+      return { score: Math.min(100, Math.max(0, parsed.score)), feedback: parsed.feedback };
+    }
+    throw new Error('No JSON in response');
+  } catch (e) {
+    clearTimeout(timeout);
+    throw e;
+  }
+}
+
+// ===== FALLBACK EVALUATION =====
+function fallbackEvaluate(question, studentAnswer) {
+  const answer = studentAnswer.toLowerCase().replace(/[,.'"\s]+/g, ' ').trim();
+  const expected = (question.answer || '').toLowerCase().replace(/[,.'"\s]+/g, ' ').trim();
+
+  if (!expected) {
+    // Open-ended — give partial credit based on length
+    if (answer.length > 100) return { score: 75, feedback: "Yaxshi javob. Batafsilroq tahlil kutilgan edi." };
+    if (answer.length > 40) return { score: 55, feedback: "Qisman javob. Ko'proq tushuntirish kerak." };
+    return { score: 30, feedback: "Javob juda qisqa. Batafsil yozing." };
+  }
+
+  // Check exact match
+  if (answer.includes(expected) || expected.includes(answer)) {
+    return { score: 95, feedback: "Ajoyib! To'g'ri javob." };
+  }
+
+  // Check numeric proximity
+  const numExpected = parseFloat(expected.replace(/[^\d.-]/g, ''));
+  const numAnswer = parseFloat(answer.replace(/[^\d.-]/g, ''));
+  if (!isNaN(numExpected) && !isNaN(numAnswer)) {
+    if (numExpected === numAnswer) return { score: 95, feedback: "To'g'ri!" };
+    if (Math.abs(numExpected - numAnswer) / Math.max(1, Math.abs(numExpected)) < 0.05) {
+      return { score: 70, feedback: "Yaqin, lekin aniqroq hisoblang." };
+    }
+  }
+
+  // Keyword overlap
+  const expectedWords = expected.split(' ').filter(w => w.length > 2);
+  const answerWords = answer.split(' ').filter(w => w.length > 2);
+  const overlap = expectedWords.filter(w => answerWords.some(a => a.includes(w) || w.includes(a))).length;
+  const ratio = expectedWords.length > 0 ? overlap / expectedWords.length : 0;
+
+  if (ratio > 0.7) return { score: 80, feedback: "Yaxshi! Asosiy g'oya to'g'ri." };
+  if (ratio > 0.4) return { score: 55, feedback: "Qisman to'g'ri. Yechish usulini tekshiring." };
+  return { score: 20, feedback: "Noto'g'ri javob. Qayta o'ylab ko'ring." };
+}
+
+// ===== HINTS =====
+function useHint() {
+  const q = state.questions[state.currentQ];
+  if (!q.hints || state._hintIndex >= q.hints.length) return;
+
+  state.currentHP = Math.min(state.maxHP, state.currentHP + state.hintCost);
+  state.hintsUsed++;
+  state.combo = 0;
+  updateHP();
+  updateCombo();
+
+  const hint = q.hints[state._hintIndex];
+  state._hintIndex++;
+
+  const display = document.getElementById('hintDisplay');
+  display.innerHTML += `<div class="hint-box">💡 Ko'rsatma ${state._hintIndex}: ${hint}</div>`;
+
+  if (state._hintIndex >= q.hints.length) {
+    document.getElementById('btnHint').disabled = true;
+  }
+
+  showDamageFloat(state.hintCost, false, true);
+}
+
+// ===== UI UPDATES =====
+function updateHP() {
+  const pct = Math.max(0, (state.currentHP / state.maxHP) * 100);
+  const bar = document.getElementById('hpBar');
+  bar.style.width = pct + '%';
+  bar.textContent = Math.round(pct) + '%';
+  bar.className = 'hp-bar ' + (pct > 60 ? 'high' : pct > 30 ? 'mid' : 'low');
+  document.getElementById('hpText').textContent = `${state.currentHP} / ${state.maxHP}`;
+}
+
+function updateCombo() {
+  const indicator = document.getElementById('comboIndicator');
+  if (state.combo >= 2) {
+    indicator.style.display = 'block';
+    document.getElementById('comboCount').textContent = state.combo;
+    if (state.combo >= 3) indicator.style.color = 'var(--combo)';
+    else indicator.style.color = 'var(--gold)';
+  } else {
+    indicator.style.display = 'none';
+  }
+}
+
+function showDamageFloat(value, isCombo, isHeal = false) {
+  const el = document.createElement('div');
+  el.className = 'damage-float';
+  el.textContent = isHeal ? `+${value} HP` : `-${value} HP`;
+  el.style.color = isHeal ? 'var(--hp-red)' : isCombo ? 'var(--combo)' : 'var(--hp-green)';
+  el.style.left = (Math.random() * 200 + 300) + 'px';
+  el.style.top = '180px';
+  if (isCombo) el.textContent += ' COMBO!';
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 1500);
+}
+
+// ===== END BATTLE =====
+function endBattle(victory) {
+  document.getElementById('battleScreen').style.display = 'none';
+  const result = document.getElementById('resultScreen');
+  result.style.display = 'block';
+  result.className = 'result-screen';
+
+  const title = document.getElementById('resultTitle');
+  const msg = document.getElementById('resultMessage');
+  const starsEl = document.getElementById('resultStars');
+  const statsEl = document.getElementById('resultStats');
+
+  if (victory) {
+    // Calculate stars
+    let stars = 1;
+    const hpRemaining = ((state.maxHP - state.currentHP) / state.maxHP); // how much of boss HP was depleted... wait
+    // Actually currentHP is boss HP remaining after our damage
+    const hpPct = state.currentHP / state.maxHP; // remaining boss HP = 0 means we killed it
+    // Stars: based on attempts and hints
+    if (state.hintsUsed === 0 && state.wrong === 0) stars = 3;
+    else if (state.wrong <= 1 && state.hintsUsed <= 1) stars = 2;
+
+    if (state.bossType === 'mythical') {
+      result.classList.add('mythical-victory');
+      title.textContent = '⚡ MYTHICAL BOSS DEFEATED! ⚡';
+      msg.textContent = "Siz afsonaviy bossni yengdingiz! Bu kamdan-kam uchraydigan yutuq — siz haqiqiy chempionsiz!";
+      starsEl.innerHTML = ''; // No stars for mythical
+    } else {
+      result.classList.add('victory');
+      title.textContent = 'Boss Yengildi! 🎉';
+      msg.textContent = stars === 3 ? "Mukammal! Birinchi urinishda, ko'rsatmasiz!" :
+                         stars === 2 ? "Ajoyib natija!" : "Boss yengildi — davom eting!";
+      starsEl.innerHTML = Array(3).fill(0).map((_, i) =>
+        `<span class="${i < stars ? 'earned' : 'empty'}">${i < stars ? '⭐' : '☆'}</span>`
+      ).join('');
+    }
+
+    const baseXP = state.bossType === 'mythical' ? 5000 :
+                   state.bossType === 'big' ? (stars === 3 ? 2000 : stars === 2 ? 1400 : 1000) :
+                   (stars === 3 ? 1000 : stars === 2 ? 700 : 500);
+
+    statsEl.innerHTML = `
+      <div><span>Boss turi</span><strong>${BOSS_CONFIG[state.bossType].name}</strong></div>
+      <div><span>To'g'ri javoblar</span><strong>${state.correct}/${state.questions.length}</strong></div>
+      <div><span>Qisman</span><strong>${state.partial}</strong></div>
+      <div><span>Noto'g'ri</span><strong>${state.wrong}</strong></div>
+      <div><span>Ko'rsatmalar</span><strong>${state.hintsUsed}</strong></div>
+      <div><span>Combo max</span><strong>${state.combo}</strong></div>
+      <div><span style="color:var(--gold)">XP</span><strong style="color:var(--gold)">+${baseXP} XP</strong></div>
+      ${state.bossType === 'big' ? '<div><span>Bonus</span><strong>Haftalik nishon + Streak muzlatish</strong></div>' : ''}
+      ${state.bossType === 'mythical' ? '<div><span>Bonus</span><strong>Eksklyuziv unvon + Avatar ramkasi + Shon-sharaf zali</strong></div>' : ''}
+    `;
+  } else {
+    result.classList.add('defeat');
+    if (state.bossType === 'mythical') {
+      title.textContent = 'Afsonaviy Boss chekinadi...';
+      msg.textContent = "Tashvishlanmang — Mythical Boss'ni yengish juda kam odamga nasib etadi. Bu tajriba o'zi mukofot!";
+    } else {
+      title.textContent = 'Hali emas! 💪';
+      msg.textContent = "Miyangiz hozir Feedback oldi. Qayta urinib ko'ring — savollar yangilanadi!";
+    }
+    starsEl.innerHTML = '<span class="empty">☆</span><span class="empty">☆</span><span class="empty">☆</span>';
+    statsEl.innerHTML = `
+      <div><span>Boss HP qoldi</span><strong>${state.currentHP} / ${state.maxHP}</strong></div>
+      <div><span>To'g'ri javoblar</span><strong>${state.correct}/${state.questions.length}</strong></div>
+      <div><span>Jami zarar</span><strong>${state.totalDamage} HP</strong></div>
+      <div><span>Ko'rsatmalar</span><strong>${state.hintsUsed}</strong></div>
+    `;
+  }
+}
+
+function restart() {
+  document.getElementById('setupScreen').style.display = 'block';
+  document.getElementById('battleScreen').style.display = 'none';
+  document.getElementById('resultScreen').style.display = 'none';
+  state.bossType = null;
+  document.querySelectorAll('.boss-type-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('btnStart').disabled = true;
+}
+
+// Handle Enter key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey && document.getElementById('battleScreen').style.display === 'block') {
+    e.preventDefault();
+    if (!document.getElementById('btnSubmit').disabled) submitAnswer();
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Library Framework — Subject Classification & Content Catalog</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0f; --surface: #111118; --card: #16161f; --border: #2a2a38;
+  --text: #e0e0e8; --text-dim: #7a7a8e;
+  --cyan: #00d4ff; --cyan-glow: #00d4ff44; --cyan-soft: #00d4ff11;
+  --accent: #00aacc; --accent2: #0088aa;
+  --green: #22cc88; --green-glow: #22cc8844;
+  --gold: #ffaa00; --gold-glow: #ffaa0044;
+  --purple: #aa66ff; --purple-glow: #aa66ff44;
+}
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.08) 2px, rgba(0,0,0,.08) 4px);
+}
+.header { background: linear-gradient(135deg, #0a0d14, #0a1a18); border-bottom: 1px solid var(--cyan-soft); padding: 2.5rem 1.5rem 2rem; text-align: center; position: relative; overflow: hidden; }
+.header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: var(--cyan); box-shadow: 0 0 20px var(--cyan-glow), 0 0 60px var(--cyan-glow); }
+.header h1 { font-size: 2rem; color: #fff; text-shadow: 0 0 12px var(--cyan-glow), 0 0 40px var(--cyan-glow); margin-bottom: .3rem; }
+.header .subtitle { opacity: .6; font-size: .9rem; color: var(--text-dim); letter-spacing: .06em; text-transform: uppercase; }
+.meta-bar { background: var(--surface); border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; padding: .7rem 1.5rem; font-size: .8rem; color: var(--text-dim); }
+.meta-bar span { white-space: nowrap; }
+.meta-bar strong { color: var(--cyan); text-shadow: 0 0 6px var(--cyan-glow); }
+.layout { display: flex; max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 3rem; gap: 1.5rem; }
+.sidebar { width: 220px; flex-shrink: 0; position: sticky; top: 1rem; align-self: flex-start; max-height: calc(100vh - 2rem); overflow-y: auto; }
+.sidebar nav a { display: flex; align-items: center; gap: .4rem; padding: .4rem .6rem; border-radius: 5px; text-decoration: none; color: var(--text-dim); font-size: .78rem; transition: all .2s; border-left: 2px solid transparent; margin-bottom: 2px; }
+.sidebar nav a:hover { color: var(--text); background: var(--surface); border-left-color: var(--accent); }
+.sidebar nav a.active { color: var(--cyan); background: var(--cyan-soft); border-left-color: var(--cyan); }
+.sidebar nav a .num { font-size: .65rem; color: var(--text-dim); min-width: 18px; }
+.main { flex: 1; min-width: 0; }
+@media (max-width: 800px) { .sidebar { display: none; } .layout { padding: 1rem .7rem 2rem; } }
+.section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: .8rem; overflow: hidden; transition: border-color .3s; }
+.section:hover { border-color: var(--accent); }
+.section.open { border-color: var(--cyan-soft); }
+.section-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.3rem; cursor: pointer; user-select: none; transition: background .2s; }
+.section-header:hover { background: #1a1a26; }
+.section-header-left { display: flex; align-items: center; gap: .6rem; }
+.section-header h2 { font-size: 1.05rem; color: #fff; margin: 0; text-shadow: 0 0 8px var(--cyan-glow); }
+.sec-icon { font-size: 1.2rem; }
+.sec-num { font-size: .68rem; background: var(--cyan-soft); color: var(--cyan); padding: 2px 8px; border-radius: 20px; font-weight: 700; border: 1px solid var(--cyan-soft); }
+.sec-subtitle { font-size: .75rem; color: var(--text-dim); margin-top: .15rem; }
+.chevron { transition: transform .25s; font-size: 1rem; color: var(--text-dim); }
+.section.open .chevron { transform: rotate(90deg); color: var(--cyan); }
+.section-body { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+.section.open .section-body { max-height: 50000px; }
+.section-content { padding: 0 1.3rem 1.3rem; }
+.section-content p { font-size: .88rem; color: #c0c0cc; margin-bottom: .7rem; line-height: 1.7; }
+.section-content h3 { font-size: .95rem; color: var(--cyan); margin: 1rem 0 .4rem; text-shadow: 0 0 6px var(--cyan-glow); }
+/* Tables */
+table { width: 100%; border-collapse: collapse; font-size: .82rem; margin: .6rem 0; }
+th { padding: .5rem .8rem; text-align: left; background: var(--surface); color: var(--cyan); font-weight: 600; border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: .5rem .8rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:hover td { background: #0f0f16; }
+/* Family cards */
+.family-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .6rem; margin-top: .8rem; }
+.family-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; cursor: pointer; transition: all .2s; text-align: center; }
+.family-card:hover { border-color: var(--cyan); box-shadow: 0 0 12px var(--cyan-soft); transform: translateY(-2px); }
+.family-card .fc-icon { font-size: 2rem; margin-bottom: .3rem; }
+.family-card h4 { font-size: .9rem; color: var(--cyan); margin-bottom: .2rem; }
+.family-card .fc-count { font-size: .75rem; color: var(--text-dim); }
+.family-card .fc-subjects { font-size: .72rem; color: var(--text-dim); margin-top: .4rem; }
+/* Tabs */
+.tabs { display: flex; gap: .3rem; flex-wrap: wrap; margin-bottom: .8rem; }
+.tab-btn { background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: .4rem .8rem; font-size: .78rem; color: var(--text-dim); cursor: pointer; transition: all .2s; white-space: nowrap; }
+.tab-btn:hover { color: var(--text); border-color: var(--accent); }
+.tab-btn.active { color: var(--cyan); border-bottom: 2px solid var(--cyan); background: var(--cyan-soft); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.tab-panel h4 { font-size: .88rem; color: #fff; margin-bottom: .4rem; }
+/* Chips */
+.chip { display: inline-block; font-size: .72rem; background: #1a1a26; border: 1px solid var(--border); border-radius: 12px; padding: 2px 10px; margin: 2px; color: var(--text-dim); }
+.chip.cyan { color: var(--cyan); border-color: var(--cyan-soft); }
+.chip.green { color: var(--green); border-color: #22cc8822; }
+.chip.gold { color: var(--gold); border-color: var(--gold-glow); }
+.chip.purple { color: var(--purple); border-color: var(--purple-glow); }
+/* Level cards */
+.level-grid { display: grid; gap: .5rem; margin-top: .6rem; }
+.level-row { display: grid; grid-template-columns: 60px 1fr 1fr 60px; gap: .5rem; align-items: start; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .7rem .8rem; font-size: .8rem; }
+.level-row:hover { border-color: var(--cyan); }
+.level-badge { text-align: center; }
+.level-badge .lvl { font-size: .9rem; font-weight: 700; color: var(--cyan); text-shadow: 0 0 6px var(--cyan-glow); }
+.level-badge .lbl { font-size: .6rem; color: var(--text-dim); text-transform: uppercase; }
+.level-row .lp, .level-row .rp { color: #c0c0cc; }
+.level-row .rp { text-align: right; color: var(--text-dim); font-weight: 600; }
+@media (max-width: 700px) { .level-row { grid-template-columns: 50px 1fr 50px; } .level-row .rp { display: none; } }
+/* Path cards */
+.path-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: .6rem; margin-top: .6rem; }
+.path-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: .9rem; cursor: pointer; transition: all .2s; }
+.path-card:hover { border-color: var(--cyan); box-shadow: 0 0 10px var(--cyan-soft); transform: translateY(-1px); }
+.path-card .pc-code { font-size: .65rem; background: var(--cyan-soft); color: var(--cyan); padding: 1px 8px; border-radius: 10px; display: inline-block; margin-bottom: .3rem; }
+.path-card h5 { font-size: .85rem; color: #fff; margin-bottom: .2rem; }
+.path-card .pc-meta { font-size: .72rem; color: var(--text-dim); }
+/* Course cards */
+.course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .7rem; margin-top: .8rem; }
+.course-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: all .2s; cursor: pointer; }
+.course-card:hover { border-color: var(--cyan); box-shadow: 0 0 14px var(--cyan-soft); }
+.cc-head { padding: .8rem 1rem; border-bottom: 1px solid var(--border); }
+.cc-head .cc-code { font-size: .62rem; background: var(--cyan-soft); color: var(--cyan); padding: 1px 8px; border-radius: 10px; }
+.cc-head h5 { font-size: .88rem; color: #fff; margin-top: .3rem; }
+.cc-body { padding: .6rem 1rem .8rem; font-size: .75rem; color: var(--text-dim); line-height: 1.5; }
+.cc-expand { max-height: 0; overflow: hidden; transition: max-height .4s ease; font-size: .78rem; color: #b0b0bb; padding: 0 1rem; line-height: 1.6; }
+.course-card.expanded .cc-expand { max-height: 2000px; padding-bottom: .8rem; }
+/* Library tree */
+.lib-tree { font-size: .8rem; line-height: 1.8; font-family: 'Consolas', 'Fira Code', monospace; }
+.lib-tree .tree-node { cursor: pointer; padding: 1px 0; }
+.lib-tree .tree-node:hover { background: var(--surface); border-radius: 3px; }
+.lib-tree .tree-children { padding-left: 1.2rem; border-left: 1px solid var(--border); margin-left: .5rem; }
+.lib-tree .toggle { display: inline-block; width: 16px; color: var(--cyan); font-size: .7rem; }
+.lib-tree .closed + .tree-children { display: none; }
+.lib-tree .icon { margin-right: .3rem; }
+.lib-tree .node-label { color: var(--text); }
+.lib-tree .node-count { color: var(--text-dim); font-size: .7rem; margin-left: .3rem; }
+/* Stat boxes */
+.stat-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: .6rem 0; }
+.stat-box { flex: 1; min-width: 140px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: .8rem 1rem; text-align: center; }
+.stat-box .stat-num { font-size: 1.6rem; font-weight: 700; color: var(--cyan); text-shadow: 0 0 10px var(--cyan-glow); }
+.stat-box .stat-label { font-size: .72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .04em; margin-top: .15rem; }
+/* Progress bars */
+.prog-track { background: var(--surface); border-radius: 4px; height: 8px; overflow: hidden; margin-top: .3rem; }
+.prog-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
+.prog-fill.cyan { background: var(--cyan); box-shadow: 0 0 6px var(--cyan-glow); }
+.prog-fill.green { background: var(--green); box-shadow: 0 0 6px var(--green-glow); }
+.prog-fill.gold { background: var(--gold); box-shadow: 0 0 6px var(--gold-glow); }
+/* Placement table */
+.placement-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .6rem; margin-top: .6rem; }
+.place-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .8rem; }
+.place-card h5 { font-size: .85rem; color: var(--cyan); margin-bottom: .3rem; }
+.place-card p { font-size: .78rem; color: var(--text-dim); }
+.place-card .place-trigger { font-size: .72rem; color: var(--green); margin-top: .3rem; }
+/* Research table */
+.res-status { font-weight: 700; padding: 2px 10px; border-radius: 10px; font-size: .72rem; display: inline-block; }
+.res-status.done { background: #22cc8822; color: var(--green); }
+.res-status.needed { background: #ffaa0022; color: var(--gold); }
+footer { text-align: center; padding: 1.5rem; font-size: .78rem; color: var(--text-dim); border-top: 1px solid var(--border); background: var(--surface); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>NETS Library Framework</h1>
+  <div class="subtitle">Subject Classification & Content Catalog — v0.4</div>
+</div>
+<div class="meta-bar">
+  <span>Version <strong>0.4</strong></span>
+  <span>Date <strong>2026-04-11</strong></span>
+  <span>Status <strong>Draft (Buzan integration)</strong></span>
+  <span>Families <strong>5</strong></span>
+  <span>Subjects <strong>29</strong></span>
+  <span>Courses <strong>16</strong></span>
+  <span>Research <strong>4 waves</strong></span>
+  <span>Est. Items <strong>~125,500</strong></span>
+</div>
+
+<div class="layout">
+<aside class="sidebar">
+  <nav id="toc">
+    <a href="#s1" data-section="s1"><span class="num">01</span> 📚 Overview</a>
+    <a href="#s2" data-section="s2"><span class="num">02</span> 🗂️ Families</a>
+    <a href="#s3" data-section="s3"><span class="num">03</span> 📈 Levels</a>
+    <a href="#s4" data-section="s4"><span class="num">04</span> 🛤️ Paths</a>
+    <a href="#s5" data-section="s5"><span class="num">05</span> 🎓 Courses</a>
+    <a href="#s6" data-section="s6"><span class="num">06</span> 🌳 Hierarchy</a>
+    <a href="#s7" data-section="s7"><span class="num">07</span> 📍 Placement</a>
+    <a href="#s8" data-section="s8"><span class="num">08</span> 🧠 Buzan Science</a>
+    <a href="#s9" data-section="s9"><span class="num">09</span> 🔬 Research</a>
+  </nav>
+</aside>
+
+<main class="main">
+
+<!-- S1: Overview -->
+<div class="section" id="s1">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">📚</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">01</span><h2>Overview</h2></div>
+        <div class="sec-subtitle">What this framework is — library architecture, not tier mechanics</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>This document defines the <strong>content catalog architecture</strong> for NETS. It classifies all subjects into families, defines difficulty levels, learning paths, cross-subject courses, and the complete library hierarchy. It does not define Basic/Premium tier mechanics — those are handled separately by colleagues.</p>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num">5</div><div class="stat-label">Subject Families</div></div>
+      <div class="stat-box"><div class="stat-num">29</div><div class="stat-label">Unique Subjects</div></div>
+      <div class="stat-box"><div class="stat-num">4</div><div class="stat-label">Difficulty Levels</div></div>
+      <div class="stat-box"><div class="stat-num">5</div><div class="stat-label">Learning Paths</div></div>
+      <div class="stat-box"><div class="stat-num">16</div><div class="stat-label">Cross-Subject Courses</div></div>
+      <div class="stat-box"><div class="stat-num">~125K</div><div class="stat-label">Content Items at Scale</div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- S2: Families -->
+<div class="section" id="s2">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">🗂️</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">02</span><h2>Subject Family Classifications</h2></div>
+        <div class="sec-subtitle">29 subjects grouped by cognitive demands and mechanic fit</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>Five families. Family membership is locked — a subject cannot move without a formal ADR. Once a family framework exists, all subjects beneath it inherit the cognitive profile, mechanic emphasis, and Boss format rules.</p>
+    <div class="family-cards">
+      <div class="family-card" onclick="this.classList.toggle('expanded')">
+        <div class="fc-icon">📐</div>
+        <h4>Aniq Fanlar</h4>
+        <div class="fc-count">8 subjects (with splits)</div>
+        <div class="fc-subjects">Matematika, Algebra, Geometriya, Fizika, Kimyo, Informatika...</div>
+      </div>
+      <div class="family-card">
+        <div class="fc-icon">🗣️</div>
+        <h4>Til Fanlari</h4>
+        <div class="fc-count">5 subjects</div>
+        <div class="fc-subjects">Ona tili, Rus tili, Ingliz tili, Adabiyot, Nemetskiy</div>
+      </div>
+      <div class="family-card">
+        <div class="fc-icon">🌿</div>
+        <h4>Tabiat Fanlari</h4>
+        <div class="fc-count">4 subjects</div>
+        <div class="fc-subjects">Biologiya, Geografiya, Science (combined), Astronomiya</div>
+      </div>
+      <div class="family-card">
+        <div class="fc-icon">🏛️</div>
+        <h4>Ijtimoiy Fanlari</h4>
+        <div class="fc-count">7 subjects (with splits)</div>
+        <div class="fc-subjects">Jahon tarixi, O'zbekiston tarixi, Huquq, Iqtisodiyot, Tadbirkorlik...</div>
+      </div>
+      <div class="family-card">
+        <div class="fc-icon">🎨</div>
+        <h4>Tarbiya / Sanat</h4>
+        <div class="fc-count">8 subjects</div>
+        <div class="fc-subjects">Tarbiya, Musiqa, Tasviriy san'at, Texnologiya, Chizmachilik, Ma'naviyat...</div>
+      </div>
+    </div>
+
+    <div class="tabs" style="margin-top:1rem">
+      <button class="tab-btn active" onclick="switchTab(this,'fam-aniq')">📐 Aniq</button>
+      <button class="tab-btn" onclick="switchTab(this,'fam-til')">🗣️ Til</button>
+      <button class="tab-btn" onclick="switchTab(this,'fam-tabiat')">🌿 Tabiat</button>
+      <button class="tab-btn" onclick="switchTab(this,'fam-ijt')">🏛️ Ijtimoiy</button>
+      <button class="tab-btn" onclick="switchTab(this,'fam-tarb')">🎨 Tarbiya</button>
+    </div>
+
+    <div id="fam-aniq" class="tab-panel active">
+      <h4>Aniq Fanlar — Exact Sciences</h4>
+      <p><strong>What it teaches:</strong> Formal reasoning. Every concept is a definition, derivation, or application. Builds ability to move between concrete, symbolic, and verbal representations.</p>
+      <table>
+        <tr><th>Subject</th><th>UZ</th><th>RU</th><th>Grades</th><th>Notes</th></tr>
+        <tr><td>Mathematics</td><td>Matematika</td><td>Математика</td><td>G5-6</td><td>Unified, splits at G7</td></tr>
+        <tr><td>Algebra</td><td>Algebra</td><td>Алгебра</td><td>G7-9</td><td></td></tr>
+        <tr><td>Geometry</td><td>Geometriya</td><td>Геометрия</td><td>G7-11</td><td></td></tr>
+        <tr><td>Algebra & Analysis</td><td>Algebra va analiz asoslari</td><td>Алгебра</td><td>G10-11</td><td></td></tr>
+        <tr><td>Physics</td><td>Fizika</td><td>Физика</td><td>G7-11</td><td></td></tr>
+        <tr><td>Chemistry</td><td>Kimyo</td><td>Химия</td><td>G7-11</td><td></td></tr>
+        <tr><td>Informatics</td><td>Informatika / Dasturlash</td><td>Информатика</td><td>G5-11</td><td>Incl. programming at G11. <span style="color:var(--gold)">ADR-pending:</span> default Aniq Fanlar — may reclassify if G5 framework reveals creative/constructive demands (§10 #2)</td></tr>
+      </table>
+      <p><strong>Primary Mechanics:</strong> <span class="chip cyan">Worked examples</span> <span class="chip cyan">CPA progression</span> <span class="chip cyan">Tile Match</span> <span class="chip cyan">Notebook Capture</span> <span class="chip cyan">Error Analysis</span></p>
+      <p><strong>Boss:</strong> Open derivation problem, never MC for G6+. Rubric-based partial credit.</p>
+    </div>
+
+    <div id="fam-til" class="tab-panel">
+      <h4>Til Fanlari — Languages</h4>
+      <p><strong>What it teaches:</strong> Communication through structured language acquisition. Four core competencies: comprehension (reading/listening) and production (writing/speaking).</p>
+      <table>
+        <tr><th>Subject</th><th>UZ</th><th>RU</th><th>Grades</th><th>Notes</th></tr>
+        <tr><td>Uzbek Language</td><td>Ona tili</td><td>Узб. язык</td><td>G5-11</td><td></td></tr>
+        <tr><td>Russian Language</td><td>Rus tili</td><td>Русский язык</td><td>G5-11</td></tr>
+        <tr><td>English</td><td>Ingliz tili</td><td>Англ. язык</td><td>G5-11</td></tr>
+        <tr><td>Literature</td><td>Adabiyot</td><td>Литература</td><td>G5-11</td><td style="font-size:.72rem"><span style="color:var(--gold)">ADR-pending:</span> default Til Fanlari — may move to Humanities subfamily (§10 #3)</td></tr>
+        <tr><td>German</td><td>—</td><td>Немецкий язык</td><td>G11 RU</td></tr>
+      </table>
+      <p><strong>Primary Mechanics:</strong> <span class="chip cyan">Spaced Repetition</span> <span class="chip cyan">Cloze/Sentence Fill</span> <span class="chip cyan">Listening tasks</span> <span class="chip cyan">Dialogue exercises</span> <span class="chip cyan">Dictation</span></p>
+      <p><strong>Boss:</strong> Writing production evaluated by Tier 2 LLM against rubric.</p>
+    </div>
+
+    <div id="fam-tabiat" class="tab-panel">
+      <h4>Tabiat Fanlari — Natural Sciences</h4>
+      <p><strong>What it teaches:</strong> How natural systems work. Observe → classify → hypothesize → explain → predict.</p>
+      <table>
+        <tr><th>Subject</th><th>UZ</th><th>RU</th><th>Grades</th><th>Notes</th></tr>
+        <tr><td>Biology</td><td>Biologiya</td><td>Биология</td><td>G5-11</td><td></td></tr>
+        <tr><td>Geography</td><td>Geografiya</td><td>География</td><td>G5-11</td><td></td></tr>
+        <tr><td>Combined Science</td><td>Science / Tabiiy fanlar</td><td>Естествознание</td><td>G5-6</td><td>Transitional</td></tr>
+        <tr><td>Astronomy</td><td>Astronomiya</td><td>Астраномия</td><td>G11</td><td></td></tr>
+      </table>
+      <p><strong>Primary Mechanics:</strong> <span class="chip cyan">Diagram Labeling</span> <span class="chip cyan">Memory Palace</span> <span class="chip cyan">Story Mode</span> <span class="chip cyan">Tile Match</span> <span class="chip cyan">Speed Match</span></p>
+      <p><strong>Boss:</strong> Explanation task — "describe the process" or "explain why" — Tier 2 LLM evaluated.</p>
+    </div>
+
+    <div id="fam-ijt" class="tab-panel">
+      <h4>Ijtimoiy Fanlari — Social Sciences</h4>
+      <p><strong>What it teaches:</strong> How human systems work — institutions, events, laws, economies. Interpretive truth: multiple valid perspectives.</p>
+      <table>
+        <tr><th>Subject</th><th>UZ</th><th>RU</th><th>Grades</th><th>Notes</th></tr>
+        <tr><td>World History</td><td>Jahon tarixi</td><td>Всемирная история</td><td>G7-11</td><td>Splits at G7</td></tr>
+        <tr><td>Uzbekistan History</td><td>O'zbekiston tarixi</td><td>История Узбекистана</td><td>G7-11</td><td>Splits at G7</td></tr>
+        <tr><td>Ancient History</td><td>Tarix Qadimgi Dunyo</td><td>История</td><td>G5-6</td><td>Unified</td></tr>
+        <tr><td>Law</td><td>Huquq</td><td>Право</td><td>G8-11</td><td></td></tr>
+        <tr><td>Economy</td><td>Iqtisodiyot</td><td>Экономика</td><td>G8-11</td><td></td></tr>
+        <tr><td>Entrepreneurship</td><td>Tadbirkorlik</td><td>Основы предпр.</td><td>G11</td><td></td></tr>
+        <tr><td>Civic Prep</td><td>CHQBT</td><td>НВП</td><td>G10-11</td><td></td></tr>
+      </table>
+      <p><strong>Primary Mechanics:</strong> <span class="chip cyan">Story Mode</span> <span class="chip cyan">Memory Palace</span> <span class="chip cyan">Tile Match (timelines)</span> <span class="chip cyan">Source Comparison</span></p>
+      <p><strong>Boss:</strong> Case reasoning — "given this situation, what principle applies and why?"</p>
+    </div>
+
+    <div id="fam-tarb" class="tab-panel">
+      <h4>Tarbiya / Sanat — Soft & Formative</h4>
+      <p><strong>What it teaches:</strong> Expression, appreciation, formation — not derivation or analysis. Intentionally minimal gamification to avoid extrinsic-reward plateau.</p>
+      <table>
+        <tr><th>Subject</th><th>UZ</th><th>RU</th><th>Grades</th><th>Notes</th></tr>
+        <tr><td>Character Ed.</td><td>Tarbiya</td><td>Воспитание</td><td>G5-11</td><td></td></tr>
+        <tr><td>Music</td><td>Musiqa</td><td>Музыка</td><td>G5-9</td><td></td></tr>
+        <tr><td>Visual Art</td><td>Tasviriy san'at</td><td>ИЗО</td><td>G5-9</td><td></td></tr>
+        <tr><td>Technology</td><td>Texnologiya</td><td>Технология</td><td>G5-11</td><td></td></tr>
+        <tr><td>Physical Ed.</td><td>Jismoniy tarbiya</td><td>Физкультура</td><td>All</td><td><strong style="color:#ff4444">EXCLUDED</strong> from Library. Movement Breaks remain mandatory in sessions for G1-4 (UNIFIED §5)</td></tr>
+        <tr><td>Drafting</td><td>Chizmachilik</td><td>Черчение</td><td>G8-9</td><td></td></tr>
+        <tr><td>Spirituality</td><td>Ma'naviyat asoslari</td><td>—</td><td>G5-10 UZ</td><td></td></tr>
+        <tr><td>Future Hour</td><td>kelajak soati</td><td>час будущего</td><td>All</td><td></td></tr>
+      </table>
+      <p><strong>Primary Mechanics:</strong> <span class="chip cyan">Reflection Journal</span> <span class="chip cyan">Movement Breaks</span> <span class="chip cyan">Expressive output</span> <span class="chip cyan">Creative Lab</span></p>
+      <p><strong>Boss:</strong> Optional formative prompt only. No scoring, no rubric. Encouraging response only.</p>
+    </div>
+  </div></div>
+</div>
+
+<!-- S3: Levels -->
+<div class="section" id="s3">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">📈</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">03</span><h2>Universal Level System</h2></div>
+        <div class="sec-subtitle">4 levels from textbook canon to Olympiad expert</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>Every subject has a vertical difficulty axis. Levels define <strong>how hard</strong>, paths define <strong>why</strong>. The 4-Level Model:</p>
+    <table>
+      <tr><th>Level</th><th>Name</th><th>Meaning</th><th>Who</th><th>Source</th></tr>
+      <tr><td><strong style="color:var(--cyan)">L1</strong></td><td>Textbook Canon</td><td>National curriculum exactly</td><td>All (Basic)</td><td>Uzbek textbook</td></tr>
+      <tr><td><strong style="color:var(--green)">L2</strong></td><td>Extended</td><td>Lyceum "Delta" topics, deeper problems</td><td>Opt-in</td><td>Lyceum curricula</td></tr>
+      <tr><td><strong style="color:var(--gold)">L3</strong></td><td>Exam Prep</td><td>DTM, IELTS, Olympiad qualifiers</td><td>Opt-in</td><td>Exam specifications</td></tr>
+      <tr><td><strong style="color:var(--purple)">L4</strong></td><td>Expert</td><td>Olympiad medal, university freshman</td><td>Opt-in</td><td>International standards</td></tr>
+    </table>
+
+    <h3>Aniq Fanlar — Level Breakdown</h3>
+    <div class="level-grid">
+      <div class="level-row"><div class="level-badge"><div class="lvl">L1</div><div class="lbl">Canon</div></div><div class="lp">National curriculum, standard difficulty</div><div class="rp">PISA L2-3</div></div>
+      <div class="level-row"><div class="level-badge"><div class="lvl">L2</div><div class="lbl">Delta</div></div><div class="lp">Set theory, complex numbers, calculus intro, rigid body dynamics, Kirchhoff's Laws, organic mechanisms</div><div class="rp">PISA L3-4</div></div>
+      <div class="level-row"><div class="level-badge"><div class="lvl">L3</div><div class="lbl">Exam</div></div><div class="lp">DTM topics + harder variants, Olympiad regional: quadratic inequalities, function proofs, RLC circuits</div><div class="rp">PISA L4-5</div></div>
+      <div class="level-row"><div class="level-badge"><div class="lvl">L4</div><div class="lbl">Expert</div></div><div class="lp">IMO/IPhO: Vieta's, AM-GM, Fermat/Euler, Chinese Remainder, Lagrangian mechanics, Maxwell distribution</div><div class="rp">PISA L5-6</div></div>
+    </div>
+
+    <h3 style="margin-top:1rem">Level Indicators (Student-Facing)</h3>
+    <p><strong>Levels are never labeled with numbers.</strong> Hidden difficulty (SOUL Principle 3 — the 10yo must not perceive difficulty scaling):</p>
+    <table>
+      <tr><th>Internal</th><th>Student Label</th><th>Visual</th></tr>
+      <tr><td>L1</td><td>(none — default)</td><td>Standard appearance</td></tr>
+      <tr><td>L2</td><td>"Chuqurroq" (Deeper)</td><td>Slightly more ornate frame</td></tr>
+      <tr><td>L3</td><td>"Ustoz yo'li" (Master's path)</td><td>Distinctive badge icon</td></tr>
+      <tr><td>L4</td><td>"Chempion" (Champion)</td><td>Gold border, rare</td></tr>
+    </table>
+  </div></div>
+</div>
+
+<!-- S4: Paths -->
+<div class="section" id="s4">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">🛤️</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">04</span><h2>Path System</h2></div>
+        <div class="sec-subtitle">5 paths — Standard, DTM, Olympiad, International Cert, PISA Excellence</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>Paths are the horizontal axis. A path selects which levels to encounter, in what order, with what emphasis. Multiple paths can be active simultaneously.</p>
+    <div class="path-grid">
+      <div class="path-card"><div class="pc-code">STD</div><h5>Standard</h5><div class="pc-meta">All students, all grades<br>L1 mandatory, L2 optional<br>Target: PISA L2-3</div></div>
+      <div class="path-card"><div class="pc-code">DTM</div><h5>University Entrance</h5><div class="pc-meta">G9-11<br>L1-L3, 90 MCQ, 180 min<br>Target: ≥68.0 (state grant)</div></div>
+      <div class="path-card"><div class="pc-code">OLY</div><h5>Olympiad</h5><div class="pc-meta">G5-11, requires ≥80% L2<br>L1-L4, School→National<br>Direct uni admission</div></div>
+      <div class="path-card"><div class="pc-code">CERT</div><h5>Int'l Certification</h5><div class="pc-meta">G7-11, language students<br>IELTS/TOEFL/Cambridge/TORFL<br>Target: IELTS 6.5+, CEFR B2+</div></div>
+      <div class="path-card"><div class="pc-code">PISA</div><h5>PISA Excellence</h5><div class="pc-meta">G5-11, G7+ self-enroll<br>L2-L4<br>Target: PISA L4-6</div></div>
+    </div>
+
+    <h3 style="margin-top:1rem">DTM Specialty Mapping</h3>
+    <table>
+      <tr><th>University Direction</th><th>Specialty 1 (3.1 pts)</th><th>Specialty 2 (2.1 pts)</th><th>Key Paths</th></tr>
+      <tr><td>Medical</td><td>Biology</td><td>Chemistry</td><td>STD + DTM Bio+Chem + CERT English</td></tr>
+      <tr><td>Engineering</td><td>Mathematics</td><td>Physics</td><td>STD + DTM Math+Phys + OLY (optional)</td></tr>
+      <tr><td>Law</td><td>History</td><td>Foreign Language</td><td>STD + DTM Hist+Lang + CERT IELTS</td></tr>
+      <tr><td>Economics/Finance</td><td>Mathematics</td><td>Foreign Language</td><td>STD + DTM Math+Lang + CERT IELTS</td></tr>
+      <tr><td>IT/CS</td><td>Mathematics</td><td>Physics or Foreign Lang</td><td>STD + DTM Math+Phys + CSC-005 IT</td></tr>
+      <tr><td>Chemical Tech</td><td>Chemistry</td><td>Mathematics</td><td>STD + DTM Chem+Math</td></tr>
+      <tr><td>Agriculture</td><td>Biology</td><td>Chemistry</td><td>STD + DTM Bio+Chem</td></tr>
+    </table>
+    <p style="margin-top:.5rem"><strong>Strategic note:</strong> B2 IELTS (5.5+) = automatic 63.0 points for Foreign Language block. Massive advantage for Law, Econ, IT tracks. <span style="font-size:.72rem;color:var(--text-dim)">(Source: <code>DTM_Exam_Specs.md</code> — verify against current DTM regulations before surfacing to students)</span></p>
+  </div></div>
+</div>
+
+<!-- S5: Courses -->
+<div class="section" id="s5">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">🎓</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">05</span><h2>16 Cross-Subject Courses</h2></div>
+        <div class="sec-subtitle">Premium differentiators — each maps to an employer skills gap</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>These courses don't belong to a single textbook subject. They synthesize skills across domains and target real-world competencies the national curriculum doesn't explicitly teach. Click any card to expand.</p>
+    <div class="course-grid">
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-001</span><h5>Critical Thinking</h5></div><div class="cc-body">G6-G11 · L1-L3 · #1 employer deficit · Fallacy detection, bias identification, media literacy</div><div class="cc-expand"><p>Socratic inquiry, logical fallacy detection, cognitive bias identification, news/media literacy, argument structure analysis, evidence evaluation. Source Comparison + Error Analysis + Cloze + Why Chain mechanics.</p><p><strong>Boss:</strong> "Here is a claim with evidence. Identify fallacies, evaluate evidence quality, state if justified."</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-002</span><h5>Academic Writing</h5></div><div class="cc-body">G9-G11 · L3-L4 · #1 technical barrier · IELTS Task 1/2, academic citations</div><div class="cc-expand"><p>IELTS Task 1 reports (data description, process diagrams), Task 2 essays (opinion, discussion, problem-solution), academic citations, research methods, paragraph coherence. Timed essay writing (40 min) evaluated against IELTS 4-criterion rubric.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-003</span><h5>Debate & Rhetoric</h5></div><div class="cc-body">G7-G11 · L1-L3 · Communication gap · Parliamentary/Lincoln-Douglas formats</div><div class="cc-expand"><p>Logical fallacy recognition, Parliamentary debate format, Lincoln-Douglas format, World Schools format, constructive speech writing, rebuttal techniques, evidence-based argumentation.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-004</span><h5>Financial Literacy</h5></div><div class="cc-body">G5-G11 · L1-L3 · Economic literacy · Budgeting → Banking → Investing</div><div class="cc-expand"><p>G5-7: budgeting, saving, needs vs. wants. G8-9: banking system, compound interest, loans, credit. G10-11: personal investing, inflation, taxation in Uzbekistan, retirement planning, crypto basics.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-005</span><h5>IT & Programming</h5></div><div class="cc-body">G7-G11 · L1-L4 · IT talent war · Python → Data → Web/Mobile/GameDev/Cybersec</div><div class="cc-expand"><p><strong>L1:</strong> Python fundamentals (OMUC 120hrs). <strong>L2:</strong> Data structures + SQL/NumPy/Pandas. <strong>L3:</strong> 5 tracks — Front-End (React), Back-End (Flask/PostgreSQL/AWS), Android (Kotlin/Jetpack), Game Dev (Unity/Unreal), Cybersecurity (Kali/Wireshark). <strong>L4:</strong> Competitive programming (Robocontest.uz).</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-006</span><h5>AI Literacy & ML</h5></div><div class="cc-body">G10-G11 · L1-L3 · 74% use AI without training · Neural nets, ethics, LLMs</div><div class="cc-expand"><p>Neural networks (conceptual), supervised vs. unsupervised learning, ethical AI, bias in ML, LLMs (how they work, limitations). Data labeling, evaluation metrics. Hands-on no-code ML, prompt engineering.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-007</span><h5>Medical School Prep</h5></div><div class="cc-body">G10-G11 · L3-L4 · Medical entrance · MCAT-lite: anatomy, biochem, molecular bio</div><div class="cc-expand"><p>Advanced anatomy (tissue level), biochemistry (amino acids, enzyme kinetics, metabolic pathways), molecular biology (Central Dogma, gene regulation), cell biology, organic chemistry (reaction mechanisms, stereochemistry).</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-008</span><h5>Environmental Science</h5></div><div class="cc-body">G7-G11 · L1-L3 · 2030 sustainability · Climate, biodiversity, Aral Sea</div><div class="cc-expand"><p>Climate systems and modeling, biodiversity and conservation, pollution and remediation, Aral Sea, water management, desertification, global climate agreements.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-009</span><h5>GIS & Cartography</h5></div><div class="cc-body">G8-G11 · L1-L3 · Geospatial literacy · Map projections → GIS → remote sensing</div><div class="cc-expand"><p>Map projections, topographic interpretation, satellite imagery analysis, GIS fundamentals (layers, queries, spatial joins), data visualization (heat maps, choropleth, 3D terrain), remote sensing basics.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-010</span><h5>Law & Civic Rights</h5></div><div class="cc-body">G9-G11 · L1-L3 · Civic literacy · Constitution, human rights, civil/criminal law</div><div class="cc-expand"><p>Constitutional law (2023 Constitution), human rights framework (UDHR), civil law basics, criminal law fundamentals, administrative law, legal reasoning, Uzbek court system.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-011</span><h5>Applied Economics</h5></div><div class="cc-body">G10-G11 · L1-L3 · Economic literacy · Micro → Macro → Entrepreneurship</div><div class="cc-expand"><p>Micro: supply/demand, market structures, pricing. Macro: GDP, inflation, unemployment, monetary/fiscal policy. Uzbekistan's economy: agriculture, textiles, mining, services. Entrepreneurship: business plans, market research, risk assessment.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-012</span><h5>Historiography</h5></div><div class="cc-body">G9-G11 · L2-L4 · Critical history · Annales/Marxist/Liberal/Post-colonial schools</div><div class="cc-expand"><p>Historiographical schools, source criticism methods, archival research basics, comparative history, Central Asian historiography (Silk Road, Timurid, Colonial, Soviet, Post-Soviet interpretations).</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-013</span><h5>Creative Lab (Digital Art)</h5></div><div class="cc-body">G5-G11 · L1-L3 · Digital creative skills · Illustration → UI/UX → 3D</div><div class="cc-expand"><p>Digital illustration fundamentals, color theory, composition, UI/UX basics, 3D modeling intro, Uzbek traditional patterns in digital form, portfolio building. No scoring — encouraging feedback only.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-014</span><h5>Music Production</h5></div><div class="cc-body">G7-G11 · L1-L3 · Creative industry · DAW → Sound design → Digital composition</div><div class="cc-expand"><p>DAW basics (Logic, Ableton), sound design, MIDI and digital instruments, mixing and mastering, digital composition incorporating Uzbek traditional music elements.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-015</span><h5>Sports Science</h5></div><div class="cc-body">G8-G11 · L1-L3 · Health literacy · Kinesiology → Nutrition → Exercise physiology</div><div class="cc-expand"><p>Kinesiology (muscle groups, biomechanics), sports nutrition (macros, hydration), exercise physiology (energy systems, training principles), injury prevention, sports psychology.</p></div></div>
+      <div class="course-card" onclick="this.classList.toggle('expanded')"><div class="cc-head"><span class="cc-code">CSC-016</span><h5>Mathematical Logic</h5></div><div class="cc-body">G8-G11 · L1-L3 · Formal reasoning · Propositional logic → Proofs → Applications</div><div class="cc-expand"><p>Propositional logic (truth tables, connectives), predicate logic (quantifiers), boolean algebra (De Morgan's, logic gates), proof techniques (direct, contradiction, induction, pigeonhole), set theory, applications to programming and circuit design.</p></div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- S6: Hierarchy -->
+<div class="section" id="s6">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">🌳</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">06</span><h2>Library Catalog Hierarchy</h2></div>
+        <div class="sec-subtitle">The complete tree — every content item has exactly one home</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>Click nodes to expand/collapse. This is the full content tree.</p>
+    <div class="lib-tree" id="lib-tree">
+      <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▼</span> <span class="icon">📂</span> <span class="node-label">NETS LIBRARY</span></div>
+      <div class="tree-children">
+        <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▼</span> <span class="icon">📂</span> <span class="node-label">Subject Families</span><span class="node-count">5</span></div>
+        <div class="tree-children">
+          <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📐</span> <span class="node-label">Aniq Fanlar</span><span class="node-count">8 subjects</span></div>
+          <div class="tree-children">
+            <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📄</span> <span class="node-label">Matematika</span><span class="node-count">G5-6</span></div>
+            <div class="tree-children"><div class="tree-node"><span class="toggle"></span> <span class="icon">📑</span> <span class="node-label">Chapters</span><span class="node-count">~30 each</span></div><div class="tree-node"><span class="toggle"></span> <span class="icon">📑</span> <span class="node-label">L1 Content Blocks</span><span class="node-count">8 types</span></div><div class="tree-node"><span class="toggle"></span> <span class="icon">📑</span> <span class="node-label">L2 Extended</span></div></div>
+            <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📄</span> <span class="node-label">Algebra</span><span class="node-count">G7-9</span></div>
+            <div class="tree-children"><div class="tree-node"><span class="toggle"></span> <span class="icon">📑</span> <span class="node-label">Chapters + L1-L4 content</span></div></div>
+            <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📄</span> <span class="node-label">Geometriya</span><span class="node-count">G7-11</span></div>
+            <div class="tree-children"><div class="tree-node"><span class="toggle"></span> <span class="icon">📑</span> <span class="node-label">Chapters + L1-L4 content</span></div></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Fizika</span><span class="node-count">G7-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Kimyo</span><span class="node-count">G7-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Informatika</span><span class="node-count">G5-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📂</span> <span class="node-label">Cross-Grade Resources</span></div>
+          </div>
+          <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📂</span> <span class="node-label">Til Fanlari</span><span class="node-count">5 subjects</span></div>
+          <div class="tree-children">
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Ona tili</span><span class="node-count">G5-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Rus tili</span><span class="node-count">G5-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Ingliz tili</span><span class="node-count">G5-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Adabiyot</span><span class="node-count">G5-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Nemetskiy yazyk</span><span class="node-count">G11 RU</span></div>
+          </div>
+          <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📂</span> <span class="node-label">Tabiat Fanlari</span><span class="node-count">4 subjects</span></div>
+          <div class="tree-children">
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Biologiya</span><span class="node-count">G5-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Geografiya</span><span class="node-count">G5-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Science (combined)</span><span class="node-count">G5-6</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Astronomiya</span><span class="node-count">G11</span></div>
+          </div>
+          <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📂</span> <span class="node-label">Ijtimoiy Fanlari</span><span class="node-count">7 subjects</span></div>
+          <div class="tree-children">
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Jahon / O'zbekiston tarixi</span><span class="node-count">G7-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Huquq</span><span class="node-count">G8-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Iqtisodiyot</span><span class="node-count">G8-11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Tadbirkorlik</span><span class="node-count">G11</span></div>
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">CHQBT / NВП</span><span class="node-count">G10-11</span></div>
+          </div>
+          <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📂</span> <span class="node-label">Tarbiya / Sanat</span><span class="node-count">8 subjects</span></div>
+          <div class="tree-children">
+            <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">Tarbiya, Musiqa, Tasviriy san'at...</span><span class="node-count">L1-L3 only</span></div>
+          </div>
+        </div>
+        <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📂</span> <span class="node-label">Cross-Subject Courses</span><span class="node-count">16</span></div>
+        <div class="tree-children">
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">CSC-001 Critical Thinking</span></div>
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">CSC-002 Academic Writing</span></div>
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">CSC-005 IT & Programming</span><span class="node-count">5 tracks</span></div>
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📄</span> <span class="node-label">... 13 more courses</span></div>
+        </div>
+        <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📂</span> <span class="node-label">Weekly PISA Lessons</span><span class="node-count">156/year</span></div>
+        <div class="tree-children">
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📑</span> <span class="node-label">PISA Math</span><span class="node-count">52 lessons</span></div>
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📑</span> <span class="node-label">PISA Reading</span><span class="node-count">52 lessons</span></div>
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📑</span> <span class="node-label">PISA Science</span><span class="node-count">52 lessons</span></div>
+        </div>
+        <div class="tree-node" onclick="toggleTree(this)"><span class="toggle">▶</span> <span class="icon">📂</span> <span class="node-label">Supplemental Libraries</span></div>
+        <div class="tree-children">
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📚</span> <span class="node-label">Worked Example Banks</span></div>
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📚</span> <span class="node-label">Practice Drill Sets</span></div>
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📚</span> <span class="node-label">Formula / Reference Sheets</span></div>
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📚</span> <span class="node-label">Diagram / Image Libraries</span></div>
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📚</span> <span class="node-label">Vocabulary Master Lists</span></div>
+          <div class="tree-node"><span class="toggle"></span> <span class="icon">📚</span> <span class="node-label">Assessment Item Banks</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:1rem">Library Size Projection</h3>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num">55K</div><div class="stat-label">L1 Subject Items</div><div class="prog-track"><div class="prog-fill cyan" style="width:44%"></div></div></div>
+      <div class="stat-box"><div class="stat-num">27.5K</div><div class="stat-label">L2 Extended</div><div class="prog-track"><div class="prog-fill green" style="width:22%"></div></div></div>
+      <div class="stat-box"><div class="stat-num">15K</div><div class="stat-label">DTM + Olympiad</div><div class="prog-track"><div class="prog-fill gold" style="width:12%"></div></div></div>
+      <div class="stat-box"><div class="stat-num">8K</div><div class="stat-label">Cross-Subject Courses</div><div class="prog-track"><div class="prog-fill cyan" style="width:6%"></div></div></div>
+      <div class="stat-box"><div class="stat-num">15K</div><div class="stat-label">Supplemental</div><div class="prog-track"><div class="prog-fill green" style="width:12%"></div></div></div>
+      <div class="stat-box"><div class="stat-num" style="font-size:1.2rem">~125K</div><div class="stat-label">Total at Scale</div></div>
+    </div>
+
+    <h3>Content Addressing Schema</h3>
+    <p style="font-family:monospace;font-size:.82rem;background:var(--surface);padding:.6rem .8rem;border-radius:6px;border:1px solid var(--border);margin:.4rem 0">{family_code}/{subject_code}/{grade}/<strong style="color:var(--gold)">{lang}</strong>/{chapter}/{level}/{block_type}/{item_id}</p>
+    <p style="font-size:.78rem;color:var(--text-dim)">The <span style="color:var(--gold)">{lang}</span> segment is mandatory — NETS is bilingual (<code>uz</code> + <code>ru</code>). Each language version is a separate library item.</p>
+    <p style="font-size:.78rem;color:var(--text-dim)">Example: <span style="color:var(--cyan)">ANIQ/MATH/7/uz/3/L1/game_item/tile_match_001</span> · Russian sibling: <span style="color:var(--cyan)">ANIQ/MATH/7/ru/3/L1/game_item/tile_match_001</span></p>
+  </div></div>
+</div>
+
+<!-- S7: Placement -->
+<div class="section" id="s7">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">📍</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">07</span><h2>Placement Suggestions</h2></div>
+        <div class="sec-subtitle">Where everything goes in the product, with triggers</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>The bridge between library (what exists) and UX (what students see).</p>
+    <div class="placement-grid">
+      <div class="place-card"><h5>📊 Weekly PISA Lesson</h5><p>Weekly for ALL tiers. Basic: standard L1-L2 PISA session (~20 min). Premium: expanded content pool (L3-L4 items, AI analysis, personalized PISA study plans). 7-day async rolling window. Rotates: Math → Reading → Science.</p><div class="place-trigger">Trigger: Monday or first login of week</div></div>
+      <div class="place-card"><h5>🎓 Cross-Subject Courses</h5><p>"Courses" tab in Library. Cards with title, grade, level, progress, skills gap. Recommended based on PISA weakness + direction interest.</p><div class="place-trigger">Trigger: PISA weakness / performance pattern</div></div>
+      <div class="place-card"><h5>📈 Extended Content (L2)</h5><p>Unlocks at ≥80% L1 success (flow-state headroom — 70% is the floor, not the gate). Labeled "Chuqurroq" (Deeper). Optional extension after standard chapter. DTM path students get it automatically.</p><div class="place-trigger">Trigger: "Ready for a deeper challenge?" after strong completion</div></div>
+      <div class="place-card"><h5>📝 DTM Practice Exams</h5><p>Standalone sessions — not 7-phase flow. 90 MCQs, 180 min timer. Results: score per block, vs. 68.0 threshold. Weekly practice recommended. <strong style="color:var(--gold)">ADR REQUIRED:</strong> "Assessment Mode" exception to 7-phase immutability. DTM Drills (10-15 Q, 15-20 min) CAN fit 7-phase and need no ADR.</p><div class="place-trigger">Trigger: G9-11 on DTM path only</div></div>
+      <div class="place-card"><h5>🏆 Olympiad Content</h5><p>Requires ≥80% L2 qualification. "Chempion" challenges on Today surface. Gold border. Monthly practice events simulate district/regional conditions.</p><div class="place-trigger">Trigger: Qualification + teacher recommendation</div></div>
+      <div class="place-card"><h5>📚 Supplemental Libraries</h5><p>On-demand reference — not sessions. Formula sheets as in-session hints. Worked examples browsable from Library. Vocab lists with spaced repetition integration.</p><div class="place-trigger">Trigger: Student-initiated browsing or in-session hint tap</div></div>
+    </div>
+
+    <h3 style="margin-top:1rem">Content Production Priority</h3>
+    <table>
+      <tr><th>Phase</th><th>Priority</th><th>Content</th><th>Scope</th></tr>
+      <tr><td>1</td><td><span class="res-status done">Foundation</span></td><td>Matematika G5, Science G5, Algebra/Kimyo G7</td><td>~8 chapters → full frameworks</td></tr>
+      <tr><td>2</td><td>Core G5-7</td><td>All G5-7 subjects (UZ + RU)</td><td>~102 frameworks</td></tr>
+      <tr><td>3</td><td>DTM Paths</td><td>7 specialty subjects, practice exams, drills</td><td>70 full mock exams + drills</td></tr>
+      <tr><td>4</td><td>Cross-Subject</td><td>Critical Thinking → IT → IELTS → remaining 13</td><td>16 courses × ~500 items</td></tr>
+      <tr><td>5</td><td>Olympiad + PISA</td><td>5 subjects Olympiad, 156 PISA lessons</td><td>Olympiad + weekly PISA</td></tr>
+      <tr><td>6</td><td>L2 + Supplemental</td><td>Extended variants, worked examples, formula sheets</td><td>~50K items</td></tr>
+    </table>
+  </div></div>
+</div>
+
+<!-- S8: Buzan Science -->
+<div class="section" id="s8">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">🧠</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">08</span><h2>Buzan Cognitive Science</h2></div>
+        <div class="sec-subtitle">TEFCAS engine, memory systems, BOST, Mind Mapping, speed reading</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>Tony Buzan's research on Radiant Thinking, memory systems, and the Organic Study Technique provides the cognitive science backbone for how NETS delivers content.</p>
+
+    <h3>TEFCAS — Core Engine Logic</h3>
+    <p>Trial → Event → Feedback → Check → Adjust → Success. The foundational logic for NETS's difficulty adaptation engine. TEFCAS models the student's learning cycle; IRT (from UNIFIED spec) calibrates item difficulty. They are complementary, not interchangeable.</p>
+    <table>
+      <tr><th>Step</th><th>Definition</th><th>NETS Mapping</th></tr>
+      <tr><td><strong style="color:var(--cyan)">T</strong>rial</td><td>Initial attempt</td><td>Every question; Final Boss is the ultimate Trial</td></tr>
+      <tr><td><strong style="color:var(--cyan)">E</strong>vent</td><td>The outcome</td><td>Score, HP changes, visual/audio response</td></tr>
+      <tr><td><strong style="color:var(--cyan)">F</strong>eedback</td><td>Sensory info from event</td><td>Socratic guiding feedback (not answers)</td></tr>
+      <tr><td><strong style="color:var(--cyan)">C</strong>heck</td><td>Comparison vs. Goal</td><td>IRT checks proficiency against item difficulty</td></tr>
+      <tr><td><strong style="color:var(--cyan)">A</strong>djust</td><td>Modify approach</td><td>IRT adjusts difficulty to 70-80% flow zone</td></tr>
+      <tr><td><strong style="color:var(--cyan)">S</strong>uccess</td><td>Achieving target</td><td>XP gain, badge, boss defeat, streak</td></tr>
+    </table>
+    <p><strong>Key Maxim:</strong> "There is no such thing as failure, only feedback." → <em>"Hali emas!"</em> for G5.</p>
+
+    <h3>Memory Systems</h3>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab(this,'mem-link')">Link</button>
+      <button class="tab-btn" onclick="switchTab(this,'mem-peg')">Peg</button>
+      <button class="tab-btn" onclick="switchTab(this,'mem-major')">Major</button>
+      <button class="tab-btn" onclick="switchTab(this,'mem-palace')">Palace</button>
+      <button class="tab-btn" onclick="switchTab(this,'mem-smash')">SMASHIN' SCOPE</button>
+    </div>
+    <div id="mem-link" class="tab-panel active">
+      <h4>Link System</h4>
+      <p>Vivid chain of images where each item triggers the next. Best for sequential lists and process steps.</p>
+      <p><strong>Phase 1 (Memory Sprint):</strong> Link System chains for vocabulary clusters instead of standard MCQs.</p>
+      <p><strong>Phase 2 (Story Mode):</strong> The narrative itself IS a Link System — each story event triggers the next.</p>
+    </div>
+    <div id="mem-peg" class="tab-panel">
+      <h4>Peg System</h4>
+      <p>Mental hooks for random access to data. Number-Shape: 1=Spear, 2=Swan, 3=Heart, 4=Sailboat. Number-Rhyme: 1=Sun, 2=Shoe, 3=Tree, 4=Door.</p>
+      <p><strong>Phase 1:</strong> Quick-fire Number-Shape Pegs for math rules. <strong>Phase 3:</strong> Tic Tac Toe — convert number to Peg image to place a mark.</p>
+    </div>
+    <div id="mem-major" class="tab-panel">
+      <h4>Major System</h4>
+      <p>Phonetic code mapping digits to consonant sounds: 0=s/z, 1=t/d, 2=n, 3=m, 4=r, 5=l, 6=j/sh/ch, 7=k/g, 8=f/v, 9=p/b. Converts numbers into memorable words/images.</p>
+      <p><strong>Example:</strong> Navoi's birth year 1441 → "TRRT" → Image: a "TuRTle" wearing a Tara.</p>
+    </div>
+    <div id="mem-palace" class="tab-panel">
+      <h4>Memory Palace (Method of Loci)</h4>
+      <p>Place vivid images at specific locations in a familiar spatial environment.</p>
+      <p><strong>Default Loci:</strong> Registan Square. Students place science concepts (cell organelles, physics formulas) in specific corners of Sher-Dor Madrasah.</p>
+      <p><strong>Phase 5 (Consolidation):</strong> Memory Palace serves as the "mnemonic lock" before the Final Boss.</p>
+    </div>
+    <div id="mem-smash" class="tab-panel">
+      <h4>SMASHIN' SCOPE — 12-Quality Mnemonic Gate</h4>
+      <p>All AI-generated mnemonics must maximize these qualities:</p>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin:.5rem 0">
+        <span class="chip cyan">Synaesthesia</span><span class="chip cyan">Movement</span><span class="chip cyan">Association</span><span class="chip green">Vitality</span><span class="chip cyan">Humor</span><span class="chip cyan">Imagination</span><span class="chip cyan">Number</span><span class="chip cyan">Symbolism</span><span class="chip cyan">Color</span><span class="chip cyan">Order</span><span class="chip cyan">Positive</span><span class="chip cyan">Exaggeration</span>
+      </div>
+      <p>AI tutor prompts students to add at least 3 SMASHIN' SCOPE qualities to their own mental images.</p>
+    </div>
+
+    <h3 style="margin-top:1rem">MIG — Memory Effects</h3>
+    <table>
+      <tr><th>Effect</th><th>What</th><th>NETS Phase</th></tr>
+      <tr><td><strong style="color:var(--cyan)">Primacy</strong></td><td>Highest recall at START</td><td>Phase 1 (Memory Sprint)</td></tr>
+      <tr><td><strong style="color:var(--cyan)">Recency</strong></td><td>Highest recall at END</td><td>Phase 7 (Reflection)</td></tr>
+      <tr><td><strong style="color:var(--cyan)">Association</strong></td><td>We remember linked knowledge</td><td>Phase 2 (Story Mode)</td></tr>
+      <tr><td><strong style="color:var(--cyan)">Von Restorff</strong></td><td>We remember the unique/weird</td><td>Phase 3 (Game Breaks)</td></tr>
+      <tr><td><strong style="color:var(--gold)">The "Sag"</strong></td><td>Recall dips after ~25 min</td><td>Solved: 7 phases reset Primacy/Recency</td></tr>
+    </table>
+
+    <h3>BOST — Organic Study Technique</h3>
+    <table>
+      <tr><th>BOST Step</th><th>NETS Phase</th><th>Implementation</th></tr>
+      <tr><td>Browse + 5-min Mind Map</td><td>Pre-Session-A (Theme Preview)</td><td>"What do you already know?" + partially completed Radiant Anchor</td></tr>
+      <tr><td>Questions/Goals</td><td>Pre-Session-A</td><td>"What's one thing you want to figure out?" — shown again in Phase 7</td></tr>
+      <tr><td>Overview + Preview</td><td>Pre-Session-B (Flash Cards)</td><td>Rapid review of formulas/definitions before practice</td></tr>
+      <tr><td>Inview (detailed work)</td><td>Phase 2 + Phase 3</td><td>Core content delivery maintaining momentum</td></tr>
+      <tr><td>Review (Gestalt synthesis)</td><td>Phase 5 + Phase 7</td><td>Memory Palace + Reflection Journal synthesize the whole</td></tr>
+    </table>
+
+    <h3 style="margin-top:1rem">BOST Review Intervals</h3>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num">10m</div><div class="stat-label">Phase 5 Consolidation</div></div>
+      <div class="stat-box"><div class="stat-num">24h</div><div class="stat-label">Next day Memory Sprint</div></div>
+      <div class="stat-box"><div class="stat-num">1w</div><div class="stat-label">Boss Rematch</div></div>
+      <div class="stat-box"><div class="stat-num">1mo</div><div class="stat-label">Champion's Arena</div></div>
+    </div>
+
+    <h3>Speed Reading Integration</h3>
+    <table>
+      <tr><th>Concept</th><th>Definition</th><th>Target</th></tr>
+      <tr><td>Fixations</td><td>Brief pauses (0.25-1.5s) where eye absorbs info</td><td>2-3 per line (vs. 8-10 traditional)</td></tr>
+      <tr><td>Regressions</td><td>Re-reading words — destroys rhythm</td><td>Eliminate via pacer/guide</td></tr>
+      <tr><td>Chunking</td><td>3-5 words per meaningful unit</td><td>Reduces fixations, keeps comprehension</td></tr>
+      <tr><td>Sub-vocalization</td><td>Inner voice limits speed to ~150 WPM</td><td>Visual pacer forces eyes faster</td></tr>
+    </table>
+    <p style="margin-top:.5rem"><strong>UI/UX Rules:</strong> Column width 50-75 chars (66 ideal) · Line height 1.5x · Font: Arimo (Uzbek Latin/Cyrillic)</p>
+
+    <h3>NETS Mini-Games from Speed Reading</h3>
+    <table>
+      <tr><th>Game</th><th>Target</th><th>Description</th></tr>
+      <tr><td><strong style="color:var(--cyan)">Scanning Sprint</strong></td><td>PISA L1/L2</td><td>500-word excerpt. Find name/city within 15 seconds. Trains eye to ignore filler.</td></tr>
+      <tr><td><strong style="color:var(--cyan)">Structural Skimming</strong></td><td>PISA L3</td><td>Read headings + bold + first sentences. Build 5-branch Mind Map in 3 minutes.</td></tr>
+    </table>
+
+    <h3 style="margin-top:1rem">Mind Mapping — By Phase</h3>
+    <table>
+      <tr><th>Phase</th><th>Mind Map Application</th></tr>
+      <tr><td>Pre-Session: BOST Preview</td><td>5-min BOST Mind Map — "What do you already know?"</td></tr>
+      <tr><td>Phase 1: Memory Sprint</td><td>4-branch Radiant Anchor of prior lesson (G5 WM-respecting: ≤5 chunks)</td></tr>
+      <tr><td>Phase 2: Story Mode</td><td>Radiant Narrative — story unfolds radiantly, not linearly</td></tr>
+      <tr><td>Phase 3: Game Breaks</td><td>Digital Memory Palace (Registan Square), Major System, Pegs</td></tr>
+      <tr><td>Phase 4: Real-Life Challenge</td><td>Divergent Thinking — "branching" Why Chains</td></tr>
+      <tr><td>Phase 5: Consolidation</td><td>Radiant Summaries — drag-and-drop keywords onto map branches</td></tr>
+      <tr><td>Phase 6: Final Boss</td><td>TEFCAS full cycle — the Boss is the ultimate Trial</td></tr>
+      <tr><td>Phase 7: Reflection</td><td>Recency Effect — review map, identify weak branches, AI targets remediation</td></tr>
+    </table>
+
+    <h3 style="margin-top:1rem">G5-G6 Mind Map Adaptations (WM-Respecting)</h3>
+    <p>Working Memory ceiling: <strong>4-5 chunks</strong>. Mind maps are the direct antidote.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:4px;margin:.4rem 0">
+      <span class="chip cyan">Landscape orientation</span>
+      <span class="chip cyan">One word per branch</span>
+      <span class="chip cyan">Icon-first rule</span>
+      <span class="chip cyan">Min 3 colors</span>
+      <span class="chip cyan">Color-coded zones</span>
+      <span class="chip cyan">Supernova effect</span>
+      <span class="chip cyan">Secret symbols</span>
+      <span class="chip cyan">Central image (no words)</span>
+    </div>
+
+    <h3>Radiant Navigation & Anti-Cheat</h3>
+    <table>
+      <tr><th>Concept</th><th>Implementation</th></tr>
+      <tr><td><strong style="color:var(--cyan)">Radiant Navigation</strong></td><td>Subject journeys as maps, not linear lists. Current chapter = active branch. Bilim Bazasi grows as persistent radiant map.</td></tr>
+      <tr><td><strong style="color:var(--cyan)">Anti-Cheat Radiance Score</strong></td><td>AI/LLM responses are linear and predictable. Student responses with idiosyncratic associations, non-linear logic jumps, and personal keywords get higher authenticity scores. Linear/formulaic = flagged. Implementation: Tier 2 AI only, ~200-400 tokens/eval, fallback to MONITOR if unavailable, 6-month validation before promotion to SOFT_WARNING.</td></tr>
+    </table>
+
+    <h3 style="margin-top:1rem">Buzan Quantifiable Metrics</h3>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num">10-15%</div><div class="stat-label">Retention gain (Merz Study)</div></div>
+      <div class="stat-box"><div class="stat-num">10%</div><div class="stat-label">Recall improvement (Farrand et al.)</div></div>
+      <div class="stat-box"><div class="stat-num">4-5</div><div class="stat-label">G5 Working Memory chunks</div></div>
+      <div class="stat-box"><div class="stat-num">2-3</div><div class="stat-label">Target fixations per line</div></div>
+      <div class="stat-box"><div class="stat-num">~150</div><div class="stat-label">WPM sub-vocalization limit</div></div>
+      <div class="stat-box"><div class="stat-num">6</div><div class="stat-label">TEFCAS steps</div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- S9: Research -->
+<div class="section" id="s9">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">🔬</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">09</span><h2>Research Status</h2></div>
+        <div class="sec-subtitle">All initial gaps resolved — 6 future needs identified</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <h3>Resolved Gaps</h3>
+    <table>
+      <tr><th>Gap</th><th>Source</th><th>Status</th></tr>
+      <tr><td>DTM exam specs + topic percentages</td><td><code style="font-size:.75rem">DTM_Exam_Specs.md</code></td><td><span class="res-status done">Resolved</span></td></tr>
+      <tr><td>IELTS band descriptors + CEFR mapping</td><td><code style="font-size:.75rem">Language_Certifications.md</code></td><td><span class="res-status done">Resolved</span></td></tr>
+      <tr><td>Olympiad full syllabi (IMO/IPhO/IChO/IBO/IOI)</td><td><code style="font-size:.75rem">Olympiad_Full_Syllabi.md</code></td><td><span class="res-status done">Resolved</span></td></tr>
+      <tr><td>Lyceum detailed curricula per track</td><td><code style="font-size:.75rem">Lyceum_Detailed_Curricula.md</code></td><td><span class="res-status done">Resolved</span></td></tr>
+      <tr><td>Competitor pricing & course catalogs</td><td><code style="font-size:.75rem">DTM_IELTS_Prep_Market.md</code></td><td><span class="res-status done">Resolved</span></td></tr>
+      <tr><td>Employer/University skills gaps</td><td><code style="font-size:.75rem">Employer_University_Expectations.md</code></td><td><span class="res-status done">Resolved</span></td></tr>
+      <tr><td>1M Coders / IT Park full syllabi</td><td><code style="font-size:.75rem">IT_Programs_Syllabi.md</code></td><td><span class="res-status done">Resolved</span></td></tr>
+      <tr><td>Buzan cognitive science (TEFCAS, memory, BOST, Mind Mapping, speed reading)</td><td><code style="font-size:.75rem">6 Buzan files</code></td><td><span class="res-status done">Resolved</span></td></tr>
+    </table>
+
+    <h3>Future Research Needs</h3>
+    <table>
+      <tr><th>Need</th><th>Why</th><th>Priority</th></tr>
+      <tr><td>DTM question bank samples</td><td>Have structure but not actual question examples for content authoring</td><td><span class="res-status needed">High</span></td></tr>
+      <tr><td>PISA item bank samples</td><td>Have framework descriptors but not actual item formats</td><td><span class="res-status needed">High</span></td></tr>
+      <tr><td>G8-11 content audit</td><td>Current audit covers G5-7 only</td><td><span class="res-status needed">Medium</span></td></tr>
+      <tr><td>Teacher dashboard UX research</td><td>How Uzbek teachers actually use dashboards on smartphones</td><td><span class="res-status needed">Medium</span></td></tr>
+      <tr><td>Russian-language subject mappings</td><td>Some RU subjects have no UZ equivalent</td><td><span class="res-status needed">Low</span></td></tr>
+      <tr><td>Group Mind Map multiplayer UX</td><td>Collaborative study session design patterns</td><td><span class="res-status needed">Low</span></td></tr>
+    </table>
+  </div></div>
+</div>
+
+</main>
+</div>
+
+<footer>
+  NETS Library Framework v0.4 · <a href="#">standards/system-design/v1/NETS-Library-Framework.md</a> · Depends on NETS-Homework-Engine-UNIFIED v2.0 · 4 Research Waves Complete
+</footer>
+
+<script>
+function toggleSection(header) {
+  const section = header.closest('.section');
+  section.classList.toggle('open');
+  updateSidebar();
+}
+function toggleTree(node) {
+  const toggle = node.querySelector(':scope > .toggle');
+  if (!toggle.textContent.trim()) return;
+  const children = node.nextElementSibling;
+  if (!children || !children.classList.contains('tree-children')) return;
+  if (children.style.display === 'none') {
+    children.style.display = '';
+    toggle.textContent = '▼';
+  } else {
+    children.style.display = 'none';
+    toggle.textContent = '▶';
+  }
+}
+function switchTab(btn, panelId) {
+  const tabs = btn.closest('.tabs');
+  tabs.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const container = tabs.parentElement;
+  container.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(panelId).classList.add('active');
+}
+function updateSidebar() {
+  document.querySelectorAll('#toc a').forEach(a => a.classList.remove('active'));
+  document.querySelectorAll('.section.open').forEach(s => {
+    const a = document.querySelector(`#toc a[data-section="${s.id}"]`);
+    if (a) a.classList.add('active');
+  });
+}
+document.querySelectorAll('#toc a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const section = document.querySelector(a.getAttribute('href'));
+    if (!section.classList.contains('open')) section.classList.add('open');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    updateSidebar();
+  });
+});
+window.addEventListener('scroll', updateSidebar);
+</script>
+</body>
+</html>

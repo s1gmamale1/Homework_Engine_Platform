@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS — Basic vs Premium Tier Comparison (Dars 1.1 Alifbo)</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --panel: #1a2332;
+    --text: #e6edf3;
+    --muted: #8b9cb3;
+    --accent: #58a6ff;
+    --accent2: #7ee787;
+    --accent3: #ffa657;
+    --border: #30363d;
+    --code-bg: #0d1117;
+    --header-bg: #1e2d40;
+    --basic: #f97316;
+    --premium: #a855f7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+                 "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 28px 120px;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  h1, h2, h3, h4, h5 {
+    color: #fff;
+    line-height: 1.3;
+    margin-top: 2em;
+    margin-bottom: 0.6em;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 2.1em;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+    margin-top: 0.5em;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  h2 {
+    font-size: 1.65em;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 8px;
+    color: var(--accent);
+  }
+  h3 { font-size: 1.3em; color: var(--accent2); }
+  h4 { font-size: 1.1em; color: var(--accent3); }
+  p { margin: 0.9em 0; }
+  strong { color: #fff; font-weight: 700; }
+  em { color: var(--accent3); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul, ol { padding-left: 1.6em; }
+  li { margin: 0.35em 0; }
+  blockquote {
+    border-left: 4px solid var(--accent);
+    background: var(--panel);
+    margin: 1.2em 0;
+    padding: 10px 18px;
+    color: var(--muted);
+    border-radius: 0 6px 6px 0;
+  }
+  blockquote em { color: var(--accent2); }
+  code {
+    background: var(--code-bg);
+    color: var(--accent3);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-family: "Fira Code", Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+    border: 1px solid var(--border);
+  }
+  pre {
+    background: var(--code-bg);
+    color: var(--text);
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    font-size: 0.88em;
+    line-height: 1.5;
+  }
+  pre code { background: transparent; border: none; padding: 0; color: inherit; }
+  table {
+    border-collapse: collapse;
+    margin: 1.2em 0;
+    width: 100%;
+    background: var(--panel);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+  th {
+    background: var(--header-bg);
+    color: var(--accent);
+    text-align: left;
+    padding: 12px 14px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent);
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background: rgba(88, 166, 255, 0.06); }
+  hr {
+    border: none;
+    border-top: 2px dashed var(--border);
+    margin: 3em 0;
+  }
+  .topbar {
+    position: sticky;
+    top: 0;
+    background: rgba(15, 20, 25, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 12px 20px;
+    margin: -40px -28px 24px;
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    font-size: 0.9em;
+    color: var(--muted);
+  }
+  .topbar strong { color: var(--accent); }
+  @media print {
+    body { background: white; color: black; max-width: none; padding: 20px; }
+    h1, h2, h3, h4 { color: #000 !important; -webkit-text-fill-color: initial; background: none; }
+    blockquote { background: #f5f5f5; color: #333; }
+    pre, code { background: #f0f0f0; color: #000; border-color: #ccc; }
+    table { box-shadow: none; background: white; }
+    th { background: #eee; color: #000; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <strong>NETS Tier Comparison — Ona tili Dars 1.1 Alifbo</strong> · generated 11/04/2026, 01:30:51 · NETS Homework Engine v2.0
+</div>
+<h1>NETS — Basic vs Premium Tier Comparison</h1>
+<h2>Same Lesson, Two Experiences</h2>
+<p><strong>Subject:</strong> Ona tili (O&#39;zbek native language)
+<strong>Grade:</strong> 5-sinf | <strong>Bob 1, Dars 1.1 — ALIFBO</strong> | Betlar 3–5
+<strong>Standard:</strong> UZ-ONATILI-5-ALIF-01</p>
+<p>This document shows the <strong>exact same lesson</strong> delivered in two tiers. Everything traces to the same textbook pages (3–5), same learning objective (alphabetization), same PISA target (L1→L2). The difference is <strong>depth, interactivity, and AI involvement</strong>.</p>
+<hr>
+<h1>BASIC TIER (Free)</h1>
+<pre><code>┌──────────────────────────────────────────────────────────────┐
+│  HOMEWORK SESSION — BASIC                                     │
+│  Ona tili │ 5-sinf │ Bob 1 Dars 1 │ Betlar 3–5               │
+│  Duration: 12–15 min │ Phases: 3 │ AI: None (pre-generated)  │
+│  PISA: Reading L1 → L2 │ Bloom&#39;s: Remember → Understand      │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<h2>Phase 1 — Quick Review (2 min, 5 questions)</h2>
+<p><em>Oldingi darsdan takrorlash</em></p>
+<ol>
+<li>&quot;Toshkent&quot; so&#39;zi qanday yoziladi? → <strong>T</strong> bosh harf bilan</li>
+<li>Gap oxirida qaysi belgi qo&#39;yiladi (darak gap)? → <strong>.</strong> (nuqta)</li>
+<li>Quyidagilardan qaysi biri atoqli ot? → a) daryo  b) <strong>Amudaryo</strong>  c) shahar</li>
+<li>&quot;kitob&quot; — atoqli otmi yoki turdosh? → <strong>turdosh</strong></li>
+<li>Paytaxtimiz nomi qaysi harfdan boshlanadi? → <strong>T</strong></li>
+</ol>
+<p>Result: ≥3/5 = pass → next phase.</p>
+<hr>
+<h2>Phase 2 — Practice Game: Speed Sort (5 min)</h2>
+<p><strong>Topshiriq:</strong> Quyidagi joy nomlarini alifbo tartibida joylashtiring.</p>
+<p><strong>So&#39;zlar:</strong> Farg&#39;ona, Andijon, Buxoro, Chirchiq, Egizqum, Hazorasp</p>
+<p><strong>To&#39;g&#39;ri tartib:</strong></p>
+<ol>
+<li>Andijon</li>
+<li>Buxoro</li>
+<li>Chirchiq</li>
+<li>Egizqum</li>
+<li>Farg&#39;ona</li>
+<li>Hazorasp</li>
+</ol>
+<p><em>Talaba drag-drop qiladi. Natija: to&#39;g&#39;ri/noto&#39;g&#39;ri. Noto&#39;g&#39;ri bo&#39;lsa — qaytadan urinish.</em></p>
+<hr>
+<h2>Phase 3 — Quiz (5 min, 6 questions)</h2>
+<p><strong>Multiple Choice + Short Answer</strong></p>
+<ol>
+<li><p>O&#39;zbek alifbosida nechta harf bor?</p>
+<ul>
+<li>a) 26  b) <strong>29</strong>  c) 33  d) 31</li>
+</ul>
+</li>
+<li><p>Alifbodagi birinchi harf qaysi?
+→ <strong>A</strong></p>
+</li>
+<li><p>Lug&#39;atda so&#39;zlar qaysi tartibda beriladi?</p>
+<ul>
+<li>a) Uzunligi bo&#39;yicha  b) <strong>Alifbo tartibida</strong>  c) Ma&#39;nosi bo&#39;yicha</li>
+</ul>
+</li>
+<li><p>&quot;Samarqand&quot; so&#39;zi qaysi harfdan boshlanadi?
+→ <strong>S</strong></p>
+</li>
+<li><p>Quyidagi so&#39;zlardan qaysi biri alifbo tartibida birinchi keladi: Toshkent, Navoiy, Qarshi?
+→ <strong>Navoiy</strong></p>
+</li>
+<li><p>O&#39;zbek alifbosi qaysi yozuvga asoslangan?</p>
+<ul>
+<li>a) Kirill  b) Arab  c) <strong>Lotin</strong></li>
+</ul>
+</li>
+</ol>
+<p><strong>Pass threshold:</strong> ≥4/6 (67%)</p>
+<hr>
+<h3>Summary Report (Basic)</h3>
+<pre><code>┌─────────────────────────────────┐
+│  NATIJA                          │
+│  Umumiy: 4/6 (67%) ✅ O&#39;tdi     │
+│  Mavzu: Alifbo                   │
+│  Keyingi dars: Antonimlar        │
+└─────────────────────────────────┘
+</code></pre>
+<p><strong>Total time:</strong> ~12 minutes
+<strong>AI used:</strong> None (all content pre-generated)
+<strong>Feedback:</strong> Correct/incorrect only, with textbook page reference (Bet 3–5)</p>
+<hr>
+<hr>
+<hr>
+<h1>PREMIUM TIER ($3–5/year)</h1>
+<pre><code>┌──────────────────────────────────────────────────────────────────┐
+│  HOMEWORK SESSION — PREMIUM                                      │
+│  Ona tili │ 5-sinf │ Bob 1 Dars 1 │ Betlar 3–5                   │
+│  Duration: 25–30 min │ Phases: 7 │ AI: 3-tier (Mistral+Haiku+Opus)│
+│  PISA: Reading L1 → L2 │ Bloom&#39;s: Remember → Understand → Apply  │
+│  Adaptive difficulty: IRT-based │ Recovery: Socratic tutoring      │
+└──────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h2>Pre-Homework: Theme Preview (2–3 min, no scoring)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Component</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>Summary</strong></td>
+<td>Alifbo — harflarning ma&#39;lum tartibda joylashuvi. O&#39;zbek alifbosi lotin yozuviga asoslangan. 29 ta harf + 3 ta harf birikmasi (sh, ch, ng). Biz bu tartibda lug&#39;at, ro&#39;yxat, atlas qidiramiz.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Better Explanation</strong></td>
+<td>&quot;Alifbo&quot; so&#39;zi arabcha &quot;alif&quot; + &quot;bo&quot; (birinchi ikki harf) dan kelgan — ko&#39;p tillarda shunaqa: ABC, alphabet, azбука. Muhimi: tartib tasodifiy emas, u bizga tezda topishga yordam beradi.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Examples</strong></td>
+<td>Andijon, Buxoro, Chirchiq, Do&#39;ngqishloq, Egizqum, Farg&#39;ona, G&#39;ijduvon, Hazorasp… — 27 viloyat/tuman nomi alifbo tartibida.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Real-Life Research</strong></td>
+<td>Birinchi alifbo — eramizdan oldin 1800-yilda Finikiyada. O&#39;zbek tili 1940–1995 kirill, 1995-dan lotin. Ulug&#39;bek rasadxonasida yulduzlarni tartibga solish uchun harflar ishlatgan.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Personal Hook</strong></td>
+<td>Telefoningizdagi kontaktlar qanday tartibda? To&#39;g&#39;ri — alifbo tartibida! Lug&#39;atda ham, darslikda ham, hatto kutubxonada ham.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Why This Matters</strong></td>
+<td>Alifbo = tezkor qidiruv tizimi. Buni bilmasdan lug&#39;at ochish = ko&#39;zi bog&#39;lanib yurish.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Mental Model</strong></td>
+<td>Alifbo = poezd vagonlari: har biri o&#39;z joyida, tartib buzilsa, chayqalib ketadi.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>What&#39;s Next</strong></td>
+<td>Keyingi bosqichda: so&#39;zlarni alifbo tartibida joylashtirishni mashq qilamiz.</td>
+</tr>
+</tbody></table>
+<h2>Pre-Homework: Flash Cards (1–2 min, swipeable)</h2>
+<ul>
+<li><strong>Alifbo</strong> = harflarning belgilangan tartibi</li>
+<li><strong>O&#39;zbek alifbosi</strong> = lotin yozuvi, 29 harf + sh/ch/ng</li>
+<li><strong>Alifbe</strong> ≠ alifbo (Alifbe = 1-sinf savod kitobi)</li>
+<li>Birinchi harflar: <strong>A, B, D, E, F, G, H, I, J, K</strong></li>
+<li>Oxirgi harflar: <strong>X, Y, Z, O&#39;, G&#39;, Sh, Ch</strong></li>
+</ul>
+<p><strong>[ START MY HOMEWORK ]</strong></p>
+<hr>
+<h2>Phase 1 — Memory Sprint (2 min, 5 items)</h2>
+<p><em>4-sinfdan qaytarish: atoqli otlar, bosh harf, tinish belgilari.</em></p>
+<ol>
+<li>Quyidagilardan qaysi biri atoqli ot? → a) daryo  b) <strong>Amudaryo</strong>  c) shahar</li>
+<li>Gap oxirida qaysi belgi qo&#39;yiladi (darak)? → <strong>.</strong> (nuqta)</li>
+<li>&quot;Toshkent&quot; so&#39;zi qanday yoziladi? → <strong>T</strong> bosh harf bilan</li>
+<li>Qaysi bosh harfdan boshlanadi: paytaxtimiz nomi? → <strong>T</strong></li>
+<li>&quot;kitob&quot; — atoqli otmi yoki turdosh? → <strong>turdosh</strong></li>
+</ol>
+<p>✅ ≥4/5 → Phase 2 | ❌ ≤3/5 → scaffold &amp; retry</p>
+<blockquote>
+<p><em>Did you know?</em> O&#39;zbek tilida 29 harf bor, lekin talaffuzda 31 tovush ishlatamiz — chunki sh, ch, ng — bu birikmalar.</p>
+</blockquote>
+<hr>
+<h2>Phase 2 — Story Mode (5–7 min)</h2>
+<p><strong>Narrative: &quot;Alifbo sayohati&quot;</strong> | <em>Arc: Muammo → Kurash → Kashfiyot → Yechim</em></p>
+<p><strong>[Muammo]</strong> Dilnoza xola lug&#39;atchidan 50 ta so&#39;zni tartibga solishni so&#39;radi. Dilnoza taajjub bo&#39;ldi: &quot;Qayerdan boshlayman?&quot;</p>
+<p><strong>Checkpoint 1</strong> — Dilnozaning muammosi nima?
+→ a) So&#39;zlarni yozish  b) <strong>Tartibga solish</strong>  c) Tarjima qilish</p>
+<p><strong>[Kurash]</strong> U avval uzunligiga qarab tartibladi — chiqmaydi. Keyin ma&#39;nosiga qarab — yana chiqmaydi. Vaqt o&#39;tayotir.</p>
+<p><strong>[Kashfiyot]</strong> Buvisi yonidan o&#39;tdi: &quot;Qizim, lug&#39;atda so&#39;zlar qaysi tartibda turadi?&quot; Dilnoza o&#39;yladi… &quot;Alifbo tartibida!&quot; U darhol A-dan boshlab yozib chiqdi: <strong>Andijon, Buxoro, Chirchiq, Do&#39;ngqishloq…</strong></p>
+<p><strong>Checkpoint 2</strong> — Qaysi so&#39;z A dan keyin keladi: <strong>Buxoro</strong> yoki <strong>Guliston</strong>?
+→ <strong>Buxoro</strong> (B A dan keyin)</p>
+<p><strong>[Yechim]</strong> 50 ta so&#39;z 15 daqiqada tartibga solindi. Buvisi jilmayib: <em>&quot;Alifbo — eng sodiq yordamchi.&quot;</em></p>
+<p><strong>Checkpoint 3</strong> — Nega alifbo tartibi yordam berdi?
+→ <strong>Chunki u doimiy va aniq tizim</strong></p>
+<blockquote>
+<p><em>Did you know?</em> Telefoningizda kontaktlarni ochsangiz, ular o&#39;z-o&#39;zidan alifbo tartibida! Bu 2500 yillik kashfiyot hali ham ishlayapti.</p>
+</blockquote>
+<hr>
+<h2>Phase 3 — Game Breaks (6–9 min, 3 interleaved games)</h2>
+<h3>Game 1: Tile Match — Harf ↔ O&#39;rin (3 min)</h3>
+<table>
+<thead>
+<tr>
+<th>Harf</th>
+<th>Tartib raqami</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>1</td>
+</tr>
+<tr>
+<td>D</td>
+<td>4</td>
+</tr>
+<tr>
+<td>H</td>
+<td>10</td>
+</tr>
+<tr>
+<td>O&#39;</td>
+<td>26</td>
+</tr>
+<tr>
+<td>Sh</td>
+<td>28</td>
+</tr>
+</tbody></table>
+<p>Talaba 8 ta juftni moslashtiradi. 90 soniya. ≥6/8 → davom.</p>
+<h3>Game 2: Speed Sort — Joy nomlarini alifbo tartibida (3 min)</h3>
+<p><strong>To&#39;plam:</strong> Farg&#39;ona, Andijon, Buxoro, Chirchiq, Do&#39;ngqishloq, G&#39;ijduvon, Egizqum, Hazorasp</p>
+<p>✅ To&#39;g&#39;ri tartib = Andijon → Buxoro → Chirchiq → Do&#39;ngqishloq → Egizqum → Farg&#39;ona → G&#39;ijduvon → Hazorasp.</p>
+<h3>Game 3: Sentence Fill (Cloze) — Alifbo jumboqlari (3 min)</h3>
+<ol>
+<li>Alifbodagi birinchi harf — <strong>___</strong> (A)</li>
+<li>&quot;Samarqand&quot; so&#39;zi <strong>___</strong> harfidan boshlanadi. (S)</li>
+<li>Lug&#39;atda so&#39;zlar <strong>___</strong> tartibida beriladi. (alifbo)</li>
+<li>O&#39;zbek alifbosi <strong>___</strong> yozuviga asoslangan. (lotin)</li>
+<li><strong>O&#39;</strong>, <strong>G&#39;</strong>, <strong>Sh</strong>, <strong>Ch</strong> — bular <strong>___</strong> . (harf birikmalari)</li>
+</ol>
+<blockquote>
+<p><em>Did you know?</em> Ulug&#39;bek o&#39;zining &quot;Ziji&quot; (yulduzlar jadvali) asarida 1018 ta yulduzni nom bo&#39;yicha tartibladi — o&#39;sha davrdagi eng aniq kosmik alifbo edi.</p>
+</blockquote>
+<hr>
+<h2>Phase 4 — Real-Life Challenge (3–5 min)</h2>
+<p><strong>Birinchi shaxsdan: &quot;Men kutubxonachiman&quot;</strong></p>
+<blockquote>
+<p><em>Salom, men Nozimaxon opa — Alisher Navoiy nomidagi kutubxonada ishlayman. Har kuni 200 dan ortiq o&#39;quvchi kitob so&#39;rab keladi. Tasavvur qil: agar men kitoblarni alifbo tartibida joylashtirmasam — bitta kitobni topish uchun 2 soat ketadi! Sen menga yordam bera olasanmi?</em></p>
+</blockquote>
+<p><strong>Vazifa:</strong> Kutubxonaga 6 ta yangi kitob keldi. Ularni alifbo tartibida javonga joylang:</p>
+<ol>
+<li><em>&quot;Navoiy&quot;</em></li>
+<li><em>&quot;Alpomish&quot;</em></li>
+<li><em>&quot;O&#39;tkan kunlar&quot;</em></li>
+<li><em>&quot;Bolalikning oltin olmasi&quot;</em></li>
+<li><em>&quot;Go&#39;ro&#39;g&#39;li&quot;</em></li>
+<li><em>&quot;Farzandim&quot;</em></li>
+</ol>
+<p>✅ <strong>To&#39;g&#39;ri tartib:</strong> Alpomish → Bolalikning oltin olmasi → Farzandim → Go&#39;ro&#39;g&#39;li → Navoiy → O&#39;tkan kunlar</p>
+<p><strong>Nozimaxon opa:</strong> <em>&quot;Rahmat! Endi o&#39;quvchilar 10 soniyada kitob topadi.&quot;</em></p>
+<hr>
+<h2>Phase 5 — Mnemonic Lock (2–3 min)</h2>
+<p><strong>Yodlash texnikasi: &quot;ABDEF palatsi&quot;</strong></p>
+<blockquote>
+<p><em>Tasavvur qil: A — Asl darvoza (kirish). B — Bog&#39;. D — Duxon. E — Eshik ichi. F — Favvora. G — Gumbaz. H — Hovuz.</em></p>
+<p><em>Har safar lug&#39;at ochmoqchi bo&#39;lsangiz, ABDEF palatsini eslang — siz darvozadan kirib, alifbo tartibida yurasiz.</em></p>
+</blockquote>
+<p><strong>Tekshiruv:</strong> D dan keyin qaysi harf? → <strong>E</strong>. H dan oldin qaysi? → <strong>G</strong>.</p>
+<hr>
+<h2>Phase 6 — Final Boss (5–10 min, 3-tier escalating)</h2>
+<p><strong>Tier 1 — Sub-Boss</strong> (PISA L1, Easy)</p>
+<blockquote>
+<p>Quyidagi 5 ta so&#39;zni alifbo tartibiga joylang: <strong>Toshkent, Qarshi, Samarqand, Xorazm, Navoiy</strong></p>
+<p>✅ Javob: Navoiy → Qarshi → Samarqand → Toshkent → Xorazm</p>
+</blockquote>
+<p><strong>Tier 2 — Big Boss</strong> (PISA L2, Medium)</p>
+<blockquote>
+<p>Lug&#39;atda &quot;go&#39;zal&quot; so&#39;zini qidiryapsiz. Quyidagi 4 so&#39;zdan qaysi biri &quot;go&#39;zal&quot;dan oldin keladi: <em>gul, guvoh, g&#39;alaba, g&#39;oya</em>?</p>
+<p>✅ Javob: <strong>gul, guvoh</strong> (G — G&#39;dan oldin)</p>
+</blockquote>
+<p><strong>Tier 3 — Mythic Boss</strong> (PISA L3, Hard)</p>
+<blockquote>
+<p>Sen kutubxonachisan. 10 ta kitob ichidan 3 ta &quot;O&quot; harfidan boshlanadiganini topib, ularni o&#39;zaro tartibga solib chiqar: <em>Otamning bog&#39;i, O&#39;rik gullaganda, Oltin olmalar, Ona Vatan, Olimlar shahri</em></p>
+<p>✅ Javob: <strong>Oltin olmalar → Olimlar shahri → Ona Vatan → Otamning bog&#39;i → O&#39;rik gullaganda</strong></p>
+</blockquote>
+<p><strong>Fail → Socratic recovery (AI-generated):</strong></p>
+<blockquote>
+<p><em>&quot;Yaqin keldingiz! Keling, birga o&#39;ylaymiz: A, B, D, E… O va O&#39; — qaysi biri oldin keladi? O&#39;zbek alifbosida O oddiy, O&#39; keyinroq. Endi qaytadan uring — sen uddalaysan.&quot;</em></p>
+</blockquote>
+<p>✅ Pass threshold: ≥2/3 tiers (67%)</p>
+<hr>
+<h2>Phase 7 — Reflection (2–3 min, metacognition)</h2>
+<ol>
+<li><strong>Bugun nimani o&#39;rgandingiz?</strong> (1 jumla)</li>
+<li><strong>Qaysi qism qiyin keldi?</strong><ul>
+<li>a) Harflarni eslash</li>
+<li>b) So&#39;zlarni tartibga solish</li>
+<li>c) O&#39; va G&#39; ning joyi</li>
+<li>d) Hech qaysisi</li>
+</ul>
+</li>
+<li><strong>Bu bilimni hayotda qayerda ishlatasiz?</strong> (1 misol)</li>
+<li><strong>Ishonchingiz (1–5):</strong> _____</li>
+<li><strong>Do&#39;stingizga qanday tushuntirasiz: alifbo nima uchun kerak?</strong> (1 jumla)</li>
+</ol>
+<hr>
+<h3>Premium Summary Report</h3>
+<pre><code>┌──────────────────────────────────────────────────┐
+│  NATIJA — PREMIUM ANALYTICS                       │
+│                                                    │
+│  Umumiy ball: 87% ✅                               │
+│  PISA darajasi: L1 → L2 (confirmed)               │
+│  Bloom&#39;s: Remember ✅ Understand ✅ Apply ✅        │
+│                                                    │
+│  Bosqich natijalari:                               │
+│  • Memory Sprint: 5/5 (100%)                       │
+│  • Story Checkpoints: 3/3 (100%)                   │
+│  • Tile Match: 7/8 (87%)                           │
+│  • Speed Sort: 8/8 (100%)                          │
+│  • Cloze: 4/5 (80%)                                │
+│  • Real-Life Challenge: ✅                          │
+│  • Mnemonic: 2/2 (100%)                            │
+│  • Final Boss: Tier 2 passed, Tier 3 failed        │
+│                                                    │
+│  Kuchli tomonlar: tartibga solish, eslash          │
+│  Ishlash kerak: O&#39; vs O farqlash                   │
+│                                                    │
+│  Keyingi dars: Antonimlar (qarama-qarshi so&#39;zlar)  │
+│  Tavsiya: O&#39;/G&#39; qo&#39;shimcha mashq (2 min)           │
+└──────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Total time:</strong> ~28 minutes
+<strong>AI used:</strong> Tier 1 (games) + Tier 2 (story) + Tier 3 (Socratic recovery on Final Boss fail)
+<strong>Feedback:</strong> Detailed per-phase analytics, PISA tracking, personalized next-step recommendations</p>
+<hr>
+<h1>Side-by-Side Comparison Summary</h1>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>BASIC (Free)</th>
+<th>PREMIUM ($3-5/yr)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Duration</strong></td>
+<td>12–15 min</td>
+<td>25–30 min</td>
+</tr>
+<tr>
+<td><strong>Phases</strong></td>
+<td>3 (Review, Game, Quiz)</td>
+<td>7 + Pre-homework (Theme Preview, Flash Cards)</td>
+</tr>
+<tr>
+<td><strong>Games per session</strong></td>
+<td>1 (Speed Sort)</td>
+<td>3 (Tile Match + Speed Sort + Cloze)</td>
+</tr>
+<tr>
+<td><strong>Story Mode</strong></td>
+<td>None</td>
+<td>Full narrative arc with 3 checkpoints</td>
+</tr>
+<tr>
+<td><strong>Real-Life Challenge</strong></td>
+<td>None</td>
+<td>Kutubxonachi scenario (1st person POV)</td>
+</tr>
+<tr>
+<td><strong>Mnemonic technique</strong></td>
+<td>None</td>
+<td>ABDEF palace method</td>
+</tr>
+<tr>
+<td><strong>Final Boss tiers</strong></td>
+<td>1 tier (quiz only)</td>
+<td>3 tiers (Sub → Big → Mythic)</td>
+</tr>
+<tr>
+<td><strong>On failure</strong></td>
+<td>&quot;Try again&quot;</td>
+<td>Socratic AI tutoring + emotional pacing</td>
+</tr>
+<tr>
+<td><strong>Reflection</strong></td>
+<td>None</td>
+<td>5 metacognitive prompts</td>
+</tr>
+<tr>
+<td><strong>Report</strong></td>
+<td>Pass/fail + %</td>
+<td>Per-phase analytics, PISA level, strengths/weaknesses</td>
+</tr>
+<tr>
+<td><strong>AI involvement</strong></td>
+<td>None (pre-generated)</td>
+<td>3-tier real-time AI</td>
+</tr>
+<tr>
+<td><strong>Adaptive difficulty</strong></td>
+<td>Fixed</td>
+<td>IRT-based, hidden from student</td>
+</tr>
+<tr>
+<td><strong>Cultural context</strong></td>
+<td>Minimal (city names)</td>
+<td>Deep (Ulug&#39;bek, Navoiy, kutubxona, kontaktlar)</td>
+</tr>
+<tr>
+<td><strong>Bloom&#39;s levels</strong></td>
+<td>Remember, Understand</td>
+<td>Remember, Understand, Apply</td>
+</tr>
+<tr>
+<td><strong>PISA assessment</strong></td>
+<td>L1 only</td>
+<td>L1 → L2 → L3 (escalating)</td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>Generated by NETS Homework Engine v2.0 — Paperclip AI</em></p>
+
+</body>
+</html>

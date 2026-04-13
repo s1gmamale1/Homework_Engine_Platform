@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETS Real-Life Challenge v1</title>
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --panel: #fffaf2;
+      --ink: #1d2a2b;
+      --muted: #5f6e6c;
+      --line: #d9cdb5;
+      --teal: #0f766e;
+      --amber: #b45309;
+      --red: #991b1b;
+      --green: #166534;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(15,118,110,.14), transparent 24rem),
+        radial-gradient(circle at bottom left, rgba(180,83,9,.14), transparent 24rem),
+        var(--bg);
+    }
+
+    .shell {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 28px 20px 48px;
+    }
+
+    .hero, .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 16px;
+      box-shadow: 0 12px 32px rgba(29, 42, 43, 0.08);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15,118,110,.12);
+      color: var(--teal);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { margin: 0 0 10px; line-height: 1.15; }
+    h1 { font-size: clamp(2rem, 4vw, 3rem); }
+    p, li { color: var(--muted); line-height: 1.55; }
+
+    .grid-2 {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(255,255,255,.65);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(15,118,110,.1);
+      color: var(--teal);
+      font-size: 13px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+
+    code {
+      background: rgba(15,118,110,.08);
+      border-radius: 6px;
+      padding: 2px 6px;
+      color: #134e4a;
+      font-family: Consolas, "Courier New", monospace;
+    }
+
+    .good, .bad {
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin-top: 10px;
+      border: 1px solid var(--line);
+    }
+
+    .good { background: rgba(22,101,52,.08); color: var(--green); }
+    .bad { background: rgba(153,27,27,.08); color: var(--red); }
+
+    @media (max-width: 760px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <span class="eyebrow">Phase 4 Mechanic</span>
+      <h1>NETS Real-Life Challenge v1</h1>
+      <p>Real-Life Challenge is the transfer mechanic in Phase 4. The student applies the current lesson to a realistic Uzbek-context case, as the expert, and must explain the decision.</p>
+      <div class="pill-row">
+        <span class="pill">Transfer application</span>
+        <span class="pill">PISA L2+</span>
+        <span class="pill">First-person expert POV</span>
+        <span class="pill">Explanation required</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Purpose</h2>
+      <p>This mechanic tests transfer, not recall. It sits between practice and Final Boss:</p>
+      <ul>
+        <li>Story Mode teaches</li>
+        <li>Game Breaks rehearse</li>
+        <li>Real-Life Challenge transfers</li>
+        <li>Final Boss certifies</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Non-Negotiable Rules</h2>
+      <div class="grid-2">
+        <div class="card">
+          <ol>
+            <li>The student must be addressed in first-person expert POV.</li>
+            <li>The student must be the expert, not the observer.</li>
+            <li>The case must be solvable using current-lesson knowledge only.</li>
+            <li>Explanation is required.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <ol start="5">
+            <li>Wrong options must be plausible.</li>
+            <li>The context should feel believable and may use local or broader industry applications.</li>
+            <li>Students below PISA Level 2 get extra Apply-level practice instead.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Standard Shape</h2>
+      <table>
+        <tr><th>Item</th><th>Standard Mode</th><th>Extended Mode</th></tr>
+        <tr><td>Duration</td><td>3-5 min</td><td>10 min</td></tr>
+        <tr><td>Scenario count</td><td>1</td><td>1</td></tr>
+        <tr><td>Sub-questions</td><td>2-3</td><td>3-5</td></tr>
+        <tr><td>Minimum level</td><td>PISA L2+</td><td>PISA L2+</td></tr>
+        <tr><td>Output</td><td>Decision + explanation</td><td>Decision + explanation + comparison</td></tr>
+      </table>
+      <p>Recommended flow: understand the case, apply the lesson concept, evaluate in context.</p>
+    </section>
+
+    <section class="section">
+      <h2>Core Structure</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Expert Frame</h3>
+          <p><code>You are a fire safety inspector...</code></p>
+          <p><code>You are a transport pricing advisor...</code></p>
+        </div>
+        <div class="card">
+          <h3>Situation Brief</h3>
+          <p>A short case with concrete constraints, numbers, and a real decision.</p>
+        </div>
+        <div class="card">
+          <h3>Evidence Set</h3>
+          <p>Use a table, short text, diagram, map, or timeline. No hidden knowledge.</p>
+        </div>
+        <div class="card">
+          <h3>Decision Prompt</h3>
+          <p>Choose, compare, recommend, diagnose, prioritize, or explain.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Scoring</h2>
+      <table>
+        <tr><th>Dimension</th><th>Weight</th></tr>
+        <tr><td>Decision accuracy</td><td>40%</td></tr>
+        <tr><td>Reasoning quality</td><td>60%</td></tr>
+      </table>
+      <p>Reasoning is weighted higher because transfer is the point of the mechanic.</p>
+      <ul>
+        <li><strong>Off-track:</strong> wrong concept or ignores case facts</li>
+        <li><strong>Partial:</strong> some correct work, weak explanation</li>
+        <li><strong>Solid:</strong> correct conclusion with mostly correct reasoning</li>
+        <li><strong>Strong transfer:</strong> correct conclusion, evidence-based explanation, handles constraints well</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Best Variations</h2>
+      <ul>
+        <li><strong>Choose the Best Option:</strong> compare 2-3 options and recommend one</li>
+        <li><strong>Diagnose the Problem:</strong> find what is wrong and explain why</li>
+        <li><strong>Prioritize the First Move:</strong> choose the best first action under constraints</li>
+        <li><strong>Compare Claims:</strong> decide which claim is stronger and justify it</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Subject Fit</h2>
+      <table>
+        <tr><th>Family</th><th>Best use</th></tr>
+        <tr><td>Aniq Fanlar</td><td>Pricing, safety, calculations, engineering decisions</td></tr>
+        <tr><td>Til Fanlari</td><td>Communication choices, interpretation, language-in-context</td></tr>
+        <tr><td>Tabiat Fanlari</td><td>Diagnosis, process explanation, evidence-based recommendation</td></tr>
+        <tr><td>Ijtimoiy Fanlari</td><td>Source reliability, civic, legal, economic, compare claims</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Anti-Patterns</h2>
+      <ul>
+        <li>Third-person spectator framing</li>
+        <li>Fake real-life wrapping on a normal worksheet</li>
+        <li>Outside-knowledge dependency</li>
+        <li>Single-step textbook question disguised as transfer</li>
+        <li>Explanation-free tasks</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Acceptance Checklist</h2>
+      <ul>
+        <li>The student is explicitly the expert</li>
+        <li>The task requires transfer, not recall only</li>
+        <li>All required facts are supplied</li>
+        <li>Explanation is mandatory</li>
+        <li>Wrong paths are plausible</li>
+        <li>The context feels believable and appropriately applied</li>
+        <li>The task fits Phase 4 time limits</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Canonical Example</h2>
+      <div class="bad"><strong>Bad:</strong> A taxi costs 2000 + 1500 per km. What is the price for 5 km?</div>
+      <div class="good"><strong>Good:</strong> You are advising the city council on taxi pricing. Company A charges 2000 UZS base + 1500 per km. Company B charges 3000 UZS base + 1000 per km. At what distance do they cost the same? A commuter says Company B is always cheaper. Is that true? Write your recommendation and explain why.</div>
+    </section>
+  </div>
+</body>
+</html>

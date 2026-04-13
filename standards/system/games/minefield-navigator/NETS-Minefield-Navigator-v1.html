@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETS Minefield Navigator v1</title>
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --panel: #fffaf2;
+      --ink: #1d2a2b;
+      --muted: #5f6e6c;
+      --line: #d9cdb5;
+      --teal: #0f766e;
+      --amber: #b45309;
+      --red: #991b1b;
+      --green: #166534;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(15,118,110,.12), transparent 24rem),
+        radial-gradient(circle at bottom right, rgba(180,83,9,.12), transparent 24rem),
+        var(--bg);
+    }
+    .shell {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 28px 20px 48px;
+    }
+    .hero, .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 16px;
+      box-shadow: 0 12px 32px rgba(29, 42, 43, 0.08);
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15,118,110,.12);
+      color: var(--teal);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { margin: 0 0 10px; line-height: 1.15; }
+    h1 { font-size: clamp(2rem, 4vw, 3rem); }
+    p, li { color: var(--muted); line-height: 1.55; }
+    .grid-2 {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(255,255,255,.65);
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .pill {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(15,118,110,.1);
+      color: var(--teal);
+      font-size: 13px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+    .good, .bad {
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin-top: 10px;
+      border: 1px solid var(--line);
+    }
+    .good { background: rgba(22,101,52,.08); color: var(--green); }
+    .bad { background: rgba(153,27,27,.08); color: var(--red); }
+    @media (max-width: 760px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <span class="eyebrow">Phase 3 Mechanic</span>
+      <h1>NETS Minefield Navigator v1</h1>
+      <p>Minefield Navigator is a knowledge-gated navigation puzzle. The student moves from Start to Exit across a hidden-mine grid, and every move is decided by question performance.</p>
+      <div class="pill-row">
+        <span class="pill">Navigation tension</span>
+        <span class="pill">Knowledge-gated control</span>
+        <span class="pill">3 lives</span>
+        <span class="pill">2 runs</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Purpose</h2>
+      <p>This game tests content mastery and path planning at the same time. The board creates risk. The questions decide whether the student keeps control of movement.</p>
+    </section>
+
+    <section class="section">
+      <h2>Core Rules</h2>
+      <ul>
+        <li>The board is a hidden-mine grid.</li>
+        <li>The student must move from Start to Exit.</li>
+        <li>Every move requires one question.</li>
+        <li>Correct answer: move to the chosen adjacent tile.</li>
+        <li>Wrong answer: the AI forces an adjacent move.</li>
+        <li>If the forced tile contains a mine, one life is lost.</li>
+        <li>The student has 3 lives.</li>
+        <li>Reaching the exit is a win.</li>
+        <li>Losing all 3 lives is a loss.</li>
+        <li>The student gets 2 runs with a new mine layout on retry.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Standard Shape</h2>
+      <table>
+        <tr><th>Item</th><th>Standard Mode</th><th>Hard Mode</th></tr>
+        <tr><td>Grid</td><td>5x5</td><td>6x6</td></tr>
+        <tr><td>Mine count</td><td>3-5</td><td>6-10</td></tr>
+        <tr><td>Lives</td><td>3</td><td>3</td></tr>
+        <tr><td>Moves</td><td>Adjacent only</td><td>Adjacent only</td></tr>
+        <tr><td>Retry runs</td><td>2</td><td>2</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Core Loop</h2>
+      <ol>
+        <li>Show Start and Exit on the grid.</li>
+        <li>Student chooses an adjacent tile.</li>
+        <li>System asks one question.</li>
+        <li>Correct answer keeps the chosen move.</li>
+        <li>Wrong answer triggers a forced adjacent move.</li>
+        <li>Check whether the new tile is safe or mined.</li>
+        <li>Update lives and board state.</li>
+        <li>Repeat until exit or zero lives.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Difficulty Design</h2>
+      <table>
+        <tr><th>Level</th><th>Target</th><th>Design</th></tr>
+        <tr><td>Easy</td><td>Lower readiness</td><td>5x5, fewer mines, mildly punishing forced moves</td></tr>
+        <tr><td>Medium</td><td>Standard use</td><td>5x5 or 6x6, balanced mine spread</td></tr>
+        <tr><td>Hard</td><td>Advanced students</td><td>6x6, more mines, more strategic forced moves</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Subject Fit</h2>
+      <table>
+        <tr><th>Family</th><th>Best use</th></tr>
+        <tr><td>Aniq Fanlar</td><td>Coordinates, spatial logic, numeric movement</td></tr>
+        <tr><td>Tabiat Fanlari</td><td>Map navigation, terrain, ecosystem zones</td></tr>
+        <tr><td>Ijtimoiy Fanlari</td><td>Timeline traversal, route planning, region comparison</td></tr>
+        <tr><td>Til Fanlari</td><td>Limited use only when the grid clearly represents sequence/order</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Recommended Subject Usage</h2>
+      <table>
+        <tr><th>Family</th><th>Recommendation</th><th>Notes</th></tr>
+        <tr><td>Aniq Fanlar</td><td>Strong</td><td>Best fit for coordinates, grid logic, ordered traversal</td></tr>
+        <tr><td>Tabiat Fanlari</td><td>Strong</td><td>Works for map movement, terrain, classification zones</td></tr>
+        <tr><td>Ijtimoiy Fanlari</td><td>Good</td><td>Works for timeline or route progression</td></tr>
+        <tr><td>Til Fanlari</td><td>Limited</td><td>Use only when sequence/order meaning is strong</td></tr>
+        <tr><td>Tarbiya/Sanat</td><td>Not recommended</td><td>Poor fit for navigation-risk structure</td></tr>
+      </table>
+      <p>Strongest subjects: Mathematics, Geography, History, Physics, Chemistry. Conditional fits: Biology, Informatics. Avoid by default: Literature, Art, Music, Tarbiya.</p>
+    </section>
+
+    <section class="section">
+      <h2>Question Types</h2>
+      <table>
+        <tr><th>Question type</th><th>Use</th><th>Best fit</th></tr>
+        <tr><td>Multiple choice</td><td>Default per move</td><td>All supported subjects</td></tr>
+        <tr><td>Short answer</td><td>Medium+ difficulty, older students</td><td>Math, science, history</td></tr>
+        <tr><td>Tile match</td><td>Zone-based traversal or ordered mapping</td><td>Geography, chemistry, history</td></tr>
+        <tr><td>Flashcard-style quick recall</td><td>Low-friction early turns</td><td>Math facts, coordinates, terms</td></tr>
+      </table>
+      <p>Do not use long open response, Notebook Capture, or long narrative blocks inside the turn-by-turn loop.</p>
+    </section>
+
+    <section class="section">
+      <h2>Difficulty and Question Level</h2>
+      <table>
+        <tr><th>Difficulty</th><th>Board difficulty</th><th>Question difficulty</th><th>Typical question types</th></tr>
+        <tr><td>Easy</td><td>5x5, fewer mines</td><td>Recall / direct application</td><td>Flashcard, MC</td></tr>
+        <tr><td>Medium</td><td>5x5 or 6x6, balanced mines</td><td>Application / interpretation</td><td>MC, short answer</td></tr>
+        <tr><td>Hard</td><td>6x6, more mines, riskier forced moves</td><td>Multi-step application / analysis</td><td>Short answer, tile match, harder MC</td></tr>
+      </table>
+      <p>Hard mode is Premium-only.</p>
+    </section>
+
+    <section class="section">
+      <h2>Tier Division</h2>
+      <table>
+        <tr><th>Dimension</th><th>Basic Tier</th><th>Premium Tier</th></tr>
+        <tr><td>Access</td><td>Available</td><td>Available</td></tr>
+        <tr><td>Board modes</td><td>Easy, Medium</td><td>Easy, Medium, Hard</td></tr>
+        <tr><td>Question types</td><td>MC + flashcard-style quick recall</td><td>MC + short answer + selective tile match</td></tr>
+        <tr><td>Attempt policy</td><td>Limited</td><td>No practical cap</td></tr>
+        <tr><td>Difficulty ceiling</td><td>Moderate</td><td>Full</td></tr>
+      </table>
+      <p>Basic gets 2 attempts per assigned session instance. Premium gets effectively unlimited retries in practice mode. Hard mode is Premium-only.</p>
+    </section>
+
+    <section class="section">
+      <h2>Buzan Integration</h2>
+      <p>Minefield Navigator should use Buzan-aligned elements only where they improve navigation, recall, or transfer.</p>
+      <ul>
+        <li><strong>Memory Palace logic:</strong> the grid can act as a simple spatial memory board.</li>
+        <li><strong>Association Effect:</strong> safe routes are easier to remember when zones have meaningful anchors.</li>
+        <li><strong>Radiant thinking:</strong> branching route choice should reward comparing multiple paths.</li>
+        <li><strong>BOST-style review feel:</strong> feedback after a wrong move should reconnect the concept to the location.</li>
+      </ul>
+      <p>Avoid decorative Buzan theming that does not improve memory, route choice, or concept linkage.</p>
+    </section>
+
+    <section class="section">
+      <h2>Scoring</h2>
+      <table>
+        <tr><th>Action</th><th>XP</th></tr>
+        <tr><td>Correct answer</td><td>+50</td></tr>
+        <tr><td>Safe move progress</td><td>+20</td></tr>
+        <tr><td>Reach exit</td><td>+200</td></tr>
+        <tr><td>Mine hit</td><td>-10</td></tr>
+        <tr><td>Wrong answer</td><td>-5</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Best Variations</h2>
+      <ul>
+        <li><strong>Coordinate Navigator:</strong> math grid movement</li>
+        <li><strong>Map Route Navigator:</strong> geography-style terrain crossing</li>
+        <li><strong>Timeline Navigator:</strong> movement through ordered historical milestones</li>
+        <li><strong>Cross-Subject Hazard Grid:</strong> rows or zones use different question pools</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Anti-Patterns</h2>
+      <ul>
+        <li>Movement stays random even after correct answers</li>
+        <li>The student can win by pure luck</li>
+        <li>The forced move is always instant death</li>
+        <li>The grid is decorative only</li>
+        <li>The questions have no relation to the board metaphor</li>
+        <li>Buzan-themed elements are pasted on without improving memory or navigation</li>
+        <li>Question formats are too slow for turn-by-turn play</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Acceptance Checklist</h2>
+      <ul>
+        <li>Correct answers preserve player control</li>
+        <li>Wrong answers remove control but do not make loss automatic</li>
+        <li>The board offers meaningful route choice</li>
+        <li>The mine layout creates tension without unfair traps</li>
+        <li>The subject metaphor fits the movement system</li>
+        <li>Any Buzan-style spatial anchors improve recall or route reasoning</li>
+        <li>The question format matches fast navigation pacing</li>
+        <li>Basic and Premium rules are clearly separated</li>
+        <li>The game works in two short runs</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Story Mode Note</h2>
+      <p>For future Story Mode work, Buzan integration should be explicit where relevant: narrative as memory scaffold, strong association hooks, clean chunking, and visual or radiant structure where it improves recall.</p>
+      <p>Story Mode should build memorable structure, and Minefield can later reuse that structure spatially.</p>
+    </section>
+
+    <section class="section">
+      <h2>Canonical Example</h2>
+      <div class="good"><strong>Good baseline:</strong> You are navigating a 5x5 hazard grid from Start to Exit. You choose one adjacent tile each turn. If you answer correctly, you move there. If you answer wrong, the AI forces an adjacent move. Some tiles are mined. You have 3 lives. Reach the exit before losing all lives.</div>
+    </section>
+  </div>
+</body>
+</html>

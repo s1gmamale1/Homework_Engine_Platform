@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Library Framework v0.4 — Final Audit Report</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0f;--surface:#111118;--card:#16161f;--border:#2a2a38;
+  --text:#e0e0e8;--text-dim:#7a7a8e;--text-muted:#555568;
+  --cyan:#00d4ff;--cyan-glow:#00d4ff44;--cyan-soft:#00d4ff11;
+  --green:#22cc66;--green-soft:#22cc6622;--green-glow:#22cc6644;
+  --red:#ff2244;--red-soft:#ff224422;--red-glow:#ff224466;
+  --yellow:#ffaa22;--yellow-soft:#ffaa2222;--yellow-glow:#ffaa2244;
+  --purple:#aa44ff;--purple-soft:#aa44ff22;--purple-glow:#aa44ff44;
+  --orange:#ff6622;--orange-soft:#ff662222;
+}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.06) 2px,rgba(0,0,0,.06) 4px)}
+.header{background:linear-gradient(135deg,#0d0d14,#0a1a18);border-bottom:1px solid var(--cyan-soft);padding:2.5rem 1.5rem 2rem;text-align:center;position:relative;overflow:hidden}
+.header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--cyan);box-shadow:0 0 20px var(--cyan-glow),0 0 60px var(--cyan-glow)}
+.header h1{font-size:1.8rem;color:#fff;text-shadow:0 0 12px var(--cyan-glow),0 0 40px var(--cyan-glow);margin-bottom:.2rem}
+.header .subtitle{opacity:.6;font-size:.85rem;color:var(--text-dim);letter-spacing:.06em;text-transform:uppercase}
+.meta-bar{background:var(--surface);border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.2rem;padding:.7rem 1.5rem;font-size:.8rem;color:var(--text-dim)}
+.meta-bar strong{color:var(--cyan);text-shadow:0 0 6px var(--cyan-glow)}
+.container{max-width:1000px;margin:0 auto;padding:1.5rem 1rem 3rem}
+
+/* Verdict banner */
+.verdict-banner{background:linear-gradient(135deg,#0a1a12,#0d1a0f);border:1px solid var(--green-soft);border-radius:10px;padding:1.5rem 2rem;text-align:center;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.verdict-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,var(--green-soft),transparent 70%);pointer-events:none}
+.verdict-banner h2{font-size:1.4rem;color:var(--green);text-shadow:0 0 12px var(--green-glow),0 0 30px var(--green-glow);margin-bottom:.3rem;position:relative}
+.verdict-banner p{font-size:.88rem;color:#a0c0a8;position:relative}
+.verdict-score{font-size:3rem;font-weight:700;color:var(--green);text-shadow:0 0 20px var(--green-glow);display:block;margin-bottom:.2rem;position:relative}
+
+/* Sections */
+.section{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:.8rem;overflow:hidden;transition:border-color .3s}
+.section:hover{border-color:var(--cyan);border-color:color-mix(in srgb,var(--cyan) 40%,transparent)}
+.section.open{border-color:var(--cyan-soft)}
+.section-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.3rem;cursor:pointer;user-select:none;transition:background .2s}
+.section-header:hover{background:#1a1a26}
+.section-header-left{display:flex;align-items:center;gap:.6rem}
+.section-header h2{font-size:1rem;color:#fff;margin:0;text-shadow:0 0 8px var(--cyan-glow)}
+.sec-num{font-size:.65rem;background:var(--cyan-soft);color:var(--cyan);padding:2px 8px;border-radius:20px;font-weight:700;border:1px solid var(--cyan-soft)}
+.chevron{transition:transform .25s;font-size:1rem;color:var(--text-dim)}
+.section.open .chevron{transform:rotate(90deg);color:var(--cyan)}
+.section-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.section.open .section-body{max-height:50000px}
+.section-content{padding:0 1.3rem 1.3rem}
+.section-content p{font-size:.85rem;color:#c0c0cc;margin-bottom:.7rem;line-height:1.7}
+.section-content h3{font-size:.92rem;color:var(--cyan);margin:1rem 0 .4rem;text-shadow:0 0 6px var(--cyan-glow)}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;font-size:.8rem;margin:.6rem 0}
+th{padding:.5rem .7rem;text-align:left;background:var(--surface);color:var(--cyan);font-weight:600;border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:.5rem .7rem;border-bottom:1px solid var(--border);vertical-align:top}
+tr:hover td{background:#0f0f16}
+
+/* Status badges */
+.badge{display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem;padding:2px 8px;border-radius:10px;font-weight:700}
+.badge-pass{background:var(--green-soft);color:var(--green);border:1px solid #22cc6633}
+.badge-warn{background:var(--yellow-soft);color:var(--yellow);border:1px solid #ffaa2233}
+.badge-fail{background:var(--red-soft);color:var(--red);border:1px solid #ff224433}
+.badge-info{background:var(--purple-soft);color:var(--purple);border:1px solid #aa44ff33}
+.badge-note{background:#ffffff08;color:var(--text-dim);border:1px solid var(--border)}
+
+/* Check rows */
+.check-grid{display:grid;gap:.4rem;margin:.6rem 0}
+.check-row{display:flex;align-items:center;gap:.6rem;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.5rem .8rem;font-size:.82rem;transition:border-color .2s}
+.check-row:hover{border-color:var(--cyan)}
+.check-icon{font-size:1rem;flex-shrink:0;width:22px;text-align:center}
+.check-icon.pass{color:var(--green);text-shadow:0 0 6px var(--green-glow)}
+.check-icon.warn{color:var(--yellow);text-shadow:0 0 6px var(--yellow-glow)}
+.check-icon.fail{color:var(--red);text-shadow:0 0 6px var(--red-glow)}
+.check-label{flex:1;color:#c0c0cc}
+.check-detail{font-size:.72rem;color:var(--text-dim);max-width:40%}
+
+/* Fix cards */
+.fix-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.6rem;margin:.8rem 0}
+.fix-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.8rem 1rem;transition:all .2s;position:relative;overflow:hidden}
+.fix-card:hover{border-color:var(--cyan);box-shadow:0 0 10px var(--cyan-soft)}
+.fix-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px 0 0 3px}
+.fix-card.done::before{background:var(--green);box-shadow:0 0 6px var(--green-glow)}
+.fix-card.deferred::before{background:var(--yellow);box-shadow:0 0 6px var(--yellow-glow)}
+.fix-card h4{font-size:.84rem;color:#fff;margin-bottom:.25rem}
+.fix-card p{font-size:.76rem;color:var(--text-dim);line-height:1.5}
+.fix-card .fix-version{font-size:.62rem;color:var(--cyan);background:var(--cyan-soft);padding:1px 6px;border-radius:8px;display:inline-block;margin-top:.3rem}
+
+/* Timeline */
+.timeline{position:relative;padding-left:1.5rem;margin:.8rem 0}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:1px;background:var(--border)}
+.timeline-item{position:relative;margin-bottom:.8rem;padding-left:1rem}
+.timeline-item::before{content:'';position:absolute;left:-1.05rem;top:.45rem;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan-glow);border:2px solid var(--bg)}
+.timeline-item h4{font-size:.82rem;color:var(--cyan);margin-bottom:.15rem}
+.timeline-item p{font-size:.76rem;color:var(--text-dim);line-height:1.5}
+
+/* Research file cards */
+.research-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.5rem;margin:.6rem 0}
+.research-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.6rem .8rem;display:flex;align-items:center;gap:.6rem;font-size:.78rem;transition:border-color .2s}
+.research-card:hover{border-color:var(--green)}
+.research-card .rc-icon{font-size:1.1rem;flex-shrink:0}
+.research-card .rc-name{color:#fff;font-weight:600;font-size:.76rem}
+.research-card .rc-desc{color:var(--text-dim);font-size:.68rem;margin-top:.1rem}
+
+footer{text-align:center;padding:1.5rem;font-size:.75rem;color:var(--text-dim);border-top:1px solid var(--border);background:var(--surface)}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Library Framework — Final Audit</h1>
+  <div class="subtitle">v0.4 Cross-Reference & Sync Verification</div>
+</div>
+<div class="meta-bar">
+  <span>Document <strong>NETS-Library-Framework</strong></span>
+  <span>Version <strong>0.4</strong></span>
+  <span>Audit Date <strong>2026-04-11</strong></span>
+  <span>Research Files <strong>15/15 found</strong></span>
+  <span>Formats <strong>.md + .html + .docx</strong></span>
+</div>
+
+<div class="container">
+
+<!-- Verdict -->
+<div class="verdict-banner">
+  <span class="verdict-score">ALL CLEAR</span>
+  <h2>Audit Passed — No Critical Issues Remaining</h2>
+  <p>All 15 research files verified. All v0.4 fixes confirmed across .md, .html, .docx. Buzan integration properly scoped. Ready for deployment.</p>
+</div>
+
+<!-- S1: Research Files -->
+<div class="section open" id="s1">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-num">01</span>
+      <h2>Research Files Verification (15/15)</h2>
+    </div>
+    <span class="chevron">&#9654;</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>All Gemini research files referenced in Parts 1-7 are present in <code>research/</code> with substantive content.</p>
+
+    <h3>Buzan Cognitive Science (6 files)</h3>
+    <div class="research-grid">
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Buzan_Use_Your_Head.md</div><div class="rc-desc">BOST study technique, cortical skills, session design</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Buzan_Use_Your_Memory.md</div><div class="rc-desc">Link/Peg/Major systems, SMASHIN' SCOPE, SEM3, MIG curves</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Buzan_Mind_Map_Book.md</div><div class="rc-desc">7 Laws, Mind Mapping research, Radiant Thinking theory</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Buzan_Speed_Reading.md</div><div class="rc-desc">Fixations, saccades, chunking, sub-vocalization, guided pacer</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Buzan_Mind_Maps_Kids.md</div><div class="rc-desc">G5-G6 WM adaptations, icon-first, landscape, 1-word-per-branch</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Buzan_Scientific_Research.md</div><div class="rc-desc">TEFCAS model, empirical evidence, Merz/Farrand studies</div></div></div>
+    </div>
+
+    <h3>Subject & Market Research (9 files)</h3>
+    <div class="research-grid">
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">DTM_Exam_Specs.md</div><div class="rc-desc">BBA exam structure, topic weights, scoring, specialty blocks</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Language_Certifications.md</div><div class="rc-desc">IELTS band descriptors, CEFR mapping, TOEFL, Cambridge, TORFL</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Olympiad_Full_Syllabi.md</div><div class="rc-desc">IMO, IPhO, IChO, IBO, IOI — 4-stage system, topic lists</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Lyceum_Detailed_Curricula.md</div><div class="rc-desc">4 lyceum tracks, delta topics, credit-module system</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">DTM_IELTS_Prep_Market.md</div><div class="rc-desc">Competitor pricing, course catalogs, market landscape</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Employer_University_Expectations.md</div><div class="rc-desc">Skills gaps, labor market, employer survey data</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">IT_Programs_Syllabi.md</div><div class="rc-desc">1M Coders Udacity tracks, IT Park, GameDev, Cybersecurity</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">Specialized_School_Tracks.md</div><div class="rc-desc">Presidential Schools, Cambridge mapping, specialized curricula</div></div></div>
+      <div class="research-card"><span class="rc-icon">&#9989;</span><div><div class="rc-name">NETS_Content_Audit.md</div><div class="rc-desc">Textbook status by grade/subject, content gap analysis</div></div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- S2: Format Sync -->
+<div class="section open" id="s2">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-num">02</span>
+      <h2>Format Sync Verification (.md / .html / .docx)</h2>
+    </div>
+    <span class="chevron">&#9654;</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>All three output formats checked for v0.4 fix presence.</p>
+    <table>
+      <tr><th>Fix</th><th>.md</th><th>.html</th><th>.docx</th></tr>
+      <tr><td>Version 0.4</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>TEFCAS/IRT complementary (not replacement)</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>"Phase 0" &#8594; "Pre-Session"</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>Radiance Score implementation contract</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>Weekly PISA &#8594; all tiers</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>L3 label "Ustoz yo'li"</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>L2 unlock &#8805;80% (flow headroom)</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>Content addressing with {lang}</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>ADR-pending markers (Informatics, Literature)</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>PE/Movement Breaks clarification</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>DTM Assessment Mode ADR required</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>SMASHIN' SCOPE "Vitality" (not "Sexuality")</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-note">N/A</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>SEM3 deferred to future</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-note">N/A</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+      <tr><td>Duplicate summary deleted</td><td><span class="badge badge-pass">&#10003;</span></td><td><span class="badge badge-note">N/A</span></td><td><span class="badge badge-pass">&#10003;</span></td></tr>
+    </table>
+    <p style="font-size:.75rem;color:var(--text-dim);margin-top:.4rem">N/A = HTML Buzan section is condensed and didn't contain the item in the first place.</p>
+  </div></div>
+</div>
+
+<!-- S3: Buzan Integration Map -->
+<div class="section" id="s3">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-num">03</span>
+      <h2>Buzan Integration Map — By Phase</h2>
+    </div>
+    <span class="chevron">&#9654;</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>Every Buzan technique mapped to its NETS phase, with source file and implementation status.</p>
+    <table>
+      <tr><th>NETS Phase</th><th>Buzan Technique</th><th>Source</th><th>Status</th></tr>
+      <tr><td>Pre-Session</td><td>BOST Preparation: Browse &#8594; 5-min Mind Map &#8594; Questions/Goals</td><td>Use_Your_Head</td><td><span class="badge badge-pass">Spec'd</span></td></tr>
+      <tr><td>P1: Memory Sprint</td><td>Primacy Effect, Link System chains, Number-Shape Pegs, 4-branch Radiant Anchor</td><td>Use_Your_Memory</td><td><span class="badge badge-pass">Spec'd</span></td></tr>
+      <tr><td>P2: Story Mode</td><td>Association Effect, Link System narrative, Guided Pacer, Chunked presentation</td><td>Speed_Reading</td><td><span class="badge badge-pass">Spec'd</span></td></tr>
+      <tr><td>P3: Game Breaks</td><td>Von Restorff Effect, Digital Memory Palace (Registan), Major System</td><td>Use_Your_Memory</td><td><span class="badge badge-pass">Spec'd</span></td></tr>
+      <tr><td>P4: Real-Life</td><td>Association Effect (local context), Divergent Thinking branching Why Chains</td><td>Mind_Map_Book</td><td><span class="badge badge-pass">Spec'd</span></td></tr>
+      <tr><td>P5: Consolidation</td><td>Radiant Summaries, Mind Map synthesis, BOST 10-min review, SMASHIN' SCOPE gate</td><td>Use_Your_Head + Memory</td><td><span class="badge badge-pass">Spec'd</span></td></tr>
+      <tr><td>P6: Final Boss</td><td>TEFCAS full cycle (Trial &#8594; Success), "Hali emas" reframe, Try-All achievement</td><td>Scientific_Research</td><td><span class="badge badge-pass">Spec'd</span></td></tr>
+      <tr><td>P7: Reflection</td><td>Recency Effect, Socratic TEFCAS prompts, Radiant Summary review, 24h/1w/1mo scheduling</td><td>Use_Your_Memory</td><td><span class="badge badge-pass">Spec'd</span></td></tr>
+      <tr><td>Difficulty Engine</td><td>TEFCAS as learning cycle (complementary to IRT, not replacement)</td><td>Scientific_Research</td><td><span class="badge badge-pass">Clarified v0.4</span></td></tr>
+      <tr><td>Anti-Cheat</td><td>Radiance Score — detects linear/AI vs radiant/personal response patterns</td><td>Mind_Map_Book</td><td><span class="badge badge-pass">Contract v0.4</span></td></tr>
+      <tr><td>UI Architecture</td><td>Radiant Navigation (subject journeys as maps), 50-75 char columns, 1.5x line height</td><td>Speed_Reading</td><td><span class="badge badge-warn">Concept only</span></td></tr>
+      <tr><td>Spaced Repetition</td><td>BOST intervals: 10m &#8594; 24h &#8594; 1w &#8594; 1mo</td><td>Use_Your_Memory</td><td><span class="badge badge-pass">Aligned</span></td></tr>
+      <tr><td>G5 Psychology</td><td>1-word-per-branch, icon-first, landscape, &#8804;5 chunks, min 3 colors</td><td>Mind_Maps_Kids</td><td><span class="badge badge-pass">Spec'd</span></td></tr>
+      <tr><td>SEM3 Matrix</td><td>10,000-item master memory grid</td><td>Use_Your_Memory</td><td><span class="badge badge-info">Deferred</span></td></tr>
+      <tr><td>Group Mind Map</td><td>Multiplayer collaborative study sessions</td><td>Mind_Maps_Kids</td><td><span class="badge badge-info">Deferred</span></td></tr>
+      <tr><td>Eye Tracking</td><td>Peripheral vision training, fixation optimization</td><td>Speed_Reading</td><td><span class="badge badge-info">Deferred (hardware)</span></td></tr>
+    </table>
+  </div></div>
+</div>
+
+<!-- S4: v0.2 → v0.4 Changelog -->
+<div class="section" id="s4">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-num">04</span>
+      <h2>Version History: v0.1 &#8594; v0.4</h2>
+    </div>
+    <span class="chevron">&#9654;</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>v0.1 — Qwen initial draft (2026-04-10)</h4>
+        <p>6-part Library Framework: Subject Families, Level System, Path System, 16 Cross-Subject Courses, Catalog Hierarchy, Placement Suggestions. Based on Gemini's 9 research files.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>v0.2 — Claude review fixes (2026-04-11)</h4>
+        <p>13 fixes: added {lang} to content addressing, raised L2 unlock to &#8805;80%, L3 label "Ustoz yo'li", ADR-pending markers for Informatics + Literature, PE Movement Breaks clarification, DTM Assessment Mode ADR, quality check criteria defined, cost estimate, formative completion gates for Creative Lab + Music Production, multi-path UX note, IELTS citation, Weekly PISA flagged as proposal.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>v0.3 — Qwen + Buzan integration (2026-04-11)</h4>
+        <p>Part 7 added: TEFCAS, MIG memory effects, memory systems (Link/Peg/Major/Palace/SMASHIN' SCOPE/SEM3), BOST, Mind Mapping laws + G5 adaptations, Speed Reading, Radiant Navigation, Radiance Score anti-cheat. Based on Gemini's 6 Buzan research files.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>v0.4 — Claude final review (2026-04-11)</h4>
+        <p>13 fixes: TEFCAS/IRT clarified as complementary, "Phase 0" &#8594; "Pre-Session Stage", SEM3 + Group Mind Map deferred, eye-tracking scoped to implementable subset, "Sexuality" &#8594; "Vitality", Radiance Score implementation contract, duplicate summary deleted, Merz citation flagged, Peg System playtesting note, Weekly PISA &#8594; all tiers, .html + .docx synced.</p>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- S5: Outstanding Items -->
+<div class="section" id="s5">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-num">05</span>
+      <h2>Outstanding Items (Non-blocking)</h2>
+    </div>
+    <span class="chevron">&#9654;</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>Nothing critical. These are cosmetic or deferred items that do not block deployment.</p>
+    <div class="check-grid">
+      <div class="check-row">
+        <span class="check-icon warn">&#9679;</span>
+        <span class="check-label">Status still says "Draft" — update to "Final" when ready to lock</span>
+        <span class="check-detail">Cosmetic</span>
+      </div>
+      <div class="check-row">
+        <span class="check-icon warn">&#9679;</span>
+        <span class="check-label">Radiant Navigation UI — concept only, no technical spec</span>
+        <span class="check-detail">Deferred to UX team</span>
+      </div>
+      <div class="check-row">
+        <span class="check-icon warn">&#9679;</span>
+        <span class="check-label">Peg System + Tic Tac Toe needs G5 playtesting before shipping</span>
+        <span class="check-detail">Flagged in doc</span>
+      </div>
+      <div class="check-row">
+        <span class="check-icon warn">&#9679;</span>
+        <span class="check-label">Merz Study citation — secondary source, not primary RCT</span>
+        <span class="check-detail">Flagged in doc</span>
+      </div>
+      <div class="check-row">
+        <span class="check-icon warn">&#9679;</span>
+        <span class="check-label">HTML Buzan section is condensed vs. full Part 7 in .md</span>
+        <span class="check-detail">Acceptable — HTML is visual summary</span>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- S6: File Manifest -->
+<div class="section" id="s6">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-num">06</span>
+      <h2>File Manifest</h2>
+    </div>
+    <span class="chevron">&#9654;</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <table>
+      <tr><th>File</th><th>Version</th><th>Size</th><th>Purpose</th></tr>
+      <tr><td><code>NETS-Library-Framework.md</code></td><td>v0.4</td><td>~1,630 lines</td><td>Source of truth — full spec with all 7 parts</td></tr>
+      <tr><td><code>NETS-Library-Framework.html</code></td><td>v0.4</td><td>~750 lines</td><td>Interactive visual — collapsible sections, tabs, tree view</td></tr>
+      <tr><td><code>NETS-Library-Framework.docx</code></td><td>v0.4</td><td>~81 KB</td><td>Shareable Word document for stakeholders</td></tr>
+      <tr><td><code>NETS-Library-Framework-Audit.html</code></td><td>—</td><td>This file</td><td>Final audit report</td></tr>
+      <tr><td><code>NETS-System-Design-v1.md</code></td><td>v1.0</td><td>~43 KB</td><td>Parent architecture document (Layer 1-4)</td></tr>
+      <tr><td><code>NETS-Task-Allocation-Dashboard.html</code></td><td>—</td><td>~57 KB</td><td>42 tasks + 8 decisions dashboard</td></tr>
+    </table>
+  </div></div>
+</div>
+
+</div>
+
+<footer>
+  NETS Library Framework v0.4 — Final Audit Report &middot; Generated 2026-04-11 &middot; Auditor: Claude Opus 4.6 + Haiku sub-agents
+</footer>
+
+<script>
+function toggleSection(header){
+  header.closest('.section').classList.toggle('open');
+}
+</script>
+</body>
+</html>

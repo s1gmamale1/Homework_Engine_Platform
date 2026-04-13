@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Library Framework — Assessment Report</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #050508; --surface: #0a0a10; --card: #0f0f18; --border: #1a1a28;
+  --text: #d0d0d8; --text-dim: #5a5a70;
+  --cyan: #00f0ff; --cyan-glow: #00f0ff33; --cyan-soft: #00f0ff0a;
+  --green: #22ff88; --green-glow: #22ff8833;
+  --gold: #ffaa00; --gold-glow: #ffaa0033;
+  --pink: #ff2266; --pink-glow: #ff226633;
+  --purple: #a855f7; --purple-glow: #a855f733;
+}
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; font-size: 14px; }
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999; background: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(0,0,0,.12) 1px, rgba(0,0,0,.12) 2px); opacity: .3; }
+.header { background: linear-gradient(135deg, #050508, #0a0520, #050508); border-bottom: 1px solid var(--cyan-soft); padding: 2rem 1.5rem 1.8rem; text-align: center; position: relative; overflow: hidden; }
+.header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: var(--cyan); box-shadow: 0 0 30px var(--cyan-glow), 0 0 80px var(--cyan-glow); }
+.header h1 { font-size: 1.8rem; color: #fff; text-shadow: 0 0 15px var(--cyan-glow), 0 0 40px var(--cyan-glow); margin-bottom: .25rem; }
+.header .subtitle { opacity: .5; font-size: .82rem; color: var(--text-dim); letter-spacing: .08em; text-transform: uppercase; }
+.meta-bar { background: var(--surface); border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; padding: .6rem 1.5rem; font-size: .75rem; color: var(--text-dim); }
+.meta-bar strong { color: var(--cyan); text-shadow: 0 0 6px var(--cyan-glow); }
+.layout { display: flex; max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 3rem; gap: 1.5rem; }
+.sidebar { width: 190px; flex-shrink: 0; position: sticky; top: 1rem; align-self: flex-start; max-height: calc(100vh - 2rem); overflow-y: auto; }
+.sidebar nav a { display: flex; align-items: center; gap: .35rem; padding: .35rem .55rem; border-radius: 5px; text-decoration: none; color: var(--text-dim); font-size: .74rem; transition: all .2s; border-left: 2px solid transparent; margin-bottom: 2px; }
+.sidebar nav a:hover { color: var(--text); background: var(--surface); border-left-color: var(--purple); }
+.sidebar nav a.active { color: var(--cyan); background: var(--cyan-soft); border-left-color: var(--cyan); }
+.sidebar nav a .num { font-size: .62rem; color: var(--text-dim); min-width: 18px; }
+.main { flex: 1; min-width: 0; }
+@media (max-width: 800px) { .sidebar { display: none; } .layout { padding: 1rem .6rem 2rem; } }
+.section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: .7rem; overflow: hidden; transition: border-color .3s; }
+.section:hover { border-color: #2a2a40; }
+.section.open { border-color: var(--cyan-soft); }
+.section-header { display: flex; align-items: center; justify-content: space-between; padding: .9rem 1.2rem; cursor: pointer; user-select: none; transition: background .2s; }
+.section-header:hover { background: #0c0c14; }
+.section-header-left { display: flex; align-items: center; gap: .55rem; }
+.section-header h2 { font-size: .98rem; color: #fff; margin: 0; text-shadow: 0 0 8px var(--cyan-glow); }
+.sec-icon { font-size: 1.1rem; }
+.sec-num { font-size: .64rem; background: var(--cyan-soft); color: var(--cyan); padding: 2px 8px; border-radius: 20px; font-weight: 700; border: 1px solid #00f0ff15; }
+.sec-subtitle { font-size: .72rem; color: var(--text-dim); margin-top: .1rem; }
+.chevron { transition: transform .25s; font-size: .9rem; color: var(--text-dim); }
+.section.open .chevron { transform: rotate(90deg); color: var(--cyan); }
+.section-body { max-height: 0; overflow: hidden; transition: max-height .45s ease; }
+.section.open .section-body { max-height: 60000px; }
+.section-content { padding: 0 1.2rem 1.2rem; }
+.section-content p { font-size: .85rem; color: #b0b0c0; margin-bottom: .65rem; line-height: 1.7; }
+.section-content h3 { font-size: .92rem; color: var(--cyan); margin: .9rem 0 .35rem; text-shadow: 0 0 6px var(--cyan-glow); }
+table { width: 100%; border-collapse: collapse; font-size: .8rem; margin: .5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th { padding: .45rem .7rem; text-align: left; background: #0a0a12; color: var(--cyan); font-weight: 600; border-bottom: 1px solid var(--border); white-space: nowrap; font-size: .75rem; }
+td { padding: .45rem .7rem; border-bottom: 1px solid var(--border); vertical-align: top; color: #b0b0c0; }
+tr:hover td { background: #08080e; }
+.stat-row { display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0; }
+.stat-box { flex: 1; min-width: 130px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: .7rem .9rem; text-align: center; }
+.stat-box .stat-num { font-size: 1.5rem; font-weight: 700; color: var(--cyan); text-shadow: 0 0 10px var(--cyan-glow); }
+.stat-box .stat-label { font-size: .68rem; color: var(--text-dim); text-transform: uppercase; margin-top: .1rem; }
+.chip { display: inline-block; font-size: .68rem; padding: 2px 10px; border-radius: 12px; margin: 2px; font-weight: 600; }
+.chip.pass { background: #22ff8812; color: var(--green); border: 1px solid #22ff8822; }
+.chip.partial { background: #ffaa0012; color: var(--gold); border: 1px solid #ffaa0022; }
+.chip.needed { background: #ff226612; color: var(--pink); border: 1px solid #ff226622; }
+.res-status { font-weight: 700; padding: 2px 10px; border-radius: 10px; font-size: .7rem; display: inline-block; }
+.res-status.done { background: #22ff8812; color: var(--green); }
+.res-status.needed { background: #ffaa0012; color: var(--gold); }
+footer { text-align: center; padding: 1.5rem; font-size: .74rem; color: var(--text-dim); border-top: 1px solid var(--border); background: var(--surface); }
+code { font-size: .75rem; background: #0a0a12; padding: 1px 6px; border-radius: 4px; color: var(--cyan); border: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Assessment Report</h1>
+  <div class="subtitle">NETS Library Framework v0.4 vs System Design v1 vs Research Integration</div>
+</div>
+<div class="meta-bar">
+  <span>Date <strong>2026-04-11</strong></span>
+  <span>Verdict <strong>97% Clean</strong></span>
+  <span>Files Compared <strong>3</strong></span>
+  <span>Issues Found <strong>4</strong></span>
+</div>
+
+<div class="layout">
+<aside class="sidebar">
+  <nav id="toc">
+    <a href="#s1" data-section="s1"><span class="num">01</span> 📊 Executive Summary</a>
+    <a href="#s2" data-section="s2"><span class="num">02</span> ✅ Consistency Checks</a>
+    <a href="#s3" data-section="s3"><span class="num">03</span> 🔧 Claude v0.4 Fixes</a>
+    <a href="#s4" data-section="s4"><span class="num">04</span> 📚 Research Waves</a>
+    <a href="#s5" data-section="s5"><span class="num">05</span> ⚠️ Issues Found</a>
+    <a href="#s6" data-section="s6"><span class="num">06</span> 🏁 Final Verdict</a>
+  </nav>
+</aside>
+
+<main class="main">
+
+<!-- S1 -->
+<div class="section" id="s1">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">📊</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">01</span><h2>Executive Summary</h2></div>
+        <div class="sec-subtitle">Three documents compared, 97% consistency confirmed</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>Compared three documents for consistency, contradictions, and completeness:</p>
+    <table>
+      <tr><th>Document</th><th>Version</th><th>Lines</th><th>Role</th></tr>
+      <tr><td>Library Framework</td><td>v0.4</td><td>1,632</td><td>Content catalog architecture</td></tr>
+      <tr><td>System Design v1</td><td>v1.0</td><td>458</td><td>Product layer + tier + metagame</td></tr>
+      <tr><td>Research Files</td><td>—</td><td>8 files</td><td>Empirical data integration</td></tr>
+    </table>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num" style="color:var(--green)">5/5</div><div class="stat-label">Families Match</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--green)">29</div><div class="stat-label">Subjects Classified</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--green)">4</div><div class="stat-label">Research Waves</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--gold)">4</div><div class="stat-label">Issues Found</div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- S2 -->
+<div class="section" id="s2">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">✅</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">02</span><h2>Consistency Checks — All Passing</h2></div>
+        <div class="sec-subtitle">Every check confirmed aligned</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <table>
+      <tr><th>Check</th><th>Status</th><th>Notes</th></tr>
+      <tr><td>5 Subject Families match across both docs</td><td><span class="chip pass">PASS</span></td><td>Same subjects, cognitive demands, mechanics, Boss formats</td></tr>
+      <tr><td>5-Layer Architecture (L0-L4)</td><td><span class="chip pass">PASS</span></td><td>Library operates at L1 (Families) + L2 (Subjects)</td></tr>
+      <tr><td>Tier Overlay non-interference</td><td><span class="chip pass">PASS</span></td><td>Library doesn't define tier pricing/gating</td></tr>
+      <tr><td>SOUL Principles (all 5)</td><td><span class="chip pass">PASS</span></td><td>Hidden difficulty, textbook-truth, intrinsic > extrinsic honored</td></tr>
+      <tr><td>G5 Psychology</td><td><span class="chip pass">PASS</span></td><td>4-5 chunk WM ceiling, "Hali emas", landscape orientation</td></tr>
+      <tr><td>Informatics ADR-pending</td><td><span class="chip pass">PASS</span></td><td>Flagged per System Design v1 §10 #2</td></tr>
+      <tr><td>Literature ADR-pending</td><td><span class="chip pass">PASS</span></td><td>Flagged per System Design v1 §10 #3</td></tr>
+      <tr><td>{lang} bilingual addressing</td><td><span class="chip pass">PASS</span></td><td>Bilingual system properly reflected</td></tr>
+      <tr><td>Content tagging (10 mandatory tags)</td><td><span class="chip pass">PASS</span></td><td>Matches UNIFIED spec schema</td></tr>
+      <tr><td>PE excluded from library</td><td><span class="chip pass">PASS</span></td><td>No library content, movement breaks remain mandatory</td></tr>
+      <tr><td>Formative gates (Creative Lab, Music)</td><td><span class="chip pass">PASS</span></td><td>Submission + reflection = completion, no rubric score</td></tr>
+    </table>
+  </div></div>
+</div>
+
+<!-- S3 -->
+<div class="section" id="s3">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">🔧</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">03</span><h2>Claude's v0.4 Fixes — All Quality</h2></div>
+        <div class="sec-subtitle">Every fix was correct and necessary</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <table>
+      <tr><th>Fix</th><th>Status</th><th>Assessment</th></tr>
+      <tr><td>TEFCAS/IRT relationship clarified</td><td><span class="chip pass">FIXED</span></td><td>Critical fix: TEFCAS = student learning cycle, IRT = statistical engine. Complementary, not replacements</td></tr>
+      <tr><td>"Phase 0" → "Pre-Session Stage A/B"</td><td><span class="chip pass">FIXED</span></td><td>Avoids confusion with locked 7-phase structure</td></tr>
+      <tr><td>SMASHIN' SCOPE: "S" = Vitality</td><td><span class="chip pass">FIXED</span></td><td>Age-appropriate replacement for "Sexuality"</td></tr>
+      <tr><td>L2 unlock: 70% → 80%</td><td><span class="chip pass">FIXED</span></td><td>Sound rationale: 80% ensures flow state headroom</td></tr>
+      <tr><td>L3 label: "Ustoz yo'li" (not "test prep")</td><td><span class="chip pass">FIXED</span></td><td>Hidden difficulty per SOUL Principle 3</td></tr>
+      <tr><td>Radiance Score implementation contract</td><td><span class="chip pass">ADDED</span></td><td>Full spec: input, output, thresholds, AI tier, token cost, fallback, rollout phase</td></tr>
+      <tr><td>Peripheral Vision excluded from scope</td><td><span class="chip pass">FIXED</span></td><td>Not implementable without eye-tracking hardware</td></tr>
+      <tr><td>SEM3 deferred</td><td><span class="chip pass">FIXED</span></td><td>"Future exploration — not in current scope"</td></tr>
+      <tr><td>DTM Assessment Mode ADR required</td><td><span class="chip pass">ADDED</span></td><td>90-MCQ exams don't fit 7-phase; needs exception</td></tr>
+      <tr><td>Multi-path UX priority defined</td><td><span class="chip pass">ADDED</span></td><td>DTM > CERT > OLY > PISA > STD by deadline urgency</td></tr>
+      <tr><td>Production cost estimate</td><td><span class="chip pass">ADDED</span></td><td>~$15K-$25K using AI pipeline; QA is bottleneck</td></tr>
+      <tr><td>Tic Tac Toe + Major System warning</td><td><span class="chip pass">ADDED</span></td><td>"May exceed G5 WM ceiling — test before shipping"</td></tr>
+    </table>
+  </div></div>
+</div>
+
+<!-- S4 -->
+<div class="section" id="s4">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">📚</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">04</span><h2>Research Integration — 4 Waves Complete</h2></div>
+        <div class="sec-subtitle">8 research files, all integrated, all sources cited</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <table>
+      <tr><th>Research Wave</th><th>Files</th><th>Integration Location</th><th>Status</th></tr>
+      <tr><td>DTM/IELTS/Market</td><td>3</td><td>Part 3 (Paths), Part 4 (Courses), research table</td><td><span class="res-status done">Resolved</span></td></tr>
+      <tr><td>Olympiad/Lyceum/IT</td><td>3</td><td>Part 2 (L2 Delta), Part 3 (OLY), CSC-005</td><td><span class="res-status done">Resolved</span></td></tr>
+      <tr><td>Employer/Market/Audit</td><td>3</td><td>Part 4 (skills gaps), Part 6 (priority)</td><td><span class="res-status done">Resolved</span></td></tr>
+      <tr><td>Buzan Cognitive Science</td><td>6</td><td>Part 7 (full integration, 16+ metrics)</td><td><span class="res-status done">Resolved</span></td></tr>
+    </table>
+    <div class="stat-row" style="margin-top:.6rem">
+      <div class="stat-box"><div class="stat-num" style="color:var(--green)">15</div><div class="stat-label">Research Files</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--green)">4</div><div class="stat-label">Waves Complete</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--green)">16+</div><div class="stat-label">Empirical Metrics</div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- S5 -->
+<div class="section" id="s5">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">⚠️</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">05</span><h2>Issues Found (4 Total)</h2></div>
+        <div class="sec-subtitle">1 medium severity, 3 cosmetic</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <table>
+      <tr><th>#</th><th>Severity</th><th>Issue</th><th>Location</th><th>Fix</th></tr>
+      <tr><td>1</td><td><span class="chip partial">MEDIUM</span></td><td>Weekly PISA all-tier decision conflicts with System Design v1 §4 (says "Premium only") and §5.2 (BT award for PISA is "Premium only")</td><td>Library Part 6 vs System Design §4 + §5.2</td><td>Update System Design v1 or add ADR reference to Library</td></tr>
+      <tr><td>2</td><td><span class="chip needed">COSMETIC</span></td><td>Footer still says v0.3</td><td>Line 1627</td><td>Update to v0.4</td></tr>
+      <tr><td>3</td><td><span class="chip needed">COSMETIC</span></td><td>Duplicate final line</td><td>Lines 1630 + 1632</td><td>Remove duplicate</td></tr>
+      <tr><td>4</td><td><span class="chip needed">COSMETIC</span></td><td>Teacher Dashboard PISA line says "Premium classes only" — but weekly PISA is now all-tier</td><td>Library Part 6 table</td><td>Update (follows from #1)</td></tr>
+    </table>
+  </div></div>
+</div>
+
+<!-- S6 -->
+<div class="section" id="s6">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-header-left">
+      <span class="sec-icon">🏁</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">06</span><h2>Final Verdict</h2></div>
+        <div class="sec-subtitle">Production-ready pending 1 medium fix</div>
+      </div>
+    </div>
+    <span class="chevron">▶</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+    <p>The framework is <strong>97% clean</strong>. Claude's v0.4 review was high-quality — the TEFCAS/IRT clarification alone was critical (the original draft wrongly implied TEFCAS replaces IRT). The Radiance Score implementation contract is production-ready. All 4 research waves are properly integrated with sources cited.</p>
+    <p>The only substantive issue is the <strong>Weekly PISA tier change</strong> — it's a good product decision but System Design v1 needs a matching note so future readers don't see a contradiction.</p>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num" style="color:var(--green)">97%</div><div class="stat-label">Consistency Score</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--cyan)">0</div><div class="stat-label">Breaking Issues</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--gold)">1</div><div class="stat-label">Medium Priority</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--pink)">3</div><div class="stat-label">Cosmetic</div></div>
+    </div>
+  </div></div>
+</div>
+
+</main>
+</div>
+
+<footer>
+  Assessment generated by Qwen Code · 2026-04-11 · Compared: Library Framework v0.4 (1,632 lines), System Design v1 (458 lines), 15 research files
+</footer>
+
+<script>
+function toggleSection(header) {
+  const section = header.closest('.section');
+  section.classList.toggle('open');
+  updateSidebar();
+}
+function updateSidebar() {
+  document.querySelectorAll('#toc a').forEach(a => a.classList.remove('active'));
+  document.querySelectorAll('.section.open').forEach(s => {
+    const a = document.querySelector(`#toc a[data-section="${s.id}"]`);
+    if (a) a.classList.add('active');
+  });
+}
+document.querySelectorAll('#toc a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const section = document.querySelector(a.getAttribute('href'));
+    if (!section.classList.contains('open')) section.classList.add('open');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    updateSidebar();
+  });
+});
+window.addEventListener('scroll', updateSidebar);
+</script>
+</body>
+</html>

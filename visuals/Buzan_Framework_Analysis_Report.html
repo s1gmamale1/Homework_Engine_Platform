@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETS Architect Analysis: Buzan & Library Framework Integration</title>
+    <style>
+        :root {
+            --primary: #00f2ff; /* Cyan Neon */
+            --secondary: #7000ff; /* Purple Neon */
+            --accent: #ff007a; /* Pink Neon */
+            --background: #0a0b10;
+            --surface: #161b22;
+            --text: #e6edf3;
+            --border: #30363d;
+            --success: #39ff14; /* Neon Green */
+            --warning: #f59e0b;
+            --danger: #ff3131;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            background-image: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0b10 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--primary);
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.15);
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.25rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: transparent;
+            color: var(--success);
+            border: 1px solid var(--success);
+            padding: 0.25rem 1rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            box-shadow: 0 0 5px var(--success);
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        h2 {
+            border-bottom: 1px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            color: var(--secondary);
+            font-size: 1.6rem;
+            margin-top: 2.5rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(112, 0, 255, 0.4);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: #0d1117;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background: #0d1117;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 700;
+            border-bottom: 1px dashed var(--primary);
+        }
+
+        footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.8rem;
+            color: #8b949e;
+            text-align: center;
+        }
+
+        code {
+            color: var(--accent);
+            background: rgba(255, 0, 122, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+            padding: 0.1rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li::before {
+            content: ">> ";
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NETS Library Framework — Architectural Audit</h1>
+            <div class="status-badge">Analysis Complete (v0.4)</div>
+            <p style="margin-top: 1rem; color: #64748b;">
+                <strong>Date:</strong> 2026-04-11 | 
+                <strong>Analyst:</strong> NETS Architect Agent | 
+                <strong>Target:</strong> NETS-Library-Framework.md
+            </p>
+        </header>
+
+        <section id="executive-summary">
+            <h2>Executive Summary</h2>
+            <p>
+                The <code>NETS-Library-Framework.md</code> (v0.4) represents a successful synthesis of the <strong>5-Layer Architecture</strong> established in System Design v1.0 and the <strong>Cognitive Science</strong> principles derived from the Tony Buzan research brief. The framework moves beyond standard subject classification to create a "Pedagogical Operating System" for Uzbekistan's national PISA goals.
+            </p>
+        </section>
+
+        <section id="architecture">
+            <h2>1. Architectural Integrity</h2>
+            <div class="card">
+                <h3>5-Layer Alignment</h3>
+                <p>The library structure perfectly mirrors the hierarchical requirements:</p>
+                <ul>
+                    <li><span class="highlight">Layer 0:</span> 7-Phase engine is maintained as the immutable core.</li>
+                    <li><span class="highlight">Layer 1:</span> Correct implementation of 5 Subject Families (Aniq, Til, Tabiat, Ijtimoiy, Tarbiya).</li>
+                    <li><span class="highlight">Layer 2:</span> Subject Frameworks now inherit pedagogy, mechanics, and Boss rules from families.</li>
+                    <li><span class="highlight">Layer 3:</span> Tier Overlay (Basic/Premium) defines the PISA scaffolding for all students.</li>
+                    <li><span class="highlight">Layer 4:</span> Metagame (Bilim Bazasi) integrated into the Mind Mapping visuals.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="buzan-integration">
+            <h2>2. Buzan Cognitive Science Integration</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>TEFCAS & IRT Synergy</h3>
+                    <p>The framework resolves the potential conflict between <strong>TEFCAS</strong> (learning loop) and <strong>IRT</strong> (difficulty engine). TEFCAS provides the "pedagogical framing" (Socratic tutoring, reflection) while IRT handles the statistical calibration. This is a critical architectural win.</p>
+                </div>
+                <div class="card">
+                    <h3>SMASHIN' SCOPE</h3>
+                    <p>Implemented as a mandatory <strong>AI-Generation Checklist</strong> for all mnemonics. This ensures that visual associations are not just "drawings" but high-impact cognitive triggers (Synaesthesia, Humor, Exaggeration, etc.).</p>
+                </div>
+                <div class="card">
+                    <h3>G5 Mind Mapping</h3>
+                    <p>The framework successfully applies the <strong>"One Word Per Branch"</strong> and <strong>Landscape Orientation</strong> rules to solve the Grade 5 <strong>Working Memory bottleneck</strong> (4-5 chunks).</p>
+                </div>
+                <div class="card">
+                    <h3>Speed Reading Metrics</h3>
+                    <p>UI/UX rules are now quantifiable: <strong>66-character ideal line width</strong>, <strong>1.5x line height</strong>, and <strong>Guided Pacer</strong> mechanics in Story Mode to eliminate regressions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="security-anti-cheat">
+            <h2>3. Security & Anti-Cheat (Radiance Score)</h2>
+            <p>One of the most innovative sections is the <strong>Radiance Score</strong>. By analyzing the "radiance" (non-linearity/idiosyncrasy) of a student's open-reasoning answer, the system can distinguish between organic thought and linear AI-generated copy-paste.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Specification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>AI Tier</strong></td>
+                        <td>Tier 2 (Cheap LLM Inference)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Detection Logic</strong></td>
+                        <td>Idiosyncratic association vs. Linear predictability</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rollout Strategy</strong></td>
+                        <td>6-month "Monitor" phase before SOFT_WARNING deployment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integration</strong></td>
+                        <td>6th flag type in the existing Anti-Cheat system</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="pedagogy">
+            <h2>4. Subject Family Pedagogy</h2>
+            <p>Each family framework now carries specific, unviolable principles:</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Aniq Fanlar (Exact)</h3>
+                    <ul>
+                        <li><strong>CPA Progression:</strong> Concrete → Pictorial → Abstract.</li>
+                        <li><strong>Completion Effect:</strong> Partially solved worked examples.</li>
+                        <li><strong>Notebook Capture:</strong> Mandatory for G7+ math derivation.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Til Fanlari (Languages)</h3>
+                    <ul>
+                        <li><strong>Krashen i+1:</strong> Comprehensible input via Story Mode.</li>
+                        <li><strong>Spaced Repetition:</strong> Ebbinghaus curve review intervals.</li>
+                        <li><strong>Dual Coding:</strong> Image + Native Gloss + Target Word.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="critical-observations">
+            <h2>5. Critical Observations & Risk Mitigation</h2>
+            <ul>
+                <li><span class="highlight">L3 Naming:</span> Successfully renamed "Sinovga tayyorlan" to <strong>"Ustoz yo'li"</strong> (Master's Path), preserving the <strong>Hidden Difficulty</strong> principle (SOUL #3).</li>
+                <li><span class="highlight">G5 Peg System Risk:</span> The framework correctly flags the Peg System as a potential cognitive overload risk for G5. This must be held in <strong>experimental status</strong> until playtesting.</li>
+                <li><span class="highlight">Assessment Mode ADR:</span> Identified a conflict between DTM exams and the 7-phase engine. The proposed <strong>"Assessment Mode"</strong> is a necessary architectural exception for Layer 3 content.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>NETS Architect Report | Confidential Internal Document | Sigma_Edu_3000 Project</p>
+            <div class="tag">Confidential</div>
+            <div class="tag">Architecture</div>
+            <div class="tag">Buzan-Aligned</div>
+        </footer>
+    </div>
+</body>
+</html>
