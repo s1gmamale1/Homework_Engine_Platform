@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buzan Method Integration into NETS Homework Engine</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #1a1a2e;
+    --accent: #0f3460;
+    --border: #dee2e6;
+    --section-bg: #e9ecef;
+    --green: #2e7d32;
+    --red: #c62828;
+    --amber: #e65100;
+    --blue: #1565c0;
+    --purple: #6a1b9a;
+    --teal: #00838f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .header {
+    text-align: center;
+    padding: 2rem 0 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .header h1 { font-size: 1.9rem; color: var(--accent); }
+  .header p { color: #666; margin-top: .5rem; font-size: .95rem; }
+
+  h2 {
+    font-size: 1.3rem;
+    color: #fff;
+    background: var(--accent);
+    padding: .6rem 1rem;
+    border-radius: 8px 8px 0 0;
+    margin: 2.5rem 0 0;
+  }
+  .section-intro {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: .8rem 1rem;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    color: #555;
+  }
+
+  .method-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+  }
+  .method-card.game { border-left-color: var(--blue); }
+  .method-card.phase5 { border-left-color: var(--purple); }
+  .method-card.deferred { border-left-color: var(--red); opacity: .85; }
+  .method-card.pending { border-left-color: var(--amber); }
+  .method-card.elsewhere { border-left-color: #9e9e9e; }
+  .method-card.no-buzan { border-left-color: #bdbdbd; background: #fafafa; }
+
+  .method-card h3 {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin: 0 0 .8rem;
+  }
+  .method-card.game h3 { color: var(--blue); }
+  .method-card.phase5 h3 { color: var(--purple); }
+  .method-card.deferred h3 { color: var(--red); }
+
+  .field { margin: .6rem 0; }
+  .field-label {
+    display: inline-block;
+    font-weight: 700;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: .15rem .5rem;
+    border-radius: 3px;
+    margin-bottom: .2rem;
+  }
+  .label-what { background: #e3f2fd; color: var(--blue); }
+  .label-why { background: #f3e5f5; color: var(--purple); }
+  .label-how { background: #e8f5e9; color: var(--green); }
+  .label-not { background: #fbe9e7; color: var(--red); }
+  .label-best { background: #fff3e0; color: var(--amber); }
+  .label-cut { background: #ffebee; color: var(--red); }
+
+  .field p { margin: .2rem 0 0; }
+
+  .tag {
+    display: inline-block;
+    padding: .1rem .5rem;
+    border-radius: 4px;
+    font-size: .75rem;
+    font-weight: 600;
+    color: #fff;
+    margin-right: .3rem;
+    margin-bottom: .3rem;
+  }
+  .tag-phase { background: var(--accent); }
+  .tag-game { background: var(--blue); }
+  .tag-method { background: var(--purple); }
+  .tag-deferred { background: var(--red); }
+  .tag-pending { background: var(--amber); }
+
+  table { width: 100%; border-collapse: collapse; margin: .8rem 0; font-size: .86rem; }
+  th, td { border: 1px solid var(--border); padding: .45rem .6rem; text-align: left; vertical-align: top; }
+  th { background: var(--section-bg); font-weight: 600; }
+
+  hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+  ul { padding-left: 1.4rem; margin: .4rem 0; }
+  li { margin-bottom: .2rem; }
+  code { background: #f0f0f0; padding: .1rem .35rem; border-radius: 3px; font-size: .88rem; }
+  em { font-style: italic; color: #555; }
+
+  @media (max-width: 600px) {
+    body { padding: 1rem; }
+    .method-card { padding: .8rem 1rem; }
+    table { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Buzan Method Integration into NETS Homework Engine</h1>
+  <p>Each method: <strong>What</strong> &rarr; <strong>Why</strong> &rarr; <strong>How</strong> &rarr; <strong>Where Not</strong></p>
+  <p style="margin-top:.3rem; font-size:.85rem; color:#999;">Methods without "Best for" are subject-agnostic &mdash; they apply to all subjects.</p>
+</div>
+
+<!-- ==================== PHASE-LEVEL ==================== -->
+<h2>Phase-Level Injections</h2>
+<div class="section-intro">These apply at the session/phase level, not inside individual games. All are subject-agnostic unless noted.</div>
+
+<div class="method-card">
+  <h3>1. TEFCAS Learning Loop</h3>
+  <span class="tag tag-phase">All Phases</span>
+  <span class="tag tag-method">Methods #10, #11</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Trial &rarr; Event &rarr; Feedback &rarr; Check &rarr; Adjust &rarr; Success. Buzan's model of how the brain acquires skills through cybernetic feedback. <em>(Source: Buzan, Scientific Research &mdash; The TEFCAS Model)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>The NETS session already follows this loop but doesn't name it. Naming it gives the AI tutor a consistent vocabulary and reframes all failure as "Feedback, not failure."</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>All wrong-answer responses use <strong>"Hali emas!"</strong> (Not yet!) &mdash; "Wrong," "Incorrect," "Noto'g'ri," "Xato" are banned system-wide. Phase 6 Socratic tutoring follows C&rarr;A&rarr;S. Phase 7 prompts use TEFCAS vocabulary.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Raw performance data (correct count, XP, time) stays as numbers &mdash; TEFCAS language applies to student-facing prompts only, not analytics dashboards or teacher reports.</p>
+  </div>
+</div>
+
+<div class="method-card">
+  <h3>2. MIG &mdash; Most Important Graph</h3>
+  <span class="tag tag-phase">Phase 1, 3, 7</span>
+  <span class="tag tag-method">Methods #14, #26, #33</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Recall is highest at start (Primacy) and end (Recency), dips in middle (the Sag), spikes on outstanding items (Von Restorff). <em>(Source: Buzan, Use Your Memory &mdash; The MIG)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Explains why the 7-phase structure works. Makes phase ordering intentional rather than arbitrary.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Phase 1 = Primacy window. Phase 3, Game Break 2 = Von Restorff Anchor (tag middle game as "outstanding"). Phase 7 = Recency window. Content authors tag at least 3 items per lesson as <code>outstanding: true</code>.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Does not change Phase 2 (Story Mode) or Phase 4 (Real-Life Challenge) &mdash; those are content delivery, not recall-curve phases.</p>
+  </div>
+</div>
+
+<div class="method-card">
+  <h3>3. BOST &mdash; Buzan Organic Study Technique</h3>
+  <span class="tag tag-phase">Phase 0-A</span>
+  <span class="tag tag-method">Methods #13, #27</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Browse &rarr; Time &rarr; Prime &rarr; Questions &rarr; Overview &rarr; Preview &rarr; Inview &rarr; Review. <em>(Source: Buzan, Use Your Head &mdash; BOST)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>NETS already maps to BOST at ~80%. Two small additions close the gap &mdash; activating prior knowledge and setting a learning goal that Phase 7 closes.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Panel 5 adds: <em>"Bu mavzu haqida nimalarni bilasiz?"</em> (Prior Knowledge). Panel 6 adds: <em>"Bugun nimani bilmoqchisiz?"</em> (Learning Goal). Both stored, resurfaced in Phase 7.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Recovery Sessions (15-20 min, no time). First-ever lesson in a brand new subject.</p>
+  </div>
+</div>
+
+<div class="method-card">
+  <h3>4. Buzan Review Intervals</h3>
+  <span class="tag tag-phase">Phase 1 + System-wide</span>
+  <span class="tag tag-method">Method #34</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Mandatory review at ~10min &rarr; ~24h &rarr; ~1 week &rarr; ~1 month. <em>(Source: Buzan, Use Your Memory &mdash; Review Intervals)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>SM-2 may schedule reviews too late for "Easy" rated items. Buzan's intervals catch the steepest part of the forgetting curve.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Floor constraints: <code>min(SM-2, Buzan)</code> &mdash; whichever is sooner wins. Missed session? Touchpoint shifts, never skipped.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Does not override SM-2 when SM-2 schedules SOONER. Buzan intervals are a floor, not a ceiling.</p>
+  </div>
+</div>
+
+<div class="method-card">
+  <h3>5. 80/20 Keyword Extraction</h3>
+  <span class="tag tag-phase">Content Pipeline</span>
+  <span class="tag tag-method">Method #22</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>~20% of words carry ~80% of conceptual value. <em>(Source: Buzan, Speed Reading &mdash; 80/20 Rule)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Tagged keywords feed Radiant Summary, Flash Cards, Memory Sprint, Sentence Fill. One extraction, many consumers.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Every <code>narrative_segment</code> must have <code>keywords_80_20</code> array (3-8 keywords). Pipeline QA blocks segments with missing arrays.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Only narrative segments. Game items, boss questions, checkpoints are already keyword-dense.</p>
+  </div>
+</div>
+
+<div class="method-card">
+  <h3>6. Cortical Skills Synergy</h3>
+  <span class="tag tag-phase">Phase 3 Selection</span>
+  <span class="tag tag-method">Method #25</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Left-brain + right-brain working together = exponential performance increase. <em>(Source: Buzan, Use Your Head &mdash; Cortical Skills)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Without a constraint, the algorithm could pick 3 verbal games &mdash; all left-brain, zero visual/spatial engagement.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Tag each game with a modality. Selection constraint: at least 2 of 3 games from DIFFERENT modalities.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Recovery Sessions (only 1-2 games).</p>
+  </div>
+</div>
+
+<div class="method-card">
+  <h3>7. Schema Activation</h3>
+  <span class="tag tag-phase">Session Assembly</span>
+  <span class="tag tag-method">Method #13</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>New info anchors better when connected to already-active knowledge. <em>(Source: Buzan, Scientific Research &mdash; Schema Theory)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>If Phase 2 introduces a new concept but Phase 1 didn't activate any prerequisite, the concept floats unanchored.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Session Assembler checks: every Phase 2 concept must have &ge;1 prerequisite activated in Phase 1 or Phase 0-B. If missing, auto-inject.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>First lesson in a subject where no prerequisites exist yet.</p>
+  </div>
+</div>
+
+<div class="method-card">
+  <h3>8. W5H Radiant Problem Solving</h3>
+  <span class="tag tag-phase">Phase 4</span>
+  <span class="tag tag-method">Method #4</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Who/What/Where/When/Why/How radiate from a central problem. <em>(Source: Buzan, Mind Map Book &mdash; Problem Solving)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Students jump to answers without analyzing all factors. W5H forces structured decomposition.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>6-branch W5H frame before answer area. Student fills &ge;4. NOT scored &mdash; scaffolding. G5-6: mandatory. G9+: optional.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-best">Best for</div>
+    <p>Science, History, Geography, Tarbiya.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Math (pure calculation). Tasviriy Sanat (creative). Language (comprehension).</p>
+  </div>
+</div>
+
+<div class="method-card">
+  <h3>9. Decision Mapping</h3>
+  <span class="tag tag-phase">Phase 4</span>
+  <span class="tag tag-method">Method #5</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Compare two competing options radiantly with weighted pros/cons. <em>(Source: Buzan, Mind Map Book &mdash; Decision Mapping)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Linear pros/cons lists hide trade-offs. Radiant comparison makes them visible.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Phase 4 extension of W5H &mdash; for genuine trade-offs between 2+ options. Student completes branches, assigns weights, justifies.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Phase 6 Boss (assessment &mdash; scaffolding doesn't belong). Math. Language. Single-answer scenarios.</p>
+  </div>
+</div>
+
+<!-- ==================== PHASE 5 ==================== -->
+<h2>Phase 5 Consolidation &mdash; Technique by Content Structure</h2>
+<div class="section-intro">Phase 5 is Buzan's home phase. Technique selected based on content structure, not randomly.</div>
+
+<div class="method-card phase5">
+  <h3>10. Radiant Summary (Mind Mapping)</h3>
+  <span class="tag tag-method">Methods #1, #2, #7</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Partially completed mind map &mdash; student drags keywords onto branches. Central image, organic curves, one keyword per branch, 3+ colors. <em>(Source: Buzan, Mind Map Book)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Hierarchical content is best encoded as a visual hierarchy. Fills the undefined "Mind maps" slot in Phase 5.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>3-5 BOI branches, empty sub-branch slots, 2-3 distractors. G5: max 4 branches (WM ceiling), Icon-First. Optional Supernova Sprint after.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-best">Best for</div>
+    <p>Science classification, Math formula families, Tarbiya virtue categories, Geography biomes, Art elements.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Sequential content (Link System). Spatial (Memory Palace). History timelines (temporal, not hierarchical).</p>
+  </div>
+</div>
+
+<div class="method-card phase5">
+  <h3>11. Link System</h3>
+  <span class="tag tag-method">Method #28</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>A vivid story chain where each item triggers the next. <em>(Source: Buzan, Use Your Memory)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Sequential content is best encoded as a chain &mdash; each item triggers recall of the next.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Phase 1 as "Link Chain" format. Phase 5 as consolidation technique. SMASHIN' SCOPE story using textbook's actual terms.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-best">Best for</div>
+    <p>Science processes, History timelines, cause-effect chains.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Unrelated vocabulary. Math formulas. Hierarchical content (Radiant Summary).</p>
+  </div>
+</div>
+
+<div class="method-card phase5">
+  <h3>12. Peg System</h3>
+  <span class="tag tag-method">Method #29</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Number-Shape pegs (1=Candle, 2=Swan, 3=Heart, 4=Sailboat, 5=Hook) as permanent mental hooks. <em>(Source: Buzan, Use Your Memory)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Gives random-access to numbered items. Fills the undefined "Peg system" slot in Phase 5.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Associate concepts with peg images via "link sentences." Recall both directions. Can integrate with Tic Tac Toe.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-best">Best for</div>
+    <p>History key facts, Language vocabulary, Science key terms.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Sequential processes (Link System). Hierarchical (Radiant Summary). More than 7 items (overload).</p>
+  </div>
+</div>
+
+<div class="method-card phase5">
+  <h3>13. Major System (G7+ only)</h3>
+  <span class="tag tag-method">Method #30</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Phonetic digit code: 1=T, 2=N, 3=M, 4=R... <em>(Source: Buzan, Use Your Memory)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Only mnemonic that works for raw numbers.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Number &rarr; consonants &rarr; word &rarr; vivid image. Example: 1441 &rarr; T-R-R-T &rarr; "Toshbaqa."</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-best">Best for</div>
+    <p>History dates, Chemistry/Physics constants.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>G5-6 (too abstract). Tarbiya, Tasviriy Sanat, Language (no numbers).</p>
+  </div>
+</div>
+
+<div class="method-card phase5">
+  <h3>14. SMASHIN' SCOPE Quality Gate</h3>
+  <span class="tag tag-method">Method #32</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>12-point vividness checklist for mnemonic content. <em>(Source: Buzan, Use Your Memory)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Dry mnemonics perform no better than rote memorization. Vivid imagery is what makes mnemonics work.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Every <code>mnemonic_exercise</code> must score 6+/12. Below 6 = returned for enrichment.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Non-mnemonic content (quizzes, boss questions, checkpoints).</p>
+  </div>
+</div>
+
+<div class="method-card phase5">
+  <h3>15. Dual Coding</h3>
+  <span class="tag tag-method">Method #12</span>
+  <div class="field">
+    <div class="field-label label-what">What</div>
+    <p>Verbal + visual encoding = two retrieval paths. <em>(Source: Buzan, Scientific Research / Paivio)</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Doubles recall probability. Phase 5 IS the Dual Coding moment &mdash; verbal (Phase 2) re-encoded visually/spatially here.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Pipeline QA: every content block must declare 2+ encoding channels (VRB, VIS, SPA, AUD, KIN).</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Movement Breaks (physical activity, not encoding).</p>
+  </div>
+</div>
+
+<!-- ==================== GAMES ==================== -->
+<h2>Game-Level Injections</h2>
+<div class="section-intro">How Buzan methods enhance specific games. Each includes WHY this method helps THIS specific game.</div>
+
+<div class="method-card game">
+  <h3>Tile Match</h3>
+  <span class="tag tag-game">Dual Coding</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>If both cards are text, the brain uses only ONE channel (verbal). If one is an image and one is text, TWO channels fire (visual + verbal). Paivio's Dual Coding shows this doubles recall. The game already requires pairs &mdash; making them cross-modal costs nothing and doubles the learning.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Pairs must be image&harr;text, not text&harr;text.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Only flag pairs where both sides are text-only.</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Why Chain</h3>
+  <span class="tag tag-game">Radiant Thinking</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>The "Why?" structure IS radiant thinking &mdash; branching deeper. But the UI renders it as a flat list, hiding the branching. A tree visualization lets the student SEE understanding deepen &mdash; knowledge radiating outward from a central concept.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Render as a downward branching tree, not a flat numbered list.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>2-level chains (too short to branch meaningfully).</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Sentence Fill</h3>
+  <span class="tag tag-game">80/20 Rule</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Blanking a random word tests one random fact. Blanking the 80/20 keyword trains the student to identify the conceptual anchor of every sentence. Over time, builds the habit of reading for meaning.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Blanked words = <code>keywords_80_20</code>. Not articles or prepositions.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Language grammar exercises where the blank IS a grammatical element.</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Memory Palace</h3>
+  <span class="tag tag-game">SMASHIN' SCOPE + Buzan Intervals</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Already a Buzan method, but content at hotspots can be dry or vivid. Dry placements perform no better than rote memorization. The palace only works if what's placed there is memorable. Buzan intervals ensure palaces are revisited at critical forgetting curve points.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Hotspot content must pass SMASHIN' SCOPE (6+/12). Revisits follow Buzan intervals. "Hali emas" on missed recalls.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Already defined in <code>NETS-Memory-Palace-Definition.md</code>. Just add SMASHIN' SCOPE gate + interval floor.</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Tic Tac Toe</h3>
+  <span class="tag tag-game">Peg System Integration</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Standard Tic Tac Toe: board position and question are unrelated. With Peg System merged, cell 3 = Heart peg = concept pegged to Heart. Spatial strategy fuses with mnemonic retrieval = triple coding (visual peg + verbal concept + strategic position).</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>When Peg System is also active: cells labeled with peg numbers. Place X = recall pegged concept.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Only when Peg System is also selected. Otherwise plays normally.</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Puzzle Lock</h3>
+  <span class="tag tag-game">Link System</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Puzzle Lock = arrange tiles in order. Without a story, student relies on rote memory. With a Link Chain story, the student has a narrative scaffold explaining WHY the order matters &mdash; causal logic, not arbitrary sequence. Reduces random guessing.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>For sequence tiles: Link Chain story as hint after 2 wrong moves.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Number-ordering (1-2-3...8). Sentence fragment puzzles (grammar logic).</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Mystery Box</h3>
+  <span class="tag tag-game">Von Restorff Effect</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Big prize question is usually random. Making it the "outstanding" one creates a double reward: XP prize AND memorable learning moment. Von Restorff means this ONE question is remembered far better than the other 8. The game's reward structure amplifies a specific piece of knowledge.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Large prize box (&Iscr;) = <code>outstanding: true</code> question.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Don't make ALL questions outstanding. Effect works because ONE stands out.</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Spaced Flashcards</h3>
+  <span class="tag tag-game">Buzan Review Intervals</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>SM-2 is great for struggling items but too generous with "Easy" &mdash; pushing them weeks out. Buzan shows 24h and 1-week points are critical regardless of ease. A student rating "Easy" today may forget in 3 days. The floor catches overconfident ratings before they become gaps.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>"Easy" cards still return at 24h, 1w, 1mo minimum.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>"Again" cards &mdash; SM-2 already returns them immediately.</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Adaptive Quiz</h3>
+  <span class="tag tag-game">TEFCAS</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>The adaptive mechanism IS TEFCAS but the student doesn't see it &mdash; questions just get harder/easier with no explanation. Naming the transitions turns a confusing difficulty swing into a visible learning process.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>On level up: <em>"Trial muvaffaqiyatli!"</em> On level down: <em>"Feedback olindi &mdash; flow zonangizni topmoqdamiz."</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Only on difficulty TRANSITIONS, not every question.</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Peer Teaching</h3>
+  <span class="tag tag-game">TEFCAS Failure Framing</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Only mechanic where students PRODUCE knowledge. "Incorrect &mdash; the answer is X" kills the production impulse. "Hali emas! Covers [X] but missing [Y] &mdash; how would you Adjust?" preserves the expert identity the mechanic is built on.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p><em>"Hali emas! Tushuntirishingiz [X] ni qamraydi, lekin [Y] yetishmayapti. Qanday Adjust qilasiz?"</em></p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Factually dangerous explanations (safety info) &mdash; direct correction necessary.</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Reflection Journal</h3>
+  <span class="tag tag-game">TEFCAS + BOST Goal Recall</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Generic prompts produce generic answers. TEFCAS prompts produce structured metacognition. BOST goal recall closes the loop from Phase 0-A &mdash; completion or honest "not yet."</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>TEFCAS-framed prompts by performance band. BOST goal recall at end.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Raw performance summary unchanged. TEFCAS applies to prompts only.</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Story Mode</h3>
+  <span class="tag tag-game">80/20 Keyword Tagging</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>Without tagging, downstream mechanics guess which words matter. With <code>keywords_80_20</code> tagged once, every mechanic knows exactly which terms to test, blank, or use as labels. One extraction, consistency everywhere.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Every narrative segment has tagged keywords feeding downstream.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Speed reading mechanics DEFERRED (see below).</p>
+  </div>
+</div>
+
+<div class="method-card game">
+  <h3>Memory Sprint</h3>
+  <span class="tag tag-game">Link System + Buzan Intervals</span>
+  <div class="field">
+    <div class="field-label label-why">Why</div>
+    <p>5 existing formats are retrieval-based. Link Chain (6th) is encoding-based: the story EXPLAINS why the order matters. Better than "Order the Steps" for causal content. Buzan intervals ensure critical concepts always appear even if SM-2 would delay them.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">How</div>
+    <p>Link Chain: 5 items + SMASHIN' SCOPE story, 15s study, recall out of order. Intervals as floor constraints.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-not">Where Not</div>
+    <p>Link Chain not for unrelated vocabulary or math formulas.</p>
+  </div>
+</div>
+
+<!-- ==================== NO BUZAN ==================== -->
+<h2>Games Where Buzan Adds Nothing</h2>
+
+<div class="method-card no-buzan">
+  <h3>Movement Breaks</h3>
+  <p>Physical activity &mdash; no knowledge encoding. Buzan methods are cognitive, not physical.</p>
+</div>
+<div class="method-card no-buzan">
+  <h3>Connect Four</h3>
+  <p>Pure strategy with knowledge gating. The strategy IS the engagement. Mnemonic framing overcomplicates it.</p>
+</div>
+<div class="method-card no-buzan">
+  <h3>Blackjack 21</h3>
+  <p>Math-only, probability-focused. Live calculation doesn't benefit from mnemonics.</p>
+</div>
+<div class="method-card no-buzan">
+  <h3>Codebreaker</h3>
+  <p>Letter deduction logic. The Wordle-style process is its own cognitive method. Buzan adds friction, not value.</p>
+</div>
+<div class="method-card no-buzan">
+  <h3>Notebook Capture</h3>
+  <p>Physical drawing/writing. The kinesthetic act IS the encoding &mdash; Buzan's visual methods are already embedded in drawing.</p>
+</div>
+
+<!-- ==================== DEFERRED ==================== -->
+<h2>Deferred Methods</h2>
+<div class="section-intro">CUT from active injection. May apply at G9+ after empirical validation.</div>
+
+<div class="method-card deferred">
+  <h3>Focus Guide, Sub-vocalization, Meta-Guiding, Forward Momentum, Semantic Chunking, Saccade/Peripheral Vision</h3>
+  <span class="tag tag-deferred">Methods #16-21, #23</span>
+  <span class="tag tag-deferred">DEFERRED &rarr; Future Reading Fluency Module</span>
+  <div class="field">
+    <div class="field-label label-cut">Why Cut</div>
+    <p><strong>G5 bottleneck is COMPREHENSION, not speed.</strong> Rayner et al. (2016) found speed reading training does NOT improve comprehension. G5 students (Lexile 830-1010L) struggle with multi-clause sentences. Pushing faster harms understanding. Regression is a legitimate comprehension strategy. These methods were designed for adults.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">Validation path</div>
+    <p>A/B test with 200+ G9-11 students. Measure comprehension, not just WPM. Only ship if comprehension maintained.</p>
+  </div>
+</div>
+
+<div class="method-card pending">
+  <h3>Anti-Cheat Radiant Signature</h3>
+  <span class="tag tag-pending">Method #15</span>
+  <span class="tag tag-pending">PENDING VALIDATION</span>
+  <div class="field">
+    <div class="field-label label-cut">Why Gated</div>
+    <p>Students explaining sequential processes naturally produce "linear" text &mdash; not cheating. False positive rate for G5 unacceptable.</p>
+  </div>
+  <div class="field">
+    <div class="field-label label-how">Ship gate</div>
+    <p>500+ labeled responses, precision &ge; 90% or doesn't ship.</p>
+  </div>
+</div>
+
+<!-- ==================== ELSEWHERE ==================== -->
+<h2>Not in Homework Engine (Belong Elsewhere)</h2>
+
+<div class="method-card elsewhere">
+  <h3>Group Mind Mapping (#3)</h3>
+  <p>Post-MVP roadmap &mdash; requires multiplayer infrastructure.</p>
+</div>
+<div class="method-card elsewhere">
+  <h3>Secret Symbols (#8)</h3>
+  <p>Bilim Bazasi metagame &rarr; NETS-System-Design-v1.md</p>
+</div>
+<div class="method-card elsewhere">
+  <h3>Color-Coded Zones (#9)</h3>
+  <p>Visual design system &rarr; NETS-UI-UX-Design-Spec</p>
+</div>
+<div class="method-card elsewhere">
+  <h3>SEM&sup3; Memory Matrix (#31)</h3>
+  <p>Backend data model &rarr; NETS-System-Design-v1.md</p>
+</div>
+
+</body>
+</html>
