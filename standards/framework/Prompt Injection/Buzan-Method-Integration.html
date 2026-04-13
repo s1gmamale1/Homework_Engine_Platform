@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buzan Method Integration into NETS Homework Engine</title>
+<style>
+  :root { --bg:#fff; --text:#1a1a2e; --accent:#0f3460; --border:#e0e0e0; --code-bg:#f5f5f5; --section-bg:#fafafa; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; max-width:960px; margin:0 auto; padding:2rem 1.5rem; }
+  h1 { font-size:1.7rem; color:var(--accent); margin:1.5rem 0 .8rem; }
+  h2 { font-size:1.35rem; color:var(--accent); margin:1.8rem 0 .6rem; border-bottom:2px solid var(--accent); padding-bottom:.3rem; }
+  h3 { font-size:1.1rem; color:var(--text); margin:1.1rem 0 .5rem; }
+  hr { border:none; border-top:1px solid var(--border); margin:1.5rem 0; }
+  p { margin:.5rem 0; }
+  ul,ol { padding-left:1.6rem; margin:.5rem 0; }
+  li { margin-bottom:.3rem; }
+  a { color:var(--accent); }
+  strong { font-weight:600; }
+  em { font-style:italic; }
+  code { background:var(--code-bg); padding:.15rem .4rem; border-radius:3px; font-size:.9rem; font-family:'Cascadia Code',Consolas,monospace; }
+  pre { background:var(--code-bg); padding:1rem; border-radius:6px; overflow-x:auto; margin:.8rem 0; font-size:.85rem; }
+  pre code { background:none; padding:0; }
+  table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.88rem; }
+  th,td { border:1px solid var(--border); padding:.5rem .65rem; text-align:left; vertical-align:top; }
+  th { background:var(--section-bg); font-weight:600; }
+  @media(max-width:600px){ body{padding:1rem;} table{font-size:.8rem;} }
+</style>
+</head>
+<body>
+<h1>Buzan Method Integration into NETS Homework Engine</h1>
+<p>Each entry: <strong>What</strong> (the method) → <strong>Why</strong> (what it improves) → <strong>How</strong> (concrete implementation) → <strong>Where Not</strong> (where it&#39;s unnecessary or harmful).</p>
+<hr>
+<h2>Phase-Level Injections</h2>
+<h3>1. TEFCAS Learning Loop</h3>
+<ul>
+<li><strong>What:</strong> Trial → Event → Feedback → Check → Adjust → Success. Buzan&#39;s model of how the brain acquires skills through cybernetic feedback. <em>(Source: Buzan, Scientific Research — The TEFCAS Model)</em></li>
+<li><strong>Why:</strong> The NETS session already follows this loop but doesn&#39;t name it. Naming it gives the AI tutor a consistent vocabulary and reframes all failure as &quot;Feedback, not failure.&quot;</li>
+<li><strong>How:</strong> <ul>
+<li>All wrong-answer responses across ALL phases use <strong>&quot;Hali emas!&quot;</strong> (Not yet!) — the words &quot;Wrong,&quot; &quot;Incorrect,&quot; &quot;Noto&#39;g&#39;ri,&quot; &quot;Xato&quot; are banned system-wide.</li>
+<li>Phase 6 Socratic tutoring follows C→A→S: &quot;Let&#39;s <strong>Check</strong> where the gap is → How would you <strong>Adjust</strong>? → Try again for <strong>Success</strong>.&quot;</li>
+<li>Phase 7 reflection prompts use TEFCAS: &quot;What <strong>Feedback</strong> did your brain receive? What will you <strong>Adjust</strong> next time?&quot;</li>
+</ul>
+</li>
+<li><strong>Where Not:</strong> The raw performance data (correct count, XP, time) stays as numbers — TEFCAS language applies to student-facing prompts only, not analytics dashboards or teacher reports.</li>
+</ul>
+<h3>2. MIG — Most Important Graph (Primacy, Recency, Von Restorff, the Sag)</h3>
+<ul>
+<li><strong>What:</strong> Recall is highest at the start (Primacy) and end (Recency) of a session, dips in the middle (the Sag), and spikes on outstanding/unusual items (Von Restorff). <em>(Source: Buzan, Use Your Memory — The MIG)</em></li>
+<li><strong>Why:</strong> Explains why the 7-phase structure works. Makes phase ordering intentional rather than arbitrary.</li>
+<li><strong>How:</strong><ul>
+<li><strong>Phase 1 (Memory Sprint)</strong> = Primacy window. Most important prior-knowledge items go here.</li>
+<li><strong>Phase 3, Game Break 2 (middle game)</strong> = Sag position. Tag this game as the <strong>Von Restorff Anchor</strong> — preferentially select content items tagged <code>outstanding: true</code> (surprising facts, humorous framing, unusual visuals). Content authors must tag at least 3 items per lesson as outstanding.</li>
+<li><strong>Phase 7 (Reflection)</strong> = Recency window. The last mental act consolidates learning.</li>
+</ul>
+</li>
+<li><strong>Where Not:</strong> Does not change Phase 2 (Story Mode) or Phase 4 (Real-Life Challenge) — those are content delivery phases, not recall-curve phases.</li>
+</ul>
+<h3>3. BOST — Buzan Organic Study Technique</h3>
+<ul>
+<li><strong>What:</strong> Browse → Time → Prime → Questions → Overview → Preview → Inview → Review. <em>(Source: Buzan, Use Your Head — BOST)</em></li>
+<li><strong>Why:</strong> The NETS session already maps to BOST at ~80%. Two small additions close the gap and complete the study cycle.</li>
+<li><strong>How:</strong><ul>
+<li><strong>Phase 0-A Panel 5</strong> adds a Prior Knowledge prompt: <em>&quot;Bu mavzu haqida nimalarni bilasiz?&quot;</em> (What do you already know?). Student taps 2-3 keywords. This is the BOST &quot;Prime&quot; step — activates existing schemas. Stored for Phase 7.</li>
+<li><strong>Phase 0-A Panel 6</strong> adds a Learning Goal prompt: <em>&quot;Bugun nimani bilmoqchisiz?&quot;</em> (What do you want to learn?). Stored and resurfaced in Phase 7: <em>&quot;You wanted to learn X. Did you?&quot;</em></li>
+</ul>
+</li>
+<li><strong>Where Not:</strong> Recovery Sessions (15-20 min, no time for prompts). First-ever lesson in a brand new subject (nothing to &quot;already know&quot;).</li>
+</ul>
+<h3>4. Buzan Review Intervals</h3>
+<ul>
+<li><strong>What:</strong> Mandatory review at 10min → 24h → 1 week → 1 month after initial learning. <em>(Source: Buzan, Use Your Memory — Review Intervals)</em></li>
+<li><strong>Why:</strong> SM-2 may schedule reviews too late for &quot;Easy&quot; rated items. Buzan&#39;s intervals catch the steepest part of the forgetting curve.</li>
+<li><strong>How:</strong> Add floor constraints to the Memory Sprint item selection algorithm: <code>actual_next_review = min(SM-2_schedule, Buzan_mandatory)</code> — whichever is sooner wins. The ~10min touchpoint is Phase 5 of the same session. The ~24h touchpoint injects into next day&#39;s Phase 1. If a student misses a session, the touchpoint shifts to the next available session — never skipped.</li>
+<li><strong>Where Not:</strong> Does not override SM-2 when SM-2 schedules SOONER (e.g., student rated &quot;Again&quot;). Buzan intervals are a floor, not a ceiling.</li>
+</ul>
+<h3>5. 80/20 Keyword Extraction</h3>
+<ul>
+<li><strong>What:</strong> ~20% of words carry ~80% of a text&#39;s conceptual value. <em>(Source: Buzan, Speed Reading — The 80/20 Rule)</em></li>
+<li><strong>Why:</strong> Tagging keywords creates a shared resource used by Radiant Summary (branch labels), Flash Cards (card fronts), Memory Sprint (recall items), and Sentence Fill (blanked words).</li>
+<li><strong>How:</strong> Content pipeline requirement: every <code>narrative_segment</code> must have a <code>keywords_80_20</code> array (3-8 keywords). Automated QA blocks segments with missing arrays.</li>
+<li><strong>Where Not:</strong> Only for <code>narrative_segment</code> blocks. Game items, boss questions, and checkpoints are already keyword-dense by nature — no extraction needed.</li>
+</ul>
+<h3>6. Cortical Skills Synergy</h3>
+<ul>
+<li><strong>What:</strong> When left-brain (logic, words) and right-brain (imagery, spatial) skills work together, performance increases exponentially. <em>(Source: Buzan, Use Your Head — Cortical Skills)</em></li>
+<li><strong>Why:</strong> Without a constraint, the Phase 3 game selection algorithm could pick 3 verbal games — all left-brain, zero visual/spatial engagement.</li>
+<li><strong>How:</strong> Tag each game mechanic with a cortical modality (Verbal/Logical, Visual/Spatial, Kinesthetic, Strategic, Productive). Add selection constraint: at least 2 of the 3 games per session must come from DIFFERENT modalities.</li>
+<li><strong>Where Not:</strong> Recovery Sessions (only 1-2 games — diversity constraint would over-restrict).</li>
+</ul>
+<h3>7. Schema Activation</h3>
+<ul>
+<li><strong>What:</strong> New information anchors better when it connects to knowledge already active in working memory. <em>(Source: Buzan, Scientific Research — Schema Theory)</em></li>
+<li><strong>Why:</strong> If Phase 2 introduces &quot;photosynthesis&quot; but Phase 1 didn&#39;t activate any prerequisite (e.g., &quot;plants,&quot; &quot;sunlight&quot;), the new concept floats unanchored.</li>
+<li><strong>How:</strong> Session Assembler check: every new concept in Phase 2 must have at least 1 prerequisite activated in Phase 1 or Phase 0-B. If missing, auto-inject a prerequisite recall item into Memory Sprint.</li>
+<li><strong>Where Not:</strong> First lesson in a subject where no prerequisites exist yet.</li>
+</ul>
+<h3>8. W5H Radiant Problem Solving</h3>
+<ul>
+<li><strong>What:</strong> Radiate Who/What/Where/When/Why/How from a central problem to see the whole picture before answering. <em>(Source: Buzan, Mind Map Book — Problem Solving)</em></li>
+<li><strong>Why:</strong> Students jump to answers without analyzing all factors. The W5H frame forces structured decomposition.</li>
+<li><strong>How:</strong> Phase 4 (Real-Life Challenge): before the answer area opens, a 6-branch W5H frame appears. Student fills at least 4 of 6 branches with brief notes. Frame stays visible as sidebar while answering. NOT scored — it&#39;s scaffolding.<ul>
+<li>G5-6: mandatory, 4/6 minimum</li>
+<li>G7-8: default ON, toggleable off, 5/6</li>
+<li>G9+: available via button, not forced</li>
+</ul>
+</li>
+<li><strong>Where Not:</strong> Math-only computational challenges (pure calculation doesn&#39;t decompose into W5H). Tasviriy Sanat (creative challenges). Language comprehension tasks.</li>
+</ul>
+<h3>9. Decision Mapping</h3>
+<ul>
+<li><strong>What:</strong> Compare two competing options radiantly with weighted pros/cons. <em>(Source: Buzan, Mind Map Book — Decision Mapping)</em></li>
+<li><strong>Why:</strong> Linear pros/cons lists hide trade-offs. Radiant comparison makes them visible.</li>
+<li><strong>How:</strong> Phase 4 (Real-Life Challenge) extension of W5H — for scenarios with genuine trade-offs between 2+ options. Two options radiate from the problem, each with pro/con sub-branches. Student completes missing branches, assigns weights (1-5), selects choice, writes justification.</li>
+<li><strong>Where Not:</strong> Phase 6 Boss (assessment gate — scaffolding doesn&#39;t belong in assessment). Math (has correct answers, not trade-offs). Language (no decision trade-offs). Scenarios with a single correct answer (use W5H alone).</li>
+</ul>
+<hr>
+<h2>Phase 5 Consolidation — Technique-by-Content-Structure</h2>
+<p>Phase 5 is Buzan&#39;s home phase. The technique is selected based on content structure, not randomly.</p>
+<h3>10. Radiant Summary (Mind Mapping)</h3>
+<ul>
+<li><strong>What:</strong> Partially completed mind map — student drags keywords onto correct branches. Central image, organic curved branches, one keyword per branch, 3+ colors. <em>(Source: Buzan, Mind Map Book — Radiant Thinking + 7 Laws)</em></li>
+<li><strong>Why:</strong> Hierarchical content (classifications, categories) is best encoded as a visual hierarchy. Fills the undefined &quot;Mind maps&quot; slot in Phase 5.</li>
+<li><strong>How:</strong> Content author provides central image, 3-5 BOI branch labels, empty sub-branch slots, and 2-3 distractor keywords. Student drags correct keywords to correct branches. G5: max 4 branches (WM ceiling), Icon-First (image before text), landscape orientation. Optional Supernova Sprint: 30-sec timed association burst from one keyword after map completion.</li>
+<li><strong>Where Not:</strong> Sequential content (use Link System). Spatial content (use Memory Palace). Discrete unrelated facts (use Peg System). History timelines (temporal, not hierarchical).</li>
+<li><strong>Best for:</strong> Science classification (Kingdom Animalia), Math formula families, Tarbiya virtue categories, Geography biome types, Art elements.</li>
+</ul>
+<h3>11. Link System</h3>
+<ul>
+<li><strong>What:</strong> A vivid story chain where each item triggers the next. <em>(Source: Buzan, Use Your Memory — Link System)</em></li>
+<li><strong>Why:</strong> Sequential content (process steps, timelines) is best encoded as a chain — each item triggers recall of the next.</li>
+<li><strong>How:</strong> Available in two places:<ul>
+<li><strong>Phase 1 (Memory Sprint)</strong> as &quot;Link Chain&quot; format: 5 items with a SMASHIN&#39; SCOPE story, 15s study, recall tested out of order.</li>
+<li><strong>Phase 5 (Consolidation)</strong> as a technique for sequential content.</li>
+<li>Content author writes the chain story using the textbook&#39;s actual terms (never substitutes).</li>
+</ul>
+</li>
+<li><strong>Where Not:</strong> Unrelated vocabulary (no natural chain — use Peg System). Math formulas (not sequential narrative). Hierarchical content (use Radiant Summary).</li>
+<li><strong>Best for:</strong> Science processes (water cycle, digestion), History timelines, cause-effect chains.</li>
+</ul>
+<h3>12. Peg System</h3>
+<ul>
+<li><strong>What:</strong> Number-Shape pegs (1=Candle, 2=Swan, 3=Heart, 4=Sailboat, 5=Hook) as permanent mental hooks for lesson concepts. <em>(Source: Buzan, Use Your Memory — Peg System)</em></li>
+<li><strong>Why:</strong> Gives random-access to numbered items (unlike Link System which is sequential). Fills the undefined &quot;Peg system&quot; slot in Phase 5.</li>
+<li><strong>How:</strong> Student associates each lesson concept with a numbered peg image, aided by a &quot;link sentence&quot; connecting them. Recall tested both directions: peg→concept and concept→peg. Culturally adapted for Uzbekistan (shapes chosen to be universally recognizable). Can integrate with Tic Tac Toe: to place X on cell 3, recall the concept pegged to number 3.</li>
+<li><strong>Where Not:</strong> Sequential processes (use Link System). Hierarchical categories (use Radiant Summary). Content with more than 5-7 items per lesson (peg overload).</li>
+<li><strong>Best for:</strong> History key facts (5 Silk Road facts), Language vocabulary sets, Science key terms per chapter.</li>
+</ul>
+<h3>13. Major System (G7+ only)</h3>
+<ul>
+<li><strong>What:</strong> Phonetic digit code: 1=T, 2=N, 3=M, 4=R... Digits convert to consonants, then to a memorable word. <em>(Source: Buzan, Use Your Memory — Major System)</em></li>
+<li><strong>Why:</strong> Only mnemonic that works for raw numbers (dates, constants, statistical data).</li>
+<li><strong>How:</strong> System presents a number (e.g., 1441 — Navoi&#39;s birth year), shows consonant conversion (T-R-R-T), suggests a memorable word (&quot;Toshbaqa&quot; = Turtle), pairs it with a vivid image. Student confirms or creates their own word.</li>
+<li><strong>Where Not:</strong> G5-6 (abstract phonetic mapping exceeds developmental stage). Tarbiya (no numbers). Tasviriy Sanat (no numbers). Any subject where numbers aren&#39;t central to the content.</li>
+<li><strong>Best for:</strong> History dates, Chemistry constants, Physics constants, Math (Pi digits).</li>
+</ul>
+<h3>14. SMASHIN&#39; SCOPE Quality Gate</h3>
+<ul>
+<li><strong>What:</strong> 12-point vividness checklist for mnemonic content: Synaesthesia, Movement, Association, Substitution, Humor, Imagination, Number, Symbolism, Color, Order, Positive, Exaggeration. <em>(Source: Buzan, Use Your Memory — SMASHIN&#39; SCOPE)</em></li>
+<li><strong>Why:</strong> Dry mnemonics perform no better than rote memorization. Vivid, multi-sensory imagery is what makes mnemonics work.</li>
+<li><strong>How:</strong> Every <code>mnemonic_exercise</code> in the content pipeline must score 6+/12. Below 6 = returned for enrichment with specific criteria flagged. Content reviewer scores each criterion 0 or 1.</li>
+<li><strong>Where Not:</strong> Non-mnemonic content (quizzes, boss questions, checkpoints, game items). Only applies to Memory Palace scenes, Peg associations, Link Chain stories, and Radiant Summary content.</li>
+</ul>
+<h3>15. Dual Coding</h3>
+<ul>
+<li><strong>What:</strong> Combining verbal + visual (or verbal + spatial, or visual + kinesthetic) encoding creates two retrieval paths. <em>(Source: Buzan, Scientific Research — Dual Coding Theory / Paivio)</em></li>
+<li><strong>Why:</strong> Doubles the chance of recall. Phase 5 IS the Dual Coding moment — concepts learned verbally in Phase 2 get re-encoded visually/spatially here.</li>
+<li><strong>How:</strong> Pipeline QA gate: every <code>game_item</code>, <code>mnemonic_exercise</code>, and <code>boss_question</code> must declare 2+ encoding channels (VRB, VIS, SPA, AUD, KIN). Items with only 1 channel are flagged.</li>
+<li><strong>Where Not:</strong> Movement Breaks (physical activity, not knowledge encoding).</li>
+</ul>
+<hr>
+<h2>Game-Level Injections</h2>
+<h3>Tile Match</h3>
+<ul>
+<li><strong>Method applied:</strong> #15 Dual Coding</li>
+<li><strong>Why:</strong> Tile Match is a pairing game — the student flips two cards to find a match. If both cards are text (&quot;Fotosintez&quot; ↔ &quot;O&#39;simliklar oziq tayyorlash jarayoni&quot;), the brain uses only ONE encoding channel (verbal). If one card is an image and one is text (leaf diagram ↔ &quot;Fotosintez&quot;), the brain encodes through TWO channels (visual + verbal). Paivio&#39;s Dual Coding Theory shows this doubles recall probability. The game already requires pairs — making them cross-modal costs nothing and doubles the learning.</li>
+<li><strong>How:</strong> Pairs must be image↔text (not text↔text). Content authors should always pair a visual representation with a textual term.</li>
+<li><strong>Where Not:</strong> Already applies by default when content is well-authored. Only flag pairs where both sides are text-only.</li>
+</ul>
+<h3>Why Chain</h3>
+<ul>
+<li><strong>Method applied:</strong> #1 Radiant Thinking</li>
+<li><strong>Why:</strong> Why Chain IS radiant thinking — each &quot;Why?&quot; answer branches one level deeper from the surface toward the root cause. But the current UI renders it as a flat numbered list (L1, L2, L3...), which makes it look linear and hides the branching structure. Showing it as a growing tree reinforces that knowledge radiates outward from a central concept — the student literally SEES their understanding deepen.</li>
+<li><strong>How:</strong> Visualize the chain as a downward radiant branch on screen, not a flat numbered list. Each level shows as a new branch growing from the previous answer.</li>
+<li><strong>Where Not:</strong> The mechanic itself doesn&#39;t change. Only the VISUAL RENDERING changes from a flat list to a branching tree. Don&#39;t force radiant visualization for 2-level chains (too short to branch meaningfully).</li>
+</ul>
+<h3>Sentence Fill</h3>
+<ul>
+<li><strong>Method applied:</strong> #5 80/20 Rule</li>
+<li><strong>Why:</strong> Sentence Fill blanks a word and tests if the student can identify it from context. If you blank a random word (&quot;O&#39;simliklar _____ yordamida oziq tayyorlaydi&quot; → &quot;yorug&#39;lik&quot;), you test recall of one fact. But if you ALWAYS blank the 80/20 keyword — the word carrying the most meaning in that sentence — you train the student to identify the conceptual anchor of every sentence. Over time, this builds the habit of reading for meaning, not just reading words.</li>
+<li><strong>How:</strong> The blanked words should BE the <code>keywords_80_20</code> from the narrative segment — the words carrying 80% of meaning. Not random words, not articles or prepositions.</li>
+<li><strong>Where Not:</strong> Language grammar exercises where the blank IS a grammatical element (verb tense, preposition) — there the grammar point is the keyword, not the content word.</li>
+</ul>
+<h3>Memory Palace</h3>
+<ul>
+<li><strong>Method applied:</strong> #14 SMASHIN&#39; SCOPE, #4 Buzan Review Intervals</li>
+<li><strong>Why:</strong> Memory Palace is already a Buzan method (Method of Loci), but the content PLACED at each hotspot can be dry (&quot;Bug&#39;lanish — suv gaz holatiga o&#39;tishi&quot;) or vivid (&quot;Darvozada kir qurimoqda — Quyosh suvi TORTIB olyapti, ko&#39;rinmas bug&#39; osmonga UCHIB ketyapti!&quot;). SMASHIN&#39; SCOPE ensures the imagery is vivid — because research shows dry loci placements perform no better than rote memorization. The palace only works if what&#39;s placed there is memorable. Buzan Review Intervals ensure palaces are revisited at the critical forgetting curve points, not just once.</li>
+<li><strong>How:</strong> Content placed at hotspots must pass SMASHIN&#39; SCOPE (6+/12). Palace revisits follow Buzan Review Intervals (Day 1 → Day 3 → Day 7 → Day 14 → Day 30). &quot;Hali emas&quot; framing on missed recalls.</li>
+<li><strong>Where Not:</strong> Already fully defined in <code>NETS-Memory-Palace-Definition.md</code>. Don&#39;t duplicate the spec — just add the SMASHIN&#39; SCOPE gate and review interval floor.</li>
+</ul>
+<h3>Tic Tac Toe</h3>
+<ul>
+<li><strong>Method applied:</strong> #12 Peg System integration</li>
+<li><strong>Why:</strong> Standard Tic Tac Toe gates each move with a generic knowledge question — the board position and the question are unrelated. By merging with Peg System, the board position BECOMES the recall cue: cell 3 = Heart peg = the concept pegged to Heart. Now the student&#39;s spatial strategy (where to place X) is fused with their mnemonic retrieval (what&#39;s at that peg number). This creates a third encoding channel (strategic/spatial) on top of the existing two (visual peg + verbal concept), deepening the memory trace through triple coding.</li>
+<li><strong>How:</strong> When Peg System and Tic Tac Toe are both in the same session, merge them: the 9 cells are labeled with peg numbers. To place X on cell 3, student must recall the concept pegged to number 3. Correct recall = X placed.</li>
+<li><strong>Where Not:</strong> Only when Peg System is also active in the same session. When Peg System isn&#39;t selected, Tic Tac Toe plays normally with standard knowledge-gating questions.</li>
+</ul>
+<h3>Puzzle Lock</h3>
+<ul>
+<li><strong>Method applied:</strong> #11 Link System</li>
+<li><strong>Why:</strong> Puzzle Lock requires arranging tiles in the correct order — timeline events, process steps, classification levels. This IS the Link System problem: remember the sequence. But without a story connecting the items, the student relies on rote memory of the order. With a Link Chain story available as a hint (&quot;Remember: first the water EVAPORATES, then it CONDENSES into clouds, then it FALLS as rain...&quot;), the student has a narrative scaffold that makes the correct order memorable, not just memorizable. The story reduces random guessing and teaches the student that sequences have causal logic, not arbitrary order.</li>
+<li><strong>How:</strong> When tiles represent a sequence, content authors provide the Link Chain story as a hint available after 2 wrong moves: &quot;Remember the story: first X, then Y, then Z...&quot;</li>
+<li><strong>Where Not:</strong> Number-ordering puzzles (1-2-3...8) — no narrative chain needed for pure number sequence. Sentence fragment puzzles — grammar logic, not mnemonic.</li>
+</ul>
+<h3>Mystery Box</h3>
+<ul>
+<li><strong>Method applied:</strong> #2 Von Restorff Effect</li>
+<li><strong>Why:</strong> Mystery Box uses variable reward (Skinner) — the student doesn&#39;t know which box has the big prize. But the QUESTION behind the big prize box is usually random. By making the big prize question the &quot;outstanding&quot; one — the most surprising fact, the funniest scenario, the most unusual visual — you create a double reward: the XP prize AND a memorable learning moment. The Von Restorff Effect means this one question will be remembered far better than the other 8. You&#39;re using the game&#39;s existing reward structure to amplify a specific piece of knowledge.</li>
+<li><strong>How:</strong> The large prize box (🏆, 1 per session) should contain the &quot;outstanding&quot; question — the most surprising, funny, or unusual item. Content authors tag which question gets the large prize.</li>
+<li><strong>Where Not:</strong> Don&#39;t make ALL questions outstanding. The effect works because ONE thing stands out. If everything is unusual, nothing is.</li>
+</ul>
+<h3>Spaced Flashcards</h3>
+<ul>
+<li><strong>Method applied:</strong> #4 Buzan Review Intervals</li>
+<li><strong>Why:</strong> SM-2 is excellent for struggling items (rated &quot;Again&quot; or &quot;Hard&quot;) but can be too generous with &quot;Easy&quot; items — pushing them weeks into the future. Buzan&#39;s research shows the 24-hour and 1-week review points are critical regardless of perceived ease. A student who rates a card &quot;Easy&quot; today may forget it in 3 days if there&#39;s no touchpoint. The Buzan floor catches these overconfident ratings before they become gaps.</li>
+<li><strong>How:</strong> Card scheduling follows Buzan&#39;s floor: cards rated &quot;Easy&quot; still return at 24h, 1w, 1mo minimum — SM-2 can&#39;t push them further out than Buzan&#39;s mandatory touchpoints.</li>
+<li><strong>Where Not:</strong> Cards rated &quot;Again&quot; — SM-2 already brings these back immediately. Buzan floor only matters for &quot;Good&quot; and &quot;Easy&quot; rated cards.</li>
+</ul>
+<h3>Adaptive Quiz</h3>
+<ul>
+<li><strong>Method applied:</strong> #1 TEFCAS</li>
+<li><strong>Why:</strong> The adaptive difficulty mechanism IS TEFCAS — the student tries (Trial), gets a result (Event/Feedback), the system compares to the target (Check), adjusts difficulty (Adjust), and the student progresses toward mastery (Success). But the student doesn&#39;t SEE this cycle — they just see questions getting harder or easier with no explanation. By naming the transitions, the student understands WHY the difficulty changed: &quot;Your brain Adjusted successfully — next level!&quot; or &quot;Feedback received — finding your flow zone.&quot; This turns a confusing difficulty swing into a visible learning process.</li>
+<li><strong>How:</strong> When difficulty increases: <em>&quot;Trial successful — Adjusting to next level!&quot;</em> When difficulty decreases: <em>&quot;Feedback received — Adjusting for your flow zone.&quot;</em></li>
+<li><strong>Where Not:</strong> Don&#39;t show TEFCAS labels on every single question. Only on difficulty TRANSITIONS (level up or level down). Anything more is noise.</li>
+</ul>
+<h3>Peer Teaching</h3>
+<ul>
+<li><strong>Method applied:</strong> #1 TEFCAS failure framing</li>
+<li><strong>Why:</strong> Peer Teaching is the only mechanic where students PRODUCE knowledge instead of retrieving it. When the AI says &quot;Incorrect — the answer is X,&quot; it kills the production impulse. But when it says &quot;Hali emas! Your explanation covers [X] but is missing [Y]. How would you Adjust it?&quot; — it treats the student as a teacher who needs to refine their explanation, not a student who got it wrong. This preserves the expert identity the mechanic is built on.</li>
+<li><strong>How:</strong> When the AI evaluates a student&#39;s explanation as incomplete or inaccurate, it uses: <em>&quot;Hali emas! Your explanation covers [X] but is missing [Y]. How would you Adjust it?&quot;</em></li>
+<li><strong>Where Not:</strong> When the explanation is factually dangerous (e.g., wrong safety information in Texnologiya). In that case, direct correction is necessary — you don&#39;t Socratic-method your way around a safety hazard.</li>
+</ul>
+<h3>Reflection Journal</h3>
+<ul>
+<li><strong>Method applied:</strong> #1 TEFCAS, #3 BOST Goal Recall</li>
+<li><strong>Why:</strong> Reflection Journal is the conscious &quot;Adjust&quot; step of TEFCAS — making the brain&#39;s error-correction process explicit. Generic prompts (&quot;What was hard?&quot;) produce generic answers. TEFCAS-framed prompts (&quot;What Feedback did your brain receive? What will you Adjust?&quot;) produce structured metacognition. The BOST goal recall (&quot;You wanted to learn X — did you?&quot;) closes the loop opened in Phase 0-A and gives the student a sense of completion or an honest &quot;not yet.&quot;</li>
+<li><strong>How:</strong> Prompts use TEFCAS vocabulary. Session ends with BOST goal recall: <em>&quot;You wanted to learn X. Did you?&quot;</em></li>
+<li><strong>Where Not:</strong> The raw performance summary (questions, XP, time) stays unchanged. TEFCAS applies to prompts only.</li>
+</ul>
+<h3>Story Mode</h3>
+<ul>
+<li><strong>Method applied:</strong> #5 80/20 Keyword Tagging</li>
+<li><strong>Why:</strong> Story Mode delivers content through narrative. Without keyword tagging, the downstream mechanics (Radiant Summary, Flash Cards, Sentence Fill, Memory Sprint) have to guess which words matter. With <code>keywords_80_20</code> tagged by the content author, every downstream mechanic knows exactly which terms to test, which to use as branch labels, which to blank in Sentence Fill. The keywords are the skeleton of the lesson — tagging them once ensures consistency across all phases.</li>
+<li><strong>How:</strong> Every narrative segment has tagged keywords that feed downstream mechanics. The Stranger Test quality gate already ensures comprehension quality.</li>
+<li><strong>Where Not:</strong> Speed reading mechanics (Focus Guide, Forward Momentum, Semantic Chunking) are DEFERRED — G5 students&#39; bottleneck is comprehension, not speed. See &quot;Deferred Methods&quot; below.</li>
+</ul>
+<h3>Memory Sprint</h3>
+<ul>
+<li><strong>Method applied:</strong> #11 Link System (Link Chain format), #4 Buzan Review Intervals</li>
+<li><strong>Why:</strong> Memory Sprint has 5 formats — all retrieval-based (recall what you already know). Link Chain adds a 6th format that&#39;s encoding-based: the student reads a vivid chain story, then is tested on the sequence. This is better than &quot;Order the Steps&quot; for content where the sequence has causal logic (water cycle, digestion) because the story EXPLAINS why the order matters, not just what the order is. Buzan Review Intervals ensure the most critical prior concepts always appear in the Sprint, even if SM-2 would have delayed them.</li>
+<li><strong>How:</strong> Link Chain is the 6th approved format. Buzan Review Intervals are floor constraints on the item selection algorithm.</li>
+<li><strong>Where Not:</strong> Link Chain is not for unrelated vocabulary or math formulas — there&#39;s no sequential story to tell. Use Flash Sprint or Speed Match for those.</li>
+</ul>
+<h3>Games Where Buzan Adds Nothing</h3>
+<table>
+<thead>
+<tr>
+<th>Game</th>
+<th>Why Not</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Movement Breaks</strong></td>
+<td>Physical activity — no knowledge encoding. Buzan methods are cognitive.</td>
+</tr>
+<tr>
+<td><strong>Connect Four</strong></td>
+<td>Pure strategy with knowledge gating. The strategy IS the engagement. Adding mnemonic framing overcomplicates a simple mechanic.</td>
+</tr>
+<tr>
+<td><strong>Blackjack 21</strong></td>
+<td>Math-only, probability-focused. Live calculation doesn&#39;t benefit from mnemonics.</td>
+</tr>
+<tr>
+<td><strong>Codebreaker</strong></td>
+<td>Letter deduction logic. The Wordle-style process is its own cognitive method. Layering Buzan adds friction, not value.</td>
+</tr>
+<tr>
+<td><strong>Notebook Capture</strong></td>
+<td>Physical drawing/writing. The kinesthetic act IS the encoding — Buzan&#39;s visual methods are already embedded in the act of drawing.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Deferred Methods (Future: Reading Fluency Module)</h2>
+<p>These Buzan methods are CUT from the active injection. Reason: G5 students&#39; bottleneck is <strong>comprehension, not speed</strong>. Rayner et al. (2016) found speed reading training does not improve comprehension — it teaches skimming. These may apply at G9+ after empirical validation.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Method</th>
+<th>Why Deferred</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>16</td>
+<td>Focus Guide (Fixation Training)</td>
+<td>Pushes past sub-vocalization, but G5 students NEED sub-vocalization to comprehend complex text</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Saccade Optimization</td>
+<td>Good typography practice but not a Buzan-specific injection — belongs in general UI/UX spec</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Forward Momentum Rule</td>
+<td>Regression is a LEGITIMATE comprehension strategy at G5-6, not a bad habit. Re-reading is often necessary for process-heavy subjects.</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Peripheral Vision Training</td>
+<td>Same as saccade — general typography</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Semantic Chunking</td>
+<td>Needs A/B testing for Uzbek-language text before deployment</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Sub-vocalization Elimination</td>
+<td>Sub-vocalization is a comprehension AID at G5-6</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Meta-Guiding</td>
+<td>Merged with Focus Guide — same reason</td>
+</tr>
+</tbody></table>
+<h2>Pending Empirical Validation</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Method</th>
+<th>Issue</th>
+<th>Validation Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>15</td>
+<td>Anti-Cheat Radiant Signature</td>
+<td>Students explaining sequential processes naturally produce &quot;linear&quot; text — not because they&#39;re cheating. False positive rate would be unacceptable.</td>
+<td>Collect 500+ real G5-6 responses, label human vs AI, train classifier, precision must be ≥90% or it doesn&#39;t ship.</td>
+</tr>
+</tbody></table>
+<h2>Not in Homework Engine (Belong Elsewhere)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Method</th>
+<th>Where It Belongs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3</td>
+<td>Group Mind Mapping</td>
+<td>Post-MVP roadmap (needs multiplayer)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Secret Symbols</td>
+<td>NETS-System-Design-v1.md (Bilim Bazasi metagame)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Color-Coded Zones</td>
+<td>NETS-UI-UX-Design-Spec (visual design system)</td>
+</tr>
+<tr>
+<td>31</td>
+<td>SEM³ Memory Matrix</td>
+<td>NETS-System-Design-v1.md (backend data model)</td>
+</tr>
+</tbody></table>
+</body></html>
