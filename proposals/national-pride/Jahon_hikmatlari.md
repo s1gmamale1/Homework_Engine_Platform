@@ -1,0 +1,123 @@
+# Jahon Hikmatlari: Ta'lim, Iqtisod va Motivatsiya
+
+Ushbu to'plam dunyo miqyosidagi buyuk mutafakkirlar, olimlar va iqtisodchilarning yoshlar uchun mo'ljallangan eng sarra hikmatlaridan iborat.
+
+## Tony Buzan (10 ta) — Intellekt va Ta'lim
+1. "Miya — bu uxlab yotgan gigant, uni uyg'otishning kaliti esa bilimdir."
+2. "Qanday o'rganishni o'rganish — bu hayotdagi eng muhim mahoratdir."
+3. "Sizning miyangiz — bu cheksiz imkoniyatlar dunyosi, undan foydalanishni to'xtatmang."
+4. "Xotira — bu mushak kabidir, uni mashq qildirsangiz, u yanada kuchayadi."
+5. "Xaritalash (Mind Mapping) — bu fikrlaringizni tartibga solishning eng tabiy yo'lidir."
+6. "Ijodkorlik — bu shunchaki yangi bog'liqliklarni topishdir."
+7. "Har bir inson daho bo'lib tug'iladi, faqat buni kashf etish kerak."
+8. "Bilim — bu kuch, lekin uni qanday qo'llashni bilish — bu donolikdir."
+9. "Miyangizni tushunish — o'zingizni tushunish demakdir."
+10. "O'qish — bu sarguzasht, har bir sahifa yangi dunyoni ochadi."
+
+## Adam Smith (10 ta) — Iqtisodiyot va Mehnat
+1. "Insonning o'z mehnati — uning barcha boyliklarining poydevoridir."
+2. "Tejamkorlik va mehnatsevarlik — farovonlikning ikki asosiy ustunidir."
+3. "Raqobat — bu sifatni oshiruvchi va narxni adolatli qiluvchi kuchdir."
+4. "Jamiyat boyligi — undagi har bir insonning unumli mehnatiga bog'liq."
+5. "O'z ustida ishlash — iqtisodiy erkinlikning birinchi qadamidir."
+6. "Bilim va ko'nikma — eng qimmatli kapitaldir."
+7. "Adolatli savdo — har ikki tomon uchun ham foydalidir."
+8. "Iqtisodiy o'sish — bu yangi g'oyalar va innovatsiyalar natijasidir."
+9. "Vaqt — bu eng kamyob resurs, uni to'g'ri boshqarishni o'rganing."
+10. "Inson o'z manfaatini ko'zlab harakat qilsa-da, bilvosita jamiyatga ham foyda keltiradi."
+
+## Warren Buffett (10 ta) — Sarmoya va Muvaffaqiyat
+1. "O'zingizga qilgan sarmoyangiz — bu eng yaxshi va eng daromadli sarmoyadir."
+2. "Bilim — bu har kuni to'planib boradigan murakkab foizga o'xshaydi."
+3. "Obro'ni qozonish uchun 20 yil kerak bo'ladi, uni yo'qotish uchun esa 5 daqiqa yetarli."
+4. "Boshqalar qo'rqqanda jasur bo'ling, boshqalar haddan tashqari jasur bo'lganda ehtiyot bo'ling."
+5. "Muvaffaqiyat — bu siz sevgan ishni qilishingiz va sizni sevishlaridir."
+6. "Oddiylik — bu murakkablikning eng yuqori cho'qqisidir."
+7. "Kitob o'qish — bu boshqalarning tajribasini arzon narxda sotib olishdir."
+8. "Hech qachon faqat bitta daromad manbaiga tayanmang, bilimingizni boyiting."
+9. "Xato qilishdan qo'rqmang, lekin bir xil xatoni ikki marta takrorlamang."
+10. "Muvaffaqiyatli insonlar bilan muloqot qilish — bu o'sishning eng tez yo'lidir."
+
+## Albert Einstein (10 ta) — Ilm va Tafakkur
+1. "Tasavvur — bilimdan muhimroqdir, chunki bilim chegaralangan."
+2. "Mantiq sizni A nuqtadan B nuqtaga olib boradi, tasavvur esa hamma joyga."
+3. "Hech qachon savol berishdan to'xtamang, qiziquvchanlik — hayotiy zaruriyatdir."
+4. "Xato qilmagan inson — hech qachon yangi narsani sinab ko'rmagan insondir."
+5. "Oddiy tushuntira olmasangiz, demak uni yetarlicha yaxshi tushunmaysiz."
+6. "Qiyinchiliklar o'rtasida imkoniyatlar yashiringan bo'ladi."
+7. "Bilimning yagona manbai — bu tajribadir."
+8. "Daho — bu 1% iste'dod va 99% mehnat demakdir."
+9. "Dunyo uni yomonlik qilayotganlar emas, balki qarab turib hech narsa qilmayotganlar tufayli xavflidir."
+10. "Men o'ta aqlli emasman, shunchaki muammolar ustida uzoqroq ishlayman."
+
+## Nelson Mandela (10 ta) — Ta'lim va Shaxsiyat
+1. "Ta'lim — bu dunyoni o'zgartirish uchun ishlatish mumkin bo'lgan eng kuchli quroldir."
+2. "Muvaffaqiyat — bu yiqilmaslik emas, balki har gal yiqilganda qayta turishdir."
+3. "Kechirish — bu ruhni ozod qilish va qo'rquvni yengish demakdir."
+4. "Vatanparvarlik — bu o'z xalqingga bo'lgan cheksiz muhabbat va xizmatdir."
+5. "Har doim biror ish amalga oshirilgunga qadar imkonsizdek tuyuladi."
+6. "Yetakchi — bu xuddi cho'pon kabidir: u qo'y podasining orqasida turib, eng kuchlilariga yo'l ko'rsatadi."
+7. "Ozod bo'lish — bu faqat o'z zanjirlaringdan qutulish emas, balki boshqalarning erkinligini hurmat qilishdir."
+8. "Bilim — bu zulmatni yorituvchi nurdir."
+9. "Jasorat — bu qo'rquvning yo'qligi emas, balki uni mag'lub etishdir."
+10. "Siz o'tirgan joyingizni emas, balki ko'zlangan marrangizni o'zgartira olasiz."
+
+## Steve Jobs (10 ta) — Innovatsiya va Maqsad
+1. "Sizning vaqtingiz cheklangan, uni boshqalarning hayoti bilan yashab o'tkazmang."
+2. "Ishingizni sevish — bu buyuk natijalarga erishishning yagona yo'lidir."
+3. "Innovatsiya — bu yetakchi va ergashuvchini ajratib turuvchi asosiy farqdir."
+4. "Och qoling, ahmoq bo'ling (Stay hungry, stay foolish) — har doim bilimga tashna bo'ling."
+5. "Dizayn — bu faqat qanday ko'rinishi emas, balki qanday ishlashidir."
+6. "Sifat — miqdordan muhimroqdir. Bir marta qilingan mukammal ish mingta chala ishdan afzal."
+7. "O'zligingizga sodiq qoling va ichki ovozingizga quloq soling."
+8. "Katta orzu qiling va uni amalga oshirishdan qo'rqmang."
+9. "Texnologiya — bu shunchaki vosita, odamlarning bilim va irodasi esa asosiy kuchdir."
+10. "Bugun hayotingizning oxirgi kuni bo'lganda, hozir qilayotgan ishingiz bilan shug'ullanarmidingiz?"
+
+## Henry Ford (10 ta) — Intizom va Sanoat
+1. "Agar siz buni qila olaman deb o'ylasangiz yoki qila olmayman deb o'ylasangiz — har ikki holatda ham haqsiz."
+2. "Muvaffaqiyat siri — boshqalarning nuqtai nazarini tushuna olishdadir."
+3. "To'xtab qolgan odam qarigan hisoblanadi, u 20 yoki 80 yoshda bo'lishidan qat'i nazar."
+4. "Sifat — bu hech kim qarab turmaganda ham ishni to'g'ri bajarish demakdir."
+5. "Muammo — bu uni hal qilish uchun berilgan imkoniyatdir."
+6. "Birlashish — boshlanish, birga bo'lish — taraqqiyot, birga ishlash esa muvaffaqiyatdir."
+7. "Faqat pul ishlashni ko'zlagan biznes — bu juda kambag'al biznesdir."
+8. "Hech qanday ish, agar u kichik bo'laklarga bo'linsa, qiyin emas."
+9. "Tajriba — bu inson o'zi uchun sotib oladigan eng qimmatli narsadir."
+10. "Haqiqiy bilim — bu amalda qo'llanilgan bilimdir."
+
+## Marie Curie (10 ta) — Sabr va Ilmiy Shijoat
+1. "Hayotda qo'rqadigan hech narsa yo'q, faqat tushunish kerak bo'lgan narsalar bor."
+2. "Insonlarga emas, g'oyalarga qiziqing."
+3. "Ilm-fan yo'li — uzoq va sabr talab qiladigan yo'ldir."
+4. "O'zligingizga ishoning va orzularingiz sari dadil qadam tashlang."
+5. "Olim o'z laboratoriyasida faqat mutaxassis emas, u mo'jizalar dunyosidagi bolakay kabidir."
+6. "Hech qachon erishilgan natijalar bilan cheklanmang, doim oldinga intiling."
+7. "Bilim — bu insoniyatni birlashtiruvchi kuchdir."
+8. "Sabr va mehnat — har qanday to'siqni yengib o'tishga yordam beradi."
+9. "Biz dunyoni yaxshiroq qilishimiz kerak, buning uchun esa o'zimiz yaxshi bo'lishimiz lozim."
+10. "Ilm-fan — bu chegara bilmas sarguzashtdir."
+
+## Mahatma Gandhi (10 ta) — Insoniylik va O'zgarish
+1. "Dunyoni qanday ko'rishni istasangiz, o'zingiz o'sha o'zgarishga aylaning."
+2. "Kuch jismoniy qobiliyatdan emas, balki yengilmas irodadan keladi."
+3. "Ertaga o'ladiganingdek yasha, abadiy yashaydiganingdek o'qi."
+4. "Kuchli insonlar kechirishni biladilar, kechirish — bu kuchlilarning sifatidir."
+5. "Haqiqat — hech qachon zarar keltirmaydi."
+6. "Inson o'z fikrlarining mahsulidir: u nima deb o'ylasa, o'sha bo'ladi."
+7. "Baxt — bu sizning o'ylayotganingiz, aytayotganingiz va qilayotganingiz uyg'un bo'lishidir."
+8. "O'zligingni topishning eng yaxshi yo'li — boshqalarga xizmat qilishda o'zingni yo'qotishdir."
+9. "Yumshoq tarzda ham dunyoni larzaga keltirish mumkin."
+10. "Sabr — bu g'alaba kalitidir."
+
+## Leonardo da Vinci (10 ta) — San'at va Izlanish
+1. "O'rganish — bu aqlni hech qachon charchatmaydigan yagona narsadir."
+2. "Barcha bilimlarimiz asosi — bu bizning his-tuyg'ularimizdir."
+3. "Tajriba — bu eng ishonchli ustoz."
+4. "Oddiylik — bu murakkablikning eng yuqori cho'qqisidir."
+5. "Vaqt uni to'g'ri ishlatganlar uchun yetarli darajada ko'pdir."
+6. "Harakat — barcha muvaffaqiyatlarning asosiy poydevoridir."
+7. "Tabiat — barcha bilimlarning manbai."
+8. "Bilish yetarli emas, uni qo'llash kerak. Xohlash yetarli emas, bajarish kerak."
+9. "Temir ishlatilmasa zanglaydi, turg'un suv buziladi, inson ongi ham harakatsizlikdan so'nadi."
+10. "Har bir san'at asari — bu tabiatning aksidir."
