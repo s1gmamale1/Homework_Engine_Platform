@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Sentence Fill (Cloze Test)</title>
+    <style>
+        :root {
+            --bg: #0d1117; --surface: #161b22; --border: #30363d;
+            --text: #e6edf3; --text-muted: #8b949e;
+            --primary: #58a6ff; --accent: #bc8cff;
+            --danger: #f85149; --success: #3fb950; --gold: #d29922;
+        }
+        body { background-color: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 40px; display: flex; justify-content: center; }
+        .container { max-width: 1000px; width: 100%; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 40px; }
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin: 20px 0; }
+        .premium-box { border: 2px solid var(--gold); background: rgba(210, 153, 34, 0.05); padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .buzan-box { border: 2px solid var(--accent); background: rgba(188, 140, 255, 0.05); padding: 20px; border-radius: 12px; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sentence Fill: Cloze Test Edition</h1>
+            <p style="color: var(--text-muted)">Default Mechanic #4 — Systematic Word Removal for Contextual Vocabulary & Grammar Practice</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Mode: Solo Cloze</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Understand</span>
+                <span class="tag">PISA: 2</span>
+                <span class="tag">AI Tier: Tier 1</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Sentence Fill (Cloze) Mechanics</h2>
+            <div class="card">
+                <p>A passage (sentence, paragraph, or formula explanation) has <strong>systematically removed words</strong> replaced by blank lines. The student fills each blank from a <strong>word bank</strong> (lower grades) or by <strong>free recall</strong> (G8+). Based on <strong>Cloze Testing research</strong> (Taylor, 1953).</p>
+                <h3>Word Removal Rules</h3>
+                <ul>
+                    <li><strong>Grades 2-4:</strong> Every 3rd word removed. Word bank provided with 2-3 distractors per blank.</li>
+                    <li><strong>Grades 5-7:</strong> Every 4th word removed. Word bank provided with 3-4 distractors per blank.</li>
+                    <li><strong>Grades 8-11:</strong> Every 5th word removed. <strong>No word bank</strong> — free recall only.</li>
+                </ul>
+                <h3>Protected Words (Never Removed)</h3>
+                <ul>
+                    <li>Proper nouns (names, places, dates)</li>
+                    <li>Key formulas (if the passage is about a formula, the formula itself stays visible)</li>
+                    <li>The first and last word of each sentence (preserves sentence frame for context)</li>
+                    <li>Articles and prepositions in lower grades (G2-4) — these are grammatical, not content words</li>
+                </ul>
+                <h3>How It Is Played</h3>
+                <ol>
+                    <li>Passage appears with blanks numbered (①, ②, ③...).</li>
+                    <li>Word bank displayed below (for G2-7). G8+ sees only the passage.</li>
+                    <li>Student drags a word from the bank to a blank (or types for G8+).</li>
+                    <li>After filling all blanks, student taps "Tekshirish" (Check).</li>
+                    <li>Correct fills turn green. Incorrect fills turn red and show the correct word.</li>
+                    <li>First-attempt accuracy is tracked as an efficiency signal for the learning curve.</li>
+                    <li>Perfect Fill (all blanks correct on first try) is recorded as a mastery indicator.</li>
+                </ol>
+                <h3>Parameters</h3>
+                <ul>
+                    <li>Blanks per passage: 3-6 (depends on passage length)</li>
+                    <li>Grade data: accuracy = correct fills / total blanks; first-attempt rate tracked as efficiency signal</li>
+                    <li>No timer — student-paced</li>
+                    <li>Maximum 2 attempts per blank (after 2 wrong, correct answer is revealed and the blank is locked)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <table>
+                <thead><tr><th>Feature</th><th>Basic Tier</th><th>Premium Tier</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Session Access</strong></td><td>Available in Phase 3 Game Breaks per dual-catalog rule</td><td>Same + on-demand Library access</td></tr>
+                    <tr><td><strong>Passage Length</strong></td><td>Standard (1-2 sentences per cloze)</td><td>Extended (3-5 sentences, paragraph-level cloze)</td></tr>
+                    <tr><td><strong>Word Bank</strong></td><td>Standard bank with distractors (G2-7)</td><td>Expanded bank: includes near-synonyms and morphological variants as distractors</td></tr>
+                    <tr><td><strong>Feedback</strong></td><td>Correct/incorrect shown after Check</td><td>Per-blank explanation: "Why this word is correct" with grammatical or contextual reasoning</td></tr>
+                    <tr><td><strong>Free Recall Mode</strong></td><td>G8+ only</td><td>G6+ (Premium students transition to free recall 2 grades earlier)</td></tr>
+                    <tr><td><strong>Cross-Subject Cloze</strong></td><td>Not available</td><td>Cloze passages that span two subjects (e.g., a Science passage with Math formulas embedded)</td></tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> The core cloze mechanism — systematic word removal, word bank, grade tracking — is identical for both tiers. Premium extends passage length and adds explanation depth, not the fundamental mechanic.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Contextual Encoding</h2>
+            <ul>
+                <li><strong>Color Hooks by Subject:</strong> The passage text uses subject family colors for key terms (even in the cloze version). Math terms in blue, science terms in green. The color acts as a retrieval cue — the student's brain associates "blue word in a blank" with "this blank needs a math term."</li>
+                <li><strong>Radiant Context:</strong> When a student completes a cloze passage perfectly, the full passage (with all blanks filled correctly) briefly glows with a connecting web that links key terms to their definitions in the margins. This creates a mini "radiant map" — the passage becomes a node in the student's Knowledge Web.</li>
+                <li><strong>Associative Anchors (Premium):</strong> For abstract vocabulary, a small illustration appears next to the blank (e.g., a tiny plant icon next to a blank that needs "fotosintez"). The illustration acts as a Buzan-style imagery hook, creating visual-verbal dual encoding.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>The cloze passage IS the question. Difficulty scales by grade band and PISA level:</p>
+            <table>
+                <thead>
+                    <tr><th>PISA Level</th><th>Passage Type</th><th>Removed Words</th><th>Distractor Style</th><th>Cognitive Target</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>L1</strong></td><td>Single sentence with concrete nouns</td><td>Nouns, obvious verbs</td><td>Obvious mismatches (wrong part of speech)</td><td>Vocabulary recognition in context</td></tr>
+                    <tr><td><strong>L2</strong></td><td>2-sentence passage with technical terms</td><td>Technical terms, key verbs</td><td>Same-category distractors (both are science terms, only one fits)</td><td>Technical vocabulary in context</td></tr>
+                    <tr><td><strong>L3</strong></td><td>Paragraph with causal chain</td><td>Causal connectors ("because," "therefore," "as a result"), process verbs</td><td>Logical but incorrect connectors (both fit grammatically, only one fits the causal logic)</td><td>Causal reasoning through language</td></tr>
+                    <tr><td><strong>L4</strong></td><td>Multi-paragraph analysis</td><td>Abstract nouns, qualifying language ("primarily," "to some extent"), comparative structures</td><td>Nuanced distractors (similar meaning but different degree or certainty)</td><td>Precision of academic language</td></tr>
+                    <tr><td><strong>L5+</strong></td><td>Source excerpt (historical document, scientific abstract)</td><td>Key argument terms, rhetorical markers</td><td>All options are academically valid; only one matches the original author's intent</td><td>Close reading + authorial intent analysis</td></tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Stranger Test Compliance:</strong> L1 cloze passages always retain enough context words (first/last word protected, nouns protected) that visual and logical inference can guide the student even without full language comprehension. L3+ assumes reading comprehension is part of the test.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type A (Accuracy-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Accuracy (%)</td><td>Correct fills / total blanks</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>First-attempt rate</td><td>Blanks filled correctly on first try / total blanks</td><td>Secondary — feeds Efficiency metric (high first-attempt rate = confident recall)</td></tr>
+                        <tr><td>Attempts per blank</td><td>Count of retries across all blanks</td><td>Tertiary — fewer retries = higher confidence signal</td></tr>
+                        <tr><td>Sessions (cumulative)</td><td>Total cloze sessions completed</td><td>Feeds the curve-fitting algorithm (y = K × sessions^n) to calculate velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Sentence Fill (Cloze) — [Topic]</strong><br>
+                    ███████░░░ 78% (Proficient ↗)<br>
+                    Velocity: n=0.55 (improving)<br>
+                    First-Attempt Rate: 71% (getting better ✓)<br>
+                    ~2 sessions to Mastered
+                </div>
+
+                <h3>C. Subject-Specific Implementations</h3>
+                <ul>
+                    <li><strong>Language Sciences:</strong> Grammar-in-context. Blanks target specific grammar rules (verb tense, article usage, adjective agreement). Word bank includes morphological variants.</li>
+                    <li><strong>Natural Sciences:</strong> Science definition cloze. Blanks target technical vocabulary. Protected words include formulas and equations.</li>
+                    <li><strong>Exact Sciences:</strong> Formula explanation cloze. The formula itself is visible; blanks are in the explanatory text around it.</li>
+                    <li><strong>Social Sciences:</strong> Historical narrative cloze. Blanks target dates, names, causal connectors in historical analysis.</li>
+                    <li><strong>Arts / Tarbiya:</strong> Values and concepts. Blanks target character education vocabulary, artistic terminology.</li>
+                </ul>
+
+                <h3>D. "Hali Emas" (Not Yet) Framing</h3>
+                <p>When a student fails a blank (2 wrong attempts), the correct answer is shown with a gentle explanation. There is no penalty — the system treats the revealed answer as a learning opportunity, not a failure. The blank is counted in the student's accuracy stats but does not block session progress.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Sentence Fill (Cloze Test) v1.0
+        </footer>
+    </div>
+</body>
+</html>

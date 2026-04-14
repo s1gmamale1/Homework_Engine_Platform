@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Escape Room: Subject Lock (Concept-Definition Edition)</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Escape Room: Subject Lock — Concept-Definition Edition</h1>
+            <p style="color: var(--text-muted)">Interactive Knowledge-Gated Mechanic #11 — Cross-Hinted Multi-Object Unlock</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Modes: Solo, Co-op (Premium)</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Synthesize</span>
+                <span class="tag">PISA: 3-4</span>
+                <span class="tag">AI Tier: Tier 2</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>Escape Room: Subject Lock presents the student with <strong>4 locked objects</strong> (doors, chests, devices, vaults) arranged in a room or chamber. Each object has a lock requiring a correct answer to open. The defining innovation is the <strong>cross-hinting structure</strong>: clues for one lock are partially hidden within the answers and feedback of other locks.</p>
+                <ul>
+                    <li><strong>Setup:</strong> The room contains 4 locked objects, each labeled with a cryptic title (e.g., "The Iron Door," "The Cipher Chest," "The Clockwork Device," "The Obsidian Vault"). Each lock has a visible keyhole showing a hint fragment — a partial word, number, symbol, or image.</li>
+                    <li><strong>Unlock Mechanism:</strong> The student selects a locked object and receives a subject question. Correct answer = the object unlocks and reveals its contents plus a <strong>clue fragment</strong> that helps with one or more other locked objects. Wrong answer = the object remains locked, the student receives a "lockout penalty" (one hint fragment is permanently erased from their clue list), and they may retry the same object or switch to another.</li>
+                    <li><strong>Cross-Hinting:</strong> Solving one lock reveals clue fragments for other locks. For example, unlocking "The Iron Door" (a math question) might reveal: "The third digit of the Cipher Chest's code is the same as the answer to the Iron Door." This forces the student to integrate knowledge across locks — solving one genuinely helps with others.</li>
+                    <li><strong>Cross-Subject Review:</strong> In Big Boss sessions, the 4 locks draw from different subjects. A math lock's clue might reveal a fact needed for a science lock. A history lock's answer might contain a number needed for a math lock. This creates forced cross-domain synthesis — the student cannot silo their thinking.</li>
+                </ul>
+                <p><strong>Lock difficulty scales by grade:</strong></p>
+                <ul>
+                    <li><strong>Grades 1-2:</strong> 4 simple locks with single-word/number answers. Clues are visual (matching shapes, colors). 15:00 timer.</li>
+                    <li><strong>Grades 3-4:</strong> 4 locks with short-answer or multiple-choice questions. Clues are word fragments or numbers. 12:00 timer.</li>
+                    <li><strong>Grades 5-7:</strong> 4 locks with multi-step reasoning. Clues include partial formulas, coded phrases. 10:00 timer.</li>
+                    <li><strong>Grades 8-11:</strong> 4 locks with complex synthesis questions. Clues require interpretation (e.g., "The answer to Lock 2 modulo 3 gives the first digit of Lock 4's code"). 8:00 timer.</li>
+                </ul>
+                <p><strong>Retry Rule:</strong> Each lock can be attempted unlimited times, but each wrong attempt erases one hint fragment from the student's clue board. After 3 wrong attempts on the same lock, the lock "degrades" — the question difficulty increases by one PISA level (the lock is learning the student's weakness).</p>
+            </div>
+
+            <h3>Hint System</h3>
+            <div class="card">
+                <p>The student starts with <strong>2 free hint fragments</strong> visible on their clue board. Additional hint fragments are earned by unlocking other locks. The hint system works as follows:</p>
+                <ul>
+                    <li><strong>Direct Clue:</strong> "The answer to Lock 1 is a prime number. Lock 3's code is that number + 5." This directly links two locks.</li>
+                    <li><strong>Elimination Clue:</strong> "Lock 2's answer does NOT contain the letter 'E'." This narrows possibilities without giving the answer.</li>
+                    <li><strong>Cross-Subject Clue:</strong> "The year of the Battle of Anantar (History, Lock 4) minus 500 equals the answer to Lock 1 (Math)." This forces the student to solve the history question to unlock the math question.</li>
+                    <li><strong>Meta Clue (rare, ~10% of rooms):</strong> "All four answers share a common property." The student must identify the property (e.g., all are even numbers, all contain the letter 'A', all are divisible by 7) to narrow their search space.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Escape Room: Subject Lock is part of the 28-mechanic core. Both tiers receive the full solo puzzle experience; Premium adds cooperative modes and hint depth.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Available in Phase 3 Game Breaks (dual-catalog selection)</td>
+                        <td>Same + on-demand access from Library</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Game Modes</strong></td>
+                        <td>Solo only</td>
+                        <td>Solo + Co-op (2 students share one room, alternate turns, share clue board)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starting Hints</strong></td>
+                        <td>2 free hint fragments</td>
+                        <td>3 free hint fragments</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cross-Subject Rooms</strong></td>
+                        <td>2 same-subject locks + 2 cross-subject locks per room</td>
+                        <td>All 4 locks can be cross-subject (maximum integration)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Visual Polish</strong></td>
+                        <td>Standard room rendering, basic lock animations</td>
+                        <td>3D room perspective, animated lock mechanisms, particle effects on unlock</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lock Degradation</strong></td>
+                        <td>After 3 wrong attempts, difficulty increases by 1 PISA level</td>
+                        <td>Same + "Recovery Chance": one free undo per room — reverse one wrong attempt without hint loss</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Room Variety</strong></td>
+                        <td>3 room themes rotate (study, dungeon, laboratory)</td>
+                        <td>8+ room themes, seasonal specials, custom room creation (teacher tool)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> The core puzzle — 4 locks, cross-hinting, unlock through correct answers — is identical across tiers. Premium adds cooperative play, hint depth, and cosmetic variety. The cross-subject synthesis challenge is present in both tiers.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Associative Lock Discovery</h2>
+            <p>Escape Room: Subject Lock implements <strong>Tony Buzan's associative thinking and color-coded imagery</strong> principles to transform isolated facts into interconnected knowledge networks.</p>
+            <ul>
+                <li><strong>Color Hooks (Lock Identity):</strong> Each of the 4 locks is assigned a distinct color. When a lock opens, its color floods across the clue board (0.5s pulse), and all clue fragments related to that lock glow in that color. This creates a vivid visual map of which locks have been solved and which remain. Unsolved locks pulse dimly in their color, creating a "calling" effect that draws attention to remaining challenges.</li>
+                <li><strong>Radiant Branches (Clue Web):</strong> When the student unlocks their first lock, the clue fragment for the second lock appears as a "branch" extending from the solved lock. Each subsequent unlock extends the branch further. By the time all 4 locks are open, the clue board displays a radiant web connecting all four — a visual representation of how knowledge domains interconnect. This web is saved to the student's match history gallery.</li>
+                <li><strong>Imagery & Exaggeration (Lock Personalities):</strong> Each lock has an exaggerated visual personality. "The Iron Door" is massive, rusted, with a keyhole shaped like a math symbol. "The Cipher Chest" is ornate, covered in coded symbols, with a combination dial that spins on its own. "The Clockwork Device" ticks audibly, its gears visible through glass. "The Obsidian Vault" absorbs light, its surface reflecting distorted images of the student's past answers. These exaggerated features create strong episodic memories.</li>
+                <li><strong>Memory Palace Anchor (Room as Palace):</strong> The escape room itself functions as a mini Memory Palace. Each locked object occupies a distinct "room location." When all 4 locks are opened, the room transforms into a bright, open space — the "palace revealed." The student can revisit this room in their gallery, and the spatial layout of the 4 objects serves as anchor points for the knowledge they unlocked. Students who complete 10+ Escape Rooms unlock the "Master Escapist" achievement in the Bilim Bazasi.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Each lock presents a question scaled to the target PISA level. The cross-hinting structure means questions are never isolated — answers to one lock provide genuine utility for solving others.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Lock Question Type</th>
+                        <th>Cross-Hint Complexity</th>
+                        <th>Cognitive Target</th>
+                        <th>Interaction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L1</strong></td>
+                        <td>Direct recall (e.g., "What is 9 + 6?")</td>
+                        <td>Direct number/word transfer: "Lock B's answer is 15"</td>
+                        <td>Basic retrieval and recognition</td>
+                        <td>Select answer from 3 options. Clue reveals exact value for another lock.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L2</strong></td>
+                        <td>Property identification (e.g., "Which shape has 4 equal sides?")</td>
+                        <td>Property transfer: "Lock C's answer has the same number of letters as Lock A's answer"</td>
+                        <td>Concept application with cross-referencing</td>
+                        <td>Select from 4 options. Clue reveals a property (length, first letter, category) of another lock's answer.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L3</strong></td>
+                        <td>Multi-step reasoning (e.g., "If 3 apples cost 600, how much do 5 cost?")</td>
+                        <td>Calculated transfer: "Lock D's code = (Lock A's answer) x 2 + 3"</td>
+                        <td>Inference chain requiring computation across locks</td>
+                        <td>Free-form numeric or short-text input. Clue reveals a formula linking two locks.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Scenario analysis (e.g., interpret a graph, then answer)</td>
+                        <td>Conditional transfer: "If Lock B's answer is even, Lock D's first digit is 7; if odd, it is 4"</td>
+                        <td>Evaluation under conditional logic</td>
+                        <td>Multiple steps: interpret scenario, compute answer, then apply conditional clue to narrow another lock.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5</strong></td>
+                        <td>Multi-source synthesis (combine 2+ information sources)</td>
+                        <td>Integrated transfer: "The sum of all 4 lock answers equals 100. You now know 3 of them."</td>
+                        <td>Synthesis across all locks simultaneously</td>
+                        <td>Student must track running totals, apply elimination logic, and solve for remaining unknowns.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L6</strong></td>
+                        <td>Novel problem requiring original reasoning</td>
+                        <td>Meta-transfer: "The relationship between the 4 answers follows a pattern you must discover."</td>
+                        <td>Original pattern recognition and solution creation</td>
+                        <td>Student must identify the hidden pattern (arithmetic, geometric, linguistic) linking all 4 answers before the final lock can be opened.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Cross-Subject Integration Rule:</strong> In cross-subject rooms, at least one clue must bridge two different subjects. A math lock's answer must provide information needed for a science lock, or a history lock's answer must contain a number needed for a math lock. This prevents the student from treating each lock as an isolated quiz — they must actively synthesize across domains.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type B (Rubric-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Accuracy (%)</td><td>Lock accuracy % = locks unlocked / total locks × question accuracy across all 4 locks</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>Cross-hint utilization</td><td>% of locks solved using clues from other locks (measures synthesis ability)</td><td>Secondary — measures cross-domain reasoning skill</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total Escape Room sessions played</td><td>Feeds curve-fitting (y = K × attempts^n) for velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Escape Room — [Room Theme]</strong><br>
+                    ████████░░ 62% (Apprentice ↗)<br>
+                    Lock Accuracy: 75% (3/4 unlocked) | Cross-Hint Use: 67%<br>
+                    Velocity: n=0.41 (improving)<br>
+                    ~3 rooms to Proficient
+                </div>
+
+                <h3>C. Escape Outcome Grades</h3>
+
+                <p><strong>Full Escape Victory (all 4 locks unlocked):</strong></p>
+                <ul>
+                    <li><strong>Perfect Escape (0 wrong attempts):</strong> Mastered-level grade. "Flawless Escapist" badge. The room transforms into a sunlit garden celebration.</li>
+                    <li><strong>Clean Escape (1-2 wrong):</strong> Proficient-level grade. The room opens partially — one wall dissolves to reveal the outside.</li>
+                    <li><strong>Hard Escape (3+ wrong):</strong> Apprentice-level grade. The room's exit creaks open slowly — earned through persistence.</li>
+                </ul>
+
+                <p><strong>Timer Exhaustion (Partial Escape):</strong></p>
+                <ul>
+                    <li><strong>3 of 4 unlocked:</strong> "Hali emas" screen. The remaining lock is shown with its correct answer and the clue that would have helped. Partial accuracy credit for 3 locks. No forced replay — counted as a near-miss learning session.</li>
+                    <li><strong>2 or fewer unlocked:</strong> "Hali emas" screen. All remaining locks are revealed with correct answers shown for 10 seconds. Student earns accuracy credit only for unlocked locks. The room is marked as "pending mastery" and will reappear in a future session with the same lock configuration but fresh questions.</li>
+                </ul>
+
+                <h3>D. Defeat Framing</h3>
+                <p>Failure is framed as <strong>"The room still holds its secrets"</strong> — never as personal inadequacy. The "Hali emas" screen shows the locked objects with a dim glow, as if waiting for the student's return. All correct answers are revealed for study. The message reads: "The locks were strong, but your mind is stronger. Study these clues and try again." The room persists in the student's pending list, guaranteeing a rematch with the same structural puzzle (different questions) in a future session.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Escape Room: Subject Lock: Concept-Definition Edition v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>

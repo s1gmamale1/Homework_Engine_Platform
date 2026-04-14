@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Memory Sprint</title>
+    <style>
+        :root {
+            --bg: #0d1117; --surface: #161b22; --border: #30363d;
+            --text: #e6edf3; --text-muted: #8b949e;
+            --primary: #58a6ff; --accent: #bc8cff;
+            --danger: #f85149; --success: #3fb950; --gold: #d29922;
+        }
+        body { background-color: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 40px; display: flex; justify-content: center; }
+        .container { max-width: 1000px; width: 100%; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 40px; }
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin: 20px 0; }
+        .premium-box { border: 2px solid var(--gold); background: rgba(210, 153, 34, 0.05); padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .buzan-box { border: 2px solid var(--accent); background: rgba(188, 140, 255, 0.05); padding: 20px; border-radius: 12px; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Memory Sprint: Prior Knowledge Activation</h1>
+            <p style="color: var(--text-muted)">Default Mechanic #1 — Rapid Recall from Prior Chapters</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Mode: Solo Recall</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Remember</span>
+                <span class="tag">PISA: 1</span>
+                <span class="tag">AI Tier: Tier 1</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Memory Sprint Mechanics</h2>
+            <div class="card">
+                <p>A <strong>two-phase rapid recall exercise</strong> used as the Phase 1 warm-up in every homework session. Designed to activate prior knowledge from <strong>previous chapters</strong> (NOT current topic), preventing decay and priming the brain for new content.</p>
+                <h3>Phase 1: Study (5 seconds)</h3>
+                <p>6 items are displayed simultaneously for exactly 5 seconds. Each item shows: emoji/icon + label. The student must memorize as many as possible. Items are drawn from topics covered 2-4 weeks ago (spaced repetition timing).</p>
+                <h3>Phase 2: Recall (30 seconds)</h3>
+                <p>Items disappear. 6 multiple-choice questions appear one at a time, each testing one of the 6 items shown. Student selects the correct answer from 4 options. The 30-second timer creates mild time pressure (not anxiety — most students finish in 15-20 seconds).</p>
+                <h3>Flexible Question Formats</h3>
+                <p>Memory Sprint supports 5 sub-formats, selected based on subject and content type:</p>
+                <ul>
+                    <li><strong>MC Recall:</strong> Standard 4-option multiple choice ("Which process do plants use?")</li>
+                    <li><strong>Speed Match:</strong> Two items flash briefly; student taps if they belong to the same category</li>
+                    <li><strong>Fill-Blanks:</strong> A key term is removed from a definition; student selects the correct word</li>
+                    <li><strong>Order Steps:</strong> 4 steps of a process shown scrambled; student selects the correct first step</li>
+                    <li><strong>Image Label:</strong> A diagram is shown; student selects the correct label for a highlighted part</li>
+                </ul>
+                <h3>Parameters</h3>
+                <ul>
+                    <li>Items: 6 per sprint</li>
+                    <li>Study time: 5 seconds (fixed)</li>
+                    <li>Recall time: 30 seconds (soft cap — student can finish early)</li>
+                    <li>Questions: 6 (1 per item shown)</li>
+                    <li>Grade data: accuracy = correct answers / 6; velocity = improvement rate across sessions</li>
+                    <li>No penalty for wrong answers — the sprint is diagnostic, not evaluative</li>
+                    <li>Source pool: Spaced Flashcards "Again" items + items from 2-4 weeks ago that haven't been reviewed recently</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <table>
+                <thead><tr><th>Feature</th><th>Basic Tier</th><th>Premium Tier</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Session Access</strong></td><td>Phase 1 mandatory warm-up every session</td><td>Same + optional "Pre-Sprint" (extra 3-item warm-up before the main sprint)</td></tr>
+                    <tr><td><strong>Question Formats</strong></td><td>MC Recall + Fill-Blanks (standard)</td><td>All 5 formats including Speed Match, Order Steps, Image Label</td></tr>
+                    <tr><td><strong>Item Selection</strong></td><td>Algorithm selects from 2-4 week old items</td><td>Same + AI prioritizes items from the student's weakest PISA domains</td></tr>
+                    <tr><td><strong>Feedback</strong></td><td>Score shown at end (X/6 correct)</td><td>Per-item breakdown showing which items were missed + quick review card</td></tr>
+                    <tr><td><strong>Timer</strong></td><td>Fixed 30-second recall</td><td>Adaptive timer: 30s for weak students, 20s for strong students (pressure tuning)</td></tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> The core warm-up function — activating prior knowledge with 6 items — is identical for both tiers. Premium adds format variety and adaptive timing, not additional knowledge.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Primacy/Recency Activation</h2>
+            <p>Memory Sprint leverages <strong>two of Buzan's core memory principles</strong> simultaneously.</p>
+            <ul>
+                <li><strong>Primacy/Recency Effect:</strong> The 5-second study window exploits the fact that the brain remembers the first and last items in a sequence best. Items are ordered so that the student's weakest items appear first (primacy) and last (recency), with stronger items in the middle. This maximizes the chance of recall during the recall phase while still challenging the student on gaps.</li>
+                <li><strong>Color Hooks:</strong> Each item card uses the subject family's color as a background tint. Math = light blue, Science = light green, etc. The color acts as a subconscious category cue, strengthening the memory trace.</li>
+                <li><strong>Multi-sensory Preview (Premium):</strong> In Speed Match format, a brief sound plays when items appear (e.g., a "whoosh" for physics items, a "chirp" for biology). The auditory cue creates an additional encoding channel.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Memory Sprint questions are <strong>always from past content</strong> — never from the current session's topic. The complexity scales by the student's current PISA level:</p>
+            <table>
+                <thead>
+                    <tr><th>PISA Level</th><th>Study Phase Items</th><th>Recall Questions</th><th>Cognitive Target</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>L1</strong></td><td>Term + large icon (emoji)</td><td>MC: "Which one was shown?" with 4 visual options</td><td>Visual recognition</td></tr>
+                    <tr><td><strong>L2</strong></td><td>Term + small icon</td><td>MC: "What does [term] mean?" with 4 definition options</td><td>Definition recall</td></tr>
+                    <tr><td><strong>L3</strong></td><td>Term only (no icon)</td><td>Fill-Blanks or MC with plausible distractors (same-family terms)</td><td>Concept discrimination — student must distinguish similar concepts</td></tr>
+                    <tr><td><strong>L4</strong></td><td>Process step (partial description)</td><td>Order Steps: "Which step comes first?" with 4 process options</td><td>Sequential reasoning — student must remember the full process chain</td></tr>
+                    <tr><td><strong>L5+</strong></td><td>Data point or quote fragment</td><td>MC: "What principle does this illustrate?" requiring synthesis</td><td>Abstract connection — linking specific data to general principle</td></tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Stranger Test Compliance:</strong> L1 items always include large icons. L2 items include small icons. A test player who doesn't speak the language can still complete L1-L2 sprints through visual matching. L3+ removes visual support — reading comprehension becomes part of the test.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type A (Accuracy-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Accuracy (%)</td><td>Correct answers / 6</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>Time per answer</td><td>Session duration / correct count</td><td>Secondary — feeds Efficiency metric (getting faster = positive signal)</td></tr>
+                        <tr><td>Missed items</td><td>Which of the 6 items were recalled incorrectly</td><td>Tertiary — feeds the Memory Sprint question pool for remediation</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total Memory Sprint sessions completed</td><td>Feeds the curve-fitting algorithm (y = K × attempts^n) to calculate velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Memory Sprint — [Prior Topic]</strong><br>
+                    ██████░░░░ 50% (Apprentice →)<br>
+                    Velocity: n=0.41 (improving)<br>
+                    Speed: 18s/answer (getting faster ✓)<br>
+                    ~4 sessions to Proficient
+                </div>
+
+                <h3>C. Below 60% Threshold — Remediation Routing</h3>
+                <p>If a student scores <strong>below 60% (≤3/6)</strong> on the Memory Sprint, the system routes them to a <strong>targeted remediation micro-exercise</strong> before continuing to Story Mode. The remediation is:</p>
+                <ul>
+                    <li>A 30-second review of the 3 items they missed (items reappear with correct answers highlighted)</li>
+                    <li>1 follow-up question per missed item (total 3 follow-ups, MC format)</li>
+                    <li>No grade penalty — the remediation is supportive, not punitive</li>
+                    <li>Flagged on the teacher dashboard: "Student struggled with prior knowledge on [topic]"</li>
+                </ul>
+
+                <h3>D. "Hali Emas" (Not Yet) Framing</h3>
+                <p>Memory Sprint has no failure condition. Even a student who scores 0/6 continues to the next phase. The sprint's purpose is diagnostic — it tells the system what the student has forgotten so the Story Mode and Game Breaks can compensate. The "Hali emas" framing applies throughout: forgetting is normal, and the system responds by helping, not punishing.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Memory Sprint v1.0
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Territory Conquest (Concept-Definition Edition)</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Territory Conquest: Concept-Definition Edition</h1>
+            <p style="color: var(--text-muted)">Interactive Knowledge-Gated Mechanic #10 — Simplified Risk-Style 1v1 Area Control</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1-6 (1 Student + up to 5 AIs)</span>
+                <span class="tag">Modes: Standard Duel, FFA, One-for-All (Premium)</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Apply/Analyze</span>
+                <span class="tag">PISA: 3</span>
+                <span class="tag">AI Tier: Tier 1</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>Territory Conquest is a <strong>simplified Risk-style area control game</strong> played on a hex or square grid map. Each cell on the map represents a territory. The student and AI opponents take turns expanding and attacking.</p>
+                <ul>
+                    <li><strong>Setup:</strong> Each entity (student + AIs) starts with a Capital territory and 2-3 adjacent starter territories. Unclaimed neutral territories fill the remaining map.</li>
+                    <li><strong>Attack Phase:</strong> On their turn, the student selects an adjacent enemy or neutral territory to attack. A <strong>subject question</strong> appears. Correct answer = attack succeeds, territory is captured. Wrong answer = attack fails and the student loses one of their own territories adjacent to the target (retreat penalty).</li>
+                    <li><strong>Reinforcement Phase:</strong> After each turn, the active entity receives reinforcement troops equal to the number of territories they control divided by 3 (minimum 1). Reinforcements can be placed on any owned territory.</li>
+                    <li><strong>AI Behavior:</strong> AI entities act on their turns using a weighted strategy: prefer attacking weaker neighbors, defend capitals when threatened, expand into neutral territory when safe. AI "difficulty" scales with grade level (lower grades = AI makes suboptimal choices more often).</li>
+                </ul>
+                <p><strong>Map scale increases dynamically with player count:</strong></p>
+                <ul>
+                    <li><strong>2 entities (1 Student + 1 AI):</strong> 8x8 grid (64 territories).</li>
+                    <li><strong>3 entities (1 Student + 2 AIs):</strong> 8x8 grid.</li>
+                    <li><strong>4 entities (1 Student + 3 AIs):</strong> 10x10 grid (100 territories).</li>
+                    <li><strong>5 entities (1 Student + 4 AIs):</strong> 10x10 grid.</li>
+                    <li><strong>6 entities (1 Student + 5 AIs):</strong> 12x12 grid (144 territories).</li>
+                </ul>
+                <p><strong>Reinforcement Event (~10% chance mid-game):</strong> After turn 6, there is a 10% chance per turn of a "Reinforcement Event" — a random neutral territory spawns a bonus army. The first entity to answer a bonus question correctly claims it. This prevents stalemates and adds unpredictability.</p>
+                <p><strong>Cross-Subject Review (Big Boss / Mythical Boss):</strong> In review sessions, questions rotate across all subjects the student has studied. A math question may lead to capturing a territory, then a history question on the next attack. This forces cross-domain retrieval under strategic pressure.</p>
+            </div>
+
+            <h3>Strategic Victory Conditions</h3>
+            <div class="card">
+                <p>Two paths to victory exist:</p>
+                <ul>
+                    <li><strong>Strategic Victory (Turn 12):</strong> If no entity has achieved Total Domination by turn 12, the game ends. The entity controlling the most territories wins. Ties broken by: (1) most capital captures, (2) most contiguous territory chain, (3) coin flip.</li>
+                    <li><strong>Total Domination:</strong> Capture all enemy capitals. Instant win regardless of turn count. This is the highest-difficulty path and requires sustained correct-answer streaks across multiple subjects.</li>
+                </ul>
+                <p><strong>FFA (Free-for-All) Mode (Premium):</strong> All entities are independent. Last player standing (most territories at Turn 12 or last capital remaining) wins. Temporary alliances are not allowed — pure competition.</p>
+                <p><strong>One-for-All Mode (Premium):</strong> 5 AIs coordinate against the student. The student is the underdog defending their capital against a coalition. Victory requires capturing at least 2 AI capitals before Turn 12. This is the highest-stakes mode and awards the most XP.</p>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Territory Conquest is part of the 28-mechanic core. Basic students receive the standard duel experience; Premium unlocks multiplayer variants and strategic depth.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Available in Phase 3 Game Breaks (dual-catalog selection)</td>
+                        <td>Same + on-demand access from Library</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Game Modes</strong></td>
+                        <td>Standard Duel only (1 Student vs 1 AI)</td>
+                        <td>Standard Duel + FFA (up to 6 entities) + One-for-All (5 AIs vs student)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Map Size</strong></td>
+                        <td>8x8 grid only</td>
+                        <td>Up to 12x12 grid (scales with player count)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Count</strong></td>
+                        <td>1 AI enemy only</td>
+                        <td>1-5 AI enemies</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Visual Polish</strong></td>
+                        <td>Standard map rendering, basic territory colors</td>
+                        <td>Animated troop movements, territory glow effects, battle animations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reinforcement Events</strong></td>
+                        <td>Not available</td>
+                        <td>10% chance per turn mid-game — bonus territory spawns</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Victory Paths</strong></td>
+                        <td>Total Domination only (capture all enemy territories)</td>
+                        <td>Total Domination + Strategic Victory (Turn 12 count) + One-for-All underdog challenge</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> The Standard Duel (1v1) provides the full strategic learning experience. The core mechanic — answering correctly to expand, answering wrongly to lose ground — is identical across tiers. Premium adds scale, variant modes, and cosmetic depth.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Spatial-Territorial Memory</h2>
+            <p>Territory Conquest leverages <strong>Tony Buzan's spatial memory and color association</strong> principles to bind content knowledge to geographic positions on the map.</p>
+            <ul>
+                <li><strong>Color Hooks (Territory Identity):</strong> Each player's territories are rendered in a distinct high-contrast color (student = blue, AI-1 = red, AI-2 = green, etc.). When a territory changes hands, the color transition animates with a 0.5s pulse — the old color "retreats" as the new color "advances." This creates a vivid visual narrative of conquest that the student remembers far better than abstract scores.</li>
+                <li><strong>Radiant Branches (Contiguous Territory Chains):</strong> When a student controls a contiguous chain of 5+ territories, a glowing border appears connecting them — a "supply line." This visual chain reinforces the concept that knowledge builds cumulatively. Breaking an enemy's supply line (capturing a key territory) triggers a "Supply Line Severed" notification, reinforcing strategic cause-and-effect.</li>
+                <li><strong>Imagery & Exaggeration (Capital Monuments):</strong> Each capital displays a subject-specific monument icon (e.g., a math capital shows a giant calculator, a history capital shows a fortress). When a capital is captured, the monument "falls" with dramatic animation, and the conquering player's monument rises in its place. This exaggerated imagery creates strong episodic memories tied to the content questions that enabled the capture.</li>
+                <li><strong>Memory Palace Anchor (Conquest Chronicle — rare, ~5% of captured territories):</strong> Occasionally, a captured territory contains a 📜 Chronicle Scroll. Reading it places the territory and the question that captured it into the student's Conquest Chronicle — a persistent gallery showing their strategic history across sessions. Students who collect Chronicle Scrolls from all subjects unlock the "Grand Strategist" achievement in the Bilim Bazasi.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Territory Conquest gates every attack and defense behind subject questions. The question complexity scales with the PISA level being targeted.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Question Type</th>
+                        <th>Attack Scenario</th>
+                        <th>Cognitive Target</th>
+                        <th>Feedback Style</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L1</strong></td>
+                        <td>Direct recall (e.g., "What is 7 x 8?")</td>
+                        <td>Attack neutral territory — simple fact check</td>
+                        <td>Automatic retrieval fluency</td>
+                        <td>Instant: correct = green flash + territory captured; wrong = red flash + retreat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L2</strong></td>
+                        <td>Property identification (e.g., "Which of these is a prime number?")</td>
+                        <td>Attack lightly defended territory — requires basic reasoning</td>
+                        <td>Concept application in context</td>
+                        <td>Correct answer shows brief explanation; wrong answer shows correct answer + territory loss</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L3</strong></td>
+                        <td>Multi-step reasoning (e.g., "If x + 5 = 12, what is x x 3?")</td>
+                        <td>Attack enemy territory — requires inference chain</td>
+                        <td>Causal analysis under pressure</td>
+                        <td>Step-by-step breakdown shown after answer; wrong answer costs territory and shows full solution</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Scenario analysis (e.g., data interpretation from a chart)</td>
+                        <td>Attack fortified territory — complex problem with distractors</td>
+                        <td>Evaluation of evidence, discrimination between plausible options</td>
+                        <td>Full solution path shown; territory loss includes "What went wrong" hint</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5</strong></td>
+                        <td>Multi-source synthesis (e.g., combine two facts to derive a third)</td>
+                        <td>Attack capital — hardest questions guard capitals</td>
+                        <td>Synthesis across information sources</td>
+                        <td>Detailed explanation; capital defense questions trigger "Siege Mode" — 2 questions in a row, both must be correct</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L6</strong></td>
+                        <td>Novel problem requiring original reasoning</td>
+                        <td>Final Boss capital — mythic difficulty</td>
+                        <td>Original creation/solution under maximum strategic pressure</td>
+                        <td>Full worked solution + "General's Analysis" explaining the reasoning approach. Wrong answer = immediate capital defense counterattack.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Cross-Subject Gate Rule:</strong> In Big Boss review sessions, consecutive attacks never draw from the same subject. If the last attack was math, the next will be history, science, or language. This forces cognitive flexibility and prevents subject-specific warm-up bias.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type C (Outcome-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Territory % controlled</td><td>Territories held at game end / Total territories × 100</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>Strategic efficiency</td><td>Question accuracy rate during attacks + territory retention rate (territories lost / attacks attempted)</td><td>Secondary — measures how effectively knowledge translates into strategic gains</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total Territory Conquest games played</td><td>Feeds curve-fitting (y = K × attempts^n) for velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Territory Conquest — [Subject]</strong><br>
+                    ████████░░ 62% (Apprentice ↗)<br>
+                    Territory Controlled: 45% | Attack Accuracy: 68%<br>
+                    Velocity: n=0.39 (improving)<br>
+                    ~4 games to Proficient
+                </div>
+
+                <h3>C. Victory Outcome Grades</h3>
+
+                <p><strong>Total Domination Victory (capture all enemy capitals):</strong></p>
+                <ul>
+                    <li><strong>Flawless Conquest:</strong> No territories lost. Mastered-level grade. "Undefeated Warlord" badge.</li>
+                    <li><strong>Hard-Fought Victory:</strong> Lost 1-3 territories. Proficient-level grade.</li>
+                    <li><strong>Narrow Victory:</strong> Lost 4+ territories. Apprentice-level grade. "Hali emas" framing for lost territories — shown on recap map with correct answers.</li>
+                </ul>
+
+                <p><strong>Strategic Victory (Turn 12 — most territories):</strong></p>
+                <ul>
+                    <li><strong>Student wins:</strong> "Strategist" badge. Map recap shows all territories controlled at game end.</li>
+                    <li><strong>Student loses:</strong> "Hali emas" screen. The map is shown with all correct answers for territories the student failed to capture. Accuracy credit for each territory successfully captured during the game.</li>
+                </ul>
+
+                <p><strong>One-for-All Victory (Premium — capture 2+ AI capitals vs 5 AIs):</strong></p>
+                <ul>
+                    <li><strong>Victory:</strong> "Underdog Champion" badge — the highest single-game recognition in Territory Conquest.</li>
+                    <li><strong>Defeat:</strong> Encouragement: "You held the line against 5 armies." Map recap shows which capitals were closest to falling.</li>
+                </ul>
+
+                <h3>D. Defeat Framing</h3>
+                <p>Loss is always framed as <strong>"Hali emas"</strong> (not yet). The defeat screen shows the map with the student's remaining territories highlighted in gold, and all lost territories display the correct answers they missed. The message reads: "Your empire will rise again. Study these territories and return stronger." No punishment beyond lost time — the student retains partial accuracy credit for territories captured and is encouraged to retry.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Territory Conquest: Concept-Definition Edition v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>
