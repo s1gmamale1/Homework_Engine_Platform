@@ -1,99 +1,132 @@
-# NETS Subject Framework: Ijtimoiy Fanlari — O'zbekiston Tarixi (History of Uzbekistan)
+# O'zbekiston Tarixi (History of Uzbekistan) — Subject-Specific Framework
 
-**Version:** 1.0 (Subject Spec)  
-**Status:** Implementation Ready  
-**Parent Family:** [[Ijtimoiy-Fanlari-Framework.md]]  
-**Target:** Grade 7-11
-
----
-
-## 1. SUBJECT IDENTITY: THE ROOTS OF THE RENAISSANCE
-
-**O'zbekiston Tarixi** in the NETS ecosystem is the study of the **civilizational development, statehood, and cultural heritage** of the Central Asian region with Uzbekistan at its heart. It focuses on the transition from ancient city-states to the modern sovereign republic, emphasizing continuity and national identity.
-
-### 1.1 Core Pillars of O'zbekiston Tarixi
-- **Statehood Evolution:** From the early states (Khorezm, Bactria) to the Timurids, Khanates, and the Republic.
-- **Cultural & Scientific Legacy:** The "First" and "Second" Renaissances (Al-Khwarizmi, Al-Biruni, Ibn Sina, Ulugh Beg).
-- **The Silk Road Nexus:** Uzbekistan's role as the "Heart of the Silk Road" connecting East and West.
-- **Jadidism & Independence:** The struggle for modernization and sovereignty in the 19th-21st centuries.
+**Scope:** G7-11, all grades, universal  
+**Family:** Ijtimoiy Fanlari (Social Sciences)  
+**Parent docs:**
+- Ijtimoiy Fanlari Family Documentation
+- NETS-Homework-Engine-UNIFIED-Buzan.md v2.0
+- NETS-Library-Framework.md v0.6
 
 ---
 
-## 2. SUBJECT-SPECIFIC COGNITIVE DEMANDS
+## 1. What O'zbekiston Tarixi Teaches
 
-Following the Ijtimoiy Fanlari profile, O'zbekiston Tarixi prioritizes:
-1. **Ancestral Connection:** Understanding how the decisions of historical figures (e.g., Amir Temur) still influence national principles today.
-2. **Geographical-Historical Context:** Linking the development of cities (Samarkand, Bukhara, Khiva) to trade and environmental factors.
-3. **Primary Source Analysis (National):** Analyzing local manuscripts, architectural inscriptions (e.g., Registan), and the "Tuzuklar" (Institutes) of Timur.
-4. **Causal Continuity:** Tracing a single theme (e.g., "Adolat" / Justice) across different eras of Uzbek history.
+O'zbekiston Tarixi in NETS is the study of **civilizational statehood, ancestral legacy, and national identity**. It focuses on the evolution from early city-states to the modern sovereign Republic, emphasizing the "Renaissance" peaks and the continuity of national principles.
 
----
+- **Factual Sovereignty (70%):** Students must memorize dynasties, rulers (e.g., Amir Temur, Zahiriddin Muhammad Babur), scientific achievements, and specific dates of independence milestones.
+- **Identity Synthesis (30%):** Understanding how ancestral decisions (e.g., *Temur Tuzuklari*) influence modern Uzbek values.
+- **Cultural Anchor:** Deep focus on the Silk Road, the three Renaissances, and the architectural/literary heritage.
+- **Recall Readiness:** Building rapid chronological and figure-based recall.
 
-## 3. GAME MECHANICS & PEDAGOGY (UZBEK HISTORY TUNED)
+**What O'zbekiston Tarixi is NOT about:**
+- Speculative revisionist history.
+- Purely abstract "roleplay" without factual textbook grounding.
+- External political theories not present in the national curriculum.
 
-### 3.1 Primary Mechanics
-- **Territory Conquest (Hududlar Jangi):** Mapping the changing borders of Central Asian empires and the specific routes of the Silk Road.
-- **Timeline Sort (Milliy Xotira):** Arranging the reigns of key rulers and the founding dates of major architectural monuments.
-- **Source Comparison:** Comparing local chronicles with the accounts of foreign travelers (e.g., Marco Polo, Clavijo, or Ibn Battuta) regarding the same Uzbek city.
-- **Why Chain:** Mapping the factors that led to the "Golden Age" of the Timurid Renaissance.
-
-### 3.2 Mnemonic Systems (Buzan Integration)
-- **Memory Palace:** Using the **Registan Square** (Samarkand) or the **Ichan-Kala** (Khiva) as a 3D digital loci to "place" facts about specific dynasties.
-- **Radiant Summary (Mind Map):** Creating a "Tree of Statehood" showing the evolution of Uzbek governance branches.
-- **Link System:** Memorizing the sequence of the 12 signs of the "Temur Tuzuklari" or the 7 Pir of Bukhara.
+**Core production rule:** The ancestral legacy is the "code" of the nation. Students must first master the facts of this code before analyzing its modern projection.
 
 ---
 
-## 4. NATIONAL PRIDE INJECTIONS (STRICT 70/30 ADAPTATION)
+## 2. Grade-Band Progression
 
-*Note: For Uzbekistan History, the National Focus is raised to 70% to anchor the identity, with 30% Global Context for perspective.*
-
-- **National Focus (70%):** Deep immersion in the **Third Renaissance** vision, the spiritual legacies of ancestors, and the achievements of independence.
-- **Global Context (30%):** Connecting Uzbekistan's events to the "Great Game," the Silk Road's global impact, and world trade.
-- **Wise Role:** `Milliy Meros Himoyachisi` (Guardian of National Heritage).
-- **Example Injection:** "Amir Temur 'Kuch adolatdadir' deb aytgan. Siz bugun 14-asrda ushbu adolat tizimi qanday ishlaganini manbalar orqali tahlil qilasiz."
-
----
-
-## 5. BOSS FORMAT: THE ARCHIVAL GUARDIAN
-
-- **Format:** **Historical Source Reconstruction**.
-- **The Task:** "Given an architectural inscription from a 15th-century madrasa and a snippet from a traveler's diary, explain how education was prioritized during the Timurid era and why it matters for today's Third Renaissance."
-- **Evaluation:** Tier 2 LLM checks for **evidence use**, **ancestral respect**, and **analytical depth**.
-- **No MCQs:** All sessions culminate in a written historical synthesis.
+| Grade | Focus | Production Level | Boss Expectations |
+|---|---|---|---|
+| **G7-8** | Early states, Arab conquest, First/Second Renaissance | Prompted: Sequence 5-8 dynasties, list 3 scientific works | Name 3 rulers, give reign dates, explain one legacy |
+| **G9** | Khanates era, Jadidism, Russian conquest | Prompted -> Free: Explain the struggle for modernization | Why did Jadidism emerge? List 3 goals. Give dates. |
+| **G10-11** | Soviet era, Struggle for Independence, Third Renaissance | Free: Multi-paragraph analysis of statehood milestones | Extended synthesis: Statehood evolution + modern projection |
 
 ---
 
-## 6. Narrative Adaptation
+## 3. Content Production Rules by Grade Band
+
+### G7-9 (Development)
+
+- **Terminology:** 10-15 new names/terms per session (e.g., *Movarounnahr*, *Vaqf*, *Jadid*).
+- **Chronology:** Use **Memory Palace** (Registan Square or Ichan-Kala digital layouts) to anchor dynastic sequences.
+- **Error Detection:** Find factual errors in local chronicles or timelines (e.g., "Amir Temur was born in 1936. Fix it.").
+- **Historical Projection:** "The educational system of the Jadids is like modern IT Park because..."
+
+**Good production pattern:**  
+"Step 1: Memorize the years of Al-Xorazmiy's life. Step 2: Identify his 2 major works. Step 3: Explain how his 'Algorithm' concept is used in your phone today."
+
+**Good Boss pattern:**  
+"Identify the 3 major Khanates of the 18th century. Give their capital cities. Explain one reason for the decline of their power."
+
+**Bad production pattern:**  
+"You are a merchant in 18th-century Khiva. Write a poem about your camels." (Too creative/soft).
+
+### G10-11 (Advanced)
+
+- **Terminology:** 15-20+ academic terms (e.g., Sovereignty, Constitution, Third Renaissance).
+- **Complex Why Chain:** 3 levels (e.g., Cotton Monoculture -> Economic Dependency -> Ecological Crisis).
+- **Synthesis Tasks:** Mandatory. Connect an ancestral principle (e.g., Justice) to a modern independence milestone.
+- **Historical Projection:** "Trace the evolution of Uzbek statehood from the Timurids to the modern Republic. Identify 3 points of continuity."
+
+**Good production pattern:**  
+"Analyze the 1991 Independence Proclamation. Sequence the 5 major political steps taken in the first year. Explain the constitutional foundation."
+
+**Good Boss pattern:**  
+"Compare the First and Second Renaissances in Uzbekistan. List 3 scientists from each, their specific contributions, and the dates of the eras. How do these inform the Third Renaissance vision today?"
+
+**Bad production pattern:**  
+"List all the districts of Tashkent in order of population." (Geography/Busywork).
+
+---
+
+## 4. Game Mechanics — O'zbekiston Tarixi Specific
+
+### Always Primary (The "Big Three")
+
+#### **Spaced Flashcards**
+- THE core mechanic for rulers, dates, and architectural monuments.
+- **Good:** "Front: 1336 / Back: Amir Temur tavalludi."
+
+#### **Memory Palace (Chronology)**
+- Use national landmarks to anchor statehood sequences.
+- **Good:** "Place the Timurid princes along the gallery of the Gur-e-Amir."
+
+#### **Tile Match**
+- Connect Ruler <-> Achievement or Book <-> Author.
+- **Good:** "Match Ibn Sina to 'Al-Qonun fit-tib'."
+
+### Secondary Mechanics
+- **Speed Match:** Rapid identification of historical coins, flags, or terms.
+- **Story Mode:** Narrative of a builder, scientist, or freedom fighter (Jadid).
+
+### Games to Avoid
+- **Territory Conquest:** Removed from game system.
+- **Word Ladder:** Linguistic focus.
+- **Connect Four:** Too strategic for factual history.
+
+---
+
+## 5. Boss Format: Archival Synthesis
+
+- **Structure:** Retrieval of National Facts -> Continuity Reasoning -> Evidence Check.
+- **HP Scaling:** G7-8: 100 | G9-11: 150.
+- **Failure:** TEFCAS framing ("Hali emas!").
+
+**Good Boss (G10-11):** "Explain the significance of the year 1991 in Uzbek history. List 3 immediate political changes and 2 economic challenges. How does this event fulfill the dreams of the Jadids from 100 years prior?"
+**Bad Boss:** "Write a letter to your future self about history." (Too abstract).
+
+---
+
+## 6. Story Mode & Historical Projection
 
 ### Story Mode (Phase 2)
-Must follow **Discovery Narrative** across 3 segments:
-- **Segment A:** A human moment (e.g., "Imagine you are a judge in 14th century Bukhara...").
-- **Segment B:** The struggle/conflict based on textbook facts.
-- **Segment C:** The resolution and modern legacy.
+Focus on **National Milestones**.
+- **Good:** "You are in the crowd during the construction of the Bibi-Khanym Mosque. The bricks are being passed. The engineers are debating. What is the goal of this massive project?"
 
-### Real-Life Challenge (Phase 4)
-- **Role:** Student IS the expert (e.g., "You are the Lead Archival Guard").
-- **Context:** Must be Uzbek-specific (e.g., Samarkand planning, Mahalla development, Prezident's project).
-- **Goal:** Transfer the textbook concept to a "messy" real-world scenario.
-
----
-
-## 7. Subject Pattern Example (Standard Session)
-
-- **Phase 0:** Gate Quote + BOST Mind Map.
-- **Phase 1:** Recall of previous day's events.
-- **Phase 2:** Story: "Akmal is measuring the Registan courtyard..."
-- **Phase 3:** Territory Conquest + Timeline Sort.
-- **Phase 4:** Real-Life: "Analyze the archival sources for a new museum in Bukhara."
-- **Phase 5:** Radiant Summary of the day’s rules.
-- **Phase 6:** Multi-step open numerical Boss fight.
+### Historical Projection (Phase 4)
+- **Goal:** Ancestral Continuity.
+- **Pattern:** "Amir Temur said 'Kuch adolatdadir'. How is this principle reflected in Article 1 of our modern Constitution?"
 
 ---
 
 ## Technical Rules
-1. **Inheritance:** Inherits National Pride rules from [[NETS-Library-Framework.md]] v0.6 Part 8.
-2. **Quality Gate:** Every session must pass the "5 Feature Showcase" (Narrative, Chronology, Perspective, Pride, Buzan).
+1. **Inheritance:** Inherits Ijtimoiy Fanlari family rules + National Pride (Strict 70/30 National focus).
+2. **Identity Rule:** Every session must include at least one "Wise Role" injection (e.g., [MILLIY MEROS HIMOYACHISI]).
+3. **Buzan Rule:** Major System for memorizing the 12 signs of the *Temur Tuzuklari* is mandatory in Grade 7.
 
 ---
 *Document produced by Gemini CLI Subject Framework Engine.*
