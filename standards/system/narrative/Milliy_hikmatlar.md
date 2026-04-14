@@ -1,0 +1,248 @@
+# Milliy Hikmatlar: Yoshlar, Ta'lim va Kelajak
+
+Ushbu to'plam Yangi O'zbekiston ruhini aks ettiruvchi, yoshlarni ilm-ma'rifat va vatanparvarlikka chorlovchi buyuk siymolarimizning hikmatli so'zlaridan iborat.
+
+## Shavkat Mirziyoyev (60 ta)
+
+1. "Yangi O‘zbekiston ostonasi maktabdan boshlanadi."
+2. "Ta’lim va tarbiya – bizning hayot-mamot masalamiz."
+3. "Ilm bor joyda taraqqiyot bo‘ladi, yuksak madaniyat bo‘ladi."
+4. "Maktab – bu faqat bilim maskani emas, u barchamiz uchun yuksak ma’naviyat beshigidir."
+5. "Biz ta’lim tizimini tubdan isloh qilmasdan turib, ko‘zlangan maqsadlarimizga erisha olmaymiz."
+6. "Bilim – bu hech kim tortib ololmaydigan yagona boylikdir."
+7. "Farzandlarimiz bizdan ko‘ra bilimli, kuchli va albatta baxtli bo‘lishlari shart."
+8. "Ta’limga tikilgan sarmoya – kelajakka tikilgan sarmoyadir."
+9. "Bog‘cha tarbiyasi – bu inson kamolotining poydevori."
+10. "Ma’rifatli jamiyatni faqat bilimli insonlar qura oladi."
+11. "Maktab o‘quvchisi nafaqat fanlarni, balki hayotni ham o‘rganishi kerak."
+12. "Ta’lim sifati – mamlakatning xalqaro maydondagi nufuzini belgilaydi."
+13. "Bizga faqat diplomli mutaxassis emas, bilimli va tafakkurli insonlar kerak."
+14. "Tarbiya qancha mukammal bo‘lsa, xalq shuncha baxtli yashaydi."
+15. "Ilm-fan – taraqqiyotning lokomotividir."
+16. "Yoshlar – bizning eng katta boyligimiz, bebaho xazinamiz."
+17. "Har bir yoshning taqdiri – Vatan taqdiridir."
+18. "Yoshlarimizning ko‘zidagi shijoatni ko‘rib, kelajagimizga ishonchim ortadi."
+19. "Biz yoshlarga sharoit yaratib berishimiz kerak, natijani esa ular o‘zlari ko‘rsatishadi."
+20. "Yoshlar – Uchinchi Renessansning asosiy poydevori va bunyodkorlaridir."
+21. "Vatanparvarlik – bu faqat so‘zda emas, amalda, bilimda va mehnatda namoyon bo‘lishi kerak."
+22. "Yoshlaringshabbusi – islohotlarimizning drayveridir."
+23. "Hech bir yosh e’tibordan chetda qolmasligi kerak."
+24. "Yoshlarimiz zamonaviy texnologiyalarni mukammal egallashlari shart."
+25. "Sizlarning intilishingiz – O‘zbekistonning yangi qiyofasini yaratadi."
+26. "Yoshlik – bu imkoniyatlar davri, uni ilm olishga sarflang."
+27. "Biz yoshlarga baliq emas, qarmoq berishimiz, ularni tadbirkorlikka o‘rgatishimiz kerak."
+28. "Yoshlar ittifoqi – yoshlarning chinakam suyanchi va tayanchi bo‘lishi lozim."
+29. "O‘z kelajagini Vatan taqdiri bilan bog‘lagan yoshlar hech qachon kam bo‘lmaydi."
+30. "Yoshlarning orzulari – davlatimizning ustuvor maqsadlaridir."
+31. "O‘qituvchi qadri baland bo‘lmagan yurtda hech qachon rivojlanish bo‘lmaydi."
+32. "Muallim – jamiyatning eng mo‘’tabar va hurmatli insonidir."
+33. "O‘qituvchining obro‘si – bu Prezidentning obro‘si, butun millatning obro‘sidir."
+34. "Biz o‘qituvchini moddiy va ma’naviy qo‘llab-quvvatlashni davom ettiramiz."
+35. "Maktab direktori – bu islohotlarning joylardagi asosiy vakilidir."
+36. "O‘qituvchi faqat dars beruvchi emas, u yoshlar qalbi va ongining me’moridir."
+37. "Zamonamiz qahramoni – bu fidoyi o‘qituvchidir."
+38. "O‘qituvchining erkinligi – ta’lim sifating kafolatidir."
+39. "Ustozga ehtirom – kelajakka ehtiromdir."
+40. "O‘qituvchi o‘z ustida ishlashdan to‘xtasa, ta’lim ham to‘xtaydi."
+41. "Kitob o‘qigan bola dunyoni boshqaradi."
+42. "Kitobxonlik – ma’naviy kamolot kalitidir."
+43. "Kitob do‘st bo‘lsa, jaholatga o‘rin qolmaydi."
+44. "Har bir xonadonda kutubxona bo‘lishi kerak."
+45. "Ma’naviyat – eng kuchli va eng o‘tkir qurolimizdir."
+46. "O‘z tarixini bilmagan yoshlarning kelajagi bo‘lmaydi."
+47. "Milliy qadriyatlarimiz – bizning o‘zligimizdir."
+48. "San’at va madaniyat yoshlarning dunyoqarashini boyitadi."
+49. "Ona tilimiz – millatimizning ruhidir."
+50. "Ma’rifatli inson yomonlikka qo‘l urmaydi."
+51. "Bizning maqsadimiz – O‘zbekistonni dunyoning rivojlangan davlatlari qatoriga olib chiqish."
+52. "Raqamli iqtisodiyotni faqat bilimli yoshlar bilan qura olamiz."
+53. "Innovatsiya – bu kelajak sari tashlangan dadil qadamdir."
+54. "Biz yoshlarimizni dunyo bilan raqobat qila oladigan darajada tarbiyalashimiz kerak."
+55. "Har bir islohotimizning markazida inson va uning manfaatlari turadi."
+56. "Vatanimizning ertangi kuni siz yoshlarning qo‘lingizda."
+57. "Bilim va tajriba – eng katta sarmoyadir."
+58. "Biz yoshlarga ishonamiz va ularga suyanamiz."
+59. "Yangi O‘zbekistonကို birgalikda, yuksak marralar bilan quramiz."
+60. "To‘xtab qolishga haqqimiz yo‘q, faqat oldinga intilishimiz kerak."
+
+## Islom Karimov (10 ta)
+
+1. "Vatan ostonadan boshlanadi."
+2. "O'zbekiston — kelajagi buyuk davlat."
+3. "Bizdan ozod va obod Vatan qolsin."
+4. "Vatan bittadir, u ham bo'lsa O'zbekistondir."
+5. "Milliy g'oya — xalqni birlashtiruvchi, uni buyuk maqsadlar sari yetaklovchi kuchdir."
+6. "Farzandlarimiz bizdan ko'ra kuchli, bilimli, dono va albatta baxtli bo'lishlari shart."
+7. "Mustaqillik — eng oliy ne'mat, uni asrab-avaylash har birimizning muqaddas burchimizdir."
+8. "Vatanparvarlik — bu faqat so'z emas, balki amaliy ish, ona yurtga bo'lgan cheksiz muhabbatdir."
+9. "O'zligini anglagan xalqni hech kim yenga olmaydi."
+10. "Tinchlik va barqarorlik — taraqqiyotning eng muhim garovidir."
+
+## Amir Temur (10 ta)
+
+1. "Kuch — adolatdadir."
+2. "Azm-u jazm bilan ish tutgan kishi har qanday to'siqni yengib o'tadi."
+3. "Vatanimning har bir qarich yeri men uchun muqaddas va azizdir."
+4. "Yuz ming otliq askar qila olmagan ishni bir to'g'ri tadbir bilan bitirish mumkin."
+5. "Davlat ishlarining to'qqiz ulushi kengash, tadbir va mashvarat, qolgan bir ulushi esa qilich bilan amalga oshiriladi."
+6. "Adolat va insof bilan ish yuritgan podshohning davlati uzoq yashaydi."
+7. "Yaxshi odam yurtiga foyda keltirur, yomon odam esa faqat o'zini o'ylar."
+8. "Birlashgan o'zar, birlashmagan to'zar."
+9. "Vatan himoyasi — har bir o'g'lonning muqaddas burchidir."
+10. "Mening kuchim — xalqimning birligi va menga bo'lgan ishonchidadir."
+
+## Jaloliddin Manguberdi (10 ta)
+
+1. "Vatan himoyasi — nafaqat jismoniy kuch, balki yuksak ma'naviyat va sadoqatdir."
+2. "Ozodlik — insonning eng katta boyligi, uni asrash har birimizning vazifamizdir."
+3. "Vatan ozodligi uchun kurashish — har bir o'g'lonning muqaddas burchidir."
+4. "Vatan tuprog'ining har bir zarrasida ajdodlarimizning shonli tarixi yashirin."
+5. "Qo'rqoqlik bilan o'tgan umr — umr emas, xorlikdir."
+6. "Vatan — bu bizning nomusimiz, g'ururimiz va ota-onamizdir."
+7. "Dushman qanchalik ko'p va kuchli bo'lmasin, haqiqat va Vatan ishqi biz tomonda."
+8. "Vatanparvarlik — ona tuproqni har qanday yovdan ko'z qorachig'idek asrashdir."
+9. "Bizning ruhimizni hech qanday zanjir bilan bog'lab bo'lmaydi, chunki u ozodlikka tashna."
+10. "Haqiqiy qahramonlik — Vatan ravnaqi uchun bilim va shijoat bilan mehnat qilishdir."
+
+## Tomiris (10 ta)
+
+1. "O'z erkinligini qadrlagan xalqni hech qachon mag'lub etib bo'lmaydi."
+2. "Biz tinchlikni sevamiz, lekin erkinligimiz uchun mardlarcha kurashishdan qaytmaymiz."
+3. "Ayol kishi ham Vatan himoyasida erkaklar bilan teng tura olishini isbotlaymiz."
+4. "Vatan — bu bizning uyimiz, uni asrash har bir farzandning vazifasidir."
+5. "Bizning kuchimiz — adolatda va o'z haq-huquqimizni himoya qilishimizdadir."
+6. "Ozodlik — hayotning o'zidan ham qimmatliroq ne'matdir."
+7. "Farzandlarimiz qul bo'lib emas, ozod yurtning erkin egalari bo'lib ulg'ayishi kerak."
+8. "Vatanparvarlik — bu ona suti bilan qonga kirgan muqaddas tuyg'udir."
+9. "Bizning kuchimiz — birligimizda va ona zaminimizga bo'lgan cheksiz muhabbatimizdadir."
+10. "Ayol — jamiyatning ustuni, uning bilimli va jasur bo'lishi kelajak poydevoridir."
+
+## Abu Ali ibn Sina (10 ta)
+
+1. "Ilm — o‘rganish bilan, amal — qilish bilan."
+2. "Baxtning asosi — bilim va ezgu axloqdir."
+3. "Bilim — qalbning chirog‘i, u insonni zulmatdan nurga olib chiqadi."
+4. "Tajriba — barcha bilimlarning onasi va eng ishonchli ustozdir."
+5. "Haqiqatni izlash — insonning eng oliy burchidir."
+6. "Aql — insonning eng katta boyligi, bilimsizlik esa eng og‘ir kambag‘allikdir."
+7. "Kitob — eng yaxshi suhbatdosh, u senga xiyonat qilmaydi."
+8. "Dunyoni bilishni istasang, avval o‘zligingni angla."
+9. "Bilimsizlik — barcha kasalliklar va yomonliklarning ildizidir."
+10. "Ilm — inson ruhining ozuqasi va kamolot kalitidir."
+
+## Abu Rayhan al-Biruni (10 ta)
+
+1. "Ilm — insonni jaholat botqog‘idan qutqaruvchi yagona kuchdir."
+2. "Haqiqatni aytish va uni izlashdan qo‘rqmaslik — chinakam olimning sifatidir."
+3. "Har bir narsaning sababini izlash — kashfiyot의 kalitidir."
+4. "Bilim — cheksiz ummon, inson undan qancha ko‘p ichsa, shuncha chanqog‘i ortadi."
+5. "Vaqtni ilmga sarflash — inson hayotidagi eng foydali sarmoyadir."
+6. "Turli xalqlarning ilmini o‘rganish — dunyoqarashni kengaytiradi va adovatni yo‘qotadi."
+7. "Kuzatish va tajriba — tabiat sirlarini ochishning asosiy yo‘lidir."
+8. "Ilm — insoniyatning umumiy mulki, u chegara bilmaydi."
+9. "Yolg‘on — ilmning dushmani, haqiqat esa uning poydevoridir."
+10. "Olimning qalami — uning eng o‘tkir qurolidir."
+
+## Muhammad al-Khwarizmi (10 ta)
+
+1. "Tartib va mantiq — ilmning poydevoridir."
+2. "Sonlar — koinot၏ tili, ularni tushungan kishi borliqni tushunadi."
+3. "Murakkab masalalarni soddalashtirish — buyuk aqlning belgisidir."
+4. "Bilim — amaliyotda qo‘llanilmasa, u shunchaki yukdir."
+5. "Aniq hisob-kitob — xatolardan asrovchi eng ishonchli qalqondir."
+6. "Yangi yo‘llarni izlashdan va yangilik yaratishdan to‘xtama."
+7. "Ilm — zulmatdagi nur kabi yo‘lingni yoritadi."
+8. "Mantiqiy fikrlash — insonni to‘g‘ri qaror qabul qilishga o‘rgatadi."
+9. "Har bir mushkul masalaning yechimi ilmda yashiringan."
+10. "Bilim insonni yuksaltiradi va unga haqiqiy erkinlik beradi."
+
+## Al-Farabi (10 ta)
+
+1. "Baxtga erishish uchun inson avvalo ilm va ma’rifatni egallashi lozim."
+2. "Insonning kamoloti — uning aqliy va axloqiy yetukligidadir."
+3. "Falsafa — barcha ilmlarning onasi, u borliqнинг mohiyatini ochadi."
+4. "Jamiyatni ilm va adolat bilan boshqargan rahbar — haqiqiy rahbardir."
+5. "Aql — insonni yuksaltiruvchi va uni ulug‘lovchi bebaho ne’matdir."
+6. "Bilim — ruhning ozuqasi, usiz ruh so‘nib boradi."
+7. "Ustozsiz ilm o‘rganish — qorong‘u uyda yo‘l izlash kabidir."
+8. "Haqiqiy olim — kamtar bo‘ladi, chunki u bilganlari bilmaganlari oldida dengizdan tomchi ekanini anglaydi."
+9. "Ezgulik va bilim — bir-biri bilan chambarchas bog‘liqdir."
+10. "Ilm — insonni nafaqat aqlli, balki fazilatli ham qilishi kerak."
+
+## Mirzo Ulugbek (10 ta)
+
+1. "Ilmga intilish — inson kamolotining poydevoridir."
+2. "Dinlar bulutlar kabi tarqalib ketadi, saltanatlar yo'q bo'ladi, ammo ilm ishlari abadiy qoladi."
+3. "Ishga yarab qolsa ishing bir muddat, yana oshirmoqqa aylagil shiddat."
+4. "Insoniyat aqli kashf etgan fanlar ichida eng sharaflisi astronomiyadir."
+5. "Adolat bilan ish yuritgan hukmdor xalqning hurmatiga sazovor bo'lur."
+6. "Kitob — tafakkur xazinasi, uni e'zozlamoq lozim."
+7. "Haqiqiy olim o'z ilmining poyasini bilishi va uni asrashi kerak."
+8. "Vaqtni g'animat bilib, uni ilm va ma'rifatga sarf eting."
+9. "Yulduzlar ilmi insonni koinotning buyukligini anglashga chorlaydi."
+10. "Ustozga bo'lgan hurmat — ilmga bo'lgan hurmatdir."
+
+## Zahiriddin Muhammad Babur (10 ta)
+
+1. "Har kimki vafo qilsa, vafo topqusidur, har kimki jafo qilsa, jafo topqusidur."
+2. "Davlat uchun ko'ngilni zor etma, izzat uchun o'zingni xor etma."
+3. "Yaxshi kishi ko'rmag'ay yomonlig' hargiz, har kimki yomon bo'lsa, jazo topqusidur."
+4. "Shafqatsiz kishi azobga loyiqdir."
+5. "Yaxshi kishilarni Yaratgan yaxshi do'stlar bilan siylaydi."
+6. "Ko'pchilik bahodirlar o'z jahllari va qo'rquvlaridan ustun kela olmaydilar."
+7. "Adolat o'rnatishda insonlarning qarashlariga chuqur hurmatda bo'l."
+8. "Davlatga yetib, mehnat elini unutma."
+9. "Tiling bilan ko'nglingni bir tut."
+10. "Vatan ishqidan bo'lak ishq yo'qdir."
+
+## Alisher Navoi (10 ta)
+
+1. "Olim kerakki, o'z ilmining poya va miqdorini asragay, gavharni imtihon uchun toshga urmagay."
+2. "Bilmaganin so'rab o'rgangan — olim, orlanib so'ramagan — o'ziga zolim."
+3. "Oz-oz o'rganib dono bo'lur, qatra-qatra yig'ilib daryo bo'lur."
+4. "Sihhat tilasang — ko'p yema, izzat tilasang — ko'p dema."
+5. "Odam borki, odamlarning naqshidur, odam borki, hayvon undan yaxshidur."
+6. "Tiling bilan ko'nglingni bir tut."
+7. "Yaxshilikni bilmasang, bori, yaxshilarga qo'shul."
+8. "Bilim — insonning eng yuksak ziynati, u bilan har qanday qiyinchilikni yengsa bo'lur."
+9. "Haq yo'linda kim senga bir harf o'qitmish ranj ila, aylamak bo'lmas ado oning haqin yuz ganch ila."
+10. "So'z qattig'i el ko'ngliga ozor aylar, yumshog'i ko'ngillarni giriftor aylar."
+
+## Mahmudkhoja Behbudi (10 ta)
+
+1. "Dunyo imoratlari ichida eng ulug‘i maktabdir."
+2. "Haq berilmas, olinur!"
+3. "Zamonasozlik — zamonaga muvofiq ish ko‘rmoqdir."
+4. "Millatni uyg‘otmoq uchun teatr kerak. Teatr — ibratxonadir."
+5. "Ilm — millatning ko'zi va hayotidir."
+6. "Til yashasa, millat yashar."
+7. "Tarixini bilmagan millatning kelajagi yo‘q."
+8. "Boy bo‘lmoq uchun ilm va hunar kerak."
+9. "Gazeta — millatning ko‘zgusidir."
+10. "Bizga islohot kerak, ammo u milliy ruhda bo‘lsin."
+
+## Abdulla Qodiriy (10 ta)
+
+1. "Moziyga qaytib ish ko‘rmoq xayrlidir."
+2. "Adabiyot — ko‘ngilning bayonidir."
+3. "Oila — jamiyatning poydevori."
+4. "Vijdon — insonning eng oliy hakamidir."
+5. "Muhabbat — insonni poklovchi kuch."
+6. "Haqiqat egiladi, bukiladi, lekin sinmaydi."
+7. "Inson o'zligini anglamasa, u hayvondan farq qilmaydi."
+8. "Kitob — eng yaqin do‘st."
+9. "Xalqning birligi — uning eng buyuk kuchi va kelajak garovidir."
+10. "Vatan — muqaddas dargoh."
+
+## Cho'lpon (10 ta)
+
+1. "Kishan kiyma, bo‘yin egma, ki sen ham hur tug‘ilg‘onsen!"
+2. "Uyg‘on, ey millat!"
+3. "Shoirning tili — xalqning tili."
+4. "Ozodlik — eng oliy ne’mat."
+5. "Qalb — haqiqat maskani."
+6. "Zulm uzoq davom etmaydi."
+7. "Ilm nuri zulmatni quvadi."
+8. "Vatan ishqi — insonning eng oliy va pokiza tuyg'usidir."
+9. "Birlik bor joyda baraka bor."
+10. "Go‘zallik — ruhning ozuqasidir."
