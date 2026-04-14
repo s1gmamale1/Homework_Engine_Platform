@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology (Biologiya) — Subject-Specific Framework</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --accent-color: #00f2ff; /* Neon Cyan */
+            --accent-glow: rgba(0, 242, 255, 0.3);
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --border-color: #333;
+            --neon-purple: #bc13fe;
+            --neon-green: #39ff14;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-glow);
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--neon-purple);
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+        }
+
+        .status-bar p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        details {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            margin-right: 15px;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        code {
+            background: #2a2a2a;
+            color: var(--neon-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--header-color);
+        }
+
+        .highlight {
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+
+        .good-example {
+            border-left: 3px solid var(--neon-green);
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #afffa3;
+        }
+
+        .bad-example {
+            border-left: 3px solid #ff3131;
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #ffb1b1;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Biology (Biologiya) Framework</h1>
+    
+    <div class="status-bar">
+        <p><strong>Scope:</strong> G5-11, all grades, universal</p>
+        <p><strong>Family:</strong> Tabiy Fanlar (Natural Sciences)</p>
+        <p><strong>Branch:</strong> OBS (Observation-first)</p>
+        <p><strong>Parent Docs:</strong> <code>Tabiy Fanlar Family Doc</code> | <code>UNIFIED-Buzan v2.0</code> | <code>Library Framework v0.6</code></p>
+        <p><strong>Last Updated:</strong> April 14, 2026</p>
+    </div>
+
+    <details open>
+        <summary>1. What Biology Teaches</summary>
+        <div class="content">
+            <p>Biology is an <strong>observation-first, classification-heavy, terminology-dense, visually dependent</strong> subject.</p>
+            <ul>
+                <li><strong>Observation-First:</strong> Students learn to see, classify, and then explain natural systems.</li>
+                <li><strong>Terminology Load:</strong> Highest of any science (15-30 new terms per chapter).</li>
+                <li><strong>Visual Mastery:</strong> Diagrams are first-class representations. Drawing and labeling are mandatory.</li>
+                <li><strong>Causal Chains:</strong> Focus on photosynthesis, digestion, inheritance, and ecological cascades.</li>
+                <li><strong>Transformation:</strong> Turn flat textbook labels into discovery-based discovery: observation -> classification -> explanation.</li>
+            </ul>
+            <p><strong>Core Rule:</strong> Observation comes before explanation; diagram comes before paragraph.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. Grade-Band Progression</summary>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>Focus</th>
+                        <th>Key Content</th>
+                        <th>Production Level</th>
+                        <th>Boss Mode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>G5-6</td>
+                        <td>Observation</td>
+                        <td>Plants, animals, human body</td>
+                        <td>Guided labeling & sorting</td>
+                        <td>Labeling + Short causal</td>
+                    </tr>
+                    <tr>
+                        <td>G7</td>
+                        <td>Systems</td>
+                        <td>Cells, plant/animal systems</td>
+                        <td>Prompted description</td>
+                        <td>Multi-part + Diagram</td>
+                    </tr>
+                    <tr>
+                        <td>G8</td>
+                        <td>Organ Systems</td>
+                        <td>Human organs, food webs</td>
+                        <td>System-level paragraphs</td>
+                        <td>Causal chain (3+ steps)</td>
+                    </tr>
+                    <tr>
+                        <td>G9</td>
+                        <td>Cell/Genetics</td>
+                        <td>Cell division, DNA, heredity</td>
+                        <td>Paragraph with evidence</td>
+                        <td>Mechanism + Prediction</td>
+                    </tr>
+                    <tr>
+                        <td>G10</td>
+                        <td>Molecular</td>
+                        <td>Protein synthesis, evolution</td>
+                        <td>Multi-para analytical</td>
+                        <td>Data-based analysis</td>
+                    </tr>
+                    <tr>
+                        <td>G11</td>
+                        <td>Adv. Genetics</td>
+                        <td>G. Engineering, ecosystem models</td>
+                        <td>Independent analytical</td>
+                        <td>Evidence-based prediction</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <details>
+        <summary>3. Content Production Rules by Grade Band</summary>
+        <div class="content">
+            <h3>G5-6 (Foundation)</h3>
+            <ul>
+                <li>10-15 new terms per session.</li>
+                <li>Term requirement: <strong>diagram + UZ definition + example</strong>.</li>
+                <li>Start with <strong>concrete observation</strong> (photo or specimen).</li>
+                <li>Notebook Capture required every 2 sessions for hand-drawn diagrams.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "Observe these leaf shapes from Tashkent Botanical Garden. Identify what makes them different."</div>
+
+            <h3>G7-9 (Development)</h3>
+            <ul>
+                <li>15-20 new terms per session.</li>
+                <li>Constant use of system-level diagrams (cells, food webs).</li>
+                <li>Discovery narratives: observe -> hypothesize -> test.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "A farmer's crops are failing. Observe leaves, compare sunlight, and infer the failing process."</div>
+
+            <h3>G10-11 (Advanced)</h3>
+            <ul>
+                <li>20+ terms, focusing on molecular and systems levels.</li>
+                <li>Require full causal chains: molecular -> cellular -> population.</li>
+                <li>Frame lessons as research scenarios or diagnostic puzzles.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "Your lab sequenced a drought-resistance gene. Explain the change at the molecular level."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>4. Game Mechanics — Biology Specific</summary>
+        <div class="content">
+            <h3>Primary Mechanics</h3>
+            <ul>
+                <li><strong>Spaced Flashcards:</strong> Mandatory every session (visual-focused).</li>
+                <li><strong>Notebook Capture:</strong> Non-negotiable hand-drawn diagrams.</li>
+                <li><strong>Tile Match:</strong> Classification sorting and structure grouping.</li>
+                <li><strong>Why Chain:</strong> Deep causal reasoning (up to 4 levels in G11).</li>
+                <li><strong>Memory Palace:</strong> Taxonomy hierarchies and anatomy layouts.</li>
+            </ul>
+
+            <h3>Interactive Picks</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Game</th>
+                        <th>Best Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Puzzle Lock</td>
+                        <td>Process ordering / Life cycles</td>
+                    </tr>
+                    <tr>
+                        <td>Reaction Chain</td>
+                        <td>Food chains / Developmental sequences</td>
+                    </tr>
+                    <tr>
+                        <td>Memory Match</td>
+                        <td>Organism <-> Classification</td>
+                    </tr>
+                    <tr>
+                        <td>Tic Tac Toe</td>
+                        <td>Fast taxonomy or organ-function recall</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Phase 5 Buzan Options</h3>
+            <p><strong>Radiant Summary:</strong> Taxonomy trees. <strong>Link System:</strong> Mitosis/Photosynthesis steps. <strong>Peg System:</strong> Exception sets.</p>
+            
+            <p><strong>Note:</strong> Skip Word Ladder, Listening, and Speed Match (math-focused).</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. Boss Format</summary>
+        <div class="content">
+            <p><strong>OBS Branch:</strong> Explain-the-phenomenon + visual evidence.</p>
+            <ul>
+                <li><strong>G5-6:</strong> Labeling + 2-3 sentence explanation.</li>
+                <li><strong>G7-8:</strong> Multi-part explanation with required diagram.</li>
+                <li><strong>G9-11:</strong> Prediction in mechanisms or food webs.</li>
+                <li><strong>Notebook Capture:</strong> Preferred for all Boss diagram submissions.</li>
+                <li><strong>Failure:</strong> Use TEFCAS framing ("Hali emas!").</li>
+            </ul>
+            <div class="good-example">Good Boss (G9-11): "Predict what happens to a food web if the apex predator disappears. Trace cascade through 3+ levels."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>6. Story Mode & Real-Life Challenge</summary>
+        <div class="content">
+            <h3>Story Mode</h3>
+            <p>Must be observation-first. Pattern: <strong>Notice -> Classify -> Hypothesize -> Explain.</strong></p>
+            <div class="good-example">Good Example: "Marine biologists notice bleaching near Muynak. Observe, hypothesize, and test the cascade."</div>
+            
+            <h3>Real-Life Challenge</h3>
+            <ul>
+                <li><strong>Botanika mutaxassisi:</strong> Help at Tashkent Botanical Garden.</li>
+                <li><strong>Ekologiya direktori:</strong> Manage Aral Sea fish decline.</li>
+                <li><strong>Genetik tahlilchi:</strong> Review crop-resistance reports.</li>
+                <li><strong>Tibbiyot tadqiqotchisi:</strong> Diagnosis-style scenarios.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details>
+        <summary>Technical Rules</summary>
+        <div class="content">
+            <ol>
+                <li><strong>Inheritance:</strong> Tabiy Fanlar family rules + OBS filter.</li>
+                <li><strong>Observation Priority:</strong> Observation before explanation.</li>
+                <li><strong>Diagram Priority:</strong> Diagram before long text.</li>
+                <li><strong>Terminology:</strong> Spaced Flashcards are mandatory every session.</li>
+                <li><strong>National Pride:</strong> Uzbekistan-based ecological contexts (Aral Sea, Zarafshan river).</li>
+            </ol>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>
