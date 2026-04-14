@@ -135,6 +135,7 @@ Content producers must prioritize these cognitive anchors:
 - **HP Scaling:** G1-4: 50 | G5-8: 100 | G9-11: 150 ([[UNIFIED-Buzan §5.6]]).
 - **Stars:** 3★ requires 1st attempt, no hints, and >80% HP remaining.
 - **Hints:** Socratic hints cost -10 HP.
+- **TEFCAS UI:** All feedback must use TEFCAS terminology (Trial/Feedback/Adjust) and G5 "Hali emas" (Not yet) framing.
 
 **Good Boss Question:** "A fountain with radius 3m has a path around it of width x. If the total area is 50m², find x to 2 decimal places. Show your working."
 
