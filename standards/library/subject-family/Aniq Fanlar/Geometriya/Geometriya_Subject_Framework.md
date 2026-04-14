@@ -339,6 +339,29 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 | **No 3D beyond scope** | G7-9 covers 2D shapes and basic 3D measurement. Advanced 3D proof belongs to Geometriya Advanced. |
 | **Pythagorean theorem is G8+** | Do not introduce Pythagorean theorem in G7 sessions. |
 
+### 5.4 Aniq Fanlar Family Rules (added v1.1)
+
+*Source: `Aniq_Fanlar_Subject_Family_Framework.md` §3 update. Applies to all Aniq Fanlar subjects.*
+
+**Bidirectional Thinking — mandatory every session:**
+Every session must practice BOTH directions:
+- Real situation → theorem: "The architect says both base angles of the triangular roof are equal. What geometric property guarantees the roof is balanced? State the theorem."
+- Theorem → real world: "You proved the triangle is isosceles using the base angle theorem. What does this guarantee about the physical roof — why can the architect trust this without re-measuring?"
+
+A student who can cite a theorem but cannot explain what it guarantees in a real context has not learned geometric reasoning.
+
+**Error Analysis is PRIMARY — not optional:**
+Minimum 1 in every 2 sessions must include an error analysis task. The task must ask WHERE the proof step is wrong and WHY — not just whether the final answer is correct.
+- Good: "A student's proof says: 'Since AB = CD, the triangles are congruent (SSS).' Find the error: what information is missing and which congruence rule actually applies?"
+- Bad: "Is this proof correct? [Yes / No]"
+
+**Answer Completeness — enforced at all phases:**
+Every numerical answer must include correct units. Every proof answer must include the theorem or property cited.
+- Incomplete (calculation): `Area = 24`
+- Complete: `Area = 24 m²`
+- Incomplete (proof step): "Therefore the angles are equal."
+- Complete: "Therefore ∠ABC = ∠BCD (alternate interior angles, AB ∥ CD)."
+
 ---
 
 ## 6. PISA Alignment

@@ -332,6 +332,29 @@ Cap at 3 levels for G7-8, 3 levels for G9 (UNIFIED §Why Chain: Exact Sciences s
 | **Factoring before formula** | Quadratic formula introduced only after factoring — students must understand why |
 | **No "magic steps"** | Every algebraic manipulation justified by a named property |
 
+### 5.4 Aniq Fanlar Family Rules (added v1.1)
+
+*Source: `Aniq_Fanlar_Subject_Family_Framework.md` §3 update. Applies to all Aniq Fanlar subjects.*
+
+**Bidirectional Thinking — mandatory every session:**
+Every session must practice BOTH directions:
+- Real world → equation: "Jahongir earns 5 000 so'm per phone case and has fixed costs of 30 000 so'm. Write the profit equation."
+- Equation → real world: "You solved `5x − 30 000 = 0`, so `x = 6`. What does x represent? What decision does this answer tell Jahongir to make?"
+
+A student who can solve `5x − 30 000 = 0` but cannot interpret the answer in context has not learned algebra — they have learned symbol manipulation.
+
+**Error Analysis is PRIMARY — not optional:**
+Minimum 1 in every 2 sessions must include an error analysis task. The task must ask WHERE the error is and WHY it is wrong — binary yes/no is not acceptable.
+- Good: "A student solved `2(x + 3) = 10` and wrote `2x + 3 = 10`. Find the step where the error occurred and name the property that was violated."
+- Bad: "Is this solution correct? [Yes / No]"
+
+**Answer Completeness — enforced at all phases:**
+Every numerical answer must include correct units or contextual meaning. A bare number is marked incomplete — partial credit applies.
+- Incomplete: `x = 6`
+- Complete: `x = 6 ta chexol` or "Jahongir must sell at least 6 cases to cover his costs."
+
+This applies equally to equation solutions, function values, and inequality solutions — the answer must be interpreted, not just stated.
+
 ---
 
 ## 6. PISA Alignment

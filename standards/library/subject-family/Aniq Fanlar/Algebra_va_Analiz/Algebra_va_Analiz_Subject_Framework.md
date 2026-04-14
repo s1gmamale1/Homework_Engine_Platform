@@ -341,6 +341,29 @@ Students who can set up and solve but misinterpret earn 3/4.
 | **Scope boundary** | Single-variable calculus only. Partial derivatives, multivariable — university scope. |
 | **Trig derivatives derived geometrically** | Sine and cosine derivatives shown from unit circle before memorized |
 
+### 5.4 Aniq Fanlar Family Rules (added v1.1)
+
+*Source: `Aniq_Fanlar_Subject_Family_Framework.md` §3 update. Applies to all Aniq Fanlar subjects.*
+
+**Bidirectional Thinking — mandatory every session:**
+Every session must practice BOTH directions:
+- Real phenomenon → calculus model: "A Tashkent factory's output is growing faster each month. Identify what kind of function models this, write the function, and find its derivative."
+- Calculus result → real world: "You found f'(5) = 12.4 thousand units per month. What does this mean for the factory manager making a staffing decision at month 5?"
+
+A student who can differentiate `f(x) = 2x³ + 5x` but cannot explain what the derivative value means in a given context has not learned analysis — they have learned a calculation procedure.
+
+**Error Analysis is PRIMARY — not optional:**
+Minimum 1 in every 2 sessions must include an error analysis task on a multi-step derivation. The task must identify the specific incorrect step and name the rule that was violated.
+- Good: "A student differentiated f(x) = sin(3x) and got f'(x) = cos(3x). Find the exact step where the error occurred and state which rule was forgotten."
+- Bad: "Is this derivative correct? [Yes / No]"
+
+**Answer Completeness — enforced at all phases:**
+Every numerical answer must include units and contextual interpretation. A bare number is incomplete — partial credit applies.
+- Incomplete: `f'(3) = 2.3`
+- Complete: `f'(3) = 2.3% per minute — at minute 3, the battery charge is falling at a rate of 2.3% per minute.`
+- Incomplete: `x = 60`
+- Complete: `x = 60 ta mahsulot — this is the production level that maximizes profit.`
+
 ---
 
 ## 6. PISA Alignment

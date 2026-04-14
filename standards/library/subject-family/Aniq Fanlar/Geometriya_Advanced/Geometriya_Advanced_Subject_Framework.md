@@ -346,6 +346,29 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 | **Scope boundary** | Solid geometry, vectors (introductory), coordinate geometry (lines, circles, conics), trig in 3D. Differential geometry, projective geometry — university scope. |
 | **Cross-product scope** | Introduced at G11 only, only for finding normal vector to a plane. Do not use for torque or angular momentum — physics scope. |
 
+### 5.4 Aniq Fanlar Family Rules (added v1.1)
+
+*Source: `Aniq_Fanlar_Subject_Family_Framework.md` §3 update. Applies to all Aniq Fanlar subjects.*
+
+**Bidirectional Thinking — mandatory every session:**
+Every session must practice BOTH directions:
+- Real 3D problem → model: "The dome of the Navoi Opera House is a hemisphere of radius 12m on a cylindrical base. Write the expressions for the surface area of each component and the total."
+- Model → real world: "You calculated the total outer shell area as 1 583 m². What does this tell the construction engineer ordering materials? What practical factor should they add for waste and overlap?"
+
+A student who can calculate a hemisphere surface area but cannot explain what the number means for a real engineering decision has not reached the learning goal.
+
+**Error Analysis is PRIMARY — not optional:**
+Minimum 1 in every 2 sessions must include an error analysis task on a 3D calculation or vector operation. The task must identify the specific incorrect step.
+- Good: "A student calculated the total surface area of a cone-cylinder composite and included the circular base of the cone. Find the error: explain which face should NOT be counted and why."
+- Bad: "Is this surface area calculation correct? [Yes / No]"
+
+**Answer Completeness — enforced at all phases:**
+Every numerical answer must include correct units and geometric context. Every vector answer must state what the result represents geometrically.
+- Incomplete: `V = 904.8`
+- Complete: `V = 904.8 m³ — this is the total volume of concrete needed for the cylindrical pylon.`
+- Incomplete: `a⃗ · b⃗ = 0`
+- Complete: `a⃗ · b⃗ = 0, therefore vectors a⃗ and b⃗ are perpendicular — the two structural beams meet at a right angle.`
+
 ---
 
 ## 6. PISA Alignment

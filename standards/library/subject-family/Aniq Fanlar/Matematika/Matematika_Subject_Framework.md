@@ -352,6 +352,29 @@ Corny lines (rotated per UI/UX spec):
 | **Estimation before precision** | "About how much?" before "Exactly how much?" — PISA L2 skill |
 | **Reasonable numbers** | No "farmer has 47,382 chickens." Keep quantities realistic. |
 
+### 5.5 Aniq Fanlar Family Rules (added v1.1)
+
+*Source: `Aniq_Fanlar_Subject_Family_Framework.md` §3 update. Applies to all Aniq Fanlar subjects.*
+
+**Bidirectional Thinking — mandatory every session:**
+Every session must practice BOTH directions:
+- Real world → formula: "Madina has 3 equal pieces of non. There are 7 students. Write the fraction each student gets."
+- Formula → real world: "You solved `7 ÷ 3 ≈ 2.33`. What does this mean for Madina's problem? Is the answer reasonable in this context?"
+
+A student who can calculate `7 ÷ 3` but cannot explain what the decimal result means has not learned the concept.
+
+**Error Analysis is PRIMARY — not optional:**
+Minimum 1 in every 2 sessions must include an error analysis task. The task must ask WHERE the error is and WHY it is wrong — not just "is this correct?" (binary yes/no has no diagnostic value).
+- Good: "A student calculated ½ + ⅓ = 2/5. Find the exact step where the error occurred and state the correct rule."
+- Bad: "Is this calculation correct? [Yes / No]"
+
+**Answer Completeness — enforced at all phases:**
+Every numerical answer must include correct units or context. A bare number is marked incomplete — partial credit applies.
+- Incomplete: `x = 5`
+- Complete: `x = 5 ta non bo'lagi` or `5 metr` or `5 000 so'm`
+
+Content agents must not accept bare number answers in any phase of a Matematika session.
+
 ---
 
 ## 6. PISA Alignment
