@@ -1,4 +1,4 @@
-# NETS Subject Framework: Ijtimoiy Fanlari — O'zbekiston Tarixi (History of Uzbekistan)
+# NETS Subject Framework: Ijtimoiy Fanlari — O'zbekiston Tarixi
 
 **Version:** 1.0 (Subject Spec)  
 **Status:** Implementation Ready  
@@ -29,71 +29,97 @@ Following the Ijtimoiy Fanlari profile, O'zbekiston Tarixi prioritizes:
 
 ---
 
-## 3. GAME MECHANICS & PEDAGOGY (UZBEK HISTORY TUNED)
+## 3. WHAT THIS SUBJECT FOCUSES ON (CONTENT FILTER)
 
-### 3.1 Primary Mechanics
-- **Territory Conquest (Hududlar Jangi):** Mapping the changing borders of Central Asian empires and the specific routes of the Silk Road.
-- **Timeline Sort (Milliy Xotira):** Arranging the reigns of key rulers and the founding dates of major architectural monuments.
-- **Source Comparison:** Comparing local chronicles with the accounts of foreign travelers (e.g., Marco Polo, Clavijo, or Ibn Battuta) regarding the same Uzbek city.
-- **Why Chain:** Mapping the factors that led to the "Golden Age" of the Timurid Renaissance.
+Content producers must prioritize these cognitive anchors:
+- **Heritage Anchor:** Every session must link the historical topic to its modern-day legacy in the "Third Renaissance."
+- **Source-to-Story:** Use authentic local chronicles (e.g., Narshakhi, Baburnama) to frame the narrative.
+- **Visual Evidence:** Prioritize architectural diagrams and artifact photos from Uzbekistan's museums.
+- **70/30 Ratio:** Strictly maintain 70% National Focus / 30% Global Context.
 
-### 3.2 Mnemonic Systems (Buzan Integration)
-- **Memory Palace:** Using the **Registan Square** (Samarkand) or the **Ichan-Kala** (Khiva) as a 3D digital loci to "place" facts about specific dynasties.
-- **Radiant Summary (Mind Map):** Creating a "Tree of Statehood" showing the evolution of Uzbek governance branches.
-- **Link System:** Memorizing the sequence of the 12 signs of the "Temur Tuzuklari" or the 7 Pir of Bukhara.
+**Do NOT Focus On:**
+- Generic historical theories not grounded in the national textbook.
+- Disconnected dates without causal links to national development.
 
 ---
 
-## 4. NATIONAL PRIDE INJECTIONS (STRICT 70/30 ADAPTATION)
+## 4. GAME MECHANICS & PEDAGOGY (TUNED)
 
-*Note: For Uzbekistan History, the National Focus is raised to 70% to anchor the identity, with 30% Global Context for perspective.*
+### Primary Mechanics (Priority Usage)
 
-- **National Focus (70%):** Deep immersion in the **Third Renaissance** vision, the spiritual legacies of ancestors, and the achievements of independence.
-- **Global Context (30%):** Connecting Uzbekistan's events to the "Great Game," the Silk Road's global impact, and world trade.
-- **Wise Role:** `Milliy Meros Himoyachisi` (Guardian of National Heritage).
-- **Example Injection:** "Amir Temur 'Kuch adolatdadir' deb aytgan. Siz bugun 14-asrda ushbu adolat tizimi qanday ishlaganini manbalar orqali tahlil qilasiz."
+#### **Territory Conquest (Hududlar Jangi)**
+- **What it is:** Mapping changing borders of Central Asian empires and Silk Road routes.
+- **Why:** Builds spatial understanding of statehood and trade influence.
+- **Good Example:** "Trace the expansion of the Timurid Empire across Central Asia."
+
+#### **Timeline Sort (Milliy Xotira)**
+- **What it is:** Arranging reigns of key rulers and architectural monument dates.
+- **Why:** Anchors the "Golden Ages" in chronological sequence.
+- **Good Example:** "Order the construction phases of the Registan Ensemble."
+
+#### **Source Comparison**
+- **What it is:** Comparing local chronicles with foreign traveler accounts.
+- **Why:** Builds critical perspective on Uzbekistan's global standing.
+- **Good Example:** "Compare Clavijo's account of Samarkand with local Timurid records."
+
+### Secondary Mechanics
+- **Memory Palace:** Using Samarkand's Registan Square as a 3D digital loci.
+- **Why Chain:** Mapping the factors that led to the "Golden Age" of the Timurid Renaissance.
+- **Escape Room:** Decoding architectural inscriptions to "unlock" the next era.
+
+### Interactive Catalog Picks (≥1 required per session)
+
+| Game | Why It Fits O'zbekiston Tarixi | Best For |
+|---|---|---|
+| **Territory Conquest** | Visualizing empire expansion and Silk Road | G7-11 Statehood topics |
+| **Puzzle Lock** | Reconstructing ancient artifacts or maps | G7-9 Cultural heritage |
+| **Reaction Chain** | Tracing causal links in revolutionary movements | G10-11 Modern history |
+
+### Games to AVOID
+- **Notebook Capture (Calculations):** Reserved for Aniq Fanlar.
+- **Speed Match:** Reserved for Aniq Fanlar.
 
 ---
 
 ## 5. BOSS FORMAT: THE ARCHIVAL GUARDIAN
 
-- **Format:** **Historical Source Reconstruction**.
-- **The Task:** "Given an architectural inscription from a 15th-century madrasa and a snippet from a traveler's diary, explain how education was prioritized during the Timurid era and why it matters for today's Third Renaissance."
-- **Evaluation:** Tier 2 LLM checks for **evidence use**, **ancestral respect**, and **analytical depth**.
-- **No MCQs:** All sessions culminate in a written historical synthesis.
+- **Core Format:** **Historical Source Reconstruction** evaluated by Tier 2 LLM.
+- **The Task:** "Given an architectural inscription and a snippet from a traveler's diary, explain how education was prioritized during the Timurid era."
+- **HP Scaling:** G7-8: 100 | G9-11: 150.
+- **Wise Role Injection:** Student is addressed as `Milliy Meros Himoyachisi`.
 
 ---
 
-## 6. Narrative Adaptation
+## 6. STORY MODE & REAL-LIFE CHALLENGE — NARRATIVE ADAPTATION
 
 ### Story Mode (Phase 2)
 Must follow **Discovery Narrative** across 3 segments:
-- **Segment A:** A human moment (e.g., "Imagine you are a judge in 14th century Bukhara...").
+- **Segment A:** A human moment in an ancient Uzbek city.
 - **Segment B:** The struggle/conflict based on textbook facts.
-- **Segment C:** The resolution and modern legacy.
+- **Segment C:** The resolution and its legacy for the Third Renaissance.
 
 ### Real-Life Challenge (Phase 4)
-- **Role:** Student IS the expert (e.g., "You are the Lead Archival Guard").
-- **Context:** Must be Uzbek-specific (e.g., Samarkand planning, Mahalla development, Prezident's project).
-- **Goal:** Transfer the textbook concept to a "messy" real-world scenario.
+- **Role:** `Milliy Meros Himoyachisi` (Guardian of National Heritage).
+- **Context:** Must be Uzbek-specific (e.g., Samarkand reconstruction, Mahalla development, museum curation).
+- **Goal:** Apply historical logic to modern national preservation.
 
 ---
 
 ## 7. Subject Pattern Example (Standard Session)
 
-- **Phase 0:** Gate Quote + BOST Mind Map.
-- **Phase 1:** Recall of previous day's events.
-- **Phase 2:** Story: "Akmal is measuring the Registan courtyard..."
+- **Phase 0:** [Meros Himoyachisi] Gate Quote.
+- **Phase 1:** Recall of previous dynasty's impact.
+- **Phase 2:** Story: "A master architect in 15th century Samarkand."
 - **Phase 3:** Territory Conquest + Timeline Sort.
-- **Phase 4:** Real-Life: "Analyze the archival sources for a new museum in Bukhara."
-- **Phase 5:** Radiant Summary of the day’s rules.
-- **Phase 6:** Multi-step open numerical Boss fight.
+- **Phase 4:** Real-Life: "Propose a preservation plan for a newly found artifact."
+- **Phase 5:** Radiant Summary: "The Timurid Renaissance Tree."
+- **Phase 6:** Archival Guardian Boss fight.
 
 ---
 
 ## Technical Rules
 1. **Inheritance:** Inherits National Pride rules from [[NETS-Library-Framework.md]] v0.6 Part 8.
-2. **Quality Gate:** Every session must pass the "5 Feature Showcase" (Narrative, Chronology, Perspective, Pride, Buzan).
+2. **Dual-Catalog:** Phase 3 must use ≥1 Interactive and ≥2 Default mechanics.
 
 ---
-*Document produced by Gemini CLI Subject Framework Engine.*
+*This document is a subject-specific specialization of the Ijtimoiy Fanlari Family Framework.*

@@ -14,23 +14,17 @@
 
 "Ijtimoiy" translates to social or societal. This family is defined by its focus on human systems—institutions, events, laws, and economies. Unlike Aniq Fanlar (where truth is derived) or Tabiat Fanlari (where truth is observed), Ijtimoiy Fanlari deals with **interpretive truth**: multiple valid perspectives, source reliability, and principled reasoning under uncertainty.
 
-**The Textbook Refinement Mandate (CRITICAL):**
-Unlike Til Fanlari (Languages), which may reference international standards like IELTS/CEFR, **Ijtimoiy Fanlari must strictly refine the original Uzbek National Textbooks.** 
-- **No Outside Teaching:** Do not import external historical interpretations, Western legal theories, or global economic syllabi not present in the mandated Grade 5-11 books.
-- **Source of Truth:** The official textbook (e.g., *O'zbekiston tarixi*, *Huquq*, *Iqtisodiyot*) is the absolute source for all Phase 2 Stories and Phase 6 Boss tasks.
-- **Standard Alignment:** All L1-L3 levels must map to **DTM (State Testing Center)** competency requirements and the National Curriculum standards.
-
 **What it teaches:** How human systems work and the reasoning required to navigate them as defined by the national curriculum.
 
 **What it focuses on:**
 - Chronological and causal modeling of historical events.
-- Source criticism and historiographical analysis.
+- Source criticism and historiographical analysis (who, when, why, for whom?).
 - Legal reasoning and constitutional application.
 - Economic modeling and resource management.
 - Perspective-taking and empathy in societal contexts.
-- Critical Thinking.
+- Critical Thinking and evidence-based evaluation.
 
-**What it is NOT about:** Arithmetic derivation, laboratory experimentation, or pure linguistic grammar drills.
+**What it is NOT about:** Arithmetic derivation, laboratory experimentation, pure linguistic grammar drills, or free-form creative expression without evidence.
 
 **Cognitive Demand Profile (Priority Order):**
 1. Source Criticism (Evaluating reliability/bias)
@@ -39,6 +33,7 @@ Unlike Til Fanlari (Languages), which may reference international standards like
 4. Perspective-taking
 5. Concept Understanding
 6. Narrative Synthesis
+7. Institutional Reasoning
 
 ---
 
@@ -48,7 +43,7 @@ Unlike Til Fanlari (Languages), which may reference international standards like
 | :--- | :--- | :--- | :--- | :--- |
 | **History** | Tarix | История | G5-11 | Unified at G5-6; splits at G7 (World/UZ). |
 | **Law** | Huquq | Право | G8-11 | Focus on rights and the 2023 Constitution. |
-| **Economics** | Iqtisodiyot | Экономика | G8-11 | Micro/Macro and Financial Literacy. |
+| **Economics** | Iqtisodiyot | Экономиka | G8-11 | Micro/Macro and Financial Literacy. |
 
 *Note: History is the priority subject for the Toriqli branch refinement.*
 
@@ -59,19 +54,25 @@ Unlike Til Fanlari (Languages), which may reference international standards like
 Content producers must prioritize these cognitive anchors:
 
 - **Perspective BEFORE Fact:** Ensure students understand *why* an actor made a choice before they memorize the date it happened.
-- **Source-to-Reasoning Flow:** Every historical or legal claim must be anchored to a source (Primary vs. Secondary).
+- **Source-to-Reasoning Flow:** Every historical or legal claim must be anchored to a primary or secondary source.
 - **Discovery Narrative:** Transform textbook facts into a human story (The "Story Mode" default).
 - **Case-Based Assessment:** Evaluate understanding through "What would you do?" or "Which law applies?" scenarios.
-- **National-Global Dialectic:** Strictly maintain the 55/45 origin balance (Uzbekistan vs. World).
+- **National-Global Dialectic:** Strictly maintain the 55/45 or 70/30 origin balance (Uzbekistan vs. World) as defined in subject tracks.
+- **Principle-before-case:** Legal and economic principles are introduced via an Uzbek everyday scenario before formal definition.
 
 **Do NOT Focus On:**
 - Rote memorization of dates without causal context.
 - Single-perspective "absolute" truths in complex historical events.
-- Mathematical derivation of economic formulas (focus on the *logic* of the shift).
+- Mathematical derivation of economic formulas.
+- Opinion-based debates without evidence-based derivation.
 
 ---
 
 ## 4. Best Methods & Games (Filtered from UNIFIED-Buzan)
+
+**Dual-Catalog Rule:** Phase 3 still follows the core session rule: use at least 1 Interactive mechanic and at least 2 Default mechanics (see [[UNIFIED-Buzan §5.3]]).
+
+**National Pride Inheritance:** Ijtimoiy Fanlari inherits the same National Pride ratios and injection surfaces as all families; do not redefine them here (see [[NETS-Library-Framework.md]] Part 8).
 
 ### Primary Mechanics (Priority Usage)
 
@@ -98,70 +99,57 @@ Content producers must prioritize these cognitive anchors:
 - **Why:** Excellent for History and Geography (Trade routes, empires).
 
 ### Secondary Mechanics
-- **Tile Match:** Sorting legal articles or economic categories.
-- **Escape Room:** Using historical dates/codes to "unlock" the next narrative segment.
-- **Memory Palace:** Using Registan or Ark Fortress to "place" constitutional articles.
+
+| Mechanic | Why It Fits Ijtimoiy Fanlari | Best For |
+|---|---|---|
+| **Memory Palace** | Uses iconic structures (Registan, Ark) to spatially organize chronological sequences | Dynasties, legislative structures, eras |
+| **Escape Room** | Decoding historical sources or legal codes to "progress" the narrative | History, Law |
+| **Codebreaker** | Identifying legal articles or economic indicators through deductive puzzles | Law, Economics |
+| **Connect Four vs AI** | Strategic planning where students must anticipate the "market's" next move | Economics, Law |
 
 ### Phase 5 Buzan Alternatives
 - **Radiant Summary:** Mind maps for classifying legal systems or historical eras (minimum 3 colors).
-- **Memory Palace:** Strategic placement of "Wise Status" hooks in a 3D mental space.
-
-### Interactive Catalog Picks (≥1 required per session)
-
-| Game | Why It Fits Ijtimoiy Fanlari | Best For |
-|---|---|---|
-| **Territory Conquest** | Visualizing expansion of empires and trade | History, Geography |
-| **Escape Room** | Decoding historical sources to progress | History, Law |
-| **Codebreaker** | Identifying legal articles or economic indicators | Law, Economics |
-| **Connect Four vs AI** | Strategic planning and causal anticipation | Economics, Law |
+- **Memory Palace:** Place vocabulary clusters or historical eras at Registan Square locations.
+- **Link System:** Build story chains for chronological sequences or causal links.
 
 ### Games to AVOID
 - **Notebook Capture (Calculations):** Reserved for Aniq Fanlar.
 - **Speed Match (Arithmetic):** Reserved for Aniq Fanlar.
-- **Word Ladder:** reserved for Til Fanlari.
+- **Word Ladder:** Reserved for Til Fanlari.
+- **Listening/Dictation:** Reserved for Til Fanlari.
 
 ---
 
 ## 5. Boss Format for Ijtimoiy Fanlari
 
-- **Core Format:** **Case Reasoning Task**.
-- **No Multiple Choice (MC):** G6+ must use open-ended reasoning evaluated by Tier 2 LLM.
-- **Perspective Check:** Must require the student to explain "Why" or "From whose perspective?"
+- **Core Format:** **Case Reasoning Task** evaluated by Tier 2 LLM against rubric.
+- **No Multiple Choice (MC):** G6+ must use open-ended reasoning.
+- **Perspective Check:** Must require the student to justify their answer from a specific perspective or principle.
+- **HP Scaling:** G1-4: 50 | G5-8: 100 | G9-11: 150 ([[UNIFIED-Buzan §5.6]]).
 - **Heritage Anchor:** 30% of Bosses should be framed with a "Wise Status" injection (e.g., [BOSH QONUNSHUNOS]).
-- **HP Scaling:** G5-8: 100 | G9-11: 150.
 - **Feedback:** Must use TEFCAS "Hali emas" (Not yet) framing for errors.
+
+**Good Boss Question:** "A citizen claims their right to privacy was violated by a local business. Based on Chapter VII of the Constitution, evaluate this claim and provide a 3-point justification for your verdict."
 
 ---
 
-## 6. Narrative Adaptation (National Pride)
+## 6. Narrative Adaptation — National Pride
 
 ### Story Mode (Phase 2)
-- **The 55/45 Rule:** 55% Uzbekistan / 45% Global context.
+- **The 55/45 Rule:** 55% Uzbekistan / 45% Global context (Subject-specific tracks may vary).
 - **Narrative Hook:** Start with a human moment (e.g., "Imagine you are a judge in 14th century Bukhara...").
+- **Structure:** 3 segments with comprehension gates between them.
 
 ### Real-Life Challenge (Phase 4)
 - **Role:** Assign high-status titles: `Tarixiy Tahlilchi`, `Bosh Qonunshunos`, `Strategik Iqtisodchi`.
-- **National Context:** Use hooks from the `quotes_database.json` and `Bilarmidingiz_faktlar.md`.
-- **Wise Status:** Context must be Uzbek-specific (e.g., Prezident's project, Samarkand reconstruction, Mahalla development).
-
----
-
-## 7. Subject Pattern Example (Standard Session)
-
-- **Phase 0:** Gate Quote (5s lock) + BOST Mind Map.
-- **Phase 1:** Timeline Sort of yesterday's events.
-- **Phase 2:** Story: "The 1991 Independence Proclamation — a firsthand account."
-- **Phase 3:** Source Comparison game + Why Chain.
-- **Phase 4:** [BOSH QONUNSHUNOS] "Apply Article 1 of the Constitution to this modern civic dispute."
-- **Phase 5:** Memory Palace (Registan) to lock in key articles.
-- **Phase 6:** Case Reasoning Boss: "Evaluate the economic impact of the new Silk Road initiative."
-- **Phase 7:** Reflection: "Third Renaissance" closing hook.
+- **Context:** Must be Uzbek-specific (e.g., Prezident's project, Samarkand reconstruction, Mahalla development).
+- **Goal:** Transfer the textbook concept to a "messy" real-world scenario.
 
 ---
 
 ## Technical Rules
-1. **Inheritance:** Inherits all Part 8 rules (National Pride) from [[NETS-Library-Framework.md]] v0.6.
+1. **Inheritance:** Inherits National Pride rules from [[NETS-Library-Framework.md]] v0.6 Part 8.
 2. **Quality Gate:** Every session must pass the "5 Feature Showcase" (Narrative, Chronology, Perspective, Pride, Buzan).
 
 ---
-*Document produced by Gemini CLI Master Framework Engine.*
+*This document is a filter/adapter between the core specs and the content producer. It REFERENCES rules from parent docs, never RE-DEFINES them.*

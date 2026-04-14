@@ -22,77 +22,103 @@
 ## 2. SUBJECT-SPECIFIC COGNITIVE DEMANDS
 
 Following the Ijtimoiy Fanlari profile, Tarix prioritizes:
-1. **Causal Chain Construction:** "X event led to Y because of Z."
+1. **Causal Chain Construction:** Mapping "Event A leads to Effect B because of Factor C."
 2. **Timeline Management:** Placing events in a multi-century context.
-3. **Source Evaluation:** Identifying bias, perspective, and reliability in historical accounts.
+3. **Source Evaluation:** Identifying bias, perspective, and reliability in basic accounts.
 4. **Narrative Synthesis:** Summarizing complex eras into a coherent story.
 
 ---
 
-## 3. GAME MECHANICS & PEDAGOGY (TARIX TUNED)
+## 3. WHAT THIS SUBJECT FOCUSES ON (CONTENT FILTER)
 
-### 3.1 Primary Mechanics
-- **Timeline Sort (Tarixiy Kenglik):** The "Gold Standard" for History. Students arrange events or eras.
-  - *G5-6:* 5-8 events.
-- **Source Comparison:** Presenting two accounts (e.g., an Egyptian scribe vs. a Hittite diplomat) and identifying differences.
-- **Why Chain:** Mapping the rise of an empire or the development of ancient writing across 3 levels.
-- **Territory Conquest:** Visualizing the expansion of ancient civilizations and trade routes.
+Content producers must prioritize these cognitive anchors:
+- **Narrative FIRST:** Every lesson starts with a human character's dilemma.
+- **Evidence-to-Fact:** Show the artifact (clay tablet, coin) before stating the fact it proves.
+- **Simultaneous History:** Show what was happening in Bactria while the Pyramids were built in Egypt.
+- **55/45 Ratio:** Maintain 55% National (Ancient states on UZ territory) / 45% Global context.
 
-### 3.2 Mnemonic Systems (Buzan Integration)
-- **Link System:** For memorizing dynasties or sequential reigns.
-- **Major System:** Converting critical dates into vivid phonetic images.
-- **Memory Palace:** Using digital layouts of ancient cities (e.g., The Pyramids, The Great Wall) to "place" facts.
+**Do NOT Focus On:**
+- Isolated date memorization without causal context.
+- Passive reading of long textbook passages without interactive gates.
 
 ---
 
-## 4. NATIONAL PRIDE INJECTIONS (55/45 BALANCE)
+## 4. GAME MECHANICS & PEDAGOGY (TUNED)
 
-- **National Focus (55%):** Emphasis on the ancient states on Uzbekistan's territory (Bactria, Sogdia, Khorezm) and their global connections.
-- **Global Focus (45%):** Connecting national history to global movements (Ancient Egypt, Mesopotamia, Greece).
-- **Wise Role:** `Tarixiy Tahlilchi` (Historical Analyst).
-- **Example Injection:** "Baqtriya va Sug'diyona davlatlari qadimgi dunyo sivilizatsiyasida muhim o'rin tutgan. Bugun siz ushbu qadimgi davlatlar tarixini tahlil qilasiz."
+### Primary Mechanics (Priority Usage)
+
+#### **Timeline Sort (Tarixiy Kenglik)**
+- **What it is:** Arranging events, dynasties, or eras in chronological order.
+- **Why:** Builds temporal logic in younger students.
+- **Good Example:** "Order the events of the rise of Ancient Khorezm."
+
+#### **Why Chain**
+- **What it is:** Mapping 2-3 levels of causality.
+- **Why:** Encourages students to look beyond the surface of an event.
+- **Good Example:** "Event: City abandoned. Level 1: River dried up. Level 2: Climate shift."
+
+#### **Territory Conquest (Hududlar Jangi)**
+- **What it is:** Visualizing the growth of early civilizations on a map.
+- **Why:** Connects geography to historical development.
+
+### Secondary Mechanics
+- **Source Comparison:** Comparing an Egyptian scribe's account with a Hittite diplomat's.
+- **Memory Palace:** Placing facts about the Seven Wonders at specific Registan locations.
+- **Escape Room:** Solving "Riddles of the Past" to progress the story.
+
+### Interactive Catalog Picks (≥1 required per session)
+
+| Game | Why It Fits Tarix (Unified) | Best For |
+|---|---|---|
+| **Mystery Box** | Identifying artifacts and their uses | G5 Ancient Egypt/Bactria |
+| **Puzzle Lock** | Reconstructing ancient wall paintings | G5-6 Cultural artifacts |
+| **Codebreaker** | Decoding hieroglyphs or ancient scripts | G5 Mesopotamian/Greek topics |
+
+### Games to AVOID
+- **Connect Four vs AI:** Too complex for G5-6 strategic history intro.
+- **Notebook Capture (Calculations):** Reserved for Aniq Fanlar.
 
 ---
 
 ## 5. BOSS FORMAT: THE ANALYTICAL DETECTIVE
 
-- **Format:** **Historical Case Reasoning**.
+- **Core Format:** **Historical Case Reasoning** evaluated by Tier 2 LLM.
 - **The Task:** "Given these two sources (a clay tablet and a wall painting), explain how trade influenced the growth of this ancient city."
-- **Evaluation:** Tier 2 LLM checks for **evidence use**, **causal logic**, and **perspective**.
-- **No MCQs:** Grade 6 sessions must end with an open-ended analytical challenge.
+- **HP Scaling:** G5-6: 100.
+- **Wise Role Injection:** Student is addressed as `Tarixiy Tahlilchi`.
 
 ---
 
-## 6. Narrative Adaptation
+## 6. STORY MODE & REAL-LIFE CHALLENGE — NARRATIVE ADAPTATION
 
 ### Story Mode (Phase 2)
 Must follow **Discovery Narrative** across 3 segments:
-- **Segment A:** A human moment in an ancient city.
-- **Segment B:** The struggle/conflict based on textbook facts.
-- **Segment C:** The resolution and historical legacy.
+- **Segment A:** A child in an ancient civilization faces a daily challenge.
+- **Segment B:** The conflict unfolds using textbook historical facts.
+- **Segment C:** The legacy of that era discovered today.
 
 ### Real-Life Challenge (Phase 4)
-- **Role:** Student IS the expert (e.g., "You are the Lead Historical Detective").
-- **Context:** Must be Uzbek-specific (e.g., Ancient Termez excavations, Silk Road discovery).
-- **Goal:** Transfer the textbook concept to a "messy" real-world scenario.
+- **Role:** `Tarixiy Tahlilchi` (Historical Analyst).
+- **Context:** Must be Uzbek-specific (e.g., Ancient Termez excavations, Silk Road discovery in a local mahalla).
+- **Goal:** Use historical inquiry to explain a modern artifact.
 
 ---
 
 ## 7. Subject Pattern Example (Standard Session)
 
-- **Phase 0:** Gate Quote + BOST Mind Map.
-- **Phase 1:** Recall of previous day's events.
-- **Phase 2:** Story: "A day in the life of a Sogdian merchant..."
-- **Phase 3:** Timeline Sort + Why Chain.
-- **Phase 4:** Real-Life: "Analyze the artifacts found in a new excavation site."
-- **Phase 5:** Radiant Summary of the day’s rules.
-- **Phase 6:** Multi-step open numerical Boss fight.
+- **Phase 0:** [Tarixiy Tahlilchi] Gate Quote.
+- **Phase 1:** Timeline sort of yesterday's lesson.
+- **Phase 2:** Story: "A young scribe in Ancient Babylon."
+- **Phase 3:** Mystery Box + Why Chain.
+- **Phase 4:** Real-Life: "Analyze the artifacts found in a local dig site."
+- **Phase 5:** Radiant Summary: "The Ancient World Web."
+- **Phase 6:** Analytical Detective Boss fight.
 
 ---
 
 ## Technical Rules
 1. **Inheritance:** Inherits National Pride rules from [[NETS-Library-Framework.md]] v0.6 Part 8.
-2. **Quality Gate:** Every session must pass the "5 Feature Showcase" (Narrative, Chronology, Perspective, Pride, Buzan).
+2. **Dual-Catalog:** Phase 3 must use ≥1 Interactive and ≥2 Default mechanics.
 
 ---
-*Document produced by Gemini CLI Subject Framework Engine.*
+*This document is a subject-specific specialization of the Ijtimoiy Fanlari Family Framework.*

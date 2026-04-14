@@ -1,4 +1,4 @@
-# NETS Subject Framework: Ijtimoiy Fanlari — Jahon Tarixi (World History)
+# NETS Subject Framework: Ijtimoiy Fanlari — Jahon Tarixi
 
 **Version:** 1.0 (Subject Spec)  
 **Status:** Implementation Ready  
@@ -22,78 +22,103 @@
 ## 2. SUBJECT-SPECIFIC COGNITIVE DEMANDS
 
 Following the Ijtimoiy Fanlari profile, Jahon Tarixi prioritizes:
-1. **Comparative Analysis:** "How did the Roman Republic differ from the Athenian Democracy?"
-2. **Causal Chains (Global):** Tracing the ripple effects of a discovery in one part of the world (e.g., gunpowder or printing) to its impact on another.
-3. **Historiography (Perspective):** Analyzing how different cultures view the same historical event (e.g., the Crusades or the Mongol conquests).
-4. **Contextualization:** Placing national events (Uzbekistan) within the broader currents of world history.
+1. **Comparative Analysis:** Comparing different political, social, and economic systems across global civilizations.
+2. **Causal Chains (Global):** Tracing the ripple effects of global discoveries (e.g., gunpowder, printing) across continents.
+3. **Historiography (Perspective):** Analyzing how different cultures view the same global historical event.
+4. **Contextualization:** Placing national events (Uzbekistan) within the broader current of world history.
 
 ---
 
-## 3. GAME MECHANICS & PEDAGOGY (WORLD HISTORY TUNED)
+## 3. WHAT THIS SUBJECT FOCUSES ON (CONTENT FILTER)
 
-### 3.1 Primary Mechanics
-- **Source Comparison (Global):** Comparing two viewpoints on a global event (e.g., a Chinese chronicler vs. a Byzantine diplomat on the Silk Road trade).
-- **Timeline Sort (World Stage):** Arranging global milestones (e.g., Invention of writing, the French Revolution, World War I) and identifying what was happening in Central Asia at that same time.
-- **Escape Room (World Explorers):** Decoding puzzles from different cultures to "unlock" the next geographic era.
-- **Connect Four vs AI (Empire Strategy):** Simulating the strategic decisions of global leaders during critical turning points.
+Content producers must prioritize these cognitive anchors:
+- **Global-National Synthesis:** Every global movement must be paired with its specific impact or equivalent in Central Asia.
+- **55/45 Ratio:** Strictly maintain 55% Global Focus / 45% National Cross-Reference.
+- **Trade & Exchange:** Prioritize themes of exchange (ideas, goods, technology) over isolated national narratives.
+- **Source Literacy (Global):** Use excerpts from world historians (e.g., Herodotus, Sima Qian) alongside local accounts.
 
-### 3.2 Mnemonic Systems (Buzan Integration)
-- **Radiant Summary (Mind Map):** Creating a "World Civilization Map" showing the connections between East and West.
-- **Memory Palace:** Using the **British Museum** or the **Louvre** (digital layout) to "place" artifacts and facts from different global eras.
-- **SMASHIN' SCOPE:** Creating vivid mental images for specific global movements (e.g., the Industrial Revolution or the Enlightenment).
+**Do NOT Focus On:**
+- Eurocentric narratives that ignore the Central Asian scientific contribution to the global Renaissance.
+- Isolated dates without global context.
 
 ---
 
-## 4. NATIONAL PRIDE INJECTIONS (45% CROSS-REFERENCE)
+## 4. GAME MECHANICS & PEDAGOGY (TUNED)
 
-*Note: For World History, the focus is 55% Global / 45% National Cross-Reference to anchor the learning.*
+### Primary Mechanics (Priority Usage)
 
-- **Global Focus (55%):** Broad coverage of world events and civilizations.
-- **National Anchor (45%):** Connecting every global era to Central Asia (e.g., "While the Renaissance flourished in Europe, the Timurid Renaissance reached its peak in Samarkand").
-- **Wise Role:** `Jahon Tahlilchisi` (World Analyst).
-- **Example Injection:** "G'arbda Uyg'onish davri boshlanishidan oldin, Sharqda - bizning ajdodlarimiz Al-Xorazmiy va Beruniy 'Birinchi Renessans' poydevorini qo'yishgan edi. Keling, ushbu global bog'liqlikni tahlil qilaylik."
+#### **Source Comparison (Global Perspective)**
+- **What it is:** Comparing two viewpoints on a global event (e.g., Chinese vs. Byzantine on trade).
+- **Why:** Builds awareness of global interpretive truth.
+- **Good Example:** "Compare a 13th-century European monk's view of the Mongols with a Persian scholar's account."
+
+#### **Timeline Sort (World Stage)**
+- **What it is:** Arranging global milestones and syncing them with regional events.
+- **Why:** Builds a "Simultaneous History" mental model.
+- **Good Example:** "Sync the European Renaissance with the Timurid Renaissance on a single timeline."
+
+#### **Escape Room (World Explorers)**
+- **What it is:** Decoding puzzles from different cultures to "unlock" the next geographic era.
+- **Why:** Engages students in the "Detective Story" of global exploration.
+
+### Secondary Mechanics
+- **Connect Four vs AI:** Simulating leader decisions at global turning points (e.g., Industrial Rev choices).
+- **Why Chain:** Mapping the global causes of the World Wars.
+- **Memory Palace:** Using the Louvre or British Museum (digital) to place global artifacts.
+
+### Interactive Catalog Picks (≥1 required per session)
+
+| Game | Why It Fits Jahon Tarixi | Best For |
+|---|---|---|
+| **Connect Four vs AI** | Strategic planning at a global scale | G9-11 Political systems |
+| **Codebreaker** | Decoding global codes or symbols | G7-9 Ancient civilizations |
+| **Memory Match Blitz** | Pairing global events with their years | G7-11 Chronology drills |
+
+### Games to AVOID
+- **Word Ladder:** Reserved for Til Fanlari.
+- **Notebook Capture (Calculations):** Reserved for Aniq Fanlar.
 
 ---
 
 ## 5. BOSS FORMAT: THE COMPARATIVE HISTORIAN
 
-- **Format:** **Global-National Comparative Reasoning**.
-- **The Task:** "Compare the development of maritime trade during the Age of Discovery in the West with the simultaneous overland Silk Road trade in the East. How did each influence their respective regions' economies?"
-- **Evaluation:** Tier 2 LLM checks for **comparative logic**, **source awareness**, and **global-national synthesis**.
-- **No MCQs:** All sessions culminate in a comparative historical analysis.
+- **Core Format:** **Global-National Comparative Reasoning** evaluated by Tier 2 LLM.
+- **The Task:** "Compare the maritime trade during the Age of Discovery with the Silk Road's overland trade. How did each influence regional economies?"
+- **HP Scaling:** G7-8: 100 | G9-11: 150.
+- **Wise Role Injection:** Student is addressed as `Jahon Tahlilchisi`.
 
 ---
 
-## 6. Narrative Adaptation
+## 6. STORY MODE & REAL-LIFE CHALLENGE — NARRATIVE ADAPTATION
 
 ### Story Mode (Phase 2)
 Must follow **Discovery Narrative** across 3 segments:
-- **Segment A:** A human moment (e.g., "Imagine you are a merchant in Venice...").
-- **Segment B:** The struggle/conflict based on global trade facts.
-- **Segment C:** The resolution and the Central Asian connection.
+- **Segment A:** A human moment in a foreign global center (e.g., Venice, Chang'an).
+- **Segment B:** The struggle/exchange based on global facts.
+- **Segment C:** The resolution and the connection back to Uzbekistan.
 
 ### Real-Life Challenge (Phase 4)
-- **Role:** Student IS the expert (e.g., "You are the Global Strategic Analyst").
-- **Context:** Must be Uzbek-specific (e.g., Silk Road routes, Prezident's project on global trade).
-- **Goal:** Transfer the textbook concept to a "messy" real-world scenario.
+- **Role:** `Jahon Tahlilchisi` (World Analyst).
+- **Context:** Must be global-national (e.g., Silk Road routes, global trade summit, UN educational project).
+- **Goal:** Use global historical logic to solve a modern strategic problem.
 
 ---
 
 ## 7. Subject Pattern Example (Standard Session)
 
-- **Phase 0:** Gate Quote + BOST Mind Map.
-- **Phase 1:** Recall of previous day's events.
-- **Phase 2:** Story: "Marco Polo meets the Great Khan..."
+- **Phase 0:** [Jahon Tahlilchisi] Gate Quote.
+- **Phase 1:** Recall of previous global civilization.
+- **Phase 2:** Story: "Marco Polo meets the Great Khan."
 - **Phase 3:** Source Comparison + Escape Room.
-- **Phase 4:** Real-Life: "Analyze the global trade impact of the new Silk Road."
-- **Phase 5:** Radiant Summary of the day’s rules.
-- **Phase 6:** Multi-step open numerical Boss fight.
+- **Phase 4:** Real-Life: "Analyze the global trade impact of the New Silk Road initiative."
+- **Phase 5:** Radiant Summary: "The Global Exchange Map."
+- **Phase 6:** Comparative Historian Boss fight.
 
 ---
 
 ## Technical Rules
 1. **Inheritance:** Inherits National Pride rules from [[NETS-Library-Framework.md]] v0.6 Part 8.
-2. **Quality Gate:** Every session must pass the "5 Feature Showcase" (Narrative, Chronology, Perspective, Pride, Buzan).
+2. **Dual-Catalog:** Phase 3 must use ≥1 Interactive and ≥2 Default mechanics.
 
 ---
-*Document produced by Gemini CLI Subject Framework Engine.*
+*This document is a subject-specific specialization of the Ijtimoiy Fanlari Family Framework.*
