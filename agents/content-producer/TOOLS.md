@@ -28,21 +28,20 @@ This document lists every tool you have access to and how to use each one. Do no
 
 ## 2. File System — Write
 
-**Purpose:** Write content item JSON files and production logs.
+**Purpose:** Write homework .docx files and production logs.
 
 **When to use:**
-- Phase 4: writing output JSON files
-- Throughout: writing/appending to `_log.md`
+- Production: writing .docx homework session files
+- Throughout: writing/updating STATUS.md progress log
 
 **Paths you are authorized to write:**
-- `standards/subject-family/grades/{grade}/{lang}/{family}/` — content output
-- Your assignment's specific `output_path`
+- Your assignment's specific `output_path` (e.g., `output/Grade5_Math_uz/`)
+- STATUS.md in the output directory (your heartbeat)
 
 **Rules:**
 - Never overwrite existing files unless assignment explicitly requests regeneration
-- Always write valid JSON (parseable by any standard JSON parser)
-- One file per game per chapter: `{game}-ch{chapter}-items.json`
-- Log file: `_log.md` in the same output directory
+- One .docx per chapter: `{Subject}_Grade{N}_Ch{N}_{lang}.docx`
+- STATUS.md updated after every docx creation
 
 ---
 

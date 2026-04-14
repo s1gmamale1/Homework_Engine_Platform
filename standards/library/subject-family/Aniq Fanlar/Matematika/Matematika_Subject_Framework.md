@@ -113,7 +113,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 - Panel 1: Structural Scan layout (heading tree, bold-term chips, diagram thumbnails — not flowing paragraphs)
 - Panel 5 Personal Hook: G5-6 life contexts — sharing food, saving money, measuring ingredients, comparing game scores. BOST Prime prompt: *"Bu mavzu haqida nimalarni bilasiz?"*
 - Panel 6 Why This Matters: BOST Goals prompt: *"Bugun raqamlar haqida nimani bilmoqchisiz?"* — stored and resurfaced in Phase 7
-- Panel 7 Industry Application: Builder (`quruvchi`), shopkeeper (`sotuvchi`), chef (`oshpaz`), architect (`me'mor`), farmer (`dehqon`)
+- Panel 7 Industry Application: Engineer (`muhandis`), analyst (`tahlilchi`), architect (`me'mor`), developer (`dasturchi`), entrepreneur (`tadbirkor`)
 - Mathematician references: **Al-Khwarizmi** (first, at least 1 per 5 sessions), **Al-Biruni**, **Ulugh Beg**, then Pythagoras, Euclid, Fibonacci
 
 **0-B Flash Cards — Matematika-specific overrides:**
@@ -130,23 +130,23 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 
 ### 4.1 Memory Sprint (Phase 1)
 
-**Inherits:** UNIFIED §5.1. Duration ≤2 min (hard cap). Spaced repetition from prior chapters only.
+**Inherits:** UNIFIED §5.1. Duration ≤2 min (hard cap). Current chapter warm-up — key terms, prerequisite concepts, foundational facts needed for this session.
 
 **Matematika-specific format priority:**
 
 | Format | Priority | Why |
 |---|---|---|
-| **Speed Match** | HIGH | Formula ↔ visual model, fraction ↔ decimal, number ↔ expanded form |
-| **Tile Match** | HIGH | Pattern recognition — strongest at this age |
-| **Fill-in-Blanks Race** | MEDIUM | Complete the number pattern or calculation step |
-| **Quick MC / Binary** | MEDIUM | "Which calculation is correct?" — not typed numeric entry (keyboard friction) |
-| **Order the Steps** | LOW | For procedural sequences (e.g., order of operations) |
-| **Link Chain** | LOW | Only for sequential processes (e.g., steps of long division) |
+| **Speed Match** | HIGH | Formula ↔ visual model, fraction ↔ decimal, number ↔ expanded form from current chapter |
+| **Tile Match** | HIGH | Pattern recognition — match current chapter's key terms to definitions/visuals |
+| **Fill-in-Blanks Race** | MEDIUM | Complete the number pattern or calculation step from current topic |
+| **Quick MC / Binary** | MEDIUM | "Which calculation is correct?" — preview current chapter's core operations |
+| **Order the Steps** | LOW | For procedural sequences in current chapter (e.g., order of operations) |
+| **Link Chain** | LOW | Only for sequential processes in current chapter (e.g., steps of long division) |
 
 **Matematika additions:**
 - Include 2-3 mental math speed rounds (250 × 10?) with 3-second timer — creates energy, not anxiety. Cap at 3.
 - Wrong answer feedback: show the CORRECT calculation visually: *"34 × 100 = 3 400, ikki nol qo'shiladi."* Never just the answer.
-- Buzan Primacy Effect: most important spaced-repetition items go here. Buzan review intervals apply: items ~24h, ~1 week, ~1 month ago are prioritized.
+- Buzan Primacy Effect: most important current-topic items go here — the brain is primed to encode what it sees first.
 
 **National Pride:** Not injected in Phase 1 (UNIFIED §1.5 — 2-min speed format, adding role framing wastes seconds).
 
@@ -158,7 +158,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 
 | Arc Beat | Matematika Version |
 |---|---|
-| **Problem** | A real Uzbek situation requiring the math concept. Alive — not "A train leaves Tashkent at 60 km/h." Use: Aziza building a garden bed, Akmal dividing non bread, Sardor buying fabric at Chorsu, Madina scaling a palov recipe. |
+| **Problem** | A real situation requiring the math concept. Alive — not "A train leaves Tashkent at 60 km/h." Use modern, relatable contexts: planning a room renovation, splitting a group project budget, comparing phone data plans, figuring out how many tiles fit a floor. Textbook characters (Madina, Aziza, Akmal, Sardor) are fine as protagonists but put them in situations that don't feel like a folklore skit. |
 | **Struggle** | Failed attempt using prior knowledge. SHOW why the old method doesn't work — "She tried adding the sides — that gives the perimeter, not the area." |
 | **Discovery** | The concept emerges through CPA: FIRST a concrete object, THEN a diagram, THEN the formula. Never jump straight to symbols. |
 | **Solution** | Full worked example. Student sees every step before doing anything themselves. |
@@ -168,7 +168,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 - Checkpoint questions test **comprehension**, not calculation: "Why did Aziza's first method fail?" YES. "What is ½ × 6 × 8?" NO (Phase 3).
 - IELTS-style checkpoints: main idea, inference, compare across segments, vocabulary in context.
 - Characters from textbook: Madina, Aziza, Akmal, Sardor, Robi — maintain textbook continuity.
-- Grade narrative framework: **G5 — "The Cotton Harvest Challenge"** (agriculture, family, rural life); **G6 — "Building the Registan"** (architecture, mathematics in design).
+- Grade narrative framework: **G5 — "The Startup Challenge"** (budgets, planning, daily math); **G6 — "Building the Future"** (architecture, design, engineering math).
 - Sentence length: average ≤ 14 words.
 - Buzan 80/20 keyword tagging: keywords extracted from each segment feed Phase 5 and Flash Cards.
 - National Pride: `setting_origin` tag per segment — 55/45 national/global balance across sessions (not per-session mandate).
@@ -205,30 +205,30 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 
 **Inherits:** UNIFIED §5.4. First-person Expert POV mandatory. Student is THE EXPERT, never a third-person observer.
 
-**Expert roles for Matematika:**
-- Shopkeeper (Chorsu Bazaar) calculating profit and making change
-- Builder estimating bricks, paint, fabric for a Tashkent construction site
-- Chef scaling a palov recipe for 50 guests (ratios, fractions)
-- Farmer planning cotton rows in Fergana valley (area, ratios)
-- Architect designing a room layout for a school in Bukhara (area, volume, scale)
-- Event planner dividing supplies among guests (division, fractions)
+**Professional roles for Matematika:**
+- Business owner analyzing monthly revenue and expenses (profit, percentages)
+- Project manager estimating materials and budget for a construction project (area, volume, scale)
+- Logistics analyst optimizing delivery routes or warehouse space (ratios, distance)
+- Product designer calculating dimensions and material costs for manufacturing (geometry, fractions)
+- Data analyst interpreting sales charts and making projections (percentages, ratios)
+- App developer planning server capacity based on user growth (multiplication, estimation)
 
 **Buzan W5H Scaffold (mandatory for G5-6):**
 Before the answer area opens, a 6-branch W5H frame appears: **Who / What / Where / When / Why / How**. Student fills at least **4 of 6** branches (1-2 words each) before writing their answer. Frame stays visible as sidebar. Not scored — scaffolding only.
 - Pure calculation tasks (single-step) are exempt from W5H.
-- W5H is useful for multi-factor Matematika problems (e.g., farmer planning — Who=farmer, What=plant cotton rows, Where=Fergana valley, How=calculate area per row).
+- W5H is useful for multi-factor Matematika problems (e.g., project budget — Who=project manager, What=estimate materials, Why=stay under budget, How=calculate area per floor).
 
-**Decision Mapping:** Applied when the scenario involves choosing between 2 options (e.g., comparing two shopkeeper pricing strategies). Student completes a pro/con map, assigns weights, selects option, writes 1-2 sentence justification. Not applied for single-answer expert scenarios.
+**Decision Mapping:** Applied when the scenario involves choosing between 2 options (e.g., comparing two vendor pricing plans). Student completes a pro/con map, assigns weights, selects option, writes 1-2 sentence justification. Not applied for single-answer scenarios.
 
 **Wise Status — National Pride (30% of Phase 4 tasks):**
 For 1 in 3 Real-Life Challenges:
-1. **Status:** Professional title — "Bosh Hisobchi," "Qurilish Muhandisi," "Bozor Menejeri"
+1. **Status:** Professional title — "Bosh Hisobchi," "Loyiha Menejeri," "Ma'lumotlar Tahlilchisi"
 2. **Arena (55/45):** National: anchor in real Uzbek achievement (Afrosiyob, Tashkent metro, Registan). Global: anchor in global standard.
 3. **Bridge:** The academic core (calculation) is UNTOUCHED.
 4. **Closing:** "Sizning aniqligingiz Uchinchi Renessansni quradi" (national) or "Sizning natijangiz global standartlarga mos" (global).
 
 **Hard rules:**
-- First-person: "You are the shopkeeper…" — never third person
+- First-person: "You run a…" / "Your team needs to…" — never third person
 - Multi-step: minimum 2-3 calculation steps; single-step belongs in Phase 3
 - PISA L1+ gate: below L1, replace with guided worked example at same content level
 - Include at least one distractor answer from a common error (e.g., forgetting to divide by 2 in triangle area)
@@ -256,6 +256,51 @@ For 1 in 3 Real-Life Challenges:
 
 **National Pride:** Heritage anchor in mnemonic link sentences when natural. Example: *"Mirzo Ulug'bek yulduzlarni sanagan — siz ham shu aniqlikda hisoblang."* Not forced.
 
+### 4.6 Final Boss (Phase 6)
+
+**Inherits:** UNIFIED §5.6. Three-tier boss system applies: Sub Boss (every session), Big Boss (weekly), Mythical Boss (<5% random).
+
+**Matematika Sub Boss parameters:**
+
+| Parameter | UNIFIED Default | Matematika G5-6 Override |
+|---|---|---|
+| **HP** | G5-8: 100 HP | **100 HP** — standard secondary value per UNIFIED §5.6 |
+| **Hint Tax** | G5-8: -10 HP | **-5 HP** — gentler; encourage hint use over quitting |
+| **MC allowed?** | No MC for G5+ | **Yes — up to 30% MC** (WM ceiling at 10-11; open reasoning overwhelms) |
+| **Question types** | Short answer + open reasoning | Short answer + multi-step word problem + visual-model matching |
+| **Combo bonus** | 3 correct → 2× damage | Unchanged |
+| **Max attempts** | TEFCAS loop | 3, with "Hali emas!" framing each time |
+
+**PISA-tiered damage (applied to Matematika's 100 HP):**
+
+| Tier | Damage | PISA Level | Bloom's | Matematika Example |
+|---|---|---|---|---|
+| Easy | -10 HP | L3 | Apply | "Calculate the area of a triangular garden. Show your working." |
+| Medium | -20 HP | L4 | Analyze | "Two methods give different answers for the same fraction addition. Which is correct and why?" |
+| Hard | -30 HP | L5-6 | Evaluate | "A company divides office space using a ratio of 3:5:2. One section is 120m². Design a floor plan showing all three sections with dimensions." |
+
+**Question distribution:** 40% Easy · 40% Medium · 20% Hard
+
+**Boss design rules for Matematika:**
+- At least one word problem (text → math translation)
+- At least one visual model question (bar model, area grid, diagram)
+- No question requiring more than 3 calculation steps without scaffolding
+- No purely symbolic questions without concrete context
+- National Pride framing: Boss entry reframed as *"Bu — sizning professional sertifikatingiz."* On defeat: *"Sertifikatsiya muvaffaqiyatli!"* HP/mechanics unchanged — framing only.
+
+**TEFCAS Failure Flow:**
+1. *"Hali emas! Miyangiz Feedback oldi."* — never "Noto'g'ri"
+2. Socratic hint for Matematika: show first step of worked example, ask student to complete
+3. Route to specific Story Mode segment
+4. Regenerate questions (same standards, different numbers/context)
+
+**Mastery Stars:**
+
+| Stars | Criteria |
+|---|---|
+| 1★ | Boss defeated (any number of attempts) |
+| 2★ | Boss defeated in ≤2 attempts, >50% HP remaining |
+| 3★ | First attempt, no hints, >80% HP remaining |
 
 ---
 
@@ -269,7 +314,7 @@ For 1 in 3 Real-Life Challenges:
 | **Tone** | Curious, calm, encouraging. Math anxiety peaks at G5-6 — voice is a calm guide, never a drill sergeant. |
 | **Language** | Conversational Uzbek or Russian. Math terms introduced with local equivalents: numerator → "surat", denominator → "maxraj", ratio → "nisbat". |
 | **Sentence length** | Average ≤ 14 words. Long sentences in word problems cause G5-6 students to lose track. |
-| **Cultural anchors** | Uzbek names from textbook (Madina, Aziza, Akmal, Sardor, Robi), Uzbek places (Toshkent, Samarqand, Buxoro, Farg'ona vodiysi), Uzbek contexts (bozor pricing, non bread division, palov recipe, cotton harvest). |
+| **Cultural anchors** | Uzbek names from textbook (Madina, Aziza, Akmal, Sardor, Robi). Modern Uzbek contexts — tech, business, sports, school projects, daily life. Avoid cliché bazaar/village/folksy scenarios. Keep it relatable to how 10-12 year olds actually live. |
 
 ### 5.2 Visuals
 
@@ -304,7 +349,7 @@ Corny lines (rotated per UI/UX spec):
 | **Fractions sequence** | Proper → improper → mixed. Never skip stages. |
 | **Units always required** | Every measurement answer must include units. Unit-less = incomplete. |
 | **Estimation before precision** | "About how much?" before "Exactly how much?" — PISA L2 skill |
-| **Reasonable numbers** | No "farmer has 47,382 chickens." Keep quantities realistic. |
+| **Reasonable numbers** | No absurd quantities ("47,382 items in stock"). Keep numbers realistic for the scenario. |
 
 ### 5.5 Aniq Fanlar Family Rules (added v1.1)
 

@@ -207,7 +207,7 @@ English inherits the Til Fanlari Boss model: writing production, rubric-based ev
 
 | Grade | Role | Scenario Complexity |
 |---|---|---|
-| **G5-6** | Simple helper | "You meet a tourist. They're lost. Help them find the bazaar using: go, turn, near." |
+| **G5-6** | Simple helper | "A new student just joined your class. They need to find the library. Give directions using: go, turn, near." |
 | **G7-8** | Service professional | "You work at a hotel. A guest emails asking about room prices. Write a reply." |
 | **G9-10** | Expert communicator | "You are a journalist interviewing a scientist about climate change. Write 5 interview questions." |
 | **G11** | Academic/professional | "You are applying for an IT Park internship. Write a cover letter explaining your skills." |

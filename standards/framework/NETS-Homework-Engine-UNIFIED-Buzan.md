@@ -238,7 +238,7 @@ Each Learning Objective is delivered through multiple content blocks. Every bloc
 
 | Block Type | Purpose | Used In Phase | Source Layer |
 |---|---|---|---|
-| `recall_item` | Quick-fire question from previous chapters | Phase 1: Memory Sprint | Textbook |
+| `recall_item` | Quick-fire warm-up question from current chapter's key concepts | Phase 1: Memory Sprint | Textbook |
 | `narrative_segment` | Textbook content rewritten as story/documentary | Phase 2: Story Mode | Textbook + NETS |
 | `checkpoint_question` | Comprehension gate between narrative segments | Phase 2: Story Mode | PISA-calibrated |
 | `game_item` | Practice item for a specific game mechanic | Phase 3: Game Breaks | Textbook + PISA |
@@ -528,7 +528,7 @@ When a student opens a homework assignment, the engine performs:
    - Teacher overrides (if any)
 5. SELECT content blocks from the pre-generated pool:
    - Pre-Homework: theme_preview_components (§4.4) + flash_cards (§4.5)
-   - Phase 1: 5-8 recall_items from PREVIOUS chapters (spaced repetition algo)
+   - Phase 1: 5-8 recall_items from CURRENT chapter (warm-up activation)
    - Phase 2: narrative_segments for THIS topic
    - Phase 3: game_items matching the topic's learning objectives
    - Phase 4: 1 transfer_scenario contextualized to Uzbek culture
@@ -613,15 +613,15 @@ When a student opens a homework assignment, the engine performs:
 
 ### 5.1 Phase 1 -- Memory Sprint (2 minutes)
 
-**Purpose:** Activate prior knowledge. Prevent memory decay. Connect old learning to new. Deliver quick dopamine to warm the student into the session.
+**Purpose:** Warm up the student's brain for the CURRENT chapter's homework. Activate relevant schemas, preview key terminology, and build readiness for the concepts about to be learned. Deliver quick dopamine to energize the session start.
 
-**UPDATED 2026-04-07:** Memory Sprint is no longer locked to "single-answer recall". The original spec was too narrow and led content creators to produce typed quiz questions only. The intent was *warm up the brain* — any fast-paced format that hits prior chapters in ≤2 min is now permitted.
+**UPDATED 2026-04-15:** Memory Sprint now targets the CURRENT chapter, not prior chapters. The student has already seen the Theme Preview (0-A) and Flash Cards (0-B) — Memory Sprint is the first active engagement with the current topic's key terms, concepts, and prerequisite connections. Prior-chapter spaced repetition is handled by the platform's adaptive review system outside of homework sessions.
 
 | Parameter | Standard Mode | Extended Mode |
 |---|---|---|
 | Duration | ≤2 minutes (hard cap) | ≤2 minutes |
 | Item count | 5-8 items | 8-10 items |
-| Source | Previous chapters in same subject (NOT current topic) | Same |
+| Source | **Current chapter** — key terms, prerequisite concepts, foundational facts needed for this session | Same |
 | Format | **Flexible — any approved fast format (see table below)** | Same |
 | Hints allowed | No | No |
 | AI Tier | Tier 1 (pre-generated pool) | Same |
@@ -630,35 +630,29 @@ When a student opens a homework assignment, the engine performs:
 
 | Format | Description | Best For |
 |---|---|---|
-| **Quick MC / Binary** | 5-8 tap-to-answer questions from prior chapters | All subjects |
-| **Speed Match** | Drag-and-drop matching: term ↔ definition, formula ↔ result | Math, Science |
-| **Flash Sprint** | Rapid-fire flashcards — student swipes "Know" or "Review" | Biology, History |
-| **Fill-in-Blanks Race** | Complete 5 sentences with missing keywords, timed | Language, Science |
+| **Quick MC / Binary** | 5-8 tap-to-answer questions on current chapter's key concepts | All subjects |
+| **Speed Match** | Drag-and-drop matching: term ↔ definition, formula ↔ result from current topic | Math, Science |
+| **Flash Sprint** | Rapid-fire flashcards — student swipes "Know" or "Review" on current chapter terms | Biology, History |
+| **Fill-in-Blanks Race** | Complete 5 sentences with missing keywords from current topic, timed | Language, Science |
 | **Order the Steps** | Arrange process steps in correct order (drag-and-drop) | Science, Math procedures |
-| **Link Chain** | 5 items shown with a vivid story chain linking them (SMASHIN' SCOPE imagery). After 15s study, recall tested out of order: "What came after X?" | Science processes, History timelines — any sequential content. NOT for unrelated vocabulary (use Flash Sprint). |
+| **Link Chain** | 5 items from current chapter shown with a vivid story chain linking them (SMASHIN' SCOPE imagery). After 15s study, recall tested out of order: "What came after X?" | Science processes, History timelines — any sequential content. NOT for unrelated vocabulary (use Flash Sprint). |
 
-**Format Selection Rule:** Content creator chooses the format that best fits the subject and prior chapter content. All formats must have a Start button, instant per-item feedback, streak/combo bonuses, and a final score display. Mixing formats within a single Sprint is permitted.
+**Format Selection Rule:** Content creator chooses the format that best fits the subject and current chapter content. All formats must have a Start button, instant per-item feedback, streak/combo bonuses, and a final score display. Mixing formats within a single Sprint is permitted.
 
 **Item Selection Algorithm:**
 ```
-1. GET all recall_items from chapters BEFORE the current chapter
-2. PRIORITIZE by forgetting curve:
-   - Items the student got WRONG in previous sessions -> highest priority
-   - Items approaching forgetting threshold (Ebbinghaus model) -> high priority
-   - Items answered correctly but not seen in 7+ days -> medium priority
-2b. INJECT Buzan mandatory review items (Buzan Review Intervals):
-   - Concepts learned ~24h ago -> high priority (first mandatory touchpoint)
-   - Concepts learned ~1 week ago -> medium priority (second touchpoint)
-   - Concepts learned ~1 month ago -> medium priority (third touchpoint)
-   - Rule: min(SM-2 schedule, Buzan mandatory) — whichever is SOONER wins
-   - If sprint exceeds 8 items after injection, drop lowest-priority non-Buzan item
-3. FILTER to 5-8 items, balanced across prior chapters
+1. GET key concepts, terms, and prerequisite facts from the CURRENT chapter
+2. PRIORITIZE by session relevance:
+   - Core terminology the student will encounter in Story Mode (Phase 2) -> highest priority
+   - Prerequisite concepts from earlier chapters needed to understand current topic -> high priority
+   - Key formulas, rules, or definitions introduced in this chapter -> medium priority
+3. FILTER to 5-8 items, balanced across the chapter's main concepts
 4. RANDOMIZE order
 ```
 
-**Buzan Injection — Primacy Effect:** Phase 1 is the Primacy window — recall is highest at the start of a session. This is why the most important prior-knowledge items go here, not later. The Link Chain format adds Buzan's Link System mnemonic to the format options. Buzan Review Intervals (10min → 24h → 1w → 1mo) act as floor constraints on SM-2 to ensure no concept slips through the forgetting curve.
+**Buzan Injection — Primacy Effect:** Phase 1 is the Primacy window — recall is highest at the start of a session. This is why the most important current-topic items go here — the brain is primed to encode what it sees first. The Link Chain format adds Buzan's Link System mnemonic to the format options.
 
-**Not applied here:** Radiant Thinking, Peg System, Major System — these require encoding time (45-90s) and don't fit the 2-minute hard cap. Memory Sprint is for rapid retrieval, not new encoding.
+**Not applied here:** Radiant Thinking, Peg System, Major System — these require encoding time (45-90s) and don't fit the 2-minute hard cap. Memory Sprint is for rapid activation, not deep encoding.
 
 **Scoring:**
 - Correct: +100 XP per question
@@ -848,8 +842,8 @@ Every narrative segment must have its `keywords_80_20` extracted (the ~20% of wo
 | Element | Requirement |
 |---|---|
 | **POV** | Direct address: "You are..." / "Your job is..." / "A client comes to you..." Never third-person. |
-| **Role** | Student is positioned as an expert — fire safety inspector, scientist, engineer, consultant, doctor, lawyer, historian — NOT as a student answering a textbook question. |
-| **Case** | Preferably a real-world case (historical incident, documented event, known engineering challenge). If not available, a realistic hypothetical that could plausibly occur. |
+| **Role** | Student is positioned as a professional — project manager, analyst, engineer, consultant, business owner, researcher — NOT as a student answering a textbook question. Roles must feel modern and aspirational, not folksy or patronizing. |
+| **Case** | A realistic professional scenario that could plausibly occur in a modern workplace, business, or research setting. Avoid cliché bazaar/village/folksy scenarios — students should feel like they're solving real problems, not acting in a school play. |
 | **Tricky Questions** | Multiple-path questions with plausible wrong answers (distractors that look right to a novice). Forces real reasoning, not pattern matching. |
 | **Explanation Required** | Student must justify their choice. AI evaluates the reasoning, not just the choice. ("What would you do AND why?") |
 | **Subject Integration** | All reasoning must use concepts from the current lesson. No outside knowledge required. |
@@ -860,13 +854,13 @@ Every narrative segment must have its `keywords_80_20` extracted (the ~20% of wo
 > ✅ NEW: *"You are a fire safety inspector called to a workshop. The owner stores gasoline, uses a wood-burning stove, and keeps an asbestos fire blanket in the corner. He asks: 'Is my setup safe?' You look around and immediately spot 3 problems. What are they, and what do you tell the owner?"*
 
 > ❌ OLD (Algebra / Linear Functions): *"A taxi charges 2000 + 1500 per km. Calculate the cost for 5 km."*
-> ✅ NEW: *"You are advising a city council on taxi pricing regulation. Two companies propose different pricing models. Company A: 2000 base + 1500/km. Company B: 3000 base + 1000/km. At what distance does Company B become cheaper? A commuter claims Company B is always better — is this true? Write your recommendation."*
+> ✅ NEW: *"You run a delivery startup. You're comparing two vehicle leasing plans for your fleet. Plan A: 2,000,000 so'm/month base + 1,500 so'm/km. Plan B: 3,000,000 so'm/month base + 1,000 so'm/km. Your drivers average 120 km/day. Which plan saves more money over a month? A partner says Plan B is always better — is that true? Show your analysis."*
 
 | Parameter | Standard Mode | Extended Mode |
 |---|---|---|
 | Duration | 3-5 minutes | 10 minutes |
 | Scenario count | 1 scenario, 2-3 sub-questions | 1 scenario, 3-5 sub-questions |
-| Context | Uzbek cultural context (bazaars, travel, family, local industry) | Same |
+| Context | Modern professional context — business, tech, infrastructure, research. Uzbek setting when natural, but never forced-folksy. | Same |
 | AI Tier | Tier 2 (AI-generated, expert-reviewed) | Same |
 
 **Buzan Injection — W5H Radiant Problem Solving Scaffold:**
