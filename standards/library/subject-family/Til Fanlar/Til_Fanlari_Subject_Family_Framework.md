@@ -99,7 +99,7 @@ Content producers must prioritize these cognitive anchors:
 #### **Dialogue Exercises**
 - **What it is:** Prompted spoken or written responses with a clear communicative goal.
 - **Why:** Productive fluency grows through bounded exchanges, not open-ended chaos.
-- **Good Example:** "Your friend invites you to the bazaar. Respond with: accept + suggest a time."
+- **Good Example:** "Your friend invites you to hang out this weekend. Respond with: accept + suggest a time and place."
 - **Bad Example:** Open sandbox chat with no structure.
 
 #### **Dictation**
