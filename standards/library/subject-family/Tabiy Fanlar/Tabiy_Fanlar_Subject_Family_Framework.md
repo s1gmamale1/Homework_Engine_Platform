@@ -1,253 +1,241 @@
-# TABIY FANLAR — Natural Sciences
-## Subject Family Framework (Layer 1)
+# Tabiy Fanlar — Natural Sciences · Family Documentation
 
-**Version:** 1.0
-**Date:** April 14, 2026
-**Status:** Production — Authoritative Framework for all Tabiy Fanlar subjects
-**Constitution:** `NETS-Homework-Engine-UNIFIED-Buzan.md` (unchanged — inherits all Layer 0 rules)
-**Library Framework Ref:** `NETS-Library-Framework.md` Part 1, Family 3 (v0.6 — post Physics/Chemistry migration)
+**Status:** Family Documentation Guide (Filter/Adapter)
+**Target Audience:** Subject-Specific Content Producers
+**Role:** Acts as a bridge between core standards and individual subject frameworks.
 
----
-
-## 1. FAMILY DEFINITION
-
-**Tabiy Fanlar** (Uzbek: "Natural Sciences") — the family of subjects that study how natural systems work. Every concept in this family is either (a) an observation about the natural world, (b) a classification system organizing observations, or (c) a causal model explaining why a system behaves as it does. Knowledge is built through a shared scientific method: **observe → classify → hypothesize → explain → predict**.
-
-**Uzbek gloss:** "Tabiat" = nature. These are the sciences where truth is discovered through observation and experiment, then made reliable through formal description.
-
-**Epistemological commitment:** The textbook is the source of truth. NETS transforms delivery but never alters core phenomena, classifications, or causal models. When a causal claim conflicts with observed data, the data wins — but within NETS, the textbook's treatment of a phenomenon is the canonical version a student is assessed on.
-
-**Dual identity:** As of Library Framework v0.6, Physics and Chemistry migrated from Aniq Fanlar into this family. The family therefore carries two coexisting cognitive modes:
-- **Observational branch** (Biology, Geography, Astronomy, Combined Science) — diagram-heavy, classification-first, causal-explanation centered.
-- **Quantitative branch** (Physics, Chemistry) — formal-notation-heavy, derivation-capable, error-detection rigorous.
-
-Both branches share the scientific method. The framework below applies to the whole family; where a rule differs between branches, it is tagged **[OBS]** or **[QNT]**.
-
-**Permeable boundary with Aniq Fanlar (now Math-only):** Quantitative natural sciences explicitly reference Math for calculation (population growth rates, stoichiometry, kinematics equations, astronomical constants). The boundary is crossed by reference, not by content migration.
+### Parent Documents (Referenced)
+- **Layer 0:** [[NETS-Homework-Engine-UNIFIED-Buzan.md]] v2.0
+- **Layer 1:** [[NETS-Library-Framework.md]] v0.6
 
 ---
 
-## 2. SUBJECTS IN THIS FAMILY
+## 1. What Is This Family
 
-| Subject | Grades | Uzbek Name | Branch | Notes |
+"Tabiat" = nature. This family studies how natural systems work. Every concept is either (a) an observation about the natural world, (b) a classification system organizing observations, or (c) a causal model explaining why a system behaves as it does.
+
+**The scientific method is the spine:** observe → classify → hypothesize → explain → predict.
+
+**Dual identity:** As of Library Framework v0.6, Physics and Chemistry migrated from Aniq Fanlar. The family now has two coexisting branches:
+- **OBS (Observational):** Biology, Geography, Astronomy, Combined Science — diagram-heavy, classification-first, causal-explanation centered
+- **QNT (Quantitative):** Physics, Chemistry — formal-notation-heavy, derivation-capable, CPA mandatory
+
+Both share the scientific method. Where a rule differs between branches, it's tagged **[OBS]** or **[QNT]**.
+
+**What it focuses on:** causal explanation, concept model construction, classification, diagram interpretation, experimental reasoning, data interpretation
+**[QNT] adds:** formal notation fluency, multi-step calculation, error detection (inherited from Aniq Fanlar origins)
+
+**What it is NOT about:** free-form writing, opinion/debate, formula derivation without physical meaning. Those belong to Til Fanlari, Ijtimoiy Fanlari, and Aniq Fanlar respectively.
+
+**Transform philosophy:** Textbooks give the topics. NETS makes them alive. If the textbook presents photosynthesis as a list of steps, Story Mode turns it into a discovery narrative. If the textbook gives flat diagrams, Notebook Capture makes students draw and annotate by hand.
+
+**Cognitive Demand Profile (Priority Order):**
+1. Causal explanation (why does this happen?)
+2. Concept model construction (how does this system work?)
+3. Classification & taxonomy [OBS primary]
+4. Diagram interpretation & production [OBS primary, QNT secondary]
+5. Formal notation fluency [QNT]
+6. Multi-step calculation [QNT]
+7. Experimental reasoning (both)
+8. Data interpretation (both)
+9. Error detection [QNT]
+10. Memorization for recall (both — lowest priority)
+
+---
+
+## 2. Subjects in This Family
+
+| Subject | UZ Name | Grade Range | Branch | Notes |
 |---|---|---|---|---|
-| **Biology** | G5–11 | Biologiya | OBS | Core observational subject. Anatomy, ecology, genetics. Diagram-first. |
-| **Physics** | G7–11 | Fizika | QNT | Migrated from Aniq Fanlar v0.6. Experimental + formal; keeps CPA + Worked Examples + Error Analysis. |
-| **Chemistry** | G7–11 | Kimyo | QNT | Migrated from Aniq Fanlar v0.6. Symbolic notation (periodic table, equations) + procedural reasoning (reactions, stoichiometry). |
-| **Geography** | G5–11 | Geografiya | OBS | Spatial reasoning, map/satellite interpretation. Feeder for GIS & Cartography (CSC-009). |
-| **Combined Science** | G5–6 | Tabiiy fanlar | OBS | Transitional combined science. Phenomenon-first. Splits into Biology/Physics/Chemistry/Geography from G7. |
-| **Astronomy** | G11 only | Astronomiya | OBS | Orbital mechanics + prediction-from-principles. Leans on Physics for G11 students who took it. |
-
-**Why these six cluster together:** All six share the scientific method — observation, classification, causal explanation, prediction. A student strong in Biology's causal reasoning transfers to Chemistry's reaction mechanisms more easily than to, say, pure Math proofs. Physics and Chemistry join this family because, at the G7–11 level taught in Uzbek schools, their epistemology is primarily experimental (observe → hypothesize → test → explain) rather than axiomatic. Mechanic emphasis is therefore shared, with branch-specific adaptations for the quantitative subjects.
+| **Biology** | Biologiya | G5-11 | OBS | Anatomy, ecology, genetics. Diagram-first. |
+| **Physics** | Fizika | G7-11 | QNT | Migrated from Aniq Fanlar v0.6. Keeps CPA + Worked Examples + Error Analysis. |
+| **Chemistry** | Kimyo | G7-11 | QNT | Migrated from Aniq Fanlar v0.6. Periodic table, equations, stoichiometry. |
+| **Geography** | Geografiya | G5-11 | OBS | Spatial reasoning, map interpretation. |
+| **Combined Science** | Tabiiy fanlar | G5-6 | OBS | Transitional combined science. Splits at G7. |
+| **Astronomy** | Astronomiya | G11 only | OBS | Orbital mechanics. Leans on Physics. |
 
 ---
 
-## 3. COGNITIVE DEMAND PROFILE
+## 3. What This Family Focuses On (The Content Filter)
 
-The Tabiy Fanlar family targets these cognitive skills, ranked by importance across the whole family:
+**Do:**
+- **Causal reasoning first** — every session must make the student explain WHY, not just WHAT
+- **Dual Coding is MANDATORY** — every concept gets visual + verbal simultaneously. Text-only is banned. (See [[UNIFIED-Buzan §1.4]])
+- **[QNT] CPA Progression is MANDATORY** — Physics/Chemistry formulas must go Concrete → Pictorial → Abstract (See [[UNIFIED-Buzan §5.2]])
+- **[QNT] Worked Examples + Error Analysis** — inherited from Aniq Fanlar origins. Student sees solved problems, fills gaps, finds bugs.
+- **Diagram production** — students don't just label diagrams, they DRAW them (Notebook Capture)
+- **Classification before causation** [OBS] — organize observations into categories first, then explain why
 
-| Rank | Cognitive Demand | Description | Branch | PISA Mapping |
-|---|---|---|---|---|
-| 1 | **Causal explanation** | Trace cause-effect chains; articulate why a phenomenon happens | Both | Science: Explain |
-| 2 | **Concept model construction** | Build mental model of how a system works (photosynthesis, circuits, reactions, tectonics) | Both | Science: Interpret / Use Evidence |
-| 3 | **Classification & taxonomy** | Organize observations into valid categories (organisms, rocks, reactions, forces) | OBS (primary), QNT (secondary) | Science: Identify |
-| 4 | **Diagram interpretation & production** | Read, label, and produce diagrams as first-class representations | OBS (primary), QNT (force/molecular) | Science: Interpret |
-| 5 | **Formal notation fluency** | Read and write equations, formulas, periodic table symbols, chemical equations | QNT | Math: Quantity; Science: Knowledge |
-| 6 | **Multi-step calculation** | Execute quantitative procedures; track intermediate results | QNT | Math: Employ; Science: Use Evidence |
-| 7 | **Experimental reasoning** | Identify variables, design simple investigations, interpret results | Both | Science: Evaluate |
-| 8 | **Data interpretation** | Read graphs, tables, cross-sections, satellite imagery | Both | Science: Use Evidence |
-| 9 | **Error detection** | Identify where a derivation, measurement, or classification went wrong | QNT (primary) | All: Evaluate |
-| 10 | **Memorization for recall** | Rapid retrieval of taxonomic facts, formulas, constants | Both | Remember |
-
-**Developmental considerations (Piaget):**
-- **Grades 5–6 (Transitional / Combined Science):** Concrete-operational anchoring. Every concept starts with a physical specimen, photograph, or map. Classification precedes causation. Why Chain capped at 2 levels.
-- **Grades 7–9 (Emerging formal operational):** Students begin abstract system modeling. Physics/Chemistry introduce formal notation with mandatory CPA staging (concrete→pictorial→abstract). Why Chain 3 levels. Diagrams shift from labeling to production.
-- **Grades 10–11 (Formal operational):** Full experimental reasoning, multi-variable analysis, derivation. Astronomy applies Physics principles to orbital prediction. Biology/Chemistry support pre-medical and pre-agriculture tracks.
+**Do NOT Focus On:**
+- Pure memorization of taxonomy lists without understanding
+- Formula manipulation without physical meaning [QNT]
+- Text-only explanations without diagrams — this family is VISUAL
+- Opinion/debate without evidence
 
 ---
 
-## 4. GAME MECHANICS — SUITABILITY MATRIX
+## 4. Best Methods & Games (Filtered from UNIFIED-Buzan)
 
-### 4.1 PRIMARY MECHANICS (Always Available — Core to This Family)
+**Dual-Catalog Rule:** Phase 3: ≥1 Interactive (7 games), ≥2 Default (16 mechanics). See [[UNIFIED-Buzan §5.3]].
 
-| Mechanic | Pool | Why It Fits Tabiy Fanlar | Primary Phases | Branch |
-|---|---|---|---|---|
-| **Story Mode** | Default | **Core concept delivery.** Discovery narrative arc (Problem → Struggle → Discovery → Solution) — every concept framed as a problem scientists faced. Uzbek-context anchor (Aral Sea, local ecosystems, Silk Road climate). | Phase 2 | Both |
-| **Notebook Capture** | Default | **CRITICAL.** Students draw diagrams, derivations, force/molecular models, maps by hand and photograph. Generation Effect = 25–40% retention gain. Used for anatomy labels, chemical equations, physics diagrams, cross-sections. | Phases 3, 5, 6 | Both |
-| **Tile Match** | Default | Classification sorting (organism↔habitat, rock type↔formation), formula assembly (Phys/Chem), equation completion, ecosystem assembly. | Phase 3 | Both |
-| **Memory Palace** | Default | Anatomy (organs at Registan hotspots), ecosystem layers, geography features, solar system, periodic table groups. 2.5D isometric scene — 5 hotspots default. | Phase 5 | Both |
-| **Why Chain** | Default | **Core causal-reasoning mechanic.** Drills 2–4 levels of "why" to reach root cause. 2-level cap G5, 3-level G6–8, 4-level G9+. | Phases 3, 6 | Both |
-| **Real-Life Challenge** | Default | Transfer via first-person expert POV. Student IS the ecologist, engineer, chemist, city planner. W5H Radiant scaffold mandatory G5–6. | Phase 4 | Both |
-| **Adaptive Quiz** | Default | IRT-calibrated practice for taxonomy recall, formula fluency, classification. | Phase 3 | Both |
-| **Worked Examples** | Default | **[QNT primary]** AI presents step-by-step solved derivation; student fills in missing steps. Sweller's cognitive load reduction. | Phases 2–3 | QNT |
-| **CPA Progression** | Default (structural) | **[QNT mandatory]** Concrete → Pictorial → Abstract for every Physics/Chemistry formula. Non-negotiable for new quantitative concepts. | Phase 2 | QNT |
-| **Error Analysis Tasks** | Default | **[QNT primary]** Deliberately-wrong worked examples; student diagnoses the mistake. "What error did this student make?" | Phase 3 | QNT |
-| **Final Boss** | Default | Open reasoning G5+. Two archetypes: explain-the-phenomenon [OBS] and show-the-derivation [QNT]. Rubric-based partial credit. | Phase 6 | Both |
-| **Speed Match** | Default | Automaticity drills: species↔feature, element↔symbol, formula↔result. Frees working memory for reasoning. | Phase 1 | Both |
+**Inherits National Pride rules** from [[NETS-Library-Framework.md]] v0.6 Part 8.
 
-### 4.2 SECONDARY MECHANICS (Context-Dependent)
+### Primary Mechanics
 
-| Mechanic | When to Use | Caveats |
+#### **Story Mode** (discovery narrative)
+- **Why:** Core concept delivery through Problem → Struggle → Discovery → Solution arc
+- **Good [OBS]:** "Scientists noticed flamingos in Lake Natron survive 60°C water. Segment A: observe the lake. Segment B: examine flamingo leg adaptations. Segment C: explain alkaline tolerance."
+- **Bad:** "Photosynthesis has 6 steps. Read them." ← no narrative, no discovery
+
+#### **Notebook Capture** (hand-drawn diagrams)
+- **Why:** Generation Effect — drawing diagrams improves retention 25-40%. CRITICAL for this family.
+- **Good [OBS]:** "Draw and label the human respiratory system from memory."
+- **Good [QNT]:** "Draw the force diagram for a block on an inclined plane. Show all vectors."
+- **Bad:** "Write the definition of respiration" ← text, not diagram. Wrong mechanic.
+- **Frequency:** G5-8: 1 in 3 sessions. G9-11: 1 in 2 sessions. [QNT] Boss: every session.
+
+#### **Tile Match** (classification sorting)
+- **Why [OBS]:** Sorting organisms, rocks, biomes, organs into correct categories
+- **Why [QNT]:** Formula assembly, equation completion (inherited from Aniq Fanlar)
+- **Good [OBS]:** "Match each organism to its kingdom: Ko'rshapalak → Sutemizuvchi, Qizilbaliq → Baliq"
+- **Good [QNT]:** "Match each element symbol to its name: Fe → Temir, Na → Natriy"
+- **Bad:** "Match the word 'biology' to its definition" ← vocabulary, not classification
+
+#### **Why Chain** (causal reasoning)
+- **Why:** THE core reasoning mechanic for natural sciences. Drills "why" to root cause.
+- **Good:** "Why do leaves change color in autumn?" → "What happens to chlorophyll?" → "Why does chlorophyll break down?"
+- **Bad:** "What color do leaves turn?" ← recall, not causal reasoning
+- **Cap:** 2 levels G5, 3 levels G6-8, 4 levels G9+
+
+#### **Memory Palace** (spatial classification)
+- **Why:** Anatomy, ecosystem layers, periodic table groups, solar system — naturally spatial
+- **Good:** "Place the 5 human senses at Registan Square locations. Eyes at the minaret (they look far)."
+- **Bad:** "Memorize these 10 terms" ← no spatial anchor, use flashcards instead
+
+#### **[QNT] Worked Examples + Error Analysis**
+- **Why:** Physics/Chemistry inherit these from their Aniq Fanlar origins
+- **Good Worked Example:** "Step 1: F = ma. Step 2: F = 2kg × ___. Step 3: F = ___ N."
+- **Good Error Analysis:** "A student balanced H₂ + O₂ → H₂O as 1:1:1. Find the error."
+- **Bad:** "Solve F = ma for 10 different values" ← drill without scaffolding
+
+### Secondary Mechanics
+
+| Mechanic | When to Use | Branch |
 |---|---|---|
-| **Link System** | Sequential processes: water cycle, photosynthesis steps, mitosis stages, reaction chains. | Best with SMASHIN' SCOPE 6+/12 imagery gate. |
-| **Puzzle Lock (Sliding Tile)** | Procedural ordering: lab protocols, process steps, map assembly, force-diagram reconstruction. | Higher render cost — skip on low-end devices. |
-| **Reaction Chain** | Fast classification (Living/Non-living, acid/base, biome categories, organism taxa). | Good for G5–G7 fluency building. |
-| **Peer Teaching** | G8+. Student explains photosynthesis/Ohm's law/equilibrium to a fictional classmate. | Tier 2 AI evaluation. Forces deep processing. |
-| **Memory Sprint** | Phase 1 warm-up from prior chapters. Link Chain format for sequential science. | Previous chapters only. |
-| **Mystery Box** | Cross-chapter retention. Student must recognize WHICH concept/tool applies. | Good for when students confuse similar methods (e.g., mitosis vs meiosis). |
-| **Tic Tac Toe vs AI** | Recall-heavy practice where strategy amplifies motivation. Periodic table recall, biome identification. | Best for fact-dense content. |
-| **Connect Four vs AI** | Multi-step planning (balancing reactions, solving kinematics). | G7+ only. |
-| **Sentence Fill (Cloze)** | Rarely — only for terminology fill-in in a definition or procedure caption. | Not for causal problems. |
+| Adaptive Quiz | Taxonomy recall, formula fluency drills | Both |
+| Speed Match | Species↔feature, element↔symbol automaticity | Both |
+| Link System (Phase 5) | Sequential processes: water cycle, photosynthesis, reaction chains | Both |
+| Puzzle Lock | Lab protocol ordering, process steps, map assembly | Both |
+| Reaction Chain | Fast classification (living/nonliving, acid/base) | OBS primary |
+| Peer Teaching | G8+: explain photosynthesis/Ohm's law to a classmate | Both |
+| Mystery Box | Cross-chapter: which concept applies? (mitosis vs meiosis) | Both |
+| Connect Four vs AI | Multi-step planning (balancing reactions, kinematics) | QNT, G7+ |
+| Codebreaker | Periodic table recall, formula decoding | QNT |
 
-### 4.3 BANNED or NOT RECOMMENDED
+### Interactive Catalog Picks (≥1 required per session)
 
-| Mechanic | Status | Reason |
+| Game | Why It Fits | Best For |
 |---|---|---|
-| **Word Ladder Climb** | Banned | Purely linguistic. No natural fit for any natural-science subject. |
-| **Memory Match Blitz** | Banned | Pure visual memory without knowledge gate. Fails "every mechanic must carry cognitive load" rule. |
-| **Movement Breaks** | Not Recommended G5+ | Developmentally G1–4 only. Tabiy Fanlar G5+ requires sustained cognitive effort. |
-| **Speed Reading Mechanics** | Not Recommended | Natural-science problems require careful, deliberate reading. Speed reading produces careless errors in both branches. |
-| **Reflection Journal** | Phase 7 only | Metacognitive closure, not a practice mechanic. |
-| **Escape Room / Territory Conquest** | Big Boss / Mythical Boss only | Too complex for standard sessions. |
+| **Puzzle Lock** | Spatial reasoning — diagram/map reconstruction | Geography maps, biological process ordering |
+| **Reaction Chain** | Sequential science — each correct answer lights the next node | Photosynthesis steps, food chains, reaction mechanisms |
+| **Connect Four vs AI** | Multi-step planning under pressure | Balancing equations, kinematics sequences [QNT] |
+| **Codebreaker** | Deductive reasoning + symbol recall | Periodic table, formula syntax [QNT] |
+| **Memory Match Blitz** | Paired recall under time pressure | Organism↔classification, element↔symbol |
+| **Tic Tac Toe vs AI** | Fast recall with strategic stakes | Taxonomy, formula recall drills |
 
----
+### Phase 5 Buzan Alternatives
 
-## 5. BUZAN TECHNIQUES USED IN TABIY FANLAR
+Select by content structure, not by subject:
 
-### 5.1 Core Buzan Techniques
+| Content Type | Technique | Example |
+|---|---|---|
+| Hierarchical (taxonomy, organ systems, periodic groups) | Radiant Summary | Cell → organelles branching |
+| Sequential (water cycle, photosynthesis, reactions) | Link System | Vivid story chain of mitosis stages |
+| Spatial (anatomy, biomes, solar system, force diagrams) | Memory Palace | Organs at Registan Square hotspots |
+| Discrete facts (constants, atomic numbers, periods) | Peg System | Number-shape pegs for geological periods |
 
-| Technique | NETS Implementation | Where in Session | Tabiy Fanlar Application |
-|---|---|---|---|
-| **BOST (Buzan Organic Study Technique)** | Browse → Prime → Overview → Inview → Review | Phases 0-A → 0-B → 2–3 → 5+7 | Student scans chapter (0-A), primes prior knowledge ("what do you already know about ecosystems / circuits?"), overviews key cards (0-B), engages (2–3), reviews (5+7). |
-| **MIG (Recall Curve)** | Primacy peak P1, Recency peak P5+7. Sag in P3. | Phase 1 = Primacy, Phase 5 = Recency | Prior-chapter prerequisites (e.g., cell structure before respiration, kinematics before dynamics) placed in P1. New concept re-locked in P5 + surfaced again in P7. |
-| **Dual Coding** | **MANDATORY.** Every concept presented with visual + verbal simultaneously. Text-only banned. | Phases 2, 3, 5 | Every anatomy term paired with diagram; every Physics formula paired with force diagram; every chemical reaction paired with molecular model; every biome with map + photo. |
-| **Radiant Thinking** | Concepts branch from a central idea, not linear lists. | Phases 2, 5 | Systems taught radiantly: "Cell" central → organelles branch out → each organelle's function sub-branches. "Circuit" central → components → behavior. |
-| **80/20 Keyword Tagging** | 3–8 keywords per narrative segment carry ~80% of meaning. | Phases 2, 5 | Keywords feed Phase 5 Radiant Summary, Phase 1 Memory Sprint items, Phase 0-B Flash Cards. |
-| **Link System** | Mnemonic chain through vivid association. | Phases 1, 5 | **IDEAL for sequential science:** water cycle, photosynthesis, food chains, reaction mechanisms, mitosis stages. |
-| **Memory Palace (Loci)** | 5 concepts placed at Registan Square hotspots. | Phase 5 | **IDEAL for spatial science:** organ systems, ecosystem layers, biome features, solar system, periodic table groups, force-diagram layouts. |
-| **Peg System** | Number-shape pegs for 5 discrete facts. | Phase 5 | Astronomical constants, atomic numbers, classification orders, geological periods. |
-| **Primacy–Recency Effect** | Memory strongest at session start and end. | Phases 1, 5, 7 | Most-forgotten prior-knowledge items (formulas, taxa) placed in P1. New concept re-tested in P5 + P7. |
-| **Von Restorff Effect** | Distinctive items remembered better. | Phases 3, 6 | Middle Game Break tagged as "outstanding anchor" for the session. Boss has distinctive visual theme. |
-| **Cortical Diversity** | Both left-brain (logical) and right-brain (visual/spatial) engaged per session. | Phase 3 | Mix must include ≥1 spatial/visual mechanic (Memory Palace, Notebook Capture, Puzzle Lock) AND ≥1 logical mechanic (Why Chain, Adaptive Quiz). |
-| **W5H Radiant Problem Solving** | Who/What/Where/When/Why/How branches radiating from a problem. | Phase 4 | **MANDATORY G5–6** (4-of-6 branches minimum); default ON for G7–8. Forces structured decomposition before writing expert response. |
-| **TEFCAS Failure Language** | Trial → Event → Feedback → Check → Adjust → Success. "Hali emas!" ("Not yet") replaces "Wrong." | Phases 3, 6, 7 | All Boss failures route through Socratic tutor: Check ("where is the misunderstanding?") → Adjust ("what changes if we approach this differently?") → Success. Never "wrong," always "feedback." |
-| **SMASHIN' SCOPE Quality Gate** | Every mnemonic scored 6+/12 on vivid imagery criteria. | Phase 5 | Non-negotiable for Memory Palace, Link System, Peg System exercises. Content pipeline blocks deployment below 6/12. |
-| **Buzan Review Intervals** | 10 min → 24 h → 1 week → 1 month. | Phases 1, 5 | Spaced-repetition floor: no concept can skip review if it hasn't been seen within the Buzan interval, even if SM-2 says mastered. Critical because concept-slippage in Biology/Physics cascades into cross-topic failure. |
+**Full spec:** [[UNIFIED-Buzan §5.5]], [[NETS-Library-Framework.md]] v0.6 Part 7
 
-### 5.2 Buzan Techniques NOT Applied
+### Games to AVOID
 
-| Technique | Why Not Applied |
+| Mechanic | Reason |
 |---|---|
-| **Speed Reading** | Natural-science problems require careful, deliberate reading (especially multi-step Physics/Chemistry and causal-chain questions in Biology). Deferred to a future Reading Fluency Module. |
-| **Mind Mapping as primary practice** | Mind maps are excellent for overview but low practice density. Used only in Phase 5 as Radiant Summary; replaced by Notebook Capture for G8+ where hand-drawn diagrams carry more weight. |
-| **Major System (phonetic digits)** | G10–11 only, and only for dense-memorization tasks (astronomy constants, atomic weights). Optional extension, not a default. |
-
-### 5.3 Buzan Technique Frequency
-
-| Phase | Buzan Techniques | Frequency |
-|---|---|---|
-| Phase 0-A (Theme Preview) | BOST Browse + Prime | 100% |
-| Phase 0-B (Flash Cards) | BOST Overview | 100% |
-| Phase 1 (Memory Sprint) | Primacy + Buzan Review Intervals + Link System (occasional) | 100% |
-| Phase 2 (Story Mode) | Radiant Thinking + Dual Coding + 80/20 Keywords | 100% |
-| Phase 3 (Game Breaks) | Cortical Diversity + Von Restorff + TEFCAS Feedback | 100% |
-| Phase 4 (Real-Life Challenge) | W5H Radiant (mandatory G5–6, default G7–8) + Dual Coding | 100% |
-| Phase 5 (Consolidation) | Memory Palace / Link System / Peg System (selected by content structure) + SMASHIN' SCOPE gate + 80/20 + Recency | 100% |
-| Phase 6 (Final Boss) | Von Restorff + Recency + TEFCAS failure language | 100% |
-| Phase 7 (Reflection) | BOST Review + TEFCAS Adjust | 100% |
-
-**Phase 5 technique selection rule** (family-specific): choose the mnemonic technique by content structure, not by subject.
-- **Hierarchical** (taxonomy, organ systems, periodic groups) → Radiant Summary
-- **Sequential** (water cycle, photosynthesis, reaction mechanisms, mitosis) → Link System
-- **Spatial** (anatomy, biomes, solar system, force diagrams) → Memory Palace
-- **Discrete facts** (constants, atomic numbers, geological periods) → Peg System
+| Word Ladder Climb | Purely linguistic — no natural science fit |
+| Listening/Dictation | Language family specific |
+| Creative Lab | Formative family (Tarbiya/Sanat) |
+| Movement Breaks | Mandatory G1-4, optional G5-6, not recommended G7+ |
 
 ---
 
-## 6. BOSS FORMAT RULES FOR TABIY FANLAR
+## 5. Boss Format for Tabiy Fanlar
 
-| Parameter | Grades 5–6 | Grades 7–8 | Grades 9–11 |
+**Don't redefine — reference:** Full Boss spec at [[UNIFIED-Buzan §5.6]].
+
+**Two Boss archetypes for this family:**
+- **[OBS] Explain-the-phenomenon:** "Why does X happen? Trace the causal chain."
+- **[QNT] Show-the-derivation:** "Solve this. Show all steps."
+
+| Parameter | G5-6 | G7-8 | G9-11 |
 |---|---|---|---|
-| **Question format** | Short answer + diagram labeling via Notebook Capture (0% MC for G5+) | Multi-part explanation + causal chain (0% MC) | Open reasoning + extended response + derivation [QNT] / evidence-based argument [OBS] (0% MC) |
-| **Boss archetype [OBS]** | Explain-the-phenomenon | Identify-the-causal-chain | Predict-from-principles / evaluate-competing-explanations |
-| **Boss archetype [QNT]** | N/A (Phys/Chem start G7) | Show-the-derivation (multi-step solve) | Full derivation + error analysis + real-world application |
-| **Notebook Capture** | 1 in 3 Boss sessions (hand-drawn diagrams) | 1 in 2 Boss sessions | Every Boss session [QNT]; 1 in 2 [OBS] |
-| **Partial credit** | Yes — component-level rubric | Yes — rubric with causal-chain milestones | Yes — rubric with derivation steps [QNT] or evidence-quality bands [OBS] |
-| **Socratic tutoring on failure** | Tier 3 (Premium) — TEFCAS Check → Adjust → Success | Tier 3 — routes to specific Story Mode segment for review | Tier 3 — no answer given; redirecting questions only |
-| **Damage tiers** | Easy −10 HP (PISA L3), Medium −20 HP (PISA L4), Hard −30 HP (PISA L5–6) | Same | Same |
-| **Question distribution** | 40% Easy, 40% Medium, 20% Hard | Same | Same |
-| **Boss HP** | 100 | 100 | 150 |
-| **Failure language** | "Hali emas!" (Not yet) — never "Wrong" / "Noto'g'ri" | Same | Same |
+| Format [OBS] | Short answer + diagram labeling | Multi-part causal explanation | Predict-from-principles / evaluate competing explanations |
+| Format [QNT] | N/A (starts G7) | Multi-step derivation | Full derivation + error analysis + application |
+| Notebook Capture | 1 in 3 Boss sessions | 1 in 2 | Every session [QNT]; 1 in 2 [OBS] |
+| Partial credit | Component-level rubric | Causal-chain milestones | Derivation steps [QNT] / evidence-quality bands [OBS] |
 
-**Tabiy Fanlar Boss Design Principle:** Every Boss question must require the student to produce **reasoning**, not recall. For observational branches: "why" and "how" dominate over "what." For quantitative branches: the student must SHOW THEIR WORK — typed step-by-step derivation or photographed hand-work via Notebook Capture. A Boss question answerable by pattern-matching a memorized formula or term is a failed Boss question.
+- **HP:** G5-8: 100 | G9-11: 150
+- **Damage:** Easy -10 | Medium -20 | Hard -30. Distribution: 40/40/20.
+- **Stars:** 1★ / 2★ / 3★ follow universal Boss rules
+- **Hints:** -10 HP. TEFCAS failure framing: "Hali emas!"
 
-**Example stems:**
-- **[OBS Biology]** "Explain why leaves change color in autumn. What is the underlying biological process?"
-- **[OBS Ecology]** "If wolves disappear from a forest, predict what happens to the deer population, to the vegetation, and explain the cascade."
-- **[OBS Geography]** "Using Earth's axial tilt, predict what season it will be in Argentina in July. Justify your reasoning."
-- **[OBS Astronomy]** "Predict why Mars appears brighter in certain months, using orbital principles."
-- **[QNT Physics]** "A 2 kg block slides down a 30° frictionless incline. Derive its acceleration and show all steps."
-- **[QNT Chemistry]** "Balance the combustion reaction for propane. Then calculate the mass of CO₂ produced from 10 g of propane. Show stoichiometric reasoning."
+**Good Boss [OBS]:** "If wolves disappear from a forest, predict what happens to deer population, then to vegetation. Explain the cascade."
+
+**Good Boss [QNT]:** "A 2kg block slides down a 30° frictionless incline. Derive its acceleration. Show all steps."
+
+**Bad Boss:** "What is photosynthesis?" ← Bloom's L1 recall, not reasoning.
 
 ---
 
-## 7. PHASE TIME WEIGHT OVERRIDES
+## 6. Story Mode & Real-Life Challenge — Narrative Adaptation
 
-Standard 30–45 min session is weighted differently for Tabiy Fanlar, with branch-specific adjustments.
+### Story Mode (Phase 2)
+- Must follow discovery narrative: Problem → Struggle → Discovery → Solution
+- **[OBS]:** narrative driven by observation and mystery ("Scientists noticed something strange...")
+- **[QNT]:** narrative driven by a problem needing calculation ("The bridge keeps failing...")
+- Dual Coding mandatory — every segment has visual + verbal
+- If textbook is dry, make it alive: turn a flat process description into a discovery story
 
-| Phase | Standard | [OBS] Duration | [QNT] Duration | Rationale |
-|---|---|---|---|---|
-| Phase 0-A (Theme Preview) | 2–3 min | 2–3 min | 2–3 min | Unchanged. |
-| Phase 0-B (Flash Cards) | 1–2 min | 1–2 min | 1–2 min | Unchanged. |
-| Phase 1 (Memory Sprint) | 2 min | 2 min | 2 min | Unchanged. |
-| Phase 2 (Story Mode) | 5–7 min | **7–9 min** (+2) | 5–7 min | [OBS] Discovery-narrative arc + Uzbek-context anchoring adds time. [QNT] inherits Aniq-style duration. |
-| Phase 3 (Game Breaks) | 6–9 min | 6–9 min | **8–10 min** (+2) | [QNT] Extra practice density + Notebook Capture / Error Analysis. |
-| Phase 4 (Real-Life Challenge) | 3–5 min | 3–5 min | 3–5 min | W5H scaffold built into standard duration. |
-| Phase 5 (Consolidation) | 2–3 min | **3–4 min** (+1) | **3–4 min** (+1) | Mnemonic technique selection by content structure + SMASHIN' SCOPE gate. |
-| Phase 6 (Final Boss) | 5–10 min | **6–11 min** (+1) | **7–12 min** (+2) | Open reasoning + Notebook Capture hand-work takes longer than MC. [QNT] derivation is longest. |
-| Phase 7 (Reflection) | 2–3 min | 2–3 min | 2–3 min | Unchanged. |
+**Good [OBS G7]:** "Marine biologists in the Aral Sea region noticed fish populations collapsing. Segment A: observe the data. Segment B: hypothesize causes. Segment C: test with evidence."
 
----
+**Good [QNT G8]:** "An engineer needs to calculate how much current flows through a circuit to avoid overheating. Segment A: examine the circuit (concrete). Segment B: draw the diagram (pictorial). Segment C: apply Ohm's law (abstract)."
 
-## 8. NATIONAL PRIDE APPLICATION
+**Bad:** "Read about circuits. Answer 5 questions." ← no narrative, no CPA
 
-National Pride injection rules (5-second skip-lock on Phase 0-A quote, 20% all-task injection, Phase 6 "professional certification" framing, dark-mode default on pride screens) are inherited from Layer 0 (UNIFIED-Buzan). This section only lists **family-specific applications**: which Wise Status roles and which Uzbek-context anchors are canonical for Tabiy Fanlar.
+### Real-Life Challenge (Phase 4)
+- Student IS the scientist/engineer/analyst
+- Uzbek cultural context (Aral Sea, Zarafshan river, IT Park labs, Tashkent Botanical Garden)
 
-### 8.1 Wise Status Roles (Phase 4, ~30% of tasks)
+**Good [OBS G5]:** "You are a field researcher at Tashkent Botanical Garden. 3 plants are wilting. Examine the soil, light, and water data. Diagnose the problem."
 
-| Subject | Professional Title Examples |
-|---|---|
-| **Biology** | Botanika mutaxassisi (Plant Scientist), Ekologiya direktori (Ecology Director), Genetik tahlilchi (Genetic Analyst), Tibbiyot tadqiqotchisi (Medical Researcher) |
-| **Physics** | Bosh muhandis (Chief Engineer), Energetika tahlilchi (Energy Analyst), Eksperimental fizik (Experimental Physicist), Yadro fizikasi mutaxassisi (Nuclear Physics Specialist) |
-| **Chemistry** | Laboratoriya rahbari (Laboratory Director), Sintez kimyogar (Synthesis Chemist), Sifat nazorati tahlilchi (Quality Control Analyst), Farmatsevtika tadqiqotchisi (Pharmaceutical Researcher) |
-| **Geography** | Shahar rejalashtiruvchi (Urban Planner), Kartografiya mutaxassisi (Cartography Specialist), Iqlim tahlilchi (Climate Analyst), GIS mutaxassisi (GIS Specialist) |
-| **Combined Science** | Tabiatshunos (Natural Scientist), Dala tadqiqotchisi (Field Researcher) |
-| **Astronomy** | Rasadxona direktori (Observatory Director), Orbital hisob-kitob mutaxassisi (Orbital Mechanics Specialist) |
+**Good [QNT G9]:** "You are an energy analyst at Navoi Solar Plant. Calculate the panel efficiency given these measurements. Recommend improvements."
 
-### 8.2 Uzbek-Context Anchors (55% national / 45% global rolling balance)
+**Bad:** "Calculate the resistance of a 5-ohm resistor" ← no scenario, no role
 
-**National (55%):** Aral Sea desiccation, Zarafshan river ecosystem, Tien Shan geology, Afrosiyob high-speed rail (materials science), IT-Park research labs, Samarkand Registan (orbital scale model, architecture-physics), Tashkent Botanical Garden, Uzbek cotton genetics, Silk Road climate/trade routes, Ulugh Beg observatory (astronomy heritage), Mirzo Ulugbek Madrasa.
-
-**Global (45%):** CERN, NASA/ESA, Darwin's Galápagos, Mendeleev (Russian Empire, claimable cross-reference), Marie Curie, Jane Goodall, Rosalind Franklin, Great Barrier Reef, Amazon rainforest, Apollo missions.
-
-### 8.3 Tagged Quote Examples (Phase 0-A opening quote pool)
-
-Quotes are pulled from `quotes_database.json` with `subject_tag: "tabiy_fanlar"` or subject-specific tags. Sample seeding:
-
-- *Abu Rayhon Beruniy* — on observation and measurement (national, Biology/Astronomy)
-- *Mirzo Ulugbek* — on celestial observation (national, Astronomy)
-- *Charles Darwin* — on natural selection (global, Biology)
-- *Dmitri Mendeleev* — on periodic patterns (global, Chemistry)
-- *Abu Ali ibn Sino (Avicenna)* — on medicine and observation (national, Biology/Chemistry)
-- *Marie Curie* — on experimental persistence (global, Chemistry/Physics)
-
-### 8.4 Phase 6 Certification Framing (inherited from Layer 0)
-
-Boss entry line: *"Bu — sizning professional sertifikatingiz. Global standartga mos keling."*
-Boss victory line: *"Sertifikatsiya muvaffaqiyatli! Siz [Role] sifatida tasdiqlandingiz."*
-Role is filled from the §8.1 table matching the current subject.
+### Wise Status Roles (Phase 4, ~30% of tasks)
+- Biology: Botanika mutaxassisi, Ekologiya direktori, Genetik tahlilchi
+- Physics: Bosh muhandis, Energetika tahlilchi, Eksperimental fizik
+- Chemistry: Laboratoriya rahbari, Sintez kimyogar, Sifat nazorati tahlilchi
+- Geography: Shahar rejalashtiruvchi, Kartografiya mutaxassisi, Iqlim tahlilchi
+- Astronomy: Rasadxona direktori, Orbital hisob-kitob mutaxassisi
 
 ---
 
-**End of Tabiy Fanlar Subject Family Framework v1.0**
-*This document is the Layer 1 authoritative framework. All Tabiy Fanlar Layer 2 subject frameworks (Biology, Physics, Chemistry, Geography, Combined Science, Astronomy) inherit from this document and may only deviate with a formal ADR (Architecture Decision Record) and founder approval. Family membership is locked per Library Framework v0.6 — reclassification of any subject into or out of Tabiy Fanlar requires an ADR.*
+## Technical Rules
+1. **Inheritance:** Tabiy Fanlar inherits all session rules from [[UNIFIED-Buzan §4-5]]. Phase timing follows standard unless subject-specific framework overrides.
+2. **Dual-Catalog:** Phase 3: ≥1 Interactive, ≥2 Default ([[UNIFIED-Buzan §5.3]]).
+3. **National Pride:** Inherits from [[NETS-Library-Framework.md]] v0.6 Part 8. Uzbek-context anchors: Aral Sea, Zarafshan, Tien Shan, Afrosiyob rail, Ulugh Beg observatory, Tashkent Botanical Garden.
+4. **TEFCAS:** All failure language uses "Hali emas!" framing ([[UNIFIED-Buzan §1.4]]).
+5. **Buzan techniques:** Inherited from [[UNIFIED-Buzan §1.4]]. Phase 5 selection by content structure (hierarchical → Radiant, sequential → Link, spatial → Palace, discrete → Peg).
+
+---
+
+*This document is a filter/adapter between the core specs and the content producer. It REFERENCES rules from parent docs, never RE-DEFINES them. For full specifications, see UNIFIED-Buzan and Library Framework v0.6.*
