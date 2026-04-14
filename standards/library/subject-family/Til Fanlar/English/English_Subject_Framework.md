@@ -50,7 +50,7 @@ English in NETS is a **foreign language**, not a native or heritage language. Th
 
 ### G5-6 (Foundation)
 
-- Maximum **5 new vocabulary items** per session.
+- Maximum **10 new vocabulary items** per session.
 - Every new word gets: **image + Uzbek translation + audio pronunciation + example sentence**.
 - Grammar is taught through patterns in context, never as isolated rule-first explanation.
 - Reading passages: **50-80 words max**.
@@ -70,7 +70,7 @@ English in NETS is a **foreign language**, not a native or heritage language. Th
 
 ### G7-9 (Development)
 
-- Target **8-12 new vocabulary items** per session.
+- Target **10+ new vocabulary items** per session.
 - Grammar can include: past continuous, conditionals (1st/2nd), passive voice, relative clauses.
 - Reading passages: **100-200 words**.
 - Listening: **natural speed**, usually **45-60 seconds**. Limited background noise can appear by G9.
@@ -122,7 +122,7 @@ English inherits the Til Fanlari mechanic set, then narrows it further.
 
 | Mechanic | G5-6 | G7-9 | G10-11 |
 |---|---|---|---|
-| **Spaced Flashcards** | 5 words, image + UZ translation | 10 words, English definition + example | 15 words, academic set, English-only |
+| **Spaced Flashcards** | 10 words, image + UZ translation | 10+ words, English definition + example | 15+ words, academic set, English-only |
 | **Sentence Fill** | Word bank provided, 1 blank per sentence | 2-3 blanks, no word bank by G9 | Full cloze paragraph, no aids |
 | **Listening** | 30 sec, slow, clear | 60 sec, natural speed | 2-3 min, multiple speakers |
 | **Dialogue** | Scripted response, choose/complete | Prompted response, student writes own answer | Free response, minimal scaffolding |
