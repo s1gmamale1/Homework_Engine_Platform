@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Subject Family Framework: Ijtimoiy Fanlari</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0f; --surface: #111118; --card: #16161f; --border: #2a2a38;
+  --text: #e0e0e8; --text-dim: #7a7a8e;
+  --cyan: #00d4ff; --cyan-glow: #00d4ff44; --cyan-soft: #00d4ff11;
+  --accent: #00aacc; --accent2: #0088aa;
+  --green: #22cc88; --green-glow: #22cc8844;
+  --gold: #ffaa00; --gold-glow: #ffaa0044;
+  --purple: #aa66ff; --purple-glow: #aa66ff44;
+  --red: #ff4444;
+}
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 0; }
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.08) 2px, rgba(0,0,0,.08) 4px);
+}
+.header { background: linear-gradient(135deg, #0a0d14, #1a0d0a); border-bottom: 1px solid var(--gold-glow); padding: 3rem 1.5rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+.header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: var(--gold); box-shadow: 0 0 20px var(--gold-glow), 0 0 60px var(--gold-glow); }
+.header h1 { font-size: 2.4rem; color: #fff; text-shadow: 0 0 12px var(--gold-glow), 0 0 40px var(--gold-glow); margin-bottom: .3rem; letter-spacing: 0.05rem; }
+.header .subtitle { opacity: .7; font-size: 1rem; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+
+.meta-bar { background: var(--surface); border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 2rem; padding: 1rem 1.5rem; font-size: 0.9rem; color: var(--text-dim); }
+.meta-bar strong { color: var(--gold); }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+
+.section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 2rem; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+.section-title { background: #1a1a26; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 1px solid var(--border); }
+.section-title h2 { font-size: 1.3rem; color: #fff; text-shadow: 0 0 8px var(--cyan-glow); }
+.icon-box { font-size: 1.5rem; }
+
+.content { padding: 1.5rem; }
+.content p { margin-bottom: 1rem; color: #ccc; }
+.content h3 { color: var(--cyan); margin: 1.5rem 0 0.8rem; border-left: 3px solid var(--cyan); padding-left: 10px; }
+
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+th { background: #1a1a26; color: var(--gold); text-align: left; padding: 12px; border-bottom: 2px solid var(--border); }
+td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:hover { background: #1f1f2e; }
+
+.badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-right: 5px; }
+.badge-gold { background: var(--gold-glow); color: var(--gold); border: 1px solid var(--gold); }
+.badge-cyan { background: var(--cyan-soft); color: var(--cyan); border: 1px solid var(--cyan); }
+.badge-green { background: var(--green-glow); color: var(--green); border: 1px solid var(--green); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; transition: transform 0.3s, border-color 0.3s; }
+.card:hover { transform: translateY(-5px); border-color: var(--gold); }
+.card h4 { color: var(--gold); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+
+.heritage-box { background: linear-gradient(to right, #1a0d0a, #16161f); border-left: 4px solid var(--gold); padding: 1.5rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+.heritage-title { color: var(--gold); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+
+.buzan-box { background: linear-gradient(to right, #0d1a1a, #16161f); border-left: 4px solid var(--cyan); padding: 1.5rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+.buzan-title { color: var(--cyan); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+
+.phase-step { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+.phase-num { width: 30px; height: 30px; background: var(--cyan); color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; }
+.phase-content h4 { color: #fff; margin-bottom: 0.3rem; }
+.phase-content p { font-size: 0.85rem; }
+
+footer { text-align: center; padding: 3rem; color: var(--text-dim); border-top: 1px solid var(--border); font-size: 0.85rem; }
+
+.highlight { color: var(--gold); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Ijtimoiy Fanlari Master Framework</h1>
+  <div class="subtitle">Milliy G'urur va Taraqqiyot — v1.0</div>
+</div>
+
+<div class="meta-bar">
+  <span>Status: <strong>Implementation Ready</strong></span>
+  <span>Target: <strong>Grades 5-11</strong></span>
+  <span>Subjects: <strong>History, Law, Economics</strong></span>
+  <span>Balance: <strong>55% National / 45% Global</strong></span>
+</div>
+
+<div class="container">
+
+  <!-- Section 1: Identity -->
+  <div class="section">
+    <div class="section-title">
+      <div class="icon-box">🏛️</div>
+      <h2>Mission & Identity</h2>
+    </div>
+    <div class="content">
+      <p>The <span class="highlight">Ijtimoiy Fanlari</span> family teaches how human systems work — institutions, events, laws, economies, and the reasoning required to navigate them.</p>
+      <div class="grid">
+        <div class="card">
+          <h4>⏳ Tarix (History)</h4>
+          <p>Ancient, World, and Uzbekistan History (G5-11). Focus on chronological and causal modeling.</p>
+        </div>
+        <div class="card">
+          <h4>⚖️ Huquq (Law)</h4>
+          <p>Civil rights, Constitution, and Jurisprudence (G8-11). Focus on legal reasoning and constitutional analysis.</p>
+        </div>
+        <div class="card">
+          <h4>📊 Iqtisodiyot (Economics)</h4>
+          <p>Micro/Macroeconomics and Financial Literacy (G8-11). Focus on economic modeling and resource management.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: National Pride -->
+  <div class="section" style="border-color: var(--gold);">
+    <div class="section-title" style="background: #261a1a;">
+      <div class="icon-box">⭐</div>
+      <h2 style="color: var(--gold);">National Pride — Cross-Family Inheritance</h2>
+    </div>
+    <div class="content">
+      <p>All sessions MUST adhere to the non-negotiable <span class="highlight">Milliy G'urur va Taraqqiyot</span> standards:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Rule</th>
+            <th>Implementation Contract</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-gold">55/45 Balance</span></td>
+            <td>55% of scenarios must anchor in <span class="highlight">Uzbekistan achievements</span> (Temurids, Jadids, Modern Era).</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-gold">20% Injection</span></td>
+            <td>Every 5th task must have national pride framing to spark motivation.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-gold">Gate Quote</span></td>
+            <td>Phase 0-A starts with a wisdom quote (Hikmatlar) with a 5-second lock.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-gold">Wise Status</span></td>
+            <td>30% of Phase 4 tasks assign titles like <strong>Tarixiy Tahlilchi</strong> or <strong>Bosh Qonunshunos</strong>.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-gold">3rd Renaissance</span></td>
+            <td>All sessions conclude with a closing hook targeting the "Uchinchi Renessans" vision.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="heritage-box">
+        <div class="heritage-title">📜 Sample Heritage Hook</div>
+        <p style="font-style: italic; color: var(--gold);">"Amir Temur 'Tuzuklar'ida adolatni davlatning ustuni deb bilgan. Sizning bugungi huquqiy tahlilingiz ushbu poydevorni mustahkamlaydi."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Levels -->
+  <div class="section">
+    <div class="section-title">
+      <div class="icon-box">📈</div>
+      <h2>Level Progression & Path System</h2>
+    </div>
+    <div class="content">
+      <table>
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Label</th>
+            <th>Cognitive Demand</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-cyan">L1</span></td>
+            <td>Standard</td>
+            <td><strong>Textbook Canon:</strong> Event recall, basic cause identification.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-green">L2</span></td>
+            <td>Chuqurroq</td>
+            <td><strong>Lyceum Delta:</strong> Source criticism, 2023 Constitution analysis.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-gold">L3</span></td>
+            <td>Ustoz yo'li</td>
+            <td><strong>DTM Prep:</strong> Multi-cause reasoning, economic modeling.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-purple">L4</span></td>
+            <td>Chempion</td>
+            <td><strong>Olympiad:</strong> Legal brief writing, macroeconomic policy analysis.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Section 4: 7-Phase Architecture -->
+  <div class="section">
+    <div class="section-title">
+      <div class="icon-box">⚙️</div>
+      <h2>Unified 7-Phase Session Architecture</h2>
+    </div>
+    <div class="content">
+      <div class="phase-step">
+        <div class="phase-num">0</div>
+        <div class="phase-content">
+          <h4>Pre-Session (Gate & Preview)</h4>
+          <p>Gate Quote (5s lock) + 5-min BOST Mind Map preview of the era or law.</p>
+        </div>
+      </div>
+      <div class="phase-step">
+        <div class="phase-num">1</div>
+        <div class="phase-content">
+          <h4>Memory Sprint (Recall)</h4>
+          <p>Rapid identification of dates, names, and legal terms via Link System chains.</p>
+        </div>
+      </div>
+      <div class="phase-step">
+        <div class="phase-num">2</div>
+        <div class="phase-content">
+          <h4>Story Mode (Context)</h4>
+          <p>Facts transformed into human narratives (e.g., "A day in the life of a Silk Road merchant").</p>
+        </div>
+      </div>
+      <div class="phase-step">
+        <div class="phase-num">3</div>
+        <div class="phase-content">
+          <h4>Game Breaks (Flow)</h4>
+          <p>Interactive mechanics like <strong>Timeline Sort</strong> and <strong>Territory Conquest</strong>.</p>
+        </div>
+      </div>
+      <div class="phase-step">
+        <div class="phase-num">4</div>
+        <div class="phase-content">
+          <h4>Challenge (Wise Status)</h4>
+          <p>Peak cognitive load. The student acts as a <strong>Strategic Economist</strong> or <strong>Law Analyst</strong>.</p>
+        </div>
+      </div>
+      <div class="phase-step">
+        <div class="phase-num">5</div>
+        <div class="phase-content">
+          <h4>Mnemonic Lock (Consolidation)</h4>
+          <p>Buzan <strong>Memory Palace</strong> integration using the Registan or Ark Fortress.</p>
+        </div>
+      </div>
+      <div class="phase-step">
+        <div class="phase-num">6</div>
+        <div class="phase-content">
+          <h4>Final Boss (Assessment)</h4>
+          <p><strong>Case Reasoning Task:</strong> Analyze a legal dispute or economic shift. No MCQs.</p>
+        </div>
+      </div>
+      <div class="phase-step" style="margin-bottom:0">
+        <div class="phase-num">7</div>
+        <div class="phase-content">
+          <h4>Reflection (Exit)</h4>
+          <p>Metacognitive synthesis: "Which perspective was hardest to understand today?"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5: Buzan Science -->
+  <div class="section" style="border-color: var(--cyan);">
+    <div class="section-title" style="background: #1a2626;">
+      <div class="icon-box">🧠</div>
+      <h2 style="color: var(--cyan);">Buzan Cognitive Science Integration</h2>
+    </div>
+    <div class="content">
+      <div class="buzan-box">
+        <div class="buzan-title">🔄 TEFCAS Learning Loop</div>
+        <p>Failure is reframed as <span class="highlight">Feedback</span>. AI prompts use: <strong>"Hali emas! Let's adjust your timeline branch."</strong></p>
+      </div>
+      <div class="buzan-box">
+        <div class="buzan-title">🏰 Method of Loci</div>
+        <p>Students place legal concepts or historical events in a digital <strong>Memory Palace</strong> (Registan Square).</p>
+      </div>
+      <div class="buzan-box">
+        <div class="buzan-title">🌿 Radiant Thinking</div>
+        <p>History and Law sessions use <strong>Mind Maps</strong> with at least 3 colors to force multi-sensory association.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  NETS Subject Family Framework Engine &copy; 2026<br>
+  Generated by Gemini CLI Agent for the Homework Engine Platform.
+</footer>
+
+</body>
+</html>
