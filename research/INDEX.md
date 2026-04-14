@@ -44,7 +44,7 @@ All research that informs NETS design. Each group links to the system nodes it f
 
 ## Strategy & Compliance
 
-> Informs → [[standards/framework/NETS-Homework-Engine-UNIFIED|UNIFIED Spec]] · [[standards/framework/NETS-Tier-Overlay-Spec|Tier Overlay Spec]]
+> Informs → [[standards/framework/NETS-Homework-Engine-UNIFIED-Buzan|UNIFIED Spec]] · [[standards/framework/NETS-Tier-Overlay-Spec|Tier Overlay Spec]]
 
 - [[COMPLIANCE-STRATEGY|Compliance Strategy]] — PISA and ISTE alignment framework
 

@@ -772,4 +772,4 @@ Backgrounds use dark-mode variants by default (primary at 15% on near-black), ac
 
 ---
 
-**End of Design Spec.** Pairs with `NETS-Homework-Engine-UNIFIED.md` (rules) and `NETS-Homework-Engine-Blueprint.docx` (session flow).
+**End of Design Spec.** Pairs with `NETS-Homework-Engine-UNIFIED-Buzan.md` (rules) and `NETS-Homework-Engine-Blueprint.docx` (session flow).

@@ -393,4 +393,4 @@ For the existing 5 G5 frameworks (Science, Tarbiya, Texnologiya, Tasviriy Sanat,
 
 *Document path: `All analysis/Full Design Rework/NETS-Tier-Overlay-Spec.md`*  
 *Parent: `All analysis/NETS-System-Design-v1.md` Section 4*  
-*Constitution: `All analysis/Universal Specs/NETS-Homework-Engine-UNIFIED.md` v2.0*
+*Constitution: `All analysis/Universal Specs/NETS-Homework-Engine-UNIFIED-Buzan.md` v2.0*

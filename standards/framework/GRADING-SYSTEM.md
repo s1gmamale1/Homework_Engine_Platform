@@ -1,7 +1,7 @@
 # NETS Grading System — Learning Curve Specification
 
 **Version:** 1.0 | April 2026 | Replaces: XP-based reward system
-**Parent:** `NETS-Homework-Engine-UNIFIED.md` v2.0
+**Parent:** `NETS-Homework-Engine-UNIFIED-Buzan.md` v2.0
 **Layer:** 4 (grading overlay — sits on top of all mechanics)
 
 ---

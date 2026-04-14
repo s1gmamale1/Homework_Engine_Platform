@@ -80,4 +80,4 @@ This document is the bridge between the framework era and the platform era. The 
 ---
 
 *Full document: `standards/system-design/v1/NETS-System-Design-v1.md`*  
-*Constitution: `standards/NETS-Homework-Engine-UNIFIED.md` v2.0*
+*Constitution: `standards/NETS-Homework-Engine-UNIFIED-Buzan.md` v2.0*

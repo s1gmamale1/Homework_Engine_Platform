@@ -8,7 +8,7 @@ NETS (National Education Transformation System) — AI-powered gamified LMS for 
 
 ## Architecture — Two Layers
 
-**Layer 0: UNIFIED Spec** (`standards/framework/NETS-Homework-Engine-UNIFIED.md`) — The engine. Defines the session structure: Pre-Session (Theme Preview + Flash Cards) → 7-phase homework engine (Memory Sprint → Story Mode → Game Breaks → Real-Life Challenge → Consolidation → Final Boss → Reflection). This is the single source of truth for all mechanics, timing, XP, HP, PISA gating, and session modes.
+**Layer 0: UNIFIED Spec** (`standards/framework/NETS-Homework-Engine-UNIFIED-Buzan.md`) — The engine. Defines the session structure: Pre-Session (Theme Preview + Flash Cards) → 7-phase homework engine (Memory Sprint → Story Mode → Game Breaks → Real-Life Challenge → Consolidation → Final Boss → Reflection). This is the single source of truth for all mechanics, timing, XP, HP, PISA gating, and session modes.
 
 **Layer 1: Library Framework** (`standards/library/framework/NETS-Library-Framework.md`) — The content architecture. Groups 29 subjects into 5 families (Aniq Fanlar, Til Fanlari, Tabiat Fanlari, Ijtimoiy Fanlari, Tarbiya/Sanat). Each family has its own mechanic emphasis, boss format, and pedagogical rules. This determines WHAT content goes inside the engine for each subject.
 
@@ -34,7 +34,7 @@ memory/               ← Shared MCP memory palace for cross-agent context
 
 | Document | Path | Purpose |
 |----------|------|---------|
-| UNIFIED Spec | `standards/framework/NETS-Homework-Engine-UNIFIED.md` | Source of truth — read this first |
+| UNIFIED Spec | `standards/framework/NETS-Homework-Engine-UNIFIED-Buzan.md` | Source of truth — read this first |
 | Library Framework | `standards/library/framework/NETS-Library-Framework.md` | Family rules, mechanics, Bloom's/PISA mapping |
 | Game Catalog | `standards/library/catalog/NETS-Game-Catalog-Summary.md` | All 28 game mechanics described |
 | Quick Reference | `standards/framework/QUICK_REFERENCE.md` | Fast lookup for session flow |

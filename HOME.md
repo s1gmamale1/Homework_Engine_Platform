@@ -6,7 +6,7 @@
 
 ## Framework
 
-- [[standards/framework/NETS-Homework-Engine-UNIFIED|NETS Unified Spec]] — single source of truth (v2.0, 20 sections)
+- [[standards/framework/NETS-Homework-Engine-UNIFIED-Buzan|NETS Unified Spec]] — single source of truth (v2.0, 20 sections)
 - [[standards/framework/NETS-Homework-Engine-Universal-Blueprint-Flow-Diagram|Universal Blueprint Flow Diagram]]
 - [[standards/framework/NETS-Tier-Overlay-Spec|Tier Overlay Spec]]
 - [[standards/framework/QUICK_REFERENCE|Quick Reference]]

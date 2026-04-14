@@ -1,6 +1,6 @@
 # NETS Game Catalog — Quick Reference
 
-**Source:** `NETS-Homework-Engine-UNIFIED.md` v2.0 (Section 6)
+**Source:** `NETS-Homework-Engine-UNIFIED-Buzan.md` v2.0 (Section 6)
 **Dual-Catalog Rule:** Phase 3 selects 3 games per session — ≥1 from Interactive Catalog, ≥2 from Default Pool.
 
 ---

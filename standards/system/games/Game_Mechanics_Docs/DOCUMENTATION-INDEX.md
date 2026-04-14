@@ -1,7 +1,7 @@
 # NETS Game Mechanics — Complete Documentation Index
 
 **Version:** 2.1 | April 2026 | For: NETS Content & Engineering Teams
-**Source:** `NETS-Homework-Engine-UNIFIED.md` v2.0 (Section 6) + `NETS-Game-Catalog-Summary.md`
+**Source:** `NETS-Homework-Engine-UNIFIED-Buzan.md` v2.0 (Section 6) + `NETS-Game-Catalog-Summary.md`
 **Dual-Catalog Rule:** Phase 3 selects 3 games per session — ≥1 from Interactive Catalog, ≥2 from Default Pool.
 
 ---

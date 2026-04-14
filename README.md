@@ -15,7 +15,7 @@ Sigma_Edu_3000/
 ├── .env.txt                            # Test credentials (all user roles)
 │
 ├── standards/                          # Authoritative specifications
-│   ├── NETS-Homework-Engine-UNIFIED.md # THE spec (v2.0, 2072 lines, 20 sections)
+│   ├── NETS-Homework-Engine-UNIFIED-Buzan.md # THE spec (v2.0, 2072 lines, 20 sections)
 │   │                                   #   Single source of truth — supersedes ALL previous
 │   ├── EDUCATIONAL_EXPERIENCE_DESIGN.md # Learning philosophy + UX design
 │   └── QUICK_REFERENCE.md             # Developer cheat sheet
@@ -58,7 +58,7 @@ Sigma_Edu_3000/
 
 ---
 
-## The Spec: NETS-Homework-Engine-UNIFIED.md
+## The Spec: NETS-Homework-Engine-UNIFIED-Buzan.md
 
 **This is the single authoritative document.** Engineering and content teams build exclusively from it. It supersedes all previous versions.
 
@@ -110,7 +110,7 @@ Uzbekistan PISA 2022: Math 364 (-108 vs OECD), Reading 336 (-140), Science 355 (
 
 | Audience | Start Here |
 |----------|-----------|
-| **Engineer** | `standards/NETS-Homework-Engine-UNIFIED.md` (the only spec you need) |
+| **Engineer** | `standards/NETS-Homework-Engine-UNIFIED-Buzan.md` (the only spec you need) |
 | **Designer** | `visuals/NETS-Homework-Engine-UNIFIED-Visual.html` (open in browser) |
 | **New team member** | `research/proposal/RESEARCH_SUMMARY.md` → this README |
 | **Content creator** | Unified spec Section 10 (pipeline) + Section 2 (tagging schema) |
