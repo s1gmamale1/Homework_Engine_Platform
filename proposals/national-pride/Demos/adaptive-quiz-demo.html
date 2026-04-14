@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Quiz — Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: 240 15% 8%;
+      --foreground: 0 0% 95%;
+      --card: 240 12% 12%;
+      --card-hover: 240 12% 16%;
+      --primary: 162 93% 42%;
+      --primary-foreground: 0 0% 100%;
+      --muted: 240 10% 20%;
+      --muted-foreground: 240 5% 55%;
+      --border: 240 10% 22%;
+      --success: 142 76% 45%;
+      --warning: 38 92% 50%;
+      --destructive: 0 72% 51%;
+      --radius: 0.75rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: hsl(var(--background));
+      color: hsl(var(--foreground));
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 16px 12px 48px;
+    }
+    .container { width: 100%; max-width: 420px; }
+
+    .phase-flow { display: flex; gap: 3px; margin-bottom: 12px; }
+    .phase-segment { flex: 1; height: 4px; border-radius: 2px; background: hsl(var(--muted)); transition: background 0.3s; }
+    .phase-segment.active { background: hsl(var(--primary)); }
+    .phase-segment.done { background: hsl(var(--success)); }
+    .phase-label {
+      font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: hsl(var(--muted-foreground));
+      text-align: center; margin-bottom: 8px; letter-spacing: 0.5px; text-transform: uppercase;
+    }
+
+    .header { text-align: center; margin-bottom: 16px; }
+    .header h1 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .header p { color: hsl(var(--muted-foreground)); font-size: 13px; margin-top: 4px; }
+
+    .stats-bar {
+      display: flex; gap: 8px; margin-bottom: 16px;
+      background: hsla(var(--card), 0.6); backdrop-filter: blur(24px);
+      border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 10px 12px;
+    }
+    .stat-item { flex: 1; display: flex; flex-direction: column; align-items: center; }
+    .stat-label { font-size: 10px; color: hsl(var(--muted-foreground)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: hsl(var(--foreground)); margin-top: 2px; }
+    .stat-value.level-val { color: hsl(var(--primary)); font-size: 16px; }
+    .stat-value.velocity-val { color: hsl(var(--success)); font-size: 12px; }
+    .stat-value.q-val { color: hsl(var(--warning)); font-size: 14px; }
+    .stat-value.diff-val { font-size: 12px; }
+    .diff-val.easy { color: hsl(var(--success)); }
+    .diff-val.medium { color: hsl(var(--warning)); }
+    .diff-val.hard { color: hsl(var(--destructive)); }
+
+    /* Grade Card */
+    .grade-card {
+      background: hsla(var(--card), 0.8); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius); padding: 16px; margin: 12px 0; text-align: center;
+    }
+    .grade-level {
+      font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .grade-label { font-size: 12px; color: hsl(var(--muted-foreground)); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .grade-detail { font-size: 14px; color: hsl(var(--foreground)); margin-top: 8px; font-weight: 600; }
+
+    .glass-card {
+      background: hsla(var(--card), 0.6); backdrop-filter: blur(24px);
+      border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 16px;
+    }
+
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    .start-btn {
+      width: 100%; padding: 16px; border: none; border-radius: var(--radius);
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      color: hsl(var(--primary-foreground)); font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px; font-weight: 700; cursor: pointer; transition: transform 0.2s;
+    }
+    .start-btn:active { transform: scale(0.97); }
+
+    .rules-list { list-style: none; margin: 16px 0; }
+    .rules-list li {
+      padding: 10px 12px; margin-bottom: 8px;
+      background: hsla(var(--muted), 0.4); border-radius: var(--radius);
+      font-size: 14px; line-height: 1.4;
+    }
+
+    /* Theta Bar */
+    .theta-container { margin-bottom: 16px; }
+    .theta-label {
+      font-size: 11px; color: hsl(var(--muted-foreground)); font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;
+    }
+    .theta-bar {
+      height: 8px; border-radius: 4px; background: hsl(var(--muted));
+      position: relative; overflow: hidden;
+    }
+    .theta-fill {
+      height: 100%; border-radius: 4px;
+      background: linear-gradient(90deg, hsl(var(--success)), hsl(var(--primary)), hsl(var(--destructive)));
+      transition: width 0.5s;
+    }
+    .theta-marker {
+      position: absolute; top: -2px; width: 12px; height: 12px;
+      border-radius: 50%; background: white; border: 2px solid hsl(var(--primary));
+      transition: left 0.5s;
+    }
+    .theta-labels { display: flex; justify-content: space-between; margin-top: 4px; }
+    .theta-labels span { font-size: 10px; color: hsl(var(--muted-foreground)); }
+    .theta-value {
+      font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700;
+      text-align: center; color: hsl(var(--primary)); margin-top: 4px;
+    }
+
+    /* Difficulty Badge */
+    .diff-badge {
+      display: inline-block; padding: 4px 12px; border-radius: 20px;
+      font-size: 12px; font-weight: 700; margin-bottom: 12px;
+    }
+    .diff-badge.easy { background: hsla(var(--success), 0.2); color: hsl(var(--success)); }
+    .diff-badge.medium { background: hsla(var(--warning), 0.2); color: hsl(var(--warning)); }
+    .diff-badge.hard { background: hsla(var(--destructive), 0.2); color: hsl(var(--destructive)); }
+
+    /* Question */
+    .q-card {
+      background: hsla(var(--card), 0.8); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius); padding: 20px; margin-bottom: 16px;
+    }
+    .q-text { font-size: 16px; font-weight: 700; margin-bottom: 16px; line-height: 1.5; }
+    .q-opts { display: grid; gap: 8px; }
+    .q-opt {
+      padding: 14px 12px; border: 1px solid hsl(var(--border)); border-radius: var(--radius);
+      background: hsla(var(--card), 0.5); cursor: pointer; font-size: 14px;
+      font-family: 'Nunito', sans-serif; font-weight: 600; color: hsl(var(--foreground));
+      text-align: left; transition: all 0.15s;
+    }
+    .q-opt:hover:not(.answered) { border-color: hsl(var(--primary)); background: hsla(var(--primary), 0.1); }
+    .q-opt.correct { background: hsla(var(--success), 0.2); border-color: hsl(var(--success)); color: hsl(var(--success)); }
+    .q-opt.wrong { background: hsla(var(--destructive), 0.2); border-color: hsl(var(--destructive)); color: hsl(var(--destructive)); }
+    .q-opt.answered { pointer-events: none; opacity: 0.7; }
+
+    /* PISA Result */
+    .pisa-result {
+      text-align: center; padding: 24px; margin: 16px 0;
+      background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+      border-radius: var(--radius); border: 1px solid hsl(var(--border));
+    }
+    .pisa-level {
+      font-family: 'Space Grotesk', sans-serif; font-size: 64px; font-weight: 700;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .pisa-desc { font-size: 14px; color: hsl(var(--muted-foreground)); margin-top: 8px; }
+
+    /* Completion */
+    .completion-panel { text-align: center; padding: 24px 16px; }
+    .completion-panel .big-emoji { font-size: 64px; margin: 16px 0; }
+    .completion-panel h2 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 8px;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .completion-panel .summary { color: hsl(var(--muted-foreground)); font-size: 14px; margin: 12px 0; }
+    .score-breakdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 16px 0; }
+    .score-item {
+      background: hsla(var(--muted), 0.3); border-radius: var(--radius); padding: 12px 8px; text-align: center;
+    }
+    .score-item .s-val { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; }
+    .score-item .s-label { font-size: 11px; color: hsl(var(--muted-foreground)); margin-top: 4px; }
+
+    /* Answer History */
+    .history { margin: 16px 0; }
+    .history-item {
+      display: flex; align-items: center; gap: 8px; padding: 8px;
+      border-bottom: 1px solid hsl(var(--border)); font-size: 13px;
+    }
+    .history-item .h-icon { font-size: 16px; }
+    .history-item .h-diff { font-size: 11px; font-weight: 700; margin-left: auto; }
+
+    #confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; }
+  </style>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="container">
+    <div class="phase-label">Session Phase</div>
+    <div class="phase-flow">
+      <div class="phase-segment done"></div>
+      <div class="phase-segment done"></div>
+      <div class="phase-segment done"></div>
+      <div class="phase-segment active"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+    </div>
+
+    <div class="header">
+      <h1> Adaptive Quiz</h1>
+      <p>Adaptiv savollar — sizning darajangiz</p>
+    </div>
+
+    <div class="stats-bar" id="stats-bar" style="display:none;">
+      <div class="stat-item"><span class="stat-label">Daraja</span><span class="stat-value level-val" id="level-display">0%</span></div>
+      <div class="stat-item"><span class="stat-label">Tezlik</span><span class="stat-value velocity-val" id="velocity-display">n=0.00</span></div>
+      <div class="stat-item"><span class="stat-label">Savol</span><span class="stat-value q-val" id="q-display">1/7</span></div>
+      <div class="stat-item"><span class="stat-label">Qiyinlik</span><span class="stat-value diff-val medium" id="diff-display">O'rta</span></div>
+    </div>
+
+    <!-- Start Panel -->
+    <div class="panel active" id="panel-start">
+      <div class="glass-card">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:18px; margin-bottom:12px;">Adaptive Quiz</h2>
+        <ul class="rules-list">
+          <li> O'rtadan boshlanadi</li>
+          <li> To'g'ri = qiyinroq savol, noto'g'ri = osonroq</li>
+          <li> Theta — sizning mahorat darajangiz</li>
+          <li> 7 ta savoldan keyin PISA darajangiz chiqadi</li>
+          <li> Daraja va Tezlik aniqlikka qarab o'zgaradi</li>
+        </ul>
+        <button class="start-btn" onclick="startQuiz()">Boshlash</button>
+      </div>
+    </div>
+
+    <!-- Quiz Panel -->
+    <div class="panel" id="panel-quiz">
+      <div class="theta-container">
+        <div class="theta-label">Mahorat ko'rsatkichi (Theta)</div>
+        <div class="theta-bar">
+          <div class="theta-fill"></div>
+          <div class="theta-marker" id="theta-marker"></div>
+        </div>
+        <div class="theta-labels">
+          <span>-3.0 (Oson)</span>
+          <span>0 (O'rta)</span>
+          <span>+3.0 (Qiyin)</span>
+        </div>
+        <div class="theta-value" id="theta-value">θ = 0.00</div>
+      </div>
+
+      <div id="diff-badge-container" style="text-align:center;">
+        <span class="diff-badge medium" id="diff-badge">O'rta</span>
+      </div>
+
+      <div class="q-card">
+        <div class="q-text" id="q-text"></div>
+        <div class="q-opts" id="q-opts"></div>
+      </div>
+    </div>
+
+    <!-- Results Panel -->
+    <div class="panel" id="panel-results">
+      <div class="pisa-result">
+        <div style="font-size:14px; color:hsl(var(--muted-foreground)); margin-bottom:8px;">PISA Darajangiz</div>
+        <div class="pisa-level" id="pisa-level"></div>
+        <div class="pisa-desc" id="pisa-desc"></div>
+      </div>
+      <div class="history" id="history"></div>
+      <div class="grade-card">
+        <div class="grade-level" id="grade-level"></div>
+        <div class="grade-label">Umumiy Daraja</div>
+        <div class="grade-detail" id="grade-detail"></div>
+      </div>
+      <div class="score-breakdown">
+        <div class="score-item">
+          <div class="s-val" style="color:hsl(var(--success));" id="final-correct">0</div>
+          <div class="s-label">To'g'ri</div>
+        </div>
+        <div class="score-item">
+          <div class="s-val" style="color:hsl(var(--primary));" id="final-accuracy">0%</div>
+          <div class="s-label">Aniqlik</div>
+        </div>
+        <div class="score-item">
+          <div class="s-val" style="color:hsl(var(--warning));" id="final-theta"></div>
+          <div class="s-label">Theta</div>
+        </div>
+      </div>
+      <button class="start-btn" onclick="restartQuiz()">Qayta boshlash</button>
+    </div>
+  </div>
+
+  <script>
+    // Question pool organized by difficulty (theta)
+    const questionPool = {
+      easy: [  // theta: -2 to -1
+        { q: 'O\'simlikning qaysi qismi suvni ildizdan barglarga yetkazadi?', opts: ['Poyasi (ksilema)', 'Guli', 'Mevasi', 'Urug\'i'], correct: 'Poyasi (ksilema)', xp: 30 },
+        { q: 'Quyosh — bu nima?', opts: ['Yulduz', 'Sayyora', 'Oy', 'Asteroid'], correct: 'Yulduz', xp: 30 },
+        { q: 'Suv qancha gradusda qaynaydi?', opts: ['50°C', '100°C', '150°C', '200°C'], correct: '100°C', xp: 30 },
+        { q: 'Fotosintez uchun nima kerak?', opts: ['Suv, quyosh nuri, CO₂', 'Faqat suv', 'Faqat tuproq', 'Faqat havo'], correct: 'Suv, quyosh nuri, CO₂', xp: 30 }
+      ],
+      medium: [  // theta: -0.5 to +0.5
+        { q: 'Fotosintez jarayonida o\'simlik nima hosil qiladi?', opts: ['Glyukoza va kislorod', 'Faqat suv', 'CO₂ va suv', 'Faqat uglerod'], correct: 'Glyukoza va kislorod', xp: 60 },
+        { q: 'Hujayraning "quvvat stansiyasi" nima?', opts: ['Mitoxondriya', 'Yadro', 'Ribosoma', 'Membrana'], correct: 'Mitoxondriya', xp: 60 },
+        { q: 'DNK nima uchun javobgar?', opts: ['Irsiy ma\'lumotlarni saqlash', 'Energiya ishlab chiqarish', 'Suvni tashish', 'Ovqat hazm qilish'], correct: 'Irsiy ma\'lumotlarni saqlash', xp: 60 },
+        { q: 'Ekosistemada "ishtirokchi" deb nima aytiladi?', opts: ['Organizm', 'Tuproq', 'Suv', 'Havo'], correct: 'Organizm', xp: 60 }
+      ],
+      hard: [  // theta: +1 to +2
+        { q: 'Fotosintezning to\'liq kimyoviy formulasi qaysi?', opts: ['6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂', 'CO₂ + H₂O → C₆H₁₂O₆', '6O₂ + C₆H₁₂O₆ → 6CO₂ + 6H₂O', 'H₂O + O₂ → CO₂'], correct: '6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂', xp: 100 },
+        { q: 'Nima uchun fotosintez barcha hayot uchun muhim?', opts: ['U kislorod va oziq-ovqat zanjirining asosini ta\'minlaydi', 'Faqat o\'simliklar uchun kerak', 'U faqat suv ishlatadi', 'U faqat kechasi sodir bo\'ladi'], correct: 'U kislorod va oziq-ovqat zanjirining asosini ta\'minlaydi', xp: 100 },
+        { q: 'Agar atmosferada CO₂ keskin kamaysa, fotosintezga nima bo\'ladi?', opts: ['Jarayon sekinlashadi yoki to\'xtaydi', 'Tezlashadi', 'O\'zgarmaydi', 'Kislorod ko\'payadi'], correct: 'Jarayon sekinlashadi yoki to\'xtaydi', xp: 100 },
+        { q: 'Xloroplastning qaysi qismida yorug\'lik reaksiyalari sodir bo\'ladi?', opts: ['Tilakoid membranasi', 'Stroma', 'Hujayra devori', 'Yadro'], correct: 'Tilakoid membranasi', xp: 100 }
+      ],
+      veryHard: [  // theta: +2.5 to +3
+        { q: 'Kam miqdorda yorug\'likda o\'simlikda qaysi jarayon ustunlik qiladi?', opts: ['Nafas olish (respiratsiya)', 'Fotosintez', 'Transpiratsiya', 'Osmoz'], correct: 'Nafas olish (respiratsiya)', xp: 130 },
+        { q: 'C4 o\'simliklar C3 o\'simliklardan qanday farq qiladi?', opts: ['Ular yuqori haroratda samarali fotosintez qiladi', 'Ular kechasi faqat nafas oladi', 'Ularga suv kerak emas', 'Ular kislorod ishlatmaydi'], correct: 'Ular yuqori haroratda samarali fotosintez qiladi', xp: 130 }
+      ]
+    };
+
+    let theta = 0;
+    let sessionHistory = [];  // [{correct, diff, timestamp}]
+    let questionNum = 0;
+    const maxQuestions = 7;
+    let correctCount = 0;
+    let usedQuestions = new Set();
+
+    function calcVelocity() {
+      if (sessionHistory.length < 2) return 0;
+      const first = sessionHistory[0].timestamp;
+      const last = sessionHistory[sessionHistory.length - 1].timestamp;
+      const elapsedMin = (last - first) / 60000;
+      if (elapsedMin < 0.1) return 0;
+      return sessionHistory.length / elapsedMin;
+    }
+
+    function getGradeLabel(accuracy, velocity) {
+      const score = accuracy * 0.7 + Math.min(velocity, 10) * 3;
+      if (score >= 80) return { grade: 'A+', color: 'hsl(var(--success))' };
+      if (score >= 70) return { grade: 'A', color: 'hsl(var(--success))' };
+      if (score >= 60) return { grade: 'B', color: 'hsl(var(--primary))' };
+      if (score >= 50) return { grade: 'C', color: 'hsl(var(--warning))' };
+      if (score >= 35) return { grade: 'D', color: 'hsl(var(--warning))' };
+      return { grade: 'F', color: 'hsl(var(--destructive))' };
+    }
+
+    function updateStats() {
+      const accuracy = sessionHistory.length > 0 ? Math.round((correctCount / sessionHistory.length) * 100) : 0;
+      const velocity = calcVelocity();
+      document.getElementById('level-display').textContent = accuracy + '%';
+      document.getElementById('velocity-display').textContent = 'n=' + velocity.toFixed(2);
+    }
+
+    function showPanel(id) {
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function getDifficultyLevel(theta) {
+      if (theta <= -1) return { label: 'Oson', cls: 'easy', pool: 'easy' };
+      if (theta <= 0.5) return { label: 'O\'rta', cls: 'medium', pool: 'medium' };
+      if (theta <= 1.5) return { label: 'Qiyin', cls: 'hard', pool: 'hard' };
+      return { label: 'Juda qiyin', cls: 'hard', pool: 'veryHard' };
+    }
+
+    function pickQuestion(pool) {
+      const available = questionPool[pool].filter((_, i) => !usedQuestions.has(pool + '-' + i));
+      if (available.length === 0) {
+        // Reset used for this pool
+        questionPool[pool].forEach((_, i) => usedQuestions.delete(pool + '-' + i));
+        return questionPool[pool][Math.floor(Math.random() * questionPool[pool].length)];
+      }
+      return available[Math.floor(Math.random() * available.length)];
+    }
+
+    function updateThetaBar() {
+      const normalized = (theta + 3) / 6; // map -3..3 to 0..1
+      const marker = document.getElementById('theta-marker');
+      marker.style.left = (normalized * 100) + '%';
+      document.getElementById('theta-value').textContent = 'θ = ' + theta.toFixed(2);
+    }
+
+    function startQuiz() {
+      theta = 0; sessionHistory = []; questionNum = 0; correctCount = 0;
+      usedQuestions = new Set();
+      document.getElementById('level-display').textContent = '0%';
+      document.getElementById('velocity-display').textContent = 'n=0.00';
+      document.getElementById('stats-bar').style.display = 'flex';
+      updateThetaBar();
+      nextQuestion();
+    }
+
+    function nextQuestion() {
+      if (questionNum >= maxQuestions) { showResults(); return; }
+      questionNum++;
+      document.getElementById('q-display').textContent = questionNum + '/' + maxQuestions;
+
+      const diff = getDifficultyLevel(theta);
+      const badge = document.getElementById('diff-badge');
+      badge.textContent = diff.label;
+      badge.className = 'diff-badge ' + diff.cls;
+      document.getElementById('diff-display').textContent = diff.label;
+      document.getElementById('diff-display').className = 'stat-value diff-val ' + diff.cls;
+
+      const qData = pickQuestion(diff.pool);
+      document.getElementById('q-text').textContent = qData.q;
+
+      const opts = document.getElementById('q-opts');
+      opts.innerHTML = '';
+      const optsArr = qData.opts;
+      optsArr.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'q-opt';
+        btn.textContent = opt;
+        btn.onclick = () => answerQuestion(btn, opt, qData.correct, qData.xp);
+        opts.appendChild(btn);
+      });
+
+      showPanel('panel-quiz');
+    }
+
+    function answerQuestion(btn, selected, correct, baseXP) {
+      const allBtns = document.querySelectorAll('#q-opts .q-opt');
+      allBtns.forEach(b => {
+        b.classList.add('answered');
+        if (b.textContent === correct) b.classList.add('correct');
+      });
+
+      const diff = getDifficultyLevel(theta);
+      if (selected === correct) {
+        btn.classList.add('correct');
+        theta += 0.5;
+        correctCount++;
+        sessionHistory.push({ correct: true, diff: diff.label, timestamp: Date.now() });
+      } else {
+        btn.classList.add('wrong');
+        theta -= 0.5;
+        sessionHistory.push({ correct: false, diff: diff.label, timestamp: Date.now() });
+      }
+
+      theta = Math.max(-3, Math.min(3, theta));
+      updateStats();
+      updateThetaBar();
+
+      setTimeout(nextQuestion, 1200);
+    }
+
+    function showResults() {
+      document.getElementById('stats-bar').style.display = 'none';
+      showPanel('panel-results');
+
+      // Map theta to PISA level
+      let pisaLevel, pisaDesc;
+      if (theta >= 2) { pisaLevel = '5'; pisaDesc = 'Yuqori daraja — murakkab masalalarni yechish qobiliyati'; }
+      else if (theta >= 1) { pisaLevel = '4'; pisaDesc = 'Yaxshi — ko\'p bosqichli muammolarni tahlil qila olasiz'; }
+      else if (theta >= 0) { pisaLevel = '3'; pisaDesc = 'O\'rta — standart vazifalarni bajara olasiz'; }
+      else if (theta >= -1) { pisaLevel = '2'; pisaDesc = 'Bazaviy — oddiy vazifalarni tushunasiz'; }
+      else { pisaLevel = '1'; pisaDesc = 'Past — qo\'shimcha yordam kerak'; }
+
+      document.getElementById('pisa-level').textContent = pisaLevel;
+      document.getElementById('pisa-desc').textContent = pisaDesc;
+      document.getElementById('final-correct').textContent = correctCount;
+
+      const accuracy = sessionHistory.length > 0 ? Math.round((correctCount / sessionHistory.length) * 100) : 0;
+      const velocity = calcVelocity();
+      const grade = getGradeLabel(accuracy, velocity);
+
+      document.getElementById('final-accuracy').textContent = accuracy + '%';
+      document.getElementById('final-theta').textContent = theta.toFixed(1);
+
+      // Grade card
+      document.getElementById('grade-level').textContent = grade.grade;
+      document.getElementById('grade-level').style.background = `linear-gradient(135deg, ${grade.color}, hsl(180, 85%, 35%))`;
+      document.getElementById('grade-level').style.webkitBackgroundClip = 'text';
+      document.getElementById('grade-level').style.webkitTextFillColor = 'transparent';
+      document.getElementById('grade-level').style.backgroundClip = 'text';
+      document.getElementById('grade-detail').textContent = `Aniqlik: ${accuracy}% | PISA: ${pisaLevel} | Tezlik: n=${velocity.toFixed(2)}`;
+
+      // Build history
+      const histDiv = document.getElementById('history');
+      histDiv.innerHTML = '<h3 style="font-family:\'Space Grotesk\',sans-serif; font-size:14px; margin-bottom:8px;">Javoblar tarixi</h3>';
+      sessionHistory.forEach((h, i) => {
+        histDiv.innerHTML += `<div class="history-item">
+          <span class="h-icon">${h.correct ? '✅' : '❌'}</span>
+          <span>Savol ${i + 1}</span>
+          <span class="h-diff" style="color:${h.correct ? 'hsl(var(--success))' : 'hsl(var(--destructive))'}">${h.diff}</span>
+        </div>`;
+      });
+
+      if (correctCount >= 4) launchConfetti();
+    }
+
+    function restartQuiz() {
+      theta = 0; sessionHistory = []; questionNum = 0; correctCount = 0;
+      usedQuestions = new Set();
+      document.getElementById('level-display').textContent = '0%';
+      document.getElementById('velocity-display').textContent = 'n=0.00';
+      showPanel('panel-start');
+    }
+
+    function launchConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+      const pieces = [];
+      const colors = ['#10B981', '#06D6A0', '#F59E0B', '#8B5CF6', '#EF4444', '#3B82F6'];
+      for (let i = 0; i < 120; i++) {
+        pieces.push({
+          x: Math.random() * canvas.width, y: Math.random() * canvas.height - canvas.height,
+          w: Math.random() * 8 + 4, h: Math.random() * 4 + 2,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vy: Math.random() * 3 + 2, vx: (Math.random() - 0.5) * 2,
+          rot: Math.random() * 360, rotSpeed: (Math.random() - 0.5) * 10
+        });
+      }
+      let frames = 0;
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pieces.forEach(p => {
+          ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot * Math.PI / 180);
+          ctx.fillStyle = p.color; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+          p.y += p.vy; p.x += p.vx; p.rot += p.rotSpeed;
+        });
+        frames++;
+        if (frames < 300) requestAnimationFrame(draw);
+        else ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      draw();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS — Reflection Journal (Munozaba Jurnal)</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --background: 240 15% 8%;
+  --foreground: 0 0% 95%;
+  --card: 240 12% 12%;
+  --primary: 162 93% 42%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 240 10% 20%;
+  --muted-foreground: 240 5% 55%;
+  --border: 240 10% 22%;
+  --success: 142 76% 45%;
+  --warning: 38 92% 50%;
+  --destructive: 0 72% 51%;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+.container { max-width: 420px; width: 100%; }
+h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+.glass {
+  background: hsla(var(--card), 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+}
+.stats-bar {
+  display: flex; gap: 8px; padding: 12px; margin-bottom: 16px;
+  justify-content: center;
+}
+.stat {
+  text-align: center; flex: 1; padding: 8px 4px;
+  background: hsla(var(--muted), 0.5); border-radius: 0.5rem;
+}
+.stat-value { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.25rem; color: hsl(var(--primary)); }
+.stat-label { font-size: 0.7rem; color: hsl(var(--muted-foreground)); text-transform: uppercase; }
+.phase-flow { display: flex; gap: 4px; margin-bottom: 16px; flex-wrap: wrap; justify-content: center; }
+.phase-pill {
+  padding: 4px 8px; border-radius: 9999px; font-size: 0.65rem; font-weight: 700;
+  background: hsla(var(--muted), 0.4); color: hsl(var(--muted-foreground));
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.phase-pill.active { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+.phase-pill.done { background: hsla(var(--success), 0.3); color: hsl(var(--success)); }
+.card { padding: 20px; margin-bottom: 16px; }
+.card h2 { font-size: 1.2rem; margin-bottom: 8px; }
+.card p { color: hsl(var(--muted-foreground)); font-size: 0.9rem; line-height: 1.5; margin-bottom: 12px; }
+.btn {
+  display: block; width: 100%; padding: 14px; border: none; border-radius: 0.75rem;
+  background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+  color: hsl(var(--primary-foreground)); font-family: 'Space Grotesk'; font-weight: 600;
+  font-size: 1rem; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 20px hsla(var(--primary), 0.4); }
+.btn-secondary {
+  background: hsla(var(--muted), 0.6); color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+textarea {
+  width: 100%; min-height: 140px; padding: 14px; border-radius: 0.75rem;
+  background: hsla(var(--muted), 0.4); border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground)); font-family: 'Nunito'; font-size: 0.95rem;
+  resize: vertical; outline: none; transition: border-color 0.2s; line-height: 1.6;
+}
+textarea:focus { border-color: hsl(var(--primary)); }
+.star { color: hsl(var(--warning)); font-size: 1.5rem; }
+.star-empty { color: hsl(var(--muted)); font-size: 1.5rem; }
+.summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+.summary-item { background: hsla(var(--muted), 0.3); padding: 12px; border-radius: 0.5rem; text-align: center; }
+.summary-item .val { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.3rem; color: hsl(var(--primary)); }
+.summary-item .lbl { font-size: 0.75rem; color: hsl(var(--muted-foreground)); margin-top: 2px; }
+.strength-weakness { display: flex; gap: 10px; margin: 12px 0; }
+.sw-box { flex: 1; padding: 10px; background: hsla(var(--muted), 0.3); border-radius: 0.5rem; }
+.sw-box .label { font-size: 0.7rem; color: hsl(var(--muted-foreground)); text-transform: uppercase; }
+.sw-box .value { font-size: 0.85rem; font-weight: 700; margin-top: 4px; }
+.sw-box .value.good { color: hsl(var(--success)); }
+.sw-box .value.bad { color: hsl(var(--warning)); }
+.prompt-box {
+  background: hsla(var(--primary), 0.08); border-left: 3px solid hsl(var(--primary));
+  padding: 14px; border-radius: 0 0.5rem 0.5rem 0; margin: 12px 0;
+}
+.prompt-box p { color: hsl(var(--foreground)); font-size: 0.95rem; margin: 0; line-height: 1.6; font-style: italic; }
+.char-count { text-align: right; font-size: 0.8rem; color: hsl(var(--muted-foreground)); margin-top: 4px; }
+.char-count.valid { color: hsl(var(--success)); }
+.char-count.invalid { color: hsl(var(--destructive)); }
+.privacy-notice {
+  display: flex; align-items: center; gap: 8px; padding: 10px 14px;
+  background: hsla(var(--muted), 0.3); border-radius: 0.5rem; margin-top: 12px;
+  font-size: 0.8rem; color: hsl(var(--muted-foreground));
+}
+.privacy-notice .icon { font-size: 1.2rem; }
+.stored-card {
+  background: hsla(var(--success), 0.08); border: 1px solid hsla(var(--success), 0.3);
+  padding: 16px; border-radius: 0.75rem; text-align: center; margin: 12px 0;
+}
+.stored-card .check { font-size: 2.5rem; margin-bottom: 8px; }
+.stored-card p { color: hsl(var(--foreground)); font-size: 0.9rem; margin: 0; }
+.hidden { display: none !important; }
+#confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
+.btn-row { display: flex; gap: 10px; margin-top: 12px; }
+.btn-row .btn { flex: 1; }
+.xp-popup {
+  position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-family: 'Space Grotesk'; font-weight: 700; font-size: 2rem;
+  color: hsl(var(--primary)); text-shadow: 0 0 30px hsla(var(--primary), 0.5);
+  animation: xpPop 1.5s ease-out forwards; pointer-events: none; z-index: 100;
+}
+@keyframes xpPop { 0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); } 20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); } 40% { transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; transform: translate(-50%, -80%) scale(0.8); } }
+</style>
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+<div class="container">
+  <!-- Stats Bar -->
+  <div class="stats-bar glass">
+    <div class="stat"><div class="stat-value" id="status-display">⏳</div><div class="stat-label">Holat</div></div>
+    <div class="stat"><div class="stat-value">📖</div><div class="stat-label">Jurnal</div></div>
+    <div class="stat"><div class="stat-value" id="entry-count">0</div><div class="stat-label">Yozuvlar</div></div>
+  </div>
+  <!-- Phase Flow -->
+  <div class="phase-flow">
+    <span class="phase-pill active" id="ph-intro">Kirish</span>
+    <span class="phase-pill" id="ph-summary">Xulosa</span>
+    <span class="phase-pill" id="ph-prompt">Savol</span>
+    <span class="phase-pill" id="ph-reflect">Fikrlash</span>
+    <span class="phase-pill" id="ph-save">Saqlash</span>
+  </div>
+  <!-- Phase 1: Intro -->
+  <div id="phase-intro" class="card glass">
+    <h2>📝 Munozaba Jurnali</h2>
+    <p>Dars yakunida o'zingizni sinab ko'ring. Bu shaxsiy jurnal — faqat siz ko'rasiz.</p>
+    <p>Sun'iy intellekt sizning yutuqlaringiz asosida maxsus savol beradi. Javobingiz baholanmaydi — faqat saqlanadi.</p>
+    <button class="btn" onclick="startGame()">Boshlash</button>
+  </div>
+  <!-- Phase 2: Session Summary -->
+  <div id="phase-summary" class="hidden">
+    <div class="card glass">
+      <h2>📊 Bugungi Dars Xulosasi</h2>
+      <div class="summary-grid">
+        <div class="summary-item"><div class="val">5</div><div class="lbl">Sessiyalar</div></div>
+        <div class="summary-item"><div class="val">6</div><div class="lbl">Topshiriqlar</div></div>
+        <div class="summary-item"><div class="val">12:34</div><div class="lbl">Vaqt</div></div>
+        <div class="summary-item"><div class="val" id="stars"></div><div class="lbl">Yulduzlar</div></div>
+      </div>
+      <div class="strength-weakness">
+        <div class="sw-box"><div class="label">Kuchli tomon</div><div class="value good">🌟 Tushuntirish</div></div>
+        <div class="sw-box"><div class="label">Zaif tomon</div><div class="value bad">📐 Hisoblash</div></div>
+      </div>
+      <button class="btn" onclick="goToPrompt()">Davom etish</button>
+    </div>
+  </div>
+  <!-- Phase 3: AI Prompt -->
+  <div id="phase-prompt" class="hidden">
+    <div class="card glass">
+      <h2>🤖 AI Taklifi</h2>
+      <p style="color:hsl(var(--muted-foreground))">Bugungi natijalaringiz asosida:</p>
+      <div class="prompt-box"><p id="ai-prompt"></p></div>
+      <p style="font-size:0.8rem;color:hsl(var(--muted-foreground));margin-top:8px">Bu savolga samimiy javob bering. To'g'ri yoki noto'g'ri javob yo'q.</p>
+      <div class="btn-row">
+        <button class="btn btn-secondary" onclick="skipReflection()">O'tkazib yuborish</button>
+        <button class="btn" onclick="goToReflect()">Javob yozish</button>
+      </div>
+    </div>
+  </div>
+  <!-- Phase 4: Reflection Writing -->
+  <div id="phase-reflect" class="hidden">
+    <div class="card glass">
+      <h2>✍️ Fikringiz</h2>
+      <div class="prompt-box"><p id="reflect-prompt"></p></div>
+      <textarea id="reflection-input" placeholder="Bu yerda yozing..."></textarea>
+      <div class="char-count" id="char-count">0 / 10 belgi minimum</div>
+      <div class="privacy-notice"><span class="icon">🔒</span><span>Faqat siz buni ko'rishingiz mumkin. Hech kimga ko'rsatilmaydi.</span></div>
+      <div class="btn-row">
+        <button class="btn btn-secondary" onclick="skipReflection()">O'tkazib yuborish</button>
+        <button class="btn" id="save-btn" onclick="saveReflection()" disabled>Saqlash</button>
+      </div>
+    </div>
+  </div>
+  <!-- Phase 5: Saved -->
+  <div id="phase-save" class="hidden">
+    <div class="card glass" style="text-align:center">
+      <div class="stored-card"><div class="check">✅</div><p id="save-message"></p></div>
+      <p style="margin-top:12px;font-size:0.85rem;color:hsl(var(--muted-foreground))">Jurnal yozuvingiz xavfsiz saqlandi. Istalgan vaqtda qayta o'qishingiz mumkin.</p>
+      <div style="margin-top:16px;font-size:1.5rem;font-family:'Space Grotesk';font-weight:700" id="final-status">✅ Tugallandi</div>
+      <p style="font-size:0.85rem;color:hsl(var(--muted-foreground))">Munozaba uchun ishtirok belgisi</p>
+      <button class="btn" onclick="location.reload()" style="margin-top:16px">Qayta boshlash</button>
+    </div>
+  </div>
+</div>
+<script>
+const prompts = [
+  "Bugungi darsda eng qiziqarli narsa nima edi? Nima uchun sizga yoqdi?",
+  "Qaysi mavzuni hali to'liq tushunmadingiz? Uni tushunish uchun nima qilishingiz mumkin?",
+  "Bugun o'rgangan narsangizni hayotingizda qanday ishlatishingiz mumkin?",
+  "Agar bugungi darsni 1 so'z bilan tavsiflashingiz kerak bo'lsa, bu qaysi so'z bo'lardi? Nima uchun?",
+  "Bugungi darsdan oldin nima deb o'ylardingiz va hozir nima deb o'ylaysiz? Farq bormi?"
+];
+let entries = 0;
+function setPhase(name) {
+  document.querySelectorAll('.phase-pill').forEach(p => { p.classList.remove('active'); p.classList.remove('done'); });
+  const phases = ['ph-intro','ph-summary','ph-prompt','ph-reflect','ph-save'];
+  const names = ['intro','summary','prompt','reflect','save'];
+  let idx = names.indexOf(name);
+  phases.forEach((p, i) => {
+    if (i < idx) document.getElementById(p).classList.add('done');
+    if (i === idx) document.getElementById(p).classList.add('active');
+  });
+}
+function startGame() {
+  document.getElementById('phase-intro').classList.add('hidden');
+  document.getElementById('phase-summary').classList.remove('hidden');
+  setPhase('summary');
+  // Render stars
+  let starsHTML = '';
+  for (let i = 0; i < 5; i++) {
+    starsHTML += i < 4 ? '<span class="star">★</span>' : '<span class="star-empty">★</span>';
+  }
+  document.getElementById('stars').innerHTML = starsHTML;
+}
+function goToPrompt() {
+  document.getElementById('phase-summary').classList.add('hidden');
+  document.getElementById('phase-prompt').classList.remove('hidden');
+  setPhase('prompt');
+  // Pick random prompt
+  const p = prompts[Math.floor(Math.random() * prompts.length)];
+  document.getElementById('ai-prompt').textContent = p;
+}
+function goToReflect() {
+  document.getElementById('phase-prompt').classList.add('hidden');
+  document.getElementById('phase-reflect').classList.remove('hidden');
+  setPhase('reflect');
+  document.getElementById('reflect-prompt').textContent = document.getElementById('ai-prompt').textContent;
+  document.getElementById('reflection-input').value = '';
+  document.getElementById('char-count').textContent = '0 / 10 belgi minimum';
+  document.getElementById('char-count').className = 'char-count invalid';
+  document.getElementById('save-btn').disabled = true;
+  document.getElementById('reflection-input').addEventListener('input', updateCharCount);
+}
+function updateCharCount() {
+  const len = document.getElementById('reflection-input').value.length;
+  const el = document.getElementById('char-count');
+  el.textContent = len + ' / 10 belgi minimum';
+  if (len >= 10) {
+    el.className = 'char-count valid';
+    document.getElementById('save-btn').disabled = false;
+  } else {
+    el.className = 'char-count invalid';
+    document.getElementById('save-btn').disabled = true;
+  }
+}
+function skipReflection() {
+  document.getElementById('phase-prompt').classList.add('hidden');
+  document.getElementById('phase-reflect').classList.add('hidden');
+  document.getElementById('phase-save').classList.remove('hidden');
+  setPhase('save');
+  document.getElementById('save-message').textContent = 'Sakrab o\'tildi. Hech narsa saqlanmadi.';
+  document.getElementById('final-status').textContent = '⏸ Sakrab o\'tildi';
+}
+function saveReflection() {
+  const text = document.getElementById('reflection-input').value.trim();
+  if (text.length < 10) return;
+  entries++;
+  document.getElementById('phase-reflect').classList.add('hidden');
+  document.getElementById('phase-save').classList.remove('hidden');
+  setPhase('save');
+  document.getElementById('save-message').textContent = 'Jurnal yozuvingiz saqlandi! (' + text.length + ' belgi)';
+  document.getElementById('final-status').textContent = '✅ Tugallandi — ' + entries + ' ta yozuv';
+  document.getElementById('status-display').textContent = '✅';
+  document.getElementById('entry-count').textContent = entries;
+  showCompletionPopup();
+  launchConfetti();
+}
+function showCompletionPopup() {
+  const el = document.createElement('div');
+  el.className = 'xp-popup'; el.textContent = '✅ Saqlandi!';
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 1500);
+}
+function launchConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  const particles = [];
+  const colors = ['#22c55e','#3b82f6','#f59e0b','#ef4444','#8b5cf6','#06b6d4','#ec4899'];
+  for (let i = 0; i < 120; i++) {
+    particles.push({ x: Math.random() * canvas.width, y: -20, w: Math.random() * 10 + 5, h: Math.random() * 6 + 3, color: colors[Math.floor(Math.random() * colors.length)], vx: (Math.random() - 0.5) * 4, vy: Math.random() * 3 + 2, rot: Math.random() * 360, rv: (Math.random() - 0.5) * 10 });
+  }
+  let frame = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => { p.x += p.vx; p.y += p.vy; p.vy += 0.05; p.rot += p.rv; ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot * Math.PI / 180); ctx.fillStyle = p.color; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore(); });
+    frame++; if (frame < 250) requestAnimationFrame(animate); else ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  animate();
+}
+</script>
+</body>
+</html>

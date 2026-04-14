@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qochish Xonasi | Escape Room: Subject Lock</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --background: 240 15% 8%;
+  --foreground: 0 0% 95%;
+  --card: 240 12% 12%;
+  --primary: 162 93% 42%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 240 10% 20%;
+  --muted-foreground: 240 5% 55%;
+  --border: 240 10% 22%;
+  --success: 142 76% 45%;
+  --warning: 38 92% 50%;
+  --destructive: 0 72% 51%;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Nunito',sans-serif;
+  background:hsl(var(--background));
+  color:hsl(var(--foreground));
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:16px;
+}
+.container { max-width:420px; width:100%; }
+h1,h2,h3 { font-family:'Space Grotesk',sans-serif; }
+
+.stats-bar { display:flex; gap:8px; margin-bottom:12px; }
+.stat-card {
+  flex:1;
+  background:hsla(var(--card),0.7);
+  backdrop-filter:blur(24px);
+  border:1px solid hsl(var(--border));
+  border-radius:0.75rem;
+  padding:10px 8px;
+  text-align:center;
+}
+.stat-card .label { font-size:0.65rem; color:hsl(var(--muted-foreground)); text-transform:uppercase; letter-spacing:0.5px; }
+.stat-card .value { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:700; color:hsl(var(--foreground)); }
+.stat-card .value.level-val{color:hsl(var(--success))}
+.stat-card .value.velocity-val{color:hsl(var(--warning))}
+.grade-card{background:hsla(var(--card),0.8);backdrop-filter:blur(24px);border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:20px;text-align:center;margin:16px 0}
+.grade-level{font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:800;background:linear-gradient(135deg,hsl(162,93%,42%),hsl(180,85%,35%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.grade-label{font-size:18px;font-weight:700;margin:4px 0}
+.grade-detail{font-size:13px;color:hsl(var(--muted-foreground));margin:2px 0}
+.stat-card .value.timer { color:hsl(var(--warning)); }
+
+.game-title { text-align:center; margin-bottom:12px; }
+.game-title h1 {
+  font-size:1.4rem;
+  background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.game-title p { font-size:0.8rem; color:hsl(var(--muted-foreground)); margin-top:2px; }
+
+/* Locks Display */
+.locks-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-bottom:12px;
+}
+.lock-card {
+  background:hsla(var(--card),0.7);
+  backdrop-filter:blur(24px);
+  border:1px solid hsl(var(--border));
+  border-radius:0.75rem;
+  padding:16px;
+  text-align:center;
+  transition:all 0.3s;
+}
+.lock-card.unlocked {
+  border-color:hsl(var(--success));
+  background:hsla(var(--success),0.1);
+}
+.lock-card.degraded {
+  border-color:hsl(var(--warning));
+  background:hsla(var(--warning),0.1);
+}
+.lock-card.broken {
+  border-color:hsl(var(--destructive));
+  background:hsla(var(--destructive),0.1);
+}
+.lock-icon { font-size:2.5rem; margin-bottom:6px; }
+.lock-name { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.9rem; margin-bottom:4px; }
+.lock-status { font-size:0.7rem; color:hsl(var(--muted-foreground)); }
+.lock-status.open { color:hsl(var(--success)); }
+.lock-status.warn { color:hsl(var(--warning)); }
+.lock-card .attempt-dots { display:flex; justify-content:center; gap:4px; margin-top:6px; }
+.lock-card .attempt-dots .dot {
+  width:8px; height:8px; border-radius:50%;
+  background:hsl(var(--muted));
+  transition:background 0.3s;
+}
+.lock-card .attempt-dots .dot.used { background:hsl(var(--destructive)); }
+.lock-card .attempt-dots .dot.safe { background:hsl(var(--success)); }
+
+/* Clue Banner */
+.clue-banner {
+  background:hsla(var(--card),0.7);
+  backdrop-filter:blur(24px);
+  border:1px solid hsl(var(--primary));
+  border-radius:0.75rem;
+  padding:12px 14px;
+  margin-bottom:12px;
+  display:none;
+}
+.clue-banner.show { display:block; }
+.clue-banner .clue-label { font-size:0.65rem; color:hsl(var(--primary)); text-transform:uppercase; letter-spacing:1px; }
+.clue-banner .clue-text { font-size:0.85rem; margin-top:4px; line-height:1.4; }
+
+/* Action Button */
+.action-btn {
+  width:100%; padding:14px;
+  background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));
+  border:none; border-radius:0.75rem;
+  color:hsl(var(--primary-foreground));
+  font-family:'Nunito',sans-serif; font-weight:700; font-size:0.95rem;
+  cursor:pointer;
+  transition:all 0.2s;
+  margin-bottom:8px;
+}
+.action-btn:hover { opacity:0.9; transform:translateY(-1px); }
+.action-btn:disabled { opacity:0.4; cursor:default; transform:none; }
+
+/* Modal */
+.modal-overlay {
+  position:fixed; inset:0;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(8px);
+  display:flex; align-items:center; justify-content:center;
+  z-index:100;
+  padding:16px;
+}
+.modal-overlay.hidden { display:none; }
+.modal {
+  background:hsl(var(--card));
+  border:1px solid hsl(var(--border));
+  border-radius:1rem;
+  padding:20px;
+  max-width:400px; width:100%;
+  max-height:90vh; overflow-y:auto;
+}
+.modal h2 {
+  font-size:1.1rem; margin-bottom:6px;
+  background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.modal .question { font-size:0.9rem; margin:12px 0; line-height:1.5; }
+.modal .options { display:flex; flex-direction:column; gap:8px; margin-top:12px; }
+.modal .option-btn {
+  background:hsl(var(--muted));
+  border:1px solid hsl(var(--border));
+  border-radius:0.5rem;
+  padding:12px 14px;
+  color:hsl(var(--foreground));
+  font-family:'Nunito',sans-serif;
+  font-size:0.85rem;
+  cursor:pointer; text-align:left; transition:all 0.2s;
+}
+.modal .option-btn:hover { border-color:hsl(var(--primary)); background:hsla(var(--primary),0.15); }
+.modal .option-btn.correct { border-color:hsl(var(--success)); background:hsla(var(--success),0.2); }
+.modal .option-btn.wrong { border-color:hsl(var(--destructive)); background:hsla(var(--destructive),0.2); }
+.modal .result {
+  margin-top:12px; padding:10px; border-radius:0.5rem; text-align:center; font-weight:700; font-size:0.9rem;
+}
+.modal .result.success { background:hsla(var(--success),0.2); color:hsl(var(--success)); }
+.modal .result.fail { background:hsla(var(--destructive),0.2); color:hsl(var(--destructive)); }
+.modal .result.warn { background:hsla(var(--warning),0.2); color:hsl(var(--warning)); }
+.modal .close-btn {
+  margin-top:12px; width:100%; padding:12px;
+  background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));
+  border:none; border-radius:0.5rem;
+  color:hsl(var(--primary-foreground));
+  font-family:'Nunito',sans-serif; font-weight:700; font-size:0.9rem;
+  cursor:pointer;
+}
+
+/* End Screen */
+.end-screen { text-align:center; padding:20px; }
+.end-screen h1 { font-size:1.6rem; margin-bottom:8px; }
+.end-screen .restart-btn {
+  margin-top:16px; padding:14px 32px;
+  background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));
+  border:none; border-radius:0.75rem;
+  color:hsl(var(--primary-foreground));
+  font-family:'Nunito',sans-serif; font-weight:700; font-size:1rem;
+  cursor:pointer;
+}
+
+#confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:200; }
+</style>
+</head>
+<body>
+
+<canvas id="confetti-canvas"></canvas>
+
+<div class="container">
+  <div class="game-title">
+    <h1>Qochish Xonasi</h1>
+    <p>Escape Room: Subject Lock - 4 ta qulfni oching!</p>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-card"><div class="label">Daraja</div><div class="value level-val" id="level">0%</div></div>
+    <div class="stat-card"><div class="label">Tezlik</div><div class="value velocity-val" id="velocity">n=0.00</div></div>
+    <div class="stat-card"><div class="label">Vaqt</div><div class="value timer" id="timer-display">5:00</div></div>
+    <div class="stat-card"><div class="label">Ochiq</div><div class="value" id="unlocked-display">0/4</div></div>
+  </div>
+
+  <div class="clue-banner" id="clue-banner">
+    <div class="clue-label">SIR</div>
+    <div class="clue-text" id="clue-text"></div>
+  </div>
+
+  <div class="locks-grid" id="locks-grid"></div>
+
+  <div id="action-area"></div>
+</div>
+
+<!-- Question Modal -->
+<div class="modal-overlay hidden" id="question-modal">
+  <div class="modal">
+    <h2 id="modal-title">Qulfni ochish</h2>
+    <div class="question" id="modal-question"></div>
+    <div class="options" id="modal-options"></div>
+    <div class="result hidden" id="modal-result"></div>
+    <button class="close-btn hidden" id="modal-close">Davom etish</button>
+  </div>
+</div>
+
+<!-- End Screen -->
+<div class="modal-overlay hidden" id="end-modal">
+  <div class="modal end-screen">
+    <h1 id="end-title"></h1>
+    <p id="end-message"></p>
+    <div class="grade-card" id="end-grade-card">
+      <div class="grade-level" id="end-grade-level">0%</div>
+      <div class="grade-label" id="end-grade-label">Novice</div>
+      <div class="grade-detail" id="end-grade-detail">Ochiq qulflar: 0/4</div>
+      <div class="grade-detail" id="end-velocity-detail">Tezlik: n=0.00</div>
+    </div>
+    <button class="restart-btn" onclick="location.reload()">Qayta boshlash</button>
+  </div>
+</div>
+
+<script>
+// ==================== QUESTIONS ====================
+const questionBank = [
+  { q:"What is the chemical symbol for water?", opts:["H2O","CO2","NaCl","O2"], correct:0 },
+  { q:"Which planet is known as the Red Planet?", opts:["Venus","Mars","Jupiter","Saturn"], correct:1 },
+  { q:"What force keeps us on the ground?", opts:["Magnetism","Friction","Gravity","Inertia"], correct:2 },
+  { q:"What is the speed of light approximately?", opts:["300 km/s","300,000 km/s","3,000 km/s","30,000 km/s"], correct:1 },
+  { q:"What gas do plants absorb from the atmosphere?", opts:["Oxygen","Nitrogen","Carbon Dioxide","Hydrogen"], correct:2 },
+  { q:"How many bones are in the adult human body?", opts:["186","206","226","196"], correct:1 },
+  { q:"What is the powerhouse of the cell?", opts:["Nucleus","Ribosome","Mitochondria","Golgi Body"], correct:2 },
+  { q:"Which element has the atomic number 1?", opts:["Helium","Oxygen","Carbon","Hydrogen"], correct:3 },
+  { q:"What type of energy does the sun produce?", opts:["Chemical","Nuclear","Mechanical","Sound"], correct:1 },
+  { q:"What is the hardest natural substance?", opts:["Gold","Iron","Diamond","Quartz"], correct:2 },
+  { q:"What does DNA stand for?", opts:["Deoxyribonucleic Acid","Dynamic Nuclear Atom","Digital Network Array","Dual Nitrogen Acid"], correct:0 },
+  { q:"Which organ pumps blood through the body?", opts:["Lungs","Brain","Liver","Heart"], correct:3 },
+  { q:"What is the boiling point of water in Celsius?", opts:["90","100","110","120"], correct:1 },
+  { q:"What is the unit of electrical resistance?", opts:["Volt","Ampere","Ohm","Watt"], correct:2 },
+  { q:"Which layer of the atmosphere do we live in?", opts:["Stratosphere","Mesosphere","Troposphere","Thermosphere"], correct:2 },
+  { q:"What is the largest organ in the human body?", opts:["Liver","Brain","Skin","Lungs"], correct:2 },
+  { q:"What is the chemical formula for table salt?", opts:["NaCl","KCl","NaOH","HCl"], correct:0 },
+  { q:"Which blood type is the universal donor?", opts:["A","B","AB","O"], correct:3 },
+  { q:"What is the smallest unit of matter?", opts:["Molecule","Cell","Atom","Electron"], correct:2 },
+  { q:"What is the most abundant gas in Earth's atmosphere?", opts:["Oxygen","Carbon Dioxide","Nitrogen","Argon"], correct:2 },
+];
+
+// ==================== LOCK DATA ====================
+const locks = [
+  { name:"Eshik", icon:"🔒", iconOpen:"🔓", status:"locked", attempts:0, maxAttempts:3, hint:"Bu qulf suv haqida..." },
+  { name:"Sandiq", icon:"🔒", iconOpen:"🔓", status:"locked", attempts:0, maxAttempts:3, hint:"Bu qulf hujayra haqida..." },
+  { name:"Qurilma", icon:"🔒", iconOpen:"🔓", status:"locked", attempts:0, maxAttempts:3, hint:"Bu qulf atmosfera haqida..." },
+  { name:"Seif", icon:"🔒", iconOpen:"🔓", status:"locked", attempts:0, maxAttempts:3, hint:"Bu qulf elementlar haqida..." },
+];
+
+// Cross-hints revealed when previous lock is solved
+const crossHints = [
+  null,
+  "Eshik ochildi! IsHora: Sandiq - hujayra kuch markazi haqida o'ylang.",
+  "Sandiq ochildi! IsHora: Qurilma - biz yashayotgan atmosfera qatlami.",
+  "Qurilma ochildi! IsHora: Seif - eng kichik materiya birligi.",
+];
+
+// Questions mapped per lock
+const lockQuestions = {
+  0: [0, 3, 9],    // water, light speed, diamond
+  1: [5, 6, 10],   // bones, mitochondria, DNA
+  2: [14, 12, 19], // troposphere, boiling point, nitrogen
+  3: [7, 16, 18],  // atomic number, salt, smallest unit
+};
+
+let sessionHistory=[
+  {session:1,accuracy:15},
+  {session:2,accuracy:30},
+  {session:3,accuracy:45}
+];
+function calcVelocity(){
+  if(sessionHistory.length<2)return 0.3;
+  var f=sessionHistory[0].accuracy,l=sessionHistory[sessionHistory.length-1].accuracy,s=sessionHistory.length;
+  return Math.min(0.9,Math.max(0.1,(l-f)/(s*15)));
+}
+function getGradeLabel(acc){
+  if(acc>=85)return{label:'Mastered \u2605'};
+  if(acc>=60)return{label:'Proficient \u2713'};
+  if(acc>=30)return{label:'Apprentice \u25b3'};
+  return{label:'Novice \u25cb'};
+}
+let timer = 300; // 5 minutes
+let timerInterval = null;
+let unlockedCount = 0;
+let currentLockIdx = -1;
+let currentQuestionIdx = 0;
+let gameEnded = false;
+let hintUsed = false;
+let clueQuestionIndices = {};
+
+function getQuestionForLock(lockIdx, attemptNum) {
+  const qIdx = lockQuestions[lockIdx][Math.min(attemptNum, 2)];
+  return { ...questionBank[qIdx], index: qIdx };
+}
+
+function initGame() {
+  renderLocks();
+  renderActions();
+  startTimer();
+}
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timer--;
+    if (timer <= 0) {
+      clearInterval(timerInterval);
+      endGame(false);
+      return;
+    }
+    const m = Math.floor(timer / 60);
+    const s = timer % 60;
+    document.getElementById('timer-display').textContent = `${m}:${s.toString().padStart(2,'0')}`;
+  }, 1000);
+}
+
+function renderLocks() {
+  const el = document.getElementById('locks-grid');
+  el.innerHTML = '';
+  locks.forEach((lock, i) => {
+    const card = document.createElement('div');
+    let cls = 'lock-card';
+    if (lock.status === 'unlocked') cls += ' unlocked';
+    else if (lock.status === 'broken') cls += ' broken';
+    else if (lock.attempts > 0) cls += ' degraded';
+    card.className = cls;
+    let statusText = 'Qulflangan';
+    let statusCls = '';
+    if (lock.status === 'unlocked') { statusText = 'Ochiq!'; statusCls = 'open'; }
+    else if (lock.status === 'broken') { statusText = 'Singan'; statusCls = 'warn'; }
+    else if (lock.attempts > 0) { statusText = `${lock.attempts}/3 noto'g'ri`; statusCls = 'warn'; }
+
+    let dotsHtml = '';
+    for (let d = 0; d < 3; d++) {
+      let dotCls = 'dot';
+      if (lock.status === 'unlocked') dotCls += ' safe';
+      else if (d < lock.attempts) dotCls += ' used';
+      dotsHtml += `<div class="${dotCls}"></div>`;
+    }
+
+    card.innerHTML = `
+      <div class="lock-icon">${lock.status === 'unlocked' ? lock.iconOpen : lock.icon}</div>
+      <div class="lock-name">${lock.name}</div>
+      <div class="lock-status ${statusCls}">${statusText}</div>
+      <div class="attempt-dots">${dotsHtml}</div>
+    `;
+    el.appendChild(card);
+  });
+  document.getElementById('unlocked-display').textContent = `${unlockedCount}/4`;
+  const accuracy = Math.round(unlockedCount / 4 * 100);
+  document.getElementById('level').textContent = accuracy + '%';
+  sessionHistory.push({session: unlockedCount, accuracy: accuracy});
+  document.getElementById('velocity').textContent = 'n=' + calcVelocity().toFixed(2);
+}
+
+function renderActions() {
+  const area = document.getElementById('action-area');
+  area.innerHTML = '';
+  // Find next lock to attempt
+  let nextLock = -1;
+  for (let i = 0; i < 4; i++) {
+    if (locks[i].status === 'locked') {
+      nextLock = i;
+      break;
+    }
+  }
+  if (nextLock === -1) {
+    if (unlockedCount === 4 && !gameEnded) endGame(true);
+    return;
+  }
+  // Show hint if available
+  if (nextLock > 0 && locks[nextLock - 1].status === 'unlocked' && locks[nextLock].status === 'locked') {
+    const banner = document.getElementById('clue-banner');
+    banner.classList.add('show');
+    document.getElementById('clue-text').textContent = crossHints[nextLock];
+  }
+  const btn = document.createElement('button');
+  btn.className = 'action-btn';
+  btn.textContent = `${locks[nextLock].icon} ${locks[nextLock].name} - Ochish uchun bosing`;
+  btn.addEventListener('click', () => attemptLock(nextLock));
+  area.appendChild(btn);
+}
+
+function attemptLock(lockIdx) {
+  if (gameEnded) return;
+  currentLockIdx = lockIdx;
+  const lock = locks[lockIdx];
+  const q = getQuestionForLock(lockIdx, lock.attempts);
+  document.getElementById('modal-title').textContent = `${lock.icon} ${lock.name} qulfi`;
+  document.getElementById('modal-question').textContent = q.q;
+  const optsEl = document.getElementById('modal-options');
+  optsEl.innerHTML = '';
+  q.opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.textContent = opt;
+    btn.addEventListener('click', () => handleAnswer(i, q.correct, btn));
+    optsEl.appendChild(btn);
+  });
+  document.getElementById('modal-result').classList.add('hidden');
+  document.getElementById('modal-close').classList.add('hidden');
+  document.getElementById('question-modal').classList.remove('hidden');
+}
+
+function handleAnswer(chosen, correct, btn) {
+  const allBtns = document.querySelectorAll('#modal-options .option-btn');
+  allBtns.forEach((b, i) => {
+    b.disabled = true;
+    if (i === correct) b.classList.add('correct');
+    if (i === chosen && i !== correct) b.classList.add('wrong');
+  });
+  const lock = locks[currentLockIdx];
+  const resultEl = document.getElementById('modal-result');
+  resultEl.classList.remove('hidden');
+
+  if (chosen === correct) {
+    resultEl.textContent = `Tog\'ri! ${lock.name} ochildi!`;
+    resultEl.className = 'result success';
+    lock.status = 'unlocked';
+    unlockedCount++;
+  } else {
+    lock.attempts++;
+    if (lock.attempts >= lock.maxAttempts) {
+      lock.status = 'broken';
+      resultEl.textContent = `${lock.name} sindi! Mavzu ochildi, lekin daraja past.`;
+      resultEl.className = 'result warn';
+    } else {
+      resultEl.textContent = `Noto\'g\'ri! ${lock.attempts}/${lock.maxAttempts}. Yana harakat qiling!`;
+      resultEl.className = 'result fail';
+    }
+  }
+  document.getElementById('modal-close').classList.remove('hidden');
+  document.getElementById('modal-close').onclick = () => {
+    document.getElementById('question-modal').classList.add('hidden');
+    document.getElementById('clue-banner').classList.remove('show');
+    renderLocks();
+    renderActions();
+    if (unlockedCount === 4 && !gameEnded) endGame(true);
+    // Check if all locks are either unlocked or broken
+    const allDone = locks.every(l => l.status === 'unlocked' || l.status === 'broken');
+    if (allDone && !gameEnded) {
+      endGame(unlockedCount === 4);
+    }
+  };
+}
+
+function endGame(victory) {
+  gameEnded = true;
+  clearInterval(timerInterval);
+  const accuracy = Math.round(unlockedCount / 4 * 100);
+  const grade = getGradeLabel(accuracy);
+  const velocity = calcVelocity();
+  document.getElementById('end-title').textContent = victory ? 'Barcha qulflar ochildi!' : 'Vaqt tugadi!';
+  document.getElementById('end-title').style.background = victory
+    ? 'linear-gradient(135deg,hsl(var(--success)),hsl(var(--primary)))'
+    : 'linear-gradient(135deg,hsl(var(--destructive)),hsl(var(--warning)))';
+  document.getElementById('end-title').style.webkitBackgroundClip = 'text';
+  document.getElementById('end-title').style.webkitTextFillColor = 'transparent';
+  document.getElementById('end-title').style.backgroundClip = 'text';
+  document.getElementById('end-message').textContent = victory
+    ? `4 ta qulf ochildi! ${hintUsed ? 'Sir ham ishlatildi!' : ''}`
+    : `${unlockedCount}/4 qulf ochildi.`;
+  document.getElementById('end-grade-level').textContent = accuracy + '%';
+  document.getElementById('end-grade-label').textContent = grade.label;
+  document.getElementById('end-grade-detail').textContent = `Ochiq qulflar: ${unlockedCount}/4 (${accuracy}% aniqlik)`;
+  document.getElementById('end-velocity-detail').textContent = `Tezlik: n=${velocity.toFixed(2)}`;
+  document.getElementById('end-modal').classList.remove('hidden');
+  if (victory) launchConfetti();
+}
+
+// ==================== CONFETTI ====================
+function launchConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const pieces = [];
+  const colors = ['#10b981','#06b6d4','#f59e0b','#ef4444','#8b5cf6','#ec4899','#ffffff'];
+  for (let i = 0; i < 150; i++) {
+    pieces.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      w: Math.random() * 10 + 5,
+      h: Math.random() * 6 + 3,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      vx: (Math.random() - 0.5) * 4,
+      vy: Math.random() * 3 + 2,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 10,
+      opacity: 1
+    });
+  }
+  let frame = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    frame++;
+    pieces.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.05;
+      p.rot += p.rv;
+      if (frame > 120) p.opacity -= 0.01;
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot * Math.PI / 180);
+      ctx.globalAlpha = Math.max(0, p.opacity);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+      ctx.restore();
+    });
+    if (frame < 250) requestAnimationFrame(animate);
+    else ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  animate();
+}
+
+initGame();
+</script>
+</body>
+</html>

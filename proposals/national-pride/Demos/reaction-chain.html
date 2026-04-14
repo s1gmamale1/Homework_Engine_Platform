@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Reaction Chain — NETS Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--background:240 15% 8%;--foreground:0 0% 95%;--card:240 12% 12%;
+--primary:162 93% 42%;--primary-foreground:0 0% 100%;--muted:240 10% 20%;
+--muted-foreground:240 5% 55%;--border:240 10% 22%;--success:142 76% 45%;
+--warning:38 92% 50%;--destructive:0 72% 51%
+}
+body{
+font-family:'Nunito',sans-serif;
+background:hsl(var(--background));color:hsl(var(--foreground));
+min-height:100vh;display:flex;flex-direction:column;align-items:center;
+padding:12px;max-width:420px;margin:0 auto
+}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+.stats-bar{display:flex;gap:8px;width:100%;margin-bottom:12px}
+.stat-card{flex:1;background:rgba(255,255,255,0.06);backdrop-filter:blur(24px);
+border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:8px;text-align:center}
+.stat-label{font-size:0.65rem;color:hsl(var(--muted-foreground));text-transform:uppercase;letter-spacing:0.05em}
+.stat-value{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;color:hsl(var(--primary))}
+.stat-value.level-val{color:hsl(var(--primary));font-size:0.95rem}
+.stat-value.velocity-val{color:hsl(var(--success));font-size:0.75rem}
+.grade-card{background:hsla(var(--card),0.9);backdrop-filter:blur(24px);border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:16px;text-align:center;margin-top:12px}
+.grade-level{font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:700;background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.grade-label{font-size:12px;color:hsl(var(--muted-foreground));margin-top:4px;text-transform:uppercase;letter-spacing:1px}
+.grade-detail{font-size:14px;color:hsl(var(--foreground));margin-top:8px;font-weight:600}
+.game-title{text-align:center;margin-bottom:8px}
+.game-title h1{font-size:1.3rem;background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.game-title p{font-size:0.75rem;color:hsl(var(--muted-foreground))}
+.chain-container{width:100%;margin:12px 0;position:relative}
+.chain-svg{width:100%;height:200px}
+.chain-node{transition:all 0.5s}
+.chain-line{stroke:hsla(var(--border),0.5);stroke-width:3;fill:none;transition:all 0.5s}
+.chain-line.active{stroke:hsl(var(--primary));filter:drop-shadow(0 0 4px hsla(var(--primary),0.5))}
+.chain-line.broken{stroke:hsl(var(--destructive));stroke-dasharray:6 4}
+.node-circle{fill:hsl(var(--muted));stroke:hsla(var(--border),0.5);stroke-width:2;transition:all 0.5s}
+.node-circle.lit{fill:hsl(var(--primary));stroke:hsl(var(--primary));filter:drop-shadow(0 0 8px hsla(var(--primary),0.6))}
+.node-circle.broken-node{fill:hsl(var(--destructive));stroke:hsl(var(--destructive));filter:drop-shadow(0 0 8px hsla(var(--destructive),0.4))}
+.node-circle.gray-node{fill:#555;stroke:#666}
+.node-label{font-family:'Space Grotesk',sans-serif;font-size:11px;fill:hsl(var(--muted-foreground));transition:fill 0.5s;pointer-events:none}
+.node-label.active{fill:hsl(var(--primary-foreground))}
+.crack-line{stroke:hsl(var(--destructive));stroke-width:2;opacity:0;transition:opacity 0.5s}
+.crack-line.visible{opacity:1}
+.question-area{width:100%;margin:8px 0}
+.q-btn{width:100%;padding:12px;border:none;border-radius:0.5rem;
+background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));
+color:hsl(var(--primary-foreground));font-weight:700;font-size:0.9rem;cursor:pointer;
+font-family:'Nunito',sans-serif;transition:opacity 0.2s}
+.q-btn:disabled{opacity:0.4;cursor:not-allowed}
+.status-bar{text-align:center;margin:8px 0;font-size:0.8rem;color:hsl(var(--muted-foreground))}
+.status-bar .streak{color:hsl(var(--primary));font-weight:700}
+.status-bar .broken{color:hsl(var(--destructive));font-weight:700}
+.result-banner{background:hsla(var(--card),0.9);backdrop-filter:blur(24px);
+border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;
+padding:16px;text-align:center;margin-top:12px;display:none}
+.result-banner.show{display:block}
+.result-banner h2{font-size:1.2rem;margin-bottom:8px}
+.result-banner .xp{font-size:1.5rem;font-weight:800;color:hsl(var(--primary))}
+.btn{background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));
+color:hsl(var(--primary-foreground));border:none;border-radius:0.5rem;
+padding:10px 20px;font-size:0.85rem;font-weight:700;cursor:pointer;
+font-family:'Nunito',sans-serif;width:100%;margin-top:8px}
+.btn:hover{opacity:0.9}
+.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);
+display:flex;align-items:center;justify-content:center;z-index:100;
+padding:16px;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.modal-overlay.active{opacity:1;pointer-events:auto}
+.modal{background:hsl(var(--card));border:1px solid hsla(var(--border),0.5);
+border-radius:0.75rem;padding:20px;width:100%;max-width:360px;
+transform:scale(0.9);transition:transform 0.3s}
+.modal-overlay.active .modal{transform:scale(1)}
+.modal h3{font-size:1rem;margin-bottom:12px;color:hsl(var(--primary))}
+.modal p{font-size:0.85rem;line-height:1.5;margin-bottom:16px}
+.modal-options{display:flex;flex-direction:column;gap:8px}
+.modal-option{background:hsla(var(--muted),0.5);border:1px solid hsla(var(--border),0.3);
+border-radius:0.5rem;padding:10px;font-size:0.85rem;color:hsl(var(--foreground));
+cursor:pointer;transition:all 0.2s;font-family:'Nunito',sans-serif;text-align:left}
+.modal-option:hover{background:hsla(var(--primary),0.2);border-color:hsl(var(--primary))}
+.modal-option.correct{background:hsla(var(--success),0.3);border-color:hsl(var(--success))}
+.modal-option.wrong{background:hsla(var(--destructive),0.3);border-color:hsl(var(--destructive))}
+#confetti-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1000}
+</style>
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+<div class="game-title"><h1>Reaction Chain</h1><p>Zanjirni uzmay 8 ta savolga javob bering!</p></div>
+<div class="stats-bar">
+<div class="stat-card"><div class="stat-label">Daraja</div><div class="stat-value level-val" id="level">0%</div></div>
+<div class="stat-card"><div class="stat-label">Tezlik</div><div class="stat-value velocity-val" id="velocity">n=0.00</div></div>
+<div class="stat-card"><div class="stat-label">Zanjir</div><div class="stat-value" id="chain">0/8</div></div>
+<div class="stat-card"><div class="stat-label">Xato</div><div class="stat-value" id="wrong">0</div></div>
+</div>
+<div class="chain-container">
+<svg class="chain-svg" viewBox="0 0 400 200" id="chain-svg">
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="3" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+</svg>
+</div>
+<div class="status-bar" id="status">Zanjirni boshlash uchun tugmani bosing</div>
+<div class="question-area">
+<button class="q-btn" id="q-btn" onclick="showQuestion()">Zanjirni boshlash</button>
+</div>
+<div class="result-banner" id="result-banner">
+<h2 id="result-title"></h2>
+<div class="grade-card" id="grade-card">
+<div class="grade-level" id="grade-level"></div>
+<div class="grade-label">Umumiy Daraja</div>
+<div class="grade-detail" id="grade-detail"></div>
+</div>
+<button class="btn" onclick="resetGame()">Qayta boshlash</button>
+</div>
+<div class="modal-overlay" id="modal">
+<div class="modal">
+<h3 id="modal-title">Savol</h3>
+<p id="modal-question"></p>
+<div class="modal-options" id="modal-options"></div>
+</div>
+</div>
+<script>
+const NODES=8;
+const questions=[
+{q:"Suvning kimyoviy formulasi?",o:["H2O","CO2","NaCl","O2"],a:0},
+{q:"Yer Quyosh atrofida necha kun aylanadi?",o:["30","365","7","24"],a:1},
+{q:"Fotosintezda nima chiqariladi?",o:["CO2","Azot","Kislorod","Vodorod"],a:2},
+{q:"Elektr birligi nima?",o:["Volt","Joul","Nyuton","Paskal"],a:0},
+{q:"Eng katta sayyora?",o:["Mars","Saturn","Yupiter","Neptun"],a:2},
+{q:"DNA qanday tuzilishga ega?",o:["Uch","Ikki spiral","Halqa","Chiziq"],a:1},
+{q:"Eng qattiq mineral?",o:["Kvarts","Olmos","Topaz","Granit"],a:1},
+{q:"Muz erish harorati?",o:["100 C","0 C","-10 C","50 C"],a:1},
+{q:"Odamda nechta suyak?",o:["106","206","306","186"],a:1},
+{q:"Tortishish qonuni muallifi?",o:["Eynshteyn","Nyuton","Galiley","Bor"],a:1},
+{q:"Eng yaqin yulduz?",o:["Proksima","Siriys","Quyosh","Vega"],a:2},
+{q:"Periodik jadval muallifi?",o:["Lavoazye","Mendeleev","Dalton","Bor"],a:1},
+{q:"Atomda nima aylanadi?",o:["Proton","Neytron","Elektron","Foton"],a:2},
+{q:"O'yog' organ qaysi?",o:["O'pka","Jigar","Yurak","Buyrak"],a:2},
+{q:"Plastmassa qanday material?",o:["Tabiiy","Sintetik","Mineral","Metall"],a:1},
+];
+let chain=[false,false,false,false,false,false,false,false];
+let brokenAt=-1,currentNode=0,wrongCount=0,wrongStreak=0,qIdx=0,gameOver=false;
+let sessionHistory=[];
+
+function calcVelocity(){
+if(sessionHistory.length<2)return 0;
+const first=sessionHistory[0].timestamp;
+const last=sessionHistory[sessionHistory.length-1].timestamp;
+const elapsedMin=(last-first)/60000;
+if(elapsedMin<0.1)return 0;
+return sessionHistory.length/elapsedMin;
+}
+
+function getGradeLabel(accuracy,velocity){
+const score=accuracy*0.7+Math.min(velocity,10)*3;
+if(score>=80)return{grade:'A+',color:'hsl(var(--success))'};
+if(score>=70)return{grade:'A',color:'hsl(var(--success))'};
+if(score>=60)return{grade:'B',color:'hsl(var(--primary))'};
+if(score>=50)return{grade:'C',color:'hsl(var(--warning))'};
+if(score>=35)return{grade:'D',color:'hsl(var(--warning))'};
+return{grade:'F',color:'hsl(var(--destructive))'};
+}
+
+function updateStats(){
+const completed=chain.filter(Boolean).length;
+const accuracy=sessionHistory.length>0?Math.round((completed/Math.max(sessionHistory.length,1))*100):0;
+const velocity=calcVelocity();
+document.getElementById('level').textContent=accuracy+'%';
+document.getElementById('velocity').textContent='n='+velocity.toFixed(2);
+}
+function init(){
+chain=[false,false,false,false,false,false,false,false];
+brokenAt=-1;currentNode=0;sessionHistory=[];wrongCount=0;wrongStreak=0;qIdx=0;gameOver=false;
+document.getElementById('level').textContent='0%';
+document.getElementById('velocity').textContent='n=0.00';
+document.getElementById('chain').textContent='0/8';
+document.getElementById('wrong').textContent='0';
+document.getElementById('result-banner').classList.remove('show');
+document.getElementById('status').innerHTML='Zanjirni boshlash uchun tugmani bosing';
+document.getElementById('q-btn').disabled=false;
+document.getElementById('q-btn').textContent='Zanjirni boshlash';
+renderChain();
+}
+function renderChain(){
+const svg=document.getElementById('chain-svg');
+const nodePositions=getNodePositions();
+let html='<defs><filter id="glow"><feGaussianBlur stdDeviation="3" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
+// lines
+for(let i=0;i<NODES-1;i++){
+const x1=nodePositions[i].x,y1=nodePositions[i].y;
+const x2=nodePositions[i+1].x,y2=nodePositions[i+1].y;
+let cls='chain-line';
+if(brokenAt===i+1)cls+=' broken';
+else if(chain[i+1])cls+=' active';
+html+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" class="${cls}"/>`;
+if(brokenAt===i+1){
+const mx=(x1+x2)/2,my=(y1+y2)/2;
+html+=`<polyline points="${mx-8},${my-10} ${mx-3},${my+2} ${mx+2},${my-8} ${mx+7},${my+4}" class="crack-line visible"/>`;
+}}
+// nodes
+for(let i=0;i<NODES;i++){
+const p=nodePositions[i];let cls='node-circle';
+if(i<brokenAt)cls+=' lit';
+else if(brokenAt>0&&i===brokenAt)cls+=' broken-node';
+else if(brokenAt>0&&i>brokenAt)cls+=' gray-node';
+else if(chain[i])cls+=' lit';
+let labelCls='node-label';
+if(i<brokenAt||(brokenAt===-1&&chain[i]))labelCls+=' active';
+html+=`<circle cx="${p.x}" cy="${p.y}" r="22" class="${cls}" filter="${(i<brokenAt||chain[i])?'url(#glow)':''}"/>`;
+html+=`<text x="${p.x}" y="${p.y+1}" text-anchor="middle" dominant-baseline="central" class="${labelCls}">${i+1}</text>`;
+}
+svg.innerHTML=html;
+}
+function getNodePositions(){
+const positions=[];
+const cols=4,rows=2;const sw=400,sh=200;
+const padX=50,padY=40;
+const spacingX=(sw-2*padX)/(cols-1);
+const spacingY=(sh-2*padY)/(rows-1);
+for(let i=0;i<NODES;i++){
+const row=Math.floor(i/cols);const col=i%cols;
+positions.push({x:padX+col*spacingX,y:padY+row*spacingY});
+}
+return positions;
+}
+function showQuestion(){
+if(gameOver)return;
+const q=questions[qIdx%questions.length];qIdx++;
+document.getElementById('modal-title').textContent='Savol #'+qIdx;
+document.getElementById('modal-question').textContent=q.q;
+const opts=document.getElementById('modal-options');opts.innerHTML='';
+q.o.forEach((o,i)=>{
+const b=document.createElement('button');b.className='modal-option';b.textContent=o;
+b.addEventListener('click',()=>onAnswer(i,q.a,b));opts.appendChild(b);
+});
+document.getElementById('modal').classList.add('active');
+}
+function onAnswer(sel,correct,btn){
+const btns=document.querySelectorAll('.modal-option');
+btns.forEach((b,i)=>{b.disabled=true;if(i===correct)b.classList.add('correct');if(i===sel&&i!==correct)b.classList.add('wrong')});
+if(sel===correct){wrongStreak=0;
+sessionHistory.push({correct:true,timestamp:Date.now()});
+setTimeout(()=>{document.getElementById('modal').classList.remove('active');lightNode()},400);
+}else{wrongCount++;wrongStreak++;
+sessionHistory.push({correct:false,timestamp:Date.now()});
+document.getElementById('wrong').textContent=wrongCount;
+if(wrongStreak>=3){
+setTimeout(()=>{document.getElementById('modal').classList.remove('active');breakChain()},400);
+}else{
+setTimeout(()=>{document.getElementById('modal').classList.remove('active');
+document.getElementById('status').innerHTML='<span class="broken">Xato! '+wrongStreak+'/3 uzilish. Yana '+wrongStreak+' xato = zanjir uziladi!</span>'},400);
+}}
+}
+function lightNode(){
+if(brokenAt>0)currentNode=brokenAt;
+chain[currentNode]=true;currentNode++;
+document.getElementById('chain').textContent=currentNode+'/8';
+updateStats();
+const status=document.getElementById('status');
+status.innerHTML='Zanjir: <span class="streak">'+currentNode+'/8</span> — davom eting!';
+document.getElementById('q-btn').textContent='Keyingi savol ('+(currentNode+1)+')';
+if(currentNode>=NODES){gameOver=true;
+document.getElementById('q-btn').disabled=true;
+showResult(true);return;
+}
+renderChain();
+}
+function breakChain(){
+brokenAt=currentNode;
+chain[brokenAt]=false;
+document.getElementById('status').innerHTML='<span class="broken">Zanjir '+brokenAt+' da uzildi! Qayta tiklash uchun javob bering.</span>';
+document.getElementById('q-btn').textContent='Zanjirni tiklash ('+(brokenAt+1)+')';
+document.getElementById('chain').textContent=currentNode+'/8';
+renderChain();
+if(currentNode>=NODES-1){gameOver=true;document.getElementById('q-btn').disabled=true;showResult(false);return;}
+}
+function showResult(complete){
+const banner=document.getElementById('result-banner');
+const title=document.getElementById('result-title');
+banner.classList.add('show');
+const completed=chain.filter(Boolean).length;
+const accuracy=sessionHistory.length>0?Math.round((completed/Math.max(sessionHistory.length,1))*100):0;
+const velocity=calcVelocity();
+const grade=getGradeLabel(accuracy,velocity);
+if(complete){title.textContent='Zanjir to\'liq! 8/8!';title.style.color='hsl(var(--success))';}
+else{title.textContent='Zanjir uzildi! '+currentNode+'/8';title.style.color='hsl(var(--warning))';}
+document.getElementById('grade-level').textContent=grade.grade;
+document.getElementById('grade-level').style.background='linear-gradient(135deg,'+grade.color+',hsl(180,85%,35%))';
+document.getElementById('grade-level').style.webkitBackgroundClip='text';
+document.getElementById('grade-level').style.webkitTextFillColor='transparent';
+document.getElementById('grade-level').style.backgroundClip='text';
+document.getElementById('grade-detail').textContent='Aniqlik: '+accuracy+'% | Tezlik: n='+velocity.toFixed(2)+' | '+completed+'/8 zanjir tugatildi';
+if(complete)launchConfetti();
+}
+function resetGame(){init();}
+function launchConfetti(){
+const canvas=document.getElementById('confetti-canvas');const ctx=canvas.getContext('2d');
+canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+const pieces=[];const colors=['hsl(162,93%,42%)','hsl(180,85%,35%)','hsl(142,76%,45%)','hsl(38,92%,50%)','hsl(0,72%,51%)'];
+for(let i=0;i<150;i++)pieces.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height-canvas.height,
+w:Math.random()*10+5,h:Math.random()*6+3,color:colors[Math.floor(Math.random()*colors.length)],
+vx:(Math.random()-0.5)*4,vy:Math.random()*3+2,rot:Math.random()*360,rs:(Math.random()-0.5)*10});
+let frame=0;
+function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);
+pieces.forEach(p=>{ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot*Math.PI/180);
+ctx.fillStyle=p.color;ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);ctx.restore();
+p.x+=p.vx;p.y+=p.vy;p.rot+=p.rs;p.vy+=0.05});
+frame++;if(frame<200)requestAnimationFrame(animate);else ctx.clearRect(0,0,canvas.width,canvas.height)}
+animate();
+}
+init();
+</script>
+</body>
+</html>

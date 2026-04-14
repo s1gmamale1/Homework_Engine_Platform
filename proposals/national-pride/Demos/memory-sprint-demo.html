@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Sprint — Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: 240 15% 8%;
+      --foreground: 0 0% 95%;
+      --card: 240 12% 12%;
+      --card-hover: 240 12% 16%;
+      --primary: 162 93% 42%;
+      --primary-foreground: 0 0% 100%;
+      --muted: 240 10% 20%;
+      --muted-foreground: 240 5% 55%;
+      --border: 240 10% 22%;
+      --success: 142 76% 45%;
+      --warning: 38 92% 50%;
+      --destructive: 0 72% 51%;
+      --radius: 0.75rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: hsl(var(--background));
+      color: hsl(var(--foreground));
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 12px 48px;
+    }
+    .container { width: 100%; max-width: 420px; }
+
+    /* Phase Flow */
+    .phase-flow { display: flex; gap: 3px; margin-bottom: 12px; }
+    .phase-segment { flex: 1; height: 4px; border-radius: 2px; background: hsl(var(--muted)); transition: background 0.3s; }
+    .phase-segment.active { background: hsl(var(--primary)); }
+    .phase-segment.done { background: hsl(var(--success)); }
+    .phase-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; color: hsl(var(--muted-foreground)); text-align: center;
+      margin-bottom: 8px; letter-spacing: 0.5px; text-transform: uppercase;
+    }
+
+    .header { text-align: center; margin-bottom: 16px; }
+    .header h1 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .header p { color: hsl(var(--muted-foreground)); font-size: 13px; margin-top: 4px; }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: flex; gap: 8px; margin-bottom: 16px;
+      background: hsla(var(--card), 0.6); backdrop-filter: blur(24px);
+      border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 10px 12px;
+    }
+    .stat-item { flex: 1; display: flex; flex-direction: column; align-items: center; }
+    .stat-label { font-size: 10px; color: hsl(var(--muted-foreground)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: hsl(var(--foreground)); margin-top: 2px; }
+    .stat-value.level-val { color: hsl(var(--primary)); }
+    .stat-value.velocity-val { color: hsl(var(--success)); }
+    .stat-value.timer-val { color: hsl(var(--destructive)); }
+    .stat-value.score-val { color: hsl(var(--success)); }
+
+    /* Grade Card */
+    .grade-card {
+      background: hsla(var(--card), 0.8); backdrop-filter: blur(24px);
+      border: 1px solid hsla(var(--border), 0.5); border-radius: 0.75rem;
+      padding: 20px; text-align: center; margin: 16px 0;
+    }
+    .grade-level { font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 800;
+      background: linear-gradient(135deg, hsl(162,93%,42%), hsl(180,85%,35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .grade-label { font-size: 18px; font-weight: 700; margin: 4px 0; }
+    .grade-detail { font-size: 13px; color: hsl(var(--muted-foreground)); margin: 2px 0; }
+
+    .glass-card {
+      background: hsla(var(--card), 0.6); backdrop-filter: blur(24px);
+      border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 16px;
+    }
+
+    /* Panels */
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    /* Start Screen */
+    .rules-list { list-style: none; margin: 16px 0; }
+    .rules-list li {
+      padding: 10px 12px; margin-bottom: 8px;
+      background: hsla(var(--muted), 0.4); border-radius: var(--radius);
+      font-size: 14px; line-height: 1.4;
+    }
+    .rules-list li .rule-icon { margin-right: 8px; }
+
+    .start-btn {
+      width: 100%; padding: 16px; border: none; border-radius: var(--radius);
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      color: hsl(var(--primary-foreground)); font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px; font-weight: 700; cursor: pointer; transition: transform 0.2s;
+    }
+    .start-btn:active { transform: scale(0.97); }
+
+    /* Study Phase */
+    .study-banner {
+      background: linear-gradient(135deg, hsl(220, 80%, 25%), hsl(260, 70%, 25%));
+      border-radius: var(--radius); padding: 14px 16px; text-align: center; margin-bottom: 16px;
+      border: 1px solid hsl(240 10% 30%);
+    }
+    .study-banner h2 { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; }
+    .study-banner p { font-size: 13px; color: hsl(var(--muted-foreground)); margin-top: 4px; }
+
+    .study-countdown {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 72px; font-weight: 700; text-align: center; margin: 16px 0;
+      color: hsl(var(--primary));
+      text-shadow: 0 0 30px hsla(var(--primary), 0.4);
+    }
+
+    .items-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+    .study-item {
+      background: hsla(var(--card), 0.8); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius); padding: 16px 8px; text-align: center;
+      transition: opacity 0.5s;
+    }
+    .study-item .emoji { font-size: 32px; margin-bottom: 6px; }
+    .study-item .label { font-size: 12px; font-weight: 700; color: hsl(var(--foreground)); }
+
+    /* Recall Phase */
+    .recall-banner {
+      background: linear-gradient(135deg, hsl(0, 60%, 25%), hsl(20, 70%, 25%));
+      border-radius: var(--radius); padding: 14px 16px; text-align: center; margin-bottom: 16px;
+      border: 1px solid hsl(0 40% 35%);
+    }
+    .recall-banner h2 { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; }
+    .recall-banner p { font-size: 13px; color: hsl(20, 60%, 75%); margin-top: 4px; }
+
+    .q-counter { font-size: 13px; font-weight: 700; color: hsl(var(--muted-foreground)); text-align: center; margin-bottom: 12px; }
+
+    .q-card {
+      background: hsla(var(--card), 0.8); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius); padding: 20px; margin-bottom: 16px;
+    }
+    .q-text { font-size: 18px; font-weight: 700; color: hsl(var(--foreground)); margin-bottom: 16px; line-height: 1.4; }
+    .q-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .q-opt {
+      padding: 14px 10px; border: 1px solid hsl(var(--border)); border-radius: var(--radius);
+      background: hsla(var(--card), 0.5); cursor: pointer; font-size: 14px;
+      font-family: 'Nunito', sans-serif; font-weight: 600; color: hsl(var(--foreground));
+      text-align: center; transition: all 0.15s;
+    }
+    .q-opt:hover:not(.answered) { border-color: hsl(var(--primary)); background: hsla(var(--primary), 0.1); }
+    .q-opt.correct { background: hsla(var(--success), 0.2); border-color: hsl(var(--success)); color: hsl(var(--success)); }
+    .q-opt.wrong { background: hsla(var(--destructive), 0.2); border-color: hsl(var(--destructive)); color: hsl(var(--destructive)); }
+    .q-opt.answered { pointer-events: none; opacity: 0.7; }
+
+    /* Completion */
+    .completion-panel { text-align: center; padding: 24px 16px; }
+    .completion-panel .big-emoji { font-size: 64px; margin: 16px 0; }
+    .completion-panel h2 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 8px;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .completion-panel .summary { color: hsl(var(--muted-foreground)); font-size: 14px; margin: 12px 0; }
+    .score-breakdown {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 16px 0;
+    }
+    .score-item {
+      background: hsla(var(--muted), 0.3); border-radius: var(--radius); padding: 12px 8px; text-align: center;
+    }
+    .score-item .s-val { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; }
+    .score-item .s-label { font-size: 11px; color: hsl(var(--muted-foreground)); margin-top: 4px; }
+
+    #confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; }
+  </style>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="container">
+    <div class="phase-label">Session Phase</div>
+    <div class="phase-flow">
+      <div class="phase-segment done"></div>
+      <div class="phase-segment done"></div>
+      <div class="phase-segment done"></div>
+      <div class="phase-segment active"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+    </div>
+
+    <div class="header">
+      <h1>⚡ Memory Sprint</h1>
+      <p>Yodlang → Eslang → Ball to'plang</p>
+    </div>
+
+    <div class="stats-bar" id="stats-bar" style="display:none;">
+      <div class="stat-item"><span class="stat-label">Daraja</span><span class="stat-value level-val" id="level-display">0%</span></div>
+      <div class="stat-item"><span class="stat-label">Tezlik</span><span class="stat-value velocity-val" id="velocity-display">n=0.00</span></div>
+      <div class="stat-item"><span class="stat-label">Urinish</span><span class="stat-value" id="attempts-display">0</span></div>
+    </div>
+
+    <!-- Start Panel -->
+    <div class="panel active" id="panel-start">
+      <div class="glass-card">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:18px; margin-bottom:12px;">📋 O'yin Qoidalari</h2>
+        <ul class="rules-list">
+          <li><span class="rule-icon">👀</span> <strong>1-bosqich:</strong> 6 ta elementni 5 soniyada yodlab oling</li>
+          <li><span class="rule-icon">🧠</span> <strong>2-bosqich:</strong> 6 ta savolga to'g'ri javob bering</li>
+          <li><span class="rule-icon">⏱</span> <strong>Vaqt:</strong> 30 soniya chegara</li>
+          <li><span class="rule-icon">📈</span> <strong>Daraja:</strong> Har to'g'ri javob = aniqlik oshadi</li>
+        </ul>
+        <button class="start-btn" onclick="startGame()">🚀 Boshlash!</button>
+      </div>
+    </div>
+
+    <!-- Study Panel -->
+    <div class="panel" id="panel-study">
+      <div class="study-banner">
+        <h2>👀 Yodlab oling!</h2>
+        <p>Elementlarni eslab qoling</p>
+      </div>
+      <div class="study-countdown" id="study-timer">5</div>
+      <div class="items-grid" id="study-grid"></div>
+    </div>
+
+    <!-- Recall Panel -->
+    <div class="panel" id="panel-recall">
+      <div class="recall-banner">
+        <h2>🧠 Eslab qoling!</h2>
+        <p>To'g'ri javobni tanlang</p>
+      </div>
+      <div class="q-counter" id="recall-counter">Savol 1/6</div>
+      <div class="q-card">
+        <div class="q-text" id="recall-qtext"></div>
+        <div class="q-opts" id="recall-opts"></div>
+      </div>
+    </div>
+
+    <!-- Completion Panel -->
+    <div class="panel" id="panel-complete">
+      <div class="glass-card completion-panel">
+        <div class="big-emoji">🏆</div>
+        <h2>Ajoyib natija!</h2>
+        <div class="grade-card" id="grade-card">
+          <div class="grade-level" id="grade-level">0%</div>
+          <div class="grade-label" id="grade-label">Novice ○</div>
+          <div class="grade-detail" id="grade-velocity">Velocity: n=0.00</div>
+          <div class="grade-detail" id="grade-speed">Speed: 0s/answer</div>
+          <div class="grade-detail" id="grade-progress">~5 sessions to Proficient</div>
+        </div>
+        <div class="score-breakdown">
+          <div class="score-item">
+            <div class="s-val" style="color:hsl(var(--success));" id="final-correct">0</div>
+            <div class="s-label">✅ To'g'ri</div>
+          </div>
+          <div class="score-item">
+            <div class="s-val" style="color:hsl(var(--warning));" id="final-time">0s</div>
+            <div class="s-label">⏱ Vaqt</div>
+          </div>
+          <div class="score-item">
+            <div class="s-val" style="color:hsl(var(--primary));" id="final-accuracy">0%</div>
+            <div class="s-label">📈 Aniqlik</div>
+          </div>
+        </div>
+        <p class="summary" id="final-summary"></p>
+        <button class="start-btn" onclick="restartGame()">🔄 Qayta boshlash</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const items = [
+      { emoji: '🏔️', label: 'Cho\'qqi' },
+      { emoji: '🌊', label: 'Okean' },
+      { emoji: '🌵', label: 'Kaktus' },
+      { emoji: '🦅', label: 'Burgut' },
+      { emoji: '🌙', label: 'Oy' },
+      { emoji: '⭐', label: 'Yulduz' }
+    ];
+
+    // Generate MC questions from items
+    function generateQuestions() {
+      const allLabels = items.map(i => i.label);
+      return items.map((item, i) => {
+        // Get 3 wrong answers
+        const wrong = allLabels.filter(l => l !== item.label).sort(() => Math.random() - 0.5).slice(0, 3);
+        const options = [...wrong, item.label].sort(() => Math.random() - 0.5);
+        return {
+          question: `Qaysi element "${item.emoji}" emoji bilan bog'liq?`,
+          correct: item.label,
+          options: options
+        };
+      });
+    }
+
+    let questions = [];
+    let currentQ = 0;
+    let score = 0;
+    let timer = 30;
+    let timerInterval = null;
+    let gameStartTime = 0;
+
+    // Simulated history
+    var sessionHistory = [
+      { session: 1, accuracy: 15, timePerAnswer: 22, hints: 4 },
+      { session: 2, accuracy: 30, timePerAnswer: 18, hints: 3 },
+      { session: 3, accuracy: 45, timePerAnswer: 15, hints: 2 }
+    ];
+    var currentAccuracy = 0;
+    var totalAttempts = 0;
+    var correctCount = 0;
+
+    function calcVelocity() {
+      if (sessionHistory.length < 2) return 0.3;
+      var first = sessionHistory[0].accuracy;
+      var last = sessionHistory[sessionHistory.length - 1].accuracy;
+      var sessions = sessionHistory.length;
+      return Math.min(0.9, Math.max(0.1, (last - first) / (sessions * 20)));
+    }
+
+    function getGradeLabel(acc) {
+      if (acc >= 85) return { label: 'Mastered ★', color: 'hsl(var(--success))' };
+      if (acc >= 60) return { label: 'Proficient ✓', color: 'hsl(var(--success))' };
+      if (acc >= 30) return { label: 'Apprentice △', color: 'hsl(var(--warning))' };
+      return { label: 'Novice ○', color: 'hsl(var(--muted-foreground))' };
+    }
+
+    function updateGradeDisplay() {
+      var n = calcVelocity();
+      var grade = getGradeLabel(currentAccuracy);
+      document.getElementById('level-display').textContent = currentAccuracy + '%';
+      document.getElementById('velocity-display').textContent = 'n=' + n.toFixed(2);
+      document.getElementById('attempts-display').textContent = totalAttempts;
+    }
+
+    function showPanel(id) {
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function startGame() {
+      questions = generateQuestions();
+      currentQ = 0;
+      score = 0;
+      timer = 30;
+      correctCount = 0;
+      totalAttempts = 0;
+
+      document.getElementById('stats-bar').style.display = 'flex';
+      updateGradeDisplay();
+
+      // Build study grid
+      const grid = document.getElementById('study-grid');
+      grid.innerHTML = '';
+      items.forEach(item => {
+        grid.innerHTML += `<div class="study-item"><div class="emoji">${item.emoji}</div><div class="label">${item.label}</div></div>`;
+      });
+
+      showPanel('panel-study');
+
+      // Study countdown
+      let studyTime = 5;
+      document.getElementById('study-timer').textContent = studyTime;
+      const studyInt = setInterval(() => {
+        studyTime--;
+        document.getElementById('study-timer').textContent = studyTime;
+        if (studyTime <= 0) {
+          clearInterval(studyInt);
+          startRecall();
+        }
+      }, 1000);
+    }
+
+    function startRecall() {
+      gameStartTime = Date.now();
+      showPanel('panel-recall');
+
+      // Start timer
+      timerInterval = setInterval(() => {
+        timer--;
+        document.getElementById('timer-display').textContent = timer;
+        if (timer <= 0) {
+          clearInterval(timerInterval);
+          endGame();
+        }
+      }, 1000);
+
+      showQuestion();
+    }
+
+    function showQuestion() {
+      if (currentQ >= questions.length) { endGame(); return; }
+      const q = questions[currentQ];
+      document.getElementById('recall-counter').textContent = `Savol ${currentQ + 1}/${questions.length}`;
+      document.getElementById('recall-qtext').textContent = q.question;
+
+      const opts = document.getElementById('recall-opts');
+      opts.innerHTML = '';
+      q.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'q-opt';
+        btn.textContent = opt;
+        btn.onclick = () => answerQuestion(btn, opt, q.correct);
+        opts.appendChild(btn);
+      });
+    }
+
+    function answerQuestion(btn, selected, correct) {
+      const allBtns = document.querySelectorAll('.q-opt');
+      allBtns.forEach(b => {
+        b.classList.add('answered');
+        if (b.textContent === correct) b.classList.add('correct');
+      });
+
+      totalAttempts++;
+
+      if (selected === correct) {
+        btn.classList.add('correct');
+        score++;
+        correctCount++;
+      } else {
+        btn.classList.add('wrong');
+      }
+
+      // Update accuracy and display
+      currentAccuracy = Math.round((correctCount / totalAttempts) * 100);
+      updateGradeDisplay();
+
+      currentQ++;
+      setTimeout(showQuestion, 1200);
+    }
+
+    function endGame() {
+      if (timerInterval) clearInterval(timerInterval);
+      const elapsed = Math.round((Date.now() - gameStartTime) / 1000);
+
+      // Add current session to history
+      const accuracy = Math.round((score / 6) * 100);
+      sessionHistory.push({
+        session: sessionHistory.length + 1,
+        accuracy: accuracy,
+        timePerAnswer: score > 0 ? Math.round(elapsed / score) : elapsed,
+        hints: 0
+      });
+
+      // Recalculate velocity with updated history
+      var n = calcVelocity();
+      var grade = getGradeLabel(accuracy);
+      var timePerAnswer = score > 0 ? Math.round(elapsed / score) : elapsed;
+      var sessionsToProficient = Math.max(1, Math.ceil((60 - accuracy) / 15));
+
+      showPanel('panel-complete');
+      document.getElementById('final-correct').textContent = score;
+      document.getElementById('final-time').textContent = elapsed + 's';
+      document.getElementById('final-accuracy').textContent = accuracy + '%';
+
+      // Populate grade card
+      document.getElementById('grade-level').textContent = accuracy + '%';
+      document.getElementById('grade-label').textContent = grade.label;
+      document.getElementById('grade-velocity').textContent = 'Velocity: n=' + n.toFixed(2) + (n > 0.3 ? ' (improving)' : '');
+      document.getElementById('grade-speed').textContent = 'Speed: ' + timePerAnswer + 's/answer' + (timePerAnswer < 15 ? ' (getting faster ✓)' : '');
+      document.getElementById('grade-progress').textContent = '~' + sessionsToProficient + ' sessions to Proficient';
+
+      document.getElementById('final-summary').textContent = `Aniqlik: ${accuracy}% — ${score >= 5 ? 'A\'lo!' : score >= 3 ? 'Yaxshi!' : 'Yana mashq qiling!'}`;
+
+      if (score >= 4) launchConfetti();
+    }
+
+    function restartGame() {
+      timer = 30;
+      currentAccuracy = 0;
+      totalAttempts = 0;
+      correctCount = 0;
+      document.getElementById('stats-bar').style.display = 'none';
+      showPanel('panel-start');
+    }
+
+    function launchConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const pieces = [];
+      const colors = ['#10B981', '#06D6A0', '#F59E0B', '#8B5CF6', '#EF4444', '#3B82F6'];
+      for (let i = 0; i < 120; i++) {
+        pieces.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height - canvas.height,
+          w: Math.random() * 8 + 4,
+          h: Math.random() * 4 + 2,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vy: Math.random() * 3 + 2,
+          vx: (Math.random() - 0.5) * 2,
+          rot: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 10
+        });
+      }
+      let frames = 0;
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pieces.forEach(p => {
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot * Math.PI / 180);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+          p.y += p.vy;
+          p.x += p.vx;
+          p.rot += p.rotSpeed;
+        });
+        frames++;
+        if (frames < 300) requestAnimationFrame(draw);
+        else ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      draw();
+    }
+  </script>
+</body>
+</html>
