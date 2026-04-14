@@ -62,9 +62,14 @@ Connect the textbook question to the arena. End with a serious closing: "Your pr
 - **National Context (55% Chance):** "O'zbekiston IT-Park rezidentlari o'rtasida yangi startup loyihalarni saralamoqda. Tanlovda 10 ta loyihadan 3 tasi 'FinTech' sohasida. Tasodifiy tanlangan loyihaning FinTech bo'lish ehtimolligini toping."
 - **Academic Core:** Calculate P(A) = 3/10.
 
-### Example 2: CHEMISTRY (Grade 9 - Elements)
-- **Status:** [XALQARO EKSPERT]
-- **Global Context (45% Chance):** "Dunyodagi eng yirik kimyoviy laboratoriyalar vodorod energiyasi ustida izlanish olib bormoqda. Mendeleyev davriy jadvalidagi birinchi elementning atom massasi va xossalarini tahlil qiling. Sizning bilimingiz global ekologik barqarorlikka xizmat qiladi."
+### Example 3: HISTORY (Grade 7 - Temurid Era)
+- **Status:** [TARIXIY TAHLILCHI]
+- **National Context (55% Chance):** "Amir Temur davrida Samarqand jahonning ilm-fan va madaniyat markaziga aylandi. Temur tuzuklaridagi davlatni boshqarish prinsiplarini tahlil qiling. Sizning xulosangiz o'tmish saboqlarini kelajak bilan bog'laydi."
+- **Academic Core:** Identify 3 primary administrative principles from the text.
+
+### Example 4: LAW (Grade 10 - Human Rights)
+- **Status:** [BOSH QONUNSHUNOS]
+- **Global Context (45% Chance):** "Birlashgan Millatlar Tashkilotining Inson huquqlari umumjahon deklaratsiyasi barcha millatlar uchun asosiy standartdir. Ushbu deklaratsiya va O'zbekiston Konstitutsiyasidagi o'xshashliklarni solishtiring. Adolat — davlatning ustunidir."
 
 ---
 

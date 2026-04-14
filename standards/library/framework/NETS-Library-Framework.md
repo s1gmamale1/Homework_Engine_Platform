@@ -594,25 +594,25 @@ Every path is a curated sequence of content items drawn from the level system. P
 #### Ijtimoiy Fanlari — Paths
 
 **Standard Path (STD):**
-- National curriculum: event knowledge, basic cause identification, institutional concepts
-- L1-L2 difficulty
-- Boss: source comparison, principled reasoning
+- National curriculum: event knowledge, basic cause identification, institutional concepts.
+- L1-L2 difficulty. PISA Reading (Social Science context) L2-3 target.
+- Boss: source comparison, principled reasoning.
 
 **DTM Path (DTM):**
-- History DTM topic weights: Uzbekistan History 60%, World History 40%
-- L2-L3 difficulty: source analysis, multi-cause reasoning
-- Specialty block for Law direction (History primary + Foreign Language secondary)
-- Law DTM: constitutional concepts, civil code basics, human rights framework
+- **History DTM:** Target 60% Uzbekistan History (Ancient to Independence), 40% World History (Civilizations, Middle Ages, Modern). Focus on dates, names, and chronological causality.
+- **Law DTM:** Focus on the 2023 Constitution, Civil Code, Labor Code, and Criminal Law fundamentals. Specialty block for Law (TDYU) direction.
+- **Economy DTM:** Micro/Macro basics, supply/demand shifts, market structures.
+- Practice exams follow the 30-question specialty block format (3.1 pts or 2.1 pts per Q).
 
 **Olympiad Path (OLY):**
-- History: comparative history, historiographical analysis (Annales vs. Marxist vs. Liberal)
-- Law: constitutional reasoning, legal brief construction
-- Economy: macroeconomic modeling, policy analysis
-- L3-L4 difficulty
+- **History:** Aligned with National Olympiad stages. Topics: Historiography (Annales vs. Marxist vs. Liberal), source criticism, archival analysis, comparative history of Central Asian states.
+- **Law:** Constitutional reasoning, legal brief construction, international law (UDHR, UN Charter) integration.
+- **Economy:** Macroeconomic modeling, fiscal/monetary policy analysis, game theory basics.
+- L3-L4 difficulty. Boss format: essay-based analytical argument evaluated by Tier 2 LLM.
 
 **PISA Excellence Path (PISA):**
-- Extended Reading framework applied to social science texts
-- Targets L4-6: evaluate credibility, synthesize diverse sources, construct novel interpretations
+- Extended Reading framework applied to social science texts.
+- Targets L4-6: evaluate credibility of conflicting sources, synthesize diverse arguments, construct novel interpretations of socio-economic data.
 
 #### Tarbiya/Sanat — Paths
 

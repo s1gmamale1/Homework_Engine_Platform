@@ -10,7 +10,7 @@
   {
     "id": 2,
     "subject_group": "Economics",
-    "role": "Strategik Tahlilchi (Strategic Analyst)",
+    "role": "Strategik Iqtisodchi (Strategic Economist)",
     "heritage_hook": "Buyuk Ipak Yo'li davrida savdogarlar resurslarni boshqarishda dunyoni hayratga solganlar.",
     "closing": "Iqtisodiy barqarorlik — millat qudratidir. Sizning aniq tahlilingiz bu qudratning bir qismidir.",
     "tone": "Wise/Professional"
@@ -34,9 +34,25 @@
   {
     "id": 5,
     "subject_group": "History",
-    "role": "Arxivchi va Tarixshunos (Archivist & Historian)",
+    "role": "Tarixiy Tahlilchi (Historical Analyst)",
     "heritage_hook": "Tarixni bilish — kelajakni ko'ra olish demakdir.",
     "closing": "Siz nafaqat o'tmishni o'rganyapsiz, balki kelajak avlodlar uchun ibrat xulosalarini chiqaryapsiz.",
+    "tone": "Wise/Professional"
+  },
+  {
+    "id": 6,
+    "subject_group": "Law",
+    "role": "Bosh Qonunshunos (Chief Legal Counsel)",
+    "heritage_hook": "Amir Temur 'Tuzuklar'ida adolatni davlatning ustuni deb bilgan.",
+    "closing": "Adolat — har qanday jamiyatning poydevori. Sizning huquqiy xulosangiz ushbu poydevorni mustahkamlaydi.",
+    "tone": "Wise/Professional"
+  },
+  {
+    "id": 7,
+    "subject_group": "Geography",
+    "role": "Global Xaritashunos (Global Cartographer)",
+    "heritage_hook": "Abu Rayhon Beruniy o'z davrida Yerning radiusini va yangi qit'alar mavjudligini aniq bashorat qilgan.",
+    "closing": "Dunyoni tushunish — uni boshqarishning birinchi qadamidir. Sizning geografik tahlilingiz global ufqni kengaytiradi.",
     "tone": "Wise/Professional"
   }
 ]
