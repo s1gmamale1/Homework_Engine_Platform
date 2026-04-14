@@ -6,64 +6,88 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 NETS (National Education Transformation System) — AI-powered gamified LMS for Uzbekistan's 8.8M K-11 students. This repo is the **specification and content vault**, not a codebase. It contains framework documents, content architecture, research, and an agent-driven homework production pipeline.
 
-## Architecture — Two Layers
+## Architecture — 5 Layers
 
-**Layer 0: UNIFIED Spec** (`standards/framework/NETS-Homework-Engine-UNIFIED-Buzan.md`) — The engine. Defines the session structure: Pre-Session (Theme Preview + Flash Cards) → 7-phase homework engine (Memory Sprint → Story Mode → Game Breaks → Real-Life Challenge → Consolidation → Final Boss → Reflection). This is the single source of truth for all mechanics, timing, XP, HP, PISA gating, and session modes.
+**Layer 0: UNIFIED-Buzan** (`standards/framework/NETS-Homework-Engine-UNIFIED-Buzan.md`) — The engine. Pre-Session (Theme Preview + Flash Cards) → 7-phase homework engine (Memory Sprint → Story Mode → Game Breaks → Real-Life Challenge → Consolidation → Final Boss → Reflection). Single source of truth for all mechanics, timing, HP, PISA gating, Buzan cognitive science, and National Pride module.
 
-**Layer 1: Library Framework** (`standards/library/framework/NETS-Library-Framework.md`) — The content architecture. Groups 29 subjects into 5 families (Aniq Fanlar, Til Fanlari, Tabiat Fanlari, Ijtimoiy Fanlari, Tarbiya/Sanat). Each family has its own mechanic emphasis, boss format, and pedagogical rules. This determines WHAT content goes inside the engine for each subject.
+**Layer 1: Library Framework** (`standards/library/framework/NETS-Library-Framework.md` v0.6) — Content architecture. 5 subject families, each with mechanic emphasis, boss format, and pedagogical rules.
+
+**Layer 2: Subject Family Docs + Subject Frameworks** (`standards/library/subject-family/`) — Per-family filter/adapter docs that reference Layers 0-1, plus per-subject production guides with grade-band tables.
+
+**Layer 3: Tier Overlay** (`standards/framework/NETS-Tier-Overlay-Spec.md` v2.0) — Basic/Premium split. Basic = full product. Premium = enrichment on top.
+
+**Layer 4: Grading System** (`standards/framework/GRADING-SYSTEM.md`) — Learning Curve Grade (Level, Velocity, Efficiency, Attempts). Not yet approved for production.
 
 ## Repository Structure
 
 ```
 standards/
-  framework/          ← UNIFIED spec, Quick Reference, Tier Overlay, Blueprint
-  system/             ← Per-subsystem specs (games/, ui-ux/)
-  system-design/      ← System Design v1 summary
-  library/            ← Content architecture (framework, catalog, games template)
-  subject-family/     ← grades/{5-11}/{uz,ru}/{family}/ — content output destination
-research/             ← Buzan research, curriculum analysis, engagement hooks, proposals
-agents/               ← Agent instruction files (CLAUDE.md, GEMINI.md, QWEN.md)
-  content-producer/   ← Production agent config (SOUL.md, SKILLS.md, SCHEMA.md)
-references/           ← Agent dashboard protocol, Notion pipeline tools
-textbooks/            ← Grade 5-11 PDFs organized by grade/language/subject
-scripts/              ← Python utilities (docx conversion, compliance checks, demos)
-memory/               ← Shared MCP memory palace for cross-agent context
+  framework/               ← UNIFIED-Buzan, Tier Overlay, Grading System, Quick Reference, Blueprint
+  library/
+    framework/             ← Library Framework v0.6
+    catalog/               ← Game Catalog (16 Default + 7 Interactive), Interactive Game Catalog
+    subject-family/        ← Family docs + subject-specific frameworks
+      Aniq Fanlar/         ← Pure math (5 subjects: Mat, Alg, Geo, Alg&Analiz, Geo Adv)
+      Til Fanlar/          ← Languages (English/, Ona_Tili/, Rus_Tili/)
+      Tabiy Fanlar/        ← Natural Sciences (Biology/, Physics/, Chemistry/)
+      Ijtimoiy Fanlar/     ← Social Sciences (Tarix/)
+      Other Fanlar/        ← Soft & Formative (Tarbiya, Music, Art, Informatics, etc.)
+    games/_template/       ← Content item JSON schema
+    content-templates/     ← Standard content schemas
+  system/
+    games/
+      Game_Mechanics_Demos/ ← 20+ interactive HTML demos
+      Game_Mechanics_Docs/  ← 21 numbered game docs + DOCUMENTATION.md master
+    narrative/             ← National Pride: quotes_database.json (600), facts, wisdom quotes
+    ui-ux/                 ← UI/UX Design Spec
+  system-design/v1/        ← System architecture summary
+research/                  ← Buzan research, curriculum, engagement hooks, proposals
+agents/
+  content-producer/        ← Production agent config (SOUL.md, SKILLS.md, SCHEMA.md, etc.)
+  CLAUDE.md, GEMINI.md, QWEN.md, SONNET.md  ← Per-agent instructions
+references/                ← Agent dashboard protocol, Notion pipeline tools
+textbooks/                 ← Grade 5-11 PDFs (uz + ru)
+scripts/                   ← Python utilities
+memory/                    ← Shared MCP memory palace
 ```
 
 ## Key Documents
 
 | Document | Path | Purpose |
 |----------|------|---------|
-| UNIFIED Spec | `standards/framework/NETS-Homework-Engine-UNIFIED-Buzan.md` | Source of truth — read this first |
-| Library Framework | `standards/library/framework/NETS-Library-Framework.md` | Family rules, mechanics, Bloom's/PISA mapping |
-| Game Catalog | `standards/library/catalog/NETS-Game-Catalog-Summary.md` | All 28 game mechanics described |
-| Quick Reference | `standards/framework/QUICK_REFERENCE.md` | Fast lookup for session flow |
+| UNIFIED-Buzan | `standards/framework/NETS-Homework-Engine-UNIFIED-Buzan.md` | Source of truth — read this first |
+| Library Framework | `standards/library/framework/NETS-Library-Framework.md` | 5 families, mechanics, Bloom's/PISA (v0.6) |
+| Game Catalog | `standards/library/catalog/NETS-Game-Catalog-Summary.md` | 16 Default + 7 Interactive games |
+| Tier Overlay | `standards/framework/NETS-Tier-Overlay-Spec.md` | Basic/Premium tier rules (v2.0) |
+| Quick Reference | `standards/framework/QUICK_REFERENCE.md` | Fast session flow lookup |
 | HOME.md | `HOME.md` | Obsidian hub — links to everything |
-| Research Index | `research/INDEX.md` | All research grouped by topic |
 
 ## Content Production Pipeline
 
-Homework is produced by AI agents (Codex/MiniMax via OpenClaw, or Claude). The pipeline:
+Homework sessions (.docx) are produced by AI agents. The reading chain:
 
-1. Agent reads framework docs (UNIFIED + Library Framework for the subject's family)
-2. Agent reads textbook chapter
-3. Agent produces a `.docx` homework session: Pre-Session 0-A/0-B + 7 phases
-4. Agent updates `STATUS.md` in the output directory as a heartbeat
-5. Output goes to `standards/subject-family/grades/{N}/{lang}/{family}/`
+1. **UNIFIED-Buzan** → session structure, mechanics, rules
+2. **Library Framework** → family rules for the subject
+3. **Family Doc** → filter/adapter for the family (e.g., Tabiy Fanlar: OBS/QNT branches)
+4. **Subject Framework** → grade-band tables, game filtering, boss format, Good/Bad examples (e.g., English, Biology, Physics)
+5. **Textbook chapter** → actual content source
+6. **Produce .docx** → Pre-Session 0-A/0-B + 7 phases
+7. **Update STATUS.md** → heartbeat/progress tracking
 
-Agent config lives in `agents/content-producer/` — SOUL.md (framework summaries + constraints), SKILLS.md (production template), SCHEMA.md (output format).
+Agent config: `agents/content-producer/` (SOUL.md, SKILLS.md, SCHEMA.md, AGENTS.md, TOOLS.md, HEARTBEAT.md, MASTER_INSTRUCTION.md)
 
 ## Framework Rules That Cannot Be Violated
 
 - **Session structure is immutable:** Pre-Session 0-A → 0-B → Phase 1-7. No skipping, no reordering.
-- **Phase 3 game selection:** 3 games per session. At least 1 from Interactive Catalog, at least 2 from Default Pool.
+- **Phase 3 game selection:** 3 games per session. ≥1 from Interactive Catalog (7 games), ≥2 from Default Pool (16 mechanics).
 - **Boss HP:** G1-4: 50 | G5-8: 100 | G9-11: 150. Damage: Easy -10, Medium -20, Hard -30. Distribution: 40/40/20.
 - **No MC for G6+ in Final Boss.** G5 allows up to 30% MC.
-- **Textbook is source of truth.** NETS wraps textbook content in engagement — never alters facts.
+- **Textbook is source of truth.** NETS transforms textbook content into better learning — never alters facts, never adds external curriculum.
 - **Every content item must carry:** `standard_ref`, `blooms_level`, `pisa_level`, `transition_skill`.
-- **5 Subject Families are locked.** A subject cannot move between families without a formal ADR.
-- **Bloom's/PISA progression through session:** Phase 1 (L1) → Phase 6 (L3-L5).
-- **All student-facing content in Uzbek (uz) or Russian (ru).** Field names stay English.
+- **5 Subject Families are locked.** Reclassification requires formal ADR.
+- **Removed games (do not reference):** Blackjack 21, Bridge Builder, Minefield Navigator, Escape Room, Territory Conquest.
+- **No IELTS/DTM/Premium content in subject frameworks.** Those are separate courses, not textbook homework.
+- **Universal production rules (all families):** Bidirectional thinking, Error Analysis/Detection primary (every 2 sessions), Answer Completeness.
 
 ## Scripts
 
@@ -74,25 +98,25 @@ python scripts/md_to_docx.py                   # Convert markdown to docx
 python scripts/build_homework_and_students.py  # Build homework + student profiles
 ```
 
-No package.json or requirements.txt at root. Scripts are standalone Python — install dependencies as needed (`pip install python-docx pymupdf`).
+No package.json or requirements.txt at root. Scripts are standalone Python — install dependencies as needed (`pip install python-docx pymupdf markdown`).
 
 ## Git
 
 ```bash
-# Windows git has ownership mismatch — use this flag:
 git -c safe.directory="C:/Users/DaddysHere/Documents/Sigma_Edu_3000" status
-git -c safe.directory="C:/Users/DaddysHere/Documents/Sigma_Edu_3000" push origin master
+git -c safe.directory="C:/Users/DaddysHere/Documents/Sigma_Edu_3000" push origin Cheeks
 ```
 
-Remote: `https://github.com/s1gmamale1/Homework_Engine_Platform.git` (branch: master)
+Remote: `https://github.com/s1gmamale1/Homework_Engine_Platform.git`
+Branches: `Cheeks` (development) · `master` (stable)
 
 ## Obsidian
 
-This repo doubles as an Obsidian vault. `HOME.md` is the central hub. Graph color groups: framework=blue, system=cyan, library=green, subject-family=yellow, research=orange, agents=red, references=purple. Team config committed in `.obsidian/` (plugins, graph, app settings).
+This repo doubles as an Obsidian vault. `HOME.md` is the central hub. Graph color groups: framework=blue, system=cyan, library=green, subject-family=yellow, research=orange, agents=red, references=purple.
 
 ## Multi-Agent Context
 
-Multiple agents (Claude, Gemini, Qwen, Codex) work on this project. Shared memory is being set up via agent-recall MCP (`mcp-shared-memory.json`). Agent dashboard protocol at `references/agent-dashboard-protocol.md`. Each agent has instruction files in `agents/`.
+Multiple agents (Claude, Gemini, Qwen, Codex) work on this project. OpenClaw for agent prototyping, PaperclipAI for production scale. Shared memory via agent-recall MCP (`mcp-shared-memory.json`). Each agent has instruction files in `agents/`.
 
 ## What NOT to Do
 
@@ -101,3 +125,5 @@ Multiple agents (Claude, Gemini, Qwen, Codex) work on this project. Shared memor
 - Do not push to git without explicit user request.
 - Do not modify `openclaw.json` or MCP server configs unless explicitly asked.
 - Do not create files in `.claude/`, `.codex/`, `.qwen/`, `.gemini/` — these are gitignored agent runtime dirs.
+- Do not add IELTS, DTM, or Premium course content to subject frameworks — textbook only.
+- Do not reference removed games (Blackjack, Bridge Builder, Minefield Navigator, Escape Room, Territory Conquest).
