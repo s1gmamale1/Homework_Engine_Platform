@@ -51,7 +51,7 @@ Each homework session has a Pre-Session warm-up (3-5 min) followed by the 7-phas
 
 **Session modes:** Standard (25-30 min) | Extended (45-60 min) | Recovery (10-25 min, after failure — compressed phases, 1 game only, Phase 4 skipped)
 
-> **Full details:** Read `standards/framework/NETS-Homework-Engine-UNIFIED.md`
+> **Full details:** Read `standards/framework/NETS-Homework-Engine-UNIFIED-Buzan.md`
 
 ---
 
@@ -59,11 +59,11 @@ Each homework session has a Pre-Session warm-up (3-5 min) followed by the 7-phas
 
 | # | UZ Name | EN Name | Subjects |
 |---|---------|---------|----------|
-| 1 | Aniq Fanlar | Exact Sciences | Math, Algebra, Geometry, Physics, Chemistry, Informatics |
-| 2 | Til Fanlari | Languages | Uzbek, Russian, English, Literature, German (G11 RU) |
-| 3 | Tabiat Fanlari | Natural Sciences | Biology, Geography, Combined Science (G5-6), Astronomy (G11) |
+| 1 | Aniq Fanlar | Exact Sciences (pure math) | Math G5-6, Algebra G7-9, Geometry G7-9, Algebra & Analysis G10-11, Geometry Adv G10-11 |
+| 2 | Til Fanlari | Languages | Uzbek, Russian, English, Literature (ADR-pending), German (G11 RU) |
+| 3 | Tabiat Fanlari | Natural Sciences | Biology, Physics, Chemistry, Geography, Combined Science (G5-6), Astronomy (G11) |
 | 4 | Ijtimoiy Fanlari | Social Sciences | History (World/Uzbek/Ancient), Law, Economy, Entrepreneurship |
-| 5 | Tarbiya / Sanat | Soft & Formative | Character Ed, Music, Art, Technology, PE, Drafting, Spirituality |
+| 5 | Tarbiya / Sanat | Soft & Formative (Others) | Character Ed, Music, Art, Technology, Informatics, PE, Drafting, Spirituality, Future Hour, Civic Prep |
 
 ### Mechanic Emphasis by Family
 
@@ -116,7 +116,7 @@ All paths relative to project root.
 
 | Document | Path |
 |----------|------|
-| UNIFIED Spec (source of truth) | `standards/framework/NETS-Homework-Engine-UNIFIED.md` |
+| UNIFIED Spec (source of truth) | `standards/framework/NETS-Homework-Engine-UNIFIED-Buzan.md` |
 | Quick Reference | `standards/framework/QUICK_REFERENCE.md` |
 | Library Framework (families, mechanics) | `standards/library/framework/NETS-Library-Framework.md` |
 | Game Catalog (all games) | `standards/library/catalog/NETS-Game-Catalog-Summary.md` |
