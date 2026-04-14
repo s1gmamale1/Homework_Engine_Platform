@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS — Notebook Capture (Daftar Rasm)</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --background: 240 15% 8%;
+  --foreground: 0 0% 95%;
+  --card: 240 12% 12%;
+  --primary: 162 93% 42%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 240 10% 20%;
+  --muted-foreground: 240 5% 55%;
+  --border: 240 10% 22%;
+  --success: 142 76% 45%;
+  --warning: 38 92% 50%;
+  --destructive: 0 72% 51%;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+.container { max-width: 420px; width: 100%; }
+h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+.glass {
+  background: hsla(var(--card), 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+}
+.stats-bar {
+  display: flex; gap: 8px; padding: 12px; margin-bottom: 16px;
+  justify-content: center;
+}
+.stat {
+  text-align: center; flex: 1; padding: 8px 4px;
+  background: hsla(var(--muted), 0.5); border-radius: 0.5rem;
+}
+.stat-value { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.25rem; color: hsl(var(--primary)); }
+.stat-value.level-val{color:hsl(var(--success))}
+.stat-value.velocity-val{color:hsl(var(--warning))}
+.stat-label { font-size: 0.7rem; color: hsl(var(--muted-foreground)); text-transform: uppercase; }
+.grade-card{background:hsla(var(--card),0.8);backdrop-filter:blur(24px);border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:20px;text-align:center;margin:16px 0}
+.grade-level{font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:800;background:linear-gradient(135deg,hsl(162,93%,42%),hsl(180,85%,35%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.grade-label{font-size:18px;font-weight:700;margin:4px 0}
+.grade-detail{font-size:13px;color:hsl(var(--muted-foreground));margin:2px 0}
+.phase-flow { display: flex; gap: 4px; margin-bottom: 16px; flex-wrap: wrap; justify-content: center; }
+.phase-pill {
+  padding: 4px 8px; border-radius: 9999px; font-size: 0.65rem; font-weight: 700;
+  background: hsla(var(--muted), 0.4); color: hsl(var(--muted-foreground));
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.phase-pill.active { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+.phase-pill.done { background: hsla(var(--success), 0.3); color: hsl(var(--success)); }
+.card { padding: 20px; margin-bottom: 16px; }
+.card h2 { font-size: 1.2rem; margin-bottom: 8px; }
+.card p { color: hsl(var(--muted-foreground)); font-size: 0.9rem; line-height: 1.5; margin-bottom: 12px; }
+.btn {
+  display: block; width: 100%; padding: 14px; border: none; border-radius: 0.75rem;
+  background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+  color: hsl(var(--primary-foreground)); font-family: 'Space Grotesk'; font-weight: 600;
+  font-size: 1rem; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 20px hsla(var(--primary), 0.4); }
+.btn-secondary {
+  background: hsla(var(--muted), 0.6); color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+.prompt-box {
+  background: hsla(var(--primary), 0.08); border: 2px dashed hsla(var(--primary), 0.3);
+  padding: 16px; border-radius: 0.75rem; margin: 12px 0; text-align: center;
+}
+.prompt-box .emoji { font-size: 2.5rem; margin-bottom: 8px; }
+.prompt-box p { color: hsl(var(--foreground)); font-size: 1rem; font-weight: 600; margin: 0; }
+.canvas-area {
+  min-height: 200px; background: hsla(var(--muted), 0.3);
+  border: 2px dashed hsl(var(--border)); border-radius: 0.75rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 20px; margin: 12px 0; text-align: center;
+}
+.canvas-area .emoji { font-size: 3rem; margin-bottom: 8px; }
+.canvas-area p { color: hsl(var(--muted-foreground)); font-size: 0.9rem; }
+textarea {
+  width: 100%; min-height: 100px; padding: 14px; border-radius: 0.75rem;
+  background: hsla(var(--muted), 0.4); border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground)); font-family: 'Nunito'; font-size: 0.9rem;
+  resize: vertical; outline: none; transition: border-color 0.2s;
+}
+textarea:focus { border-color: hsl(var(--primary)); }
+.upload-zone {
+  border: 2px dashed hsl(var(--primary)); border-radius: 0.75rem;
+  padding: 30px; text-align: center; margin: 12px 0;
+  cursor: pointer; transition: background 0.2s;
+}
+.upload-zone:hover { background: hsla(var(--primary), 0.06); }
+.upload-zone .emoji { font-size: 2.5rem; margin-bottom: 8px; }
+.upload-zone p { font-size: 0.9rem; color: hsl(var(--muted-foreground)); margin: 0; }
+.upload-zone .primary-text { color: hsl(var(--primary)); font-weight: 700; }
+.loading-overlay {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 40px; text-align: center;
+}
+.spinner {
+  width: 48px; height: 48px; border: 4px solid hsla(var(--primary), 0.2);
+  border-top-color: hsl(var(--primary)); border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { margin-top: 12px; color: hsl(var(--muted-foreground)); font-size: 0.9rem; }
+.loading-steps { margin-top: 8px; font-size: 0.8rem; color: hsl(var(--muted-foreground)); }
+.loading-steps .step { margin: 4px 0; }
+.loading-steps .step.done { color: hsl(var(--success)); }
+.loading-steps .step.active { color: hsl(var(--primary)); }
+.rubric-table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+.rubric-table th { text-align: left; font-size: 0.8rem; color: hsl(var(--muted-foreground)); padding: 6px 8px; border-bottom: 1px solid hsl(var(--border)); }
+.rubric-table td { padding: 10px 8px; border-bottom: 1px solid hsla(var(--border), 0.5); font-size: 0.9rem; }
+.rubric-table .score { font-family: 'Space Grotesk'; font-weight: 700; text-align: center; }
+.score-green { color: hsl(var(--success)); }
+.score-yellow { color: hsl(var(--warning)); }
+.score-red { color: hsl(var(--destructive)); }
+.annotation-card {
+  padding: 12px; margin: 8px 0; border-radius: 0.5rem;
+  border-left: 4px solid;
+}
+.annotation-card.good { border-color: hsl(var(--success)); background: hsla(var(--success), 0.06); }
+.annotation-card.warn { border-color: hsl(var(--warning)); background: hsla(var(--warning), 0.06); }
+.annotation-card.bad { border-color: hsl(var(--destructive)); background: hsla(var(--destructive), 0.06); }
+.annotation-card .title { font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; }
+.annotation-card .desc { font-size: 0.8rem; color: hsl(var(--muted-foreground)); }
+.hidden { display: none !important; }
+#confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
+</style>
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+<div class="container">
+  <!-- Stats Bar -->
+  <div class="stats-bar glass">
+    <div class="stat"><div class="stat-value level-val" id="level-display">0%</div><div class="stat-label">Daraja</div></div>
+    <div class="stat"><div class="stat-value velocity-val" id="velocity-display">n=0.00</div><div class="stat-label">Tezlik</div></div>
+    <div class="stat"><div class="stat-value">📸</div><div class="stat-label">Rasm</div></div>
+  </div>
+  <!-- Phase Flow -->
+  <div class="phase-flow">
+    <span class="phase-pill active" id="ph-intro">Kirish</span>
+    <span class="phase-pill" id="ph-draw">Chizish</span>
+    <span class="phase-pill" id="ph-upload">Yuklash</span>
+    <span class="phase-pill" id="ph-analyze">Tahlil</span>
+    <span class="phase-pill" id="ph-results">Natijalar</span>
+  </div>
+  <!-- Phase 1: Intro -->
+  <div id="phase-intro" class="card glass">
+    <h2>📒 Daftar Rasm</h2>
+    <p>Sizga topshiriq beriladi. Daftaringizga chizing, keyin rasm yuklang. Sun'iy intellekt rasmingizni tekshirib baholaydi.</p>
+    <p style="font-size:0.85rem">Rubrik bo'yicha: to'liqlik, aniqlik, tashkiliy tuzilish va belgilar to'g'riligi baholanadi.</p>
+    <button class="btn" onclick="startGame()">Boshlash</button>
+  </div>
+  <!-- Phase 2: Draw Prompt -->
+  <div id="phase-draw" class="hidden">
+    <div class="card glass">
+      <h2>🎨 Chizish Vazifasi</h2>
+      <div class="prompt-box">
+        <div class="emoji">💧🌍☀️</div>
+        <p>Suv aylanish diagrammasini chizing</p>
+      </div>
+      <p>Quyidagilarni ko'rsating:</p>
+      <ul style="padding-left:20px;color:hsl(var(--muted-foreground));font-size:0.9rem;line-height:1.8;margin:8px 0">
+        <li>Quyosh energiyasi</li>
+        <li>Bug'lanish (evaporatsiya)</li>
+        <li>Kondensatsiya (bulutlar)</li>
+        <li>Yog'ingarchilik (yomg'ir/qor)</li>
+        <li>Oqim (daryolar, yer osti suvlari)</li>
+      </ul>
+      <div class="canvas-area">
+        <div class="emoji">📝</div>
+        <p>Daftaringizga chizing va tayyor bo'lgach pastdagi tugmani bosing</p>
+        <textarea placeholder="Chizganingizni qisqacha tasvirlang (ixtiyoriy)..." style="margin-top:12px"></textarea>
+      </div>
+      <button class="btn" onclick="goToUpload()">Tayyor — Rasm Yuklash</button>
+    </div>
+  </div>
+  <!-- Phase 3: Upload -->
+  <div id="phase-upload" class="hidden">
+    <div class="card glass">
+      <h2>📸 Rasm Yuklash</h2>
+      <p>Daftaringizdagi rasmni yuklang:</p>
+      <div class="upload-zone" id="upload-zone" onclick="simulateUpload()">
+        <div class="emoji">📷</div>
+        <p class="primary-text">Rasm yuklash</p>
+        <p>Yoki rasmni shu yerga tortib olib kelib tashlang</p>
+      </div>
+      <div id="upload-preview" class="hidden">
+        <div class="canvas-area" style="background:hsla(var(--card),0.8)">
+          <div class="emoji" style="font-size:2rem">🖼️</div>
+          <p id="preview-text">Rasm yuklandi!</p>
+          <div style="margin-top:8px;font-size:0.8rem;color:hsl(var(--muted-foreground))">suv_aylanishi_diagrammasi.jpg</div>
+        </div>
+        <button class="btn" onclick="analyzeImage()" style="margin-top:12px">AI Tahlilni Boshlash</button>
+      </div>
+    </div>
+  </div>
+  <!-- Phase 4: Loading/Analysis -->
+  <div id="phase-analyze" class="hidden">
+    <div class="card glass">
+      <h2>🤖 AI Tahlil Qilmoqda...</h2>
+      <div class="loading-overlay">
+        <div class="spinner" id="spinner"></div>
+        <div class="loading-text" id="loading-text">Rasmni o'qish...</div>
+        <div class="loading-steps" id="loading-steps">
+          <div class="step" id="step-1">📷 Rasmni skanerlash</div>
+          <div class="step" id="step-2">🔍 Elementlarni aniqlash</div>
+          <div class="step" id="step-3">📊 Rubrik baholash</div>
+          <div class="step" id="step-4">📝 Izohlar tayyorlash</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Phase 5: Results -->
+  <div id="phase-results" class="hidden">
+    <div class="card glass">
+      <h2>📊 AI Tahlil Natijalari</h2>
+      <table class="rubric-table">
+        <thead><tr><th>Mezon</th><th class="score">Ball</th></tr></thead>
+        <tbody id="rubric-body"></tbody>
+      </table>
+      <div class="grade-card" id="results-grade-card">
+        <div class="grade-level" id="results-grade-level">0%</div>
+        <div class="grade-label" id="results-grade-label">Novice</div>
+        <div class="grade-detail" id="results-grade-detail">Umumiy rubrik ball: 0/40</div>
+        <div class="grade-detail" id="results-velocity-detail">Tezlik: n=0.00</div>
+      </div>
+      <h3 style="margin:16px 0 8px">📝 AI Izohlari</h3>
+      <div id="annotations"></div>
+      <button class="btn" onclick="location.reload()" style="margin-top:12px">Qayta boshlash</button>
+    </div>
+  </div>
+</div>
+<script>
+var sessionHistory=[
+  {session:1,accuracy:15},
+  {session:2,accuracy:30},
+  {session:3,accuracy:45}
+];
+function calcVelocity(){
+  if(sessionHistory.length<2)return 0.3;
+  var f=sessionHistory[0].accuracy,l=sessionHistory[sessionHistory.length-1].accuracy,s=sessionHistory.length;
+  return Math.min(0.9,Math.max(0.1,(l-f)/(s*15)));
+}
+function getGradeLabel(acc){
+  if(acc>=85)return{label:'Mastered \u2605'};
+  if(acc>=60)return{label:'Proficient \u2713'};
+  if(acc>=30)return{label:'Apprentice \u25b3'};
+  return{label:'Novice \u25cb'};
+}
+function setPhase(name) {
+  document.querySelectorAll('.phase-pill').forEach(p => { p.classList.remove('active'); p.classList.remove('done'); });
+  const phases = ['ph-intro','ph-draw','ph-upload','ph-analyze','ph-results'];
+  const names = ['intro','draw','upload','analyze','results'];
+  let idx = names.indexOf(name);
+  phases.forEach((p, i) => {
+    if (i < idx) document.getElementById(p).classList.add('done');
+    if (i === idx) document.getElementById(p).classList.add('active');
+  });
+}
+function startGame() {
+  document.getElementById('phase-intro').classList.add('hidden');
+  document.getElementById('phase-draw').classList.remove('hidden');
+  setPhase('draw');
+}
+function goToUpload() {
+  document.getElementById('phase-draw').classList.add('hidden');
+  document.getElementById('phase-upload').classList.remove('hidden');
+  setPhase('upload');
+}
+function simulateUpload() {
+  document.getElementById('upload-zone').classList.add('hidden');
+  document.getElementById('upload-preview').classList.remove('hidden');
+}
+function analyzeImage() {
+  document.getElementById('phase-upload').classList.add('hidden');
+  document.getElementById('phase-analyze').classList.remove('hidden');
+  setPhase('analyze');
+  // Simulate loading steps
+  const steps = [
+    { id: 'step-1', text: "Rasmni skanerlash...", delay: 0 },
+    { id: 'step-2', text: "Elementlarni aniqlash...", delay: 800 },
+    { id: 'step-3', text: "Rubrik baholash...", delay: 1600 },
+    { id: 'step-4', text: "Izohlar tayyorlash...", delay: 2400 }
+  ];
+  steps.forEach(s => {
+    setTimeout(() => {
+      document.getElementById(s.id).classList.add('active');
+      document.getElementById('loading-text').textContent = s.text;
+    }, s.delay);
+    setTimeout(() => {
+      document.getElementById(s.id).classList.remove('active');
+      document.getElementById(s.id).classList.add('done');
+      document.getElementById(s.id).textContent = '✅ ' + document.getElementById(s.id).textContent.replace('📷 ', '').replace('🔍 ', '').replace('📊 ', '').replace('📝 ', '');
+    }, s.delay + 700);
+  });
+  setTimeout(() => showResults(), 3200);
+}
+function showResults() {
+  document.getElementById('phase-analyze').classList.add('hidden');
+  document.getElementById('phase-results').classList.remove('hidden');
+  setPhase('results');
+  // Rubric scores (simulated)
+  const rubric = [
+    { name: "To'liqlik", score: 8, max: 10, note: "5 ta elementdan 4 tasini ko'rsatdingiz. Oqim (yer osti suvlari) yetishmayapti." },
+    { name: "Aniqlik", score: 7, max: 10, note: "Bug'lanish va kondensatsiya aniq ko'rsatilgan. Biroq yog'ingarchilik belgisi noaniq." },
+    { name: "Tashkiliy tuzilish", score: 9, max: 10, note: "Aylanish tartibi to'g'ri: bug'lanish → kondensatsiya → yog'ingarchilik → oqim. Ajoyib!" },
+    { name: "Belgilar va yorliqlar", score: 6, max: 10, note: "Ba'zi yorliqlar bor, lekin barcha elementlar imzolanmagan. Strelkalar yo'nalishi to'g'ri." }
+  ];
+  const body = document.getElementById('rubric-body');
+  let totalScore = 0;
+  rubric.forEach(r => {
+    totalScore += r.score;
+    const pct = r.score / r.max;
+    const colorClass = pct >= 0.8 ? 'score-green' : pct >= 0.5 ? 'score-yellow' : 'score-red';
+    const row = document.createElement('tr');
+    row.innerHTML = `<td>${r.name}</td><td class="score ${colorClass}">${r.score}/${r.max}</td>`;
+    body.appendChild(row);
+  });
+  const accuracy = Math.round(totalScore / 40 * 100);
+  const grade = getGradeLabel(accuracy);
+  const velocity = calcVelocity();
+  sessionHistory.push({session: 1, accuracy: accuracy});
+  document.getElementById('results-grade-level').textContent = accuracy + '%';
+  document.getElementById('results-grade-label').textContent = grade.label;
+  document.getElementById('results-grade-detail').textContent = `Umumiy rubrik ball: ${totalScore}/40 (${accuracy}%) | To'liqlik: ${rubric[0].score}/${rubric[0].max} | Aniqlik: ${rubric[1].score}/${rubric[1].max} | Tuzilish: ${rubric[2].score}/${rubric[2].max} | Belgilar: ${rubric[3].score}/${rubric[3].max}`;
+  document.getElementById('results-velocity-detail').textContent = `Tezlik: n=${velocity.toFixed(2)}`;
+  document.getElementById('level-display').textContent = accuracy + '%';
+  document.getElementById('velocity-display').textContent = 'n=' + velocity.toFixed(2);
+  // Annotations
+  const annotationsDiv = document.getElementById('annotations');
+  rubric.forEach(r => {
+    const pct = r.score / r.max;
+    const type = pct >= 0.8 ? 'good' : pct >= 0.5 ? 'warn' : 'bad';
+    const icon = type === 'good' ? '\u2705' : type === 'warn' ? '\u26a0\ufe0f' : '\u274c';
+    const card = document.createElement('div');
+    card.className = 'annotation-card ' + type;
+    card.innerHTML = `<div class="title">${icon} ${r.name}: ${r.score}/${r.max}</div><div class="desc">${r.note}</div>`;
+    annotationsDiv.appendChild(card);
+  });
+  launchConfetti();
+}
+function launchConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  const particles = [];
+  const colors = ['#22c55e','#3b82f6','#f59e0b','#ef4444','#8b5cf6','#06b6d4','#ec4899'];
+  for (let i = 0; i < 120; i++) {
+    particles.push({ x: Math.random() * canvas.width, y: -20, w: Math.random() * 10 + 5, h: Math.random() * 6 + 3, color: colors[Math.floor(Math.random() * colors.length)], vx: (Math.random() - 0.5) * 4, vy: Math.random() * 3 + 2, rot: Math.random() * 360, rv: (Math.random() - 0.5) * 10 });
+  }
+  let frame = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => { p.x += p.vx; p.y += p.vy; p.vy += 0.05; p.rot += p.rv; ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot * Math.PI / 180); ctx.fillStyle = p.color; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore(); });
+    frame++; if (frame < 250) requestAnimationFrame(animate); else ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  animate();
+}
+</script>
+</body>
+</html>

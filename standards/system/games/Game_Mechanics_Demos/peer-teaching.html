@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS — Peer Teaching (Hamkorlikda O'qitish)</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --background: 240 15% 8%;
+  --foreground: 0 0% 95%;
+  --card: 240 12% 12%;
+  --primary: 162 93% 42%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 240 10% 20%;
+  --muted-foreground: 240 5% 55%;
+  --border: 240 10% 22%;
+  --success: 142 76% 45%;
+  --warning: 38 92% 50%;
+  --destructive: 0 72% 51%;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+.container { max-width: 420px; width: 100%; }
+h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+.glass {
+  background: hsla(var(--card), 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+}
+.stats-bar {
+  display: flex; gap: 8px; padding: 12px; margin-bottom: 16px;
+  justify-content: center;
+}
+.stat {
+  text-align: center; flex: 1; padding: 8px 4px;
+  background: hsla(var(--muted), 0.5); border-radius: 0.5rem;
+}
+.stat-value { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.25rem; color: hsl(var(--primary)); }
+.stat-value.level-val{color:hsl(var(--success))}
+.stat-value.velocity-val{color:hsl(var(--warning))}
+.stat-label { font-size: 0.7rem; color: hsl(var(--muted-foreground)); text-transform: uppercase; }
+.grade-card{background:hsla(var(--card),0.8);backdrop-filter:blur(24px);border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:20px;text-align:center;margin:16px 0}
+.grade-level{font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:800;background:linear-gradient(135deg,hsl(162,93%,42%),hsl(180,85%,35%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.grade-label{font-size:18px;font-weight:700;margin:4px 0}
+.grade-detail{font-size:13px;color:hsl(var(--muted-foreground));margin:2px 0}
+.phase-flow { display: flex; gap: 4px; margin-bottom: 16px; flex-wrap: wrap; justify-content: center; }
+.phase-pill {
+  padding: 4px 8px; border-radius: 9999px; font-size: 0.65rem; font-weight: 700;
+  background: hsla(var(--muted), 0.4); color: hsl(var(--muted-foreground));
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.phase-pill.active { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+.phase-pill.done { background: hsla(var(--success), 0.3); color: hsl(var(--success)); }
+.card { padding: 20px; margin-bottom: 16px; }
+.card h2 { font-size: 1.2rem; margin-bottom: 8px; }
+.card p { color: hsl(var(--muted-foreground)); font-size: 0.9rem; line-height: 1.5; margin-bottom: 12px; }
+.btn {
+  display: block; width: 100%; padding: 14px; border: none; border-radius: 0.75rem;
+  background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+  color: hsl(var(--primary-foreground)); font-family: 'Space Grotesk'; font-weight: 600;
+  font-size: 1rem; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 20px hsla(var(--primary), 0.4); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-secondary {
+  background: hsla(var(--muted), 0.6); color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+.scenario-card {
+  padding: 16px; margin-bottom: 12px; cursor: pointer;
+  transition: border-color 0.2s, transform 0.15s;
+  border: 2px solid hsl(var(--border));
+}
+.scenario-card:hover { border-color: hsl(var(--primary)); transform: translateY(-2px); }
+.scenario-card.selected { border-color: hsl(var(--primary)); background: hsla(var(--primary), 0.1); }
+.scenario-letter {
+  display: inline-block; width: 32px; height: 32px; line-height: 32px; text-align: center;
+  background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+  border-radius: 50%; font-family: 'Space Grotesk'; font-weight: 700; margin-right: 10px;
+}
+.scenario-title { font-weight: 700; font-size: 1rem; }
+.scenario-desc { font-size: 0.85rem; color: hsl(var(--muted-foreground)); margin-top: 4px; }
+textarea {
+  width: 100%; min-height: 120px; padding: 14px; border-radius: 0.75rem;
+  background: hsla(var(--muted), 0.4); border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground)); font-family: 'Nunito'; font-size: 0.95rem;
+  resize: vertical; outline: none; transition: border-color 0.2s;
+}
+textarea:focus { border-color: hsl(var(--primary)); }
+.result-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid hsla(var(--border), 0.5); }
+.result-row:last-child { border-bottom: none; }
+.result-label { font-size: 0.9rem; color: hsl(var(--muted-foreground)); }
+.result-score { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.1rem; }
+.score-good { color: hsl(var(--success)); }
+.score-ok { color: hsl(var(--warning)); }
+.score-bad { color: hsl(var(--destructive)); }
+.badge { display: inline-block; padding: 2px 10px; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; }
+.badge-success { background: hsla(var(--success), 0.2); color: hsl(var(--success)); }
+.badge-warning { background: hsla(var(--warning), 0.2); color: hsl(var(--warning)); }
+.badge-destructive { background: hsla(var(--destructive), 0.2); color: hsl(var(--destructive)); }
+.situation-box {
+  background: hsla(var(--primary), 0.08); border-left: 3px solid hsl(var(--primary));
+  padding: 14px; border-radius: 0 0.5rem 0.5rem 0; margin: 12px 0;
+}
+.situation-box p { color: hsl(var(--foreground)); font-size: 0.9rem; margin: 0; line-height: 1.6; }
+.hidden { display: none !important; }
+#confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
+.progress-bar { height: 6px; background: hsla(var(--muted), 0.5); border-radius: 9999px; overflow: hidden; margin: 8px 0; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%)); border-radius: 9999px; transition: width 0.5s; }
+.loading-dots span { animation: dotPulse 1.4s infinite; font-size: 1.5rem; }
+.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dotPulse { 0%, 80%, 100% { opacity: 0.3; } 40% { opacity: 1; } }
+</style>
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+<div class="container">
+  <!-- Stats Bar -->
+  <div class="stats-bar glass">
+    <div class="stat"><div class="stat-value level-val" id="level-display">0%</div><div class="stat-label">Daraja</div></div>
+    <div class="stat"><div class="stat-value velocity-val" id="velocity-display">n=0.00</div><div class="stat-label">Tezlik</div></div>
+    <div class="stat"><div class="stat-value" id="scenario-num">0/3</div><div class="stat-label">Vaziyat</div></div>
+  </div>
+  <!-- Phase Flow -->
+  <div class="phase-flow">
+    <span class="phase-pill active" id="ph-intro">Kirish</span>
+    <span class="phase-pill" id="ph-sel">Tanlash</span>
+    <span class="phase-pill" id="ph-write">Yozish</span>
+    <span class="phase-pill" id="ph-eval">Baholash</span>
+    <span class="phase-pill" id="ph-next">Keyingi</span>
+    <span class="phase-pill" id="ph-done">Tugadi</span>
+  </div>
+  <!-- Phase 1: Intro -->
+  <div id="phase-intro" class="card glass">
+    <h2>🧑‍🏫 Hamkorlikda O'qitish</h2>
+    <p>Boshqalarga o'rgatish — o'rganishning eng samarali usuli. Siz 3 xil vaziyatda talabaga tushuntirishingiz kerak bo'ladi.</p>
+    <p>Har bir javob <strong>to'liqlik</strong>, <strong>aniqlik</strong> va <strong>to'g'rilik</strong> bo'yicha baholanadi.</p>
+    <button class="btn" onclick="startGame()">Boshlash</button>
+  </div>
+  <!-- Phase 2: Scenario Selection -->
+  <div id="phase-select" class="hidden">
+    <div class="card glass">
+      <h2>Vaziyatni tanlang</h2>
+      <p>Har bir ssenariy boshqacha ko'nikma talab qiladi.</p>
+    </div>
+    <div id="scenario-list"></div>
+  </div>
+  <!-- Phase 3: Write Explanation -->
+  <div id="phase-write" class="hidden">
+    <div class="card glass">
+      <h2 id="write-title"></h2>
+      <div class="situation-box"><p id="write-situation"></p></div>
+      <p style="margin-top:12px">Talabaga tushuntiring:</p>
+      <textarea id="explanation-input" placeholder="Bu yerda tushuntiring..."></textarea>
+      <div style="margin-top:12px">
+        <button class="btn" id="submit-btn" onclick="submitExplanation()">Topshirish</button>
+      </div>
+    </div>
+  </div>
+  <!-- Phase 4: Evaluation -->
+  <div id="phase-eval" class="hidden">
+    <div class="card glass">
+      <h2>🤖 Sun'iy Intellekt Bahosi</h2>
+      <div class="loading-dots" id="eval-loading"><span>.</span><span>.</span><span>.</span></div>
+      <div id="eval-results" class="hidden">
+        <div class="result-row"><span class="result-label">To'liqlik</span><span class="result-score" id="res-completeness"></span></div>
+        <div class="result-row"><span class="result-label">Aniqlik</span><span class="result-score" id="res-clarity"></span></div>
+        <div class="result-row"><span class="result-label">To'g'rilik</span><span class="result-score" id="res-accuracy"></span></div>
+        <div class="progress-bar" style="margin-top:12px"><div class="progress-fill" id="res-bar"></div></div>
+        <div class="grade-card" id="eval-grade-card" style="margin-top:12px">
+          <div class="grade-level" id="eval-grade-level">0%</div>
+          <div class="grade-label" id="eval-grade-label">Novice</div>
+          <div class="grade-detail" id="eval-grade-detail">Daraja: 0%</div>
+        </div>
+        <p id="res-feedback" style="margin-top:12px;font-size:0.85rem;color:hsl(var(--muted-foreground))"></p>
+        <button class="btn" id="next-btn" onclick="nextScenario()" style="margin-top:12px">Keyingi vaziyat</button>
+      </div>
+    </div>
+  </div>
+  <!-- Phase 5: Final -->
+  <div id="phase-done" class="hidden">
+    <div class="card glass" style="text-align:center">
+      <h2 style="font-size:1.5rem">🎉 Ajoyib!</h2>
+      <p>Barcha 3 vaziyatni tugatdingiz!</p>
+      <div class="grade-card" id="final-grade-card">
+        <div class="grade-level" id="final-grade-level">0%</div>
+        <div class="grade-label" id="final-grade-label">Novice</div>
+        <div class="grade-detail" id="final-grade-detail">O'rtacha ball: 0%</div>
+        <div class="grade-detail" id="final-velocity-detail">Tezlik: n=0.00</div>
+      </div>
+      <div class="result-row"><span class="result-label">Eng yaxshi ssenariy</span><span class="result-score" id="best-scenario"></span></div>
+      <button class="btn" onclick="location.reload()" style="margin-top:16px">Qayta boshlash</button>
+    </div>
+  </div>
+</div>
+<script>
+const scenarios = [
+  {
+    letter: 'A', title: 'Noldan tushuntiring',
+    desc: 'Talaba mavzuni birinchi marta eshitmoqda',
+    situation: 'Sizga yangi talaba — Dilshod keldi. U "Fotosintez nima?" deb so\'radi. U bu haqda hech narsa bilmaydi. Sodda va bosqichma-bosqich tushuntiring.',
+    xpMax: 100, keywords: ['quyosh', 'yashil', 'o\'simlik', 'chiqindisi', 'energiya', 'suv', 'havosi', 'glukoza', 'barg']
+  },
+  {
+    letter: 'B', title: 'Yordam kerak',
+    desc: 'Talaba bir joyda tiqilib qolgan',
+    situation: 'Malika sizga aytdi: "Men tenglamaning chap tomonini tushundim, lekin o\'ng tomonga o\'tkazishni bilmayapman." Unga aniq yordam bering.',
+    xpMax: 100, keywords: ['belgi', 'teskari', 'qarama', 'tenglama', 'o\'ng', 'chap', 'algebra', 'x', 'topish', 'son']
+  },
+  {
+    letter: 'C', title: "Noto'g'ri javobni to'g'rilang",
+    desc: 'Talaba xato tushunchaga ishonmoqda',
+    situation: 'Jasur aytdi: "Oyning nuri o\'zidan chiqadi, shuning uchun u yulduz." Bu noto\'g\'ri. Jasurga mehribonlik bilan to\'g\'ri javobni tushuntiring.',
+    xpMax: 200, keywords: ['aks', 'quyosh', 'yoritilgan', 'emass', 'emasi', 'yorug\'lik', 'sayyora', 'ulduz', 'masofa', 'ko\'rinadigan']
+  }
+];
+let currentIdx = -1;
+let completed = 0;
+let totalScore = 0;
+let results = {};
+var sessionHistory=[
+  {session:1,accuracy:15},
+  {session:2,accuracy:30},
+  {session:3,accuracy:45}
+];
+function calcVelocity(){
+  if(sessionHistory.length<2)return 0.3;
+  var f=sessionHistory[0].accuracy,l=sessionHistory[sessionHistory.length-1].accuracy,s=sessionHistory.length;
+  return Math.min(0.9,Math.max(0.1,(l-f)/(s*15)));
+}
+function getGradeLabel(acc){
+  if(acc>=85)return{label:'Mastered \u2605'};
+  if(acc>=60)return{label:'Proficient \u2713'};
+  if(acc>=30)return{label:'Apprentice \u25b3'};
+  return{label:'Novice \u25cb'};
+}
+function setPhase(name) {
+  document.querySelectorAll('.phase-pill').forEach(p => { p.classList.remove('active'); p.classList.remove('done'); });
+  const phases = ['ph-intro','ph-sel','ph-write','ph-eval','ph-next','ph-done'];
+  const names = ['intro','sel','write','eval','next','done'];
+  let idx = names.indexOf(name);
+  phases.forEach((p, i) => {
+    if (i < idx) document.getElementById(p).classList.add('done');
+    if (i === idx) document.getElementById(p).classList.add('active');
+  });
+}
+function updateStats() {
+  const accuracy = completed > 0 ? Math.round(totalScore / completed) : 0;
+  document.getElementById('level-display').textContent = accuracy + '%';
+  document.getElementById('velocity-display').textContent = 'n=' + calcVelocity().toFixed(2);
+  document.getElementById('scenario-num').textContent = completed + '/3';
+}
+function startGame() {
+  document.getElementById('phase-intro').classList.add('hidden');
+  document.getElementById('phase-select').classList.remove('hidden');
+  setPhase('sel');
+  renderScenarios();
+}
+function renderScenarios() {
+  const list = document.getElementById('scenario-list');
+  list.innerHTML = '';
+  scenarios.forEach((s, i) => {
+    const done = results[i] !== undefined;
+    const card = document.createElement('div');
+    card.className = 'scenario-card glass' + (done ? ' selected' : '');
+    card.innerHTML = `<span class="scenario-letter">${s.letter}</span><span class="scenario-title">${s.title}</span>
+      <div class="scenario-desc">${s.desc}</div>
+      ${done ? '<div style="margin-top:8px"><span class="badge badge-success">Tugallangan - ' + results[i].avg + '%</span></div>' : '<div style="margin-top:8px"><span class="badge badge-warning">Boshlanmagan</span></div>'}`;
+    if (!done) {
+      card.onclick = () => selectScenario(i);
+    }
+    list.appendChild(card);
+  });
+}
+function selectScenario(idx) {
+  currentIdx = idx;
+  const s = scenarios[idx];
+  document.getElementById('phase-select').classList.add('hidden');
+  document.getElementById('phase-write').classList.remove('hidden');
+  document.getElementById('write-title').textContent = s.letter + ': ' + s.title;
+  document.getElementById('write-situation').textContent = s.situation;
+  document.getElementById('explanation-input').value = '';
+  setPhase('write');
+}
+function submitExplanation() {
+  const text = document.getElementById('explanation-input').value.trim();
+  if (text.length < 10) { alert('Iltimos, kamida 10 ta belgi yozing.'); return; }
+  document.getElementById('phase-write').classList.add('hidden');
+  document.getElementById('phase-eval').classList.remove('hidden');
+  document.getElementById('eval-loading').classList.remove('hidden');
+  document.getElementById('eval-results').classList.add('hidden');
+  setPhase('eval');
+  setTimeout(() => evaluate(text), 2000);
+}
+function evaluate(text) {
+  const s = scenarios[currentIdx];
+  const words = text.toLowerCase();
+  let matchCount = 0;
+  s.keywords.forEach(kw => { if (words.includes(kw.toLowerCase())) matchCount++; });
+  const keywordRatio = Math.min(matchCount / (s.keywords.length * 0.5), 1);
+  const lengthBonus = Math.min(text.length / 300, 1);
+  const completeness = Math.round((keywordRatio * 0.6 + lengthBonus * 0.4) * 100);
+  const clarity = Math.min(Math.round((text.split('.').length > 1 ? 0.6 : 0.3 + 0.4) * 100 + Math.random() * 10), 100);
+  const accuracy = Math.round(keywordRatio * 100);
+  const avg = (completeness + clarity + accuracy) / 3;
+  results[currentIdx] = { completeness, clarity, accuracy, avg };
+  completed++;
+  totalScore += Math.round(avg);
+  sessionHistory.push({session: completed, accuracy: Math.round(avg)});
+  updateStats();
+  document.getElementById('eval-loading').classList.add('hidden');
+  document.getElementById('eval-results').classList.remove('hidden');
+  const fmtScore = (v) => {
+    const cls = v >= 70 ? 'score-good' : v >= 40 ? 'score-ok' : 'score-bad';
+    return `<span class="${cls}">${v}%</span>`;
+  };
+  document.getElementById('res-completeness').innerHTML = fmtScore(completeness);
+  document.getElementById('res-clarity').innerHTML = fmtScore(clarity);
+  document.getElementById('res-accuracy').innerHTML = fmtScore(accuracy);
+  const grade = getGradeLabel(Math.round(avg));
+  document.getElementById('eval-grade-level').textContent = Math.round(avg) + '%';
+  document.getElementById('eval-grade-label').textContent = grade.label;
+  document.getElementById('eval-grade-detail').textContent = `Daraja: ${Math.round(avg)}% | To'liqlik: ${completeness}% | Aniqlik: ${clarity}% | To'g'rilik: ${accuracy}%`;
+  document.getElementById('res-bar').style.width = avg + '%';
+  const feedbacks = [
+    'Yaxshi boshlang\'ich! Ko\'proq misollar qo\'shing.',
+    'Ajoyib tushuntirish! Aniq va to\'liq.',
+    'Yaxshi, lekin ba\'zi kalit so\'zlar yetishmayapti.',
+    'Zo\'r! Talaba buni yaxshi tushunadi.'
+  ];
+  document.getElementById('res-feedback').textContent = feedbacks[Math.floor(avg / 25)] || feedbacks[0];
+  const btn = document.getElementById('next-btn');
+  btn.textContent = completed >= 3 ? 'Natijalarni ko\'rish' : 'Keyingi vaziyat';
+}
+function nextScenario() {
+  document.getElementById('phase-eval').classList.add('hidden');
+  if (completed >= 3) {
+    document.getElementById('phase-done').classList.remove('hidden');
+    const avgScore = Math.round(totalScore / 3);
+    const grade = getGradeLabel(avgScore);
+    const velocity = calcVelocity();
+    document.getElementById('final-grade-level').textContent = avgScore + '%';
+    document.getElementById('final-grade-label').textContent = grade.label;
+    document.getElementById('final-grade-detail').textContent = `O'rtacha ball: ${avgScore}%`;
+    document.getElementById('final-velocity-detail').textContent = `Tezlik: n=${velocity.toFixed(2)}`;
+    let best = 0; let bestIdx = 0;
+    Object.keys(results).forEach(k => { if (results[k].avg > best) { best = results[k].avg; bestIdx = parseInt(k); } });
+    document.getElementById('best-scenario').textContent = scenarios[bestIdx].letter + ': ' + scenarios[bestIdx].title;
+    setPhase('done');
+    launchConfetti();
+  } else {
+    document.getElementById('phase-select').classList.remove('hidden');
+    setPhase('sel');
+    renderScenarios();
+  }
+}
+function launchConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  const particles = [];
+  const colors = ['#22c55e','#3b82f6','#f59e0b','#ef4444','#8b5cf6','#06b6d4','#ec4899'];
+  for (let i = 0; i < 150; i++) {
+    particles.push({ x: Math.random() * canvas.width, y: -20, w: Math.random() * 10 + 5, h: Math.random() * 6 + 3, color: colors[Math.floor(Math.random() * colors.length)], vx: (Math.random() - 0.5) * 4, vy: Math.random() * 3 + 2, rot: Math.random() * 360, rv: (Math.random() - 0.5) * 10 });
+  }
+  let frame = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => { p.x += p.vx; p.y += p.vy; p.vy += 0.05; p.rot += p.rv; ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot * Math.PI / 180); ctx.fillStyle = p.color; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore(); });
+    frame++; if (frame < 300) requestAnimationFrame(animate); else ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  animate();
+}
+</script>
+</body>
+</html>

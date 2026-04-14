@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Puzzle Lock (Sliding Tile)</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Puzzle Lock (Sliding Tile)</h1>
+            <p style="color: var(--text-muted)">Interactive Knowledge-Gated Mechanic #4 — Visual-Spatial Content Reconstruction</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Mode: Solo</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Apply/Analyze</span>
+                <span class="tag">PISA: 2-4</span>
+                <span class="tag">AI Tier: Tier 1</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>Puzzle Lock presents a <strong>sliding tile puzzle</strong> (3×3 or 4×4 grid) where each tile carries a fragment of subject content — a map region, a timeline segment, a diagram piece, a sentence fragment, or a formula component. The tiles are <strong>scrambled</strong> at the start. The student must <strong>slide tiles into the correct positions</strong> to reconstruct the complete image or sequence. <strong>Knowledge gating</strong> controls every slide: correct answers execute the student's chosen move; wrong answers execute a random move instead.</p>
+                <ul>
+                    <li><strong>Grid sizes by grade:</strong>
+                        <ul>
+                            <li><strong>Grades 1-6:</strong> 3×3 grid (8 tiles + 1 empty space). Timer: 3 minutes. Content: simple maps, 3-part diagrams, short sentence assembly, basic formula reconstruction.</li>
+                            <li><strong>Grades 7-11:</strong> 4×4 grid (15 tiles + 1 empty space). Timer: 5 minutes. Content: detailed geography maps, multi-event timelines, complex diagram assembly, multi-step equation reconstruction.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Correct answer:</strong> The student's chosen tile slides into the empty space. The tile glows green briefly and locks into position. If the tile lands in its correct solved position, it gains a gold border (visual confirmation). The student retains control of the next move.</li>
+                    <li><strong>Wrong answer:</strong> A <strong>random valid adjacent tile</strong> (any tile adjacent to the empty space) slides instead of the student's chosen tile. This tile slides in a random valid direction, potentially disrupting the student's progress. The tile flashes red. The student then regains control for the next move.</li>
+                    <li><strong>Goal:</strong> Arrange all tiles into their correct positions before the timer expires. A completion animation assembles the full image/sequence.</li>
+                </ul>
+                <p><strong>Reference image:</strong> A small reference image showing the solved state is always visible in a corner of the screen (shrunk to ~15% of the puzzle area). For Grades 1-3, the reference is larger (~25%) and may include numbered positions on tiles as an additional hint. For Grades 10-11 on 4x4 grids, the reference can be toggled off by the student (risk/reward — no reference = grade bonus on solve).</p>
+                <p><strong>Subject compatibility:</strong> Best suited for visual-spatial content. Geography (assembling country/region maps, placing capitals), history (timeline assembly — ordering events chronologically), biology (diagram reconstruction — cell structures, organ systems), chemistry (periodic table segment assembly, molecular structure construction), math (formula/equation reconstruction, geometric proof assembly), language (sentence/paragraph assembly from fragments).</p>
+                <p><strong>Solvability guarantee:</strong> The scrambling algorithm only produces solvable configurations (standard 15-puzzle parity rules apply). Every puzzle is guaranteed to be solvable within the time limit by a student who answers all questions correctly and uses optimal move strategy.</p>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Both tiers receive Puzzle Lock as part of the 28-mechanic core during Phase 3 sessions. Premium unlocks larger grids, competitive modes, and visual enhancements.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Available in Phase 3 Game Breaks (dual-catalog selection)</td>
+                        <td>Same + on-demand access from Library</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Grid Size</strong></td>
+                        <td>3×3 (all grades), 4×4 (Grades 7+)</td>
+                        <td>3×3, 4×4, and 5×5 challenge grids (Grades 9+)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Game Modes</strong></td>
+                        <td>Solo puzzle solve only</td>
+                        <td>Solo + Ghost Race (compete against a recorded best-time ghost) + Co-op Solve (two students share one puzzle, alternating turns)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Visual Polish</strong></td>
+                        <td>Standard tile slide animations, basic color coding</td>
+                        <td>Enhanced particle effects on correct placement, animated image reveal as tiles approach solved state, custom tile themes (map textures, parchment, blueprint)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wrong Answer Consequence</strong></td>
+                        <td>Random adjacent tile slides (may disrupt progress)</td>
+                        <td>Same + random slide is highlighted in red with a "lost move" animation, making the cost of wrong answers visually salient</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reference Image</strong></td>
+                        <td>Always visible (scaled per grade)</td>
+                        <td>Reference can be hidden for grade bonus on solve (Grades 7+). "Blind Solve" mode available — no reference from the start.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Streak Bonus</strong></td>
+                        <td>Standard (per 3-correct streak)</td>
+                        <td>Amplified (per 3-correct streak) + visual combo counter on puzzle</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> During Phase 3 sessions, Basic students receive the full learning experience. Ghost Race, Co-op Solve, 5×5 grids, and visual enhancements are enrichment, not required for PISA progression. The same puzzle content and knowledge-gating mechanics are presented to both tiers.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Spatial-Visual Memory Encoding</h2>
+            <p>Puzzle Lock leverages <strong>Tony Buzan's color, imagery, and spatial memory principles</strong> to strengthen visual-spatial reasoning and content recall.</p>
+            <ul>
+                <li><strong>Color Hooks (Synesthesia):</strong> Tiles that belong to the same content region share a subtle background tint. In a geography puzzle, tiles from the same country/region share a color (e.g., all Central Asian tiles share a warm gold tint, all European tiles share a cool blue). In a biology diagram, tiles from the same system share a color (e.g., circulatory = red, nervous = purple). This color coding provides a spatial-visual cue that helps students group related tiles mentally, even before they are adjacent on the grid. When a tile is placed in its correct position, the color briefly floods the entire grid (0.3s pulse), reinforcing the completed region.</li>
+                <li><strong>Radiant Thinking (Image Hub):</strong> The completed puzzle is treated as a radiant structure. When the final tile slides into place, the full image assembles and a "reveal" animation expands from the center tile outward, showing the complete diagram/map/timeline. The solved puzzle is then treated as a single visual unit — the student's brain encodes it as a complete image rather than 8/15/24 separate tiles. This is the core Buzan principle: the whole image is more memorable than the sum of its parts.</li>
+                <li><strong>Imagery & Exaggeration:</strong> Each tile carries not just a content fragment but also a micro-visual element that is exaggerated or distinctive (e.g., a map tile with an unusually shaped lake, a timeline tile with a dramatic event illustration, a cell diagram tile with a comically oversized mitochondrion). Per Buzan's principle, these distinctive visual features make individual tiles 3-7x more memorable, which aids the student in remembering where each tile belongs. When a tile is placed correctly, its distinctive feature is briefly highlighted.</li>
+                <li><strong>Memory Palace Anchor (Puzzle Milestone — rare, ~5% of puzzles):</strong> One tile in the puzzle carries a 🏛️ icon. Placing this tile in its correct position triggers a 5-second mini-palace sequence: a familiar location appears, and the completed image/fragment is "placed" at one location within it. Students who solve all Palace Puzzles across sessions unlock the "Visual Architect" achievement in the Bilim Bazasi.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Each slide attempt requires answering a subject question. The question style scales with the PISA level of the content and the student's grade band.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Question Style</th>
+                        <th>Puzzle Context</th>
+                        <th>Cognitive Target</th>
+                        <th>Wrong Answer Feedback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L1</strong></td>
+                        <td>Direct identification: "Which tile shows [X]?" or "What is this part of the map called?" with visual options</td>
+                        <td>3×3 simple maps, basic diagrams, picture assembly</td>
+                        <td>Direct recall recognition — identify content elements visually</td>
+                        <td>Visual hint appears (highlight on reference image showing where the content belongs). Random tile still slides.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L2</strong></td>
+                        <td>Property identification: "What property does this tile represent?" or "Which event happened first: [A] or [B]?"</td>
+                        <td>3×3 timelines, labeled diagrams, sentence assembly</td>
+                        <td>Property/relationship identification within the content domain</td>
+                        <td>Context clue shown (e.g., date range for timeline events, function hint for diagram parts). Random tile still slides.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L3</strong></td>
+                        <td>Causal/relational: "Why does [tile A] connect to [tile B]?" or "What happens when [process shown on tile] occurs?"</td>
+                        <td>3×3 or 4×4 process diagrams, causation timelines, multi-part systems</td>
+                        <td>Causal reasoning — understand relationships between content fragments</td>
+                        <td>Brief explanation of the relationship shown. Random tile still slides, potentially disrupting placement.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Process analysis: "If you remove [tile] from the puzzle, what is missing from the complete picture?"</td>
+                        <td>4×4 complex diagrams, detailed maps, multi-system assemblies</td>
+                        <td>Process analysis — understand the role of individual components within a system</td>
+                        <td>System shows what the complete picture would look like without that component. Random tile still slides.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5</strong></td>
+                        <td>Evaluation: "Which of these two tile arrangements is correct? Justify."</td>
+                        <td>4×4 ambiguous content (competing interpretations, multi-valid arrangements)</td>
+                        <td>Evaluation — assess competing content arrangements, justify placement choice</td>
+                        <td>Counter-evidence presented for the wrong arrangement. Random tile still slides.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L6</strong></td>
+                        <td>Synthesis: "Place these tiles to represent [alternative interpretation] of the content."</td>
+                        <td>4×4 open-ended content (multiple valid solved states representing different models/frameworks)</td>
+                        <td>Synthesis — construct alternative valid arrangements based on different theoretical frameworks</td>
+                        <td>Partial credit for arrangements that are valid under alternative frameworks. Random tile still slides.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Interaction Model:</strong> The puzzle grid occupies the center of the screen. The student taps/clicks a tile adjacent to the empty space to select it, then taps the empty space to propose the slide. A subject question appears in a panel above or below the grid. Correct answers execute the proposed slide with a smooth animation. Wrong answers execute a random slide — the system randomly selects one of the other valid adjacent tiles and slides it in a random valid direction. The timer counts down visibly. The reference image remains accessible throughout.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type A (Accuracy-Based) + Efficiency</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Accuracy (%)</td><td>% of tiles correctly placed ÷ total tiles × question accuracy rate</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>Time per answer</td><td>Average time per question during solve</td><td>Secondary — feeds Efficiency metric (faster correct answers = higher efficiency)</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total Puzzle Lock sessions on this content type</td><td>Feeds curve-fitting (y = K × attempts^n) for velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Puzzle Lock — [Topic]</strong><br>
+                    ████████░░ 62% (Apprentice ↗)<br>
+                    Tile Accuracy: 85% | Question Accuracy: 70%<br>
+                    Velocity: n=0.51 (improving)<br>
+                    ~2 sessions to Proficient
+                </div>
+
+                <h3>C. Solve Outcome Grades</h3>
+                <p>Each puzzle solve receives a grade based on accuracy and wrong-answer count:</p>
+                <ul>
+                    <li><strong>Perfect Solve (0 wrong):</strong> Mastered-level grade. Full reveal animation with particle effects. "Perfect" badge for the session.</li>
+                    <li><strong>Strong Solve (1-2 wrong):</strong> Proficient-level grade. Standard reveal animation. The random-slid tiles are marked with a faint red scar.</li>
+                    <li><strong>Solved (3+ wrong):</strong> Apprentice-level grade. Reveal animation plays, but the board shows the number of disruptions. "Hali emas" framing for the wrong answers — the puzzle was solved, but with significant interference.</li>
+                </ul>
+
+                <h3>D. Timer Exhaustion (Below Grade)</h3>
+                <p>Timer reaches 0 with tiles still misplaced:</p>
+                <ul>
+                    <li><strong>Below 50% tiles correct:</strong> "Hali emas" screen. The solved puzzle is shown for 5 seconds. Student must replay this puzzle in the next session (tracked as a pending mastery item).</li>
+                    <li><strong>50-99% tiles correct:</strong> Partial credit awarded. Remaining tiles are shown sliding into their correct positions. Student earns accuracy credit for tiles correctly placed. No forced replay — counted as a learning session, not a failure.</li>
+                </ul>
+
+                <h3>E. Ghost Race Mode (Premium)</h3>
+                <p>In Ghost Race mode, the student competes against a recorded "ghost" of their own best previous solve on the same puzzle. Beating the ghost (fewer total moves) earns a "Ghost Buster" recognition. Losing carries no penalty — the student's current solve still earns standard accuracy credit.</p>
+
+                <h3>F. Co-op Solve Mode (Premium)</h3>
+                <p>Two students share one puzzle and alternate turns. Each student faces questions independently. If both students achieve a solve with fewer than 3 total wrong answers combined, each earns a "Teamwork" recognition.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Puzzle Lock (Sliding Tile) v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>

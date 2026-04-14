@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Mode — Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: 240 15% 8%;
+      --foreground: 0 0% 95%;
+      --card: 240 12% 12%;
+      --card-hover: 240 12% 16%;
+      --primary: 162 93% 42%;
+      --primary-foreground: 0 0% 100%;
+      --muted: 240 10% 20%;
+      --muted-foreground: 240 5% 55%;
+      --border: 240 10% 22%;
+      --success: 142 76% 45%;
+      --warning: 38 92% 50%;
+      --destructive: 0 72% 51%;
+      --radius: 0.75rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: hsl(var(--background));
+      color: hsl(var(--foreground));
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 16px 12px 48px;
+    }
+    .container { width: 100%; max-width: 420px; }
+
+    .phase-flow { display: flex; gap: 3px; margin-bottom: 12px; }
+    .phase-segment { flex: 1; height: 4px; border-radius: 2px; background: hsl(var(--muted)); transition: background 0.3s; }
+    .phase-segment.active { background: hsl(var(--primary)); }
+    .phase-segment.done { background: hsl(var(--success)); }
+    .phase-label {
+      font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: hsl(var(--muted-foreground));
+      text-align: center; margin-bottom: 8px; letter-spacing: 0.5px; text-transform: uppercase;
+    }
+
+    .header { text-align: center; margin-bottom: 16px; }
+    .header h1 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .header p { color: hsl(var(--muted-foreground)); font-size: 13px; margin-top: 4px; }
+
+    .stats-bar {
+      display: flex; gap: 8px; margin-bottom: 16px;
+      background: hsla(var(--card), 0.6); backdrop-filter: blur(24px);
+      border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 10px 12px;
+    }
+    .stat-item { flex: 1; display: flex; flex-direction: column; align-items: center; }
+    .stat-label { font-size: 10px; color: hsl(var(--muted-foreground)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: hsl(var(--foreground)); margin-top: 2px; }
+    .stat-value.level-val { color: hsl(var(--primary)); font-size: 16px; }
+    .stat-value.velocity-val { color: hsl(var(--success)); font-size: 12px; }
+    .stat-value.beat-val { color: hsl(var(--warning)); font-size: 14px; }
+    .stat-value.score-val { color: hsl(var(--success)); }
+
+    /* Grade Card */
+    .grade-card {
+      background: hsla(var(--card), 0.8); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius); padding: 16px; margin: 12px 0; text-align: center;
+    }
+    .grade-level {
+      font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .grade-label { font-size: 12px; color: hsl(var(--muted-foreground)); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .grade-detail { font-size: 14px; color: hsl(var(--foreground)); margin-top: 8px; font-weight: 600; }
+
+    .glass-card {
+      background: hsla(var(--card), 0.6); backdrop-filter: blur(24px);
+      border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 16px;
+    }
+
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    .start-btn {
+      width: 100%; padding: 16px; border: none; border-radius: var(--radius);
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      color: hsl(var(--primary-foreground)); font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px; font-weight: 700; cursor: pointer; transition: transform 0.2s;
+    }
+    .start-btn:active { transform: scale(0.97); }
+
+    .rules-list { list-style: none; margin: 16px 0; }
+    .rules-list li {
+      padding: 10px 12px; margin-bottom: 8px;
+      background: hsla(var(--muted), 0.4); border-radius: var(--radius);
+      font-size: 14px; line-height: 1.4;
+    }
+
+    /* Story Beats */
+    .beat-indicator {
+      display: flex; gap: 6px; justify-content: center; margin-bottom: 16px;
+    }
+    .beat-dot {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: hsl(var(--muted)); transition: all 0.3s;
+    }
+    .beat-dot.done { background: hsl(var(--success)); }
+    .beat-dot.current { background: hsl(var(--primary)); box-shadow: 0 0 8px hsla(var(--primary), 0.5); }
+    .beat-dot.locked { background: hsl(var(--muted)); opacity: 0.3; }
+
+    .story-scene {
+      background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+      border-radius: var(--radius); padding: 24px 16px; margin-bottom: 16px;
+      border: 1px solid hsl(var(--border));
+    }
+    .story-emoji { font-size: 48px; text-align: center; margin-bottom: 12px; }
+    .story-title {
+      font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700;
+      text-align: center; margin-bottom: 12px;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .story-text {
+      font-size: 15px; line-height: 1.8; color: hsl(var(--foreground));
+    }
+
+    /* Gate Question */
+    .gate-banner {
+      background: linear-gradient(135deg, hsl(260, 60%, 20%), hsl(200, 50%, 20%));
+      border: 1px solid hsl(260, 40%, 35%);
+      border-radius: var(--radius); padding: 14px 16px; margin-bottom: 16px;
+      text-align: center;
+    }
+    .gate-banner .lock-icon { font-size: 24px; margin-bottom: 4px; }
+    .gate-banner h3 { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; }
+    .gate-banner p { font-size: 12px; color: hsl(var(--muted-foreground)); }
+
+    .q-card {
+      background: hsla(var(--card), 0.8); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius); padding: 20px; margin-bottom: 16px;
+    }
+    .q-text { font-size: 16px; font-weight: 700; margin-bottom: 16px; line-height: 1.4; }
+    .q-opts { display: grid; gap: 8px; }
+    .q-opt {
+      padding: 14px 12px; border: 1px solid hsl(var(--border)); border-radius: var(--radius);
+      background: hsla(var(--card), 0.5); cursor: pointer; font-size: 14px;
+      font-family: 'Nunito', sans-serif; font-weight: 600; color: hsl(var(--foreground));
+      text-align: left; transition: all 0.15s;
+    }
+    .q-opt:hover:not(.answered) { border-color: hsl(var(--primary)); background: hsla(var(--primary), 0.1); }
+    .q-opt.correct { background: hsla(var(--success), 0.2); border-color: hsl(var(--success)); color: hsl(var(--success)); }
+    .q-opt.wrong { background: hsla(var(--destructive), 0.2); border-color: hsl(var(--destructive)); color: hsl(var(--destructive)); }
+    .q-opt.answered { pointer-events: none; opacity: 0.7; }
+
+    .gate-feedback {
+      text-align: center; font-size: 14px; font-weight: 700; margin: 12px 0; min-height: 24px;
+    }
+    .gate-feedback.pass { color: hsl(var(--success)); }
+    .gate-feedback.fail { color: hsl(var(--destructive)); }
+
+    .next-btn {
+      width: 100%; padding: 14px; border: none; border-radius: var(--radius);
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      color: hsl(var(--primary-foreground)); font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px; font-weight: 700; cursor: pointer; transition: transform 0.2s;
+      display: none;
+    }
+    .next-btn.visible { display: block; }
+    .next-btn:active { transform: scale(0.97); }
+
+    /* Completion */
+    .completion-panel { text-align: center; padding: 24px 16px; }
+    .completion-panel .big-emoji { font-size: 64px; margin: 16px 0; }
+    .completion-panel h2 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 8px;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .completion-panel .summary { color: hsl(var(--muted-foreground)); font-size: 14px; margin: 12px 0; }
+    .score-breakdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 16px 0; }
+    .score-item {
+      background: hsla(var(--muted), 0.3); border-radius: var(--radius); padding: 12px 8px; text-align: center;
+    }
+    .score-item .s-val { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; }
+    .score-item .s-label { font-size: 11px; color: hsl(var(--muted-foreground)); margin-top: 4px; }
+
+    #confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; }
+  </style>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="container">
+    <div class="phase-label">Session Phase</div>
+    <div class="phase-flow">
+      <div class="phase-segment done"></div>
+      <div class="phase-segment active"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+    </div>
+
+    <div class="header">
+      <h1>📖 Story Mode</h1>
+      <p>Fotosintez haqida hikoya</p>
+    </div>
+
+    <div class="stats-bar" id="stats-bar" style="display:none;">
+      <div class="stat-item"><span class="stat-label">Daraja</span><span class="stat-value level-val" id="level-display">0%</span></div>
+      <div class="stat-item"><span class="stat-label">Tezlik</span><span class="stat-value velocity-val" id="velocity-display">n=0.00</span></div>
+      <div class="stat-item"><span class="stat-label">Beat</span><span class="stat-value beat-val" id="beat-display">1/4</span></div>
+      <div class="stat-item"><span class="stat-label">Darvoza</span><span class="stat-value score-val" id="gate-display">0/3</span></div>
+    </div>
+
+    <!-- Start Panel -->
+    <div class="panel active" id="panel-start">
+      <div class="glass-card">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:18px; margin-bottom:12px;">Hikoya haqida</h2>
+        <p style="font-size:14px; line-height:1.6; margin-bottom:16px;">
+          Bu hikoyada o'simliklar qanday ovqatlanishini o'rganamiz. 4 qism: Muammo → Kurash → Kashfiyot → Yechim.
+          Har bir qismdan keyin savol bor. To'g'ri javob = keyingi qism ochiladi!
+        </p>
+        <ul class="rules-list">
+          <li> Hikoyani o'qing va tushuning</li>
+          <li> Darvoza savoliga javob bering</li>
+          <li> To'g'ri = keyingi qism ochiladi</li>
+          <li> Noto'g'ri = qayta urinish mumkin</li>
+          <li> 4 qism + 3 ta darvoza savoli</li>
+        </ul>
+        <button class="start-btn" onclick="startGame()">Hikoyani boshlash</button>
+      </div>
+    </div>
+
+    <!-- Story Panel -->
+    <div class="panel" id="panel-story">
+      <div class="beat-indicator" id="beat-indicator"></div>
+      <div class="story-scene">
+        <div class="story-emoji" id="story-emoji"></div>
+        <div class="story-title" id="story-title"></div>
+        <div class="story-text" id="story-text"></div>
+      </div>
+      <button class="next-btn" id="next-btn" onclick="showGate()">Savolga o'tish</button>
+    </div>
+
+    <!-- Gate Question Panel -->
+    <div class="panel" id="panel-gate">
+      <div class="gate-banner">
+        <div class="lock-icon">🔒</div>
+        <h3>Tushunish darvozasi</h3>
+        <p>To'g'ri javob = keyingi qism ochiladi</p>
+      </div>
+      <div class="q-card">
+        <div class="q-text" id="gate-qtext"></div>
+        <div class="q-opts" id="gate-opts"></div>
+      </div>
+      <div class="gate-feedback" id="gate-feedback"></div>
+    </div>
+
+    <!-- Completion Panel -->
+    <div class="panel" id="panel-complete">
+      <div class="glass-card completion-panel">
+        <div class="big-emoji"></div>
+        <h2></h2>
+        <div class="score-breakdown">
+          <div class="score-item">
+            <div class="s-val" style="color:hsl(var(--success));" id="final-beats">0</div>
+            <div class="s-label">Qismlar</div>
+          </div>
+          <div class="score-item">
+            <div class="s-val" style="color:hsl(var(--primary));" id="final-accuracy">0%</div>
+            <div class="s-label">Aniqlik</div>
+          </div>
+          <div class="score-item">
+            <div class="s-val" style="color:hsl(var(--warning));" id="final-gates">0</div>
+            <div class="s-label">Darvozalar</div>
+          </div>
+        </div>
+        <div class="grade-card">
+          <div class="grade-level" id="grade-level"></div>
+          <div class="grade-label">Umumiy Daraja</div>
+          <div class="grade-detail" id="grade-detail"></div>
+        </div>
+        <p class="summary" id="final-summary"></p>
+        <button class="start-btn" onclick="restartGame()">Qayta boshlash</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const storyBeats = [
+      {
+        beat: 'Muammo',
+        emoji: '🌾',
+        title: 'Qurg\'oqlik boshlandi',
+        text: 'Kichkina Omina qishlog\'ida katta muammo boshlandi. Yomg\'ir yog\'mayapti, daryolar quriyapti. Aminaning bobosining bog\'idagi daraxtlar ham so\'lib bormoqda. "Bobo, nima uchun daraxtlar quriyapti?" — deb so\'radi Omina. Bobo javob berdi: "Daraxtlar ham biz kabi ovqatlanadi. Lekin hozir ular suv va quyosh nuri yetishmayapti."'
+      },
+      {
+        beat: 'Kurash',
+        emoji: '😟',
+        title: 'Aminaning tadqiqoti',
+        text: 'Omina maktabda o\'qigan kitobini esladi. Unda o\'simliklar haqida yozilgan edi. "O\'simliklar barglari orqali ovqat tayyorlaydi!" — deb eslab qoldi. Lekin qanday? U kitobni qayta o\'qidi. Unda aytilgan: "O\'simliklar quyosh nuri, suv va havodagi uglerod gazidan foydalanadi." Omina tushundi: "Demak, suv bo\'lmasa, ular ovqat tayyorlay olmaydi! Shuning uchun daraxtlar so\'lyapti!"'
+      },
+      {
+        beat: 'Kashfiyot',
+        emoji: '💡',
+        title: 'Fotosintez siri',
+        text: 'Omina fotosintez deb ataladigan jarayonni kashf qildi. Bu o\'simliklarning sehrli retsepti! 🌱 Quyosh nuri = energiya manbai. Suv = vodorod manbai. Havodagi CO₂ = uglerod manbai. O\'simlik bularning barchasini birlashtirib, glyukoza (shakar) va kislorod hosil qiladi! Formula: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂. Bu degani: 6 ta uglerod gazi + 6 ta suv → 1 ta glyukoza + 6 ta kislorod!'
+      },
+      {
+        beat: 'Yechim',
+        emoji: '🌳',
+        title: 'Bog\'ni qutqarish',
+        text: 'Omina boboga aytdi: "Bobo, daraxtlarga suv kerak! Fotosintez uchun suv, quyosh nuri va CO₂ kerak. Hozir suv yo\'q, shuning uchun ular ovqat tayyorlay olmayapti!" Bobo Aminaga yordam berdi. Ular quduqdan suv tortib, bog\'ni sug\'ordilar. Bir necha kundan keyin daraxtlar yana yashil bo\'ldi. Omina qishloqdagi barchaga fotosintezni o\'rgatdi. Endi hamma daraxtlarni asraydi!'
+      }
+    ];
+
+    const gateQuestions = [
+      { // After beat 1
+        question: 'Nima uchun daraxtlar so\'lib bormoqda?',
+        options: ['Hasharotlar yeyapti', 'Suv va quyosh nuri yetishmayapti', 'Tuproq yaxshi emas', 'Shamol ko\'p'],
+        correct: 'Suv va quyosh nuri yetishmayapti'
+      },
+      { // After beat 2
+        question: 'O\'simliklar qaysi qismi orqali ovqat tayyorlaydi?',
+        options: ['Ildiz', 'Poyasi', 'Barglari', 'Gullari'],
+        correct: 'Barglari'
+      },
+      { // After beat 3
+        question: 'Fotosintez natijasida nima hosil bo\'ladi?',
+        options: ['Faqat suv', 'Glyukoza va kislorod', 'Faqat CO₂', 'Tuproq'],
+        correct: 'Glyukoza va kislorod'
+      }
+    ];
+
+    let sessionHistory = [];  // [{correct, timestamp}]
+    let currentBeat = 0;
+    let gatePasses = 0;
+
+    function calcVelocity() {
+      if (sessionHistory.length < 2) return 0;
+      const first = sessionHistory[0].timestamp;
+      const last = sessionHistory[sessionHistory.length - 1].timestamp;
+      const elapsedMin = (last - first) / 60000;
+      if (elapsedMin < 0.1) return 0;
+      return sessionHistory.length / elapsedMin;
+    }
+
+    function getGradeLabel(accuracy, velocity) {
+      const score = accuracy * 0.7 + Math.min(velocity, 10) * 3;
+      if (score >= 80) return { grade: 'A+', color: 'hsl(var(--success))' };
+      if (score >= 70) return { grade: 'A', color: 'hsl(var(--success))' };
+      if (score >= 60) return { grade: 'B', color: 'hsl(var(--primary))' };
+      if (score >= 50) return { grade: 'C', color: 'hsl(var(--warning))' };
+      if (score >= 35) return { grade: 'D', color: 'hsl(var(--warning))' };
+      return { grade: 'F', color: 'hsl(var(--destructive))' };
+    }
+
+    function updateStats() {
+      const accuracy = sessionHistory.length > 0 ? Math.round((gatePasses / sessionHistory.length) * 100) : 0;
+      const velocity = calcVelocity();
+      document.getElementById('level-display').textContent = accuracy + '%';
+      document.getElementById('velocity-display').textContent = 'n=' + velocity.toFixed(2);
+    }
+
+    function showPanel(id) {
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function startGame() {
+      sessionHistory = []; currentBeat = 0; gatePasses = 0;
+      document.getElementById('level-display').textContent = '0%';
+      document.getElementById('velocity-display').textContent = 'n=0.00';
+      document.getElementById('gate-display').textContent = '0/3';
+      document.getElementById('stats-bar').style.display = 'flex';
+      showBeat(0);
+    }
+
+    function showBeat(idx) {
+      currentBeat = idx;
+      document.getElementById('beat-display').textContent = (idx + 1) + '/4';
+
+      // Beat indicator dots
+      const dots = document.getElementById('beat-indicator');
+      dots.innerHTML = '';
+      for (let i = 0; i < 4; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'beat-dot';
+        if (i < idx) dot.classList.add('done');
+        else if (i === idx) dot.classList.add('current');
+        else dot.classList.add('locked');
+        dots.appendChild(dot);
+      }
+
+      const beat = storyBeats[idx];
+      document.getElementById('story-emoji').textContent = beat.emoji;
+      document.getElementById('story-title').textContent = beat.beat + ': ' + beat.title;
+      document.getElementById('story-text').textContent = beat.text;
+
+      document.getElementById('next-btn').classList.remove('visible');
+      showPanel('panel-story');
+
+      // Delay the next button to give reading time
+      setTimeout(() => {
+        document.getElementById('next-btn').classList.add('visible');
+      }, 2000);
+    }
+
+    function showGate() {
+      if (currentBeat >= 3) {
+        endGame();
+        return;
+      }
+      const q = gateQuestions[currentBeat];
+      document.getElementById('gate-qtext').textContent = q.question;
+      document.getElementById('gate-feedback').textContent = '';
+
+      const opts = document.getElementById('gate-opts');
+      opts.innerHTML = '';
+      q.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'q-opt';
+        btn.textContent = opt;
+        btn.onclick = () => answerGate(btn, opt, q.correct);
+        opts.appendChild(btn);
+      });
+
+      showPanel('panel-gate');
+    }
+
+    function answerGate(btn, selected, correct) {
+      if (selected === correct) {
+        btn.classList.add('correct');
+        gatePasses++;
+        sessionHistory.push({ correct: true, timestamp: Date.now() });
+        updateStats();
+        document.getElementById('gate-display').textContent = gatePasses + '/3';
+        document.getElementById('gate-feedback').textContent = '✅ To\'g\'ri! Darvoza ochildi!';
+        document.getElementById('gate-feedback').className = 'gate-feedback pass';
+
+        // Disable all buttons
+        document.querySelectorAll('#gate-opts .q-opt').forEach(b => b.classList.add('answered'));
+
+        setTimeout(() => {
+          if (currentBeat + 1 >= 3) {
+            // Show beat 4 (final) then end
+            showBeat(3);
+            setTimeout(endGame, 3000);
+          } else {
+            showBeat(currentBeat + 1);
+          }
+        }, 1500);
+      } else {
+        btn.classList.add('wrong');
+        sessionHistory.push({ correct: false, timestamp: Date.now() });
+        document.getElementById('gate-feedback').textContent = '❌ Noto\'g\'ri! Qayta urinib ko\'ring.';
+        document.getElementById('gate-feedback').className = 'gate-feedback fail';
+
+        setTimeout(() => {
+          btn.classList.remove('wrong', 'answered');
+          document.getElementById('gate-feedback').textContent = '';
+        }, 1000);
+      }
+    }
+
+    function endGame() {
+      showPanel('panel-complete');
+
+      const accuracy = sessionHistory.length > 0 ? Math.round((gatePasses / sessionHistory.length) * 100) : 0;
+      const velocity = calcVelocity();
+      const grade = getGradeLabel(accuracy, velocity);
+
+      document.querySelector('.completion-panel .big-emoji').textContent = '🏆';
+      document.querySelector('.completion-panel h2').textContent = 'Hikoya tugadi!';
+      document.getElementById('final-beats').textContent = '4/4';
+      document.getElementById('final-accuracy').textContent = accuracy + '%';
+      document.getElementById('final-gates').textContent = gatePasses + '/3';
+
+      // Grade card
+      document.getElementById('grade-level').textContent = grade.grade;
+      document.getElementById('grade-level').style.background = `linear-gradient(135deg, ${grade.color}, hsl(180, 85%, 35%))`;
+      document.getElementById('grade-level').style.webkitBackgroundClip = 'text';
+      document.getElementById('grade-level').style.webkitTextFillColor = 'transparent';
+      document.getElementById('grade-level').style.backgroundClip = 'text';
+      document.getElementById('grade-detail').textContent = `Aniqlik: ${accuracy}% | Tezlik: n=${velocity.toFixed(2)} | ${gatePasses}/3 darvoza ochildi`;
+
+      document.getElementById('final-summary').textContent =
+        `Fotosintez hikoyasini o'qidingiz! ${gatePasses}/3 darvoza ochildi.`;
+
+      launchConfetti();
+    }
+
+    function restartGame() {
+      sessionHistory = []; currentBeat = 0; gatePasses = 0;
+      document.getElementById('level-display').textContent = '0%';
+      document.getElementById('velocity-display').textContent = 'n=0.00';
+      document.getElementById('gate-display').textContent = '0/3';
+      document.getElementById('beat-display').textContent = '1/4';
+      document.getElementById('stats-bar').style.display = 'none';
+      showPanel('panel-start');
+    }
+
+    function launchConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+      const pieces = [];
+      const colors = ['#10B981', '#06D6A0', '#F59E0B', '#8B5CF6', '#EF4444', '#3B82F6'];
+      for (let i = 0; i < 120; i++) {
+        pieces.push({
+          x: Math.random() * canvas.width, y: Math.random() * canvas.height - canvas.height,
+          w: Math.random() * 8 + 4, h: Math.random() * 4 + 2,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vy: Math.random() * 3 + 2, vx: (Math.random() - 0.5) * 2,
+          rot: Math.random() * 360, rotSpeed: (Math.random() - 0.5) * 10
+        });
+      }
+      let frames = 0;
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pieces.forEach(p => {
+          ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot * Math.PI / 180);
+          ctx.fillStyle = p.color; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+          p.y += p.vy; p.x += p.vx; p.rot += p.rotSpeed;
+        });
+        frames++;
+        if (frames < 300) requestAnimationFrame(draw);
+        else ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      draw();
+    }
+  </script>
+</body>
+</html>

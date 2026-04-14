@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Palace — Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: 240 15% 8%;
+      --foreground: 0 0% 95%;
+      --card: 240 12% 12%;
+      --card-hover: 240 12% 16%;
+      --primary: 162 93% 42%;
+      --primary-foreground: 0 0% 100%;
+      --muted: 240 10% 20%;
+      --muted-foreground: 240 5% 55%;
+      --border: 240 10% 22%;
+      --success: 142 76% 45%;
+      --warning: 38 92% 50%;
+      --destructive: 0 72% 51%;
+      --radius: 0.75rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: hsl(var(--background));
+      color: hsl(var(--foreground));
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 16px 12px 48px;
+    }
+    .container { width: 100%; max-width: 420px; }
+
+    .phase-flow { display: flex; gap: 3px; margin-bottom: 12px; }
+    .phase-segment { flex: 1; height: 4px; border-radius: 2px; background: hsl(var(--muted)); transition: background 0.3s; }
+    .phase-segment.active { background: hsl(var(--primary)); }
+    .phase-segment.done { background: hsl(var(--success)); }
+    .phase-label {
+      font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: hsl(var(--muted-foreground));
+      text-align: center; margin-bottom: 8px; letter-spacing: 0.5px; text-transform: uppercase;
+    }
+
+    .header { text-align: center; margin-bottom: 16px; }
+    .header h1 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .header p { color: hsl(var(--muted-foreground)); font-size: 13px; margin-top: 4px; }
+
+    .stats-bar {
+      display: flex; gap: 8px; margin-bottom: 16px;
+      background: hsla(var(--card), 0.6); backdrop-filter: blur(24px);
+      border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 10px 12px;
+    }
+    .stat-item { flex: 1; display: flex; flex-direction: column; align-items: center; }
+    .stat-label { font-size: 10px; color: hsl(var(--muted-foreground)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: hsl(var(--foreground)); margin-top: 2px; }
+    .stat-value.level-val { color: hsl(var(--primary)); font-size: 16px; }
+    .stat-value.velocity-val { color: hsl(var(--success)); font-size: 12px; }
+    .stat-value.step-val { color: hsl(var(--warning)); font-size: 14px; }
+    .stat-value.score-val { color: hsl(var(--success)); }
+
+    /* Grade Card */
+    .grade-card {
+      background: hsla(var(--card), 0.8); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius); padding: 16px; margin: 12px 0; text-align: center;
+    }
+    .grade-level {
+      font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .grade-label { font-size: 12px; color: hsl(var(--muted-foreground)); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .grade-detail { font-size: 14px; color: hsl(var(--foreground)); margin-top: 8px; font-weight: 600; }
+
+    .glass-card {
+      background: hsla(var(--card), 0.6); backdrop-filter: blur(24px);
+      border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 16px;
+    }
+
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    .start-btn {
+      width: 100%; padding: 16px; border: none; border-radius: var(--radius);
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      color: hsl(var(--primary-foreground)); font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px; font-weight: 700; cursor: pointer; transition: transform 0.2s;
+    }
+    .start-btn:active { transform: scale(0.97); }
+
+    .rules-list { list-style: none; margin: 16px 0; }
+    .rules-list li {
+      padding: 10px 12px; margin-bottom: 8px;
+      background: hsla(var(--muted), 0.4); border-radius: var(--radius);
+      font-size: 14px; line-height: 1.4;
+    }
+
+    /* Palace Selection */
+    .palace-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
+    .palace-card {
+      background: hsla(var(--card), 0.8); border: 2px solid hsl(var(--border));
+      border-radius: var(--radius); padding: 20px 12px; text-align: center; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .palace-card:hover { border-color: hsl(var(--primary)); transform: scale(1.03); }
+    .palace-card .emoji { font-size: 40px; margin-bottom: 8px; }
+    .palace-card .name { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; }
+    .palace-card .desc { font-size: 11px; color: hsl(var(--muted-foreground)); margin-top: 4px; }
+
+    /* Concept Placement */
+    .palace-locations { margin: 16px 0; }
+    .location {
+      display: flex; align-items: center; gap: 12px; padding: 12px;
+      background: hsla(var(--muted), 0.3); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius); margin-bottom: 8px;
+    }
+    .location .loc-icon { font-size: 28px; flex-shrink: 0; }
+    .location .loc-name { font-size: 14px; font-weight: 700; flex: 1; }
+    .location .loc-placed {
+      font-size: 12px; color: hsl(var(--success)); font-weight: 700;
+      padding: 4px 8px; background: hsla(var(--success), 0.15); border-radius: 4px;
+    }
+
+    .concept-cards { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .concept-card {
+      padding: 10px 14px; border: 1px solid hsl(var(--border)); border-radius: var(--radius);
+      background: hsla(var(--card), 0.8); cursor: pointer; font-size: 13px; font-weight: 700;
+      transition: all 0.2s;
+    }
+    .concept-card:hover:not(.placed) { border-color: hsl(var(--primary)); }
+    .concept-card.selected { border-color: hsl(var(--primary)); background: hsla(var(--primary), 0.2); }
+    .concept-card.placed { opacity: 0.4; pointer-events: none; border-color: hsl(var(--success)); }
+
+    .step-instruction {
+      font-size: 14px; color: hsl(var(--muted-foreground)); text-align: center;
+      margin: 12px 0; line-height: 1.5;
+    }
+
+    /* Walkthrough */
+    .walkthrough-visual {
+      text-align: center; padding: 20px; margin: 16px 0;
+      background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+      border-radius: var(--radius);
+    }
+    .walkthrough-visual .big-emoji { font-size: 64px; }
+    .walkthrough-visual .narrative { font-size: 15px; margin-top: 12px; line-height: 1.6; }
+    .walkthrough-timer {
+      font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700;
+      text-align: center; color: hsl(var(--primary)); margin: 16px 0;
+      text-shadow: 0 0 30px hsla(var(--primary), 0.4);
+    }
+
+    /* MC Questions */
+    .q-card {
+      background: hsla(var(--card), 0.8); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius); padding: 20px; margin-bottom: 16px;
+    }
+    .q-text { font-size: 16px; font-weight: 700; margin-bottom: 16px; line-height: 1.4; }
+    .q-opts { display: grid; gap: 8px; }
+    .q-opt {
+      padding: 14px 12px; border: 1px solid hsl(var(--border)); border-radius: var(--radius);
+      background: hsla(var(--card), 0.5); cursor: pointer; font-size: 14px;
+      font-family: 'Nunito', sans-serif; font-weight: 600; color: hsl(var(--foreground));
+      text-align: left; transition: all 0.15s;
+    }
+    .q-opt:hover:not(.answered) { border-color: hsl(var(--primary)); background: hsla(var(--primary), 0.1); }
+    .q-opt.correct { background: hsla(var(--success), 0.2); border-color: hsl(var(--success)); color: hsl(var(--success)); }
+    .q-opt.wrong { background: hsla(var(--destructive), 0.2); border-color: hsl(var(--destructive)); color: hsl(var(--destructive)); }
+    .q-opt.answered { pointer-events: none; opacity: 0.7; }
+    .q-counter { font-size: 13px; font-weight: 700; color: hsl(var(--muted-foreground)); text-align: center; margin-bottom: 12px; }
+
+    /* Completion */
+    .completion-panel { text-align: center; padding: 24px 16px; }
+    .completion-panel .big-emoji { font-size: 64px; margin: 16px 0; }
+    .completion-panel h2 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 8px;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .completion-panel .summary { color: hsl(var(--muted-foreground)); font-size: 14px; margin: 12px 0; }
+    .score-breakdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 16px 0; }
+    .score-item {
+      background: hsla(var(--muted), 0.3); border-radius: var(--radius); padding: 12px 8px; text-align: center;
+    }
+    .score-item .s-val { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; }
+    .score-item .s-label { font-size: 11px; color: hsl(var(--muted-foreground)); margin-top: 4px; }
+
+    #confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; }
+  </style>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="container">
+    <div class="phase-label">Session Phase</div>
+    <div class="phase-flow">
+      <div class="phase-segment done"></div>
+      <div class="phase-segment done"></div>
+      <div class="phase-segment active"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+      <div class="phase-segment"></div>
+    </div>
+
+    <div class="header">
+      <h1>🏛️ Memory Palace</h1>
+      <p>Xotira saroyi quring</p>
+    </div>
+
+    <div class="stats-bar" id="stats-bar" style="display:none;">
+      <div class="stat-item"><span class="stat-label">Daraja</span><span class="stat-value level-val" id="level-display">0%</span></div>
+      <div class="stat-item"><span class="stat-label">Tezlik</span><span class="stat-value velocity-val" id="velocity-display">n=0.00</span></div>
+      <div class="stat-item"><span class="stat-label">Bosqich</span><span class="stat-value step-val" id="step-display">1/4</span></div>
+      <div class="stat-item"><span class="stat-label">Ball</span><span class="stat-value score-val" id="score-display">0/5</span></div>
+    </div>
+
+    <!-- Step 1: Palace Selection -->
+    <div class="panel active" id="panel-palace-select">
+      <div class="glass-card">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:18px; margin-bottom:8px;">Sarayni tanlang</h2>
+        <p class="step-instruction">Qaysi joy sizga yaxshi tanish? O'shani tanlang.</p>
+        <div class="palace-grid" id="palace-grid"></div>
+      </div>
+    </div>
+
+    <!-- Step 2: Place Concepts -->
+    <div class="panel" id="panel-place">
+      <div class="glass-card">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:18px; margin-bottom:8px;">Joylarga joylang</h2>
+        <p class="step-instruction">Har bir tushunchani saroydagi joyga bosing, keyin tanlang.</p>
+        <div class="palace-locations" id="locations"></div>
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:14px; margin: 16px 0 8px;">Tushunchalar:</h3>
+        <div class="concept-cards" id="concept-cards"></div>
+      </div>
+    </div>
+
+    <!-- Step 3: Walkthrough -->
+    <div class="panel" id="panel-walkthrough">
+      <div class="glass-card">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:18px; margin-bottom:8px;">Sayohat boshlandi!</h2>
+        <p class="step-instruction">Ko'zingizni yumib, tasavvur qiling...</p>
+        <div class="walkthrough-timer" id="walkthrough-timer">30</div>
+        <div class="walkthrough-visual" id="walkthrough-visual"></div>
+      </div>
+    </div>
+
+    <!-- Step 4: Recall Questions -->
+    <div class="panel" id="panel-recall">
+      <div class="q-counter" id="recall-counter">Savol 1/5</div>
+      <div class="q-card">
+        <div class="q-text" id="recall-qtext"></div>
+        <div class="q-opts" id="recall-opts"></div>
+      </div>
+    </div>
+
+    <!-- Completion Panel -->
+    <div class="panel" id="panel-complete">
+      <div class="glass-card completion-panel">
+        <div class="big-emoji"></div>
+        <h2></h2>
+        <div class="score-breakdown">
+          <div class="score-item">
+            <div class="s-val" style="color:hsl(var(--success));" id="final-correct">0</div>
+            <div class="s-label">To'g'ri</div>
+          </div>
+          <div class="score-item">
+            <div class="s-val" style="color:hsl(var(--primary));" id="final-accuracy">0%</div>
+            <div class="s-label">Aniqlik</div>
+          </div>
+          <div class="score-item">
+            <div class="s-val" style="color:hsl(var(--warning));" id="final-palace"></div>
+            <div class="s-label">Saray</div>
+          </div>
+        </div>
+        <div class="grade-card">
+          <div class="grade-level" id="grade-level"></div>
+          <div class="grade-label">Umumiy Daraja</div>
+          <div class="grade-detail" id="grade-detail"></div>
+        </div>
+        <p class="summary" id="final-summary"></p>
+        <button class="start-btn" onclick="restartGame()">Qayta boshlash</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const palaces = [
+      { id: 'registon', emoji: '🕌', name: 'Registon', desc: 'Samarqanddagi mashhur maydon',
+        locations: [
+          { icon: '🚪', name: 'Beshik darvozasi' },
+          { icon: '🏛️', name: 'Ulug\'bek madrasasi' },
+          { icon: '🕌', name: 'Tilla-Qori masjidi' },
+          { icon: '📚', name: 'Kutubxona zali' },
+          { icon: '🌳', name: 'Bog\' favvorasi' }
+        ]
+      },
+      { id: 'home', emoji: '🏠', name: 'Uy', desc: 'Sizning uyingiz',
+        locations: [
+          { icon: '🚪', name: 'Kirish eshigi' },
+          { icon: '🛋️', name: 'Mehmonxona' },
+          { icon: '🍳', name: 'Oshxona' },
+          { icon: '🛏️', name: 'Yotoqxona' },
+          { icon: '🌿', name: 'Bog\' (hovli)' }
+        ]
+      },
+      { id: 'school', emoji: '🏫', name: 'Maktab', desc: 'Sizning maktabingiz',
+        locations: [
+          { icon: '🚪', name: 'Maktab darvozasi' },
+          { icon: '📖', name: 'Sinf xonasi' },
+          { icon: '🔬', name: 'Laboratoriya' },
+          { icon: '📚', name: 'Kutubxona' },
+          { icon: '⚽', name: 'Sport maydoni' }
+        ]
+      },
+      { id: 'bazaar', emoji: '🏪', name: 'Bozor', desc: 'Mahalliy savdo bozori',
+        locations: [
+          { icon: '🚪', name: 'Bozor kirishi' },
+          { icon: '🍎', name: 'Meva savdosi' },
+          { icon: '🧵', name: 'Matolar do\'koni' },
+          { icon: '🫖', name: 'Choyxona' },
+          { icon: '🏪', name: 'Zargarlik do\'koni' }
+        ]
+      }
+    ];
+
+    const concepts = [
+      { name: 'Hujayra', emoji: '🔬', def: 'Eng kichik tirik birlik' },
+      { name: 'Fotosintez', emoji: '🌱', def: 'Quyosh energiyasidan oziq modda' },
+      { name: 'DNK', emoji: '🧬', def: 'Irsiy ma\'lumot saqlovchi molekula' },
+      { name: 'Ekosistema', emoji: '🌍', def: ' Organizmlar va muhit tizimi' },
+      { name: 'Evolyutsiya', emoji: '🦎', def: 'Turlarning o\'zgarishi' }
+    ];
+
+    let sessionHistory = [];  // [{correct, timestamp}]
+    let score = 0;
+    let selectedPalace = null;
+    let placements = {};  // location index -> concept index
+    let selectedConceptIdx = null;
+    let currentQ = 0;
+    let recallScore = 0;
+
+    function calcVelocity() {
+      if (sessionHistory.length < 2) return 0;
+      const first = sessionHistory[0].timestamp;
+      const last = sessionHistory[sessionHistory.length - 1].timestamp;
+      const elapsedMin = (last - first) / 60000;
+      if (elapsedMin < 0.1) return 0;
+      return sessionHistory.length / elapsedMin;
+    }
+
+    function getGradeLabel(accuracy, velocity) {
+      const score = accuracy * 0.7 + Math.min(velocity, 10) * 3;
+      if (score >= 80) return { grade: 'A+', color: 'hsl(var(--success))' };
+      if (score >= 70) return { grade: 'A', color: 'hsl(var(--success))' };
+      if (score >= 60) return { grade: 'B', color: 'hsl(var(--primary))' };
+      if (score >= 50) return { grade: 'C', color: 'hsl(var(--warning))' };
+      if (score >= 35) return { grade: 'D', color: 'hsl(var(--warning))' };
+      return { grade: 'F', color: 'hsl(var(--destructive))' };
+    }
+
+    function updateStats() {
+      const accuracy = sessionHistory.length > 0 ? Math.round((recallScore / sessionHistory.length) * 100) : 0;
+      const velocity = calcVelocity();
+      document.getElementById('level-display').textContent = accuracy + '%';
+      document.getElementById('velocity-display').textContent = 'n=' + velocity.toFixed(2);
+    }
+
+    function showPanel(id) {
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    // Step 1: Palace Selection
+    function initPalaceSelect() {
+      const grid = document.getElementById('palace-grid');
+      grid.innerHTML = '';
+      palaces.forEach(p => {
+        grid.innerHTML += `<div class="palace-card" onclick="selectPalace('${p.id}')">
+          <div class="emoji">${p.emoji}</div>
+          <div class="name">${p.name}</div>
+          <div class="desc">${p.desc}</div>
+        </div>`;
+      });
+    }
+
+    function selectPalace(id) {
+      selectedPalace = palaces.find(p => p.id === id);
+      placements = {};
+      showPanel('panel-place');
+      document.getElementById('step-display').textContent = '2/4';
+      initPlacePhase();
+    }
+
+    // Step 2: Place concepts at locations
+    function initPlacePhase() {
+      const locsDiv = document.getElementById('locations');
+      const concDiv = document.getElementById('concept-cards');
+      locsDiv.innerHTML = '';
+      concDiv.innerHTML = '';
+
+      selectedPalace.locations.forEach((loc, i) => {
+        locsDiv.innerHTML += `<div class="location" id="loc-${i}" onclick="placeAt(${i})">
+          <span class="loc-icon">${loc.icon}</span>
+          <span class="loc-name">${loc.name}</span>
+          <span class="loc-placed" id="loc-placed-${i}" style="display:none;"></span>
+        </div>`;
+      });
+
+      const shuffledConcepts = shuffle([...Array(concepts.length).keys()]);
+      shuffledConcepts.forEach(ci => {
+        concDiv.innerHTML += `<div class="concept-card" id="conc-${ci}" onclick="selectConcept(${ci})">
+          ${concepts[ci].emoji} ${concepts[ci].name}
+        </div>`;
+      });
+    }
+
+    function selectConcept(ci) {
+      if (Object.values(placements).includes(ci)) return;
+      document.querySelectorAll('.concept-card').forEach(c => c.classList.remove('selected'));
+      document.getElementById('conc-' + ci).classList.add('selected');
+      selectedConceptIdx = ci;
+    }
+
+    function placeAt(locIdx) {
+      if (selectedConceptIdx === null) return;
+      if (placements[locIdx] !== undefined) return;
+
+      placements[locIdx] = selectedConceptIdx;
+      document.getElementById('conc-' + selectedConceptIdx).classList.add('placed');
+      document.getElementById('conc-' + selectedConceptIdx).classList.remove('selected');
+
+      const placedLabel = document.getElementById('loc-placed-' + locIdx);
+      placedLabel.style.display = 'block';
+      placedLabel.textContent = concepts[selectedConceptIdx].emoji + ' ' + concepts[selectedConceptIdx].name;
+
+      selectedConceptIdx = null;
+
+      // Check all placed
+      if (Object.keys(placements).length === 5) {
+        setTimeout(() => {
+          startWalkthrough();
+        }, 500);
+      }
+    }
+
+    // Step 3: Walkthrough
+    function startWalkthrough() {
+      showPanel('panel-walkthrough');
+      document.getElementById('step-display').textContent = '3/4';
+
+      const visual = document.getElementById('walkthrough-visual');
+      let steps = [];
+      selectedPalace.locations.forEach((loc, i) => {
+        const ci = placements[i];
+        steps.push(`${loc.icon} ${loc.name} → ${concepts[ci].emoji} ${concepts[ci].name}: ${concepts[ci].def}`);
+      });
+
+      let stepIdx = 0;
+      let timeLeft = 30;
+
+      function showStep() {
+        if (stepIdx >= steps.length) {
+          clearInterval(walkInterval);
+          startRecall();
+          return;
+        }
+        visual.innerHTML = `<div class="big-emoji">${selectedPalace.locations[stepIdx].icon}</div>
+          <div class="narrative"><strong>${selectedPalace.locations[stepIdx].name}</strong><br>${steps[stepIdx]}</div>`;
+        stepIdx++;
+      }
+
+      showStep();
+      document.getElementById('walkthrough-timer').textContent = timeLeft;
+
+      const stepInterval = setInterval(() => {
+        if (stepIdx < steps.length) showStep();
+      }, 5000);
+
+      const walkInterval = setInterval(() => {
+        timeLeft--;
+        document.getElementById('walkthrough-timer').textContent = timeLeft;
+        if (timeLeft <= 0) {
+          clearInterval(walkInterval);
+          clearInterval(stepInterval);
+          startRecall();
+        }
+      }, 1000);
+    }
+
+    // Step 4: Recall Questions
+    function startRecall() {
+      showPanel('panel-recall');
+      document.getElementById('step-display').textContent = '4/4';
+      currentQ = 0;
+      recallScore = 0;
+      generateRecallQuestions();
+      showRecallQuestion();
+    }
+
+    let recallQuestions = [];
+
+    function generateRecallQuestions() {
+      recallQuestions = selectedPalace.locations.map((loc, i) => {
+        const ci = placements[i];
+        const correctConcept = concepts[ci];
+        const wrongConcepts = concepts.filter((_, j) => j !== ci);
+        const wrongOptions = shuffle(wrongConcepts).slice(0, 3).map(c => c.name);
+        const options = shuffle([...wrongOptions, correctConcept.name]);
+        return {
+          question: `${loc.icon} ${loc.name} da nima joylashgan edi?`,
+          correct: correctConcept.name,
+          options: options
+        };
+      });
+    }
+
+    function showRecallQuestion() {
+      if (currentQ >= recallQuestions.length) { endGame(); return; }
+      const q = recallQuestions[currentQ];
+      document.getElementById('recall-counter').textContent = `Savol ${currentQ + 1}/${recallQuestions.length}`;
+      document.getElementById('recall-qtext').textContent = q.question;
+
+      const opts = document.getElementById('recall-opts');
+      opts.innerHTML = '';
+      q.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'q-opt';
+        btn.textContent = opt;
+        btn.onclick = () => answerRecall(btn, opt, q.correct);
+        opts.appendChild(btn);
+      });
+    }
+
+    function answerRecall(btn, selected, correct) {
+      const allBtns = document.querySelectorAll('.q-opt');
+      allBtns.forEach(b => {
+        b.classList.add('answered');
+        if (b.textContent === correct) b.classList.add('correct');
+      });
+
+      if (selected === correct) {
+        btn.classList.add('correct');
+        recallScore++;
+        sessionHistory.push({ correct: true, timestamp: Date.now() });
+      } else {
+        btn.classList.add('wrong');
+        sessionHistory.push({ correct: false, timestamp: Date.now() });
+      }
+
+      document.getElementById('score-display').textContent = recallScore + '/5';
+      updateStats();
+
+      currentQ++;
+      setTimeout(showRecallQuestion, 1200);
+    }
+
+    function endGame() {
+      showPanel('panel-complete');
+
+      const accuracy = Math.round((recallScore / 5) * 100);
+      const velocity = calcVelocity();
+      const grade = getGradeLabel(accuracy, velocity);
+
+      document.querySelector('.completion-panel .big-emoji').textContent = recallScore >= 4 ? '🏆' : recallScore >= 2 ? '👍' : '🧠';
+      document.querySelector('.completion-panel h2').textContent = recallScore >= 4 ? 'A\'lo!' : recallScore >= 2 ? 'Yaxshi!' : 'Yana mashq qiling!';
+      document.getElementById('final-correct').textContent = recallScore;
+      document.getElementById('final-accuracy').textContent = accuracy + '%';
+      document.getElementById('final-palace').textContent = selectedPalace.emoji + ' ' + selectedPalace.name;
+
+      // Grade card
+      document.getElementById('grade-level').textContent = grade.grade;
+      document.getElementById('grade-level').style.background = `linear-gradient(135deg, ${grade.color}, hsl(180, 85%, 35%))`;
+      document.getElementById('grade-level').style.webkitBackgroundClip = 'text';
+      document.getElementById('grade-level').style.webkitTextFillColor = 'transparent';
+      document.getElementById('grade-level').style.backgroundClip = 'text';
+      document.getElementById('grade-detail').textContent = `Aniqlik: ${accuracy}% | Tezlik: n=${velocity.toFixed(2)} | 5 ta joydan ${recallScore} tasi eslab qolindi`;
+
+      document.getElementById('final-summary').textContent = `Xotira saroyi yakunlandi! ${recallScore}/5 to'g'ri joy eslab qolindi.`;
+
+      if (recallScore >= 3) launchConfetti();
+    }
+
+    function restartGame() {
+      sessionHistory = []; score = 0; selectedPalace = null; placements = {};
+      selectedConceptIdx = null; currentQ = 0; recallScore = 0;
+      document.getElementById('level-display').textContent = '0%';
+      document.getElementById('velocity-display').textContent = 'n=0.00';
+      document.getElementById('score-display').textContent = '0/5';
+      document.getElementById('step-display').textContent = '1/4';
+      document.getElementById('stats-bar').style.display = 'none';
+      showPanel('panel-palace-select');
+      initPalaceSelect();
+    }
+
+    function launchConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+      const pieces = [];
+      const colors = ['#10B981', '#06D6A0', '#F59E0B', '#8B5CF6', '#EF4444', '#3B82F6'];
+      for (let i = 0; i < 120; i++) {
+        pieces.push({
+          x: Math.random() * canvas.width, y: Math.random() * canvas.height - canvas.height,
+          w: Math.random() * 8 + 4, h: Math.random() * 4 + 2,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vy: Math.random() * 3 + 2, vx: (Math.random() - 0.5) * 2,
+          rot: Math.random() * 360, rotSpeed: (Math.random() - 0.5) * 10
+        });
+      }
+      let frames = 0;
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pieces.forEach(p => {
+          ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot * Math.PI / 180);
+          ctx.fillStyle = p.color; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+          p.y += p.vy; p.x += p.vx; p.rot += p.rotSpeed;
+        });
+        frames++;
+        if (frames < 300) requestAnimationFrame(draw);
+        else ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      draw();
+    }
+
+    // Init
+    initPalaceSelect();
+    document.getElementById('stats-bar').style.display = 'flex';
+  </script>
+</body>
+</html>

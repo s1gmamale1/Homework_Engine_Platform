@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spaced Flashcards — Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: 240 15% 8%;
+      --foreground: 0 0% 95%;
+      --card: 240 12% 12%;
+      --card-hover: 240 12% 16%;
+      --primary: 162 93% 42%;
+      --primary-foreground: 0 0% 100%;
+      --muted: 240 10% 20%;
+      --muted-foreground: 240 5% 55%;
+      --border: 240 10% 22%;
+      --success: 142 76% 45%;
+      --warning: 38 92% 50%;
+      --destructive: 0 72% 51%;
+      --radius: 0.75rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: hsl(var(--background));
+      color: hsl(var(--foreground));
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 12px 48px;
+    }
+    .container { width: 100%; max-width: 420px; }
+
+    /* Phase Flow Indicator */
+    .phase-flow {
+      display: flex; gap: 3px; margin-bottom: 12px;
+    }
+    .phase-segment {
+      flex: 1; height: 4px; border-radius: 2px;
+      background: hsl(var(--muted));
+      transition: background 0.3s;
+    }
+    .phase-segment.active { background: hsl(var(--primary)); }
+    .phase-segment.done { background: hsl(var(--success)); }
+    .phase-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; color: hsl(var(--muted-foreground));
+      text-align: center; margin-bottom: 8px;
+      letter-spacing: 0.5px; text-transform: uppercase;
+    }
+
+    /* Header */
+    .header { text-align: center; margin-bottom: 16px; }
+    .header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px; font-weight: 700;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .header p { color: hsl(var(--muted-foreground)); font-size: 13px; margin-top: 4px; }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: flex; gap: 8px; margin-bottom: 16px;
+      background: hsla(var(--card), 0.6);
+      backdrop-filter: blur(24px);
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      padding: 10px 12px;
+    }
+    .stat-item {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+    }
+    .stat-label { font-size: 10px; color: hsl(var(--muted-foreground)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px; font-weight: 700; color: hsl(var(--foreground)); margin-top: 2px;
+    }
+    .stat-value.level-val { color: hsl(var(--primary)); }
+    .stat-value.velocity-val { color: hsl(var(--success)); }
+    .stat-value.interval-val { color: hsl(var(--warning)); font-size: 14px; }
+
+    /* Grade Card */
+    .grade-card {
+      background: hsla(var(--card), 0.8); backdrop-filter: blur(24px);
+      border: 1px solid hsla(var(--border), 0.5); border-radius: 0.75rem;
+      padding: 20px; text-align: center; margin: 16px 0;
+    }
+    .grade-level { font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 800;
+      background: linear-gradient(135deg, hsl(162,93%,42%), hsl(180,85%,35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .grade-label { font-size: 18px; font-weight: 700; margin: 4px 0; }
+    .grade-detail { font-size: 13px; color: hsl(var(--muted-foreground)); margin: 2px 0; }
+
+    /* Glass Card */
+    .glass-card {
+      background: hsla(var(--card), 0.6);
+      backdrop-filter: blur(24px);
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+
+    /* Card Scene - 3D */
+    .card-scene {
+      perspective: 1000px;
+      margin-bottom: 16px;
+      min-height: 220px;
+    }
+    .card-wrap {
+      position: relative;
+      width: 100%; height: 220px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    .card-wrap.flipped { transform: rotateY(180deg); }
+    .card-face {
+      position: absolute; inset: 0;
+      border-radius: var(--radius);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      backface-visibility: hidden;
+      padding: 24px; text-align: center;
+      border: 1px solid hsl(var(--border));
+    }
+    .card-front {
+      background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--card-hover)));
+    }
+    .card-back {
+      background: linear-gradient(145deg, hsl(162, 30%, 14%), hsl(180, 25%, 12%));
+      transform: rotateY(180deg);
+    }
+    .card-icon { font-size: 36px; margin-bottom: 12px; }
+    .card-term {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px; font-weight: 700; color: hsl(var(--foreground));
+    }
+    .card-hint { font-size: 12px; color: hsl(var(--muted-foreground)); margin-top: 16px; }
+    .card-definition {
+      font-size: 16px; line-height: 1.5; color: hsl(var(--foreground));
+    }
+    .card-example {
+      font-size: 13px; color: hsl(var(--muted-foreground)); margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* Rating Buttons */
+    .rating-bar {
+      display: none; gap: 6px; margin-bottom: 16px;
+    }
+    .rating-bar.visible { display: flex; }
+    .rate-btn {
+      flex: 1; padding: 12px 6px; border: 1px solid hsl(var(--border));
+      border-radius: var(--radius); background: hsla(var(--card), 0.8);
+      color: hsl(var(--foreground)); font-family: 'Nunito', sans-serif;
+      font-size: 12px; font-weight: 700; cursor: pointer;
+      transition: all 0.2s; text-align: center;
+    }
+    .rate-btn:active { transform: scale(0.95); }
+    .rate-btn.again { border-color: hsl(var(--destructive)); }
+    .rate-btn.again:active { background: hsl(var(--destructive)); color: white; }
+    .rate-btn.hard { border-color: hsl(var(--warning)); }
+    .rate-btn.hard:active { background: hsl(var(--warning)); color: #000; }
+    .rate-btn.good { border-color: hsl(var(--success)); }
+    .rate-btn.good:active { background: hsl(var(--success)); color: white; }
+    .rate-btn.easy { border-color: hsl(var(--primary)); }
+    .rate-btn.easy:active { background: hsl(var(--primary)); color: white; }
+
+    .rate-interval {
+      font-size: 10px; color: hsl(var(--muted-foreground)); margin-top: 2px;
+    }
+
+    /* Queue Dots */
+    .queue-bar {
+      display: flex; gap: 6px; justify-content: center; margin-bottom: 16px;
+    }
+    .q-dot {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: hsl(var(--muted));
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    .q-dot.current { border-color: hsl(var(--primary)); background: hsl(var(--card)); }
+    .q-dot.again { background: hsl(var(--destructive)); }
+    .q-dot.hard { background: hsl(var(--warning)); }
+    .q-dot.good { background: hsl(var(--success)); }
+    .q-dot.easy { background: hsl(var(--primary)); }
+
+    /* Completion */
+    .completion-panel {
+      display: none; text-align: center; padding: 32px 16px;
+    }
+    .completion-panel.visible { display: block; }
+    .completion-panel h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 28px; font-weight: 700; margin-bottom: 8px;
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .completion-panel .big-emoji { font-size: 64px; margin: 16px 0; }
+    .completion-panel .summary { color: hsl(var(--muted-foreground)); font-size: 14px; margin-bottom: 16px; }
+
+    .restart-btn {
+      padding: 14px 32px; border: none; border-radius: var(--radius);
+      background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+      color: hsl(var(--primary-foreground)); font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px; font-weight: 700; cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .restart-btn:active { transform: scale(0.95); }
+
+    /* Confetti Canvas */
+    #confetti-canvas {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 1000;
+    }
+
+    /* SM-2 Table */
+    .sm2-table {
+      width: 100%; border-collapse: collapse; margin-top: 12px;
+      font-size: 12px;
+    }
+    .sm2-table th, .sm2-table td {
+      padding: 6px 8px; border-bottom: 1px solid hsl(var(--border));
+      text-align: center;
+    }
+    .sm2-table th {
+      color: hsl(var(--muted-foreground)); font-weight: 700; text-transform: uppercase;
+      font-size: 10px; letter-spacing: 0.5px;
+    }
+    .sm2-table td { color: hsl(var(--foreground)); }
+    .sm2-table .term-cell { text-align: left; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="container">
+    <!-- Phase Flow -->
+    <div class="phase-label">Session Phase</div>
+    <div class="phase-flow">
+      <div class="phase-segment done" title="Kirish"></div>
+      <div class="phase-segment done" title="Takrorlash"></div>
+      <div class="phase-segment active" title="Yangi Kontent"></div>
+      <div class="phase-segment" title="Amaliyot"></div>
+      <div class="phase-segment" title="Baholash"></div>
+      <div class="phase-segment" title="Xulosa"></div>
+      <div class="phase-segment" title="Mukofot"></div>
+    </div>
+
+    <div class="header">
+      <h1>🧠 Spaced Flashcards</h1>
+      <p>Kartani bosing → Ta'rifni ko'ring → Baholang</p>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-label">Daraja</span>
+        <span class="stat-value level-val" id="level-display">0%</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Karta</span>
+        <span class="stat-value" id="card-counter">1/6</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Tezlik</span>
+        <span class="stat-value velocity-val" id="velocity-display">n=0.00</span>
+      </div>
+    </div>
+
+    <!-- Queue Dots -->
+    <div class="queue-bar" id="queue-bar"></div>
+
+    <!-- Game Area -->
+    <div id="game-area">
+      <div class="card-scene">
+        <div class="card-wrap" id="card-wrap" onclick="flipCard()">
+          <div class="card-face card-front">
+            <div class="card-icon" id="card-icon">🌍</div>
+            <div class="card-term" id="card-term">Loading...</div>
+            <div class="card-hint">👆 Baholash uchun bosing</div>
+          </div>
+          <div class="card-face card-back">
+            <div class="card-definition" id="card-def">Loading...</div>
+            <div class="card-example" id="card-example"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating Buttons -->
+      <div class="rating-bar" id="rating-bar">
+        <div>
+          <button class="rate-btn again" onclick="rateCard('again')">Yana</button>
+          <div class="rate-interval">&lt;1m</div>
+        </div>
+        <div>
+          <button class="rate-btn hard" onclick="rateCard('hard')">Qiyin</button>
+          <div class="rate-interval">2d</div>
+        </div>
+        <div>
+          <button class="rate-btn good" onclick="rateCard('good')">Yaxshi</button>
+          <div class="rate-interval">5d</div>
+        </div>
+        <div>
+          <button class="rate-btn easy" onclick="rateCard('easy')">Oson</button>
+          <div class="rate-interval">10d</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SM-2 Summary -->
+    <div class="glass-card" id="sm2-summary" style="display:none;">
+      <h3 style="font-family:'Space Grotesk',sans-serif; font-size:14px; margin-bottom:8px;">📊 SM-2 Natijalar</h3>
+      <table class="sm2-table">
+        <thead><tr><th>Atama</th><th>Baho</th><th>Interval</th><th>EF</th></tr></thead>
+        <tbody id="sm2-tbody"></tbody>
+      </table>
+    </div>
+
+    <!-- Completion -->
+    <div class="completion-panel" id="completion-panel">
+      <div class="big-emoji">🎉</div>
+      <h2>Ajoyib!</h2>
+      <div class="grade-card" id="grade-card">
+        <div class="grade-level" id="grade-level">0%</div>
+        <div class="grade-label" id="grade-label">Novice ○</div>
+        <div class="grade-detail" id="grade-velocity">Velocity: n=0.00</div>
+        <div class="grade-detail" id="grade-speed">Cards rated: 0/6</div>
+        <div class="grade-detail" id="grade-progress">~5 sessions to Proficient</div>
+      </div>
+      <p class="summary" id="completion-summary">Barcha kartalar o'tildi!</p>
+      <button class="restart-btn" onclick="restartGame()">🔄 Qayta boshlash</button>
+    </div>
+  </div>
+
+  <script>
+    // Card data - Science vocabulary
+    const cards = [
+      { icon: '🌍', term: 'Ekosistema', def: 'Tirik organizmlar va ularning atrof-muhiti bilan o\'zaro ta\'minot tizimi.', example: 'Masalan: O\'rmon, ko\'l, cho\'l', interval: 1, ef: 2.5, ease: 'good' },
+      { icon: '⚡', term: 'Energiya', def: 'Ish bajarish qobiliyati. Energiya yo\'qdan bor qilinmaydi, faqat bir turdan ikkinchi turga o\'tadi.', example: 'Quyosh energiyasi → elektr energiyasi', interval: 1, ef: 2.5, ease: 'good' },
+      { icon: '🔬', term: 'Hujayra', def: 'Tirik organizmlarning eng kichik tuzilish birligi. Barcha tirik mavjudotlar hujayralardan tashkil topgan.', example: 'Inson tanasida ~37 trillion hujayra bor', interval: 1, ef: 2.5, ease: 'good' },
+      { icon: '🌱', term: 'Fotosintez', def: 'O\'simliklarning quyosh nuri, suv va CO2 dan foydalanib oziq modda (glyukoza) hosil qilish jarayoni.', example: '6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂', interval: 1, ef: 2.5, ease: 'good' },
+      { icon: '🧬', term: 'DNK', def: 'Dezoksiribonuklein kislota — organizmning irsiy ma\'lumotlarini saqlovchi molekula.', example: 'DNK spiral shaklida bo\'lib, genlarni o\'z ichiga oladi', interval: 1, ef: 2.5, ease: 'good' },
+      { icon: '🌋', term: 'Magnit', def: 'Temir, nikel va kobalt kabi moddalarni o\'ziga tortadigan jismlar. Magnit maydon yaratadi.', example: 'Yerning o\'zi ulkan magnit hisoblanadi', interval: 1, ef: 2.5, ease: 'good' }
+    ];
+
+    let currentIndex = 0;
+    let isFlipped = false;
+    let cardResults = [];
+    let goodRatings = 0;
+    let totalRatings = 0;
+
+    // Simulated history
+    var sessionHistory = [
+      { session: 1, accuracy: 20, timePerAnswer: 25, hints: 5 },
+      { session: 2, accuracy: 35, timePerAnswer: 20, hints: 4 },
+      { session: 3, accuracy: 50, timePerAnswer: 16, hints: 3 }
+    ];
+    var currentAccuracy = 0;
+    var totalAttempts = 0;
+
+    function calcVelocity() {
+      if (sessionHistory.length < 2) return 0.3;
+      var first = sessionHistory[0].accuracy;
+      var last = sessionHistory[sessionHistory.length - 1].accuracy;
+      var sessions = sessionHistory.length;
+      return Math.min(0.9, Math.max(0.1, (last - first) / (sessions * 20)));
+    }
+
+    function getGradeLabel(acc) {
+      if (acc >= 85) return { label: 'Mastered ★', color: 'hsl(var(--success))' };
+      if (acc >= 60) return { label: 'Proficient ✓', color: 'hsl(var(--success))' };
+      if (acc >= 30) return { label: 'Apprentice △', color: 'hsl(var(--warning))' };
+      return { label: 'Novice ○', color: 'hsl(var(--muted-foreground))' };
+    }
+
+    function updateGradeDisplay() {
+      var n = calcVelocity();
+      var grade = getGradeLabel(currentAccuracy);
+      document.getElementById('level-display').textContent = currentAccuracy + '%';
+      document.getElementById('velocity-display').textContent = 'n=' + n.toFixed(2);
+    }
+
+    function buildQueue() {
+      const bar = document.getElementById('queue-bar');
+      bar.innerHTML = '';
+      cards.forEach((c, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'q-dot' + (i === currentIndex ? ' current' : '');
+        if (cardResults[i]) dot.className = 'q-dot ' + cardResults[i];
+        bar.appendChild(dot);
+      });
+    }
+
+    function showCard(index) {
+      const card = cards[index];
+      document.getElementById('card-icon').textContent = card.icon;
+      document.getElementById('card-term').textContent = card.term;
+      document.getElementById('card-def').textContent = card.def;
+      document.getElementById('card-example').textContent = card.example;
+      document.getElementById('card-counter').textContent = `${index + 1}/${cards.length}`;
+
+      // Reset flip
+      isFlipped = false;
+      document.getElementById('card-wrap').classList.remove('flipped');
+      document.getElementById('rating-bar').classList.remove('visible');
+
+      buildQueue();
+    }
+
+    function flipCard() {
+      if (isFlipped) return;
+      isFlipped = true;
+      document.getElementById('card-wrap').classList.add('flipped');
+      setTimeout(() => {
+        document.getElementById('rating-bar').classList.add('visible');
+      }, 300);
+    }
+
+    function rateCard(rating) {
+      const card = cards[currentIndex];
+      cardResults[currentIndex] = rating;
+      totalRatings++;
+      totalAttempts++;
+
+      // SM-2 simplified interval update
+      if (rating === 'again') {
+        card.interval = 0;
+        card.ef = Math.max(1.3, card.ef - 0.3);
+      } else if (rating === 'hard') {
+        card.interval = Math.max(1, Math.round(card.interval * 1.2));
+        card.ef = Math.max(1.3, card.ef - 0.15);
+      } else if (rating === 'good') {
+        card.interval = card.interval <= 1 ? 3 : Math.round(card.interval * card.ef);
+        goodRatings++;
+      } else if (rating === 'easy') {
+        card.interval = card.interval <= 1 ? 5 : Math.round(card.interval * card.ef * 1.5);
+        card.ef += 0.15;
+        goodRatings++;
+      }
+
+      card.ease = rating;
+
+      // Update accuracy (Good/Easy = correct)
+      currentAccuracy = Math.round((goodRatings / totalRatings) * 100);
+      updateGradeDisplay();
+
+      currentIndex++;
+      if (currentIndex >= cards.length) {
+        showCompletion();
+      } else {
+        showCard(currentIndex);
+      }
+    }
+
+    function showCompletion() {
+      document.getElementById('game-area').style.display = 'none';
+      document.getElementById('rating-bar').classList.remove('visible');
+      document.getElementById('queue-bar').style.display = 'none';
+
+      // Show SM-2 table
+      const tbody = document.getElementById('sm2-tbody');
+      tbody.innerHTML = '';
+      cards.forEach(c => {
+        const labels = { again: '🔴 Yana', hard: '🟡 Qiyin', good: '🟢 Yaxshi', easy: '💜 Oson' };
+        tbody.innerHTML += `<tr>
+          <td class="term-cell">${c.icon} ${c.term}</td>
+          <td>${labels[c.ease]}</td>
+          <td>${c.interval}d</td>
+          <td>${c.ef.toFixed(2)}</td>
+        </tr>`;
+      });
+      document.getElementById('sm2-summary').style.display = 'block';
+
+      // Add session to history
+      sessionHistory.push({
+        session: sessionHistory.length + 1,
+        accuracy: currentAccuracy,
+        timePerAnswer: 15,
+        hints: 0
+      });
+
+      var n = calcVelocity();
+      var grade = getGradeLabel(currentAccuracy);
+      var sessionsToProficient = Math.max(1, Math.ceil((60 - currentAccuracy) / 15));
+
+      // Populate grade card
+      document.getElementById('grade-level').textContent = currentAccuracy + '%';
+      document.getElementById('grade-label').textContent = grade.label;
+      document.getElementById('grade-velocity').textContent = 'Velocity: n=' + n.toFixed(2) + (n > 0.3 ? ' (improving)' : '');
+      document.getElementById('grade-speed').textContent = 'Cards rated: ' + totalRatings + '/' + cards.length;
+      document.getElementById('grade-progress').textContent = '~' + sessionsToProficient + ' sessions to Proficient';
+
+      // Completion panel
+      const panel = document.getElementById('completion-panel');
+      panel.classList.add('visible');
+      document.getElementById('completion-summary').textContent = `${cards.filter(c => c.ease === 'easy').length} ta oson, ${cards.filter(c => c.ease === 'good').length} ta yaxshi, ${cards.filter(c => c.ease === 'hard').length} ta qiyin.`;
+
+      launchConfetti();
+    }
+
+    function restartGame() {
+      currentIndex = 0;
+      goodRatings = 0;
+      totalRatings = 0;
+      currentAccuracy = 0;
+      totalAttempts = 0;
+      cardResults = [];
+      cards.forEach(c => { c.interval = 1; c.ef = 2.5; c.ease = 'good'; });
+      updateGradeDisplay();
+      document.getElementById('sm2-summary').style.display = 'none';
+      document.getElementById('completion-panel').classList.remove('visible');
+      document.getElementById('game-area').style.display = 'block';
+      document.getElementById('queue-bar').style.display = 'flex';
+      showCard(0);
+    }
+
+    // Confetti
+    function launchConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const pieces = [];
+      const colors = ['#10B981', '#06D6A0', '#F59E0B', '#8B5CF6', '#EF4444', '#3B82F6'];
+      for (let i = 0; i < 120; i++) {
+        pieces.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height - canvas.height,
+          w: Math.random() * 8 + 4,
+          h: Math.random() * 4 + 2,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vy: Math.random() * 3 + 2,
+          vx: (Math.random() - 0.5) * 2,
+          rot: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 10
+        });
+      }
+      let frames = 0;
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pieces.forEach(p => {
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot * Math.PI / 180);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+          p.y += p.vy;
+          p.x += p.vx;
+          p.rot += p.rotSpeed;
+        });
+        frames++;
+        if (frames < 300) requestAnimationFrame(draw);
+        else ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      draw();
+    }
+
+    // Init
+    buildQueue();
+    showCard(0);
+  </script>
+</body>
+</html>

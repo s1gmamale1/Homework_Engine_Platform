@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Story Mode (Narrative Concept Delivery)</title>
+    <style>
+        :root {
+            --bg: #0d1117; --surface: #161b22; --border: #30363d;
+            --text: #e6edf3; --text-muted: #8b949e;
+            --primary: #58a6ff; --accent: #bc8cff;
+            --danger: #f85149; --success: #3fb950; --gold: #d29922;
+        }
+        body { background-color: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 40px; display: flex; justify-content: center; }
+        .container { max-width: 1000px; width: 100%; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 40px; }
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin: 20px 0; }
+        .premium-box { border: 2px solid var(--gold); background: rgba(210, 153, 34, 0.05); padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .buzan-box { border: 2px solid var(--accent); background: rgba(188, 140, 255, 0.05); padding: 20px; border-radius: 12px; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Story Mode</h1>
+            <p style="color: var(--text-muted)">Default Mechanic #6 — Narrative Concept Delivery with Comprehension Gates</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Mode: Solo Only</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Understand</span>
+                <span class="tag">PISA: 2-3</span>
+                <span class="tag">AI Tier: Tier 2</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>Story Mode delivers textbook content as a <strong>narrative with a 4-beat dramatic arc: Problem → Struggle → Discovery → Solution</strong>. Research by Willingham (2004) shows stories are up to 22x more memorable than isolated facts. Story Mode is a <strong>Phase 2 concept delivery</strong> mechanic — it builds understanding before practice.</p>
+
+                <h3>4-Beat Arc Structure (5-7 minutes total)</h3>
+
+                <p><strong>Beat 1 — Problem (60-90 seconds):</strong> Introduces a character facing a challenge that can only be resolved by understanding the target concept. The character is always an Uzbek student or community member in a culturally familiar setting.</p>
+
+                <p><strong>Gate 1 — Comprehension Check (30 seconds):</strong> 1-2 IELTS-style questions about the Problem beat. Tests understanding of the situation, not prior subject knowledge. Must answer at least 1 correctly to continue.</p>
+
+                <p><strong>Beat 2 — Struggle (90-120 seconds):</strong> The character tries everyday reasoning and fails, creating cognitive tension — the student now <em>wants</em> to know the answer.</p>
+
+                <p><strong>Gate 2 — Comprehension + Prediction (30 seconds):</strong> Questions about the Struggle beat AND a prediction: "What do YOU think the tree needs?" (logged for analysis).</p>
+
+                <p><strong>Beat 3 — Discovery (90-120 seconds):</strong> The target concept is revealed through a mentor figure. The scientific/academic principle is introduced as the key to solving the problem.</p>
+
+                <p><strong>Gate 3 — Concept Comprehension (30-45 seconds):</strong> Tests whether the student understood the concept itself, not just the story. Must pass at least 1 of 2 questions to reach the Solution beat.</p>
+
+                <p><strong>Beat 4 — Solution (30-60 seconds):</strong> The character applies the concept. The academic concept is explicitly named and summarized.</p>
+
+                <h3>The "Stranger Test"</h3>
+                <p>Every story must pass the <strong>Stranger Test</strong>: a test player with zero subject knowledge must follow the story and identify the correct solution using only narrative context clues. If it fails, the story is rewritten with more exposition, simpler language, clearer cause-and-effect links.</p>
+
+                <h3>Grade Scaling</h3>
+                <ul>
+                    <li><strong>G1-4:</strong> 3-beat arc (Problem → Discovery → Solution). Shorter passages (40-60s). Single MC questions with visual support. Read aloud with text highlighting.</li>
+                    <li><strong>G5-7:</strong> Full 4-beat arc. Gates include 2 questions each (1 literal + 1 inference). Text-only with optional read-aloud toggle.</li>
+                    <li><strong>G8-11:</strong> Full 4-beat arc + 5th beat: <strong>Extension</strong> — a harder problem applying the concept in a new context. Gates include short-answer responses AI-evaluated for conceptual accuracy.</li>
+                </ul>
+
+                <h3>Cultural Anchoring Mandate</h3>
+                <p>Every story MUST be anchored to Uzbek cultural context. Characters have Uzbek names. Settings are recognizable Uzbek locations. References draw from Uzbek daily life (plov cooking, Navruz celebrations, bazaar economics). This is not optional — cultural anchoring is a validation gate before any story ships.</p>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <table>
+                <thead><tr><th>Feature</th><th>Basic Tier</th><th>Premium Tier</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Session Access</strong></td><td>Available during Phase 2 concept delivery</td><td>Same + on-demand access from Library for self-study</td></tr>
+                    <tr><td><strong>Story Format</strong></td><td>Text passages with static illustrations</td><td>Same + animated scene transitions, ambient sound design, character voice acting</td></tr>
+                    <tr><td><strong>Gate Questions</strong></td><td>2 questions per gate (6 total)</td><td>3 questions per gate (9 total) + Extension gate for G8-11</td></tr>
+                    <tr><td><strong>Story Branching</strong></td><td>Linear narrative — one path</td><td>Branching paths — student choices at Gate 2 change Discovery beat's approach</td></tr>
+                    <tr><td><strong>Character Customization</strong></td><td>Fixed character per story</td><td>Choose protagonist's name, appearance, home city — story adapts cultural references</td></tr>
+                    <tr><td><strong>Extended Stories</strong></td><td>Standard single-concept stories (5-7 min)</td><td>"Chapter" mode — multi-concept saga spanning 3-4 sessions with cliffhangers</td></tr>
+                    <tr><td><strong>Story Creator</strong></td><td>Not available</td><td>G9-11 students co-create stories with AI — submit concept, receive draft, edit and share</td></tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> All students receive the complete 4-beat narrative experience with comprehension gates. The story content, concept delivery, and learning outcomes are identical. Premium adds cinematic polish, branching paths, and extended multi-session sagas — enrichment that deepens engagement but is not required for concept mastery.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Narrative Radiance</h2>
+            <ul>
+                <li><strong>Color as Emotional Anchor:</strong> Each beat carries a color palette. Problem = warm amber (urgency). Struggle = cool blue-gray (frustration). Discovery = bright green and gold (illumination). Solution = warm white and green (resolution). The color progression creates an emotional arc critical for memory encoding.</li>
+                <li><strong>Vivid Imagery (Picture Power):</strong> Every story includes at least 2 "sticky images" — exaggerated, memorable visuals. "Tiny green factories" (not just "organelles"). A Navruz plov divided among 3 families creates concrete anchor for abstract fractions.</li>
+                <li><strong>Association Chains (Radiant Links):</strong> Each story character becomes a "radiant hub." Subsequent stories featuring the same character automatically link back to prior knowledge. The character is the associative anchor.</li>
+                <li><strong>Personal Relevance (Self Principle):</strong> "What would YOU do?" prompts trigger the self-reference effect — information connected to oneself is 2-3x better recalled (Symons & Johnson, 1997).</li>
+                <li><strong>Sensory Storytelling:</strong> Stories include at least one non-visual sensory detail per beat: smell of wet soil, sound of bazaar call to prayer, taste of first ripe lemon. Multi-sensory encoding creates redundant retrieval paths.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <table>
+                <thead>
+                    <tr><th>PISA Level</th><th>Gate Question Style</th><th>Cognitive Target</th><th>Pass Threshold</th><th>Feedback on Failure</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>L1</strong></td><td>Literal MC, 3 options, visual support</td><td>Direct text retrieval</td><td>1 of 1 correct per gate</td><td>Passage reread with target sentence highlighted</td></tr>
+                    <tr><td><strong>L2</strong></td><td>Inference MC, 3 options, requires connecting sentences</td><td>Connect information across passage</td><td>1 of 2 correct per gate</td><td>Target sentences extracted and shown</td></tr>
+                    <tr><td><strong>L3</strong></td><td>Application MC with explanation</td><td>Apply concept to modified scenario</td><td>1 of 2 correct per gate</td><td>Concept re-explained with new example</td></tr>
+                    <tr><td><strong>L4</strong></td><td>Analysis: select from process steps</td><td>Analyze process — identify causal chain</td><td>1 of 2 correct per gate</td><td>Process diagram with causal chain highlighted</td></tr>
+                    <tr><td><strong>L5</strong></td><td>Evaluation short-answer, AI-evaluated</td><td>Evaluate competing claims using evidence</td><td>AI scores ≥3/5 on rubric</td><td>Model answer shown after 2 failed attempts</td></tr>
+                    <tr><td><strong>L6</strong></td><td>Creation open-ended, multi-paragraph</td><td>Synthesize concept with novel constraints</td><td>AI scores ≥4/5 on rubric</td><td>Peer exemplar shown (anonymized high-scoring response)</td></tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Gate Design Philosophy:</strong> Gates are never punitive — they are comprehension checkpoints. A student who fails is not "wrong"; they need the story segment revisited. Even after 2 consecutive failures, the student can proceed to the Solution beat (concept flagged for later review).
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type C (Outcome-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Gate accuracy (%)</td><td>Correct gate answers / total gate questions</td><td>Primary — determines comprehension Level</td></tr>
+                        <tr><td>Reading pace</td><td>Seconds per beat completed</td><td>Secondary — feeds Efficiency metric</td></tr>
+                        <tr><td>Retries needed</td><td>Number of gate re-reads triggered</td><td>Tertiary — fewer retries = higher confidence signal</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total story sessions on this concept</td><td>Feeds curve-fitting (y = K × attempts^n) for velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <div class="card">
+                    <strong>Story Mode — [Topic]</strong><br>
+                    ████████░░ 72% (Proficient ✓)<br>
+                    Velocity: n=0.42 (improving)<br>
+                    Read pace: 45s/beat (getting faster ✓)<br>
+                    ~2 sessions to Mastered
+                </div>
+
+                <h3>C. Outcome Grades</h3>
+                <ul>
+                    <li><strong>Master Reader (all gates first attempt):</strong> "Ajoyib! Siz hikoyani to'liq tushundingiz!" Story added with gold bookmark. Grade: Proficient ✓.</li>
+                    <li><strong>Strong Reader (all gates passed, 1 retry):</strong> "Yaxshi!" Story added with silver bookmark.</li>
+                    <li><strong>Completed (all gates passed, 2+ retries):</strong> "Hali emas — lekin siz yetib keldingiz!" Story added with bronze bookmark.</li>
+                    <li><strong>Incomplete (gate failed after 2 retries):</strong> "Hali emas" screen. Story pauses at current beat. Solution beat shown in condensed summary. Story flagged for replay with different approach (simplified language, different cultural reference).</li>
+                </ul>
+
+                <h3>D. No XP Penalty for Retries</h3>
+                <p>The student earns grade credit for all beats completed. Only the completion bonus is withheld if retries are needed. There is no punitive grading — the story always offers a path forward.</p>
+
+                <h3>E. "Hali Emas" (Not Yet) Framing</h3>
+                <p>A student who cannot pass a gate after retries has not "failed the story" — they have identified a comprehension gap. The story pauses, reveals how it ends, and promises to return: "Bu hikoya sizni kutib turadi" — "This story will wait for you." No grade penalty. The concept is flagged for later review in a different mechanic (Adaptive Quiz or Final Boss).</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Story Mode v1.0
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Puzzle Lock — NETS Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--background:240 15% 8%;--foreground:0 0% 95%;--card:240 12% 12%;
+--primary:162 93% 42%;--primary-foreground:0 0% 100%;--muted:240 10% 20%;
+--muted-foreground:240 5% 55%;--border:240 10% 22%;--success:142 76% 45%;
+--warning:38 92% 50%;--destructive:0 72% 51%
+}
+body{
+font-family:'Nunito',sans-serif;
+background:hsl(var(--background));color:hsl(var(--foreground));
+min-height:100vh;display:flex;flex-direction:column;align-items:center;
+padding:12px;max-width:420px;margin:0 auto
+}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+
+/* Stats */
+.stats-bar{display:flex;gap:8px;width:100%;margin-bottom:12px}
+.stat-card{flex:1;background:rgba(255,255,255,0.06);backdrop-filter:blur(24px);
+border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:8px;text-align:center}
+.stat-label{font-size:0.65rem;color:hsl(var(--muted-foreground));text-transform:uppercase;letter-spacing:0.05em}
+.stat-value{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;color:hsl(var(--primary))}
+.stat-value.level-val{color:hsl(var(--success))}
+.stat-value.velocity-val{color:hsl(var(--warning))}
+.stat-value.timer{color:hsl(var(--warning))}
+.grade-card{background:hsla(var(--card),0.8);backdrop-filter:blur(24px);border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:20px;text-align:center;margin:16px 0}
+.grade-level{font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:800;background:linear-gradient(135deg,hsl(162,93%,42%),hsl(180,85%,35%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.grade-label{font-size:18px;font-weight:700;margin:4px 0}
+.grade-detail{font-size:13px;color:hsl(var(--muted-foreground));margin:2px 0}
+
+/* Title */
+.game-title{text-align:center;margin-bottom:8px}
+.game-title h1{font-size:1.3rem;background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.game-title p{font-size:0.75rem;color:hsl(var(--muted-foreground))}
+.goal{font-size:0.7rem;color:hsl(var(--muted-foreground));text-align:center;margin-bottom:8px}
+.goal code{color:hsl(var(--primary));font-family:'Space Grotesk',sans-serif}
+
+/* Board */
+.puzzle-wrap{width:100%;max-width:320px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+background:hsla(var(--card),0.5);border:2px solid hsla(var(--border),0.3);
+border-radius:1rem;padding:12px}
+
+/* Each cell is a square slot */
+.cell{aspect-ratio:1;position:relative;
+background:hsla(var(--background),0.6);border:2px dashed hsla(var(--border),0.2);
+border-radius:0.6rem;display:flex;align-items:center;justify-content:center}
+
+/* The tile (the thing that moves) — always a square box */
+.tile{width:100%;height:100%;
+background:rgba(255,255,255,0.85);border:3px solid rgba(255,255,255,0.3);
+border-radius:0.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;
+cursor:default;transition:all 0.25s ease;position:relative;
+box-shadow:0 2px 8px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.5)}
+.tile .num{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:800;color:#1a1a2e;line-height:1}
+.tile .lbl{font-size:0.5rem;color:#555;margin-top:2px;text-align:center;line-height:1.1}
+
+/* Highlighted = can move into the empty slot */
+.tile.highlight{border-color:hsl(var(--primary));
+background:rgba(255,255,255,0.92);cursor:pointer;
+box-shadow:0 0 22px hsla(var(--primary),0.5),0 0 50px hsla(var(--primary),0.15),0 2px 8px rgba(0,0,0,0.3);
+animation:glow 1.8s ease-in-out infinite}
+.tile.highlight:hover{background:rgba(255,255,255,1);transform:scale(1.04)}
+
+@keyframes glow{
+0%,100%{box-shadow:0 0 18px hsla(var(--primary),0.4),0 0 40px hsla(var(--primary),0.12),inset 0 0 10px hsla(var(--primary),0.08)}
+50%{box-shadow:0 0 28px hsla(var(--primary),0.6),0 0 60px hsla(var(--primary),0.22),inset 0 0 18px hsla(var(--primary),0.14)}
+}
+
+/* Correct position hint */
+.tile.in-place{border-color:hsla(var(--success),0.5);
+box-shadow:inset 0 0 12px hsla(var(--success),0.12)}
+
+/* Slide animation */
+.tile.slide{animation:popIn 0.25s ease-out}
+@keyframes popIn{0%{transform:scale(0.75);opacity:0.3}60%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+
+/* Info bar */
+.info-bar{display:flex;justify-content:space-between;width:100%;max-width:320px;margin:8px 0;
+font-size:0.75rem;color:hsl(var(--muted-foreground))}
+
+/* Result banner */
+.result-banner{background:hsla(var(--card),0.9);backdrop-filter:blur(24px);
+border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;
+padding:16px;text-align:center;margin-top:12px;display:none}
+.result-banner.show{display:block}
+.result-banner h2{font-size:1.2rem;margin-bottom:8px}
+.btn{background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));
+color:hsl(var(--primary-foreground));border:none;border-radius:0.5rem;
+padding:10px 20px;font-size:0.85rem;font-weight:700;cursor:pointer;
+font-family:'Nunito',sans-serif;width:100%;margin-top:8px}
+.btn:hover{opacity:0.9}
+
+/* Modal */
+.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);
+display:flex;align-items:center;justify-content:center;z-index:100;
+padding:16px;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.modal-overlay.active{opacity:1;pointer-events:auto}
+.modal{background:hsl(var(--card));border:1px solid hsla(var(--border),0.5);
+border-radius:0.75rem;padding:20px;width:100%;max-width:360px;
+transform:scale(0.9);transition:transform 0.3s}
+.modal-overlay.active .modal{transform:scale(1)}
+.modal h3{font-size:1rem;margin-bottom:12px;color:hsl(var(--primary))}
+.modal p{font-size:0.85rem;line-height:1.5;margin-bottom:16px}
+.modal-options{display:flex;flex-direction:column;gap:8px}
+.modal-option{background:hsla(var(--muted),0.5);border:1px solid hsla(var(--border),0.3);
+border-radius:0.5rem;padding:10px;font-size:0.85rem;color:hsl(var(--foreground));
+cursor:pointer;transition:all 0.2s;font-family:'Nunito',sans-serif;text-align:left}
+.modal-option:hover{background:hsla(var(--primary),0.2);border-color:hsl(var(--primary))}
+.modal-option.correct{background:hsla(var(--success),0.3);border-color:hsl(var(--success))}
+.modal-option.wrong{background:hsla(var(--destructive),0.3);border-color:hsl(var(--destructive))}
+
+#confetti-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1000}
+</style>
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+
+<div class="game-title"><h1>🧩 Puzzle Lock</h1><p>Raqamlarni tartibga soling — 1 dan 8 gacha!</p></div>
+
+<div class="stats-bar">
+<div class="stat-card"><div class="stat-label">Daraja</div><div class="stat-value level-val" id="level">0%</div></div>
+<div class="stat-card"><div class="stat-label">Tezlik</div><div class="stat-value velocity-val" id="velocity">n=0.00</div></div>
+<div class="stat-card"><div class="stat-label">Vaqt</div><div class="stat-value timer" id="timer">3:00</div></div>
+<div class="stat-card"><div class="stat-label">Xato</div><div class="stat-value" id="wrong">0</div></div>
+</div>
+
+<div class="goal">Maqsad: <code>1  2  3 / 4  5  6 / 7  8  ◻</code></div>
+
+<div class="puzzle-wrap">
+<div class="grid" id="grid"></div>
+</div>
+
+<div class="info-bar">
+<span>Harakatlar: <strong id="moves">0</strong></span>
+<span>To'g'ri: <strong id="correct">0</strong></span>
+</div>
+
+<div class="result-banner" id="result-banner">
+<h2 id="result-title"></h2>
+<div class="grade-card" id="result-grade-card">
+  <div class="grade-level" id="result-grade-level">0%</div>
+  <div class="grade-label" id="result-grade-label">Novice</div>
+  <div class="grade-detail" id="result-grade-detail">To'g'ri javoblar: 0/0</div>
+  <div class="grade-detail" id="result-velocity-detail">Tezlik: n=0.00</div>
+</div>
+<button class="btn" onclick="resetGame()">🔄 Qayta boshlash</button>
+</div>
+
+<!-- Question Modal -->
+<div class="modal-overlay" id="modal">
+<div class="modal">
+<h3 id="modal-title">❓ Savol</h3>
+<p id="modal-question"></p>
+<div class="modal-options" id="modal-options"></div>
+</div>
+</div>
+
+<script>
+const LABELS=['Atom','DNA','Quyosh','Oy','Yulduz','Sayyora','Bakteriya','Virus',''];
+const QS=[
+{q:"Suv formulasi?",o:["H₂O","CO₂","NaCl","O₂"],a:0},
+{q:"Yer aylanish vaqti?",o:["24 soat","365 kun","30 kun","7 kun"],a:1},
+{q:"Eng katta sayyora?",o:["Mars","Saturn","Yupiter","Neptun"],a:2},
+{q:"Fotosintezda nima chiqadi?",o:["CO₂","Kislorod","Azot","Vodorod"],a:1},
+{q:"Elektr birligi?",o:["Volt","Joul","Nyuton","Paskal"],a:0},
+{q:"DNA tuzilishi?",o:["Uch","Ikki spiral","Halqa","Chiziq"],a:1},
+{q:"Eng qattiq mineral?",o:["Kvarts","Olmos","Topaz","Granit"],a:1},
+{q:"Muz erish harorati?",o:["100°C","0°C","-10°C","50°C"],a:1},
+{q:"Odamlarda suyaklar soni?",o:["106","206","306","186"],a:1},
+{q:"Tortishish qonuni kimniki?",o:["Eynshteyn","Nyuton","Galiley","Bor"],a:1},
+{q:"Yerga eng yaqin yulduz?",o:["Proksima","Siriys","Quyosh","Vega"],a:2},
+{q:"Atomda nima aylanadi?",o:["Proton","Neytron","Elektron","Foton"],a:2},
+{q:"Asosiy hayotiy organ?",o:["O'pka","Jigar","Yurak","Buyrak"],a:2},
+{q:"Plastmassa qanday material?",o:["Tabiiy","Sintetik","Mineral","Metall"],a:1},
+];
+
+let tiles=[],empty=8,wrong=0,qi=0,over=false,moves=0,ok=0;
+var sessionHistory=[
+  {session:1,accuracy:15},
+  {session:2,accuracy:30},
+  {session:3,accuracy:45}
+];
+function calcVelocity(){
+  if(sessionHistory.length<2)return 0.3;
+  var f=sessionHistory[0].accuracy,l=sessionHistory[sessionHistory.length-1].accuracy,s=sessionHistory.length;
+  return Math.min(0.9,Math.max(0.1,(l-f)/(s*15)));
+}
+function getGradeLabel(acc){
+  if(acc>=85)return{label:'Mastered \u2605'};
+  if(acc>=60)return{label:'Proficient \u2713'};
+  if(acc>=30)return{label:'Apprentice \u25b3'};
+  return{label:'Novice \u25cb'};
+}
+let pending=-1,ti=null,left=180;
+
+function init(){
+tiles=[1,2,3,4,5,6,7,8,0];empty=8;wrong=0;qi=0;over=false;
+moves=0;ok=0;pending=-1;left=180;
+$('level').textContent='0%';$('velocity').textContent='n=0.00';$('wrong').textContent='0';
+$('moves').textContent='0';$('correct').textContent='0';
+$('result-banner').classList.remove('show');
+shuffle();draw();tick();
+if(ti)clearInterval(ti);
+ti=setInterval(sec,1000);
+}
+
+function $(id){return document.getElementById(id)}
+
+function shuffle(){
+for(let i=0;i<200;i++){
+const n=nbrs(empty);
+const j=n[Math.random()*n.length|0];
+[tiles[empty],tiles[j]]=[tiles[j],tiles[empty]];empty=j;
+}}
+
+function nbrs(i){
+const r=i/3|0,c=i%3,a=[];
+if(r>0)a.push(i-3);if(r<2)a.push(i+3);
+if(c>0)a.push(i-1);if(c<2)a.push(i+1);
+return a;
+}
+
+function draw(){
+const g=$('grid');g.innerHTML='';
+const can=nbrs(empty);
+for(let i=0;i<9;i++){
+const cell=document.createElement('div');
+cell.className='cell';
+if(tiles[i]===0){
+  // empty slot — shows as dashed box
+}else{
+  const t=document.createElement('div');
+  t.className='tile';
+  if(can.includes(i)){t.classList.add('highlight');t.onclick=()=>tap(i)}
+  if(tiles[i]===i+1)t.classList.add('in-place');
+  t.innerHTML='<span class="num">'+tiles[i]+'</span><span class="lbl">'+LABELS[tiles[i]-1]+'</span>';
+  cell.appendChild(t);
+}
+g.appendChild(cell);
+}}
+
+function tap(i){
+if(over)return;
+const n=nbrs(empty);
+if(!n.includes(i))return;
+pending=i;ask();
+}
+
+function ask(){
+const q=QS[qi%QS.length];qi++;
+$('modal-title').textContent='Savol #'+qi;
+$('modal-question').textContent=q.q;
+const o=$('modal-options');o.innerHTML='';
+q.o.forEach((x,i)=>{
+  const b=document.createElement('button');b.className='modal-option';b.textContent=x;
+  b.onclick=()=>ans(i,q.a,b);o.appendChild(b);
+});
+$('modal').classList.add('active');
+}
+
+function ans(sel,cor,btn){
+document.querySelectorAll('.modal-option').forEach((b,i)=>{
+  b.disabled=true;
+  if(i===cor)b.classList.add('correct');
+  if(i===sel&&i!==cor)b.classList.add('wrong');
+});
+if(sel===cor){ok++;
+  setTimeout(()=>{$('modal').classList.remove('active');slide(pending)},400);
+}else{wrong++;$('wrong').textContent=wrong;
+  setTimeout(()=>{$('modal').classList.remove('active');badSlide()},400);
+}
+}
+
+function slide(i){
+[tiles[empty],tiles[i]]=[tiles[i],tiles[empty]];empty=i;moves++;
+$('moves').textContent=moves;$('correct').textContent=ok;
+draw();
+// animate the tile that moved into empty
+const cells=$('grid').children;
+if(cells[empty]&&cells[empty].firstChild)cells[empty].firstChild.classList.add('slide');
+if(win()){end(true);return}
+}
+
+function badSlide(){
+const n=nbrs(empty);
+const j=n[Math.random()*n.length|0];
+[tiles[empty],tiles[j]]=[tiles[j],tiles[empty]];empty=j;moves++;
+$('moves').textContent=moves;draw();
+if(win()){end(true);return}
+}
+
+function win(){
+for(let i=0;i<8;i++)if(tiles[i]!==i+1)return false;
+return tiles[8]===0;
+}
+
+function sec(){
+left--;
+const m=left/60|0,s=left%60;
+$('timer').textContent=m+':'+(s<10?'0':'')+s;
+if(left<=0){over=true;clearInterval(ti);end(false)}
+}
+
+function end(won){
+const b=$('result-banner'),t=$('result-title');
+b.classList.add('show');
+const totalQuestions = qi;
+const accuracy = totalQuestions > 0 ? Math.round(ok / totalQuestions * 100) : 0;
+const grade = getGradeLabel(accuracy);
+const velocity = calcVelocity();
+if(won){
+  t.textContent='\ud83c\udf89 Boshqotirma yechildi! '+moves+' harakatda';
+  t.style.color='hsl(var(--success))';
+  document.getElementById('result-grade-level').textContent = accuracy + '%';
+  document.getElementById('result-grade-label').textContent = grade.label;
+  document.getElementById('result-grade-detail').textContent = `To'g'ri javoblar: ${ok}/${totalQuestions} (${accuracy}%)`;
+  document.getElementById('result-velocity-detail').textContent = `Tezlik: n=${velocity.toFixed(2)}`;
+  $('level').textContent = accuracy + '%';
+  sessionHistory.push({session: ok, accuracy: accuracy});
+  $('velocity').textContent = 'n=' + velocity.toFixed(2);
+  launchConfetti();
+}else{
+  t.textContent='\u23f0 Vaqt tugadi!';
+  t.style.color='hsl(var(--destructive))';
+  document.getElementById('result-grade-level').textContent = accuracy + '%';
+  document.getElementById('result-grade-label').textContent = grade.label;
+  document.getElementById('result-grade-detail').textContent = `To'g'ri javoblar: ${ok}/${totalQuestions} (${accuracy}%)`;
+  document.getElementById('result-velocity-detail').textContent = `Tezlik: n=${velocity.toFixed(2)}`;
+}
+}
+
+function resetGame(){init()}
+
+function launchConfetti(){
+const cv=$('confetti-canvas'),ctx=cv.getContext('2d');
+cv.width=window.innerWidth;cv.height=window.innerHeight;
+const P=[],C=['hsl(162,93%,42%)','hsl(180,85%,35%)','hsl(142,76%,45%)','hsl(38,92%,50%)','hsl(0,72%,51%)'];
+for(let i=0;i<150;i++)P.push({x:Math.random()*cv.width,y:Math.random()*cv.height-cv.height,
+w:Math.random()*10+5,h:Math.random()*6+3,c:C[Math.random()*C.length|0],
+vx:(Math.random()-.5)*4,vy:Math.random()*3+2,r:Math.random()*360,rs:(Math.random()-.5)*10});
+let f=0;
+(function go(){ctx.clearRect(0,0,cv.width,cv.height);
+P.forEach(p=>{ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r*Math.PI/180);
+ctx.fillStyle=p.c;ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);ctx.restore();
+p.x+=p.vx;p.y+=p.vy;p.r+=p.rs;p.vy+=.05});
+f++;if(f<200)requestAnimationFrame(go);else ctx.clearRect(0,0,cv.width,cv.height)})();
+}
+
+init();
+</script>
+</body>
+</html>

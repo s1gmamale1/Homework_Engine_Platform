@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Why Chain</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Why Chain (Nima Uchun? Zanjiri)</h1>
+            <p style="color: var(--text-muted)">Default Mechanic #10 — AI-Guided Socratic Dialogue</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Mode: Solo + AI</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Analyze</span>
+                <span class="tag">PISA: 3-4</span>
+                <span class="tag">AI Tier: Tier 2</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>Why Chain is an <strong>AI-guided Socratic dialogue</strong> that asks "why?" at increasing depth. The AI never gives direct answers — it always acknowledges the student's response and probes deeper.</p>
+                <p><strong>Chain structure:</strong></p>
+                <ul>
+                    <li>The AI presents an initial question tied to the current lesson topic (e.g., "Nima uchun o'simliklar yorug'likka muhtoj?").</li>
+                    <li>The student types a free-text answer.</li>
+                    <li>The AI evaluates the answer for keyword presence and reasoning depth.</li>
+                    <li>If accepted: the AI acknowledges ("Yaxshi boshlanish!"), then asks the next "why?" at greater depth. The chain continues.</li>
+                    <li>If rejected: the AI gives a <strong>hint</strong> (not the answer) and invites the student to try again. Hints are recorded as a depth-penalty indicator.</li>
+                </ul>
+                <p><strong>Chain depth by grade / PISA level:</strong></p>
+                <ul>
+                    <li><strong>Grades 2-3 (L2-3):</strong> 2-3 chain levels. The AI asks "why?" two to three times, each probing one layer deeper into the causal chain.</li>
+                    <li><strong>Grades 3-4 (L3-4):</strong> 4 chain levels. The AI digs into multi-step reasoning, requiring the student to connect cause to mechanism to principle.</li>
+                    <li><strong>Grades 5-6+ (L5-6):</strong> 5+ chain levels. The final level may present a hypothetical or paradox ("Agar Quyosh faqat infraqizil nur chiqarganida, o'simliklar yashay olarmidi?").</li>
+                </ul>
+                <p><strong>AI behavioral rules (non-negotiable):</strong></p>
+                <ul>
+                    <li><strong>NEVER give a direct answer.</strong> The AI's role is to guide, not to tell. Even on the final chain level, the AI does not state the correct explanation — it asks the student to synthesize.</li>
+                    <li><strong>ALWAYS acknowledge.</strong> Every student response receives affirmation first ("Yaxshi!", "Ajoyib!", "Zo'r!") before the next probe.</li>
+                    <li><strong>ALWAYS probe deeper.</strong> The AI never accepts a surface-level answer at a deep level. If the student says "because plants need light," the AI asks "why do they need light?" — pushing past the tautology.</li>
+                </ul>
+                <p><strong>Timer:</strong> 3-minute countdown. The student can work through the chain at their own pace within this window. Timer expiration does not end the chain — the student can continue, but the completion bonus is forfeited.</p>
+                <p><strong>Hints:</strong> Each hint is tracked as a depth indicator. Hints point to page references, visual cues, or prior lesson content — they never state the answer directly.</p>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Why Chain is available to all tiers during Phase 3 sessions. Premium extends chain depth, AI sophistication, and visual polish.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Available in Phase 3 (Phase 5 — Mustahkamlash)</td>
+                        <td>Same + on-demand access from Library for extra practice</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chain Depth</strong></td>
+                        <td>Standard depth per grade (2-5 levels as specified above)</td>
+                        <td>+1 additional level per chain (e.g., G3-4 gets 5 levels instead of 4)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Response Quality</strong></td>
+                        <td>Keyword-based evaluation with canned follow-up prompts</td>
+                        <td>LLM-powered dynamic response generation — unique follow-ups per student answer</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hint System</strong></td>
+                        <td>Static hints (page references, fixed cues)</td>
+                        <td>Adaptive hints (contextual to student's prior mistakes)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chain Visualization</strong></td>
+                        <td>Level dots in header (1-5), color-coded by status</td>
+                        <td>Animated chain graph — each answered level draws a connecting line to the next, building a visible reasoning tree</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Multi-Topic Chains</strong></td>
+                        <td>Single-topic chains only (all questions about one concept)</td>
+                        <td>Cross-topic chains (e.g., chain connects photosynthesis → energy → ecosystems)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Depth Reward</strong></td>
+                        <td>Standard (per level completed + completion bonus)</td>
+                        <td>Standard + per-level bonus for chains completed without hints</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> The core Socratic experience is identical for both tiers — the AI asks "why?" at the specified depth, accepts answers, and provides hints. Premium adds dynamic AI generation, deeper chains, and visual polish. The learning outcome is the same.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Radiant Questioning</h2>
+            <p>Why Chain implements <strong>Tony Buzan's Radiant Thinking and Hierarchical Order</strong> principles by structuring dialogue as an expanding chain of inquiry.</p>
+            <ul>
+                <li><strong>Color Hooks (Chain Depth Encoding):</strong> Each chain level has a distinct color that appears in the level indicator dots: Level 1 = blue (surface), Level 2 = green (mechanism), Level 3 = gold (principle), Level 4 = purple (synthesis), Level 5 = red (paradox). As the student progresses, the colors shift from cool to warm, visually signaling increasing depth. Per Buzan, color gradients help the brain encode hierarchical information — the warmest color signals the most cognitively demanding level.</li>
+                <li><strong>Radiant Branches (Question Tree):</strong> Each "why?" branches outward from the initial concept. In Premium, the completed chain is rendered as a visual tree: the initial concept is the root, each answered question is a branch, and the final synthesis is the terminal node. Students can review their chain later as a study artifact — it represents their own reasoning path, not a teacher's explanation.</li>
+                <li><strong>Imagery Through Verbal Exaggeration:</strong> The AI's acknowledgment phrases use vivid, emotionally positive language ("MUKAMMAL!", "Ajoyib! 🌿") that creates an emotional tag on the cognitive effort. Buzan emphasizes that emotional salience strengthens memory — a student who hears "Bu juda chuqur fikrlash!" (That's very deep thinking!) at Level 5 will associate the breakthrough moment with positive affect.</li>
+                <li><strong>Self-Generated Mental Maps:</strong> Because the AI never provides answers, the student must construct their own mental model at each level. This is Buzan's Radiant Thinking operationalized: the student's own reasoning radiates outward from the central concept, building associative links that are personally meaningful rather than externally imposed.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Why Chain IS the interaction — the student types free-text answers, and the AI evaluates them against keyword sets and reasoning depth. The chain levels scale with PISA complexity.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Question Style (AI Prompt)</th>
+                        <th>Acceptance Criteria</th>
+                        <th>Cognitive Target</th>
+                        <th>Hint Style</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L1</strong></td>
+                        <td colspan="4" style="text-align:center;">Why Chain does not operate at L1 — too shallow for Socratic dialogue. Minimum entry is L2.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L2</strong></td>
+                        <td>Direct "why" about a known fact ("Why do plants need light?")</td>
+                        <td>Answer contains 1+ topic-relevant keywords from a predefined set</td>
+                        <td>Property identification — connect a known fact to its cause</td>
+                        <td>Page reference to the lesson text where the fact is explained</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L3</strong></td>
+                        <td>Mechanism probe ("Why does light give plants energy?")</td>
+                        <td>Answer identifies the process (photosynthesis, chlorophyll role) + 2+ keywords</td>
+                        <td>Causal reasoning — explain how a cause produces its effect</td>
+                        <td>Visual cue ("Look at the diagram on page 25 — what does the green part do?")</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Principle identification ("Why can ONLY plants do this?")</td>
+                        <td>Answer distinguishes the unique mechanism (chloroplasts, chlorophyll in plant cells) from non-plant alternatives</td>
+                        <td>Process analysis — differentiate between similar systems</td>
+                        <td>Comparison prompt ("What do plant cells have that animal cells don't?")</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5</strong></td>
+                        <td>Hypothetical scenario ("What if the sun only emitted infrared light?")</td>
+                        <td>Answer proposes a reasoned argument (not just a fact), 15+ characters, references prior chain levels</td>
+                        <td>Evaluation — apply known principles to a novel scenario</td>
+                        <td>Synthesis nudge ("Think about what chlorophyll absorbs — which wavelengths?")</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L6</strong></td>
+                        <td>Paradox or open problem ("If photosynthesis is so efficient, why haven't animals evolved it?")</td>
+                        <td>Answer proposes a multi-factor argument, acknowledges complexity, 20+ characters</td>
+                        <td>Synthesis — construct a novel argument from first principles</td>
+                        <td>Framework prompt ("Consider evolutionary constraints: energy cost, cellular complexity, timescale")</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Evaluation Transparency:</strong> The AI uses keyword matching for L2-L4 levels and length + reasoning criteria for L5-L6. This is intentionally simple — the goal is to verify that the student engaged with the concept, not to grade essay quality. A student who types a thoughtful answer without the "right" keywords will be prompted to try again (with a hint), not rejected outright. The system favors inclusion over precision.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type B (Rubric-Based) — Depth + Reasoning</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Depth reached</td><td>Highest chain level completed (1-5+) — measures how deep the student can reason</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>Reasoning quality</td><td>Answer acceptance rate per level + hint usage frequency (fewer hints = higher quality)</td><td>Secondary — measures independent reasoning strength</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total Why Chain sessions on this topic</td><td>Feeds curve-fitting (y = K × attempts^n) for velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Why Chain — [Topic]</strong><br>
+                    ████████░░ 62% (Apprentice ↗)<br>
+                    Depth Reached: Level 3/5 | Reasoning Quality: 71%<br>
+                    Velocity: n=0.46 (improving)<br>
+                    ~3 sessions to Proficient
+                </div>
+
+                <h3>C. Chain Outcome Grades</h3>
+                <p>Each chain attempt receives a grade based on depth completed and independence:</p>
+                <ul>
+                    <li><strong>Full Chain (all levels, no hints):</strong> Mastered-level grade. "Perfect Chain" recognition. The completed reasoning tree is saved as a study artifact.</li>
+                    <li><strong>Full Chain (with hints):</strong> Proficient-level grade. All levels completed but required guidance. Hints are recorded but not penalized.</li>
+                    <li><strong>Partial Chain (some levels):</strong> Apprentice-level grade. Depth reached is recorded. "Hali emas" framing — the chain is not finished.</li>
+                </ul>
+
+                <h3>D. Timer Expiration</h3>
+                <p>Timer expires before all levels are completed:</p>
+                <ul>
+                    <li><strong>Depth completed is retained</strong> — the student's progress up to the timer is recorded.</li>
+                    <li><strong>No completion bonus</strong> — the completion bonus requires all levels.</li>
+                    <li><strong>"Hali emas" framing:</strong> "Hali emas — zanjir hali tugamadi!" (Not yet — the chain is not finished!) The student is encouraged to retry in the next session. The incomplete chain is saved and can be resumed from the last completed level.</li>
+                </ul>
+
+                <h3>E. "Hali Emas" (Not Yet) Framing</h3>
+                <p>The Why Chain is designed so that <strong>there is no true failure</strong> — every answer, even if rejected, is part of the Socratic process. Hints are not penalties; they are part of the guided discovery. The AI never gives direct answers, preserving the student's intellectual agency:</p>
+                <ul>
+                    <li><strong>Research basis:</strong> Elaborative Interrogation (Pressley et al., 1992) shows that asking "why?" and generating explanations improves comprehension by approximately 2 PISA sub-levels. The depth-reward structure rewards persistence through deeper levels of reasoning.</li>
+                    <li><strong>The 3-minute timer</strong> creates moderate pressure without making speed the primary metric — reasoning quality matters more than speed.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Why Chain (Nima Uchun? Zanjiri) v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>

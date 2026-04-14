@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Tic Tac Toe vs AI</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tic Tac Toe vs AI</h1>
+            <p style="color: var(--text-muted)">Interactive Mechanic #1 / Default Mechanic #15 — Answer-to-Move Grid Conquest</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Mode: Student vs AI</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Remember / Apply</span>
+                <span class="tag">PISA: 2-3</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>Student plays a standard 3×3 Tic Tac Toe game against an AI opponent. The twist: <strong>the student does not choose where their mark goes — their knowledge does.</strong></p>
+                <ul>
+                    <li><strong>Correct answer →</strong> the student's chosen tile (X or O) is placed on the <strong>student's intended cell</strong> (the cell they tapped before the question appeared).</li>
+                    <li><strong>Wrong answer →</strong> the student's tile is placed on a <strong>RANDOM empty cell</strong> (0.2% mercy chance that it lands on the intended cell anyway — a hidden "lucky bounce" edge case).</li>
+                </ul>
+                <p>The AI plays <strong>optimally at all times</strong> — it will not deliberately lose, make suboptimal moves, or show mercy. The AI uses a standard minimax algorithm, guaranteeing it never loses. The best possible outcome for the student is a draw.</p>
+                <p><strong>Game flow per session:</strong></p>
+                <ul>
+                    <li><strong>3 games per session.</strong> Each game is a fresh 3×3 board.</li>
+                    <li>Before each turn, the student taps their target cell, then answers a subject question (Math, Science, History, English — matching the current lesson).</li>
+                    <li>The AI responds immediately after the student's move resolves.</li>
+                    <li>Student's win rate across all 3 games is tracked on their profile permanently.</li>
+                </ul>
+                <p><strong>Grade scaling:</strong></p>
+                <ul>
+                    <li><strong>Grades 1-3:</strong> Questions at PISA L1-L2 (direct recall, simple recognition). AI plays with a 1-move delay (shows "thinking..." animation) to reduce intimidation.</li>
+                    <li><strong>Grades 4-6:</strong> Questions at PISA L2-L3 (property identification, basic inference). Standard AI speed.</li>
+                    <li><strong>Grades 7-9:</strong> Questions at PISA L3-L4 (causal reasoning, process analysis). AI moves instantly — no delay.</li>
+                    <li><strong>Grades 10-11:</strong> Questions at PISA L4+ (multi-step reasoning). AI moves instantly. Question difficulty increases with each consecutive correct answer (escalating challenge).</li>
+                </ul>
+                <p><strong>Dual-Catalog Rule compliance:</strong> Tic Tac Toe vs AI appears in <strong>BOTH</strong> the Default catalog (Mechanic #15) and the Interactive catalog (Mechanic #1). A session must still select at least 1 Interactive + 2 Default games — Tic Tac Toe can fulfill either slot, but not both simultaneously.</p>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Both tiers receive Tic Tac Toe vs AI as part of the 28-mechanic core during Phase 3 sessions. Premium unlocks additional board sizes and competitive features.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Available in Phase 3 Game Breaks (dual-catalog selection)</td>
+                        <td>Same + on-demand access from Library</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Board Size</strong></td>
+                        <td>Standard 3×3 only</td>
+                        <td>3×3 + 4×4 (Premium) + 5×5 (Premium, need 4-in-a-row to win)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Difficulty</strong></td>
+                        <td>Optimal (minimax) — unchangeable</td>
+                        <td>Optimal + "Grandmaster" mode (AI plays 4×4 and 5×5 with alpha-beta pruning, deeper search)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Win Rate Tracking</strong></td>
+                        <td>Basic win/draw/loss counter on profile</td>
+                        <td>Detailed analytics: win rate by subject, streak tracking, heat map of intended vs actual cell placements</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cosmetic Themes</strong></td>
+                        <td>Standard X/O marks, basic grid</td>
+                        <td>Custom mark themes (swords vs shields, atoms vs molecules, historical figures), animated grid lines</td>
+                    </tr>
+                    <tr>
+                        <td><strong>First-Move Advantage</strong></td>
+                        <td>Student always goes first</td>
+                        <td>Student goes first in Game 1, AI goes first in Game 2, alternating thereafter — true competitive balance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>"Study the Enemy" Replay</strong></td>
+                        <td>Not available</td>
+                        <td>After each game, student can replay the board in "sandbox mode" (no questions) to analyze what they could have done differently</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> During Phase 3 sessions, Basic students receive the full 3-game experience with optimal AI. The core learning mechanism (answer correctly = your move lands) is identical for both tiers. Premium adds larger boards and post-game analysis tools — these are enrichment, not required for PISA progression.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Color Warfare & Spatial Memory</h2>
+            <p>Tic Tac Toe vs AI channels <strong>Tony Buzan's color and imagery principles</strong> to transform a simple grid into a spatial memory battlefield.</p>
+            <ul>
+                <li><strong>Color Hooks (Synesthesia — Board Identity):</strong> The student's marks glow in their assigned mastery color (blue for Math lessons, green for Science, gold for History, purple for English). The AI's marks are always a neutral steel gray. This creates a visual story: "my knowledge has color; the machine has none." When the student wins or draws, their color floods the entire winning line (0.5s pulse), creating a strong positive emotional anchor.</li>
+                <li><strong>Spatial Memory (Mind Mapping the Board):</strong> Each of the 9 cells is subtly associated with a position keyword: center = "Heart," corners = "Pillars," edges = "Bridges." After 10+ games, the system generates a "Battle Map" showing which cells the student most frequently intended to claim — and how often wrong answers scattered their marks. This visual map reinforces the connection between knowledge accuracy and strategic control.</li>
+                <li><strong>Imagery & Emotional Weight:</strong> Winning lines are not simple strikes — they are rendered as breaking chains (liberation imagery), lightning bolts (power), or growing vines (organic mastery), chosen randomly per game. Per Buzan: emotionally-charged imagery is 5-10x more memorable than neutral marks. These victory images are saved to the student's gallery.</li>
+                <li><strong>"Hali Emas" Defeat Reframing:</strong> When the student loses (AI wins), the board does NOT show a grim X-through-line. Instead, the AI's winning line dims to gray, and a message appears: "Hali emas" (Not yet). The board then replays the student's wrong-answer moves in red, showing exactly which knowledge gaps cost them the game. Defeat becomes a diagnostic, not a punishment.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Tic Tac Toe vs AI uses subject questions as the gate for every student move. The AI's moves are automatic (no questions for the AI). Question complexity scales with PISA level.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Question Style</th>
+                        <th>Interaction Flow</th>
+                        <th>Cognitive Target</th>
+                        <th>Example (Math)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L2</strong></td>
+                        <td>Direct recall / recognition — single concept</td>
+                        <td>Student taps cell → question appears (multiple choice, 4 options) → correct = mark on target, wrong = random cell</td>
+                        <td>Remember — retrieve fact from memory</td>
+                        <td>"What is 7 × 8?" Options: 54, 56, 48, 63</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L3</strong></td>
+                        <td>Property identification / simple inference</td>
+                        <td>Same flow, but questions require one reasoning step beyond recall</td>
+                        <td>Understand — identify relationship or property</td>
+                        <td>"Which fraction is equivalent to 3/6?" Options: 2/5, 1/2, 4/9, 5/8</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L3+</strong></td>
+                        <td>Apply rule to unfamiliar context</td>
+                        <td>Same flow, question may include a short scenario or diagram</td>
+                        <td>Apply — use known procedure in new situation</td>
+                        <td>"A rectangle has perimeter 24cm and width 5cm. What is its area?" Options: 35, 40, 20, 30 cm²</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Multi-step reasoning / process analysis</td>
+                        <td>Same flow, question requires 2+ steps. Timer may appear (30s limit) for higher grades</td>
+                        <td>Analyze — break down complex information</td>
+                        <td>"If f(x) = 2x + 3 and g(x) = x - 1, what is f(g(5))?" Options: 11, 9, 13, 7</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Interaction Design Note:</strong> The student taps their desired cell FIRST, then the question appears. This creates intentional commitment — the student must live with the consequence of their knowledge accuracy. The "wrong = random" penalty is the core punishment mechanism. It makes knowledge gaps feel viscerally costly (your mark lands somewhere you didn't want it), which is far more motivating than a simple "try again" message.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type C (Outcome-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Win rate (draw rate)</td><td>(Draws + Wins) / Total games across all sessions — primary outcome metric</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>Question accuracy</td><td>Correct answers / Total questions answered — separate from game outcome</td><td>Secondary — measures subject knowledge independent of game strategy</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total Tic Tac Toe games played</td><td>Feeds curve-fitting (y = K × attempts^n) for velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Tic Tac Toe vs AI — [Subject]</strong><br>
+                    ████████░░ 62% (Apprentice ↗)<br>
+                    Session: 2 draws, 1 loss | Draw Rate: 38%<br>
+                    Question Accuracy: 72% (improving)<br>
+                    ~5 games to Proficient
+                </div>
+
+                <h3>C. Per-Game Outcome Grades</h3>
+                <p>Each of the 3 games can end in one of three states:</p>
+                <ul>
+                    <li><strong>Student Wins:</strong> Student completes a 3-in-a-row. Since the AI plays optimally, this is near-impossible in standard mode. <em>"Impossible Happened" achievement (extremely rare).</em></li>
+                    <li><strong>Draw:</strong> Board fills with no winner. This is the expected best outcome against optimal AI. <em>"Held the Line" recognition.</em></li>
+                    <li><strong>AI Wins:</strong> AI completes a 3-in-a-row. This is the most common outcome. <em>"Hali emas" framing — defeat shown as diagnostic, not shame. The board replays the student's wrong-answer moves in red, showing exactly which knowledge gaps cost them the game.</em></li>
+                </ul>
+
+                <h3>D. Session-Wide Outcome (3 Games)</h3>
+                <table>
+                    <thead>
+                        <tr><th>Session Result</th><th>Criteria</th><th>Consequence</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Strong Session</strong></td>
+                            <td>2+ draws out of 3 games</td>
+                            <td>"Tactician" session badge, draw rate improves</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Solid Session</strong></td>
+                            <td>1 draw, 2 losses</td>
+                            <td>Draw rate updates. Encouraging message.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Task Failed</strong></td>
+                            <td>0 draws, 3 losses (AI won all 3)</td>
+                            <td><strong style="color: var(--danger);">Must redo homework in Duolingo Mode.</strong> The lesson content is re-served as micro-drills until mastery improves. Student cannot advance to the next Phase 3 segment until Duolingo Mode clearance is achieved.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>E. "Hali Emas" (Not Yet) Framing & Win Rate Tracking</h3>
+                <p>When the student loses (AI wins), the board does NOT show a grim X-through-line. Instead, the AI's winning line dims to gray, and a "Hali emas" (Not yet) message appears. The board then replays the student's wrong-answer moves in red, showing exactly which knowledge gaps cost them the game. Defeat becomes a diagnostic, not a punishment.</p>
+                <p>Every student has a <strong>Tic Tac Toe Draw Rate</strong> displayed on their profile. Benchmarks:</p>
+                <ul>
+                    <li><strong>0-20% draw rate:</strong> "Learning the Board" — knowledge gaps still significant.</li>
+                    <li><strong>20-40% draw rate:</strong> "Holding Ground" — improving, core concepts solidifying.</li>
+                    <li><strong>40-60% draw rate:</strong> "Formidable Opponent" — strong knowledge foundation.</li>
+                    <li><strong>60%+ draw rate:</strong> "Unbreakable" — elite-level mastery. Student is ready for 4×4 board (Premium) or harder question sets.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Tic Tac Toe vs AI v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>

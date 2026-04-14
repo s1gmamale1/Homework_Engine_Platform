@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETS — Game Mechanics Demo Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --background: 240 15% 8%; --foreground: 0 0% 95%;
+            --card: 240 12% 12%; --card-hover: 240 12% 16%;
+            --primary: 162 93% 42%; --primary-foreground: 0 0% 100%;
+            --muted: 240 10% 20%; --muted-foreground: 240 5% 55%;
+            --border: 240 10% 22%; --input: 240 10% 18%;
+            --success: 142 76% 45%; --warning: 38 92% 50%; --destructive: 0 72% 51%;
+            --gradient-primary: linear-gradient(135deg, hsl(162, 93%, 42%) 0%, hsl(180, 85%, 35%) 100%);
+            --gradient-card: linear-gradient(145deg, hsl(240, 12%, 14%) 0%, hsl(240, 12%, 10%) 100%);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, .4);
+            --radius: .75rem;
+        }
+        body {
+            font-family: 'Nunito', system-ui, sans-serif;
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 24px 16px 48px;
+        }
+        .container { width: 100%; max-width: 480px; }
+        header { text-align: center; margin-bottom: 32px; }
+        header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px; font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text; background-clip: text;
+            color: transparent; margin-bottom: 8px;
+        }
+        header p { font-size: 14px; color: hsl(var(--muted-foreground)); }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px; font-weight: 600; margin: 24px 0 12px;
+            padding-bottom: 8px; border-bottom: 1px solid hsl(var(--border));
+        }
+        .grid { display: grid; gap: 10px; margin-bottom: 16px; }
+        .grid-2 { grid-template-columns: 1fr 1fr; }
+        .card {
+            background: var(--gradient-card);
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 14px 16px;
+            box-shadow: var(--shadow-card);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: transform .15s, border-color .15s;
+        }
+        .card:hover { transform: translateY(-2px); border-color: hsl(var(--primary)); }
+        .card-icon {
+            font-size: 28px;
+            width: 44px; height: 44px;
+            display: flex; align-items: center; justify-content: center;
+            background: hsl(var(--muted));
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+        .card-info { flex: 1; }
+        .card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px; font-weight: 600; margin-bottom: 2px;
+        }
+        .card-meta { font-size: 11px; color: hsl(var(--muted-foreground)); }
+        .badge {
+            display: inline-block;
+            font-size: 10px; font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 6px;
+        }
+        .badge-default { background: hsl(var(--primary)); color: white; }
+        .badge-interactive { background: hsl(330, 85%, 60%); color: white; }
+        .stats {
+            display: flex; gap: 12px; justify-content: center;
+            margin-bottom: 24px;
+        }
+        .stat {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 12px 16px;
+            text-align: center;
+            flex: 1;
+        }
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px; font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text; background-clip: text;
+            color: transparent;
+        }
+        .stat-label { font-size: 10px; color: hsl(var(--muted-foreground)); text-transform: uppercase; margin-top: 2px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 NETS Game Mechanics</h1>
+            <p>Interactive Demo Hub — 22 Playable Prototypes</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">22</div>
+                <div class="stat-label">Mechanics</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">13</div>
+                <div class="stat-label">Default</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">9</div>
+                <div class="stat-label">Interactive</div>
+            </div>
+        </div>
+
+        <div class="section-title">📚 Default Pool — 13 Mechanics</div>
+        <div class="grid grid-2">
+            <a class="card" href="memory-sprint-demo.html">
+                <div class="card-icon">⚡</div>
+                <div class="card-info">
+                    <div class="card-title">Memory Sprint<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 1 · Tier 1 · Phase 1</div>
+                </div>
+            </a>
+            <a class="card" href="spaced-flashcards-demo.html">
+                <div class="card-icon">🃏</div>
+                <div class="card-info">
+                    <div class="card-title">Spaced Flashcards<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 1 · Tier 1 · Phase 0-B</div>
+                </div>
+            </a>
+            <a class="card" href="tile-match-demo.html">
+                <div class="card-icon">🧩</div>
+                <div class="card-info">
+                    <div class="card-title">Tile Match<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 1-2 · Tier 1 · Phase 3</div>
+                </div>
+            </a>
+            <a class="card" href="sentence-fill-demo.html">
+                <div class="card-icon">📝</div>
+                <div class="card-info">
+                    <div class="card-title">Sentence Fill<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 2 · Tier 1 · Phase 3</div>
+                </div>
+            </a>
+            <a class="card" href="memory-palace-demo.html">
+                <div class="card-icon">🏛️</div>
+                <div class="card-info">
+                    <div class="card-title">Memory Palace<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 1-2 · Tier 1 · Phase 3/5</div>
+                </div>
+            </a>
+            <a class="card" href="story-mode-demo.html">
+                <div class="card-icon">📖</div>
+                <div class="card-info">
+                    <div class="card-title">Story Mode<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 2-3 · Tier 2 · Phase 2</div>
+                </div>
+            </a>
+            <a class="card" href="adaptive-quiz-demo.html">
+                <div class="card-icon">📊</div>
+                <div class="card-info">
+                    <div class="card-title">Adaptive Quiz<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 2-3 · Tier 1 · Phase 3</div>
+                </div>
+            </a>
+            <a class="card" href="mystery-box-demo.html">
+                <div class="card-icon">🎁</div>
+                <div class="card-info">
+                    <div class="card-title">Mystery Box<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 3 · Tier 1 · Phase 3</div>
+                </div>
+            </a>
+            <a class="card" href="why-chain-demo.html">
+                <div class="card-icon">🔗</div>
+                <div class="card-info">
+                    <div class="card-title">Why Chain<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 3-4 · Tier 2 · Phase 3</div>
+                </div>
+            </a>
+            <a class="card" href="06_peer_teaching.html">
+                <div class="card-icon">👨‍🏫</div>
+                <div class="card-info">
+                    <div class="card-title">Peer Teaching<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 4-5 · Tier 1 · Phase 3</div>
+                </div>
+            </a>
+            <a class="card" href="09_real_life_challenge.html">
+                <div class="card-icon">🌍</div>
+                <div class="card-info">
+                    <div class="card-title">Real-Life Challenge<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 4-5 · Tier 2 · Phase 4</div>
+                </div>
+            </a>
+            <a class="card" href="07_reflection_journal.html">
+                <div class="card-icon">📓</div>
+                <div class="card-info">
+                    <div class="card-title">Reflection Journal<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 3-4 · Tier 1 · Phase 7</div>
+                </div>
+            </a>
+            <a class="card" href="../tic-tac-toe.html">
+                <div class="card-icon">❌⭕</div>
+                <div class="card-info">
+                    <div class="card-title">Tic Tac Toe vs AI<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 2-3 · Tier 1 · Phase 3</div>
+                </div>
+            </a>
+            <a class="card" href="10_notebook_capture.html">
+                <div class="card-icon">📸</div>
+                <div class="card-info">
+                    <div class="card-title">Notebook Capture<span class="badge badge-default">Default</span></div>
+                    <div class="card-meta">PISA 2-5 · Tier 3 · Phase 3/4/6</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="section-title">🎮 Interactive Catalog — 12 Games</div>
+        <div class="grid grid-2">
+            <a class="card" href="../tic-tac-toe.html">
+                <div class="card-icon">❌⭕</div>
+                <div class="card-info">
+                    <div class="card-title">Tic Tac Toe vs AI<span class="badge badge-interactive">Interactive</span></div>
+                    <div class="card-meta">PISA 2-3 · Tier 1 · Knowledge gate</div>
+                </div>
+            </a>
+            <a class="card" href="01-connect-four.html">
+                <div class="card-icon">🔴🟡</div>
+                <div class="card-info">
+                    <div class="card-title">Connect Four vs AI<span class="badge badge-interactive">Interactive</span></div>
+                    <div class="card-meta">PISA 2-3 · Tier 1 · Knowledge gate</div>
+                </div>
+            </a>
+            <a class="card" href="../memory-match-blitz.html">
+                <div class="card-icon">⚡</div>
+                <div class="card-info">
+                    <div class="card-title">Memory Match Blitz<span class="badge badge-interactive">Interactive</span></div>
+                    <div class="card-meta">PISA 1-2 · Tier 1 · Knowledge gate</div>
+                </div>
+            </a>
+            <a class="card" href="03-reaction-chain.html">
+                <div class="card-icon">⛓️</div>
+                <div class="card-info">
+                    <div class="card-title">Reaction Chain<span class="badge badge-interactive">Interactive</span></div>
+                    <div class="card-meta">PISA 2-3 · Tier 1 · Knowledge gate</div>
+                </div>
+            </a>
+            <a class="card" href="05-puzzle-lock.html">
+                <div class="card-icon">🧩</div>
+                <div class="card-info">
+                    <div class="card-title">Puzzle Lock<span class="badge badge-interactive">Interactive</span></div>
+                    <div class="card-meta">PISA 2-4 · Tier 1 · Knowledge gate</div>
+                </div>
+            </a>
+            <a class="card" href="../blackjack-21.html">
+                <div class="card-icon">🃏</div>
+                <div class="card-info">
+                    <div class="card-title">Blackjack 21<span class="badge badge-interactive">Interactive</span></div>
+                    <div class="card-meta">PISA 2-3 · Tier 1 · Math only</div>
+                </div>
+            </a>
+            <a class="card" href="territory-conquest.html">
+                <div class="card-icon">⚔️</div>
+                <div class="card-info">
+                    <div class="card-title">Territory Conquest<span class="badge badge-interactive">Interactive</span></div>
+                    <div class="card-meta">PISA 3 · Tier 1 · Knowledge gate</div>
+                </div>
+            </a>
+            <a class="card" href="escape-room.html">
+                <div class="card-icon">🚪</div>
+                <div class="card-info">
+                    <div class="card-title">Escape Room<span class="badge badge-interactive">Interactive</span></div>
+                    <div class="card-meta">PISA 3-4 · Tier 2 · Knowledge gate</div>
+                </div>
+            </a>
+        </div>
+
+        <footer style="margin-top: 40px; padding-top: 16px; border-top: 1px solid hsl(var(--border)); text-align: center; font-size: 11px; color: hsl(var(--muted-foreground));">
+            NETS Game Mechanics Demo Hub v2.1 · April 2026<br>
+            22 active mechanics · Class A Education design system · Dark theme · Mobile-first
+        </footer>
+    </div>
+</body>
+</html>
