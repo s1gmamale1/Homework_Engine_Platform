@@ -1,98 +1,120 @@
-# NETS Subject Framework: Ijtimoiy Fanlari — Tarix (Unified)
+# Tarix (Unified History) — Subject-Specific Framework
 
-**Version:** 1.0 (Subject Spec)  
-**Status:** Implementation Ready  
-**Parent Family:** [[Ijtimoiy-Fanlari-Framework.md]]  
-**Target:** Grade 5-6
-
----
-
-## 1. SUBJECT IDENTITY: THE DETECTIVE STORY OF HUMANITY
-
-**Tarix (History)** in the G5-6 unified stage is the study of **causality, change, and continuity** in the ancient world. It transforms history from a list of dates into a "Detective Story" where students use evidence (sources) to reconstruct the past.
-
-### 1.1 Core Pillars of Tarix
-- **Chronological Fluency:** Understanding the sequence of events (What happened first? What came after?).
-- **Causal Analysis:** Identifying the triggers (Why did it happen?) and the consequences (What did it change?).
-- **Source Literacy:** Distinguishing between primary sources (artifacts, manuscripts) and secondary interpretations.
-- **Historical Empathy:** Understanding the motivations of people in the past within their own context.
+**Scope:** G5-6, unified foundation  
+**Family:** Ijtimoiy Fanlari (Social Sciences)  
+**Parent docs:**
+- Ijtimoiy Fanlari Family Documentation
+- NETS-Homework-Engine-UNIFIED-Buzan.md v2.0
+- NETS-Library-Framework.md v0.6
 
 ---
 
-## 2. SUBJECT-SPECIFIC COGNITIVE DEMANDS
+## 1. What Tarix Teaches (Unified)
 
-Following the Ijtimoiy Fanlari profile, Tarix prioritizes:
-1. **Causal Chain Construction:** "X event led to Y because of Z."
-2. **Timeline Management:** Placing events in a multi-century context.
-3. **Source Evaluation:** Identifying bias, perspective, and reliability in historical accounts.
-4. **Narrative Synthesis:** Summarizing complex eras into a coherent story.
+History in Grades 5-6 is the study of **causality, sequence, and foundational identity**. It transforms history from a dry list of dates into a **Chronological Narrative** where students build a mental map of human progress.
 
----
+- **Factual Foundation:** 70% of homework is about memorizing dates, names, places, and key events from the textbook.
+- **Causal Linking:** 30% is about understanding why events happened (Cause -> Effect).
+- **Recall Training:** Homework must build rapid recall under pressure — dates, names, sequences.
+- **Narrative Focus:** Use Story Mode to make the ancient world feel alive, not as a list of abstract facts.
 
-## 3. GAME MECHANICS & PEDAGOGY (TARIX TUNED)
+**What Tarix is NOT about:**
+- Complex historiographical debate or modern political analysis.
+- Real-world "expert" roleplay (e.g., "You are a modern diplomat").
+- Arithmetic or formula work.
 
-### 3.1 Primary Mechanics
-- **Timeline Sort (Tarixiy Kenglik):** The "Gold Standard" for History. Students arrange events or eras.
-  - *G5-6:* 5-8 events.
-- **Source Comparison:** Presenting two accounts (e.g., an Egyptian scribe vs. a Hittite diplomat) and identifying differences.
-- **Why Chain:** Mapping the rise of an empire or the development of ancient writing across 3 levels.
-- **Territory Conquest:** Visualizing the expansion of ancient civilizations and trade routes.
-
-### 3.2 Mnemonic Systems (Buzan Integration)
-- **Link System:** For memorizing dynasties or sequential reigns.
-- **Major System:** Converting critical dates into vivid phonetic images.
-- **Memory Palace:** Using digital layouts of ancient cities (e.g., The Pyramids, The Great Wall) to "place" facts.
+**Core production rule:** Factual retention comes first. A student must know **what** happened and **when** before they can explain **why**.
 
 ---
 
-## 4. NATIONAL PRIDE INJECTIONS (55/45 BALANCE)
+## 2. Grade-Band Progression
 
-- **National Focus (55%):** Emphasis on the ancient states on Uzbekistan's territory (Bactria, Sogdia, Khorezm) and their global connections.
-- **Global Focus (45%):** Connecting national history to global movements (Ancient Egypt, Mesopotamia, Greece).
-- **Wise Role:** `Tarixiy Tahlilchi` (Historical Analyst).
-- **Example Injection:** "Baqtriya va Sug'diyona davlatlari qadimgi dunyo sivilizatsiyasida muhim o'rin tutgan. Bugun siz ushbu qadimgi davlatlar tarixini tahlil qilasiz."
-
----
-
-## 5. BOSS FORMAT: THE ANALYTICAL DETECTIVE
-
-- **Format:** **Historical Case Reasoning**.
-- **The Task:** "Given these two sources (a clay tablet and a wall painting), explain how trade influenced the growth of this ancient city."
-- **Evaluation:** Tier 2 LLM checks for **evidence use**, **causal logic**, and **perspective**.
-- **No MCQs:** Grade 6 sessions must end with an open-ended analytical challenge.
+| Grade | Focus | Production Level | Boss Expectations |
+|---|---|---|---|
+| **G5** | Ancient civilizations, basic chronology, key figures (UZ/World) | Guided: Identify names, sequence 3-5 events | Name 3 events, give dates, explain one |
+| **G6** | Early statehood, Silk Road basics, medieval foundations | Prompted: Sequence 5-8 events, list 2-3 causes | Sequence events, explain cause-effect (2 levels) |
 
 ---
 
-## 6. Narrative Adaptation
+## 3. Content Production Rules by Grade Band
+
+### G5-6 (Foundation)
+
+- **Terminology:** Focus on 5-8 new terms/names per session.
+- **Dates:** Always pair a date with a vivid image or a narrative hook.
+- **Chronology:** Use **Memory Palace** (Registan Square) to place events in order.
+- **Error Detection:** Use "Broken Timelines" (e.g., "Chingizxon was born in 1991. Find the error.").
+- **Historical Projection:** Instead of "What would you do?", use "This ancient trade route is like modern online shopping because..."
+
+**Good production pattern:**  
+"Step 1: Memorize the year Samarkand was founded. Step 2: Place it at the entrance of your Memory Palace. Step 3: Explain why its location was perfect for trade."
+
+**Good Boss pattern:**  
+"Name two ancient states on Uzbekistan's territory. Give their estimated dates. Explain how trade connected them."
+
+**Bad production pattern:**  
+"You are a modern archeologist. Write a report on the Baqtriya excavation using scientific notation." (Too abstract).
+
+---
+
+## 4. Game Mechanics — Tarix Specific
+
+### Always Primary (The "Big Three")
+
+#### **Spaced Flashcards**
+- Mandatory every session for dates, names, and ancient terms.
+- **Good:** "Front: Amir Temur / Back: 1336-1405, Temuriylar davlati asoschisi."
+
+#### **Memory Palace (Chronology)**
+- Use 3D digital landmarks (Registan, Ark Fortress) to anchor sequences.
+- **Good:** "Place the three eras of Ancient Khorezm along the palace walls."
+
+#### **Tile Match (Pairs)**
+- Connect Figure <-> Achievement or Date <-> Event.
+- **Good:** "Match Al-Xorazmiy to Algebra."
+
+### Secondary Mechanics
+- **Speed Match:** Rapid-fire date recall (G6+).
+- **Story Mode:** Narrative arc of a merchant, ruler, or traveler.
+- **Why Chain:** Max 2 levels (e.g., Trade -> Wealth -> City Growth).
+
+### Games to Avoid
+- **Connect Four:** Too strategic/abstract for G5 factual recall.
+- **Blackjack:** Removed.
+- **Word Ladder:** Linguistic focus.
+
+---
+
+## 5. Boss Format: Recall + Explain
+
+The Boss fight is a tiered challenge of retrieval and basic reasoning.
+
+- **G5:** Name 3 events + Give Dates + Describe one.
+- **G6:** Identify Event + Sequence + Explain one Cause.
+- **Failure framing:** Use **"Hali emas!"** (Not yet).
+
+**Good Boss Question:** "Identify the dates of the Baqtriya state. List two major cities from that time. Why was the location of these cities important for the Silk Road?"
+**Bad Boss Question:** "Compare Baqtriyan governance to modern Uzbekistan's parliamentary system." (Too complex/abstract for G5).
+
+---
+
+## 6. Story Mode & Historical Projection
 
 ### Story Mode (Phase 2)
-Must follow **Discovery Narrative** across 3 segments:
-- **Segment A:** A human moment in an ancient city.
-- **Segment B:** The struggle/conflict based on textbook facts.
-- **Segment C:** The resolution and historical legacy.
+Focus on the **FEEL** of the era. Use first-person sensory details.
+- **Good:** "You are standing at the gates of ancient Afrasiyab. The smell of spices is everywhere. Why are there so many merchants here today?"
 
-### Real-Life Challenge (Phase 4)
-- **Role:** Student IS the expert (e.g., "You are the Lead Historical Detective").
-- **Context:** Must be Uzbek-specific (e.g., Ancient Termez excavations, Silk Road discovery).
-- **Goal:** Transfer the textbook concept to a "messy" real-world scenario.
-
----
-
-## 7. Subject Pattern Example (Standard Session)
-
-- **Phase 0:** Gate Quote + BOST Mind Map.
-- **Phase 1:** Recall of previous day's events.
-- **Phase 2:** Story: "A day in the life of a Sogdian merchant..."
-- **Phase 3:** Timeline Sort + Why Chain.
-- **Phase 4:** Real-Life: "Analyze the artifacts found in a new excavation site."
-- **Phase 5:** Radiant Summary of the day’s rules.
-- **Phase 6:** Multi-step open numerical Boss fight.
+### Historical Projection (Phase 4)
+Light connection to today. No engineering scenarios.
+- **Pattern:** "The way Amir Temur organized his mail system (Pochta) is similar to how we use X today."
+- **Goal:** Show relevance, not application.
 
 ---
 
 ## Technical Rules
-1. **Inheritance:** Inherits National Pride rules from [[NETS-Library-Framework.md]] v0.6 Part 8.
-2. **Quality Gate:** Every session must pass the "5 Feature Showcase" (Narrative, Chronology, Perspective, Pride, Buzan).
+1. **Inheritance:** Inherits Ijtimoiy Fanlari family rules + National Pride (55/45 balance).
+2. **Recall Density:** Every session must include at least one rapid-recall task (timeline ordering, date matching, figure identification).
+3. **Buzan Rule:** Memory Palace for chronology is mandatory in every chapter review session.
 
 ---
 *Document produced by Gemini CLI Subject Framework Engine.*
