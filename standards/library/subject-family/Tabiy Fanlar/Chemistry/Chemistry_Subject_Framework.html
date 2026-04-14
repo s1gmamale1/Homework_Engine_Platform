@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry (Kimyo) — Subject-Specific Framework</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --accent-color: #00f2ff; /* Neon Cyan */
+            --accent-glow: rgba(0, 242, 255, 0.3);
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --border-color: #333;
+            --neon-purple: #bc13fe;
+            --neon-green: #39ff14;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-glow);
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--neon-purple);
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+        }
+
+        .status-bar p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        details {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            margin-right: 15px;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        code {
+            background: #2a2a2a;
+            color: var(--neon-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--header-color);
+        }
+
+        .highlight {
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+
+        .good-example {
+            border-left: 3px solid var(--neon-green);
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #afffa3;
+        }
+
+        .bad-example {
+            border-left: 3px solid #ff3131;
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #ffb1b1;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chemistry (Kimyo) Framework</h1>
+    
+    <div class="status-bar">
+        <p><strong>Scope:</strong> G7-11, all grades, universal</p>
+        <p><strong>Family:</strong> Tabiy Fanlar (Natural Sciences)</p>
+        <p><strong>Branch:</strong> QNT (Quantitative)</p>
+        <p><strong>Parent Docs:</strong> <code>Tabiy Fanlar Family Doc</code> | <code>Physics Framework</code> | <code>Aniq Fanlar Family Doc</code> | <code>UNIFIED-Buzan v2.0</code> | <code>Library Framework v0.6</code></p>
+        <p><strong>Last Updated:</strong> April 14, 2026</p>
+    </div>
+
+    <details open>
+        <summary>1. What Chemistry Teaches</summary>
+        <div class="content">
+            <p>Chemistry is the subject where <strong>atoms meet reactions</strong>. It explains matter at the molecular level and shows why substances change when they interact.</p>
+            <ul>
+                <li><strong>Dual-mode subject:</strong> classification (elements, compounds, groups, periods, reaction types) plus calculation (moles, mass, concentration, yield, enthalpy).</li>
+                <li><strong>QNT heritage:</strong> inherits CPA progression, Worked Examples, and Error Analysis.</li>
+                <li><strong>Symbolic notation:</strong> formulas, equations, electron structures, and molecular diagrams are the language of the subject.</li>
+                <li><strong>Core skill:</strong> balancing equations is the backbone and appears in every chapter from G7 onward.</li>
+                <li><strong>Transformation:</strong> textbooks often present reactions as finished facts; NETS must reveal bonding, energy, particles, and conservation.</li>
+            </ul>
+            <p><strong>Core Rule:</strong> Reactions are not facts to memorize. They are phenomena to understand.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. Grade-Band Progression</summary>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>Focus</th>
+                        <th>Key Content</th>
+                        <th>Production Level</th>
+                        <th>Boss Mode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>G7</td>
+                        <td>Matter basics</td>
+                        <td>Elements, simple compounds, formulas</td>
+                        <td>Prompted balancing and identification</td>
+                        <td>Balance + identify + draw</td>
+                    </tr>
+                    <tr>
+                        <td>G8</td>
+                        <td>Reactions and bonding</td>
+                        <td>Reaction types, ionic/covalent, groups/periods</td>
+                        <td>Predict products and explain bonding</td>
+                        <td>Predict + balance + explain</td>
+                    </tr>
+                    <tr>
+                        <td>G9</td>
+                        <td>Stoichiometry</td>
+                        <td>Moles, acids/bases, solutions</td>
+                        <td>Full stoichiometric calculation</td>
+                        <td>Derivation + lab reasoning</td>
+                    </tr>
+                    <tr>
+                        <td>G10</td>
+                        <td>Organic and electrochem</td>
+                        <td>Hydrocarbons, functional groups, redox</td>
+                        <td>Multi-step molecular reasoning</td>
+                        <td>Calculation + structure + prediction</td>
+                    </tr>
+                    <tr>
+                        <td>G11</td>
+                        <td>Advanced chemistry</td>
+                        <td>Equilibrium, enthalpy, advanced organic</td>
+                        <td>Extended derivation and analysis</td>
+                        <td>Full reasoning + application</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <details>
+        <summary>3. Content Production Rules by Grade Band</summary>
+        <div class="content">
+            <h3>G7-8</h3>
+            <ul>
+                <li>10-15 new terms per session.</li>
+                <li>Every concept follows <strong>CPA</strong>: concrete reaction -> pictorial model -> abstract equation.</li>
+                <li><strong>Equation balancing every session.</strong></li>
+                <li>Notebook Capture for Lewis structures and molecular sketches.</li>
+                <li>Error Analysis every 2 sessions minimum.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "A kitchen fire flares when water hits hot oil. Build the chemistry step by step."</div>
+            <div class="bad-example">Bad Pattern: "Memorize the names of the first 20 elements."</div>
+
+            <h3>G9-10</h3>
+            <ul>
+                <li>15-20 terms including stoichiometric vocabulary.</li>
+                <li>Unit tracking on all stoichiometry tasks.</li>
+                <li>Lab reasoning: predict gases, products, and ion/electron behavior.</li>
+                <li>Error Analysis should appear every session.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "You add acid to a metal sample. Predict the gas, write the equation, and explain why."</div>
+            <div class="bad-example">Bad Pattern: "Write the definition of molarity and solve 10 substitutions."</div>
+
+            <h3>G10-11</h3>
+            <ul>
+                <li>Full multi-step stoichiometry from first principles.</li>
+                <li>Organic chemistry requires structural formulas and functional-group reasoning.</li>
+                <li>Thermochemistry must include energy interpretation, not just arithmetic.</li>
+                <li>Frame dry chapters as pharmaceutical, industrial, or environmental chemistry scenarios.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "Your lab is testing a synthesis route. Draw the structure, calculate yield, explain loss."</div>
+            <div class="bad-example">Bad Pattern: "List all functional groups from the chapter."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>4. Game Mechanics — Chemistry Specific</summary>
+        <div class="content">
+            <h3>Primary Mechanics</h3>
+            <ul>
+                <li><strong>Tile Match:</strong> Element-symbol, compound-formula, reactant-product matching. Periodic table fluency builder.</li>
+                <li><strong>Worked Examples:</strong> Stoichiometry scaffolding with completion effect.</li>
+                <li><strong>Error Analysis:</strong> Core for balancing, formula writing, mole conversion, and unit handling.</li>
+                <li><strong>Notebook Capture:</strong> Lewis structures, balanced equations, apparatus sketches.</li>
+                <li><strong>Speed Match:</strong> Fast periodic table and classification recall.</li>
+                <li><strong>CPA Progression:</strong> Mandatory for every new reaction or symbolic structure.</li>
+            </ul>
+
+            <h3>Interactive Picks</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Game</th>
+                        <th>Best Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Codebreaker</td>
+                        <td>Element and compound decoding from symbols</td>
+                    </tr>
+                    <tr>
+                        <td>Reaction Chain</td>
+                        <td>Reactants -> intermediates -> products</td>
+                    </tr>
+                    <tr>
+                        <td>Connect Four</td>
+                        <td>Multi-step stoichiometry planning</td>
+                    </tr>
+                    <tr>
+                        <td>Puzzle Lock</td>
+                        <td>Lab procedure ordering and synthesis sequence</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Phase 5 Buzan Options</h3>
+            <p><strong>Peg System:</strong> Group numbers and families. <strong>Radiant Summary:</strong> Periodic hierarchy and reaction types. <strong>Link System:</strong> Reaction mechanisms. <strong>Memory Palace:</strong> Periodic table zones and lab stations.</p>
+            
+            <p><strong>Note:</strong> Skip Word Ladder, Listening/Dictation, Creative Lab, and usually Memory Match Blitz.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. Boss Format</summary>
+        <div class="content">
+            <p><strong>QNT Branch:</strong> Show-the-derivation + balance + explain.</p>
+            <ul>
+                <li><strong>Notebook Capture:</strong> Required every Boss for molecular diagrams, equations, and steps.</li>
+                <li><strong>G7-8:</strong> Balance, identify, draw, explain reaction type.</li>
+                <li><strong>G9-10:</strong> Balance, calculate, justify, interpret a lab scenario.</li>
+                <li><strong>G11:</strong> Combine calculation, diagram, and feasibility reasoning.</li>
+                <li><strong>Failure:</strong> Use TEFCAS framing ("Hali emas!").</li>
+            </ul>
+            <div class="good-example">Good Boss (G11): "Use Hess's law to calculate heat of reaction. Draw the energy diagram and explain feasibility."</div>
+            <div class="bad-example">Bad Boss: "What is the periodic table?"</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>6. Story Mode & Real-Life</summary>
+        <div class="content">
+            <h3>Story Mode</h3>
+            <p>Must combine <strong>discovery narrative + CPA</strong>: visible reaction -> particle model -> notation or calculation.</p>
+            <div class="good-example">Good Example: "Mendeleev notices patterns in the elements. Observe, organize, then predict an unknown element."</div>
+            <div class="bad-example">Bad Example: "The periodic table has 118 elements. Here they are."</div>
+            
+            <h3>Real-Life Challenge</h3>
+            <ul>
+                <li><strong>Sifat nazorati tahlilchi:</strong> abnormal pH in food production.</li>
+                <li><strong>Sintez kimyogar:</strong> product synthesis and yield.</li>
+                <li><strong>Farmatsevtika tadqiqotchisi:</strong> aspirin or medicine production scenarios.</li>
+                <li><strong>Laboratoriya rahbari:</strong> reaction control and safety reasoning.</li>
+            </ul>
+            <p><strong>Uzbek contexts:</strong> Navoi Mining, Fergana oil refinery, Bukhara gas processing, water treatment, cotton fiber chemistry.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Technical Rules</summary>
+        <div class="content">
+            <ol>
+                <li><strong>Inheritance:</strong> Tabiy Fanlar family rules + QNT filter + Aniq carryovers.</li>
+                <li><strong>Starts at G7:</strong> No G5-6 production rules for Chemistry.</li>
+                <li><strong>CPA Mandatory:</strong> Every new reaction or symbolic structure must move through concrete -> pictorial -> abstract.</li>
+                <li><strong>Balancing Priority:</strong> Equation balancing is drilled every session.</li>
+                <li><strong>Error Analysis:</strong> Primary mechanic, at least every 2 sessions and effectively every higher-grade session.</li>
+                <li><strong>Periodic Table Fluency:</strong> Continuous Tile Match + Speed Match.</li>
+                <li><strong>Notebook Capture:</strong> Molecular-structure diagrams in most sessions and every Boss.</li>
+            </ol>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>
