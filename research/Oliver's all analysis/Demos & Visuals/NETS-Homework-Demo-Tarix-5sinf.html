@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS — Tarix 5-sinf Demo</title>
+<style>
+  :root {
+    --bg: #0a0c10; --bg2: #0f1318; --bg3: #151a22;
+    --ink3: #1e2530; --ink4: #2a3340;
+    --text-hi: #e8edf5; --text-mid: #8b95a8; --text-lo: #4a5568;
+    --amber: #f59e0b; --blue: #3b82f6; --green: #10b981;
+    --purple: #8b5cf6; --red: #ef4444; --cyan: #06b6d4; --orange: #f97316;
+    --mono: 'JetBrains Mono','Fira Code','Courier New',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text-hi);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;line-height:1.7;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+  .topbar{width:100%;background:var(--bg2);border-bottom:1px solid var(--ink3);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+  .topbar-left{display:flex;align-items:center;gap:16px}
+  .topbar-logo{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--amber);letter-spacing:.1em}
+  .topbar-sep{color:var(--ink4)}
+  .topbar-subject{font-size:13px;color:var(--text-mid)}
+  .topbar-right{display:flex;align-items:center;gap:12px}
+  .topbar-xp{font-family:var(--mono);font-size:12px;color:var(--amber);background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);border-radius:2px;padding:4px 10px}
+  .topbar-user{font-size:12px;color:var(--text-mid)}
+  .topbar-avatar{width:28px;height:28px;border-radius:50%;background:var(--ink4);display:flex;align-items:center;justify-content:center;font-size:13px}
+  .flow-indicator{font-family:var(--mono);font-size:10px;padding:4px 10px;border-radius:2px;font-weight:600;letter-spacing:.05em;transition:all .3s}
+  .flow-green{color:var(--green);background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25)}
+  .flow-yellow{color:var(--amber);background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25)}
+  .flow-red{color:var(--red);background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25)}
+  .phase-bar{width:100%;background:var(--bg2);border-bottom:1px solid var(--ink3);padding:10px 24px;display:flex;align-items:center;gap:4px}
+  .phase-pip{flex:1;height:6px;background:var(--ink3);border-radius:3px;position:relative;transition:all .3s}
+  .phase-pip.active{background:var(--amber);box-shadow:0 0 8px rgba(245,158,11,.3)}
+  .phase-pip.done{background:var(--green)}
+  .phase-pip-label{position:absolute;top:10px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:8px;color:var(--text-lo);white-space:nowrap;letter-spacing:.05em}
+  .phase-pip.active .phase-pip-label{color:var(--amber)}
+  .phase-pip.done .phase-pip-label{color:var(--green)}
+  .container{width:100%;max-width:820px;padding:40px 24px 80px;flex:1}
+  .phase-header{text-align:center;margin-bottom:32px}
+  .phase-badge{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;padding:4px 14px;border-radius:2px;margin-bottom:12px}
+  .phase-title{font-size:24px;font-weight:700;margin-bottom:6px}
+  .phase-subtitle{font-size:13px;color:var(--text-mid)}
+  .phase-timer{font-family:var(--mono);font-size:22px;color:var(--amber);margin-top:12px}
+  .std-tag{display:inline-block;font-family:var(--mono);font-size:9px;color:var(--cyan);background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);border-radius:2px;padding:2px 8px;margin:2px}
+  .alias-tag{display:inline-block;font-family:var(--mono);font-size:9px;color:var(--text-lo);background:rgba(74,85,104,.15);border:1px solid rgba(74,85,104,.3);border-radius:2px;padding:2px 8px;margin:2px}
+  .pisa-tag{display:inline-block;font-family:var(--mono);font-size:9px;color:var(--purple);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25);border-radius:2px;padding:2px 8px;margin:2px}
+  .bloom-tag{display:inline-block;font-family:var(--mono);font-size:9px;color:var(--orange);background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.25);border-radius:2px;padding:2px 8px;margin:2px}
+  .txt-tag{display:inline-block;font-family:var(--mono);font-size:9px;color:var(--text-lo);background:rgba(74,85,104,.2);border:1px solid rgba(74,85,104,.3);border-radius:2px;padding:2px 8px;margin:2px}
+  .transition-tag{display:inline-block;font-family:var(--mono);font-size:9px;color:var(--green);background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);border-radius:2px;padding:2px 8px;margin:2px}
+  .boss-tier-easy{color:var(--green);background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3)}
+  .boss-tier-medium{color:var(--amber);background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3)}
+  .boss-tier-hard{color:var(--red);background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3)}
+  .boss-tier-tag{display:inline-block;font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:2px;margin:2px;font-weight:700}
+  .card{background:var(--bg3);border:1px solid var(--ink3);border-radius:6px;padding:24px;margin-bottom:16px}
+  .card-glow-green{border-color:rgba(16,185,129,.4);box-shadow:0 0 12px rgba(16,185,129,.1)}
+  .card-glow-red{border-color:rgba(239,68,68,.4);box-shadow:0 0 12px rgba(239,68,68,.1)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border:none;border-radius:4px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;font-family:inherit}
+  .btn-primary{background:var(--amber);color:#000}
+  .btn-primary:hover{background:#d97706}
+  .btn-secondary{background:var(--ink4);color:var(--text-hi)}
+  .btn-lg{padding:14px 36px;font-size:15px}
+  .btn:disabled{opacity:.4;cursor:not-allowed}
+  .sprint-q{text-align:center;padding:40px 20px}
+  .sprint-q-text{font-size:22px;font-weight:700;margin-bottom:24px;line-height:1.5}
+  .sprint-input{background:var(--bg);border:2px solid var(--ink4);border-radius:6px;color:var(--text-hi);font-size:18px;text-align:center;padding:12px 20px;width:100%;max-width:400px;outline:none;font-family:var(--mono);transition:border-color .2s}
+  .sprint-input:focus{border-color:var(--amber)}
+  .sprint-input.correct{border-color:var(--green);background:rgba(16,185,129,.05)}
+  .sprint-input.wrong{border-color:var(--red);background:rgba(239,68,68,.05)}
+  .sprint-counter{font-family:var(--mono);font-size:12px;color:var(--text-lo);margin-top:16px}
+  .sprint-feedback{font-size:16px;font-weight:600;margin-top:12px;min-height:28px}
+  .story-segment{font-size:15px;color:var(--text-mid);line-height:1.9;margin-bottom:20px}
+  .story-segment strong{color:var(--text-hi)}
+  .checkpoint{background:rgba(245,158,11,.05);border:1px solid rgba(245,158,11,.2);border-radius:6px;padding:20px;margin-top:20px}
+  .checkpoint-label{font-family:var(--mono);font-size:10px;color:var(--amber);letter-spacing:.1em;margin-bottom:8px}
+  .tile-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:500px;margin:20px auto}
+  .tile{aspect-ratio:1.4;background:var(--bg);border:2px solid var(--ink4);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;padding:8px;text-align:center;user-select:none;line-height:1.3}
+  .tile:hover{border-color:var(--amber)}
+  .tile.selected{border-color:var(--amber);background:rgba(245,158,11,.08);box-shadow:0 0 10px rgba(245,158,11,.15)}
+  .tile.matched{border-color:var(--green);background:rgba(16,185,129,.08);opacity:.6;cursor:default}
+  .tile.wrong{border-color:var(--red);animation:shake .4s}
+  .sf-sentence{font-size:16px;line-height:2;margin-bottom:16px}
+  .sf-blank{display:inline-block;min-width:120px;border-bottom:2px solid var(--amber);padding:2px 4px;margin:0 4px;font-family:var(--mono);color:var(--amber)}
+  .sf-options{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .sf-opt{padding:8px 16px;background:var(--bg);border:1px solid var(--ink4);border-radius:4px;cursor:pointer;font-size:13px;transition:all .15s}
+  .sf-opt:hover{border-color:var(--amber)}
+  .sf-opt.correct{border-color:var(--green);background:rgba(16,185,129,.08);color:var(--green)}
+  .sf-opt.wrong{border-color:var(--red);background:rgba(239,68,68,.08);color:var(--red)}
+  .why-level{background:var(--bg);border:1px solid var(--ink3);border-radius:8px;padding:16px;margin-bottom:12px;border-left:3px solid var(--purple)}
+  .why-level-header{font-family:var(--mono);font-size:10px;color:var(--purple);margin-bottom:8px;letter-spacing:.1em}
+  .why-prompt{font-size:14px;color:var(--text-hi);margin-bottom:10px}
+  .why-input{width:100%;background:var(--bg3);border:1px solid var(--ink4);border-radius:4px;color:var(--text-hi);font-size:13px;padding:10px 14px;outline:none;font-family:inherit;transition:border-color .2s}
+  .why-input:focus{border-color:var(--purple)}
+  .rl-scenario{background:var(--bg);border-left:3px solid var(--cyan);border-radius:0 6px 6px 0;padding:20px;margin-bottom:20px;font-size:14px;line-height:1.9;color:var(--text-mid)}
+  .rl-scenario strong{color:var(--text-hi)}
+  .rl-input{width:100%;background:var(--bg);border:2px solid var(--ink4);border-radius:6px;color:var(--text-hi);font-size:14px;padding:10px 14px;outline:none;font-family:inherit;transition:border-color .2s;min-height:60px;resize:vertical}
+  .rl-input:focus{border-color:var(--cyan)}
+  .registan-palace{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+  .registan-room{background:var(--bg);border:2px solid var(--ink4);border-radius:10px;padding:20px;text-align:center;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
+  .registan-room:hover{border-color:var(--purple)}
+  .registan-room.revealed{border-color:var(--purple);background:rgba(139,92,246,.04)}
+  .registan-room-icon{font-size:36px;margin-bottom:10px}
+  .registan-room-name{font-size:12px;font-weight:600;color:var(--text-hi);margin-bottom:4px}
+  .registan-room-label{font-size:10px;color:var(--text-lo)}
+  .registan-room-concept{font-size:12px;color:var(--purple);font-weight:600;margin-top:10px;display:none;padding-top:10px;border-top:1px solid rgba(139,92,246,.2)}
+  .registan-room.revealed .registan-room-concept{display:block}
+  .boss-area{text-align:center;margin-bottom:24px}
+  .boss-icon{font-size:64px;margin-bottom:12px;animation:boss-float 3s ease-in-out infinite}
+  .boss-name{font-size:18px;font-weight:700;color:var(--red)}
+  .hp-bar-wrap{width:100%;max-width:400px;margin:12px auto;background:var(--ink3);border-radius:4px;height:20px;overflow:hidden;position:relative}
+  .hp-bar{height:100%;background:linear-gradient(90deg,var(--red),#ff6b6b);transition:width .5s ease;border-radius:4px}
+  .hp-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--text-hi);font-weight:700}
+  .combo-badge{font-family:var(--mono);font-size:11px;color:var(--amber);background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:2px;padding:3px 10px;display:inline-block;margin-top:8px}
+  .boss-q-area{background:var(--bg);border:1px solid var(--ink3);border-radius:8px;padding:28px;margin:20px 0;text-align:left}
+  .boss-q-text{font-size:15px;line-height:1.7;margin-bottom:16px}
+  .boss-input{width:100%;background:var(--bg3);border:2px solid var(--ink4);border-radius:6px;color:var(--text-hi);font-size:14px;padding:12px 16px;outline:none;font-family:inherit;transition:border-color .2s;min-height:60px;resize:vertical}
+  .boss-input:focus{border-color:var(--amber)}
+  .replay-stat{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--ink3)}
+  .replay-stat:last-child{border-bottom:none}
+  .replay-label{color:var(--text-mid);font-size:13px}
+  .replay-value{font-family:var(--mono);font-size:13px;font-weight:600}
+  .replay-textarea{width:100%;background:var(--bg);border:2px solid var(--ink4);border-radius:6px;color:var(--text-hi);font-size:14px;padding:14px;outline:none;font-family:inherit;min-height:100px;resize:vertical;margin-top:12px;transition:border-color .2s}
+  .replay-textarea:focus{border-color:var(--amber)}
+  .completion{text-align:center;padding:40px 0}
+  .stars{font-size:48px;margin:20px 0;letter-spacing:8px}
+  .xp-total{font-family:var(--mono);font-size:36px;color:var(--amber);font-weight:700}
+  .xp-breakdown{margin:20px auto;max-width:350px}
+  .login-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;text-align:center}
+  .login-card{background:var(--bg3);border:1px solid var(--ink3);border-radius:10px;padding:40px;max-width:380px;width:100%}
+  .login-logo{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--amber);letter-spacing:.1em;margin-bottom:4px}
+  .login-sub{font-size:11px;color:var(--text-lo);margin-bottom:32px}
+  .login-field{width:100%;background:var(--bg);border:1px solid var(--ink4);border-radius:6px;color:var(--text-hi);font-size:14px;padding:12px 16px;outline:none;font-family:inherit;margin-bottom:12px;transition:border-color .2s}
+  .login-field:focus{border-color:var(--amber)}
+  .login-btn{width:100%;margin-top:8px;justify-content:center}
+  .quiz-opt{background:var(--bg);border:2px solid var(--ink4);border-radius:6px;padding:14px 18px;cursor:pointer;transition:all .15s;font-size:14px;display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .quiz-opt:hover{border-color:var(--amber);background:rgba(245,158,11,.03)}
+  .quiz-opt.correct{border-color:var(--green);background:rgba(16,185,129,.08)}
+  .quiz-opt.wrong{border-color:var(--red);background:rgba(239,68,68,.08)}
+  .hidden{display:none!important}
+  .fade-in{animation:fadeIn .4s ease}
+  .tag-row{margin:6px 0;display:flex;flex-wrap:wrap;gap:3px;align-items:center}
+  .text-center{text-align:center}
+  .mt-8{margin-top:8px}.mt-12{margin-top:12px}.mt-16{margin-top:16px}.mt-20{margin-top:20px}.mt-32{margin-top:32px}.mb-12{margin-bottom:12px}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+  @keyframes boss-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @media(max-width:600px){.tile-grid{grid-template-columns:repeat(3,1fr)}.container{padding:24px 16px 60px}.registan-palace{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar" id="topbar" style="display:none">
+  <div class="topbar-left">
+    <span class="topbar-logo">NETS</span>
+    <span class="topbar-sep">|</span>
+    <span class="topbar-subject">Tarix — 5-sinf</span>
+  </div>
+  <div class="topbar-right">
+    <span class="flow-indicator flow-green" id="flow-indicator" style="display:none">FLOW &#10003;</span>
+    <span class="topbar-xp" id="topbar-xp">0 XP</span>
+    <span class="topbar-user">Sardor Karimov</span>
+    <span class="topbar-avatar">S</span>
+  </div>
+</div>
+
+<div class="phase-bar" id="phasebar" style="display:none">
+  <div class="phase-pip" id="pip-1"><span class="phase-pip-label">SPRINT</span></div>
+  <div class="phase-pip" id="pip-2"><span class="phase-pip-label">HIKOYA</span></div>
+  <div class="phase-pip" id="pip-3"><span class="phase-pip-label">O'YINLAR</span></div>
+  <div class="phase-pip" id="pip-4"><span class="phase-pip-label">HAYOT</span></div>
+  <div class="phase-pip" id="pip-5"><span class="phase-pip-label">XOTIRA</span></div>
+  <div class="phase-pip" id="pip-6"><span class="phase-pip-label">BOSS</span></div>
+  <div class="phase-pip" id="pip-7"><span class="phase-pip-label">TAFAKKUR</span></div>
+</div>
+
+<div class="container" id="app">
+
+  <!-- LOGIN -->
+  <div id="screen-login" class="login-screen">
+    <div class="login-card">
+      <div class="login-logo">NETS</div>
+      <div class="login-sub">National Education Transformation System</div>
+      <div style="font-size:12px;color:var(--text-mid);margin-bottom:20px">Tarix 5-sinf — Demo v1.0</div>
+      <input class="login-field" id="login-user" placeholder="Username" value="student1">
+      <input class="login-field" id="login-pass" type="password" placeholder="Parol" value="student123">
+      <button class="btn btn-primary btn-lg login-btn" onclick="doLogin()">Kirish</button>
+      <div style="margin-top:16px;font-size:10px;color:var(--text-lo)">Mavzu: 1-§ Tarix fani nimani o'rganadi? | Darslik: 6-8 bet</div>
+    </div>
+  </div>
+
+  <!-- HW SELECT -->
+  <div id="screen-hw" class="hidden fade-in">
+    <div class="phase-header">
+      <div class="phase-title">Tarix — Uy vazifalari</div>
+      <div class="phase-subtitle">I bob: Tarix — o'tmish guvohi va bugungi kun uchun ibrat maktabi</div>
+    </div>
+    <div class="card" style="cursor:pointer" onclick="startHomework()">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
+        <div>
+          <div style="font-weight:600;margin-bottom:6px;font-size:15px">1-§. Tarix fani nimani o'rganadi?</div>
+          <div class="tag-row">
+            <span class="std-tag">UZ-HIST-5-SOURCES-01..04</span>
+            <span class="alias-tag">TAR.5.1.1.1..4</span>
+            <span class="pisa-tag">PISA Level 2-3 (Reading)</span>
+            <span class="txt-tag">Darslik: 6-8 bet</span>
+          </div>
+        </div>
+        <span style="font-family:var(--mono);font-size:10px;padding:3px 10px;border-radius:2px;color:var(--amber);background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25)">YANGI</span>
+      </div>
+      <div style="font-family:var(--mono);font-size:10px;color:var(--text-lo);background:rgba(74,85,104,.1);border:1px solid rgba(74,85,104,.2);border-radius:3px;padding:6px 10px;margin-top:8px">
+        Tarixiy manbalar: moddiy va yozma | Standard rejim: ~25 daqiqa
+      </div>
+    </div>
+    <div class="card" style="opacity:.5;cursor:default">
+      <div style="display:flex;justify-content:space-between"><div><div style="font-weight:600;margin-bottom:6px">Kirish: O'zbekiston — Vatanim manim</div><div class="tag-row"><span class="std-tag">UZ-HIST-5-INTRO-01</span><span class="pisa-tag">PISA L1</span></div></div><span style="font-family:var(--mono);font-size:10px;padding:3px 10px;border-radius:2px;color:var(--green);background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25)">TUGATILDI</span></div>
+    </div>
+  </div>
+
+  <!-- PHASE 1: MEMORY SPRINT -->
+  <div id="screen-p1" class="hidden fade-in">
+    <div class="phase-header">
+      <div class="phase-badge" style="color:var(--red);background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25)">FAZA 1</div>
+      <div class="phase-title">Xotira Sprinti</div>
+      <div class="phase-subtitle">Kirish bobidan tezkor savol-javob</div>
+      <div class="phase-timer" id="sprint-timer">02:00</div>
+    </div>
+    <div class="card" id="sprint-card">
+      <div class="tag-row" id="sprint-tags"></div>
+      <div class="sprint-q">
+        <div class="sprint-q-text" id="sprint-q-text"></div>
+        <input class="sprint-input" id="sprint-input" type="text" autocomplete="off" placeholder="Javobingiz..." onkeydown="if(event.key==='Enter')checkSprint()">
+        <div class="sprint-feedback" id="sprint-feedback"></div>
+        <div class="sprint-counter" id="sprint-counter"></div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center"><button class="btn btn-primary" onclick="checkSprint()">Tekshirish</button></div>
+  </div>
+
+  <!-- PHASE 2: STORY MODE -->
+  <div id="screen-p2" class="hidden fade-in">
+    <div class="phase-header">
+      <div class="phase-badge" style="color:var(--blue);background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25)">FAZA 2</div>
+      <div class="phase-title">Hikoya rejimi</div>
+      <div class="phase-subtitle">"Yosh arxeolog — Registon siri"</div>
+    </div>
+
+    <!-- Segment 1 -->
+    <div id="story-seg-1" class="card fade-in">
+      <div class="tag-row"><span class="std-tag">UZ-HIST-5-SOURCES-01</span><span class="pisa-tag">PISA L1</span><span class="bloom-tag">REMEMBER</span><span class="txt-tag">Darslik: 6-bet</span></div>
+      <div class="story-segment">
+        Samarqanddagi 5-sinf o'quvchisi <strong>Sardor</strong> bugun birinchi marta tarix darsiga keldi. O'qituvchisi <strong>Barno opa</strong> dedi:<br><br>
+        <em>"Bolalar, <strong>tarix — bu o'tmish haqidagi fan</strong>. 'Tarix' arabcha so'z bo'lib, 'o'tgan voqealar haqida hikoya' degan ma'noni anglatadi."</em><br><br>
+        Sardor hayron bo'ldi: <em>"Lekin o'tmishni qanday bilish mumkin? Hech kim o'sha paytda kamera bilan suratga olmagan-ku!"</em><br><br>
+        Barno opa kulib dedi: <em>"Juda yaxshi savol! Ana shuning uchun biz <strong>TARIXIY MANBALAR</strong> haqida o'rganamiz."</em>
+      </div>
+      <div class="checkpoint">
+        <div class="checkpoint-label">NAZORAT SAVOLI</div>
+        <div style="font-size:14px;margin-bottom:12px">"Tarix" so'zi qaysi tildan olingan va nima ma'noni anglatadi?</div>
+        <div class="quiz-opt" onclick="checkStory(this,true,1)"><span>Arabcha — o'tmish, o'tgan voqealar haqida hikoya</span></div>
+        <div class="quiz-opt" onclick="checkStory(this,false,1)"><span>Lotincha — kelajak haqida fan</span></div>
+        <div class="quiz-opt" onclick="checkStory(this,false,1)"><span>Forscha — tabiat haqidagi fan</span></div>
+        <div id="cp1-fb" class="mt-8" style="font-size:13px"></div>
+        <div id="cp1-next" class="hidden mt-12"><button class="btn btn-primary" onclick="showSeg(2)">Davom etish &#8594;</button></div>
+      </div>
+    </div>
+
+    <!-- Segment 2 -->
+    <div id="story-seg-2" class="card fade-in hidden">
+      <div class="tag-row"><span class="std-tag">UZ-HIST-5-SOURCES-02</span><span class="pisa-tag">PISA L2</span><span class="bloom-tag">UNDERSTAND</span><span class="transition-tag">L1&#8594;L2: tasniflash</span></div>
+      <div class="story-segment">
+        Ertasi kuni sinf sayohatga chiqdi — <strong>Samarqanddagi arxeologik qazishmalar maydoniga</strong>. Arxeolog <strong>Akmal aka</strong> yerdan ehtiyotlik bilan eski tanga chiqardi.<br><br>
+        <em>"Bu — <strong>MODDIY MANBA</strong>,"</em> dedi Akmal aka. <em>"Moddiy manbalar — bu qadimgi odamlarning <strong>suyak qoldiqlari</strong>, ular yashagan joylar qoldiqlari, <strong>tangalar</strong>, gerblar, muhrlar va <strong>mehnat qurollari</strong>. Bularning hammasini biz arxeologlar qazish orqali topamiz."</em><br><br>
+        Sardor tangani ko'rdi — unda noma'lum yozuvlar bor edi. <em>"Bu tanga necha yoshda?"</em> deb so'radi. Akmal aka dedi: <em>"Biz uni laboratoriyada tekshiramiz va aniq yoshini aniqlaymiz."</em>
+      </div>
+      <div class="checkpoint">
+        <div class="checkpoint-label">NAZORAT SAVOLI</div>
+        <div style="font-size:14px;margin-bottom:12px">Arxeolog topgan tanga qaysi manba turiga kiradi?</div>
+        <div class="quiz-opt" onclick="checkStory(this,false,2)"><span>Yozma manba — chunki ustida yozuv bor</span></div>
+        <div class="quiz-opt" onclick="checkStory(this,true,2)"><span>Moddiy manba — chunki u inson qo'li bilan yaratilgan ashyoviy narsa</span></div>
+        <div class="quiz-opt" onclick="checkStory(this,false,2)"><span>Bu manba emas — chunki u eski</span></div>
+        <div id="cp2-fb" class="mt-8" style="font-size:13px"></div>
+        <div id="cp2-next" class="hidden mt-12"><button class="btn btn-primary" onclick="showSeg(3)">Davom etish &#8594;</button></div>
+      </div>
+    </div>
+
+    <!-- Segment 3 -->
+    <div id="story-seg-3" class="card fade-in hidden">
+      <div class="tag-row"><span class="std-tag">UZ-HIST-5-SOURCES-03</span><span class="pisa-tag">PISA L2</span><span class="bloom-tag">UNDERSTAND</span><span class="transition-tag">L1&#8594;L2: farqlash</span></div>
+      <div class="story-segment">
+        Sayohatdan qaytib, Barno opa sinfga eski kitob rasmini ko'rsatdi.<br><br>
+        <em>"Bu — <strong>Avesto</strong> kitobi. O'zbekiston tarixiga oid <strong>eng qadimgi yozma manba</strong>. Bundan besh ming yil oldin odamlar qoyatoshlarga, hayvon terisiga, daraxt po'stlog'iga yozishni o'rgangan. Keyinchalik qog'oz ixtiro qilingan."</em><br><br>
+        <em>"<strong>Yozma manbalar</strong> tarixiy manbalarning eng muhim va asosiy turidir. Ular <strong>arxivlarda</strong> saqlanadi."</em><br><br>
+        Sardor o'yladi: <em>"Demak, Akmal aka topgan tanga — <strong>moddiy manba</strong>, Avesto kitobi — <strong>yozma manba</strong>. Ikkalasi ham o'tmish haqida gapiradi, lekin turli yo'llar bilan!"</em>
+      </div>
+      <div class="checkpoint">
+        <div class="checkpoint-label">NAZORAT SAVOLI</div>
+        <div style="font-size:14px;margin-bottom:12px">Moddiy va yozma manbalar orasidagi asosiy farq nima?</div>
+        <div class="quiz-opt" onclick="checkStory(this,false,3)"><span>Moddiy manbalar eski, yozma manbalar yangi</span></div>
+        <div class="quiz-opt" onclick="checkStory(this,false,3)"><span>Moddiy manbalar muhim, yozma manbalar muhim emas</span></div>
+        <div class="quiz-opt" onclick="checkStory(this,true,3)"><span>Moddiy manbalar — narsalar (ashyolar), yozma manbalar — yozib qoldirilgan ma'lumotlar</span></div>
+        <div id="cp3-fb" class="mt-8" style="font-size:13px"></div>
+        <div id="cp3-next" class="hidden mt-12"><button class="btn btn-primary" onclick="goToPhase(3)">Faza 3: O'yinlar &#8594;</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 3: GAME BREAKS -->
+  <div id="screen-p3" class="hidden fade-in">
+    <div class="phase-header">
+      <div class="phase-badge" style="color:var(--green);background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25)">FAZA 3</div>
+      <div class="phase-title">O'yin tanaffuslari</div>
+      <div class="phase-subtitle">3 ta o'yin: Tile Match &#8594; Sentence Fill &#8594; Why Chain</div>
+    </div>
+
+    <!-- Game 1: Tile Match -->
+    <div id="game-tile" class="card">
+      <div style="font-weight:600;margin-bottom:4px">O'yin 1: Tile Match — Manbalarni juftla</div>
+      <div style="font-size:11px;color:var(--text-lo);margin-bottom:12px">Har bir tushunchani uning ta'rifiga moslang</div>
+      <div class="tag-row"><span class="std-tag">UZ-HIST-5-SOURCES-02</span><span class="bloom-tag">UNDERSTAND</span><span class="transition-tag">L1&#8594;L2: tasniflash</span></div>
+      <div class="tile-grid" id="tile-grid"></div>
+      <div class="text-center mt-12"><span id="tile-status" style="font-family:var(--mono);font-size:12px;color:var(--text-lo)">0 / 6 juftlik topildi</span></div>
+    </div>
+
+    <!-- Game 2: Sentence Fill -->
+    <div id="game-sf" class="card hidden">
+      <div style="font-weight:600;margin-bottom:4px">O'yin 2: Sentence Fill — Bo'shliqni to'ldiring</div>
+      <div style="font-size:11px;color:var(--text-lo);margin-bottom:12px">Darslikdagi asosiy faktlarni eslab, bo'shliqni to'g'ri so'z bilan to'ldiring</div>
+      <div class="tag-row"><span class="std-tag">UZ-HIST-5-SOURCES-01..04</span><span class="bloom-tag">REMEMBER</span></div>
+      <div id="sf-area"></div>
+    </div>
+
+    <!-- Game 3: Why Chain -->
+    <div id="game-why" class="card hidden">
+      <div style="font-weight:600;margin-bottom:4px">O'yin 3: Why Chain — "Nima uchun?" zanjiri</div>
+      <div style="font-size:11px;color:var(--text-lo);margin-bottom:12px">Har bir javobdan keyin chuqurroq savol beriladi</div>
+      <div class="tag-row"><span class="std-tag">UZ-HIST-5-SOURCES-03</span><span class="bloom-tag">ANALYZE</span><span class="pisa-tag">PISA L3</span><span class="transition-tag">L2&#8594;L3: sabab-oqibat</span></div>
+      <div id="why-area"></div>
+    </div>
+  </div>
+
+  <!-- PHASE 4: REAL-LIFE -->
+  <div id="screen-p4" class="hidden fade-in">
+    <div class="phase-header">
+      <div class="phase-badge" style="color:var(--cyan);background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25)">FAZA 4</div>
+      <div class="phase-title">Hayotiy vaziyat</div>
+      <div class="phase-subtitle">"Bobongizning sandiq siri"</div>
+    </div>
+    <div class="rl-scenario">
+      Yozgi ta'tilda siz <strong>Buxorodagi bobongizning</strong> uyiga bordingiz. Eski sandiqdan quyidagilar topildi:<br><br>
+      1. Bobongizning otasi yozgan <strong>kundalik</strong> (1940-yillar)<br>
+      2. Oilaviy <strong>fotosurat</strong> (1950-yil)<br>
+      3. Rasmiy <strong>hujjat</strong> — Toshkent viloyati hokimligidan (1948-yil)<br>
+      4. Qo'shningiz Xolida xola so'zlagan <strong>hikoya</strong>: "Sizning bobongiz juda mashhur hunarmand bo'lgan"<br><br>
+      <strong>MUAMMO:</strong> Kundalikda "dehqon" deb yozilgan, Xolida xola esa "hunarmand" deydi!
+    </div>
+    <div class="card">
+      <div class="tag-row mb-12"><span class="std-tag">UZ-HIST-5-SOURCES-02</span><span class="pisa-tag">PISA L2</span><span class="bloom-tag">UNDERSTAND</span></div>
+      <div style="font-weight:600;margin-bottom:8px">1-savol: Topilgan 4 ta narsadan qaysilari YOZMA manba?</div>
+      <textarea class="rl-input" id="rl-1" placeholder="Javobingizni yozing..."></textarea>
+    </div>
+    <div class="card">
+      <div class="tag-row mb-12"><span class="std-tag">UZ-HIST-5-SOURCES-03</span><span class="pisa-tag">PISA L3</span><span class="bloom-tag">ANALYZE</span><span class="transition-tag">L2&#8594;L3: ishonchlilik</span></div>
+      <div style="font-weight:600;margin-bottom:8px">2-savol: Kundalik "dehqon" deydi, Xolida xola "hunarmand" deydi. Qaysi manbaga ko'proq ishonasiz? NIMA UCHUN?</div>
+      <textarea class="rl-input" id="rl-2" placeholder="Javobingizni yozing..."></textarea>
+    </div>
+    <div class="text-center mt-16">
+      <button class="btn btn-primary btn-lg" onclick="submitRL()">Javoblarni yuborish</button>
+    </div>
+    <div id="rl-feedback" class="hidden mt-16"></div>
+  </div>
+
+  <!-- PHASE 5: MEMORY PALACE -->
+  <div id="screen-p5" class="hidden fade-in">
+    <div class="phase-header">
+      <div class="phase-badge" style="color:var(--purple);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25)">FAZA 5</div>
+      <div class="phase-title">Xotira saroyi — Registon</div>
+      <div class="phase-subtitle">Har bir joyni bosib, tushunchani xotirangizga joylashtiring</div>
+    </div>
+    <div class="card">
+      <div class="registan-palace">
+        <div class="registan-room" onclick="revealRegistan(this)">
+          <div class="registan-room-icon">&#127966;</div>
+          <div class="registan-room-name">Bosh darvoza</div>
+          <div class="registan-room-label">1-tushuncha</div>
+          <div class="registan-room-concept">TARIX — o'tmish haqidagi fan.<br>Arabcha so'z: "o'tgan voqealar hikoyasi"</div>
+        </div>
+        <div class="registan-room" onclick="revealRegistan(this)">
+          <div class="registan-room-icon">&#127963;</div>
+          <div class="registan-room-name">Ulug'bek madrasasi</div>
+          <div class="registan-room-label">2-tushuncha</div>
+          <div class="registan-room-concept">MODDIY MANBALAR — tangalar, qurollar, suyaklar.<br>Arxeologlar qazish orqali topadi.</div>
+        </div>
+        <div class="registan-room" onclick="revealRegistan(this)">
+          <div class="registan-room-icon">&#127981;</div>
+          <div class="registan-room-name">Sherdo'r madrasasi</div>
+          <div class="registan-room-label">3-tushuncha</div>
+          <div class="registan-room-concept">YOZMA MANBALAR — Avesto, yozuvlar, hujjatlar.<br>Eng muhim va asosiy tur.</div>
+        </div>
+        <div class="registan-room" onclick="revealRegistan(this)">
+          <div class="registan-room-icon">&#128218;</div>
+          <div class="registan-room-name">Tillakori madrasasi</div>
+          <div class="registan-room-label">4-tushuncha</div>
+          <div class="registan-room-concept">ARXIV — eski hujjatlar saqlanadigan joy.<br>Yozma manbalar bu yerda saqlanadi.</div>
+        </div>
+        <div class="registan-room" style="grid-column:1/3" onclick="revealRegistan(this)">
+          <div class="registan-room-icon">&#9878;</div>
+          <div class="registan-room-name">Maydon markazi</div>
+          <div class="registan-room-label">5-tushuncha</div>
+          <div class="registan-room-concept">FARQ: Moddiy = NARSALAR | Yozma = MA'LUMOTLAR<br>Ikkalasi ham o'tmishni o'rganishda kerak!</div>
+        </div>
+      </div>
+      <div class="text-center mt-12"><span id="registan-status" style="font-family:var(--mono);font-size:12px;color:var(--text-lo)">0/5 joy ochildi</span></div>
+      <div id="registan-next" class="hidden text-center mt-16"><button class="btn btn-primary" onclick="goToPhase(6)">Faza 6: Yakuniy Boss &#8594;</button></div>
+    </div>
+  </div>
+
+  <!-- PHASE 6: FINAL BOSS -->
+  <div id="screen-p6" class="hidden fade-in">
+    <div class="phase-header">
+      <div class="phase-badge" style="color:var(--red);background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25)">FAZA 6</div>
+      <div class="phase-title">Yakuniy Boss</div>
+      <div class="phase-subtitle">100 HP | Bossni mag'lub qilish SHART!</div>
+    </div>
+    <div class="boss-area">
+      <div class="boss-icon">&#128370;</div>
+      <div class="boss-name">VAQT QOROVULI</div>
+      <div class="hp-bar-wrap"><div class="hp-bar" id="boss-hp-bar" style="width:100%"></div><div class="hp-text">HP: <span id="boss-hp-text">100</span>/100</div></div>
+      <div class="combo-badge" id="boss-combo">COMBO: 0</div>
+    </div>
+    <div class="boss-q-area" id="boss-q-area">
+      <div class="tag-row" id="boss-tags"></div>
+      <div class="boss-q-text" id="boss-q-text"></div>
+      <textarea class="boss-input" id="boss-input" placeholder="Javobingizni yozing..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();checkBoss()}"></textarea>
+      <div id="boss-feedback" class="mt-8" style="font-size:13px"></div>
+      <div class="mt-12" style="display:flex;gap:8px">
+        <button class="btn btn-primary" onclick="checkBoss()">Javob berish</button>
+        <button class="btn btn-secondary" onclick="useBossHint()">Hint (-10 HP)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 7: REFLECTION -->
+  <div id="screen-p7" class="hidden fade-in">
+    <div class="phase-header">
+      <div class="phase-badge" style="color:var(--purple);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25)">FAZA 7</div>
+      <div class="phase-title" id="reflection-title">Tafakkur</div>
+      <div class="phase-subtitle" id="reflection-prompt"></div>
+    </div>
+    <div class="card">
+      <div style="font-weight:600;margin-bottom:8px">Sessiya natijalari</div>
+      <div class="replay-stat"><span class="replay-label">Jami savollar</span><span class="replay-value" id="rep-total">0</span></div>
+      <div class="replay-stat"><span class="replay-label">To'g'ri</span><span class="replay-value" style="color:var(--green)" id="rep-correct">0</span></div>
+      <div class="replay-stat"><span class="replay-label">Noto'g'ri</span><span class="replay-value" style="color:var(--red)" id="rep-wrong">0</span></div>
+      <div class="replay-stat"><span class="replay-label">Hintlar ishlatildi</span><span class="replay-value" id="rep-hints">0</span></div>
+      <div class="replay-stat"><span class="replay-label">Aniqlik</span><span class="replay-value" id="rep-accuracy">0%</span></div>
+      <div class="replay-stat"><span class="replay-label">Jami XP</span><span class="replay-value" style="color:var(--amber)" id="rep-xp">0</span></div>
+    </div>
+    <div class="card">
+      <div style="font-weight:600;margin-bottom:12px">Tafakkur yozing (kamida 10 ta belgi):</div>
+      <div style="font-size:13px;color:var(--text-mid);margin-bottom:8px">1. Moddiy va yozma manbalar orasidagi farqni qanday tushuntirgan bo'lar edingiz?</div>
+      <textarea class="replay-textarea" id="reflect-text" placeholder="O'z fikringizni yozing..."></textarea>
+      <div class="text-center mt-16"><button class="btn btn-primary btn-lg" onclick="finishHomework()">Sessiyani yakunlash</button></div>
+    </div>
+  </div>
+
+  <!-- COMPLETION -->
+  <div id="screen-done" class="hidden fade-in">
+    <div class="completion">
+      <div style="font-size:64px;margin-bottom:16px">&#127942;</div>
+      <div class="phase-title">Uy vazifasi tugatildi!</div>
+      <div class="stars" id="final-stars"></div>
+      <div class="xp-total" id="final-xp">0 XP</div>
+      <div class="xp-breakdown">
+        <div class="replay-stat"><span class="replay-label">Xotira Sprinti</span><span class="replay-value" id="xp-sprint">0</span></div>
+        <div class="replay-stat"><span class="replay-label">Hikoya rejimi</span><span class="replay-value" id="xp-story">0</span></div>
+        <div class="replay-stat"><span class="replay-label">O'yinlar</span><span class="replay-value" id="xp-games">0</span></div>
+        <div class="replay-stat"><span class="replay-label">Hayotiy vaziyat</span><span class="replay-value" id="xp-rl">0</span></div>
+        <div class="replay-stat"><span class="replay-label">Boss jangi</span><span class="replay-value" id="xp-boss">0</span></div>
+        <div class="replay-stat"><span class="replay-label">Tafakkur</span><span class="replay-value" id="xp-reflect">0</span></div>
+      </div>
+      <div class="mt-20" style="font-size:12px;color:var(--text-lo)">
+        NETS Tarix Demo v1.0 | Darslik: "Tarixdan hikoyalar" 5-sinf, 6-8 bet<br>
+        Standard: UZ-HIST-5-SOURCES-01..04 | PISA: Reading L2-3
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ====== STATE ======
+let totalXP=0,totalCorrect=0,totalWrong=0,hintsUsed=0,streakCount=0;
+let xpSprint=0,xpStory=0,xpGames=0,xpRL=0,xpBoss=0,xpReflect=0;
+let sprintIdx=0,sprintCorrect=0,sprintTotal=0;
+let sprintTimerInterval;
+
+function addXP(n,cat){
+  totalXP+=n;
+  if(cat==='sprint')xpSprint+=n;
+  else if(cat==='story')xpStory+=n;
+  else if(cat==='games')xpGames+=n;
+  else if(cat==='rl')xpRL+=n;
+  else if(cat==='boss')xpBoss+=n;
+  else if(cat==='reflect')xpReflect+=n;
+  document.getElementById('topbar-xp').textContent=totalXP+' XP';
+}
+
+function showScreen(id){
+  document.querySelectorAll('.container > div').forEach(d=>d.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function setPhase(n){
+  for(let i=1;i<=7;i++){
+    const p=document.getElementById('pip-'+i);
+    p.classList.remove('active','done');
+    if(i<n)p.classList.add('done');
+    else if(i===n)p.classList.add('active');
+  }
+}
+
+function updateFlowIndicator(){
+  const t=totalCorrect+totalWrong;
+  if(t<3){document.getElementById('flow-indicator').style.display='none';return;}
+  const r=totalCorrect/t;
+  const el=document.getElementById('flow-indicator');
+  el.style.display='inline-block';
+  if(r>=.7&&r<=.9){el.className='flow-indicator flow-green';el.innerHTML='FLOW &#10003;';}
+  else if(r>=.6){el.className='flow-indicator flow-yellow';el.innerHTML='FLOW ~';}
+  else{el.className='flow-indicator flow-red';el.innerHTML='FLOW &#9888;';}
+}
+
+// ====== LOGIN ======
+function doLogin(){
+  document.getElementById('topbar').style.display='flex';
+  document.getElementById('phasebar').style.display='flex';
+  showScreen('screen-hw');
+}
+
+// ====== HW SELECT ======
+function startHomework(){
+  setPhase(1);
+  showScreen('screen-p1');
+  sprintIdx=0;sprintCorrect=0;sprintTotal=0;
+  startSprintTimer();
+  loadSprintQ();
+}
+
+// ====== PHASE 1: MEMORY SPRINT ======
+const sprintQuestions=[
+  {q:'"Vatan" so\'zi qaysi tildan olingan?',a:'arabcha',std:'UZ-HIST-5-INTRO-01',alias:'TAR.5.0.1',bloom:'REMEMBER',transition:'Asosiy: eslab qolish',txt:'Kirish bobi'},
+  {q:'"Vatan" so\'zining ma\'nosi nima?',a:'ona yurt',std:'UZ-HIST-5-INTRO-01',alias:'TAR.5.0.1',bloom:'REMEMBER',transition:'Asosiy: eslab qolish',txt:'Kirish bobi'},
+  {q:'O\'zbekiston o\'tmishda qanday nomlar bilan ataldi? (kamida 1 ta)',a:'turon',std:'UZ-HIST-5-INTRO-01',alias:'TAR.5.0.1',bloom:'REMEMBER',transition:'Asosiy: eslab qolish',txt:'Kirish bobi'},
+  {q:'Davlatimiz necha ming yillik tarixga ega?',a:'3',std:'UZ-HIST-5-INTRO-01',alias:'TAR.5.0.1',bloom:'REMEMBER',transition:'Asosiy: eslab qolish',txt:'Kirish bobi'},
+  {q:'"Tarixiy xotirasiz ..." — davom ettiring',a:'kelajak yo\'q',std:'UZ-HIST-5-INTRO-01',alias:'TAR.5.0.1',bloom:'REMEMBER',transition:'Asosiy: eslab qolish',txt:'Kirish bobi'}
+];
+
+let sprintTimeLeft=120;
+function startSprintTimer(){
+  sprintTimeLeft=120;
+  updateSprintTimerDisplay();
+  sprintTimerInterval=setInterval(()=>{
+    sprintTimeLeft--;
+    updateSprintTimerDisplay();
+    if(sprintTimeLeft<=0){clearInterval(sprintTimerInterval);endSprint();}
+  },1000);
+}
+function updateSprintTimerDisplay(){
+  const m=Math.floor(sprintTimeLeft/60);
+  const s=sprintTimeLeft%60;
+  document.getElementById('sprint-timer').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+}
+
+function loadSprintQ(){
+  if(sprintIdx>=sprintQuestions.length){clearInterval(sprintTimerInterval);endSprint();return;}
+  const q=sprintQuestions[sprintIdx];
+  document.getElementById('sprint-q-text').textContent=q.q;
+  document.getElementById('sprint-input').value='';
+  document.getElementById('sprint-input').className='sprint-input';
+  document.getElementById('sprint-feedback').textContent='';
+  document.getElementById('sprint-counter').textContent='Savol '+(sprintIdx+1)+' / '+sprintQuestions.length;
+  document.getElementById('sprint-tags').innerHTML='<span class="std-tag">'+q.std+'</span><span class="alias-tag">'+q.alias+'</span><span class="bloom-tag">'+q.bloom+'</span><span class="transition-tag">'+q.transition+'</span><span class="txt-tag">'+q.txt+'</span>';
+  document.getElementById('sprint-input').focus();
+}
+
+function checkSprint(){
+  const q=sprintQuestions[sprintIdx];if(!q)return;
+  const input=document.getElementById('sprint-input');
+  const fb=document.getElementById('sprint-feedback');
+  const val=input.value.trim().replace(/\s/g,'').toLowerCase();
+  if(!val)return;
+  sprintTotal++;
+  const correct=q.a.toLowerCase().split(',').some(a=>val.includes(a.trim().replace(/\s/g,'')));
+  if(correct){
+    input.className='sprint-input correct';streakCount++;
+    const bonus=10*streakCount;
+    fb.innerHTML='<span style="color:var(--green)">\u2713 To\'g\'ri! +100 XP'+(bonus>0?' + '+bonus+' streak':'')+'</span>';
+    addXP(100+bonus,'sprint');totalCorrect++;sprintCorrect++;
+  }else{
+    input.className='sprint-input wrong';
+    fb.innerHTML='<span style="color:var(--red)">\u2717 Javob: '+q.a+'</span>';
+    totalWrong++;streakCount=0;
+  }
+  updateFlowIndicator();sprintIdx++;
+  setTimeout(loadSprintQ,1200);
+}
+
+function endSprint(){
+  const acc=sprintTotal>0?sprintCorrect/sprintTotal:1;
+  addXP(150,'story'); // Story mode completion XP
+  setPhase(2);showScreen('screen-p2');
+}
+
+// ====== PHASE 2: STORY MODE ======
+function checkStory(el,correct,seg){
+  const opts=el.parentElement.querySelectorAll('.quiz-opt');
+  opts.forEach(o=>o.style.pointerEvents='none');
+  if(correct){
+    el.classList.add('correct');
+    document.getElementById('cp'+seg+'-fb').innerHTML='<span style="color:var(--green)">\u2713 To\'g\'ri! +100 XP</span>';
+    document.getElementById('cp'+seg+'-next').classList.remove('hidden');
+    addXP(100,'story');totalCorrect++;
+  }else{
+    el.classList.add('wrong');
+    const hints=['Hikoyada Barno opa tushuntirdi: "Tarix" arabcha so\'z...','Moddiy manbalar — inson qo\'li bilan yaratilgan NARSALAR','Darslikda yozilgan: moddiy = narsalar, yozma = yozilgan ma\'lumotlar'];
+    document.getElementById('cp'+seg+'-fb').innerHTML='<span style="color:var(--red)">\u2717 '+hints[seg-1]+'</span>';
+    totalWrong++;
+    setTimeout(()=>{opts.forEach(o=>{o.style.pointerEvents='auto';o.classList.remove('wrong');});},1500);
+  }
+  updateFlowIndicator();
+}
+
+function showSeg(n){
+  document.getElementById('story-seg-'+n).classList.remove('hidden');
+  document.getElementById('story-seg-'+n).scrollIntoView({behavior:'smooth'});
+}
+
+// ====== PHASE 3: GAMES ======
+
+// -- Tile Match --
+const tilePairs=[
+  {a:'Moddiy manba',b:'Tangalar, suyaklar, qurollar'},
+  {a:'Yozma manba',b:'Avesto, yozuvlar, kitoblar'},
+  {a:'Arxeolog',b:'Qazish orqali topilmalar izlaydi'},
+  {a:'Arxiv',b:'Eski hujjatlar saqlanadigan joy'},
+  {a:'Manbashunos',b:'Manbalarni o\'rganuvchi olim'},
+  {a:'Avesto',b:'Eng qadimgi yozma manba'}
+];
+let tileSelected=null,tilesMatched=0;
+
+function initGames(){
+  tilesMatched=0;tileSelected=null;
+  const grid=document.getElementById('tile-grid');grid.innerHTML='';
+  let items=[];
+  tilePairs.forEach((p,i)=>{
+    items.push({text:p.a,pairId:i,type:'a'});
+    items.push({text:p.b,pairId:i,type:'b'});
+  });
+  for(let i=items.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[items[i],items[j]]=[items[j],items[i]];}
+  items.forEach(item=>{
+    const div=document.createElement('div');
+    div.className='tile';div.textContent=item.text;
+    div.dataset.pairId=item.pairId;div.dataset.type=item.type;
+    if(item.text.length>20)div.style.fontSize='10px';
+    div.onclick=()=>clickTile(div);
+    grid.appendChild(div);
+  });
+}
+
+function clickTile(el){
+  if(el.classList.contains('matched'))return;
+  if(tileSelected===el){el.classList.remove('selected');tileSelected=null;return;}
+  if(!tileSelected){el.classList.add('selected');tileSelected=el;}
+  else{
+    if(tileSelected.dataset.pairId===el.dataset.pairId&&tileSelected.dataset.type!==el.dataset.type){
+      el.classList.add('matched');tileSelected.classList.remove('selected');tileSelected.classList.add('matched');
+      tileSelected=null;tilesMatched++;addXP(50,'games');totalCorrect++;
+      document.getElementById('tile-status').textContent=tilesMatched+' / 6 juftlik topildi';
+      if(tilesMatched===6){
+        document.getElementById('tile-status').innerHTML='<span style="color:var(--green)">Barcha juftliklar topildi! +300 XP</span>';
+        setTimeout(startSentenceFill,1000);
+      }
+    }else{
+      el.classList.add('wrong');tileSelected.classList.add('wrong');totalWrong++;
+      const prev=tileSelected;tileSelected=null;
+      setTimeout(()=>{el.classList.remove('wrong','selected');prev.classList.remove('wrong','selected');},600);
+    }
+    updateFlowIndicator();
+  }
+}
+
+// -- Sentence Fill --
+const sfQuestions=[
+  {sentence:'Tarix — bu ______ haqidagi fan.',options:['kelajak','o\'tmish','tabiat','kosmos'],correct:1},
+  {sentence:'"Tarix" so\'zi ______ tilidan olingan.',options:['lotin','fors','arab','ingliz'],correct:2},
+  {sentence:'Tarixiy manbalar ikki turga bo\'linadi: moddiy va ______.',options:['ilmiy','yozma','shaxsiy','og\'zaki'],correct:1},
+  {sentence:'O\'zbekiston tarixiga oid eng qadimgi yozma manba — ______ kitobi.',options:['Qur\'on','Avesto','Tarix','Geografiya'],correct:1},
+  {sentence:'Moddiy manbalarni ______ to\'plashadi.',options:['tarixchilar','arxeologlar','olimlar','o\'qituvchilar'],correct:1}
+];
+let sfIdx=0;
+
+function startSentenceFill(){
+  document.getElementById('game-tile').classList.add('hidden');
+  document.getElementById('game-sf').classList.remove('hidden');
+  document.getElementById('game-sf').scrollIntoView({behavior:'smooth'});
+  sfIdx=0;loadSF();
+}
+
+function loadSF(){
+  if(sfIdx>=sfQuestions.length){setTimeout(startWhyChain,800);return;}
+  const q=sfQuestions[sfIdx];
+  document.getElementById('sf-area').innerHTML=
+    '<div class="sf-sentence">'+q.sentence.replace('______','<span class="sf-blank">???</span>')+'</div>'+
+    '<div class="sf-options">'+q.options.map((o,i)=>'<div class="sf-opt" onclick="checkSF(this,'+i+','+q.correct+')">'+o+'</div>').join('')+'</div>'+
+    '<div id="sf-fb" class="mt-12" style="font-size:13px"></div>';
+}
+
+function checkSF(el,idx,correct){
+  const opts=el.parentElement.querySelectorAll('.sf-opt');
+  opts.forEach(o=>o.style.pointerEvents='none');
+  if(idx===correct){
+    el.classList.add('correct');
+    document.getElementById('sf-fb').innerHTML='<span style="color:var(--green)">\u2713 To\'g\'ri! +100 XP</span>';
+    document.querySelector('#game-sf .sf-blank').textContent=el.textContent;
+    document.querySelector('#game-sf .sf-blank').style.color='var(--green)';
+    addXP(100,'games');totalCorrect++;
+  }else{
+    el.classList.add('wrong');opts[correct].classList.add('correct');
+    document.getElementById('sf-fb').innerHTML='<span style="color:var(--red)">\u2717 To\'g\'ri javob: '+opts[correct].textContent+'</span>';
+    totalWrong++;
+  }
+  updateFlowIndicator();sfIdx++;setTimeout(loadSF,1500);
+}
+
+// -- Why Chain --
+const whyChainData={
+  levels:[
+    {prompt:'Nima uchun tarixiy manbalar muhim?',feedback:'To\'g\'ri! Manbalarsiz o\'tmish haqida bilish mumkin emas.'},
+    {prompt:'Lekin NIMA UCHUN o\'tmishni bilish kerak?',feedback:'Ajoyib! "Tarixiy xotirasiz kelajak yo\'q" — o\'tmishdagi xatolarni takrorlamaslik uchun.'},
+    {prompt:'Agar bizda faqat MODDIY manbalar bo\'lsa-yu, YOZMA manbalar bo\'lmasa — nimani bilib bo\'lmas edi?',feedback:'Mukammal! Moddiy manbalar NIMA bo\'lganini ko\'rsatadi, yozma manbalar NIMA UCHUN bo\'lganini tushuntiradi!'}
+  ]
+};
+let whyLevel=0;
+
+function startWhyChain(){
+  document.getElementById('game-sf').classList.add('hidden');
+  document.getElementById('game-why').classList.remove('hidden');
+  document.getElementById('game-why').scrollIntoView({behavior:'smooth'});
+  whyLevel=0;
+  document.getElementById('why-area').innerHTML='<div id="why-chain-levels"></div>';
+  loadWhyLevel();
+}
+
+function loadWhyLevel(){
+  if(whyLevel>=whyChainData.levels.length){
+    document.getElementById('why-chain-levels').innerHTML+='<div class="text-center mt-16"><span style="color:var(--green);font-size:14px;font-weight:600">\u2713 Why Chain tugatildi! +250 XP bonus</span><br><br><button class="btn btn-primary" onclick="goToPhase(4)">Faza 4: Hayotiy vaziyat &#8594;</button></div>';
+    addXP(250,'games');return;
+  }
+  const lvl=whyChainData.levels[whyLevel];
+  document.getElementById('why-chain-levels').innerHTML+=
+    '<div class="why-level" id="why-lvl-'+whyLevel+'">'+
+      '<div class="why-level-header">CHUQURLIK '+(whyLevel+1)+'/3</div>'+
+      '<div class="why-prompt">'+lvl.prompt+'</div>'+
+      '<input class="why-input" id="why-input-'+whyLevel+'" placeholder="Javobingiz..." onkeydown="if(event.key===\'Enter\')submitWhy()">'+
+      '<div class="mt-8"><button class="btn btn-primary" style="padding:6px 16px;font-size:12px" onclick="submitWhy()">Javob berish</button></div>'+
+      '<div id="why-fb-'+whyLevel+'" class="mt-8" style="font-size:13px"></div>'+
+    '</div>';
+  setTimeout(()=>{const inp=document.getElementById('why-input-'+whyLevel);if(inp)inp.focus();},100);
+}
+
+function submitWhy(){
+  const input=document.getElementById('why-input-'+whyLevel);
+  if(!input||!input.value.trim())return;
+  const lvl=whyChainData.levels[whyLevel];
+  document.getElementById('why-fb-'+whyLevel).innerHTML='<span style="color:var(--green)">\u2713 '+lvl.feedback+'</span>';
+  input.disabled=true;totalCorrect++;addXP(150,'games');
+  updateFlowIndicator();whyLevel++;setTimeout(loadWhyLevel,800);
+}
+
+// ====== PHASE 4: REAL-LIFE ======
+function submitRL(){
+  const v1=document.getElementById('rl-1').value.trim();
+  const v2=document.getElementById('rl-2').value.trim();
+  if(!v1&&!v2)return;
+  addXP(400,'rl');totalCorrect++;updateFlowIndicator();
+  document.getElementById('rl-feedback').classList.remove('hidden');
+  document.getElementById('rl-feedback').innerHTML=
+    '<div class="card card-glow-green" style="text-align:left">'+
+      '<div style="color:var(--green);font-weight:600;margin-bottom:8px">\u2713 Javoblar qabul qilindi! +400 XP</div>'+
+      '<div style="font-size:13px;color:var(--text-mid);line-height:1.7">'+
+        '<strong>1-savol:</strong> Yozma manbalar: kundalik, rasmiy hujjat. Fotosurat — moddiy manba. Og\'zaki hikoya — og\'zaki manba (yozma va moddiy emas).<br><br>'+
+        '<strong>2-savol:</strong> Kundalik (yozma manba) ko\'proq ishonchli — chunki u o\'sha davrda yozilgan. Xolida xolaning hikoyasi vaqt o\'tishi bilan o\'zgarishi mumkin (xotira xatolari).<br><br>'+
+        '<strong>Xulosa:</strong> Tarixchilar bir nechta manbani SOLISHTIRISH orqali haqiqatni aniqlaydi!'+
+      '</div>'+
+      '<div class="mt-12"><button class="btn btn-primary" onclick="goToPhase(5)">Faza 5: Xotira saroyi &#8594;</button></div>'+
+    '</div>';
+}
+
+// ====== PHASE 5: REGISTAN ======
+let registanRevealed=0;
+function revealRegistan(el){
+  if(el.classList.contains('revealed'))return;
+  el.classList.add('revealed');registanRevealed++;
+  document.getElementById('registan-status').textContent=registanRevealed+'/5 joy ochildi';
+  if(registanRevealed===5){
+    document.getElementById('registan-status').innerHTML='<span style="color:var(--green)">Barcha tushunchalar xotirada! +300 XP</span>';
+    document.getElementById('registan-next').classList.remove('hidden');
+    addXP(300,'games');
+  }
+}
+
+// ====== PHASE 6: BOSS ======
+const bossQuestions=[
+  {q:'Tarixiy manbalar necha turga bo\'linadi? Ularni nomlang.',a:['2','ikki','moddiy','yozma'],tier:'easy',damage:10,pisa:'PISA L2',bloom:'REMEMBER',transition:'Asosiy: eslab qolish',hint:'Darslikning 6-betiga qarang'},
+  {q:'Avesto kitobi qaysi manba turiga kiradi? Javobingizni asoslang.',a:['yozma'],tier:'easy',damage:10,pisa:'PISA L2',bloom:'UNDERSTAND',transition:'L1\u21922: tasniflash',hint:'Avesto — kitob. Kitob qaysi manba turiga kiradi?'},
+  {q:'Arxeologlar Samarqanddan qadimgi sopol topdi. Ustida yozuv bor. Bu moddiy manbami yoki yozma manbami? Yoki ikkisi ham? Tushuntiring.',a:['ikkisi','ikkalasi','ham'],tier:'medium',damage:20,pisa:'PISA L3',bloom:'APPLY',transition:'L2\u21923: murakkab tasniflash',hint:'Sopolning o\'zi — narsa (ashyo). Lekin ustidagi yozuv — ma\'lumot. Demak...'},
+  {q:'Moddiy va yozma manbalardan faqat BITTASINI tanlashingiz kerak bo\'lsa, qaysi birini tanlagan bo\'lar edingiz? NIMA UCHUN?',a:['yozma','moddiy'],tier:'medium',damage:20,pisa:'PISA L3',bloom:'ANALYZE',transition:'L2\u21923: baholash',hint:'Qaysi biri ko\'proq BATAFSIL ma\'lumot beradi?'},
+  {q:'Bir tarixchi faqat yozma manbalarga, ikkinchisi faqat moddiy manbalarga tayanadi. Qaysi birining ishi to\'liqroq bo\'ladi?',a:['ikkalasi','hech','bitta','to\'liq emas'],tier:'hard',damage:30,pisa:'PISA L4',bloom:'EVALUATE',transition:'L3\u21924: tanqidiy baholash',hint:'Ikki xil manba turli ma\'lumot beradi. BITTA tur yetarlimi?'}
+];
+let bossHP=100,bossIdx=0,bossCombo=0;
+
+function initBoss(){
+  bossHP=100;bossIdx=0;bossCombo=0;loadBossQ();
+}
+
+function loadBossQ(){
+  if(bossHP<=0||bossIdx>=bossQuestions.length){bossDone();return;}
+  const q=bossQuestions[bossIdx];
+  document.getElementById('boss-q-text').textContent=q.q;
+  document.getElementById('boss-input').value='';
+  document.getElementById('boss-feedback').textContent='';
+  document.getElementById('boss-combo').textContent='COMBO: '+bossCombo;
+  let tc,tl;
+  if(q.tier==='easy'){tc='boss-tier-easy';tl='OSON (-10 HP)';}
+  else if(q.tier==='medium'){tc='boss-tier-medium';tl='O\'RTA (-20 HP)';}
+  else{tc='boss-tier-hard';tl='QIYIN (-30 HP)';}
+  document.getElementById('boss-tags').innerHTML=
+    '<span class="std-tag">UZ-HIST-5-SOURCES-02</span><span class="pisa-tag">'+q.pisa+'</span><span class="bloom-tag">'+q.bloom+'</span><span class="boss-tier-tag '+tc+'">'+tl+'</span><span class="transition-tag">'+q.transition+'</span><span class="txt-tag">Darslik: 6-8 bet</span>';
+  document.getElementById('boss-input').focus();
+}
+
+function checkBoss(){
+  const q=bossQuestions[bossIdx];if(!q)return;
+  const val=document.getElementById('boss-input').value.trim().toLowerCase();
+  if(!val)return;
+  const fb=document.getElementById('boss-feedback');
+  const correct=q.a.some(a=>val.includes(a));
+  if(correct){
+    bossCombo++;let dmg=q.damage;if(bossCombo>=3)dmg*=2;
+    bossHP=Math.max(0,bossHP-dmg);
+    fb.innerHTML='<span style="color:var(--green)">\u2713 To\'g\'ri! -'+dmg+' HP'+(bossCombo>=3?' (2x COMBO!)':'')+'</span>';
+    totalCorrect++;addXP(100,'boss');
+  }else{
+    bossCombo=0;
+    fb.innerHTML='<span style="color:var(--red)">\u2717 To\'liqroq javob bering. Qayta urinib ko\'ring yoki Hint ishlating.</span>';
+    totalWrong++;
+  }
+  updateFlowIndicator();
+  document.getElementById('boss-hp-bar').style.width=bossHP+'%';
+  document.getElementById('boss-hp-text').textContent=bossHP;
+  document.getElementById('boss-combo').textContent='COMBO: '+bossCombo;
+  bossIdx++;setTimeout(()=>{if(bossHP<=0)bossDone();else loadBossQ();},1200);
+}
+
+function useBossHint(){
+  const q=bossQuestions[bossIdx];if(!q)return;
+  bossHP=Math.min(100,bossHP+10);hintsUsed++;
+  document.getElementById('boss-hp-bar').style.width=bossHP+'%';
+  document.getElementById('boss-hp-text').textContent=bossHP;
+  document.getElementById('boss-feedback').innerHTML='<span style="color:var(--amber)">\ud83d\udca1 '+q.hint+' (Boss +10 HP qaytardi)</span>';
+}
+
+function bossDone(){
+  if(bossHP<=0){
+    addXP(500,'boss');
+    document.getElementById('boss-q-area').innerHTML=
+      '<div class="text-center" style="padding:40px 0"><div style="font-size:48px;margin-bottom:16px">&#127942;</div>'+
+      '<div style="font-size:20px;font-weight:700;color:var(--green)">BOSS MAG\'LUB BO\'LDI!</div>'+
+      '<div style="font-size:14px;color:var(--text-mid);margin-top:8px">+500 XP bonus</div>'+
+      '<div class="mt-20"><button class="btn btn-primary btn-lg" onclick="goToPhase(7)">Faza 7: Tafakkur &#8594;</button></div></div>';
+    document.getElementById('boss-hp-bar').style.width='0%';
+    document.getElementById('boss-hp-text').textContent='0';
+  }else{
+    document.getElementById('boss-q-area').innerHTML=
+      '<div class="text-center" style="padding:40px 0"><div style="font-size:14px;color:var(--amber);margin-bottom:16px">Boss hali tirik, lekin demo uchun davom etamiz</div>'+
+      '<div class="mt-12"><button class="btn btn-primary" onclick="goToPhase(7)">Faza 7: Tafakkur &#8594;</button></div></div>';
+  }
+}
+
+// ====== NAVIGATION ======
+function goToPhase(n){
+  setPhase(n);
+  if(n===3){showScreen('screen-p3');initGames();}
+  else if(n===4){showScreen('screen-p4');}
+  else if(n===5){showScreen('screen-p5');}
+  else if(n===6){showScreen('screen-p6');initBoss();}
+  else if(n===7){showScreen('screen-p7');initReplay();}
+}
+
+// ====== PHASE 7: REFLECTION ======
+function initReplay(){
+  const t=totalCorrect+totalWrong;
+  const acc=t>0?Math.round(totalCorrect/t*100):0;
+  document.getElementById('rep-total').textContent=t;
+  document.getElementById('rep-correct').textContent=totalCorrect;
+  document.getElementById('rep-wrong').textContent=totalWrong;
+  document.getElementById('rep-hints').textContent=hintsUsed;
+  document.getElementById('rep-accuracy').textContent=acc+'%';
+  document.getElementById('rep-xp').textContent=totalXP;
+  if(acc>=80){document.getElementById('reflection-title').textContent='Ajoyib natija!';document.getElementById('reflection-prompt').textContent='Qaysi strategiya bugun sizga yordam berdi?';}
+  else if(acc>=60){document.getElementById('reflection-title').textContent='Yaxshi harakat!';document.getElementById('reflection-prompt').textContent='Nima qiyin bo\'ldi? Qanday hal qildingiz?';}
+  else{document.getElementById('reflection-title').textContent='Davom eting!';document.getElementById('reflection-prompt').textContent='Buni yaxshiroq tushunish uchun nima yordam beradi?';}
+}
+
+function finishHomework(){
+  const txt=document.getElementById('reflect-text').value.trim();
+  if(txt.length<10){alert('Kamida 10 ta belgi yozing!');return;}
+  addXP(100,'reflect');
+  setPhase(8);
+  for(let i=1;i<=7;i++){document.getElementById('pip-'+i).classList.remove('active');document.getElementById('pip-'+i).classList.add('done');}
+  document.getElementById('final-xp').textContent=totalXP+' XP';
+  document.getElementById('xp-sprint').textContent=xpSprint+' XP';
+  document.getElementById('xp-story').textContent=xpStory+' XP';
+  document.getElementById('xp-games').textContent=xpGames+' XP';
+  document.getElementById('xp-rl').textContent=xpRL+' XP';
+  document.getElementById('xp-boss').textContent=xpBoss+' XP';
+  document.getElementById('xp-reflect').textContent=xpReflect+' XP';
+  let stars='\u2b50';
+  if(hintsUsed===0&&bossHP<=0)stars='\u2b50\u2b50\u2b50';
+  else if(bossHP<=50)stars='\u2b50\u2b50';
+  document.getElementById('final-stars').textContent=stars;
+  showScreen('screen-done');
+}
+</script>
+</body>
+</html>

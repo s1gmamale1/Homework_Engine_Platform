@@ -1,0 +1,35 @@
+Universal immutables honored:
+    - ✅ 7-phase structure preserved (phases get renamed/repurposed but the slot count and order stays)
+    - ✅ 0-A Theme Preview + 0-B Flash Cards mandatory
+    - ✅ Stranger Test on Story Mode narratives
+    - ✅ Dual-pathway answer checking (Tier 1 + Tier 3 vision for the Make)
+    - ✅ Cultural framing Uzbek-first
+    - ✅ Cosmetics never purchasable (Galereya + Master Painters Hall are earned-only)
+    - ✅ transition_skill tag requirement (custom Visual Arts track defined in §3)
+    - ✅ Teacher overrides scoped (allowed vs cannot)
+    - ✅ Textbook-first traceability (every Make traces to a textbook lesson)
+    - ✅ Standards-referenced dual code (UZ-TSV-5-{TOPIC}-{SEQ} + alias)
+
+    Universal immutables overridden — must be resolved in §0:
+    - ⚠️ Final Boss replaced with "The Make" — same structural slot (session climax, longer duration, higher stakes), no defeat/HP/fail state. Same precedent Tarbiya set with "Big Decision." Needs §0
+    resolution.
+    - ⚠️ Memory Sprint replaced with "Warm-up Sketch" — same slot (≤3 min, low-stakes, prepares student for main content), but it's hand warmup not memory drill. §0 resolution needed.
+    - ⚠️ No 60% pass threshold — every Make passes (engagement = success). §0 resolution needed, same precedent as Tarbiya.
+    - ⚠️ Real-Life Challenge replaced with "Choice + Plan" — same first-person agency principle, no tricky distractors. §0 resolution.
+    - ⚠️ Session duration ~30 min — within universal Standard range (30–45 min), no override needed.
+    - ⚠️ Notebook Capture elevated from "sometimes" to every session as the climax — that's a priority shift, not an immutable break. §0 resolution to flag the shift.
+
+    Custom track for §3 (since Tasviriy Sanat doesn't fit PISA Math/Reading/Science):
+    - Visual Reasoning (VR-L1 → VR-L4) custom track — recognize/apply/analyze/create
+    - PISA Creative Thinking as primary secondary tag
+    - PISA Reading L1 as conditional tag for theory-heavy lessons (art history reading)
+    - Same precedent Tarbiya set with MR/SEL and Texnologiya set with TR
+
+    Pipeline conformance:
+    - ✅ Universal framework (UNIFIED + Blueprint + UI/UX spec)
+    - ✅ G5 psychology research (qwen-grade5-psychology-findings.md)
+    - ✅ Subject textbook (5-sinf Tasviriy san'at, Kuziyev/Abdirasilov/Nurtoyev/Sulaymonov, 2020, 128pp)
+    - ✅ Subject-specific framework output (the Maker-First spec)
+
+    Bottom line: Maker-First is structurally a sibling of Tarbiya's Chill Mode and Texnologiya's standard mode — it overrides specific phases by formal §0 resolution while preserving the universal skeleton.
+    Same playbook both prior frameworks already used. Fully Universal Specs–compliant.

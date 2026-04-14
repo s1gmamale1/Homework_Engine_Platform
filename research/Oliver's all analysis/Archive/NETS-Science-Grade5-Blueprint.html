@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETS Homework Engine — Science Grade 5 Blueprint</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-code: #252833;
+      --bg-highlight: rgba(108,99,255,0.08);
+      --border: #2d3140;
+      --text: #e2e4eb;
+      --text-muted: #9ca3b8;
+      --text-dim: #6b7280;
+      --accent: #6c63ff;
+      --accent-light: #8b83ff;
+      --green: #22c55e;
+      --green-dim: #16a34a;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --blue: #3b82f6;
+      --cyan: #06b6d4;
+      --orange: #f97316;
+      --pink: #ec4899;
+      --radius: 8px;
+      --shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(108,99,255,0.1) 0%, transparent 70%);
+      animation: pulse 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #c7d2fe, #6c63ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 0.75rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .meta {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .badge {
+      display: inline-block;
+      background: rgba(108,99,255,0.2);
+      color: var(--accent-light);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+      border: 1px solid rgba(108,99,255,0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Section cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      color: var(--accent-light);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h2 .icon {
+      font-size: 1.3rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      color: var(--cyan);
+      margin: 1.25rem 0 0.75rem;
+    }
+
+    .card h4 {
+      font-size: 0.95rem;
+      color: var(--yellow);
+      margin: 1rem 0 0.5rem;
+    }
+
+    /* Tables */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1rem 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: rgba(108,99,255,0.15);
+      color: var(--accent-light);
+      padding: 0.75rem;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+    tr:hover { background: rgba(108,99,255,0.05); }
+
+    /* Lists */
+    ul, ol {
+      padding-left: 1.5rem;
+      margin: 0.75rem 0;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Inline code */
+    code {
+      background: var(--bg-code);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.88em;
+      color: var(--cyan);
+    }
+
+    /* Code blocks */
+    pre {
+      background: var(--bg-code);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    pre code {
+      background: none;
+      padding: 0;
+      color: var(--text);
+    }
+
+    /* Banned / Mandatory lists */
+    .banned { list-style: none; padding-left: 0; }
+    .banned li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--red);
+    }
+    .banned li:last-child { border-bottom: none; }
+    .banned li strong { color: var(--red); }
+
+    .mandatory { list-style: none; padding-left: 0; }
+    .mandatory li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--green);
+    }
+    .mandatory li:last-child { border-bottom: none; }
+    .mandatory li strong { color: var(--green); }
+
+    /* Tags */
+    .tag {
+      display: inline-block;
+      background: rgba(6,182,212,0.15);
+      color: var(--cyan);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+    }
+
+    .tag-green { background: rgba(34,197,94,0.15); color: var(--green); }
+    .tag-yellow { background: rgba(245,158,11,0.15); color: var(--yellow); }
+    .tag-red { background: rgba(239,68,68,0.15); color: var(--red); }
+    .tag-purple { background: rgba(108,99,255,0.15); color: var(--accent-light); }
+
+    /* Checklist */
+    .checklist { list-style: none; padding-left: 0; }
+    .checklist li::before { content: '☐ '; color: var(--accent); font-weight: bold; }
+
+    /* Phase table highlight */
+    .phase-row td:first-child { font-weight: 600; color: var(--accent-light); }
+    .phase-total { background: rgba(108,99,255,0.1) !important; }
+
+    /* Open decisions */
+    .decision {
+      background: rgba(245,158,11,0.08);
+      border-left: 3px solid var(--yellow);
+      padding: 1rem;
+      margin: 0.75rem 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .decision strong { color: var(--yellow); }
+
+    /* Sub-section divider */
+    .divider {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: var(--bg-highlight);
+      border: 1px solid rgba(108,99,255,0.2);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+    }
+
+    /* Arrow flow */
+    .flow {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      color: var(--accent-light);
+      font-size: 0.95rem;
+      margin: 0.75rem 0;
+    }
+
+    /* Did you know */
+    .dyk {
+      background: rgba(249,115,22,0.08);
+      border-left: 3px solid var(--orange);
+      padding: 0.75rem 1rem;
+      margin: 0.5rem 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-style: italic;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 2rem;
+      padding: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      body { padding: 1rem 0.5rem; }
+      .header { padding: 2rem 1rem; }
+      .header h1 { font-size: 1.5rem; }
+      .card { padding: 1.25rem; }
+      table { font-size: 0.8rem; }
+      th, td { padding: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>NETS Homework Engine</h1>
+      <div class="subtitle">Science Grade 5 Blueprint</div>
+      <div class="meta">
+        Source textbook: Aleksandr Grey, <em>Tabiiy fanlar 5-sinf</em> (Marshall Cavendish, Toshkent: Novda Edutainment, 2024) — 164 pages, 10 chapters
+      </div>
+      <div class="badge">Subject-Specific Instantiation &middot; Inherits UNIFIED v2.0 (2026-04-07) &middot; Grade 5 Cognitive Filter Applied &middot; 16 Game Mechanics</div>
+    </div>
+
+    <!-- Section 0: Grade 5 Psychology Filter -->
+    <div class="card">
+      <h2><span class="icon">&#x1F9E0;</span> 0. Grade 5 Psychology Filter</h2>
+      <p>The universal NETS engine targets K–11. Grade 5 (10–11 yr) has specific developmental constraints that override generic defaults. Every rule below either <strong>adjusts a number</strong> or <strong>bans a technique</strong>.</p>
+
+      <h3>A. Numeric Overrides</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Parameter</th><th>Universal Default</th><th>Grade 5 Override</th><th>Source</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Flow state success rate</td><td>70–80%</td><td><strong>75–85%</strong></td><td>Frontiers in Psych 2018</td></tr>
+            <tr><td>Difficulty adapt cadence</td><td>Every 3–5 questions</td><td><strong>Every 3–4 questions</strong></td><td>WM whiplash research</td></tr>
+            <tr><td>Pass threshold (Sprint, Boss)</td><td>70%</td><td><strong>60%</strong></td><td>Guskey 2010</td></tr>
+            <tr><td>Total session length</td><td>30–45 min Std / 45–60 Ext</td><td><strong>35–45 min Standard</strong> (incl. 0-A + 0-B + 7 phases)</td><td>UNIFIED §4 + attention research</td></tr>
+            <tr><td>Single phase length</td><td>Varies</td><td><strong>Never exceed 7–9 min</strong></td><td>Attention span data</td></tr>
+            <tr><td>New technical terms / session</td><td>Not specified</td><td><strong>Max 1–2</strong></td><td>Nagy & Herman 1987</td></tr>
+            <tr><td>New concepts / instruction</td><td>Not specified</td><td><strong>Max 3</strong></td><td>Cowan 2001 (WM = 4–5)</td></tr>
+            <tr><td>Why Chain depth</td><td>2-level</td><td><strong>Stays at 2-level</strong></td><td>Confirmed</td></tr>
+            <tr><td>Recovery after wrong answer</td><td>Not specified</td><td><strong>5–10 sec positive framing</strong></td><td>Thompson 2011</td></tr>
+            <tr><td>Story Mode reading level</td><td>Not specified</td><td><strong>Lexile 800–900L</strong></td><td>MetaMetrics 2025</td></tr>
+            <tr><td>Daily session cap</td><td>Not specified</td><td><strong>Max 1–2 sessions/day</strong></td><td>Cooper et al. 2006</td></tr>
+            <tr><td>Best deployment window</td><td>Not specified</td><td><strong>17:00–19:00</strong></td><td>UNICEF Uzbekistan 2023</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>B. Banned Techniques</h3>
+      <ul class="banned">
+        <li>❌ <strong>Public displays of wrong answers</strong> — fragile self-concept; private correction only</li>
+        <li>❌ <strong>Absolute-rank leaderboards</strong> — only improvement ranking or class-wide goals</li>
+        <li>❌ <strong>Real-time multiplayer competition</strong> — use async ("beat your own score") instead</li>
+        <li>❌ <strong>Pure discovery / unbounded sandbox</strong> — always provide guided structure</li>
+        <li>❌ <strong>Random rewards without competence link</strong> — opportunity must be earned</li>
+        <li>❌ <strong>Purchasable cosmetics</strong> — all avatar items earned through competence</li>
+        <li>❌ <strong>Abstract-only puzzles</strong> — CPA mandatory for Science</li>
+        <li>❌ <strong>Complex multi-step instructions without worked examples</strong></li>
+        <li>❌ <strong>Delayed feedback</strong> — all feedback within seconds</li>
+        <li>❌ <strong>"You're smart" / ability praise</strong> — use effort + strategy praise</li>
+        <li>❌ <strong>The word "wrong"</strong> — use "not yet" / "not quite" / "close — here's why"</li>
+        <li>❌ <strong>Brain breaks every 5 min</strong> — phase transitions ARE the breaks</li>
+        <li>❌ <strong>Learning styles matching</strong> — no evidence; ignore</li>
+        <li>❌ <strong>Why Chain ≥3 levels</strong> — over WM ceiling for G5</li>
+        <li>❌ <strong>Visible difficulty labels</strong> — triggers self-handicapping; hidden from UI</li>
+        <li>❌ <strong>Group/peer-correction as primary feedback</strong> — solo-first for concept acquisition</li>
+      </ul>
+
+      <h3>C. Mandatory Additions</h3>
+      <ul class="mandatory">
+        <li>✅ <strong>CPA progression</strong> — Concrete → Pictorial → Abstract for every Science concept</li>
+        <li>✅ <strong>Dual coding</strong> — text paired WITH image, never text-only</li>
+        <li>✅ <strong>Worked example</strong> before independent practice</li>
+        <li>✅ <strong>Spaced retrieval</strong> — Day 1 / Day 3 / Day 7 / Day 14 schedule</li>
+        <li>✅ <strong>Effort + strategy feedback</strong> — "You found a strategy that didn't work — let's try another"</li>
+        <li>✅ <strong>Uzbek cultural anchors</strong> — Ulugh Beg observatory, Aral Sea, Registan, Amir Temur</li>
+        <li>✅ <strong>Mobile-first, portrait orientation, low-bandwidth</strong></li>
+        <li>✅ <strong>Variable-ratio reward windows</strong> — earned via competence</li>
+        <li>✅ <strong>Hidden difficulty tiering</strong> — adapts silently</li>
+        <li>✅ <strong>30-second productive struggle window</strong> — before offering hint</li>
+      </ul>
+    </div>
+
+    <!-- Section 1: Why Science-Specific Engine -->
+    <div class="card">
+      <h2><span class="icon">&#x1F52C;</span> 1. Why a Science-Specific Engine</h2>
+      <ul>
+        <li><strong>Triple-domain textbook</strong> — biology (Ch.1–2), physics/chemistry (Ch.3–7), earth science/geography (Ch.8–10). One Story Mode template can't serve all three.</li>
+        <li><strong>PISA Science L1→L2 transition is the national bottleneck</strong> — baseline 355, target L2. Every session must scaffold this transition explicitly.</li>
+        <li><strong>Textbook is inquiry-based</strong> — chapters open with <code>O'ylab ko'ring</code> (think) and end with <code>Bilimingizni sinab ko'ring</code> (test).</li>
+        <li><strong><code>Tadqiqotchilik ko'nikmalari</code></strong> (research/inquiry skills) is a transversal competency tagged on every chapter.</li>
+      </ul>
+    </div>
+
+    <!-- Section 2: Inherited Immutables -->
+    <div class="card">
+      <h2><span class="icon">&#x1F512;</span> 2. Inherited Immutables (No Override)</h2>
+      <div class="highlight-box">
+        <ul>
+          <li><strong>Pre-homework Sessions 0-A (Theme Preview) + 0-B (Flash Cards)</strong> — student-paced, no scoring, no XP, returnable; timer starts only after "Start my Homework" tap</li>
+          <li><strong>7 phases + 16 game mechanics</strong> (Memory Palace #5, Tic-Tac-Toe vs AI #15, Notebook Capture #16 — per UNIFIED 2026-04-07)</li>
+          <li><strong>30–45 min Standard / 45–60 min Extended</strong> (G5 Science target: 35–45 Standard)</li>
+          <li>Flow state 70–80%, adaptive every 3–5 questions <em>(G5 override: 75–85%, every 3–4, see §0)</em></li>
+          <li>Bloom's distribution per LU: 4R / 3U / 3Ap / 2An / 1–2 E-C, span ≥4 levels</li>
+          <li>Boss is mandatory, tiered (Sub / Big / Mythical)</li>
+          <li>Textbook-as-source-of-truth, Stranger Test on Story Mode</li>
+          <li>Mandatory tags: <code>textbook_ref</code>, <code>standard_ref</code>, <code>pisa_ref</code> (with <code>transition_skill</code>), <code>blooms_level</code>, <code>game_mechanic</code></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Section 3: Chapter & Domain Map -->
+    <div class="card">
+      <h2><span class="icon">&#x1F4DA;</span> 3. Science Grade 5 — Chapter & Domain Map</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Bob</th><th>Title (Uzbek)</th><th>English</th><th>Domain</th><th>PISA Sub-domain</th><th>Page</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Gulli o'simliklar</td><td>Flowering plants</td><td>Biology</td><td>Identify/Explain</td><td>8</td></tr>
+            <tr><td>2</td><td>Moslanishlar</td><td>Adaptations</td><td>Biology</td><td>Interpret evidence</td><td>25</td></tr>
+            <tr><td>3</td><td>Moddaning agregat holatlari</td><td>States of matter</td><td>Phys/Chem</td><td>Identify/Explain</td><td>41</td></tr>
+            <tr><td>4</td><td>Moddalarning o'zaro ta'siri</td><td>Substance interactions</td><td>Phys/Chem</td><td>Interpret evidence</td><td>60</td></tr>
+            <tr><td>5</td><td>Kuchlar</td><td>Forces</td><td>Physics</td><td>Interpret + Inquiry</td><td>78</td></tr>
+            <tr><td>6</td><td>Tovushlar</td><td>Sounds</td><td>Physics</td><td>Identify/Explain</td><td>102</td></tr>
+            <tr><td>7</td><td>Magnitlar va magnit kuchi</td><td>Magnets and magnetic force</td><td>Physics</td><td>Identify/Explain</td><td>114</td></tr>
+            <tr><td>8</td><td>Atmosfera. Suvning tabiatda aylanishi</td><td>Atmosphere, water cycle</td><td>Earth</td><td>Interpret evidence</td><td>125</td></tr>
+            <tr><td>9</td><td>Atrof-muhitning ifloslanishi</td><td>Environmental pollution</td><td>Earth</td><td>Reflect/Evaluate</td><td>139</td></tr>
+            <tr><td>10</td><td>Tabiiy fanlarning hayotga tatbiqi</td><td>Science in daily life</td><td>Cross-domain</td><td>Reflect/Evaluate</td><td>150</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Standard code pattern:</strong> <code>UZ-SCI-5-{TOPIC}-{SEQ}</code> — e.g., <code>UZ-SCI-5-FLOWER-01</code>, <code>UZ-SCI-5-MAGNET-03</code>. Alias: <code>SCI.5.{bob}.{topic}.{seq}</code></p>
+    </div>
+
+    <!-- Section 4: PISA Science Mapping -->
+    <div class="card">
+      <h2><span class="icon">&#x1F4C8;</span> 4. PISA Science Mapping — Grade 5 Target</h2>
+      <p>Grade 5 Science targets <strong>L1 → L2 transition</strong> as the dominant scaffold, with L2 → L3 stretch goals for top quartile.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>PISA Level</th><th>What student can do</th><th>G5 Expected Coverage</th><th>Bloom's Pairing</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>L1</td><td>Recall simple scientific facts, recognize familiar phenomena</td><td>30% of tasks</td><td>Remember</td></tr>
+            <tr style="background: rgba(108,99,255,0.1);"><td><strong>L2</strong></td><td><strong>Explain familiar phenomena, identify simple causes</strong></td><td><strong>40% of tasks (target)</strong></td><td><strong>Understand, Apply</strong></td></tr>
+            <tr><td>L3</td><td>Interpret data, evaluate simple evidence</td><td>25% of tasks (stretch)</td><td>Analyze</td></tr>
+            <tr><td>L4</td><td>Multi-source synthesis, abstract reasoning</td><td>5% of tasks (Final Boss Hard)</td><td>Evaluate</td></tr>
+            <tr><td>L5–L6</td><td>Mythical Boss only (&lt;5% random)</td><td>n/a</td><td>Create</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Mandatory transition_skill Tags</h4>
+      <ul>
+        <li><span class="tag">L1→L2: explain familiar phenomena from observation</span></li>
+        <li><span class="tag">L1→L2: identify a simple cause-effect relationship</span></li>
+        <li><span class="tag">L2→L3: interpret a simple data table or diagram</span></li>
+        <li><span class="tag">L2→L3: design a fair test (control variables)</span></li>
+        <li><span class="tag">L3→L4: integrate evidence from two different sources</span></li>
+      </ul>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">Every task in DRAFT without one of these tags is rejected by content review.</p>
+    </div>
+
+    <!-- Section 4.5: Pre-homework Sessions -->
+    <div class="card">
+      <h2><span class="icon">&#x1F5BC;&#xFE0F;</span> 4.5. Pre-homework Sessions (0-A and 0-B)</h2>
+      <p>Per UNIFIED §4.4 + §4.5 (updated 2026-04-07). These run <strong>before</strong> the 7-phase engine. Timer does not start until the student taps <strong>"Start my Homework"</strong>. No XP, no scoring, no penalties.</p>
+
+      <h3>Session 0-A — Theme Preview (Swipe Deck)</h3>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td style="width: 200px;"><strong>Duration</strong></td><td>2–4 min, student-paced (Science G5: target 3 min)</td></tr>
+            <tr><td><strong>Format</strong></td><td>Vertical swipe deck (TikTok/Tinder-style), one component per card, swipe up/down, may skip</td></tr>
+            <tr><td><strong>Tier</strong></td><td>AI Tier 2 — personalized framing per student PISA level + interests</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Mandatory 8 Components per Card (UNIFIED §4.4)</h4>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Component</th><th>Science G5 Instantiation</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Summary of Book Content</td><td>2–3 sentence textbook chapter summary in Uzbek (Lexile 800–900L)</td></tr>
+            <tr><td>2</td><td>Better Explanation</td><td>Same concept rephrased with metaphor + concrete analogy</td></tr>
+            <tr><td>3</td><td>Examples</td><td>2–3 short examples (Concrete → Pictorial, never Abstract-only)</td></tr>
+            <tr><td>4</td><td>Real-Life Research</td><td>Local Uzbek context — <em>"Aral dengizi qurib bormoqda"</em>, <em>"Ulug'bek rasadxonasi"</em></td></tr>
+            <tr><td>5</td><td>Personal Hook</td><td>Direct "you" framing — <em>"Sizning telefoningizdagi kompas qanday ishlaydi?"</em></td></tr>
+            <tr><td>6</td><td>Why This Matters</td><td>Connects to student's life — health, safety, daily decisions</td></tr>
+            <tr><td>7</td><td>Industry Application</td><td>Uzbek professionals — meteorolog, agronom, ekolog, shifokor, muhandis</td></tr>
+            <tr><td>8</td><td>Additional Materials</td><td>Links: [uz] textbook video, [ru] secondary resource, [en] simulator</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Design rules:</strong> Visual-first, first-person POV, Lexile 800–900L, define new terms inline.</p>
+      <p><strong>Ends with transition card:</strong> <em>"Boshlashdan oldin — kerak bo'ladigan asosiy g'oyalar."</em> → leads into 0-B</p>
+
+      <hr class="divider">
+
+      <h3>Session 0-B — Flash Cards</h3>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td style="width: 200px;"><strong>Duration</strong></td><td>1–2 min initial pass; <strong>returnable throughout homework</strong> via "Flash Cards" button (NOT a hint — pure reference)</td></tr>
+            <tr><td><strong>Format</strong></td><td>Swipeable card pool, one concept per card, no testing</td></tr>
+            <tr><td><strong>Tier</strong></td><td>AI Tier 1 (pre-generated per chapter)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Card Pool Must Contain (per UNIFIED §4.5):</h4>
+      <ul>
+        <li><strong>All Key Formulas</strong> — density (Bob 4), force diagrams (Bob 5)</li>
+        <li><strong>All Key Concepts</strong> — magnet poles, adaptation, water cycle stages</li>
+        <li><strong>All Key Rules</strong> — like poles repel, opposite attract; predator-prey balance</li>
+      </ul>
+
+      <p><strong>Card structure:</strong> Front = concept name + textbook page; Back = 1–2 sentence definition + image/diagram</p>
+      <div class="highlight-box">
+        <strong>Ends with prominent "Boshlash" / "Start my Homework" button.</strong> Only after this button does the timer start and XP accrue.
+      </div>
+
+      <h3>Why These Matter for Science G5</h3>
+      <ul>
+        <li><strong>Vocabulary scaffold</strong> — 0-B preloads all new technical terms, satisfying the §0.A "max 1–2 new terms" rule</li>
+        <li><strong>Cultural priming</strong> — 0-A's Uzbek anchors lock in cultural relevance before cognitive load begins</li>
+        <li><strong>Anxiety buffer</strong> — student-paced exploration with no penalty respects fragile G5 self-concept</li>
+        <li><strong>Fairness for slow readers</strong> — Lexile-controlled, swipeable, no time pressure</li>
+      </ul>
+    </div>
+
+    <!-- Section 5: Phase-by-Phase Overrides -->
+    <div class="card">
+      <h2><span class="icon">&#x1F3AE;</span> 5. Phase-by-Phase Science Overrides</h2>
+
+      <h3>Phase 1 — Memory Sprint (≤2 min)</h3>
+      <ul>
+        <li>Recall items pull from <code>Ilmiy atamalar</code> (glossary) + prior chapter terminology</li>
+        <li>Format: 50% MC term-definition, 30% Tile Match, 20% Sentence Fill</li>
+        <li>No abstract calculation — belongs in Game Breaks</li>
+        <li>Remediation gate: &lt;60% → route to remediation chapter</li>
+      </ul>
+
+      <hr class="divider">
+
+      <h3>Phase 2 — Story Mode (5–7 min)</h3>
+      <p><strong>Template:</strong></p>
+      <div class="flow">Phenomenon &nbsp;→&nbsp; Predict &nbsp;→&nbsp; Observe/Results &nbsp;→&nbsp; Explain</div>
+      <p>This mirrors the textbook's own <code>O'ylab ko'ring</code> → activity → explanation pattern.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Domain</th><th>Phenomenon Hook</th><th>Predict Gate</th><th>Results Gate</th><th>Explain Gate</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Biology (Ch.1-2)</td><td>Time-lapse / image</td><td>"What will happen if…?" MC</td><td>Animation or photo</td><td>Free-text or scaffolded</td></tr>
+            <tr><td>Phys/Chem (Ch.3-7)</td><td>Demo video</td><td>Predict outcome</td><td>Show actual result</td><td>Tile-Match cause→effect</td></tr>
+            <tr><td>Earth (Ch.8-9)</td><td>Satellite image / weather</td><td>Predict pattern</td><td>Reveal data</td><td>Why-Chain (2 levels)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="divider">
+
+      <h3>Phase 3 — Game Breaks (6–9 min)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Game Mechanic</th><th>When to Use</th><th>Bloom's</th><th>PISA</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Tile Match</strong></td><td>Term ↔ diagram</td><td>R/U</td><td>L1</td></tr>
+            <tr><td><strong>Mystery Box</strong></td><td>Identify from clues</td><td>U/Ap</td><td>L1→L2</td></tr>
+            <tr><td><strong>Why Chain (2-level)</strong></td><td>Simple cause-effect</td><td>Ap/An</td><td>L2→L3</td></tr>
+            <tr><td><strong>Sentence Fill</strong></td><td>Scientific definitions</td><td>U</td><td>L1→L2</td></tr>
+            <tr><td><strong>Adaptive Quiz</strong></td><td>Mixed Bloom's</td><td>Variable</td><td>All</td></tr>
+            <tr><td><strong>Memory Palace</strong></td><td>Glossary load</td><td>R</td><td>L1</td></tr>
+            <tr><td><strong>Tic-Tac-Toe vs AI</strong></td><td>Recall under stakes</td><td>R</td><td>L1</td></tr>
+            <tr><td><strong>Sorting Lab</strong> <span class="tag tag-green">New</span></td><td>Classify (magnetic/non-magnetic, etc.)</td><td>U/Ap</td><td>L1→L2</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top: 0.75rem;"><strong>Selection algorithm (3 games):</strong> 1) Reinforcement game at current Bloom's → 2) Stretch game one level above → 3) Transition-skill game scaffolding L1→L2 or L2→L3.</p>
+
+      <hr class="divider">
+
+      <h3>Phase 4 — Real-Life Challenge (3–5 min)</h3>
+      <ul>
+        <li><strong>First-person expert POV mandatory</strong> — Uzbek-context roles: farmer in Andijon, teacher in Tashkent, meteorologist, environmental inspector at Aral Sea</li>
+        <li>Multi-path reasoning required (≥2 valid approaches)</li>
+        <li><strong>Inquiry hook:</strong> ends with "What would you measure?" / "What would your control group be?"</li>
+      </ul>
+
+      <hr class="divider">
+
+      <h3>Phase 5 — Consolidation / Mnemonic Lock (3–5 min)</h3>
+      <p><strong>Default technique:</strong> Memory Palace (mechanic #5) using culturally-anchored Uzbek locations. 5 loci = 5 concepts from session, each with <code>concept + visual + recall question</code>.</p>
+
+      <h4>Per-Chapter Memory Palace Defaults</h4>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Bob</th><th>Palace Location</th><th>Why This Place</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1, 2</td><td>Chimgan tog'lari + o'rmon</td><td>Living systems, plant/animal habitats</td></tr>
+            <tr><td>3, 4</td><td>Toshkent kimyo laboratoriyasi</td><td>States of matter, substance interactions</td></tr>
+            <tr><td>5</td><td>Bunyodkor stadioni</td><td>Forces in action — running, jumping, balance</td></tr>
+            <tr><td>6</td><td>O'zbek milliy musiqa zali</td><td>Sound — strings, vibration, pitch</td></tr>
+            <tr><td>7</td><td>Ulug'bek rasadxonasi (Samarqand)</td><td>Magnets, compass, navigation, astronomy heritage</td></tr>
+            <tr><td>8</td><td>Registon maydoni + osmon</td><td>Atmosphere, weather, water cycle</td></tr>
+            <tr><td>9</td><td>Orol dengizi (Aral Sea)</td><td>Pollution, environmental change, human impact</td></tr>
+            <tr><td>10</td><td>Amir Temur muzeyi</td><td>Cross-domain heritage capstone</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Structure</h4>
+      <ol>
+        <li><strong>5 loci</strong> mapped to 5 concepts from current chapter</li>
+        <li>Each locus card: location image + concept text + visual mnemonic + 1 recall question</li>
+        <li><strong>Recall test</strong> at end: 3 questions cycling through loci, no hints</li>
+        <li>Interleaving: 1 of 5 loci references a prior-chapter concept</li>
+      </ol>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">Alternative: Adaptive Quiz (only if Memory Palace was used in prior session — avoid back-to-back same mechanic).</p>
+
+      <hr class="divider">
+
+      <h3>Phase 6 — Final Boss</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Student PISA</th><th>Boss Tier</th><th>HP / Pattern</th><th>Expected Outcome</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Below L1 (≈355)</td><td>Sub Boss Easy</td><td>30 HP, L1 only</td><td>Required win, scaffolded</td></tr>
+            <tr><td>L1–L2 (median G5)</td><td>Sub Boss Medium</td><td>50 HP, L1–L2 mix</td><td>Win after 1 retry</td></tr>
+            <tr><td>L2–L3 (top quartile)</td><td>Big Boss (weekly) or Sub Boss Hard</td><td>80 HP, L2–L3</td><td>Real challenge</td></tr>
+            <tr><td>L3+ (top decile)</td><td>Big Boss + occasional Mythical</td><td>100+ HP, L3–L4</td><td>Stretch</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Boss Content Requirements</h4>
+      <ul>
+        <li><strong>5 questions</strong>, distribution: Easy 40% / Medium 40% / Hard 20%</li>
+        <li>1 phenomenon-explanation (Tier 3 AI evaluates reasoning)</li>
+        <li>1 data-interpretation (chart, table, or diagram from textbook)</li>
+        <li>1 cause-effect chain question</li>
+        <li>1 vocabulary/recall (anchors L1)</li>
+        <li>Optional Hard: 1 inquiry-design — Sub Boss Hard / Big Boss only</li>
+      </ul>
+
+      <h4>Each Boss Question MUST Carry</h4>
+      <ul>
+        <li>Step-by-step worked solution (visible after answer)</li>
+        <li>2–3 progressive <strong>Hints</strong> (revealed on request, not auto-pushed)</li>
+        <li><strong>Common Errors</strong> list — at least 1 known wrong answer with diagnostic explanation</li>
+      </ul>
+
+      <div class="highlight-box">
+        <span class="tag tag-red">HIDDEN</span> <strong>Difficulty labels</strong> (<code>[EASY]</code> / <code>[MEDIUM]</code> / <code>[HARD]</code>) are <strong>INTERNAL ONLY</strong> — never shown to student in UI (per §0.B.15 hidden difficulty rule).
+      </div>
+
+      <h4>Mastery Stars (1–3) — Earned Per Session</h4>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Stars</th><th>Condition</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>⭐ 1</td><td>Boss defeated (any attempts within retry limit)</td></tr>
+            <tr><td>⭐⭐ 2</td><td>Boss defeated in ≤2 attempts AND &gt;50% HP remaining</td></tr>
+            <tr><td>⭐⭐⭐ 3</td><td>Boss defeated on FIRST attempt, no hints used, &gt;80% HP remaining</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Failure → Boss Regeneration</h4>
+      <p>If student fails all permitted retries, Tier 3 AI runs <strong>Socratic tutoring</strong> based on wrong answers, then <strong>regenerates new boss questions</strong> tailored to the gap. Auto-flags teacher dashboard after <strong>3 failed sessions on the same standard</strong>.</p>
+
+      <p><strong>Boss is mandatory.</strong> Max 2 retries per session; on 2× fail → next session continues from boss with simplified scaffold + Tier 3 Socratic intro (UNIFIED §5.6).</p>
+
+      <hr class="divider">
+
+      <h3>Phase 7 — Reflection (2–3 min)</h3>
+      <p><strong>Tier 2 AI generates ONE prompt per session, selected by accuracy bucket:</strong></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Accuracy Bucket</th><th>Prompt Style</th><th>Science G5 Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>≥80% (mastery)</strong></td><td>Strategy reflection</td><td><em>"Qaysi strategiya sizga muvaffaqiyat keltirdi? Magnit kuchini tushuntirishda nima yordam berdi?"</em></td></tr>
+            <tr><td><strong>60–79% (passing)</strong></td><td>Struggle + recovery</td><td><em>"Qaysi savol qiyin bo'ldi? Siz uni qanday hal qildingiz?"</em></td></tr>
+            <tr><td><strong>&lt;60% (Duolingo Mode)</strong></td><td>Support-seeking</td><td><em>"Buni yaxshiroq tushunish uchun nima kerak? Qaysi qism chalkash bo'ldi?"</em></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Universal Science Prompts (rotate when not bucket-overridden)</h4>
+      <ul>
+        <li><em>"Bugun qaysi tabiat hodisasini yangidan tushundingiz?"</em></li>
+        <li><em>"Tajribangizda nima kutilganidan boshqacha bo'ldi?"</em></li>
+        <li><em>"Bu mavzu kundalik hayotingizda qayerda uchraydi?"</em></li>
+      </ul>
+
+      <h4>Rules</h4>
+      <ul>
+        <li>Min 10 characters (teacher configurable up to 5 sentences)</li>
+        <li>Bloom's = Create, PISA = L3-4 (metacognitive only)</li>
+        <li><strong>Effort + strategy language only</strong> — never "Were you smart enough?"</li>
+        <li>Optional peer-explanation: <em>"Bu mavzuni darsda yo'q bo'lgan do'stingizga qanday tushuntirgan bo'lardingiz?"</em></li>
+      </ul>
+    </div>
+
+    <!-- Section 6: Sample Session -->
+    <div class="card">
+      <h2><span class="icon">&#x1F9F2;</span> 6. Sample Session — Bob 7 (Magnitlar va magnit kuchi)</h2>
+      <p><strong>Topic:</strong> §7.2 Magnit kuchi &nbsp;|&nbsp; <strong>Standard:</strong> <code>UZ-SCI-5-MAGNET-02</code> / <code>SCI.5.7.2.1</code> &nbsp;|&nbsp; <strong>Textbook:</strong> pp. 106–110 &nbsp;|&nbsp; <strong>Mode:</strong> Standard</p>
+      <p><strong>Target PISA transition:</strong> <span class="tag">L1→L2: explain familiar phenomena from observation</span></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Phase</th><th>Time</th><th>Content</th></tr>
+          </thead>
+          <tbody class="phase-row">
+            <tr><td><strong>0-A. Theme Preview</strong> <span class="tag tag-green">No XP</span></td><td>3 min</td><td>8-card swipe deck: magnetic force summary → compass metaphor ("miniature Ulug'bek star-finder") → 2 examples → Real-life: <em>"Telefoningizdagi kompas magnit ishlatadi"</em> → Personal hook → Why it matters → Industry (geolog, muhandis) → Materials links</td></tr>
+            <tr><td><strong>0-B. Flash Cards</strong> <span class="tag tag-green">Returnable</span></td><td>2 min</td><td>6 cards: magnit qutbi / magnetik material / kompas / magnit kuchi / N-S qoidasi / iron filings pattern. Front=term, back=definition + diagram</td></tr>
+            <tr style="background: rgba(34,197,94,0.1);"><td colspan="3" style="text-align: center; font-style: italic;">→ <strong>"Boshlash" tap → timer starts</strong> →</td></tr>
+            <tr><td>1. Memory Sprint</td><td>2 min</td><td>7 items: glossary — Tile Match + MC + Sentence Fill. 2 items from Bob 4 (interleaving)</td></tr>
+            <tr><td>2. Story Mode</td><td>7 min</td><td><strong>Phenomenon:</strong> iron filings video → <strong>Predict:</strong> "Where will filings be densest?" → <strong>Observe:</strong> show pattern → <strong>Explain:</strong> "Why are poles strongest?" (2-level Why Chain)</td></tr>
+            <tr><td>3. Game Breaks</td><td>8 min</td><td>Game 1: Sorting Lab (magnetic/non-magnetic) — L1. Game 2: Mystery Box (clues → identify) — L2. Game 3: Tic-Tac-Toe vs AI (pole questions) — L1→L2</td></tr>
+            <tr><td>4. Real-Life Challenge</td><td>4 min</td><td><em>"Siz Toshkent maktabida o'qituvchisisiz. O'quvchi qum qutisida sochto'g'nag'ichini tushirib qo'ydi. Magnit bilan qanday topasiz? Qayerda ishlatib BO'LMAYDI?"</em> Inquiry hook: <em>"Qanday tekshirasiz?"</em></td></tr>
+            <tr><td>5. Consolidation (Memory Palace — Ulug'bek rasadxonasi)</td><td>5 min</td><td>5 loci: darvoza (compass), minora (poles), katalog (materials), ayvon (Earth's field), gumbaz (cause-effect). Recall test: 3 questions cycling loci</td></tr>
+            <tr><td>6. Sub Boss Medium</td><td>7 min</td><td>50 HP, 5 Qs (E×2, M×2, H×1). Q1: Compass → north? Q2: Diagram predict. Q3: Cause chain. Q4: Vocab MC. Q5: Inquiry — control? Each has worked solution + hints + Common Errors</td></tr>
+            <tr><td>7. Reflection</td><td>3 min</td><td>Tier 2 generates 1 prompt by accuracy bucket. Min 10 chars, effort-praise framing</td></tr>
+            <tr class="phase-total"><td><strong>Total (timed)</strong></td><td><strong>36 min</strong></td><td>Standard mode (within 35–45 G5 budget)</td></tr>
+            <tr class="phase-total"><td><strong>Total incl. 0-A + 0-B</strong></td><td><strong>41 min</strong></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>"Did You Know" Insights (≤8 sec each, AI Tier 2)</h4>
+      <div class="dyk">After Story Mode → <em>"Bilasizmi? Yer sayyorasi ham ulkan magnit — shimolda ham, janubda ham qutblar bor!"</em></div>
+      <div class="dyk">After Game Breaks → <em>"Bilasizmi? Hozirgi kompaslar 1000 yil oldin Xitoyda kashf etilgan, Buyuk Ipak yo'lidan O'rta Osiyoga kelgan."</em></div>
+      <div class="dyk">Before Boss → <em>"Bilasizmi? Eng kuchli magnitlar MRI apparatlarida ishlatiladi — shifokorlar miyangizni shu orqali ko'radi!"</em></div>
+
+      <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);"><strong>Tag check:</strong> ~25 task units total, all carry <code>textbook_ref</code>, <code>standard_ref</code>, <code>pisa_ref</code>, <code>blooms_level</code>, <code>game_mechanic</code>. <span class="tag tag-green">&#x2705;</span></p>
+    </div>
+
+    <!-- Section 7: Tagging Schema -->
+    <div class="card">
+      <h2><span class="icon">&#x1F3F7;&#xFE0F;</span> 7. Tagging Schema Example</h2>
+      <pre><code>{
+  "task_id": "UZ-SCI-5-MAGNET-02-T07",
+  "textbook_ref": {
+    "book": "Tabiiy fanlar 5-sinf (Grey, 2024)",
+    "chapter": 7,
+    "section": "7.2",
+    "pages": [108, 109]
+  },
+  "standard_ref": {
+    "primary": "UZ-SCI-5-MAGNET-02",
+    "alias": "SCI.5.7.2.1"
+  },
+  "pisa_ref": {
+    "domain": "Science",
+    "sub_domain": "Identify and explain phenomena",
+    "level_target": 2,
+    "transition_skill": "L1→L2: explain familiar phenomena from observation"
+  },
+  "blooms_level": "Understand",
+  "game_mechanic": "tile_match",
+  "phase": "game_break",
+  "prompt_uz": "Quyidagi rasmlarni mos juftlarga ajrating: magnit qutbi ↔ kuchli tortish joyi.",
+  "expected_uz": "Shimoliy qutb va janubiy qutb — har ikki uchda tortish kuchi eng katta.",
+  "evaluation_tier": 1,
+  "estimated_time_sec": 45
+}</code></pre>
+    </div>
+
+    <!-- Section 8: AI Tier Strategy -->
+    <div class="card">
+      <h2><span class="icon">&#x1F4B0;</span> 8. AI Tier Strategy (Cost-Aware)</h2>
+      <p>Inherits UNIFIED §13 budget targets ($3–5/student/year).</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Phase</th><th>Tier</th><th>Why</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Memory Sprint</td><td><span class="tag tag-purple">T1</span></td><td>Pre-generated MC/Tile Match items</td></tr>
+            <tr><td>Story Mode</td><td><span class="tag tag-purple">T1</span></td><td>Static phenomenon videos + scripted gates</td></tr>
+            <tr><td>Game Breaks</td><td><span class="tag tag-purple">T1</span></td><td>Pre-generated game pools per chapter</td></tr>
+            <tr><td>Real-Life Challenge</td><td><span class="tag tag-green">T2</span></td><td>Multi-path reasoning evaluation</td></tr>
+            <tr><td>Consolidation</td><td><span class="tag tag-purple">T1</span> + <span class="tag tag-green">T2</span></td><td>Standard pool + flow-state adjustment</td></tr>
+            <tr><td>Final Boss</td><td><span class="tag tag-green">T2</span> / <span class="tag tag-yellow">T3</span> on fail</td><td>Socratic re-teach + question regeneration</td></tr>
+            <tr><td>Reflection</td><td><span class="tag tag-green">T2</span></td><td>One AI-tailored prompt per session</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted);"><strong>Vision (T3) usage:</strong> only for occasional Notebook Capture (labeled diagrams, free-body sketches, water cycle drawings). Frequency ~1 per 4 sessions G5.</p>
+    </div>
+
+    <!-- Section 8.5: Assessment, Scoring & Escalation -->
+    <div class="card">
+      <h2><span class="icon">&#x1F4CA;</span> 8.5. Assessment, Scoring & Escalation</h2>
+
+      <h3>Pass Threshold</h3>
+      <p><strong>60% minimum</strong> to pass session (G5 override §0). Below 60% → <strong>Duolingo Mode</strong> triggers automatically.</p>
+
+      <h3>Score → Reward Mapping</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Score</th><th>Rating (Uzbek)</th><th>Reward</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>100%</strong></td><td><em>Mukammal!</em></td><td>Confetti, max XP, title: <em>"Aniq tadqiqotchi"</em> — effort-framed</td></tr>
+            <tr><td><strong>90–99%</strong></td><td><em>A'lo!</em></td><td>Full XP + streak fire animation</td></tr>
+            <tr><td><strong>80–89%</strong></td><td><em>Juda yaxshi!</em></td><td>First-time-80%+ bonus XP</td></tr>
+            <tr><td><strong>60–79%</strong></td><td><em>O'tdi!</em> (Passed)</td><td>Standard XP, repass offered (max 2 attempts)</td></tr>
+            <tr><td><strong>&lt;60%</strong></td><td><em>Hali emas</em> (Not yet)</td><td>Duolingo Mode, 0 XP this attempt</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Duolingo Mode (&lt;60% Pass)</h3>
+      <ol>
+        <li>Identify wrong questions</li>
+        <li>Re-present with additional scaffolding (worked example + hint exposed)</li>
+        <li>Reduce difficulty by 1 tier</li>
+        <li>Repeat until 60% achieved</li>
+        <li><strong>Auto-flag teacher dashboard after 3 consecutive failed sessions on the same standard</strong></li>
+      </ol>
+
+      <h3>Answer Checking (Dual Pathway)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Task Type</th><th>Method</th><th>Latency</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>MC, Tile Match, Sentence Fill, ordering, binary</td><td>Tier 1 rule-based exact match</td><td>&lt;100 ms</td></tr>
+            <tr><td>Open reasoning (RLC, Boss, Reflection)</td><td>Tier 3 AI semantic evaluation</td><td>≤5 sec</td></tr>
+            <tr><td>Notebook Capture (sketches, diagrams)</td><td>Tier 3 vision rubric scoring</td><td>≤10 sec</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 9: Teacher Overrides -->
+    <div class="card">
+      <h2><span class="icon">&#x1F39B;&#xFE0F;</span> 9. Teacher Overrides (Science G5)</h2>
+      <ul class="mandatory">
+        <li>✅ Session mode (Standard 20-30 / Extended 40-50)</li>
+        <li>✅ Boss HP modifier 50–150%</li>
+        <li>✅ Difficulty floor (student PISA ±1)</li>
+        <li>✅ Game pool selection (Auto / Manual)</li>
+        <li>✅ RLC required/optional (default: required for Science)</li>
+        <li>✅ Notebook Capture frequency</li>
+      </ul>
+      <ul class="banned">
+        <li>❌ Cannot override 7-phase structure</li>
+        <li>❌ Cannot skip Boss</li>
+        <li>❌ Cannot disable Stranger Test on Story Mode</li>
+        <li>❌ Cannot remove <code>transition_skill</code> tag requirement</li>
+      </ul>
+    </div>
+
+    <!-- Section 10: Content Production Checklist -->
+    <div class="card">
+      <h2><span class="icon">&#x1F4CB;</span> 10. Content Production Checklist (Per Chapter)</h2>
+      <ul class="checklist">
+        <li>30–50 Memory Sprint items (tagged, mixed Tile Match/MC/Sentence Fill)</li>
+        <li>1 Story Mode arc per topic section (~3 per chapter), with phenomenon media + 2 checkpoint sets</li>
+        <li>6–9 Game Break activities across 3+ mechanics</li>
+        <li>3–5 Real-Life Challenge cases with Uzbek context + multi-path rubric</li>
+        <li>1 Sub Boss Easy + 1 Sub Boss Medium + 1 Sub Boss Hard question pool</li>
+        <li>1 Big Boss pool combining 3 weakest standards</li>
+        <li>Reflection prompt bank (5+ prompts)</li>
+        <li>Glossary load (<code>Ilmiy atamalar</code>) imported into Memory Palace</li>
+        <li>All items dual-coded (<code>UZ-SCI-5-...</code> + alias)</li>
+        <li>All items carry <code>transition_skill</code> from §4 list</li>
+      </ul>
+      <p style="margin-top: 1rem;"><strong>Total estimated content per chapter:</strong> ~80–120 task units. <strong>Total for Grade 5 Science:</strong> ~900–1,200 task units.</p>
+    </div>
+
+    <!-- Section 11: Open Decisions -->
+    <div class="card">
+      <h2><span class="icon">&#x1F914;</span> 11. Open Decisions (Need Stakeholder Input)</h2>
+
+      <div class="decision">
+        <strong>1. Notebook Capture default ON or OFF for Science G5?</strong><br>
+        UNIFIED says optional G1-4, encouraged G5+. Recommend ON for Science (diagrams are central) but flag for teacher discretion.
+      </div>
+
+      <div class="decision">
+        <strong>2. Sorting Lab as 15th game mechanic?</strong><br>
+        Currently a Science-specific extension. Either add to universal game roster or keep as Science-only.
+      </div>
+
+      <div class="decision">
+        <strong>3. Bob 10 (Tabiiy fanlarning hayotga tatbiqi) — Cross-domain capstone.</strong><br>
+        Should it use a unique session template (project-based) instead of standard 7-phase?
+      </div>
+
+      <div class="decision">
+        <strong>4. PISA L1 floor for low-baseline G5 students.</strong><br>
+        Uzbek baseline is ~355 (below L2). Should we add a "L0→L1 bridge" phase before Memory Sprint for students below baseline?
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p><strong>End of Blueprint.</strong> Ready for content team handoff and stakeholder review.</p>
+      <p style="margin-top: 0.5rem;">All overrides justified against UNIFIED sections &middot; No immutables violated.</p>
+      <p style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--text-dim);">
+        NETS Homework Engine v2.0 &middot; Ministry of Education, Republic of Uzbekistan &middot; Proprietary &middot; Updated 2026-04-07
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>

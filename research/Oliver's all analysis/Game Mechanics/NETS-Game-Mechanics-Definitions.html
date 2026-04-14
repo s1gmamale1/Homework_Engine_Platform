@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Game Mechanics — Universal Definitions v1.0</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg-elev: #14141c;
+    --bg-card: #1a1a24;
+    --bg-hover: #22222e;
+    --border: #2a2a38;
+    --border-bright: #3a3a4e;
+    --text: #e8e8f0;
+    --text-dim: #9090a8;
+    --text-faint: #606078;
+    --accent-default: #3b82f6;
+    --accent-interactive: #a855f7;
+    --accent-gold: #f59e0b;
+    --accent-red: #ef4444;
+    --accent-green: #10b981;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    margin: 0 0 .5rem;
+    font-size: 1.9rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #3b82f6, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .meta {
+    color: var(--text-dim);
+    font-size: .85rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .meta span strong { color: var(--text); }
+  h2 {
+    font-size: 1.3rem;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  }
+  h2 .sec-num {
+    display: inline-block;
+    background: var(--bg-elev);
+    color: var(--text-dim);
+    padding: .1rem .5rem;
+    border-radius: 4px;
+    font-size: .75rem;
+    font-weight: 600;
+    border: 1px solid var(--border);
+  }
+  h3 { font-size: 1rem; margin: 1rem 0 .4rem; color: var(--text); }
+  p { margin: .5rem 0; }
+  code {
+    background: var(--bg-elev);
+    padding: .1rem .4rem;
+    border-radius: 3px;
+    font-size: .85em;
+    color: #f0a0c0;
+    border: 1px solid var(--border);
+  }
+  .intro {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .intro p { color: var(--text-dim); }
+  .intro p:first-child { margin-top: 0; }
+  .intro p:last-child { margin-bottom: 0; }
+
+  /* Merge decisions */
+  .merge-box {
+    background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(245,158,11,0.03));
+    border: 1px solid rgba(245,158,11,0.4);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+  }
+  .merge-box h3 {
+    color: var(--accent-gold);
+    margin-top: 0;
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .merge-box ol { margin: .5rem 0; padding-left: 1.25rem; }
+  .merge-box li { color: var(--text-dim); margin-bottom: .4rem; }
+  .merge-box li strong { color: var(--text); }
+
+  /* Template list */
+  .template-list {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    column-count: 2;
+    column-gap: 2rem;
+  }
+  .template-list ol { margin: 0; padding-left: 1.25rem; }
+  .template-list li { color: var(--text-dim); margin-bottom: .35rem; font-size: .85rem; }
+  .template-list li strong { color: var(--text); }
+
+  /* Mechanic cards */
+  .mech-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: border-color .2s;
+  }
+  .mech-card:hover { border-color: var(--border-bright); }
+  .mech-card.default { border-left: 4px solid var(--accent-default); }
+  .mech-card.interactive { border-left: 4px solid var(--accent-interactive); }
+
+  .mech-header {
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-card);
+    transition: background .15s;
+    user-select: none;
+  }
+  .mech-header:hover { background: var(--bg-hover); }
+  .mech-title {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    flex: 1;
+    min-width: 0;
+  }
+  .mech-title h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .mech-tag {
+    font-size: .7rem;
+    padding: .15rem .5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+  }
+  .tag-default {
+    background: rgba(59,130,246,0.15);
+    color: var(--accent-default);
+    border: 1px solid rgba(59,130,246,0.4);
+  }
+  .tag-interactive {
+    background: rgba(168,85,247,0.15);
+    color: var(--accent-interactive);
+    border: 1px solid rgba(168,85,247,0.4);
+  }
+  .mech-summary {
+    color: var(--text-dim);
+    font-size: .82rem;
+    margin-left: .5rem;
+    flex: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  @media (max-width: 800px) {
+    .mech-summary { display: none; }
+  }
+  .mech-arrow {
+    color: var(--text-faint);
+    font-size: .8rem;
+    transition: transform .2s;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+  .mech-card.open .mech-arrow { transform: rotate(180deg); }
+  .mech-body {
+    display: none;
+    padding: 0 1.25rem 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+  .mech-card.open .mech-body { display: block; }
+
+  .field {
+    margin: 1.25rem 0;
+  }
+  .field-label {
+    display: inline-block;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--text-faint);
+    font-weight: 700;
+    margin-bottom: .4rem;
+    padding: .15rem .5rem;
+    background: var(--bg-elev);
+    border-radius: 3px;
+    border: 1px solid var(--border);
+  }
+  .field-content { color: var(--text); }
+  .field-content ul, .field-content ol {
+    margin: .4rem 0;
+    padding-left: 1.25rem;
+  }
+  .field-content li { margin-bottom: .3rem; }
+  .field-content p { margin: .4rem 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: .5rem 0;
+    font-size: .85rem;
+  }
+  th, td {
+    padding: .5rem .75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    background: var(--bg-elev);
+    color: var(--text-dim);
+    font-weight: 600;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  tr:last-child td { border-bottom: none; }
+  td strong { color: var(--accent-gold); }
+
+  .merge-applied {
+    background: rgba(245,158,11,0.08);
+    border-left: 2px solid var(--accent-gold);
+    padding: .6rem .85rem;
+    margin: .75rem 0;
+    border-radius: 0 4px 4px 0;
+    font-size: .85rem;
+    color: var(--text-dim);
+  }
+  .merge-applied strong { color: var(--accent-gold); }
+
+  .ban-box {
+    background: rgba(239,68,68,0.08);
+    border-left: 2px solid var(--accent-red);
+    padding: .6rem .85rem;
+    margin: .75rem 0;
+    border-radius: 0 4px 4px 0;
+    font-size: .85rem;
+    color: var(--text-dim);
+  }
+  .ban-box strong { color: var(--accent-red); }
+
+  .eligible-box {
+    background: rgba(16,185,129,0.08);
+    border-left: 2px solid var(--accent-green);
+    padding: .6rem .85rem;
+    margin: .75rem 0;
+    border-radius: 0 4px 4px 0;
+    font-size: .85rem;
+    color: var(--text-dim);
+  }
+  .eligible-box strong { color: var(--accent-green); }
+
+  /* Cross-cutting */
+  .cc-card {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .cc-card h3 {
+    margin-top: 0;
+    color: var(--text);
+    font-size: 1rem;
+  }
+  .cc-card p, .cc-card li { color: var(--text-dim); font-size: .88rem; }
+
+  /* Footer */
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: .8rem;
+    text-align: center;
+  }
+  footer code { font-size: .8em; }
+
+  /* Expand all button */
+  .controls {
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-end;
+    margin-bottom: .75rem;
+  }
+  .btn {
+    background: var(--bg-elev);
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    padding: .4rem .9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: .8rem;
+    transition: all .15s;
+  }
+  .btn:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+    border-color: var(--border-bright);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>NETS Game Mechanics — Universal Definitions v1.0</h1>
+  <div class="meta">
+    <span><strong>Date:</strong> 2026-04-11</span>
+    <span><strong>Scope:</strong> 7 of 28 mechanics</span>
+    <span><strong>Status:</strong> Skeleton / v1.0 draft</span>
+    <span><strong>Best-guess fields:</strong> PISA, Bloom, cost, time</span>
+  </div>
+</header>
+
+<div class="intro">
+  <p><strong>Purpose.</strong> Universal K-11 definitions for 7 game mechanics: Memory Palace, Story Mode, Adaptive Quiz, Mystery Box, Memory Match Blitz, Reaction Chain, Word Ladder Climb. Each mechanic has grade-band design variations and a 15-field spec.</p>
+  <p><strong>Sources.</strong> Primary: <code>NETS-Game-Mechanics-Research-Answers.md</code> (research-backed, cited). Secondary: <code>NETS-Homework-Engine-UNIFIED.md</code> v2.0, <code>NETS-Game-Catalog-Summary.md</code>, G5 psychology findings. Plus 4 design merge decisions from conversation 2026-04-11.</p>
+</div>
+
+<div class="merge-box">
+  <h3>Merge Decisions Applied</h3>
+  <ol>
+    <li><strong>Adaptive Quiz round length</strong> &rarr; pure fixed, no early termination. Predictability &gt; measurement precision for homework.</li>
+    <li><strong>Memory Match Blitz wrong-confirmation</strong> &rarr; 3-second correct-answer flash is mandatory. Implementation must not re-hide instantly.</li>
+    <li><strong>Reaction Chain custom visuals</strong> &rarr; custom process-diagram visuals only for top-20 chains after 6 months of production data.</li>
+    <li><strong>Word Ladder Climb rung count</strong> &rarr; capped at 5-6 rungs max. Each rung is 2 interactions so longer ladders drag.</li>
+  </ol>
+</div>
+
+<h2><span class="sec-num">01</span> The 15-Field Template</h2>
+<div class="template-list">
+  <ol>
+    <li><strong>Summary</strong> — one-line description</li>
+    <li><strong>Core loop</strong> — step-by-step what the student does</li>
+    <li><strong>Grade-band design variations</strong> — K-G11 adaptations</li>
+    <li><strong>Content author input</strong> — what the team provides</li>
+    <li><strong>Evaluation &amp; retry rules</strong> — correct/partial/wrong behavior</li>
+    <li><strong>PISA coverage</strong> — levels, domains, processes</li>
+    <li><strong>Bloom's band</strong> — primary cognitive level(s)</li>
+    <li><strong>Transition skill types</strong> — PISA transitions scaffoldable</li>
+    <li><strong>Grade eligibility</strong> — K-G11 with rationale</li>
+    <li><strong>Subject eligibility &amp; <code>framework_bans</code></strong> — who bans it, why</li>
+    <li><strong>Anti-cheat surface</strong> — what Tier 2 watches for</li>
+    <li><strong>Telemetry events</strong> — what gets logged</li>
+    <li><strong>Cost profile</strong> — Tier 1/2/3 touches per round</li>
+    <li><strong>Device requirements</strong> — minimum spec, bandwidth</li>
+    <li><strong>Session-time allocation</strong> — minutes per round by grade</li>
+  </ol>
+</div>
+
+<h2><span class="sec-num">02</span> Mechanic Definitions</h2>
+
+<div class="controls">
+  <button class="btn" onclick="toggleAll(true)">Expand all</button>
+  <button class="btn" onclick="toggleAll(false)">Collapse all</button>
+</div>
+
+<!-- =============================================== -->
+<!-- 1. MEMORY PALACE -->
+<!-- =============================================== -->
+<div class="mech-card default">
+  <div class="mech-header" onclick="toggleCard(this)">
+    <div class="mech-title">
+      <span class="mech-tag tag-default">Default #5</span>
+      <h3>1. Memory Palace</h3>
+      <span class="mech-summary">Place concepts at spatial locations, recall via free recall + temporal order, SM-2 spaced repetition</span>
+    </div>
+    <span class="mech-arrow">&#9660;</span>
+  </div>
+  <div class="mech-body">
+
+    <div class="field">
+      <span class="field-label">1.1 Summary</span>
+      <div class="field-content"><p>Student places 3-15 concepts (grade-dependent) at distinct locations in a culturally familiar 2.5D scene, then retrieves them via free recall and temporal-order prompts. Palace persists across sessions via SM-2 spaced repetition. One palace per topic to prevent cross-topic interference.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.2 Core loop</span>
+      <div class="field-content">
+        <ol>
+          <li>Pick palace location from pool: Registan, Chorsu Bazaar, hovli courtyard, school, own classroom (rural fallback).</li>
+          <li>System presents N concepts.</li>
+          <li>For each, tap a hotspot, pick from 2-3 visual images, drag to lock.</li>
+          <li>Guided walkthrough animates a walk through all hotspots.</li>
+          <li><strong>Primary recall:</strong> free recall (spoken or typed) — "Walk through your palace."</li>
+          <li><strong>Secondary:</strong> temporal-order probes (2-3).</li>
+          <li>Palace saves. SM-2 schedules revisits.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.3 Grade-band variations</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Age</th><th>Loci</th><th>Interaction</th><th>Recall format</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>5-8</td><td>3</td><td>Pre-placed, guided walk</td><td>Point-to-location MC</td></tr>
+            <tr><td>G3-4</td><td>8-10</td><td>5</td><td>Tap → pick image → auto-lock</td><td>Free recall w/ prompts</td></tr>
+            <tr><td>G5-6</td><td>10-12</td><td>5-7</td><td>Full: tap → 3 images → drag</td><td>Free recall + temporal</td></tr>
+            <tr><td>G7-9</td><td>12-15</td><td>7-10</td><td>Full + annotations</td><td>Free recall + annotations</td></tr>
+            <tr><td>G10-11</td><td>15-17</td><td>10-15</td><td>Self-built palaces</td><td>Free recall + self-explain</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.4 Content author input</span>
+      <div class="field-content">
+        <ul>
+          <li>N concepts (label + 1-sentence definition)</li>
+          <li>2-3 authored visual image candidates per concept</li>
+          <li>Palace background images (2.5D scenes from location pool)</li>
+          <li>Hotspot coordinates per background</li>
+          <li>Walkthrough narration script</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.5 Evaluation &amp; retry rules</span>
+      <div class="field-content">
+        <ul>
+          <li><strong>Placement:</strong> formative, no scoring.</li>
+          <li><strong>Free recall:</strong> Tier 2 semantic match; partial credit per concept. Missing = "Hali emas" (not failed).</li>
+          <li><strong>Temporal order:</strong> binary per probe.</li>
+          <li><strong>Retry:</strong> one re-walk before recall. Missed concepts flow into next session's Memory Sprint.</li>
+          <li><strong>SM-2 schedule:</strong> day 1 → 3 → 7 → 14 → 30.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.6 PISA coverage</span>
+      <div class="field-content">
+        <p><strong>Levels:</strong> L1-L3 primarily; L4 when temporal-order probes assess causal chains.<br>
+        <strong>Domains:</strong> All (content-agnostic).<br>
+        <strong>Processes:</strong> Represent spatially, retrieve from LTM, organize into structure.</p>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.7 Bloom's band</span>
+      <div class="field-content"><p>Primary: <strong>Remember, Understand.</strong> Secondary: Apply (when palace is reused in later sessions).</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.8 Transition skills</span>
+      <div class="field-content">
+        <ul>
+          <li>L1→L2: Organize disparate facts into coherent structure</li>
+          <li>L2→L3: Retrieve and apply prior learning to current context</li>
+          <li>L3→L4: Connect spatial/temporal relationships</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.9 Grade eligibility</span>
+      <div class="field-content"><div class="eligible-box"><strong>K-G11 universal.</strong> K-G2 uses pre-placed guided walks. Independent use from G3.</div></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.10 Subject eligibility &amp; framework_bans</span>
+      <div class="field-content"><p>Eligible: all subjects. <code>framework_bans: []</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.11 Anti-cheat surface</span>
+      <div class="field-content"><p>Tier 2 watches: identical free-recall transcripts across students, placement time &lt;5s per placement, clipboard paste into recall input. Signal: SOFT_WARNING; TEACHER_ALERT if repeated.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.12 Telemetry events</span>
+      <div class="field-content"><p><code>mp_palace_selected</code>, <code>mp_placement_completed</code>, <code>mp_free_recall_score</code>, <code>mp_temporal_probe_result</code>, <code>mp_palace_revisit</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.13 Cost profile</span>
+      <div class="field-content"><p><strong>T1:</strong> placement, hotspot matching, SM-2 scheduler, asset serving. <strong>T2:</strong> free-recall semantic eval. <strong>T3:</strong> none. <strong>Per-round cost:</strong> &lt;$0.001</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.14 Device requirements</span>
+      <div class="field-content"><p>Mid-tier Android (2GB RAM), 1024×768. ~500KB one-time image load. Microphone optional (text input fallback).</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">1.15 Session-time allocation</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Per round</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>3-4 min</td></tr>
+            <tr><td>G3-4</td><td>4-5 min</td></tr>
+            <tr><td>G5-6</td><td>5-7 min</td></tr>
+            <tr><td>G7-9</td><td>6-8 min</td></tr>
+            <tr><td>G10-11</td><td>7-10 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- 2. STORY MODE -->
+<!-- =============================================== -->
+<div class="mech-card default">
+  <div class="mech-header" onclick="toggleCard(this)">
+    <div class="mech-title">
+      <span class="mech-tag tag-default">Default #6 / Phase 2</span>
+      <h3>2. Story Mode</h3>
+      <span class="mech-summary">Human-authored narrative + AI-personalized variants, 30-150s segments, mixed MC + short-answer gates</span>
+    </div>
+    <span class="mech-arrow">&#9660;</span>
+  </div>
+  <div class="mech-body">
+
+    <div class="field">
+      <span class="field-label">2.1 Summary</span>
+      <div class="field-content"><p>Textbook content delivered as linear narrative with human-authored master stories and AI-personalized variants. Segments 30-150s (grade-dependent) with mixed MC + short-answer comprehension gates. Also the universal Phase 2 driver of every session.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.2 Core loop</span>
+      <div class="field-content">
+        <ol>
+          <li>Segment title + illustration.</li>
+          <li>Text plays (TTS optional for struggling readers).</li>
+          <li>2-3 micro-choice points per story — same content, different framing (POV shifts).</li>
+          <li><strong>Gate between segments:</strong> 2 MC (misconception distractors) + 1 short-answer (keyword + semantic).</li>
+          <li>Gate ≥70% → advance. &lt;70% → remediation branch, retry (max 2).</li>
+          <li>After 2 failures → "Hali emas", advance anyway, flag teacher.</li>
+          <li>4-beat arc: Problem → Struggle → Discovery → Solution.</li>
+          <li><strong>Stranger Test mandatory:</strong> a newcomer must be able to follow.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.3 Grade-band variations</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Segment length</th><th>Checkpoints</th><th>Structure</th><th>Gate format</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>30-45s</td><td>2-3</td><td>Single protagonist, heavy illustration</td><td>2 MC only</td></tr>
+            <tr><td>G3-4</td><td>45-75s</td><td>3-4</td><td>Linear problem-solution arc</td><td>2 MC + voice optional</td></tr>
+            <tr><td>G5-6</td><td>60-90s</td><td>4-5</td><td>Concrete ops, mild complexity</td><td>2 MC + 1 SA</td></tr>
+            <tr><td>G7-9</td><td>90-120s</td><td>5-6</td><td>Multi-perspective, moral ambiguity</td><td>2 MC + 2 SA</td></tr>
+            <tr><td>G10-11</td><td>120-150s</td><td>6-7</td><td>Layered, abstract, hypothetical</td><td>1 MC + 2 SA + 1 essay</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.4 Content author input</span>
+      <div class="field-content">
+        <ul>
+          <li>Human-authored master narrative per chapter (4-beat arc)</li>
+          <li>2-3 micro-choice branch variants</li>
+          <li>Illustrations per segment</li>
+          <li>Gate item bank: MC w/ misconception distractors + short-answer w/ keyword rubric</li>
+          <li>Remediation branch content</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.5 Evaluation &amp; retry rules</span>
+      <div class="field-content">
+        <ul>
+          <li><strong>MC:</strong> immediate feedback, no retry (item pool rotates)</li>
+          <li><strong>Short-answer:</strong> Tier 2 keyword + semantic match, 3-tier scoring</li>
+          <li><strong>Gate:</strong> 70% threshold, max 2 retries then advance w/ "Hali emas"</li>
+          <li><strong>TTS:</strong> optional toggle; synthesized Uzbek TTS deferred; pre-recorded human voice = future enhancement</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.6 PISA coverage</span>
+      <div class="field-content"><p><strong>Levels:</strong> L1-L5. <strong>Domains:</strong> Reading primary, subject content secondary. <strong>Processes:</strong> Locate, interpret &amp; integrate, reflect &amp; evaluate.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.7 Bloom's band</span>
+      <div class="field-content"><p>Primary: <strong>Understand.</strong> Secondary: Analyze (multi-perspective choice points in G7+).</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.8 Transition skills</span>
+      <div class="field-content">
+        <ul>
+          <li>L1→L2: Extract key info from continuous text</li>
+          <li>L2→L3: Integrate info across segments</li>
+          <li>L3→L4: Infer author/character perspective</li>
+          <li>L4→L5: Evaluate narrative choice implications (G7+)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.9 Grade eligibility</span>
+      <div class="field-content"><div class="eligible-box"><strong>K-G11 universal.</strong> Phase 2 driver for every session.</div></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.10 Subject eligibility &amp; framework_bans</span>
+      <div class="field-content"><p>Eligible: all subjects. <code>framework_bans: []</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.11 Anti-cheat surface</span>
+      <div class="field-content"><p>Tier 2 watches: checkpoint completion &lt;10s (skipping story), clipboard paste into SA, near-identical SA text across students, forward-button mashing.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.12 Telemetry events</span>
+      <div class="field-content"><p><code>sm_segment_started</code>, <code>sm_micro_choice_made</code>, <code>sm_checkpoint_mc_result</code>, <code>sm_checkpoint_sa_score</code>, <code>sm_gate_outcome</code>, <code>sm_remediation_triggered</code>, <code>sm_stranger_test_flag</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.13 Cost profile</span>
+      <div class="field-content"><p><strong>T1:</strong> MC scoring, branch selection, gate logic. <strong>T2:</strong> SA keyword + semantic match. <strong>T3:</strong> none (pre-authored). <strong>Per-round:</strong> &lt;$0.005</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.14 Device requirements</span>
+      <div class="field-content"><p>Low-tier Android (1.5GB RAM). ~1-2MB per story. TTS/voice optional.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">2.15 Session-time allocation</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Per round</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>3-4 min</td></tr>
+            <tr><td>G3-4</td><td>5-7 min</td></tr>
+            <tr><td>G5-6</td><td>7-10 min</td></tr>
+            <tr><td>G7-9</td><td>10-13 min</td></tr>
+            <tr><td>G10-11</td><td>13-17 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- 3. ADAPTIVE QUIZ -->
+<!-- =============================================== -->
+<div class="mech-card default">
+  <div class="mech-header" onclick="toggleCard(this)">
+    <div class="mech-title">
+      <span class="mech-tag tag-default">Default #7</span>
+      <h3>3. Adaptive Quiz</h3>
+      <span class="mech-summary">IRT-calibrated item bank + productive-failure scaffolding. Fixed question count, no early termination.</span>
+    </div>
+    <span class="mech-arrow">&#9660;</span>
+  </div>
+  <div class="mech-body">
+
+    <div class="field">
+      <span class="field-label">3.1 Summary</span>
+      <div class="field-content"><p>IRT-calibrated question bank serves items at student's current theta (ability estimate) with productive-failure scaffolding on wrong answers. Fixed question count — no early termination.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.2 Core loop</span>
+      <div class="field-content">
+        <ol>
+          <li>Pick item at current theta.</li>
+          <li>Student answers. Immediate correct/wrong feedback.</li>
+          <li><strong>On wrong → Productive Failure scaffold:</strong>
+            <ul>
+              <li>Step 1: Metacognitive prompt ("What do you know about this?")</li>
+              <li>Step 2: Partial worked solution (first step, not answer)</li>
+              <li>Step 3: Answer + explanation contrasting misconception</li>
+            </ul>
+          </li>
+          <li>Theta updates via Bayesian update.</li>
+          <li>Next item at theta ± 1 level.</li>
+          <li>Round ends at fixed question count. Final theta logged.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.3 Grade-band variations</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Questions/round</th><th>Feedback</th><th>Scaffold depth</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>3</td><td>Immediate visual</td><td>1-step: show correct answer</td></tr>
+            <tr><td>G3-4</td><td>4</td><td>Immediate</td><td>2-step: hint → answer</td></tr>
+            <tr><td>G5-6</td><td>5</td><td>Immediate</td><td>3-step productive failure</td></tr>
+            <tr><td>G7-9</td><td>7</td><td>Immediate</td><td>Full + misconception contrast</td></tr>
+            <tr><td>G10-11</td><td>7</td><td>Immediate + round summary</td><td>Full + self-explanation</td></tr>
+          </tbody>
+        </table>
+        <div class="merge-applied"><strong>MERGE APPLIED:</strong> Fully fixed question count per grade band. No early termination. The research doc's suggested early-stop on 3 consecutive correct at ceiling would create session-time variance, contradicting its own "predictability &gt; precision for homework" argument.</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.4 Content author input</span>
+      <div class="field-content">
+        <ul>
+          <li>Item bank with IRT parameters (difficulty, discrimination) — pre-calibrated or seeded + live Bayesian update after ~100 responses</li>
+          <li>Metacognitive prompts per item/topic</li>
+          <li>Partial worked solutions per item</li>
+          <li>Misconception-to-correct-reasoning explanations</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.5 Evaluation &amp; retry rules</span>
+      <div class="field-content">
+        <ul>
+          <li>Binary correct/wrong per item</li>
+          <li>No retry on same item in the round — item is "spent"</li>
+          <li>Wrong items re-enter spaced-repetition queue for Memory Sprint</li>
+          <li>Productive failure scaffold triggers automatically on wrong</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.6 PISA coverage</span>
+      <div class="field-content"><p><strong>Levels:</strong> L1-L6 (full adaptive range). <strong>Domains:</strong> Math, Science, Reading, languages. <strong>Processes:</strong> All.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.7 Bloom's band</span>
+      <div class="field-content"><p>Primary: <strong>Apply, Analyze.</strong> Secondary: Remember, Understand at L1-L2.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.8 Transition skills</span>
+      <div class="field-content"><p>Flexible workhorse — can scaffold any transition depending on item bank. Strongest for L2→L3 ("apply procedure to unfamiliar context") and L3→L4 ("analyze multi-step problem and select approach").</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.9 Grade eligibility</span>
+      <div class="field-content"><div class="eligible-box"><strong>K-G11 universal</strong> (scaffold depth scales by grade).</div></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.10 Subject eligibility &amp; framework_bans</span>
+      <div class="field-content">
+        <p>Eligible: Math, Science, Reading, languages, most content subjects.</p>
+        <div class="ban-box"><strong>Banned:</strong> <code>framework_bans: ["science_grade5"]</code> — Science G5 bans because it "feels like endless testing" to Uzbek G5 students.</div>
+        <p><strong>Flagged for review:</strong> Tarbiya (no objective right answers), Tasviriy Sanat (creative, not quiz-able).</p>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.11 Anti-cheat surface</span>
+      <div class="field-content"><p>Tier 2 watches: answer time &lt;3s (guessing without reading), pattern answering, theta curve too steep (external help), clipboard paste.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.12 Telemetry events</span>
+      <div class="field-content"><p><code>aq_item_served</code>, <code>aq_item_answered</code>, <code>aq_scaffold_step</code>, <code>aq_round_complete</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.13 Cost profile</span>
+      <div class="field-content"><p><strong>T1:</strong> item selection, IRT update, scoring, scaffold selection. <strong>T2:</strong> SA eval if present, scaffold personalization. <strong>T3:</strong> none. <strong>Per-round:</strong> &lt;$0.003</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.14 Device requirements</span>
+      <div class="field-content"><p>Low-tier Android. Minimal bandwidth. No special hardware.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">3.15 Session-time allocation</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Per round</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>3 min</td></tr>
+            <tr><td>G3-4</td><td>4-5 min</td></tr>
+            <tr><td>G5-6</td><td>5-7 min</td></tr>
+            <tr><td>G7-9</td><td>7-10 min</td></tr>
+            <tr><td>G10-11</td><td>10-13 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- 4. MYSTERY BOX -->
+<!-- =============================================== -->
+<div class="mech-card default">
+  <div class="mech-header" onclick="toggleCard(this)">
+    <div class="mech-title">
+      <span class="mech-tag tag-default">Default #8</span>
+      <h3>4. Mystery Box</h3>
+      <span class="mech-summary">Interleaved practice via vague-labeled boxes. NOT the same as Treasure Chest (separate metagame mechanic).</span>
+    </div>
+    <span class="mech-arrow">&#9660;</span>
+  </div>
+  <div class="mech-body">
+
+    <div class="field">
+      <span class="field-label">4.1 Summary</span>
+      <div class="field-content"><p>Student picks from 2-5 boxes with <strong>vague thematic labels</strong> ("Something about plants..."). Each box contains a problem from a different prior chapter. Labels sit at the inverted-U curiosity peak — not blind (anxiety), not revealed (boring). <strong>Not to be confused with Treasure Chest</strong> — see cross-cutting notes.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.2 Core loop</span>
+      <div class="field-content">
+        <ol>
+          <li>Present N closed boxes with vague thematic labels.</li>
+          <li>Student picks any box in any order (autonomy).</li>
+          <li>Box opens, problem appears.</li>
+          <li><strong>Identification step (G3+):</strong> student identifies problem type (discriminative contrast).</li>
+          <li>Student solves the problem.</li>
+          <li>Correct = box claimed; wrong = one retry.</li>
+          <li>Round ends when all boxes resolved.</li>
+          <li>1-in-10-to-15 rounds: bonus "cross-subject connection" box, explicitly framed as bonus.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.3 Grade-band variations</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Boxes</th><th>Labels</th><th>Identification step</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>2</td><td>Picture only</td><td>Skipped</td></tr>
+            <tr><td>G3-4</td><td>3</td><td>Short vague text</td><td>Optional</td></tr>
+            <tr><td>G5-6</td><td>3</td><td>Vague thematic</td><td>Required</td></tr>
+            <tr><td>G7-9</td><td>4</td><td>Vague thematic</td><td>Required + justify</td></tr>
+            <tr><td>G10-11</td><td>4-5</td><td>Abstract thematic</td><td>Required + justify + connect</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.4 Content author input</span>
+      <div class="field-content">
+        <ul>
+          <li>Problem pool from prior chapters, tagged by category</li>
+          <li>Vague thematic labels per category (noticeable but not revealing)</li>
+          <li>Difficulty levels matched to theta</li>
+          <li>Cross-subject bonus connection problems (flagged)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.5 Evaluation &amp; retry rules</span>
+      <div class="field-content">
+        <ul>
+          <li><strong>Identification:</strong> binary, one retry, no penalty (discriminative contrast is the point)</li>
+          <li><strong>Solve:</strong> inherits from item type (MC, SA, etc.)</li>
+          <li><strong>Box order:</strong> any — autonomy preserved (SDT)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.6 PISA coverage</span>
+      <div class="field-content"><p><strong>Levels:</strong> L2-L5. <strong>Domains:</strong> All. <strong>Processes:</strong> Recognize problem type, select strategy, apply prior learning.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.7 Bloom's band</span>
+      <div class="field-content"><p>Primary: <strong>Apply, Analyze</strong> (strategy selection). Secondary: Remember (prior chapter retrieval).</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.8 Transition skills</span>
+      <div class="field-content">
+        <ul>
+          <li>L2→L3: Recognize when to apply which tool</li>
+          <li>L3→L4: Strategy selection across plausible approaches</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.9 Grade eligibility</span>
+      <div class="field-content"><div class="eligible-box"><strong>K-G11 universal.</strong> Identification step scales by grade.</div></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.10 Subject eligibility &amp; framework_bans</span>
+      <div class="field-content"><p>Eligible: all subjects with accumulated chapter history. <strong>First-chapter sessions cannot use Mystery Box</strong> — no prior chapters to interleave. <code>framework_bans: []</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.11 Anti-cheat surface</span>
+      <div class="field-content"><p>Tier 2 watches: always picking same-position box (gaming order), identification answered before box fully opens (automation).</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.12 Telemetry events</span>
+      <div class="field-content"><p><code>mb_round_started</code>, <code>mb_box_picked</code>, <code>mb_identification_result</code>, <code>mb_solve_result</code>, <code>mb_bonus_connection_triggered</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.13 Cost profile</span>
+      <div class="field-content"><p><strong>T1:</strong> box generation, category pool, identification matching. <strong>T2:</strong> solve-step eval (inherits from item type). <strong>T3:</strong> none. <strong>Per-round:</strong> &lt;$0.003</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.14 Device requirements</span>
+      <div class="field-content"><p>Low-tier Android. Minimal bandwidth. No special hardware.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">4.15 Session-time allocation</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Per round</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>2-3 min</td></tr>
+            <tr><td>G3-4</td><td>3-5 min</td></tr>
+            <tr><td>G5-6</td><td>5-7 min</td></tr>
+            <tr><td>G7-9</td><td>6-9 min</td></tr>
+            <tr><td>G10-11</td><td>7-10 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- 5. MEMORY MATCH BLITZ -->
+<!-- =============================================== -->
+<div class="mech-card interactive">
+  <div class="mech-header" onclick="toggleCard(this)">
+    <div class="mech-title">
+      <span class="mech-tag tag-interactive">Interactive #4</span>
+      <h3>5. Memory Match Blitz</h3>
+      <span class="mech-summary">Concentration grid + pair-tied confirmation question. Wrong = mandatory 3s correct-answer flash.</span>
+    </div>
+    <span class="mech-arrow">&#9660;</span>
+  </div>
+  <div class="mech-body">
+
+    <div class="field">
+      <span class="field-label">5.1 Summary</span>
+      <div class="field-content"><p>Concentration-style grid. When a pair is found, a confirmation question <strong>tied to that specific pair</strong> gates whether it locks. Wrong confirmation → correct answer flashes for <strong>exactly 3 seconds (mandatory)</strong> → cards re-hide. Leverages hypercorrection effect (Butterfield &amp; Metcalfe 2006).</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.2 Core loop</span>
+      <div class="field-content">
+        <ol>
+          <li>Grid face-down. Cards are term-definition pairs (mixed).</li>
+          <li>Student flips two cards.</li>
+          <li>No match → both re-hide.</li>
+          <li>Match → confirmation question appears, tied to the matched concept.</li>
+          <li><strong>Right:</strong> pair locks, stays face-up, score increases.</li>
+          <li><strong>Wrong:</strong> correct answer flashes for exactly 3 seconds (mandatory hypercorrection window), then cards re-hide.</li>
+          <li>Round continues until all pairs locked or soft timer expires.</li>
+          <li>Final score = pairs locked + speed bonus.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.3 Grade-band variations</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Grid</th><th>Pairs</th><th>Timer</th><th>Confirmation Q</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>2×3</td><td>3</td><td>None</td><td>Skipped</td></tr>
+            <tr><td>G3-4</td><td>3×4</td><td>6</td><td>Soft 2 min</td><td>Simple MC</td></tr>
+            <tr><td>G5-6</td><td>3×4 or 4×4</td><td>6-8</td><td>Soft 90s</td><td>MC + explanation</td></tr>
+            <tr><td>G7-9</td><td>4×4</td><td>8</td><td>Soft 90s</td><td>Short-answer</td></tr>
+            <tr><td>G10-11</td><td>4×5</td><td>10</td><td>Soft 60s</td><td>SA + connection</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Max grid: 4×5 (20 cards, 10 pairs).</strong> Larger exceeds working memory (~4 chunks per Cowan 2001).</p>
+        <div class="merge-applied"><strong>MERGE APPLIED:</strong> The 3-second correct-answer flash on wrong confirmation is <strong>mandatory, not optional</strong>. Implementation must not re-hide cards instantly. The 3-second window preserves the hypercorrection benefit.</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.4 Content author input</span>
+      <div class="field-content">
+        <ul>
+          <li>Term-definition pair pool per chapter</li>
+          <li>Confirmation question per pair — <strong>tied to that specific concept</strong>, not pool-random</li>
+          <li>Correct-answer flash content (what appears during the 3s window)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.5 Evaluation &amp; retry rules</span>
+      <div class="field-content">
+        <ul>
+          <li>Match step: no gating</li>
+          <li>Confirmation wrong → mandatory 3s flash → re-hide</li>
+          <li>Pair can be re-attempted in same round (retrieval practice + corrective feedback)</li>
+          <li>Soft timer: points decrease over time, round does NOT end on timeout</li>
+          <li>Speed bonus rewards fluency without punishing slower students</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.6 PISA coverage</span>
+      <div class="field-content"><p><strong>Levels:</strong> L1-L3. <strong>Domains:</strong> All with term-definition content. <strong>Processes:</strong> Retrieve from LTM, map term to meaning.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.7 Bloom's band</span>
+      <div class="field-content"><p>Primary: <strong>Remember, Understand.</strong></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.8 Transition skills</span>
+      <div class="field-content">
+        <ul>
+          <li>L1→L2: Map term to definition in context</li>
+          <li>L2→L3: Recognize term in varied form</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.9 Grade eligibility</span>
+      <div class="field-content"><div class="eligible-box"><strong>K-G11 universal</strong> (grid size scales by working memory).</div></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.10 Subject eligibility &amp; framework_bans</span>
+      <div class="field-content"><p>Eligible: subjects with term-definition content (Science, Languages, Tarbiya vocab, Geografiya place-names). Less useful for process-heavy subjects but not banned. <code>framework_bans: []</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.11 Anti-cheat surface</span>
+      <div class="field-content"><p>Tier 2 watches: confirmation answered faster than human read time (&lt;1s), wrong-then-right patterns (memorizing position, not content).</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.12 Telemetry events</span>
+      <div class="field-content"><p><code>mmb_round_started</code>, <code>mmb_pair_found</code>, <code>mmb_confirmation_result</code>, <code>mmb_hypercorrection_shown</code>, <code>mmb_round_complete</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.13 Cost profile</span>
+      <div class="field-content"><p><strong>T1:</strong> grid gen, match detection, 3s flash rendering. <strong>T2:</strong> SA confirmation eval. <strong>T3:</strong> none. <strong>Per-round:</strong> &lt;$0.002</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.14 Device requirements</span>
+      <div class="field-content"><p>Low-tier Android. Minimal bandwidth. No special hardware.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">5.15 Session-time allocation</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Per round</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>2-3 min</td></tr>
+            <tr><td>G3-4</td><td>3-5 min</td></tr>
+            <tr><td>G5-6</td><td>4-6 min</td></tr>
+            <tr><td>G7-9</td><td>5-7 min</td></tr>
+            <tr><td>G10-11</td><td>6-8 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- 6. REACTION CHAIN -->
+<!-- =============================================== -->
+<div class="mech-card interactive">
+  <div class="mech-header" onclick="toggleCard(this)">
+    <div class="mech-title">
+      <span class="mech-tag tag-interactive">Interactive #5</span>
+      <h3>6. Reaction Chain</h3>
+      <span class="mech-summary">Conceptually sequential nodes, streak-reset w/ partial credit, top-20 chains get custom visuals</span>
+    </div>
+    <span class="mech-arrow">&#9660;</span>
+  </div>
+  <div class="mech-body">
+
+    <div class="field">
+      <span class="field-label">6.1 Summary</span>
+      <div class="field-content"><p>4-10 <strong>conceptually sequential</strong> nodes light up as student answers correctly. 3 wrong in a row resets streak to 0 (lit nodes keep partial credit). Soft 15-30s timer per node. Default visual is linear; top-20 chains get custom process-diagram visuals.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.2 Core loop</span>
+      <div class="field-content">
+        <ol>
+          <li>Present N sequential nodes on a topic with natural order (photosynthesis, water cycle, historical chain, algorithm).</li>
+          <li>Node 1 question appears.</li>
+          <li>Correct → node lights up, advance. Wrong/timeout → adds to 3-in-row counter.</li>
+          <li>3 wrong in a row → chain breaks visually, streak resets to 0, lit nodes keep their points.</li>
+          <li><strong>Recovery scaffold:</strong> "Your streak was [X]. Let's rebuild." Next question is 1 level easier.</li>
+          <li>Round ends at all-nodes-lit or max question count.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.3 Grade-band variations</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Nodes</th><th>Timer/node</th><th>Break threshold</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>4</td><td>None</td><td>2 wrong in a row</td></tr>
+            <tr><td>G3-4</td><td>5-6</td><td>30s soft</td><td>3 wrong in a row</td></tr>
+            <tr><td>G5-6</td><td>6-8</td><td>20s soft</td><td>3 wrong in a row</td></tr>
+            <tr><td>G7-9</td><td>8-10</td><td>15s soft</td><td>3 wrong in a row</td></tr>
+            <tr><td>G10-11</td><td>10</td><td>15s soft</td><td>3 wrong in a row</td></tr>
+          </tbody>
+        </table>
+        <div class="merge-applied"><strong>MERGE APPLIED:</strong> Custom process-diagram visuals only for the <strong>top 20 chains by usage after 6 months</strong> of production data. Everything else uses auto-generated linear-node visual. Stops endless "should we build custom X?" debates.</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.4 Content author input</span>
+      <div class="field-content">
+        <ul>
+          <li>N conceptually sequential concepts in strict order</li>
+          <li>Question per node (calibrated to student level)</li>
+          <li>Recovery question pool (easier than normal)</li>
+          <li>Default linear visual auto-generated; custom diagram authored only for top-20</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.5 Evaluation &amp; retry rules</span>
+      <div class="field-content">
+        <ul>
+          <li>Binary correct/wrong per node</li>
+          <li>Timeout counts as wrong (contributes to 3-in-a-row counter)</li>
+          <li>On break: lit nodes keep partial credit, streak resets, recovery scaffold activates</li>
+          <li>Round completes at all-lit or max question count</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.6 PISA coverage</span>
+      <div class="field-content"><p><strong>Levels:</strong> L2-L4 (sequential reasoning, process understanding). <strong>Domains:</strong> Science processes, Math procedures, History timelines, IT algorithms. <strong>Processes:</strong> Sequence steps, identify causal chain, apply procedural knowledge.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.7 Bloom's band</span>
+      <div class="field-content"><p>Primary: <strong>Understand, Apply.</strong> Secondary: Analyze at higher node depths.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.8 Transition skills</span>
+      <div class="field-content">
+        <ul>
+          <li>L2→L3: Recall sequenced info in correct order</li>
+          <li>L3→L4: Understand causal/procedural flow between steps</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.9 Grade eligibility</span>
+      <div class="field-content"><div class="eligible-box"><strong>K-G11 universal</strong> (node count + timer scale by grade).</div></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.10 Subject eligibility &amp; framework_bans</span>
+      <div class="field-content">
+        <p>Eligible: subjects with inherently sequential content (Science, Math, History, IT/Programming, Geografiya physical processes).</p>
+        <p><strong>NOT appropriate for:</strong> Tarbiya (values = no sequence), Tasviriy Sanat (creative = no sequence), vocabulary recall.</p>
+        <div class="ban-box"><strong>Flagged bans (needs review):</strong> <code>framework_bans: ["tarbiya_grade5", "tasviriy_sanat_grade5"]</code></div>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.11 Anti-cheat surface</span>
+      <div class="field-content"><p>Tier 2 watches: answer time &lt;2s per node (pattern guessing), identical wrong-node sequences across students.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.12 Telemetry events</span>
+      <div class="field-content"><p><code>rc_chain_started</code>, <code>rc_node_answered</code>, <code>rc_streak_broken</code>, <code>rc_chain_complete</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.13 Cost profile</span>
+      <div class="field-content"><p><strong>T1:</strong> node rendering (auto-gen linear), streak tracking, recovery scaffold. <strong>T2:</strong> SA question eval. <strong>T3:</strong> none. <strong>Per-round:</strong> &lt;$0.002</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.14 Device requirements</span>
+      <div class="field-content"><p>Low-tier Android. Linear visual minimal bandwidth; custom diagrams +200-500KB per chain (top 20 only).</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">6.15 Session-time allocation</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Per round</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>2-3 min</td></tr>
+            <tr><td>G3-4</td><td>3-5 min</td></tr>
+            <tr><td>G5-6</td><td>5-7 min</td></tr>
+            <tr><td>G7-9</td><td>6-9 min</td></tr>
+            <tr><td>G10-11</td><td>7-10 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- 7. WORD LADDER CLIMB -->
+<!-- =============================================== -->
+<div class="mech-card interactive">
+  <div class="mech-header" onclick="toggleCard(this)">
+    <div class="mech-title">
+      <span class="mech-tag tag-interactive">Interactive #6</span>
+      <h3>7. Word Ladder Climb</h3>
+      <span class="mech-summary">Letter-swap word transformation, 2-phase rungs (question + puzzle), LANGUAGE SUBJECTS ONLY</span>
+    </div>
+    <span class="mech-arrow">&#9660;</span>
+  </div>
+  <div class="mech-body">
+
+    <div class="field">
+      <span class="field-label">7.1 Summary</span>
+      <div class="field-content"><p>Transform start word into target word one letter at a time, each intermediate must be a real dictionary word. Each rung = <strong>2 phases</strong>: (1) answer subject question, (2) solve letter-change puzzle as "reward." <strong>Language subjects ONLY.</strong> Ladder capped at 5-6 rungs max.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.2 Core loop</span>
+      <div class="field-content">
+        <ol>
+          <li>Present start word and target word (e.g., COLD → WARM).</li>
+          <li><strong>Rung 1:</strong>
+            <ul>
+              <li>Phase A: Subject question (grammar, vocab, definition). Correct → unlocks puzzle. Wrong → hint.</li>
+              <li>Phase B: Perform letter change — 1 letter swap, result must be real dictionary word.</li>
+              <li>Correct change → advance. Wrong → 2 attempts, then hint or auto-skip.</li>
+            </ul>
+          </li>
+          <li>Repeat for 4-5 more rungs until target reached.</li>
+          <li>Skip budget: 1 skip per ladder total.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.3 Grade-band variations</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Rungs</th><th>Word length</th><th>Skip</th><th>Hints</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td colspan="4"><strong style="color:var(--accent-red);">NOT ELIGIBLE</strong> (pre-reading)</td></tr>
+            <tr><td>G3-4</td><td>3</td><td>3-4 letters</td><td>1</td><td>Unlimited</td></tr>
+            <tr><td>G5-6</td><td>4-5</td><td>4 letters</td><td>1</td><td>1/step</td></tr>
+            <tr><td>G7-9</td><td>5-6</td><td>4-5 letters</td><td>1</td><td>1/step</td></tr>
+            <tr><td>G10-11</td><td>6</td><td>4-5 letters</td><td>1</td><td>None</td></tr>
+          </tbody>
+        </table>
+        <div class="merge-applied"><strong>MERGE APPLIED:</strong> Rung count capped at 5-6 max. Each rung is 2 interactions (question + puzzle) — 6 rungs × 2 = 12 interactions is already at the limit for a Phase 3 game.</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.4 Content author input</span>
+      <div class="field-content">
+        <ul>
+          <li>Pre-validated word ladder database (start/target with known valid paths)</li>
+          <li>Subject question per rung</li>
+          <li>Hint content per rung (first/last letter, definition clue)</li>
+          <li>Dictionary validation source per language</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.5 Evaluation &amp; retry rules</span>
+      <div class="field-content">
+        <ul>
+          <li>Subject Q: correct advances; wrong = hint; 2nd wrong = auto-reveal + advance</li>
+          <li>Letter change: 2 attempts → hint → 1 more attempt → auto-skip</li>
+          <li>Skip budget: 1 per ladder</li>
+          <li>No streak, no hypercorrection — linear progression</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.6 PISA coverage</span>
+      <div class="field-content"><p><strong>Levels:</strong> L1-L3 (vocabulary recognition, morphological awareness). <strong>Domains:</strong> Reading primary. <strong>Processes:</strong> Recognize word form, apply spelling patterns, build vocabulary.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.7 Bloom's band</span>
+      <div class="field-content"><p>Primary: <strong>Remember, Apply.</strong> Secondary: Understand (word families, morphology).</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.8 Transition skills</span>
+      <div class="field-content">
+        <ul>
+          <li>L1→L2: Recognize word transformations</li>
+          <li>L2→L3: Apply orthographic patterns to new words</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.9 Grade eligibility</span>
+      <div class="field-content"><div class="ban-box"><strong>G3-G11 only.</strong> NOT eligible for K-G2 (pre-reading / early reading stage).</div></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.10 Subject eligibility &amp; framework_bans</span>
+      <div class="field-content">
+        <p><strong>Eligible: Language subjects ONLY</strong> — Uzbek Tili, Rus Tili, Ingliz Tili.</p>
+        <div class="ban-box"><strong>Not eligible:</strong> Science, Math, Biology, History, Tarbiya, Tasviriy Sanat, Texnologiya, Geografiya, IT, Music — essentially every non-language subject.<br>
+        <code>framework_bans: ["science_grade5", "tarbiya_grade5", "tasviriy_sanat_grade5", "texnologiya_grade5", "geografiya_grade5"]</code></div>
+        <p><strong>Uzbek note:</strong> Classic letter-substitution ladders don't work in agglutinative Turkic languages. A <strong>Suffix Ladder variant</strong> (add/remove one suffix per step) is the linguistically appropriate version for Uzbek Tili and Rus Tili. Same pedagogy (morphological awareness), different implementation. Flagged as separate future mechanic.</p>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.11 Anti-cheat surface</span>
+      <div class="field-content"><p>Tier 2 watches: dictionary lookup on another device (answer time cadence), clipboard paste into puzzle input.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.12 Telemetry events</span>
+      <div class="field-content"><p><code>wlc_ladder_started</code>, <code>wlc_rung_question_answered</code>, <code>wlc_rung_puzzle_solved</code>, <code>wlc_skip_used</code>, <code>wlc_ladder_complete</code></p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.13 Cost profile</span>
+      <div class="field-content"><p><strong>T1:</strong> dictionary validation, letter-change matching, hint selection. <strong>T2:</strong> subject Q eval. <strong>T3:</strong> none. <strong>Per-round:</strong> &lt;$0.002</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.14 Device requirements</span>
+      <div class="field-content"><p>Low-tier Android. Dictionary stored locally. No special hardware.</p></div>
+    </div>
+
+    <div class="field">
+      <span class="field-label">7.15 Session-time allocation</span>
+      <div class="field-content">
+        <table>
+          <thead><tr><th>Grade</th><th>Per round</th></tr></thead>
+          <tbody>
+            <tr><td>K-G2</td><td>— (not eligible)</td></tr>
+            <tr><td>G3-4</td><td>3-4 min</td></tr>
+            <tr><td>G5-6</td><td>4-6 min</td></tr>
+            <tr><td>G7-9</td><td>5-8 min</td></tr>
+            <tr><td>G10-11</td><td>6-9 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- Cross-Cutting Notes -->
+<!-- =============================================== -->
+<h2><span class="sec-num">03</span> Cross-Cutting Notes</h2>
+
+<div class="cc-card">
+  <h3>A. Mystery Box split → Treasure Chest (separate mechanic)</h3>
+  <p>The original catalog conflated two different things under "Mystery Box":</p>
+  <table>
+    <thead><tr><th>Aspect</th><th>Mystery Box (#4 here)</th><th>Treasure Chest (separate)</th></tr></thead>
+    <tbody>
+      <tr><td>Purpose</td><td>Phase 3 interleaved-practice learning mechanic</td><td>Bilim Bazasi metagame reward event</td></tr>
+      <tr><td>Psychology</td><td>Rohrer interleaving + Loewenstein curiosity</td><td>Variable-ratio reward (Skinner)</td></tr>
+      <tr><td>Research base</td><td>Interleaving studies</td><td>Behavioral economics</td></tr>
+      <tr><td>K-11 concern</td><td>None</td><td>Gambling-like mechanic — ethical flag</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Recommendation:</strong> Define Treasure Chest separately as part of Bilim Bazasi metagame (Layer 4) work. Do not share a name, UI, or codebase.</p>
+</div>
+
+<div class="cc-card">
+  <h3>B. Word Ladder → Suffix Ladder variant for Uzbek</h3>
+  <p>Classic letter-substitution word ladders are an <strong>English-specific mechanic</strong>. They don't translate to agglutinative Turkic languages. A sibling mechanic, <strong>Suffix Ladder</strong>, should be designed for Uzbek Tili and Rus Tili:</p>
+  <ul>
+    <li>Add or remove one suffix per step</li>
+    <li>Each step must be a real inflected/derived word</li>
+    <li>Validated against a morphological analyzer (MorphUz or equivalent)</li>
+    <li>Same pedagogy (morphological awareness), appropriate implementation</li>
+  </ul>
+  <p><strong>Action:</strong> Flagged for linguistics review and separate mechanic definition when language subject frameworks are written.</p>
+</div>
+
+<div class="cc-card">
+  <h3>C. The <code>framework_bans</code> pattern</h3>
+  <p>Every mechanic definition includes a <code>framework_bans</code> field — explicit list of subject-grade frameworks that ban this mechanic, with rationale. Makes ban decisions visible to designers instead of hidden in override docs. Grows into a cross-subject compatibility matrix over time.</p>
+  <table>
+    <thead><tr><th>Mechanic</th><th>Banned</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>Adaptive Quiz</td><td>Science G5</td><td>"Feels like endless testing" — G5 psychology</td></tr>
+      <tr><td>Reaction Chain</td><td>Tarbiya G5, Tasviriy Sanat G5 (flagged)</td><td>Non-sequential content</td></tr>
+      <tr><td>Word Ladder Climb</td><td>All non-language subjects</td><td>Mechanic only works for language content</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="cc-card">
+  <h3>D. Fields marked as best-guess — review needed</h3>
+  <p>The following fields across all 7 mechanics are my first-pass proposals and need review by content/pedagogy leads before locking:</p>
+  <ul>
+    <li>PISA coverage levels (L1-L6)</li>
+    <li>Bloom's band assignments</li>
+    <li>Transition skill type candidates</li>
+    <li>Cost profile estimates (per-round USD)</li>
+    <li>Session-time allocations per grade band</li>
+  </ul>
+</div>
+
+<!-- What's Next -->
+<h2><span class="sec-num">04</span> What's Next</h2>
+<div class="cc-card">
+  <ol>
+    <li>Review and adjust this v1.0 draft — especially the best-guess fields above</li>
+    <li>Write the remaining 21 mechanics using this template, if scope expands</li>
+    <li>Resolve open items: Reaction Chain bans for Tarbiya/Tasviriy Sanat; define Treasure Chest as part of Layer 4 metagame; design Suffix Ladder variant with linguistics review; validate PISA/Bloom assignments with pedagogy lead</li>
+    <li>Sync with the Library Framework when it lands — content-heavy mechanics (Adaptive Quiz item banks, Story Mode authoring) will need re-mapping</li>
+  </ol>
+</div>
+
+<footer>
+  <p><code>All analysis/Game Mechanics/NETS-Game-Mechanics-Definitions.html</code></p>
+  <p>Primary source: <code>NETS-Game-Mechanics-Research-Answers.md</code> &middot; Constitution: <code>NETS-Homework-Engine-UNIFIED.md</code> v2.0</p>
+  <p>v1.0 skeleton — 7 of 28 mechanics defined. Best-guess fields need review.</p>
+</footer>
+
+</div>
+
+<script>
+  function toggleCard(header) {
+    const card = header.closest('.mech-card');
+    card.classList.toggle('open');
+  }
+  function toggleAll(open) {
+    document.querySelectorAll('.mech-card').forEach(card => {
+      if (open) card.classList.add('open');
+      else card.classList.remove('open');
+    });
+  }
+</script>
+</body>
+</html>

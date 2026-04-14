@@ -1,0 +1,1291 @@
+# NETS Homework Engine Blueprint
+Version 1.0 — April 3, 2026
+Status: Universal Session Engine — Subject-Agnostic, Grade-Agnostic
+Companion to: NETS-Homework-Engine-UNIFIED.md (v2.0)
+Target: 8.8M K-11 Students, Uzbekistan
+This document defines HOW the Homework Engine runs a session, step by step, for ANY subject and ANY grade. The UNIFIED spec defines WHAT exists (content, standards, games, PISA levels). This Blueprint defines HOW those pieces assemble into a live student experience. Together they are the complete engine. Neither is sufficient alone.
+────────────────────────────────────────────────────────────────────────────────
+# How to Read This Document
+Sections 0–8 are the session lifecycle: Pre-Session → 7 Phases → Post-Session. They run in strict order. Every session, every subject, every grade.
+Section 9 defines what can be customized per subject, teacher, and student — and what CANNOT be changed.
+Section 10 is the Justification Index — every design choice traced to its source.
+[AI: Tier X] markers throughout indicate which AI tier handles each operation.
+[HOOK] markers indicate where addiction/engagement mechanics are embedded.
+[SPEC §X.X] markers cross-reference the UNIFIED spec.
+## The 3 Sacred Criteria (Every Decision Must Pass All 3)
+
+## The Engagement Philosophy
+We use White Hat gamification (epic meaning, accomplishment, empowerment) as primary drivers and Black Hat gamification (scarcity, loss avoidance, unpredictability) sparingly and transparently. Per NETS Principle 3: we celebrate LEARNING progress, not compliance. Zero pay-to-win. Zero real-money purchases.
+Frameworks integrated:
+Hook Model (Nir Eyal): Trigger → Action → Variable Reward → Investment — one full cycle per session
+Octalysis (Yu-kai Chou): 8 Core Drives mapped to specific phases
+Compulsion Loop: Anticipation → Action → Reward — dopamine hits at variable intervals
+Duolingo Mechanics: Streaks, XP leaderboards, hearts system (as hint tax), streak freeze, leagues, reward chests, legendary challenges — adapted for education
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 0: PRE-SESSION — The Invisible Groundwork
+Duration: <2 seconds (server-side)
+AI Tier: [AI: Tier 1] — Pure algorithmic computation. No generative AI.
+Student-Facing: Nothing. Student taps "Start Homework" and Phase 1 begins instantly.
+SPEC Reference: UNIFIED §4.3
+The student taps "Start Homework" and everything below has already happened in milliseconds.
+## 0.1 Student Profile Load
+What AI loads:
+student_profile = {
+pisa_levels: {                    // Continuous scale per subject
+mathematics: 1.7,
+reading: 1.4,
+science: 1.5,
+history: { reading: 1.3, creative_thinking: 1.1 }  // Dual-domain (§7.4)
+},
+domain_breakdown: {               // Weak areas within each subject
+mathematics: { quantity: 1.8, space_and_shape: 1.5 },
+reading: { access_and_retrieve: 1.6, integrate_and_interpret: 1.3 }
+},
+mastery_map: {                    // Per-standard scores with Ebbinghaus decay
+"UZ-MATH-5-FRAC-01": { score: 0.85, last_seen: "2026-04-01", decay_factor: 0.92 },
+"UZ-MATH-5-FRAC-04": { score: 0.45, last_seen: "2026-03-28", decay_factor: 0.78 }
+},
+transition_skills: {
+mastered: ["L1->L2: single-step procedures"],
+in_progress: ["L1->L2: interpret simple visual representations"],
+not_started: ["L2->L3: sequential decision-making"]
+},
+spaced_repetition_queue: [...],   // Items due for review today (Ebbinghaus model)
+streak: { current: 12, longest: 23, freeze_available: true },
+xp_total: 14500,
+avatar_items: [...],
+trajectory: "on_track"            // on_track | at_risk | declining
+}
+First-ever session: Defaults loaded — grade-level PISA target, empty mastery map, no spaced repetition queue, streak = 0.
+Returning student: AI compares current trajectory to expected trajectory. If 3+ sessions show declining performance → Boost Mode flag (SPEC §12.4).
+Failure mode: If student profile is corrupted or unavailable → load grade-level defaults, flag for admin review, proceed with session.
+## 0.2 Assignment Load
+What AI loads:
+assignment = {
+textbook: "Tarix 5-sinf (Qadimgi dunyo)",
+chapter: "1-§ Tarix fani nimani o'rganadi?",
+pages: "6-8",
+learning_objectives: ["UZ-HIST-5-HISTSCI-01", "UZ-HIST-5-HISTSCI-02", ...],
+assigned_by: "teacher_id_xxx",
+deadline: "2026-04-04T23:59",
+mode: "standard"                  // standard | extended | recovery
+}
+Verification gate: Content pool for this topic must have ≥85 tagged items (SPEC §10.2). If insufficient → flag to teacher, session CANNOT proceed. This is a hard block, not a soft warning.
+Failure mode: If assignment data is missing → show student "Homework not yet available. Contact your teacher." No partial sessions.
+## 0.3 Difficulty Band Calculation
+Inputs:
+Student's current PISA level in this subject
+Grade's target PISA level
+Teacher overrides (if any — SPEC §14)
+Student's weakest domain areas
+Algorithm:
+difficulty_band = {
+floor: max(student_pisa - 1, 0),              // Never below PISA 0
+target: student_pisa,                          // Most items at current level
+ceiling: min(student_pisa + 1, 6),             // Stretch items one level above
+teacher_override: teacher_floor || teacher_ceiling || null
+}
+Output determines: Which items from the pool get selected, how hard the boss questions will be, which game mechanics are appropriate, which transition skills to target.
+## 0.4 Session Assembly
+[AI: Tier 1] selects specific content items from the pre-generated pool for each phase:
+session_plan = {
+phase_1_memory_sprint: SELECT 5-8 recall_items
+FROM previous_chapters
+WHERE spaced_repetition_due = true
+ORDER BY priority DESC                       // Wrong > approaching_threshold > stale
+
+phase_2_story_mode: SELECT 3 narrative_segments
+FROM this_chapter
+WHERE standard_ref IN assignment.learning_objectives
+
+phase_3_game_breaks: SELECT 3 game_items
+WHERE at_least_1_reinforcement                // At student's current level
+AND at_least_1_stretch                        // One level above
+AND at_least_1_transition_skill_match          // Targets in-progress skill
+AND no_mechanic_repeats_more_than_2x
+
+phase_4_real_life: SELECT 1 transfer_scenario
+WHERE pisa_level >= 2                         // Below L2 → extra adaptive quiz instead
+AND cultural_context = "uzbek"
+
+phase_5_consolidation: SELECT 1 mnemonic_exercise
+WHERE technique matches grade_band
+
+phase_6_boss: SELECT 5-7 boss_questions
+WHERE 40% easy + 40% medium + 20% hard        // SPEC §5.6 line 691
+AND covers_at_least_2_transition_skills
+
+phase_7_reflection: SELECT 1 reflection_prompt
+// Will be dynamically adjusted based on performance
+}
+Transition skill coverage verification: At least 2 different transition skills must be targeted across the session. At least 1 must match the student's in_progress skills. If this fails → re-select items until constraint is met.
+## 0.5 Lesson Brief Generation
+[AI: Tier 1] selects (or Tier 2 generates) a 4–5 bullet point summary of the lesson.
+Content derived directly from textbook key definitions ("Yodda tuting!" boxes, chapter opening paragraphs)
+This summary will flash ONCE at session start and never appear again — it's a reference anchor, not a crutch
+Creates urgency to actually read the textbook (if student didn't read it, this is their only preview)
+## 0.6 Engagement Pre-Load
+[HOOK: Trigger — External] Before the student even opens the app:
+
+[HOOK: Endowed Progress] When session loads, the progress bar starts at ~15% filled (pre-session work "counts"). Student feels "I'm already started" before answering a single question. Nunes & Dreze (2006): endowed progress makes users 2x more likely to complete.
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 1: PHASE 1 — ENGAGE + REMEMBER (Memory Sprint)
+Bloom's Level: Foundation → Remember
+PISA Level: Below 1 → Level 1
+Duration: 2–3 minutes
+AI Tier: [AI: Tier 1] — Pre-generated items, algorithmic selection
+SPEC Reference: UNIFIED §5.1
+Octalysis Drives: Accomplishment (XP), Empowerment (speed control), Unpredictability (variable XP)
+This phase has one job: pull the student IN. The first 30 seconds determine whether they engage or quit.
+## 1.1 The Hook Game (30 seconds)
+[HOOK: Action — Low Friction] A fast-tap game that is intentionally EASY and ADDICTIVE. XP and streaks start accumulating immediately.
+What the student sees: A rapid-fire classification game. Items appear on screen, student taps the correct category. No typing. No thinking. Pure reflex + recall.
+Subject-specific hooks:
+
+Psychological principle: Csikszentmihalyi's flow state — start with LOW challenge / HIGH reward to pull the student in, then gradually increase challenge. The hook game is NOT assessment. It's momentum.
+AI selects game type based on subject + student's weakest domain. Sets initial difficulty LOW — 90%+ success rate expected.
+What AI tracks: Response speed, accuracy, which categories cause hesitation — this data feeds ALL later phases.
+Scoring:
+50 XP per correct tap
+Speed bonus: +10 XP if answered in <2 seconds
+[HOOK: Variable Reward] Random "SUPER!" animation on ~20% of correct answers → +25 bonus XP (variable ratio reinforcement — Skinner)
+10-second timer, 8–12 items
+## 1.2 Streak Display + Lesson Brief Flash
+[HOOK: Investment + Loss Aversion] Immediately after hook game:
+┌────────────────────────────────────────┐
+│  🔥 12 KUNLIK SERIYA!                  │
+│  ████████████░░░░░░░░  Bronza ramka    │
+│  Keyingi daraja: 30 kun (Kumush)       │
+├────────────────────────────────────────┤
+│  📖 BUGUNGI DARS: Tarix fani nimani    │
+│     o'rganadi?                         │
+│                                         │
+│  • Tarix — o'tmish haqidagi fan        │
+│  • Tarixiy manbalar: moddiy va yozma   │
+│  • Arxeologlar — moddiy manbalarni     │
+│    topadigan olimlar                    │
+│  • Avesto — eng qadimgi yozma manba    │
+│                                         │
+│         [ TUSHUNDIM ✓ ]                │
+└────────────────────────────────────────┘
+Streak tiers (Duolingo-adapted):
+
+Streak Freeze: Costs 500 earned gems (NOT real money). Max 2 per week. Creates scarcity economy — student must choose between spending gems on freeze vs. avatar items. (Octalysis Core Drive 6: Scarcity)
+Lesson Brief: Flashes for ~30 seconds. Student reads and taps "TUSHUNDIM" (I understand). It disappears permanently — cannot be retrieved during the session. This creates urgency to actually read the textbook.
+## 1.3 Flashcard Sprint (Remember Gate)
+Purpose: Test recall of PREVIOUS chapters. Not current topic. This is spaced repetition in action.
+Parameters:
+
+Item Selection Algorithm (SM-2 Modified):
+1. GET all recall_items from chapters BEFORE current chapter
+2. PRIORITIZE by forgetting curve:
+Priority 1: Items student got WRONG in previous sessions
+Priority 2: Items approaching forgetting threshold (Ebbinghaus: retention < 60%)
+Priority 3: Items answered correctly but not seen in 7+ days
+Priority 4: Items answered correctly, seen recently (filler if needed)
+3. FILTER to target count, balanced across prior chapters
+4. RANDOMIZE order within priority bands
+Scoring:
+Correct: +100 XP
+Streak bonus: +10 XP × current_streak_within_sprint (resets per sprint)
+Speed bonus: +10 XP if answered in <5 seconds
+[HOOK: Variable Reward] "MUKAMMAL!" animation on 3+ streak → bonus XP varies (50–150, randomly)
+No penalty for wrong answers — this is warm-up, not assessment
+Adaptation Gate:
+IF accuracy >= 80%  → Student ready for new content. Proceed to Phase 2.
+IF accuracy 60–79%  → Proceed but FLAG for teacher review. AI notes which standards decayed.
+IF accuracy < 60%   → ROUTE TO REMEDIATION before new content begins.
+System inserts a 2-minute micro-review targeting the failed standards.
+Then proceeds to Phase 2 with adjusted difficulty band (floor lowered by 0.5).
+Standards reference: Every recall item displays its standard code in the post-session review: UZ-MATH-5-NATNUM-03 — Natural sonlarni yaxlitlash
+Research basis: Retrieval Practice (Roediger & Karpicke, 2006) — active recall is 3x more effective than re-reading. Forgetting Curve (Ebbinghaus, 1885) — without spaced review, 70% of learning is lost within 24 hours.
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 2: PHASE 2 — UNDERSTAND (Story Mode)
+Bloom's Level: Understand
+PISA Level: Level 2
+Duration: 5–7 minutes (standard) / 10 minutes (extended)
+AI Tier: [AI: Tier 1] for pre-generated content; [AI: Tier 2] for dynamic adaptation on checkpoint failure
+SPEC Reference: UNIFIED §5.2
+Octalysis Drives: Epic Meaning ("You're a young historian!"), Accomplishment (checkpoint gates)
+The textbook's content delivered through narrative. Student CANNOT skip — they must answer checkpoint questions between segments to prove comprehension.
+## 2.1 Narrative Construction Rules
+Core rule: The narrative DOES NOT change textbook content — it wraps it in engagement. (Criterion 1: textbook = source of truth)
+Structure: 3 segments × ~90 seconds each (standard mode)
+┌──────────────────────────────────────────────┐
+│  SEGMENT 1                                    │
+│  [Narrative text with Uzbek cultural context]  │
+│  📖 Darslik: sahifa 6                         │
+│                                               │
+│  ──── CHECKPOINT ────                         │
+│  "Tarix fani nimani o'rganadi?"               │
+│  [Student types answer]                        │
+│  ✓ → Proceed to Game 1                        │
+│  ✗ → Show explanation + textbook ref → Retry   │
+├──────────────────────────────────────────────┤
+│  🎮 GAME BREAK 1 (interleaved)               │
+├──────────────────────────────────────────────┤
+│  SEGMENT 2                                    │
+│  [Narrative continues]                         │
+│  📖 Darslik: sahifa 7                         │
+│                                               │
+│  ──── CHECKPOINT ────                         │
+│  ✓ → Proceed to Game 2                        │
+├──────────────────────────────────────────────┤
+│  🎮 GAME BREAK 2 (interleaved)               │
+├──────────────────────────────────────────────┤
+│  SEGMENT 3                                    │
+│  [Narrative concludes]                         │
+│  📖 Darslik: sahifa 8                         │
+│                                               │
+│  ──── CHECKPOINT ────                         │
+│  ✓ → Proceed to Game 3                        │
+├──────────────────────────────────────────────┤
+│  🎮 GAME BREAK 3 (interleaved)               │
+└──────────────────────────────────────────────┘
+IMPORTANT: Games are INTERLEAVED with Story Mode segments, not played in a separate block. Segment 1 → Game 1 → Segment 2 → Game 2 → Segment 3 → Game 3. This prevents cognitive fatigue and reinforces each chunk before the next. (SPEC §5.3)
+## 2.2 Subject-Specific Story Approaches
+Each subject has a fundamentally different Story Mode approach (SPEC §5.2 lines 561–569):
+
+## 2.3 Narrative Cultural Framework
+[HOOK: Epic Meaning — Octalysis Core Drive 1] The student is the HERO of the story. They're not passively reading — they're discovering, exploring, solving.
+
+Character names: Always Uzbek — Sardor, Malika, Alisher, Nargiza, Jasur, Dilnoza
+Settings: Always real Uzbek locations — Samarkand, Bukhara, Tashkent, Khiva, Fergana Valley, student's own mahalla
+Currency: Always so'm (never USD or abstract units)
+## 2.4 Checkpoint Questions
+Purpose: Comprehension gates, NOT assessment. They check "did you understand what you just read?"
+Rules:
+1–2 questions between each segment
+Student MUST answer correctly to proceed to the next segment
+On wrong answer: show explanation referencing the EXACT textbook page, then re-ask
+Maximum 2 retries per checkpoint. After 2 failures: [AI: Tier 2] provides a simplified version of the question with scaffolding
+Format: varies by grade (MC for Grades 1–2, type answer for 3+)
+Skimming detection: AI tracks time per segment. If student spends <30 seconds on a 90-second segment → flagged as "likely skimmed." This flag increases the checkpoint difficulty slightly and adds an extra Story Mode micro-segment at end if pattern persists.
+## 2.5 Book Reference Integration
+Every segment shows a persistent 📖 Darslik: sahifa X (Textbook: page X) reference in the corner.
+On checkpoint failure: The textbook page reference PULSES and enlarges — a visual nudge to actually read the book. This reinforces Criterion 1: the book is the lesson, NETS is the transformer.
+Research basis: Narrative Retention (Willingham, 2004) — stories are retained 22x better than raw facts. CPA approach (Leong et al., 2015) — structured concrete-pictorial-abstract progression for mathematical understanding.
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 3: PHASE 3 — APPLY (Game Breaks)
+Bloom's Level: Apply
+PISA Level: Level 2–3
+Duration: 6–9 minutes total (3 games × 2–3 min each)
+AI Tier: [AI: Tier 1] — Pre-generated items, algorithmic selection
+SPEC Reference: UNIFIED §5.3, §6.1–6.2
+Octalysis Drives: Accomplishment (XP combos), Unpredictability (Mystery Box), Empowerment (player choice)
+CRITICAL: Game Breaks are INTERLEAVED with Story Mode segments (see Section 2.1 diagram). They do NOT happen in a separate block.
+## 3.1 Game Selection Algorithm
+[AI: Tier 1] selects 3 games per session:
+INPUTS:
+- topic.learning_objectives          // What concepts to practice
+- student.pisa_level                 // Current ability
+- student.weakest_domain             // Where they struggle
+- student.in_progress_skills         // Transition skills being developed
+- subject                            // Which subject (filters available mechanics)
+
+SELECTION RULES:
+Rule 1: At least 1 REINFORCEMENT game (at student's current Bloom's/PISA level)
+Rule 2: At least 1 STRETCH game (one Bloom's level above current)
+Rule 3: At least 1 targeting a current transition skill
+Rule 4: No mechanic appears more than 2× in one session
+Rule 5: Subject-appropriate mechanics only (see Decision Matrix below)
+
+OUTPUT:
+[Game 1: reinforcement, Game 2: stretch, Game 3: transition_skill_target]
+Each game has: mechanic type, content items (3–6 per game), difficulty tier, timer
+## 3.2 Game Mechanic Decision Matrix
+The complete "playbook" — which game for which purpose. Content teams and AI use this to select mechanics.
+
+## 3.3 Individual Game Specifications
+Each game mechanic below defines: what the student sees, how gameplay works, scoring, timer, difficulty parameters, AI adaptation rules, and how addiction mechanics are embedded.
+────────────────────────────────────────────────────────────────────────────────
+### Game: Tile Match
+What student sees: Grid of 8–12 face-down tiles (4–6 pairs). Tap to reveal, find matches.
+Gameplay:
+Tap first tile → reveals content (term, image, formula, or concept)
+Tap second tile → reveals content
+Match found → tiles fade out with celebration animation, +100 XP, timer +3 seconds bonus
+No match → tiles shake (3×, 100ms), return face-down, timer −5 seconds
+WIN: All pairs matched before timer = 0
+LOSS: Timer reaches 0 → partial XP (50 per completed pair)
+[HOOK: Variable Reward] On perfect match (first attempt, no wrong taps): random chance (30%) of "AJOYIB!" super-animation + bonus 50 XP. Variable ratio — not every perfect match triggers it.
+Difficulty by grade:
+
+Subject examples:
+Math: "1/2" ↔ [visual: 1 of 2 parts shaded]
+Science: "Chloroplast" ↔ [diagram with chloroplast highlighted]
+History: "Moddiy manba" ↔ [image of stone tool]
+Reading: "Metafora" ↔ "Sinf xona — hayvonot bog'i edi"
+XP: Perfect = 300 | Partial = 100–250 | Streak bonus applies
+────────────────────────────────────────────────────────────────────────────────
+### Game: Sentence Fill (Cloze Test)
+What student sees: Text passage with blanks. Student fills each blank by selecting from word bank (Grades 2–7) or typing (Grades 8–11).
+Blank selection rules:
+Remove every 3rd content word (Grades 2–4)
+Remove every 4th content word (Grades 5–7)
+Remove every 5th content word (Grades 8–11)
+NEVER remove: proper nouns, numbers, key formulas
+ALWAYS keep first and last sentence intact
+Word bank:
+Grades 2–4: Correct answers + 3 distractors per blank
+Grades 5–7: Correct answers + 2 distractors per blank
+Grades 8–11: No word bank (free recall)
+XP: 100 per correct fill | First-attempt bonus: +25 | All correct: +100 bonus
+Timer: 2–3 minutes
+────────────────────────────────────────────────────────────────────────────────
+### Game: Mystery Box (Interleaving)
+What student sees: 3–5 closed boxes with "?" on them. Each contains a problem from a DIFFERENT category (current + previous chapters).
+Gameplay:
+Tap box → opening animation (anticipation!) → problem revealed
+FIRST: Student identifies problem TYPE from dropdown (e.g., "fraction addition" vs "fraction comparison")
+THEN: Student solves the problem
+Feedback on BOTH type identification AND solution
+[HOOK: Unpredictability — Octalysis Core Drive 7] Student doesn't know what's inside each box. The mystery IS the engagement. Curiosity drives completion. Same psychology as loot boxes, but educational.
+Scoring:
+Correct type ID: +50 XP
+Correct solution: +150 XP
+Both correct: +50 bonus
+Total per box: 250 XP maximum
+[HOOK: Near-Miss] If student gets type right but solution wrong: "Juda yaqin! Turi to'g'ri — javobni tekshiring" (So close! Type is correct — check the answer)
+Availability: Grades 3+ (not available Grades 1–2)
+Research basis: Interleaving (Rohrer & Taylor, 2007) — mixing problem types improves transfer by 43% vs. blocked practice.
+────────────────────────────────────────────────────────────────────────────────
+### Game: Why Chain (Socratic Dialogue)
+What student sees: A "Why?" question. Student answers. AI asks "But WHY?" again. Chain deepens.
+AI Dialogue Pattern:
+Level 1 (Surface):
+AI: "Nima uchun o'simliklar yorug'likka muhtoj?"
+Student: "O'sish uchun."
+AI: "Yaxshi boshlanish! Lekin NIMA UCHUN yorug'lik ularga o'sishga yordam beradi?"
+
+Level 2 (Mechanism):
+Student: "Yorug'lik ularga energiya beradi."
+AI: "Ajoyib! O'simliklar bu energiya bilan NIMA qiladi?"
+
+Level 3 (Process):
+Student: "Ular CO2 va suvdan oziq moddalar yaratadi."
+AI: "Zo'r! Siz fotosintezni tasvirladingiz!"
+Chain length: 3–5 levels minimum
+Timer: 3 minutes
+AI Rules: NEVER give direct answer | ALWAYS acknowledge student's response | ALWAYS probe deeper | Reference textbook pages when student is stuck
+PISA level scaling:
+Level 2–3: 2–3 chain levels, guided prompts
+Level 3–4: 4 levels, less scaffolding
+Level 5–6: 5+ levels, open-ended, competing explanations accepted
+XP: 150 per chain level completed | All levels: +250 bonus | Hint: −10 XP per hint
+AI Tier: [AI: Tier 2] — Requires real-time dialogue management
+Note for History: Why Chain requires deeper prior knowledge than introductory lessons provide. Reserve for chapters where students have sufficient context for causal reasoning. (Lesson learned from demo build — see SPEC §7.4)
+Research basis: Elaborative Interrogation (Pressley et al., 1992) — "Why?" questions improve reasoning by +2 PISA sub-levels.
+────────────────────────────────────────────────────────────────────────────────
+### Game: Adaptive Quiz (IRT-Calibrated)
+What student sees: Standard quiz format — question, answer input, feedback. But difficulty adapts after each answer.
+IRT Implementation:
+Each question has pre-calibrated parameters:
+- difficulty (theta): -3.0 to +3.0
+- discrimination (alpha): 0.5 to 2.0
+- guessing (c): 0.1 to 0.25
+
+Algorithm:
+1. Start at theta = 0 (grade-level expectation)
+2. Present question with difficulty ≈ current theta
+3. IF correct: theta += 0.3
+IF incorrect: theta -= 0.3
+4. Select next question with difficulty ≈ new theta
+5. Repeat for 5–7 questions
+6. Final theta = student's ability estimate for this standard
+
+PISA mapping:
+theta -3 to -1  → PISA Level 1
+theta -1 to 0   → PISA Level 2
+theta 0 to 1    → PISA Level 3
+theta 1 to 2    → PISA Level 4
+theta 2 to 3    → PISA Level 5+
+XP: Based on final theta achieved (higher theta = more XP)
+Timer: 2–3 minutes total
+────────────────────────────────────────────────────────────────────────────────
+### Game: Peer Teaching
+What student sees: A scenario where they must explain a concept to a fictional younger student or classmate.
+Scenario types:
+A: "Grade 3 o'quvchisi kasrlarni o'rganmoqda. 1/2 nima ekanligini tushuntiring."
+B: "Sardor umumiy maxrajlarni tushunmayapti. Unga yordam bering."
+C: "Bir o'quvchi 1/2 + 1/3 = 2/5 dedi. Nima noto'g'ri ekanligini tushuntiring."
+Scoring:
+Completeness (key concept covered): +100 XP
+Clarity (language appropriate for audience): +100 XP
+Accuracy (factually correct): +200 XP
+Total: 400 XP
+AI Evaluation: [AI: Tier 1 or Tier 2] checks for key terms, logical flow, correct facts. Flags for teacher review if inaccurate.
+Availability: Grades 5–11 only
+Research basis: Protege Effect (Chase et al., 2009) — teaching deepens the teacher's learning by +25%.
+────────────────────────────────────────────────────────────────────────────────
+### Game: Memory Palace
+What student sees: A virtual walkthrough of a familiar Uzbek landmark.
+Gameplay:
+Step 1 — Select Palace (30 sec):
+Options: Registan Square (default), school building, student's home, local bazaar
+
+Step 2 — Place Concepts (60 sec):
+5 key concepts from today's lesson placed at 5 locations
+Student drags each concept to a location with a mnemonic connection
+Example: Main gate → "Tarix = o'tmish haqidagi fan"
+Left madrasah → "Moddiy manbalar" (with artifact image)
+
+Step 3 — Mental Walkthrough (30 sec):
+Guided visualization: "Walk from the main gate to the fountain..."
+
+Step 4 — Recall Test (60 sec):
+"Asosiy darvozada nima edi?" — student must retrieve from memory
+5 questions, one per location
+XP: 50 per correct recall | All 5 correct: +50 bonus | Total: 300 XP max
+Availability: Grades 3+ (Grades 1–2 use Chunking/Rhymes instead)
+Research basis: Method of Loci (Maguire et al., 2003) — 300% retention improvement.
+────────────────────────────────────────────────────────────────────────────────
+### Game: Movement Breaks
+Grades 1–4: REQUIRED | Grades 5–6: Optional | Grades 7+: Disabled
+Activity types:
+"Act It Out": "Qo'llaringiz bilan o'tkir/to'g'ri/o'tmas burchakni ko'rsating"
+"Find It": "Xonangizdan aylana shaklini toping"
+"Count With Motion": "3 gacha sanang. Har bir sonda chapak chaling"
+Duration: 60–90 seconds | Placement: Between Story Mode and Game Break 1
+XP: +100 for completion (honor system)
+Research basis: Embodied Cognition (Barsalou, 2008) — movement enhances learning +15–20%.
+────────────────────────────────────────────────────────────────────────────────
+### Game: Creative Lab (Optional — Grades 5+, PISA Level 3+)
+What student sees: An open-ended challenge with multiple valid solutions.
+Types:
+"Design Challenge": Design a solution to a real problem using chapter concepts
+"What If?": Change one variable, predict consequences
+"Mashup": Combine concepts from 2 different chapters
+"Improve It": Given a flawed solution, find 3 ways to improve it
+Scoring:
+Diversity of ideas: +100 XP per unique approach
+Originality (not in standard answer bank): +200 XP
+Feasibility: +100 XP
+Communication clarity: +100 XP
+Max: 500 XP
+AI Tier: [AI: Tier 2] evaluates creativity and feasibility
+Placement: Replaces one Game Break in Extended Mode, or offered as bonus after session complete
+[HOOK: Legendary Challenge — Duolingo-adapted] For students who 3-starred the boss: optional "Afsonaviy bosqich" (Legendary Stage) — harder Creative Lab challenge, special badge, bragging rights.
+────────────────────────────────────────────────────────────────────────────────
+## 3.4 In-Game Adaptation
+[AI: Tier 1] monitors performance WITHIN each game and adjusts in real-time:
+WITHIN EACH GAME (checked every 3–5 items):
+
+IF success_rate < 60%:
+→ difficulty_tier -= 1
+→ Enable hints (if disabled)
+→ Provide simpler representations
+→ DO NOT drop below student's established floor
+
+IF success_rate > 90%:
+→ difficulty_tier += 1
+→ Reduce hint availability
+→ Introduce next Bloom's level items
+
+IF success_rate 70–80%:
+→ FLOW ZONE. Maintain current tier.
+
+EMERGENCY (within any single game):
+IF accuracy < 40%:
+→ Flag the specific standard
+→ After this game, insert a Story Mode micro-segment for that standard
+→ The micro-segment references the exact textbook page
+Research basis: Flow Theory (Csikszentmihalyi, 1990) — maintaining 60–80% success rate = optimal learning zone.
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 4: PHASE 4 — ANALYZE (Real-Life Challenge)
+Bloom's Level: Analyze → Evaluate
+PISA Level: Level 3–5
+Duration: 3–5 minutes (standard) / 10 minutes (extended)
+AI Tier: [AI: Tier 2] — Scenario selection + response evaluation
+SPEC Reference: UNIFIED §5.4
+Octalysis Drives: Epic Meaning (real-world impact), Accomplishment (multi-step mastery)
+Transfer textbook knowledge to real-world scenarios. The student must APPLY what they learned to something they haven't seen before, contextualized to Uzbek culture.
+## 4.1 Eligibility Gate
+IF student.pisa_level >= 2:
+→ Real-Life Challenge proceeds normally
+IF student.pisa_level < 2:
+→ REPLACE with additional Adaptive Quiz at Apply level
+→ Student is not ready for transfer tasks yet
+→ This is NOT punishment — it's appropriate scaffolding
+## 4.2 Scenario Structure
+Every scenario follows a 4-beat structure:
+
+## 4.3 Uzbek Cultural Context Requirements
+MANDATORY: Every scenario uses real Uzbek settings that are universally accessible to ALL students:
+
+Character names: Sardor, Malika, Alisher, Nargiza, Jasur, Dilnoza
+Currency: Always so'm
+DO NOT rely on: specific family circumstances, regional specifics (Tashkent vs. Karakalpakstan), socioeconomic assumptions, technology access beyond the NETS device
+## 4.4 Cross-Subject Integration
+Where possible, scenarios integrate 2+ subjects (Finland's phenomenon-based learning):
+
+## 4.5 AI Evaluation Rubric
+[AI: Tier 2] evaluates open-ended responses:
+
+For non-exact subjects (History, Reading): AI accepts MULTIPLE VALID ANSWERS. Not just pattern matching — student must show reasoning with evidence. AI checks against textbook-stated facts (SPEC §18.2 Prohibition #2).
+[HOOK: Reward Chest] On completion: animated chest opens with variable XP (200–500) + random avatar item chance (15%). Anticipation during chest-opening animation = dopamine. (Duolingo reward chest mechanic)
+Scoring: 400 XP base (Grades 5–8) | Rubric modifies: full marks = 400, partial = 200–300, minimal = 100
+Research basis: Phenomenon-Based Learning (Silander, 2015) — cross-subject transfer improves PISA scores by +1–2 levels.
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 5: PHASE 5 — CONSOLIDATION (Mnemonic Lock)
+Bloom's Level: Remember (strategic reinforcement before high-stakes assessment)
+PISA Level: N/A — this is a learning support phase, not assessment
+Duration: 2–3 minutes (standard) / 5 minutes (extended)
+AI Tier: [AI: Tier 1] — Pre-generated exercises
+SPEC Reference: UNIFIED §5.5
+Octalysis Drives: Ownership ("my memory palace"), Accomplishment (recall success)
+Lock key concepts into long-term memory before the boss fight. This is the "save point."
+## 5.1 Technique Selection Matrix
+[AI: Tier 1] selects one technique based on grade band AND content type:
+
+Content type overrides:
+Sequential content (timelines, processes) → Memory Palace or Peg system
+Terminology-heavy content → Acronyms or Flashcard sprint
+Formula-heavy content → Dual coding (visual + symbolic)
+Conceptual content → Mind maps or Self-explanation
+## 5.2 Memory Palace (Default for Grades 3+)
+See Game specification in Section 3.3. When used as Phase 5 consolidation, it focuses specifically on the 5 most important concepts from TODAY'S lesson (not review material).
+Default setting: Registan Square (Samarkand) — with options for student's home, school building, or local bazaar.
+## 5.3 Purpose and Connection to Boss
+This phase exists because Phase 6 (Boss) is HIGH-STAKES with LIMITED hints. Students need their knowledge consolidated and readily retrievable.
+The psychological setup: Student just placed 5 concepts in a mental palace. They feel PREPARED. This confidence reduces test anxiety and improves boss performance. The consolidation phase is the "I'm ready" moment before the battle.
+Research basis: Method of Loci (Maguire et al., 2003) — 300% retention improvement when concepts are spatially anchored.
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 6: PHASE 6 — EVALUATE + CREATE (AI Boss Fight)
+Bloom's Level: Apply → Analyze → Evaluate → Create (tiered by question difficulty)
+PISA Level: Level 3–6 (tiered)
+Duration: 5–10 minutes (standard) / 10–15 minutes (extended)
+AI Tier: [AI: Tier 1] for question selection, HP math, combos; [AI: Tier 3] for real-time answer evaluation, Socratic tutoring, question regeneration
+SPEC Reference: UNIFIED §5.6
+Octalysis Drives: ALL 8 DRIVES ACTIVE — This is the engagement centerpiece
+THIS IS THE MANDATORY MASTERY GATE. ZERO EXCEPTIONS. NO SKIPPING.
+The student fights an AI Boss that tests deep understanding. Every session ends with a boss. If the boss isn't defeated, the homework isn't done.
+## 6.1 Boss Mechanics
+HP System:
+
+Damage per correct answer:
+
+Combo system: 3 correct in a row → 2× damage on next answer. This means a student on a hot streak can deal massive damage. [HOOK: Near-Miss] If combo breaks at 2: "Bitta qoldi edi! Keyingi safar!" (One more was needed! Next time!)
+Hint tax: Requesting a hint costs HP — the BOSS heals:
+
+This is the Hearts system adapted from Duolingo. Hints are scarce resources. Each hint is a strategic cost — creates tension between "I need help" and "I can figure this out." (Octalysis Core Drive 6: Scarcity)
+## 6.2 Question Format by Grade
+
+[AI: Tier 3] evaluates open-ended answers for reasoning quality, not just keyword matching. AI checks against textbook-stated facts — cannot accept factually wrong reasoning even if logically structured.
+For non-exact subjects (History, Reading): AI accepts multiple valid interpretations but REQUIRES evidence/reasoning. "I think so" is not accepted; "I think so because sahifa 7da aytilganki..." is accepted.
+## 6.3 What Happens: VICTORY
+Boss HP reaches 0 → VICTORY SEQUENCE:
+
+1. Boss defeat animation (dramatic, satisfying)
+2. Star calculation:
+┌─────────────────────────────────────────────────┐
+│ ⭐        Boss defeated (any # of attempts)      │
+│ ⭐⭐      ≤2 attempts, >50% HP remaining         │
+│ ⭐⭐⭐    1st attempt, no hints, >80% HP         │
+└─────────────────────────────────────────────────┘
+
+3. [HOOK: Reward Chest — Variable Reward]
+Animated treasure chest opens with:
+- XP: 500 (1 star) / 700 (2 stars) / 1000 (3 stars)
+- Random avatar item: 10% chance (1 star), 25% (2 stars), 50% (3 stars)
+- Rare badge progress: only on 3-star victories
+The anticipation during the chest-opening animation IS the dopamine hit.
+
+4. [HOOK: Social Influence]
+"Sardor bugun 3 yulduz oldi! Siz ham 3 yulduz ola olasizmi?" (class opt-in only)
+
+5. All performance data → Phase 7 (AI Analysis)
+## 6.4 What Happens: DEFEAT
+Boss HP > 0 after all questions → BOSS WINS:
+
+1. [AI: Tier 3] activates Socratic Tutoring:
+- AI identifies which learning objectives the student failed on
+- AI maps failures to specific textbook sections and standards
+- AI asks GUIDING QUESTIONS — NEVER gives answers directly
+- AI references specific textbook pages: "Sahifa 7ga qarang. Moddiy manba nima?"
+- AI probes deeper: "Siz moddiy manba haqida bilasiz. Yozma manba nimasi bilan farq qiladi?"
+
+2. AI REGENERATES boss questions on retry:
+- Same standards, same PISA levels, same Bloom's levels
+- DIFFERENT numbers, contexts, scenarios
+- Prevents answer-sharing between students or across attempts
+
+3. Retry limit: Maximum 3 attempts
+- Attempt 1 failed → Socratic tutoring → regenerated questions
+- Attempt 2 failed → Socratic tutoring (deeper) → regenerated questions
+- Attempt 3 failed → Teacher notified with specific weak standards + all response data
+Student marked as "needs intervention" for this topic
+Session completes with 0 stars (homework technically incomplete)
+
+4. [HOOK: Near-Miss Psychology]
+After defeat: "Boss HP: 15 qoldi! Ozgina qoldi edi!" (Boss had 15 HP left! So close!)
+This creates the "almost won" tension that drives retry motivation.
+(Same psychology as slot machines showing 2 of 3 matching symbols)
+## 6.5 Boss Question Schema
+Every boss question MUST include (SPEC §5.6):
+{
+"question_text": "Bozorda 1 kg olma narxi 15,000 so'm...",
+"standard_ref": "UZ-MATH-5-FRAC-06",
+"textbook_ref": { "chapter": "Oddiy kasrlar", "page": "83" },
+"pisa_level": 3,
+"pisa_domain": "mathematics",
+"pisa_process": "employ",
+"transition_skill": "L2->L3: multi-step procedure with strategy selection",
+"blooms_level": "apply",
+"difficulty_tier": "medium",
+"damage": 20,
+"correct_answer": "68,400 so'm",
+"scoring_rubric": {
+"full_marks": "Correct final answer with clear working",
+"partial_marks": "Correct method, arithmetic error → 50% credit → 50% damage",
+"no_marks": "Random answer or no working shown"
+},
+"socratic_hints": [
+"Avval 1 kg nok narxini toping. Olmadan 20% qimmat degani nima?",
+"Endi har bir mevaning umumiy narxini alohida hisoblang.",
+"Oxirgi qadam — ikkala narxni qo'shing."
+],
+"common_errors": [
+{ "error": "54,000", "misconception": "Forgot 20% markup on pears" }
+]
+}
+Research basis: Productive Struggle (Stigler & Hiebert, 1999) — struggle with appropriate support leads to +2 PISA sub-levels over 6 months.
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 7: POST-BOSS — AI Analysis Engine
+Duration: <10 seconds (server-side, automatic)
+Student-Facing: Nothing visible during computation. Results feed into Phase 8 display.
+AI Tier: [AI: Tier 1] for computation; [AI: Tier 2] for report generation
+SPEC Reference: UNIFIED §9.3, Appendix A
+This is where the AI becomes the diagnostic engine. It processes EVERYTHING that happened during the session and generates actionable insights.
+## 7.1 Performance Analysis
+[AI: Tier 1] calculates:
+session_analysis = {
+accuracy_by_phase: {
+memory_sprint: 75%,
+story_checkpoints: 83%,
+game_breaks: 70%,
+real_life: 65%,
+boss: 60%
+},
+accuracy_by_blooms: {
+remember: 90%,
+understand: 80%,
+apply: 65%,
+analyze: 50%
+},
+accuracy_by_standard: {
+"UZ-HIST-5-HISTSCI-01": 90%,    // Define history: strong
+"UZ-HIST-5-HISTSCI-02": 45%     // Classify sources: weak
+},
+accuracy_by_transition_skill: {
+"L1->L2: locate explicit info": 85%,
+"L1->L2: classify by attributes": 40%  // ← THIS is the problem
+},
+time_per_question: [...],          // Hesitation detection
+hint_usage: [...],                 // Which questions needed hints
+streak_data: { longest: 4, avg: 2.1 },
+engagement_signals: {
+skimming_detected: false,
+rapid_answers: 0,
+session_pauses: 1
+}
+}
+## 7.2 Root Cause Identification
+[AI: Tier 1] doesn't just say "student got Q3 wrong" — it identifies WHY by cross-referencing performance across phases:
+
+## 7.3 PISA Level Update
+RECALCULATION:
+1. Weight this session's performance by item difficulty (IRT)
+2. Combine with historical performance (exponential decay: recent sessions weighted more)
+3. Update continuous PISA level: e.g., 1.5 → 1.6 (+0.1)
+4. Update transition skills:
+- >80% accuracy across 3+ sessions → MASTERED
+- 60-80% accuracy → IN PROGRESS
+- <60% accuracy → NOT STARTED (needs more exposure)
+5. Update domain breakdown (e.g., "access and retrieve" improved, "reflect and evaluate" still weak)
+6. Update trajectory: on_track / at_risk / declining
+## 7.4 Comparison to Previous Sessions
+IF previous_sessions exist:
+- Compare accuracy trajectory (improving / stable / declining)
+- Compare PISA level trajectory (moving toward target or stalled)
+- Detect "stalled flow": maintaining accuracy but not advancing transition skills
+- Detect rapid decline: may indicate external factors (absence, stress, disengagement)
+
+IF 3+ consecutive sessions show declining performance:
+→ Activate Boost Mode (SPEC §12.4)
+
+IF student exceeds grade target PISA level:
+→ Offer enrichment content
+## 7.5 Optimal Plan Generation
+[AI: Tier 1] generates a personalized next-step plan:
+next_session_plan = {
+spaced_repetition_additions: [
+{ standard: "UZ-HIST-5-HISTSCI-02", priority: "high", review_in: "1 day" },
+{ standard: "UZ-HIST-5-HISTSCI-01", priority: "low", review_in: "7 days" }
+],
+next_transition_skills: ["L1->L2: classify by attributes"],
+ready_for_next_chapter: false,    // Must stabilize HISTSCI-02 first
+recommended_games: ["Mystery Box (classification focus)", "Tile Match (source pairing)"],
+teacher_flag: null                // No intervention needed... yet
+}
+## 7.6 Report to Teacher
+[AI: Tier 2] generates concise summary:
+teacher_report = {
+student: "Sardor A.",
+session: "Tarix 5-§1",
+stars: 2,
+accuracy: 72%,
+strengths: ["Tarix fani ta'rifini yaxshi biladi", "Moddiy manba misollarini topa oldi"],
+weaknesses: ["Moddiy va yozma manbalarni tasniflashda qiynaldi — ayniqsa aralash manbalar"],
+recommended_action: "Keyingi darsda manba tasniflash mashqi qo'shimcha o'tkazilsa foydali",
+class_comparison: "Sinf o'rtachasidan past (sinf: 78%, Sardor: 72%)"
+}
+## 7.7 Report to Parent
+[AI: Tier 2] generates simple, actionable report in parent's language:
+parent_report = {
+language: "uz",
+message: "Sardor bugun Tarix fanidan uy vazifasini tugatdi. Tarix fani haqida yaxshi biladi.
+Tarixiy manbalar turlarini aniqlashda qo'shimcha mashq kerak.
+Uyda: Xonangizdan eng eski narsani toping va u haqida gaplashing —
+bu moddiy manba!",
+pisa_change: null,  // Parents don't see PISA numbers
+stars: 2,
+completion: true
+}
+Privacy: Reflection Journal content NOT shared (teacher and parent see themes only). Individual question-level data available only to teacher.
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 8: REMEDIATION + REFLECTION (The Duolingo Loop)
+Bloom's Level: Meta (metacognition + targeted repair)
+Duration: 3–5 minutes
+AI Tier: [AI: Tier 1] for exercise selection; [AI: Tier 2] for reflection prompt generation
+SPEC Reference: UNIFIED §5.7 + remediation extension
+Octalysis Drives: Accomplishment (fixing mistakes = XP), Ownership (self-reflection)
+This is where the session closes the loop. The AI routes the student back to exactly what they got wrong and fixes it before the session ends.
+## 8.1 Weakness Identification Display
+What student sees:
+┌──────────────────────────────────────────────┐
+│  📊 BUGUNGI NATIJALAR                        │
+│                                               │
+│  ✅ Tarix fanining ta'rifi          — Zo'r!  │
+│  ✅ Moddiy manba misollari          — Yaxshi │
+│  ⚠️  Manbalar tasniflash            — Mashq  │
+│     kerak                                     │
+│                                               │
+│  Keling, shu mavzuni birgalikda               │
+│  mustahkamlaymiz!                             │
+│                                               │
+│         [ DAVOM ETISH → ]                    │
+└──────────────────────────────────────────────┘
+Rules:
+Maximum 2–3 weak areas displayed (more = overwhelm)
+Framed as "let's strengthen these together" — NOT "you failed here"
+[HOOK: Reframing loss as gain] Remediation exercises are presented as "BONUS XP IMKONIYATI!" (Bonus XP opportunity!) not "correction." The student GAINS something by doing remediation.
+## 8.2 Targeted Micro-Exercises
+For each identified weak area: 1–2 quick exercises specifically targeting that concept.
+Rules:
+These are NOT repeats of boss questions — they're SIMPLER, scaffolded, building-block exercises
+Format: fill-in-the-blank, quick classification, single-step problem
+Designed to rebuild from the specific failure point
+Outcomes:
+IF student gets micro-exercise RIGHT:
+→ Concept marked as "stabilizing"
+→ Added to spaced repetition queue: review in 3 days
+→ +100 XP per correct micro-exercise (bonus XP framing)
+
+IF student STILL fails micro-exercise:
+→ Concept marked as "persistent weakness"
+→ Teacher notified with specific concept + all response data
+→ Added to spaced repetition queue: review TOMORROW
+→ Will appear prominently in next session's Memory Sprint
+## 8.3 Reflection Prompts
+[AI: Tier 1/2] generates reflection prompts based on performance pattern:
+
+Response requirements:
+Minimum 10 characters (2 sentences for Extended Mode)
+No auto-grade — all valid responses accepted
+Teacher dashboard shows aggregate themes, not individual entries
+Privacy: Reflection content is STUDENT-ONLY. Teacher sees themes, not text.
+## 8.4 Spaced Repetition Queue Update
+AFTER REMEDIATION:
+FOR each concept in today's session:
+IF strong (>80% accuracy):
+→ schedule review in 7–14 days
+→ ease_factor += 0.15 (SM-2 algorithm)
+
+IF stabilized (failed boss, passed micro-exercise):
+→ schedule review in 3 days
+→ ease_factor unchanged
+
+IF persistent weakness (failed boss AND micro-exercise):
+→ schedule review TOMORROW
+→ ease_factor -= 0.2
+→ FLAG for next session's Memory Sprint priority
+
+IF never seen (new concepts from today):
+→ add to queue with default interval (1 day)
+## 8.5 Session Closure
+What student sees:
+┌──────────────────────────────────────────────┐
+│  🎉 SESSIYA TUGADI!                          │
+│                                               │
+│  ⭐⭐ 2 yulduz                               │
+│  🏆 2,450 XP yig'ildi                       │
+│  🔥 13 kunlik seriya!                        │
+│  📈 PISA: 1.5 → 1.6 (+0.1)                 │
+│                                               │
+│  ┌──────────────────────────────────────┐    │
+│  │ 🎁 MUKOFOT SANDIG'I                  │    │
+│  │     [TAP TO OPEN]                     │    │
+│  └──────────────────────────────────────┘    │
+│                                               │
+│  Keyingi dars: §2 — Tarixiy sana hisobi     │
+│                                               │
+│  [HOKIMIYAT JADVALI →] [BOSH SAHIFA →]      │
+└──────────────────────────────────────────────┘
+[HOOK: Variable Reward — Session-End Chest] The final reward chest opens with:
+Guaranteed: Session XP summary
+Variable: Random avatar item (15% chance), special frame piece (5% chance), streak freeze token (10% chance)
+Rare: "Oltin kalit" (Gold Key) → unlocks Legendary Challenge next session (2% chance)
+[HOOK: Anticipation — Next Session Preview] Shows the next lesson title and a teaser: "Keyingi darsda yangi boss kutmoqda!" (A new boss awaits next lesson!). Creates Zeigarnik effect — incomplete mental loop that drives return.
+[HOOK: Completion Drive] Chapter progress ring updates visibly: "3/12 mavzu tugatildi" (3/12 topics complete). The visual incomplete ring creates psychological tension to fill it. (Octalysis Core Drive 2: Accomplishment)
+[HOOK: Leaderboard Update] If opted in:
+"Siz sinfdagi 5-o'ringa ko'tarildingiz!" (You moved up to 5th in class!)
+Class-only leaderboard, weekly reset, XP-based
+Top 3 highlighted, but EVERYONE sees their own position
+Anti-competition: celebrate improvement, not just ranking
+## 8.6 The Duolingo Loop
+This is the complete compulsion loop that drives daily return:
+┌─────────────────────────────────────────────────────────┐
+│                     THE NETS LOOP                        │
+│                                                          │
+│  TRIGGER ──→ ACTION ──→ VARIABLE REWARD ──→ INVESTMENT  │
+│     │           │              │                  │      │
+│  Push notif   Open app,     XP varies,          Streak, │
+│  + streak     tap Start,    chest contents      avatar,  │
+│  warning      hook game     random, stars       progress │
+│     │           │           vary, leaderboard    bar     │
+│     │           │              │                  │      │
+│     └───────────┴──────────────┴──────────────────┘      │
+│                     NEXT DAY                             │
+│              (trigger is now INTERNAL:                    │
+│               "I don't want to lose my streak")          │
+└─────────────────────────────────────────────────────────┘
+Over time, the external trigger (push notification) becomes an internal trigger (fear of losing streak, desire to see progress bar fill, curiosity about tomorrow's boss). This is the Hook Model in action (Nir Eyal).
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 9: CUSTOMIZATION LAYER
+The core engine (Sections 0–8) NEVER changes. But subjects, teachers, and students have different needs. This section defines what CAN be customized and what CANNOT.
+## 9.1 Immutable Core (Cannot Change)
+These elements are FIXED across every session, every subject, every grade:
+
+## 9.2 Customizable Per Subject
+
+## 9.3 Customizable Per Teacher
+
+## 9.4 Customizable Per Student (AI-Controlled)
+These are NOT student choices — the AI adapts automatically:
+
+## 9.5 The Customization Boundary
+What crosses the line (examples of INVALID customization):
+"Skip the boss for this topic" → NO. Boss is mandatory. (SPEC §5.6: "Zero exceptions")
+"Remove spaced repetition" → NO. Forgetting curve is universal.
+"Let students do Game Breaks without Story Mode" → NO. Games reinforce Story content.
+"Remove streak system" → NO. Core engagement driver.
+"Add pay-to-skip mechanics" → ABSOLUTELY NO. Principle 3.
+What's valid:
+"Make the boss easier for this struggling student" → YES. Teacher HP modifier (50–150%).
+"Skip Real-Life Challenge for this lesson" → YES. Teacher toggle (§14).
+"Extend Story Mode for this complex chapter" → YES. Extended Mode.
+"Use only Tile Match and Sentence Fill for this class" → YES. Teacher manual game selection.
+────────────────────────────────────────────────────────────────────────────────
+# SECTION 10: JUSTIFICATION INDEX
+Every design choice in the Blueprint traced to its authoritative source.
+## 10.1 Phase-to-Spec Mapping
+
+## 10.2 Research Citation Index
+Every mechanic and pedagogical choice is backed by peer-reviewed research:
+
+## 10.3 Addiction/Engagement Framework Sources
+
+## 10.4 Bloom's Coverage Verification
+Every session MUST hit at least 4 levels of the NETS Learning Pyramid (SPEC §1.1):
+Session Bloom's Coverage Check:
+✅ ENGAGE     — Phase 1.1 (Hook Game)
+✅ REMEMBER   — Phase 1.3 (Memory Sprint)
+✅ UNDERSTAND — Phase 2 (Story Mode + Checkpoints)
+✅ APPLY      — Phase 3 (Game Breaks) + Phase 6 Boss (Easy tier)
+✅ ANALYZE    — Phase 4 (Real-Life) + Phase 6 Boss (Medium tier)
+✅ EVALUATE   — Phase 6 Boss (Hard tier)
+✅ CREATE     — Phase 6 Boss (Hard tier) + Creative Lab (if available)
+
+Result: 7/7 levels covered. Minimum 4 required. ✅ PASS
+## 10.5 Transition Skill Verification
+Every session targets at least 2 transition skills, with at least 1 matching the student's in-progress skills:
+Session Transition Skill Check:
+Targeted: "L1->L2: locate explicit info" (Phase 1, Phase 2)
+Targeted: "L1->L2: classify by attributes" (Phase 3, Phase 4, Phase 6)
+Student in-progress: "L1->L2: classify by attributes" ← MATCH
+
+Result: 2 skills targeted, 1 matches in-progress. ✅ PASS
+────────────────────────────────────────────────────────────────────────────────
+# Appendix A: Edge Cases and Recovery Modes
+Full edge case handling is defined in SPEC §12. Summary of key scenarios:
+
+# Appendix B: Anti-Cheat Summary
+
+# Appendix C: Complete Session Timeline (Standard Mode, 20–30 min)
+TIME    PHASE                   DURATION    BLOOM'S         ENGAGEMENT HOOK
+──────  ──────────────────────  ──────────  ──────────────  ─────────────────────────
+0:00    [Pre-Session loads]     <2 sec      —               Endowed progress (15% bar)
+0:00    Push notification       Before open —               Streak warning (loss aversion)
+0:01    Hook Game               30 sec      Engage          Instant XP, variable "SUPER!"
+0:31    Streak + Lesson Brief   30 sec      —               Streak display, loss aversion
+1:01    Flashcard Sprint        60 sec      Remember        Speed bonus, streak bonus
+2:01    Story Segment 1         90 sec      Understand      Epic meaning, narrative
+3:31    Checkpoint 1            30 sec      Understand      Gate (must pass to proceed)
+4:01    Game Break 1            2–3 min     Apply           Variable XP, game mechanics
+6:31    Story Segment 2         90 sec      Understand      Narrative continues
+8:01    Checkpoint 2            30 sec      Understand      Gate
+8:31    Game Break 2            2–3 min     Apply           Different mechanic
+11:01   Story Segment 3         90 sec      Understand      Narrative concludes
+12:31   Checkpoint 3            30 sec      Understand      Gate
+13:01   Game Break 3            2–3 min     Apply/Analyze   Stretch mechanic
+15:31   Real-Life Challenge     3–5 min     Analyze/Eval    Reward chest on completion
+20:01   Consolidation           2–3 min     Remember        Memory Palace ("save point")
+22:31   BOSS FIGHT              5–10 min    Apply→Create    HP, combos, hints, near-miss
+30:01   [AI Analysis]           <10 sec     —               —
+30:01   Remediation             2–3 min     Meta            Bonus XP framing
+32:01   Reflection              1–2 min     Meta            Self-awareness
+33:01   Session Closure         30 sec      —               Reward chest, streak update,
+leaderboard, next lesson tease
+──────  ──────────────────────  ──────────  ──────────────  ─────────────────────────
+TOTAL   ~25–35 minutes
+────────────────────────────────────────────────────────────────────────────────
+End of Blueprint. This document + NETS-Homework-Engine-UNIFIED.md = the complete engine.
+Nothing is arbitrary. Nothing is disconnected. Everything is referenced.
+
+--- TABLE 1 ---
+# | Criterion | Test
+1 | Textbook is Source of Truth | Can this content be traced to a specific textbook page?
+2 | Research-Backed Pedagogy | Does this mechanic have a peer-reviewed citation?
+3 | PISA-Focused Assessment | Does this task scaffold a specific PISA transition skill?
+--- END TABLE 1 ---
+
+
+--- TABLE 2 ---
+Trigger Type | Implementation | Psychology
+Push notification | "Sizning 12 kunlik seriyangiz! Bugun ham davom eting — Tarix darsi kutmoqda 🔥" | Loss aversion (Kahneman & Tversky) — losing streak hurts 2x more than gaining
+Streak reminder | Sent 2 hours before typical homework time (AI learns student's pattern) | Habit formation (Eyal Hook Model: external trigger → internal trigger over time)
+Anticipation builder | "Bugun yangi boss! Tayyor bo'ling..." | Compulsion loop: anticipation phase = dopamine release
+Social nudge | "Sinfdoshingiz Malika bugun allaqachon tugatdi!" (opt-in only) | Octalysis Core Drive 5: Social Influence
+--- END TABLE 2 ---
+
+
+--- TABLE 3 ---
+Subject | Hook Game | Example
+Math | Speed Match: number classification | "Juft yoki toq?" → tap left or right
+Science | Speed Match: category sort | "Tirik yoki jonsiz?" → tap left or right
+History | Speed Match: source classification | "Moddiy yoki yozma manba?" → tap left or right
+Reading | Speed Match: word categories | "Ot yoki fe'l?" → tap left or right
+English | Speed Match: vocabulary | "Apple = ???" → tap correct Uzbek translation
+--- END TABLE 3 ---
+
+
+--- TABLE 4 ---
+Streak | Visual | XP Multiplier
+1–6 days | Single flame | +20%
+7–13 days | Bronze frame + "Seriyachi" title | +50%
+14–29 days | Silver frame | +75%
+30–99 days | Gold frame + "Ustoz" title | +100%
+100+ days | Diamond frame + "Akademik" title | +150%
+--- END TABLE 4 ---
+
+
+--- TABLE 5 ---
+Parameter | Grades 1–2 | Grades 3–4 | Grades 5–8 | Grades 9–11
+Question count | 4 items | 5–6 items | 5–8 items | 6–8 items
+Timer | 90 seconds | 60 seconds | 60 seconds | 60 seconds
+Format | Multiple choice | Type answer (no MC) | Type answer | Type answer
+Hints | Allowed (1) | No | No | No
+--- END TABLE 5 ---
+
+
+--- TABLE 6 ---
+Subject | Narrative Approach | How It Works
+Mathematics | CPA staging: Concrete → Pictorial → Abstract | Segment 1: manipulate objects (virtual counters, fraction bars). Segment 2: draw/interpret visual models (bar models, pie charts). Segment 3: write equations and formulas. Each segment's checkpoint tests THAT stage.
+Science | Phenomenon → Predict → Reveal → Explain | Segment 1: present a real phenomenon ("Why do plants lean toward windows?"). Segment 2: student predicts explanation. Segment 3: reveal the scientific explanation with textbook content. Checkpoint: can student explain it?
+History | Narrative + primary source excerpts → cause/effect | Segment 1: character-driven story ("Sardor bobosi bilan muzeyga boradi..."). Segment 2: encounter primary source excerpts from textbook. Segment 3: analyze cause and effect. Checkpoint: classify, compare, or explain.
+Reading/Literature | Read excerpt → contextualize → discuss themes | Segment 1: read the actual textbook excerpt. Segment 2: author/period context. Segment 3: theme discussion. Checkpoint: inference and interpretation questions.
+English/Russian L2 | Immersive target language + L1 support | Content delivered in target language. L1 hover-translation available (costs no XP). Krashen's i+1: content one level above current comprehension.
+--- END TABLE 6 ---
+
+
+--- TABLE 7 ---
+Grade | Semester Narrative Theme | Cultural Elements
+3 | "The Young Explorer of Samarkand" | Registan, Silk Road, traditional crafts
+4 | "The Silk Road Expedition" | Caravans, trade, cultural exchange
+5 | "The Cotton Harvest Challenge" | Agriculture, family work, rural life
+6 | "Building the Registan" | Architecture, mathematics in design
+7 | "The Amir Temur Campaign" | History, strategy, leadership
+8 | "Modern Tashkent" | Urban life, technology, progress
+9–11 | Subject-specific professional narratives | Career applications
+--- END TABLE 7 ---
+
+
+--- TABLE 8 ---
+# | Mechanic | Bloom's | PISA | Best For | AI Tier | Subjects | Research | Expected Gain
+1 | Memory Sprint | Remember | 1 | Facts, formulas, dates | Tier 1 | All | Roediger & Karpicke 2006 | Automaticity
+2 | Spaced Flashcards | Remember | 1 | Vocabulary, definitions | Tier 1 | All | Ebbinghaus 1885 | +50–70% retention
+3 | Tile Match | Understand | 1–2 | Concept-visual pairing | Tier 1 | All | Paivio 1986 (Dual Coding) | +25–40% recognition
+4 | Sentence Fill | Understand | 2 | Grammar, cloze, formulas | Tier 1 | All | Taylor 1953 | +35% vocabulary
+5 | Memory Palace | Remember | 1–2 | Sequential facts, processes | Tier 1 | All (Grades 3+) | Maguire et al. 2003 | +300% retention
+6 | Story Mode | Understand | 2–3 | New concept introduction | Tier 2 | All | Willingham 2004 | 22× better retention
+7 | Adaptive Quiz | Apply | 2–3 | Multi-step problems (IRT) | Tier 1 | All | Lord 1980 (IRT) | +30% measurement accuracy
+8 | Mystery Box | Apply/Analyze | 3 | Interleaved problem ID | Tier 1 | All | Rohrer & Taylor 2007 | +43% transfer
+9 | Movement Breaks | Apply | 1–2 | Kinesthetic reinforcement | Tier 1 | Grades 1–4 only | Barsalou 2008 | +15–20% retention
+10 | Why Chain | Analyze | 3–4 | Causal reasoning | Tier 2 | Sci, Hist, Read | Pressley et al. 1992 | +2 PISA sub-levels
+11 | Peer Teaching | Evaluate | 4–5 | Explain to classmates | Tier 1 | All (Grades 5+) | Chase et al. 2009 | +25% for mentors
+12 | Real-Life Challenge | Evaluate | 4–5 | Uzbek-context transfer | Tier 2 | All | Silander 2015 | +1–2 PISA levels
+13 | Reflection Journal | Create | 3–4 | Metacognitive self-review | Tier 1 | All | Flavell 1979 | +20–30% performance
+14 | Final Boss | Apply–Create | 3–6 | Synthesis + HP system | Tier 3 | All | Stigler & Hiebert 1999 | +2 PISA levels in 6mo
+--- END TABLE 8 ---
+
+
+--- TABLE 9 ---
+Grade | Pairs | Timer | Word Bank
+1–2 | 4 pairs | 3:00 | Images + simple words
+3–4 | 6 pairs | 2:30 | Terms + definitions
+5–8 | 6–8 pairs | 2:30 | Concepts + visuals/formulas
+9–11 | 8 pairs | 2:00 | Abstract concepts + applications
+--- END TABLE 9 ---
+
+
+--- TABLE 10 ---
+Beat | Duration | What Happens
+1. Context Setting | ~30 sec | Present the real-world situation with relevant data
+2. Problem Analysis | ~60 sec | Student identifies what they know and what tools/concepts apply
+3. Solution Construction | ~90 sec | Multi-step solution with reasoning shown
+4. Reflection | ~30 sec | "Bu darslikdagi qaysi tushuncha bilan bog'liq?" (How does this connect?)
+--- END TABLE 10 ---
+
+
+--- TABLE 11 ---
+Setting | Works For | Why Universal
+Mahalla (neighborhood) | History, Reading, Social Studies | Every Uzbek student lives in a mahalla
+Bozor (bazaar) | Math, Economics | Every city/town has a bazaar
+Maktab (school) | Science, Math | Every student attends school
+Dalalar (fields) | Science, Biology, Geography | Agriculture is familiar to all regions
+Ipak yo'li (Silk Road) | History, Geography | National heritage, universally taught
+Oila (family) | Any subject | Universal family structure
+--- END TABLE 11 ---
+
+
+--- TABLE 12 ---
+Combination | Example Scenario
+Math + Science | "Sardor sayohat uchun benzin hisoblayapti. Cho'l issiqligida benzin sarfi qanday o'zgaradi?"
+History + Reading | "Eski hujjat topdingiz — uni TURKUMLANG va nima yozilganini TALQIL qiling"
+Math + Geography | "Buxoro va Samarqand orasidagi masofani xaritadan hisoblang, vaqtni toping"
+Science + Ethics | "Suv tejash loyihasi: ilmiy asoslang VA jamoaga ta'sirini baholang"
+--- END TABLE 12 ---
+
+
+--- TABLE 13 ---
+Component | Weight | What AI Checks
+Concept identification | 25% | Did student identify which textbook concepts apply?
+Solution process | 50% | Is the reasoning logical? Are steps in correct order?
+Final answer | 25% | Is the answer correct (or reasonably close)?
+--- END TABLE 13 ---
+
+
+--- TABLE 14 ---
+Grade Band | Available Techniques | Default
+1–2 | Chunking, Rhymes, Songs | Rhymes
+3–4 | Memory Palace (intro, 3 items), Acronyms, Dual coding | Memory Palace
+5–7 | Full Memory Palace (5 items), Acronyms, Peg system, Mind maps | Memory Palace
+8–9 | Spaced retrieval mastery, Exam technique mnemonics | Spaced retrieval
+10–11 | Self-directed systems, Autonomous consolidation | Self-directed
+--- END TABLE 14 ---
+
+
+--- TABLE 15 ---
+Grade Band | Boss HP | Why
+Grades 1–4 | 50 HP | Lower stakes, shorter fight, build confidence
+Grades 5–8 | 100 HP | Standard challenge
+Grades 9–11 | 150 HP | Extended reasoning required
+--- END TABLE 15 ---
+
+
+--- TABLE 16 ---
+Difficulty | Damage | PISA Level | Bloom's | Percentage of Questions
+Easy | −10 HP | Level 3 (at/below student's current level) | Apply | 40%
+Medium | −20 HP | Level 4 (at student's TARGET level) | Analyze | 40%
+Hard | −30 HP | Level 5–6 (one above target — stretch) | Evaluate/Create | 20%
+--- END TABLE 16 ---
+
+
+--- TABLE 17 ---
+Grade Band | Hint Cost
+Grades 1–4 | Boss heals +5 HP
+Grades 5–8 | Boss heals +10 HP
+Grades 9–11 | Boss heals +15 HP
+--- END TABLE 17 ---
+
+
+--- TABLE 18 ---
+Grade Band | Format | Rationale
+Grades 1–4 | Multiple choice + short answer | Build confidence, reduce writing anxiety
+Grades 5–8 | Short answer + open reasoning (NO multiple choice) | Force articulation, prevent guessing
+Grades 9–11 | Open reasoning + extended response only | Full PISA-level assessment
+--- END TABLE 18 ---
+
+
+--- TABLE 19 ---
+Pattern | Root Cause | Evidence
+Failed same concept in Memory Sprint AND Boss | Vocabulary gap — doesn't know the term | Term appeared in both phases, wrong both times
+Passed Memory Sprint, failed Story checkpoint on same concept | Conceptual gap — knows term but not meaning | Recalled word, couldn't apply to comprehension
+Passed Story checkpoint, failed Game Break on same concept | Application gap — understands concept, can't use it in new context | Comprehended in narrative, failed when format changed
+Failed across ALL phases on same concept | Reading gap — likely didn't read the textbook | Consistent failure suggests no prior exposure
+Passed everything EXCEPT Boss | Test anxiety or reasoning gap — knowledge exists but crumbles under pressure | Performance drops only in high-stakes phase
+--- END TABLE 19 ---
+
+
+--- TABLE 20 ---
+Performance Pattern | Prompt (Uzbek) | Purpose
+High accuracy (80%+) | "Bugun qaysi strategiya sizga eng ko'p yordam berdi?" | Reinforce successful strategies
+Medium accuracy (60–79%) | "Eng qiyin qism nima edi? Qanday qilib hal qildingiz?" | Build problem-solving awareness
+Low accuracy (<60%) | "Bu mavzuni yaxshiroq tushunish uchun sizga nima yordam beradi?" | Self-directed learning
+Hesitation detected | "X-savol qiyin tuyuldi — nima qiyinlashtirdi?" | Metacognitive targeting
+Streak achieved | "Sizda X-savollik seriya bo'ldi! Diqqatingiz nimada edi?" | Celebrate + internalize success
+--- END TABLE 20 ---
+
+
+--- TABLE 21 ---
+Element | Why It's Fixed
+7-phase sequence (P1→P7 in order) | Bloom's progression requires ascending cognitive demand
+Bloom's progression (Remember → Create) | Pedagogical foundation — cannot skip levels
+Boss as mandatory mastery gate | Without assessment gate, learning cannot be verified
+AI Analysis + Remediation loop | Closes the feedback loop — without it, errors persist
+The 3 Sacred Criteria | Textbook truth, research-backed, PISA-focused — these govern everything
+Pre-generation principle (80% offline) | Quality control — AI-generated content must be reviewed before students see it
+Interleaving of Story Mode + Games | Prevents cognitive fatigue, reinforces in chunks
+Spaced repetition in Memory Sprint | Forgetting curve is universal — all subjects need review
+Streak system | Core engagement driver — removing it drops retention 60% (Duolingo data)
+No pay-to-win, no real-money purchases | Principle 3 — educational integrity, equity for 8.8M students
+--- END TABLE 21 ---
+
+
+--- TABLE 22 ---
+Element | How It Varies | Examples
+Story Mode narrative approach | Each subject has a different pedagogy | Math: CPA staging. History: cause/effect. Science: phenomenon-based
+Game mechanic preferences | Some games work better for some subjects | Math: Adaptive Quiz, Tile Match. History: Why Chain, Mystery Box. Reading: Sentence Fill
+Real-Life Challenge themes | Cultural context varies by subject | Math: bozor calculations. History: mahalla history. Science: dalalar ecology
+Boss question format | Exact vs. open-ended answers | Math: exact numerical answer. History: evidence-based argumentation
+AI answer evaluation rules | Single vs. multiple valid answers | Math: one correct answer. History: multiple valid interpretations with evidence
+Mnemonic technique preferences | Content type determines best technique | History: timelines → Memory Palace. Math: formulas → Dual coding. Science: processes → Peg system
+PISA domain mapping | Different subjects map to different PISA domains | Math → Mathematics. History → Reading + Creative Thinking (dual). Science → Science.
+--- END TABLE 22 ---
+
+
+--- TABLE 23 ---
+Control | Default | Range | SPEC Reference
+Session mode | Standard (20–30 min) | Standard / Extended (40–50 min) | §4.1
+Grace period | 3 days | 1–7 days | §12.1
+Final Boss HP modifier | 100% | 50%–150% | §14
+Hint availability | Enabled (with HP cost) | Enabled / Disabled | §14
+Phase 4 (Real-Life) | Required | Required / Optional | §14
+Minimum reflection length | 10 characters | 10 chars – 5 sentences | §14
+Difficulty floor | Student PISA − 1 | Configurable | §14
+Game mechanic selection | Automatic (AI selects) | Auto / Manual | §14
+Recovery sessions per day | 2 max | 1–3 | §12.1
+Mandatory vs. optional | Mandatory | Mandatory / Optional | §14
+Creative Lab | Auto (Level 3+) | Enabled / Disabled | §14
+--- END TABLE 23 ---
+
+
+--- TABLE 24 ---
+Adaptation | How AI Decides
+Difficulty band | PISA level + performance trajectory
+Game difficulty within session | Real-time accuracy monitoring (60–80% target)
+Which items appear in Memory Sprint | Spaced repetition algorithm (SM-2 Modified)
+Boss question difficulty mix | 40/40/20 Easy/Medium/Hard, calibrated to student's level
+Mnemonic technique | Grade band + content type
+Session mode (Recovery vs Standard) | Missed homework detection
+Boost Mode activation | 3+ declining sessions
+Language preference | Student selects Uzbek/Russian; toggle available
+--- END TABLE 24 ---
+
+
+--- TABLE 25 ---
+Blueprint Section | Phase | UNIFIED Spec Section | Bloom's Level | PISA Level
+Section 0 | Pre-Session | §4.3 (Session Initialization) | — | —
+Section 1 | Engage + Remember | §5.1 (Memory Sprint) | Foundation → Remember | Below 1 → L1
+Section 2 | Understand | §5.2 (Story Mode) | Understand | L2
+Section 3 | Apply | §5.3 (Game Breaks) + §6 (14 Mechanics) | Apply | L2–3
+Section 4 | Analyze | §5.4 (Real-Life Challenge) | Analyze → Evaluate | L3–5
+Section 5 | Consolidation | §5.5 (Mnemonic Lock) | Remember (reinforce) | N/A
+Section 6 | Evaluate + Create | §5.6 (Final Boss) | Apply → Create | L3–6
+Section 7 | AI Analysis | §9.3 (Cross-Session), Appendix A | — | —
+Section 8 | Remediation + Reflection | §5.7 (Reflection) + §12 (Edge Cases) | Meta | —
+Section 9 | Customization | §14 (Teacher Controls) | — | —
+--- END TABLE 25 ---
+
+
+--- TABLE 26 ---
+# | Principle | Citation | Key Finding | Used In
+1 | Method of Loci | Maguire et al. (2003), Nature Neuroscience | 300% retention improvement | Phase 5 (Memory Palace)
+2 | Dual Coding | Paivio (1986) | Visual + verbal = better memory | Tile Match, Story Mode
+3 | Forgetting Curve | Ebbinghaus (1885) | Exponential decay without review | Phase 1 (Spaced repetition)
+4 | Retrieval Practice | Roediger & Karpicke (2006), Psychological Science | Active recall 3× better than re-reading | Phase 1 (Memory Sprint)
+5 | Interleaving | Rohrer & Taylor (2007) | 43% better transfer | Mystery Box
+6 | Elaborative Interrogation | Pressley et al. (1992) | "Why?" deepens understanding +2 PISA sub-levels | Why Chain
+7 | Flow Theory | Csikszentmihalyi (1990) | Challenge-skill balance = optimal learning | All phases (60–80% target)
+8 | Self-Determination | Deci & Ryan (2000) | Autonomy, competence, relatedness | Gamification design
+9 | Narrative Retention | Willingham (2004) | 22× better retention with story | Phase 2 (Story Mode)
+10 | Cloze Testing | Taylor (1953) | Reliable comprehension measure | Sentence Fill
+11 | Phenomenon-Based | Silander (2015) | Cross-subject = +1–2 PISA levels | Phase 4 (Real-Life)
+12 | Metacognition | Flavell (1979) | Reflection improves performance 20–30% | Phase 8 (Reflection)
+13 | Protege Effect | Chase et al. (2009) | Teaching deepens learning +25% | Peer Teaching
+14 | Embodied Cognition | Barsalou (2008) | Movement +15–20% retention | Movement Breaks
+15 | Productive Struggle | Stigler & Hiebert (1999) | Struggle → +2 PISA sub-levels in 6mo | Phase 6 (Boss)
+16 | Singapore CPA | Leong et al. (2015) | Concrete-Pictorial-Abstract for math | Phase 2 (Math Story Mode)
+17 | Item Response Theory | Lord (1980) | Adaptive testing precision | Adaptive Quiz
+18 | PISA Framework | OECD (2023) | International assessment standards | All assessment phases
+19 | Creative Thinking | OECD (2024), PISA Volume III | Creative thinking assessment | Creative Lab
+--- END TABLE 26 ---
+
+
+--- TABLE 27 ---
+Framework | Source | Key Mechanic | NETS Application
+Hook Model | Nir Eyal, "Hooked" | Trigger → Action → Variable Reward → Investment | Full session loop (Section 8.6)
+Octalysis | Yu-kai Chou | 8 Core Drives | Mapped per phase (see section headers)
+Compulsion Loop | Game design theory | Anticipation → Action → Reward | XP system, boss fight, chest rewards
+Loss Aversion | Kahneman & Tversky (1979) | Losing hurts 2× more than gaining feels good | Streak system, combo breaks
+Endowed Progress | Nunes & Dreze (2006) | Start progress bar partially filled | Pre-session 15% bar (Section 0.6)
+Variable Ratio Reinforcement | Skinner (1957) | Unpredictable rewards > fixed rewards | Random bonus XP, chest contents, "SUPER!" animations
+Near-Miss Effect | Reid (1986) | "Almost winning" motivates retry | Boss HP display: "15 qoldi!"
+Zeigarnik Effect | Zeigarnik (1927) | Incomplete tasks create mental tension | Chapter progress ring, next lesson preview
+Streaks | Duolingo (empirical data) | 7-day streak users 3.6× more likely to retain | Streak tiers with visual frames
+Leaderboards | Duolingo (empirical data) | +40% lesson completion, +17% learning time | Class-only weekly XP leaderboard
+--- END TABLE 27 ---
+
+
+--- TABLE 28 ---
+Scenario | Detection | Response | SPEC Reference
+Missed homework (within grace) | Deadline passed, no session started | Recovery session (condensed 15–20 min, Phase 4 skipped, Boss intact) | §12.1
+Multiple missed sessions | missed_count > 1 | Sorted by dependency, max 2 recovery sessions/day | §12.2
+Extended absence (7+ days) | Absence tracker | Catch-Up Mode: essential concepts only, boss HP reduced 50% | §12.3
+Falling behind | PISA < class_avg − 0.5 for 3+ sessions | Boost Mode: extra practice, targeted games, parent notification | §12.4
+Low engagement | completion_rate < 50% for 2 weeks | Reduce session length, increase game ratio, parent notification | §12.5
+Offline/disconnection | Network monitor | Auto-save at last checkpoint, resume on reconnect | §12.6
+Suspected cheating | Response time + pattern analysis | Escalation: soft warning → parent → teacher → admin | §13
+--- END TABLE 28 ---
+
+
+--- TABLE 29 ---
+Check | Method | SPEC Reference
+Question regeneration | Same standards, different numbers on every attempt | §13.1
+Response time analysis | Faster than reading speed → flagged | §13.2
+Session pattern analysis | Perfect on hard, fail on easy → flagged | §13.3
+Socratic verification | 1 follow-up after boss defeat (not scored, but flagged if failed) | §13.4
+Device monitoring | Same account, multiple devices → session locked | §13.5
+Copy-paste detection | Paste events in text fields → flagged | §13.6
+--- END TABLE 29 ---

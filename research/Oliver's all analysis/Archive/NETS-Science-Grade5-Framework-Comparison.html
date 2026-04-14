@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETS Science Grade 5 — Framework Comparison</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-code: #252833;
+      --border: #2d3140;
+      --text: #e2e4eb;
+      --text-muted: #9ca3b8;
+      --text-dim: #6b7280;
+      --accent: #6c63ff;
+      --accent-light: #8b83ff;
+      --green: #22c55e;
+      --green-bg: rgba(34,197,94,0.1);
+      --red: #ef4444;
+      --red-bg: rgba(239,68,68,0.1);
+      --yellow: #f59e0b;
+      --yellow-bg: rgba(245,158,11,0.1);
+      --blue: #3b82f6;
+      --blue-bg: rgba(59,130,246,0.1);
+      --cyan: #06b6d4;
+      --orange: #f97316;
+      --radius: 8px;
+      --shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(108,99,255,0.1) 0%, transparent 70%);
+      animation: pulse 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #c7d2fe, #6c63ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative; z-index: 1;
+    }
+
+    .header .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      position: relative; z-index: 1;
+    }
+
+    /* Verdict banner */
+    .verdict {
+      text-align: center;
+      padding: 1.5rem 2rem;
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.3);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+    }
+
+    .verdict h2 {
+      color: var(--green);
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .verdict p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Side-by-side header cards */
+    .side-by-side {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .side-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .side-card.ours { border-left: 3px solid var(--accent); }
+    .side-card.theirs { border-left: 3px solid var(--cyan); }
+
+    .side-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .side-card.ours h3 { color: var(--accent-light); }
+    .side-card.theirs h3 { color: var(--cyan); }
+
+    .side-card table {
+      width: 100%;
+      font-size: 0.85rem;
+      border-collapse: collapse;
+    }
+
+    .side-card td {
+      padding: 0.35rem 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .side-card td:first-child {
+      color: var(--text-muted);
+      width: 40%;
+    }
+
+    /* Section cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      color: var(--accent-light);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      color: var(--cyan);
+      margin: 1.25rem 0 0.5rem;
+    }
+
+    /* Comparison tables */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1rem 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    table.cmp {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    table.cmp th {
+      background: rgba(108,99,255,0.15);
+      color: var(--accent-light);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    table.cmp th:nth-child(2) {
+      background: rgba(108,99,255,0.2);
+      color: var(--accent-light);
+      min-width: 200px;
+    }
+
+    table.cmp th:nth-child(3) {
+      background: rgba(6,182,212,0.15);
+      color: var(--cyan);
+      min-width: 200px;
+    }
+
+    table.cmp td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    table.cmp tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+    table.cmp tr:hover { background: rgba(108,99,255,0.05); }
+
+    table.cmp td:first-child {
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    /* Winner badges */
+    .winner {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .winner-ours {
+      background: rgba(108,99,255,0.2);
+      color: var(--accent-light);
+      border: 1px solid rgba(108,99,255,0.3);
+    }
+
+    .winner-theirs {
+      background: rgba(6,182,212,0.2);
+      color: var(--cyan);
+      border: 1px solid rgba(6,182,212,0.3);
+    }
+
+    .winner-both {
+      background: rgba(34,197,94,0.2);
+      color: var(--green);
+      border: 1px solid rgba(34,197,94,0.3);
+    }
+
+    .winner-debate {
+      background: rgba(245,158,11,0.2);
+      color: var(--yellow);
+      border: 1px solid rgba(245,158,11,0.3);
+    }
+
+    /* Contradiction rows */
+    .contra-row { border-left: 3px solid var(--orange); }
+
+    /* Missing sections */
+    .missing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .missing-col h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .missing-col.missing-in-ours h4 { color: var(--accent-light); }
+    .missing-col.missing-in-theirs h4 { color: var(--cyan); }
+
+    .missing-col ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .missing-col li {
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .missing-col li:last-child { border-bottom: none; }
+    .missing-col li::before { content: '✗ '; }
+    .missing-col.missing-in-ours li::before { content: '✗ '; color: var(--red); }
+    .missing-col.missing-in-theirs li::before { content: '✗ '; color: var(--accent-light); }
+
+    .missing-col li span {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    /* Inline code */
+    code {
+      background: var(--bg-code);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.88em;
+      color: var(--cyan);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      margin-top: 2rem;
+      padding: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .side-by-side, .missing-grid { grid-template-columns: 1fr; }
+      .header h1 { font-size: 1.4rem; }
+      .card { padding: 1.25rem; }
+      table.cmp { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>NETS Science Grade 5 — Framework Comparison</h1>
+      <div class="subtitle">Two drafts of the same blueprint — produced by the same Claude orchestration pipeline</div>
+    </div>
+
+    <!-- Verdict -->
+    <div class="verdict">
+      <h2>🔀 Same Framework, Different Maturity Levels</h2>
+      <p>These are <strong>not competing frameworks</strong>. They are complementary halves of the same specification. The Friend's v1.0 excels at <strong>content production guidance</strong>. Ours v2.0 excels at <strong>assessment architecture &amp; governance</strong>. Merging them yields a production-ready blueprint.</p>
+    </div>
+
+    <!-- Side-by-Side Overview -->
+    <div class="side-by-side">
+      <div class="side-card ours">
+        <h3>🟣 Our Blueprint (v2.0)</h3>
+        <table>
+          <tr><td>File</td><td><code>NETS-Science-Grade5-Blueprint.md</code></td></tr>
+          <tr><td>Location</td><td><code>Claude analysis/</code></td></tr>
+          <tr><td>Lines</td><td>518</td></tr>
+          <tr><td>Positioning</td><td>Subject-specific instantiation</td></tr>
+          <tr><td>Strengths</td><td>Assessment, scoring, AI cost strategy, teacher governance, boss mechanics</td></tr>
+        </table>
+      </div>
+      <div class="side-card theirs">
+        <h3>🔵 Friend's Framework (v1.0)</h3>
+        <table>
+          <tr><td>File</td><td><code>grade5-uz-science-framework.md</code></td></tr>
+          <tr><td>Location</td><td><code>Downloads/</code></td></tr>
+          <tr><td>Lines</td><td>632</td></tr>
+          <tr><td>Positioning</td><td>Delta layer adaptation</td></tr>
+          <tr><td>Strengths</td><td>Content production guidance, UI specs, game catalog, sample walkthrough, anti-cheat</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Shared DNA -->
+    <div class="card">
+      <h2>🧬 Shared Foundation (Both Have These)</h2>
+      <ul>
+        <li>Same UNIFIED §4.4 / §4.5 pre-homework architecture (0-A Theme Preview + 0-B Flash Cards)</li>
+        <li>Same 7-phase engine structure</li>
+        <li>Same psychology research base (<code>qwen-grade5-psychology-findings.md</code>)</li>
+        <li>Same cultural anchor list (Ulugh Beg, Aral Sea, Registan, Amir Temur)</li>
+        <li>Same tagging schema requirement (<code>textbook_ref</code>, <code>standard_ref</code>, <code>pisa_ref</code>, <code>blooms_level</code>)</li>
+        <li>Same Duolingo Mode concept (below 60% → remediation)</li>
+        <li>Same first-person expert POV for Real-Life Challenge</li>
+        <li>Same "not yet" language rules (growth mindset, Yeager 2019)</li>
+        <li>Same hidden difficulty tiering</li>
+        <li>Same 75–85% flow state target</li>
+        <li>Same 60% pass threshold</li>
+      </ul>
+    </div>
+
+    <!-- Where Ours Dominates -->
+    <div class="card">
+      <h2>🟣 Where OUR Blueprint Dominates</h2>
+      <div class="table-wrap">
+        <table class="cmp">
+          <thead>
+            <tr><th>Area</th><th>Our Blueprint (v2.0)</th><th>Friend's (v1.0)</th><th>Verdict</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Boss Mechanics</td>
+              <td>5 questions (40/40/20 E/M/H), worked solutions, hints, Common Errors list, Mastery Stars table, auto-flag after 3 failures</td>
+              <td>HP 80, 4 questions, hint tax −5 HP, combo 3×, max 3 attempts</td>
+              <td><span class="winner winner-ours">Ours</span></td>
+            </tr>
+            <tr>
+              <td>Memory Palace</td>
+              <td>Full per-chapter table: all 10 boblar mapped to specific Uzbek locations with rationale</td>
+              <td>"Prefer labeled diagram recall" — no table, no chapter mapping</td>
+              <td><span class="winner winner-ours">Ours</span></td>
+            </tr>
+            <tr>
+              <td>Reflection (Phase 7)</td>
+              <td>3 accuracy-bucket prompt table (≥80%, 60–79%, &lt;60%) with Uzbek examples</td>
+              <td>"1 sentence minimum, single prompt" — one-size-fits-all</td>
+              <td><span class="winner winner-ours">Ours</span></td>
+            </tr>
+            <tr>
+              <td>Assessment &amp; Scoring</td>
+              <td>Full §8.5: score→reward table, Duolingo Mode 5-step escalation, dual-pathway checking with latency targets</td>
+              <td>Basic score bands at end of walkthrough</td>
+              <td><span class="winner winner-ours">Ours</span></td>
+            </tr>
+            <tr>
+              <td>AI Tier Strategy</td>
+              <td>Per-phase T1/T2/T3 breakdown with cost rationale ($3–5/student/year)</td>
+              <td>Not addressed</td>
+              <td><span class="winner winner-ours">Ours</span></td>
+            </tr>
+            <tr>
+              <td>PISA Transition Skills</td>
+              <td>5 explicit mandatory tags, rejection rule for DRAFT without them</td>
+              <td>1 transition skill mentioned in sample walkthrough</td>
+              <td><span class="winner winner-ours">Ours</span></td>
+            </tr>
+            <tr>
+              <td>Content Production Checklist</td>
+              <td>§10 with 10 line items + total volume estimates (900–1,200 task units)</td>
+              <td>Not addressed</td>
+              <td><span class="winner winner-ours">Ours</span></td>
+            </tr>
+            <tr>
+              <td>Teacher Overrides</td>
+              <td>6 allowed / 4 blocked list with rationale</td>
+              <td>Not addressed</td>
+              <td><span class="winner winner-ours">Ours</span></td>
+            </tr>
+            <tr>
+              <td>Boss HP Differentiation</td>
+              <td>30 / 50 / 80 HP by PISA tier (tiered difficulty)</td>
+              <td>80 HP flat for all G5 Science Bosses</td>
+              <td><span class="winner winner-ours">Ours</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Where Friend's Dominates -->
+    <div class="card">
+      <h2>🔵 Where FRIEND'S Framework Dominates</h2>
+      <div class="table-wrap">
+        <table class="cmp">
+          <thead>
+            <tr><th>Area</th><th>Our Blueprint (v2.0)</th><th>Friend's (v1.0)</th><th>Verdict</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Full Sample Walkthrough</td>
+              <td>Bob 7 Magnets — table summary, some details truncated</td>
+              <td>Complete Chapter 1.1 "Gul" — every phase with actual Uzbek text, questions, answers, checkpoints</td>
+              <td><span class="winner winner-theirs">Theirs</span></td>
+            </tr>
+            <tr>
+              <td>Theme Preview Detail</td>
+              <td>Lists 8 components but less granular on <em>how</em> to write them</td>
+              <td>All 8 panels tuned: sentence length, visual-first ratio, scientist preference order, age-fit jobs, animation language, skip behavior</td>
+              <td><span class="winner winner-theirs">Theirs</span></td>
+            </tr>
+            <tr>
+              <td>Flash Card Specs</td>
+              <td>Lists categories (formulas/concepts/rules), no count cap</td>
+              <td>5–7 card cap (WM-grounded), 600ms flip animation, 3–4s hint, sample 6-card pool, "5-sec readability test"</td>
+              <td><span class="winner winner-theirs">Theirs</span></td>
+            </tr>
+            <tr>
+              <td>Game Catalog Decisions</td>
+              <td>Science-relevant subset listed</td>
+              <td>Full Default 16 table (yes/no per mechanic) + Interactive Catalog 12 table (yes/no per game) with reasons</td>
+              <td><span class="winner winner-theirs">Theirs</span></td>
+            </tr>
+            <tr>
+              <td>Notebook Capture</td>
+              <td>"Occasional, ~1 per 4 sessions" — treated as optional</td>
+              <td>1 in every 3 sessions (highest priority for Science), 7 task types with AI vision rubric guidance</td>
+              <td><span class="winner winner-theirs">Theirs</span></td>
+            </tr>
+            <tr>
+              <td>Anti-Cheat Tuning</td>
+              <td>Not addressed at all</td>
+              <td>§7 dedicated: Grade 5 leniency rules, mother-as-supervisor cultural framing ("collaborative scaffolding, not cheating")</td>
+              <td><span class="winner winner-theirs">Theirs</span></td>
+            </tr>
+            <tr>
+              <td>Narrative Voice Guide</td>
+              <td>Scattered across sections</td>
+              <td>§4.1 complete style guide: POV, tone, register, sentence length, active voice, cultural anchors</td>
+              <td><span class="winner winner-theirs">Theirs</span></td>
+            </tr>
+            <tr>
+              <td>Session Duration</td>
+              <td>35–45 min (includes pre-homework)</td>
+              <td>25–35 min (tighter, better aligned with 20–30 min attention research)</td>
+              <td><span class="winner winner-theirs">Theirs</span></td>
+            </tr>
+            <tr>
+              <td>MC in Boss</td>
+              <td>"1 vocab/recall question" — implicit, doesn't address universal MC prohibition</td>
+              <td>Explicitly allows 30% MC at Grade 5, calls out universal rule as too strict for this age</td>
+              <td><span class="winner winner-theirs">Theirs</span></td>
+            </tr>
+            <tr>
+              <td>Chapter-to-Session Plan</td>
+              <td>10 chapters listed, no session counts</td>
+              <td>10 chapters, 23 sections, ~23 sessions total, with page ranges from actual textbook PDF</td>
+              <td><span class="winner winner-theirs">Theirs</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Direct Contradictions -->
+    <div class="card">
+      <h2>⚡ Direct Contradictions (Same Topic, Different Decision)</h2>
+      <div class="table-wrap">
+        <table class="cmp">
+          <thead>
+            <tr><th>Topic</th><th>Our Blueprint</th><th>Friend's</th><th>Who's Right</th></tr>
+          </thead>
+          <tbody>
+            <tr class="contra-row">
+              <td>Session Duration</td>
+              <td>35–45 min</td>
+              <td>25–35 min</td>
+              <td><span class="winner winner-theirs">Friend's</span> — better aligned with 20–30 min attention research</td>
+            </tr>
+            <tr class="contra-row">
+              <td>Boss HP</td>
+              <td>30/50/80 by PISA tier</td>
+              <td>80 HP flat</td>
+              <td><span class="winner winner-ours">Ours</span> — tiered HP is better for differentiated instruction</td>
+            </tr>
+            <tr class="contra-row">
+              <td>Memory Palace</td>
+              <td>Default with Uzbek locations</td>
+              <td>Prefer "labeled diagram recall"</td>
+              <td><span class="winner winner-debate">Debatable</span> — both work. Palace = identity; Diagrams = Science fit</td>
+            </tr>
+            <tr class="contra-row">
+              <td>Notebook Capture</td>
+              <td>~1 per 4 sessions (optional)</td>
+              <td>1 in 3 sessions (high priority)</td>
+              <td><span class="winner winner-theirs">Friend's</span> — for Science, drawing IS the assessment</td>
+            </tr>
+            <tr class="contra-row">
+              <td>MC in Boss</td>
+              <td>Implicit ("1 vocab MC")</td>
+              <td>Explicitly 30%, resolves universal conflict</td>
+              <td><span class="winner winner-theirs">Friend's</span> — identified &amp; resolved spec tension we papered over</td>
+            </tr>
+            <tr class="contra-row">
+              <td>Why Chain Depth</td>
+              <td>2 levels max</td>
+              <td>3 levels max</td>
+              <td><span class="winner winner-ours">Ours</span> — more conservative, better aligned with WM ceiling (4–5 chunks)</td>
+            </tr>
+            <tr class="contra-row">
+              <td>Adaptive Quiz</td>
+              <td>Included as game option</td>
+              <td>NO for Grade 5 ("ages 12+ only")</td>
+              <td><span class="winner winner-theirs">Friend's</span> — IRT quizzes feel like endless tests to 10-year-olds</td>
+            </tr>
+            <tr class="contra-row">
+              <td>Flash Card Count</td>
+              <td>Not capped</td>
+              <td>5–7 max (WM-grounded)</td>
+              <td><span class="winner winner-theirs">Friend's</span> — no cap risks overwhelming working memory</td>
+            </tr>
+            <tr class="contra-row">
+              <td>Story Mode Segments</td>
+              <td>5–7 min, per-domain templates</td>
+              <td>3 segments × 90 sec each</td>
+              <td><span class="winner winner-theirs">Friend's</span> — specific &amp; measurable</td>
+            </tr>
+            <tr class="contra-row">
+              <td>Peer Teaching</td>
+              <td>Not mentioned</td>
+              <td>Explicitly NO (Uzbek classroom culture)</td>
+              <td><span class="winner winner-theirs">Friend's</span> — correct cultural call</td>
+            </tr>
+            <tr class="contra-row">
+              <td>Anti-Cheat / Mother Help</td>
+              <td>Not addressed</td>
+              <td>Dedicated §7 with cultural framing</td>
+              <td><span class="winner winner-theirs">Friend's</span> — critical gap in ours</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- What Each Is Missing -->
+    <div class="card">
+      <h2>🔍 What Each Is Missing That the Other Has</h2>
+      <div class="missing-grid">
+        <div class="missing-col missing-in-ours">
+          <h4>✗ Missing in OUR Blueprint (✓ Has Friend's)</h4>
+          <ul>
+            <li><span>✓ Has</span> Full chapter-to-session plan (23 sessions across 10 chapters)</li>
+            <li><span>✓ Has</span> Narrative voice / style guide (§4.1)</li>
+            <li><span>✓ Has</span> Game catalog allow/block matrix (§5)</li>
+            <li><span>✓ Has</span> Anti-cheat cultural tuning (§7)</li>
+            <li><span>✓ Has</span> Full end-to-end sample session in Uzbek (§10)</li>
+            <li><span>✓ Has</span> Flash Card engineering specs (animation, count cap)</li>
+            <li><span>✓ Has</span> Theme Preview writing rules (sentence length, visual ratio)</li>
+            <li><span>✓ Has</span> "Did You Know" curation with good/bad examples</li>
+            <li><span>✓ Has</span> Boss HP simplification (80 flat — less complex)</li>
+            <li><span>✓ Has</span> MC-in-Boss conflict resolution (30% allowed)</li>
+          </ul>
+        </div>
+        <div class="missing-col missing-in-theirs">
+          <h4>✗ Missing in FRIEND'S (✓ Has Ours)</h4>
+          <ul>
+            <li><span>✓ Has</span> Assessment &amp; Scoring system (score→reward, Duolingo 5-step)</li>
+            <li><span>✓ Has</span> AI tier cost strategy (per-phase T1/T2/T3)</li>
+            <li><span>✓ Has</span> Memory Palace chapter mapping table (all 10 boblar)</li>
+            <li><span>✓ Has</span> Reflection accuracy-bucket adaptation (3-bucket table)</li>
+            <li><span>✓ Has</span> Teacher overrides (6 allowed / 4 blocked)</li>
+            <li><span>✓ Has</span> Content production checklist with volume estimates</li>
+            <li><span>✓ Has</span> Big Boss / Mythical Boss detail &amp; cross-session strategy</li>
+            <li><span>✓ Has</span> Open decisions with engineering context (4 flagged)</li>
+            <li><span>✓ Has</span> Dual-pathway answer checking with latency targets</li>
+            <li><span>✓ Has</span> Boss Common Errors list requirement per question</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Merge Recommendation -->
+    <div class="card">
+      <h2>🔀 Recommended Merge Strategy</h2>
+      <p>Take <strong>Friend's v1.0 as the base document</strong> (it has better structure for content production, UI specs, and the full sample walkthrough), then inject <strong>our v2.0's</strong> architectural depth:</p>
+
+      <div class="table-wrap">
+        <table class="cmp">
+          <thead>
+            <tr><th>Step</th><th>Action</th><th>Source</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Use Friend's chapter table (10 chapters, 23 sections, session counts) as production plan</td><td>Friend's §2</td></tr>
+            <tr><td>2</td><td>Use Friend's Theme Preview writing rules (sentence length, visual ratio, scientist order)</td><td>Friend's §3.A</td></tr>
+            <tr><td>3</td><td>Use Friend's Flash Card engineering specs (5–7 cap, 600ms flip, 3–4s hint)</td><td>Friend's §3.B</td></tr>
+            <tr><td>4</td><td>Use Friend's game catalog allow/block matrix (Default 16 + Catalog 12)</td><td>Friend's §5</td></tr>
+            <tr><td>5</td><td>Use Friend's narrative voice guide (§4.1) as the style reference</td><td>Friend's §4.1</td></tr>
+            <tr><td>6</td><td><strong>Inject</strong> our Boss mechanics (5-question distribution, Mastery Stars, Common Errors, regeneration)</td><td>Ours §5.6</td></tr>
+            <tr><td>7</td><td><strong>Inject</strong> our assessment &amp; scoring system (score→reward table, Duolingo 5-step, dual-pathway checking)</td><td>Ours §8.5</td></tr>
+            <tr><td>8</td><td><strong>Inject</strong> our AI tier cost strategy (per-phase T1/T2/T3)</td><td>Ours §8</td></tr>
+            <tr><td>9</td><td><strong>Inject</strong> our Memory Palace chapter mapping table (all 10 boblar) as <em>alternative</em> to labeled diagrams</td><td>Ours §5.5</td></tr>
+            <tr><td>10</td><td><strong>Inject</strong> our reflection accuracy-bucket table (3 buckets)</td><td>Ours §5.7</td></tr>
+            <tr><td>11</td><td><strong>Inject</strong> our teacher overrides (6 allowed / 4 blocked)</td><td>Ours §9</td></tr>
+            <tr><td>12</td><td><strong>Inject</strong> our content production checklist (§10)</td><td>Ours §10</td></tr>
+            <tr><td>13</td><td>Adopt Friend's session duration: <strong>25–35 min</strong> (drop our 35–45 min)</td><td>Friend's §3.1</td></tr>
+            <tr><td>14</td><td>Adopt Friend's Notebook Capture frequency: <strong>1 in 3 sessions</strong> (drop our 1 in 4)</td><td>Friend's §6</td></tr>
+            <tr><td>15</td><td>Adopt Friend's MC-in-Boss rule: <strong>30% MC allowed at Grade 5</strong> (universal rule too strict)</td><td>Friend's §3.8</td></tr>
+            <tr><td>16</td><td>Adopt Friend's anti-cheat cultural tuning (§7 — mother-as-supervisor framing)</td><td>Friend's §7</td></tr>
+            <tr><td>17</td><td>Keep our Why Chain depth: <strong>2 levels max</strong> (not Friend's 3 — WM ceiling)</td><td>Ours §0.A</td></tr>
+            <tr><td>18</td><td>Keep our tiered Boss HP: <strong>30/50/80</strong> (not Friend's 80 flat)</td><td>Ours §5.6</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>NETS Science Grade 5 — Framework Comparison &middot; Generated 2026-04-08</p>
+      <p style="margin-top: 0.25rem;">Both documents produced by Claude orchestration pipeline using Qwen psychology research</p>
+    </div>
+
+  </div>
+</body>
+</html>

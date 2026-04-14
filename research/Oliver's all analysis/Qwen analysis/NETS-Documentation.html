@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS — National Education Transformation System</title>
+<style>
+  :root {
+    --bg: #0a0c10;
+    --bg2: #0f1318;
+    --bg3: #151a22;
+    --ink3: #1e2530;
+    --ink4: #2a3340;
+    --text-hi: #e8edf5;
+    --text-mid: #8b95a8;
+    --text-lo: #4a5568;
+    --amber: #f59e0b;
+    --blue: #3b82f6;
+    --green: #10b981;
+    --purple: #8b5cf6;
+    --red: #ef4444;
+    --cyan: #06b6d4;
+    --orange: #f97316;
+    --mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text-hi);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    display: flex;
+  }
+
+  /* ── SIDEBAR ── */
+  nav {
+    width: 240px;
+    min-height: 100vh;
+    background: var(--bg2);
+    border-right: 1px solid var(--ink3);
+    position: fixed;
+    top: 0; left: 0;
+    overflow-y: auto;
+    z-index: 100;
+    padding: 24px 0 48px;
+  }
+  .nav-logo {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid var(--ink3);
+    margin-bottom: 16px;
+  }
+  .nav-logo .acronym {
+    font-family: var(--mono);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--amber);
+    letter-spacing: 0.1em;
+  }
+  .nav-logo .subtitle {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--text-lo);
+    letter-spacing: 0.08em;
+    margin-top: 3px;
+  }
+  nav a {
+    display: block;
+    padding: 6px 20px;
+    color: var(--text-mid);
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.15s;
+    border-left: 2px solid transparent;
+  }
+  nav a:hover { color: var(--text-hi); background: var(--ink3); border-left-color: var(--amber); }
+  .nav-section {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--text-lo);
+    letter-spacing: 0.12em;
+    padding: 14px 20px 4px;
+    text-transform: uppercase;
+  }
+
+  /* ── MAIN ── */
+  main {
+    margin-left: 240px;
+    padding: 48px 60px 80px;
+    max-width: 1100px;
+    width: 100%;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    text-align: center;
+    padding: 60px 0 48px;
+    border-bottom: 1px solid var(--ink3);
+    margin-bottom: 56px;
+  }
+  .hero-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--amber);
+    background: rgba(245,158,11,0.1);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 2px;
+    padding: 4px 12px;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--text-hi);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .hero h1 span { color: var(--amber); }
+  .hero .tagline {
+    color: var(--text-mid);
+    font-size: 15px;
+    max-width: 600px;
+    margin: 12px auto 0;
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+  .meta-pill {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-mid);
+    background: var(--bg3);
+    border: 1px solid var(--ink4);
+    border-radius: 2px;
+    padding: 5px 12px;
+  }
+
+  /* ── SECTIONS ── */
+  section { margin-bottom: 72px; }
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-hi);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--ink3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2 .sec-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--amber);
+    background: rgba(245,158,11,0.1);
+    border: 1px solid rgba(245,158,11,0.25);
+    border-radius: 2px;
+    padding: 2px 8px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-hi);
+    margin: 24px 0 12px;
+  }
+  p { color: var(--text-mid); margin-bottom: 14px; }
+  strong { color: var(--text-hi); }
+
+  /* ── PISA SCORE BARS ── */
+  .pisa-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .pisa-card {
+    background: var(--bg3);
+    border: 1px solid var(--ink3);
+    border-radius: 4px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pisa-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .pisa-card.math::before { background: var(--blue); }
+  .pisa-card.reading::before { background: var(--purple); }
+  .pisa-card.science::before { background: var(--green); }
+  .pisa-label { font-family: var(--mono); font-size: 10px; color: var(--text-lo); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .pisa-score { font-size: 42px; font-weight: 800; color: var(--text-hi); line-height: 1; margin-bottom: 4px; }
+  .pisa-oecd { font-size: 12px; color: var(--text-mid); }
+  .pisa-oecd span { color: var(--green); }
+  .pisa-bar-wrap { margin-top: 14px; height: 6px; background: var(--ink3); border-radius: 3px; overflow: hidden; }
+  .pisa-bar { height: 100%; border-radius: 3px; }
+  .pisa-card.math .pisa-bar { background: var(--blue); width: 61%; }
+  .pisa-card.reading .pisa-bar { background: var(--purple); width: 56%; }
+  .pisa-card.science .pisa-bar { background: var(--green); width: 58%; }
+  .pisa-gap { font-family: var(--mono); font-size: 11px; color: var(--red); margin-top: 8px; }
+
+  /* ── COUNTRY CARDS ── */
+  .country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .country-card {
+    background: var(--bg3);
+    border: 1px solid var(--ink3);
+    border-radius: 4px;
+    padding: 18px;
+    border-left: 3px solid;
+  }
+  .country-card .cc-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .cc-name { font-weight: 700; font-size: 14px; color: var(--text-hi); }
+  .cc-score { font-family: var(--mono); font-size: 13px; font-weight: 700; }
+  .cc-method { font-size: 12px; color: var(--amber); font-weight: 600; margin-bottom: 6px; }
+  .cc-desc { font-size: 12px; color: var(--text-mid); line-height: 1.5; }
+
+  /* ── GAME MECHANICS ── */
+  .mechanics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .mechanic-card {
+    background: var(--bg3);
+    border: 1px solid var(--ink3);
+    border-radius: 4px;
+    padding: 18px;
+  }
+  .mechanic-top { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .mechanic-icon {
+    width: 36px; height: 36px;
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .mechanic-name { font-weight: 700; font-size: 13px; color: var(--text-hi); }
+  .mechanic-grades { font-family: var(--mono); font-size: 10px; color: var(--text-lo); margin-top: 2px; }
+  .mechanic-improvement {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--green);
+    background: rgba(16,185,129,0.1);
+    border: 1px solid rgba(16,185,129,0.2);
+    border-radius: 2px;
+    padding: 3px 8px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .mechanic-desc { font-size: 12px; color: var(--text-mid); line-height: 1.5; }
+
+  /* ── LEARNING FORMULA ── */
+  .formula-phases {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 20px 0;
+  }
+  .phase {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+  .phase-num {
+    width: 48px;
+    background: var(--ink3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-lo);
+    flex-shrink: 0;
+    border-radius: 4px 0 0 4px;
+  }
+  .phase-body {
+    flex: 1;
+    padding: 14px 18px;
+    background: var(--bg3);
+    border: 1px solid var(--ink3);
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+  }
+  .phase-title { font-weight: 700; font-size: 13px; color: var(--text-hi); margin-bottom: 4px; }
+  .phase-time {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--amber);
+    background: rgba(245,158,11,0.1);
+    border-radius: 2px;
+    padding: 2px 7px;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+  .phase-desc { font-size: 12px; color: var(--text-mid); }
+
+  /* ── BLOOM'S TAXONOMY ── */
+  .blooms { display: flex; flex-direction: column; gap: 3px; margin: 20px 0; }
+  .bloom-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 160px 80px;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 3px;
+    align-items: center;
+  }
+  .bloom-level { font-weight: 700; font-size: 13px; }
+  .bloom-mechanic { font-size: 12px; color: var(--text-mid); }
+  .bloom-example { font-size: 11px; color: var(--text-lo); }
+  .bloom-pisa {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-align: right;
+    color: var(--text-mid);
+  }
+
+  /* ── TABLES ── */
+  .table-wrap { overflow-x: auto; margin: 20px 0; }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr { background: var(--ink3); }
+  th {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--text-lo);
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  td {
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--text-mid);
+    border-bottom: 1px solid var(--ink3);
+    vertical-align: top;
+  }
+  tr:hover td { background: var(--bg3); }
+  td strong { color: var(--text-hi); }
+
+  /* ── METRICS ── */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .metric-card {
+    background: var(--bg3);
+    border: 1px solid var(--ink3);
+    border-radius: 4px;
+    padding: 18px;
+  }
+  .metric-label { font-family: var(--mono); font-size: 9px; color: var(--text-lo); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .metric-current { font-size: 32px; font-weight: 800; color: var(--red); line-height: 1; }
+  .metric-arrow { font-size: 18px; color: var(--text-lo); margin: 4px 0; }
+  .metric-target { font-size: 32px; font-weight: 800; color: var(--green); line-height: 1; }
+
+  /* ── TECH TIERS ── */
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0; }
+  .tier-card {
+    background: var(--bg3);
+    border: 1px solid var(--ink3);
+    border-radius: 4px;
+    padding: 20px;
+    border-top: 3px solid;
+  }
+  .tier-card.t1 { border-top-color: var(--green); }
+  .tier-card.t2 { border-top-color: var(--blue); }
+  .tier-card.t3 { border-top-color: var(--purple); }
+  .tier-num { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-lo); margin-bottom: 8px; }
+  .tier-name { font-weight: 700; font-size: 14px; color: var(--text-hi); margin-bottom: 8px; }
+  .tier-models { font-family: var(--mono); font-size: 11px; color: var(--amber); margin-bottom: 10px; }
+  .tier-desc { font-size: 12px; color: var(--text-mid); }
+  .tier-cost {
+    margin-top: 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+  .t1 .tier-cost { color: var(--green); background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); }
+  .t2 .tier-cost { color: var(--blue); background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); }
+  .t3 .tier-cost { color: var(--purple); background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.2); }
+
+  /* ── CALLOUT ── */
+  .callout {
+    background: var(--bg3);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 4px 4px 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 13px;
+    color: var(--text-mid);
+  }
+  .callout strong { color: var(--amber); }
+
+  /* ── QUEST ARCS ── */
+  .quests { display: flex; flex-direction: column; gap: 2px; margin: 20px 0; }
+  .quest {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 16px;
+    background: var(--bg3);
+    border: 1px solid var(--ink3);
+    border-radius: 3px;
+  }
+  .quest-grade {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-lo);
+    width: 64px;
+    flex-shrink: 0;
+  }
+  .quest-name { font-weight: 600; font-size: 13px; color: var(--text-hi); }
+
+  /* ── INFRA PIPELINE ── */
+  .pipeline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .pipe-step {
+    background: var(--bg3);
+    border: 1px solid var(--ink3);
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: 12px;
+    color: var(--text-hi);
+    text-align: center;
+  }
+  .pipe-arrow { color: var(--amber); font-size: 16px; }
+
+  /* ── REWARD SYSTEM ── */
+  .rewards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 20px 0; }
+  .reward-card {
+    background: var(--bg3);
+    border: 1px solid var(--ink3);
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .reward-icon { font-size: 24px; flex-shrink: 0; }
+  .reward-name { font-weight: 700; font-size: 13px; color: var(--text-hi); margin-bottom: 4px; }
+  .reward-desc { font-size: 12px; color: var(--text-mid); }
+
+  /* ── REFERENCES ── */
+  .refs { columns: 2; gap: 24px; margin: 20px 0; }
+  .ref-item {
+    font-size: 11px;
+    color: var(--text-lo);
+    line-height: 1.5;
+    margin-bottom: 8px;
+    break-inside: avoid;
+  }
+
+  @media (max-width: 900px) {
+    nav { display: none; }
+    main { margin-left: 0; padding: 24px 20px; }
+    .pisa-grid, .tiers { grid-template-columns: 1fr; }
+    .bloom-row { grid-template-columns: 1fr 1fr; }
+    .refs { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── SIDEBAR NAV ── -->
+<nav>
+  <div class="nav-logo">
+    <div class="acronym">NETS</div>
+    <div class="subtitle">National Education Transformation System</div>
+  </div>
+  <div class="nav-section">Overview</div>
+  <a href="#executive">1. Executive Summary</a>
+  <a href="#problem">2. The Problem</a>
+  <div class="nav-section">Research</div>
+  <a href="#global">3. Global Methodologies</a>
+  <a href="#turnaround">4. Turnaround Case Studies</a>
+  <a href="#cognitive">5. Cognitive Science</a>
+  <div class="nav-section">Platform</div>
+  <a href="#mechanics">6. Game Mechanics</a>
+  <a href="#subjects">7. Subject Mapping</a>
+  <a href="#formula">8. Learning Formula</a>
+  <a href="#operations">9. Real-World Ops</a>
+  <div class="nav-section">Curriculum</div>
+  <a href="#bilingual">10. Bilingual Framework</a>
+  <a href="#grades">11. Grade-by-Grade</a>
+  <a href="#rewards">12. Reward System</a>
+  <div class="nav-section">Implementation</div>
+  <a href="#tech">13. Technology</a>
+  <a href="#pilot">14. Pilot Design</a>
+  <a href="#metrics">15. Success Metrics</a>
+  <a href="#references">16. References</a>
+</nav>
+
+<!-- ── MAIN CONTENT ── -->
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">INTERNAL PRODUCT DOCUMENT — CONFIDENTIAL</div>
+    <h1>National Education<br><span>Transformation System</span></h1>
+    <p class="tagline">A Comprehensive AI-Powered, Gamified Learning Management System for Transforming K-11 Education in Uzbekistan</p>
+    <div class="hero-meta">
+      <span class="meta-pill">VERSION 2.0 — MARCH 2026</span>
+      <span class="meta-pill">8.8M STUDENTS · K-11 · 10,000+ SCHOOLS</span>
+      <span class="meta-pill">PISA TOP 30 BY 2030</span>
+    </div>
+  </div>
+
+  <!-- 1. EXECUTIVE SUMMARY -->
+  <section id="executive">
+    <h2><span class="sec-num">01</span> Executive Summary</h2>
+    <p>Uzbekistan's education system faces a critical inflection point. PISA 2022 results placed the country among the lowest-performing nations globally, with over 80% of students below minimum proficiency. President Mirziyoyev has set the target: <strong>reach top 30 PISA-ranked nations by 2030.</strong></p>
+
+    <div class="pisa-grid">
+      <div class="pisa-card math">
+        <div class="pisa-label">Mathematics</div>
+        <div class="pisa-score">364</div>
+        <div class="pisa-oecd">OECD Average: <span>472</span></div>
+        <div class="pisa-bar-wrap"><div class="pisa-bar"></div></div>
+        <div class="pisa-gap">▼ −108 points below average</div>
+      </div>
+      <div class="pisa-card reading">
+        <div class="pisa-label">Reading</div>
+        <div class="pisa-score">336</div>
+        <div class="pisa-oecd">OECD Average: <span>476</span></div>
+        <div class="pisa-bar-wrap"><div class="pisa-bar"></div></div>
+        <div class="pisa-gap">▼ −140 points below average</div>
+      </div>
+      <div class="pisa-card science">
+        <div class="pisa-label">Science</div>
+        <div class="pisa-score">355</div>
+        <div class="pisa-oecd">OECD Average: <span>485</span></div>
+        <div class="pisa-bar-wrap"><div class="pisa-bar"></div></div>
+        <div class="pisa-gap">▼ −130 points below average</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>What NETS is:</strong> A replacement architecture for how content is delivered, assessed, and iterated across the national school system — not a supplementary tool. It integrates with the existing Kundalik/eMaktab infrastructure as a learning enhancement layer on top of the administrative foundation already deployed in 10,000+ schools.
+    </div>
+  </section>
+
+  <!-- 2. THE PROBLEM -->
+  <section id="problem">
+    <h2><span class="sec-num">02</span> The Problem</h2>
+
+    <h3>Structural Deficiencies</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Issue</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Soviet-era pedagogy</strong></td><td>Rote memorisation prioritises factual recall over reasoning</td></tr>
+          <tr><td><strong>No centralised LMS</strong></td><td>No standards-aligned learning management across 10,000+ schools</td></tr>
+          <tr><td><strong>Teacher gaps</strong></td><td>Educators lack tools to diagnose individual student weaknesses</td></tr>
+          <tr><td><strong>Zero adaptive content</strong></td><td>All students receive identical instruction regardless of ability</td></tr>
+          <tr><td><strong>No PISA alignment</strong></td><td>Disconnect between textbook content and international assessment frameworks</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Kundalik/eMaktab — What Exists Today</h3>
+    <p>244 million lessons conducted and 2 billion grades issued in 2022/23. But Kundalik is purely administrative — it manages logistics, not learning. <strong>NETS fills the gap</strong> by sitting on top of Kundalik: pulling rosters, pushing grades back, while delivering the actual learning transformation layer.</p>
+
+    <h3>Competitive Landscape</h3>
+    <p>~29 EdTech startups in Uzbekistan (only 4 funded). None offer a comprehensive K-11 LMS with gamified mechanics across all subjects, AI-adaptive content, mnemonic training, bilingual instruction, Socratic AI tutoring, and real-time PISA diagnostics. The Asian Development Bank approved a <strong>$100M loan</strong> for STEM education enhancement — confirming funding appetite for exactly this solution.</p>
+  </section>
+
+  <!-- 3. GLOBAL METHODOLOGIES -->
+  <section id="global">
+    <h2><span class="sec-num">03</span> Global Education Methodologies</h2>
+    <div class="country-grid">
+      <div class="country-card" style="border-left-color:#3b82f6">
+        <div class="cc-top">
+          <span class="cc-name">🇸🇬 Singapore</span>
+          <span class="cc-score" style="color:#3b82f6">575</span>
+        </div>
+        <div class="cc-method">Concrete-Pictorial-Abstract (CPA)</div>
+        <div class="cc-desc">Physical objects → visual bar models → symbolic equations. Deep conceptual understanding before procedural fluency. <strong>NETS:</strong> Every maths lesson follows CPA staging. Tile-match presents concrete problems first, transitioning to pictorial then abstract.</div>
+      </div>
+      <div class="country-card" style="border-left-color:#10b981">
+        <div class="cc-top">
+          <span class="cc-name">🇫🇮 Finland</span>
+          <span class="cc-score" style="color:#10b981">484</span>
+        </div>
+        <div class="cc-method">Phenomenon-Based Learning (PBL)</div>
+        <div class="cc-desc">Real-world cross-subject study. "Running a Market Stall" requires maths, reading, and science simultaneously. <strong>NETS:</strong> Real-Life Challenges module uses AI-generated Uzbek cultural scenarios (bazaars, plov recipes, silk production).</div>
+      </div>
+      <div class="country-card" style="border-left-color:#f59e0b">
+        <div class="cc-top">
+          <span class="cc-name">🇰🇷 South Korea</span>
+          <span class="cc-score" style="color:#f59e0b">527</span>
+        </div>
+        <div class="cc-method">Mastery Gating + Spaced Repetition</div>
+        <div class="cc-desc">Mastery at each level before advancement. AI-optimised spaced repetition based on Ebbinghaus forgetting curves. <strong>NETS:</strong> Mastery gating enforced. Flashcard sessions resurface concepts at individually calibrated intervals.</div>
+      </div>
+      <div class="country-card" style="border-left-color:#ef4444">
+        <div class="cc-top">
+          <span class="cc-name">🇯🇵 Japan</span>
+          <span class="cc-score" style="color:#ef4444">536</span>
+        </div>
+        <div class="cc-method">Productive Struggle (Jugyou Kenkyuu)</div>
+        <div class="cc-desc">Present problems before instruction. Students develop own solutions before standard methods revealed. <strong>NETS:</strong> Final Boss mechanic — AI presents PISA problems with zero hints. Failure routes to Socratic tutoring, then regenerated boss.</div>
+      </div>
+      <div class="country-card" style="border-left-color:#8b5cf6">
+        <div class="cc-top">
+          <span class="cc-name">🇨🇳 Shanghai</span>
+          <span class="cc-score" style="color:#8b5cf6">591</span>
+        </div>
+        <div class="cc-method">Deliberate Practice</div>
+        <div class="cc-desc">High-volume carefully sequenced problems with immediate feedback, progressing from basic to multi-step reasoning. <strong>NETS:</strong> Minimum 30 progressively complex problems per topic. AI analyses error patterns and generates targeted remediation.</div>
+      </div>
+      <div class="country-card" style="border-left-color:#06b6d4">
+        <div class="cc-top">
+          <span class="cc-name">🇪🇪 Estonia</span>
+          <span class="cc-score" style="color:#06b6d4">510</span>
+        </div>
+        <div class="cc-method">Digital-First + ProgeTiger</div>
+        <div class="cc-desc">Computational thinking from Grade 1. Unified e-Kool digital ecosystem. Post-Soviet nation achieving world-class outcomes via digitalisation. <strong>NETS:</strong> CT and AI literacy track from Grade 1. Parent portal mirrors e-Kool functionality.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TURNAROUND CASE STUDIES -->
+  <section id="turnaround">
+    <h2><span class="sec-num">04</span> Turnaround Case Studies</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Country</th><th>Starting Point</th><th>Outcome</th><th>Key Reform</th><th>Lesson for NETS</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>🇵🇱 Poland</strong></td>
+            <td>Below OECD average (1999)</td>
+            <td>European top performer (2018) — +116 pts for lowest performers</td>
+            <td>Extended comprehensive education, delayed vocational streaming, national curriculum</td>
+            <td>Delayed specialisation + equal access to rigorous content produces largest gains</td>
+          </tr>
+          <tr>
+            <td><strong>🇵🇹 Portugal</strong></td>
+            <td>Bottom of EU (2000)</td>
+            <td>Above OECD average (2015) — only EU nation to reduce low achievers in all 3 domains</td>
+            <td>Curriculum aligned to PISA, external exams at grades 4/6/9, reading promotion</td>
+            <td>Framework alignment + reading from Grade 1 + early intervention = sustained gains</td>
+          </tr>
+          <tr>
+            <td><strong>🇻🇳 Vietnam</strong></td>
+            <td>GDP $2,170/capita — poorest PISA participant</td>
+            <td>8th in science, 17th in maths (2012) — beat wealthy nations</td>
+            <td>Zero teacher absenteeism, professional educators, Resolution 29 placing education central</td>
+            <td>Most relevant to Uzbekistan: quality enforcement + cultural commitment = world-class outcomes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 5. COGNITIVE SCIENCE -->
+  <section id="cognitive">
+    <h2><span class="sec-num">05</span> Cognitive Science Foundations</h2>
+
+    <h3>Bloom's Taxonomy as Assessment Architecture</h3>
+    <div class="blooms">
+      <div class="bloom-row" style="background:rgba(239,68,68,0.08)">
+        <span class="bloom-level" style="color:#ef4444">Remember</span>
+        <span class="bloom-mechanic">Flashcards</span>
+        <span class="bloom-example">What is 7 × 8?</span>
+        <span class="bloom-pisa">Below L1</span>
+      </div>
+      <div class="bloom-row" style="background:rgba(249,115,22,0.08)">
+        <span class="bloom-level" style="color:#f97316">Understand</span>
+        <span class="bloom-mechanic">Tile Match</span>
+        <span class="bloom-example">Match ½ with its visual</span>
+        <span class="bloom-pisa">Level 1</span>
+      </div>
+      <div class="bloom-row" style="background:rgba(245,158,11,0.08)">
+        <span class="bloom-level" style="color:#f59e0b">Apply</span>
+        <span class="bloom-mechanic">Quizzes</span>
+        <span class="bloom-example">Apples 3000 som/kg. Price for 2.5kg?</span>
+        <span class="bloom-pisa">Level 2</span>
+      </div>
+      <div class="bloom-row" style="background:rgba(16,185,129,0.08)">
+        <span class="bloom-level" style="color:#10b981">Analyse</span>
+        <span class="bloom-mechanic">Real-Life Challenges</span>
+        <span class="bloom-example">Compare two mobile plans for family</span>
+        <span class="bloom-pisa">Level 3</span>
+      </div>
+      <div class="bloom-row" style="background:rgba(59,130,246,0.08)">
+        <span class="bloom-level" style="color:#3b82f6">Evaluate</span>
+        <span class="bloom-mechanic">Sentence Fill / Extended HW</span>
+        <span class="bloom-example">Classmate says 0.5 > 0.45. Correct? Explain.</span>
+        <span class="bloom-pisa">Level 4</span>
+      </div>
+      <div class="bloom-row" style="background:rgba(139,92,246,0.08)">
+        <span class="bloom-level" style="color:#8b5cf6">Create</span>
+        <span class="bloom-mechanic">Final Boss</span>
+        <span class="bloom-example">Design a budget for class trip to Samarkand.</span>
+        <span class="bloom-pisa">Level 5–6</span>
+      </div>
+    </div>
+
+    <h3>Key Cognitive Principles</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Principle</th><th>Research Basis</th><th>NETS Implementation</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Mnemonic Systems</strong></td><td>2-3x recall improvement (Worthen & Hunt, 2011). Memory Palace: up to 300% retention gain (Maguire, 2003)</td><td>Method of Loci from Grade 3, AI acronyms, Chunking (Miller's 7±2), Dual Coding</td></tr>
+          <tr><td><strong>Spaced Repetition</strong></td><td>Ebbinghaus forgetting curve (1885) — exponential memory decay without review</td><td>AI-optimised flashcard scheduling based on individual retention patterns</td></tr>
+          <tr><td><strong>Flow State</strong></td><td>Csikszentmihalyi (1990) — optimal learning when challenge = skill level</td><td>Real-time difficulty adjustment maintains each student in their flow channel</td></tr>
+          <tr><td><strong>Self-Determination Theory</strong></td><td>Deci & Ryan (2000) — Autonomy, Competence, Relatedness</td><td>Avatar customisation (Autonomy), level progression (Competence), class leaderboards (Relatedness)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 6. GAME MECHANICS -->
+  <section id="mechanics">
+    <h2><span class="sec-num">06</span> Game Mechanics</h2>
+    <div class="mechanics-grid">
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(59,130,246,0.15)">🧩</div>
+          <div><div class="mechanic-name">Tile Match</div><div class="mechanic-grades">Grades 1–6 · 3–5 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+25–40% concept recognition</div>
+        <div class="mechanic-desc">Match concept-representation card pairs (fraction ↔ visual, vocabulary ↔ definition). Based on dual coding theory. Difficulty scales with more pairs and abstract representations.</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(16,185,129,0.15)">🃏</div>
+          <div><div class="mechanic-name">Flashcards (Spaced Repetition)</div><div class="mechanic-grades">Grades 1–11 · 5–10 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+50–70% long-term retention</div>
+        <div class="mechanic-desc">AI adjusts review intervals based on Easy/Medium/Hard confidence ratings. Cards at forgetting threshold are prioritised. Based on Ebbinghaus curve and Leitner system.</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(245,158,11,0.15)">⚡</div>
+          <div><div class="mechanic-name">Memory Sprint</div><div class="mechanic-grades">Grades 2–11 · 1–2 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+50% weekly retention</div>
+        <div class="mechanic-desc">60-second rapid-fire session at session start. Pure recall, no hints. AI selects questions based on individual forgetting curves. Based on retrieval practice research (+50% 1-week retention vs re-reading).</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(139,92,246,0.15)">📦</div>
+          <div><div class="mechanic-name">Mystery Box (Interleaving)</div><div class="mechanic-grades">Grades 3–11 · 5–8 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+43% transfer performance</div>
+        <div class="mechanic-desc">Mixed problem types in one session. Students must identify the problem type before solving. Critical for PISA where context doesn't signal which concept applies. Bonus for correct categorisation.</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(6,182,212,0.15)">📊</div>
+          <div><div class="mechanic-name">Adaptive Quizzes</div><div class="mechanic-grades">Grades 1–11 · 5–10 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+30% proficiency accuracy</div>
+        <div class="mechanic-desc">Computer Adaptive Testing — correct answers increase difficulty, incorrect decrease. Converges on actual proficiency within 8–12 questions. Immediate feedback with explanatory hints. Based on Item Response Theory.</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(249,115,22,0.15)">🔗</div>
+          <div><div class="mechanic-name">Why Chain</div><div class="mechanic-grades">Grades 3–11 · 3–5 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+2 PISA sub-levels (science)</div>
+        <div class="mechanic-desc">After correct answer, AI asks "Why?" 3–4 times, drilling deeper into causal reasoning. Bonus rewards for sustained depth. Based on elaborative interrogation research — separates Level 2 from Level 4 thinking.</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(16,185,129,0.15)">✏️</div>
+          <div><div class="mechanic-name">Sentence Fill (Cloze)</div><div class="mechanic-grades">Grades 2–11 · 3–5 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+35% vocabulary acquisition</div>
+        <div class="mechanic-desc">Complete sentences with correct terms. Simple vocabulary fills for younger students; complex reasoning fills for older (e.g., "Photosynthesis requires ___ and ___ to produce ___"). Targets both comprehension and productive knowledge.</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(59,130,246,0.15)">🌍</div>
+          <div><div class="mechanic-name">Real-Life Challenge</div><div class="mechanic-grades">Grades 3–11 · 10–15 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+1–2 PISA levels (transfer)</div>
+        <div class="mechanic-desc">AI-generated cross-subject scenarios using Uzbek cultural contexts. Example: Plan a Tashkent→Bukhara trip — fuel costs (maths), desert climate (science), travel plan (writing). Directly models Finland's PBL approach.</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(245,158,11,0.15)">📖</div>
+          <div><div class="mechanic-name">Quest Arc</div><div class="mechanic-grades">Grades 1–11 · Semester-long</div></div>
+        </div>
+        <div class="mechanic-improvement">22× contextual retention</div>
+        <div class="mechanic-desc">Each grade has a semester-long cultural narrative. Grade 9: "The Aral Sea Mission". Grade 10: "Uzbekistan's Space Programme". Grade 11: "Designing Tomorrow's Uzbekistan". Based on Willingham's (2004) narrative advantage research.</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(239,68,68,0.15)">🪞</div>
+          <div><div class="mechanic-name">Battle Replay</div><div class="mechanic-grades">Grades 4–11 · 5 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+20–30% next assessment</div>
+        <div class="mechanic-desc">After Final Boss, students review their own response process. AI highlights hesitations, answer changes, errors. Student writes: "What was hardest? What would I do differently?" Builds metacognitive awareness.</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(139,92,246,0.15)">🎓</div>
+          <div><div class="mechanic-name">Mentor Mode</div><div class="mechanic-grades">Grades 5–11 · 10–15 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+25% mentors, +15% mentees</div>
+        <div class="mechanic-desc">Advanced students create mini-lessons and hints for struggling peers. AI reviews for accuracy. Mentors earn badges and XP. Based on the Protégé Effect — teaching others forces deeper knowledge consolidation.</div>
+      </div>
+
+      <div class="mechanic-card">
+        <div class="mechanic-top">
+          <div class="mechanic-icon" style="background:rgba(16,185,129,0.15)">🏆</div>
+          <div><div class="mechanic-name">Final Boss</div><div class="mechanic-grades">Grades 3–11 · 10–20 min</div></div>
+        </div>
+        <div class="mechanic-improvement">+2 PISA sub-levels in 6 months</div>
+        <div class="mechanic-desc">Boss has HP (50/100/150 by grade band). Each correct answer deals damage. Hint Tax: −10 HP for hints. Boss must be defeated to complete homework. Failure → Socratic tutoring → regenerated questions. No multiple choice for Grade 5+.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. SUBJECT MAPPING -->
+  <section id="subjects">
+    <h2><span class="sec-num">07</span> Subject-Specific Method Mapping</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Subject</th><th>Core Purpose</th><th>Primary Mechanics</th><th>Key Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Mathematics</strong></td><td>Logic, Critical Thinking, Problem Solving</td><td>Tile Match, Mystery Box, Final Boss</td><td>CPA progression (Singapore) — conceptual understanding before procedural fluency</td></tr>
+          <tr><td><strong>Literature / Reading</strong></td><td>Comprehension, Empathy, Expression</td><td>Why Chain, Sentence Fill, Real-Life Challenges</td><td>Textual evidence required. Final Boss asks interpretive questions. "Literature builds the soul."</td></tr>
+          <tr><td><strong>Science</strong></td><td>Observation, Hypothesis, Evidence-Based Reasoning</td><td>Story Mode experiments, Why Chain, Final Boss</td><td>Predict before reveal. Design experiments. Evaluate claims with evidence.</td></tr>
+          <tr><td><strong>English / Russian</strong></td><td>Communication, Expression, Global Access</td><td>Flashcards, Sentence Fill, Quest Arc immersion</td><td>Krashen's Input Hypothesis (i+1). Content-based instruction — learn English through maths/science, not grammar drills.</td></tr>
+          <tr><td><strong>History / Social Studies</strong></td><td>Context, Perspective, Civic Understanding</td><td>Why Chain, Real-Life Challenges, Final Boss</td><td>"Why did the Silk Road develop? Why was Samarkand important?" Multi-perspective argumentation.</td></tr>
+          <tr><td><strong>Technology / Digital Literacy</strong></td><td>Creation, Automation, Future Readiness</td><td>Block-based coding, Algorithmic puzzles, Final Boss</td><td>Computational thinking, not just coding. Basic AI/ML concepts in upper grades.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 8. LEARNING FORMULA -->
+  <section id="formula">
+    <h2><span class="sec-num">08</span> The Learning Formula — Per Session Journey</h2>
+    <p>Consistent across every subject and chapter. Content adapts dynamically, but structure is fixed — building predictability and habit.</p>
+
+    <div class="formula-phases">
+      <div class="phase">
+        <div class="phase-num">P1</div>
+        <div class="phase-body">
+          <div class="phase-title">Warm Up: Memory Sprint</div>
+          <span class="phase-time">2 minutes</span>
+          <div class="phase-desc">5–8 rapid-fire questions from previous chapters. Pure recall. Primes the brain and connects prior knowledge to incoming content. <strong>Cannot be skipped.</strong></div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">P2</div>
+        <div class="phase-body">
+          <div class="phase-title">Story Mode: Concept Delivery</div>
+          <span class="phase-time">10 minutes</span>
+          <div class="phase-desc">AI presents textbook content as a narrative/documentary. Small segments: read → watch AI video → answer checkpoint → next segment. <strong>Cannot skip ahead without answering each checkpoint.</strong></div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">P3</div>
+        <div class="phase-body">
+          <div class="phase-title">Game Breaks: Active Practice</div>
+          <span class="phase-time">10 minutes (interleaved)</span>
+          <div class="phase-desc">2–3 minute game sessions between story segments. Each game targets a specific cognitive skill: Tile Match (vocabulary), Sentence Fill (comprehension), Why Chain (causal reasoning), Mystery Box (discrimination).</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">P4</div>
+        <div class="phase-body">
+          <div class="phase-title">Real-Life Challenge: Transfer Application</div>
+          <span class="phase-time">10 minutes</span>
+          <div class="phase-desc">AI-generated scenario using Uzbek cultural context. Forces transfer — applying textbook knowledge to an unfamiliar real-world situation. The core skill PISA measures.</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">P5</div>
+        <div class="phase-body">
+          <div class="phase-title">Mnemonic Lock: Consolidation</div>
+          <span class="phase-time">5 minutes</span>
+          <div class="phase-desc">Memory Palace exercise, flashcard session, or AI acronym from chapter key concepts. The "save point" — locking knowledge into long-term memory before assessment begins.</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">P6</div>
+        <div class="phase-body">
+          <div class="phase-title">Final Boss: Assessment Gate</div>
+          <span class="phase-time">10–15 minutes</span>
+          <div class="phase-desc">Boss must be defeated to complete homework — <strong>zero exceptions.</strong> Failure → Socratic tutoring → regenerated questions (prevents answer memorisation). AI asks guiding questions, never gives answers: "Which section covered this? What's the first step?"</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">P7</div>
+        <div class="phase-body">
+          <div class="phase-title">Battle Replay: Reflection</div>
+          <span class="phase-time">3 minutes</span>
+          <div class="phase-desc">AI highlights hesitations, answer changes, and errors. Student writes brief reflection. Builds metacognitive awareness and autonomous learning habits over time.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. REAL-WORLD OPERATIONS -->
+  <section id="operations">
+    <h2><span class="sec-num">09</span> Real-World Operations</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Scenario</th><th>NETS Response</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Missed homework</strong></td><td>Recovery Queue: 3-day grace period (teacher-configurable). Condensed session: longer Memory Sprint + core content + Final Boss. Multi-miss: AI prioritises prerequisite concepts first.</td></tr>
+          <tr><td><strong>Extended absence (1+ week)</strong></td><td>Catch-Up Mode: condensed path covering only essential concepts. Simplified Final Boss (reduced HP, hints allowed). Teacher dashboard flags student. Returns to normal once within 1 session of class.</td></tr>
+          <tr><td><strong>Falling behind peers</strong></td><td>Boost Mode: optional but incentivised extra practice (bonus XP + avatar items). AI generates personalised improvement plan for student + parents. Teacher alert with specific recommendations.</td></tr>
+          <tr><td><strong>Low motivation</strong></td><td>Reduces session length, increases game-to-content ratio. Parent notification. Teacher can assign Quest Arc (narrative) sessions instead of standard homework.</td></tr>
+          <tr><td><strong>Anti-cheating</strong></td><td>Question regeneration per attempt. Response pattern analysis (speed vs reading time). Device fingerprinting. Socratic verification after boss defeat.</td></tr>
+          <tr><td><strong>No internet / offline</strong></td><td>NETS pre-caches content on school devices. Results sync when connectivity restored. Works on shared school computers — session tied to student account, not device.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 10. BILINGUAL FRAMEWORK -->
+  <section id="bilingual">
+    <h2><span class="sec-num">10</span> Bilingual Language Acquisition Framework</h2>
+    <p>Primary instruction in <strong>Uzbek and Russian</strong>. English taught as a foreign language via Krashen's Input Hypothesis (i+1) — content-based instruction through maths and science, not isolated grammar drills.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Grades</th><th>CEFR Level</th><th>Focus</th><th>Game Types</th><th>IELTS Equiv.</th><th>Target Vocabulary</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1–2</strong></td><td>Pre-A1</td><td>Phonics, basic vocabulary</td><td>Tile Match, Songs</td><td>N/A</td><td>100 words</td></tr>
+          <tr><td><strong>3–4</strong></td><td>A1–A2</td><td>Sentences, reading, listening</td><td>Sentence Fill, Flashcards</td><td>2.0–3.0</td><td>500 words</td></tr>
+          <tr><td><strong>5–7</strong></td><td>A2–B1</td><td>Paragraphs, grammar, conversation</td><td>Why Chain, Quizzes</td><td>3.5–5.0</td><td>2,000 words</td></tr>
+          <tr><td><strong>8–9</strong></td><td>B1–B2</td><td>Essays, debate, academic reading</td><td>Real-Life, Mentor Mode</td><td>5.0–6.5</td><td>5,000 words</td></tr>
+          <tr><td><strong>10–11</strong></td><td>B2–C1</td><td>Academic writing, critical analysis</td><td>Final Boss, Quest Arc</td><td>6.5–7.5</td><td>8,000+ words</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 11. GRADE FRAMEWORK -->
+  <section id="grades">
+    <h2><span class="sec-num">11</span> Grade-by-Grade Content Framework</h2>
+
+    <h3>Quest Arc Narratives</h3>
+    <div class="quests">
+      <div class="quest"><span class="quest-grade">Grade 3 · Age 9</span><span class="quest-name">🗺️ The Young Explorer of Samarkand</span></div>
+      <div class="quest"><span class="quest-grade">Grade 4 · Age 10</span><span class="quest-name">🐪 The Silk Road Expedition</span></div>
+      <div class="quest"><span class="quest-grade">Grade 5 · Age 11</span><span class="quest-name">🌾 The Cotton Harvest Challenge</span></div>
+      <div class="quest"><span class="quest-grade">Grade 6 · Age 12</span><span class="quest-name">🏛️ Building the Registan</span></div>
+      <div class="quest"><span class="quest-grade">Grade 7 · Age 13</span><span class="quest-name">⚔️ The Amir Temur Campaign</span></div>
+      <div class="quest"><span class="quest-grade">Grade 8 · Age 14</span><span class="quest-name">🏙️ Modern Tashkent: City of the Future</span></div>
+      <div class="quest"><span class="quest-grade">Grade 9 · Age 15</span><span class="quest-name">🌊 The Aral Sea Mission</span></div>
+      <div class="quest"><span class="quest-grade">Grade 10 · Age 16</span><span class="quest-name">🚀 Uzbekistan's Space Programme</span></div>
+      <div class="quest"><span class="quest-grade">Grade 11 · Age 17</span><span class="quest-name">🏗️ Capstone: Designing Tomorrow's Uzbekistan</span></div>
+    </div>
+
+    <h3>PISA Progression by Grade</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Grade</th><th>Age</th><th>PISA Target</th><th>Primary Games</th><th>Mnemonic Focus</th><th>Key Competencies</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1</strong></td><td>7</td><td>Pre-L1</td><td>Tile Match, Move to Learn, Songs</td><td>Chunking, Rhymes</td><td>Number sense, Letter recognition</td></tr>
+          <tr><td><strong>2</strong></td><td>8</td><td>Pre-L1</td><td>Flashcards, Sentence Fill</td><td>Acronyms, Stories</td><td>Basic operations, Sentence reading</td></tr>
+          <tr><td><strong>3</strong></td><td>9</td><td>Level 1a</td><td>Quizzes, Mystery Box, Why Chain</td><td>Memory Palace intro</td><td>Multiplication, Paragraph comprehension</td></tr>
+          <tr><td><strong>4</strong></td><td>10</td><td>Level 1a–2</td><td>Real-Life, Final Boss (intro)</td><td>Loci method, Dual coding</td><td>Fractions, Inferential reading</td></tr>
+          <tr><td><strong>5</strong></td><td>11</td><td>Level 2</td><td>All game types active</td><td>All techniques active</td><td>Decimals/%, Scientific method</td></tr>
+          <tr><td><strong>6</strong></td><td>12</td><td>Level 2–3</td><td>Mentor Mode unlocked</td><td>Peg system</td><td>Ratios, Hypothesis testing</td></tr>
+          <tr><td><strong>7</strong></td><td>13</td><td>Level 3</td><td>Increased Final Boss frequency</td><td>Mind mapping</td><td>Algebra intro, Experimental design</td></tr>
+          <tr><td><strong>8</strong></td><td>14</td><td>Level 3–4</td><td>Extended Real-Life, Debate module</td><td>Spaced retrieval mastery</td><td>Equations, Data interpretation</td></tr>
+          <tr><td><strong>9</strong></td><td>15</td><td><strong>Level 4 (PISA test age)</strong></td><td>Full PISA simulation mode</td><td>Exam technique mnemonics</td><td>Functions, Scientific reasoning</td></tr>
+          <tr><td><strong>10</strong></td><td>16</td><td>Level 4–5</td><td>Research projects, AI literacy</td><td>Self-directed systems</td><td>Advanced algebra, Research writing</td></tr>
+          <tr><td><strong>11</strong></td><td>17</td><td>Level 5–6</td><td>Capstone projects, University prep</td><td>Autonomous learning</td><td>Calculus, Independent research</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 12. REWARD SYSTEM -->
+  <section id="rewards">
+    <h2><span class="sec-num">12</span> Gamification Reward System</h2>
+    <div class="callout"><strong>Principle:</strong> No real-money purchases. No pay-to-win. Every reward earned through learning. Based on Deci & Ryan's intrinsic motivation principles.</div>
+    <div class="rewards">
+      <div class="reward-card"><span class="reward-icon">⚡</span><div><div class="reward-name">Experience Points (XP)</div><div class="reward-desc">Earned per game, session, and boss defeat. Daily streaks multiply XP. Weekly targets provide short-term goals.</div></div></div>
+      <div class="reward-card"><span class="reward-icon">⭐</span><div><div class="reward-name">Mastery Stars</div><div class="reward-desc">1 star = completed. 2 stars = fewer than 3 attempts. 3 stars = first-attempt mastery. Visible on student profile and parent dashboard.</div></div></div>
+      <div class="reward-card"><span class="reward-icon">📋</span><div><div class="reward-name">Leaderboards</div><div class="reward-desc">Class-level only. Weekly reset for fresh starts. Shows XP (effort), not grades. Opt-in for parents. No public shaming.</div></div></div>
+      <div class="reward-card"><span class="reward-icon">🎨</span><div><div class="reward-name">Avatar Customisation</div><div class="reward-desc">XP unlocks cosmetic items. Cultural themes: Uzbek traditional clothing, Silk Road merchant outfits, astronaut suits for science achievers.</div></div></div>
+      <div class="reward-card"><span class="reward-icon">🏅</span><div><div class="reward-name">Badges</div><div class="reward-desc">"Mentor" for peer teaching. "Streak Master" for 30-day streaks. "PISA Champion" for proficiency levels. "Boss Slayer" for 10 hintless boss defeats.</div></div></div>
+      <div class="reward-card"><span class="reward-icon">📈</span><div><div class="reward-name">Anti-Unhealthy Competition</div><div class="reward-desc">Celebrates improvement, not just absolute performance. Level 1→2 earns same recognition as maintaining Level 5. No public shaming of low performers.</div></div></div>
+    </div>
+  </section>
+
+  <!-- 13. TECHNOLOGY -->
+  <section id="tech">
+    <h2><span class="sec-num">13</span> Technology Architecture</h2>
+
+    <h3>Three-Tier AI Model Strategy</h3>
+    <div class="tiers">
+      <div class="tier-card t1">
+        <div class="tier-num">Tier 1 — 80% of interactions</div>
+        <div class="tier-name">Open-Source Fine-Tuned</div>
+        <div class="tier-models">Mistral / Llama (Uzbek fine-tuned)</div>
+        <div class="tier-desc">Flashcard generation, quiz creation, sentence fill, basic content parsing.</div>
+        <span class="tier-cost">COST: MINIMAL</span>
+      </div>
+      <div class="tier-card t2">
+        <div class="tier-num">Tier 2 — 15% of interactions</div>
+        <div class="tier-name">Mid-Range</div>
+        <div class="tier-models">Claude Haiku / GPT-4o-mini</div>
+        <div class="tier-desc">Real-Life Challenge generation, content refinement, Why Chain dialogue.</div>
+        <span class="tier-cost">COST: MODERATE</span>
+      </div>
+      <div class="tier-card t3">
+        <div class="tier-num">Tier 3 — 5% of interactions</div>
+        <div class="tier-name">Premium</div>
+        <div class="tier-models">Claude Sonnet/Opus / GPT-4</div>
+        <div class="tier-desc">Final Boss questions, Socratic tutoring, diagnostic analysis, complex reasoning assessment.</div>
+        <span class="tier-cost">COST: HIGHEST</span>
+      </div>
+    </div>
+
+    <h3>Content Production Pipeline</h3>
+    <div class="pipeline">
+      <div class="pipe-step">Physical Textbook</div>
+      <span class="pipe-arrow">→</span>
+      <div class="pipe-step">OCR / Text Extraction</div>
+      <span class="pipe-arrow">→</span>
+      <div class="pipe-step">AI Refinement</div>
+      <span class="pipe-arrow">→</span>
+      <div class="pipe-step">Human Expert Review</div>
+      <span class="pipe-arrow">→</span>
+      <div class="pipe-step">Game Mechanic Mapping</div>
+      <span class="pipe-arrow">→</span>
+      <div class="pipe-step">Platform Deployment</div>
+    </div>
+
+    <h3>Infrastructure Specs</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Requirement</th><th>Solution</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Scale</strong></td><td>Designed for 8.8M potential concurrent users. CDN-based delivery for media assets.</td></tr>
+          <tr><td><strong>Offline</strong></td><td>Pre-cached content on school devices. Results sync on connectivity restore. PWA architecture — any device with a browser.</td></tr>
+          <tr><td><strong>Integration</strong></td><td>Kundalik API integration: roster sync, attendance pull, grade passback.</td></tr>
+          <tr><td><strong>Data Privacy</strong></td><td>Uzbekistan Law ZRU-547 (2019) compliant. All servers on Uzbek territory. Encrypted at rest and in transit. Minor cognitive profiles: education use only.</td></tr>
+          <tr><td><strong>Cost Target</strong></td><td>$3–5 per student per year at national scale via Tier 1 for 80% of interactions + pre-generated content pools.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 14. PILOT DESIGN -->
+  <section id="pilot">
+    <h2><span class="sec-num">14</span> Pilot Design</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Parameter</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Pilot Schools</strong></td><td>100 NETS schools: 50 urban (Tashkent, Samarkand, Bukhara) + 50 rural (Fergana, Karakalpakstan, Surkhandarya)</td></tr>
+          <tr><td><strong>Control Group</strong></td><td>100 matched schools without NETS, selected by region, socioeconomic profile, and baseline PISA-simulated scores</td></tr>
+          <tr><td><strong>Initial Scope</strong></td><td>Grades 3–5 in Mathematics, Reading, and Science</td></tr>
+          <tr><td><strong>Pre-test</strong></td><td>PISA-simulated assessment at pilot launch</td></tr>
+          <tr><td><strong>Monitoring</strong></td><td>Monthly AI diagnostic reports. Quarterly formal PISA-simulated assessments.</td></tr>
+          <tr><td><strong>Post-test</strong></td><td>Full assessment at 6 months and 12 months</td></tr>
+          <tr><td><strong>Independent Evaluation</strong></td><td>UNICEF, World Bank, or ADB partner for credibility</td></tr>
+          <tr><td><strong>Teacher Training</strong></td><td>2-week onboarding: platform mechanics, dashboard interpretation, change management. Ongoing in-platform modules + regional coordinators.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 15. SUCCESS METRICS -->
+  <section id="metrics">
+    <h2><span class="sec-num">15</span> Success Metrics — 2022 vs 2030 Targets</h2>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-label">PISA Mathematics</div>
+        <div class="metric-current">364</div>
+        <div class="metric-arrow">↓</div>
+        <div class="metric-target">480+</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">PISA Reading</div>
+        <div class="metric-current">336</div>
+        <div class="metric-arrow">↓</div>
+        <div class="metric-target">470+</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">PISA Science</div>
+        <div class="metric-current">355</div>
+        <div class="metric-arrow">↓</div>
+        <div class="metric-target">475+</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">≥Level 2 Maths</div>
+        <div class="metric-current">22%</div>
+        <div class="metric-arrow">↓</div>
+        <div class="metric-target">70%+</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">≥Level 2 Reading</div>
+        <div class="metric-current">17%</div>
+        <div class="metric-arrow">↓</div>
+        <div class="metric-target">65%+</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">≥Level 2 Science</div>
+        <div class="metric-current">19%</div>
+        <div class="metric-arrow">↓</div>
+        <div class="metric-target">65%+</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Grade 11 CEFR B2+ English</div>
+        <div class="metric-current">5%</div>
+        <div class="metric-arrow">↓</div>
+        <div class="metric-target">40%+</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Schools on NETS</div>
+        <div class="metric-current">0</div>
+        <div class="metric-arrow">↓</div>
+        <div class="metric-target">10,000+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16. REFERENCES -->
+  <section id="references">
+    <h2><span class="sec-num">16</span> References</h2>
+    <div class="refs">
+      <div class="ref-item">Anderson, L.W. & Krathwohl, D.R. (2001). <em>A Taxonomy for Learning, Teaching, and Assessing.</em> Longman.</div>
+      <div class="ref-item">Barsalou, L.W. (2008). Grounded Cognition. <em>Annual Review of Psychology,</em> 59, 617–645.</div>
+      <div class="ref-item">British Columbia Ministry of Education (2019). BC's New Curriculum: Core Competency Profiles.</div>
+      <div class="ref-item">Bruner, J.S. (1966). <em>Toward a Theory of Instruction.</em> Harvard University Press.</div>
+      <div class="ref-item">Chase, C.C. et al. (2009). Teachable Agents and the Protégé Effect. <em>Journal of Science Education and Technology,</em> 18(4), 334–352.</div>
+      <div class="ref-item">Council of Europe (2020). Common European Framework of Reference for Languages (CEFR).</div>
+      <div class="ref-item">Crato, N. (2020). <em>Curriculum and Educational Reforms in Portugal.</em> Springer.</div>
+      <div class="ref-item">Csikszentmihalyi, M. (1990). <em>Flow: The Psychology of Optimal Experience.</em> Harper & Row.</div>
+      <div class="ref-item">Deci, E.L. & Ryan, R.M. (2000). The "What" and "Why" of Goal Pursuits. <em>Psychological Inquiry,</em> 11(4), 227–268.</div>
+      <div class="ref-item">Ebbinghaus, H. (1885/1913). <em>Memory: A Contribution to Experimental Psychology.</em></div>
+      <div class="ref-item">Flavell, J.H. (1979). Metacognition and Cognitive Monitoring. <em>American Psychologist,</em> 34(10), 906–911.</div>
+      <div class="ref-item">Glewwe, P. et al. (2017). What Explains Vietnam's Exceptional Performance in Education. ScienceDirect.</div>
+      <div class="ref-item">Jakubowski, M. et al. (2016). The Impact of the 1999 Education Reform in Poland. University of Warsaw.</div>
+      <div class="ref-item">Kataoka, S. et al. (2020). <em>Vietnam's Human Capital: Education Success and Future Challenges.</em> World Bank.</div>
+      <div class="ref-item">Krashen, S. (1982). <em>Principles and Practice in Second Language Acquisition.</em> Pergamon.</div>
+      <div class="ref-item">Leitner, S. (1972). <em>So lernt man lernen.</em> Herder.</div>
+      <div class="ref-item">Ma, L. (1999). <em>Knowing and Teaching Elementary Mathematics.</em> Lawrence Erlbaum.</div>
+      <div class="ref-item">Maguire, E.A. et al. (2003). Routes to Remembering. <em>Journal of Neuroscience,</em> 23(8), 3250–3258.</div>
+      <div class="ref-item">Miller, G.A. (1956). The Magical Number Seven, Plus or Minus Two. <em>Psychological Review,</em> 63(2), 81–97.</div>
+      <div class="ref-item">OECD (2023). PISA 2022 Results Volume I & III. OECD Publishing.</div>
+      <div class="ref-item">Paivio, A. (1986). <em>Mental Representations: A Dual Coding Approach.</em> Oxford University Press.</div>
+      <div class="ref-item">Roediger, H.L. & Karpicke, J.D. (2006). Test-Enhanced Learning. <em>Psychological Science,</em> 17(3), 249–255.</div>
+      <div class="ref-item">Rohrer, D. & Taylor, K. (2007). The Shuffling of Mathematics Problems Improves Learning. <em>Instructional Science,</em> 35(6), 481–498.</div>
+      <div class="ref-item">Stigler, J.W. & Hiebert, J. (1999). <em>The Teaching Gap.</em> Free Press.</div>
+      <div class="ref-item">UNICEF Uzbekistan (2022/2023). Curriculum Reform and National Learning Achievement.</div>
+      <div class="ref-item">van der Linden, W.J. & Hambleton, R.K. (1997). <em>Handbook of Modern Item Response Theory.</em> Springer.</div>
+      <div class="ref-item">Willingham, D.T. (2004). The Privileged Status of Story. <em>American Educator,</em> 28(2), 43–45.</div>
+      <div class="ref-item">Worthen, J.B. & Hunt, R.R. (2011). <em>Mnemonology: Mnemonics for the 21st Century.</em> Psychology Press.</div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

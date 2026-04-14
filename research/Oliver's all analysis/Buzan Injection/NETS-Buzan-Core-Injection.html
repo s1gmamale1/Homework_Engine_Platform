@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buzan Core Injection — NETS Homework Engine</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a2e;
+    --heading: #16213e;
+    --accent: #0f3460;
+    --border: #e0e0e0;
+    --section-bg: #fafafa;
+    --sacred: #b71c1c;
+    --high: #c62828;
+    --med: #ef6c00;
+    --low: #757575;
+    --layer-a: #1565c0;
+    --layer-b: #6a1b9a;
+    --layer-c: #00838f;
+    --layer-d: #e65100;
+    --layer-e: #2e7d32;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+  .master-title {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 2rem;
+  }
+  .master-title h1 { font-size: 2rem; color: var(--accent); }
+  .master-title p { font-size: 0.95rem; color: #666; margin-top: 0.4rem; }
+  .sacred-rule {
+    background: #fff3f3;
+    border: 2px solid var(--sacred);
+    border-radius: 8px;
+    padding: 1rem 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .sacred-rule strong { color: var(--sacred); font-size: 1.05rem; }
+  nav.toc {
+    background: var(--section-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+  nav.toc h2 { font-size: 1.1rem; margin-bottom: 0.6rem; color: var(--accent); }
+  nav.toc ol { padding-left: 1.4rem; }
+  nav.toc li { margin-bottom: 0.3rem; }
+  nav.toc a { color: var(--accent); text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+  h2 { font-size: 1.35rem; color: var(--accent); margin: 2rem 0 0.6rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+  h3 { font-size: 1.1rem; color: var(--heading); margin: 1.2rem 0 0.5rem; }
+  h4 { font-size: 1rem; color: var(--heading); margin: 0.9rem 0 0.4rem; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+  p { margin: 0.5rem 0; }
+  ul, ol { padding-left: 1.6rem; margin: 0.5rem 0; }
+  li { margin-bottom: 0.3rem; }
+  code { background: #f0f0f0; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.9rem; }
+  pre { background: #f5f5f5; border: 1px solid var(--border); border-radius: 6px; padding: 1rem; overflow-x: auto; margin: 1rem 0; font-size: 0.85rem; line-height: 1.5; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.88rem; }
+  th, td { border: 1px solid var(--border); padding: 0.5rem 0.65rem; text-align: left; vertical-align: top; }
+  th { background: var(--section-bg); font-weight: 600; }
+  tr:hover { background: #f9f9ff; }
+  .badge { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 600; color: #fff; letter-spacing: 0.03em; }
+  .badge-a { background: var(--layer-a); }
+  .badge-b { background: var(--layer-b); }
+  .badge-c { background: var(--layer-c); }
+  .badge-d { background: var(--layer-d); }
+  .badge-e { background: var(--layer-e); }
+  .layer-legend { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0 1.5rem; }
+  .layer-legend .badge { font-size: 0.85rem; padding: 0.25rem 0.7rem; }
+  .deliverable-group { background: var(--section-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.2rem; margin: 0.8rem 0; }
+  .deliverable-group h4 { margin-top: 0; color: var(--accent); }
+  .cut-table td:nth-child(3) { color: #555; font-size: 0.85rem; }
+  .quote { border-left: 3px solid var(--accent); padding: 0.5rem 1rem; margin: 1rem 0; background: #f0f4ff; font-style: italic; color: #444; }
+  @media (max-width: 700px) {
+    body { padding: 1rem; }
+    .master-title h1 { font-size: 1.4rem; }
+    table { font-size: 0.8rem; }
+    .layer-legend { gap: 0.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="master-title">
+  <h1>Buzan Core Injection Specification</h1>
+  <p>NETS Homework Engine &mdash; 22 of 34 Methods &mdash; April 2026</p>
+</div>
+
+<div class="sacred-rule">
+  <strong>Sacred Rule: Content is sacred. Buzan = the HOW, never the WHAT.</strong><br>
+  All methods inject delivery mechanisms into existing content. Zero textbook changes.
+</div>
+
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#tefcas">TEFCAS Alignment</a></li>
+    <li><a href="#bost">BOST Alignment</a></li>
+    <li><a href="#qa-gates">Pipeline Quality Gates</a></li>
+    <li><a href="#radiant-ui">Radiant UI Standard</a></li>
+    <li><a href="#ai-language">AI Tutor Language</a></li>
+    <li><a href="#radiant-summary">Radiant Summary Mechanic</a></li>
+    <li><a href="#peg-system">Peg System Mechanic</a></li>
+    <li><a href="#phase-amendments">Phase Amendments</a></li>
+    <li><a href="#cut">What Was Cut &amp; Why</a></li>
+  </ol>
+</nav>
+
+<!-- ===== TEFCAS ===== -->
+<h2 id="tefcas">1. TEFCAS Alignment</h2>
+<p>The NETS 7-Phase Homework Engine is structurally aligned with Tony Buzan's <strong>TEFCAS</strong> model — the brain's natural cybernetic learning loop. TEFCAS is not a new addition; it is the <em>naming</em> of what the engine already does.</p>
+
+<h3>TEFCAS-to-NETS Phase Mapping</h3>
+<table>
+  <thead><tr><th>TEFCAS Step</th><th>NETS Phase</th><th>How It Already Works</th></tr></thead>
+  <tbody>
+    <tr><td><strong>T — Trial</strong></td><td>Phase 3: Game Breaks</td><td>Student attempts practice problems. Every attempt generates data.</td></tr>
+    <tr><td><strong>E — Event</strong></td><td>Phase 3: Per-question result</td><td>Binary outcome (correct/incorrect) plus metadata (time, hesitation, hints).</td></tr>
+    <tr><td><strong>F — Feedback</strong></td><td>Phase 3: Immediate feedback</td><td>Instant per-item feedback — correct answer, explanation on wrong, streak display.</td></tr>
+    <tr><td><strong>C — Check</strong></td><td>IRT Engine (Section 9)</td><td>IRT recalculates student Theta after each response. Compares performance against target PISA level.</td></tr>
+    <tr><td><strong>A — Adjust</strong></td><td>IRT Difficulty + Phase 5</td><td>Engine adjusts difficulty tier. Phase 5 targets weak concepts identified during Check.</td></tr>
+    <tr><td><strong>S — Success</strong></td><td>Phase 6: Boss Defeat</td><td>Boss defeated. Student demonstrated competence at target PISA level.</td></tr>
+  </tbody>
+</table>
+
+<div class="quote">
+  <strong>"There is no such thing as failure, only feedback."</strong><br>
+  This maxim governs ALL failure states in NETS. The AI tutor enforces "Hali emas!" (Not yet!) framing.
+</div>
+
+<h3>TEFCAS in Boss Failure Flow</h3>
+<pre>
+1. TRIAL (T):     Student attempted the Boss questions
+2. EVENT (E):     Boss HP &gt; 0 after all questions (defeat)
+3. FEEDBACK (F):  System identifies WHICH learning objectives failed
+4. CHECK (C):     IRT compares failed objectives against student's current Theta
+5. ADJUST (A):    Socratic tutoring guides student to specific weak branches
+                  + Boss questions regenerated (same standards, new context)
+6. SUCCESS (S):   Student re-attempts and defeats the Boss
+</pre>
+
+<!-- ===== BOST ===== -->
+<h2 id="bost">2. BOST Alignment</h2>
+<p>The Buzan Organic Study Technique (BOST) maps to the NETS 7-Phase flow at <strong>8/8 steps</strong> after two small additions.</p>
+
+<h3>BOST-to-NETS Alignment Table</h3>
+<table>
+  <thead><tr><th>BOST Step</th><th>NETS Phase</th><th>Status</th><th>Gap / Addition</th></tr></thead>
+  <tbody>
+    <tr><td>Browse</td><td>Phase 0-A: Theme Preview (Panels 1-4)</td><td>ALIGNED</td><td>No change needed.</td></tr>
+    <tr><td>Time &amp; Amount</td><td>Session timer display</td><td>ALIGNED</td><td>Timer already shows estimated remaining time.</td></tr>
+    <tr><td>Prime</td><td>Phase 0-A Panel 5 + Phase 1</td><td>PARTIAL</td><td><strong>ADD prior-knowledge prompt</strong> to Panel 5.</td></tr>
+    <tr><td>Questions/Goals</td><td>Phase 0-A Panel 6</td><td>PARTIAL</td><td><strong>ADD learning-goal prompt</strong> to Panel 6.</td></tr>
+    <tr><td>Overview</td><td>Phase 0-B: Flash Cards</td><td>ALIGNED</td><td>Flash Cards surface all key concepts.</td></tr>
+    <tr><td>Preview</td><td>Phase 2: Story Mode (Segment 1)</td><td>ALIGNED</td><td>Problem beat sets context.</td></tr>
+    <tr><td>Inview</td><td>Phase 2-3: Story Mode + Game Breaks</td><td>ALIGNED</td><td>Core content delivery and active practice.</td></tr>
+    <tr><td>Review</td><td>Phase 5 + Phase 7</td><td>ALIGNED</td><td>Mnemonic Lock synthesizes; Reflection enables metacognition.</td></tr>
+  </tbody>
+</table>
+
+<p><strong>BOST Alignment Score:</strong> Before: 6/8 (75%) → After: <strong>8/8 (100%)</strong></p>
+
+<h3>Two Required Additions</h3>
+<p><strong>Addition 1 — Prior Knowledge Prompt (Panel 5):</strong></p>
+<pre>
+prompt_uz: "Bu mavzu haqida nimalarni bilasiz? 2-3 ta kalit so'z tanlang yoki yozing."
+Interaction: keyword chips or free text | AI Tier: 1 | Scoring: none
+Data use: fed to Session Assembler to prioritize schema-linked content in Phase 2
+</pre>
+<p><strong>Addition 2 — Learning Goal Prompt (Panel 6):</strong></p>
+<pre>
+prompt_uz: "Bugun [Mavzu] haqida nimani bilmoqchisiz?"
+Interaction: single-line text input | AI Tier: 1 | Scoring: none
+Data use: resurfaced in Phase 7: "Remember, you wanted to learn [X]. Did you figure it out?"
+</pre>
+
+<!-- ===== QA GATES ===== -->
+<h2 id="qa-gates">3. Pipeline Quality Gates</h2>
+
+<h3>QG-1: 80/20 Keyword Extraction (Method #22)</h3>
+<p>Every <code>narrative_segment</code> must extract and tag <code>keywords_80_20</code> — the ~20% of words carrying 80% of conceptual value.</p>
+<p><strong>Schema:</strong> array of 3-8 items, each with <code>keyword_uz</code>, <code>keyword_ru</code> (optional), <code>importance: primary|secondary</code>, <code>textbook_page</code>.</p>
+<p><strong>Validation:</strong> <code>IF keywords_80_20 IS EMPTY → Block: DRAFT status.</code></p>
+<p><strong>Consumed by:</strong> Focus Guide, Radiant Summary, Flash Cards, Memory Sprint, Supernova Sprint.</p>
+
+<h3>QG-2: Dual Coding Check (Method #12)</h3>
+<p>Every content block must engage <strong>at least 2 encoding channels</strong>:</p>
+<table>
+  <thead><tr><th>Channel</th><th>Code</th><th>Examples</th></tr></thead>
+  <tbody>
+    <tr><td>Verbal/Textual</td><td><code>VRB</code></td><td>Words, sentences, labels</td></tr>
+    <tr><td>Visual/Pictorial</td><td><code>VIS</code></td><td>Images, diagrams, icons, colors</td></tr>
+    <tr><td>Spatial/Locational</td><td><code>SPA</code></td><td>Position, layout, movement</td></tr>
+    <tr><td>Auditory</td><td><code>AUD</code></td><td>Sound, rhythm, music, spoken word</td></tr>
+    <tr><td>Kinesthetic/Motor</td><td><code>KIN</code></td><td>Drag, draw, tap, physical action</td></tr>
+  </tbody>
+</table>
+<p><strong>Validation:</strong> <code>IF encoding_channels.length &lt; 2 → Block: DRAFT.</code></p>
+
+<h3>QG-3: SMASHIN' SCOPE Gate (Method #32)</h3>
+<p>Every <code>mnemonic_exercise</code> must score <strong>6+/12</strong> on SMASHIN' SCOPE. Score = sum of 12 boolean criteria: Synaesthesia, Movement, Association, Substitution, Humor, Imagination, Number, Symbolism, Color, Order, Positive, Exaggeration.</p>
+<p><strong>Validation:</strong> <code>IF score &lt; 6 → Return for enrichment with specific criteria flagged.</code></p>
+<p><em>Note: The 6/12 threshold is a proposal, not empirically validated.</em></p>
+
+<h3>QG-4: Schema Activation Check (Method #13)</h3>
+<p>Every new concept in Phase 2 must have <strong>at least one prerequisite</strong> activated in Phase 1 or Phase 0-B of the same session. If none exists, the Session Assembler auto-inserts one.</p>
+
+<!-- ===== RADIANT UI ===== -->
+<h2 id="radiant-ui">4. Radiant UI Standard</h2>
+<p>Any UI element displaying information radiantly MUST comply with Buzan's 7 Laws.</p>
+
+<h3>7-Point Radiant Compliance Checklist</h3>
+<table>
+  <thead><tr><th>#</th><th>Law</th><th>Requirement</th><th>Fail</th><th>Pass</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Central Image</td><td>Center has colorful image/icon. Never text alone.</td><td>Plain text</td><td>Sun icon + leaves</td></tr>
+    <tr><td>2</td><td>Organic Branches</td><td>Curved, organic lines. No straight connectors.</td><td>Straight lines</td><td>Curved, tapering thick→thin</td></tr>
+    <tr><td>3</td><td>Hierarchy</td><td>Main branches thicker/bolder than sub-branches.</td><td>All same thickness</td><td>Main 4px, Sub 2px, Leaf 1px</td></tr>
+    <tr><td>4</td><td>One Keyword/Branch</td><td>Each branch displays exactly one keyword.</td><td>Full sentence</td><td>"Bug'lanish" (Evaporation)</td></tr>
+    <tr><td>5</td><td>Emphasis</td><td>Visual hierarchy through size variation.</td><td>All same size</td><td>Main 16px, Sub 14px, Leaf 12px</td></tr>
+    <tr><td>6</td><td>Association</td><td>Connections between related branches via arrows.</td><td>Isolated branches</td><td>Dashed arrow between related</td></tr>
+    <tr><td>7</td><td>3+ Colors</td><td>Minimum 3 distinct colors per display.</td><td>Monochrome</td><td>Blue, Green, Yellow zones</td></tr>
+  </tbody>
+</table>
+
+<h3>G5-6 Simplified Radiant Rules (Override)</h3>
+<table>
+  <thead><tr><th>Rule</th><th>Standard (G7+)</th><th>G5-6 Override</th></tr></thead>
+  <tbody>
+    <tr><td>Orientation</td><td>Any</td><td><strong>Landscape only</strong></td></tr>
+    <tr><td>Max main branches</td><td>6-8</td><td><strong>4-5 maximum</strong> (WM ceiling)</td></tr>
+    <tr><td>Branch style</td><td>Organic, varied</td><td><strong>Extra thick, exaggerated curves</strong></td></tr>
+    <tr><td>Label format</td><td>Keyword text</td><td><strong>Icon-First: image BEFORE text</strong></td></tr>
+    <tr><td>Interaction</td><td>Drag-and-drop</td><td><strong>Tap-to-select from 3 options</strong> (drag optional)</td></tr>
+    <tr><td>Color</td><td>3+ colors</td><td><strong>Exactly 4-5 colors</strong>, high saturation</td></tr>
+  </tbody>
+</table>
+
+<h3>Subject Color System</h3>
+<table>
+  <thead><tr><th>Subject Family</th><th>Subjects</th><th>Color</th><th>Hex</th></tr></thead>
+  <tbody>
+    <tr><td>Aniq Fanlar (Exact)</td><td>Math, Informatika</td><td>Deep Blue</td><td><code>#1565C0</code></td></tr>
+    <tr><td>Tabiat Fanlari (Natural)</td><td>Science, Biology, Chemistry, Physics, Geography</td><td>Forest Green</td><td><code>#2E7D32</code></td></tr>
+    <tr><td>Til Fanlari (Languages)</td><td>Uzbek, English, Russian</td><td>Warm Amber</td><td><code>#E65100</code></td></tr>
+    <tr><td>Ijtimoiy Fanlar (Social)</td><td>History, Huquq</td><td>Royal Purple</td><td><code>#6A1B9A</code></td></tr>
+    <tr><td>Tarbiya / San'at</td><td>Tarbiya, Tasviriy San'at, Musiqa, Texnologiya</td><td>Warm Red</td><td><code>#C62828</code></td></tr>
+  </tbody>
+</table>
+
+<h3>Reading Optimization (Typography)</h3>
+<table>
+  <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td>Column width</td><td><strong>50-75 chars per line</strong> (66 ideal)</td></tr>
+    <tr><td>Line height</td><td><strong>1.5x</strong> (minimum 1.4x)</td></tr>
+    <tr><td>Font family</td><td><strong>Arimo</strong> (primary), Noto Sans (fallback)</td></tr>
+    <tr><td>Font size</td><td><strong>16px</strong> base (mobile), <strong>18px</strong> (tablet/desktop)</td></tr>
+    <tr><td>Text alignment</td><td><strong>Left-aligned</strong> (ragged right)</td></tr>
+    <tr><td>Max container width</td><td><strong>640px</strong> on desktop</td></tr>
+  </tbody>
+</table>
+
+<h3>Semantic Chunking (G5-6)</h3>
+<p>Story Mode text rendered with wider gaps (0.4em) between 3-5 word semantic chunks. Chunk boundaries pre-computed: (1) after punctuation, (2) between subject/predicate, (3) between verb phrase/object, (4) after 5 words (fallback).</p>
+
+<!-- ===== AI TUTOR LANGUAGE ===== -->
+<h2 id="ai-language">5. AI Tutor Language</h2>
+
+<div class="sacred-rule" style="border-color: #6a1b9a; background: #f3e5f5;">
+  <strong style="color: #6a1b9a;">Core Rule: "Wrong," "Incorrect," "Noto'g'ri," and "Xato" are BANNED.</strong><br>
+  Every failure state uses: <strong>"Hali emas!"</strong> (Not yet!) + TEFCAS-framed follow-up.
+</div>
+
+<h3>Phase-by-Phase Failure Templates (Key Examples)</h3>
+<table>
+  <thead><tr><th>Phase</th><th>Trigger</th><th>Template (Uzbek)</th></tr></thead>
+  <tbody>
+    <tr><td>P1 Memory Sprint</td><td>0-2/5-8 correct</td><td>"Hali emas! Miyangiz hozir eslamoqda. Ertaga bu so'zlar osonroq bo'ladi."</td></tr>
+    <tr><td>P2 Story Mode</td><td>Wrong checkpoint (1st)</td><td>"Hali emas! Hikoyaga qaytib qarang — javob o'sha yerda."</td></tr>
+    <tr><td>P3 Game Breaks</td><td>Wrong game answer</td><td>"Hali emas! Miyangiz hozir Feedback oldi. Keyingi urinish yaxshiroq bo'ladi."</td></tr>
+    <tr><td>P4 Real-Life</td><td>Wrong sub-question</td><td>"Hali emas! Mutaxassis sifatida qayta o'ylang — yana qaysi ma'lumot kerak?"</td></tr>
+    <tr><td>P5 Consolidation</td><td>Concept not recalled</td><td>"Hali emas — Saroyingiz qurilgan! Ertaga qaytib borsak, eslay olasiz."</td></tr>
+    <tr><td>P6 Boss</td><td>Wrong answer</td><td>"Hali emas! Miyangiz Feedback oldi. Keling, Tekshiramiz (Check) — qayerda tushunmovchilik bor?"</td></tr>
+    <tr><td>P6 Boss</td><td>Boss defeat (HP &gt; 0)</td><td>"Hali emas! Boss hali yengilmagan — lekin Bilim Bazangiz kuchaydi. Keling, Moslashtiramiz (Adjust)."</td></tr>
+    <tr><td>P7 Reflection</td><td>&lt;60% accuracy</td><td>"Bugun ko'p Feedback oldingiz — bu ajoyib! Har bir Feedback miyangizni kuchaytiryapti."</td></tr>
+  </tbody>
+</table>
+
+<h3>TEFCAS Socratic Sequence (Phase 6 Post-Failure)</h3>
+<pre>
+PROMPT 1 — CHECK (C):
+  "Keling, tekshiramiz. [Failed_concept] haqida nima bilasiz?"
+
+PROMPT 2 — ADJUST (A):
+  "Yaxshi. Endi moslashtiramiz. Agar [failed_concept] o'rniga
+   [simpler_analogy] deb o'ylasangiz — javob qanday o'zgaradi?"
+
+PROMPT 3 — SUCCESS (S):
+  "Ajoyib! Endi qayta urinib ko'ring. Yangi strategiyangiz bilan
+   Success ga erishishingiz mumkin."
+</pre>
+
+<h3>Voice Principles</h3>
+<ol>
+  <li><strong>Brain-science language, not generic praise.</strong> "Your brain just formed a new connection" not "Good job!"</li>
+  <li><strong>TEFCAS vocabulary embedded naturally.</strong> Trial, Feedback, Adjust, Success as everyday words.</li>
+  <li><strong>Radiant/Supernova metaphors.</strong> Knowledge "radiates," ideas are "sparks," learning "branches out."</li>
+  <li><strong>Always positive framing.</strong> Even when correcting, frame as growth.</li>
+  <li><strong>Uzbek-first.</strong> All templates authored in Uzbek with English equivalents.</li>
+</ol>
+
+<p><strong>32 template phrases</strong> stored as JSON lookup table keyed by <code>trigger_event</code> + <code>performance_band</code> + <code>phase</code>. All Tier 1 (zero LLM cost). Templates rotate via round-robin.</p>
+
+<!-- ===== RADIANT SUMMARY ===== -->
+<h2 id="radiant-summary">6. Radiant Summary Game Mechanic</h2>
+
+<p>A visual consolidation mechanic where the student completes a partially-built radiant map of the lesson's key concepts. Fills the undefined "Mind maps" slot in UNIFIED spec Phase 5.</p>
+
+<h3>Core Loop</h3>
+<pre>Study map (10s) → Drag keywords to branches (60-90s) → Review &amp; Score</pre>
+
+<p><strong>Phase A (10s):</strong> Partially completed radiant map appears. Central image + main branches pre-placed. Empty slots on sub-branches. Draggable keyword chips at bottom (includes 2-3 distractors).</p>
+<p><strong>Phase B (60-90s):</strong> Student drags keyword chips onto empty branch slots. Correct = green pulse + locks. Wrong = bounce back + soft shake.</p>
+<p><strong>Phase D (Score):</strong> Completed map shown with corrections. XP awarded. Map saved to Bilim Bazasi.</p>
+
+<h3>Evaluation</h3>
+<table>
+  <thead><tr><th>Result</th><th>Scoring</th></tr></thead>
+  <tbody>
+    <tr><td>Correct first try</td><td>80 XP per keyword</td></tr>
+    <tr><td>Correct second try</td><td>40 XP per keyword</td></tr>
+    <tr><td>Distractor avoided</td><td>+20 XP per distractor</td></tr>
+    <tr><td>Distractor placed</td><td>-10 XP (bounces back)</td></tr>
+  </tbody>
+</table>
+
+<h3>Parameters (G5 Defaults)</h3>
+<table>
+  <thead><tr><th>Parameter</th><th>Default</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>boi_count</td><td>4</td><td>More BOIs = wider map</td></tr>
+    <tr><td>empty_slots_total</td><td>5-6</td><td>More slots = more placement decisions</td></tr>
+    <tr><td>distractor_count</td><td>2</td><td>More distractors = harder discrimination</td></tr>
+    <tr><td>study_time</td><td>10s</td><td>Shorter study = harder</td></tr>
+    <tr><td>placement_time</td><td>60s</td><td>Shorter = more pressure</td></tr>
+  </tbody>
+</table>
+
+<h3>PISA / Bloom's / Cost</h3>
+<ul>
+  <li><strong>PISA:</strong> L1-L2 (categorization, hierarchical relationships)</li>
+  <li><strong>Bloom's:</strong> Remember → Understand (primary), Analyze (optional Supernova Sprint)</li>
+  <li><strong>Transition skills:</strong> <code>L1→L2: organize related concepts into hierarchical categories</code></li>
+  <li><strong>Subject eligibility:</strong> All subjects. Content-agnostic.</li>
+  <li><strong>Cost:</strong> Tier 1 (~$0.0001/round). Tier 2 for fuzzy matching G7+ (~$0.001). Tier 3: none.</li>
+  <li><strong>G5-6 Rules:</strong> Landscape, max 4 BOIs, Icon-First, tap-to-select from 3 options.</li>
+</ul>
+
+<!-- ===== PEG SYSTEM ===== -->
+<h2 id="peg-system">7. Peg System Game Mechanic</h2>
+
+<p>A mnemonic mechanic using visual "pegs" — memorable images permanently associated with numbers 1-10 — as hooks for lesson concepts. Fills the undefined "Peg system" slot in UNIFIED spec Phase 5.</p>
+
+<h3>Core Loop</h3>
+<pre>Learn pegs (first time only, 30s) → Associate concepts to pegs (45-60s) → Recall test (45-60s) → Score</pre>
+
+<p><strong>Phase A (30s, first time only):</strong> Show 5 pegs with images. Student taps each to see the image and association.</p>
+<p><strong>Phase B (45-60s):</strong> 5 lesson concepts + 5 peg images. Student drags each concept to a peg. Link sentence appears: "Sham (1) yonmoqda — Fotosintez ham yorug'lik bilan boshlanadi!"</p>
+<p><strong>Phase C (45-60s):</strong> Pegs shown one at a time in random order. Student selects the correct concept. Then reverse: concept shown, student selects peg.</p>
+
+<h3>Culturally Adapted Peg Set (Uzbekistan)</h3>
+<table>
+  <thead><tr><th>#</th><th>Shape</th><th>Uzbek</th><th>Image</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Candle</td><td>Sham</td><td>Tall burning candle</td></tr>
+    <tr><td>2</td><td>Swan</td><td>Oqqush</td><td>Graceful white swan</td></tr>
+    <tr><td>3</td><td>Heart</td><td>Yurak</td><td>Red heart</td></tr>
+    <tr><td>4</td><td>Sailboat</td><td>Yelkanli kema</td><td>Boat with triangular sail</td></tr>
+    <tr><td>5</td><td>Hook</td><td>Ilgak</td><td>Metal coat hook</td></tr>
+    <tr><td>6</td><td>Elephant trunk</td><td>Fil xortumi</td><td>Elephant with curled trunk</td></tr>
+    <tr><td>7</td><td>Cliff</td><td>Qoya</td><td>Cliff edge with flag</td></tr>
+    <tr><td>8</td><td>Snowman</td><td>Qorbobo</td><td>Two-ball snowman</td></tr>
+    <tr><td>9</td><td>Balloon</td><td>Shar</td><td>Balloon on string</td></tr>
+    <tr><td>10</td><td>Bat &amp; ball</td><td>To'p va tayoq</td><td>Cricket bat with ball</td></tr>
+  </tbody>
+</table>
+
+<h3>Evaluation</h3>
+<table>
+  <thead><tr><th>Result</th><th>Scoring</th></tr></thead>
+  <tbody>
+    <tr><td>Peg → Concept, correct first try</td><td>60 XP</td></tr>
+    <tr><td>Peg → Concept, correct second try</td><td>30 XP</td></tr>
+    <tr><td>Concept → Peg, correct</td><td>40 XP</td></tr>
+    <tr><td>All 10 correct (both directions)</td><td>+100 XP bonus</td></tr>
+    <tr><td><strong>Max score</strong></td><td><strong>600 XP</strong></td></tr>
+  </tbody>
+</table>
+
+<h3>PISA / Bloom's / Cost</h3>
+<ul>
+  <li><strong>PISA:</strong> L1-L2. <code>L1→L2: use visual mnemonic anchors to organize and retrieve factual information</code></li>
+  <li><strong>Bloom's:</strong> Remember (primary), Understand (link sentences)</li>
+  <li><strong>Subject eligibility:</strong> All subjects. Concept-agnostic.</li>
+  <li><strong>Cost:</strong> Tier 1 only. ~$0.0001/round. Cheapest mechanic in the catalog.</li>
+  <li><strong>Tic Tac Toe integration:</strong> Cells labeled with peg numbers. To place X, student must recall the pegged concept.</li>
+</ul>
+
+<!-- ===== PHASE AMENDMENTS ===== -->
+<h2 id="phase-amendments">8. Phase Amendments</h2>
+
+<h3>Phase 1: Link Chain Format (Method #28)</h3>
+<p>New Memory Sprint format #6. 5 sequential items with pre-authored link story using SMASHIN' SCOPE principles (15s study). Recall tested out of order via 4-option MC (45s). +60 XP correct, +100 bonus all 5. Best for sequential content (process steps, timelines). NOT for unrelated vocabulary.</p>
+
+<h3>Phase 1: Buzan Review Intervals (Method #34)</h3>
+<p>Four mandatory review touchpoints override SM-2 when SM-2 would schedule later:</p>
+<table>
+  <thead><tr><th>Touchpoint</th><th>Timing</th><th>NETS Phase</th></tr></thead>
+  <tbody>
+    <tr><td>~10 min</td><td>Phase 5 of same session</td><td>Already exists</td></tr>
+    <tr><td>~24 hours</td><td>Phase 1 of NEXT session</td><td><strong>ADD floor constraint</strong></td></tr>
+    <tr><td>~1 week</td><td>Phase 1, 7 days later</td><td><strong>ADD floor constraint</strong></td></tr>
+    <tr><td>~1 month</td><td>Phase 1, 30 days later</td><td><strong>ADD floor constraint</strong></td></tr>
+  </tbody>
+</table>
+<p><strong>Rule:</strong> <code>actual_next_review = MIN(sm2_next_review, buzan_next_mandatory)</code> — whichever is sooner wins.</p>
+
+<h3>Phase 3: Von Restorff Anchor (Method #14)</h3>
+<p>One game per session (always the middle game / Game Break 2) tagged as the Von Restorff Anchor — deliberately unusual, funny, or visually striking. Resets attention at the "Sag" point of Buzan's MIG curve.</p>
+
+<h3>Phase 3: Cortical Diversity Constraint (Method #25)</h3>
+<p>Every game mechanic receives a modality tag: <code>VL</code> (Verbal/Logical), <code>VS</code> (Visual/Spatial), <code>KM</code> (Kinesthetic/Motor), <code>SD</code> (Strategic/Decision), <code>PG</code> (Productive/Generative). Session's 3 games <em>should</em> span at least 2 different modalities. <em>Soft constraint, not hard rule.</em></p>
+
+<h3>Phase 4: W5H Radiant Analysis Scaffold (Method #4)</h3>
+<p>Real-Life Challenge gains a pre-solution scaffold: 6-branch radiant frame (Who/What/Where/When/Why/How). Student fills at least 4 of 6 branches before writing answer (G5-6 mandatory, G7-8 toggleable, G9+ optional button). Frame NOT scored; only the final answer is scored.</p>
+
+<h3>Phase 5: Link System Technique (Method #28 extension)</h3>
+<p>Available as a Phase 5 Consolidation technique. Technique selection by content structure:</p>
+<table>
+  <thead><tr><th>Content Structure</th><th>Phase 5 Technique</th></tr></thead>
+  <tbody>
+    <tr><td>Sequential</td><td>Link System</td></tr>
+    <tr><td>Spatial</td><td>Memory Palace</td></tr>
+    <tr><td>Hierarchical</td><td>Radiant Summary</td></tr>
+    <tr><td>Discrete facts</td><td>Peg System</td></tr>
+  </tbody>
+</table>
+
+<h3>Phase 7: TEFCAS Reflection Prompts</h3>
+<p>Replaces generic reflection prompts with TEFCAS-structured metacognition. Student's stored learning goal from Panel 6 resurfaced: "Remember, you wanted to learn [X]. Did you figure it out?"</p>
+
+<h3>MIG Formalization (Methods #26, #33)</h3>
+<p>The 7-phase structure IS Buzan's Memory Integration Graph in action: Primacy → Phase 1, Recency → Phase 7, Association → Phase 0-A/0-B, Von Restorff → Phase 3 anchor, The Sag → Phase 3 Game Breaks reset the curve. <em>Documentation only. No code changes.</em></p>
+
+<!-- ===== WHAT WAS CUT ===== -->
+<h2 id="cut">9. What Was Cut &amp; Why</h2>
+
+<table class="cut-table">
+  <thead><tr><th>Method</th><th>Name</th><th>Reason for Cut</th></tr></thead>
+  <tbody>
+    <tr><td><strong>15</strong></td><td>Anti-Cheat Radiant Signature</td><td>Pseudoscientific. Linear text patterns don't indicate cheating — they indicate systematic thinking. Would create false positives against students who think linearly.</td></tr>
+    <tr><td><strong>16-23</strong></td><td>Speed Reading cluster (Focus Guide, Saccade Optimization, Regression Elimination, Peripheral Vision, Sub-vocalization Elimination, Meta-Guiding)</td><td>Category error. These belong in a future Reading Fluency module, not injected into homework sessions. Speed reading research (Rayner et al. 2016) shows it doesn't improve comprehension — it teaches skimming. G5 students struggle with comprehension, not speed.</td></tr>
+    <tr><td><strong>5</strong></td><td>Decision Mapping in Boss fights</td><td>Conceptually wrong. Boss is an assessment gate, not a decision-support tool. W5H scaffold in P4 RLC captures the value without misplacing it in P6.</td></tr>
+    <tr><td><strong>30</strong></td><td>Major System</td><td>Linguistically broken for Uzbek. The phoneme-to-consonant mapping assumes English phonology. Uzbek has 33 phonemes with different distributions. Needs separate linguistic analysis.</td></tr>
+    <tr><td><strong>3</strong></td><td>Group Mind Mapping</td><td>Conflicts with banned Peer Teaching for Uzbek classroom culture. AI simulating a classmate's map doesn't solve the underlying issue. Deferred to future multiplayer module.</td></tr>
+    <tr><td><strong>8</strong></td><td>Secret Symbols</td><td>Accessibility gap — visually impaired students can't use symbol stickers. Needs haptic/audio alternative first. Deferred.</td></tr>
+    <tr><td><strong>31</strong></td><td>SEM³ Memory Matrix</td><td>Good concept, premature implementation. Data model can be built later as JSON schema + write-on-play logging. Session Assembler integration deferred.</td></tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3>Summary: Core Injection at a Glance</h3>
+<table>
+  <thead><tr><th>Layer</th><th>Methods</th><th>What Changes</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge badge-a">A</span> Phase-Bound</td><td>1, 3-5, 7-8, 20, 24, 27-29, 34</td><td>New game mechanics (Radiant Summary, Peg System, Link Chain), Phase amendments, Buzan Review Intervals</td></tr>
+    <tr><td><span class="badge badge-b">B</span> Cross-Cutting</td><td>2, 11-14, 25-26, 33</td><td>TEFCAS naming, BOST alignment, Radiant UI Standard, Von Restorff, Primacy/Recency formalization</td></tr>
+    <tr><td><span class="badge badge-c">C</span> UI/UX</td><td>2, 6, 9, 17, 19, 20</td><td>7 Laws compliance, G5-6 simplified rules, Subject Color System, Reading Optimization, Semantic Chunking</td></tr>
+    <tr><td><span class="badge badge-d">D</span> AI Language</td><td>10-11</td><td>"Hali emas!" failure responses, TEFCAS Socratic prompts, 32 template phrases</td></tr>
+    <tr><td><span class="badge badge-e">E</span> Pipeline</td><td>12, 22, 32</td><td>80/20 keyword extraction, Dual Coding check, SMASHIN' SCOPE gate, Schema Activation</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Cost impact:</strong> Zero Tier 3. All new mechanics are Tier 1 or Tier 2. <code>$3-5/student/year</code> target preserved.</p>
+<p><strong>Lines changed in UNIFIED spec:</strong> ~200 lines of amendments across Sections 1-10.</p>
+
+</body>
+</html>

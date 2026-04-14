@@ -1,0 +1,1906 @@
+
+
+NETS Homework Engine
+Universal Blueprint — Complete Specification
+
+
+Versiya: 2.0 — 2026-yil, 2-aprel
+Status: Har qanday fan, har qanday sinf uchun uy vazifasi sessiyasini qurishning yagona qo'llanmasi
+Maqsad: 8.8M K-11 o'quvchi, O'zbekiston
+PISA 2022: Matematika 364, O'qish 336, Fan 355
+Companion doc: NETS-Homework-Engine-UNIFIED.md v2.0
+
+Ishlatilgan misol: Tarix 5-sinf, 1-§ "Tarix fani nimani o'rganadi?" (Darslik: 6-8 bet)
+
+# Mundarija
+1. Asosiy tamoyillar va falsafa
+2. Kontent ma'lumot arxitekturasi
+3. PISA malaka tizimi
+4. Sessiya hayot sikli — umumiy ko'rinish
+5. Pre-Session: Tizim orkestratsiyasi
+6. Faza 1: Xotira Sprinti (Memory Sprint)
+7. Faza 2: Hikoya rejimi (Story Mode)
+8. Faza 3: O'yin tanaffuslari (Game Breaks)
+9. Faza 4: Hayotiy vaziyat (Real-Life Challenge)
+10. Faza 5: Mustahkamlash (Consolidation)
+11. Faza 6: Yakuniy Boss (Final Boss)
+12. Faza 7: Tafakkur (Reflection)
+13. Post-Boss: Diagnostika va remediation
+14. Post-Session: Ma'lumotlar saqlash va feed-forward
+15. Remediation Loop — yagona framework
+16. O'yin mexanizmlari — batafsil spetsifikatsiya
+17. O'yin mexanizmlari tanlov rubrikasi
+18. PISA ko'nikmalar rivojlanish tizimi
+19. PISA Ijodiy tafakkur domeni
+20. Qiyinlik adaptatsiya mexanizmi
+21. Darslikdan NETS ga kontent pipeline
+22. Geymifikatsiya iqtisodiyoti
+23. Favqulodda holatlar va tiklash rejimlari
+24. Anti-cheat tizimi
+25. O'qituvchi boshqaruv paneli
+26. Integratsiya nuqtalari
+27. Uy vazifasi JSON sxemasi
+28. Sinf bo'yicha amalga oshirish matritsasi
+29. Tizim takomillashtirish cheklovlari
+30. Ikki tilli til o'rganish tizimi
+31. Tadqiqot manbalari va dalillar bazasi
+
+Ilova A: Sessiya yakunlanish talablari
+Ilova B: Manba muvofiqlash jurnali
+
+# 1. Asosiy tamoyillar va falsafa
+## 1.1 NETS o'quv piramidasi
+Har bir uy vazifasi sessiyasi Bloom's taksonomiyasi orqali NETS o'quv piramidasiga mos kelishi SHART:
++-------------+
+                    |  TRANSFER   |  <-- Hayotiy vaziyat (PISA 5-6 daraja)
+                   +---------------+
+                  |    TAHLIL      |  <-- Why Chain, Mystery Box (PISA 4 daraja)
+                 +------------------+
+                |      QO'LLASH     |  <-- Adaptive Quiz, Final Boss (PISA 3 daraja)
+               +--------------------+
+              |     TUSHUNISH        |  <-- Hikoya rejimi, Tile Match (PISA 2 daraja)
+             +------------------------+
+            |       ESLAB QOLISH      |  <-- Memory Sprint, Flashcards (PISA 1 daraja)
+           +--------------------------+
+           |   JALB QILISH (Asos)      |  <-- Geymifikatsiya, Oqim holati
+           +---------------------------+
+MUQADDAS QOIDA: Har bir uy vazifasi sessiyasi piramidaning kamida 4 darajasidagi faoliyatlarni o'z ichiga olishi SHART.
+## 1.2 3 ta muqaddas tamoyil
+### Tamoyil 1: Darslik — haqiqat manbai, NETS — transformator
+
+STANDART: Uy vazifasi darslikdagi asosiy tushunchalarni O'ZGARTIRMASLIGI SHART. U yetkazish usulini faol, geymifikatsiyalangan, shaxsiylashtirilgan o'rganishga MOSLASHTIRISHI SHART.
+### Tamoyil 2: Oqim holati (Flow State) majburiy
+Csikszentmihalyi (1990) ga asoslangan holda, har bir o'quvchi oqim kanalida ushlab turilishi SHART:
+Qiyinlik darajasi
+    |         TASHVISH (Haddan tashqari qiyin — O'quvchi tark etadi)
+    |              /
+    |            /
+    |          /  +===========+
+    |        /    | OQIM      | <-- MAQSAD ZONASI
+    |      /      | 70-80%    |
+    |    /        | Muvaffaqiyat |
+    |  /          +===========+
+    |/___________________________
+    |    KO'NIKMA darajasi  \
+    |                         \
+    |                           ZERIKISH (Juda oson — O'quvchi tark etadi)
+STANDART: Tizim har 3-5 savolda qiyinlikni sozlashi SHART:
+• 60% dan past muvaffaqiyat → Qiyinlikni 1 daraja kamaytirish
+• 90% dan yuqori muvaffaqiyat → Qiyinlikni 1 daraja oshirish
+• 70-80% muvaffaqiyat → Joriy darajani saqlash
+### Tamoyil 3: Ichki motivatsiya > Tashqi mukofotlar
+
+STANDART: Pullik mexanizmlar yo'q. Haqiqiy pul xaridlari yo'q. Har bir mukofot isbotlangan o'rganish orqali qo'lga kiritiladi.
+## 1.3 "Busywork yo'q" qoidasi
+Har bir topshiriq aniq BIR PISA o'tish ko'nikmasini scaffold qilishi SHART. To'ldiruvchi savollar yo'q. Maqsadsiz takrorlash yo'q. Agar topshiriqni o'tish ko'nikmasiga teg qo'yib bo'lmasa, u kontent puliga kirmaydi.
+
+# 2. Kontent ma'lumot arxitekturasi
+## 2.1 Ierarxiya
+DARSLIK (jismoniy kitob, aniq nashr)
+  +-- BOB (bob)
+        +-- MAVZU (mavzu)
+              +-- O'QUV MAQSADI (o'quv maqsadi)
+                    +-- KONTENT BLOKI (kontent bloki)
+                          +-- BAHOLASH ELEMENTI (baholash elementi)
+Misol:
+Matematika 5-sinf (2024 nashr)
+  +-- 3-bob: Oddiy kasrlar (Common Fractions)
+        +-- Mavzu 3.4: Teng kasrlar (Equivalent fractions)
+              +-- LO-3.4.1: 2/4 = 1/2 ekanligini vizual model bilan tushuntirish
+                    +-- Block: CPA 2-bosqich -- Bar model
+                          +-- Item: Tile Match juftligi (vizual × tenglik)
+## 2.2 O'quv birliklari (Learning Units — LU)
+Har bir darslik bobi O'quv Birliklariga (LU) bo'linadi:
+• Odatda har bob bo'limiga 1-3 ta LU
+• Har bir LU aniq bitta o'quv rejasi standard kodiga mos keladi
+• Har bir LU ning old shart zanjiri bor (masalan: kasrlar butun sonlar bo'lishini talab qiladi)
+• Har bir LU Bloom's darajalari bo'yicha 10-15 ta topshiriq yaratadi: 4 Eslab qolish, 3 Tushunish, 3 Qo'llash, 2 Tahlil, 1-2 Baholash/Yaratish
+• Har bir topshiriq aniq bitta o'yin mexanizmiga tayinlanadi
+## 2.3 Kontent blok turlari
+
+## 2.4 Ikki formatli standart kod tizimi
+Birlamchi format (tavsifiy):
+UZ-{FAN}-{SINF}-{MAVZU}-{TARTIB}
+
+Alias format (orqaga mos keluvchi, nuqtali):
+{FAN}.{SINF}.{BOB}.{MAVZU}.{MAQSAD}
+
+Amalga oshirish: Tizim ikkala formatni saqlaydi. Har bir API javob va kontent tegi ikkalasini o'z ichiga oladi.
+## 2.5 Majburiy teglash sxemasi — Har bir element
+Tizimdagi har bir kontent bloki va baholash elementi live pulga kirishdan OLDIN quyidagi teglarni tashishi SHART:
+{
+  "textbook_ref": {
+    "textbook_id": "mat-5-2024-uz",
+    "grade": 5,
+    "subject": "math",
+    "language": "uz",
+    "chapter": "Oddiy kasrlar",
+    "section": "Teng kasrlar",
+    "page_range": "52-58",
+    "textbook_isbn": "978-9943-XXXX",
+    "textbook_year": 2024
+  },
+  "standard_ref": {
+    "primary_code": "UZ-MATH-5-FRAC-01",
+    "alias_code": "MAT.5.3.4.1",
+    "standard_description": "Kasrlarning teng ekanligini isbotlash",
+    "curriculum_year": 2024
+  },
+  "pisa_ref": {
+    "domain": "mathematics",
+    "proficiency_level": 2,
+    "content_category": "quantity",
+    "process_category": "employ",
+    "context": "personal",
+    "transition_skill": "L1->L2: oddiy vizual tasvirlarni izohlash"
+  },
+  "blooms_level": "understand",
+  "language": "uz",
+  "review_status": "approved",
+  "game_mechanic": "tile_match",
+  "prerequisites": ["UZ-MATH-4-DIV-03", "UZ-MATH-5-FRAC-01"]
+}
+MUHIM: transition_skill maydoni MAJBURIY. Har bir topshiriq qaysi PISA daraja o'tishini scaffold qilishini aniq e'lon qilishi kerak.
+Teg yo'q = joylashtirish yo'q.
+Har qanday majburiy tegi etishmayotgan kontent "draft" statusida ushlanadi.
+
+# 3. PISA malaka tizimi
+## 3.1 Rasmiy PISA daraja ta'riflari
+### Matematika
+
+### O'qish
+
+### Fan
+
+## 3.2 PISA darajalari NETS ga qo'llanilishi
+
+## 3.3 PISA daraja progressiya darvozasi sifatida
+O'quvchining joriy PISA darajasi (har bir fan bo'yicha kuzatiladi) quyidagilarni belgilaydi:
+• Qaysi Bloom's darajalar asosan beriladi
+• Final Boss qiyinlik darajasi
+• O'yin mexanizmlari mavjudligi
+• Uy vazifasi yakunlanish chegarasi
+## 3.4 Har bir o'quvchi uchun PISA daraja kuzatuvi
+{
+  "student_id": "420d17a7-...",
+  "subjects": {
+    "mathematics": {
+      "current_level": 1.7,
+      "target_level": 2.0,
+      "last_assessed": "2026-04-01",
+      "trajectory": "on_track",
+      "domain_breakdown": {
+        "quantity": 1.8,
+        "space_and_shape": 1.5,
+        "change_and_relationships": 1.9,
+        "uncertainty_and_data": 1.4
+      },
+      "transition_skills_mastered": [
+        "L1->L2: bir bosqichli protseduralar",
+        "L1->L2: belgilangan jadvallardan olish"
+      ],
+      "transition_skills_in_progress": [
+        "L1->L2: asosiy nisbatni tushunish",
+        "L1->L2: oddiy vizual tasvirlarni izohlash"
+      ]
+    }
+  }
+}
+Uzluksiz PISA shkalasi (masalan, 1.7) o'quvchining barcha baholash elementlari bo'yicha natijalaridan hisoblanadi, yangilik va element qiyinligi (IRT) bo'yicha tortiladi.
+
+# 4. Sessiya hayot sikli — umumiy ko'rinish
+PRE-SESSION (O'quvchi ochishdan OLDIN)
+    |
+    |-- [1] O'quvchi profilini yuklash (PISA, mastery, spaced rep)
+    |-- [2] Kontent pulini tekshirish (yetarli item bormi?)
+    |-- [3] Sessiyani yig'ish (7 faza uchun itemlarni tanlash)
+    |-- [4] O'tish ko'nikmalarini nishonga olish
+    |-- [5] O'qituvchi override larni qo'llash
+    |
+    v
+SESSIYA (O'quvchi ishlamoqda)
+    |
+    |-- FAZA 1: Xotira Sprinti -------- [Eslab qolish]
+    |     |-- Remediation A: agar <60% → darslikka yo'naltirish
+    |
+    |-- FAZA 2: Hikoya rejimi --------- [Tushunish]
+    |     |-- Nazorat savollari → 2x noto'g'ri = soddalashtirilgan versiya
+    |
+    |-- FAZA 3: O'yin tanaffuslari ---- [Qo'llash / Tahlil]
+    |     |-- Remediation B: agar <40% bitta standartda → micro-segment
+    |
+    |-- FAZA 4: Hayotiy vaziyat ------- [Transfer / Baholash]
+    |
+    |-- FAZA 5: Mustahkamlash --------- [Xotiraga mustahkamlash]
+    |
+    |-- FAZA 6: Yakuniy Boss ---------- [PISA-kalibrlangan baholash]
+    |     |-- YUTQAZISH → AI Sokratik tutoring → qayta boss
+    |
+    |-- FAZA 7: Tafakkur -------------- [Metakognitsiya]
+    |
+    v
+POST-SESSION (O'quvchi yakunlagandan KEYIN)
+    |
+    |-- [1] PISA profilini yangilash
+    |-- [2] Spaced repetition jadvalini yangilash
+    |-- [3] Mastery xaritasini yangilash (Ebbinghaus so'nish)
+    |-- [4] Traektoriya tekshirish (Boost Mode kerakmi?)
+    |-- [5] O'qituvchi hisoboti
+    |-- [6] Ota-ona xulosasi
+    |-- [7] Keyingi sessiyaga feed-forward
+Muhim: Faza 6 (Final Boss) dan tashqari barcha fazalar skriptlangan algoritmlar va qoidalar asosida ishlaydi. Faqat Boss yutqazganda Sokratik tutoring va savol qayta yaratish uchun generativ AI (Tier 3) ishlatiladi.
+
+# 5. Pre-Session: Tizim orkestratsiyasi
+Qachon: O'quvchi uy vazifasini ochgan zahoti, u ko'rishdan OLDIN.
+Ishlash turi: Algoritmik (generativ model emas)
+Kutish vaqti: <500ms
+## 5.1 O'quvchi profilini yuklash
+1. YUKLASH student_pisa_profile:
+   - Har bir fan bo'yicha joriy PISA daraja (uzluksiz shkala, masalan 1.7)
+   - Domen taqsimoti (masalan, reading: access=1.6, interpret=1.3, evaluate=1.1)
+   - O'tish ko'nikmalari: mastered [] va in_progress []
+
+2. YUKLASH mastery_map:
+   - Har bir standard uchun: mastery_score (0.0-1.0)
+   - Ebbinghaus so'nish hisoblangan (vaqt o'tishi = mastery pasayadi)
+   - mastery < 0.6 bo'lgan standardlar Memory Sprint uchun belgilanadi
+
+3. YUKLASH spaced_repetition_schedule:
+   - Qaysi itemlar ko'rib chiqish muddatiga kelgan
+   - Noto'g'ri javob berilgan itemlar → eng yuqori ustuvorlik
+   - 7+ kun ko'rilmagan itemlar → o'rta ustuvorlik
+Tarix misoli: Sardorning profili yuklanadi: reading PISA = 1.4, Kirish bobidagi "Vatan" standartlari mastery = 0.7 (yetarli, lekin so'nishga yaqin).
+## 5.2 Kontent pulini tekshirish
+4. TEKSHIRISH: uy vazifa mavzusi uchun yetarli kontent bormi?
+   - Minimal talablar (UNIFIED 10.2):
+     recall_item: 10 | narrative_segment: 3-5 | checkpoint_question: 3-5
+     tile_match_pair: 8 | flashcard: 10 | sentence_fill: 8
+     quiz_item: 12 | boss_question: 15 | reflection_prompt: 3
+   - AGAR yetarli emas → o'qituvchiga xabar, qisman sessiya + "kontent kamchiligi" bayrog'i
+## 5.3 Sessiyani yig'ish
+5. TANLASH kontent bloklari:
+   Faza 1: 5-8 ta recall_item OLDINGI boblardan (spaced repetition ustuvorligi)
+   Faza 2: 3-5 ta narrative_segment JORIY mavzu uchun
+   Faza 3: 3-4 ta o'yin mexanizmi (kamida 1 joriy Bloom's, 1 stretch, 1 zaif ko'nikma)
+   Faza 4: 1 ta transfer_scenario (O'zbek madaniy konteksti)
+   Faza 5: 1 ta mnemonic_exercise (kontentga mos texnika tanlash)
+   Faza 6: 5-8 ta boss_question (maqsad PISA darajasida, darajalangan)
+   Faza 7: 2-3 ta reflection_prompt
+
+6. TEKSHIRISH transition_skill qamrovi:
+   - Kamida 2 ta turli o'tish ko'nikmasi nishonga olingan
+   - Kamida 1 tasi o'quvchining "in_progress" ko'nikmalariga mos
+
+7. QURISH session_plan (tartibli ketma-ketlik)
+8. BOSHLASH sessiya taymeri
+## 5.4 O'qituvchi override larni qo'llash
+9. TEKSHIRISH o'qituvchi sozlamalari:
+   - Sessiya rejimi: Standard (20-30 daq) yoki Extended (40-50 daq)?
+   - Boss HP modifikatori: 50%-150%?
+   - Hint mavjudligi: yoqilgan/o'chirilgan?
+   - Faza 4 majburiyligini: majburiy/ixtiyoriy?
+   - Qiyinlik pastki chegarasi: o'quvchining PISA - 1?
+   - O'yin mexanizmlari: avtomatik/qo'lda tanlash?
+   - Grace period: 1-7 kun?
+   - Recovery sessiyalar/kun: 1-3?
+   - Uy vazifasi: majburiy/ixtiyoriy?
+   - Creative Lab: yoqilgan/o'chirilgan?
+   - Minimal tafakkur uzunligi: 10 belgi — 5 gap?
+
+# 6. Faza 1: Xotira Sprinti (Memory Sprint)
+## Maqsad
+Oldingi bilimlarni faollashtirish. Unutish egri chizig'iga qarshi kurash. Eski o'rganishni yangisiga ulash.
+
+Tadqiqot: Roediger & Karpicke (2006) — "Faol esga tushirish qayta o'qishdan 3 baravar samarali"
+## Ballash
+
+## Item tanlash algoritmi
+1. OLDINGI boblardan barcha recall_item larni OLISH
+2. USTUVORLIK bo'yicha tartiblash:
+   a. Oldingi sessiyalarda NOTO'G'RI javob berilganlar → eng yuqori
+   b. Unutish chegarasiga yaqinlashayotganlar (Ebbinghaus) → yuqori
+   c. To'g'ri javob berilgan lekin 7+ kun ko'rilmagan → o'rta
+3. 5-8 ta itemga FILTRLASH, oldingi boblar bo'yicha muvozanatli
+4. TARTIBNI ARALASHTIRISH
+## Adaptatsiya qoidalari
+AGAR aniqlik >= 80% → O'quvchi yangi kontentga tayyor. Faza 2 ga o'tish.
+AGAR aniqlik 60-79% → Davom etiladi, o'qituvchiga bayroq.
+AGAR aniqlik < 60% → REMEDIATION A faollashtiriladi (§15.1 qarang)
+## Yig'ilgan ma'lumotlar
+{
+  "phase": 1,
+  "items_attempted": 5,
+  "items_correct": 4,
+  "accuracy": 0.80,
+  "avg_response_time_seconds": 8.3,
+  "streak_max": 3,
+  "standards_tested": ["UZ-HIST-5-INTRO-01"],
+  "weak_items": ["q3_vatan_nomlari"],
+  "remediation_triggered": false
+}
+Tarix misoli: Sardor 5 ta savoldan 4 tasiga to'g'ri javob berdi (80%). O'zbekistonning o'tmishdagi nomlari (Turon, Movarounnahr) savolida qiynaldi. Bu item keyingi sessiya uchun "yuqori ustuvorlik" deb belgilanadi.
+
+# 7. Faza 2: Hikoya rejimi (Story Mode)
+## Maqsad
+Yangi darslik kontentini hikoya shaklida yetkazish. Tushunishni shakllantirish.
+
+Tadqiqot: Willingham (2004) — "Hikoya orqali eslab qolish 22 baravar yaxshiroq"
+## Kontent tuzilishi (har bir segment uchun)
+{
+  "textbook_ref": { "chapter": "Oddiy kasrlar", "section": "Teng kasrlar", "page_range": "52-58" },
+  "standard_ref": "UZ-MATH-5-FRAC-04",
+  "narrative_text": "...",
+  "media": [
+    { "type": "image", "url": "...", "alt": "2/4 = 1/2 ko'rsatuvchi bar model" },
+    { "type": "video_clip", "url": "...", "duration": 45 }
+  ],
+  "cpa_stage": "pictorial",
+  "checkpoint": {
+    "question": "Rasmga qarang. 2/4 va 1/2 nima uchun teng?",
+    "correct_answer": "Chunki ikkalasi ham yarimni bildiradi",
+    "blooms_level": "understand",
+    "pisa_level": 2,
+    "transition_skill": "L1->L2: oddiy vizual tasvirlarni izohlash",
+    "explanation_on_wrong": "Bar modelga qarang -- har ikkala kasrda ham yarimga teng qism bo'yalgan..."
+  }
+}
+## Sinf bo'yicha hikoya tizimi
+
+## Fanga xos yondashuvlar
+
+## Qoidalar
+• O'quvchi nazorat savoliga to'g'ri javob bermasdan KEYINGI segmentga o'ta OLMAYDI
+• Noto'g'ri javobda: darslik sahifasiga murojaat qilib tushuntirish, qayta so'raladi
+• Maksimum 2 ta qayta urinish. 2x noto'g'ri → soddalashtirilgan versiya
+• Segment vaqti < 30 soniya → "tez o'tib ketdi" bayrog'i (skimming aniqlash)
+
+# 8. Faza 3: O'yin tanaffuslari (Game Breaks)
+## Maqsad
+Yangi o'rganilgan tushunchalarni turli burchaklardan mashq qilish. Har bir o'yin aniq bir kognitiv ko'nikmani faollashtiradi.
+
+MUHIM: O'yin tanlash FAQAT fanga asoslanmaydi.
+O'yin tanlash 3 ta omilga asoslanadi: (1) Fan — qaysi mexanizmlar ushbu fan uchun mos, (2) Bloom's maqsad — o'quvchining joriy kognitiv darajasi va cho'zilish darajasi, (3) PISA daraja — o'quvchining zaif domenlari va in_progress o'tish ko'nikmalari.
+## O'yin tanlash algoritmi
+1. OLISH joriy mavzuning o'quv maqsadlari
+2. OLISH o'quvchining PISA darajasi va eng zaif domen sohasi
+3. OLISH o'quvchining in_progress o'tish ko'nikmalari
+4. TANLASH 3-4 ta o'yin mexanizmi:
+   a. Kamida 1 ta o'quvchining JORIY Bloom's darajasiga mos (mustahkamlash)
+   b. Kamida 1 ta BIR DARAJA YUQORI (cho'zish)
+   c. Kamida 1 ta joriy o'tish ko'nikmasini nishonga oluvchi
+   d. Faqat fanga mos mexanizmlar (qarang: §17 rubrika)
+5. YUKLASH mavzu standard_ref iga teglangan oldindan yaratilgan game_itemlar
+6. CHEKLOV: Bitta mexanizm 2x dan ko'p bo'lmasin
+7. TARTIBLASH hikoya segmentlari orasida aralashtirilgan
+## Sessiya ichida adaptatsiya
+HAR 3-5 SAVOLDA TEKSHIRILADI:
+
+ASOSIY (foizga asoslangan):
+  AGAR muvaffaqiyat < 60% → qiyinlik -= 1, yordam yoqiladi
+  AGAR muvaffaqiyat > 90% → qiyinlik += 1, keyingi Bloom's daraja
+  AGAR muvaffaqiyat 70-80% → saqlanadi (OQIM ZONASI)
+
+IKKILAMCHI (voqeaga asoslangan):
+  3 ketma-ket to'g'ri → +0.5 PISA sub-daraja
+  2 ketma-ket noto'g'ri → -0.5 PISA sub-daraja + scaffolding
+
+FAVQULODDA (REMEDIATION B):
+  O'yindagi aniqlik < 40% bitta standartda →
+    1. Aniq standardni BELGILASH
+    2. O'sha standard uchun Hikoya micro-segmentni KIRITISH
+    3. Micro-segment aniq darslik sahifasiga murojaat qiladi
+    4. O'quvchi o'yin tark etgan joyidan DAVOM ETADI
+
+# 9. Faza 4: Hayotiy vaziyat (Real-Life Challenge)
+## Maqsad
+Transfer — darslik bilimlarini hech ko'rmagan real-world ssenariyga qo'llash. Bu PISA o'lchaydigan asosiy ko'nikma.
+
+Tadqiqot: Silander (2015) — "Fenomen-asosli o'rganish: +1-2 PISA daraja"
+## Ssenariy tuzilishi (JSON)
+{
+  "title": "Toshkent bozorida mevalar",
+  "context_narrative": "Toshkent bozorida Alisher onasiga yordam bermoqda. Ular 3/4 kg olma, 1/2 kg nok va 2/3 kg uzum sotib olishdi.",
+  "textbook_refs": [
+    { "standard": "UZ-MATH-5-FRAC-06", "connection": "kasrlar bilan amallar" }
+  ],
+  "sub_questions": [
+    {
+      "question": "Jami necha kilogramm meva sotib olishdi?",
+      "pisa_level": 3,
+      "blooms": "apply",
+      "pisa_process": "employ",
+      "transition_skill": "L2->L3: turli maxrajli kasrlar bilan ko'p bosqichli protsedura",
+      "correct_answer": "23/12 = 1 11/12 kg",
+      "scoring_rubric": "To'liq ball: to'g'ri EKK + qo'shish. Qisman: to'g'ri usul, arifmetik xato."
+    },
+    {
+      "question": "Agar sumkaga 2 kg sig'sa, bir sumka yetadimi? Nima uchun?",
+      "pisa_level": 4,
+      "blooms": "evaluate",
+      "pisa_process": "interpret",
+      "transition_skill": "L3->L4: natijani real-world kontekstda izohlash",
+      "correct_answer": "Ha, yetadi. 1 11/12 < 2.",
+      "scoring_rubric": "To'liq ball: to'g'ri solishtirish + asoslash. Qisman: to'g'ri javob tushuntirishsiz."
+    }
+  ]
+}
+## Transfer tekshiruvi
+Ssenariy javobini darslik ta'riflarini takrorlash orqali berish mumkinmi? Agar ha → bu transfer emas, qayta ishlang. Haqiqiy transfer o'quvchini darslik tushunchalarini YANGI vaziyatda QO'LLASHGA majbur qiladi.
+
+# 10. Faza 5: Mustahkamlash (Consolidation)
+
+Tadqiqot: Maguire va boshq. (2003) — "Loci usuli: +300% eslab qolish"
+## Texnika tanlash qoidalari
+
+## Texnika tanlash algoritmi
+AGAR tushunchalar soni >= 5 → Memory Palace
+AGAR tushunchalar soni 3-4 → Akronim yoki chunking
+AGAR kontent turi = so'z boyligi → Flashcards
+AGAR kontent turi = ketma-ketlik → Memory Palace (joylar = bosqichlar)
+
+Memory Palace standart joylashuvi: Registon maydoni (Samarqand)
+Boshqa variantlar: o'quvchining uyi, maktab, mahalliy bozor
+## Agar mustahkamlash muvaffaqiyatsiz bo'lsa
+AGAR o'quvchi esga tushirish testida < 3/5 to'g'ri:
+  1. Boshqa texnikaga O'TISH (masalan: Memory Palace → Flashcards)
+  2. Tushunchalar sonini KAMAYTIRISH (5 → 3 ta eng muhim)
+  3. Qayta urinish
+  4. Hali ham < 3/5 → bayroq, lekin Boss ga o'tishga RUXSAT BERISH
+     (Boss o'zi baholash — mustahkamlash gate emas)
+
+# 11. Faza 6: Yakuniy Boss (Final Boss)
+Maqsad: PISA-kalibrlangan baholash. O'quvchi maqsadli PISA darajasida kompetentligini ISBOTLASHI shart.
+Boss YENGILISHI SHART — hech qanday istisno yo'q.
+
+BU YAGONA FAZA bo'lib, yutqazganda generativ AI (Tier 3) ishlatiladi: Sokratik tutoring va savol qayta yaratish.
+## PISA-darajalangan zarar tizimi
+
+## Boss savol tuzilishi (JSON)
+{
+  "question_text": "Bozorda 1 kg olma narxi 15,000 so'm...",
+  "standard_ref": "UZ-MATH-5-FRAC-06",
+  "textbook_ref": { "chapter": "Oddiy kasrlar", "section": "Kasrlar ustida amallar", "page": "83" },
+  "pisa_level": 3,
+  "pisa_domain": "mathematics",
+  "pisa_content": "quantity",
+  "pisa_process": "employ",
+  "pisa_context": "personal",
+  "transition_skill": "L2->L3: strategiya tanlash bilan ko'p bosqichli protsedura",
+  "blooms_level": "apply",
+  "difficulty_tier": "medium",
+  "correct_answer": "68,400 so'm",
+  "scoring_rubric": {
+    "full_marks": "Yechim bilan to'g'ri yakuniy javob",
+    "partial_marks": "To'g'ri usul, arifmetik xato → 50% kredit",
+    "no_marks": "Tasodifiy javob yoki yechim ko'rsatilmagan"
+  },
+  "solution_steps": [
+    "1. Olma narxi: 2.4 x 15,000 = 36,000 so'm",
+    "2. Nok narxi per kg: 15,000 x 1.20 = 18,000 so'm",
+    "3. Nok umumiy: 1.8 x 18,000 = 32,400 so'm",
+    "4. Jami: 36,000 + 32,400 = 68,400 so'm"
+  ],
+  "socratic_hints": [
+    "Avval 1 kg nok narxini toping. Olmadan 20% qimmat degani nima?",
+    "Endi har bir mevaning umumiy narxini alohida hisoblang.",
+    "Oxirgi qadam -- ikkala narxni qo'shing."
+  ],
+  "common_errors": [
+    { "error": "54,000", "misconception": "Nok narxiga 20% qo'shishni unutdi", "remediation_hint": "20% qimmat degani asosiy narxga 20% qo'shish kerak" }
+  ]
+}
+## Yutqazish oqimi
+AGAR boss HP > 0 (barcha savollardan keyin):
+  1. Qaysi standartlarda yutqazganini ANIQLASH
+  2. Yutqazishlarni aniq darslik bo'limlariga MOSLASHTIRISH
+  3. SOKRATIK TUTORING faollashtiriladi (Tier 3 — generativ AI):
+     - AI yo'naltiruvchi savollar beradi, HECH QACHON javob bermaydi
+     - Aniq darslik sahifasiga murojaat qiladi
+     - Xato tushuncha aniqlanadi
+  4. Aniq Hikoya segmentiga QAYTA YO'NALTIRISH
+  5. Boss savollarini QAYTA YARATISH (bir xil standardlar, boshqa kontekst)
+  6. Qayta urinish (MAKS 2 ta urinish bir sessiyada — burnout oldini olish)
+  7. 2x yutqazish → keyingi sessiyada davom + o'qituvchiga xabar
+
+AGAR boss HP <= 0:
+  → Faza 7 ga o'tish
+  → Yulduzlar hisoblash
+## Mahorat yulduzlari
+
+
+# 12. Faza 7: Tafakkur (Reflection)
+Maqsad: Metakognitiv xabardorlikni shakllantirish. O'z fikrlashi haqida fikrlash.
+Tadqiqot: Flavell (1979) — "Tafakkur keyingi sessiya natijalarini 20-30% yaxshilaydi"
+## Prompt generatsiyasi (natijaga asoslangan)
+AGAR aniqlik >= 80% → "Qaysi strategiya bugun sizga yordam berdi?"
+AGAR aniqlik 60-79% → "Nima qiyin bo'ldi? Qanday hal qildingiz?"
+AGAR aniqlik < 60%  → "Buni yaxshiroq tushunish uchun nima yordam beradi?"
+
+AGAR tushuncha X da ikkilanish aniqlansa →
+  "3-savol qiyin ko'rindi. Nimasi qiyinlashtirdi?"
+
+AGAR streak >= 5 →
+  "Sizda [X] savollik streak bo'ldi! Diqqatingiz nimada edi?"
+## Tafakkur tuzilishi (JSON)
+{
+  "performance_summary": {
+    "total_questions": 8,
+    "correct": 6,
+    "incorrect": 2,
+    "hints_used": 1,
+    "time_spent": "12:34",
+    "hardest_question": { "standard": "UZ-MATH-5-FRAC-04", "blooms": "analyze" },
+    "hesitation_points": ["question_3", "question_7"],
+    "answer_changes": ["question_5"]
+  },
+  "reflection_prompts": [
+    "Qaysi savol eng qiyin bo'ldi? Nima uchun?",
+    "Keyingi safar nimani boshqacha qilgan bo'lar edingiz?",
+    "Bugungi darsdan eng muhim narsa nima edi?"
+  ],
+  "student_writes": "...",
+  "standards_mastered": ["UZ-MATH-5-FRAC-01", "UZ-MATH-5-FRAC-04"],
+  "standards_needs_work": ["UZ-MATH-5-FRAC-06"]
+}
+## Javob talablari
+• Minimum 10 belgi (Extended rejim: 2 gap)
+• Avtomatik baho yo'q — barcha javoblar qabul qilinadi
+• O'qituvchi faqat umumiy mavzularni ko'radi, individual yozuvlarni EMAS
+## Maxfiylik
+• Tafakkur mazmuni FAQAT o'quvchiga ko'rinadi
+• O'qituvchi panelida faqat yig'ma mavzular ko'rsatiladi
+
+# 13. Post-Boss: Diagnostika va remediation
+## 13.1 Diagnostika
+1. YAQIN SESSIYA MA'LUMOTLARINI TO'PLASH:
+   - Har faza uchun per-standard aniqlik
+   - Har savol uchun javob vaqti, hint ishlatilishi
+   - Boss natijasi: qaysi darajada yutqazildi, qaysi standardda
+
+2. OLDINGI SESSIYALAR BILAN SOLISHTIRISH:
+   - Bu standard oldingi 3 sessiyada qanday edi?
+   - PISA daraja o'sish/tushish trend
+   - O'tish ko'nikmalari mastered vs hali in_progress
+
+3. ASOSIY SABAB TAHLILI:
+   - Yutqazilgan savollarni standart bo'yicha GURUHLASH
+   - Har standart uchun: qaysi Bloom's darajada muvaffaqiyatsiz?
+     * Remember da muvaffaqiyatsiz = asosiy bilim kamchiligi
+     * Apply da muvaffaqiyatsiz = tushunadi lekin qollay olmaydi
+     * Analyze da muvaffaqiyatsiz = chuqur fikrlash zaif
+   - Xato tushuncha naqshlari aniqlash
+## 13.2 Takomillashtirish rejasi
+HAR BIR ZAIF STANDARD UCHUN:
+  1. Yaxshilash turi aniqlash:
+     - "Qayta o'rganish" = Remember/Understand zaif → Story Mode qayta ko'rish
+     - "Qo'shimcha mashq" = Apply zaif → qo'shimcha o'yin itemlari
+     - "Chuqur tafakkur" = Analyze/Evaluate zaif → Why Chain / Real-Life
+
+  2. Keyingi sessiyaga FEED-FORWARD:
+     - Zaif standard Memory Sprint ga kiritiladi
+     - O'yin tanlashda zaif ko'nikmaga mos mexanizm ustuvorligi oshadi
+     - Agar 3 sessiya ketma-ket tushish → Boost Mode faollashtirish
+## 13.3 O'qituvchi hisoboti
+{
+  "student": "Sardor Karimov",
+  "session": "Tarix 5-sinf, 1-§",
+  "date": "2026-04-02",
+  "overall_accuracy": 0.82,
+  "pisa_level_change": "+0.1",
+  "stars": 2,
+  "strong_standards": ["UZ-HIST-5-SOURCES-01", "UZ-HIST-5-SOURCES-04"],
+  "weak_standards": ["UZ-HIST-5-SOURCES-03"],
+  "weak_standard_detail": {
+    "UZ-HIST-5-SOURCES-03": {
+      "bloom_failure_level": "apply",
+      "root_cause": "Moddiy va yozma manbalarni farqlaydi lekin CHEKKA HOLATLARDA qo'llay olmaydi",
+      "recommendation": "Sinfda aralash manbalar misollarini ko'proq muhokama qiling"
+    }
+  },
+  "flags": []
+}
+## 13.4 Ota-ona xulosasi
+"Sardor bugungi tarix uy vazifasini muvaffaqiyatli tugatdi.
+Tarixiy manbalar mavzusida 2 yulduz oldi.
+Moddiy va yozma manbalar orasidagi farqlarni ARALASH HOLATLARDA
+aniqlash ko'nikmasida qo'shimcha mashq foydali bo'ladi.
+
+Uyda mashq: Uyingizda qanday 'tarixiy manbalar' borligini birga
+izlang — eski fotolar (moddiy manba), eski maktublar (yozma manba).
+Sardordan har birini tasniflashni so'rang."
+
+# 14. Post-Session: Ma'lumotlar saqlash va feed-forward
+## 14.1 Saqlanadigan ma'lumotlar
+{
+  "student_id": "...",
+  "homework_id": "...",
+  "subject": "history",
+  "chapter": "I bob",
+  "topic": "1-§",
+  "standards_covered": ["UZ-HIST-5-SOURCES-01", "..02", "..03", "..04"],
+  "pisa_performance": {
+    "items_by_level": { "L1": "3/3", "L2": "5/6", "L3": "2/3" },
+    "estimated_level_change": "+0.1",
+    "new_estimated_level": 1.5,
+    "transition_skills_demonstrated": ["L1→L2: oddiy tasniflash"]
+  },
+  "blooms_performance": {
+    "remember": "100%", "understand": "85%", "apply": "70%", "analyze": "67%"
+  },
+  "weak_standards": ["UZ-HIST-5-SOURCES-03"],
+  "boss_attempts": 1,
+  "boss_difficulty_tiers": { "easy": "2/2", "medium": "1/2", "hard": "1/1" },
+  "mastery_stars": 2,
+  "xp_earned": 3200,
+  "time_spent": "24:17",
+  "grade_equivalent": 4,
+  "flags": [],
+  "parent_summary": "Sardor bugungi tarix uy vazifasini muvaffaqiyatli tugatdi..."
+}
+## 14.2 Keyingi sessiyaga feed-forward
+HAR SESSIYADAN KEYIN:
+
+1. YANGILASH student_pisa_profile:
+   - Yangi natijalar bilan PISA daraja qayta hisoblash
+   - Domen taqsimotini qayta hisoblash
+
+2. YANGILASH spaced_repetition_model:
+   - Noto'g'ri javob berilgan itemlar → intervalni 0 ga qaytarish
+   - To'g'ri javob berilgan itemlar → intervalini uzaytirish (SM-2)
+   - Yangi itemlar → birinchi ko'rib chiqish 1 kundan keyin
+
+3. YANGILASH standard_mastery_map:
+   - Har standard uchun mastery: 0.0 → 1.0
+   - Mastery Ebbinghaus bo'yicha vaqt o'tishi bilan SO'NADI
+   - mastery < 0.6 → Memory Sprint ga kiritish
+
+4. YANGILASH transition_skill_tracker:
+   - >80% aniqlik 3+ sessiyada → "mastered" deb belgilash
+   - Yangi nishon ko'nikmalarni aniqlash
+
+5. TEKSHIRISH traektoriya:
+   - 3 ketma-ket sessiyada tushish → BOOST MODE
+   - Sinf maqsadidan oshish → BOYITISH kontenti
+
+# 15. Remediation Loop — yagona framework
+## 15.1 Sessiya ichida remediation tetiklari
+
+## 15.2 Post-Boss remediation (batafsil oqim)
+Qadam 1 — DIAGNOSTIKA (30 son):
+  - Qaysi standartlarda yutqazildi?
+  - Qaysi o'tish ko'nikmalari o'tkazib yuborildi?
+  - Xato tushuncha aniqlash (o'quvchi javobidan)
+
+Qadam 2 — SOKRATIK TUTORING (2-3 daq, Tier 3 — generativ AI):
+  - 1-4 ta yo'naltiruvchi savol (HECH QACHON javob bermaydi)
+  - Aniq darslik sahifasiga murojaat
+  - Xato tushunchani o'quvchining o'z so'zlari bilan aniqlash
+
+Qadam 3 — MAQSADLI QAYTA YO'NALTIRISH (1 daq):
+  - Tizim xato tushunchani o'rgatadigan Hikoya segmentini aniqlash
+  - O'quvchi o'sha segmentni qayta o'qish
+
+Qadam 4 — SAVOL QAYTA YARATISH (Tier 3 — generativ AI):
+  - Bir xil standard + PISA daraja, boshqa sonlar/kontekst
+  - Combo tizimi qayta boshlanadi (yangi boshlash, jazo emas)
+  - Boss HP dastlabki qiymatga qaytadi
+
+Qadam 5 — QAYTA URINISH:
+  - Yengilsa → Faza 7
+  - Yana yutqazsa → Boost Mode bayrog'i + o'qituvchiga xabar
+## 15.3 Sessiyalar arasi remediation
+
+## 15.4 "Ko'rinmas" dizayn tamoyili
+Remediation ko'rinmas qiyinlik sozlashi bo'lishi kerak, aniq jazo emas.
+
+
+# 16. O'yin mexanizmlari — batafsil spetsifikatsiya
+## 16.1 Tile Match
+Maqsad: Vizual-so'zli assotsiatsiya tez tushunchani aniqlash uchun
+MEXANIZM:
+1. To'r 8-12 ta yashirin plitka ko'rsatadi (4-6 juft)
+2. Birinchi plitka bosiladi → kontent ko'rinadi
+3. Ikkinchi plitka bosiladi → kontent ko'rinadi
+4. AGAR mos: plitkar animatsiya (so'nish), +100 XP, taymer +3 soniya bonus
+5. AGAR mos emas: plitalar silkinish (3x, 100ms), yashiriladi, taymer -5 soniya
+6. G'ALABA: Barcha juftliklar taymer = 0 gacha topildi
+7. YUT'AZISH: Taymer tugadi — qisman XP (50 har topilgan juft uchun)
+
+TAYMER: 2:30 (ko'rinadigan ortga sanash), maks 3:00 bonuslar bilan
+XP: Mukammal = 300 XP | Qisman = 100-250 XP
+
+SINF BO'YICHA QIYINLIK:
+  1-2 sinf: 4 juft, 3:00 taymer
+  3-4 sinf: 6 juft, 2:30 taymer
+  5-8 sinf: 6-8 juft, 2:30 taymer
+  9-11 sinf: 8 juft, 2:00 taymer
+
+MAXSUS IMKONIYATLAR:
+  - Rangli ko'rish buzilishi: Ranglar + naqshlar
+  - Ekran o'quvchi: Plitka joylashuvi va kontentni e'lon qilish
+  - Harakatlanish buzilishi: Kengaytirilgan taymer (+30 soniya)
+## 16.2 Spaced Flashcards
+INTERVALLI TAKRORLASH ALGORITMI (SM-2 modifikatsiyasi):
+
+Boshlang'ich holat:
+  - Kartalar: 10-20 ta oldingi boblardan
+  - Har bir kartada: ease_factor (standart 2.5), interval (kunlar), repetitions
+
+O'quvchi kartani ko'radi → Javob haqida o'ylaydi → Kartani agtaradi
+
+O'quvchi o'z-o'zini baholaydi:
+  - "Yana" (noto'g'ri)    → interval = 0, ease_factor -= 0.2
+  - "Qiyin" (mushkul)     → interval = interval x 1.2, ease_factor -= 0.15
+  - "Yaxshi" (to'g'ri)    → interval = interval x 2.5, ease_factor o'zgarmaydi
+  - "Oson" (juda oson)    → interval = interval x 3.5, ease_factor += 0.15
+
+SESSIYA UCHUN KARTALAR: 5-10
+TAYMER: 2-3 daqiqa
+XP: 50 XP har to'g'ri eslab qolish uchun
+## 16.3 Sentence Fill (Cloze Test)
+BO'SH JOY TANLASH QOIDALARI:
+  - Har 3-so'zda (2-4 sinf)
+  - Har 4-so'zda (5-7 sinf)
+  - Har 5-so'zda (8-11 sinf)
+  - HECH QACHON olib tashlanmaydi: Atoqli otlar, sonlar, asosiy formulalar
+  - DOIMO saqlanadi: birinchi va oxirgi gap
+
+SO'Z BANKI:
+  2-4 sinf: To'g'ri javoblar + 3 ta chalg'ituvchi har bo'sh joy uchun
+  5-7 sinf: To'g'ri javoblar + 2 ta chalg'ituvchi har bo'sh joy uchun
+  8-11 sinf: So'z banki yo'q (erkin eslab qolish)
+
+XP: 100 XP har to'g'ri to'ldirish | Birinchi urinish bonus: +25 XP | Barchasi to'g'ri: +100 bonus
+TAYMER: 2-3 daqiqa
+## 16.4 Memory Palace
+SAROY QURISH:
+Qadam 1 - Saroyni tanlash (30 son): Registon (standart), o'quvchi uyi, maktab, mahalliy bozor
+Qadam 2 - Tushunchalarni joylashtirish (60 son): 5 tushuncha 5 joyga
+Qadam 3 - Xayoliy yurish (30 son): Yo'naltirilgan vizualizatsiya
+Qadam 4 - Esga tushirish testi (60 son): "Bosh darvozada nima bor edi?" — 5 savol
+
+XP: 50 XP har to'g'ri esga tushirish | Barchasi 5 to'g'ri: +50 bonus | Jami: 300 XP maks
+## 16.5 Adaptive Quiz (IRT)
+ITEM RESPONSE THEORY (IRT) AMALGA OSHIRISH:
+
+Savol banki talablari:
+  - Har bir savol oldindan kalibrlangan:
+    - qiyinlik (theta): -3.0 dan +3.0
+    - farqlash (alpha): 0.5 dan 2.0
+    - taxmin (c): 0.1 dan 0.25
+
+Adaptatsiya algoritmi:
+  1. Theta = 0 bilan boshlash (sinf daraja kutilishi)
+  2. Qiyinligi ~ joriy theta bo'lgan savol berish
+  3. AGAR to'g'ri: theta += 0.3
+     AGAR noto'g'ri: theta -= 0.3
+  4. Qiyinligi ~ yangi theta bo'lgan keyingi savolni tanlash
+  5. 5-7 savol uchun takrorlash
+  6. Yakuniy theta = o'quvchining qobiliyat bahosi
+
+PISA SHIFT: Qiyinlik darajalari PISA darajalariga mos:
+  Tier 1-2 = PISA 1-2 daraja
+  Tier 3 = PISA 3 daraja
+  Tier 4 = PISA 4 daraja
+  Tier 5 = PISA 5 daraja
+## 16.6 Mystery Box (Interleaving)
+MEXANIZM:
+  1. 3-5 ta yopiq quti ko'rsatish
+  2. Har bir qutida TURLI toifadan masala (joriy + oldingi boblar)
+  3. Qutini bosish → quti ochiladi animatsiya bilan → masala ko'rinadi
+  4. AVVAL: O'quvchi masala TURINI aniqlaydi (dropdown)
+  5. KEYIN: O'quvchi masalani yechadi
+  6. Tur aniqlash VA yechim bo'yicha teskari aloqa
+
+BALLASH:
+  - To'g'ri tur aniqlash: +50 XP
+  - To'g'ri yechim: +150 XP
+  - Ikkalasi ham to'g'ri: +50 bonus XP
+  - Har quti uchun jami: 250 XP maks
+## 16.7 Movement Breaks
+1-4 SINF: MAJBURIY | 5-6 SINF: IXTIYORIY | 7+ SINF: O'CHIRILGAN
+
+Faoliyat turlari:
+  1. Ko'rsatib berish: "Qo'llaringiz bilan o'tkir/to'g'ri/o'tmas burchakni ko'rsating"
+  2. Topish: "Xonangizda aylana shaklini toping"
+  3. Hisoblash: "3 ga sanang. Har sonida qarsak chaling"
+
+DAVOMIYLIGI: 60-90 soniya
+JOYLASHTIRISH: Hikoya rejimi va O'yin tanaffuslari orasida
+XP: +100 XP bajarish uchun (vijdon tizimi)
+## 16.8 Why Chain (Sokratik dialog)
+DIALOG NAMUNASI:
+
+1-daraja (Sirt):
+  Tizim: "Nima uchun o'simliklar quyoshga muhtoj?"
+  O'quvchi: "O'sish uchun."
+  Tizim: "Yaxshi boshlangich! Lekin NIMA UCHUN quyosh ularga o'sishda yordam beradi?"
+
+2-daraja (Mexanizm):
+  O'quvchi: "Quyosh ularga energiya beradi."
+  Tizim: "Ajoyib! O'simliklar o'sha energiya bilan NIMA QILADI?"
+
+3-daraja (Jarayon):
+  O'quvchi: "Ular CO2 va suvdan oziq tayyorlaydi."
+  Tizim: "Mukammal! Siz fotosintezni tasvirladingiz!"
+
+ZANJIR UZUNLIGI: minimum 3-5 daraja
+TAYMER: 3 daqiqa
+QOIDALAR: HECH QACHON to'g'ridan-to'g'ri javob bermaydi | DOIMO tan oladi | DOIMO chuqurroq so'raydi
+
+PISA DARAJA MISOLLARI:
+  2-3 daraja: 2-3 darajali Why Chain, yo'naltirilgan savollar
+  3-4 daraja: 4 darajali Why Chain, kamroq scaffolding
+  5-6 daraja: 5+ darajali Why Chain, ochiq, raqobatdosh tushuntirishlar
+
+XP: 150 XP har daraja | Barcha darajalar: +250 bonus | Hint: -10 XP
+## 16.9 Peer Teaching
+SSENARIYLAR:
+  A - Kichikga tushuntirish: "3-sinf o'quvchisi kasrlarni o'rganmoqda. 1/2 nima ekanligini tushuntiring."
+  B - Sinfdoshga yordam: "Sardor umumiy maxrajni tushunmaydi. Unga yordam beruvchi xabar yozing."
+  C - Xatoni tuzatish: "O'quvchi 1/2 + 1/3 = 2/5 dedi. Nima noto'g'ri ekanligini tushuntiring."
+
+BALLASH:
+  - To'liqlik (asosiy tushuncha qamrab olingan): +100 XP
+  - Aniqlik (til mos): +100 XP
+  - To'g'rilik (matematik/ilmiy jihatdan to'g'ri): +200 XP
+  - Jami: 400 XP
+
+BAHOLASH: Asosiy atamalar, mantiqiy oqim, to'g'ri faktlar tekshiriladi. Noto'g'ri bo'lsa o'qituvchiga yuboriladi.
+MAVJUDLIK: Faqat 5-11 sinf
+## 16.10 Creative Lab (ixtiyoriy mexanizm)
+CREATIVE LAB:
+  Davomiyligi: 5-8 daqiqa (Extended rejimda bitta O'yin tanaffusini almashtiradi)
+  Format: Bir nechta to'g'ri yechimli ochiq muammo
+
+  TURLARI:
+  1. "Dizayn sinovi": Bu bob tushunchalaridan foydalanib haqiqiy muammoga yechim yarating
+  2. "Agar...?": Ssenariydagi bitta o'zgaruvchini o'zgartiring va oqibatlarini bashorat qiling
+  3. "Aralashma": 2 xil bobdan tushunchalarni birlashtirb yangi muammoni yeching
+  4. "Yaxshilang": Nuqsonli yechim berilgan, uni yaxshilashning 3 usulini toping
+
+  BALLASH:
+  - Fikrlar xilma-xilligi: +100 XP har noyob yondashuv uchun
+  - Originallik (standart javob bankida yo'q yechim): +200 XP
+  - Amalga oshirilishi (yechim ishlaydi): +100 XP
+  - Kommunikatsiya (tushuntirish aniq): +100 XP
+  - Maks: 500 XP
+
+  MAVJUDLIK: 5-11 sinf, faqat PISA 3+ daraja
+  JOYLASHTIRISH: Bitta O'yin tanaffusini almashtiradi YOKI Sessiya tugaganidan keyin bonus
+
+# 17. O'yin mexanizmlari tanlov rubrikasi
+## 17.1 Qachon qaysi mexanizmni ishlatish kerak
+
+## 17.2 Tanlash qaror daraxti
+1. Mavzuning o'quv maqsadlarini OLISH
+2. O'quvchining PISA darajasi va eng zaif domenini OLISH
+3. O'quvchining in_progress o'tish ko'nikmalarini OLISH
+4. TANLASH:
+   a. Kamida 1 ta → o'quvchining JORIY Bloom's darajasiga mos (mustahkamlash)
+   b. Kamida 1 ta → BIR DARAJA YUQORI (cho'zish)
+   c. Kamida 1 ta → joriy o'tish ko'nikmasini nishonga oluvchi
+   d. → Fanga mos mexanizmlardan (yuqoridagi rubrika)
+   e. → Sinf cheklovlarini tekshirish
+
+5. CHEKLOVLAR:
+   - Bitta mexanizm sessiyada 2x dan ko'p bo'lmasin
+   - Standard rejim: 3 ta o'yin | Extended: 4 ta
+   - Creative Lab: faqat PISA L3+ va 5+ sinf
+
+# 18. PISA ko'nikmalar rivojlanish tizimi
+## 18.1 Matematika progressiyasi
+
+### Matematika PISA ko'nikma fokusi
+
+## 18.2 O'qish progressiyasi
+
+## 18.3 Fan progressiyasi
+
+
+# 19. PISA Ijodiy tafakkur domeni
+PISA 2022 birinchi marta Ijodiy tafakkurni baholadi. O'zbekiston 14/60 ball oldi (OECD o'rtachasi: 33/60). Bu domen e'tiborsiz qoldirib bo'lmaydi.
+## 19.1 4 ta kompetensiya
+1. Xilma-xil fikrlar yaratish — bir nechta turli yechimlar ishlab chiqish
+2. Ijodiy fikrlar yaratish — original, kutilmagan yechimlar ishlab chiqish
+3. Fikrlarni baholash va yaxshilash — eng yaxshi yondashuvlarni aniqlash va takomillashtirish
+4. Fikrlarni ifodalash — yozma, vizual, ilmiy va ijtimoiy muammo yechish
+## 19.2 Mavjud mexanizmlar orqali ijodiy tafakkur
+15-chi mexanizm qo'shish o'rniga, mavjud mexanizmlar Ijodiy tafakkur variantlari bilan kengaytiriladi:
+
+## 19.3 Sinf bo'yicha ijodiy tafakkur progressiyasi
+
+
+# 20. Qiyinlik adaptatsiya mexanizmi
+## 20.1 Real-vaqt sozlash (sessiya ichida)
+ADAPTATSIYA QOIDALARI (har 3-5 savolda tekshiriladi):
+
+ASOSIY (foizga asoslangan):
+  AGAR muvaffaqiyat < 60% →
+    qiyinlik_daraja -= 1
+    Scaffolding berish (hintlar yoqiladi, sodda tasvirlar)
+    O'quvchining belgilangan pastki chegarasidan PASTGA tushmaslik
+
+  AGAR muvaffaqiyat > 90% →
+    qiyinlik_daraja += 1
+    Hint mavjudligini kamaytirish
+    Keyingi Bloom's daraja itemlarini kiritish
+
+  AGAR muvaffaqiyat 70-80% →
+    Joriy darajani saqlash (OQIM ZONASI)
+
+IKKILAMCHI (voqeaga asoslangan):
+  AGAR 3 ketma-ket to'g'ri joriy darajada →
+    Qiyinlikni 0.5 PISA sub-daraja oshirish
+
+  AGAR 2 ketma-ket noto'g'ri →
+    Qiyinlikni 0.5 PISA sub-daraja kamaytirish
+    Savolning scaffold versiyasini berish
+
+FAVQULODDA:
+  AGAR o'yin tanaffusidagi aniqlik < 40% →
+    Aniq standardni belgilash
+    O'sha standard uchun qo'shimcha Hikoya micro-segmentini kiritish
+    Micro-segment aniq darslik sahifasiga murojaat qiladi
+
+DOIMO:
+  60-80% muvaffaqiyat darajasi maqsadini saqlash
+  Per-standard aniqlikni kuzatish (faqat umumiy emas)
+  Per-transition-skill aniqlikni kuzatish
+## 20.2 Qiyinlik darajalari
+
+
+# 21. Darslikdan NETS ga kontent pipeline
+## 21.1 Pipeline umumiy ko'rinish
+DARSLIK (jismoniy kitob)
+    |
+    v
+Faza 1: QABUL QILISH (oflayn, har darslik uchun bir marta)
+    |-- [1. OCR mexanizmi] → Xom matn + chegara qutilari
+    |-- [2. Struktura tahlilchisi] → Tuzilgan hujjat (JSON daraxti)
+    |-- [3. Kontent bo'luvchi] → O'quv Birliklari (LU)
+    |-- [4. Standart teglovchi] → Teglangan LU lar
+    |     (O'QITUVCHI KO'RIGI MAJBURIY — partiya tasdiqlash UI)
+    |
+    v
+Faza 2: TOPSHIRIQ YARATISH (oflayn, partiya jarayoni)
+    |-- [5. Bloom's taqsimlovchi] → Har LU uchun topshiriq spetsifikatsiyalari
+    |-- [6. Topshiriq generatori] → Xom topshiriqlar (3 rejim):
+    |     Rejim A: Shablon to'ldirish (80%, Tier 1) — ~$0.0001/topshiriq
+    |     Rejim B: Kengaytirilgan (15%, Tier 2) — ~$0.001/topshiriq
+    |     Rejim C: Ijodiy (5%, Tier 3) — ~$0.01/topshiriq
+    |-- [7. O'yin mexanizmi yo'naltiruvchisi] → Mexanizm tayinlangan topshiriqlar
+    |-- [8. Umumiy xato belgilovchisi] → Boyitilgan topshiriqlar
+    |
+    v
+Faza 3: SIFAT NAZORATI (yarim-avtomatlashtirilgan)
+    |-- [9. Avtomatlashtirilgan SN] → Tasdiqlangan topshiriqlar
+    |-- [10. O'qituvchi ko'rigi navbati] → Tasdiqlangan topshiriqlar
+    |     (Tier 3 topshiriqlar DOIMO inson ko'rigidan o'tadi)
+    |-- [11. IRT kalibrlash] → Kalibrlangan topshiriqlar
+    |
+    v
+Faza 4: SESSIYA YIG'ISH VA JOYLASHTIRISH (real-vaqt)
+    |-- [12. O'quvchi profil tekshiruvi]
+    |-- [13. Sessiya yig'uvchi] → 7 bosqichli sessiya (20-30 daq)
+    |-- [14. Yetkazish API] → Frontend sessiyani render qiladi
+    |-- [15. Analitika to'plovchi] → Natija ma'lumotlari (11, 12, 13 ga qayta aloqa)
+## 21.2 Har mavzu uchun minimal kontent talablari
+
+Har bir mavzu uchun jami minimum: ~85 kontent birligi, barchasi teglangan, barchasi ko'rib chiqilgan, barchasi darslikka kuzatilishi mumkin.
+## 21.3 Pipeline xarajat bahosi
+
+## 21.4 Tasdiqlangan darslik inventarizatsiyasi (NETS.zip dan)
+
+
+# 22. Geymifikatsiya iqtisodiyoti
+## 22.1 XP mukofot matritsasi
+
+## 22.2 Streak ko'paytiruvchilari
+
+## 22.3 Nishon tizimi
+
+## 22.4 Liderlar jadvali
+• Hajm: Faqat SINF darajasida (maktab miqyosida emas — sog'liksiz raqobatni oldini olish)
+• Qayta boshlash: Haftalik (har dushanba)
+• Toifalar: XP, Streak, O'zlashtirilgan boblar, Eng ko'p yaxshilangan
+• Top 3: Aylanadigan spotlight bilan tan olish
+• Anti-raqobat: Ommaviy sharmandalar yo'q. Yaxshilanishni nishonlash, faqat reyting emas. Ota-onalar opt-in qilishi mumkin.
+• O'quvchi doimo ko'radi: O'z pozitsiyasi va progressi, liderlar jadval opt-in dan qat'i nazar
+## 22.5 Avatar sozlash
+• O'zbek madaniy mavzudagi kosmetik elementlar (an'anaviy kiyimlar, Ipak yo'li kiyimlari, Registon mavzusidagi elementlar)
+• Yutuqlar orqali ochiladi, HECH QACHON xarid emas
+• Raqobatsiz (ijtimoiy bosim yaratadigan "noyob" elementlar yo'q)
+• Ko'rsatish joylari: liderlar jadvali, tafakkur jurnali, peer teaching, profil
+Tamoyil 3 muvofiqligi: Barcha geymifikatsiya mukofotlari o'rganish progressini nishonlaydi. Pullik mexanizmlar yo'q. Haqiqiy pul xaridlari yo'q.
+
+# 23. Favqulodda holatlar va tiklash rejimlari
+Bu 8.8M o'quvchi uchun kundalik voqelik — e'tiborsiz qoldirib bo'lmaydi.
+## 23.1 O'tkazib yuborilgan uy vazifasi (grace period ichida)
+Grace period: 3 kun (o'qituvchi sozlashi mumkin, diapazoni 1-7 kun)
+
+TIKLASH SESSIYASI (qisqartirilgan, 15-20 daq):
+  - Faza 1: KENGAYTIRILGAN Memory Sprint (3 daq, 10 savol — ko'proq so'nish tiklanadi)
+  - Faza 2: Qisqartirilgan Hikoya rejimi (faqat asosiy segmentlar, ~3 daq)
+  - Faza 3: Faqat 1 ta o'yin tanaffusi (2-3 daq)
+  - Faza 4: O'TKAZIB YUBORILADI (vaqt cheklovi)
+  - Faza 5: Faqat tezkor flashcard ko'rib chiqish (1 daq)
+  - Faza 6: To'liq Final Boss (QISQARTIRISh YO'Q — baholash yaxlitligi saqlanadi)
+  - Faza 7: Qisqartirilgan tafakkur (1 prompt)
+## 23.2 Ko'p sessiya o'tkazib yuborilgan
+AGAR missed_count > 1:
+  1. O'tkazib yuborilgan sessiyalarni BOG'LIQLIK bo'yicha TARTIBLASH (old shartlar birinchi)
+  2. Tiklash sessiyalarini bog'liqlik tartibida TAYINLASH
+  3. Har bir tiklash sessiyasi qisqartirilgan (23.1 qarang)
+  4. Kuniga maksimum 2 ta tiklash sessiyasi (burnout oldini olish)
+  5. O'qituvchi panelida tiklash navbati va taxminiy tugatish sanasi ko'rsatiladi
+## 23.3 Uzoq muddat yo'qligi — quvib yetish rejimi
+AGAR yo'qlik > 7 kun:
+  QUVIB YETISH REJIMINI FAOLLASHTIRISH:
+  - Tizim faqat MUHIM tushunchalarni aniqlaydi (old shart zanjiri tahlili)
+  - Muhim bo'lmagan mavzular quvib yetguncha keyinga qoldiriladi
+  - Final Boss: kamaytilgan HP (normalning 50%), hint jazolanmasdan ruxsat
+  - CHIQISH sharti: o'quvchi sinf pozitsiyasidan 1 ga yaqinlashadi
+  - O'qituvchiga aniq sinfda qo'llab-quvvatlash tavsiyalari bilan xabar
+  - Kuniga maksimum 2 ta quvib yetish sessiyasi
+## 23.4 Boost Mode (orqada qolish)
+AGAR student_pisa_level < class_average - 0.5, 3+ ketma-ket sessiya davomida:
+  BOOST MODE FAOLLASHTIRILADI:
+  - Qo'shimcha ixtiyoriy mashq sessiyalari (bonus XP + maxsus avatar elementlari bilan rag'batlantirish)
+  - Aniq zaif standardlar va o'tish ko'nikmalariga yo'naltirilgan
+  - Tizim shaxsiylashtirilgan yaxshilash rejasini yaratadi
+  - Ota-onaga uyda qo'llab-quvvatlash tavsiyalari bilan xabar
+  - O'qituvchiga aniq aralashuv tavsiyalari beriladi
+  - O'quvchi sinf o'rtachasiga yetganda avtomatik o'chiriladi
+## 23.5 Past jalb qilish aralashuvi
+AGAR tugatish_darajasi < 50%, 2 hafta ketma-ket:
+  JAVOB KETMA-KETLIGI:
+  1. Sessiya uzunligini minimumga qisqartirish (15 daq)
+  2. O'yin-kontent nisbatini oshirish (ko'proq O'yin, qisqaroq Hikoya)
+  3. Quest Arc hikoya kroklari bilan qayta jalb qilish
+  4. Ota-onaga aniq takliflar bilan xabar
+  5. O'qituvchi panelida jalb qilish ma'lumotlari bilan bayroq
+## 23.6 Fors-major / Texnik nosozliklar
+OFLAYN REJIM:
+  - Joriy bob + keyingi bob kontentini oldindan keshlash
+  - Sessiya avtomatik saqlash: qayta ulanishda oxirgi nazorat nuqtasidan davom etish
+  - Qurilmadan mustaqil: sessiya holati qurilmalar o'rtasida sinxronlanadi
+
+O'QITUVCHI OVERRIDE:
+  - "Uzrli" belgisi: texnik muammolar uchun qo'lda override
+  - Uy vazifasini tiklash navbatidan olib tashlash
+  - PISA kuzatuvi yoki mastery hisoblariga ta'sir qilmaydi
+
+# 24. Anti-cheat tizimi
+TIZIM MIQYOSIDAGI YAXLITLIK TEKSHIRUVLARI:
+
+1. Savol qayta yaratish: Boss savollari har urinishda qayta yaratiladi
+   (bir xil standard + PISA daraja, boshqa sonlar/kontekst)
+
+2. Javob vaqti tahlili: O'qish tezligidan tez javoblar → bayroq
+   (har o'quvchining belgilangan o'qish tezligiga kalibrlangan)
+
+3. Sessiya naqsh tahlili: G'ayrioddiy tugatish naqshlari → bayroq
+   (masalan: qiyin savollarda mukammal, oson savollarda muvaffaqiyatsiz)
+
+4. Sokratik tekshiruv: Boss yengilganidan keyin 1 ta tasdiqlash savoli
+   tushunishni tekshirish uchun (baholanmaydi, lekin muvaffaqiyatsiz bo'lsa bayroq)
+
+5. Qurilma monitoring: Bir xil akkount bir nechta qurilmada → sessiya qulflanadi
+
+6. Nusxa ko'chirish aniqlash: Matn maydonlaridagi paste hodisalari → bayroq
+
+ESKALATSIYA:
+  - Bayroq 1: O'quvchiga yumshoq ogohlantirish ("Bularni o'zingiz yechayotganingizga ishonch hosil qiling!")
+  - Bayroq 2: Ota-onaga xabar
+  - Bayroq 3: O'qituvchiga dalillar jurnali bilan xabar
+  - Bayroq 4: Akkount darajasida ko'rib chiqish (admin)
+
+# 25. O'qituvchi boshqaruv paneli
+## 25.1 Sozlash parametrlari
+O'qituvchilar sinf yoki o'quvchi bo'yicha sozlashi mumkin:
+
+## 25.2 O'qituvchi paneli xususiyatlari
+
+
+# 26. Integratsiya nuqtalari
+## 26.1 Kundalik/eMaktab
+Kundalikdan OLISH:
+  - Sinf ro'yxatlari (har sinf uchun o'quvchilar ro'yxati)
+  - Davomat ma'lumotlari (yo'qlik aniqlashga kiritiladi)
+  - Dars jadvali (fan jadvali bo'yicha uy vazifasi tayinlanadi)
+
+Kundalikka YUBORISH:
+  - Uy vazifasi tugatish holati (tugallangan / jarayonda / o'tkazib yuborilgan)
+  - Baho ekvivalenti (1-5 shkala, boss natijasidan olingan)
+  - Tugatish vaqt tamg'asi
+## 26.2 Ota-ona paneli
+OTA-ONA PORTALI XUSUSIYATLARI:
+  - PISA daraja progressiya grafigi (vaqt bo'yicha, har fan uchun)
+  - Fan bo'yicha natija taqsimoti
+  - Uy vazifasi tugatish darajalari
+  - Zaif standardlar bilan uyda qo'llab-quvvatlash tavsiyalari (aniq, amaliy)
+  - Uyda qo'llab-quvvatlash tavsiyalari
+  - Haftalik xulosa (platforma xabarnomasi yoki SMS ilovasiz ota-onalar uchun)
+
+MAXFIYLIK:
+  - Tafakkur jurnali mazmuni ULASHILMAYDI (o'qituvchi va ota-ona faqat mavzularni ko'radi)
+  - Individual savol darajasidagi ma'lumotlar faqat o'qituvchiga mavjud
+## 26.3 Admin/Milliy analitika
+YAQMA (anonimlashtirilgan):
+  - Har maktab uchun fan bo'yicha o'rtacha PISA darajalari
+  - Har hudud uchun standard mastery darajalari
+  - Milliy kontent kamchilik tahlili (butun mamlakat bo'yicha qaysi standardlar eng zaif)
+  - Darslik samaradorligi metrikasi (qaysi boblarda eng past mastery darajasi)
+  - Ijodiy tafakkur domeni progressi (milliy yig'ma)
+
+# 27. Uy vazifasi topshiriq JSON sxemasi
+Bu barcha uy vazifasi topshiriqlari uchun standartlashtirilgan format:
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NETS Homework Task Standard",
+  "type": "object",
+  "required": ["task_id", "textbook_ref", "curriculum_standard", "pisa_level",
+               "blooms_level", "game_mechanic", "content"],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "pattern": "^HW-[A-Z]+-[0-9]+-[A-Z]+-[0-9]{3}$",
+      "example": "HW-MATH5-FRAC-001"
+    },
+    "textbook_ref": {
+      "type": "object",
+      "required": ["grade", "subject", "language", "chapter", "section", "page_range"],
+      "properties": {
+        "grade": { "type": "integer", "minimum": 1, "maximum": 11 },
+        "subject": { "type": "string", "enum": ["math", "reading", "science",
+          "history", "biology", "chemistry", "physics", "geography",
+          "informatics", "english", "uzbek_language", "russian_language"] },
+        "language": { "type": "string", "enum": ["uz", "ru"] },
+        "chapter": { "type": "string" },
+        "section": { "type": "string" },
+        "page_range": { "type": "string", "pattern": "^[0-9]+-[0-9]+$" }
+      }
+    },
+    "curriculum_standard": {
+      "type": "object",
+      "required": ["primary_code", "alias_code"],
+      "properties": {
+        "primary_code": { "type": "string", "pattern": "^UZ-[A-Z]+-[0-9]+-[A-Z]+-[0-9]{2}$" },
+        "alias_code": { "type": "string", "pattern": "^[A-Z]{3}\\.[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+$" }
+      }
+    },
+    "pisa_level": {
+      "type": "object",
+      "required": ["target", "domain", "competency", "transition_skill"],
+      "properties": {
+        "target": { "type": "integer", "minimum": 1, "maximum": 6 },
+        "domain": { "type": "string", "enum": ["mathematics", "reading", "science",
+                    "creative_thinking"] },
+        "transition_skill": { "type": "string", "description": "MAJBURIY. Qaysi L N→N+1 o'tishni qo'llab-quvvatlaydi" }
+      }
+    },
+    "blooms_level": { "type": "string", "enum": ["remember", "understand", "apply",
+                      "analyze", "evaluate", "create"] },
+    "game_mechanic": {
+      "type": "object",
+      "required": ["mechanic", "format"],
+      "properties": {
+        "mechanic": { "type": "string", "enum": ["memory_sprint", "flashcards",
+          "tile_match", "sentence_fill", "memory_palace", "story_mode",
+          "adaptive_quiz", "mystery_box", "movement_breaks", "why_chain",
+          "peer_teaching", "real_life_challenge", "reflection_journal",
+          "final_boss", "creative_lab"] }
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": ["question_text", "language", "answer"],
+      "properties": {
+        "question_text": { "type": "string" },
+        "language": { "type": "string", "enum": ["uz", "ru"] },
+        "answer": {
+          "type": "object",
+          "properties": {
+            "correct": { "description": "To'g'ri javob" },
+            "format": { "type": "string", "enum": ["exact", "numeric_range",
+              "multiple_choice", "matching_pairs", "ordered_list", "open_rubric"] },
+            "common_errors": { "type": "array", "items": {
+              "type": "object", "properties": {
+                "error": { "type": "string" },
+                "misconception": { "type": "string" },
+                "remediation_hint": { "type": "string" }
+              }
+            }}
+          }
+        }
+      }
+    },
+    "difficulty": {
+      "type": "object",
+      "properties": {
+        "irt_theta": { "type": "number" },
+        "estimated_minutes": { "type": "number" },
+        "cognitive_load": { "type": "string", "enum": ["low", "medium", "high"] }
+      }
+    },
+    "prerequisites": { "type": "array", "items": { "type": "string" } },
+    "ai_tier": { "type": "integer", "enum": [1, 2, 3] },
+    "xp_reward": {
+      "type": "object",
+      "properties": {
+        "base": { "type": "integer" },
+        "streak_bonus": { "type": "integer" },
+        "speed_bonus": { "type": "integer" }
+      }
+    }
+  }
+}
+
+# 28. Sinf bo'yicha amalga oshirish matritsasi
+## 28.1 O'yin mavjudligi sinf bo'yicha
+
+## 28.2 Sessiya davomiyligi sinf bo'yicha
+
+
+# 29. Tizim takomillashtirish cheklovlari
+Bu bo'lim tizim (algoritmlar va generativ AI) kontent bilan nima qilishi va qilmasligi mumkin ekanligini aniq belgilaydi.
+## 29.1 Ruxsat etilgan operatsiyalar
+Takomillashtirish quyidagilar bilan CHEKLANGAN:
+1. Formatlash — darslik kontentini raqamli ko'rsatish uchun qayta tuzish
+2. Hikoya qadoqlash — tushunchalarni O'zbek madaniy kontekstli hikoyalarga o'rash
+3. Madaniy kontekstlashtirish — O'zbek ismlari, joylari, ssenariylar, valyuta qo'shish
+4. Qiyinlik scaffolding — bir xil tushuncha ichida savol murakkabligini sozlash
+5. Savol yaratish — darslik mashqlari bilan bir xil tushunchalarni sinovdan o'tkazadigan yangi savollar yaratish
+6. Vizual yaratish — darslik tushunchalari diagrammalari, bar modellari va vizual tasvirlari
+7. Tarjima — ma'noni saqlab O'zbek va Rus tillari o'rtasida konvertatsiya
+## 29.2 Taqiqlangan operatsiyalar
+Takomillashtirish QILMASLIGI SHART:
+• Faktik da'volar, matematik formulalar yoki ilmiy qonunlarni o'zgartirish
+• Tarixiy sanalar, geografik ma'lumotlar yoki biografik faktlarni o'zgartirish
+• Grammatika qoidalari yoki so'z ta'riflarini o'zgartirish
+• Muhim ma'no yoki old shart bilimlarini olib tashlaydigan tarzda soddalashtirish
+• Berilgan sinf uchun darslik doirasidan tashqari kontent kiritish
+• Darslikda qamrab olinmagan tushunchalarni sinovdan o'tkazadigan savollar yaratish
+• Noto'g'ri yoki nomaqbul madaniy havolalar yaratish
+• Milliy o'quv dasturiga zid kontent ishlab chiqarish
+## 29.3 Informatika o'quv dasturi istisnosi
+Istisno — Informatika: Ta'lim vazirligi tomonidan tasdiqlangan IT darsliklari NETS IT progressiyasidagi mavzularni hali qamrab olmagan joyda (masalan, 7-9 sinf uchun Python/JavaScript, 10-11 sinf uchun AI/ML tushunchalari), bu mavzular NETS-tomonidan to'ldirilgan kontent hisoblanadi. Darslik-haqiqat-manbai tamoyilidan bu istisno aniq tan olingan va darsliklar yangilanganida har yili qayta ko'rib chiqilishi kerak. IT to'ldirilgan kontent boshqa barcha teglash, PISA kalibrlash va ko'rib chiqish talablariga mos kelishi SHART.
+
+# 30. Ikki tilli til o'rganish tizimi
+## 30.1 Sinf bo'yicha til progressiyasi
+
+## 30.2 Til o'rganish metodologiyasi
+• Krashen Input gipotezasi (i+1): Kontent o'quvchining joriy tushunish darajasidan bir daraja yuqorida yetkaziladi, L1 yordami talab bo'yicha mavjud
+• Kontentga asoslangan ta'lim: Til alohida grammatika mashqlari emas, fan mazmuni orqali o'rganiladi
+• O'yin mexanizmi xaritalash: Sentence Fill so'z boyligi/grammatika uchun, Story Mode o'qish tushunish uchun, Why Chain diskurs tahlili uchun, Peer Teaching produktiv ravonlik uchun
+## 30.3 Amalga oshirish
+• Barcha kontent uz va ru tillarida mavjud
+• O'quvchining afzal tili birlamchi; ikki tilli o'quvchilar uchun almashtirish tugmasi mavjud
+• Ingliz/Rus L2 kontent CEFR progressiyasiga amal qiladi
+• L1 yordami (hover tarjima, so'z boyligi lug'ati) doimo mavjud, XP sarflamaydi
+
+# 31. Tadqiqot manbalari va dalillar bazasi
+
+PISA ma'lumot manbalari:
+• OECD PISA 2022 Results Volume I — What Students Can Do
+• NCES PISA 2022 Mathematics Proficiency Level Descriptions
+• NCES PISA 2022 Reading Proficiency Level Descriptions
+• NCES PISA 2022 Science Proficiency Level Descriptions
+• ACER Teacher's Guide to PISA Mathematics
+• PISA 2022 Mathematics Framework
+
+# Ilova A: Sessiya yakunlanish talablari
+Sessiya FAQAT quyidagilarning HAMMASI bajarilganda TUGALLANGAN:
+• F1: Xotira Sprinti — barcha savollar urinildi
+• F2: Barcha Hikoya segmentlari ko'rildi, nazorat savollari o'tildi
+• F3: Barcha tayinlangan o'yinlar bajarildi
+• F4: Hayotiy vaziyat topshirildi (yoki L2 dan past o'quvchilar uchun o'tkazib yuborildi)
+• F5: Mustahkamlash mashqi bajarildi
+• F6: Boss YENGILDI (HP → 0)
+• F7: Tafakkur yozildi (minimal uzunlik bajarildi)
+Qisman yakunlash YO'Q. O'quvchi to'liq sessiyani tugatadi yoki u jarayonda qoladi.
+## Sessiyadan keyin yuboriladigan ma'lumotlar
+{
+  "student_id": "...",
+  "homework_id": "...",
+  "subject": "mathematics",
+  "chapter": "Oddiy kasrlar",
+  "standards_covered": ["UZ-MATH-5-FRAC-01", "UZ-MATH-5-FRAC-04", "UZ-MATH-5-FRAC-06"],
+  "pisa_performance": {
+    "items_by_level": { "L1": "3/3", "L2": "4/5", "L3": "1/2" },
+    "estimated_level_change": "+0.1",
+    "new_estimated_level": 1.8,
+    "transition_skills_demonstrated": ["L1->L2: vizual tasvirlarni izohlash"]
+  },
+  "blooms_performance": { "remember": "100%", "understand": "90%", "apply": "80%", "analyze": "50%" },
+  "weak_standards": ["UZ-MATH-5-FRAC-06"],
+  "boss_attempts": 1,
+  "mastery_stars": 3,
+  "xp_earned": 2450,
+  "time_spent": "24:17",
+  "grade_equivalent": 4,
+  "flags": [],
+  "parent_summary": "..."
+}
+
+# Ilova B: Manba muvofiqlash jurnali
+Manba hujjatlari zid bo'lgan joyda, bu jurnal qaysi versiya tanlangani va sababini qayd etadi.
+
+
+# Ilova C: Tizim darajalarining xulosa matritsasi
+Muhim: Faza 6 dan tashqari barcha fazalar skriptlangan algoritmlar va qoidalar mexanizmi asosida ishlaydi. "Tier 1" = algoritmik/shablonga asoslangan. "Tier 2" = kengaytirilgan logika (oldindan yaratilgan adaptatsiyalar). "Tier 3" = faqat generativ AI (Final Boss yutqazganda).
+
+
+# Ilova D: 3 mezon tekshiruv ro'yxati
+Har bir kontent birligi ishlab chiqarilganda quyidagi 3 ta mezon tekshiriladi:
+
+Bitta teg ham yo'q = kontent o'quvchiga YETKAZILMAYDI.
+
+HUJJAT TUGADI
+
+
+Bu hujjat NETS-Homework-Engine-UNIFIED.md v2.0 asosida tuzilgan.
+Barcha 20 bo'lim + ilovalar to'liq qamrab olingan.
+Tarix 5-sinf, 1-§ "Tarix fani nimani o'rganadi?" ishchi misol sifatida ishlatilgan.
+
+Versiya: 2.0
+Sana: 2026-yil, 2-aprel
+Status: To'liq Blueprint — UNIFIED spec bilan 100% muvofiqlashtirilgan
+
+--- TABLE 1 ---
+Darslik nima qiladi | NETS nima qiladi
+Asosiy tushunchalarni beradi | Tushunchalar bilan FIKRLASHGA majbur qiladi
+Ma'lumotni taqdim etadi | Faol jalb qilishni yaratadi
+Yechilgan misollarni ko'rsatadi | O'quvchini yechimni O'ZI QURISHGA majbur qiladi
+--- END TABLE 1 ---
+
+
+--- TABLE 2 ---
+TO'G'RI (Ichki) | NOTO'G'RI (Tashqi)
+"Siz kasrlarni o'zlashtirdingiz!" | "Siz 7 kun kirish qildingiz!"
+"Fikrlash qobiliyatingiz yaxshilandi!" | "Siz 100 marta bosdingiz!"
+"Sinfdoshingizga yordam berdingiz!" | "Siz reklama ko'rdingiz!"
+--- END TABLE 2 ---
+
+
+--- TABLE 3 ---
+Blok turi | Maqsad | Qaysi fazada ishlatiladi | Manba qatlami
+recall_item | Oldingi boblardan tezkor savol | Faza 1: Memory Sprint | Darslik
+narrative_segment | Darslik kontenti hikoya/hujjatli shaklida | Faza 2: Hikoya rejimi | Darslik + NETS
+checkpoint_question | Segment orasida tushunish darvozasi | Faza 2: Hikoya rejimi | PISA-kalibrlangan
+game_item | Aniq o'yin mexanizmi uchun mashq elementi | Faza 3: O'yin tanaffuslari | Darslik + PISA
+transfer_scenario | Fanlararo real-world muammo | Faza 4: Hayotiy vaziyat | PISA-kalibrlangan
+mnemonic_exercise | Memory Palace, akronim, flashcard mustahkamlash | Faza 5: Mustahkamlash | NETS
+boss_question | PISA-kalibrlangan baholash savoli | Faza 6: Final Boss | PISA-kalibrlangan
+reflection_prompt | Metakognitiv o'z-o'zini ko'rib chiqish | Faza 7: Tafakkur | NETS
+--- END TABLE 3 ---
+
+
+--- TABLE 4 ---
+Kod | Ma'nosi
+UZ-MATH-5-FRAC-01 | O'zbekiston, Matematika, 5-sinf, Kasrlar, Maqsad 01
+UZ-SCI-7-PHOTO-03 | O'zbekiston, Fan, 7-sinf, Fotosintez, Maqsad 03
+UZ-READ-5-NARR-02 | O'zbekiston, O'qish, 5-sinf, Hikoyaviy matn, Maqsad 02
+UZ-HIST-9-SILK-01 | O'zbekiston, Tarix, 9-sinf, Ipak yo'li, Maqsad 01
+--- END TABLE 4 ---
+
+
+--- TABLE 5 ---
+Kod | Ekvivalent birlamchi
+MAT.5.3.4.1 | UZ-MATH-5-FRAC-01 (3-bob, 4-mavzu, 1-maqsad)
+SCI.7.4.2.1 | UZ-SCI-7-PHOTO-01
+--- END TABLE 5 ---
+
+
+--- TABLE 6 ---
+Daraja | Ball diapazoni | O'quvchilar nima qila oladi | O'zbekiston holati
+1 dan past | <258 | Belgilangan jadvallardan yagona qiymatlarni o'qish; asosiy butun son arifmetikasi | ~15% o'quvchilar
+1 | 258-357 | Tanish kontekstlarda barcha ma'lumot mavjud bo'lganda savolarga javob; bir bosqichli protseduralar | ~40% o'quvchilar
+2 | 358-419 | Oddiy strategiya talab qiladigan vaziyatlarni aniqlash; jadval/grafiklardan ma'lumot olish; asosiy nisbatlar | ~25% (MAQSAD MINIMUM)
+3 | 420-481 | Ko'p bosqichli protseduralar; bir nechta manbadan izohlash; sodda muammo yechish strategiyasi | ~12% o'quvchilar
+4 | 482-544 | Murakkab vaziyatlar uchun aniq modellar; tasvirlarni tanlash va birlashtirish; tushuntirishlar qurish | ~5% o'quvchilar
+5 | 545-606 | Murakkab vaziyatlar uchun modellar ishlab chiqish; tizimli muammo yechish; natijalarni real-world kontekstda baholash | ~2% o'quvchilar
+6 | >607 | Kontseptuallashtirish, umumlashtirish, ilg'or matematik fikrlash; ko'p manbalarni bog'lash | <1% o'quvchilar
+--- END TABLE 6 ---
+
+
+--- TABLE 7 ---
+Daraja | Asosiy kompetensiya | Topshiriq turi
+1 | Qisqa matndagi yagona aniq ma'lumotni topish | Kirish va olish
+2 | Asosiy fikrni aniqlash; sodda manbalardan ma'lumotni solishtirish; asosiy xulosa | Kirish va olish +
+3 | Bir nechta ma'lumot qismlarini birlashtirish; raqobatdosh ma'lumot bilan solishtirish/tasniflash | Birlashtirish va izohlash
+4 | Nozikliklarni izohlash; ko'p manbadan xulosa; aloqadorlikni baholash | Birlashtirish va izohlash +
+5 | Manbalar ishonchliligini baholash; ziddiyatli ma'lumotni boshqarish | Aks ettirish va baholash
+6 | Bir nechta murakkab matnni tanqidiy baholash; turli manbalardan sintez | Aks ettirish va baholash +
+--- END TABLE 7 ---
+
+
+--- TABLE 8 ---
+Daraja | Asosiy kompetensiya | Ilmiy jarayon
+1 | Asosiy ilmiy faktlarni aniqlash; oddiy sabab-oqibat munosabatlari | Aniqlash
+2 | Tanish ilmiy hodisalarni tushuntirish; oddiy tadqiqotda o'zgaruvchilarni aniqlash | Tushuntirish
+3 | Ma'lumot/dalillarni izohlash; oddiy eksperimental dizayndagi savolni aniqlash | Izohlash
+4 | Mavhum ilmiy kontentdan foydalanish; ilmiy dalillar yordamida harakatlarni baholash | Dalillardan foydalanish
+5 | Ilmiy bilimlarni yangi/murakkab vaziyatlarga qo'llash; raqobatdosh tushuntirishlarni baholash | Baholash
+6 | Murakkab hayotiy vaziyatlarda ilmiy bilimlarni izchil aniqlash, tushuntirish va qo'llash | Baholash va yaratish
+--- END TABLE 8 ---
+
+
+--- TABLE 9 ---
+PISA daraja | NETS Bloom's xaritalash | Asosiy o'yin mexanizmlari | O'tish ko'nikmalari (L→L+1)
+1 dan past | Eslab qolish | Flashcards, Memory Sprint | Asosiy eslab qolish aniqligi
+1-daraja | Eslab qolish-Tushunish | Tile Match, Sentence Fill, Memory Palace | L1→L2: ko'p bosqichli fikrlash; jadvallardan olish; asosiy nisbat
+2-daraja | Tushunish-Qo'llash | Quizlar, Mystery Box, Hikoya rejimi | L2→L3: ketma-ket qarorlar; bir nechta manbani birlashtirish
+3-daraja | Qo'llash-Tahlil | Hayotiy vaziyat, Why Chain, Boss (Oson) | L3→L4: aniq modellar; tasvirlarni tanlash/birlashtirish
+4-daraja | Tahlil-Baholash | Why Chain (chuqur), Boss (O'rta), Peer Teaching | L4→L5: modellar ishlab chiqish; strategiyalarni solishtirish
+5-6-daraja | Baholash-Yaratish | Boss (Qiyin), Hayotiy vaziyat kengaytirilgan, Creative Lab | L5→L6: kontseptuallashtirish; umumlashtirish
+--- END TABLE 9 ---
+
+
+--- TABLE 10 ---
+Parametr | Standard rejim | Extended rejim
+Davomiyligi | 60 soniya (qat'iy taymer) | 120 soniya
+Savollar soni | 5-8 | 8-10
+Manba | OLDINGI boblar (joriy mavzudan EMAS) | Xuddi shunday
+Format | Yagona javobli eslatish: son, atama, fakt | Xuddi shunday
+Hintlar | Yo'q | Yo'q
+--- END TABLE 10 ---
+
+
+--- TABLE 11 ---
+Harakat | XP
+Har bir to'g'ri javob | +100 XP
+Streak bonusi | +10 XP × joriy_streak
+Tezlik bonusi (<5 soniya) | +10 XP
+Noto'g'ri javob uchun jazo | Yo'q (bu isitish, baholash emas)
+--- END TABLE 11 ---
+
+
+--- TABLE 12 ---
+Parametr | Standard rejim | Extended rejim
+Davomiyligi | 5-7 daqiqa | ~10 daqiqa
+Segmentlar | 3 ta × 90 soniya | 3-5 ta × 2-3 daqiqa
+Nazorat chastotasi | Har segment uchun 1-2 (JAVOB BERMASDAN o'tib bo'lmaydi) | Xuddi shunday
+CPA bosqichlari (faqat Matematika) | Concrete → Pictorial → Abstract | Xuddi shunday
+--- END TABLE 12 ---
+
+
+--- TABLE 13 ---
+Sinf | Semestr hikoyasi | Madaniy elementlar
+3 | "Samarqandning yosh tadqiqotchisi" | Registon, Ipak yo'li, an'anaviy hunarmandchilik
+4 | "Ipak yo'li ekspeditsiyasi" | Karvonlar, savdo, madaniy almashinuv
+5 | "Paxta yig'im-terimi sinovi" | Qishloq xo'jaligi, oila mehnati, qishloq hayoti
+6 | "Registonni qurish" | Arxitektura, dizayndagi matematika
+7 | "Amir Temur yurishi" | Tarix, strategiya, yetakchilik
+8 | "Zamonaviy Toshkent" | Shahar hayoti, texnologiya, taraqqiyot
+9-11 | Fanga xos hikoyalar | Kasbiy tatbiqlar
+--- END TABLE 13 ---
+
+
+--- TABLE 14 ---
+Fan | Hikoya rejimi yondashuvi | Manba
+Matematika | CPA bosqichlash: ob'ektlarni boshqarish → model chizish → tenglamalar yozish | Darslik (Grade 5 Math 2024 da CPA tasdiqlangan)
+Tabiiy fanlar | Hodisa taqdimoti → bashorat → natijalar → tushuntirish | Milliy standartlar
+Adabiyot | Parcha o'qish → muallif/davr konteksti → mavzular muhokamasi | Darslik
+Ingliz/Rus tili | Maqsad tilda immersiv kontent, L1 yordami mavjud | Darslik + PISA
+Tarix | Birlamchi manba parchalari bilan hikoya → sabab/oqibat tahlili | Darslik
+--- END TABLE 14 ---
+
+
+--- TABLE 15 ---
+Parametr | Standard rejim | Extended rejim
+Davomiyligi | 6-9 daqiqa | 10 daqiqa
+O'yinlar soni | 3 ta × 2-3 daq | 3-4 ta × 2-3 daq
+Joylashtirish | Hikoya segmentlari orasida aralashtirilgan | Xuddi shunday
+O'yin tanlash | Fan + Bloom's maqsad + o'quvchi PISA darajasi asosida | Xuddi shunday
+--- END TABLE 15 ---
+
+
+--- TABLE 16 ---
+Parametr | Standard rejim | Extended rejim
+Davomiyligi | 3-5 daqiqa | 10 daqiqa
+Ssenariylar | 1 ta, 2-3 savol | 1 ta, 3-5 savol
+Kontekst | O'zbek madaniy konteksti | Xuddi shunday
+PISA chegarasi | Level 2+ (pastroq → Adaptive Quiz bilan almashtirish) | Xuddi shunday
+--- END TABLE 16 ---
+
+
+--- TABLE 17 ---
+Parametr | Standard rejim | Extended rejim
+Davomiyligi | 2-3 daqiqa | 5 daqiqa
+--- END TABLE 17 ---
+
+
+--- TABLE 18 ---
+Sinf | Mavjud texnikalar
+1-2 | Chunking, qo'shiqlar, she'rlar
+3-4 | Memory Palace kirishi, akronimlar, ikki kodlash
+5-7 | To'liq Memory Palace (Loci), mix sistema, xarita
+8-9 | Intervalli qaytarish mahorati, imtihon texnikalari
+10-11 | Mustaqil boshqariladigan tizimlar
+--- END TABLE 18 ---
+
+
+--- TABLE 19 ---
+Parametr | 1-4 sinf | 5-8 sinf | 9-11 sinf
+Boss HP | 50 | 100 | 150
+Savol turlari | MC + qisqa javob | Qisqa javob + ochiq fikrlash | Faqat ochiq fikrlash
+Hint jarima | -5 HP | -10 HP | -15 HP
+Combo | 3 ketma-ket → 2× zarar | Xuddi shunday | Xuddi shunday
+O'tib ketish | YO'Q | YO'Q | YO'Q
+--- END TABLE 19 ---
+
+
+--- TABLE 20 ---
+Daraja | Zarar | PISA Level | Bloom's | Taqsimot
+Oson | -10 HP | O'quvchining JORIY darajasida yoki pastda | Apply | 40%
+O'rta | -20 HP | O'quvchining MAQSAD darajasida | Analyze | 40%
+Qiyin | -30 HP | Maqsaddan YUQORI | Evaluate/Create | 20%
+--- END TABLE 20 ---
+
+
+--- TABLE 21 ---
+Yulduzlar | Mezon | Ochiladi
+1 yulduz | Boss yengildi (har qanday urinish) | Bob tugallandi
+2 yulduz | Boss <=2 urinishda, >50% HP qoldi | Bonus avatar elementi
+3 yulduz | Boss BIRINCHI urinishda, hintsiz, >80% HP | Maxsus nishon progressi
+--- END TABLE 21 ---
+
+
+--- TABLE 22 ---
+Faza | Tetik | Harakat | Manba
+F1: Sprint | Aniqlik < 60% | Remediation A: darslik sahifasiga yo'naltirish → qayta recall | UNIFIED 5.1
+F2: Hikoya | Nazorat savoliga 2x noto'g'ri | Soddalashtirilgan versiya ko'rsatish | UNIFIED 5.2
+F3: O'yinlar | Bitta standartda < 40% | Remediation B: Story Mode micro-segment kiritish | UNIFIED 9.1
+F5: Mustahkamlash | Esga tushirish < 3/5 | Texnikani o'zgartirish, tushunchalar sonini kamaytirish | Blueprint dizayn
+F6: Boss | Boss yengilmadi | Remediation C: AI Sokratik tutoring → qayta boss | UNIFIED 5.6
+--- END TABLE 22 ---
+
+
+--- TABLE 23 ---
+Metrika | Tetik | Keyingi sessiya o'zgarishi
+Standard mastery < 0.6 | Sessiya yakunlanishi | Memory Sprint ga kiritiladi
+O'tish ko'nikmasi < 80% | 2 sessiya davomida | O'sha ko'nikmani nishonga oluvchi o'yin ustuvorligi oshadi
+PISA daraja tushmoqda | 3 ketma-ket sessiya | Boost Mode faollashtiriladi
+Boss yutqazishlar ko'paymoqda | Haftada 2+ marta | Keyingi sessiyada hikoya murakkabligi kamayadi
+--- END TABLE 23 ---
+
+
+--- TABLE 24 ---
+Qayerda | Qanday his qiladi | Mexanizm
+Sprint fallback | "Yaxshi isitish! Davom etamiz." | Osonroq kontentga yo'naltirish
+O'yin micro-segment | "Tez nazorat — bir xil sahifadamiz." | Tabiiy sessiya ritmi sifatida kiritiladi
+Post-boss Sokratik | "Keling, birga o'ylab ko'raylik." | O'quvchi o'z fikrlashini o'zi tushuntiradi
+Sessiyalar arasi | Ko'proq Sprint savollari | E'lon yo'q — tizim jimgina ustuvorlik beradi
+--- END TABLE 24 ---
+
+
+--- TABLE 25 ---
+# | Mexanizm | Bloom's | PISA | Eng yaxshi kontent turi | Fanga moslik | Sinf cheklovi
+1 | Memory Sprint | Remember | 1 | Faktlar, formulalar, sanalar | BARCHA | 1-2: 4 savol
+2 | Flashcards | Remember | 1 | So'z boyligi, ta'riflar | BARCHA | 10-11: mustaqil
+3 | Tile Match | Understand | 1-2 | Tushuncha-vizual juftlash | Mat, Ing, Fan, Tarix | 5-8: 6-8 juft
+4 | Sentence Fill | Understand | 2 | Grammatika, cloze, formulalar | Adab, Ing, Fan, Tarix | 8-11: so'z bankisiz
+5 | Memory Palace | Remember | 1-2 | Ketma-ket faktlar, jarayonlar | BARCHA | 3-4 da kirish
+6 | Story Mode | Understand | 2-3 | Yangi tushuncha kiritish | BARCHA (fanga xos) | —
+7 | Adaptive Quiz | Apply | 2-3 | Ko'p bosqichli, IRT-kalibrlangan | BARCHA | 7+ da IRT
+8 | Mystery Box | Apply/Analyze | 3 | Aralashtirilgan masala turi | Mat, Fan, Tarix | 3-4 da 3 quti
+9 | Movement Breaks | Apply | 1-2 | Kinestetik mustahkamlash | Mat, Fan | 1-4: SHART, 5-6: ixtiyoriy, 7+: o'chirilgan
+10 | Why Chain | Analyze | 3-4 | Sabab fikrlash | Fan, Tarix, Adab | 5-sinf: 3-4 daraja
+11 | Peer Teaching | Evaluate | 4-5 | Tushuntirish | BARCHA | 5+ sinfdan
+12 | Real-Life | Evaluate | 4-5 | O'zbek kontekstida | BARCHA | 1-3: soddalashtirilgan
+13 | Reflection | Create | 3-4 | Metakognitiv baholash | BARCHA | 1-2: og'zaki
+14 | Final Boss | Apply-Create | 3-6 | Sintez masala, HP tizimi | BARCHA | Darajalangan
+15 | Creative Lab | Evaluate/Create | 4-6 | Ochiq muammo, ko'p yechim | BARCHA | 5+ sinf, PISA L3+
+--- END TABLE 25 ---
+
+
+--- TABLE 26 ---
+Sinf | PISA maqsad | Asosiy kompetensiyalar | Asosiy NETS o'yinlari | O'tish ko'nikmalari
+1-2 | 1 dan past - 1 | Asosiy eslab qolish, oddiy bir bosqichli amallar | Memory Sprint, Tile Match, Movement Breaks | Asosiy son sezgisi
+3 | 1-daraja | Bir bosqichli masalalar, tanish kontekstlar | Memory Sprint, Tile Match, Flashcards | L0→L1: barcha ma'lumot mavjud savollar
+4 | 1-2 daraja | Bir bosqichdan asosiy ko'p bosqichga | Story Mode, Adaptive Quiz, Sentence Fill | L1→L2: oddiy jadvallardan olish; asosiy nisbatlar
+5 | 2-daraja | Ko'p bosqichli masalalar, asosiy fikrlash | Why Chain, Final Boss, Mystery Box | L1→L2: oddiy tasvirlarni izohlash
+6 | 2-3 daraja | Qo'llanma matematika, modellashtirish boshlanishi | Real-Life Challenge, Adaptive Quiz | L2→L3: ketma-ket qarorlar; fikrlashni ifodalash
+7 | 3-daraja | Murakkab fikrlash, asoslash | Why Chain (4+ daraja), Final Boss Medium | L2→L3: bir nechta manbani birlashtirish
+8 | 3-4 daraja | Mavhum fikrlash, isbotlash tushunchalari | Final Boss, Mystery Box, Peer Teaching | L3→L4: aniq modellar; tasvirlarni birlashtirish
+9 | 4-daraja | Ilg'or modellashtirish, baholash | Real-Life Challenge, Peer Teaching | L3→L4: dalillar bilan tushuntirishlar qurish
+10 | 4-5 daraja | Murakkab muammo yechish, strategiya solishtirish | Barcha o'yinlar mahorat darajasida | L4→L5: modellar; strategiyalarni solishtirish
+11 | 5-6 daraja | PISA tayyor, ijodiy matematik fikrlash | Boss Qiyin, Real-Life Extended, Creative Lab | L5→L6: kontseptuallashtirish; umumlashtirish
+--- END TABLE 26 ---
+
+
+--- TABLE 27 ---
+Ko'nikma | Tavsif | NETS o'yinlari | Baholash qatlami
+Matematik fikrlash | Mantiqiy dalillar qurish | Why Chain, Final Boss | PISA-kalibrlangan
+Muammo yechish | Matematikani yangi vaziyatlarga qo'llash | Real-Life, Mystery Box | PISA-kalibrlangan
+Matematik modellashtirish | Real world → matematika | Real-Life Challenge | PISA-kalibrlangan
+Kommunikatsiya | Matematik fikrlashni tushuntirish | Reflection, Why Chain, Peer Teaching | PISA-kalibrlangan
+--- END TABLE 27 ---
+
+
+--- TABLE 28 ---
+Sinf | PISA maqsad | Asosiy ko'nikma fokusi | Asosiy NETS o'yinlari | O'tish ko'nikmalari
+1-2 | 1-daraja | Topish: qisqa matndagi yagona aniq ma'lumot | Memory Sprint, Sentence Fill, Tile Match | Asosiy so'zni tanish, aniq tushunish
+3-4 | 1-2 daraja | Xulosa: asosiy fikrni aniqlash; oddiy xulosalar | Story Mode, Why Chain (2 daraja), Sentence Fill | L1→L2: oddiy manbalardan solishtirish; asosiy xulosa
+5-6 | 2-3 daraja | Izohlash: matnning bir nechta qismidan ma'lumotni birlashtirish | Why Chain (3 daraja), Mystery Box, Adaptive Quiz | L2→L3: bir nechta ma'lumotni birlashtirish; solishtirish/tasniflash
+7-8 | 3-4 daraja | Baholash: kontent va shaklga aks ettirish; aloqadorlikni baholash | Real-Life, Why Chain (4 daraja), Boss Medium | L3→L4: nozikliklarni izohlash; ko'p manbadan xulosa
+9-11 | 4-6 daraja | Tanqidiy tahlil: raqobatdosh da'volarni baholash; ishonchlilikni baholash | Real-Life (kengaytirilgan), Boss Qiyin, Peer Teaching, Creative Lab | L4→L5: ishonchlilikni baholash; ziddiyatni boshqarish
+--- END TABLE 28 ---
+
+
+--- TABLE 29 ---
+Sinf | PISA maqsad | Asosiy ko'nikma fokusi | Asosiy NETS o'yinlari | O'tish ko'nikmalari
+1-2 | 1-daraja | Ilmiy bilim: asosiy ilmiy faktlar; oddiy sabab-oqibat | Memory Sprint, Flashcards, Movement Breaks | Asosiy kuzatish, hodisalarni nomlash
+3-4 | 1-2 daraja | Ilmiy tushuntirish: oddiy sabab-oqibat munosabatlarini tasvirlash | Story Mode, Tile Match, Why Chain (2 daraja) | L1→L2: tanish hodisalarni tushuntirish; o'zgaruvchilarni aniqlash
+5-6 | 2-3 daraja | Dalillarni baholash: da'volarni qo'llab-quvvatlash uchun dalillardan foydalanish | Mystery Box, Adaptive Quiz, Why Chain (3 daraja) | L2→L3: ma'lumot/dalillarni izohlash; eksperimental savollarni aniqlash
+7-8 | 3-4 daraja | Eksperimental dizayn: o'zgaruvchilarni aniqlash, testlar taklif qilish | Real-Life, Why Chain (4 daraja), Boss Medium | L3→L4: mavhum ilmiy kontent; dalillar yordamida baholash
+9-11 | 4-6 daraja | Ilg'or modellashtirish: ilmiy modellar qurish; raqobatdosh gipotezalarni baholash | Real-Life (kengaytirilgan), Boss Qiyin, Peer Teaching, Creative Lab | L4→L5: yangi/murakkab vaziyatlarga bilimni qo'llash
+--- END TABLE 29 ---
+
+
+--- TABLE 30 ---
+Mexanizm | Standart rejim | Ijodiy tafakkur kengaytmasi
+Real-Life Challenge | 1 ta to'g'ri yechim yo'li | "3 xil yechim toping. Qaysi biri yaxshiroq? Nima uchun?"
+Final Boss (Qiyin) | Baholash/Yaratish savollari | Ochiq dizayn/yaratish savollari kiritish
+Reflection Journal | "Qaysi strategiya yordam berdi?" | "Nima boshqacha qilgan bo'lar edingiz? Muqobil yondashuv yarating"
+Why Chain | Chiziqli sabab zanjiri | "Tarmoq Zanjiri": 3+ darajada o'quvchi 2+ turli sabab yo'llarini aniqlashi kerak
+Peer Teaching | To'g'ri usulni tushuntirish | "Darslikdan butunlay boshqa analogiya ishlatib tushuntiring"
+--- END TABLE 30 ---
+
+
+--- TABLE 31 ---
+Sinf guruhi | Ijodiy tafakkur fokusi | NETS amalga oshirish
+1-4 | Divergent o'yin, ko'p tasvirlar | Movement Breaks ijodiy element bilan; Tile Match "o'zingiz juft yarating"
+5-6 | Ko'p yechimlar yaratish | Real-Life Challenge: "Buni yechishning 2 ta turli usulini toping"
+7-8 | Fikrlarni baholash va yaxshilash | Why Chain tarmoqlari; Peer Teaching muqobil tushuntirishlar bilan
+9-11 | To'liq ijodiy muammo yechish | Creative Lab; Boss Qiyin daraja dizayn savollari bilan
+--- END TABLE 31 ---
+
+
+--- TABLE 32 ---
+Daraja | Tavsif | Muvaffaqiyat maqsadi | PISA daraja diapazoni
+Tier 1 | Asosiy (eslab qolish) | 80-90% | 1 dan past - 1
+Tier 2 | Asosiy qo'llash | 70-80% | 1-2
+Tier 3 | Ko'p bosqichli fikrlash | 70-80% | 2-3
+Tier 4 | Murakkab tahlil | 60-70% | 3-4
+Tier 5 | Ilg'or baholash/yaratish | 60-70% | 5-6
+--- END TABLE 32 ---
+
+
+--- TABLE 33 ---
+Kontent turi | Minimal soni | Maqsad
+recall_item | 10 | Memory Sprint puli (sessiyalar bo'yicha aylantiriladi)
+narrative_segment | 3-5 | Story Mode yetkazish
+checkpoint_question | 1 per segment | Story Mode darvozalari
+tile_match_pair | 8 juft | O'yin tanaffusi varianti
+flashcard | 10 karta | O'yin tanaffusi + Mustahkamlash
+sentence_fill | 8 element | O'yin tanaffusi varianti
+quiz_item | 12 (4 oson, 4 o'rta, 4 qiyin) | O'yin tanaffusi — adaptiv
+mystery_box_item | 6 (aralash mavzular) | O'yin tanaffusi varianti
+why_chain_sequence | 3 ketma-ketlik | O'yin tanaffusi varianti
+real_life_scenario | 3 ssenariy | Faza 4 (aylantiriladi)
+mnemonic_exercise | 2 mashq | Faza 5 (texnikaga qarab tanlanadi)
+boss_question | 15 savol (5 oson, 5 o'rta, 5 qiyin) | Faza 6 (qayta yaratish puli)
+reflection_prompt | 3 prompt | Faza 7 (aylantiriladi)
+--- END TABLE 33 ---
+
+
+--- TABLE 34 ---
+Faza | Xarajat omili | Baholash
+OCR + Tahlil | GPT-4o Vision, ~200 sahifa | ~$5
+Topshiriq yaratish | O'rtacha 500 topshiriq/darslik | ~$5
+Avtomatlashtirilgan SN | LLM validatsiya | ~$1
+O'qituvchi ko'rigi | 10 soat mahalliy tarif bilan | ~$50
+Har darslik uchun jami |  | ~$61
+5-sinf (10 fan × 2 til) |  | ~$1,220
+5-8 sinf (pilot hajmi) |  | ~$4,880
+--- END TABLE 34 ---
+
+
+--- TABLE 35 ---
+Sinf | Til | Mavjud fanlar | Asosiy kamchiliklar
+5 | Ruscha | Fan, Informatika, Tarix, Rasm, Axloq, Texnologiya | Matematika (alohida PDF), Til darsliklari
+5 | O'zbekcha | Biologiya, Geografiya, Informatika, Musiqa, Fan, Axloq, Texnologiya | Matematika, Til darsliklari
+6 | Ruscha | Fan, Botanika, Axloq, Informatika, Tarix, Adabiyot, Musiqa, Texnologiya | Matematika, Til
+7 | Ruscha | Algebra, Biologiya, Geografiya, Geometriya, Informatika, Adabiyot, Fizika, Kimyo | Til
+7 | O'zbekcha | Algebra, Biologiya, Fizika, Geografiya, Geometriya, Informatika, Kimyo | Til
+8 | Ruscha | Algebra, Biologiya, Axloq | Juda to'liqsiz
+--- END TABLE 35 ---
+
+
+--- TABLE 36 ---
+Harakat | Asosiy XP | Izohlar
+Memory Sprint (har to'g'ri) | 100 | +10 streak bonus har ketma-ket to'g'ri uchun
+Story Mode tugatish | 150 | Har sessiya
+Tile Match (mukammal) | 300 | Qisman: 100-250
+Why Chain (har daraja) | 150 | 1-4 sinf: 100, 9-11 sinf: 200
+Sentence Fill (har to'g'ri) | 100 | Birinchi urinish bonus: +25
+Mystery Box (har quti) | 250 maks | 50 tur aniqlash + 150 yechim + 50 bonus
+Real-Life Challenge | 400 | 1-4 sinf: 300, 9-11 sinf: 500
+Memory Palace (barchasi to'g'ri) | 300 | 50 har tushuncha uchun
+Final Boss (3 yulduz) | 1000 | 2 yulduz: 700, 1 yulduz: 500
+Reflection Journal | 100 | Faqat tugatish uchun
+Peer Teaching | 400 | To'liqlik + Aniqlik + To'g'rilik
+Creative Lab | 500 maks | Xilma-xillik + Originallik + Amalga oshirish + Kommunikatsiya
+--- END TABLE 36 ---
+
+
+--- TABLE 37 ---
+Streak uzunligi | XP ko'paytiruvchi | Vizual ko'rsatkich
+Kunlik (1 kun) | +20% | 1 alanga
+7 kun | +50% | 7 alanga
+14 kun | +75% | Maxsus ramka
+30+ kun | +100% | Maxsus ramka + unvon
+--- END TABLE 37 ---
+
+
+--- TABLE 38 ---
+Nishon | Talab | Ko'rsatish
+Murabbiy | 10 ta Peer Teaching bajarish | Profil + avatar ramkasi
+Streak ustasi | 30 kunlik streak | Profil + yuklash ekrani
+PISA chempioni | Har qanday fanda PISA 3+ darajaga yetish | Profil + maxsus unvon
+Boss qotili | 50 ta boss mag'lub qilish | Profil + avatar aksessuar
+Tez o'rganuvchi | Bobni <10 daqiqada tugatish | Profil
+Ko'tarilayotgan yulduz | Eng ko'p yaxshilangan (haftalik) | Haftalik aylanadigan nishon
+Bozor yordamchisi | 10 ta Real-Life Challenge bajarish | Profil
+Ijodiy aql | 5 ta Creative Lab bajarish | Profil
+--- END TABLE 38 ---
+
+
+--- TABLE 39 ---
+Boshqaruv | Standart | Diapazoni
+Sessiya rejimi | Standard (20-30 daq) | Standard / Extended (40-50 daq)
+O'tkazib yuborilgan uy vazifasi uchun grace period | 3 kun | 1-7 kun
+Final Boss HP modifikatori | 100% | 50%-150%
+Hint mavjudligi | Yoqilgan (XP xarajati bilan) | Yoqilgan / O'chirilgan
+Faza 4 (Hayotiy vaziyat) | Majburiy | Majburiy / Ixtiyoriy
+Minimal tafakkur uzunligi | 10 belgi | 10 belgi - 5 gap
+Qiyinlik pastki chegarasi | O'quvchining PISA daraja - 1 | Sozlanishi mumkin
+O'yin mexanizmi tanlash | Avtomatik | Avtomatik / Qo'lda tanlash
+Kunlik tiklash sessiyalari | 2 maks | 1-3
+Majburiy vs ixtiyoriy uy vazifasi | Majburiy | Majburiy / Ixtiyoriy
+Creative Lab mavjudligi | Avtomatik (3+ daraja) | Yoqilgan / O'chirilgan
+--- END TABLE 39 ---
+
+
+--- TABLE 40 ---
+Xususiyat | Tavsif
+Issiqlik xaritasi | Har o'quvchi, har bob, har standard uchun mastery vizualizatsiyasi
+Muddat boshqaruvlari | Uy vazifasi muddatlarini belgilash, uzaytirish yoki bekor qilish
+Maxsus topshiriqlar | NETS o'yin mexanizmi yordamida topshiriqlar yaratish (standartlarga teglangan)
+Maxsus Boss savollari | Standartlarga teglangan boss savollari yaratish
+Qiyinlik override | Aniq o'quvchilar uchun tizim qiyinligini override qilish
+Uzrli belgilash | Uy vazifasini tiklash navbatidan olib tashlash
+Sinf tushunchalari | Qaysi darslik bo'limlari sinfda mustahkamlashni talab qiladi (sinf miqyosida zaif standardlar)
+Jalb qilish ogohlantirishlari | Tugatish yoki natijasi tushayotgan o'quvchilar
+--- END TABLE 40 ---
+
+
+--- TABLE 41 ---
+O'yin | 1-2 sinf | 3-4 sinf | 5-6 sinf | 7-8 sinf | 9-11 sinf
+Memory Sprint | Soddalashtirilgan (4 savol) | Standart | Standart | Standart | Standart
+Story Mode | Ko'p vizual | Muvozanatli | Muvozanatli | Ko'p matn | Ko'p matn
+Tile Match | 4 juft | 6 juft | 6-8 juft | 8 juft | 8 juft
+Sentence Fill | So'z banki (to'liq) | So'z banki (to'liq) | So'z banki (qisman) | So'z bankisiz | So'z bankisiz
+Memory Palace | Mavjud emas | Kirish (3 element) | To'liq (5 element) | To'liq | To'liq
+Flashcards | Oddiy | Standart | Standart | Standart | Mustaqil
+Adaptive Quiz | Soddalashtirilgan | Standart | Standart | IRT-kalibrlangan | IRT-kalibrlangan
+Mystery Box | Mavjud emas | 3 quti | 3-5 quti | 5 quti | 5 quti
+Movement Breaks | MAJBURIY | MAJBURIY | Ixtiyoriy | O'chirilgan | O'chirilgan
+Why Chain | 2 daraja | 3 daraja | 3-4 daraja | 4-5 daraja | 5+ daraja
+Peer Teaching | Mavjud emas | Mavjud emas | Mavjud | Mavjud | Mavjud
+Real-Life Challenge | Soddalashtirilgan | Standart | Standart | Kengaytirilgan | Kengaytirilgan
+Final Boss | 50 HP, MC | 50 HP, MC | 100 HP, aralash | 100 HP, ochiq | 150 HP, ochiq
+Reflection Journal | 1 prompt, og'zaki | 1 prompt | 2 prompt | 2 prompt | 3 prompt
+Creative Lab | Mavjud emas | Mavjud emas | Mavjud (L3+) | Mavjud (L3+) | Mavjud (L3+)
+--- END TABLE 41 ---
+
+
+--- TABLE 42 ---
+Sinf guruhi | Standard rejim | Extended rejim | Recovery rejim
+1-2 sinf | 15-20 daq | 30 daq | 10-15 daq
+3-4 sinf | 20-25 daq | 35-40 daq | 15-20 daq
+5-8 sinf | 20-30 daq | 40-50 daq | 15-20 daq
+9-11 sinf | 25-30 daq | 45-50 daq | 20-25 daq
+--- END TABLE 42 ---
+
+
+--- TABLE 43 ---
+Sinf | Ingliz maqsad (CEFR) | Ruscha/O'zbekcha L2 maqsad | Asosiy NETS o'yinlari
+1-2 | Pre-A1 | N/A (L1 fokus) | Flashcards (so'z boyligi), Movement Breaks (TPR), Tile Match (so'z-rasm)
+3-4 | A1 | Pre-A1 (agar tegishli) | Sentence Fill (grammatika), Story Mode (tushunish), Flashcards
+5-6 | A1-A2 | A1 | Sentence Fill, Why Chain (oddiy diskurs), Story Mode (immersiv)
+7-8 | A2-B1 | A1-A2 | Barcha mexanizmlar maqsad tilida, Why Chain (diskurs tahlili)
+9-11 | B1-B2 | A2-B1 | To'liq immersiya rejimi, L2 da Peer Teaching, L2 da Real-Life
+--- END TABLE 43 ---
+
+
+--- TABLE 44 ---
+# | Mexanizm/Tamoyil | Manba | Asosiy topilma
+1 | Loci usuli | Maguire va boshq. (2003) | 300% eslab qolish yaxshilanishi
+2 | Ikki kodlash | Paivio (1986) | Vizual + so'zli = yaxshiroq xotira
+3 | Unutish egri chizig'i | Ebbinghaus (1885) | Ko'rib chiqishsiz eksponentsial so'nish
+4 | Eslab qolish mashqi | Roediger & Karpicke (2006) | Faol eslab qolish > qayta o'qish (3 baravar)
+5 | Interleaving | Rohrer & Taylor (2007) | 43% yaxshiroq transfer
+6 | Elaborativ so'roq | Pressley va boshq. (1992) | "Nima uchun?" savollari tushunishni chuqurlashtirad
+7 | Oqim nazariyasi | Csikszentmihalyi (1990) | Qiyinlik-ko'nikma muvozanati = optimal o'rganish
+8 | O'z-o'zini belgilash | Deci & Ryan (2000) | Avtonomiya, kompetentlik, aloqadorlik
+9 | Hikoyaviy eslab qolish | Willingham (2004) | Hikoya bilan 22 baravar yaxshiroq eslab qolish
+10 | Cloze testi | Taylor (1953) | Ishonchli tushunish o'lchovi
+11 | Fenomen-asosli o'rganish | Silander (2015) | Fanlararo transfer, +1-2 PISA daraja
+12 | Metakognitsiya | Flavell (1979) | Tafakkur natijalarni 20-30% yaxshilaydi
+13 | Protege effekti | Chase va boshq. (2009) | O'qitish o'rganishni +25% chuqurlashtiradi
+14 | Tanalangan bilish | Barsalou (2008) | Harakat o'rganishni +15-20% yaxshilaydi
+15 | Samarali kurash | Stigler & Hiebert (1999) | Kurash chuqurroq o'rganishga, +2 PISA sub-daraja
+16 | Singapur CPA | Leong va boshq. (2015) | Matematik tushunish uchun tuzilgan progressiya
+17 | Item Response Theory | Lord (1980) | Adaptiv test aniqligi
+18 | PISA 2022 Framework | OECD (2023) | Xalqaro baholash standartlari
+19 | Ijodiy tafakkur | OECD (2024) | Ijodiy tafakkurni baholash tizimi
+--- END TABLE 44 ---
+
+
+--- TABLE 45 ---
+Mavzu | Asl spetsifikatsiya | HOMEWORK_STANDARDS | TASK_ENGINE | Yagona qaror | Sabab
+Sessiya davomiyligi | 50 daq | 20-30 daq | 20-30 daq | 20-30 daq (50 Extended) | Uy vazifasi uchun amaliy; 50 daq o'qituvchi override
+Standart kod formati | MAT.5.1.3.2 (nuqtali) | Belgilanmagan | UZ-MATH-5-FRAC-01 | Ikki format (tavsifiy birlamchi) | Tavsifiy o'qilishi oson; nuqtali orqaga mos
+Boss PISA daraja | Darajalanmagan | Level 3-4 | Level 3-5 | Level 3-6 (darajalangan) | To'liq PISA diapazoni qamrab olinishi kerak
+Reflection PISA | Belgilanmagan | Level 6 | Level 3-4 | Level 3-4 | Tafakkur metakognitiv, PISA L6 ilg'or fikrlash emas
+Memory Sprint XP | 10 XP | 100 XP | 100 XP | 100 XP | Geymifikatsiya iqtisodiyotini qo'llab-quvvatlaydi
+Oqim chegarasi | 3 ketma-ket to'g'ri/2 noto'g'ri | <60%/>90%/70-80% | Belgilanmagan | Ikkalasi (foiz asosiy) | Foiz mustahkamroq; ketma-ket chekka holatlarni ushlaydi
+O'yin soni | 12 + Memory Palace ichki | 14 (Memory Palace mustaqil) | 14 | 14 (Memory Palace mustaqil) | Memory Palace mustaqil mexanizm statusi uchun yetarlicha alohida
+O'qish/Fan progressiya | To'liq (faqat Mat) | Stub o'rinbosarlar | Daraja bo'yicha | To'liq matritsalar | 3 PISA domenidan 2 tasi stub bo'la olmaydi
+Ijodiy tafakkur | Ko'rib chiqilmagan | Ko'rib chiqilmagan | Ko'rib chiqilmagan | Yangi §19 | PISA 2022 baholadi; O'zbekiston 14/60; e'tiborsiz qoldirib bo'lmaydi
+Favqulodda holatlar | To'liq (§9.1-9.4) | Etishmaydi | Ko'rib chiqilmagan | To'liq (asl spec dan) | 8.8M o'quvchi uchun kundalik voqelik
+Takomillashtirish cheklovlar | Ko'rib chiqilmagan | QIL/QILMA qoidalar | Ko'rib chiqilmagan | Aniq §29 | Tizim nima qilishi/qilmasligi aniq belgilanishi kerak
+IT istisnosi | Ko'rib chiqilmagan | Ko'rib chiqilmagan | Ko'rib chiqilmagan | §29.3 da hujjatlashtirilgan | IT darslik doirasidan chiqishi mumkin
+Liderlar/Avatar | Belgilanmagan | Qisqacha eslatilgan | Ko'rib chiqilmagan | To'liq spec (§22) | Asosiy geymifikatsiya maxsus spec talab qiladi
+Ikki tilli tizim | Belgilanmagan | Belgilanmagan | Ko'rib chiqilmagan | Yangi §30 | Til o'rganish asosiy fan
+--- END TABLE 45 ---
+
+
+--- TABLE 46 ---
+Faza | Tizim harakati | Daraja | Rejim
+Pre-session | Sessiya yig'ish | 1 | Yaqin-real-vaqt
+F1: Sprint | Item tanlash (spaced rep) | 1 | Yaqin-real-vaqt
+F2: Hikoya | Kontent yetkazish | 1 | Yaqin-real-vaqt
+F2: Hikoya | Checkpoint adaptatsiya (2x noto'g'ri) | 2 | Real-vaqt
+F3: O'yinlar | O'yin + item tanlash | 1 | Yaqin-real-vaqt
+F3: Why Chain | Sokratik dialog | 2 | Real-vaqt
+F4: Real-Life | Ssenariy tanlash | 1 | Yaqin-real-vaqt
+F5: Mustahkamlash | Texnika tanlash | 1 | Yaqin-real-vaqt
+F6: Boss | Savol tanlash | 1 | Yaqin-real-vaqt
+F6: Boss | Savol qayta yaratish (retry) | 3 (Generativ AI) | Real-vaqt
+F6: Boss | Sokratik tutoring (yutqazish) | 3 (Generativ AI) | Real-vaqt
+F7: Tafakkur | Prompt tanlash | 1 | Yaqin-real-vaqt
+Post-session | Profil yangilash + ota-ona xulosa | 1-2 | Fon
+--- END TABLE 46 ---
+
+
+--- TABLE 47 ---
+# | Mezon | Tekshiruv | Manbaning holati
+1 | Darslik — haqiqat manbai | textbook_ref to'ldirilganmi? Sahifa, bob, mavzu bormi? | Tegi yo'q = DRAFT
+2 | Standartga murojaat | standard_ref (birlamchi + alias) to'ldirilganmi? | Tegi yo'q = DRAFT
+3 | PISA-kalibrlangan | pisa_ref (daraja, domen, jarayon, kontekst, transition_skill) to'ldirilganmi? | Tegi yo'q = DRAFT
+--- END TABLE 47 ---

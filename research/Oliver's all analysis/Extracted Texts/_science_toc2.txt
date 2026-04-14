@@ -1,0 +1,34 @@
+p3: Polvonov Satimboy Rajapovich, Nurillayev Bobomurod Najmiddinovich, Eshchanov Baxodir
+p4: Bobning kirish qismida mavzu bilan
+p9: 1-bob
+p10: 2-bob
+p12: 4-bob
+p12: 5-bob
+p14: 9-bob
+p14: 10-bob .
+p20: Torning uzunligi musiqa asbobidan tarqaladigan tovush
+p49: Birinchi bobda hasharot va qushlar o'simlik gullarini changlatishda muhim o‘rin
+p59: 3-bob
+p78: Termometr biror jismning haroratini aniqlashga yordam beradigan asbobdir.
+p87: haroratni o'lchaydigan asbob
+p93: "Ф\ Bobur birxil balandlikdan
+p93: ^Sizningcha, Bobur o‘z
+p93: Bobur natijalar ishonchli bo'lishini ta’minlash uchun
+p93: Agar natijalarda juda katta farq bo'lsa, Bobur tajriba
+p95: deb ataladi. Siz darslikning 2-bobida ba’zi baliqlarning suyri shakldagi uzun tanasi
+p102: 2-bobda hayvonlar o‘z yashash muhitiga qanday moslashgani haqida o'rgangan
+p102: 6-bob
+p106: Qanday qilib turli musiqa asboblaridan
+p106: 4. Rezina torni xuddi torii musiqa asbobini chalgandek
+p107: Biz musiqa asboblarini ishlatganimizda ba’zan baland, ba’zan past tovushlarni
+p107: Keling, ba’zi musiqa asboblari baland va past tovushlarni qanday chiqarishiga
+p107: O‘zbek milliy musiqa asbobi chang ham
+p112: Rubob chiqaradigan tovush qattiqligini
+p113: tovush qattiqligini o'lchovchi asbob
+p114: 7-bob
+p123: Sardorga bu muammoni hal qilishda yordam bera olasizmi? 4-bobda aralashma
+p123: va eritmalardan moddalarni ajratib olish hamda mazkur bobda magnitlar haqida
+p125: 8-bob
+p131: Siz 3-bobda bug‘lanish va kondensatsiya haqida bilib oldingiz. Bu jarayon lar Yer
+p139: 9-bob
+p140: 3. 2-bobda hayvonlar o‘z yashash muhitiga qanday moslashgani haqida

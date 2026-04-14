@@ -1,0 +1,310 @@
+================================================================================
+GRADE 5 TEXNOLOGIYA (TECHNOLOGY) TEXTBOOK - COMPREHENSIVE STRUCTURAL ANALYSIS
+================================================================================
+
+TEXTBOOK IDENTIFICATION
+--------------------------------------------------------------------------------
+Title:        Texnologiya (Technology)
+Grade:        5-sinf (Grade 5)
+Authors:      O'. O. Tohirov, D. S. Mirahmedova, Z. S. Shamsiyeva
+Publisher:    "Sharq" nashriyot-matbaa aksiyadorlik kompaniyasi, Bosh tahririyati
+City:         Toshkent (Tashkent), Uzbekistan
+Year:         2020
+Pages:        244 (PDF) / 240 (printed pagination)
+ISBN:         978-9943-5997-4-1
+UDK:          373.5.013.32=512.133(075.3)
+KBK:          74.263
+Edition:      Approved by the Ministry of Public Education of the Republic of
+              Uzbekistan (O'zbekiston Respublikasi Xalq ta'limi vazirligi tomonidan tavsiya etilgan)
+Print Run:    500,940 copies (original) + 200,000 copies (reprint)
+Format:       60x84 1/8, Arial font, offset printing
+
+Reviewers (Taqrizchilar):
+  - Sh. S. Sharipov - Jizzax DPI rektori, pedagogika fanlari doktori, professor
+  - I. Karimov - Qo'qon DPI dotsenti, pedagogika fanlari nomzodi
+  - F. A. Nasrullayeva - Sergeli tumani 330-sonli maktab "Texnologiya" o'qituvchisi
+  - D. A. Zokirova - Yunusobod tumani 235-sonli maktab "Texnologiya" o'qituvchisi
+  - E. Shokirov - Chilonzor tumani amaliy fanlar metodi
+
+Editors: Rustam Yorlaqabov, Qodirjon Qayumov
+Art Editor: Bahrom Bobojonov
+Illustrator: Umida Akbarova
+Technical Editor: Oygul Fozilova
+QR Code: O'ktamjon Shokarimov
+
+DOMAINS/SUBJECT AREAS
+--------------------------------------------------------------------------------
+This is a MIXED-domain technology textbook covering TWO main tracks
+(yo'nalishlar) that students study:
+
+TRACK 1: TEXNOLOGIYA VA DIZAYN (Technology and Design)
+  - Modern technology and machinery concepts
+  - Woodworking (yog'ochga ishlov berish) - carpentry workshop skills
+  - Materials science (wood, polymers, composites, metals)
+  - Machine mechanisms and transmissions (belt, chain, gear, worm, friction, rack)
+  - Technical modeling and construction (transport vehicles)
+  - Energy production and utilization (mechanical, electrical, solar, nuclear)
+  - Electric motors, batteries, hydraulic transmissions
+  - 3D printing concepts (3D pen/3D ruchka)
+
+TRACK 2: SERVIS XIZMATI (Service Industry)
+  - Food processing technology (oziq-ovqat mahsulotlariga ishlov berish)
+    - Cooking/culinary skills (pazandachilik)
+    - Table setting (dasturxon tuzash)
+    - Vegetable processing, salads
+    - Egg dishes
+    - Sandwiches, hot and cold drinks
+    - National dishes (qaynatma sho'rva, mastava)
+  - Textile and sewing (gazlamashunoslik / tikuvchilik)
+    - Fabric science (cotton, flax fibers, weaving)
+    - Pattern making (andaza)
+    - Cutting and sewing (apron/fartuk, headscarf/ro'mol)
+    - Ironing techniques
+    - Embroidery (kashtachilik) - traditional Uzbek needlework
+
+This is NOT purely digital tech. It is a practical life-skills technology course
+covering woodworking, cooking, sewing, and basic engineering concepts - typical
+of post-Soviet "Technology" (Технология) curriculum for middle school.
+
+TEXTBOOK STRUCTURE - TABLE OF CONTENTS (Mundarija)
+================================================================================
+
+KIRISH (Introduction) ........................................................................ Page 3
+
+==========================================================================
+TRACK 1: TEXNOLOGIYA VA DIZAYN YO'NALISHI
+==========================================================================
+
+--- BOB 1: ZAMONAVIY TEXNIKA VA TEXNOLOGIYALAR ---
+(Modern Technology and Technologies)
+
+  1-§. Mehnat jarayonini tashkil etishda texnika va texnologiyalarning
+        o'rni va roli (Role of technology in organizing labor processes) ............. 6
+  2-§. Texnika turlari. Texnikaning klassifikatsiyasi va tavsiflari
+        (Types of technology. Classification and descriptions) ...................... 8
+  3-§. Texnik tizimlar haqida tushuncha. Texnologik mashinalar
+        (Introduction to technical systems. Technological machines) ................ 10
+  4-§. Texnikaning asosiy konstruktiv elementlari. Texnikaning ishchi organlari
+        (Main constructive elements of technology. Working organs) .................. 11
+  5-§. Transport vositalarini konstruksiyalash va modellashtirish
+        (Construction and modeling of transport vehicles) .......................... 13
+
+--- BOB 2: MATERIALLARGA ISHLOV BERISH TEXNOLOGIYASI ---
+(Materials Processing Technology)
+
+  2.1. Yog'ochga ishlov berish texnologiyasi (Wood Processing Technology)
+
+  6-§. Yog'ochga ishlov berish ustaxonasining tuzilishi
+        (Structure of the woodworking workshop) .................................. 15
+  7-§. Yog'ochga ishlov berishda ish o'rnini tashkil etish
+        va xavfsizlik texnikasi qoidalari
+        (Workplace organization and safety rules in woodworking) ................... 17
+  1-amaliy mashg'ulot. Duradgorlik dastgohiga brusokni mahkamlashni o'rganish
+        (Practical 1: Learning to secure blocks on the carpentry bench) ............ 18
+  8-§. Yog'och tabiiy konstruksion material sifatida
+        (Wood as a natural construction material) ................................ 19
+  9-§. Asbob-uskuna va moslama turlari
+        (Types of tools and devices) ............................................. 24
+  10-§. Yog'ochga ishlov berish stanoklari va ularning turlari
+        (Woodworking machines and their types) ................................... 30
+  11-§. Yog'och materiallaridan buyum yasash bosqichlari
+        (Stages of making products from wood materials) ............................ 32
+  12-§. Duradgorlik buyumlari detallarini tayyorlash
+        (Preparing carpentry product details) .................................... 34
+  2-amaliy mashg'ulot. To'g'ri tirnoqli birikma hosil qilishni o'rganish
+        (Practical 2: Learning to make straight joint connections) ................. 37
+  13-§. Pardozlash ishlari
+        (Finishing works) ...................................................... [cont.]
+  [Additional woodworking sections continue through approximately page 75]
+
+  2.2. Polimer materiallarga ishlov berish texnologiyasi
+       (Polymer Materials Processing Technology)
+
+  24-§. Polimer materiallar va ularning turlari
+        (Polymer materials and their types) ...................................... [~76]
+  25-§. Polimer materiallardan buyumlar yasash
+        (Making products from polymer materials) ................................. [~80]
+  9-amaliy mashg'ulot. Polimer loyidan kitobcha shaklidagi brelok yasash
+        (Practical 9: Making a book-shaped keychain from polymer clay) ............. 85
+  26-§. 3D ruchkada har xil uch o'lchamli obyektlar yasash
+        (Making various 3D objects with a 3D pen) ................................ 90
+  10-amaliy mashg'ulot. 3D ruchkadan foydalanib turli geometrik shakllar yasash
+        (Practical 10: Making various geometric shapes using a 3D pen) ............. 93
+
+==========================================================================
+TRACK 2: SERVIS XIZMATI YO'NALISHI
+==========================================================================
+
+--- BOB 1: OZIQ-OVQAT MAHSULOTLARIGA ISHLOV BERISH TEXNOLOGIYASI ---
+(Food Products Processing Technology)
+
+  1.1. Ovqatlanish madaniyati (Food Culture)
+
+  1-§. Ovqatlanishning inson hayotidagi ahamiyati. Dasturxon tuzash
+        (Importance of food in human life. Setting the table) .................... 96
+
+  1.2. Oziq-ovqat mahsulotlariga ishlov berish
+       (Food Products Processing)
+
+  2-§. Pazandachilik xonasi. Sabzavotlarga ishlov berish texnologiyasi.
+        Salat tayyorlash
+        (Cooking room. Vegetable processing technology. Making salads) ........... 103
+        Salat tayyorlash (Making salads) ......................................... 106
+  1-amaliy mashg'ulot. "Lazzat" salati
+        (Practical 1: "Lazzat" salad) .......................................... 107
+  3-§. Tuxum. Tuxumdan tayyorlanadigan taomlar
+        (Eggs. Dishes made from eggs) .......................................... 109
+  2-amaliy mashg'ulot. Quymoq tayyorlash texnologiyasi
+        (Practical 2: Technology of making fried eggs/omelette) .................. 113
+  4-§. Buterbrod. Buterbrod tayyorlash texnologiyasi. Issiq va yaxna ichimliklar
+        (Sandwiches. Sandwich preparation technology. Hot and cold drinks) ....... 114
+  3-amaliy mashg'ulot. Buterbrod tayyorlash
+        (Practical 3: Making sandwiches) ....................................... 116
+        Issiq va yaxna ichimliklar tayyorlash
+        (Making hot and cold drinks) ........................................... 120
+  5-§. Milliy taom tayyorlash texnologiyasi
+        (National dish preparation technology) ................................. 123
+  4-amaliy mashg'ulot. Qaynatma sho'rva va mastava tayyorlash texnologiyasi
+        (Practical 4: Technology of making boiled soup and mastava) .............. 123
+
+--- BOB 2: MATERIALLARGA ISHLOV BERISH TEXNOLOGIYASI ---
+(Materials Processing Technology)
+
+  2.1. Gazlamashunoslik (Fabric Science)
+
+  6-§. Tikuvchilik xonasi. To'qimachilik tolalari. Ip va gazlama haqida ma'lumot
+        (Sewing room. Textile fibers. Information about thread and fabric) ....... 127
+  7-§. Paxta va zig'ir tolasining arqoq va tanda iplari. Polotno va sarja to'qish.
+        Gazlamaning o'ng va teskari tomonlarini aniqlash
+        (Cotton and flax fiber weft and warp threads. Plain and twill weaving.
+         Determining right and wrong sides of fabric) ........................... 132
+  5-amaliy mashg'ulot. Polotno va sarja to'qish
+        (Practical 5: Weaving plain and twill) ................................. 134
+
+  [Additional textile/sewing sections continue...]
+  - Determining warp thread direction in fabric
+  - Fabric measurement and calculation
+  - Pattern making (andaza)
+  - Cutting fabric
+  - Sewing details together
+  - Ironing methods
+  - Final processing and decoration
+
+  13-§. O'lchov olish va hisoblash formulasi
+        (Taking measurements and calculation formulas) ......................... 163
+  9-amaliy mashg'ulot. O'lchov olish va hisoblash formulasi
+        (Practical 9: Taking measurements and calculations) .................... 166
+  14-§. Modellashtirish va andaza tayyorlash
+        (Modeling and pattern making) ........................................ 167
+  10-amaliy mashg'ulot. Fartukni modellashtirish
+        (Practical 10: Modeling an apron) .................................... 168
+  15-§. Gazlamani bichishga tayyorlash va bichish
+        (Preparing and cutting fabric) ....................................... 169
+  11-amaliy mashg'ulot. Fartuk va ro'molni bichish
+        (Practical 11: Cutting apron and headscarf) ............................ 170
+  12-amaliy mashg'ulot. Detallarni birlashtirish va tikish
+        (Practical 12: Joining and sewing details) ............................. 172
+  16-§. Dazmol va dazmollash usullari
+        (Iron and ironing methods) ........................................... 176
+  13-amaliy mashg'ulot. Dazmollash usullari
+        (Practical 13: Ironing methods) ...................................... 178
+  17-§. Oxirgi ishlov berish va bezash
+        (Final processing and decoration) .................................... 181
+  14-amaliy mashg'ulot. Oxirgi ishlov berish jarayonini amalga oshirish tartibi
+        (Practical 14: Final processing procedure) ............................. 182
+  18-§. Xalq hunarmandchiligi texnologiyasi. Kashtachilik tarixi haqida ma'lumot
+        (Folk craft technology. History of embroidery) ......................... 183
+        Kashta chok turlari (Types of embroidery stitches) ..................... 186
+  15-amaliy mashg'ulot ....................................................... 191
+        Kashta chokida kompozitsiya tikish
+        (Sewing composition with embroidery stitch) ............................ 193
+  16-amaliy mashg'ulot ....................................................... 194
+  19-§. Loyiha ishi. Xaridorgir kashtachilik buyumlarini tikish
+        (Project work. Sewing popular embroidery products) ..................... 195
+  17-amaliy mashg'ulot. Kashta tikish
+        (Practical 17: Embroidery stitching) ................................. 196
+
+==========================================================================
+COMBINED: TEXNOLOGIYA VA DIZAYN. SERVIS XIZMATI YO'NALISHLARI
+==========================================================================
+
+--- BOB 3: ENERGIYA ISHLAB CHIQARISH VA UNDAN FOYDALANISH ---
+(Energy Production and Utilization)
+
+  1-§. Energiya turlari (mexanik, elektr, quyosh va atom energiyasi)
+        (Types of energy: mechanical, electrical, solar, and nuclear) ............ 200
+  2-§. Elektr dvigatellar (motorlar). Batareyalar va ularning turlari
+        (Electric motors. Batteries and their types) ........................... 202
+  3-§. Gidravlik uzatmalar
+        (Hydraulic transmissions) ............................................ 204
+  4-§. Loyiha ishi va ...
+        (Project work and ...)
+
+[Note: The TOC continues beyond page 238 but the extracted text is truncated.
+ The textbook continues with project work sections, ecology/landscape design
+ projects, and concludes with a bibliography on page 235.]
+
+FOYDALANILGAN ADABIYOTLAR RO'YXATI (Bibliography) ............................ 235
+MUNDARIJA (Table of Contents) .................................................. 236
+
+================================================================================
+SYMBOL/ICON LEGEND (from page 4)
+================================================================================
+The textbook uses the following symbols to mark content types:
+
+  - Muammoli topshiriq          = Problem-based assignment
+  - Amaliy mashg'ulot           = Practical lesson (Technology & Design track)
+  - Mustahkamlash uchun savollar = Questions for consolidation (Tech & Design)
+  - Amaliy mashg'ulot           = Practical lesson (Service track)
+  - Mustahkamlash uchun savollar = Questions for consolidation (Service track)
+  - Jihozlar                    = Equipment/tools
+  - Loyiha ishi                 = Project work
+  - Diqqat qiling!              = Attention!/Warning!
+  - Ishni bajarish tartibi      = Procedure for completing the work
+  - QR Code                     = Digital supplementary content via QR/web
+
+================================================================================
+PEDAGOGICAL FEATURES OBSERVED
+================================================================================
+1. Each section ends with "Mustahkamlash uchun savollar" (Consolidation Questions)
+   - typically 4 review questions per section
+2. Practical lessons (Amaliy mashg'ulot) are numbered sequentially within each
+   sub-topic and include: Jihozlar (equipment), Ishni bajarish tartibi (procedure)
+3. Project work (Loyiha ishi) sections for independent student projects
+4. QR codes linking to digital supplementary content
+5. Two-track system: students study either Technology & Design OR Service track
+6. Cross-curricular: combines engineering concepts, life skills, and traditional crafts
+
+================================================================================
+CONTENT DENSITY ESTIMATE
+================================================================================
+Total extractable text pages: ~30 out of 244 (approximately 12%)
+Most pages are image-based with illustrations, diagrams, and photos.
+Text-bearing pages: 1-20, 235-244 (intro, early chapters, TOC, colophon)
+The bulk of the book (pages 21-234) is scanned pages where PyMuPDF cannot
+extract text without OCR. These contain the main instructional content with
+diagrams, photos, step-by-step illustrated procedures, and illustrations.
+
+================================================================================
+CURRICULUM STANDARD MAPPING NOTES
+================================================================================
+Based on the structure, this textbook maps to the Uzbek national curriculum
+standard for: TEX.5 (Texnologiya, Grade 5)
+
+Potential chapter-level codes:
+  TEX.5.1  - Modern technology and machinery concepts
+  TEX.5.2  - Woodworking and materials processing
+  TEX.5.3  - Polymer materials and 3D modeling
+  TEX.5.4  - Food preparation and cooking technology
+  TEX.5.5  - Textile science and sewing
+  TEX.5.6  - Embroidery and folk crafts
+  TEX.5.7  - Energy production and utilization
+  TEX.5.8  - Project work
+
+================================================================================
+END OF ANALYSIS
+================================================================================
+
+================================================================================
+RAW EXTRACTED TEXT (from pages with extractable content)
+================================================================================

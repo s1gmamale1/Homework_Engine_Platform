@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Geografiya — Grade 5 Subject Framework v1.0</title>
+<style>
+:root {
+  --teal: #0D9488;
+  --teal-light: #14B8A6;
+  --teal-dark: #115E59;
+  --sand: #FCD34D;
+  --sand-light: #FDE68A;
+  --bg: #0F172A;
+  --bg-card: #1E293B;
+  --bg-soft: #334155;
+  --text: #F3F4F6;
+  --text-dim: #CBD5E1;
+  --text-mute: #94A3B8;
+  --border: #475569;
+  --nav-width: 280px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+/* Layout: sidebar nav + main content */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sticky sidebar nav */
+nav.sidebar {
+  width: var(--nav-width);
+  background: linear-gradient(180deg, #115E59 0%, #0F172A 100%);
+  border-right: 1px solid var(--teal-dark);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding: 24px 20px;
+}
+nav.sidebar .nav-brand {
+  padding: 8px 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 12px;
+}
+nav.sidebar .nav-brand-badge {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+nav.sidebar .nav-brand-title {
+  color: var(--sand-light);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+nav.sidebar .nav-brand-sub {
+  color: var(--text-mute);
+  font-size: 12px;
+  margin-top: 4px;
+}
+nav.sidebar h3 {
+  color: var(--sand);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 16px 12px 8px;
+  font-weight: 700;
+}
+nav.sidebar ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav.sidebar li { margin: 0; }
+nav.sidebar a {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 12px;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+  border-left: 2px solid transparent;
+}
+nav.sidebar a:hover {
+  background: rgba(13, 148, 136, 0.15);
+  color: var(--sand-light);
+  border-left-color: var(--teal-light);
+}
+nav.sidebar a.active {
+  background: rgba(13, 148, 136, 0.2);
+  color: var(--sand);
+  border-left-color: var(--sand);
+}
+nav.sidebar a .num {
+  color: var(--teal-light);
+  font-weight: 700;
+  font-size: 11px;
+  min-width: 28px;
+  flex-shrink: 0;
+}
+
+/* Main content */
+main.content {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+}
+main.content header.hero {
+  background: linear-gradient(135deg, #1E293B 0%, #115E59 100%);
+  border-bottom: 4px solid var(--teal);
+  padding: 56px 48px 40px;
+}
+main.content header.hero .badge {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+main.content header.hero h1 {
+  font-size: 44px;
+  margin: 0 0 12px;
+  color: var(--sand);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+main.content header.hero .subtitle {
+  font-size: 19px;
+  color: var(--text-dim);
+  margin: 0 0 24px;
+  max-width: 760px;
+}
+main.content header.hero .meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+  font-size: 14px;
+  max-width: 920px;
+}
+main.content header.hero .meta-item {
+  background: rgba(13, 148, 136, 0.12);
+  padding: 12px 16px;
+  border-left: 3px solid var(--teal);
+  border-radius: 4px;
+}
+main.content header.hero .meta-item strong {
+  display: block;
+  color: var(--sand);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+main.content header.hero .meta-item span { color: var(--text-dim); }
+
+main.content .body {
+  padding: 48px;
+  max-width: 920px;
+}
+
+section { margin-bottom: 56px; scroll-margin-top: 20px; }
+h2.section-title {
+  font-size: 30px;
+  color: var(--teal-light);
+  border-bottom: 2px solid var(--teal-dark);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+h2.section-title .num { color: var(--sand); font-weight: 800; margin-right: 12px; }
+h3 {
+  font-size: 21px;
+  color: var(--sand);
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 17px;
+  color: var(--sand-light);
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+p { margin: 12px 0; color: var(--text-dim); }
+strong { color: var(--text); }
+em { color: var(--sand-light); font-style: normal; font-weight: 500; }
+code {
+  background: var(--bg-soft);
+  color: var(--sand-light);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  font-size: 13px;
+}
+pre {
+  background: var(--bg-soft);
+  border-left: 3px solid var(--teal);
+  padding: 16px 20px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 13px;
+  color: var(--text);
+}
+pre code { background: none; padding: 0; color: inherit; }
+ul, ol { margin: 12px 0; padding-left: 24px; color: var(--text-dim); }
+li { margin: 6px 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+th {
+  background: var(--bg-soft);
+  color: var(--sand);
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--teal-dark);
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-dim);
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(13, 148, 136, 0.05); }
+blockquote {
+  border-left: 4px solid var(--teal);
+  background: rgba(13, 148, 136, 0.08);
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--text);
+}
+blockquote p:first-child { margin-top: 0; }
+blockquote p:last-child { margin-bottom: 0; }
+.callout {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--sand);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.callout-warning { border-left-color: var(--teal-light); background: rgba(20, 184, 166, 0.06); }
+.callout-info { border-left-color: var(--sand); background: rgba(252, 211, 77, 0.06); }
+.tag {
+  display: inline-block;
+  background: rgba(13, 148, 136, 0.18);
+  color: var(--teal-light);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+.tag-warning { background: rgba(252, 211, 77, 0.15); color: var(--sand); }
+.tag-danger { background: rgba(239, 68, 68, 0.15); color: #FCA5A5; }
+footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  color: var(--text-mute);
+  font-size: 13px;
+  text-align: center;
+}
+footer code { font-size: 11px; }
+
+/* Mobile: collapse sidebar to top bar */
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  nav.sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--teal-dark);
+  }
+  main.content header.hero { padding: 36px 24px 28px; }
+  main.content header.hero h1 { font-size: 30px; }
+  main.content .body { padding: 32px 20px; }
+  table { font-size: 12px; }
+  th, td { padding: 8px; }
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="nav-brand">
+    <div class="nav-brand-badge">PISA-Rigorous</div>
+    <div class="nav-brand-title">Geografiya G5</div>
+    <div class="nav-brand-sub">Framework v1.0 · 2026-04-08</div>
+  </div>
+  <h3>Sections</h3>
+  <ol>
+    <li><a href="#s0"><span class="num">§0</span>Resolution Log</a></li>
+    <li><a href="#s1"><span class="num">§1</span>Audience Profile</a></li>
+    <li><a href="#s2"><span class="num">§2</span>Subject Identity</a></li>
+    <li><a href="#s3"><span class="num">§3</span>PISA + ML Track</a></li>
+    <li><a href="#s4"><span class="num">§4</span>Psychology Filter</a></li>
+    <li><a href="#s5"><span class="num">§5</span>Pre-Homework</a></li>
+    <li><a href="#s6"><span class="num">§6</span>The 7-Phase Engine</a></li>
+    <li><a href="#s7"><span class="num">§7</span>Content Rules</a></li>
+    <li><a href="#s8"><span class="num">§8</span>Game Catalog</a></li>
+    <li><a href="#s9"><span class="num">§9</span>Map Literacy Pool</a></li>
+    <li><a href="#s10"><span class="num">§10</span>Anti-Cheat</a></li>
+    <li><a href="#s11"><span class="num">§11</span>Cultural Anchors</a></li>
+    <li><a href="#s12"><span class="num">§12</span>Assessment</a></li>
+    <li><a href="#s13"><span class="num">§13</span>AI Tier Strategy</a></li>
+    <li><a href="#s14"><span class="num">§14</span>Teacher Overrides</a></li>
+    <li><a href="#s15"><span class="num">§15</span>Tagging Schema</a></li>
+    <li><a href="#s16"><span class="num">§16</span>Content Production</a></li>
+    <li><a href="#s17"><span class="num">§17</span>Sample Walkthrough</a></li>
+    <li><a href="#s18"><span class="num">§18</span>Open Questions</a></li>
+    <li><a href="#s19"><span class="num">§19</span>Production Handoff</a></li>
+    <li><a href="#s20"><span class="num">§20</span>Versioning &amp; Review</a></li>
+  </ol>
+</nav>
+
+<main class="content">
+
+<header class="hero">
+  <div class="badge">NETS Subject Framework · PISA-Rigorous Shape</div>
+  <h1>Geografiya — Grade 5</h1>
+  <p class="subtitle">Subject framework v1.0 · Production-ready · Single source of truth for Grade 5 Geografiya homework</p>
+  <div class="meta">
+    <div class="meta-item"><strong>Version</strong><span>1.0</span></div>
+    <div class="meta-item"><strong>Date</strong><span>2026-04-08</span></div>
+    <div class="meta-item"><strong>Shape</strong><span>PISA-rigorous (Science G5 lineage)</span></div>
+    <div class="meta-item"><strong>Inherits from</strong><span>UNIFIED v2.0 + Blueprint v1.0</span></div>
+    <div class="meta-item"><strong>Textbook</strong><span>Gulyamov et al. 2020 · 113pp</span></div>
+    <div class="meta-item"><strong>Sessions</strong><span>~28 sessions · 7 Bobs · ~78 LUs</span></div>
+    <div class="meta-item"><strong>Subject color</strong><span>#0D9488 Teal + #FCD34D Sand</span></div>
+  </div>
+</header>
+
+<div class="body">
+
+<blockquote>
+<p><strong>Reading order:</strong> §0 first (decisions log), then §2 (subject identity), then §6 (the engine). Everything else is reference.</p>
+<p><strong>One-line summary:</strong> Geografiya G5 is a physical geography course teaching <em>why</em> Earth systems work — solar mechanics, plate tectonics, weather, climate zones — anchored in Uzbek regional examples (Aral, Amu-Darya, Tian Shan, Fergana Valley) and Central Asian scholarly heritage (Beruni, Khorazmi, Nasir Khosrow). PISA-rigorous shape with two Geografiya-specific additions: a custom <strong>Map Literacy (ML) track</strong> and a <strong>scholar pairing rule</strong> (every world geographer paired with a Central Asian one).</p>
+</blockquote>
+
+<section id="s0">
+<h2 class="section-title"><span class="num">§0</span>Resolution Log</h2>
+<p>Geografiya G5 is the third NETS subject built on the <strong>PISA-rigorous shape</strong> (after Science G5 and Texnologiya G5). It maps cleanly to PISA Science (Earth &amp; space systems) + PISA Reading L1→L2 (map literacy). Unlike Tarbiya or Tasviriy Sanat, it does NOT need a major shape override — Final Boss, 35–45 min sessions, and standard 7-phase engine all work. The decisions below are deltas, not reinventions.</p>
+<table>
+<tr><th>#</th><th>Conflict</th><th>Resolution</th><th>Reasoning</th></tr>
+<tr><td>1</td><td>Maker-First or PISA-rigorous?</td><td><strong>PISA-rigorous.</strong> Textbook is ~45% Earth Science + ~25% Theory + ~20% Map Literacy + only ~5% hands-on.</td><td>Maker-First would misrepresent the textbook's epistemological core (causal explanation).</td></tr>
+<tr><td>2</td><td>Two domains: Earth science + map literacy. One PISA tag won't cover both.</td><td><strong>Triple-tag strategy:</strong> PISA Science (PRIMARY) + PISA Reading L1→L2 (SECONDARY, for maps) + custom <strong>Map Literacy (ML) track L1→L4</strong>.</td><td>Same pattern as Texnologiya (TR) and Tasviriy Sanat (VA).</td></tr>
+<tr><td>3</td><td>Session duration</td><td><strong>35–45 min Standard</strong> (matches Science G5 + Texnologiya G5)</td><td>Consistent within shape family.</td></tr>
+<tr><td>4</td><td>Final Boss</td><td><strong>KEEP standard Final Boss</strong> (HP, tiered Easy/Medium/Hard, max 3 attempts) — unlike Tarbiya/Tasviriy Sanat.</td><td>Geography has objective right answers.</td></tr>
+<tr><td>5</td><td>MC in Boss</td><td><strong>30% allowed</strong> at G5 (same as Science)</td><td>Universal "no MC" too strict.</td></tr>
+<tr><td>6</td><td>Notebook Capture frequency</td><td><strong>1 in every 4 sessions</strong> (lower than Science 1-in-3, much lower than Tasviriy Sanat 1-in-1)</td><td>Hands-on is only ~5% of Geografiya.</td></tr>
+<tr><td>7</td><td>Field observation (weather logs)</td><td><strong>Optional bonus quest mechanic</strong> — long-arc tracker, not session-blocking.</td><td>Real field observation requires multi-day data collection.</td></tr>
+<tr><td>8</td><td>Map drawing</td><td><strong>NOT a core mechanic.</strong> Students read/interpret maps; they don't draw them. Optional Notebook tasks for <em>labeling</em>.</td><td>Map drawing is more advanced (G6+).</td></tr>
+<tr><td>9</td><td>Adaptive Quiz</td><td><strong>BANNED</strong> (same as Science)</td><td>IRT endless-test feeling.</td></tr>
+<tr><td>10</td><td>Peer Teaching</td><td><strong>BANNED</strong> (Uzbek classroom culture, 35–38 students)</td><td>Consistent with G5 psychology filter.</td></tr>
+<tr><td>11</td><td>Why Chain depth</td><td><strong>Max 2 levels</strong> (G5 working memory)</td><td>Universal G5 cap.</td></tr>
+<tr><td>12</td><td>Boss HP tiering</td><td><strong>30/50/80 by PISA level</strong></td><td>Same as Science.</td></tr>
+<tr><td>13</td><td>Cultural anchoring — Central Asian scholars</td><td><strong>Scholar pairing rule:</strong> every world geographer mentioned must be paired with a Central Asian one. Eratosthenes ↔ Beruni · Ptolemy ↔ Khorazmi · Magellan ↔ Nasir Khosrow.</td><td>Same pattern as Tasviriy Sanat's painter pairing. Builds geographic citizenship: Central Asia is not peripheral.</td></tr>
+<tr><td>14</td><td>Uzbek regional content</td><td><strong>Embedded throughout, not segregated.</strong> Aral, Amu-Darya, Tian Shan, Fergana Valley, oases — every chapter must include at least one concrete Uzbek example.</td><td>Textbook itself does this.</td></tr>
+<tr><td>15</td><td>Religious framing</td><td><strong>Hold doctrinally-neutral cultural Islamic warmth</strong> — Beruni, Khorazmi, Nasir Khosrow referenced as scholars and scientists, not as religious figures.</td><td>Matches textbook.</td></tr>
+<tr><td>16</td><td>Mother-as-helper</td><td><strong>Welcomed for map reading and weather observation</strong>. Anti-cheat does not penalize.</td><td>Same as Science / Texnologiya.</td></tr>
+<tr><td>17</td><td>Pass threshold</td><td><strong>60% minimum</strong> (same as Science)</td><td>G5 universal floor.</td></tr>
+<tr><td>18</td><td>Flow target</td><td><strong>75–85%</strong> (tighter than universal 70–80%)</td><td>Same as Science — kids need higher floor.</td></tr>
+<tr><td>19</td><td>Visible difficulty labels</td><td><strong>Hidden</strong> (UNIFIED immutable)</td><td>—</td></tr>
+<tr><td>20</td><td>Standards code prefix</td><td><code>UZ-GEO-5-{TOPIC}-{SEQ}</code> primary; <code>GEO.5.{BOB}.{SEQ}</code> alias</td><td>—</td></tr>
+</table>
+<div class="callout callout-info">
+<strong>20 resolutions logged.</strong> The single most important insight: Geografiya is a PISA-Science clone with two custom additions — the ML track and the scholar pairing rule.
+</div>
+</section>
+
+<section id="s1">
+<h2 class="section-title"><span class="num">§1</span>Audience Profile</h2>
+<p>Inherited from <code>qwen-grade5-psychology-findings.md</code>. Geografiya-specific deltas noted inline.</p>
+
+<h3>Cognitive (universal G5)</h3>
+<ul>
+<li>Late concrete operational (Piaget); abstract reasoning emerging</li>
+<li>Working memory 4–5 chunks (Cowan 2001) → max 3 new geographic concepts per session</li>
+<li>Lexile 830–1010L</li>
+<li><strong>Spatial reasoning still developing</strong> — 2D maps before 3D globes; simple coordinate grids before complex projections</li>
+<li><strong>Scale comprehension is hard at this age</strong> — proportional reasoning is fragile; CPA progression mandatory for scale concepts</li>
+</ul>
+
+<h3>Geografiya-Specific Cognitive Load</h3>
+<ul>
+<li><strong>"Why" questions are the engine</strong> — G5 students can handle 2-step causation but struggle with 3+ step chains. Why Chain capped at 2 levels.</li>
+<li><strong>Coordinate systems are abstract</strong> — CPA mandatory: real globe → simplified grid diagram → numerical coordinates.</li>
+<li><strong>Map symbols are a vocabulary</strong> — visual scaffolding mandatory; flash cards essential; spaced retrieval works well.</li>
+<li><strong>Temporal scale is invisible</strong> — tectonics happens over millions of years. Use comparative anchors ("when dinosaurs lived").</li>
+</ul>
+
+<h3>Uzbek Context</h3>
+<ul>
+<li>Mother is primary supervisor; mother-as-co-learner welcomed for maps and weather observation</li>
+<li><strong>Strong cultural pride in Central Asian geographic heritage</strong> — leverage this</li>
+<li>Resonant historical figures: <strong>Al-Beruni, Al-Khorazmi, Nasir Khosrow, Mahmud Kashgari, Ibn Sino</strong></li>
+</ul>
+</section>
+
+<section id="s2">
+<h2 class="section-title"><span class="num">§2</span>Subject Identity</h2>
+<p><strong>Geografiya</strong> = Geography. Grade 5 is the <strong>first year of formal geography education</strong>, focused on physical geography. Subtitle: <em>Tabiiy geografiya boshlang'ich kursi</em> (Introductory Course in Physical Geography).</p>
+
+<div class="callout callout-warning">
+<strong>Pedagogical posture:</strong> <em>Curiosity, observation, explanation.</em> The textbook teaches by asking "why" — why do seasons change, why are mountains where they are, why is the Aral Sea shrinking.
+</div>
+
+<h3>Content Domains (7 Bobs)</h3>
+<ol>
+<li><strong>Bob I — Geografiya fani va uning rivojlanishi</strong> (Geography as a science) — ancient + modern, geographers across history</li>
+<li><strong>Bob II — Yer — Quyosh sistemasidagi sayyora</strong> (Earth as a planet) — celestial mechanics, seasons, coordinates, scale, map symbols</li>
+<li><strong>Bob III — Geografik xaritalar</strong> (Maps) — types, scale, legend, coordinate systems, practical work</li>
+<li><strong>Bob IV — Yerning qattiq qobig'i — Litosfera</strong> (Lithosphere) — crust movements, landforms, ocean floor relief, weathering, soil, minerals</li>
+<li><strong>Bob V — Yerning suv qobig'i — Gidrosfera</strong> (Hydrosphere) — water cycle, oceans, seas, rivers, lakes, glaciers</li>
+<li><strong>Bob VI — Yerning havo qobig'i — Atmosfera</strong> (Atmosphere) — composition, pressure, temperature, wind, weather, climate</li>
+<li><strong>Bob VII — Biosfera va inson</strong> (Biosphere + humanity) — ecosystems, human-environment interaction, Uzbek oases</li>
+</ol>
+
+<p><strong>Standard code prefix:</strong> <code>UZ-GEO-5-{TOPIC}-{SEQ}</code> primary · <code>GEO.5.{BOB}.{SEQ}</code> alias</p>
+
+<h3>Chapter Map → Session Map</h3>
+<table>
+<tr><th>Bob</th><th>Title</th><th>Sections</th><th>Sessions</th><th>LUs</th></tr>
+<tr><td>I</td><td>Geografiya fani</td><td>2</td><td>2</td><td>~6</td></tr>
+<tr><td>II</td><td>Earth as planet</td><td>8</td><td>5</td><td>~14</td></tr>
+<tr><td>III</td><td>Maps</td><td>2</td><td>2</td><td>~6</td></tr>
+<tr><td>IV</td><td>Lithosphere</td><td>6</td><td>5</td><td>~14</td></tr>
+<tr><td>V</td><td>Hydrosphere</td><td>7</td><td>5</td><td>~14</td></tr>
+<tr><td>VI</td><td>Atmosphere</td><td>10</td><td>6</td><td>~16</td></tr>
+<tr><td>VII</td><td>Biosphere</td><td>4</td><td>3</td><td>~8</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>7 Bobs</strong></td><td><strong>39 sections</strong></td><td><strong>~28 sessions</strong></td><td><strong>~78 LUs</strong></td></tr>
+</table>
+</section>
+
+<section id="s3">
+<h2 class="section-title"><span class="num">§3</span>PISA Mapping + Map Literacy (ML) Custom Track</h2>
+
+<h3>Primary tag: PISA Science L1→L2</h3>
+<p>The dominant fit. Covers all Earth-system content: solar mechanics, tectonics, water cycle, atmosphere, ecosystems, scientific reasoning, evidence &amp; observation.</p>
+
+<h3>Secondary tag: PISA Reading L1→L2</h3>
+<p>Used <strong>only on map literacy content</strong>: reading maps, interpreting coordinates, locating places, cross-referencing thematic maps.</p>
+
+<h3>Custom Map Literacy (ML) Track</h3>
+<table>
+<tr><th>Level</th><th>Code</th><th>Capability</th><th>Example task</th></tr>
+<tr><td><strong>ML-L1</strong></td><td>Read symbols</td><td>Identify map symbols, legend elements, basic features by name</td><td>"Bu xaritada yashil rang nimani anglatadi?"</td></tr>
+<tr><td><strong>ML-L2</strong></td><td>Locate &amp; measure</td><td>Find places using coordinates, calculate distance with scale, determine direction with azimuth</td><td>"Toshkentning koordinatalari nima? Buxorogacha qancha km?"</td></tr>
+<tr><td><strong>ML-L3</strong></td><td>Interpret relationships</td><td>Read multiple map features together, explain spatial patterns</td><td>"Nima uchun aksariyat shaharlar daryolar bo'yida joylashgan?"</td></tr>
+<tr><td><strong>ML-L4</strong></td><td>Synthesize</td><td>Combine information from 2+ maps, draw conclusions, predict</td><td>"Iqlim va relief xaritalarini taqqosla. Qaysi mintaqalarda eng ko'p yog'in tushadi?"</td></tr>
+</table>
+
+<h3>Distribution Targets per Session</h3>
+<table>
+<tr><th>Bucket</th><th>%</th><th>Purpose</th></tr>
+<tr><td>PISA Science L1 + ML-L1</td><td>25%</td><td>Memory Sprint, Flash Cards, Phase 3 game</td></tr>
+<tr><td>PISA Science L2 + ML-L2</td><td>40%</td><td>Story Mode comprehension, Game Breaks, Phase 4 RLC</td></tr>
+<tr><td>PISA Science L2 + ML-L3</td><td>25%</td><td>Phase 4 RLC + Boss medium tier</td></tr>
+<tr><td>PISA Science L2+ + ML-L4</td><td>10%</td><td>Boss hard tier, stretch tasks</td></tr>
+</table>
+
+<h3>Mandatory transition_skill Tags</h3>
+<ul>
+<li><code>L1→L2: identify a feature on a map and name it correctly</code></li>
+<li><code>L1→L2: explain a familiar Earth phenomenon with one cause</code></li>
+<li><code>L1→L2: read map symbols and interpret a simple legend</code></li>
+<li><code>L2→L3: use coordinates and scale to locate a place and measure distance</code></li>
+<li><code>L2→L3: interpret a 2-step causal chain (latitude → temperature → vegetation)</code></li>
+<li><code>L2→L3: read a thematic map and explain a spatial pattern</code></li>
+<li><code>L3→L4: combine information from multiple maps to draw a conclusion</code></li>
+<li><code>L3→L4: predict consequences of an Earth process (climate change → Aral Sea)</code></li>
+</ul>
+</section>
+
+<section id="s4">
+<h2 class="section-title"><span class="num">§4</span>Psychology Filter — Applied Parameters</h2>
+
+<h3>Session Timing</h3>
+<ul>
+<li><strong>Standard: 35–45 min</strong> · Extended: 45–60 min</li>
+<li>Single phase max: 5–9 min · Inter-phase break: 5–15 sec</li>
+<li>1–2 sessions/day · Deploy window 17:00–19:00</li>
+</ul>
+
+<h3>Difficulty Calibration</h3>
+<ul>
+<li><strong>Flow state:</strong> 75–85% (G5 floor higher than universal 70–80%)</li>
+<li><strong>Adapt every 3–4 questions</strong></li>
+<li>Hidden tiering · 60% pass threshold</li>
+<li>Tier-down trigger: &lt;70% (catch slipping students 10 pts earlier)</li>
+<li>Productive struggle ceiling: 30 sec</li>
+<li>"Hali emas" language — never "wrong"</li>
+<li>Max 1–2 new technical terms per session (geography vocab is dense)</li>
+<li>Max 3 new concepts per instruction (Cowan WM)</li>
+</ul>
+
+<h3>Banned Techniques</h3>
+<ol>
+<li><span class="tag tag-danger">Banned</span> Public wrong answers / leaderboards</li>
+<li><span class="tag tag-danger">Banned</span> Real-time multiplayer competition</li>
+<li><span class="tag tag-danger">Banned</span> Adaptive Quiz mechanic</li>
+<li><span class="tag tag-danger">Banned</span> Peer Teaching primary feedback</li>
+<li><span class="tag tag-danger">Banned</span> Why Chain ≥3 levels</li>
+<li><span class="tag tag-danger">Banned</span> Visible difficulty labels</li>
+<li><span class="tag tag-danger">Banned</span> "You're smart" praise</li>
+<li><span class="tag tag-danger">Banned</span> Brain breaks every 5 min</li>
+<li><span class="tag tag-danger">Banned</span> Western-only geographer canon (must always pair with Central Asian)</li>
+<li><span class="tag tag-danger">Banned</span> Forcing students to draw maps from scratch (G5 too early)</li>
+<li><span class="tag tag-danger">Banned</span> Memorization-only place lists (no spatial reasoning context)</li>
+<li><span class="tag tag-danger">Banned</span> Cosmetics purchasable with money</li>
+</ol>
+
+<h3>Mandatory Inclusions</h3>
+<ol>
+<li><span class="tag">Required</span> CPA progression (real photo → diagram → definition)</li>
+<li><span class="tag">Required</span> Dual coding</li>
+<li><span class="tag">Required</span> Worked examples before independent practice</li>
+<li><span class="tag">Required</span> Spaced retrieval (Day 1/3/7/14)</li>
+<li><span class="tag">Required</span> Effort + strategy feedback</li>
+<li><span class="tag">Required</span> Cultural anchors in every session</li>
+<li><span class="tag">Required</span> <strong>Scholar pairing rule</strong></li>
+<li><span class="tag">Required</span> Mobile-first portrait, low-bandwidth</li>
+<li><span class="tag">Required</span> 30-second productive struggle window</li>
+<li><span class="tag">Required</span> Hidden difficulty tiering</li>
+<li><span class="tag">Required</span> Uzbek-first language</li>
+</ol>
+</section>
+
+<section id="s5">
+<h2 class="section-title"><span class="num">§5</span>Pre-Homework Sessions 0-A &amp; 0-B</h2>
+
+<h3>0-A Theme Preview — 2–3 min</h3>
+<p>8-panel swipe deck, student-paced, no scoring, no XP, no timer.</p>
+<table>
+<tr><th>Panel</th><th>Content</th><th>Wind types example (Bob VI § 24)</th></tr>
+<tr><td>1. Sarlavha</td><td>Title + hook image</td><td>"Shamol turlari" + Aral Sea coast windmills</td></tr>
+<tr><td>2. Yaxshi tushuntirish</td><td>Concept defined with metaphor</td><td>"Shamol — bu havoning yugurishi. Issiq → sovuq, yuqori bosim → past bosim."</td></tr>
+<tr><td>3. Misollar</td><td>2–3 visual examples</td><td>Daily wind diagram + monsoon + Bukhara desert wind</td></tr>
+<tr><td>4. Hayotiy hikoya</td><td>3-sentence story featuring a Central Asian scholar</td><td>"1000 yil oldin Beruni Khorazmda yashagan. U havo bosimini va shamol yo'nalishini o'rgangan."</td></tr>
+<tr><td>5. Senga taalluqli</td><td>"Have you ever..." direct connection</td><td>"Sen yozda Chimgan tog'iga chiqsang, kechqurun salqin shamolni his qilasanmi?"</td></tr>
+<tr><td>6. Nega muhim</td><td>Long-arc significance</td><td>"Shamollarni tushunish — ob-havo, qishloq xo'jaligi, sog'lik uchun muhim."</td></tr>
+<tr><td>7. Hayotda qo'llanilishi</td><td>Modern Uzbek context</td><td>Wind farms, weather forecasting, agriculture</td></tr>
+<tr><td>8. Qo'shimcha materiallar</td><td>Optional extras</td><td>Monsoon video; Uzbekistan wind pattern map</td></tr>
+</table>
+
+<h3>0-B Flash Cards — 1–2 min</h3>
+<p>5–7 cards, returnable mid-session as reference. <strong>Geografiya-specific feature: every card with a place or feature includes a small map thumbnail showing where it is on Earth.</strong></p>
+</section>
+
+<section id="s6">
+<h2 class="section-title"><span class="num">§6</span>The 7-Phase Engine — Geografiya G5</h2>
+<p><strong>Total session: 35–45 min.</strong></p>
+
+<h3>§6.1 Phase 1 — Memory Sprint (≤2 min, 5–7 items)</h3>
+<ul>
+<li>Format mix: Tile Match (place ↔ symbol), Quick MC (climate zone), Sentence Fill (process sequences)</li>
+<li>Spaced retrieval Day 1/3/7/14</li>
+<li>Visual scaffolding mandatory</li>
+<li>Map symbols get priority placement</li>
+<li>Remediation gate: &lt;60% → route to remediation before Story Mode</li>
+</ul>
+
+<h3>§6.2 Phase 2 — Story Mode (5–7 min)</h3>
+<p><strong>3 segments × 90 sec.</strong> Real geographer/scholar/explorer narratives. <strong>Scholar pairing rule applies.</strong></p>
+<table>
+<tr><th>Story arc</th><th>Geografiya version</th></tr>
+<tr><td><strong>Problem</strong></td><td>"Beruni 1000 yil oldin Yer yumaloqligini bilardi. Lekin u qanday isbotladi?"</td></tr>
+<tr><td><strong>Struggle</strong></td><td>First attempts fail. "Kerakli asboblar yo'q edi."</td></tr>
+<tr><td><strong>Discovery</strong></td><td>"U o'lchov ipini va astrolyabiyani ishlatib, soyaning uzunligini va quyosh burchagini o'lchadi."</td></tr>
+<tr><td><strong>Solution</strong></td><td>"Beruni Yer aylanasini 40,000 km deb topdi — bu hozirgi qiymatga juda yaqin!"</td></tr>
+</table>
+
+<h3>§6.3 Phase 3 — Game Breaks (6–9 min, 3 games)</h3>
+<ul>
+<li><strong>Slot 1:</strong> Tile Match / Memory Match (place↔symbol, scholar↔contribution)</li>
+<li><strong>Slot 2:</strong> Why Chain (max 2 levels) / Codebreaker / Mystery Box</li>
+<li><strong>Slot 3:</strong> Notebook Capture in 1-of-4 sessions; otherwise Tic Tac Toe / Escape Room / Connect Four</li>
+</ul>
+
+<h3>§6.4 Phase 4 — Real-Life Challenge (3–5 min)</h3>
+<p><strong>First-person expert POV mandatory.</strong> Examples: <em>"Sen meteorologsan…"</em> · <em>"Sen geologsan…"</em> · <em>"Sen Aral Sea atrofidagi qishloqlarni o'rganadigan ekologsan…"</em> Real Uzbek context. Tricky distractors. Justification required. <strong>Map literacy required</strong> — at least one RLC per session involves reading a map.</p>
+
+<h3>§6.5 Phase 5 — Consolidation (3–5 min)</h3>
+<p><strong>Default: Labeled diagram / map recall.</strong></p>
+<table>
+<tr><th>Bob</th><th>Diagram template</th><th>Labels</th></tr>
+<tr><td>II</td><td>Solar system + Earth tilt</td><td>Quyosh, Yer, eksis, ekvator, qutblar, mavsumlar</td></tr>
+<tr><td>III</td><td>Map legend + coordinate grid</td><td>Belgilar, koordinata, masshtab, kompas</td></tr>
+<tr><td>IV</td><td>Cross-section of Earth + landforms</td><td>Qobiq, mantiya, yadro, tog', tekislik, vodiy</td></tr>
+<tr><td>V</td><td>Water cycle diagram</td><td>Bug'lanish, kondensatsiya, yog'in, daryo, dengiz</td></tr>
+<tr><td>VI</td><td>Atmosphere layers + pressure</td><td>Troposfera, stratosfera, bosim, harorat</td></tr>
+<tr><td>VII</td><td>Ecosystem food web (Uzbek desert/oasis)</td><td>Ishlab chiqaruvchilar, iste'molchilar, parchalovchilar</td></tr>
+</table>
+
+<h3>§6.6 Phase 6 — Final Boss / Sub Boss (6–8 min)</h3>
+<table>
+<tr><th>Student PISA</th><th>Boss tier</th><th>HP</th><th>Pattern</th></tr>
+<tr><td>Below L1</td><td>Sub Boss Easy</td><td>30 HP</td><td>ML-L1 + Science L1 only, scaffolded</td></tr>
+<tr><td>L1–L2 (median)</td><td>Sub Boss Medium</td><td>50 HP</td><td>ML-L1–L2 + Science L1–L2 mix</td></tr>
+<tr><td>L2–L3 (top quartile)</td><td>Sub Boss Hard</td><td>80 HP</td><td>ML-L2–L3 + Science L2 mix</td></tr>
+<tr><td>L3+ (top decile)</td><td>Big Boss + Mythical</td><td>80 HP (Mythical 80–100 per UNIFIED)</td><td>ML-L3–L4 stretch</td></tr>
+</table>
+<p>Boss content (5 questions, Easy 40% / Medium 40% / Hard 20%): place identification + coordinate calculation + causal explanation + map interpretation + optional cross-map synthesis (Hard).</p>
+<p>MC allowed: <strong>up to 30%.</strong> Each Q has worked solution + 2–3 hints + Common Errors. Hint tax −10 HP. Combo bonus 3-in-row → 2× damage. Max 3 attempts. Mastery Stars 1–3.</p>
+
+<h3>§6.7 Phase 7 — Reflection (1–2 min)</h3>
+<p>Tier 2 generates 1 prompt by accuracy bucket. Min 1 sentence. Effort + strategy framing only. Privacy student-only.</p>
+</section>
+
+<section id="s7">
+<h2 class="section-title"><span class="num">§7</span>Content Rules</h2>
+
+<h3>Narrative Voice</h3>
+<ul>
+<li>Second-person ("Sen") · ≤14 word sentences · active voice · Lexile 830–1010L</li>
+<li>~12k receptive vocab ceiling · Define new terms with visual + 3+ repetitions</li>
+<li><strong>Scholar pairing rule:</strong> every world geographer paired with a Central Asian one</li>
+</ul>
+
+<h3>Visuals</h3>
+<ul>
+<li>Every concept has a visual — CPA mandatory</li>
+<li>Mobile-first sizing (5" screen legible)</li>
+<li><strong>Maps are first-class content</strong> — every Bob III, IV, V, VI lesson includes at least one interactive map element</li>
+<li><strong>Subject color: deep teal <code>#0D9488</code> primary + sand <code>#FCD34D</code> accent</strong> (earth + sky + Uzbek desert)</li>
+</ul>
+
+<h3>Did You Know — Examples</h3>
+<ul>
+<li>"Beruni 1000 yil oldin Yer aylanasini deyarli aniq hisoblab chiqqan."</li>
+<li>"Aral dengizi 60 yil oldin dunyoning 4-eng katta ko'li edi. Bugun u o'z hajmining 10% iga ham yetmaydi."</li>
+<li>"Tian Shan tog'lari hozir ham yiliga 1 cm balandlashmoqda."</li>
+<li>"Khorazmi 9-asrda jahonning birinchi yagona xaritasini tuzgan."</li>
+</ul>
+</section>
+
+<section id="s8">
+<h2 class="section-title"><span class="num">§8</span>Game Catalog Selections — Geografiya G5</h2>
+
+<h3>Default Pool (16 mechanics)</h3>
+<table>
+<tr><th>#</th><th>Mechanic</th><th>Use?</th><th>Notes</th></tr>
+<tr><td>1</td><td>Memory Sprint</td><td><span class="tag">YES</span></td><td>P1 default</td></tr>
+<tr><td>2</td><td>Spaced Flashcards</td><td><span class="tag">YES</span></td><td>Place names, map symbols (also 0-B)</td></tr>
+<tr><td>3</td><td>Tile Match</td><td><span class="tag">YES (HIGH)</span></td><td>Place↔symbol, scholar↔contribution</td></tr>
+<tr><td>4</td><td>Sentence Fill</td><td><span class="tag">YES</span></td><td>Process sequences (water cycle)</td></tr>
+<tr><td>5</td><td>Memory Palace</td><td><span class="tag">YES (alt)</span></td><td>Tian Shan / Aral / Fergana walkthroughs</td></tr>
+<tr><td>6</td><td>Story Mode</td><td><span class="tag">YES</span></td><td>P2 default, scholar pairing</td></tr>
+<tr><td>7</td><td>Adaptive Quiz</td><td><span class="tag tag-danger">NO</span></td><td>IRT endless test</td></tr>
+<tr><td>8</td><td>Mystery Box</td><td><span class="tag">YES (HIGH)</span></td><td>"What's hidden under this map area?"</td></tr>
+<tr><td>9</td><td>Movement Breaks</td><td><span class="tag">YES</span></td><td>Optional</td></tr>
+<tr><td>10</td><td>Why Chain</td><td><span class="tag">YES (HIGH, max 2)</span></td><td>Causal reasoning is the heart</td></tr>
+<tr><td>11</td><td>Peer Teaching</td><td><span class="tag tag-danger">NO</span></td><td>Uzbek classroom mismatch</td></tr>
+<tr><td>12</td><td>Real-Life Challenge</td><td><span class="tag">YES</span></td><td>P4 default, map literacy required</td></tr>
+<tr><td>13</td><td>Reflection Journal</td><td><span class="tag">YES</span></td><td>P7 default</td></tr>
+<tr><td>14</td><td>Final Boss</td><td><span class="tag">YES</span></td><td>P6 default, tiered HP, MC 30% allowed</td></tr>
+<tr><td>15</td><td>Tic Tac Toe vs AI</td><td><span class="tag">YES</span></td><td>Recreational</td></tr>
+<tr><td>16</td><td>Notebook Capture</td><td><span class="tag tag-warning">LIMITED (1-in-4)</span></td><td>Map labeling, diagram completion only</td></tr>
+</table>
+<div class="callout callout-info"><strong>One Geografiya-only mechanic introduced: Map Detective (Xarita Detektivi)</strong> — student gets 4–5 clues (coordinates, scale, climate hints) and uses an interactive map to identify the hidden place. Reinforces ML-L2 and ML-L3.</div>
+</section>
+
+<section id="s9">
+<h2 class="section-title"><span class="num">§9</span>Map Literacy — Task Pool &amp; Notebook Capture</h2>
+<p>The <strong>ML track</strong> is the practice spine for all map content. Notebook Capture used sparingly (1-in-4 sessions).</p>
+
+<h3>ML Task Pool</h3>
+<table>
+<tr><th>ML level</th><th>Task type</th><th>Example</th></tr>
+<tr><td>ML-L1</td><td>Identify symbols on a legend</td><td>"Bu xaritada ko'k chiziq nimani anglatadi?"</td></tr>
+<tr><td>ML-L1</td><td>Find a place by name</td><td>"O'zbekiston xaritasidan Buxoroni topib ko'rsat"</td></tr>
+<tr><td>ML-L2</td><td>Read coordinates</td><td>"Toshkentning koordinatalari qanday?"</td></tr>
+<tr><td>ML-L2</td><td>Calculate distance with scale</td><td>"Buxorodan Samarqandgacha qancha km?"</td></tr>
+<tr><td>ML-L2</td><td>Determine direction with azimuth</td><td>"Toshkentdan Andijongacha qaysi yo'nalishda?"</td></tr>
+<tr><td>ML-L3</td><td>Read a thematic map</td><td>"Iqlim xaritasiga qarab, qaysi mintaqa eng issiq?"</td></tr>
+<tr><td>ML-L3</td><td>Explain a spatial pattern</td><td>"Nima uchun shaharlar daryolar bo'yida joylashgan?"</td></tr>
+<tr><td>ML-L4</td><td>Combine 2+ maps</td><td>"Iqlim va relief xaritalarini taqqosla."</td></tr>
+<tr><td>ML-L4</td><td>Predict from a map</td><td>"Iqlim o'zgarishi davom etsa, Aral mintaqasi 50 yildan keyin qanday ko'rinadi?"</td></tr>
+</table>
+
+<h3>Notebook Capture (1-in-4 sessions)</h3>
+<ul>
+<li><strong>Label a blank map</strong> — student gets a blank Uzbekistan map; AI vision evaluates filled labels</li>
+<li><strong>Draw a weather symbol</strong> — simple icons (sun, rain, wind direction)</li>
+<li><strong>Sketch a landform diagram</strong> — cross-section of mountain, river valley</li>
+<li><strong>Plot coordinates on a grid</strong> — find a place from given coordinates</li>
+</ul>
+<p>AI vision rubric: lenient on artistic skill, strict on conceptual accuracy. ≤10 sec Tier 3 vision.</p>
+</section>
+
+<section id="s10">
+<h2 class="section-title"><span class="num">§10</span>Anti-Cheat Tuning</h2>
+<table>
+<tr><th>Signal</th><th>Geografiya verdict</th></tr>
+<tr><td>Speed anomaly</td><td><strong>Lenient</strong> — kids click fast or stare at maps for minutes</td></tr>
+<tr><td>Length anomaly</td><td>Don't expect long typed answers</td></tr>
+<tr><td>Paste detection</td><td>Keep enabled</td></tr>
+<tr><td>Mother/family helping</td><td><strong>WELCOMED</strong> — multi-generational geographic knowledge is part of Uzbek family tradition</td></tr>
+<tr><td>Map screenshot detection</td><td>If student uploads what looks like a published map for Notebook task → MONITOR + soft prompt: "Bu xaritani sen chizganmisan?" Never accusatory.</td></tr>
+<tr><td>Verdict ladder</td><td>Universal 0=CLEAN → 3+=TEACHER_ALERT</td></tr>
+</table>
+</section>
+
+<section id="s11">
+<h2 class="section-title"><span class="num">§11</span>Cultural and Regional Anchors</h2>
+
+<h3>Names</h3>
+<p>Aziza, Bekzod, Gulnora, Sardor, Malika, Jasur, Dilnoza, Otabek, Farrux, Nodira, Komila, Anvar</p>
+
+<h3>Uzbek Places (heavily used)</h3>
+<ul>
+<li><strong>Cities:</strong> Tashkent, Samarkand, Bukhara, Khiva, Fergana, Margilan, Andijan, Urgench, Nukus, Termez</li>
+<li><strong>Mountains:</strong> Tian Shan, Pamir, Chimgan, Hisar</li>
+<li><strong>Rivers:</strong> Amu-Darya, Syr-Darya, Zarafshon, Chirchiq</li>
+<li><strong>Lakes/Reservoirs:</strong> Aral Sea (environmental theme — used carefully), Charvak reservoir</li>
+<li><strong>Valleys:</strong> Fergana Valley (tectonic formation example)</li>
+<li><strong>Deserts:</strong> Kyzylkum, Karakum</li>
+</ul>
+
+<h3>Central Asian Scholars (Scholar Pairing Rule)</h3>
+<ul>
+<li><strong>Abu Rayhan Beruni</strong> (973–1048) — Earth radius, Northern Hemisphere globe</li>
+<li><strong>Muhammad al-Khorazmi</strong> (783–850) — "Surat ul-Arz" (Description of the Earth)</li>
+<li><strong>Nasir Khosrow</strong> (1004–1088) — "Safarnama" (Travel Book)</li>
+<li><strong>Mahmud Kashgari</strong> (11th c.) — linguistic + geographic documentation</li>
+<li><strong>Ibn Sino (Avicenna)</strong> (980–1037) — climate-and-health writings</li>
+</ul>
+
+<h3>World Geographers (always paired with Central Asian)</h3>
+<ul>
+<li>Eratosthenes (Earth circumference) ↔ Beruni</li>
+<li>Ptolemy (Geographia, world maps) ↔ Khorazmi</li>
+<li>Magellan / Columbus (exploration) ↔ Nasir Khosrow</li>
+<li>Modern European cartography ↔ Kashgari</li>
+</ul>
+
+<h3>Things to Avoid</h3>
+<ul>
+<li>Direct comparisons to Western lifestyles</li>
+<li>Pork or alcohol references</li>
+<li>Politically sensitive topics (Aral Sea OK as environmental theme)</li>
+<li>Family poverty implications</li>
+<li>Doctrinal religious framing</li>
+<li><strong>Ranking Central Asian scholars as "below" world figures — always treat as equal</strong></li>
+</ul>
+</section>
+
+<section id="s12">
+<h2 class="section-title"><span class="num">§12</span>Assessment, Scoring &amp; Escalation</h2>
+
+<h3>Pass Threshold</h3>
+<p><strong>60% minimum.</strong> Below 60% → Duolingo Mode.</p>
+
+<h3>Score → Reward Mapping</h3>
+<table>
+<tr><th>Score</th><th>Rating</th><th>Reward</th></tr>
+<tr><td>100%</td><td><em>Mukammal!</em></td><td>Confetti, max XP, title <em>"Geograf"</em></td></tr>
+<tr><td>90–99%</td><td><em>A'lo!</em></td><td>Full XP + streak fire</td></tr>
+<tr><td>80–89%</td><td><em>Juda yaxshi!</em></td><td>First-time-80%+ bonus</td></tr>
+<tr><td>60–79%</td><td><em>O'tdi!</em></td><td>Standard XP, repass offered</td></tr>
+<tr><td>&lt;60%</td><td><em>Hali emas</em></td><td>Duolingo Mode, 0 XP this attempt</td></tr>
+</table>
+<p>Cosmetics earned only — never purchasable. Geografiya-specific: explorer badges, scholar frames (Beruni frame, Khorazmi frame), place stamps.</p>
+
+<h3>Dual-Pathway Answer Checking</h3>
+<ul>
+<li>MC, Tile Match, Sentence Fill, ordering, binary = Tier 1 &lt;100ms</li>
+<li>Open reasoning (RLC, Boss explanations) = Tier 3 ≤5 sec</li>
+<li>Notebook Capture = Tier 3 vision ≤10 sec</li>
+</ul>
+</section>
+
+<section id="s13">
+<h2 class="section-title"><span class="num">§13</span>AI Tier Strategy — Cost-Aware</h2>
+<table>
+<tr><th>Phase</th><th>Tier</th><th>Why</th></tr>
+<tr><td>0-A Theme Preview</td><td>T2</td><td>Personalized framing</td></tr>
+<tr><td>0-B Flash Cards</td><td>T1</td><td>Pre-generated</td></tr>
+<tr><td>Memory Sprint</td><td>T1</td><td>Pre-gen MC/Tile</td></tr>
+<tr><td>Story Mode</td><td>T1 + T2 checkpoint adapt</td><td>Static narratives + adaptive gates</td></tr>
+<tr><td>Game Breaks</td><td>T1</td><td>Pre-gen pools</td></tr>
+<tr><td>Real-Life Challenge</td><td>T2</td><td>Multi-path reasoning</td></tr>
+<tr><td>Consolidation</td><td>T1 + T2</td><td>Standard + flow adjustment</td></tr>
+<tr><td>Final Boss</td><td>T2 normal; <strong>T3 generative on failure only</strong></td><td>Socratic re-teach</td></tr>
+<tr><td>Reflection</td><td>T2</td><td>One AI-tailored prompt</td></tr>
+<tr><td>Notebook Capture (1-in-4)</td><td>T3 vision</td><td>Rubric scoring</td></tr>
+<tr><td>Did You Know</td><td>T2</td><td>Curated</td></tr>
+</table>
+<div class="callout callout-info">
+<strong>Cost projection per session:</strong> ~$0.04–0.05 (Tier 3 vision only on Notebook Capture sessions)<br>
+<strong>Annual cost per student:</strong> ~28 sessions × $0.04 + ~7 vision calls × $0.02 ≈ <strong>~$1.26/student/year</strong> — well within $3–5 envelope.
+</div>
+</section>
+
+<section id="s14">
+<h2 class="section-title"><span class="num">§14</span>Teacher Overrides</h2>
+
+<h3>Allowed</h3>
+<ul>
+<li>Session mode (Standard 35–45 / Extended 45–60)</li>
+<li>Boss HP modifier 50–150%</li>
+<li>Difficulty floor (student PISA ±1)</li>
+<li>Game pool (Auto / Manual)</li>
+<li>RLC required/optional (default required)</li>
+<li>Notebook Capture frequency (default 1-in-4, range 1-in-2 to 1-in-6)</li>
+<li>Map Detective availability per session</li>
+<li>Did You Know facts (default ↔ teacher-curated subset)</li>
+</ul>
+
+<h3>Cannot Override</h3>
+<ul>
+<li>7-phase structure</li>
+<li>Sessions 0-A and 0-B mandatory</li>
+<li>Boss is mandatory</li>
+<li>Stranger Test on Story Mode</li>
+<li><code>transition_skill</code> tag requirement</li>
+<li>60% pass threshold</li>
+<li>Banned mechanics list</li>
+<li>Cultural framing (Uzbek language, scholar pairing rule)</li>
+<li>ML track tagging requirement on map content</li>
+<li>Doctrinally-neutral framing of Central Asian scholars</li>
+</ul>
+</section>
+
+<section id="s15">
+<h2 class="section-title"><span class="num">§15</span>Tagging Schema</h2>
+<pre><code>{
+  "task_id": "UZ-GEO-5-WIND-03-T07",
+  "subject": "Geografiya",
+  "grade": 5,
+  "language": "uz",
+  "textbook_ref": {
+    "book": "Geografiya 5-sinf (Gulyamov et al. 2020)",
+    "bob": 6,
+    "section": "§24",
+    "section_title": "Shamol turlari",
+    "pages": [82, 84]
+  },
+  "standard_ref": {
+    "primary": "UZ-GEO-5-WIND-03",
+    "alias": "GEO.5.6.24"
+  },
+  "pisa_ref": {
+    "domain": "Science",
+    "sub_domain": "Earth & space — atmosphere",
+    "level_target": 2,
+    "transition_skill": "L1→L2: explain a familiar Earth phenomenon with one cause"
+  },
+  "pisa_reading_l1_l2": false,
+  "ml_level": null,
+  "earth_system": "atmosphere",
+  "blooms_level": "Understand",
+  "game_mechanic": "tile_match",
+  "phase": "game_break",
+  "prompt_uz": "Quyidagi shamol turlarini moslashtiring...",
+  "evaluation_tier": 1,
+  "estimated_time_sec": 45,
+  "cultural_anchors_used": ["Beruni atmosfera kuzatishlari"],
+  "scholar_pairing": ["Beruni", "Eratosthenes"],
+  "is_safety_critical": false
+}</code></pre>
+</section>
+
+<section id="s16">
+<h2 class="section-title"><span class="num">§16</span>Content Production Checklist</h2>
+<p>Per session (~28 sessions to cover 7 Bobs):</p>
+<table>
+<tr><th>Component</th><th>Volume per session</th></tr>
+<tr><td>Theme Preview 8-panel</td><td>8 panels</td></tr>
+<tr><td>Flash Cards</td><td>5–7 cards (each with map thumbnail)</td></tr>
+<tr><td>Memory Sprint items</td><td>30–50 (mixed Tile/MC/Sentence Fill)</td></tr>
+<tr><td>Story Mode arc</td><td>3 segments × 90 sec + scholar pairing</td></tr>
+<tr><td>Game Breaks</td><td>6–9 activities across 3+ mechanics</td></tr>
+<tr><td>Real-Life Challenge</td><td>1 case (first-person, Uzbek context, map literacy)</td></tr>
+<tr><td>Consolidation</td><td>1 labeled diagram OR Memory Palace</td></tr>
+<tr><td>Boss pools</td><td>Easy/Medium/Hard with worked solutions + hints</td></tr>
+<tr><td>Reflection prompts</td><td>3 buckets + 3 universal</td></tr>
+<tr><td>Did You Know facts</td><td>3</td></tr>
+<tr><td>All items dual-coded + tagged</td><td>standard_ref + pisa_ref + ml_level if map + earth_system + transition_skill</td></tr>
+<tr><td>Notebook Capture</td><td>1 in every 4 sessions</td></tr>
+<tr><td>Scholar pairing applied</td><td>Wherever a world geographer is mentioned</td></tr>
+</table>
+<p><strong>Total per session: ~80–120 task units.</strong> <strong>Total for Grade 5: ~2,200–3,400 task units across 28 sessions.</strong></p>
+<p>Plus production pools: ~30 scholar pairing entries · ~50–60 Did You Know facts · ~80 map snippets/diagrams · ~12 NPC dialogue trees · ~6 Memory Palace location sets.</p>
+</section>
+
+<section id="s17">
+<h2 class="section-title"><span class="num">§17</span>Sample Walkthrough — Bob VI § 24 "Shamol Turlari"</h2>
+<div class="callout callout-info"><strong>Reference implementation.</strong> Every other chapter session should match this shape.</div>
+
+<h3>Metadata</h3>
+<ul>
+<li><strong>Bob VI § 24,</strong> textbook pages 82–84</li>
+<li><strong>Standard:</strong> UZ-GEO-5-WIND-03 / GEO.5.6.24</li>
+<li><strong>PISA target:</strong> Science L2, ML-L2</li>
+<li><strong>Earth system:</strong> Atmosphere</li>
+<li><strong>Transition skill:</strong> L1→L2: explain a familiar Earth phenomenon with one cause</li>
+<li><strong>Session length:</strong> 38 min</li>
+<li><strong>Scholar pairing:</strong> Beruni ↔ Eratosthenes</li>
+</ul>
+
+<h3>Pre-Homework</h3>
+<p><strong>0-A Theme Preview</strong> (2 min, 8 panels): Aral windmills · "Shamol — havoning yugurishi" · 3 wind diagrams · Beruni 1000 yil oldin · Chimgan personal hook · Why wind matters · Modern wind farms · Optional video</p>
+<p><strong>0-B Flash Cards</strong> (1 min, 6 cards): Shamol · Bosim · Passat · Musson · Mahalliy shamollar · Shamol gulli</p>
+
+<h3>Phase 1 — Memory Sprint (2 min, 6 items)</h3>
+<p>Tile Match (wind type ↔ region) + MC (pressure/temperature) + Sentence Fill. Pulls 2 items from Bob V (water cycle interleaving).</p>
+
+<h3>Phase 2 — Story Mode (6 min, 3 segments)</h3>
+<p><strong>Segment 1:</strong> "Beruni 1020-yilda Khorazmda kuzatishlar olib borardi. U havoning balandlikka qarab nima uchun yengillashishini tushunmoqchi edi..." Checkpoint: 3 MC, all defensible.</p>
+<p><strong>Game 1 — Tile Match (2 min):</strong> 6 wind types ↔ regions</p>
+<p><strong>Segment 2:</strong> Discovery — "Issiq havo ko'tariladi, sovuq havo pastga tushadi. Bu shamol harakatining sababi." Checkpoint: open reasoning (Tier 3).</p>
+<p><strong>Game 2 — Why Chain (2 min, 2 levels):</strong> Quyosh quruqlikni qizdiradi → issiq havo ko'tariladi → dengizdan sovuq havo o'rniga keladi</p>
+<p><strong>Segment 3:</strong> Solution — "Beruni va Eratosfen orasida 1200 yil farq bor edi. Ikki olim bir xil natijaga keldi."</p>
+
+<h3>Phase 3 — Game Break (5 min)</h3>
+<p>Mystery Box — 3 hidden weather phenomena reveals + optional micro-task (sketch wind rose).</p>
+
+<h3>Phase 4 — Real-Life Challenge (4 min)</h3>
+<p><em>"Sen meteorologsan. Toshkentda yozning issiq kunlaridan biri. Soat 14:00. Toshkentda 38°, Chimganda 22°. Kechki paytda Toshkentliklar uchun qanday ob-havo bashorati berasan? Va nima uchun?"</em> 4 options + free text. Tier 3 evaluates reasoning.</p>
+
+<h3>Phase 5 — Consolidation (3 min)</h3>
+<p>Labeled diagram recall — wind formation diagram, 5 labels to drag back into place.</p>
+
+<h3>Phase 6 — Sub Boss Medium (7 min, 50 HP, 5 questions)</h3>
+<p>Each carries: <code>standard_ref</code>, <code>pisa_level</code>, <code>ml_level</code>, <code>transition_skill</code>, <code>earth_system</code>.</p>
+<table>
+<tr><th>#</th><th>Question</th><th>Type</th><th>Diff</th><th>Dmg</th><th>Tags</th></tr>
+<tr><td>1</td><td><em>"Passat shamollari qaysi mintaqada esadi?"</em></td><td>MC</td><td>easy</td><td>−10</td><td>Science L1 · ML-L1 · atmosphere</td></tr>
+<tr><td>2</td><td><em>"Quyidagi jarayonlarni to'g'ri tartibga keltir..."</em></td><td>Ordering</td><td>med</td><td>−15</td><td>Science L2 · atmosphere</td></tr>
+<tr><td>3</td><td><em>"Toshkent koordinatalarini ber. Uning yaqinida qaysi shamol turi ko'p uchraydi va nima uchun?"</em></td><td>Open + map</td><td>med</td><td>−15</td><td>Science L2 + Reading L2 · ML-L2 · atmosphere</td></tr>
+<tr><td>4</td><td><em>"Nima uchun musson Hindistonda esadi, lekin Uzbekistonda emas?"</em></td><td>Open reasoning</td><td>med</td><td>−5</td><td>Science L2 · atmosphere</td></tr>
+<tr><td>5</td><td><em>"Iqlim va relief xaritalarini taqqosla. Tian Shan tog' tizimida shamollar qanday yo'naladi va nima uchun?"</em></td><td>Open + 2-map</td><td>hard</td><td>−5</td><td>Science L2 + Reading L2 · ML-L4 · atmosphere + lithosphere</td></tr>
+</table>
+
+<h3>Phase 7 — Reflection (2 min)</h3>
+<p>Tier 2 generates 1 prompt by accuracy bucket. Min 1 sentence. Effort-praise framing only.</p>
+
+<h3>Did You Know at phase transitions</h3>
+<ol>
+<li>"Beruni 1000 yil oldin atmosfera bosimining balandlikka qarab pasayishini tushuntirgan."</li>
+<li>"Hindistondagi musson shamollari 100 milliondan ortiq odamning oziq-ovqat ta'minoti uchun muhim."</li>
+<li>"O'zbekistonda yiliga 200 dan ortiq quyoshli kun bor."</li>
+</ol>
+</section>
+
+<section id="s18">
+<h2 class="section-title"><span class="num">§18</span>Open Questions / Things to Validate</h2>
+<ol>
+<li><strong>Map interactivity at scale</strong> — pinch-zoom, pan, tap-to-identify on shared family smartphones with low bandwidth?</li>
+<li><strong>Scholar pairing accuracy</strong> — verify Central Asian scholar contributions with cultural reviewer + historian.</li>
+<li><strong>Coordinate calculation as Tier 1</strong> — can the rule-based checker handle input variations (38.5° vs 38°30')?</li>
+<li><strong>Memory Palace for Tian Shan / Aral / Fergana</strong> — needs UX prototyping.</li>
+<li><strong>Notebook Capture frequency</strong> — is 1-in-4 right? Pilot to validate.</li>
+<li><strong>Aral Sea environmental content</strong> — politically sensitive (Soviet-era history). Frame as environmental, not political. Validate with Uzbek MoE.</li>
+<li><strong>Cross-subject scholar reuse</strong> — Beruni, Khorazmi, Ibn Sino appear across Geografiya + Tarbiya + Tasviriy Sanat. Should they share NPC representations?</li>
+<li><strong>Map Detective mini-game design</strong> — needs UX prototyping; new mechanic.</li>
+<li><strong>Below-L2 fallback for map content</strong> — Reading L2 gate may exclude many G5 students.</li>
+<li><strong>Bob III Maps content depth</strong> — only 2 textbook sections but central. May need expansion to 3+ NETS sessions.</li>
+<li><strong>Field observation long-arc tracker</strong> — weather logging across multiple sessions as side quest. Engineering review for persistence.</li>
+<li><strong>Scholar pairing rule scaling</strong> — ~30 pairings needed. Who curates?</li>
+</ol>
+</section>
+
+<section id="s19">
+<h2 class="section-title"><span class="num">§19</span>Production Handoff</h2>
+<h3>Contract for Content Team</h3>
+<ol>
+<li>Source from textbook — every task traces to a Bob/section/page range</li>
+<li>Apply §4 psychology parameters — 35–45 min, calm pacing, CPA mandatory</li>
+<li>Use §11 cultural anchors — rotate Uzbek places, ALWAYS pair with Central Asian scholars</li>
+<li>Tag every task per §15 schema</li>
+<li>Pass Stranger Test on every Story segment + RLC scenario</li>
+<li>Apply scholar pairing rule wherever a world geographer is mentioned</li>
+<li>Author Boss question pools — Easy/Medium/Hard with worked solutions + hints + Common Errors</li>
+<li>Curate Did You Know pool — ~50–60 facts</li>
+<li>Validate against §18 open questions before production locks</li>
+<li>Notebook Capture in 1 of every 4 sessions only — keep limited; this isn't Maker-First</li>
+</ol>
+
+<h3>Quality Gates</h3>
+<ul>
+<li>Pedagogy review by 1 lead + 1 G5 Uzbek Geografiya teacher</li>
+<li>Language review by Uzbek native speaker</li>
+<li><strong>Cultural validation</strong> by Uzbek historian (scholar pairing accuracy)</li>
+<li><strong>Map literacy validation</strong> by Uzbek geographer</li>
+<li>Pilot in 2 classrooms (1 urban Tashkent, 1 rural Fergana)</li>
+</ul>
+</section>
+
+<section id="s20">
+<h2 class="section-title"><span class="num">§20</span>Versioning and Review</h2>
+<ul>
+<li><strong>Version 1.0</strong> — 2026-04-08, Geografiya G5 first framework, PISA-rigorous shape</li>
+<li><strong>Reviewers needed:</strong> Product/pedagogy lead, Uzbek G5 Geografiya teacher, Uzbek historian, Uzbek geographer, content lead</li>
+<li><strong>Next revision</strong> after first 5 sessions stress-tested in pilot</li>
+<li><strong>Sibling frameworks to create:</strong>
+<ul>
+<li>Geografiya G5 Russian edition</li>
+<li>Geografiya G6, G7 (next grades — economic/human geography emerges)</li>
+<li>Apply scholar pairing rule retroactively to other PISA-rigorous frameworks (Science G5)</li>
+</ul>
+</li>
+</ul>
+</section>
+
+<footer>
+<p><strong>End of NETS Geografiya G5 Framework v1.0</strong></p>
+<p>Companion docs: <code>NETS-Homework-Engine-UNIFIED.md</code> · <code>NETS-Homework-Engine-Blueprint.docx</code> · <code>NETS-UI-UX-Design-Spec.docx</code> · <code>Researches/qwen-grade5-psychology-findings.md</code> · <code>Extracted Texts/_geografiya_extracted.txt</code></p>
+</footer>
+
+</div>
+</main>
+
+</div>
+
+</body>
+</html>

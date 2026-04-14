@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Tasviriy Sanat — Grade 5 Subject Framework v1.0 (Maker-First)</title>
+<style>
+:root {
+  --purple: #7C3AED;
+  --purple-light: #A78BFA;
+  --purple-dark: #5B21B6;
+  --cream: #FEF3C7;
+  --cream-bright: #FDE68A;
+  --bg: #0F172A;
+  --bg-card: #1E293B;
+  --bg-soft: #334155;
+  --text: #F3F4F6;
+  --text-dim: #CBD5E1;
+  --text-mute: #94A3B8;
+  --border: #475569;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 60px 40px; }
+header.hero {
+  background: linear-gradient(135deg, #1E293B 0%, #2D1B69 100%);
+  border-bottom: 4px solid var(--purple);
+  padding: 60px 40px 40px;
+}
+header.hero .container { padding: 0; max-width: 920px; margin: 0 auto; }
+header.hero .badge {
+  display: inline-block;
+  background: var(--purple);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+header.hero h1 {
+  font-size: 48px;
+  margin: 0 0 12px;
+  color: var(--cream);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+header.hero .subtitle { font-size: 20px; color: var(--text-dim); margin: 0 0 24px; }
+header.hero .meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+header.hero .meta-item {
+  background: rgba(124, 58, 237, 0.12);
+  padding: 12px 16px;
+  border-left: 3px solid var(--purple);
+  border-radius: 4px;
+}
+header.hero .meta-item strong {
+  display: block;
+  color: var(--cream);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+header.hero .meta-item span { color: var(--text-dim); }
+
+nav.toc {
+  background: var(--bg-card);
+  padding: 28px 32px;
+  border-radius: 12px;
+  margin-bottom: 48px;
+  border: 1px solid var(--border);
+}
+nav.toc h2 {
+  margin: 0 0 16px;
+  color: var(--purple-light);
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+nav.toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 24px;
+}
+nav.toc li { padding: 6px 0; break-inside: avoid; }
+nav.toc a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  padding: 4px 0;
+  transition: color 0.2s, padding-left 0.2s;
+}
+nav.toc a:hover {
+  color: var(--cream);
+  padding-left: 6px;
+}
+nav.toc a strong { color: var(--cream-bright); margin-right: 8px; }
+
+section { margin-bottom: 56px; scroll-margin-top: 20px; }
+h2.section-title {
+  font-size: 32px;
+  color: var(--purple-light);
+  border-bottom: 2px solid var(--purple-dark);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+h2.section-title .num { color: var(--cream-bright); font-weight: 800; margin-right: 12px; }
+h3 {
+  font-size: 22px;
+  color: var(--cream-bright);
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 17px;
+  color: var(--cream);
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+p { margin: 12px 0; color: var(--text-dim); }
+strong { color: var(--text); }
+em { color: var(--cream); font-style: normal; font-weight: 500; }
+code {
+  background: var(--bg-soft);
+  color: var(--cream);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  font-size: 13px;
+}
+pre {
+  background: var(--bg-soft);
+  border-left: 3px solid var(--purple);
+  padding: 16px 20px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 13px;
+  color: var(--text);
+}
+pre code { background: none; padding: 0; color: inherit; }
+ul, ol { margin: 12px 0; padding-left: 24px; color: var(--text-dim); }
+li { margin: 6px 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+th {
+  background: var(--bg-soft);
+  color: var(--cream);
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--purple-dark);
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-dim);
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(124, 58, 237, 0.05); }
+blockquote {
+  border-left: 4px solid var(--purple);
+  background: rgba(124, 58, 237, 0.08);
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--text);
+}
+blockquote p:first-child { margin-top: 0; }
+blockquote p:last-child { margin-bottom: 0; }
+.callout {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--cream-bright);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.callout-warning { border-left-color: var(--purple-light); background: rgba(167, 139, 250, 0.06); }
+.callout-info { border-left-color: var(--cream-bright); background: rgba(253, 230, 138, 0.05); }
+.tag {
+  display: inline-block;
+  background: rgba(124, 58, 237, 0.18);
+  color: var(--purple-light);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+.tag-warning { background: rgba(253, 230, 138, 0.15); color: var(--cream-bright); }
+.tag-danger { background: rgba(239, 68, 68, 0.15); color: #FCA5A5; }
+.make-callout {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(253, 230, 138, 0.08));
+  border: 2px solid var(--purple);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.make-callout h4 { color: var(--cream-bright); margin-top: 0; font-size: 20px; }
+footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  color: var(--text-mute);
+  font-size: 13px;
+  text-align: center;
+}
+footer a { color: var(--cream); text-decoration: none; }
+@media (max-width: 720px) {
+  .container { padding: 40px 20px; }
+  header.hero { padding: 40px 20px 30px; }
+  header.hero h1 { font-size: 32px; }
+  nav.toc ol { columns: 1; }
+  h2.section-title { font-size: 24px; }
+  table { font-size: 12px; }
+  th, td { padding: 8px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="badge">NETS Subject Framework · Maker-First Mode</div>
+    <h1>Tasviriy Sanat — Grade 5</h1>
+    <p class="subtitle">Subject framework v1.0 · Production-ready · Single source of truth for Grade 5 Tasviriy Sanat homework</p>
+    <div class="meta">
+      <div class="meta-item"><strong>Version</strong><span>1.0 (Maker-First)</span></div>
+      <div class="meta-item"><strong>Date</strong><span>2026-04-08</span></div>
+      <div class="meta-item"><strong>Inherits from</strong><span>UNIFIED v2.0 + Blueprint v1.0</span></div>
+      <div class="meta-item"><strong>Textbook</strong><span>Kuziyev et al. 2020 · 128pp</span></div>
+      <div class="meta-item"><strong>Sessions</strong><span>34 sessions · ~22 maker + ~7 theory + ~5 hybrid</span></div>
+      <div class="meta-item"><strong>Subject color</strong><span>#7C3AED Purple + #FEF3C7 Cream</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<blockquote>
+<p><strong>Reading order:</strong> §0 first (decisions log), then §2 (subject identity), then §6 (the Maker-First engine). Everything else is reference.</p>
+<p><strong>One-line summary:</strong> Every Tasviriy Sanat session — even theory lessons about Leonardo or Nabiyev — ends with the student physically making something. The Make is the climax. There is no Final Boss; the Make replaces it. A digital fallback exists for students without supplies.</p>
+</blockquote>
+
+<nav class="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#s0"><strong>§0</strong>Resolution Log</a></li>
+<li><a href="#s1"><strong>§1</strong>Audience Profile</a></li>
+<li><a href="#s2"><strong>§2</strong>Subject Identity</a></li>
+<li><a href="#s3"><strong>§3</strong>PISA + VA Custom Track</a></li>
+<li><a href="#s4"><strong>§4</strong>Psychology Filter</a></li>
+<li><a href="#s5"><strong>§5</strong>Pre-Homework 0-A &amp; 0-B</a></li>
+<li><a href="#s6"><strong>§6</strong>The Maker-First Engine</a></li>
+<li><a href="#s7"><strong>§7</strong>Content Rules</a></li>
+<li><a href="#s8"><strong>§8</strong>Game Catalog</a></li>
+<li><a href="#s9"><strong>§9</strong>The Make + Galereya</a></li>
+<li><a href="#s10"><strong>§10</strong>Anti-Cheat Tuning</a></li>
+<li><a href="#s11"><strong>§11</strong>Cultural Anchors</a></li>
+<li><a href="#s12"><strong>§12</strong>Assessment &amp; Scoring</a></li>
+<li><a href="#s13"><strong>§13</strong>AI Tier Strategy</a></li>
+<li><a href="#s14"><strong>§14</strong>Teacher Overrides</a></li>
+<li><a href="#s15"><strong>§15</strong>Tagging Schema</a></li>
+<li><a href="#s16"><strong>§16</strong>Content Production</a></li>
+<li><a href="#s17"><strong>§17</strong>Sample Walkthrough — Lesson 27 Portrait</a></li>
+<li><a href="#s18"><strong>§18</strong>Open Questions</a></li>
+<li><a href="#s19"><strong>§19</strong>Production Handoff</a></li>
+<li><a href="#s20"><strong>§20</strong>Versioning &amp; Review</a></li>
+</ol>
+</nav>
+
+<section id="s0">
+<h2 class="section-title"><span class="num">§0</span>Resolution Log</h2>
+<p>Tasviriy Sanat is <strong>the second NETS subject built around a non-PISA creative discipline</strong> (after Tarbiya), and <strong>the first subject where physical making is the engine's center of gravity</strong>. Textbook analysis showed ~65% hands-on creation and ~30% theory/history. The user's directive: <strong>Maker-First</strong> — every session, even theory lessons, ends with the student physically making something inspired by today's content.</p>
+<table>
+<tr><th>#</th><th>Conflict</th><th>Resolution</th><th>Reasoning</th></tr>
+<tr><td>1</td><td>UNIFIED §6 mandates Final Boss with HP/defeat. Art has no defeatable correct answer.</td><td><strong>REPLACE Final Boss with "The Make" (Phase 6)</strong> — student physically draws/paints/sculpts something inspired by today's lesson, photographs it, uploads. Tier 3 vision gives warm rubric-based feedback. No HP, no defeat, always passes.</td><td>Combat metaphor is incoherent for art. The Make satisfies the climax requirement of UNIFIED §6 by becoming the session's effortful peak — 10–12 min in focused creative work.</td></tr>
+<tr><td>2</td><td>UNIFIED §4 sets Standard session 30–45 min.</td><td><strong>Maker-First sessions run 25–35 min.</strong> The Make alone is 10–12 min; need ~15 min for the rest.</td><td>Longer than Tarbiya 15–25, shorter than Science 35–45.</td></tr>
+<tr><td>3</td><td>UNIFIED §6.1 Memory Sprint = 5–8 recall items.</td><td><strong>REPLACE Memory Sprint with "Warm-up Sketch" (Phase 1)</strong> — 3-min hand-loosening exercise.</td><td>The hand needs to warm up before the mind. Drill recall is wrong opening for a making subject.</td></tr>
+<tr><td>4</td><td>UNIFIED §6.3 Game Breaks = 3 games per session.</td><td><strong>REPLACE with "Skill Drill" (Phase 3)</strong> — 1 light game + 1 micro-make. Total 4 min.</td><td>Three games is too much fragmentation when the student needs creative momentum toward the main Make.</td></tr>
+<tr><td>5</td><td>UNIFIED §6.4 RLC has expert POV + tricky distractors.</td><td><strong>REPLACE with "Choice + Plan" (Phase 4)</strong> — student picks WHAT to make today (3 options) and plans the composition.</td><td>This is the bridge between theory and the Make. Student needs to commit before the timer starts.</td></tr>
+<tr><td>6</td><td>UNIFIED §6.5 Consolidation = diagram recall before boss.</td><td><strong>REPLACE with "Master Painters Hall" (Phase 5)</strong> — today's painter card unlocks. Calm 1-min beat before the Make.</td><td>The card collection IS the consolidation; the moment of quiet pride before the creative push.</td></tr>
+<tr><td>7</td><td>UNIFIED §6.6 Final Boss → REPLACED with "The Make" (see #1).</td><td>The Make is the session climax. 10–12 min of focused physical creation, photo upload, Tier 3 vision feedback.</td><td>See #1.</td></tr>
+<tr><td>8</td><td>UNIFIED §3 mandates PISA tagging on every task.</td><td><strong>PISA Creative Thinking PRIMARY + Reading L1→L2 SECONDARY (theory only) + custom Visual Arts (VA) track L1→L4 as practice spine.</strong></td><td>Creative Thinking is closest official PISA domain. Reading covers art history texts. VA track captures making/observation.</td></tr>
+<tr><td>9</td><td>UNIFIED §6 assumes correctness-based scoring. Art has no correct answers.</td><td><strong>Engagement-only scoring for the Make.</strong> Tier 3 vision provides warm reflective feedback, never grades.</td><td>Overjustification effect (Deci/Koestner/Ryan 1999). Grading creative work crowds out intrinsic motivation.</td></tr>
+<tr><td>10</td><td>UNIFIED §11 gamification economy includes leagues.</td><td><strong>NO leagues, NO public ranking. Two collection meta-games: Master Painters Hall (artist cards) + Galereya (student's uploaded artworks).</strong></td><td>Artists want to be seen, not ranked. Galereya satisfies the "show my work" instinct without comparative damage.</td></tr>
+<tr><td>11</td><td>UNIFIED bans purchasable cosmetics.</td><td><strong>Honored.</strong> All cosmetics earned via Master Painters Hall completion.</td><td>UNIFIED rule.</td></tr>
+<tr><td>12</td><td>UNIFIED §10 requires content pool ≥85 items per topic.</td><td><strong>Tasviriy Sanat target ≥40 items per lesson</strong> (lower because each Make is one rich item replacing many drill items).</td><td>Quality &gt; quantity for creative content.</td></tr>
+<tr><td>13</td><td>What if a student has no physical supplies?</td><td><strong>Digital fallback baked in from day one.</strong> Tap "no supplies today" → engine offers in-app digital make. Full XP awarded. Tagged for teacher dashboard analytics.</td><td>Without this, sessions are blocked for students without art supplies (common in rural Uzbekistan).</td></tr>
+<tr><td>14</td><td>UNIFIED §13 cost budget $3–5/student/year.</td><td><strong>Capped at 1 Tier 3 vision call per session for The Make.</strong> Pre-projected ~$0.68/student/year for vision; full annual cost ~$2.04, within budget.</td><td>Vision is the only expensive call. 1/session keeps it affordable.</td></tr>
+<tr><td>15</td><td>UNIFIED §6.7 Reflection mandates 1 sentence minimum.</td><td><strong>Optional reflection.</strong> Voice / text / draw / skip — same XP.</td><td>Same as Tarbiya. Mandatory reflection on creative work feels coercive.</td></tr>
+<tr><td>16</td><td>Theory lessons (1, 8–9, 11, 13, 27) have no inherent making requirement.</td><td><strong>Maker-First override: theory lessons still end with The Make, but the prompt is style-imitation or response art.</strong></td><td>This is the core Maker-First commitment: theory days don't break the rhythm.</td></tr>
+<tr><td>17</td><td>Religious/cultural framing.</td><td><strong>Hold doctrinally-neutral cultural Islamic warmth</strong> (matches textbook).</td><td>Textbook is values-neutral; preserve accessibility.</td></tr>
+<tr><td>18</td><td>Family-bridge: should students show family their work?</td><td><strong>Optional warm prompt at session end: "Buvingga ko'rsat" (Show your grandmother).</strong> Never required.</td><td>Trauma-informed default = optional.</td></tr>
+<tr><td>19</td><td>UNIFIED bans visible difficulty labels.</td><td><strong>Honored — no difficulty labels.</strong></td><td>UNIFIED immutable.</td></tr>
+<tr><td>20</td><td>The Stranger Test (UNIFIED §6.2 quality gate).</td><td><strong>Honored, extended:</strong> Story segments + Make prompts must pass "10-year-old can attempt this in 10 minutes with basic supplies" test.</td><td>The Make is make-or-break. If a 10-year-old can't try it, the framework fails.</td></tr>
+</table>
+<div class="callout callout-info">
+<strong>20 resolutions logged. The single most important decision:</strong> every session ends with The Make (Phase 6 replaces Final Boss), and the digital fallback ensures no student is ever blocked.
+</div>
+</section>
+
+<section id="s1">
+<h2 class="section-title"><span class="num">§1</span>Audience Profile</h2>
+<p>Inherited from <code>qwen-grade5-psychology-findings.md</code>. Tasviriy Sanat-specific deltas noted inline.</p>
+
+<h3>Cognitive (universal G5)</h3>
+<ul>
+<li>Late concrete operational (Piaget); abstract reasoning emerging</li>
+<li>Working memory 4–5 chunks (Cowan 2001) → max 3 new technique concepts per session</li>
+<li>Sustained attention 20–30 min academic, <strong>extends to 35–40 min for engaged creative work</strong></li>
+<li>Lexile 830–1010L for art history texts</li>
+<li>Spatial reasoning still developing — 2D before 3D, simple shapes before complex figures</li>
+<li>Fine motor coordination still maturing — pencil grip varies, watercolor control limited</li>
+</ul>
+
+<h3>Social/Emotional (universal G5)</h3>
+<ul>
+<li>Self-concept fragile under public evaluation (Harter 2012)</li>
+<li><strong>Art self-concept especially fragile</strong> — "I can't draw" is a common life-long self-limiting belief at this age</li>
+<li>Failure tolerance low — never frame the Make as "good vs bad"</li>
+<li>Peer comparison sensitivity peaking — no leaderboards, no public ranking of Makes</li>
+</ul>
+
+<h3>Tasviriy Sanat-Specific Cognitive Load</h3>
+<ul>
+<li>Creative making is intrinsically motivating IF the prompt is age-appropriate and the framing is non-evaluative</li>
+<li>The "blank page" problem is real — students freeze when given unlimited choice. The "3 options" pattern (Phase 4) eliminates this</li>
+<li>10–12 min making sessions are at the upper edge of G5 sustained fine-motor attention; longer = fatigue</li>
+</ul>
+
+<h3>Uzbek Context</h3>
+<ul>
+<li>Mother is primary supervisor; mother-as-co-art-teacher is welcomed (especially for naqsh, embroidery)</li>
+<li>Shared family smartphone — mobile-first photo upload</li>
+<li><strong>Art supplies vary wildly</strong> — urban families have full kits, rural families may have only pencil + notebook. <strong>The digital fallback is essential.</strong></li>
+<li>Traditional Uzbek crafts (kashtachilik, naqsh, miniature, ceramics) are part of cultural identity</li>
+</ul>
+</section>
+
+<section id="s2">
+<h2 class="section-title"><span class="num">§2</span>Subject Identity</h2>
+<p><strong>Tasviriy Sanat</strong> = Visual Arts / Fine Arts. Mandatory in Uzbek schools. Grade 5 covers drawing fundamentals, color theory, composition, art history, and traditional Uzbek folk arts.</p>
+
+<div class="callout callout-warning">
+<strong>Pedagogical posture:</strong> <em>Make, observe, wonder, share.</em> The textbook teaches by demonstrating technique step-by-step (4-phase scaffolds), then asking students to create. NETS preserves this rhythm: theory feeds making, making feeds reflection.
+</div>
+
+<h3>Content Domains (5 thematic clusters)</h3>
+<ol>
+<li><strong>Drawing fundamentals</strong> (Lessons 2–7) — pencil, line, value, geometric form, perspective, landscape, sculpture</li>
+<li><strong>Color &amp; painting</strong> (Lessons 8–10, 17–23) — color theory, watercolor, still-life, contrast, harmony</li>
+<li><strong>Composition &amp; ornament</strong> (Lessons 12, 14–16, 21, 24–26) — sketching, decorative naqsh, themed compositions, wall newspapers</li>
+<li><strong>Genres &amp; art history</strong> (Lessons 1, 8–9, 11, 13, 27) — expressive means, color painters, portrait genre</li>
+<li><strong>Portraiture &amp; character</strong> (Lessons 28–34) — cartoon characters, clay relief portraits, historical figures (Amir Temur, Bobur)</li>
+</ol>
+
+<p><strong>Standard code prefix:</strong> <code>UZ-TSV-5-{TOPIC}-{SEQ}</code> primary · <code>TSV.5.{LESSON}.{SEQ}</code> alias</p>
+<p><strong>Textbook source:</strong> Tasviriy san'at 5-sinf, Kuziyev/Abdirasilov/Nurtoyev/Sulaymonov, "O'zbekiston" NMIU, 2020, 128pp.</p>
+
+<h3>Lesson Map → Session Map</h3>
+<table>
+<tr><th>Quarter</th><th>Lessons</th><th>Sessions</th><th>LU type</th></tr>
+<tr><td>I (Lessons 1–9)</td><td>9</td><td>9</td><td>1 theory + 6 maker + 2 theory-with-make</td></tr>
+<tr><td>II (Lessons 10–16)</td><td>7</td><td>7</td><td>1 theory-with-make + 5 maker + 1 hybrid</td></tr>
+<tr><td>III (Lessons 17–26)</td><td>10</td><td>10</td><td>All maker (still-life, ornament, composition)</td></tr>
+<tr><td>IV (Lessons 27–34)</td><td>8</td><td>8</td><td>1 theory-with-make + 7 maker (portrait)</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>34 lessons</strong></td><td><strong>34 sessions</strong></td><td><strong>~22 maker + ~7 theory-with-make + ~5 hybrid</strong></td></tr>
+</table>
+<p>In Maker-First, <strong>all 34 sessions end with The Make</strong> — only the kind of Make varies (technique-driven vs. style-imitation vs. composition).</p>
+</section>
+
+<section id="s3">
+<h2 class="section-title"><span class="num">§3</span>PISA Mapping + Visual Arts (VA) Custom Track</h2>
+
+<h3>Primary tag: PISA Creative Thinking</h3>
+<p>Closest official PISA domain. Covers generating ideas, evaluating options, improving sketches, and originality.</p>
+
+<h3>Secondary tag: PISA Reading L1→L2</h3>
+<p>Used <strong>only on theory lessons</strong>: Lesson 1 (expressive means), 8–9 (color characteristics), 11 (expressive landscape), 13 (animalistic genre), 27 (portrait genre).</p>
+
+<h3>Custom Visual Arts (VA) Track — Practice Spine</h3>
+<table>
+<tr><th>Level</th><th>Code</th><th>Capability</th><th>Example task</th></tr>
+<tr><td><strong>VA-L1</strong></td><td>Recognize</td><td>Identify a technique, artist, or art concept by name</td><td>"Mona Lizani kim chizgan?"</td></tr>
+<tr><td><strong>VA-L2</strong></td><td>Apply</td><td>Use a learned technique in a guided make</td><td>"Geometrik shaklni qalamda chiz, soyalash bilan"</td></tr>
+<tr><td><strong>VA-L3</strong></td><td>Compose</td><td>Make creative choices in composition, color, mood</td><td>"Manzara chiz — quyoshning botishi yoki tongni tanla"</td></tr>
+<tr><td><strong>VA-L4</strong></td><td>Express</td><td>Make personal/expressive work that reflects mood, style, intent</td><td>"O'zingni xohlagan rangda avtoportret chiz"</td></tr>
+</table>
+
+<h3>Distribution Targets per Session</h3>
+<table>
+<tr><th>Bucket</th><th>%</th><th>Purpose</th></tr>
+<tr><td>VA-L1 (Recognize)</td><td>25%</td><td>Theme Preview, Flash Cards, Phase 3 game</td></tr>
+<tr><td>VA-L2 (Apply)</td><td>35%</td><td>Technique demos, micro-makes</td></tr>
+<tr><td>VA-L3 (Compose)</td><td>30%</td><td>The Make (most sessions)</td></tr>
+<tr><td>VA-L4 (Express)</td><td>10%</td><td>The Make on theory days; reflection sketches</td></tr>
+</table>
+</section>
+
+<section id="s4">
+<h2 class="section-title"><span class="num">§4</span>Psychology Filter — Applied Parameters</h2>
+
+<h3>Session Timing</h3>
+<ul>
+<li><strong>Standard session: 25–35 min</strong> (Maker-First override; longer than Tarbiya 15–25, shorter than Science 35–45)</li>
+<li><strong>The Make alone: 10–12 min</strong> (extendable to 15)</li>
+<li><strong>Single non-Make phase max: 4–5 min</strong></li>
+<li><strong>Inter-phase break: 5–10 sec</strong> with Did You Know art facts</li>
+<li><strong>1 session per day max</strong> (creative fatigue is real)</li>
+<li><strong>Deploy window: 17:00–19:00</strong> (after-dinner, mother nearby for supplies)</li>
+</ul>
+
+<h3>Adaptation Calibration</h3>
+<ul>
+<li><strong>No success rate target for The Make</strong> — completion = success</li>
+<li><strong>No difficulty labels, no tiering</strong> for The Make</li>
+<li><strong>Recovery framing</strong> — never "Wrong"; use "Boshqacha qarash"</li>
+<li><strong>Productive struggle ceiling for non-Make tasks: 30 sec</strong></li>
+<li><strong>The Make has no struggle ceiling</strong> — student paces themselves</li>
+</ul>
+
+<h3>Banned Techniques</h3>
+<ol>
+<li><span class="tag tag-danger">Banned</span> Public ranking of student artworks</li>
+<li><span class="tag tag-danger">Banned</span> Comparative grading of Makes</li>
+<li><span class="tag tag-danger">Banned</span> "Good drawing / bad drawing" framing</li>
+<li><span class="tag tag-danger">Banned</span> Forced sharing of Makes</li>
+<li><span class="tag tag-danger">Banned</span> Failure states for The Make</li>
+<li><span class="tag tag-danger">Banned</span> "You're talented" praise</li>
+<li><span class="tag tag-danger">Banned</span> Boss combat metaphor</li>
+<li><span class="tag tag-danger">Banned</span> Mandatory written reflection</li>
+<li><span class="tag tag-danger">Banned</span> Western-only artist canon (always pair with Uzbek master)</li>
+<li><span class="tag tag-danger">Banned</span> Religious doctrinal framing</li>
+<li><span class="tag tag-danger">Banned</span> Real-time multiplayer drawing competitions</li>
+<li><span class="tag tag-danger">Banned</span> Adaptive Quiz mechanic</li>
+<li><span class="tag tag-danger">Banned</span> Why Chain ≥3 levels</li>
+<li><span class="tag tag-danger">Banned</span> Cosmetics purchasable with money</li>
+<li><span class="tag tag-danger">Banned</span> Visible timer countdown on The Make (opt-in only)</li>
+</ol>
+
+<h3>Mandatory Inclusions</h3>
+<ol>
+<li><span class="tag">Required</span> Every session ends with The Make</li>
+<li><span class="tag">Required</span> Digital fallback always available</li>
+<li><span class="tag">Required</span> 3-option choice pattern in Phase 4</li>
+<li><span class="tag">Required</span> Effort/process praise only</li>
+<li><span class="tag">Required</span> Master Painters Hall + Galereya dual collection</li>
+<li><span class="tag">Required</span> Cultural anchors with Uzbek/world master pairing</li>
+<li><span class="tag">Required</span> Warm Tier 3 vision feedback on every Make</li>
+<li><span class="tag">Required</span> Optional family-bridge prompt</li>
+<li><span class="tag">Required</span> Calm pacing — no countdown timers by default</li>
+<li><span class="tag">Required</span> Did You Know art facts between phases</li>
+</ol>
+</section>
+
+<section id="s5">
+<h2 class="section-title"><span class="num">§5</span>Pre-Homework Sessions 0-A &amp; 0-B</h2>
+
+<h3>0-A Theme Preview (Mavzu Tanishuvi) — 2–3 min</h3>
+<p><strong>Format:</strong> 8-panel swipe deck, student-paced, no scoring, no XP, no timer.</p>
+
+<table>
+<tr><th>Panel</th><th>Content</th><th>Lesson 17 example (Color Still-Life)</th></tr>
+<tr><td>1. Sarlavha</td><td>Title + warm hook image</td><td>"Rangtasvirda natyurmort" + finished watercolor</td></tr>
+<tr><td>2. Yaxshi tushuntirish</td><td>Concept defined with metaphor</td><td>"Natyurmort — jonsiz narsalardan jonli rasm yasash"</td></tr>
+<tr><td>3. Misollar</td><td>2–3 visual examples (master + student)</td><td>Cézanne still-life, Ahmedov "Yoz ne'matlari," real student work</td></tr>
+<tr><td>4. Hayotiy hikoya</td><td>3-sentence story about an artist</td><td>Ahmedov painting Uzbek summer fruits</td></tr>
+<tr><td>5. Senga taalluqli</td><td>"Have you ever..." direct connection</td><td>"Sen onangning piyolaga choy quyganini kuzatganmisan?"</td></tr>
+<tr><td>6. Nega muhim</td><td>Long-arc significance</td><td>"Natyurmort sening ko'zingni o'rgatadi"</td></tr>
+<tr><td>7. Hayotda qo'llanilishi</td><td>Modern Uzbek context</td><td>Gijduvan pottery, market still-lifes</td></tr>
+<tr><td>8. <strong>Bugun nima qilasan</strong></td><td><strong>Replaces "Additional Materials"</strong> — preview of what student will MAKE today</td><td>"Bugun sen 4 ta narsadan natyurmort chizasan: olma, piyola, non, gul"</td></tr>
+</table>
+<div class="callout callout-info"><strong>Stranger Test:</strong> Could a Grade 5 Uzbek student understand and feel inspired without a teacher? If no, rewrite.</div>
+
+<h3>0-B Flash Cards — 1–2 min</h3>
+<p>5–7 cards, returnable mid-session as reference. <strong>Each card has a mini-demo sketch on the back showing the concept in action</strong> — students learn by seeing technique, not by reading definitions.</p>
+<p><em>Example for Lesson 17:</em> Natyurmort · Kompozitsiya · Yorug'lik manbai · Soya · Issiq/sovuq rang · Akvarel</p>
+</section>
+
+<section id="s6">
+<h2 class="section-title"><span class="num">§6</span>The 7-Phase Engine — Tasviriy Sanat Maker-First</h2>
+<p><strong>Total session: 25–35 min.</strong> The Make alone is 10–12 min.</p>
+
+<h3>§6.1 Phase 1 — Warm-up Sketch (Qo'l Mashqi) · 3 min</h3>
+<p><strong>Replaces universal Memory Sprint.</strong> The hand warms up before the mind.</p>
+<ul>
+<li>3-min warm-up exercise tied to today's lesson (e.g., "Draw 5 different eyes, 30 sec each" for portrait day)</li>
+<li>No upload required, no timer pressure</li>
+<li>Soft recall of last session (1 visual MC)</li>
+<li>XP awarded for tapping through</li>
+<li>If "no supplies" → digital tap-and-trace exercise</li>
+</ul>
+
+<h3>§6.2 Phase 2 — Hikoya + Demo · 5–6 min</h3>
+<p><strong>Story Mode + interleaved technique demos.</strong></p>
+<ul>
+<li>3 narrative segments × 90 sec, each followed by 30-sec embedded technique demo video</li>
+<li>Story arc: Problem → Discovery → Solution</li>
+<li>Demos are textbook's step-by-step scaffolds turned into video</li>
+<li>After each segment: optional "try it real quick" invitation in notebook</li>
+<li>Tier 1 pre-generated narrative + pre-recorded demo videos</li>
+</ul>
+
+<h3>§6.3 Phase 3 — Skill Drill (Mahorat Mashqi) · 4 min</h3>
+<p><strong>Replaces universal Game Breaks.</strong> One light game + one micro-make.</p>
+<ul>
+<li><strong>Game (2 min):</strong> Tile Match / Memory Match / Mystery Box / Sentence Fill — rotating</li>
+<li><strong>Micro-make (2 min):</strong> Small drawing exercise, optional photo upload, no scoring</li>
+</ul>
+
+<h3>§6.4 Phase 4 — Tanlov + Reja (Choice + Plan) · 3 min</h3>
+<p><strong>Student picks WHAT to make today.</strong></p>
+<ol>
+<li><strong>3 prompt options</strong> with starter thumbnails (eliminates blank-page paralysis)</li>
+<li>Free-text "Boshqa fikr bor" option (Tier 2 affirms warmly)</li>
+<li><strong>1-min plan prompt</strong> — "Qog'ozni qaysi shaklda joylashtirasan? Yorug'lik qayerdan keladi?"</li>
+<li>Plan is private — never graded</li>
+</ol>
+
+<h3>§6.5 Phase 5 — Master Painters Hall (Ustozlar Saroyi) · 1–2 min</h3>
+<ul>
+<li>Today's painter card unlocks (or paired card on theory days)</li>
+<li>Brief animation, card slides into persistent Hall</li>
+<li><strong>4 zones:</strong> Renaissance Masters · Modern Masters · Uzbek Masters · Folk Tradition Masters</li>
+<li><strong>Card pairing rule:</strong> theory days unlock world master + Uzbek master together</li>
+<li><strong>34 cards total</strong> for Grade 5</li>
+<li>Calm, slow — the breath before the Make</li>
+</ul>
+
+<div class="make-callout">
+<h4>§6.6 Phase 6 — KARTINA (The Make) · 10–12 min ⭐</h4>
+<p><strong>REPLACES Final Boss.</strong> The session climax — the entire engine builds to this moment.</p>
+<ol>
+<li><strong>Setup screen</strong> (15 sec) — prompt locked from Phase 4, materials reminder</li>
+<li><strong>Optional reference panel</strong> — master examples stay visible in collapsible sidebar</li>
+<li><strong>Optional calm music</strong> (off by default)</li>
+<li><strong>Optional timer</strong> (hidden by default, extendable to 15 min)</li>
+<li><strong>Mid-make checkpoint at 5 min</strong> — gentle "Davom et yoki bir nafas ol?"</li>
+<li><strong>Photo upload</strong> when done — phone camera + auto-crop assist</li>
+<li><strong>Tier 3 vision evaluation (≤10 sec):</strong> identifies what's working, notes 1 thing to try next time, generates warm 2-sentence response</li>
+<li><strong>Always passes.</strong> Photo joins persistent Galereya. XP awarded.</li>
+<li><strong>Optional self-assessment</strong> (3 prompts, 30 sec)</li>
+</ol>
+<p><strong>Digital fallback</strong> if "no supplies" tapped → in-app digital make tool (drawing / composition builder / style picker), Tier 2 evaluation, full XP, tagged for teacher analytics.</p>
+<p><strong>No HP, no hints, no retries, no defeat, no fail screen, no difficulty tier.</strong> The Make is the climax through <em>effort</em>, not <em>combat</em>.</p>
+</div>
+
+<h3>§6.7 Phase 7 — O'ylab Ko'rish (Reflection) · 1–2 min · OPTIONAL</h3>
+<p><strong>Optional reflection. Skip is a valid path.</strong></p>
+<ol>
+<li><strong>Voice</strong> — record up to 30 sec</li>
+<li><strong>Text</strong> — write up to 2 sentences</li>
+<li><strong>Draw</strong> — quick sketch in app</li>
+<li><strong>Skip</strong> — tap "Bugun yetarli"</li>
+</ol>
+<p><strong>Optional family-bridge prompt:</strong> "Buvingga ko'rsat?" (Show your grandmother?) — pure suggestion, no XP, no requirement.</p>
+</section>
+
+<section id="s7">
+<h2 class="section-title"><span class="num">§7</span>Content Rules</h2>
+
+<h3>Narrative Voice</h3>
+<ul>
+<li>Second-person ("Sen") — warm, partner-tone, never preachy</li>
+<li>≤14 word sentences, active voice, Lexile 830–1010L</li>
+<li><strong>Master pairing rule:</strong> every world master mentioned must be paired with a Uzbek master</li>
+</ul>
+
+<h3>Emotional Tone</h3>
+<ul>
+<li><strong>Warm, affirming, never evaluative</strong> for The Make and reflection</li>
+<li><strong>Effort/process praise only</strong> — "Yaxshi mehnat qilding," not "Sen rassomsan"</li>
+<li><strong>Dweck growth-mindset language</strong></li>
+</ul>
+
+<h3>Visuals</h3>
+<ul>
+<li>Every concept has a visual. Dual coding mandatory.</li>
+<li>Mobile-first, 5" screen legible.</li>
+<li>Demo videos: ≤30 sec, no music, slow hand-cam style — student can mimic</li>
+<li><strong>Subject color: deep purple <code>#7C3AED</code> primary + warm cream <code>#FEF3C7</code> accent</strong> (creativity + warmth + tradition)</li>
+</ul>
+
+<h3>Did You Know — Examples</h3>
+<ul>
+<li>"Leonardo da Vinchi 'Mona Liza'ni 4 yil chizgan."</li>
+<li>"Malik Nabiyev Amir Temurning rasmini chizish uchun tarixchi va olimlardan maslahat olgan."</li>
+<li>"Van Gogh hayotida faqat 1 ta rasm sotgan — bugun rasmlari million dollar turadi."</li>
+<li>"O'zbek miniaturasi 600 yildan beri kitoblarda ishlangan."</li>
+</ul>
+</section>
+
+<section id="s8">
+<h2 class="section-title"><span class="num">§8</span>Game Catalog Selections — Tasviriy Sanat G5</h2>
+
+<h3>Default Pool (16 mechanics)</h3>
+<table>
+<tr><th>#</th><th>Mechanic</th><th>Tasviriy Sanat</th><th>Notes</th></tr>
+<tr><td>1</td><td>Memory Sprint</td><td><span class="tag tag-danger">NO</span></td><td>Replaced with Warm-up Sketch</td></tr>
+<tr><td>2</td><td>Spaced Flashcards</td><td><span class="tag">YES</span></td><td>0-B Flash Cards only</td></tr>
+<tr><td>3</td><td>Tile Match</td><td><span class="tag">YES (high)</span></td><td>Master ↔ painting, technique ↔ result</td></tr>
+<tr><td>4</td><td>Sentence Fill</td><td><span class="tag">YES</span></td><td>Master quotes completion</td></tr>
+<tr><td>5</td><td>Memory Palace</td><td><span class="tag tag-warning">LIMITED</span></td><td>Folk tradition center lessons (Bukhara, Khiva)</td></tr>
+<tr><td>6</td><td>Story Mode</td><td><span class="tag">YES (highest)</span></td><td>With interleaved technique demos</td></tr>
+<tr><td>7</td><td>Adaptive Quiz</td><td><span class="tag tag-danger">NO</span></td><td>Hostile to creative flow</td></tr>
+<tr><td>8</td><td>Mystery Box</td><td><span class="tag">YES (high)</span></td><td>Hidden painting details</td></tr>
+<tr><td>9</td><td>Movement Breaks</td><td><span class="tag">YES</span></td><td>Optional</td></tr>
+<tr><td>10</td><td>Why Chain</td><td><span class="tag tag-warning">LIMITED</span></td><td>Max 2 levels</td></tr>
+<tr><td>11</td><td>Peer Teaching</td><td><span class="tag tag-warning">LIMITED (opt-in)</span></td><td>Galereya share to moderated wall</td></tr>
+<tr><td>12</td><td>Real-Life Challenge</td><td><span class="tag tag-warning">REPLACED</span></td><td>Now "Tanlov + Reja"</td></tr>
+<tr><td>13</td><td>Reflection Journal</td><td><span class="tag">YES</span></td><td>Optional Phase 7</td></tr>
+<tr><td>14</td><td>Final Boss</td><td><span class="tag tag-warning">REPLACED</span></td><td>Now "Kartina" (The Make)</td></tr>
+<tr><td>15</td><td>Tic Tac Toe vs AI</td><td><span class="tag">YES</span></td><td>Recreational</td></tr>
+<tr><td>16</td><td>Notebook Capture</td><td><span class="tag">YES (CORE — every session)</span></td><td><strong>The Make IS Notebook Capture, elevated to engine center</strong></td></tr>
+</table>
+
+<div class="callout callout-info">
+<strong>Two Tasviriy Sanat-only mechanics introduced:</strong>
+<ol>
+<li><strong>Kartina (The Make)</strong> — 10–12 min physical creation + photo upload (replaces Final Boss)</li>
+<li><strong>Style Mimic (Uslub Taqlidi)</strong> — light interactive game matching brushstroke samples to master painters</li>
+</ol>
+</div>
+</section>
+
+<section id="s9">
+<h2 class="section-title"><span class="num">§9</span>The Make + Galereya — Mechanic Spec</h2>
+
+<h3>The Make — Task Pool (per lesson type)</h3>
+<table>
+<tr><th>Lesson type</th><th>Make prompt template</th><th>Time</th><th>Vision focus</th></tr>
+<tr><td><strong>Drawing fundamentals</strong> (L2–7)</td><td>Technique-specific (geometric shapes, landscape, sculpture)</td><td>10 min</td><td>Composition, line, value range</td></tr>
+<tr><td><strong>Color/painting</strong> (L8–10, 17–23)</td><td>Watercolor still-life, landscape, color exploration</td><td>12 min</td><td>Color choice, mood, brushwork</td></tr>
+<tr><td><strong>Composition/ornament</strong> (L12, 14–16, 21, 24–26)</td><td>Themed compositions, naqsh patterns</td><td>10–12 min</td><td>Symmetry, repetition, balance</td></tr>
+<tr><td><strong>Genre/art history</strong> (L1, 8–9, 11, 13, 27)</td><td><strong>Style imitation Make</strong> — "Draw something in [today's master]'s style"</td><td>10 min</td><td>Personal interpretation, style awareness</td></tr>
+<tr><td><strong>Portrait</strong> (L28–34)</td><td>Self, family member, literary character, historical figure</td><td>12 min</td><td>Face proportion, character, expression</td></tr>
+</table>
+
+<h3>Tier 3 Vision Evaluation Rubric</h3>
+<p>The vision call is <strong>never grading.</strong> It identifies what's working and offers one gentle suggestion. Sample warm responses:</p>
+<blockquote>
+<p>"Aziza, sening natyurmortingda olmaning shakli juda yaxshi chiqibdi. Keyingi safar yorug'lik qaysi tomondan kelishini ko'rsatib ko'r — bu rasmni yanada jonliroq qiladi."</p>
+</blockquote>
+<p><strong>Cost:</strong> ~$0.02 per vision call. ~34 calls/year = ~$0.68/student/year.</p>
+
+<h3>Digital Fallback Spec</h3>
+<p>When "no supplies" tapped:</p>
+<ul>
+<li>Engine offers 1 of 3 in-app digital tools (depending on lesson type): drawing tool / composition builder / style picker</li>
+<li>Tier 2 evaluates choices, gives warm feedback (cheaper than vision)</li>
+<li>Full XP awarded</li>
+<li>Galereya entry tagged <code>make_type: digital_fallback</code></li>
+<li>Teacher dashboard alert if same student uses fallback ≥3 sessions in a row → soft outreach for supplies</li>
+</ul>
+
+<h3>Galereya — Persistent Gallery</h3>
+<ul>
+<li>Every Make joins the Galereya (physical or digital)</li>
+<li>Organized by date, filterable by lesson topic</li>
+<li>Visual layout: grid of thumbnails, tap to view full size + read warm response + see master pairing</li>
+<li>Optional "Sinfga ulashish" (Share to class) — moderated by teacher</li>
+<li>End-of-quarter "Mening Choragim" auto-collage</li>
+<li>Cosmetic frame unlocks via Master Painters Hall zone completion</li>
+<li><strong>No leaderboards. No ranking. No comparison with classmates.</strong></li>
+</ul>
+
+<h3>Master Painters Hall — Second Collection Meta-Game</h3>
+<ul>
+<li>34 painter cards unlock over the year (1 per session)</li>
+<li><strong>4 zones:</strong> Renaissance · Modern · Uzbek · Folk Tradition</li>
+<li>Theory days unlock paired cards (world master + Uzbek master)</li>
+<li>Card details: portrait, dates, famous work, quote, link to today's story</li>
+<li>Zone completion unlocks Galereya frame + cosmetic accessory</li>
+<li><strong>Pure cosmetic / collection joy — never scored, never ranked</strong></li>
+</ul>
+</section>
+
+<section id="s10">
+<h2 class="section-title"><span class="num">§10</span>Anti-Cheat Tuning (Tasviriy Sanat)</h2>
+<table>
+<tr><th>Signal</th><th>Tasviriy Sanat verdict</th></tr>
+<tr><td>Speed anomaly (very fast)</td><td><strong>IGNORE</strong> for non-Make tasks; <strong>MONITOR</strong> The Make (10-sec total session = skip-through)</td></tr>
+<tr><td>Length anomaly (very short reflection)</td><td><strong>IGNORE</strong> — short is OK, skip is OK</td></tr>
+<tr><td><strong>Photo authenticity</strong> — stock images / professional art</td><td>Tier 3 vision flags → soft prompt: "Bu rasm sening qo'lingdan bo'lganmi?" Never accusatory.</td></tr>
+<tr><td><strong>Repeated identical uploads</strong></td><td>MONITOR — same photo across 3 sessions = soft teacher flag</td></tr>
+<tr><td>Mother helping detected (adult hand in photo)</td><td><strong>WELCOMED</strong> — collaboration, not cheating</td></tr>
+<tr><td>Verdict ladder</td><td><strong>Capped at MONITOR</strong> — never SOFT_WARNING, never TEACHER_ALERT</td></tr>
+</table>
+<p>Cultural framing: Uzbek mothers often teach naqsh, embroidery, kashtachilik to daughters as family tradition. NETS preserves this — anti-cheat never penalizes shared making.</p>
+</section>
+
+<section id="s11">
+<h2 class="section-title"><span class="num">§11</span>Cultural and Regional Anchors</h2>
+
+<h3>Uzbek Master Painters</h3>
+<ul>
+<li><strong>Malik Nabiyev</strong> — historical portraiture (Amir Temur)</li>
+<li><strong>Rahim Ahmedov</strong> — still-life, landscape</li>
+<li><strong>Ro'zi Choriyev</strong> — portraiture (Keksa)</li>
+<li><strong>O'rol Tansiqboyev</strong> — landscape master</li>
+<li><strong>Akmal Nur</strong> — landscape (Munavvar tong)</li>
+<li><strong>Akmal Ikromjonov, Alisher Mirzayev, Javlon Umarbekov, Bahodir Jalolov, Abdulhaq Abdullayev</strong></li>
+</ul>
+
+<h3>Uzbek Sculptors</h3>
+<ul>
+<li><strong>I. Jabborov</strong> — Amir Temur monument (Samarkand)</li>
+<li><strong>J. Mirtojiyev</strong> — Bobur, G'afur G'ulom monuments</li>
+<li><strong>A. Rahmatullayev &amp; L. Ryabsev</strong> — Ulug'bek monument</li>
+</ul>
+
+<h3>Folk Artisans &amp; Craft Centers</h3>
+<ul>
+<li><strong>Gijduvan ceramics:</strong> U. Umarov, A. Hazratqulov, M. Nazrullayev</li>
+<li><strong>Khorazm woodcarving:</strong> B. Boisov, R. Matchonov</li>
+<li><strong>Tashkent woodcarving:</strong> K. Turobov, Yu. Ziyomuhamedov</li>
+</ul>
+
+<h3>World Masters (always paired with Uzbek master)</h3>
+<ul>
+<li><strong>Renaissance:</strong> Leonardo, Raphael, Michelangelo, Dürer</li>
+<li><strong>Dutch:</strong> Rembrandt</li>
+<li><strong>19th-century landscape:</strong> Levitan, Shishkin, Savrasov, Kuindji</li>
+<li><strong>Modern:</strong> Van Gogh, Matisse, Picasso, Bryullov</li>
+</ul>
+
+<h3>Traditional Art Forms</h3>
+<ul>
+<li><strong>Naqsh (ornament):</strong> islimiy, girih, murakkab</li>
+<li><strong>Miniature painting</strong> — Uzbek manuscript tradition, 600+ years</li>
+<li><strong>Kashtachilik</strong> (embroidery)</li>
+<li><strong>Atlas/adras</strong> — ikat textile tradition (Margilan)</li>
+<li><strong>Pottery</strong> — Gijduvan, Rishtan, Khiva schools</li>
+</ul>
+
+<h3>Things to Avoid</h3>
+<ul>
+<li>Western lifestyle comparisons</li>
+<li>Pork, alcohol references</li>
+<li>Politically sensitive topics</li>
+<li>Family poverty implications</li>
+<li>Doctrinal religious framing</li>
+<li><strong>Ranking Uzbek masters as "below" world masters — always treat as equal</strong></li>
+</ul>
+</section>
+
+<section id="s12">
+<h2 class="section-title"><span class="num">§12</span>Assessment, Scoring &amp; Escalation</h2>
+<div class="callout callout-warning"><strong>There are no grades on Makes.</strong> Engagement = success. Completion = pass.</div>
+
+<table>
+<tr><th>Engagement signal</th><th>Result</th></tr>
+<tr><td>Session started + completed</td><td>Base XP (~75 XP)</td></tr>
+<tr><td>The Make uploaded (any photo)</td><td>+50 XP bonus</td></tr>
+<tr><td>Self-assessment checklist completed</td><td>+15 XP bonus</td></tr>
+<tr><td>Reflection submitted in any format</td><td>+20 XP bonus</td></tr>
+<tr><td>Galereya share to class (opt-in)</td><td>+10 XP bonus</td></tr>
+<tr><td>Family-bridge "Buvingga ko'rsat" tapped</td><td>+10 XP bonus</td></tr>
+<tr><td>Master Painters Hall zone completed</td><td>Cosmetic frame unlocked</td></tr>
+<tr><td>Skip Phase 7</td><td>No penalty</td></tr>
+</table>
+
+<h3>No Duolingo Mode</h3>
+<p>If digital fallback ≥3 sessions in a row → soft teacher flag for supplies outreach. If The Make skipped ≥2 sessions in a row → soft teacher check-in.</p>
+
+<h3>Dual-Pathway Answer Checking</h3>
+<ul>
+<li>MC choices, Tile Match = Tier 1 &lt;100ms</li>
+<li>Phase 4 Choice + Plan free-text = Tier 2 sentiment check</li>
+<li>The Make photo = Tier 3 vision rubric ≤10 sec</li>
+<li>Reflection = Tier 2 sentiment (private)</li>
+</ul>
+</section>
+
+<section id="s13">
+<h2 class="section-title"><span class="num">§13</span>AI Tier Strategy — Cost-Aware</h2>
+<table>
+<tr><th>Phase</th><th>Tier</th><th>Notes</th></tr>
+<tr><td>0-A Theme Preview</td><td>Tier 2</td><td>Personalized panel selection</td></tr>
+<tr><td>0-B Flash Cards</td><td>Tier 1</td><td>Pre-generated</td></tr>
+<tr><td>Phase 1 Warm-up</td><td>Tier 1</td><td>Pre-gen warm-up bank</td></tr>
+<tr><td>Phase 2 Story + Demo</td><td>Tier 1</td><td>Pre-gen narrative + pre-recorded videos</td></tr>
+<tr><td>Phase 3 Skill Drill</td><td>Tier 1</td><td>Algorithmic</td></tr>
+<tr><td>Phase 4 Choice + Plan</td><td>Tier 2</td><td>Free-text affirmation</td></tr>
+<tr><td>Phase 5 Hall</td><td>Tier 1</td><td>Pre-gen card art</td></tr>
+<tr><td><strong>Phase 6 The Make</strong></td><td><strong>Tier 3 vision (1/session, capped)</strong></td><td>Warm rubric feedback</td></tr>
+<tr><td>Phase 6 Digital fallback</td><td>Tier 2</td><td>Cheaper than vision</td></tr>
+<tr><td>Phase 7 Reflection</td><td>Tier 2 (only on explicit "respond" tap)</td><td>Default = no AI response</td></tr>
+<tr><td>Did You Know</td><td>Tier 2</td><td>Curated</td></tr>
+</table>
+<div class="callout callout-info">
+<strong>Cost projection per session:</strong> ~$0.06 (Tier 3 vision $0.02 + Tier 2 ~$0.04)<br>
+<strong>Annual cost per student:</strong> ~34 sessions × $0.06 = <strong>~$2.04/student/year</strong> — comfortably within $3–5 envelope.
+</div>
+</section>
+
+<section id="s14">
+<h2 class="section-title"><span class="num">§14</span>Teacher Overrides</h2>
+
+<h3>Allowed</h3>
+<ul>
+<li><strong>Mode:</strong> Standard (25–35 min) ↔ Extended (35–45 min, in-class group critique)</li>
+<li><strong>The Make timer:</strong> visible ↔ hidden ↔ extendable (default: hidden, extendable)</li>
+<li><strong>The Make sharing:</strong> private ↔ moderated class wall opt-in</li>
+<li><strong>Digital fallback:</strong> allow ↔ disallow</li>
+<li><strong>Phase 7 Reflection:</strong> optional ↔ required for in-class</li>
+<li><strong>Family-bridge prompt:</strong> show ↔ hide</li>
+<li><strong>Master Painters Hall:</strong> student-only ↔ class hall mode</li>
+</ul>
+
+<h3>Cannot Override</h3>
+<ul>
+<li>7-phase structure</li>
+<li>0-A + 0-B mandatory</li>
+<li><strong>The Make mandatory</strong> (Maker-First commitment)</li>
+<li>Stranger Test on narratives + Make prompts</li>
+<li>va_level + transition_skill tag requirement</li>
+<li>Cultural framing (Uzbek-first, master pairing rule)</li>
+<li>Banned mechanics list</li>
+<li>Doctrinally-neutral religious framing</li>
+<li>Cosmetic rewards never purchasable</li>
+<li>Reflection always optional for student</li>
+<li><strong>Digital fallback availability</strong> (cannot be permanently disabled)</li>
+</ul>
+</section>
+
+<section id="s15">
+<h2 class="section-title"><span class="num">§15</span>Tagging Schema</h2>
+<pre><code>{
+  "task_id": "TSV-5-PORT-L27-MAKE-01",
+  "subject": "Tasviriy Sanat",
+  "grade": 5,
+  "language": "uz",
+  "textbook_ref": {
+    "book": "Tasviriy san'at 5-sinf (Kuziyev et al. 2020)",
+    "lesson": 27,
+    "lesson_title": "Tasviriy san'atda portret janri",
+    "pages": "92-95"
+  },
+  "standard_ref": {
+    "primary": "UZ-TSV-5-PORT-01",
+    "alias": "TSV.5.27.1"
+  },
+  "va_level": "VA-L4",
+  "pisa_creative_thinking": true,
+  "pisa_reading_l1_l2": true,
+  "transition_skill": "VA-L3→L4: take an art history concept and express it through a personal style-imitation make",
+  "blooms_level": "Create",
+  "phase": "Phase 6 — Kartina (The Make)",
+  "game_mechanic": "Notebook Capture (The Make)",
+  "make_type": "main",
+  "make_prompt_uz": "Bugun sen Leonardo va Nabiyevdan ilhom oldin. Endi sen ham 10 daqiqada bir portret chiz — oilangdagi kimnidir.",
+  "make_options": [
+    "Avtoportret",
+    "Oilangdagi yaqin odam",
+    "Tasavvuringdagi qahramon"
+  ],
+  "ai_tier": 3,
+  "estimated_time_sec": 600,
+  "vision_evaluation_focus": ["face proportion", "expression", "composition", "personal interpretation"],
+  "cultural_anchors_used": ["Nabiyev portret an'anasi", "Leonardo sfumato"],
+  "master_painters_hall_unlock": ["Leonardo da Vinci", "Malik Nabiyev"],
+  "scoring": "engagement_only",
+  "digital_fallback_available": true
+}</code></pre>
+</section>
+
+<section id="s16">
+<h2 class="section-title"><span class="num">§16</span>Content Production Checklist</h2>
+<table>
+<tr><th>Component</th><th>Volume per session</th></tr>
+<tr><td>Theme Preview 8-panel deck</td><td>8 panels</td></tr>
+<tr><td>Flash Cards</td><td>5–7 cards (each with mini-demo sketch)</td></tr>
+<tr><td>Warm-up Sketch prompt</td><td>1 + digital fallback variant</td></tr>
+<tr><td>Story Mode segments</td><td>3 × 90 sec, 2–3 narrative variants</td></tr>
+<tr><td>Technique demo videos</td><td>3 × 30 sec embedded</td></tr>
+<tr><td>Skill Drill</td><td>1 game + 1 micro-make</td></tr>
+<tr><td>Choice + Plan</td><td>3 options + free-text fallback</td></tr>
+<tr><td>Master Painters Hall card</td><td>1 (or 1 paired on theory days)</td></tr>
+<tr><td>The Make prompt</td><td>1 main + 3 options + 5–10 warm response templates</td></tr>
+<tr><td>Digital fallback tool</td><td>1 in-app tool option per lesson type</td></tr>
+<tr><td>Reflection prompts</td><td>4 (rotating)</td></tr>
+<tr><td>Did You Know facts</td><td>4–6</td></tr>
+<tr><td>Family-bridge prompt (opt-in)</td><td>1</td></tr>
+</table>
+<p><strong>Total per session: ~30–50 task units.</strong> <strong>Total for full Grade 5: ~1,000–1,700 task units across 34 sessions.</strong></p>
+<p>Plus production pools: ~34 Master Painters Hall cards · ~30 art proverbs/quotes · ~12 NPC dialogue trees · ~6 Galereya frame designs · ~3 digital fallback tools · ~100 technique demo videos.</p>
+</section>
+
+<section id="s17">
+<h2 class="section-title"><span class="num">§17</span>Sample Walkthrough — Lesson 27 "Portret Janri"</h2>
+<div class="callout callout-info"><strong>Reference implementation.</strong> This is a <strong>theory lesson</strong> showing how Maker-First handles art history days — the session still ends with The Make.</div>
+
+<h3>Metadata</h3>
+<ul>
+<li><strong>Lesson 27</strong>, textbook pages 92–95</li>
+<li><strong>Standard:</strong> UZ-TSV-5-PORT-01 / TSV.5.27.1</li>
+<li><strong>Lesson type:</strong> Theory (art history)</li>
+<li><strong>Primary VA level:</strong> VA-L4 (Express)</li>
+<li><strong>PISA tags:</strong> Creative Thinking (primary) + Reading L1–L2 (secondary)</li>
+<li><strong>Session length:</strong> ~28 min</li>
+<li><strong>Master Painters Hall unlocks:</strong> Leonardo da Vinci + Malik Nabiyev (paired)</li>
+</ul>
+
+<h3>Pre-homework (3 min)</h3>
+<p><strong>0-A Theme Preview</strong> (2 min, 8 panels): Mona Lisa + Nabiyev's Amir Temur side-by-side · Concept explained · 3 portrait examples · Leonardo painted Mona Lisa for 4 years · Personal hook · Significance · Modern context · <strong>"Bugun sen ham bir portret chizasan — 10 daqiqada, oddiy qalam bilan."</strong></p>
+<p><strong>0-B Flash Cards</strong> (1 min, 6 cards): Portret · Avtoportret · Profil · Anfas · Xarakter · Ruhiy holat (each with mini-demo sketch)</p>
+
+<h3>Phase 1 — Warm-up Sketch (3 min)</h3>
+<p>"Daftaringga 5 ta turli ko'z chiz. Har biri 30 soniya. Hayron / xafa / xursand / charchagan / hayratlangan." No timer pressure, no upload required.</p>
+
+<h3>Phase 2 — Hikoya + Demo (6 min)</h3>
+<p><strong>Segment 1:</strong> 1503 Florence. Leonardo + savdogar's wife. <strong>Demo 1:</strong> Face shape with simple proportions.</p>
+<p><strong>Segment 2:</strong> Sfumato — smoke-like blending. <strong>Demo 2:</strong> Pencil shading with finger blending.</p>
+<p><strong>Segment 3:</strong> 1968 Tashkent. Nabiyev paints Amir Temur — but he never met him. How? <strong>Demo 3:</strong> Adding character — eyebrow direction = mood.</p>
+
+<h3>Phase 3 — Skill Drill (4 min)</h3>
+<p><strong>Game:</strong> Memory Match — 6 master/painting pairs (Leonardo↔Mona Liza, Rembrandt↔Avtoportret, Van Gogh↔Avtoportret, Nabiyev↔Amir Temur, Choriyev↔Keksa, Ahmedov↔Yoz ne'matlari)</p>
+<p><strong>Micro-make:</strong> "Bitta ko'zni his-tuyg'u bilan chiz: hayron / xafa / xursand."</p>
+
+<h3>Phase 4 — Tanlov + Reja (3 min)</h3>
+<p><strong>3 options:</strong></p>
+<ol>
+<li><strong>Avtoportret</strong> — oynaga qarab</li>
+<li><strong>Oilangdagi kimnidir</strong> — onangni, dadangni, bobongni</li>
+<li><strong>Tasavvuringdagi qahramon</strong> — adabiy yoki tarixiy</li>
+</ol>
+<p>Aziza picks Option 2 — onasi.</p>
+<p><strong>1-min plan:</strong> "Onangning yuzini qaysi tomondan ko'rasan? Eng muhim narsa — ko'zlarmi yoki tabassummi? Yorug'lik qayerdan keladi?"</p>
+
+<h3>Phase 5 — Master Painters Hall (1 min)</h3>
+<p>Today's paired card unlocks: <strong>Leonardo da Vinci</strong> (Renaissance) + <strong>Malik Nabiyev</strong> (Uzbek). Both slide into the Hall with brief animation.</p>
+
+<div class="make-callout">
+<h4>Phase 6 — KARTINA (10–12 min) ⭐</h4>
+<p><strong>Setup:</strong> "Sening tanlovingni eslab qoldim — onangning portreti. Tayyormisan? Qalam, daftar, va sevgi kifoya."</p>
+<p><strong>Reference panel</strong> (sidebar, collapsible): Leonardo Mona Lisa + Nabiyev Amir Temur thumbnails.</p>
+<p><strong>Aziza draws her mother for ~10 minutes.</strong> Pencil on notebook. She tries to remember her mother's eyes from memory, the way her hair falls, her gentle smile.</p>
+<p><strong>Mid-make checkpoint at 5 min:</strong> "Qanday ketyapti? Davom et yoki bir nafas ol?" → Aziza taps "Davom et."</p>
+<p><strong>At 10 min,</strong> Aziza taps "Tayyor" and takes a photo.</p>
+<p><strong>Tier 3 vision (8 sec):</strong></p>
+<blockquote>
+"Aziza, sening onangning portretida ko'zlarning his-tuyg'usi juda kuchli — xuddi mehrli onaga qaragandek. Keyingi safar yorug'lik qaysi tomondan kelishini ham ko'rsatib ko'r — bu portretni yanada jonliroq qiladi. Sening rasming Galereyangga qo'shildi."
+</blockquote>
+<p>Galereya updated. ~150 XP awarded.</p>
+</div>
+
+<h3>Phase 7 — O'ylab Ko'rish (1 min, optional)</h3>
+<p>Aziza taps voice mode and says: "Onamning ko'zlarini chizishda qiyinchilik bo'ldi, lekin uning tabassumi yaxshi chiqdi. Men bu rasmni unga ko'rsataman."</p>
+<p><strong>Family-bridge prompt:</strong> "Buvingga yoki onangga ko'rsat?" → Aziza taps "Ha."</p>
+
+<h3>Post-session</h3>
+<ul>
+<li>Total XP: ~155 (75 base + 50 Make + 20 Reflection + 10 family-bridge)</li>
+<li>Galereya updated with onasi portret</li>
+<li>Master Painters Hall: Leonardo + Nabiyev unlocked</li>
+<li>Teacher dashboard: "Aziza completed Lesson 27 — uploaded Make, shared reflection, will show family"</li>
+</ul>
+</section>
+
+<section id="s18">
+<h2 class="section-title"><span class="num">§18</span>Open Questions / Things to Validate</h2>
+<ol>
+<li><strong>Vision evaluation accuracy on student art</strong> — needs piloting on actual G5 student photos.</li>
+<li><strong>Digital fallback tool design</strong> — 3 tool types need UX prototyping.</li>
+<li><strong>Photo upload reliability on shared family smartphones</strong> — bandwidth, camera permissions, photo quality on low-end devices.</li>
+<li><strong>Master Painters Hall pairing logic</strong> — confirm world↔Uzbek pairings across all 34 sessions.</li>
+<li><strong>The Make timer visibility default</strong> — pilot both, measure engagement.</li>
+<li><strong>Galereya class-share moderation pipeline</strong> — teacher pre-approves vs. AI pre-screen + teacher.</li>
+<li><strong>Style Mimic mini-game content</strong> — needs ~6 master brushstroke samples, hand-curated.</li>
+<li><strong>Family-bridge "Buvingga ko'rsat" cultural validation</strong> — confirm with Uzbek teachers.</li>
+<li><strong>Quarterly "Mening Choragim" summary collage</strong> — UX design needed.</li>
+<li><strong>Cross-subject NPC sharing</strong> — Bobo Sherzod / Buvi Saodat from Tarbiya — appear here too?</li>
+<li><strong>Vision call cost re-validation</strong> — re-check if Anthropic vision pricing changes.</li>
+<li><strong>Theory-day Make prompts</strong> — careful piloting to avoid feeling like "copy this artist."</li>
+</ol>
+</section>
+
+<section id="s19">
+<h2 class="section-title"><span class="num">§19</span>Production Handoff</h2>
+<h3>Contract for Content Team</h3>
+<ol>
+<li>Source from textbook — every task traces to Lesson + page range</li>
+<li>Apply §4 psychology parameters — 25–35 min, calm pacing, no failure states, warm tone</li>
+<li>Use §11 cultural anchors — rotate Uzbek masters, ALWAYS pair with world masters</li>
+<li>Tag every task per §15 schema</li>
+<li>Pass Stranger Test on every Story segment + Make prompt</li>
+<li>Pre-generate Make warm response banks — 5–10 templates per Make prompt</li>
+<li>Author Master Painters Hall cards — 34 cards (paired on theory days)</li>
+<li>Curate Did You Know pool — ~80 facts</li>
+<li>Author technique demo videos — ~100 short videos (slow hand-cam, no music)</li>
+<li>Build digital fallback tools — 3 tool types</li>
+<li>Validate against §18 open questions before production locks</li>
+</ol>
+
+<h3>Quality Gates</h3>
+<ul>
+<li>Pedagogy review by 1 lead + 1 G5 Uzbek Tasviriy Sanat teacher</li>
+<li>Language review by Uzbek native speaker</li>
+<li><strong>Cultural validation</strong> by Uzbek art historian (master pairing accuracy)</li>
+<li><strong>Vision rubric piloting</strong> with 50+ real G5 student photos before launch</li>
+<li>Pilot in 2 classrooms (1 urban Tashkent with full art supplies, 1 rural Fergana with limited supplies — test digital fallback)</li>
+</ul>
+</section>
+
+<section id="s20">
+<h2 class="section-title"><span class="num">§20</span>Versioning and Review</h2>
+<ul>
+<li><strong>Version 1.0</strong> — 2026-04-08, Tasviriy Sanat G5 first framework, "Maker-First" design</li>
+<li><strong>Reviewers needed:</strong> Product/pedagogy lead, Uzbek G5 Tasviriy Sanat teacher, Uzbek art historian, curriculum specialist, content lead, vision evaluation engineer</li>
+<li><strong>Next revision</strong> after first 5 sessions stress-tested in pilot</li>
+<li><strong>Sibling frameworks to create:</strong>
+<ul>
+<li>Tasviriy Sanat G5 Russian edition</li>
+<li>Tasviriy Sanat G6, G7 (next grades, same Maker-First shape)</li>
+<li>Apply Maker-First learnings to Texnologiya Service track (cooking/sewing — could borrow digital fallback pattern)</li>
+</ul>
+</li>
+</ul>
+</section>
+
+<footer>
+<p><strong>End of NETS Tasviriy Sanat G5 Framework v1.0 (Maker-First)</strong></p>
+<p>Companion docs: <code>NETS-Homework-Engine-UNIFIED.md</code> · <code>NETS-Homework-Engine-Blueprint.docx</code> · <code>NETS-UI-UX-Design-Spec.docx</code> · <code>Researches/qwen-grade5-psychology-findings.md</code> · <code>Extracted Texts/_tasviriy_sanat_extracted.txt</code></p>
+</footer>
+
+</div>
+
+</body>
+</html>

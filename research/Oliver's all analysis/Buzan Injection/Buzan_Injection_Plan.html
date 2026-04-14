@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buzan 34-Method Injection Plan — NETS Homework Engine</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a2e;
+    --heading: #16213e;
+    --accent: #0f3460;
+    --border: #e0e0e0;
+    --link: #0f3460;
+    --section-bg: #fafafa;
+    --divider: #c4c4c4;
+    --sacred: #b71c1c;
+    --layer-a: #1565c0;
+    --layer-b: #6a1b9a;
+    --layer-c: #00838f;
+    --layer-d: #e65100;
+    --layer-e: #2e7d32;
+    --high: #c62828;
+    --med: #ef6c00;
+    --low: #757575;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .master-title {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 2rem;
+  }
+  .master-title h1 { font-size: 2rem; color: var(--accent); }
+  .master-title p { font-size: 0.95rem; color: #666; margin-top: 0.4rem; }
+
+  .sacred-rule {
+    background: #fff3f3;
+    border: 2px solid var(--sacred);
+    border-radius: 8px;
+    padding: 1rem 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .sacred-rule strong { color: var(--sacred); font-size: 1.05rem; }
+
+  nav.toc {
+    background: var(--section-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+  nav.toc h2 { font-size: 1.1rem; margin-bottom: 0.6rem; color: var(--accent); }
+  nav.toc ol { padding-left: 1.4rem; }
+  nav.toc li { margin-bottom: 0.3rem; }
+  nav.toc a { color: var(--link); text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+
+  h2 { font-size: 1.35rem; color: var(--accent); margin: 2rem 0 0.6rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+  h3 { font-size: 1.1rem; color: var(--heading); margin: 1.2rem 0 0.5rem; }
+  h4 { font-size: 1rem; color: var(--heading); margin: 0.9rem 0 0.4rem; }
+
+  hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+  p { margin: 0.5rem 0; }
+  ul, ol { padding-left: 1.6rem; margin: 0.5rem 0; }
+  li { margin-bottom: 0.3rem; }
+  a { color: var(--link); }
+  code { background: #f0f0f0; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.9rem; }
+
+  /* Layer badges */
+  .badge {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.03em;
+  }
+  .badge-a { background: var(--layer-a); }
+  .badge-b { background: var(--layer-b); }
+  .badge-c { background: var(--layer-c); }
+  .badge-d { background: var(--layer-d); }
+  .badge-e { background: var(--layer-e); }
+  .badge-high { background: var(--high); }
+  .badge-med { background: var(--med); }
+  .badge-low { background: var(--low); }
+
+  /* Layer legend */
+  .layer-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0 1.5rem;
+  }
+  .layer-legend .badge { font-size: 0.85rem; padding: 0.25rem 0.7rem; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.88rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.65rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--section-bg); font-weight: 600; }
+  tr:hover { background: #f9f9ff; }
+
+  /* Main mapping table specific */
+  .map-table td:nth-child(1) { width: 30px; text-align: center; font-weight: 600; }
+  .map-table td:nth-child(2) { width: 160px; font-weight: 500; }
+  .map-table td:nth-child(3) { width: 90px; text-align: center; }
+  .map-table td:nth-child(4) { width: 100px; }
+
+  /* Deliverable sections */
+  .deliverable-group {
+    background: var(--section-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+  }
+  .deliverable-group h4 { margin-top: 0; color: var(--accent); }
+
+  /* Sprint cards */
+  .sprint-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .sprint-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--section-bg);
+  }
+  .sprint-card h4 {
+    margin: 0 0 0.5rem;
+    color: var(--accent);
+    font-size: 0.95rem;
+  }
+  .sprint-card ul { margin: 0; font-size: 0.88rem; }
+
+  /* Cost table */
+  .cost-ok { color: #2e7d32; font-weight: 600; }
+
+  @media (max-width: 700px) {
+    body { padding: 1rem; }
+    .master-title h1 { font-size: 1.4rem; }
+    table { font-size: 0.8rem; }
+    .sprint-grid { grid-template-columns: 1fr; }
+    .layer-legend { gap: 0.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="master-title">
+  <h1>Buzan 34-Method Injection Plan</h1>
+  <p>NETS Homework Engine &mdash; April 2026</p>
+</div>
+
+<div class="sacred-rule">
+  <strong>Sacred Rule: Content is sacred. Buzan = the HOW, never the WHAT.</strong><br>
+  All 34 methods inject delivery mechanisms into existing content. Zero textbook changes.
+</div>
+
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#context">Context</a></li>
+    <li><a href="#layers">5 Injection Layers</a></li>
+    <li><a href="#mapping">Complete 34-Method Mapping</a></li>
+    <li><a href="#overlap">Overlap Reconciliation</a></li>
+    <li><a href="#deliverables">Deliverables List</a></li>
+    <li><a href="#sprints">Implementation Sequence</a></li>
+    <li><a href="#cost">Cost Impact</a></li>
+    <li><a href="#files">Critical Files</a></li>
+    <li><a href="#verification">Verification</a></li>
+  </ol>
+</nav>
+
+<!-- ===== CONTEXT ===== -->
+<h2 id="context">1. Context</h2>
+<p>We have 6 Buzan research briefs containing 34 distinct methods:</p>
+<ul>
+  <li><strong>The Mind Map Book</strong> &mdash; 5 methods</li>
+  <li><strong>Mind Maps for Kids</strong> &mdash; 5 methods</li>
+  <li><strong>Scientific Validation</strong> &mdash; 5 methods</li>
+  <li><strong>Speed Reading</strong> &mdash; 9 methods</li>
+  <li><strong>Use Your Head</strong> &mdash; 3 methods</li>
+  <li><strong>Use Your Memory</strong> &mdash; 7 methods</li>
+</ul>
+<p>Currently <strong>zero</strong> Buzan methods are integrated into the active NETS specs. Memory Palace exists independently but not as a Buzan-attributed technique. Phase 5 lists "Peg system, Mind maps" for G5-7 but neither is defined.</p>
+
+<!-- ===== LAYERS ===== -->
+<h2 id="layers">2. Five Injection Layers</h2>
+
+<div class="layer-legend">
+  <span class="badge badge-a">A &mdash; Phase-Bound</span>
+  <span class="badge badge-b">B &mdash; Cross-Cutting</span>
+  <span class="badge badge-c">C &mdash; UI/UX</span>
+  <span class="badge badge-d">D &mdash; AI Tutor Language</span>
+  <span class="badge badge-e">E &mdash; Content Pipeline</span>
+</div>
+
+<table>
+  <thead><tr><th>Layer</th><th>What It Means</th><th>Methods</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge badge-a">A</span></td><td>Methods that live inside specific phases as mechanics, formats, or scaffolding steps</td><td>1, 3-5, 7-8, 15-16, 18, 20-21, 23-24, 27-31, 34</td></tr>
+    <tr><td><span class="badge badge-b">B</span></td><td>Design principles enforced across all phases (system-wide rules)</td><td>2, 11-14, 25-26, 33-34</td></tr>
+    <tr><td><span class="badge badge-c">C</span></td><td>Changes to how content is displayed (not what content is)</td><td>1, 6, 9, 17, 19-20</td></tr>
+    <tr><td><span class="badge badge-d">D</span></td><td>Changes to how the AI tutor speaks to students</td><td>10-11</td></tr>
+    <tr><td><span class="badge badge-e">E</span></td><td>Quality gates for content authors in the content pipeline</td><td>2, 12, 22, 32</td></tr>
+  </tbody>
+</table>
+
+<!-- ===== MAPPING ===== -->
+<h2 id="mapping">3. Complete 34-Method Mapping</h2>
+
+<table class="map-table">
+  <thead>
+    <tr><th>#</th><th>Method</th><th>Layer</th><th>Phase(s)</th><th>What Changes</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td><td>Radiant Thinking</td>
+      <td><span class="badge badge-a">A</span><span class="badge badge-c">C</span></td>
+      <td>P5, P0-A</td>
+      <td>New <strong>"Radiant Summary"</strong> game mechanic in P5 (fills undefined "Mind maps" slot). Drag-and-drop keywords onto partially completed radiant map. P0-A Panel 1 optionally renders topic as radiant thumbnail.</td>
+    </tr>
+    <tr>
+      <td>2</td><td>7 Laws of Mind Mapping</td>
+      <td><span class="badge badge-b">B</span><span class="badge badge-e">E</span></td>
+      <td>All radiant UI</td>
+      <td>Design principle <strong>DP-1</strong>: any radiant UI must comply with 7 laws (central image, organic branches, hierarchy, one keyword/branch, emphasis, association, 3+ colors). Pipeline QA checklist for mnemonic exercises.</td>
+    </tr>
+    <tr>
+      <td>3</td><td>Group Mind Mapping</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P3 (future)</td>
+      <td>Post-MVP: async collaborative map building. MVP fallback: student builds map, AI simulates classmate's map for merge exercise.</td>
+    </tr>
+    <tr>
+      <td>4</td><td>Radiant Problem Solving</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P4</td>
+      <td>Pre-solution <strong>W5H frame</strong> (Who/What/Where/When/Why/How) radiating from problem statement. Student fills 4+ branches before writing answer.</td>
+    </tr>
+    <tr>
+      <td>5</td><td>Decision Mapping</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P6</td>
+      <td>New Boss question format: two competing options radiate from central problem with weighted pros/cons. For Big Boss / Mythical Boss decision-type questions.</td>
+    </tr>
+    <tr>
+      <td>6</td><td>Simplified Laws (Kids)</td>
+      <td><span class="badge badge-c">C</span></td>
+      <td>All G5-6 UI</td>
+      <td>Landscape orientation, thick organic branches, <strong>Icon-First</strong> (image before text), max 4-5 main branches (WM ceiling).</td>
+    </tr>
+    <tr>
+      <td>7</td><td>Supernova Effect</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P5</td>
+      <td><strong>"Supernova Sprint"</strong> micro-game: 30-sec timed association burst from one keyword. Each valid association = radiating spark + XP.</td>
+    </tr>
+    <tr>
+      <td>8</td><td>Secret Symbols</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P5, Bilim Bazasi</td>
+      <td>Students create/save personal symbol stickers for concepts. Symbols persist in Bilim Bazasi and reappear when concept resurfaces.</td>
+    </tr>
+    <tr>
+      <td>9</td><td>Color-Coded Zones</td>
+      <td><span class="badge badge-c">C</span></td>
+      <td>All phases</td>
+      <td>Each subject family gets a distinct color. Each BOI branch uses a unique color. Extends to Bilim Bazasi, loading screens, all in-session radiant elements.</td>
+    </tr>
+    <tr>
+      <td>10</td><td>"Hali emas" / TEFCAS reframe</td>
+      <td><span class="badge badge-d">D</span></td>
+      <td>All failure states</td>
+      <td>ALL failure responses across ALL phases use <strong>"Hali emas!"</strong> (Not yet!) + TEFCAS framing. Never "Wrong" or "Incorrect."</td>
+    </tr>
+    <tr>
+      <td>11</td><td>TEFCAS full loop</td>
+      <td><span class="badge badge-b">B</span><span class="badge badge-d">D</span></td>
+      <td>All phases</td>
+      <td><strong>DP-2</strong>: Map TEFCAS onto session flow (T=P3 attempts, E=outcome, F=feedback, C=IRT check, A=difficulty adjust, S=Boss defeat). AI tutor uses TEFCAS vocabulary.</td>
+    </tr>
+    <tr>
+      <td>12</td><td>Dual Coding Theory</td>
+      <td><span class="badge badge-b">B</span><span class="badge badge-e">E</span></td>
+      <td>All phases</td>
+      <td><strong>DP-5</strong>: Every content block must engage 2+ encoding channels (verbal+visual, verbal+spatial, visual+kinesthetic). Pipeline QA checks this.</td>
+    </tr>
+    <tr>
+      <td>13</td><td>Schema Theory</td>
+      <td><span class="badge badge-b">B</span></td>
+      <td>Session Assembly</td>
+      <td><strong>DP-6</strong>: Session Assembler verifies every new concept in P2 has a prerequisite activated in P1 or P0-B of the same session.</td>
+    </tr>
+    <tr>
+      <td>14</td><td>Von Restorff Effect</td>
+      <td><span class="badge badge-b">B</span></td>
+      <td>P3 (anchor)</td>
+      <td><strong>DP-4</strong>: One game per session tagged as "Von Restorff anchor" &mdash; deliberately unusual, funny, or visually striking. Mid-session game (Sag position) gets highest novelty score.</td>
+    </tr>
+    <tr>
+      <td>15</td><td>Anti-Cheat Radiant Signature</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P4, P6</td>
+      <td>New anti-cheat <strong>Check #7</strong>: analyze open-text responses for "radiant signature" (idiosyncratic associations, non-linear logic). Too-linear responses flagged as potential AI/copy-paste.</td>
+    </tr>
+    <tr>
+      <td>16</td><td>Fixation Training</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P2</td>
+      <td><strong>"Focus Guide"</strong> &mdash; text highlights in 3-5 word chunks sequentially. Speed adapts to student's reading pace. Trains eye to fixate on chunks, not words.</td>
+    </tr>
+    <tr>
+      <td>17</td><td>Saccade Optimization</td>
+      <td><span class="badge badge-c">C</span></td>
+      <td>P2</td>
+      <td>Column width <strong>50-75 chars</strong> (66 ideal). Optimizes saccade distance.</td>
+    </tr>
+    <tr>
+      <td>18</td><td>Regression Elimination</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P2</td>
+      <td><strong>Forward Momentum Rule</strong> (G5-6): previous Story Mode segment fades after swipe. Back-navigation requires deliberate button press (friction).</td>
+    </tr>
+    <tr>
+      <td>19</td><td>Peripheral Vision Training</td>
+      <td><span class="badge badge-c">C</span></td>
+      <td>P2</td>
+      <td>Merged with #17: column width + line height (1.5x) + sans-serif font (Arimo) optimize peripheral vision utilization.</td>
+    </tr>
+    <tr>
+      <td>20</td><td>Chunking</td>
+      <td><span class="badge badge-a">A</span><span class="badge badge-c">C</span></td>
+      <td>P2, P0-B</td>
+      <td>Story Mode text rendered in <strong>semantic clusters</strong> (3-5 words, wider spacing between chunks). Flash Cards: max one chunk per card face.</td>
+    </tr>
+    <tr>
+      <td>21</td><td>Sub-vocalization Elimination</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P2</td>
+      <td>Merged into Focus Guide (#16): pacer moves <strong>5-10% faster</strong> than student's established reading speed, pushing beyond inner-voice speed.</td>
+    </tr>
+    <tr>
+      <td>22</td><td>80/20 Rule</td>
+      <td><span class="badge badge-e">E</span></td>
+      <td>Content Pipeline</td>
+      <td>Every <code>narrative_segment</code> must extract and tag <code>keywords_80_20</code> array &mdash; the 20% of words carrying 80% of conceptual value. Used by Focus Guide, Radiant Summary, Flash Cards, Memory Sprint.</td>
+    </tr>
+    <tr>
+      <td>23</td><td>Meta-Guiding</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P2</td>
+      <td>Merged into Focus Guide (#16): the visual pacer IS the meta-guide that maintains rhythm and reduces eye strain.</td>
+    </tr>
+    <tr>
+      <td>24</td><td>Pre-reading (Scan/Skim)</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P0-A</td>
+      <td>Panel 1 redesigned as <strong>"Structural Scan"</strong>: heading tree, bold-term highlights, diagram thumbnail grid. Trains scanning before deep reading.</td>
+    </tr>
+    <tr>
+      <td>25</td><td>Cortical Skills Synergy</td>
+      <td><span class="badge badge-b">B</span></td>
+      <td>P3 selection</td>
+      <td><strong>DP-3</strong>: Game selection algorithm must pick 2+ games engaging DIFFERENT cortical modalities (verbal/logical, visual/spatial, kinesthetic/procedural, social).</td>
+    </tr>
+    <tr>
+      <td>26</td><td>Primacy &amp; Recency</td>
+      <td><span class="badge badge-b">B</span></td>
+      <td>P1, P7</td>
+      <td><strong>DP-4</strong>: Formalize that P1 exploits Primacy, P7 exploits Recency. Already true &mdash; make explicit in docs.</td>
+    </tr>
+    <tr>
+      <td>27</td><td>BOST full sequence</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>All phases</td>
+      <td>Alignment table mapping BOST steps to NETS phases. Two additions: <strong>"What do you already know?"</strong> prompt in P0-A Panel 5, <strong>"What do you want to learn?"</strong> prompt in P0-A Panel 6.</td>
+    </tr>
+    <tr>
+      <td>28</td><td>Link System</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P1, P5</td>
+      <td>New Memory Sprint format #6: <strong>"Link Chain"</strong> &mdash; 5 sequential items with vivid story chain, recall tested out of order. Also available as P5 technique for sequential content.</td>
+    </tr>
+    <tr>
+      <td>29</td><td>Peg System</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P5, P3</td>
+      <td>New game mechanic spec (fills undefined "Peg system" slot). Number-Shape pegs (1=Candle, 2=Swan, etc., culturally adapted). Association + recall phases. Integrates with Tic Tac Toe vs AI.</td>
+    </tr>
+    <tr>
+      <td>30</td><td>Major System</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>P5 (G7+)</td>
+      <td>Phonetic digit code for number-heavy subjects (History dates, Chemistry constants). AI generates memorable word from target number. <strong>G7+ only.</strong></td>
+    </tr>
+    <tr>
+      <td>31</td><td>SEM&sup3;</td>
+      <td><span class="badge badge-a">A</span></td>
+      <td>Bilim Bazasi</td>
+      <td>Memory Matrix data model underneath Bilim Bazasi: concepts indexed by subject &times; encoding type. Powers knowledge tree visualization and informs session assembler about encoding coverage.</td>
+    </tr>
+    <tr>
+      <td>32</td><td>SMASHIN' SCOPE</td>
+      <td><span class="badge badge-e">E</span></td>
+      <td>Pipeline QA</td>
+      <td>Every <code>mnemonic_exercise</code> must score <strong>6+/12</strong> on SMASHIN' SCOPE (Synaesthesia, Movement, Association, Humor, Humor, Imagination, Number, Symbolism, Color, Order, Positive, Exaggeration). Below 6 = returned for enrichment.</td>
+    </tr>
+    <tr>
+      <td>33</td><td>The MIG</td>
+      <td><span class="badge badge-b">B</span></td>
+      <td>P1, P3, P7</td>
+      <td>Merged with #26: formalize that the 7-phase structure IS the MIG in action. Von Restorff anchor in P3 breaks the Sag.</td>
+    </tr>
+    <tr>
+      <td>34</td><td>Buzan Review Intervals</td>
+      <td><span class="badge badge-a">A</span><span class="badge badge-b">B</span></td>
+      <td>P1, spaced rep</td>
+      <td>Four mandatory touchpoints override SM-2 when SM-2 would schedule later: ~10min (same session P5), ~24h (next day P1), ~1 week, ~1 month. Rule: <code>min(SM-2, Buzan)</code> &mdash; whichever is SOONER wins.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ===== OVERLAP ===== -->
+<h2 id="overlap">4. Overlap Reconciliation</h2>
+
+<table>
+  <thead><tr><th>Existing NETS Feature</th><th>Buzan Method</th><th>Action</th></tr></thead>
+  <tbody>
+    <tr><td>Memory Palace (fully defined)</td><td>Method of Loci (#28-31 family)</td><td><strong>ENHANCE:</strong> Add SMASHIN' SCOPE gate to Memory Palace content</td></tr>
+    <tr><td>"Hali emas" in Memory Palace only</td><td>#10 "Hali emas"</td><td><strong>EXTEND:</strong> Apply to ALL failure states across ALL phases</td></tr>
+    <tr><td>IRT engine = Check/Adjust</td><td>#11 TEFCAS</td><td><strong>FORMALIZE:</strong> Name it TEFCAS in docs; extend to AI tutor language</td></tr>
+    <tr><td>Dual Coding in Memory Palace research</td><td>#12 Dual Coding</td><td><strong>ENFORCE:</strong> System-wide mandatory design principle</td></tr>
+    <tr><td>Phase 5 lists "Peg system" (undefined)</td><td>#29 Peg System</td><td><strong>FILL GAP:</strong> Write full game mechanic spec</td></tr>
+    <tr><td>Phase 5 lists "Mind maps" (undefined)</td><td>#1 Radiant Thinking</td><td><strong>FILL GAP:</strong> Write "Radiant Summary" game mechanic spec</td></tr>
+    <tr><td>SM-2 Modified spaced repetition</td><td>#34 Buzan Review Intervals</td><td><strong>AUGMENT:</strong> Add 4 mandatory touchpoints as floor constraints</td></tr>
+    <tr><td>7-phase structure</td><td>#26 Primacy/Recency, #33 MIG</td><td><strong>FORMALIZE:</strong> Document that the structure IS the MIG</td></tr>
+  </tbody>
+</table>
+
+<!-- ===== DELIVERABLES ===== -->
+<h2 id="deliverables">5. Deliverables List</h2>
+
+<div class="deliverable-group">
+  <h4>New Game Mechanic Specs (full documents)</h4>
+  <ol>
+    <li><code>NETS-Radiant-Summary-Specification.md</code> &mdash; Methods 1, 2, 7</li>
+    <li><code>NETS-Peg-System-Specification.md</code> &mdash; Method 29</li>
+  </ol>
+</div>
+
+<div class="deliverable-group">
+  <h4>UNIFIED Spec Amendments</h4>
+  <ol start="3">
+    <li>BOST alignment table + TEFCAS alignment section (Methods 11, 27)</li>
+    <li>Phase 1: Link Chain format + Buzan Review Intervals floor (Methods 28, 34)</li>
+    <li>Phase 2: Focus Guide feature (Methods 16, 21, 23) + Forward Momentum Rule (Method 18)</li>
+    <li>Phase 3: Cortical Diversity Constraint + Von Restorff Anchor (Methods 25, 14)</li>
+    <li>Phase 4: W5H Radiant Analysis scaffold (Method 4)</li>
+    <li>Phase 5: Major System for G7+ (Method 30), Link System technique (Method 28)</li>
+    <li>Phase 6: Decision Map question type + TEFCAS Socratic language (Methods 5, 11)</li>
+    <li>Phase 7: TEFCAS-framed reflection prompts (Method 11)</li>
+    <li>Phase 0-A: Structural Scan for Panel 1 + BOST prompts for Panels 5/6 (Methods 24, 27)</li>
+    <li>Section 9: Buzan Review Intervals as SM-2 floor constraints (Method 34)</li>
+    <li>Section 10: 80/20 keyword extraction + Dual Coding check + SMASHIN' SCOPE gate + Schema Activation check (Methods 22, 12, 32, 13)</li>
+    <li>Section 13: Anti-cheat Check #7 Radiant Signature (Method 15)</li>
+  </ol>
+</div>
+
+<div class="deliverable-group">
+  <h4>UI/UX Spec Amendments</h4>
+  <ol start="15">
+    <li>Radiant UI Standard &mdash; 7 Laws (Method 2)</li>
+    <li>G5-6 Simplified Radiant Rules (Method 6)</li>
+    <li>Subject Color System (Method 9)</li>
+    <li>Reading Optimization &mdash; column width, line height, font (Methods 17, 19)</li>
+    <li>Focus Guide visual spec (Methods 16, 21, 23)</li>
+    <li>Semantic Chunking rendering rule (Method 20)</li>
+    <li>Radiant Journey Map sidebar (Method 1)</li>
+  </ol>
+</div>
+
+<div class="deliverable-group">
+  <h4>AI Tutor Language</h4>
+  <ol start="22">
+    <li>"Hali emas" failure responses for all phases (Method 10)</li>
+    <li>TEFCAS Socratic prompts for P6 and P7 (Method 11)</li>
+    <li>Buzan-Inspired Tutor Voice &mdash; 30+ template phrases (Methods 7, 10, 11)</li>
+  </ol>
+</div>
+
+<div class="deliverable-group">
+  <h4>Lower Priority / Future Roadmap</h4>
+  <ol start="25">
+    <li><code>NETS-Group-Map-Game-Brief.md</code> &mdash; Method 3 (post-MVP, multiplayer)</li>
+    <li>Secret Symbols feature spec + Bilim Bazasi amendment (Method 8)</li>
+    <li>SEM&sup3; Memory Matrix data model (Method 31)</li>
+  </ol>
+</div>
+
+<!-- ===== SPRINTS ===== -->
+<h2 id="sprints">6. Implementation Sequence</h2>
+
+<div class="sprint-grid">
+  <div class="sprint-card">
+    <h4>Sprint 1 &mdash; Foundation</h4>
+    <p style="font-size:0.82rem; color:#666; margin-bottom:0.4rem;">Cross-cutting principles + Documentation</p>
+    <ul>
+      <li>Deliverable 3: BOST + TEFCAS alignment</li>
+      <li>Deliverables 15-18: UI/UX standards</li>
+      <li>Deliverables 22-24: AI tutor language</li>
+      <li>Deliverable 13: Pipeline QA gates</li>
+    </ul>
+  </div>
+  <div class="sprint-card">
+    <h4>Sprint 2 &mdash; Core Mechanics</h4>
+    <p style="font-size:0.82rem; color:#666; margin-bottom:0.4rem;">New game mechanic specs + key system changes</p>
+    <ul>
+      <li>Deliverable 1: Radiant Summary spec</li>
+      <li>Deliverable 2: Peg System spec</li>
+      <li>Deliverables 4-5: Phase 1-2 amendments</li>
+      <li>Deliverable 12: Buzan Review Intervals</li>
+    </ul>
+  </div>
+  <div class="sprint-card">
+    <h4>Sprint 3 &mdash; Phase Amendments</h4>
+    <p style="font-size:0.82rem; color:#666; margin-bottom:0.4rem;">Remaining phase-specific injections</p>
+    <ul>
+      <li>Deliverables 6-11: Phase 3-7 + P0-A</li>
+      <li>Deliverable 14: Anti-cheat radiant sig</li>
+      <li>Deliverables 19-21: Focus Guide + chunking UI</li>
+    </ul>
+  </div>
+  <div class="sprint-card">
+    <h4>Sprint 4 &mdash; Polish &amp; Future</h4>
+    <p style="font-size:0.82rem; color:#666; margin-bottom:0.4rem;">Lower-priority and roadmap items</p>
+    <ul>
+      <li>Deliverable 25: Group Mind Mapping brief</li>
+      <li>Deliverable 26: Secret Symbols system</li>
+      <li>Deliverable 27: SEM&sup3; data model</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== COST ===== -->
+<h2 id="cost">7. Cost Impact</h2>
+
+<table>
+  <thead><tr><th>Tier</th><th>Methods</th><th>Cost Impact</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Tier 1</strong> (algorithmic/template)</td><td>1, 2, 6, 7, 9, 14, 16-21, 23-29, 32-34</td><td class="cost-ok">Zero marginal cost &mdash; UI rules, templates, algorithm tweaks</td></tr>
+    <tr><td><strong>Tier 2</strong> (small LLM calls)</td><td>4, 7 (G7+ open), 11, 13, 15, 28, 30</td><td>Minimal &mdash; a few extra Tier 2 calls per session</td></tr>
+    <tr><td><strong>Tier 3</strong> (expensive LLM)</td><td>3, 8, 31</td><td>Premium-only or infrequent features</td></tr>
+  </tbody>
+</table>
+<p><strong class="cost-ok">$3-5/student/year target preserved.</strong> No Tier 3 required for Basic users.</p>
+
+<!-- ===== FILES ===== -->
+<h2 id="files">8. Critical Files to Modify</h2>
+
+<table>
+  <thead><tr><th>File / Folder</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td><code>All analysis/Universal Specs/NETS-Homework-Engine-UNIFIED.md</code></td><td>Main constitution &mdash; receives bulk of amendments</td></tr>
+    <tr><td><code>All analysis/Universal Specs/NETS-UI-UX-Design-Spec.docx</code></td><td>UI/UX layer injections</td></tr>
+    <tr><td><code>All analysis/Game Mechanics - All Definitions/</code></td><td>New mechanic specs go here</td></tr>
+    <tr><td><code>All analysis/Buzan Injection/</code></td><td>Source briefs (read-only reference)</td></tr>
+    <tr><td><code>All analysis/NETS-System-Design-v1.md</code></td><td>Bilim Bazasi / metagame amendments</td></tr>
+  </tbody>
+</table>
+
+<!-- ===== VERIFICATION ===== -->
+<h2 id="verification">9. Verification</h2>
+
+<ol>
+  <li>Every one of the 34 methods should be traceable to at least one deliverable</li>
+  <li>No deliverable changes any textbook content</li>
+  <li>All new game mechanics follow the existing spec template (see Memory Palace spec as model)</li>
+  <li>All pipeline QA gates are additive (new checks, not replacing existing ones)</li>
+  <li>Generate the combined Buzan Injection spec as both <code>.md</code> and <code>.html</code></li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Tarbiya — Grade 5 Subject Framework v1.0</title>
+<style>
+:root {
+  --gold: #F59E0B;
+  --gold-light: #FCD34D;
+  --gold-dark: #B45309;
+  --sage: #84CC16;
+  --sage-dark: #4D7C0F;
+  --bg: #0F172A;
+  --bg-card: #1E293B;
+  --bg-soft: #334155;
+  --text: #F3F4F6;
+  --text-dim: #CBD5E1;
+  --text-mute: #94A3B8;
+  --border: #475569;
+  --accent: #FCD34D;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+header.hero {
+  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+  border-bottom: 4px solid var(--gold);
+  padding: 60px 40px 40px;
+  margin-bottom: 0;
+}
+header.hero .container { padding: 0; max-width: 920px; margin: 0 auto; }
+header.hero .badge {
+  display: inline-block;
+  background: var(--gold);
+  color: #1E293B;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+header.hero h1 {
+  font-size: 48px;
+  margin: 0 0 12px;
+  color: var(--gold-light);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+header.hero .subtitle {
+  font-size: 20px;
+  color: var(--text-dim);
+  margin: 0 0 24px;
+}
+header.hero .meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+header.hero .meta-item {
+  background: rgba(245, 158, 11, 0.08);
+  padding: 12px 16px;
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+}
+header.hero .meta-item strong {
+  display: block;
+  color: var(--gold-light);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+header.hero .meta-item span { color: var(--text-dim); }
+
+nav.toc {
+  background: var(--bg-card);
+  padding: 28px 32px;
+  border-radius: 12px;
+  margin-bottom: 48px;
+  border: 1px solid var(--border);
+}
+nav.toc h2 {
+  margin: 0 0 16px;
+  color: var(--gold);
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+nav.toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 24px;
+}
+nav.toc li {
+  padding: 6px 0;
+  break-inside: avoid;
+}
+nav.toc a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  padding: 4px 0;
+  transition: color 0.2s, padding-left 0.2s;
+}
+nav.toc a:hover {
+  color: var(--gold-light);
+  padding-left: 6px;
+}
+nav.toc a strong { color: var(--sage); margin-right: 8px; }
+
+section {
+  margin-bottom: 56px;
+  scroll-margin-top: 20px;
+}
+h2.section-title {
+  font-size: 32px;
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold-dark);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+h2.section-title .num {
+  color: var(--sage);
+  font-weight: 800;
+  margin-right: 12px;
+}
+h3 {
+  font-size: 22px;
+  color: var(--sage);
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 17px;
+  color: var(--gold-light);
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+p { margin: 12px 0; color: var(--text-dim); }
+strong { color: var(--text); }
+em { color: var(--gold-light); font-style: normal; font-weight: 500; }
+code {
+  background: var(--bg-soft);
+  color: var(--gold-light);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  font-size: 13px;
+}
+pre {
+  background: var(--bg-soft);
+  border-left: 3px solid var(--gold);
+  padding: 16px 20px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 13px;
+  color: var(--text);
+}
+pre code { background: none; padding: 0; color: inherit; }
+
+ul, ol {
+  margin: 12px 0;
+  padding-left: 24px;
+  color: var(--text-dim);
+}
+li { margin: 6px 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+th {
+  background: var(--bg-soft);
+  color: var(--gold-light);
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--gold-dark);
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-dim);
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(245, 158, 11, 0.04); }
+
+blockquote {
+  border-left: 4px solid var(--gold);
+  background: rgba(245, 158, 11, 0.06);
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--text);
+}
+blockquote p:first-child { margin-top: 0; }
+blockquote p:last-child { margin-bottom: 0; }
+
+.callout {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--sage);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.callout-warning { border-left-color: var(--gold); background: rgba(245, 158, 11, 0.05); }
+.callout-info { border-left-color: var(--sage); background: rgba(132, 204, 22, 0.05); }
+
+.tag {
+  display: inline-block;
+  background: rgba(132, 204, 22, 0.15);
+  color: var(--sage);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+.tag-warning { background: rgba(245, 158, 11, 0.15); color: var(--gold-light); }
+.tag-danger { background: rgba(239, 68, 68, 0.15); color: #FCA5A5; }
+
+footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  color: var(--text-mute);
+  font-size: 13px;
+  text-align: center;
+}
+footer a { color: var(--gold-light); text-decoration: none; }
+
+@media (max-width: 720px) {
+  .container { padding: 40px 20px; }
+  header.hero { padding: 40px 20px 30px; }
+  header.hero h1 { font-size: 32px; }
+  nav.toc ol { columns: 1; }
+  h2.section-title { font-size: 24px; }
+  table { font-size: 12px; }
+  th, td { padding: 8px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="badge">NETS Subject Framework · Chill Mode</div>
+    <h1>Tarbiya — Grade 5</h1>
+    <p class="subtitle">Subject framework v1.0 · Production-ready specification · Single source of truth for Grade 5 Tarbiya homework</p>
+    <div class="meta">
+      <div class="meta-item"><strong>Version</strong><span>1.0 (Chill Mode)</span></div>
+      <div class="meta-item"><strong>Date</strong><span>2026-04-08</span></div>
+      <div class="meta-item"><strong>Inherits from</strong><span>UNIFIED v2.0 + Blueprint v1.0</span></div>
+      <div class="meta-item"><strong>Textbook</strong><span>Quronov et al. 2020 · 112pp</span></div>
+      <div class="meta-item"><strong>Sessions</strong><span>24 sessions · ~51–70 LUs</span></div>
+      <div class="meta-item"><strong>Subject color</strong><span>#F59E0B Gold + #84CC16 Sage</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<blockquote>
+<p><strong>Reading order:</strong> §0 first (decisions log), then §2 (what is this subject), then §6 (the engine). Everything else is reference.</p>
+</blockquote>
+
+<nav class="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#s0"><strong>§0</strong>Resolution Log</a></li>
+<li><a href="#s1"><strong>§1</strong>Audience Profile</a></li>
+<li><a href="#s2"><strong>§2</strong>Subject Identity</a></li>
+<li><a href="#s3"><strong>§3</strong>Tarbiya Learning Track</a></li>
+<li><a href="#s4"><strong>§4</strong>Psychology Filter</a></li>
+<li><a href="#s5"><strong>§5</strong>Pre-Homework 0-A &amp; 0-B</a></li>
+<li><a href="#s6"><strong>§6</strong>The 7-Phase Engine</a></li>
+<li><a href="#s7"><strong>§7</strong>Content Rules</a></li>
+<li><a href="#s8"><strong>§8</strong>Game Catalog</a></li>
+<li><a href="#s9"><strong>§9</strong>Virtue Garden Mechanic</a></li>
+<li><a href="#s10"><strong>§10</strong>Anti-Cheat Tuning</a></li>
+<li><a href="#s11"><strong>§11</strong>Cultural Anchors</a></li>
+<li><a href="#s12"><strong>§12</strong>Assessment &amp; Scoring</a></li>
+<li><a href="#s13"><strong>§13</strong>AI Tier Strategy</a></li>
+<li><a href="#s14"><strong>§14</strong>Teacher Overrides</a></li>
+<li><a href="#s15"><strong>§15</strong>Tagging Schema</a></li>
+<li><a href="#s16"><strong>§16</strong>Content Production Checklist</a></li>
+<li><a href="#s17"><strong>§17</strong>Sample Walkthrough — Mehr Qadri</a></li>
+<li><a href="#s18"><strong>§18</strong>Open Questions</a></li>
+<li><a href="#s19"><strong>§19</strong>Production Handoff</a></li>
+<li><a href="#s20"><strong>§20</strong>Versioning &amp; Review</a></li>
+</ol>
+</nav>
+
+<section id="s0">
+<h2 class="section-title"><span class="num">§0</span>Resolution Log</h2>
+<p>Tarbiya is <strong>the first NETS subject that breaks the universal homework mold by design.</strong> It is values/character/civic education — reflective, narrative, no PISA domain, no objective "correct answer" for L2+ tasks. Forcing standard NETS rigor on it would feel evaluative and joyless and would actively damage moral learning (overjustification effect, Deci/Koestner/Ryan 1999). The user's directive: <em>"make this subject more like gamified, students should be able to chill while doing homework."</em></p>
+<p>This log records the 16 decisions made when Tarbiya's nature collided with UNIFIED immutables.</p>
+<table>
+<tr><th>#</th><th>Conflict</th><th>Resolution</th><th>Reasoning</th></tr>
+<tr><td>1</td><td>UNIFIED §6 mandates Final Boss with HP/defeat. Values content has no defeatable correct answer.</td><td><strong>REPLACE Final Boss with "Big Decision"</strong> — single longer scenario, student picks + writes 1-sentence why, AI gives warm reflective response, no fail state, always passes.</td><td>Defeating a moral dilemma is incoherent. Reflective tasks require psychological safety (Harter 2012); failure states trigger shame and disengagement.</td></tr>
+<tr><td>2</td><td>UNIFIED §4 sets Standard session 30–45 min.</td><td><strong>Override to 15–25 min Standard</strong> for Tarbiya.</td><td>Reflective/values content runs on System 2 (slow, effortful). Lower cognitive load required (Sweller 1988).</td></tr>
+<tr><td>3</td><td>UNIFIED §11 gamification economy includes XP, streaks, leagues. Overjustification effect warns against extrinsic rewards for moral behavior.</td><td><strong>Keep XP/streaks but reframe</strong>: XP for engagement effort, never for "being virtuous." NO leagues. Replace ranking with <strong>Fazilatlar Bog'i (Garden of Virtues)</strong> collection meta-game.</td><td>Overjustification documented (Deci et al. 1999 meta-analysis). Collection/cosmetic rewards don't crowd out intrinsic motivation.</td></tr>
+<tr><td>4</td><td>UNIFIED §6.2 Story Mode has comprehension checkpoints with right answers.</td><td><strong>Tarbiya Story Mode uses branching dialogue with no wrong path.</strong> Choices tracked, not scored.</td><td>Narrative transportation (Green &amp; Brock 2000) and observational learning (Bandura 1977) work best when reader feels safe to try perspectives.</td></tr>
+<tr><td>5</td><td>UNIFIED §6 Phase 4 RLC has "tricky distractors" and "expert POV."</td><td><strong>Tarbiya RLC is "Sen bo'lsang nima qilarding?"</strong> — 3–4 valid choices, each gets a thoughtful response, no "best answer."</td><td>Same psychological safety reasoning. Homework is one of few private spaces in 35–38 student classrooms.</td></tr>
+<tr><td>6</td><td>UNIFIED §3 mandates PISA tagging on every task.</td><td><strong>Use PISA Reading L1→L2 + Creative Thinking as secondary tags. Primary = custom Moral Reasoning track (MR-L1→MR-L4) + 5 SEL competency tags.</strong></td><td>Tarbiya is mandated by Uzbek MoE; can't be skipped. Custom track keeps tagging schema intact.</td></tr>
+<tr><td>7</td><td>UNIFIED §13 Anti-Cheat assumes correctness signal.</td><td><strong>Tarbiya anti-cheat watches engagement quality only.</strong> Mother-helping always reframed as collaborative. No verdicts above MONITOR.</td><td>Cheating on a values journal is functionally impossible.</td></tr>
+<tr><td>8</td><td>UNIFIED §16 targets ~80–120 task units/session.</td><td><strong>Tarbiya ~30–50 task units/session</strong>.</td><td>Shorter session, lower density. Each unit is "thicker" — 90-sec reflective scenario beats five 18-sec drill items.</td></tr>
+<tr><td>9</td><td>UNIFIED §6.5 Phase 5 Consolidation defaults to diagram recall.</td><td><strong>Tarbiya Phase 5 = Fazilatlar Bog'i virtue collection moment</strong>.</td><td>The garden IS the consolidation; collecting symbolizes integrating the value.</td></tr>
+<tr><td>10</td><td>UNIFIED §6.7 Reflection mandates 1 sentence minimum.</td><td><strong>Tarbiya Reflection fully optional</strong> — voice OR text OR drawing OR skip. XP identical regardless.</td><td>Mandatory reflection on values feels coercive. Optional respects autonomy (SDT, Deci &amp; Ryan 2000).</td></tr>
+<tr><td>11</td><td>UNIFIED §10 requires content pool ≥85 items per topic.</td><td><strong>Tarbiya target ≥40 items per topic</strong>.</td><td>Each item is denser; 85-item pools designed for drill subjects.</td></tr>
+<tr><td>12</td><td>UNIFIED bans Peer Teaching for many G5 contexts.</td><td><strong>Tarbiya KEEPS Peer Teaching as opt-in</strong> via "Hikoyangizni ulashing" (Share your story) moderated wall. Never required.</td><td>Tarbiya benefits from prosocial visibility when safe. Opt-in + moderation prevents the issues that ban it elsewhere.</td></tr>
+<tr><td>13</td><td>UNIFIED Boss retry limit (max 2 retries).</td><td><strong>N/A — no Boss for Tarbiya.</strong></td><td>Big Decision has no fail state.</td></tr>
+<tr><td>14</td><td>Religious framing</td><td><strong>Hold doctrinally-neutral line</strong> (matches textbook). Cultural Islamic warmth implicit; no Quranic citations.</td><td>Textbook itself is values-aligned without doctrine; preserve accessibility across diverse families.</td></tr>
+<tr><td>15</td><td>Family-bridge tasks (interview elders, observe family).</td><td><strong>All family-bridge tasks OPT-IN side quests</strong>. NPC fallback ("Bobo Sherzod") for students without access.</td><td>Trauma-informed: not all students have safe family contexts.</td></tr>
+<tr><td>16</td><td>UNIFIED bans visible difficulty labels.</td><td><strong>Tarbiya has no difficulty labels at all</strong> — no tiers in chill-mode design.</td><td>—</td></tr>
+</table>
+<div class="callout callout-info">
+<strong>16 resolutions logged. All trace to two roots:</strong> (1) values content needs psychological safety &gt; performance pressure, and (2) overjustification effect rules out scoring moral behavior.
+</div>
+</section>
+
+<section id="s1">
+<h2 class="section-title"><span class="num">§1</span>Audience Profile</h2>
+<p>Inherited from <code>qwen-grade5-psychology-findings.md</code> §1–2 + §7 (universal Grade 5 Uzbek base). Subject-agnostic facts unchanged; Tarbiya-specific deltas noted inline.</p>
+
+<h3>Cognitive (universal G5)</h3>
+<ul>
+<li>Late concrete operational (Piaget); abstract reasoning emerging but not reliable</li>
+<li>Working memory 4–5 chunks (Cowan 2001) → max 3 new concepts per instruction</li>
+<li>Sustained attention 20–30 min academic, <strong>drops to 15–20 min for reflective/emotional work</strong> (Tarbiya delta)</li>
+<li>Lexile 830–1010L; receptive vocab ~12–14k, productive ~6–8k</li>
+<li>Metacognitive accuracy ~0.4–0.5 — guided reflection only, never open-ended</li>
+</ul>
+
+<h3>Social/Emotional (universal G5)</h3>
+<ul>
+<li>Self-concept fragile under public evaluation (Harter 2012)</li>
+<li>Peer comparison sensitivity high and intensifying (Ruble et al. 2004)</li>
+<li>Failure tolerance low without reframing — attribute to strategy not ability (Dweck 2006)</li>
+<li>Recovery from negative feedback: 30–90 sec processing time (Thompson 2011)</li>
+</ul>
+
+<h3>Tarbiya-Specific Cognitive Load</h3>
+<ul>
+<li>Values reasoning is System 2 (slow, effortful) — Kahneman dual-process — requires lower extrinsic load than drill</li>
+<li>Erikson Industry vs. Inferiority transition: students want to demonstrate competence but cannot tolerate public moral judgment</li>
+<li>Kohlberg conventional level 3 ("good boy/girl orientation") — they care intensely about being seen as good, which makes failure-as-bad framing especially toxic</li>
+</ul>
+
+<h3>Uzbek Context</h3>
+<ul>
+<li>35–38 student classes, teacher-centered, formal teacher-student dynamic</li>
+<li>Mother is primary homework supervisor</li>
+<li>Shared family smartphone primary device; mobile-first, low-bandwidth, portrait orientation</li>
+<li>After-school window 2–3 hrs; peak homework 17:00–19:00</li>
+<li>Resonant figures: Amir Temur, Navoiy, Ulugh Beg, Ibn Sino, Beruni, Avloniy</li>
+<li>Resonant places: Registan, Bukhara, Khiva, Aral, Chimgan</li>
+<li>Primary language Uzbek (Latin); Russian secondary, English A1–A2</li>
+</ul>
+</section>
+
+<section id="s2">
+<h2 class="section-title"><span class="num">§2</span>Subject Identity</h2>
+<p><strong>Tarbiya</strong> = upbringing/character/values/civic education. Mandatory in Uzbek schools from Grade 1. Grade 5 marks the start of basic secondary and the textbook's transition from concrete child-world (family, friends, body) to early civic identity (citizen, ancestor, heritage, environment).</p>
+
+<div class="callout callout-warning">
+<strong>Pedagogical posture:</strong> <em>Wonder, reflection, and quiet pride</em> — never preaching, never testing. The teacher's job is to ask "Sen bo'lsang qanday qilarding?" and let students discover virtue through narrative and choice. The textbook explicitly avoids doctrinal preaching; NETS preserves that.
+</div>
+
+<h3>Content Domains (6 thematic clusters)</h3>
+<ol>
+<li><strong>Civic identity &amp; patriotism</strong> (Bob I, mavzular 1–8) — Vatanga muhabbat, responsibility, rights &amp; duties, environmental stewardship</li>
+<li><strong>Emotional &amp; interpersonal development</strong> (Bob II, mavzular 9–14) — emotional literacy, empathy, mehr (compassion), aspiration, respect for human dignity</li>
+<li><strong>Cooperation &amp; friendship</strong> (Bob III, mavzular 15–22) — helping others, hamkorlik, animal care, conduct/manners, health</li>
+<li><strong>Personal aspiration &amp; perseverance</strong> (cross-cutting Bob II–III) — motivatsiya, tirishqoqlik, qat'iyatlilik, goal-setting</li>
+<li><strong>Cultural memory &amp; heritage</strong> (Bob IV, mavzular 23–29) — historical memory, family lineage, national traditions, literary culture</li>
+<li><strong>Environmental &amp; global awareness</strong> (Bob I, 7–8 + threaded) — ecological responsibility, conservation, global cooperation</li>
+</ol>
+
+<p><strong>Standard code prefix:</strong> <code>UZ-TAR-5-{TOPIC}-{SEQ}</code> (primary) · <code>TAR.5.{BOB}.{MAVZU}.{SEQ}</code> (alias)</p>
+<p><strong>Textbook source of truth:</strong> Tarbiya 5-sinf, Quronov et al. 2020. Every NETS task must trace to textbook page range.</p>
+
+<h3>Chapter Map → Session Map</h3>
+<table>
+<tr><th>Bob</th><th>Mavzular</th><th>Sessions</th><th>Estimated LUs</th></tr>
+<tr><td>I — Men fuqaroman</td><td>1–8 (4 sections)</td><td>6</td><td>~12</td></tr>
+<tr><td>II — Men insonman</td><td>9–14 (6 sections)</td><td>7</td><td>~16</td></tr>
+<tr><td>III — Men va do'stlarim</td><td>15–22 (5 sections)</td><td>6</td><td>~13</td></tr>
+<tr><td>IV — Men va ajdodlarim</td><td>23–29 (4 sections)</td><td>5</td><td>~10</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>29 mavzular</strong></td><td><strong>24 sessions</strong></td><td><strong>~51 LUs</strong></td></tr>
+</table>
+<p>Recommend ~60–70 micro-LUs in production for richer content variety.</p>
+</section>
+
+<section id="s3">
+<h2 class="section-title"><span class="num">§3</span>The Tarbiya Learning Track — Custom Domain</h2>
+<p>Tarbiya does not map to PISA Math/Reading/Science. We define a <strong>custom 4-level Moral Reasoning (MR) track</strong> plus 5 SEL competency tags. PISA Reading L1–L2 and Creative Thinking are kept as <strong>secondary tags</strong> for cross-subject analytics.</p>
+
+<h3>Moral Reasoning Levels</h3>
+<table>
+<tr><th>Level</th><th>Code</th><th>Capability</th><th>Example task</th></tr>
+<tr><td><strong>MR-L1</strong></td><td>Recognize</td><td>Identify a virtue/concept in a narrative</td><td>"Namoz Jumayev qaysi fazilatni ko'rsatadi?" (matching)</td></tr>
+<tr><td><strong>MR-L2</strong></td><td>Apply</td><td>Apply a virtue to a familiar scenario</td><td>"Komila ukasiga g'amxo'rlik qilishi kerakmi yoki do'sti bilan gaplashishi kerakmi? Nega?"</td></tr>
+<tr><td><strong>MR-L3</strong></td><td>Weigh</td><td>Weigh competing virtues in a dilemma</td><td>"Halollik va do'st bilan sodiqlik to'qnashganda nima qilasiz?"</td></tr>
+<tr><td><strong>MR-L4</strong></td><td>Construct</td><td>Construct a coherent moral argument</td><td>"Mas'uliyat haqida o'z fikringizni 3 jumlada yozing va misol keltiring."</td></tr>
+</table>
+
+<h3>SEL Competency Tags (CASEL-aligned, Uzbek-adapted)</h3>
+<p>Every task carries ONE primary SEL tag:</p>
+<ul>
+<li><span class="tag">SA</span> <strong>Self-Awareness</strong> — recognizing emotions, strengths, limits</li>
+<li><span class="tag">SM</span> <strong>Self-Management</strong> — perseverance, responsibility, goal-setting (tirishqoqlik, mas'uliyat)</li>
+<li><span class="tag">SoA</span> <strong>Social Awareness</strong> — empathy, perspective-taking, respect (mehr, hurmat)</li>
+<li><span class="tag">RS</span> <strong>Relationship Skills</strong> — cooperation, communication, conflict resolution (hamkorlik)</li>
+<li><span class="tag">RDM</span> <strong>Responsible Decision-Making</strong> — ethical reasoning, systems thinking</li>
+</ul>
+
+<h3>Distribution Targets per Session</h3>
+<table>
+<tr><th>Bucket</th><th>% of session tasks</th><th>Purpose</th></tr>
+<tr><td>MR-L1 (Recognize)</td><td>30%</td><td>Onboarding, vocab anchoring, no-stress entry</td></tr>
+<tr><td>MR-L2 (Apply)</td><td>40%</td><td>Core practice — most session content</td></tr>
+<tr><td>MR-L3 (Weigh)</td><td>25%</td><td>Story Mode + Big Decision content</td></tr>
+<tr><td>MR-L4 (Construct)</td><td>5%</td><td>Optional reflection prompts only</td></tr>
+</table>
+</section>
+
+<section id="s4">
+<h2 class="section-title"><span class="num">§4</span>Psychology Filter — Applied Parameters</h2>
+
+<h3>Session Timing</h3>
+<ul>
+<li><strong>Standard session: 15–25 min</strong> (Tarbiya override; lower than universal 30–45)</li>
+<li><strong>Extended session: 25–35 min</strong> (in-class, teacher-led, group reflection)</li>
+<li><strong>Single phase max: 4–6 min</strong> (lower than universal 5–9)</li>
+<li><strong>Inter-phase break: 8–20 sec</strong> with Did You Know cultural facts</li>
+<li><strong>1 session per day max</strong> (no double sessions for reflective content)</li>
+<li><strong>Deploy window: 17:00–19:00</strong> (after dinner, family-quiet time)</li>
+</ul>
+
+<h3>"Difficulty" Calibration (Chill Mode)</h3>
+<ul>
+<li><strong>No success rate target</strong> — there are no right answers for MR-L2+ tasks</li>
+<li><strong>Adapt every 2–3 tasks</strong> based on engagement signals (time-on-task, choice depth, reflection length), not correctness</li>
+<li><strong>No difficulty labels, no tiering visible to student</strong></li>
+<li><strong>No pass threshold</strong> — every session is "passed" by completing it</li>
+<li><strong>Recovery framing</strong> — never "Notog'ri" (Wrong); always "Boshqacha qarash" (Another perspective)</li>
+<li><strong>Productive reflection time</strong> — 30 sec is enough; do not push past 60 sec without offering a hint or alternative</li>
+</ul>
+
+<h3>Banned Techniques (Tarbiya-Specific)</h3>
+<ol>
+<li><span class="tag tag-danger">Banned</span> Public wrong answers / leaderboards (Harter 2012)</li>
+<li><span class="tag tag-danger">Banned</span> Real-time multiplayer competition (Dweck 2006)</li>
+<li><span class="tag tag-danger">Banned</span> XP for "being virtuous" (Deci/Koestner/Ryan 1999, overjustification)</li>
+<li><span class="tag tag-danger">Banned</span> Mandatory reflection writing (Roebers 2017)</li>
+<li><span class="tag tag-danger">Banned</span> Failure states / fail screens (Dweck 2006)</li>
+<li><span class="tag tag-danger">Banned</span> Boss combat metaphor (incoherent for moral content)</li>
+<li><span class="tag tag-danger">Banned</span> "Right answer" framing for L2+ tasks</li>
+<li><span class="tag tag-danger">Banned</span> Mandatory family-bridge tasks (trauma-informed)</li>
+<li><span class="tag tag-danger">Banned</span> Religious doctrinal framing</li>
+<li><span class="tag tag-danger">Banned</span> Western emotion taxonomy (textbook uses ijobiy/salbiy/betaraf)</li>
+<li><span class="tag tag-danger">Banned</span> Timed reflection</li>
+<li><span class="tag tag-danger">Banned</span> Comparative ranking</li>
+<li><span class="tag tag-danger">Banned</span> "You're a good person" praise (use effort/strategy)</li>
+<li><span class="tag tag-danger">Banned</span> Cosmetics purchasable with money (UNIFIED rule)</li>
+<li><span class="tag tag-danger">Banned</span> Why Chain ≥3 levels (G5 working memory)</li>
+</ol>
+
+<h3>Mandatory Inclusions</h3>
+<ol>
+<li><span class="tag">Required</span> Narrative-first content (Mar &amp; Oatley; Bandura)</li>
+<li><span class="tag">Required</span> Branching dialogue with no wrong path</li>
+<li><span class="tag">Required</span> Effort/process praise only</li>
+<li><span class="tag">Required</span> Collection/cosmetic rewards via Virtue Garden</li>
+<li><span class="tag">Required</span> Cultural anchors in every session</li>
+<li><span class="tag">Required</span> Optional family-bridge side quests</li>
+<li><span class="tag">Required</span> Warm Tier 2 AI reflective responses to Big Decision</li>
+<li><span class="tag">Required</span> NPC elder fallback ("Bobo Sherzod")</li>
+<li><span class="tag">Required</span> Calm, slow pacing — no countdown timers in any phase</li>
+<li><span class="tag">Required</span> Did You Know cultural facts between phases</li>
+</ol>
+</section>
+
+<section id="s5">
+<h2 class="section-title"><span class="num">§5</span>Pre-Homework Sessions 0-A &amp; 0-B</h2>
+
+<h3>0-A Theme Preview (Mavzu Tanishuvi) — 2–3 min</h3>
+<p><strong>Format:</strong> 8-panel swipe deck (vertical TikTok-style), student-paced, no scoring, no XP, no timer.</p>
+<table>
+<tr><th>Panel</th><th>Content</th><th>Example for Mavzu 10 (Mehr qadri)</th></tr>
+<tr><td>1. Sarlavha</td><td>Title + warm hook image</td><td>"Mehr qadri" + grandmother holding child's hand</td></tr>
+<tr><td>2. Yaxshi tushuntirish</td><td>Concept defined with metaphor</td><td>"Mehr — bu boshqa odamning yuragini his qila olish..."</td></tr>
+<tr><td>3. Misollar</td><td>2–3 visual examples from daily Uzbek life</td><td>Mother bringing tea, friend sharing somsa, helping classmate</td></tr>
+<tr><td>4. Hayotiy hikoya</td><td>3-sentence story featuring an Uzbek figure</td><td>Ibn Sino healing a poor patient without payment</td></tr>
+<tr><td>5. Senga taalluqli</td><td>"Have you ever..." direct connection</td><td>"Sen kimga mehr ko'rsatgansan? Buni eslab ko'r."</td></tr>
+<tr><td>6. Nega muhim</td><td>Long-arc significance</td><td>"Mehr bo'lmagan jamiyatda hech kim baxtli yashay olmaydi."</td></tr>
+<tr><td>7. Hayotda qo'llanilishi</td><td>Modern Uzbek profession/context</td><td>Nurse, teacher, mahalla volunteer</td></tr>
+<tr><td>8. Qo'shimcha materiallar</td><td>Optional extras</td><td>Avloniy quote, optional 30-sec animated video</td></tr>
+</table>
+<p><strong>Animation:</strong> 400 ms whoosh + 600 ms assembly per panel transition. Pagination dots, swipe forward only, can skip back. <strong>No XP, no scoring, no timer</strong> — pure exploration. One Did You Know between panels 4–5.</p>
+<div class="callout callout-info"><strong>Stranger Test:</strong> Could a Grade 5 Uzbek student understand and feel something from this without a teacher present? If no, rewrite.</div>
+
+<h3>0-B Flash Cards (Tezkor Kartochkalar) — 1–2 min</h3>
+<p><strong>Format:</strong> 5–7 card carousel, 3D depth effect, returnable mid-session as reference (not counted as hint).</p>
+<p>Each card has a front (concept name + visual icon) and back (1-sentence definition + visual example + proverb/quote). Cap at 5–7 cards (Cowan working memory ceiling). Card flip 600 ms (slower than universal — Tarbiya is paced for reflection, not speed).</p>
+<p><em>Example cards for Mavzu 10:</em> Mehr · Mehribonlik · Hurmat · G'amxo'rlik · Yordam</p>
+</section>
+
+<section id="s6">
+<h2 class="section-title"><span class="num">§6</span>The 7-Phase Engine — Tarbiya Chill Mode</h2>
+<p><strong>Total session: 15–25 min</strong> (Standard) including 0-A + 0-B + 7 phases.</p>
+
+<h3>§6.1 Phase 1 — Mood Check-in (Kayfiyat) · ≤2 min</h3>
+<p><strong>Replaces universal Memory Sprint.</strong> Drill-style recall is the wrong opening for reflective content.</p>
+<ul>
+<li>3 emoji-tap "How are you today?" — happy / okay / tired / sad / excited</li>
+<li>1 soft recall from previous session: "O'tgan darsda qaysi fazilatni o'rgandik?" (4-option visual MC)</li>
+<li>No timer, no penalty for any answer</li>
+<li>XP awarded just for tapping (engagement = success)</li>
+<li>Warm response to mood: sad → "Bugun ozgina sokinroq boshlaymiz"</li>
+<li>Tier 1 algorithmic — pre-generated response bank by mood</li>
+</ul>
+<p><strong>Adaptation gate:</strong> If student taps "sad" or "tired" 3 sessions in a row → soft teacher flag (privacy-respected — teacher sees "Aziza may need a check-in," not "Aziza is sad").</p>
+
+<h3>§6.2 Phase 2 — Hikoya Vaqti (Story Time) · 5–7 min</h3>
+<p><strong>Replaces universal Story Mode.</strong> Same shape (3 segments × 90 sec) but <strong>branching dialogue, no wrong path.</strong></p>
+<ul>
+<li>3 narrative segments, each ending in a choice (not a comprehension question)</li>
+<li>Choices are tracked, not graded</li>
+<li>Every choice advances the story — no dead ends, no retries</li>
+<li>Subject-specific narrative approach by Bob:
+  <ul>
+  <li><strong>Bob I (citizenship/ecology):</strong> Real-Uzbek-place stories (Aral, mahalla, Chimgan)</li>
+  <li><strong>Bob II (emotions/aspiration):</strong> Character-arc stories with Uzbek figures</li>
+  <li><strong>Bob III (friendship/cooperation):</strong> Peer-context stories in Uzbek school/mahalla</li>
+  <li><strong>Bob IV (heritage/memory):</strong> Multi-generational stories with grandparent characters</li>
+  </ul>
+</li>
+<li>Lexile 830–1010L, ≤14 word sentences, second-person ("Sen") POV</li>
+<li>Stranger Test on every segment</li>
+<li>No timer visible — student sets the pace</li>
+</ul>
+
+<h3>§6.3 Phase 3 — O'yinlar Tanaffusi (Game Breaks) · 3–5 min</h3>
+<p><strong>Light, 2 games (not 3),</strong> interleaved between Story segments OR after Story Mode ends — teacher's choice.</p>
+<ul>
+<li><strong>Slot 1 — Visual/recognition warmup:</strong> Tile Match (virtue cards), Memory Match (proverb pairs), Sentence Fill (Avloniy quote completion)</li>
+<li><strong>Slot 2 — Light reasoning:</strong> Mystery Box (Uzbek cultural fact reveal), Why Chain (max 2 levels, soft topic only), Codebreaker (decode proverb)</li>
+</ul>
+<p>No Notebook Capture as core game for Tarbiya — but offered as optional bonus for reflective drawing tasks.</p>
+
+<h3>§6.4 Phase 4 — Sen Bo'lsang? (What Would You Do?) · 3–5 min</h3>
+<p><strong>Replaces universal Real-Life Challenge.</strong> No tricky distractors, no expert POV.</p>
+<ul>
+<li>1 scenario card with Uzbek-context dilemma</li>
+<li>3–4 choices, each is valid</li>
+<li>Every choice gets a Tier 2 AI response that explores the consequences (warm, reflective, never judgmental)</li>
+<li>No "best answer" indicator</li>
+<li>Optional follow-up: "Sen bunga qo'shilasanmi?" with thumbs up/down — pure expression, no scoring</li>
+</ul>
+
+<h3>§6.5 Phase 5 — Fazilatlar Bog'i (Garden of Virtues) · 2–3 min</h3>
+<p><strong>Replaces universal Consolidation.</strong> No diagram recall, no test.</p>
+<ul>
+<li>Today's virtue card unlocks with a brief animation (4–5 sec)</li>
+<li>Card joins the persistent Garden — student sees garden grow over weeks</li>
+<li>Tap to read virtue card details: definition, today's story snippet, related Uzbek proverb</li>
+<li>Garden visual: plants/flowers grow as cards collect (Bob I = oak tree, Bob II = flower, Bob III = bridge, Bob IV = old book)</li>
+<li>5-card combo bonus: every 5th unique virtue triggers a small celebration + cosmetic unlock</li>
+</ul>
+
+<h3>§6.6 Phase 6 — Katta Qaror (The Big Decision) · 3–5 min</h3>
+<p><strong>REPLACES Final Boss.</strong> This is the session climax — but it's a no-fail reflective decision, not combat.</p>
+<ol>
+<li><strong>Setup</strong> (30 sec) — A longer dilemma scenario (4–6 sentences) tied to today's mavzu</li>
+<li><strong>Choice</strong> — 3 options, each thoughtful</li>
+<li><strong>Justification</strong> (the only writing task) — "Nega bu javobni tanlading? 1 jumlada yoz." Voice input optional.</li>
+<li><strong>AI response</strong> (Tier 2) — Warm, reflective, explores the student's reasoning</li>
+<li><strong>Always passes.</strong> XP awarded. Garden card unlocked.</li>
+</ol>
+<div class="callout callout-warning">
+<strong>No HP, no hints, no retries, no defeat, no fail screen, no difficulty tier.</strong> Tier 3 invoked once per session for thoughtful 2+ sentence reflections (hard-capped to control budget).
+</div>
+
+<h3>§6.7 Phase 7 — O'ylab Ko'rish (Reflection) · 1–2 min · OPTIONAL</h3>
+<p><strong>Optional reflection. Skip is a valid path.</strong> XP identical regardless.</p>
+<p>Three formats, student choice:</p>
+<ol>
+<li><strong>Voice</strong> — record up to 30 sec</li>
+<li><strong>Text</strong> — write up to 2 sentences</li>
+<li><strong>Draw</strong> — quick sketch in app</li>
+<li><strong>Skip</strong> — tap "Bugun yetarli" (Enough for today)</li>
+</ol>
+<p><strong>Privacy:</strong> student-only by default. Student can tap "Ulashish" to send to teacher's wall (moderated, opt-in). No XP penalty for skipping.</p>
+</section>
+
+<section id="s7">
+<h2 class="section-title"><span class="num">§7</span>Content Rules</h2>
+
+<h3>Narrative Voice</h3>
+<ul>
+<li>Second-person ("Sen") throughout — warm, partner-tone, never preachy</li>
+<li>≤14 word sentences, active voice, Lexile 830–1010L</li>
+<li>Receptive vocab cap ~12k — define new terms inline with visual + repetition (3+ exposures)</li>
+<li>Uzbek cultural names, places, foods, professions as default frame</li>
+</ul>
+
+<h3>Emotional Tone</h3>
+<ul>
+<li><strong>Calm, warm, slow.</strong> Never urgent, never breathless.</li>
+<li><strong>Affirming, never evaluative.</strong> "Sening fikring qiziq," not "To'g'ri javob"</li>
+<li><strong>Effort/strategy praise only.</strong> "Yaxshi o'ylading," not "Sen aqlli"</li>
+<li><strong>Dweck growth-mindset language:</strong> "Hali emas" (Not yet), never "Notog'ri"</li>
+</ul>
+
+<h3>Visuals</h3>
+<ul>
+<li>Every concept has a visual. Dual coding mandatory (Paivio 1986).</li>
+<li>Mobile-first, 5" screen legible. Min font 14px, labels 16px+.</li>
+<li>≤800 ms animations. Calm, never distracting.</li>
+<li><strong>Subject color: warm gold/honey <code>#F59E0B</code> primary + sage green <code>#84CC16</code> accent.</strong> Distinct from Science purple — signals "warm + reflective" not "rigorous + scientific."</li>
+<li>Dark mode per universal UI/UX spec.</li>
+</ul>
+
+<h3>Did You Know (loading/transitions)</h3>
+<p>Cultural/historical facts, age-appropriate. One per phase transition. <em>Examples:</em> "Alisher Navoiy 30 dan ortiq kitob yozgan — birinchi kitobini 12 yoshida boshlagan"; "Ulug'bek Samarqandda dunyodagi eng katta osmon kuzatuv joyini qurgan."</p>
+<p><strong>Avoid:</strong> anything scary, family poverty implications, Western lifestyle comparisons, politics.</p>
+</section>
+
+<section id="s8">
+<h2 class="section-title"><span class="num">§8</span>Game Catalog Selections — Tarbiya G5</h2>
+
+<h3>Default Pool (16 mechanics from UNIFIED §6)</h3>
+<table>
+<tr><th>#</th><th>Mechanic</th><th>Tarbiya</th><th>Notes</th></tr>
+<tr><td>1</td><td>Memory Sprint</td><td><span class="tag tag-danger">NO</span></td><td>Replaced with Mood Check-in</td></tr>
+<tr><td>2</td><td>Spaced Flashcards</td><td><span class="tag">YES</span></td><td>0-B Flash Cards only</td></tr>
+<tr><td>3</td><td>Tile Match</td><td><span class="tag">YES (high)</span></td><td>Virtue cards, proverb halves</td></tr>
+<tr><td>4</td><td>Sentence Fill</td><td><span class="tag">YES</span></td><td>Avloniy/Navoiy quote completion</td></tr>
+<tr><td>5</td><td>Memory Palace</td><td><span class="tag tag-warning">LIMITED</span></td><td>Bob IV heritage chapters only</td></tr>
+<tr><td>6</td><td>Story Mode</td><td><span class="tag">YES (highest)</span></td><td>Branching, no wrong path</td></tr>
+<tr><td>7</td><td>Adaptive Quiz</td><td><span class="tag tag-danger">NO</span></td><td>Endless-test feeling, hostile to chill</td></tr>
+<tr><td>8</td><td>Mystery Box</td><td><span class="tag">YES (high)</span></td><td>Uzbek cultural facts, virtue reveals</td></tr>
+<tr><td>9</td><td>Movement Breaks</td><td><span class="tag">YES</span></td><td>Optional between phases</td></tr>
+<tr><td>10</td><td>Why Chain</td><td><span class="tag tag-warning">LIMITED</span></td><td>Max 2 levels, soft topics only</td></tr>
+<tr><td>11</td><td>Peer Teaching</td><td><span class="tag tag-warning">LIMITED (opt-in)</span></td><td>"Hikoyangizni ulashing" wall</td></tr>
+<tr><td>12</td><td>Real-Life Challenge</td><td><span class="tag tag-warning">REPLACED</span></td><td>Now "Sen bo'lsang?" no-fail</td></tr>
+<tr><td>13</td><td>Reflection Journal</td><td><span class="tag">YES</span></td><td>Optional Phase 7</td></tr>
+<tr><td>14</td><td>Final Boss</td><td><span class="tag tag-warning">REPLACED</span></td><td>Now "Big Decision" no-fail</td></tr>
+<tr><td>15</td><td>Tic Tac Toe vs AI</td><td><span class="tag">YES</span></td><td>Recreational only</td></tr>
+<tr><td>16</td><td>Notebook Capture</td><td><span class="tag tag-warning">LIMITED (bonus)</span></td><td>Optional drawing tasks</td></tr>
+</table>
+
+<h3>Interactive Catalog (12 mechanics)</h3>
+<table>
+<tr><th>Mechanic</th><th>Tarbiya</th><th>Use case</th></tr>
+<tr><td>Connect Four vs AI</td><td><span class="tag">YES</span></td><td>Recreational</td></tr>
+<tr><td>Codebreaker</td><td><span class="tag">YES</span></td><td>Decode proverbs</td></tr>
+<tr><td>Memory Match Blitz</td><td><span class="tag">YES</span></td><td>Virtue/concept pairs</td></tr>
+<tr><td>Reaction Chain</td><td><span class="tag tag-danger">NO</span></td><td>Speed-based, wrong tone</td></tr>
+<tr><td>Word Ladder</td><td><span class="tag tag-warning">LIMITED</span></td><td>Vocabulary chains for value words</td></tr>
+<tr><td>Puzzle Lock</td><td><span class="tag tag-danger">NO</span></td><td>Wrong tone</td></tr>
+<tr><td>Blackjack</td><td><span class="tag tag-danger">NO</span></td><td>Gambling tone</td></tr>
+<tr><td>Territory</td><td><span class="tag tag-danger">NO</span></td><td>Competitive, wrong tone</td></tr>
+<tr><td>Escape Room</td><td><span class="tag tag-warning">LIMITED</span></td><td>Bob IV heritage chapters only</td></tr>
+<tr><td>Bridge Builder</td><td><span class="tag tag-danger">NO</span></td><td>Off-topic</td></tr>
+<tr><td>Minefield</td><td><span class="tag tag-danger">NO</span></td><td>Failure-state mechanic</td></tr>
+<tr><td><strong>Garden Tend</strong> (NEW)</td><td><span class="tag">YES</span></td><td>Tap-and-tend Virtue Garden between sessions</td></tr>
+</table>
+<div class="callout callout-info"><strong>One Tarbiya-only mechanic introduced: "Garden Tend" (Bog' parvarishlash)</strong> — between sessions, students can tap their Virtue Garden, water plants, see proverbs pop up. No XP, pure ambient interaction. ~30 sec optional.</div>
+</section>
+
+<section id="s9">
+<h2 class="section-title"><span class="num">§9</span>Virtue Garden — Mechanic Spec</h2>
+<p>The <strong>Fazilatlar Bog'i (Garden of Virtues)</strong> is Tarbiya's signature meta-game and the primary engagement hook.</p>
+
+<h3>Core Loop</h3>
+<ol>
+<li>Each session unlocks <strong>1 unique virtue card</strong> in Phase 5</li>
+<li>Card joins the persistent garden, plant grows visually</li>
+<li>Garden has <strong>4 zones</strong> (one per Bob): Citizenship Oak Grove, Emotion Flower Meadow, Friendship Bridge Garden, Heritage Library Path</li>
+<li>Each zone has <strong>6–8 plant slots</strong> corresponding to mavzular</li>
+<li>Filling a zone unlocks a <strong>zone-themed avatar accessory</strong></li>
+<li><strong>24 virtue cards total</strong> for Grade 5</li>
+</ol>
+
+<h3>Card Design</h3>
+<ul>
+<li><strong>Front:</strong> virtue name (Uzbek), visual icon, color-coded by Bob</li>
+<li><strong>Back:</strong> 1-sentence definition, related proverb, link to today's story snippet, "Bobo Sherzod aytadi..." NPC elder quote</li>
+</ul>
+
+<h3>Garden Visual Layers</h3>
+<ul>
+<li>Background: Uzbek landscape (Chimgan mountains, Registan dome silhouette)</li>
+<li>Plants: stylized, low-poly, grow over time (sapling → young plant → mature → blooming)</li>
+<li>Ambient elements: birds, butterflies, wind animation — peaceful</li>
+<li>Tap-to-tend: student can tap any plant to see proverb/quote (no XP, ambient delight)</li>
+</ul>
+
+<h3>Why This Works</h3>
+<ul>
+<li>Variable-ratio reward schedule (which card unlocks next is partly surprising) without overjustification (cards aren't scored)</li>
+<li>Long-arc engagement (24 sessions to fill the garden = ~6 months)</li>
+<li>Pure intrinsic motivation: students return to <em>see their garden</em>, not <em>to win</em></li>
+<li>Cultural anchoring in every visual element</li>
+</ul>
+</section>
+
+<section id="s10">
+<h2 class="section-title"><span class="num">§10</span>Anti-Cheat Tuning (Tarbiya)</h2>
+<p>Tarbiya cheating is functionally meaningless. Anti-cheat focuses only on engagement quality.</p>
+<table>
+<tr><th>Signal</th><th>Tarbiya verdict</th></tr>
+<tr><td>Speed anomaly (very fast)</td><td><strong>IGNORE</strong> — kids tap fast on Tarbiya, expected</td></tr>
+<tr><td>Length anomaly (very short reflection)</td><td><strong>IGNORE</strong> — short is OK, skip is OK</td></tr>
+<tr><td>Paste detection in Big Decision text</td><td><strong>MONITOR</strong> — log only, never warn student</td></tr>
+<tr><td>Vocabulary jump</td><td><strong>IGNORE</strong> — irrelevant for values content</td></tr>
+<tr><td>Mother helping detected</td><td><strong>WELCOMED</strong> — explicit framing: collaboration, not cheating</td></tr>
+<tr><td>Verdict ladder</td><td><strong>Capped at MONITOR</strong> — never SOFT_WARNING, never TEACHER_ALERT</td></tr>
+</table>
+</section>
+
+<section id="s11">
+<h2 class="section-title"><span class="num">§11</span>Cultural and Regional Anchors</h2>
+
+<h3>Names (rotate)</h3>
+<p>Aziza, Bekzod, Gulnara, Sardor, Malika, Jasur, Dilnoza, Otabek, Zarina, Anvar, Komila, Nigora</p>
+
+<h3>Places</h3>
+<p>Tashkent, Samarkand, Bukhara, Khiva, Fergana, Pamir, Aral (environmental), Charvak, Chimgan, Registan, mahalla, Silk Road cities</p>
+
+<h3>Historical Figures (used as virtue exemplars)</h3>
+<ul>
+<li><strong>Alisher Navoiy</strong> — patriotism, language, intellectual courage (Bob I, IV)</li>
+<li><strong>Abdulla Avloniy</strong> — moral integrity, education, perseverance (Bob II, IV)</li>
+<li><strong>Ulugh Beg</strong> — curiosity, scholarship, Samarkand pride (Bob II, IV)</li>
+<li><strong>Ibn Sino (Avicenna)</strong> — compassion in healing, intellectual humility (Bob II, III)</li>
+<li><strong>Abu Raykhan Beruni</strong> — cross-cultural respect, observation, wonder (Bob I, IV)</li>
+<li><strong>Amir Temur</strong> — leadership, vision, civic builder (Bob I, IV — used carefully, not as conqueror)</li>
+<li><strong>Bobur</strong> — perseverance through hardship, literary achievement (Bob II, IV)</li>
+<li><strong>Namoz Jumayev</strong> (modern) — environmental responsibility (Bob I)</li>
+<li><strong>Chingiz Aytmatov</strong> — work ethic, literary culture (Bob II, IV)</li>
+</ul>
+
+<h3>NPC Characters (consistent across sessions)</h3>
+<ul>
+<li><strong>Bobo Sherzod</strong> — wise grandfather elder, recurring narrator/voice in Garden, family-bridge fallback</li>
+<li><strong>Buvi Saodat</strong> — wise grandmother, alternating voice</li>
+<li><strong>Ustoz Komilov</strong> — teacher figure for school-context scenarios</li>
+</ul>
+
+<h3>Modern Uzbek Professions (used in scenarios)</h3>
+<p>Bog'bon, o'qituvchi, shifokor, muhandis, mahalla raisi, dehqon, hunarmand, olim, shoir, meteorolog, ekolog</p>
+
+<h3>Things to Avoid</h3>
+<ul>
+<li>Western lifestyle comparisons</li>
+<li>Pork, alcohol references</li>
+<li>Politics (Aral OK as environmental theme)</li>
+<li>Family poverty implications</li>
+<li>Explicit Quranic citations (cultural Islamic warmth implicit in mehr/hurmat/burch language)</li>
+<li>Sectarian or doctrinal language</li>
+</ul>
+
+<h3>Proverbs Stock (rotate as Did You Know + Garden card backs)</h3>
+<ul>
+<li>"Vatan tarkin bir nafas aylama..." (Navoiy)</li>
+<li>"Dangasalik har vaqt insonni xor qilur" (Avloniy)</li>
+<li>"Mehr bo'lmagan joyda yorug'lik bo'lmaydi" (folk)</li>
+<li>"Bir kun do'sting uchun, bir kun o'zing uchun" (folk)</li>
+<li>"Otaning aytgan gapi tilladek, onaning aytgani — kumushdek" (folk)</li>
+</ul>
+<p>Curate ~30 proverbs total for the production pool.</p>
+</section>
+
+<section id="s12">
+<h2 class="section-title"><span class="num">§12</span>Assessment, Scoring &amp; Escalation</h2>
+<div class="callout callout-warning">
+<strong>There is no "score" in Tarbiya.</strong> Engagement = success. Completion = pass.
+</div>
+
+<table>
+<tr><th>Engagement signal</th><th>Result</th></tr>
+<tr><td>Session started + completed</td><td>XP awarded (flat ~50 XP base)</td></tr>
+<tr><td>Big Decision attempted (any choice + 1-sentence why)</td><td>+25 XP bonus</td></tr>
+<tr><td>Reflection (Phase 7) submitted in any format</td><td>+25 XP bonus</td></tr>
+<tr><td>Family-bridge side quest completed</td><td>+30 XP bonus</td></tr>
+<tr><td>Garden Tend (between-session ambient)</td><td>+5 XP per visit, max +15/day</td></tr>
+<tr><td>5-virtue combo unlocked</td><td>Cosmetic accessory (one-time)</td></tr>
+<tr><td>Skip Phase 7</td><td>No penalty, full XP</td></tr>
+</table>
+
+<h3>No Reward Labels</h3>
+<p>No "Mukammal/A'lo/Juda yaxshi" labels — they imply ranking. Replaced with: "Bugungi darsing tugadi. Fazilatlar bog'ing yana boyidi." (Today's lesson is done. Your Garden of Virtues has grown.)</p>
+
+<h3>No Duolingo Mode</h3>
+<p>There's no "fail" → no remediation loop needed. If student seems disengaged for 3+ sessions in a row → soft teacher flag.</p>
+
+<h3>Dual-Pathway Answer Checking</h3>
+<ul>
+<li>Mood check-in, MC scenario choices, Tile Match, Sentence Fill = Tier 1 algorithmic &lt;100ms</li>
+<li>Big Decision 1-sentence why = Tier 2 generative response &lt;5 sec</li>
+<li>Reflection text = Tier 2 sentiment analysis (private to student)</li>
+<li>Drawing reflection = Tier 3 vision (optional, ≤10 sec, private)</li>
+</ul>
+</section>
+
+<section id="s13">
+<h2 class="section-title"><span class="num">§13</span>AI Tier Strategy — Cost-Aware</h2>
+<p>Target: <strong>stay within universal $3–5/student/year budget</strong> despite Tarbiya's higher Tier 2 reliance.</p>
+<table>
+<tr><th>Phase</th><th>Tier</th><th>Notes</th></tr>
+<tr><td>0-A Theme Preview</td><td>Tier 2</td><td>Personalized panel selection (Tier 1 fallback)</td></tr>
+<tr><td>0-B Flash Cards</td><td>Tier 1</td><td>Pre-generated card pool</td></tr>
+<tr><td>Phase 1 Mood Check-in</td><td>Tier 1</td><td>Pre-gen response bank</td></tr>
+<tr><td>Phase 2 Story Mode</td><td>Tier 1</td><td>Pre-gen branches; Tier 2 occasional adapted variants</td></tr>
+<tr><td>Phase 3 Game Breaks</td><td>Tier 1</td><td>Algorithmic</td></tr>
+<tr><td>Phase 4 Sen Bo'lsang</td><td>Tier 2</td><td>~5 templated reactions per scenario</td></tr>
+<tr><td>Phase 5 Garden</td><td>Tier 1</td><td>Pre-gen card art + animations</td></tr>
+<tr><td>Phase 6 Big Decision</td><td>Tier 2 (Tier 3 once/session)</td><td>Hard cap on Tier 3 use</td></tr>
+<tr><td>Phase 7 Reflection</td><td>Tier 2 (only on explicit "respond" tap)</td><td>Default = no AI response</td></tr>
+<tr><td>Notebook Capture (optional)</td><td>Tier 3 vision</td><td>Capped to 1 per session</td></tr>
+</table>
+<div class="callout callout-info">
+<strong>Cost estimate per session:</strong> ~$0.04–0.06 (Big Decision Tier 2 = bulk of cost)<br>
+<strong>Sessions per year per student:</strong> ~24<br>
+<strong>Annual cost per student for Tarbiya:</strong> ~$0.96–$1.44 — well within universal budget.
+</div>
+</section>
+
+<section id="s14">
+<h2 class="section-title"><span class="num">§14</span>Teacher Overrides</h2>
+
+<h3>Allowed (per session or per student)</h3>
+<ul>
+<li><strong>Mode:</strong> Standard (15–25 min) ↔ Extended (25–35 min, in-class group reflection)</li>
+<li><strong>Phase 7 Reflection:</strong> optional (default) ↔ required for in-class use</li>
+<li><strong>Family-bridge side quests:</strong> show ↔ hide (for sensitive cohorts)</li>
+<li><strong>Big Decision sharing:</strong> private ↔ moderated class wall opt-in</li>
+<li><strong>Mood check-in flags:</strong> receive ↔ silent</li>
+<li><strong>Garden visibility:</strong> student-only ↔ class garden mode</li>
+<li><strong>Did You Know facts:</strong> default pool ↔ teacher-curated subset</li>
+</ul>
+
+<h3>Cannot Override</h3>
+<ul>
+<li>7-phase structure (replaced phases retain structural slots)</li>
+<li>0-A + 0-B mandatory</li>
+<li>Big Decision mandatory (cannot drop the climax)</li>
+<li>Stranger Test on narratives</li>
+<li>mr_level + sel_competency tag requirement</li>
+<li>Cultural framing (Uzbek-first)</li>
+<li>Banned mechanics list</li>
+<li>Doctrinally-neutral religious framing</li>
+<li>Cosmetic rewards never purchasable</li>
+<li>Reflection always optional for student</li>
+</ul>
+</section>
+
+<section id="s15">
+<h2 class="section-title"><span class="num">§15</span>Tagging Schema</h2>
+<p>Every Tarbiya task is a JSON record with:</p>
+<pre><code>{
+  "task_id": "TAR-5-MEHR-S03-RLC-01",
+  "subject": "Tarbiya",
+  "grade": 5,
+  "language": "uz",
+  "textbook_ref": {
+    "book": "Tarbiya 5-sinf (Quronov 2020)",
+    "bob": 2,
+    "mavzu": 10,
+    "section_title": "Mehr qadri",
+    "pages": "42-45"
+  },
+  "standard_ref": {
+    "primary": "UZ-TAR-5-MEHR-01",
+    "alias": "TAR.5.2.10.1"
+  },
+  "mr_level": "MR-L2",
+  "sel_competency": "SoA",
+  "pisa_secondary": {
+    "reading_l1_l2": true,
+    "creative_thinking": false
+  },
+  "transition_skill": "MR-L1→L2: take a virtue from a story and apply it to a familiar scenario",
+  "blooms_level": "Apply",
+  "phase": "Phase 4 — Sen Bo'lsang",
+  "game_mechanic": "RLC (Tarbiya variant)",
+  "ai_tier": 2,
+  "estimated_time_sec": 90,
+  "prompt_uz": "Mahallangizda yangi kelgan oila bor...",
+  "choices_uz": ["Salomlashishga boraman", "Ota-onamga aytaman", "..."],
+  "expected_response_type": "choice + optional sentence",
+  "evaluation_tier": "Tier 2 generative",
+  "warm_response_templates": ["...", "..."],
+  "cultural_anchors_used": ["mahalla", "Uzbek hospitality"],
+  "garden_card_unlock": null,
+  "scoring": "engagement_only"
+}</code></pre>
+</section>
+
+<section id="s16">
+<h2 class="section-title"><span class="num">§16</span>Content Production Checklist</h2>
+<p>Per session (~24 sessions to cover 29 mavzular):</p>
+<table>
+<tr><th>Component</th><th>Volume per session</th></tr>
+<tr><td>Theme Preview 8-panel deck</td><td>8 panels</td></tr>
+<tr><td>Flash Cards</td><td>5–7 cards</td></tr>
+<tr><td>Mood Check-in items</td><td>1 (5 emoji + 1 soft recall)</td></tr>
+<tr><td>Story Mode segments</td><td>3 segments × 90 sec, 2–3 branches each → ~6–9 narrative variants</td></tr>
+<tr><td>Game Breaks</td><td>2 games (mechanic-specific content)</td></tr>
+<tr><td>Sen Bo'lsang scenarios</td><td>1 scenario, 3–4 choices, 5 templated AI responses</td></tr>
+<tr><td>Garden virtue card</td><td>1 unique card per session</td></tr>
+<tr><td>Big Decision scenario</td><td>1 scenario, 3 choices, 5–10 templated reflective AI responses</td></tr>
+<tr><td>Reflection prompts</td><td>3 (1 per accuracy bucket equivalent)</td></tr>
+<tr><td>Did You Know facts</td><td>4–6 (one per phase transition)</td></tr>
+<tr><td>Family-bridge side quest (opt-in)</td><td>1 per session</td></tr>
+</table>
+<p><strong>Total per session: ~30–50 task units</strong> (lower than Science 80–120).<br>
+<strong>Total for full Grade 5: ~720–1,200 task units across 24 sessions.</strong></p>
+
+<p>Plus production pools:</p>
+<ul>
+<li>~30 proverbs (rotated as Did You Know + Garden card backs)</li>
+<li>~24 unique virtue cards (one per session)</li>
+<li>~10–12 NPC dialogue trees (Bobo Sherzod, Buvi Saodat, Ustoz Komilov)</li>
+<li>~6 garden zone visual states (sapling → blooming for each Bob)</li>
+</ul>
+</section>
+
+<section id="s17">
+<h2 class="section-title"><span class="num">§17</span>Sample Session Walkthrough — Mavzu 10 "Mehr Qadri"</h2>
+<div class="callout callout-info"><strong>Reference implementation. Match this shape for every session.</strong></div>
+
+<h3>Metadata</h3>
+<ul>
+<li><strong>Bob 2, Mavzu 10</strong>, textbook pages 42–45</li>
+<li><strong>Standard:</strong> UZ-TAR-5-MEHR-01 / TAR.5.2.10.1</li>
+<li><strong>Primary MR level:</strong> MR-L2 (Apply)</li>
+<li><strong>SEL competency:</strong> SoA (Social Awareness)</li>
+<li><strong>Transition skill:</strong> "Recognize compassion in narrative → apply compassion concept to a familiar scenario"</li>
+<li><strong>Session length:</strong> ~20 min</li>
+<li><strong>Garden card unlocked:</strong> "Mehr" (Compassion) — joins Bob II Emotion Flower Meadow</li>
+</ul>
+
+<h3>Pre-homework (3 min)</h3>
+<p><strong>0-A Theme Preview</strong> (2 min, 8 panels): Sarlavha "Mehr qadri" + grandmother image · concept defined with metaphor · 3 daily-life examples · Ibn Sino healing story · personal hook · long-arc significance · modern professions · Avloniy quote.</p>
+<p><strong>0-B Flash Cards</strong> (1 min, 5 cards): Mehr · Mehribonlik · Hurmat · G'amxo'rlik · Yordam.</p>
+
+<h3>Phase 1 — Mood Check-in (1 min)</h3>
+<p>"Bugun qanday his qilyapsan?" — 5 emoji bar. Soft recall of Mavzu 9. Warm response based on selection.</p>
+
+<h3>Phase 2 — Hikoya Vaqti (6 min, 3 segments)</h3>
+<p><strong>Segment 1:</strong> "Aziza maktabga ketayotgan edi. Yo'lda qariya qo'shnisi og'ir sumkalarni ko'tarib ketayotgan edi..." Choice: A) Yordam beraman, B) Salomlashib o'taman, C) Ko'rmaganga olaman. <em>All paths advance.</em></p>
+<p><strong>Segment 2:</strong> Aziza chooses path A. The qariya thanks her and shares his mother's wisdom. Choice: A) Maqtanaman, B) O'ylab qolaman, C) Boshqa yo'l bilan ham yordam berishga harakat qilaman.</p>
+<p><strong>Segment 3:</strong> Aziza arrives at school late. The teacher asks why. She tells the truth. The teacher responds with quiet pride, not punishment. Choice: A) Sinfdoshlarga aytaman, B) O'zimga saqlayman, C) Onamga kechqurun aytaman.</p>
+
+<h3>Phase 3 — Game Breaks (4 min, 2 games)</h3>
+<p><strong>Game 1 — Tile Match Virtue Pairs:</strong> 6 pairs (virtue word ↔ visual icon). <strong>Game 2 — Sentence Fill (Avloniy quote):</strong> "____ bo'lmagan joyda yorug'lik bo'lmaydi" (mehr); "Dangasalik har vaqt insonni ____ qilur" (xor).</p>
+
+<h3>Phase 4 — Sen Bo'lsang? (4 min, 1 scenario)</h3>
+<p><strong>Scenario:</strong> "Sinfingizda yangi o'quvchi keldi. U boshqa shahardan kelgan va hali hech kim bilan tanish emas. Sen nima qilasan?"</p>
+<p><strong>4 choices</strong>, each gets a thoughtful Tier 2 response. Optional thumbs up/down.</p>
+
+<h3>Phase 5 — Fazilatlar Bog'i (2 min)</h3>
+<p>Brief animation: "Mehr" virtue card unlocks. Card art: warm glowing heart with Uzbek pattern border. Card joins Bob II Emotion Flower Meadow as a small bloom. Tap-to-explore garden.</p>
+
+<h3>Phase 6 — Katta Qaror (4 min)</h3>
+<p><strong>Setup:</strong> "Tasavvur qil: Sen 13 yoshdasan. Sening eng yaqin do'sting Bekzod yangi telefon olibdi va hammaga maqtanyapti. Lekin sen bilasanki, uning ota-onasi ko'p ishlaydi va bu telefonni olishi uchun ko'p qiyinchilik chekkan. Bekzod boshqa do'stlaringga 'mening telefonim sizlarnikidan yaxshiroq' deyapti. Sen do'stingnisan, lekin u yomon ish qilyapti..."</p>
+<p><strong>3 choices:</strong></p>
+<ol>
+<li>Bekzodga to'g'ridan-to'g'ri aytaman</li>
+<li>Boshqa do'stlarga uning ahvolini tushuntiraman</li>
+<li>Hech narsa qilmayman, vaqt o'tadi</li>
+</ol>
+<p><strong>Student writes 1 sentence: "Nega bu javobni tanlading?"</strong> Tier 2 generates a warm reflective response. Always passes. XP awarded.</p>
+
+<h3>Phase 7 — O'ylab Ko'rish (1–2 min, optional)</h3>
+<p>Prompt: "Bugun qaysi fazilatni o'rgandik? Senga qanday yoqdi?" Voice / text / draw / skip — all paths give same XP.</p>
+
+<h3>Post-session</h3>
+<ul>
+<li>Total XP: ~125 (50 base + 25 Big Decision + 25 Reflection + 25 garden combo if applicable)</li>
+<li>Garden updated</li>
+<li>Mood logged (private)</li>
+<li>Teacher dashboard: "Aziza completed Mavzu 10 — engaged, shared reflection"</li>
+</ul>
+</section>
+
+<section id="s18">
+<h2 class="section-title"><span class="num">§18</span>Open Questions / Things to Validate</h2>
+<ol>
+<li><strong>Garden Tend persistence cost</strong> — does between-session ambient mechanic add server load?</li>
+<li><strong>Big Decision Tier 3 cap</strong> — 1-per-session sufficient, or need stricter limits?</li>
+<li><strong>Mood flag escalation threshold</strong> — does Uzbek teacher culture welcome or resist this?</li>
+<li><strong>Garden zone unlocks</strong> — do we want students to see other students' gardens in opt-in class mode?</li>
+<li><strong>Bobo Sherzod NPC voice</strong> — voice actor recording or text-only?</li>
+<li><strong>Big Decision content sourcing</strong> — 24 dilemmas needed; who writes them?</li>
+<li><strong>Family-bridge opt-out detection</strong> — auto-detect vs. opt-in toggle?</li>
+<li><strong>Religious framing edge cases</strong> — what if a student writes a Quranic-style reflection?</li>
+<li><strong>MR-L4 task feasibility at G5</strong> — psychology says construction-level is hard for 10-year-olds</li>
+<li><strong>Sharing wall moderation</strong> — teacher? AI pre-screen + teacher approve?</li>
+<li><strong>Tarbiya in Russian-language schools</strong> — sibling framework needed</li>
+<li><strong>Class Garden mode logistics</strong> — single shared garden or wall of individual gardens?</li>
+</ol>
+</section>
+
+<section id="s19">
+<h2 class="section-title"><span class="num">§19</span>Production Handoff</h2>
+
+<h3>Contract for Content Team</h3>
+<p>Build Tarbiya G5 content matching the <strong>§17 walkthrough shape exactly</strong>. For each of ~24 sessions:</p>
+<ol>
+<li>Source from textbook — every task traces to a Bob/Mavzu/page range</li>
+<li>Apply §4 psychology parameters — 15–25 min, calm pacing, no failure states, warm tone</li>
+<li>Use §11 cultural anchors — rotate names/places/figures, no Western anchors</li>
+<li>Tag every task per §15 schema</li>
+<li>Pass Stranger Test on every Story segment + Big Decision scenario</li>
+<li>Pre-generate Big Decision warm response banks — 5–10 templates per scenario</li>
+<li>Author Garden card art — 24 unique virtue cards</li>
+<li>Curate Did You Know pool — ~60 facts</li>
+<li>Author NPC voices — Bobo Sherzod, Buvi Saodat, Ustoz Komilov consistent across sessions</li>
+<li>Validate against §18 open questions before production locks</li>
+</ol>
+
+<h3>Quality Gates</h3>
+<ul>
+<li>Pedagogy review by 1 pedagogy lead + 1 G5 Uzbek classroom teacher</li>
+<li>Language review by Uzbek native speaker (Lexile + cultural authenticity)</li>
+<li>Pilot in 2 classrooms (1 urban Tashkent, 1 rural Fergana valley) before full rollout</li>
+<li>Mood-flag false positive review — engineering monitors first 4 weeks</li>
+</ul>
+</section>
+
+<section id="s20">
+<h2 class="section-title"><span class="num">§20</span>Versioning and Review</h2>
+<ul>
+<li><strong>Version 1.0</strong> — 2026-04-08, Tarbiya G5 first framework, "Chill Mode" design</li>
+<li><strong>Reviewers needed:</strong> Product/pedagogy lead, Uzbek G5 Tarbiya teacher (1–2), curriculum specialist, content lead</li>
+<li><strong>Next revision</strong> after first 5 sessions stress-tested in pilot</li>
+<li><strong>Sibling frameworks to create after this:</strong>
+  <ul>
+  <li>Tarbiya G5 Russian edition (sibling)</li>
+  <li>Tarbiya G6, G7 (next grades, same chill-mode shape)</li>
+  <li>Apply chill-mode learnings to other reflective subjects (e.g., Native Language literature units)</li>
+  </ul>
+</li>
+</ul>
+</section>
+
+<footer>
+<p><strong>End of NETS Tarbiya G5 Framework v1.0</strong></p>
+<p>Companion docs: <code>NETS-Homework-Engine-UNIFIED.md</code> · <code>NETS-Homework-Engine-Blueprint.docx</code> · <code>NETS-UI-UX-Design-Spec.docx</code> · <code>Researches/qwen-grade5-psychology-findings.md</code> · <code>Book &amp; Resourses/_tarbiya_extracted.txt</code></p>
+</footer>
+
+</div>
+
+</body>
+</html>

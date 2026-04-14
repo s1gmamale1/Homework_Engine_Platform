@@ -1,0 +1,61 @@
+Memory Palace
+
+  1. Location pool, not just Registan. Student picks from: Registan, Chorsu Bazaar, family mahalla courtyard, their own classroom (generic 5-desk layout for rural kids). Rural inclusivity.
+  2. Interactive labeled image with 5 hotspots. Static illustration, clickable zones. 3D = too expensive / low-end device load.
+  3. Drag-drop text to hotspot + student writes a 1-sentence association. Both. Drag-drop anchors the spatial; the sentence triggers Generation Effect.
+  4. Two-phase recall: (a) point to where each concept goes, (b) bonus — retrieve the association sentence you wrote. Spatial first, content second.
+  5. Persist 2 weeks, then retire. Reused in Phase 1 Memory Sprint for spaced retrieval. Matches Ebbinghaus forgetting curve.
+
+  Story Mode
+
+  1. Human-authored core + Tier 2 personalization. Core story written by content team per chapter. Tier 2 swaps names, local context, tunes the comprehension gates per cohort. Quality + cost balance.
+  2. Open short-answer (IELTS-style) for G5+. MC for G1-4. Open is the whole point for PISA Reading L2+.
+  3. Interact at 2 choice points per story. Same ending, different flavor (not full branching). Linear authoring cost, still agency.
+  4. Voice-over (Uzbek TTS) + on-screen text. Both together. Literacy support for weaker readers; Reading domain still exercised.
+  5. Fixed 4-5 minutes. Harder chapters get more comprehension gates, not longer runtime. Session planner needs predictable phase durations.
+
+  Adaptive Quiz
+
+  1. Pre-calibrated item bank, live Bayesian update for new items. Launch with IRT-seeded items for first 100 chapters. New items calibrate after first ~100 student responses. Cold-start problem; pure live
+  calibration unusable at launch.
+  2. Immediate feedback per question for G5-6, round-end for G9+. G5 attention can't hold tension across 5-7 Qs.
+  3. Hint first, reveal on 2nd wrong. One hint per question, then answer + 1-sentence explanation on the second wrong. Protects flow state (70-80%) while still teaching.
+  4. Yes — per-framework bans become an explicit mechanic-level note. Definition says "subject frameworks MAY ban this mechanic (e.g., Science G5 banned for testing-fatigue reasons)." Pattern is emerging;
+  document it.
+  5. Fixed 5 questions for G5, 7 for G9+. Not theta-stabilization. Predictable session durations.
+
+  Mystery Box
+
+  1. System-determined count by grade. 3 boxes for G5, 5 for G9+. Student choice adds decision fatigue in Phase 3.
+  2. Blind — category label hidden until picked. Interleaving pedagogy requires surprise; visible labels defeat the mechanic.
+  3. Cross-subject only during Big Boss week. Normal sessions interleave prior chapters within the same subject. Cross-subject is too chaotic daily, great for weekly synthesis.
+  4. Split into two mechanics, rename:
+    - Mystery Box (Phase 3 game) — the interleaved-problem-picker.
+    - Treasure Chest (Bilim Bazasi metagame event) — the gacha-style BT/cosmetic drops.
+  They're doing different jobs; conflating them confuses the spec.
+  5. Sequential play. Box 1 → 2 → 3, no skipping. Removes gaming the order.
+
+  Memory Match Blitz
+
+  1. Scales: 4×4 easy → 6×6 hard. Adaptive based on prior Memory Match performance. Flow state tuning.
+  2. Find pair → question about the matched term → right = pair locks, wrong = both cards re-hide. The question is about the pair (e.g., matched "mitochondria" with its definition → "name one other organelle
+  in the cell"). Makes the question meaningful.
+  3. Soft timer — 90 seconds. Not hard fail; time out = final score based on pairs completed. "Blitz" urgency without G5 panic.
+  4. Question tied to the matched pair. (See #2.) Meaningful practice > arbitrary gating.
+
+  Reaction Chain
+
+  1. Linear node chain for generic content; process diagram for subject-specific sequences. Default is 6-10 lighting nodes. If content has a natural sequence (photosynthesis, historical chain), visualizes as
+  that diagram. Spatial metaphor matches content structure.
+  2. Chain resets to 0 after 3 wrong in a row, BUT partial credit is kept for lit nodes. Not session end. Too punishing for G5; preserves Hali emas framing.
+  3. Soft countdown — 20s per node. Running out = counts as 1 wrong (contributes to the 3-in-a-row counter). Pressure without panic.
+  4. Conceptually sequential when the content supports it, else 6-10 thematically related questions. Fluency pedagogy prefers sequences, but not all content has one.
+
+  Word Ladder Climb
+
+  1. Language matches subject. Uzbek ladders for Uzbek, English for English subject, Russian for Russian. It's a language-learning mechanic; must work in the target language.
+  2. Classic rule — change 1 letter per step, each intermediate word must be a real dictionary word. Preserves morphological-awareness pedagogy.
+  3. Remove biology from use cases. The original file's claim is wrong — bio terms don't transform by 1 letter. Restrict to Language subjects only (Uzbek / Russian / English). Definition quality > breadth.
+  4. Subject question IS the word transformation. Unified: "The past tense of SIT is ___" → student types SAT → that's both the grammar question and the next rung. Separate gating is clunky; unified is
+  cleaner.
+  5. 1 skip per ladder, no hints. One escape hatch for a frustrating step; hints defeat the recall purpose. One safety valve, not a cheese.

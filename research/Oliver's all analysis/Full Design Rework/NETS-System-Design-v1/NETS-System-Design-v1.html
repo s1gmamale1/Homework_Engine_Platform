@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS System Design v1</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0f; --surface: #111118; --card: #16161f; --border: #2a2a38;
+  --text: #e0e0e8; --text-dim: #7a7a8e;
+  --red: #ff2244; --red-glow: #ff224466; --red-soft: #ff224422;
+  --accent: #ff4466; --accent2: #cc1133;
+}
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.08) 2px, rgba(0,0,0,.08) 4px);
+}
+.header { background: linear-gradient(135deg, #0d0d14, #1a0a10); border-bottom: 1px solid var(--red-soft); padding: 2.5rem 1.5rem 2rem; text-align: center; position: relative; overflow: hidden; }
+.header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: var(--red); box-shadow: 0 0 20px var(--red-glow), 0 0 60px var(--red-glow); }
+.header h1 { font-size: 2rem; color: #fff; text-shadow: 0 0 12px var(--red-glow), 0 0 40px var(--red-glow); margin-bottom: .3rem; }
+.header .subtitle { opacity: .6; font-size: .9rem; color: var(--text-dim); letter-spacing: .06em; text-transform: uppercase; }
+.meta-bar { background: var(--surface); border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; padding: .7rem 1.5rem; font-size: .8rem; color: var(--text-dim); }
+.meta-bar span { white-space: nowrap; }
+.meta-bar strong { color: var(--red); text-shadow: 0 0 6px var(--red-glow); }
+.layout { display: flex; max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 3rem; gap: 1.5rem; }
+.sidebar { width: 200px; flex-shrink: 0; position: sticky; top: 1rem; align-self: flex-start; max-height: calc(100vh - 2rem); overflow-y: auto; }
+.sidebar nav a { display: flex; align-items: center; gap: .4rem; padding: .4rem .6rem; border-radius: 5px; text-decoration: none; color: var(--text-dim); font-size: .78rem; transition: all .2s; border-left: 2px solid transparent; margin-bottom: 2px; }
+.sidebar nav a:hover { color: var(--text); background: var(--surface); border-left-color: var(--accent2); }
+.sidebar nav a.active { color: var(--red); background: var(--red-soft); border-left-color: var(--red); }
+.sidebar nav a .num { font-size: .65rem; color: var(--text-dim); min-width: 18px; }
+.main { flex: 1; min-width: 0; }
+@media (max-width: 800px) { .sidebar { display: none; } .layout { padding: 1rem .7rem 2rem; } }
+.section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: .8rem; overflow: hidden; transition: border-color .3s; }
+.section:hover { border-color: var(--accent2); }
+.section.open { border-color: var(--red-soft); }
+.section-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.3rem; cursor: pointer; user-select: none; transition: background .2s; }
+.section-header:hover { background: #1a1a26; }
+.section-header-left { display: flex; align-items: center; gap: .6rem; }
+.section-header h2 { font-size: 1.05rem; color: #fff; margin: 0; text-shadow: 0 0 8px var(--red-glow); }
+.sec-icon { font-size: 1.2rem; }
+.sec-num { font-size: .68rem; background: var(--red-soft); color: var(--red); padding: 2px 8px; border-radius: 20px; font-weight: 700; border: 1px solid var(--red-soft); }
+.sec-subtitle { font-size: .75rem; color: var(--text-dim); margin-top: .15rem; }
+.chevron { transition: transform .25s; font-size: 1rem; color: var(--text-dim); }
+.section.open .chevron { transform: rotate(90deg); color: var(--red); }
+.section-body { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+.section.open .section-body { max-height: 8000px; }
+.section-content { padding: 0 1.3rem 1.3rem; }
+.section-content p { font-size: .88rem; color: #c0c0cc; margin-bottom: .7rem; line-height: 1.7; }
+.section-content h3 { font-size: .95rem; color: var(--red); margin: 1rem 0 .4rem; text-shadow: 0 0 6px var(--red-glow); }
+/* Benchmark bars */
+.bench-bars { display: flex; flex-direction: column; gap: .6rem; margin-top: .8rem; }
+.bench-row { display: flex; align-items: center; gap: .8rem; }
+.bench-label { width: 160px; font-size: .8rem; color: var(--text-dim); flex-shrink: 0; }
+.bench-track { flex: 1; height: 10px; background: var(--surface); border-radius: 5px; overflow: hidden; }
+.bench-fill { height: 100%; background: var(--red); border-radius: 5px; width: 0; transition: width 1.2s ease; box-shadow: 0 0 8px var(--red-glow); }
+.bench-score { font-size: .8rem; color: var(--red); font-weight: 700; min-width: 30px; text-align: right; }
+/* Layers */
+.layers { display: flex; flex-direction: column; gap: .5rem; margin-top: .8rem; }
+.layer-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .8rem 1rem; cursor: pointer; transition: all .2s; }
+.layer-card:hover { border-color: var(--red); box-shadow: 0 0 12px var(--red-soft); transform: translateY(-1px); }
+.layer-card h4 { font-size: .88rem; color: var(--red); margin-bottom: .2rem; }
+.layer-card .layer-desc { font-size: .8rem; color: var(--text-dim); }
+.layer-expand { max-height: 0; overflow: hidden; transition: max-height .3s ease; font-size: .82rem; color: #c0c0cc; line-height: 1.6; }
+.layer-card.expanded .layer-expand { max-height: 300px; margin-top: .5rem; }
+/* Tabs */
+.tabs { display: flex; gap: .3rem; flex-wrap: wrap; margin-bottom: .8rem; }
+.tab-btn { background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: .4rem .8rem; font-size: .78rem; color: var(--text-dim); cursor: pointer; transition: all .2s; white-space: nowrap; }
+.tab-btn:hover { color: var(--text); border-color: var(--accent2); }
+.tab-btn.active { color: var(--red); border-bottom: 2px solid var(--red); background: var(--red-soft); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.tab-panel h4 { font-size: .85rem; color: #fff; margin-bottom: .4rem; }
+.chip { display: inline-block; font-size: .72rem; background: #1a1a26; border: 1px solid var(--border); border-radius: 12px; padding: 2px 10px; margin: 2px; color: var(--text-dim); }
+/* Tier toggle */
+.tier-toggle-wrap { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.tier-label { font-size: .88rem; font-weight: 700; color: var(--text-dim); }
+.tier-label.active { color: var(--red); text-shadow: 0 0 6px var(--red-glow); }
+.toggle-switch { width: 46px; height: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; cursor: pointer; position: relative; }
+.toggle-knob { width: 18px; height: 18px; background: var(--red); border-radius: 50%; position: absolute; top: 2px; left: 3px; transition: left .2s; box-shadow: 0 0 6px var(--red-glow); }
+.toggle-switch.right .toggle-knob { left: 25px; }
+.tier-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+.tier-table th { padding: .5rem .8rem; text-align: left; background: var(--surface); color: var(--text-dim); font-weight: 600; border-bottom: 1px solid var(--border); }
+.tier-table td { padding: .5rem .8rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.tier-table tr:last-child td { border-bottom: none; }
+.tier-table .col-dim { color: var(--text-dim); font-size: .78rem; }
+.tier-table .col-basic.highlight, .tier-table .col-premium.highlight { color: var(--red); background: var(--red-soft); transition: all .2s; }
+/* BT Simulator */
+.bt-counter { text-align: center; padding: 1rem; background: var(--surface); border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--red-soft); }
+.bt-counter .bt-num { font-size: 2.2rem; font-weight: 700; color: var(--red); text-shadow: 0 0 16px var(--red-glow); display: block; }
+.bt-counter .bt-label { font-size: .78rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .05em; }
+.bt-num.pulse { animation: bt-pulse .4s ease; }
+@keyframes bt-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+.earn-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+.earn-btn { background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: .4rem .8rem; font-size: .8rem; color: var(--text); cursor: pointer; transition: all .2s; }
+.earn-btn:hover { border-color: var(--red); color: var(--red); box-shadow: 0 0 8px var(--red-soft); }
+.spend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .6rem; margin-bottom: .8rem; }
+.spend-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .7rem; cursor: pointer; transition: all .2s; }
+.spend-card:hover:not(.disabled) { border-color: var(--red); box-shadow: 0 0 10px var(--red-soft); }
+.spend-card.disabled { opacity: .45; cursor: not-allowed; }
+.spend-card h5 { font-size: .82rem; color: #fff; margin-bottom: .2rem; }
+.spend-card .cost { font-size: .75rem; color: var(--red); font-weight: 700; }
+.spend-card .owned { font-size: .72rem; color: var(--text-dim); }
+.cant-buy { font-size: .8rem; color: var(--text-dim); padding: .5rem .8rem; background: var(--surface); border-radius: 5px; border: 1px solid var(--border); min-height: 36px; }
+.cant-buy strong { color: var(--accent); }
+/* AI tiers */
+.ai-tiers { display: flex; flex-direction: column; gap: .6rem; margin-top: .8rem; }
+.ai-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .9rem 1rem; transition: all .2s; }
+.ai-card:hover { border-color: var(--red); box-shadow: 0 0 12px var(--red-soft); transform: translateY(-1px); }
+.ai-card h4 { font-size: .9rem; color: var(--red); margin-bottom: .3rem; }
+.ai-card .ai-meta { display: flex; gap: 1rem; font-size: .75rem; color: var(--text-dim); margin-bottom: .3rem; flex-wrap: wrap; }
+.ai-card p { font-size: .82rem; color: #c0c0cc; }
+/* Phone mockups */
+.phones { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: .8rem; justify-content: center; }
+.phone { width: 130px; min-height: 220px; border: 2px solid var(--border); border-radius: 18px; background: var(--surface); padding: .8rem .6rem; }
+.phone::before { content: ''; width: 40px; height: 5px; background: var(--border); border-radius: 3px; display: block; margin: 0 auto .8rem; }
+.phone h5 { font-size: .72rem; color: var(--red); text-align: center; margin-bottom: .6rem; text-transform: uppercase; letter-spacing: .04em; }
+.phone-line { height: 8px; background: var(--card); border-radius: 4px; margin-bottom: .4rem; }
+.phone-line.short { width: 60%; }
+.phone-line.med { width: 80%; }
+.phone-line.accent { background: var(--red-soft); }
+.phone-btn { height: 22px; background: var(--red-soft); border: 1px solid var(--red-soft); border-radius: 4px; margin-top: .5rem; display: flex; align-items: center; justify-content: center; }
+.phone-btn span { font-size: .6rem; color: var(--red); }
+/* Asset grid */
+.asset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .6rem; margin-top: .8rem; }
+.asset-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .7rem; }
+.asset-card h5 { font-size: .78rem; color: #fff; margin-bottom: .3rem; }
+.asset-card .arrow-label { font-size: .72rem; color: var(--red); }
+/* Timeline */
+.timeline { position: relative; padding-left: 1.5rem; margin-top: .8rem; }
+.timeline::before { content: ''; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+.tl-item { position: relative; margin-bottom: .8rem; }
+.tl-dot { position: absolute; left: -1.5rem; top: .4rem; width: 14px; height: 14px; background: var(--red); border-radius: 50%; box-shadow: 0 0 8px var(--red-glow); cursor: pointer; }
+.tl-header { cursor: pointer; padding: .4rem .6rem; border-radius: 5px; transition: background .2s; }
+.tl-header:hover { background: var(--surface); }
+.tl-header h4 { font-size: .85rem; color: var(--text); }
+.tl-body { max-height: 0; overflow: hidden; transition: max-height .3s ease; font-size: .82rem; color: #c0c0cc; padding: 0 .6rem; line-height: 1.6; }
+.tl-item.open .tl-body { max-height: 300px; margin-bottom: .4rem; }
+/* Flash cards */
+.flash-cards { display: flex; gap: .7rem; flex-wrap: wrap; justify-content: center; margin-top: .8rem; }
+.flash-card { width: 155px; min-height: 110px; perspective: 600px; cursor: pointer; }
+.flash-card-inner { width: 100%; height: 110px; transition: transform .45s; transform-style: preserve-3d; position: relative; }
+.flash-card.flipped .flash-card-inner { transform: rotateY(180deg); }
+.flash-card-front, .flash-card-back { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: .7rem; text-align: center; font-size: .78rem; }
+.flash-card-front { background: linear-gradient(145deg, #1a0a10, #2a0e18); color: var(--red); font-weight: 700; border: 1px solid var(--red-soft); text-shadow: 0 0 8px var(--red-glow); }
+.flash-card-back { background: var(--surface); color: #ccc; transform: rotateY(180deg); border: 1px solid var(--red-soft); font-size: .75rem; line-height: 1.5; }
+/* SOUL tiles */
+.soul-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .7rem; margin-top: .8rem; }
+.soul-tile { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; cursor: pointer; transition: all .25s; text-align: center; }
+.soul-tile:hover { border-color: var(--red); box-shadow: 0 0 14px var(--red-soft); transform: translateY(-2px); }
+.soul-tile .soul-icon { font-size: 1.8rem; margin-bottom: .4rem; }
+.soul-tile h4 { font-size: .8rem; color: var(--red); margin-bottom: .3rem; text-shadow: 0 0 6px var(--red-glow); }
+.soul-expand { max-height: 0; overflow: hidden; transition: max-height .3s ease; font-size: .75rem; color: #c0c0cc; text-align: left; line-height: 1.5; }
+.soul-tile.expanded .soul-expand { max-height: 200px; margin-top: .5rem; }
+footer { text-align: center; padding: 1.5rem; font-size: .78rem; color: var(--text-dim); border-top: 1px solid var(--border); background: var(--surface); }
+footer a { color: var(--red); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>NETS System Design v1</h1>
+  <div class="subtitle">National Education Transformation System — Architecture Document</div>
+</div>
+<div class="meta-bar">
+  <span>Version <strong>1.0</strong></span>
+  <span>Date <strong>2026-04-09</strong></span>
+  <span>Status <strong>Draft — approved for sprint planning</strong></span>
+  <span>Constitution <strong>NETS-Homework-Engine-UNIFIED v2.0</strong></span>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav id="toc">
+      <a href="#s1" data-section="s1"><span class="num">01</span> 📊 Benchmark</a>
+      <a href="#s2" data-section="s2"><span class="num">02</span> 🏛️ Architecture</a>
+      <a href="#s3" data-section="s3"><span class="num">03</span> 🎓 Families</a>
+      <a href="#s4" data-section="s4"><span class="num">04</span> 💎 Tiers</a>
+      <a href="#s5" data-section="s5"><span class="num">05</span> 🎮 Metagame</a>
+      <a href="#s6" data-section="s6"><span class="num">06</span> 🤖 AI Tiers</a>
+      <a href="#s7" data-section="s7"><span class="num">07</span> 📱 App Surfaces</a>
+      <a href="#s8" data-section="s8"><span class="num">08</span> 🔗 Assets</a>
+      <a href="#s9" data-section="s9"><span class="num">09</span> 🗺️ Roadmap</a>
+      <a href="#s10" data-section="s10"><span class="num">10</span> ❓ Open Questions</a>
+      <a href="#s11" data-section="s11"><span class="num">11</span> ⚖️ SOUL</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+    <!-- S1: Benchmark -->
+    <div class="section" id="s1">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">📊</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">01</span><h2>Current State Benchmark</h2></div>
+            <div class="sec-subtitle">Score-9 constitution, score-1 coverage — honest assessment</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>Before designing forward, we must be honest about where we stand. The table below scores each dimension of the current project state on a ten-point scale. We have a beautiful constitution and one complete production-quality chapter. We have no content factory, no product layer, and no persistent engagement layer. A score-9 constitution with score-1 coverage is a library with one book.</p>
+        <div class="bench-bars" id="bench-bars">
+          <div class="bench-row"><span class="bench-label">Pedagogical rigor</span><div class="bench-track"><div class="bench-fill" data-score="90"></div></div><span class="bench-score">9/10</span></div>
+          <div class="bench-row"><span class="bench-label">Architecture clarity</span><div class="bench-track"><div class="bench-fill" data-score="70"></div></div><span class="bench-score">7/10</span></div>
+          <div class="bench-row"><span class="bench-label">Content coverage</span><div class="bench-track"><div class="bench-fill" data-score="10"></div></div><span class="bench-score">1/10</span></div>
+          <div class="bench-row"><span class="bench-label">Product readiness</span><div class="bench-track"><div class="bench-fill" data-score="30"></div></div><span class="bench-score">3/10</span></div>
+          <div class="bench-row"><span class="bench-label">Engagement design</span><div class="bench-track"><div class="bench-fill" data-score="60"></div></div><span class="bench-score">6/10</span></div>
+          <div class="bench-row"><span class="bench-label">Differentiation</span><div class="bench-track"><div class="bench-fill" data-score="50"></div></div><span class="bench-score">5/10</span></div>
+          <div class="bench-row"><span class="bench-label">Subject treatment</span><div class="bench-track"><div class="bench-fill" data-score="20"></div></div><span class="bench-score">2/10</span></div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- S2: Architecture -->
+    <div class="section" id="s2">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">🏛️</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">02</span><h2>The 5-Layer Architecture</h2></div>
+            <div class="sec-subtitle">Strict inheritance — lower layers cannot contradict higher layers</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>A strict hierarchy of five layers. Each layer inherits from the one above. Nothing in a lower layer may contradict a higher layer. Click any layer to expand its purpose.</p>
+        <div class="layers">
+          <div class="layer-card" onclick="this.classList.toggle('expanded')">
+            <h4>Layer 4 — Metagame + App Surfaces</h4>
+            <div class="layer-desc">Persistent, cross-subject motivation layer</div>
+            <div class="layer-expand">Bilim Bazasi visual model, Bilim Token economy, streak system, Boss tournament events, hero collection, app surface specs (Today, Library, Tournaments, Teacher Dashboard). Locked: no real-money currency, no BT spend on academic advantage. Mystery boxes earned by mastery only.</div>
+          </div>
+          <div class="layer-card" onclick="this.classList.toggle('expanded')">
+            <h4>Layer 3 — Tier Overlay</h4>
+            <div class="layer-desc">Basic + Premium delta — not a duplicate content set</div>
+            <div class="layer-expand">Difficulty band extension for Premium, AI tier assignment per tier, game unlock schedule, specialized course access rules, weekly PISA lesson format delta, metagame token reward multipliers. Locked: Basic delivers full learning mission.</div>
+          </div>
+          <div class="layer-card" onclick="this.classList.toggle('expanded')">
+            <h4>Layer 2 — Subject Frameworks</h4>
+            <div class="layer-desc">Per subject × grade × language (~110 total, 1 complete)</div>
+            <div class="layer-expand">Textbook chapter index, per-chapter content blocks and assessment items, subject-specific PISA transitions, worked example banks, Uzbek-context illustrations. Current state: 1 of ~110 complete. G5 Science v3.0 is the prototype and gold standard.</div>
+          </div>
+          <div class="layer-card" onclick="this.classList.toggle('expanded')">
+            <h4>Layer 1 — Subject Family Frameworks</h4>
+            <div class="layer-desc">5 families — NEW this sprint (highest-leverage work)</div>
+            <div class="layer-expand">Family-level PISA domain mappings, mechanic emphasis table (primary/secondary/banned), cognitive demand profile, answer format guidance, Boss format rules. Heavy design done once; all Layer 2 subject frameworks inherit it as a fast delta.</div>
+          </div>
+          <div class="layer-card" onclick="this.classList.toggle('expanded')">
+            <h4>Layer 0 — Universal Framework v2.0</h4>
+            <div class="layer-desc">The constitution — unchanged, all modifications require founder approval</div>
+            <div class="layer-expand">7-phase session structure, 16 default + 12 interactive game mechanics, dual-catalog rule, PISA framework mappings, 3-tier Boss system, Notebook Capture spec, anti-cheat framework, AI tier cost model, mandatory tagging schema, difficulty calibration rules.</div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- S3: Families -->
+    <div class="section" id="s3">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">🎓</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">03</span><h2>Subject Family Classification</h2></div>
+            <div class="sec-subtitle">5 families grouped by cognitive demands and mechanic fit</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>The five families group subjects by shared cognitive demands and mechanic fit. This is the single most important architectural decision for scaling content production. Once a family framework exists, writing a subject framework beneath it is dramatically faster.</p>
+        <div class="tabs">
+          <button class="tab-btn active" onclick="switchTab(this,'fam-aniq')">Aniq Fanlar</button>
+          <button class="tab-btn" onclick="switchTab(this,'fam-til')">Til Fanlari</button>
+          <button class="tab-btn" onclick="switchTab(this,'fam-tabiat')">Tabiat Fanlari</button>
+          <button class="tab-btn" onclick="switchTab(this,'fam-ijt')">Ijtimoiy Fanlari</button>
+          <button class="tab-btn" onclick="switchTab(this,'fam-tarb')">Tarbiya/Sanat</button>
+        </div>
+        <div id="fam-aniq" class="tab-panel active">
+          <h4>Aniq Fanlar — Exact Sciences</h4>
+          <p><strong>Subjects:</strong> Mathematics, Physics, Chemistry, Informatics</p>
+          <p><strong>Cognitive demands:</strong> Multi-step calculation, formal notation, derivation from first principles, error detection, spatial reasoning for geometry/physics</p>
+          <div style="margin:.4rem 0"><span class="chip">CPA progression</span><span class="chip">Tile Match</span><span class="chip">Notebook Capture</span><span class="chip">Worked examples</span><span class="chip">Error Analysis</span><span class="chip">Speed Match</span></div>
+          <p style="font-size:.82rem;color:#c0c0cc;margin-top:.4rem"><strong>Boss format:</strong> Open numerical/derivation problem, not multiple-choice for Grade 6+. G5 may use up to 30% MC (ADR-005). Rubric-based partial credit. Every new formula introduced via concrete scenario first.</p>
+        </div>
+        <div id="fam-til" class="tab-panel">
+          <h4>Til Fanlari — Languages</h4>
+          <p><strong>Subjects:</strong> Uzbek, Russian, English, Native Language (Tajik/Karakalpak/etc.), Literature</p>
+          <p><strong>Cognitive demands:</strong> Vocabulary acquisition, grammar rule application, reading fluency, listening comprehension, writing production, narrative interpretation</p>
+          <div style="margin:.4rem 0"><span class="chip">Spaced Repetition</span><span class="chip">Cloze/Sentence Fill</span><span class="chip">Listening tasks</span><span class="chip">Dictation</span><span class="chip">Story Mode</span><span class="chip">Word Ladder</span></div>
+          <p style="font-size:.82rem;color:#c0c0cc;margin-top:.4rem"><strong>Boss format:</strong> Writing production task evaluated by Tier 2 LLM. G5 uses guided production (stem provided). G6+ uses prompted free production. Grammar always introduced in story context first.</p>
+        </div>
+        <div id="fam-tabiat" class="tab-panel">
+          <h4>Tabiat Fanlari — Natural Sciences</h4>
+          <p><strong>Subjects:</strong> Biology, Geography, G5 Combined Science (transitional)</p>
+          <p><strong>Cognitive demands:</strong> Concept model construction, biological/geographic classification, diagram interpretation, hypothesis formation, cause-effect chains</p>
+          <div style="margin:.4rem 0"><span class="chip">Diagram Labeling</span><span class="chip">Memory Palace</span><span class="chip">Story Mode</span><span class="chip">Why Chain</span><span class="chip">Speed Match</span><span class="chip">Tile Match</span></div>
+          <p style="font-size:.82rem;color:#c0c0cc;margin-top:.4rem"><strong>Boss format:</strong> Explanation task — "describe the process" or "explain why." Diagrams may be photographed via Notebook Capture at G5. G5 Science v3.0 is the family prototype.</p>
+        </div>
+        <div id="fam-ijt" class="tab-panel">
+          <h4>Ijtimoiy Fanlari — Social Sciences</h4>
+          <p><strong>Subjects:</strong> History, Law, Economy, Civics</p>
+          <p><strong>Cognitive demands:</strong> Source analysis, critical thinking, case reasoning, chronological modeling, perspective-taking</p>
+          <div style="margin:.4rem 0"><span class="chip">Story Mode</span><span class="chip">Memory Palace</span><span class="chip">Timeline Tile Match</span><span class="chip">Source Comparison</span><span class="chip">Why Chain</span></div>
+          <p style="font-size:.82rem;color:#c0c0cc;margin-top:.4rem"><strong>Boss format:</strong> Case reasoning task — apply a principle to a situation. History Boss may include primary source excerpt. No MC for Grade 6+. Legal/economic principles introduced via Uzbek everyday scenario first.</p>
+        </div>
+        <div id="fam-tarb" class="tab-panel">
+          <h4>Tarbiya/Sanat — Soft and Formative</h4>
+          <p><strong>Subjects:</strong> Art, Music, Physical Education, Tarbiya (character education)</p>
+          <p><strong>Cognitive demands:</strong> Engagement, expressive output, character formation, aesthetic appreciation, physical skill, emotional literacy</p>
+          <div style="margin:.4rem 0"><span class="chip">Reflection Journal</span><span class="chip">Movement Breaks</span><span class="chip">Expressive tasks</span></div>
+          <p style="font-size:.82rem;color:#c0c0cc;margin-top:.4rem"><strong>Boss format:</strong> Optional formative prompt — "share one thing you created" — with encouraging response only. No scoring. Intentionally minimal-gamification: over-gamifying character education produces the extrinsic-reward plateau problem.</p>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- S4: Tiers -->
+    <div class="section" id="s4">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">💎</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">04</span><h2>The Tier Overlay</h2></div>
+            <div class="sec-subtitle">Full learning mission for all 8.8M — Premium adds depth, not gates</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>This is not pay-to-win. Basic Tier delivers the full educational mission — every student gets a complete, gamified, AI-personalized learning experience covering the national curriculum. Premium adds breadth and richer tools. No student is academically disadvantaged for not paying.</p>
+        <div class="tier-toggle-wrap">
+          <span class="tier-label active" id="lbl-basic">Basic</span>
+          <div class="toggle-switch" id="tier-toggle" onclick="toggleTier()"><div class="toggle-knob"></div></div>
+          <span class="tier-label" id="lbl-premium">Premium</span>
+        </div>
+        <table class="tier-table">
+          <thead><tr><th class="col-dim">Dimension</th><th>Basic</th><th>Premium</th></tr></thead>
+          <tbody>
+            <tr><td class="col-dim">Audience</td><td class="col-basic">All 8.8M K–11 students</td><td class="col-premium">Opt-in (business model TBD — see Section 10)</td></tr>
+            <tr><td class="col-dim">Content</td><td class="col-basic">Refined textbook canon, on-curriculum</td><td class="col-premium">Beyond-textbook extensions, exam prep, electives</td></tr>
+            <tr><td class="col-dim">Homework</td><td class="col-basic">Full 7-phase gamified sessions</td><td class="col-premium">Same engine, harder difficulty band, richer AI feedback</td></tr>
+            <tr><td class="col-dim">Games</td><td class="col-basic">1–2 interactive per 3–5 homeworks</td><td class="col-premium">Unlimited on-demand, higher-polish variants</td></tr>
+            <tr><td class="col-dim">AI tier</td><td class="col-basic">Tier 1 (rule-based) + Tier 2 (small LLM)</td><td class="col-premium">+ Tier 3 (Opus-grade): deep tutoring, study plans, writing feedback</td></tr>
+            <tr><td class="col-dim">PISA events</td><td class="col-basic">Standard monthly checkpoints</td><td class="col-premium">Mandatory weekly PISA lesson, async 7-day window, teacher-tracked</td></tr>
+            <tr><td class="col-dim">Metagame</td><td class="col-basic">Full Bilim Bazasi (cosmetic earned only)</td><td class="col-premium">Same + tournaments + additional hero collections</td></tr>
+            <tr><td class="col-dim">Retention role</td><td class="col-basic">Free utility → builds trust and reach</td><td class="col-premium">Revenue generation + differentiation + learning depth</td></tr>
+          </tbody>
+        </table>
+      </div></div>
+    </div>
+
+    <!-- S5: Metagame -->
+    <div class="section" id="s5">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">🎮</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">05</span><h2>Metagame — Bilim Bazasi</h2></div>
+            <div class="sec-subtitle">Persistent cross-session motivation — earn BT by learning, spend on culture</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>Each student has a Bilim Bazasi — a visual Cultural complex in the Central Asian tradition that grows as they complete chapters and master skills. The sole currency is Bilim Tokens (BT), earned through learning actions and spent on cosmetic and lore items only. BT has no real-money entry point.</p>
+        <div class="bt-counter">
+          <span class="bt-num" id="bt-display">0</span>
+          <span class="bt-label">Bilim Tokens</span>
+        </div>
+        <div class="earn-row">
+          <button class="earn-btn" onclick="earnBT(10)">Sessiya +10</button>
+          <button class="earn-btn" onclick="earnBT(25)">Mahorat +25</button>
+          <button class="earn-btn" onclick="earnBT(50)">Boss +50</button>
+          <button class="earn-btn" onclick="earnBT(40)">Streak +40</button>
+          <button class="earn-btn" onclick="earnBT(60)">PISA dars +60</button>
+        </div>
+        <div class="spend-grid">
+          <div class="spend-card disabled" onclick="spendBT(this,100)">
+            <h5>Yangi xona</h5>
+            <div class="cost">100 BT</div>
+            <div class="owned">Xarid: <span class="owned-count">0</span></div>
+          </div>
+          <div class="spend-card disabled" onclick="spendBT(this,75)">
+            <h5>Registan dekoratsiya</h5>
+            <div class="cost">75 BT</div>
+            <div class="owned">Xarid: <span class="owned-count">0</span></div>
+          </div>
+          <div class="spend-card disabled" onclick="spendBT(this,200)">
+            <h5>Al-Xorazmiy qahramon</h5>
+            <div class="cost">200 BT</div>
+            <div class="owned">Xarid: <span class="owned-count">0</span></div>
+          </div>
+          <div class="spend-card disabled" onclick="spendBT(this,50)">
+            <h5>Mystery Box</h5>
+            <div class="cost">50 BT</div>
+            <div class="owned">Xarid: <span class="owned-count">0</span></div>
+          </div>
+        </div>
+        <div class="cant-buy" id="cant-buy-msg"><strong>Yetarli BT yo'q:</strong> Yangi xona, Registan dekoratsiya, Al-Xorazmiy qahramon, Mystery Box</div>
+      </div></div>
+    </div>
+
+    <!-- S6: AI -->
+    <div class="section" id="s6">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">🤖</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">06</span><h2>AI Tier Strategy</h2></div>
+            <div class="sec-subtitle">80% rule-based — $3–5/student/year Basic cost target</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>A cost-constrained design principle. At $3–5 per student per year for Basic Tier, the vast majority of AI interactions must be cheap or free. The system is designed so 80% of tasks never require inference at all. All API routes implement static fallbacks — session failure on AI outage is architecturally impossible.</p>
+        <div class="ai-tiers">
+          <div class="ai-card">
+            <h4>Tier 1 — Rule-based / Hardcoded</h4>
+            <div class="ai-meta"><span>~80% of all tasks</span><span>Effectively $0</span><span>Both tiers</span></div>
+            <p>Hardcoded answer checker and fuzzy-match library (app/lib/fuzzy-match.ts). Response time under 100ms. No network call. Covers all multiple-choice, matching, numeric answer, and exact-string tasks.</p>
+          </div>
+          <div class="ai-card">
+            <h4>Tier 2 — Small LLM (cheap inference)</h4>
+            <div class="ai-meta"><span>~15% of interactions</span><span>Cents/student/year</span><span>Both tiers</span></div>
+            <p>Boss evaluation, Socratic prompts, anti-cheat analysis, story checkpoints. Current local implementation: Ollama + quantized Qwen model. Anti-cheat (behavioral baseline comparison + semantic anomaly detection) runs at Tier 2 for both Basic and Premium.</p>
+          </div>
+          <div class="ai-card">
+            <h4>Tier 3 — Opus-grade LLM</h4>
+            <div class="ai-meta"><span>~5% of interactions</span><span>Dollars/student/year</span><span>Premium only</span></div>
+            <p>Multi-turn Socratic tutoring (guides toward understanding without revealing answers), personalized cross-subject study plans, detailed writing feedback, exam preparation adaptation. Economically viable only for Premium.</p>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- S7: App Surfaces -->
+    <div class="section" id="s7">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">📱</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">07</span><h2>App Surfaces</h2></div>
+            <div class="sec-subtitle">Each surface has one primary job — complexity is a product failure</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>Five student-facing and teacher-facing surfaces. Each surface has one primary job. No more than 3 information chunks before the primary CTA. Mobile-first design for Uzbek school context — teachers often lack desktop access.</p>
+        <div class="phones">
+          <div class="phone">
+            <h5>Today</h5>
+            <div class="phone-line accent" style="height:20px;border-radius:4px;margin-bottom:.5rem;display:flex;align-items:center;justify-content:center"><span style="font-size:.6rem;color:var(--red)">🔥 7-kun streak</span></div>
+            <div class="phone-line med"></div>
+            <div class="phone-line short"></div>
+            <div class="phone-btn"><span>Uy ishini boshlash</span></div>
+            <div class="phone-line short" style="margin-top:.4rem;opacity:.4"></div>
+          </div>
+          <div class="phone">
+            <h5>Bilim Bazasi</h5>
+            <div class="phone-line accent"></div>
+            <div class="phone-line med"></div>
+            <div class="phone-line short"></div>
+            <div class="phone-line med" style="margin-top:.3rem"></div>
+            <div style="font-size:.6rem;color:var(--red);text-align:center;margin-top:.4rem">🏛️ Al-Xorazmiy</div>
+            <div style="font-size:.55rem;color:var(--text-dim);text-align:center">340 BT</div>
+          </div>
+          <div class="phone">
+            <h5>Library</h5>
+            <div class="phone-line med"></div>
+            <div class="phone-line short"></div>
+            <div class="phone-line med"></div>
+            <div class="phone-line short"></div>
+            <div class="phone-line med" style="opacity:.35"></div>
+            <div style="font-size:.6rem;color:var(--text-dim);margin-top:.3rem">🔒 Premium chapter</div>
+          </div>
+          <div class="phone">
+            <h5>Tournaments</h5>
+            <div class="phone-line accent" style="height:6px"></div>
+            <div class="phone-line med" style="margin-top:.3rem"></div>
+            <div style="font-size:.6rem;color:var(--red);margin:.3rem 0">1. Malika &mdash; 340</div>
+            <div style="font-size:.6rem;color:var(--text-dim)">2. Bobur &mdash; 290</div>
+            <div style="font-size:.6rem;color:var(--text-dim)">3. Jasur &mdash; 210</div>
+            <div style="font-size:.55rem;color:var(--text-dim);margin-top:.3rem">weekly reset</div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- S8: Assets -->
+    <div class="section" id="s8">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">🔗</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">08</span><h2>How Existing Assets Fold In</h2></div>
+            <div class="sec-subtitle">No existing work deprecated — every artifact finds its layer</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>The new 5-layer architecture does not deprecate any existing work. Every existing artifact finds a place in the new structure.</p>
+        <div class="asset-grid">
+          <div class="asset-card"><h5>NETS-Homework-Engine-UNIFIED v2.0</h5><div class="arrow-label">&#8594; Layer 0 (unchanged constitution)</div></div>
+          <div class="asset-card"><h5>G5 Science Framework v3.0</h5><div class="arrow-label">&#8594; Layer 2 under Tabiat Fanlari (gold standard)</div></div>
+          <div class="asset-card"><h5>platform/docs/ 00–11</h5><div class="arrow-label">&#8594; Platform contracts (additive extensions needed)</div></div>
+          <div class="asset-card"><h5>Demo app app/</h5><div class="arrow-label">&#8594; Session visualizer (future: tier toggle + BB mock)</div></div>
+          <div class="asset-card"><h5>G5 psychology research</h5><div class="arrow-label">&#8594; Audience contract at Layer 0, inherited by all families</div></div>
+          <div class="asset-card"><h5>16 + 12 mechanics</h5><div class="arrow-label">&#8594; Reassigned per family mechanic emphasis tables</div></div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- S9: Roadmap -->
+    <div class="section" id="s9">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">🗺️</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">09</span><h2>Implementation Roadmap</h2></div>
+            <div class="sec-subtitle">Sequenced by dependency — shipping sequence over calendar pressure</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>The roadmap is sequenced by dependency, not time estimate. Time estimates are excluded per SOUL principle: shipping sequence matters; calendar pressure does not override design quality. Click any phase to expand details.</p>
+        <div class="timeline">
+          <div class="tl-item" id="tl1">
+            <div class="tl-dot" onclick="toggleTimeline('tl1')"></div>
+            <div class="tl-header" onclick="toggleTimeline('tl1')"><h4>Phase 1 — 5 Subject Family Frameworks (Layer 1)</h4></div>
+            <div class="tl-body">One document per family: Aniq Fanlar, Til Fanlari, Tabiat Fanlari, Ijtimoiy Fanlari, Tarbiya/Sanat. Tabiat Fanlari written first (G5 Science v3.0 is the prototype). Each specifies cognitive profile, mechanic emphasis table (primary/secondary/banned), Boss format rules, PISA domain mappings.</div>
+          </div>
+          <div class="tl-item" id="tl2">
+            <div class="tl-dot" onclick="toggleTimeline('tl2')"></div>
+            <div class="tl-header" onclick="toggleTimeline('tl2')"><h4>Phase 2 — Per-family G5 Subject Frameworks (Layer 2)</h4></div>
+            <div class="tl-body">With family frameworks in place, each G5 subject framework is a delta document. Target: Math, Biology, History, Literature, Geography, English, Russian, Native Language, Informatics. Family framework does heavy cognitive-science work; subject framework adds textbook-specific content and item banks.</div>
+          </div>
+          <div class="tl-item" id="tl3">
+            <div class="tl-dot" onclick="toggleTimeline('tl3')"></div>
+            <div class="tl-header" onclick="toggleTimeline('tl3')"><h4>Phase 3 — Tier Overlay Contracts (Layer 3)</h4></div>
+            <div class="tl-body">Formal delta contract: for each subject family, what changes between Basic and Premium (difficulty band, game unlock schedule, AI tier assignment, specialized course access). Platform engineers implement against this contract as an extension to platform/docs/.</div>
+          </div>
+          <div class="tl-item" id="tl4">
+            <div class="tl-dot" onclick="toggleTimeline('tl4')"></div>
+            <div class="tl-header" onclick="toggleTimeline('tl4')"><h4>Phase 4 — Metagame Spec (Layer 4)</h4></div>
+            <div class="tl-body">Bilim Bazasi data model (base state schema, building unlock dependencies), BT economy formulas (post-playtesting with real G5 students), hero collection schema, tournament event data model, Teacher Dashboard query specifications.</div>
+          </div>
+          <div class="tl-item" id="tl5">
+            <div class="tl-dot" onclick="toggleTimeline('tl5')"></div>
+            <div class="tl-header" onclick="toggleTimeline('tl5')"><h4>Phase 5 — Platform Implementation</h4></div>
+            <div class="tl-body">FastAPI backend + React Router frontend per platform/docs/ contracts extended with Tier and Metagame contracts from Phases 3 and 4. CEO agent (platform/docs/11) coordinates sub-agent breakdown per platform/docs/09. Can be built in parallel with content production.</div>
+          </div>
+          <div class="tl-item" id="tl6">
+            <div class="tl-dot" onclick="toggleTimeline('tl6')"></div>
+            <div class="tl-header" onclick="toggleTimeline('tl6')"><h4>Phase 6 — G6–11 Expansion + Russian Siblings</h4></div>
+            <div class="tl-body">Repeat the family→subject framework process for G6–11. Russian-language siblings follow same subject frameworks with surface-language substitution and Russian-textbook-specific content deltas. Family frameworks do not change — only Layer 2 documents are added. Linear, parallel, delegable.</div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- S10: Open Questions -->
+    <div class="section" id="s10">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">❓</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">10</span><h2>Open Questions and Deferred Decisions</h2></div>
+            <div class="sec-subtitle">8 unresolved items — each requires a formal decision log entry when resolved</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>These questions must not be resolved by unilateral assumption. Click any card to flip it and see context.</p>
+        <div class="flash-cards">
+          <div class="flash-card" onclick="this.classList.toggle('flipped')">
+            <div class="flash-card-inner">
+              <div class="flash-card-front">Premium business model?</div>
+              <div class="flash-card-back">Family-paid / school-licensed / government-sponsored / corporate / hybrid. Affects pricing tier design, teacher dashboard features, and BT economy. Not resolved.</div>
+            </div>
+          </div>
+          <div class="flash-card" onclick="this.classList.toggle('flipped')">
+            <div class="flash-card-inner">
+              <div class="flash-card-front">Informatics placement?</div>
+              <div class="flash-card-back">Default: Aniq Fanlar. If dominant demands are closer to creative/constructive, raise an ADR when the G5 Informatics framework is drafted.</div>
+            </div>
+          </div>
+          <div class="flash-card" onclick="this.classList.toggle('flipped')">
+            <div class="flash-card-inner">
+              <div class="flash-card-front">Literature placement?</div>
+              <div class="flash-card-back">Default: Til Fanlari. If a Humanities subfamily is created (History + Literature + Civics), Literature is the migration candidate. Resolve when drafting G5 Literature.</div>
+            </div>
+          </div>
+          <div class="flash-card" onclick="this.classList.toggle('flipped')">
+            <div class="flash-card-inner">
+              <div class="flash-card-front">Tournament regional tier?</div>
+              <div class="flash-card-back">Class-level default. School/regional opt-in. Whether school-level becomes default for Premium classes defers to product team after foundation sprint.</div>
+            </div>
+          </div>
+          <div class="flash-card" onclick="this.classList.toggle('flipped')">
+            <div class="flash-card-inner">
+              <div class="flash-card-front">BT economy formulas?</div>
+              <div class="flash-card-back">Must be calibrated through playtesting with actual G5 students. Target: completing one session feels like visible progress; mastering a skill feels like a meaningful unlock.</div>
+            </div>
+          </div>
+          <div class="flash-card" onclick="this.classList.toggle('flipped')">
+            <div class="flash-card-inner">
+              <div class="flash-card-front">G5 Science v3.0: standalone vs. family-derived?</div>
+              <div class="flash-card-back">Recommendation: derive family framework upward from v3.0, note deltas in v3.1 resolution log. Faster and architecturally cleaner. Decision authority: founder.</div>
+            </div>
+          </div>
+          <div class="flash-card" onclick="this.classList.toggle('flipped')">
+            <div class="flash-card-inner">
+              <div class="flash-card-front">PISA enforcement: async vs. strict deadline?</div>
+              <div class="flash-card-back">Launch default: async 7-day window. Strict deadline (fixed weekly cutoff) is a configurable option. Requires school admin buy-in and student consequence design per Principle 3.</div>
+            </div>
+          </div>
+          <div class="flash-card" onclick="this.classList.toggle('flipped')">
+            <div class="flash-card-inner">
+              <div class="flash-card-front">Bilim Bazasi visual metaphor?</div>
+              <div class="flash-card-back">3 candidates: (a) historical Uzbek academy, (b) Ulugh Beg observatory with star-map, (c) composite Silk Road complex (Samarkand, Bukhara, Khiva). Requires cultural consultants + student testing.</div>
+            </div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- S11: SOUL -->
+    <div class="section" id="s11">
+      <div class="section-header" onclick="toggleSection(this)">
+        <div class="section-header-left">
+          <span class="sec-icon">⚖️</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:.5rem"><span class="sec-num">11</span><h2>SOUL Constraints Carried Forward</h2></div>
+            <div class="sec-subtitle">5 unbreakable principles with architectural accountability</div>
+          </div>
+        </div>
+        <span class="chevron">▶</span>
+      </div>
+      <div class="section-body"><div class="section-content">
+        <p>The 5 unbreakable principles, each with an explicit account of how the new design architecture honors them. Click to expand.</p>
+        <div class="soul-tiles">
+          <div class="soul-tile" onclick="this.classList.toggle('expanded')">
+            <div class="soul-icon">📖</div>
+            <h4>Textbook is Truth</h4>
+            <div class="soul-expand">Layer 2 follows textbook chapter sequence. NETS does not reorder or supplement without curriculum authority approval. If AI at any tier generates a claim contradicting the textbook, the textbook wins. Not a fallback — the system's primary epistemological commitment.</div>
+          </div>
+          <div class="soul-tile" onclick="this.classList.toggle('expanded')">
+            <div class="soul-icon">✅</div>
+            <h4>Every Task Earns Its Existence</h4>
+            <div class="soul-expand">The mandatory transition_skill tag is not relaxed at any layer. A task that cannot specify its PISA transition skill is removed at Layer 2 draft stage. "Harder" difficulty is not a sufficient justification for a task's existence.</div>
+          </div>
+          <div class="soul-tile" onclick="this.classList.toggle('expanded')">
+            <div class="soul-icon">🧒</div>
+            <h4>10-Year-Old ≠ Small Adult</h4>
+            <div class="soul-expand">G5 psychology constraints (4–5 chunk WM ceiling, "Hali emas" framing, hidden difficulty, weekly-reset competition, no public wrong answers) apply at every layer for G5 content. Competition is class-scoped only. Anti-cheat flags go to teacher, not to the class.</div>
+          </div>
+          <div class="soul-tile" onclick="this.classList.toggle('expanded')">
+            <div class="soul-icon">🌊</div>
+            <h4>Flow State, Not Anxiety</h4>
+            <div class="soul-expand">75–85% success target enforced at Layer 2 (calibration) and Layer 3 (difficulty band). Silent adaptive difficulty: below 70% triggers tier-down, above 90% triggers tier-up. Metagame calibrated for normal engagement — no extraordinary performance required for visible progress.</div>
+          </div>
+          <div class="soul-tile" onclick="this.classList.toggle('expanded')">
+            <div class="soul-icon">⚡</div>
+            <h4>Intrinsic &gt; Extrinsic. Zero Pay-to-Win.</h4>
+            <div class="soul-expand">Basic delivers the full educational mission. BT has no real-money entry point. Mystery Boxes purchased with BT only. A student whose family cannot afford Premium has the same PISA progression path. This is the design constraint that makes NETS deployable as national infrastructure without reproducing economic inequality in learning outcomes.</div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <strong>NETS System Design v1.0</strong> &nbsp;&middot;&nbsp; 2026-04-09 &nbsp;&middot;&nbsp; Draft — approved for sprint planning &nbsp;&middot;&nbsp;
+  <a href="NETS-System-Design-v1.md">View source .md</a>
+</footer>
+
+<script>
+// Section toggle
+function toggleSection(header) {
+  const sec = header.closest('.section');
+  const wasOpen = sec.classList.contains('open');
+  sec.classList.toggle('open');
+  if (!wasOpen) {
+    const bars = sec.querySelectorAll('.bench-fill');
+    if (bars.length) setTimeout(() => bars.forEach(b => { b.style.width = b.dataset.score + '%'; }), 50);
+  }
+}
+
+// Family tabs
+function switchTab(btn, panelId) {
+  const content = btn.closest('.section-content');
+  content.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  content.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
+}
+
+// Tier toggle
+let tierState = 'basic';
+function toggleTier() {
+  tierState = tierState === 'basic' ? 'premium' : 'basic';
+  document.getElementById('tier-toggle').classList.toggle('right', tierState === 'premium');
+  document.getElementById('lbl-basic').classList.toggle('active', tierState === 'basic');
+  document.getElementById('lbl-premium').classList.toggle('active', tierState === 'premium');
+  document.querySelectorAll('.col-basic').forEach(c => c.classList.toggle('highlight', tierState === 'basic'));
+  document.querySelectorAll('.col-premium').forEach(c => c.classList.toggle('highlight', tierState === 'premium'));
+}
+
+// BT Simulator
+let bt = 0;
+function earnBT(n) {
+  bt += n;
+  const el = document.getElementById('bt-display');
+  el.textContent = bt;
+  el.classList.remove('pulse');
+  void el.offsetWidth;
+  el.classList.add('pulse');
+  refreshSpend();
+}
+function spendBT(card, cost) {
+  if (bt < cost) return;
+  bt -= cost;
+  document.getElementById('bt-display').textContent = bt;
+  card.querySelector('.owned-count').textContent = parseInt(card.querySelector('.owned-count').textContent) + 1;
+  refreshSpend();
+}
+function refreshSpend() {
+  const refused = [];
+  document.querySelectorAll('.spend-card').forEach(card => {
+    const cost = parseInt(card.querySelector('.cost').textContent);
+    const canBuy = bt >= cost;
+    card.classList.toggle('disabled', !canBuy);
+    if (!canBuy) refused.push(card.querySelector('h5').textContent);
+  });
+  const msg = document.getElementById('cant-buy-msg');
+  msg.innerHTML = refused.length ? '<strong>Yetarli BT yo\'q:</strong> ' + refused.join(', ') : 'Barcha narsalar sotib olinishi mumkin!';
+}
+
+// Timeline
+function toggleTimeline(id) { document.getElementById(id).classList.toggle('open'); }
+
+// TOC active via IntersectionObserver
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      document.querySelectorAll('#toc a').forEach(a => a.classList.remove('active'));
+      const link = document.querySelector('#toc a[data-section="' + e.target.id + '"]');
+      if (link) link.classList.add('active');
+    }
+  });
+}, { threshold: 0.25 });
+['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) obs.observe(el);
+});
+</script>
+</body>
+</html>

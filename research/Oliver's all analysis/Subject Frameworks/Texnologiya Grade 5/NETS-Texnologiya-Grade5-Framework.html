@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Texnologiya Grade 5 — Framework v3.0</title>
+<style>
+:root{--bg:#0f1117;--bg-card:#1a1d27;--bg-code:#252833;--border:#2d3140;--text:#e2e4eb;--text-muted:#9ca3b8;--text-dim:#6b7280;--accent:#F59E0B;--accent-light:#FBBF24;--accent-2:#10B981;--green:#22c55e;--red:#ef4444;--yellow:#f59e0b;--cyan:#06b6d4;--radius:8px;--shadow:0 2px 12px rgba(0,0,0,.3)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:2rem 1rem}
+.container{max-width:1100px;margin:0 auto}
+.header{text-align:center;padding:2.5rem 2rem;background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#1e1b4b 100%);border-radius:var(--radius);margin-bottom:2rem;border:1px solid var(--border);position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(245,158,11,.12) 0%,transparent 70%);animation:pulse 6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+.header h1{font-size:2rem;font-weight:700;background:linear-gradient(135deg,#c7d2fe,#F59E0B 50%,#10B981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;z-index:1}
+.header .subtitle{color:var(--text-muted);font-size:.95rem;margin-top:.5rem;position:relative;z-index:1}
+.content{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;box-shadow:var(--shadow)}
+.content h1{font-size:1.6rem;color:var(--accent-light);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--accent);display:flex;align-items:center;gap:.5rem}
+.content h1:first-of-type{margin-top:0}
+.content h2{font-size:1.3rem;color:var(--accent-light);margin:2rem 0 .85rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)}
+.content h3{font-size:1.1rem;color:var(--cyan);margin:1.5rem 0 .6rem}
+.content h4{font-size:1rem;color:var(--accent-2);margin:1.25rem 0 .5rem}
+.content p{margin:.75rem 0;color:var(--text)}
+.content ul,.content ol{margin:.75rem 0 .75rem 1.5rem;color:var(--text)}
+.content li{margin:.35rem 0}
+.content strong{color:#fff;font-weight:600}
+.content em{color:var(--text-muted);font-style:italic}
+.content a{color:var(--accent-light);text-decoration:none;border-bottom:1px dotted var(--accent-light)}
+.content a:hover{color:#fff;border-bottom-style:solid}
+.content code{background:var(--bg-code);padding:.15rem .4rem;border-radius:4px;font-family:'Cascadia Code','Fira Code','Consolas',monospace;font-size:.88em;color:var(--cyan)}
+.content pre{background:var(--bg-code);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin:1rem 0;overflow-x:auto}
+.content pre code{background:transparent;padding:0;color:var(--text);font-size:.85em}
+.content blockquote{border-left:3px solid var(--accent);padding:.5rem 1rem;margin:1rem 0;background:rgba(245,158,11,.05);color:var(--text-muted);font-style:italic}
+.content hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0}
+.content table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:block;overflow-x:auto}
+.content thead{background:rgba(245,158,11,.15)}
+.content th{color:var(--accent-light);padding:.6rem .75rem;text-align:left;font-weight:600;border-bottom:2px solid var(--accent);white-space:nowrap}
+.content td{padding:.6rem .75rem;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text)}
+.content tr:nth-child(even){background:rgba(255,255,255,.02)}
+.content tr:hover{background:rgba(245,158,11,.05)}
+.content td:first-child{color:#fff}
+.tag{display:inline-block;padding:1px 8px;border-radius:4px;font-size:.75em;font-weight:600}
+.tag-yes{background:rgba(34,197,94,.15);color:#22c55e}
+.tag-no{background:rgba(239,68,68,.15);color:#ef4444}
+.tag-limited{background:rgba(245,158,11,.15);color:#f59e0b}
+.tag-high{background:rgba(245,158,11,.15);color:#f59e0b}
+.warning-box{background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:16px 20px;margin:16px 0 24px}
+.warning-box h3{color:var(--yellow);margin-top:0}
+.footer{text-align:center;color:var(--text-dim);font-size:.8rem;margin-top:2rem;padding:1rem;border-top:1px solid var(--border)}
+@media(max-width:768px){.content{padding:1.25rem}.header h1{font-size:1.4rem}.content h1{font-size:1.3rem}.content h2{font-size:1.15rem}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>NETS Texnologiya Grade 5 — Framework</h1>
+    <div class="subtitle">v3.0 merged · single source of truth · Tabiiy Fanlar · Uzbek · Two-Track</div>
+  </div>
+  <div class="content">
+<h1 id="nets-homework-framework-grade-5-uzbek-texnologiya-technology">NETS Homework Framework — Grade 5 (Uzbek) — Texnologiya (Technology)</h1>
+<p><strong>Version:</strong> 3.1 (audited &amp; revised)
+<strong>Date:</strong> 2026-04-08
+<strong>Status:</strong> Production-ready specification — single source of truth for Grade 5 uz Texnologiya homework.
+<strong>Supersedes:</strong> v3.0 (Qwen baseline, same date)
+<strong>Audit:</strong> Cross-checked against Universal Specs by Claude 2026-04-08; 8 fixes applied (4 MAJOR, 4 MINOR). See §20 changelog.</p>
+<p><strong>Pipeline position:</strong></p>
+<pre><code>Universal Framework (NETS-Homework-Engine-UNIFIED.md v2.0, 2026-04-07)
+        │
+        ▼
+Psychology Filter (qwen-grade5-psychology-findings.md)
+        │
+        ▼
+THIS DOCUMENT  ←  Grade 5 uz Texnologiya adapted spec
+        │
+        ▼
+Per-chapter homework sessions (produced by content team / openclaw)
+</code></pre>
+<p><strong>Source documents:</strong>
+- <code>NETS-Homework-Engine-UNIFIED.md</code> — master spec (the WHAT)
+- <code>NETS-Homework-Engine-Blueprint.docx</code> — universal session lifecycle (the HOW)
+- <code>NETS-Homework-Engine-Standards-Summary.docx</code> — standards/PISA framework
+- <code>NETS-Homework-Engine-Blueprint-Summary.docx</code> — phase summary
+- <code>qwen-grade5-psychology-findings.md</code> — Grade 5 cognitive/psychological research
+- <code>5-sinf_texnologiya_2020_(elekton_darslikbot).pdf</code> — Grade 5 Texnologiya textbook (Tohirov, Mirahmedova, Shamsiyeva, "Sharq" NMK, 2020, 240pp, ISBN 978-9943-5997-4-1)</p>
+<p>This is a <strong>delta layer</strong> — overrides, parameter tunings, and Texnologiya-specific selections on top of the universal blueprint. Anything not mentioned here inherits from UNIFIED unchanged.</p>
+<hr />
+<h2 id="0-resolution-log-design-decisions">§0. Resolution Log — Design Decisions</h2>
+<p>Texnologiya is a <strong>practical, hands-on life-skills subject</strong> with two parallel tracks (Technology &amp; Design vs. Service). These are the calls made:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Topic</th>
+<th>Decision</th>
+<th>Reasoning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Two-track textbook</strong></td>
+<td><strong>BOTH tracks included.</strong> Content tagged by track. Teacher assigns track per student.</td>
+<td>Schools assign tracks by gender or preference; engine must serve both.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Session duration</td>
+<td><strong>35–45 min Standard</strong> (same as Science)</td>
+<td>User instruction; consistent across Grade 5 subjects.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Notebook Capture frequency</td>
+<td><strong>1 in every 2 sessions</strong> (higher than Science's 1-in-3)</td>
+<td>Texnologiya is inherently about making/drawing/designing. Highest-leverage mechanic.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>MC in Boss</td>
+<td><strong>30% allowed</strong> at G5</td>
+<td>Useful for tool identification, material classification, safety rule recognition.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Adaptive Quiz</td>
+<td><strong>BANNED</strong> for G5</td>
+<td>IRT feels like endless testing at age 10.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Peer Teaching</td>
+<td><strong>BANNED</strong></td>
+<td>Uzbek classroom culture: 35–38 students, teacher-centered.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Flash Card count</td>
+<td><strong>5–7 cap</strong> (Cowan WM ceiling)</td>
+<td>Consistent with Grade 5 psychology filter.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Why Chain depth</td>
+<td><strong>2 levels max</strong></td>
+<td>Conservative WM safety.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Boss HP</td>
+<td><strong>Tiered 30/50/80 by PISA level</strong></td>
+<td>Differentiated instruction.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Story Mode segments</td>
+<td><strong>3 segments × 90 sec</strong> structurally</td>
+<td>Consistent with universal spec.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Memory Palace vs labeled diagrams</td>
+<td><strong>Labeled diagram recall is default</strong>; Memory Palace alternative for spatial chapters</td>
+<td>Diagrams beat loci for tool identification, process flows.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Practical work in homework</td>
+<td><strong>Theoretical/conceptual ONLY.</strong> Hands-on happens in class.</td>
+<td>Homework prepares the mind; class builds the hands.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>PISA mapping</td>
+<td><strong>Track-aware triple-tag</strong>: Track 1 = Science L1→L2 (PRIMARY) + Creative Thinking + TR. Track 2 = Creative Thinking (PRIMARY) + Reading L1→L2 + TR + Science (conditional, only for genuinely scientific content). Combined Bob 3 = Science primary for both tracks.</td>
+<td>Forcing PISA Science onto cooking/embroidery is indefensible. The two tracks need different primary domains.</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Safety-critical content</td>
+<td><strong>DOUBLE weight, ZERO tolerance for wrong answers.</strong></td>
+<td>Safety is non-negotiable. Wrong answer about machine guards = real danger.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Cultural anchoring</td>
+<td><strong>Uzbek traditional crafts central:</strong> kashtachilik, atlas, national dishes, local materials</td>
+<td>Textbook centers Uzbek material culture. NETS preserves and amplifies.</td>
+</tr>
+<tr>
+<td>16</td>
+<td>AI tier cost strategy</td>
+<td><strong>Per-phase T1/T2/T3 budget</strong> ($3–5/student/year)</td>
+<td>Notebook Capture (T3 vision) heavily used.</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Anti-cheat cultural framing</td>
+<td><strong>Mother-as-co-teacher for Service track</strong> (pedagogically appropriate)</td>
+<td>Home economics IS home learning. Mother helping with cooking = textbook intent.</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Personal Hook track-matching</td>
+<td>Theme Preview Panel 5 MUST be track-aware: Track 1 = paternal anchor (father/grandfather/uncle making things); Track 2 = maternal anchor (mother/grandmother/aunt cooking/sewing); Combined Bob 3 = mixed.</td>
+<td>Hardcoded paternal anchor would alienate Service track students; maternal would alienate Tech &amp; Design.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-audience-profile">§1. Audience Profile</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Value (from qwen research)</th>
+<th>Texnologiya Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Age</td>
+<td>10–11 years old</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Cognitive stage</td>
+<td>Late concrete operational (Piaget)</td>
+<td><strong>Spatial reasoning still developing</strong> — 2D diagrams before 3D mental rotation.</td>
+</tr>
+<tr>
+<td>Working memory</td>
+<td>4–5 chunks (Cowan, 2001)</td>
+<td><strong>Procedural sequences max 3 steps</strong> at a time.</td>
+</tr>
+<tr>
+<td>Sustained attention</td>
+<td>20–30 min (35–40 min gamified)</td>
+<td><strong>Hands-on planning tasks hold attention longer</strong> (up to 40 min).</td>
+</tr>
+<tr>
+<td>Reading level</td>
+<td>Lexile 830–1010L</td>
+<td>Technical vocab must be defined with visual + plain-language equivalent.</td>
+</tr>
+<tr>
+<td>Receptive vocabulary</td>
+<td>12,000–14,000 words</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Productive vocabulary</td>
+<td>6,000–8,000 words</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Metacognitive accuracy</td>
+<td>0.4–0.5 correlation</td>
+<td><strong>Structured reflection only.</strong></td>
+</tr>
+<tr>
+<td>Self-concept fragility</td>
+<td>High — public failure causes disengagement</td>
+<td><strong>"I'm not good with my hands"</strong> is a common self-limiting belief. Never reinforce.</td>
+</tr>
+<tr>
+<td>Peer comparison</td>
+<td>Peaks at this age</td>
+<td><strong>Cooperative design challenges</strong> work better than competition.</td>
+</tr>
+<tr>
+<td>Productive struggle ceiling</td>
+<td>~30 sec before scaffolding</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Recovery time</td>
+<td>30–90 sec after wrong answer</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Class size (Uzbek urban)</td>
+<td>35–38 students</td>
+<td>Workshop/kitchen supervision: 1 teacher for 35+ with tools. Safety critical.</td>
+</tr>
+<tr>
+<td>Device reality</td>
+<td>Shared family smartphone</td>
+<td><strong>All technical diagrams must be legible on 5" screen.</strong></td>
+</tr>
+<tr>
+<td>After-school window</td>
+<td>2–3 hours, peak 17:00–19:00</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Primary homework supervisor</td>
+<td>Mother (cultural norm, Grades 5–7)</td>
+<td><strong>ACTIVE CO-TEACHER for Service track.</strong> "Learn together" not "test alone."</td>
+</tr>
+<tr>
+<td>Primary language</td>
+<td>Uzbek (Latin script)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-subject-identity">§2. Subject Identity — What Is "Grade 5 Texnologiya"?</h2>
+<p><strong>Texnologiya</strong> = Technology / Practical Life Skills. Grade 5 is the <strong>first year of integrated technology education</strong> in the Uzbek curriculum, combining engineering concepts, material science, life skills, and traditional crafts.</p>
+<p><strong>Subject scope:</strong></p>
+<ul>
+<li><strong>Track 1 — Technology &amp; Design:</strong> Modern machinery, woodworking, polymer materials, 3D modeling, energy systems, transport design</li>
+<li><strong>Track 2 — Service:</strong> Food preparation, table culture, textile science, sewing, embroidery (Uzbek traditional crafts)</li>
+<li><strong>Cross-cutting:</strong> Safety awareness, environmental responsibility, project planning, design thinking</li>
+</ul>
+<p><strong>Pedagogical posture:</strong> <em>Making, planning, and understanding how things work.</em></p>
+<h3>Textbook Source</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>Texnologiya 5-sinf</td>
+</tr>
+<tr>
+<td>Authors</td>
+<td>O'. O. Tohirov, D. S. Mirahmedova, Z. S. Shamsiyeva</td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td>"Sharq" nashriyot-matbaa AJ, Bosh tahririyati, Toshkent</td>
+</tr>
+<tr>
+<td>Year</td>
+<td>2020</td>
+</tr>
+<tr>
+<td>Pages</td>
+<td>240</td>
+</tr>
+<tr>
+<td>ISBN</td>
+<td>978-9943-5997-4-1</td>
+</tr>
+</tbody>
+</table>
+<h3>Chapter Map → Session Map</h3>
+<h4>TRACK 1: Texnologiya va Dizayn (Technology &amp; Design)</h4>
+<table>
+<thead>
+<tr>
+<th>Bob</th>
+<th>Title (Uzbek)</th>
+<th>English</th>
+<th>Pages</th>
+<th>Sessions</th>
+<th>Domain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Zamonaviy texnika va texnologiyalar</td>
+<td>Modern Technology &amp; Technologies</td>
+<td>6–14</td>
+<td>2</td>
+<td>Engineering</td>
+</tr>
+<tr>
+<td>2.1</td>
+<td>Yog'ochga ishlov berish</td>
+<td>Woodworking</td>
+<td>15–75</td>
+<td>6</td>
+<td>Materials/Craft</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Polimer materiallarga ishlov berish</td>
+<td>Polymer Materials &amp; 3D</td>
+<td>76–93</td>
+<td>3</td>
+<td>Materials/Design</td>
+</tr>
+</tbody>
+</table>
+<h4>TRACK 2: Servis Xizmati (Service)</h4>
+<table>
+<thead>
+<tr>
+<th>Bob</th>
+<th>Title (Uzbek)</th>
+<th>English</th>
+<th>Pages</th>
+<th>Sessions</th>
+<th>Domain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Ovqatlanish madaniyati</td>
+<td>Food Culture</td>
+<td>96–102</td>
+<td>2</td>
+<td>Culinary</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Oziq-ovqat mahsulotlariga ishlov berish</td>
+<td>Food Processing</td>
+<td>103–125</td>
+<td>4</td>
+<td>Culinary</td>
+</tr>
+<tr>
+<td>2.1</td>
+<td>Gazlamashunoslik</td>
+<td>Fabric Science</td>
+<td>127–162</td>
+<td>4</td>
+<td>Textile</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Tikuvchilik</td>
+<td>Sewing &amp; Design</td>
+<td>163–182</td>
+<td>4</td>
+<td>Textile/Craft</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>Kashtachilik</td>
+<td>Embroidery (Folk Craft)</td>
+<td>183–196</td>
+<td>3</td>
+<td>Traditional Craft</td>
+</tr>
+</tbody>
+</table>
+<h4>COMBINED (Both Tracks)</h4>
+<table>
+<thead>
+<tr>
+<th>Bob</th>
+<th>Title (Uzbek)</th>
+<th>English</th>
+<th>Pages</th>
+<th>Sessions</th>
+<th>Domain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>Energiya ishlab chiqarish va undan foydalanish</td>
+<td>Energy Production &amp; Use</td>
+<td>200–220</td>
+<td>3</td>
+<td>Engineering/Science</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total:</strong> 3 main bobs per track + 1 combined bob · <strong>~21–24 homework sessions per track</strong> to produce.</p>
+<p><strong>Standard Code Pattern:</strong> <code>UZ-TEX-5-{TOPIC}-{SEQ}</code> — e.g., <code>UZ-TEX-5-WOOD-01</code>, <code>UZ-TEX-5-COOK-03</code>. Alias: <code>TEX.5.{bob}.{section}.{seq}</code>.</p>
+<hr />
+<h2 id="3-pisa-mapping">§3. PISA Mapping — Grade 5 Texnologiya Target</h2>
+<p><strong>Track-aware triple-tagging strategy.</strong> The two tracks have fundamentally different epistemological centers — Tech &amp; Design is closer to engineering/science, Service is closer to creative/practical arts. Forcing PISA Science onto cooking/embroidery is indefensible.</p>
+<h3>Track 1 — Tech &amp; Design primary tagging</h3>
+<table>
+<thead><tr><th>Primary Tag</th><th>Coverage</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><strong>PISA Science L1→L2</strong> (PRIMARY)</td><td>Materials properties (wood/polymer), energy types, physical processes, mechanism cause-effect</td><td>Core scientific reasoning for engineering content</td></tr>
+<tr><td><strong>PISA Creative Thinking</strong> (SECONDARY)</td><td>Design challenges, invention scenarios, "what if you had no X?" problems</td><td>Design problem-solving</td></tr>
+<tr><td><strong>Custom TR L1→L4</strong> (ALWAYS)</td><td>Tool selection, process sequencing, safety judgment, design evaluation</td><td>Practical reasoning</td></tr>
+</tbody>
+</table>
+<h3>Track 2 — Service primary tagging</h3>
+<table>
+<thead><tr><th>Primary Tag</th><th>Coverage</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><strong>PISA Creative Thinking</strong> (PRIMARY)</td><td>Recipe variation, pattern design, color/material combination, stitch innovation, presentation aesthetics</td><td>Creative making is the heart of Service content</td></tr>
+<tr><td><strong>PISA Reading L1→L2</strong> (SECONDARY)</td><td>Recipe/instruction comprehension, ordering steps, interpreting diagrams</td><td>Procedural literacy</td></tr>
+<tr><td><strong>PISA Science L1→L2</strong> (CONDITIONAL)</td><td>Only for genuinely scientific content: food chemistry (yeast, baking, nutrition), fabric properties (weave, dye, fiber), heat/cold cooking effects</td><td>Don't force-fit Science onto pure craft content</td></tr>
+<tr><td><strong>Custom TR L1→L4</strong> (ALWAYS)</td><td>Tool/utensil selection, process sequencing, hygiene/safety judgment, design evaluation</td><td>Practical reasoning</td></tr>
+</tbody>
+</table>
+<h3>Combined Bob 3 — Energy</h3>
+<p>Both tracks: PISA Science L1→L2 (PRIMARY) + Creative Thinking + TR. Energy content is genuinely scientific for both tracks.</p>
+<h3>Technical Reasoning (TR) Track — Custom 4-Level Scale (universal across both tracks)</h3>
+<table>
+<thead>
+<tr>
+<th>TR Level</th>
+<th>What Student Can Do</th>
+<th>Example</th>
+<th>Bloom's Pairing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TR-L1</strong></td>
+<td>Identify tools, materials, and basic safety rules by name</td>
+<td>"This is a duradgorlik dastgohi (carpentry bench)"</td>
+<td>Remember</td>
+</tr>
+<tr>
+<td><strong>TR-L2</strong></td>
+<td>Explain what a tool does, why a material is chosen, sequence steps</td>
+<td>"Yog'och needs to be measured before cutting because..."</td>
+<td>Understand, Apply</td>
+</tr>
+<tr>
+<td><strong>TR-L3</strong></td>
+<td>Analyze a design problem, select appropriate tools, identify safety risks</td>
+<td>"For making a bookshelf, use yog'och not polimer because..."</td>
+<td>Analyze</td>
+</tr>
+<tr>
+<td><strong>TR-L4</strong></td>
+<td>Design a solution to a novel problem, evaluate trade-offs</td>
+<td>"If you had no 3D ruchka, how else could you make this?"</td>
+<td>Evaluate, Create</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Grade 5 target:</strong> TR-L1 → TR-L2 as the dominant scaffold, with TR-L3 stretch goals for top quartile.</p>
+<h3>Mandatory <code>transition_skill</code> Tags for G5 Texnologiya</h3>
+<ul>
+<li><code>L1→L2: identify tools/materials and explain their purpose</code></li>
+<li><code>L1→L2: sequence steps in a simple making process</code></li>
+<li><code>L1→L2: recognize safety rules and explain why they matter</code></li>
+<li><code>L2→L3: select appropriate tools/materials for a given task</code></li>
+<li><code>L2→L3: analyze a design and suggest improvements</code></li>
+<li><code>L2→L3: predict what happens if a step is skipped or done wrong</code></li>
+<li><code>L3→L4: design a solution using available materials, evaluate trade-offs</code></li>
+</ul>
+<hr />
+<h2 id="4-psychology-filter">§4. Psychology Filter — Applied Parameters</h2>
+<h3>4.1 Session Timing</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Universal</th>
+<th>Grade 5 Texnologiya</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Standard session total</strong></td>
+<td>30–45 min</td>
+<td><strong>35–45 min</strong> (includes 0-A + 0-B + 7 phases)</td>
+</tr>
+<tr>
+<td><strong>Single phase max</strong></td>
+<td>varies</td>
+<td><strong>5–9 min</strong> (hard ceiling)</td>
+</tr>
+<tr>
+<td><strong>Inter-phase break</strong></td>
+<td>varies</td>
+<td><strong>5–15 sec</strong> loading screen with "Did You Know"</td>
+</tr>
+<tr>
+<td><strong>Daily homework cap</strong></td>
+<td>not specified</td>
+<td><strong>1–2 sessions / 30–60 min total</strong></td>
+</tr>
+<tr>
+<td><strong>Recommended deployment window</strong></td>
+<td>not specified</td>
+<td><strong>17:00–19:00</strong> (Uzbek after-dinner norm)</td>
+</tr>
+</tbody>
+</table>
+<h3>4.2 Difficulty Calibration</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Universal</th>
+<th>Grade 5 Texnologiya</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Flow state success rate</strong></td>
+<td>70–80%</td>
+<td><strong>75–85%</strong> (higher floor for kids)</td>
+</tr>
+<tr>
+<td><strong>Adapt frequency</strong></td>
+<td>every 3–5 questions</td>
+<td><strong>every 3–4 questions</strong></td>
+</tr>
+<tr>
+<td><strong>Difficulty visibility</strong></td>
+<td>not specified</td>
+<td><strong>HIDDEN</strong> — never show "Easy/Medium/Hard"</td>
+</tr>
+<tr>
+<td><strong>Pass threshold</strong></td>
+<td>not specified</td>
+<td><strong>60% minimum</strong></td>
+</tr>
+<tr>
+<td><strong>Tier-down trigger</strong></td>
+<td>&lt;60%</td>
+<td><strong>&lt;70%</strong> (catch slipping students 10 pts earlier)</td>
+</tr>
+<tr>
+<td><strong>Productive struggle ceiling</strong></td>
+<td>not specified</td>
+<td><strong>30 seconds</strong> before scaffolding</td>
+</tr>
+<tr>
+<td><strong>Wrong answer language</strong></td>
+<td>"Try again"</td>
+<td><strong>"Hali emas" / "Not yet"</strong> (+40% persistence, Yeager 2019)</td>
+</tr>
+<tr>
+<td><strong>New technical terms</strong></td>
+<td>not capped</td>
+<td><strong>max 1–2 per session</strong> (vocab ceiling)</td>
+</tr>
+<tr>
+<td><strong>New concepts per instruction</strong></td>
+<td>not capped</td>
+<td><strong>max 3</strong> (Cowan WM)</td>
+</tr>
+<tr>
+<td><strong>Safety questions</strong></td>
+<td>standard scoring</td>
+<td><strong>DOUBLE weight, ZERO tolerance for wrong answers</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>4.3 Banned Techniques (19 items)</h3>
+<p>❌ Public displays of wrong answers · ❌ Absolute-rank leaderboards · ❌ Real-time multiplayer competition · ❌ Pure discovery / unbounded sandbox · ❌ Random rewards without competence link · ❌ Purchasable cosmetics · ❌ Abstract-only puzzles (CPA mandatory) · ❌ Complex multi-step instructions without worked examples · ❌ Delayed feedback (&gt;seconds) · ❌ "You're smart" / ability praise · ❌ The word "wrong" · ❌ Brain breaks every 5 min · ❌ Learning styles matching · ❌ Why Chain ≥3 levels · ❌ Visible difficulty labels in UI · ❌ Group/peer-correction as primary feedback · ❌ <strong>Adaptive Quiz</strong> · ❌ <strong>Peer Teaching</strong> · ❌ <strong>Actual hands-on tasks as homework</strong></p>
+<h3>4.4 Mandatory Additions (12 items)</h3>
+<p>✅ CPA progression · ✅ Dual coding · ✅ Worked example before independent practice · ✅ Spaced retrieval (Day 1/3/7/14) · ✅ Effort + strategy feedback · ✅ Cultural anchors (Uzbek crafts, national dishes, local materials) · ✅ Mobile-first portrait, low-bandwidth · ✅ Variable-ratio reward windows · ✅ Hidden difficulty tiering · ✅ 30-second productive struggle window · ✅ Safety-first scoring (2× weight, zero tolerance) · ✅ Track-aware content delivery</p>
+<hr />
+<h2 id="5-pre-homework">§5. Pre-Homework — Sessions 0-A and 0-B</h2>
+<p>Both run before the 7-phase engine. Timer does not start until the student taps <strong>"Boshlash" / "Start my Homework"</strong>. No XP, no scoring, no penalties.</p>
+<h3>5.1 Session 0-A — Theme Preview (Swipe Deck)</h3>
+<p><strong>Duration:</strong> 2–3 min, student-paced · <strong>Format:</strong> Vertical swipe deck (TikTok/Tinder-style cards) · <strong>Tier:</strong> AI Tier 2</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Grade 5 Texnologiya</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Panel count</td>
+<td>8 mandatory (Summary, Better Explanation, Examples, Real-Life Research, Personal Hook, Why It Matters, Industry Application, Additional Materials)</td>
+</tr>
+<tr>
+<td>Reading level</td>
+<td><strong>Lexile 830–1010L</strong>, average sentence ≤14 words, active voice</td>
+</tr>
+<tr>
+<td>Visual-first ratio</td>
+<td><strong>Mandatory</strong> — every panel leads with photo/diagram/clip of tools, materials, or finished products</td>
+</tr>
+<tr>
+<td>Language</td>
+<td><strong>Uzbek only</strong> for student-facing text</td>
+</tr>
+<tr>
+<td>POV</td>
+<td><strong>Second-person Uzbek</strong> — <em>"Sen bilasanmi…?"</em> / <em>"Sen ko'rganmisan…?"</em></td>
+</tr>
+<tr>
+<td>Personal Hook (panel 5)</td>
+<td><strong>TRACK-AWARE — mandatory.</strong> Track 1 (Tech &amp; Design): paternal anchor — father/grandfather/uncle making/fixing/building (<em>"Sen bobongiz yoki dadangiz biror narsa yasaganini ko'rganmisan?"</em>). Track 2 (Service): maternal anchor — mother/grandmother/aunt cooking/sewing/embroidering (<em>"Sen onangiz yoki buvingiz osh pishirayotganda yoki kashta tikayotganda kuzatganmisan?"</em>). Combined Bob 3 (Energy): mixed — anyone in family using/discussing electricity/water/heat at home.</td>
+</tr>
+<tr>
+<td>Industry Application</td>
+<td><code>duradgor</code> (carpenter), <code>oshpaz</code> (cook), <code>tikuvchi</code> (seamstress), <code>kashtachi</code> (embroiderer), <code>muhandis</code> (engineer)</td>
+</tr>
+<tr>
+<td>Real-Life Research</td>
+<td><strong>Uzbek material culture</strong> — Cotton (paxta) → textile industry. Wood carving → Khiva/Bukhara. Embroidery → Silk Road.</td>
+</tr>
+</tbody>
+</table>
+<h3>5.2 Session 0-B — Flash Cards</h3>
+<p><strong>Duration:</strong> 1–2 min initial pass, <strong>returnable throughout homework</strong> · <strong>Tier:</strong> AI Tier 1</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Grade 5 Texnologiya</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Card count per session</strong></td>
+<td><strong>5–7 cards max</strong> (Cowan WM 4–5 + 1–2 buffer). Never more than 7.</td>
+</tr>
+<tr>
+<td>Card categories</td>
+<td>Prefer <strong>Concept</strong> (tool names, material types), <strong>Rule</strong> (safety rules, process sequences), <strong>Definition</strong></td>
+</tr>
+<tr>
+<td>Visual on every card</td>
+<td><strong>Mandatory</strong> — front shows term + photo/drawing of the tool/material</td>
+</tr>
+<tr>
+<td>Flip animation</td>
+<td><strong>600ms</strong> for G5 (extra processing time)</td>
+</tr>
+<tr>
+<td>Tap-to-flip prompt</td>
+<td>Visible <strong>3–4 sec</strong> for first-time confidence</td>
+</tr>
+<tr>
+<td>Language</td>
+<td><strong>Uzbek only.</strong> One Russian equivalent in parentheses if commonly bilingual (e.g., <code>dastgoh</code> / <code>станок</code>).</td>
+</tr>
+<tr>
+<td>Returnable mid-homework</td>
+<td><strong>MANDATORY</strong> — tool identification and process sequences often need reference. NOT counted as hint.</td>
+</tr>
+<tr>
+<td>"Boshlash" button</td>
+<td>Full-width, primary color (<code>#F59E0B</code> Texnologiya amber accent), gentle pulse animation.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-the-7-phase-engine">§6. The 7-Phase Engine — Grade 5 Texnologiya</h2>
+<h3>6.1 Phase 1 — Memory Sprint (≤2 min, 5–7 items)</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Spec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Item count</td>
+<td>5–7 (low end — WM ceiling + warm-up buffer)</td>
+</tr>
+<tr>
+<td>Format mix</td>
+<td>Tile Match (tool ↔ name / material ↔ property), Quick MC (safety rules, classification), Sentence Fill (process sequences). <strong>No pure typed recall.</strong></td>
+</tr>
+<tr>
+<td>Source</td>
+<td><strong>Spaced retrieval pull</strong> — Day 1/3/7/14 schedule from prior chapters</td>
+</tr>
+<tr>
+<td>Visual scaffolding</td>
+<td>Every term must show with its visual representation (tool photo, material sample, safety icon)</td>
+</tr>
+<tr>
+<td>Safety items</td>
+<td>Any safety-related recall item gets <strong>priority placement</strong> (first 2 items)</td>
+</tr>
+<tr>
+<td>Streak bonus</td>
+<td>Visible at 3+ correct (fire animation)</td>
+</tr>
+<tr>
+<td>Remediation gate</td>
+<td>&lt;60% → route to remediation chapter before Story Mode (UNIFIED §5.1)</td>
+</tr>
+</tbody>
+</table>
+<h3>6.2 Phase 2 — Story Mode (5–7 min)</h3>
+<p><strong>Story arc:</strong> Problem → Struggle → Discovery → Solution maps to <strong>real making/crafting stories</strong>.</p>
+<p><strong>Structure:</strong> 3 segments × ~90 sec each, interleaved with checkpoint games. Total ~5–7 min including checkpoints.</p>
+<table>
+<thead>
+<tr>
+<th>Story arc beat</th>
+<th>Texnologiya version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Problem</strong></td>
+<td>Someone needs to make/fix/do something. <em>"Bobur yog'ochdan qush uyasi yasamoqchi, lekin qaysi asbob kerakligini bilmaydi."</em></td>
+</tr>
+<tr>
+<td><strong>Struggle</strong></td>
+<td>First attempts fail — wrong tool, wrong material, wrong sequence. <em>"U birinchi marta pichoq bilan kesishga urindi, lekin yog'och yorilib ketdi."</em></td>
+</tr>
+<tr>
+<td><strong>Discovery</strong></td>
+<td>The concept/technique/tool is introduced. <em>"Ustozi dedi: 'Avval o'lcha, keyin belgila, keyin kes. Uch marta o'lcha — bir marta kes.'"</em></td>
+</tr>
+<tr>
+<td><strong>Solution</strong></td>
+<td>Character succeeds with the right knowledge. <em>"Endi Bobur biladi — arrani to'g'ri ushlash, sekin va tekis surish kerak."</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hard rules for G5 Texnologiya Story Mode:</strong></p>
+<ul>
+<li><strong>CPA mandatory</strong> — Concrete (real tool/photo) → Pictorial (diagram/label) → Abstract (the rule/process). 60–70% of exposures need a concrete or pictorial anchor.</li>
+<li><strong>Real craftspeople / makers preferred</strong> over invented scenarios. Uzbek woodcarvers (Khiva, Bukhara), embroiderers (Margilan, Shakhrisabz), cooks (national dish masters).</li>
+<li><strong>Stranger Test</strong> applies: a reader who's never seen the textbook should understand the process from the narrative alone.</li>
+<li><strong>Checkpoint questions are process comprehension, not recall.</strong> "Why did the wood split?" YES. "What is the name of this tool?" NO.</li>
+<li><strong>Reading level cap:</strong> Lexile 830–1010L. Average sentence ≤14 words.</li>
+<li><strong>Max 2 retries per checkpoint</strong> → simplified scaffold version.</li>
+<li><strong>Safety moments:</strong> If the story involves a tool/process with safety implications, a <strong>safety checkpoint</strong> is inserted.</li>
+</ul>
+<h3>6.3 Phase 3 — Game Breaks (6–9 min, 3 games)</h3>
+<p><strong>Slot rules for G5 Texnologiya:</strong></p>
+<blockquote>
+<p><strong>Slot 1:</strong> Tile Match OR Memory Match Blitz (tool identification, material classification — visual recognition warmup)<br />
+<strong>Slot 2:</strong> Why Chain (max 2 levels) OR Codebreaker OR Mystery Box (process reasoning, cause-effect)<br />
+<strong>Slot 3:</strong> <strong>Notebook Capture in 1 of every 2 sessions</strong>; otherwise Tic Tac Toe vs AI, Escape Room, or Connect Four vs AI</p>
+</blockquote>
+<p><strong>Selection algorithm:</strong>
+1. <strong>Reinforcement game</strong> at student's current Bloom's level on chapter's main concept
+2. <strong>Stretch game</strong> one Bloom's level above
+3. <strong>Transition-skill game</strong> scaffolding the TR-L1→L2 (or L2→L3) skill chosen for the session</p>
+<h3>6.4 Phase 4 — Real-Life Challenge (3–5 min)</h3>
+<p><strong>First-person expert POV mandatory.</strong> Expert must be a Uzbek-context role:</p>
+<ul>
+<li>Track 1 → <em>"Sen duragarsan / muhandissan / 3D dizaynersan…"</em></li>
+<li>Track 2 → <em>"Sen oshpazsan / tikuvchisan / kashtachisan…"</em></li>
+<li>Combined → <em>"Sen energetiksan / loyihachisan…"</em></li>
+</ul>
+<p><strong>Hard rules:</strong></p>
+<ul>
+<li>First-person address only. <em>"Sen duragarsan…"</em> Never "Bobur duragardir…"</li>
+<li><strong>Real Uzbek context preferred</strong> — local bazaars, family events (to'y, sayil), household needs, school projects</li>
+<li><strong>Tricky distractors</strong> — at least one plausible-but-wrong answer requiring reasoning to eliminate</li>
+<li><strong>Justify your answer</strong> — student MUST explain reasoning; AI evaluates the <em>reasoning</em>, not just the choice</li>
+<li><strong>Safety judgment:</strong> Every RLC includes at least one safety-related decision point</li>
+<li><strong>Eligibility gate:</strong> PISA Reading L2+. Below L2 → fallback adaptive scaffolded version</li>
+</ul>
+<h3>6.5 Phase 5 — Consolidation (3–5 min)</h3>
+<p><strong>Default technique for G5 Texnologiya: Labeled diagram / process flow recall.</strong> Show a diagram (tool layout, process sequence, stitch pattern) with labels removed, student fills them back in.</p>
+<h3>Per-chapter Phase 5 default:</h3>
+<table>
+<thead>
+<tr>
+<th>Bob</th>
+<th>Diagram template</th>
+<th>Labels to fill</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (Modern Tech)</td>
+<td>Technology classification chart</td>
+<td>texnika turlari, vazifalar</td>
+</tr>
+<tr>
+<td>2.1 (Woodworking)</td>
+<td>Workshop layout + tool board</td>
+<td>duradgorlik dastgohi, arra, iskana, rubanok</td>
+</tr>
+<tr>
+<td>2.2 (Polymer/3D)</td>
+<td>3D pen workflow diagram</td>
+<td>issiqlik, ekstruziya, qotish</td>
+</tr>
+<tr>
+<td>1.1 (Food Culture)</td>
+<td>Dasturxon (table setting) layout</td>
+<td>tarelka, stakan, pichoq, vilka, qoshiq</td>
+</tr>
+<tr>
+<td>1.2 (Cooking)</td>
+<td>Recipe process flow chart</td>
+<td>tayyorlash, to'g'rash, aralashtirish, pishirish, bezash</td>
+</tr>
+<tr>
+<td>2.1 (Fabric)</td>
+<td>Fabric weave diagram (polotno/sarja)</td>
+<td>tanda, arqoq, to'qish</td>
+</tr>
+<tr>
+<td>2.2 (Sewing)</td>
+<td>Apron pattern pieces</td>
+<td>old qism, orqa qism, bog'ich, cho'ntak</td>
+</tr>
+<tr>
+<td>2.3 (Embroidery)</td>
+<td>Stitch pattern sequence</td>
+<td>chok turi, yo'nalish, takrorlash</td>
+</tr>
+<tr>
+<td>3 (Energy)</td>
+<td>Energy conversion diagram</td>
+<td>mexanik→elektr, quyosh→issiqlik, etc.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alternative technique (Memory Palace)</strong> — for chapters where spatial walkthrough feels natural:</p>
+<table>
+<thead>
+<tr>
+<th>Bob</th>
+<th>Palace location</th>
+<th>Why this place</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1 (Woodworking)</td>
+<td>Duradgorlik ustaxonasi (workshop)</td>
+<td>Tool locations, safety zones, material storage</td>
+</tr>
+<tr>
+<td>1.2 (Cooking)</td>
+<td>Oshxona (kitchen) — real Uzbek kitchen</td>
+<td>Work zones: prep, cooking, cleaning, storage</td>
+</tr>
+<tr>
+<td>3 (Energy)</td>
+<td>Power plant / hydroelectric station (Charvak SES)</td>
+<td>Energy flow: water → turbine → generator → grid</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Duration cap:</strong> 3–5 min. Should feel calm and confident, not stressful.</p>
+<h3>6.6 Phase 6 — Final Boss / Sub Boss (6–8 min)</h3>
+<table>
+<thead>
+<tr>
+<th>Student PISA level</th>
+<th>Boss tier</th>
+<th>HP</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Below L1 (baseline)</td>
+<td>Sub Boss Easy</td>
+<td><strong>30 HP</strong></td>
+<td>TR-L1 questions only, scaffolded</td>
+</tr>
+<tr>
+<td>L1–L2 (median G5)</td>
+<td>Sub Boss Medium</td>
+<td><strong>50 HP</strong></td>
+<td>TR-L1–L2 mix, win expected after 1 retry</td>
+</tr>
+<tr>
+<td>L2–L3 (top quartile)</td>
+<td>Sub Boss Hard</td>
+<td><strong>80 HP</strong></td>
+<td>TR-L2–L3 mix, real challenge</td>
+</tr>
+<tr>
+<td>L3+ (top decile)</td>
+<td>Big Boss + occasional Mythical</td>
+<td><strong>80–100 HP</strong></td>
+<td>TR-L3–L4 stretch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Boss content for Texnologiya MUST include (5 questions, distribution Easy 40% / Medium 40% / Hard 20%):</strong></p>
+<ul>
+<li>1 tool/material identification question (Tier 1 rule-based or MC)</li>
+<li>1 process sequencing question (put steps in order / what comes next)</li>
+<li>1 safety judgment question (<strong>DOUBLE weight</strong>, zero tolerance for wrong)</li>
+<li>1 design analysis question (why is this shaped this way? what would improve it?)</li>
+<li>Optional Hard: 1 invention/design challenge — Sub Boss Hard / Big Boss only</li>
+</ul>
+<p><strong>MC allowed at G5 Boss:</strong> <strong>Up to 30%</strong> of questions may be multiple choice.</p>
+<p><strong>Each Boss question MUST carry:</strong></p>
+<ul>
+<li>Step-by-step worked solution (visible after answer)</li>
+<li>2–3 progressive <strong>Hints</strong> (revealed on request, not auto-pushed)</li>
+<li><strong>Common Errors</strong> list — at least 1 known wrong answer with diagnostic explanation</li>
+</ul>
+<p><strong>Mechanics:</strong></p>
+<ul>
+<li><strong>Hint tax:</strong> −5 HP each (gentler — encourage hint use over giving up)</li>
+<li><strong>Combo bonus:</strong> 3 in a row → 2× damage on next</li>
+<li><strong>Max attempts:</strong> 3, with growth-mindset framing on retry (<em>"Hali emas — yana bir bor sinaymiz"</em>)</li>
+</ul>
+<h3>Mastery Stars (1–3):</h3>
+<table>
+<thead>
+<tr>
+<th>Stars</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⭐ 1</td>
+<td>Boss defeated (any number of attempts within retry limit)</td>
+</tr>
+<tr>
+<td>⭐⭐ 2</td>
+<td>Boss defeated in ≤2 attempts AND &gt;50% HP remaining</td>
+</tr>
+<tr>
+<td>⭐⭐⭐ 3</td>
+<td>Boss defeated on FIRST attempt, no hints used, &gt;80% HP remaining</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Failure → Boss Regeneration:</strong> If student fails all retries, Tier 3 AI runs <strong>Socratic tutoring</strong> based on wrong answers, then <strong>regenerates new boss questions</strong> tailored to the gap for next session continuation. Auto-flags teacher dashboard after <strong>3 failed sessions on the same standard</strong>.</p>
+<h3>6.7 Phase 7 — Reflection (1–2 min)</h3>
+<p><strong>Tier 2 AI generates ONE prompt per session, selected from a bank by accuracy bucket:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Accuracy bucket</th>
+<th>Prompt style</th>
+<th>Texnologiya example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>≥80% (mastery)</strong></td>
+<td>Strategy reflection</td>
+<td><em>"Qaysi asbobni to'g'ri tanlading? Nima uchun?"</em></td>
+</tr>
+<tr>
+<td><strong>60–79% (passing)</strong></td>
+<td>Struggle + recovery</td>
+<td><em>"Qaysi jarayon qiyin bo'ldi? Siz uni qanday hal qildingiz?"</em></td>
+</tr>
+<tr>
+<td><strong>&lt;60% (Duolingo Mode)</strong></td>
+<td>Support-seeking</td>
+<td><em>"Buni yaxshiroq tushunish uchun nima kerak? Qaysi qism chalkash bo'ldi?"</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rules:</strong> Min 1 sentence. Bloom's = Create, PISA = L3-4. <strong>Effort + strategy language only.</strong> Privacy: student-only.</p>
+<hr />
+<h2 id="7-content-rules">§7. Content Rules</h2>
+<h3>7.1 Narrative Voice</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POV</td>
+<td>Second-person (<em>"Sen ko'rasanmi?"</em>). Never third-person observer.</td>
+</tr>
+<tr>
+<td>Tone</td>
+<td>Curious, warm, hands-on. The student is a maker/apprentice figuring things out alongside the narrator.</td>
+</tr>
+<tr>
+<td>Language register</td>
+<td>Conversational Uzbek. Technical terms defined inline with visual + plain language.</td>
+</tr>
+<tr>
+<td>Sentence length</td>
+<td>Average ≤14 words.</td>
+</tr>
+<tr>
+<td>Sentence structure</td>
+<td>Active voice. <em>"Arra yog'ochni kesadi"</em> YES. <em>"Yog'och arra tomonidan kesiladi"</em> NO.</td>
+</tr>
+<tr>
+<td>Cultural anchors</td>
+<td>Uzbek names (Gulnora, Bekzod, Aziza, Sardor, Malika, Jasur, Dilnoza, Otabek). Uzbek places (Tashkent, Samarkand, Bukhara, Khiva, Fergana, Margilan, Chirchiq). Uzbek crafts, foods, materials.</td>
+</tr>
+</tbody>
+</table>
+<h3>7.2 Visuals</h3>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Every concept gets a visual</td>
+<td>CPA mandatory: real photo of tool/material OR diagram OR pictorial representation. No text-only concept introductions.</td>
+</tr>
+<tr>
+<td>Mobile-first sizing</td>
+<td>All visuals legible on a 5" smartphone screen. No tiny tool labels, no fine diagram detail.</td>
+</tr>
+<tr>
+<td>Dark mode default</td>
+<td>Texnologiya = <code>#F59E0B</code> (amber) primary, <code>#10B981</code> (emerald) accent.</td>
+</tr>
+</tbody>
+</table>
+<h3>7.3 "Did You Know" Facts (Loading Screen + Phase Transitions)</h3>
+<ul>
+<li>✅ "Did you know? The first sewing machine was invented in 1790 by Thomas Saint — it was made of wood!"</li>
+<li>✅ "Did you know? Uzbek atlas fabric uses a special ikat dyeing technique that's over 1,000 years old."</li>
+<li>✅ "Did you know? A 3D pen heats plastic to 180°C — hot enough to melt ice cream instantly!"</li>
+<li>✅ "Did you know? Cotton (paxta) is Uzbekistan's most important crop — it's called 'white gold'."</li>
+<li>✅ "Did you know? The world's oldest embroidered fabric was found in a Scythian tomb in the Altai mountains."</li>
+</ul>
+<p><strong>Frequency:</strong> 1 Did You Know per phase transition (loading screen, ≤8 sec each, AI Tier 2 generated/curated).</p>
+<hr />
+<h2 id="8-game-catalog-selections">§8. Game Catalog Selections — Final List</h2>
+<h3>8.1 Default 16 Mechanics — Usage at G5 Texnologiya</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Mechanic</th>
+<th>Use?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Memory Sprint</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>P1 default, flexible format, mix MC + Tile Match</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Spaced Flashcards</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>Tool names, material types, safety rules (also 0-B)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Tile Match</td>
+<td><span class="tag tag-high">YES (HIGHEST)</span></td>
+<td>Tool↔name, material↔property, safety rule↔situation</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sentence Fill</td>
+<td><span class="tag tag-limited">LIMITED</span></td>
+<td>Process sequences only; sparingly</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Memory Palace</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>Workshop/kitchen walkthroughs where spatial memory helps</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Story Mode</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>P2 default, maker/craftsperson narratives with Stranger Test</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Adaptive Quiz</td>
+<td><span class="tag tag-no">NO</span></td>
+<td>IRT feels like endless test; G7+ only</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Mystery Box</td>
+<td><span class="tag tag-high">YES (HIGH)</span></td>
+<td>"What's inside?" — material identification, tool mystery</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Movement Breaks</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>Optional 30-sec stretch between phases</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Why Chain</td>
+<td><span class="tag tag-high">YES (HIGH)</span></td>
+<td>Process reasoning is heart of Texnologiya, max 2 levels</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Peer Teaching</td>
+<td><span class="tag tag-no">NO</span></td>
+<td>Uzbek classroom culture mismatch</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Real-Life Challenge</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>P4 default, first-person expert POV, safety judgment required</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Reflection Journal</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>P7 default, 1-sentence minimum</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Final Boss</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>Tiered HP, MC 30% allowed, safety questions 2× weight</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Tic Tac Toe vs AI</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>Familiar game, recall under stakes</td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>Notebook Capture</strong></td>
+<td><span class="tag tag-high">YES (HIGHEST)</span></td>
+<td><strong>1 in every 2 sessions</strong> — design sketches, process diagrams, stitch patterns</td>
+</tr>
+</tbody>
+</table>
+<h3>8.2 Interactive Game Catalog 12 — Usage at G5 Texnologiya</h3>
+<table>
+<thead>
+<tr>
+<th>Mechanic</th>
+<th>Use?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tic Tac Toe vs AI</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>(also in Default 16)</td>
+</tr>
+<tr>
+<td>Connect Four vs AI</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>Visual strategy, material classification gates</td>
+</tr>
+<tr>
+<td>Codebreaker (Mastermind)</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>Process deduction — "what's the hidden sequence?"</td>
+</tr>
+<tr>
+<td>Memory Match Blitz</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>Tool photo pairs, material samples</td>
+</tr>
+<tr>
+<td>Reaction Chain</td>
+<td><span class="tag tag-limited">LIMITED</span></td>
+<td>Process sequences (cooking steps, sewing sequence)</td>
+</tr>
+<tr>
+<td>Word Ladder Climb</td>
+<td><span class="tag tag-no">NO</span></td>
+<td>Language game, not Texnologiya fit</td>
+</tr>
+<tr>
+<td>Puzzle Lock (Sliding)</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>Ordering tasks (tool use sequence, recipe steps)</td>
+</tr>
+<tr>
+<td>Blackjack 21</td>
+<td><span class="tag tag-no">NO</span></td>
+<td>Gambling theme inappropriate</td>
+</tr>
+<tr>
+<td>Territory Conquest</td>
+<td><span class="tag tag-no">NO</span></td>
+<td>Geography fit, not Texnologiya</td>
+</tr>
+<tr>
+<td>Escape Room</td>
+<td><span class="tag tag-yes">YES</span></td>
+<td>4 locks, 5-min limit, workshop/kitchen-themed</td>
+</tr>
+<tr>
+<td>Bridge Builder</td>
+<td><span class="tag tag-limited">LIMITED</span></td>
+<td>Engineering design — save for G8+ Physics</td>
+</tr>
+<tr>
+<td>Minefield Navigator</td>
+<td><span class="tag tag-no">NO</span></td>
+<td>Stress-inducing for G5</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-notebook-capture">§9. Notebook Capture — Texnologiya Task Pool</h2>
+<p>Notebook Capture is the <strong>highest-leverage mechanic</strong> for Grade 5 Texnologiya. Use in <strong>1 of every 2 sessions minimum.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Task type</th>
+<th>Example prompt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tool identification drawing</strong></td>
+<td><em>"Daftaringga 3 ta duradgorlik asbobini chiz va nomini yoz: arra, iskana, rubanok."</em></td>
+</tr>
+<tr>
+<td><strong>Process flow diagram</strong></td>
+<td><em>"Salat tayyorlash tartibini 5 qutida chiz: yuvish → to'g'rash → aralashtirish → bezash → tortiq qilish."</em></td>
+</tr>
+<tr>
+<td><strong>Design sketch</strong></td>
+<td><em>"Qush uyasi loyihasini chiz. Uzunligi, kengligi va balandligini belgila. Kirish teshigi qayerda bo'ladi?"</em></td>
+</tr>
+<tr>
+<td><strong>Stitch pattern</strong></td>
+<td><em>"Kashta chok namunasi: 5 ta chok chiz va har birining yo'nalishini strelka bilan ko'rsat."</em></td>
+</tr>
+<tr>
+<td><strong>Material comparison</strong></td>
+<td><em>"Yog'och, polimer va gazlamani taqqosla. Har birining 2 ta xususiyatini yoz."</em></td>
+</tr>
+<tr>
+<td><strong>Safety checklist</strong></td>
+<td><em>"Duradgorlik ustaxonasida 5 ta xavfsizlik qoidasini yoz. Nima uchun har biri muhim?"</em></td>
+</tr>
+<tr>
+<td><strong>Pattern design</strong></td>
+<td><em>"Fartuk uchun bezak naqshini chiz. Qaysi ranglardan foydalanasan? Nima uchun?"</em></td>
+</tr>
+<tr>
+<td><strong>Energy flow diagram</strong></td>
+<td><em>"Charvak SESda suv elektr energiyasiga qanday aylanishini 4 bosqichda chiz."</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>AI vision evaluation rubric:</strong> Lenient on artistic skill, <strong>strict on conceptual accuracy</strong>. A child's stick-figure drawing of "measure → mark → cut → sand → finish" is a CORRECT woodworking process even if it's not pretty. Safety checklists must be conceptually complete.</p>
+<p><strong>Latency:</strong> ≤10 sec Tier 3 vision processing, with human fallback if exceeded.</p>
+<p><strong>Accessibility:</strong> Visually impaired → audio task substitute · Motor disability → teacher toggle OFF · No notebook → in-app sketch (max 80% XP)</p>
+<hr />
+<h2 id="10-anti-cheat-tuning">§10. Anti-Cheat Tuning for Grade 5 Texnologiya</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Universal</th>
+<th>Grade 5 Texnologiya</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed anomaly threshold</td>
+<td>varies</td>
+<td><strong>Be lenient</strong> — kids click fast or stare at diagrams for minutes</td>
+</tr>
+<tr>
+<td>Paste detection</td>
+<td>enabled</td>
+<td><strong>Keep enabled</strong> (mother might be helping by typing)</td>
+</tr>
+<tr>
+<td>Soft warning language</td>
+<td>not specified</td>
+<td><strong>NEVER blame the child.</strong> Frame as <em>"Biz X ni payqadik — hammasi yaxshimi?"</em></td>
+</tr>
+<tr>
+<td><strong>Mother-helping reality</strong></td>
+<td>not addressed</td>
+<td><strong>Service track: mother helping with cooking/sewing is EXPECTED and pedagogically appropriate — not cheating.</strong></td>
+</tr>
+<tr>
+<td><strong>Safety question monitoring</strong></td>
+<td>not specified</td>
+<td><strong>Elevated scrutiny on safety questions</strong> — any wrong safety answer triggers immediate scaffold regardless of anti-cheat verdict</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="11-cultural-and-regional-anchors">§11. Cultural and Regional Anchors</h2>
+<h3>11.1 Always-Include List</h3>
+<ul>
+<li><strong>Names</strong> (rotate): Aziza, Bekzod, Gulnora, Sardor, Malika, Jasur, Dilnoza, Otabek, Farrux, Nodira</li>
+<li><strong>Places</strong>: Tashkent, Samarkand, Bukhara, Khiva, Fergana, Margilan (textile center), Shakhrisabz, Pamir, Aral Sea, Charvak reservoir, Chimgan mountains</li>
+<li><strong>Foods</strong>: plov, non, somsa, choy, mastava, qaynatma sho'rva, lag'mon, manti</li>
+<li><strong>Crafts</strong>: kashtachilik (embroidery), atlas/adras (ikat fabric), kulolchilik (pottery), yog'och o'ymakorligi (wood carving)</li>
+<li><strong>Materials</strong>: paxta (cotton), ipak (silk), yog'och (wood — terak, yong'oq, dub), jun (wool)</li>
+<li><strong>Currency</strong>: so'm</li>
+<li><strong>Makers/Craftspeople</strong>: Uzbek woodcarvers (Khiva masters), Margilan silk weavers, Shakhrisabz embroiderers, Tashkent engineers, local artisans</li>
+</ul>
+<h3>11.2 Avoid</h3>
+<ul>
+<li>Direct comparisons to Western lifestyles · Pork or alcohol references · Politically sensitive topics · Anything implying the child's family is poor or struggling · Overly industrial/urban contexts that rural students can't relate to · Dangerous machinery descriptions without explicit safety framing</li>
+</ul>
+<hr />
+<h2 id="12-assessment-scoring-escalation">§12. Assessment, Scoring &amp; Escalation</h2>
+<h3>12.1 Pass Threshold</h3>
+<ul>
+<li><strong>60% minimum</strong> to pass session (G5 override)</li>
+<li>Below 60% → <strong>Duolingo Mode</strong> triggers automatically</li>
+<li><strong>Safety questions: ZERO tolerance</strong> — wrong safety answer = immediate scaffold + re-ask, regardless of overall score</li>
+</ul>
+<h3>12.2 Score → Reward Mapping</h3>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Rating (Uzbek)</th>
+<th>Reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100%</td>
+<td><em>Mukammal!</em></td>
+<td>Confetti, max XP, title: <em>"Usta"</em> (Master craftsperson) — effort-framed</td>
+</tr>
+<tr>
+<td>90–99%</td>
+<td><em>A'lo!</em></td>
+<td>Full XP + streak fire animation</td>
+</tr>
+<tr>
+<td>80–89%</td>
+<td><em>Juda yaxshi!</em></td>
+<td>First-time-80%+ bonus XP</td>
+</tr>
+<tr>
+<td>60–79%</td>
+<td><em>O'tdi!</em></td>
+<td>Standard XP, repass offered (max 2 attempts)</td>
+</tr>
+<tr>
+<td>&lt;60%</td>
+<td><em>Hali emas</em> (never "Failed")</td>
+<td>Duolingo Mode, 0 XP this attempt</td>
+</tr>
+</tbody>
+</table>
+<h3>12.3 Duolingo Mode (&lt;60% Pass)</h3>
+<ol>
+<li>Identify wrong questions</li>
+<li>Re-present with additional scaffolding (worked example + hint exposed)</li>
+<li>Reduce difficulty by 1 tier</li>
+<li>Repeat until 60% achieved</li>
+<li><strong>Auto-flag teacher dashboard after 3 consecutive failed sessions on the same standard</strong></li>
+</ol>
+<h3>12.4 Answer Checking (Dual Pathway)</h3>
+<table>
+<thead>
+<tr>
+<th>Task type</th>
+<th>Method</th>
+<th>Latency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MC, Tile Match, Sentence Fill, ordering, binary</td>
+<td>Tier 1 rule-based exact match</td>
+<td>&lt;100 ms</td>
+</tr>
+<tr>
+<td>Open reasoning (RLC, Boss, Reflection)</td>
+<td>Tier 3 AI semantic evaluation</td>
+<td>≤5 sec, human fallback if &gt;10 sec</td>
+</tr>
+<tr>
+<td>Notebook Capture (sketches, diagrams)</td>
+<td>Tier 3 vision rubric scoring</td>
+<td>≤10 sec, human fallback</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13-ai-tier-strategy">§13. AI Tier Strategy (Cost-Aware)</h2>
+<p>Inherits UNIFIED §13 budget targets ($3–5/student/year).</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Tier</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session 0-A Theme Preview</td>
+<td>T2</td>
+<td>Personalized framing per student profile + track</td>
+</tr>
+<tr>
+<td>Session 0-B Flash Cards</td>
+<td>T1</td>
+<td>Pre-generated per chapter</td>
+</tr>
+<tr>
+<td>Memory Sprint</td>
+<td>T1</td>
+<td>Pre-generated MC/Tile Match items</td>
+</tr>
+<tr>
+<td>Story Mode</td>
+<td>T1</td>
+<td>Static maker narratives + scripted gates</td>
+</tr>
+<tr>
+<td>Game Breaks</td>
+<td>T1</td>
+<td>Pre-generated game pools per chapter</td>
+</tr>
+<tr>
+<td>Real-Life Challenge</td>
+<td>T2</td>
+<td>Multi-path reasoning evaluation, adaptive prompts</td>
+</tr>
+<tr>
+<td>Consolidation</td>
+<td>T1 + T2</td>
+<td>Standard pool + flow-state adjustment</td>
+</tr>
+<tr>
+<td>Final Boss</td>
+<td>T2 normally; <strong>T3 generative on failure only</strong></td>
+<td>Socratic re-teach + question regeneration</td>
+</tr>
+<tr>
+<td>Reflection</td>
+<td>T2</td>
+<td>One AI-tailored prompt per session</td>
+</tr>
+<tr>
+<td>Notebook Capture</td>
+<td>T3 vision</td>
+<td>Rubric-driven scoring</td>
+</tr>
+<tr>
+<td>Did You Know facts</td>
+<td>T2</td>
+<td>Curated/generated theme-aware insights</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cost note — Notebook Capture budget impact:</strong> At 1-in-2 sessions × ~45 sessions/year = ~22 Tier 3 vision calls per student/year. At ~$0.02 per vision call, this adds <strong>~$0.44/student/year</strong> for vision specifically. Combined with other Tier 2/3 phases, full per-student annual Texnologiya cost projects to <strong>~$1.80–2.40</strong>, comfortably within the universal $3–5 envelope. Re-validate if vision pricing changes or Notebook frequency increases.</p>
+<hr />
+<h2 id="14-teacher-overrides">§14. Teacher Overrides</h2>
+<h3>14.1 Allowed</h3>
+<ul>
+<li>Session mode (Standard 35–45 / Extended 45–60)</li>
+<li>Track assignment (Technology &amp; Design OR Service)</li>
+<li>Boss HP modifier 50–150%</li>
+<li>Difficulty floor (student PISA ±1)</li>
+<li>Game pool selection (Auto / Manual)</li>
+<li>RLC required/optional (default: required for Texnologiya)</li>
+<li>Notebook Capture frequency</li>
+</ul>
+<h3>14.2 Cannot Override</h3>
+<ul>
+<li>7-phase structure · Sessions 0-A and 0-B (always present) · Boss is mandatory · Stranger Test on Story Mode · <code>transition_skill</code> tag requirement · 60% pass threshold · Banned mechanics list (§4.3) · Cultural framing (Uzbek language, anchors) · Safety question double-weight scoring · Track-aware content delivery</li>
+</ul>
+<hr />
+<h2 id="15-tagging-schema">§15. Tagging Schema (per UNIFIED §16)</h2>
+<pre><code class="language-json">{
+  "task_id": "UZ-TEX-5-WOOD-03-T07",
+  "textbook_ref": {
+    "book": "Texnologiya 5-sinf (Tohirov, Mirahmedova, Shamsiyeva, 2020)",
+    "chapter": 2,
+    "section": "2.1",
+    "pages": [30, 31],
+    "track": "tech_design"
+  },
+  "standard_ref": {
+    "primary": "UZ-TEX-5-WOOD-03",
+    "alias": "TEX.5.2.1.3"
+  },
+  "pisa_ref": {
+    "domain": "Science",
+    "sub_domain": "Physical systems — materials and tools",
+    "level_target": 2,
+    "transition_skill": "L1→L2: identify tools and explain their purpose",
+    "technical_reasoning_level": 2
+  },
+  "blooms_level": "Understand",
+  "game_mechanic": "tile_match",
+  "phase": "game_break",
+  "prompt_uz": "Quyidagi asboblarni mos vazifalariga moslashtiring: arra — kesish, iskana — silliqlash, rubanok — tekislash.",
+  "expected_uz": "Arra → Yog'ochni kesish, Iskana → Teshik ochish/yoyish, Rubanok → Yog'och sirtini tekislash.",
+  "evaluation_tier": 1,
+  "estimated_time_sec": 45,
+  "is_safety_critical": false
+}</code></pre>
+<hr />
+<h2 id="16-content-production-checklist">§16. Content Production Checklist</h2>
+<p>For each of the ~21–24 sessions (per track), content team must produce:</p>
+<ul>
+<li>☐ Theme Preview 8-panel deck (Tier 2 prompt + assets) — Lexile 830–1010L, second-person Uzbek, track-specific</li>
+<li>☐ Flash Card pool: 5–7 cards (Concept/Rule/Definition; visual mandatory — tool photos, material samples)</li>
+<li>☐ 30–50 Memory Sprint items (mixed Tile Match/MC/Sentence Fill, spaced retrieval, safety items prioritized)</li>
+<li>☐ 1 Story Mode arc (3 segments × 90 sec) with maker/craftsperson narrative + 2 checkpoint sets, Stranger Test passed</li>
+<li>☐ 6–9 Game Break activities across 3+ mechanics per slot rules</li>
+<li>☐ 1 Real-Life Challenge case (first-person expert + Uzbek context + safety judgment + inquiry hook)</li>
+<li>☐ 1 labeled diagram (default Phase 5) OR Memory Palace (workshop/kitchen walkthrough alternative)</li>
+<li>☐ 1 Sub Boss Easy + 1 Sub Boss Medium + 1 Sub Boss Hard question pool — each with worked solution + hints + Common Errors</li>
+<li>☐ 1 Big Boss pool (cross-session, 3 weakest standards)</li>
+<li>☐ Reflection prompt bank (3 accuracy buckets + 3 universal)</li>
+<li>☐ 3 Did You Know facts (theme-aware, age-appropriate, craft/tech-themed)</li>
+<li>☐ All items dual-coded (<code>UZ-TEX-5-...</code> + alias)</li>
+<li>☐ All items carry <code>transition_skill</code> from §3 list</li>
+<li>☐ All items tagged with correct <code>track:tech_design</code> or <code>track:service</code></li>
+<li>☐ Notebook Capture task (1 in every 2 sessions)</li>
+<li>☐ Safety questions identified and marked <code>is_safety_critical: true</code></li>
+</ul>
+<p><strong>Total estimated content per session:</strong> ~80–120 task units. <strong>Total for Grade 5 Texnologiya (~45 sessions across both tracks):</strong> ~3,600–5,400 task units.</p>
+<hr />
+<h2 id="17-sample-chapter-walkthrough">§17. Sample Chapter Walkthrough — Bob 2.1 "Yog'ochga Ishlov Berish" (Woodworking)</h2>
+<h3>17.1 Session Metadata</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bob</td>
+<td>2.1: Yog'ochga ishlov berish (Woodworking)</td>
+</tr>
+<tr>
+<td>Section</td>
+<td>Asboblar va ularning vazifalari (Tools and their purposes)</td>
+</tr>
+<tr>
+<td>Textbook pages</td>
+<td>24–30</td>
+</tr>
+<tr>
+<td>Track</td>
+<td>Technology &amp; Design</td>
+</tr>
+<tr>
+<td>Standard ref</td>
+<td><code>UZ-TEX-5-WOOD-02</code> / <code>TEX.5.2.1.2</code></td>
+</tr>
+<tr>
+<td>PISA target</td>
+<td>Science L2, TR-L2</td>
+</tr>
+<tr>
+<td>Bloom's coverage</td>
+<td>Understand, Apply (with light Remember warm-up in P1)</td>
+</tr>
+<tr>
+<td>Transition skill</td>
+<td><code>L1→L2: identify tools and explain their purpose</code></td>
+</tr>
+<tr>
+<td>Total session time</td>
+<td>38 min (incl. 0-A + 0-B)</td>
+</tr>
+</tbody>
+</table>
+<h3>17.2 Pre-Homework</h3>
+<p><strong>Theme Preview (8 panels, ~3 min, student-paced):</strong></p>
+<ol>
+<li><strong>Summary</strong> — <em>"Yog'ochga ishlov berish uchun turli asboblar kerak. Har bir asbobning o'z vazifasi bor: kesish, silliqlash, tekislash, teshik ochish."</em></li>
+<li><strong>Better Explanation</strong> — <em>"Asbob — bu sening qo'lingni kuchliroq qiladigan narsa. Qo'ling bilan yog'ochni sindira olmaysan, lekin arra bilan kesishing mumkin."</em></li>
+<li><strong>Examples</strong> — Photo of arrа (saw) cutting wood, rubanok (plane) smoothing a board, iskana (chisel) carving a detail</li>
+<li><strong>Real-Life Research</strong> — <em>"Xiva va Buxoroda yog'och o'ymakorligi ming yillik an'ana. Ustalar avlodan-avlodga asbob ishlatish sirini o'tkazib kelishgan."</em></li>
+<li><strong>Personal Hook</strong> (Track 1 paternal anchor — Track 2 would use maternal: <em>"Sen onangiz yoki buvingiz osh pishirayotganda yoki kashta tikayotganda kuzatganmisan?"</em>) — <em>"Sen hech qachon bobongiz yoki dadangiz biror narsa yasaganini ko'rganmisan?"</em></li>
+<li><strong>Why This Matters</strong> — <em>"Asboblarni to'g'ri tanlash va xavfsiz ishlatish — hayotingda kerak bo'ladigan ko'nikma."</em></li>
+<li><strong>Industry Application</strong> — <em>"Duradgorlar uy, mebel, eshik yasaydi. Me'morlar bino loyihalashtiradi."</em></li>
+<li><strong>Additional Materials</strong> — Video of a Khiva woodcarver at work; 360° photo of a school workshop</li>
+</ol>
+<p><strong>Flash Cards (~2 min, 6 cards):</strong></p>
+<table>
+<thead><tr><th>#</th><th>Front</th><th>Back</th><th>standard_ref</th><th>TR</th><th>transition_skill</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>🔪 <strong>Arra</strong> (saw)</td><td>Yog'ochni kesish uchun ishlatiladi. Tishlari yog'ochni mayda qilib kesadi.</td><td><code>UZ-TEX-5-WOOD-02-FC1</code></td><td>TR-L1</td><td>identify tools and explain their purpose</td></tr>
+<tr><td>2</td><td>🔨 <strong>Rubanok</strong> (plane)</td><td>Yog'och sirtini tekislash uchun. Pichoq ingichka qatlamni oladi.</td><td><code>UZ-TEX-5-WOOD-02-FC2</code></td><td>TR-L1</td><td>identify tools and explain their purpose</td></tr>
+<tr><td>3</td><td>🔧 <strong>Iskana</strong> (chisel)</td><td>Yog'ochda o'yma naqsh va teshiklar qilish uchun.</td><td><code>UZ-TEX-5-WOOD-02-FC3</code></td><td>TR-L1</td><td>identify tools and explain their purpose</td></tr>
+<tr><td>4</td><td>📏 <strong>Chizg'ich va qalam</strong></td><td>O'lchash va belgilash — har qanday ishning birinchi qadami.</td><td><code>UZ-TEX-5-WOOD-02-FC4</code></td><td>TR-L1</td><td>identify tools and explain their purpose</td></tr>
+<tr><td>5</td><td>⚠️ <strong>Xavfsizlik ko'zoynagi</strong></td><td>Ko'zni yog'och chipalaridan himoya qiladi. Har doim taqish shart!</td><td><code>UZ-TEX-5-WOOD-02-FC5</code></td><td>TR-L1 <strong>(safety: true)</strong></td><td>recognize safety rules and explain why they matter</td></tr>
+<tr><td>6</td><td>🪑 <strong>Duradgorlik dastgohi</strong></td><td>Yog'ochni mahkamlash uchun ish stoli. Ish paytida yog'och siljimasligi kerak.</td><td><code>UZ-TEX-5-WOOD-02-FC6</code></td><td>TR-L1</td><td>identify tools and explain their purpose</td></tr>
+</tbody>
+</table>
+<p>→ <strong>Boshlash</strong> button → timer starts.</p>
+<h3>17.3 The 7-Phase Session</h3>
+<p><strong>Phase 1 — Memory Sprint (2 min, 6 items):</strong> Tile Match (tool photo ↔ tool name) + MC (safety rules). Pulls 2 items from Bob 1 (modern technology types — interleaving).</p>
+<p><strong>Phase 2 — Story Mode (6 min, 3 × 90 sec segments interleaved with games):</strong></p>
+<ul>
+<li><strong>Segment 1 — Problem (90 sec):</strong> <em>"Sardor maktabning duradgorlik ustaxonasiga birinchi marta kirdi. Devorda turli asboblar osilgan edi. Ustozi dedi: 'Bugun sen oddiy taxta yasaysan. Lekin avval asboblarni tanib olishing kerak.' Sardor hayron bo'lib qoldi — arrami, rubanokmi, iskanami — qaysi birini birinchi olish kerak?"</em>
+Checkpoint: <em>"Sardor yog'ochni kesish uchun qaysi asbobni olishi kerak? Nima uchun?"</em></li>
+<li><strong>Game 1 — Tile Match (2 min):</strong> Match 6 tool photos to their names and purposes.</li>
+<li><strong>Segment 2 — Struggle/Discovery (90 sec):</strong> Sardor arrani oldi, lekin noto'g'ri ushladi. Ustozi tushuntirdi: <em>"Arrani ikki qo'l bilan ushla. Bir qo'l dastasida, ikkinchi qo'l ustida. Sekin va tekis sur. Shoshilma — uch marta o'lcha, bir marta kes."</em>
+Checkpoint: <em>"Nima uchun 'uch marta o'lcha, bir marta kes' deyishadi?"</em></li>
+<li><strong>Game 2 — Why Chain (2 min, 2 levels max):</strong> Why measure first → what happens if you don't → why accuracy matters</li>
+<li><strong>Segment 3 — Solution (90 sec):</strong> Sardor to'g'ri o'lchadi, to'g'ri belgiladi, to'g'ri kesdi. Taxtasi tekis va chiroyli chiqdi. Ustozi maqtadi: <em>"Yaxshi duradgor shunday boshlanadi."</em>
+Checkpoint: <em>"Sardorning birinchi taxtasi nima uchun muvaffaqiyatli chiqdi?"</em></li>
+</ul>
+<p><strong>Phase 3 — Game Break finale + Notebook Capture (5 min):</strong> Notebook task — <em>"Daftaringga 4 ta asbobni chiz: arra, rubanok, iskana, chizg'ich. Har birining yoniga qisqa vazifasini yoz."</em> AI vision evaluates labels for conceptual correctness; stick figures fully accepted.</p>
+<p><strong>Phase 4 — Real-Life Challenge (4 min):</strong> <em>"Sen uyda kichik rafka yasamoqchisan. Devorda: arra, bolt, mix, mix qoqadigan bolg'a, chizg'ich, qalam, rubanok, va mixlanadigan taxta bor. Rakfani yasash uchun qaysi 5 ta narsani sanab ber va qanday tartibda ishlatasan?"</em> with safety checkpoint: <em>"Ishni boshlashdan OLDIN nima qilishing kerak?"</em> Justification required; AI evaluates reasoning.</p>
+<p><strong>Phase 5 — Consolidation (3 min):</strong> <strong>Labeled diagram recall</strong> — show workshop tool board from textbook with labels removed; student drags 6 tool names back into place.</p>
+<p><strong>Phase 6 — Sub Boss Medium (7 min, 50 HP, 5 questions):</strong></p>
+<p>Each question carries: <code>standard_ref</code>, <code>pisa_level</code>, <code>tr_level</code>, <code>transition_skill</code>, <code>is_safety_critical</code>.</p>
+<table>
+<thead><tr><th>#</th><th>Question</th><th>Type</th><th>Diff</th><th>Dmg</th><th>Tags</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><em>"Arra qaysi materialni kesish uchun ishlatiladi?"</em></td><td>MC</td><td>easy</td><td>−10</td><td><code>WOOD-02-B1</code> · Science L1 · TR-L1 · <em>identify tools/materials</em> · safety: false</td></tr>
+<tr><td>2</td><td><em>"Yog'ochdan buyum yasash tartibini to'g'ri joylashtir: o'lchash → belgilash → kesish → silliqlash → yig'ish."</em></td><td>Ordering</td><td>med</td><td>−15</td><td><code>WOOD-02-B2</code> · Science L2 · TR-L2 · <em>sequence steps in a making process</em> · safety: false</td></tr>
+<tr><td>3</td><td><em>"Duradgorlik ustaxonasida ishlashdan OLDIN qaysi xavfsizlik qoidalarini bajarish SHART? 3 tasini yoz."</em></td><td>Open reasoning</td><td>med</td><td>−15</td><td><code>WOOD-02-B3</code> · Science L2 · TR-L2 · <em>recognize safety rules</em> · <strong>safety: true (2× weight, zero tolerance)</strong></td></tr>
+<tr><td>4</td><td><em>"Nima uchun rubanok yog'och sirtini tekislaydi? Arradan farqi nima?"</em></td><td>Open + compare</td><td>med</td><td>−5</td><td><code>WOOD-02-B4</code> · Science L2 · TR-L2 · <em>select appropriate tools for a task</em> · safety: false</td></tr>
+<tr><td>5</td><td><em>"Agar senda rubanok bo'lmasa, yog'och sirtini qanday tekislashing mumkin? Bitta alternativa taklif qil va sababini tushuntir."</em></td><td>Open + creative</td><td>hard</td><td>−5</td><td><code>WOOD-02-B5</code> · Creative Thinking + Science L2 · TR-L3 · <em>design a solution using available materials</em> · safety: false</td></tr>
+</tbody>
+</table>
+<p>Each Q has worked solution + 2-3 hints + Common Errors. Combo bonus 3-in-row → 2× next damage. Hint tax −5 HP. Max 3 attempts with growth-mindset framing.</p>
+<p><strong>Phase 7 — Reflection (2 min):</strong> Tier 2 generates 1 prompt by accuracy bucket. Min 1 sentence. Effort-praise framing only.</p>
+<p><strong>Did You Know facts at phase transitions:</strong></p>
+<ol>
+<li><em>"Did you know? The word 'duradgor' comes from Persian — 'dura' means tree, 'gar' means worker. A tree-worker!"</em></li>
+<li><em>"Did you know? A sharp saw cuts BETTER than a dull one — and is actually SAFER because you don't have to push as hard."</em></li>
+<li><em>"Did you know? Khiva's woodcarvers can make patterns so detailed that a single door takes 3 months to carve."</em></li>
+</ol>
+<hr />
+<h2 id="18-open-questions">§18. Open Questions / Things to Validate Before Production</h2>
+<ol>
+<li><strong>Two-track assignment operational logic</strong> — §0 #1 says "teacher assigns track per student"; the <em>implementation</em> (teacher dashboard UX, school-wide default, mid-year switch handling) needs engineering spec.</li>
+<li><strong>Notebook Capture 1-in-2 frequency</strong> — verify with teachers given practical nature of subject; engineering needs to confirm Tier 3 vision throughput at scale.</li>
+<li><strong>Did You Know fact pool</strong> — needs Uzbek-language curation for crafts, tools, makers (~60–80 facts).</li>
+<li><strong>Uzbek craftsperson content accuracy</strong> — verify Khiva woodcarvers, Margilan weavers, Shakhrisabz embroiderers material with cultural reviewer.</li>
+<li><strong>Boss questions for embroidery/crafts</strong> — how to assess "quality" of a stitch pattern digitally? AI vision rubric needed for Service track Notebook Capture grading.</li>
+<li><strong>Adaptive scaffolded fallback for below-L2 students</strong> — needs explicit specification (mirrors Science G5 §18 #7 — likely a shared fix across all G5 frameworks).</li>
+<li><strong>Bob 3 (Energy) combined track delivery</strong> — §2 chapter map declares it combined; confirm with curriculum specialist that BOTH tracks really cover Bob 3 in equal depth.</li>
+<li><strong>"Duradgor" etymology fact</strong> — verify Persian roots before shipping the §17.4 Did You Know (or replace with verified alternative).</li>
+<li><strong>Track 2 PISA primary = Creative Thinking</strong> (per §3 update) — confirm with PISA framework specialist that Service-track tagging is defensible against PISA 2022 Creative Thinking rubric.</li>
+<li><strong>Mythical Boss HP cap</strong> — UNIFIED §5.6 sets 80–100 HP for Mythical tier; confirm §6.6 row for L3+ top decile aligns and isn't double-counting.</li>
+</ol>
+<hr />
+<h2 id="19-production-handoff">§19. Production Handoff</h2>
+<p><strong>What every produced session must do:</strong></p>
+<ol>
+<li>Match the <strong>shape</strong> of §17 (Theme Preview → Flash Cards → 7 Phases → Post-session)</li>
+<li>Apply <strong>all</strong> parameters from §4 (timing, difficulty, formats)</li>
+<li>Use <strong>Uzbek language only</strong> for student-facing text</li>
+<li>Include <strong>at least one Notebook Capture task</strong> in every 2nd session</li>
+<li>Include <strong>at least one Did You Know fact</strong> per phase transition</li>
+<li>Use <strong>first-person Expert POV</strong> for every Real-Life Challenge</li>
+<li>Use <strong>real Uzbek craftspeople / makers / contexts</strong> wherever possible</li>
+<li>Include <strong>at least one safety question</strong> in every Boss fight</li>
+<li>Tag every item with <code>standard_ref</code>, <code>pisa_level</code>, <code>transition_skill</code>, <code>blooms_level</code>, <code>track</code> per §15</li>
+<li>Mark safety-critical items with <code>is_safety_critical: true</code></li>
+<li>Generate boss questions to hit the <strong>75–85% expected success rate</strong></li>
+<li>Validate against §18 Open Questions before deploying</li>
+</ol>
+<hr />
+<h2 id="20-versioning-and-review">§20. Versioning and Review</h2>
+<ul>
+<li><strong>v3.1 (2026-04-08, post-audit)</strong> — Claude audit pass against Universal Specs. 8 fixes:
+<ul>
+<li><strong>§0</strong> added decision #18 (Personal Hook track-matching)</li>
+<li><strong>§3</strong> rewritten with track-aware triple-tagging (Track 1 = Science primary, Track 2 = Creative Thinking primary, Science conditional only for genuinely scientific content)</li>
+<li><strong>§5.1</strong> Personal Hook now mandatorily track-aware (Track 1 = paternal anchor, Track 2 = maternal anchor)</li>
+<li><strong>§13</strong> added Tier 3 vision cost projection (~$0.44/student/year for Notebook Capture, total ~$1.80–2.40/student/year)</li>
+<li><strong>§17.1</strong> Bloom's claim corrected from 4 levels to 2 (Understand, Apply with light Remember warm-up)</li>
+<li><strong>§17.2</strong> Flash Cards now carry per-item <code>standard_ref</code> + TR level + transition_skill columns</li>
+<li><strong>§17.3</strong> Boss questions now carry per-item tags including <code>is_safety_critical</code> flag</li>
+<li><strong>§18</strong> removed items #2 and #7 (already resolved in §0 #14 and #17 respectively); softened duradgor etymology to verify-before-shipping; added Mythical HP cap verification</li>
+</ul></li>
+<li><strong>v3.0 (2026-04-08)</strong> — first Texnologiya framework (Qwen). Built from scratch using Science Merged Framework as template. 20 sections.</li>
+<li><strong>Textbook source:</strong> Texnologiya 5-sinf, Tohirov/Mirahmedova/Shamsiyeva, "Sharq" NMK, 2020, 240pp, ISBN 978-9943-5997-4-1.</li>
+<li><strong>Reviewers needed:</strong> product/pedagogy lead, 1+ Uzbek Texnologiya teacher (both tracks), content team lead, safety officer.</li>
+<li><strong>Next revision trigger:</strong> after 5+ chapters of Grade 5 Texnologiya homework are produced and stress-tested with real students.</li>
+<li><strong>Sibling adaptations to be created later, same template:</strong>
+<ul>
+<li><code>grades/5/uz/tech_design/</code> (Track 1 standalone)</li>
+<li><code>grades/5/uz/service/</code> (Track 2 standalone)</li>
+<li><code>grades/6-11/uz/technologiya/</code> (older grades, subject splits)</li>
+<li>Russian-language siblings under <code>grades/5/ru/</code></li>
+</ul></li>
+</ul>
+<hr />
+<p><strong>End of framework.</strong> Single source of truth for Grade 5 uz Texnologiya homework production going forward.</p>
+  </div>
+  <div class="footer">
+    NETS Homework Framework v3.1 (audited) · Grade 5 Uzbek · Texnologiya · Ministry of Education, Republic of Uzbekistan
+  </div>
+</div>
+</body>
+</html>

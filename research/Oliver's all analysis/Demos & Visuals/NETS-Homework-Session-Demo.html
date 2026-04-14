@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS — Uy vazifasi sessiyasi: Yozuv tarixi</title>
+<style>
+:root {
+  --bg:#0a0c10;--bg2:#0f1318;--bg3:#151a22;--bg4:#1a2030;
+  --ink:#1e2530;--ink2:#2a3340;--ink3:#354050;
+  --hi:#e8edf5;--mid:#8b95a8;--lo:#4a5568;
+  --amber:#f59e0b;--blue:#3b82f6;--green:#10b981;--purple:#8b5cf6;
+  --red:#ef4444;--cyan:#06b6d4;--orange:#f97316;--pink:#ec4899;
+  --mono:'JetBrains Mono','Fira Code','Courier New',monospace;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  --r:8px;--rs:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--hi);font-family:var(--sans);font-size:14px;line-height:1.65;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+
+/* TOP BAR */
+.top{width:100%;background:var(--bg2);border-bottom:1px solid var(--ink);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.top-left{display:flex;align-items:center;gap:16px}
+.logo{font-family:var(--mono);font-size:18px;font-weight:800;color:var(--amber);letter-spacing:.12em}
+.top-sep{color:var(--ink2)}
+.top-subj{font-size:13px;color:var(--mid)}
+.top-right{display:flex;align-items:center;gap:12px}
+.xp-badge{font-family:var(--mono);font-size:12px;color:var(--amber);background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);border-radius:2px;padding:4px 10px}
+.user-name{font-size:12px;color:var(--mid)}
+.avatar{width:28px;height:28px;border-radius:50%;background:var(--ink2);display:flex;align-items:center;justify-content:center;font-size:13px}
+
+/* FLOW BAR */
+.flow-ind{font-family:var(--mono);font-size:10px;padding:4px 10px;border-radius:2px;font-weight:600;letter-spacing:.05em}
+.fl-green{color:var(--green);background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25)}
+.fl-yellow{color:var(--amber);background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25)}
+.fl-red{color:var(--red);background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25)}
+
+/* PHASE BAR */
+.pbar{width:100%;background:var(--bg2);border-bottom:1px solid var(--ink);padding:10px 24px;display:flex;align-items:center;gap:4px}
+.pip{flex:1;height:6px;background:var(--ink);border-radius:3px;position:relative;cursor:default;transition:.3s}
+.pip.active{background:var(--amber);box-shadow:0 0 8px rgba(245,158,11,.3)}
+.pip.done{background:var(--green)}
+.pip-label{position:absolute;top:10px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--lo);white-space:nowrap;font-family:var(--mono)}
+
+/* MAIN */
+.main{width:100%;max-width:800px;padding:32px 24px 80px;flex:1}
+.screen{display:none;animation:fadeUp .4s ease}
+.screen.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* PHASE HEADER */
+.ph{margin-bottom:24px}
+.ph-tag{font-family:var(--mono);font-size:10px;color:var(--amber);background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);border-radius:2px;padding:2px 8px;letter-spacing:.08em;display:inline-block;margin-bottom:8px}
+.ph h2{font-size:22px;font-weight:700;margin-bottom:4px}
+.ph-sub{font-size:12px;color:var(--lo)}
+
+/* CARD */
+.card{background:var(--bg3);border:1px solid var(--ink);border-radius:var(--r);padding:20px;margin-bottom:16px;transition:border-color .2s}
+
+/* BTN */
+.btn{padding:10px 24px;border-radius:var(--rs);font-size:13px;font-weight:600;cursor:pointer;border:1px solid;transition:.15s;font-family:var(--sans);display:inline-block}
+.btn-p{color:var(--bg);background:var(--amber);border-color:var(--amber)}
+.btn-p:hover{filter:brightness(1.1)}
+.btn-s{color:var(--mid);background:transparent;border-color:var(--ink2)}
+.btn-s:hover{color:var(--hi);border-color:var(--ink3)}
+.btn-g{color:var(--bg);background:var(--green);border-color:var(--green)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* OPTION */
+.opt{display:block;width:100%;text-align:left;padding:12px 16px;background:var(--bg3);border:1px solid var(--ink2);border-radius:var(--rs);color:var(--hi);font-size:13px;cursor:pointer;transition:.15s;margin-bottom:8px;font-family:var(--sans)}
+.opt:hover:not(:disabled){border-color:var(--ink3);background:var(--bg4)}
+.opt.correct{border-color:var(--green);color:var(--green);background:rgba(16,185,129,.08)}
+.opt.wrong{border-color:var(--red);color:var(--red);background:rgba(239,68,68,.08)}
+.opt:disabled{cursor:default}
+
+/* TEXT INPUT */
+.text-input{width:100%;padding:12px 16px;background:var(--bg4);border:1px solid var(--ink2);border-radius:var(--rs);color:var(--hi);font-size:14px;font-family:var(--sans);line-height:1.6;transition:border-color .2s}
+.text-input:focus{outline:none;border-color:var(--amber)}
+.text-input::placeholder{color:var(--lo)}
+.text-input.short{max-width:400px}
+
+/* TIMER */
+.timer{font-family:var(--mono);font-size:20px;color:var(--amber);text-align:center}
+
+/* HP BAR */
+.hp-wrap{margin:16px 0}
+.hp-lbl{font-family:var(--mono);font-size:12px;color:var(--red);margin-bottom:4px}
+.hp-bar{height:18px;background:var(--ink);border-radius:9px;overflow:hidden;position:relative}
+.hp-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--orange));border-radius:9px;transition:width .5s}
+.hp-txt{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10px;color:var(--hi);font-weight:700}
+
+/* COMBO */
+.combo{font-family:var(--mono);font-size:11px;color:var(--purple);text-align:center;margin-top:4px;min-height:16px}
+
+/* TAG */
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;padding:2px 8px;border-radius:2px;margin:2px;letter-spacing:.03em}
+
+/* TILE MATCH */
+.tile-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.tile{aspect-ratio:1;background:var(--bg4);border:2px solid var(--ink2);border-radius:var(--r);display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;padding:8px;cursor:pointer;transition:.2s;user-select:none}
+.tile.flipped{background:var(--bg3);border-color:var(--amber);color:var(--amber)}
+.tile.matched{background:rgba(16,185,129,.1);border-color:var(--green);color:var(--green);cursor:default}
+.tile.shake{animation:shake .3s}
+.tile .tile-back{color:var(--lo);font-size:20px}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+
+/* SENTENCE FILL */
+.sf-text{font-size:14px;line-height:2;color:var(--mid)}
+.sf-blank{display:inline-block;min-width:120px;border-bottom:2px solid var(--amber);padding:2px 4px;color:var(--amber);font-weight:600;cursor:pointer;transition:.2s}
+.sf-blank.filled{border-color:var(--green);color:var(--green)}
+.sf-blank.wrong-fill{border-color:var(--red);color:var(--red)}
+.sf-bank{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.sf-word{padding:6px 14px;background:var(--bg4);border:1px solid var(--ink2);border-radius:var(--rs);font-size:12px;cursor:pointer;transition:.15s;color:var(--mid)}
+.sf-word:hover{border-color:var(--amber);color:var(--amber)}
+.sf-word.used{opacity:.3;cursor:default;pointer-events:none}
+
+/* MEMORY PALACE */
+.palace{position:relative;background:var(--bg3);border:1px solid var(--ink);border-radius:var(--r);padding:24px;min-height:300px;margin:16px 0}
+.palace-spot{position:absolute;width:80px;height:80px;border:2px dashed var(--ink2);border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:10px;color:var(--lo);cursor:pointer;transition:.2s}
+.palace-spot.placed{border-color:var(--amber);border-style:solid;color:var(--amber);background:rgba(245,158,11,.05)}
+.palace-spot.correct-spot{border-color:var(--green);color:var(--green);background:rgba(16,185,129,.05)}
+.palace-concept{padding:8px 14px;background:var(--bg4);border:1px solid var(--ink2);border-radius:var(--rs);font-size:11px;cursor:grab;display:inline-block;margin:4px;transition:.15s;color:var(--mid)}
+.palace-concept:hover{border-color:var(--amber);color:var(--amber)}
+.palace-concept.placed-c{opacity:.3;pointer-events:none}
+
+/* REFLECTION */
+.ref-textarea{width:100%;min-height:120px;background:var(--bg3);border:1px solid var(--ink2);border-radius:var(--r);padding:16px;color:var(--hi);font-family:var(--sans);font-size:14px;resize:vertical;line-height:1.6}
+.ref-textarea:focus{outline:none;border-color:var(--amber)}
+.char-count{font-family:var(--mono);font-size:11px;color:var(--lo);text-align:right;margin-top:4px}
+
+/* RESULT CARD */
+.result-big{text-align:center;padding:32px}
+.result-big .stars{font-size:48px;margin:12px 0}
+.result-big .score{font-family:var(--mono);font-size:36px;color:var(--amber);font-weight:700}
+
+/* PROGRESS */
+.prog-row{display:flex;align-items:center;gap:12px;margin:6px 0}
+.prog-lbl{font-size:12px;color:var(--mid);width:140px;flex-shrink:0}
+.prog-bar{flex:1;height:8px;background:var(--ink);border-radius:4px;overflow:hidden;max-width:400px}
+.prog-fill{height:100%;border-radius:4px;transition:width .6s ease}
+.prog-val{font-family:var(--mono);font-size:11px;color:var(--mid);width:50px;text-align:right}
+
+/* PARENT CARD */
+.parent-card{background:var(--bg3);border:1px solid rgba(16,185,129,.25);border-radius:var(--r);padding:24px;margin-top:20px}
+.parent-card h3{font-size:14px;color:var(--green);margin-bottom:12px}
+.parent-card p{font-size:13px;color:var(--mid);line-height:1.8}
+
+/* WHY CHAIN */
+.wc-msg{padding:12px 16px;border-radius:var(--r);margin-bottom:10px;max-width:85%;font-size:13px;line-height:1.6}
+.wc-sys{background:var(--bg4);border:1px solid var(--ink);margin-right:auto;color:var(--mid)}
+.wc-user{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);margin-left:auto;color:var(--amber)}
+
+/* FEEDBACK */
+.fb{padding:12px 16px;border-radius:var(--rs);margin:12px 0;font-size:13px}
+.fb-ok{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);color:var(--green)}
+.fb-err{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);color:var(--red)}
+.fb-info{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);color:var(--blue)}
+
+/* META */
+.meta{font-family:var(--mono);font-size:10px;color:var(--lo);margin-top:8px}
+.meta span{margin-right:12px}
+
+/* STORY */
+.story-seg{background:var(--bg3);border:1px solid var(--ink);border-radius:var(--r);padding:20px;margin-bottom:16px}
+.story-seg h3{font-size:15px;font-weight:600;margin-bottom:10px;color:var(--hi)}
+.story-seg p{font-size:13px;color:var(--mid);line-height:1.8;margin-bottom:10px}
+.story-ref{font-family:var(--mono);font-size:10px;color:var(--lo);border-top:1px solid var(--ink);padding-top:8px;margin-top:12px}
+.checkpoint{background:var(--bg4);border:1px solid var(--ink2);border-radius:var(--rs);padding:16px;margin-top:16px}
+.checkpoint-q{font-size:14px;font-weight:600;margin-bottom:12px}
+
+/* SOCRATIC */
+.socratic-area{background:var(--bg4);border:1px solid rgba(139,92,246,.25);border-radius:var(--r);padding:20px;margin:16px 0}
+.socratic-area h4{font-size:13px;color:var(--purple);margin-bottom:12px}
+.socratic-chat{max-height:300px;overflow-y:auto;margin-bottom:12px}
+.socratic-chat .wc-msg{margin-bottom:8px}
+
+/* REMEDIATION */
+.remediation-card{background:var(--bg3);border:1px solid rgba(239,68,68,.25);border-radius:var(--r);padding:24px;margin:16px 0}
+.remediation-card h4{font-size:14px;color:var(--red);margin-bottom:8px}
+
+/* ANTI-CHEAT */
+.ac-flag{font-family:var(--mono);font-size:10px;color:var(--orange);background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.25);border-radius:2px;padding:2px 6px;margin:2px;display:inline-block}
+
+@media(max-width:600px){.main{padding:20px 16px 60px}.tile-grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top">
+  <div class="top-left">
+    <span class="logo">NETS</span>
+    <span class="top-sep">|</span>
+    <span class="top-subj">Tarix 5-sinf &bull; 10-§ Yozuv tarixi</span>
+  </div>
+  <div class="top-right">
+    <span class="flow-ind fl-green" id="flowInd">OQIM: 75%</span>
+    <span class="xp-badge" id="totalXp">0 XP</span>
+    <span class="user-name">Sardor K.</span>
+    <span class="avatar">S</span>
+  </div>
+</div>
+
+<!-- PHASE BAR -->
+<div class="pbar" id="phaseBar">
+  <div class="pip" id="pip0"><span class="pip-label">Sprint</span></div>
+  <div class="pip" id="pip1"><span class="pip-label">Hikoya</span></div>
+  <div class="pip" id="pip2"><span class="pip-label">O'yinlar</span></div>
+  <div class="pip" id="pip3"><span class="pip-label">Hayot</span></div>
+  <div class="pip" id="pip4"><span class="pip-label">Xotira</span></div>
+  <div class="pip" id="pip5"><span class="pip-label">Boss</span></div>
+  <div class="pip" id="pip6"><span class="pip-label">Tafakkur</span></div>
+</div>
+
+<div class="main">
+
+<!-- ===================== PRE-SESSION ===================== -->
+<div class="screen active" id="scrPreSession">
+  <div class="card" style="text-align:center;padding:40px 24px;">
+    <div style="font-size:48px;margin-bottom:16px">&#128218;</div>
+    <h2 style="margin-bottom:8px">Uy vazifasi yuklanmoqda...</h2>
+    <p style="color:var(--mid);margin-bottom:24px">Tarix 5-sinf &bull; III bob &bull; 10-§ "Yozuv — insoniyatning buyuk kashfiyoti"</p>
+    <div style="font-family:var(--mono);font-size:11px;color:var(--lo);text-align:left;max-width:400px;margin:0 auto">
+      <div id="loadStep1" style="margin-bottom:6px;opacity:.3">&#9744; O'quvchi profilini yuklash...</div>
+      <div id="loadStep2" style="margin-bottom:6px;opacity:.3">&#9744; Kontent pulini tekshirish...</div>
+      <div id="loadStep3" style="margin-bottom:6px;opacity:.3">&#9744; Sessiyani yig'ish (7 faza)...</div>
+      <div id="loadStep4" style="margin-bottom:6px;opacity:.3">&#9744; O'qituvchi override qo'llash...</div>
+    </div>
+    <div class="card" style="margin-top:24px;text-align:left;background:var(--bg4)">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--amber);margin-bottom:8px">O'QUVCHI PROFILI</div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--mid)">
+        <div><strong style="color:var(--hi)">Sardor Karimov</strong><br>5-A sinf, 14-maktab, Toshkent</div>
+        <div><strong style="color:var(--cyan)">Reading PISA: 1.4</strong><br>Domen: access=1.6, interpret=1.3</div>
+        <div><strong style="color:var(--amber)">Streak: 4 kun</strong><br>Jami XP: 12,400</div>
+        <div><strong style="color:var(--green)">Mastery: 0.68</strong><br>O'tish: L1→L2 jarayonda</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PHASE 1: MEMORY SPRINT ===================== -->
+<div class="screen" id="scrPhase1">
+  <div class="ph">
+    <span class="ph-tag">FAZA 1</span>
+    <h2>&#9889; Xotira Sprinti</h2>
+    <div class="ph-sub">Oldingi bilimlarni faollashtirish &bull; OLDINGI boblardan &bull; 60 soniya &bull; Matn javob (MC yo'q)</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+    <div style="font-family:var(--mono);font-size:12px;color:var(--lo)" id="sprintProg">1 / 6</div>
+    <div class="timer" id="sprintTimer">1:00</div>
+    <div style="font-family:var(--mono);font-size:12px;color:var(--amber)" id="sprintXp">0 XP</div>
+  </div>
+  <div id="sprintQ" style="font-size:16px;font-weight:600;margin-bottom:16px;min-height:48px"></div>
+  <div id="sprintInputArea">
+    <input type="text" class="text-input short" id="sprintInput" placeholder="Javobingizni yozing..." autocomplete="off">
+    <div style="margin-top:12px">
+      <button class="btn btn-p" id="sprintSubmit" onclick="answerSprint()">Javob berish &#8594;</button>
+    </div>
+  </div>
+  <div id="sprintFb" style="min-height:40px"></div>
+  <div style="font-family:var(--mono);font-size:11px;color:var(--green);margin-top:8px" id="sprintStreak"></div>
+  <div id="sprintSummary" style="display:none"></div>
+  <!-- Anti-cheat display -->
+  <div id="sprintAntiCheat" style="margin-top:8px"></div>
+</div>
+
+<!-- ===================== PHASE 2: STORY MODE ===================== -->
+<div class="screen" id="scrPhase2">
+  <div class="ph">
+    <span class="ph-tag">FAZA 2</span>
+    <h2>&#128214; Hikoya rejimi</h2>
+    <div class="ph-sub">Yangi darslik kontenti &bull; Darslik: 30-33 bet &bull; 3 segment &bull; Nazorat savoli majburiy</div>
+  </div>
+  <div id="storyArea"></div>
+</div>
+
+<!-- ===================== PHASE 3: GAME BREAKS ===================== -->
+<div class="screen" id="scrPhase3">
+  <div class="ph">
+    <span class="ph-tag">FAZA 3</span>
+    <h2>&#127922; O'yin tanaffuslari</h2>
+    <div class="ph-sub">3 ta o'yin mexanizmi &bull; Fan + Bloom's + PISA asosida tanlangan</div>
+  </div>
+  <div id="gameArea"></div>
+</div>
+
+<!-- ===================== PHASE 4: REAL-LIFE ===================== -->
+<div class="screen" id="scrPhase4">
+  <div class="ph">
+    <span class="ph-tag">FAZA 4</span>
+    <h2>&#127758; Hayotiy vaziyat</h2>
+    <div class="ph-sub">Transfer &mdash; darslik bilimlarini yangi vaziyatda qo'llash &bull; Ochiq javob</div>
+  </div>
+  <div id="realLifeArea"></div>
+</div>
+
+<!-- ===================== PHASE 5: CONSOLIDATION ===================== -->
+<div class="screen" id="scrPhase5">
+  <div class="ph">
+    <span class="ph-tag">FAZA 5</span>
+    <h2>&#127984; Mustahkamlash — Xotira saroyi</h2>
+    <div class="ph-sub">Registon maydoni (Samarqand) &bull; 5 tushuncha &bull; Loci usuli</div>
+  </div>
+  <div id="palaceArea"></div>
+</div>
+
+<!-- ===================== PHASE 6: FINAL BOSS ===================== -->
+<div class="screen" id="scrPhase6">
+  <div class="ph">
+    <span class="ph-tag">FAZA 6</span>
+    <h2>&#128126; Yakuniy Boss</h2>
+    <div class="ph-sub">PISA-kalibrlangan baholash &bull; Boss YENGILISHI SHART &bull; Qisqa javob (MC yo'q)</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-family:var(--mono);font-size:12px;color:var(--lo)" id="bossProg">1 / 6</div>
+    <div style="font-size:20px" id="bossStars">&#9734;&#9734;&#9734;</div>
+  </div>
+  <div class="hp-wrap">
+    <div class="hp-lbl">BOSS HP: <span id="bossHpNum">100</span>/100</div>
+    <div class="hp-bar"><div class="hp-fill" id="bossHpFill" style="width:100%"></div><div class="hp-txt" id="bossHpTxt">100 HP</div></div>
+  </div>
+  <div class="combo" id="bossCombo"></div>
+  <div id="bossQ" style="font-size:15px;font-weight:600;margin:16px 0 6px;min-height:40px"></div>
+  <div id="bossMeta" class="meta"></div>
+  <div id="bossInputArea">
+    <textarea class="text-input" id="bossInput" rows="3" placeholder="Javobingizni yozing..."></textarea>
+    <div style="margin-top:12px;display:flex;gap:8px">
+      <button class="btn btn-p" id="bossSubmit" onclick="answerBoss()">Javob berish &#8594;</button>
+      <button class="btn btn-s" id="bossHintBtn" onclick="useBossHint()" style="font-size:11px">&#128161; Hint (-10 HP)</button>
+    </div>
+  </div>
+  <div id="bossFb" style="min-height:40px"></div>
+  <div id="bossSummary" style="display:none"></div>
+  <!-- Socratic tutoring area -->
+  <div id="bossSocratic" class="socratic-area" style="display:none"></div>
+</div>
+
+<!-- ===================== PHASE 7: REFLECTION ===================== -->
+<div class="screen" id="scrPhase7">
+  <div class="ph">
+    <span class="ph-tag">FAZA 7</span>
+    <h2>&#128221; Tafakkur</h2>
+    <div class="ph-sub">O'z fikrlashing haqida fikrlash &bull; Maxfiy — faqat sizga ko'rinadi</div>
+  </div>
+  <div id="reflectArea"></div>
+</div>
+
+<!-- ===================== POST-SESSION ===================== -->
+<div class="screen" id="scrPost">
+  <div class="ph">
+    <span class="ph-tag">SESSIYA YAKUNLANDI</span>
+    <h2>&#127942; Natijalar</h2>
+  </div>
+  <div id="postArea"></div>
+</div>
+
+</div><!-- /main -->
+
+<script>
+// ===== GLOBAL STATE =====
+let totalXp = 0, currentPhase = -1, flowRate = 75;
+const pips = [...document.querySelectorAll('.pip')];
+
+// Anti-cheat: track response times
+let responseTimes = [];
+
+function setXp(n) { totalXp = n; document.getElementById('totalXp').textContent = n + ' XP'; }
+function addXp(n) { setXp(totalXp + n); }
+function updateFlow(rate) {
+  flowRate = rate;
+  const el = document.getElementById('flowInd');
+  el.textContent = 'OQIM: ' + rate + '%';
+  el.className = 'flow-ind ' + (rate >= 70 ? 'fl-green' : rate >= 50 ? 'fl-yellow' : 'fl-red');
+}
+
+function trackResponseTime(questionId, seconds) {
+  responseTimes.push({ questionId, seconds });
+}
+
+function goPhase(n) {
+  if (currentPhase >= 0 && currentPhase < 7) pips[currentPhase].className = 'pip done';
+  currentPhase = n;
+  if (n >= 0 && n < 7) pips[n].className = 'pip active';
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const screens = ['scrPreSession','scrPhase1','scrPhase2','scrPhase3','scrPhase4','scrPhase5','scrPhase6','scrPhase7','scrPost'];
+  document.getElementById(screens[n + 1]).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  // Auto-init each phase after screen is visible
+  if (n >= 0) {
+    setTimeout(function(){
+      try {
+        if(n===0) startSprint();
+        else if(n===1) showStory();
+        else if(n===2) startGames();
+        else if(n===3) showRealLife();
+        else if(n===4) showPalace();
+        else if(n===5) startBoss();
+        else if(n===6) showReflection();
+        else if(n===7) showPostSession();
+      } catch(e) { console.error('Phase init error:', e); }
+    }, 150);
+  }
+}
+
+// ===== PRE-SESSION LOADING =====
+setTimeout(() => {
+  const steps = ['loadStep1','loadStep2','loadStep3','loadStep4'];
+  steps.forEach((s,i) => {
+    setTimeout(() => {
+      const el = document.getElementById(s);
+      el.style.opacity = '1';
+      el.innerHTML = '&#9745; ' + el.textContent.replace('&#9744; ','').replace('...','... <span style="color:var(--green)">tayyor</span>');
+    }, (i+1)*600);
+  });
+  setTimeout(() => {
+    goPhase(0);
+  }, 3200);
+}, 800);
+
+// ===== PHASE 1: MEMORY SPRINT (TEXT INPUT, NO MC) =====
+// FIX #1: Replaced MC with text input for Grade 5+
+// FIX #2: Added speed bonus (<5s = +10 XP) and response time tracking
+// FIX #3: Added remediation routing when accuracy <60%
+const sprintQs = [
+  { q: "Tarixiy manbalar necha turga bo'linadi? Nomlang.", answer: ["2", "ikki", "moddiy va yozma", "2: moddiy va yozma"], hint: "Asosiy ikki tur..." },
+  { q: "Arxeologiya so'zining ma'nosi nima?", answer: ["qadimshunoslik", "qadimgi narsalarni o'rganish", "qazishma"], hint: "Qadim..." },
+  { q: "Grigoriy kalendari qaysi yilda qabul qilindi? (Raqam bilan yozing)", answer: ["1582"], hint: "16-asr..." },
+  { q: "'Xronologiya' so'zi qaysi tildan olingan?", answer: ["yunon", "yunoncha", "grek", "yunon tilidan"], hint: "Qadimgi davlat..." },
+  { q: "'Avesto' qayerda yaratilgan? (Hudud nomi)", answer: ["xorazm"], hint: "O'zbekistonning qadimgi hududi..." },
+  { q: "Dastlabki globusni kim yaratgan?", answer: ["krates"], hint: "Qadimgi olim..." }
+];
+let sp = {cur:0,xp:0,streak:0,correct:0,timer:null,time:60,questionStartTime:0};
+
+function startSprint() {
+  sp = {cur:0,xp:0,streak:0,correct:0,timer:null,time:60,questionStartTime:Date.now()};
+  responseTimes = []; // Reset anti-cheat tracking
+  sp.timer = setInterval(() => {
+    sp.time--;
+    document.getElementById('sprintTimer').textContent = `${Math.floor(sp.time/60)}:${String(sp.time%60).padStart(2,'0')}`;
+    if(sp.time<=10) document.getElementById('sprintTimer').style.color='var(--red)';
+    if(sp.time<=0) endSprint();
+  },1000);
+  showSprintQ();
+}
+
+function showSprintQ() {
+  if(sp.cur >= sprintQs.length) { endSprint(); return; }
+  const q = sprintQs[sp.cur];
+  sp.questionStartTime = Date.now();
+  document.getElementById('sprintProg').textContent = `${sp.cur+1} / ${sprintQs.length}`;
+  document.getElementById('sprintQ').innerHTML = q.q + `<div class="meta" style="margin-top:8px"><span>UZ-HIST-5-INTRO-0${sp.cur+1}</span><span>PISA L1</span><span>Remember</span><span>Transition: L0→L1: asosiy faktlarni eslab qolish</span></div>`;
+  document.getElementById('sprintFb').innerHTML = '';
+  document.getElementById('sprintInput').value = '';
+  document.getElementById('sprintInput').disabled = false;
+  document.getElementById('sprintSubmit').disabled = false;
+  document.getElementById('sprintInputArea').style.display = 'block';
+  document.getElementById('sprintInput').focus();
+}
+
+function answerSprint() {
+  const input = document.getElementById('sprintInput');
+  const userAnswer = input.value.trim().toLowerCase();
+  if (!userAnswer) return;
+
+  const q = sprintQs[sp.cur];
+  const responseTime = (Date.now() - sp.questionStartTime) / 1000;
+  trackResponseTime('sprint_q' + sp.cur, responseTime);
+
+  // Anti-cheat: flag if answered in <2 seconds (impossible to read)
+  const acDiv = document.getElementById('sprintAntiCheat');
+  if (responseTime < 2) {
+    acDiv.innerHTML = `<span class="ac-flag">&#9888; Tez javob: ${responseTime.toFixed(1)}s (o'qish tezligidan tez)</span>`;
+  } else {
+    acDiv.innerHTML = '';
+  }
+
+  // Check answer: match any acceptable answer
+  const isCorrect = q.answer.some(a => userAnswer.includes(a.toLowerCase()));
+
+  input.disabled = true;
+  document.getElementById('sprintSubmit').disabled = true;
+
+  const fb = document.getElementById('sprintFb');
+  if (isCorrect) {
+    sp.correct++;
+    sp.streak++;
+    let xp = 100 + 10 * sp.streak;
+    // FIX #2: Speed bonus
+    if (responseTime < 5) {
+      xp += 10;
+    }
+    sp.xp += xp;
+    addXp(xp);
+    fb.innerHTML = `<div class="fb fb-ok">&#10004; To'g'ri! +${xp} XP${responseTime < 5 ? ' &#9889; Tezlik bonusi +10 XP' : ''} ${sp.streak>=3?'&#128293; Streak '+sp.streak+'!':''}</div>`;
+    document.getElementById('sprintStreak').textContent = sp.streak >= 2 ? '&#128293; Streak: ' + sp.streak : '';
+  } else {
+    sp.streak = 0;
+    fb.innerHTML = `<div class="fb fb-err">&#10008; Noto'g'ri. To'g'ri javob: ${q.answer[0]}. ${q.hint ? '<br><span style="font-size:11px;color:var(--lo)">Hint: ' + q.hint + '</span>' : ''}</div>`;
+    document.getElementById('sprintStreak').textContent = '';
+  }
+  document.getElementById('sprintXp').textContent = sp.xp + ' XP';
+  sp.cur++;
+  setTimeout(showSprintQ, 1500);
+}
+
+// Allow Enter key to submit
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && currentPhase === 0 && !document.getElementById('sprintInput').disabled) {
+    answerSprint();
+  }
+  if (e.key === 'Enter' && currentPhase === 5 && !document.getElementById('bossInput').disabled) {
+    answerBoss();
+  }
+});
+
+function endSprint() {
+  clearInterval(sp.timer);
+  const acc = Math.round(sp.correct/sprintQs.length*100);
+  updateFlow(acc >= 70 ? 78 : acc >= 50 ? 65 : 45);
+  document.getElementById('sprintInputArea').style.display = 'none';
+  document.getElementById('sprintQ').innerHTML = '';
+  document.getElementById('sprintFb').innerHTML = '';
+
+  // FIX #3: Remediation routing
+  let status, statusColor, showRemediation = false;
+  if(acc>=80){
+    status='Ajoyib! Yangi kontentga tayyorsiz.';
+    statusColor='var(--green)';
+  } else if(acc>=60){
+    status='Yaxshi! Davom etamiz. O\'qituvchiga bayroq qo\'yildi.';
+    statusColor='var(--amber)';
+  } else {
+    status='Remediation A: darslik sahifalariga qaytamiz...';
+    statusColor='var(--red)';
+    showRemediation = true;
+  }
+
+  const sum = document.getElementById('sprintSummary');
+  sum.style.display = 'block';
+
+  let remediationHtml = '';
+  if (showRemediation) {
+    remediationHtml = `
+      <div class="remediation-card">
+        <h4>&#9888; REMEDIATION A — Asosiy bilim kamchiligi aniqlandi</h4>
+        <p style="font-size:13px;color:var(--mid);margin-bottom:12px">
+          Aniqlik ${acc}% — 60% dan past. Yangi kontentga o'tishdan oldin asosiy bilimlarni tiklash kerak.
+        </p>
+        <div style="font-size:12px;color:var(--lo);margin-bottom:12px">
+          <strong style="color:var(--hi)">Qayta ko'rish:</strong> Darslik 25-28 betlar — "Tarixiy manbalar" bobini qayta o'qing.
+        </div>
+        <div style="font-size:12px;color:var(--lo);margin-bottom:16px">
+          <strong style="color:var(--hi)">Asosiy tushunchalar:</strong><br>
+          &bull; Tarixiy manbalar 2 turga bo'linadi: moddiy va yozma<br>
+          &bull; Moddiy manbalar — arxeologlar topadi (tanga, suyak, qurol)<br>
+          &bull; Yozma manbalar — Avesto, xatlar, hujjatlar
+        </div>
+        <button class="btn btn-g" onclick="document.getElementById('remediationCard').style.display='none';document.getElementById('sprintNextBtn').style.display='inline-block'">
+          &#10004; Qayta o'qidim, davom etamiz
+        </button>
+      </div>
+      <div id="sprintNextBtn" style="display:none;text-align:center;margin-top:16px">
+        <button class="btn btn-p" onclick="goPhase(1)">Faza 2 ga o'tish &#8594;</button>
+      </div>`;
+  } else {
+    remediationHtml = `<div style="text-align:center;margin-top:16px">
+      <button class="btn btn-p" onclick="goPhase(1)">Faza 2 ga o'tish &#8594;</button>
+    </div>`;
+  }
+
+  sum.innerHTML = `
+    <div class="card" style="text-align:center;padding:28px">
+      <div style="font-family:var(--mono);font-size:32px;color:var(--amber);margin-bottom:8px">${sp.xp} XP</div>
+      <div style="font-size:14px;color:var(--mid);margin-bottom:4px">Aniqlik: ${acc}% (${sp.correct}/${sprintQs.length})</div>
+      <div style="font-size:14px;font-weight:600;color:${statusColor};margin-bottom:16px">${status}</div>
+      ${remediationHtml}
+    </div>`;
+}
+
+// ===== PHASE 2: STORY MODE (ENFORCED CHECKPOINT GATE) =====
+// FIX #4: Checkpoint gate enforced — wrong answer doesn't advance, max 2 retries → simplified version
+const storySegs = [
+  {
+    title: "Ilk yozuvning paydo bo'lishi",
+    text: "Yer yuzida ilk yozuv belgilari dastlab Osiyo va Shimoliy Afrika xalqlari tomonidan yaratilgan. Tarix, ilm-fan va kashfiyotlar ajdodlardan avlodlarga <strong>yozuv orqali</strong> yetib keldi. Yozuv — kishilar o'rtasidagi aloqaga xizmat qiladigan yozma belgilar tizimi. Olimlar dastlabki yozuvlarni uzoq vaqtgacha o'qiy olmadilar, chunki bu yozuvlar bugungi yozuvlardan keskin farq qilgan — ular aslida harf emas, balki biror ma'noni anglatuvchi belgilardan iborat edi.",
+    ref: "Darslik: 30-bet | UZ-HIST-5-WRITING-01 | PISA L2 | Understand | Transition: L1→L2: matndan aniq ma'lumotni topish",
+    checkpoint: {
+      q: "Nima uchun olimlar dastlabki yozuvlarni o'qiy olmadilar?",
+      answer: ["belgi", "harf emas", "noma'lum", "belgilardan iborat"],
+      simplified: "Dastlabki yozuvlar harf emas, balki _______ dan iborat edi.",
+      simplifiedAnswer: ["belgi"],
+      explanation: "Dastlabki yozuvlar hozirgi alifbodagi harflar emas, balki ma'no anglatuvchi belgilar (rasmlar, chiziqlar) edi. Shuning uchun ularni o'qish juda qiyin bo'lgan."
+    }
+  },
+  {
+    title: "Qadimgi yozuv turlari: eslatuvchi belgilardan alifbogacha",
+    text: "Olimlar qadimgi yozuvlarni bir necha turga bo'lganlar:<br><br>1. <strong>Eslatuvchi belgilar</strong> — biror miqdorni belgilash yoki xabar yetkazishda ishlatilgan (toshlar, chig'anoqlar).<br>2. <strong>Buyumli yozuv</strong> — qo'rg'on rasmi = ko'milgan joy, maxsus buyumlar orqali xabar yetkazish.<br>3. <strong>Rasmli yozuv (Iyeroglif)</strong> — narsalarning rasmini chizish orqali yozish (Misr, Xitoy).<br>4. <strong>So'z yozuvi</strong> — har bir belgi butun bir so'zni bildirgan (Shumer mixxati).<br>5. <strong>Alifboli yozuv</strong> — har bir belgi tovushni bildirgan (Finikiya — birinchi alifbo).",
+    ref: "Darslik: 31-32 bet | UZ-HIST-5-WRITING-02 | PISA L2 | Understand | Transition: L1→L2: oddiy tasniflash va xulosalar chiqarish",
+    checkpoint: {
+      q: "Qadimgi yozuv turlari orasida 'qo'rg'on rasmi = ko'milgan joy' qaysi turga kiradi?",
+      answer: ["buyumli", "buyumli yozuv"],
+      simplified: "Qo'rg'on rasmi orqali xabar yetkazish — bu _______ yozuv.",
+      simplifiedAnswer: ["buyumli"],
+      explanation: "Buyumli yozuvda maxsus buyumlar yoki rasmlar orqali xabar yetkazilgan. Qo'rg'on rasmi — ko'milgan joy haqida xabar beruvchi belgi."
+    }
+  },
+  {
+    title: "Alifbo inqilobi va O'zbekistonda yozuv",
+    text: "Dunyoda birinchi harfli yozuvni miloddan avvalgi 2-ming yillik o'rtalarida qadimgi <strong>finikiyaliklar</strong> yaratishdi. Finikiy alifbosi <strong>22 ta harfdan</strong> iborat bo'lib, o'ngdan chapga yozilgan. Bu alifbo boshqa mamlakatlarga ham tarqaldi — hozirgi lotin va kirill alifbolari ham finikiy yozuvidan kelib chiqqan.<br><br>O'zbek xalqi qadimdan turli yozuvlardan foydalangan: <strong>xorazm, sug'd, urxun-yenisey, arab, kirill va lotin</strong> alifbolari. Sug'd alifbosi dastlab 23 ta harfdan iborat bo'lgan. Bugungi kunda O'zbekistonda lotin yozuviga asoslangan o'zbek alifbosidan foydalanilmoqda.",
+    ref: "Darslik: 32-33 bet | UZ-HIST-5-WRITING-03 | PISA L2-3 | Understand/Apply | Transition: L2→L3: bir nechta manbani birlashtirish",
+    checkpoint: {
+      q: "Finikiy alifbosi nechta harfdan iborat bo'lgan va qaysi yo'nalishda yozilgan?",
+      answer: ["22", "o'ngdan chapga", "22 ta", "o'ngdan chap"],
+      simplified: "Finikiy alifbosi ___ ta harfdan iborat bo'lib, ___ yozilgan.",
+      simplifiedAnswer: ["22", "o'ngdan chap"],
+      explanation: "Finikiy alifbosi 22 ta harfdan iborat bo'lib, o'ngdan chapga yozilgan. Bu dunyodagi birinchi harfli yozuv edi."
+    }
+  }
+];
+let storyIdx = 0, checkpointAttempts = 0;
+
+function showStory() {
+  const area = document.getElementById('storyArea');
+  if(storyIdx >= storySegs.length) {
+    addXp(150);
+    area.innerHTML = `<div class="card" style="text-align:center;padding:28px">
+      <div style="font-size:28px;margin-bottom:8px">&#10004;</div>
+      <div style="font-size:16px;font-weight:600;color:var(--green);margin-bottom:8px">Hikoya rejimi yakunlandi! +150 XP</div>
+      <div style="font-size:13px;color:var(--mid);margin-bottom:16px">3/3 segment o'tildi, barcha nazorat savollari to'g'ri.</div>
+      <button class="btn btn-p" onclick="goPhase(2)">Faza 3 ga o'tish &#8594;</button>
+    </div>`;
+    return;
+  }
+  checkpointAttempts = 0;
+  const s = storySegs[storyIdx];
+  area.innerHTML = `
+    <div style="font-family:var(--mono);font-size:11px;color:var(--lo);margin-bottom:12px">Segment ${storyIdx+1}/${storySegs.length}</div>
+    <div class="story-seg">
+      <h3>${s.title}</h3>
+      <p>${s.text}</p>
+      <div class="story-ref">${s.ref}</div>
+    </div>
+    <div class="checkpoint" id="storyCP">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--amber);margin-bottom:8px">NAZORAT SAVOLI — Javob bermasdan o'tib bo'lmaydi</div>
+      <div class="checkpoint-q" id="cpQuestion">${s.checkpoint.q}</div>
+      <input type="text" class="text-input short" id="cpInput" placeholder="Javobingizni yozing..." autocomplete="off">
+      <div style="margin-top:12px">
+        <button class="btn btn-p" id="cpSubmit" onclick="answerCheckpoint()">Javob berish &#8594;</button>
+      </div>
+      <div id="cpFb" style="min-height:36px;margin-top:12px"></div>
+      <div style="font-family:var(--mono);font-size:10px;color:var(--lo)" id="cpAttempts">Urinishlar: 0/2</div>
+    </div>`;
+  document.getElementById('cpInput').focus();
+}
+
+function answerCheckpoint() {
+  const input = document.getElementById('cpInput');
+  const userAnswer = input.value.trim().toLowerCase();
+  if (!userAnswer) return;
+
+  const s = storySegs[storyIdx];
+  const fb = document.getElementById('cpFb');
+  checkpointAttempts++;
+  document.getElementById('cpAttempts').textContent = 'Urinishlar: ' + checkpointAttempts + '/2';
+
+  const isCorrect = s.checkpoint.answer.some(a => userAnswer.includes(a.toLowerCase()));
+
+  if (isCorrect) {
+    input.disabled = true;
+    document.getElementById('cpSubmit').disabled = true;
+    fb.innerHTML = `<div class="fb fb-ok">&#10004; To'g'ri! Keyingi segmentga o'tamiz.</div>`;
+    storyIdx++;
+    setTimeout(showStory, 1400);
+  } else {
+    if (checkpointAttempts >= 2) {
+      // FIX #4: After 2 wrong attempts, show simplified version
+      fb.innerHTML = `<div class="fb fb-info">&#128161; Soddalashtirilgan versiya:<br><strong>${s.checkpoint.simplified}</strong></div>`;
+      // Replace question with simplified version
+      document.getElementById('cpQuestion').textContent = s.checkpoint.simplified;
+      input.value = '';
+      input.focus();
+      checkpointAttempts = 1; // Reset for simplified (give one more chance)
+      document.getElementById('cpAttempts').textContent = 'Urinishlar: 1/2 (soddalashtirilgan)';
+
+      // Override answer check for simplified
+      document.getElementById('cpSubmit').onclick = function() {
+        const simpAnswer = input.value.trim().toLowerCase();
+        if (!simpAnswer) return;
+        const simpCorrect = s.checkpoint.simplifiedAnswer.some(a => simpAnswer.includes(a.toLowerCase()));
+        if (simpCorrect) {
+          input.disabled = true;
+          document.getElementById('cpSubmit').disabled = true;
+          fb.innerHTML += `<div class="fb fb-ok" style="margin-top:8px">&#10004; To'g'ri! ${s.checkpoint.explanation}</div>`;
+          storyIdx++;
+          setTimeout(showStory, 2000);
+        } else {
+          input.disabled = true;
+          document.getElementById('cpSubmit').disabled = true;
+          fb.innerHTML += `<div class="fb fb-err" style="margin-top:8px">&#10008; To'g'ri javob: ${s.checkpoint.simplifiedAnswer[0]}. ${s.checkpoint.explanation}<br><span style="font-size:11px;color:var(--lo)">Darslik ${storySegs[storyIdx].ref.split('|')[0].trim()} qarang.</span></div>`;
+          storyIdx++;
+          setTimeout(showStory, 3000);
+        }
+      };
+    } else {
+      fb.innerHTML = `<div class="fb fb-err">&#10008; Noto'g'ri. Qayta urinib ko'ring.<br><span style="font-size:11px;color:var(--lo)">Hint: ${s.checkpoint.explanation.split('.')[0]}.</span></div>`;
+      input.value = '';
+      input.focus();
+    }
+  }
+}
+
+// ===== PHASE 3: GAME BREAKS =====
+let gameStep = 0;
+
+function startGames() { gameStep = 0; showGame(); }
+
+function showGame() {
+  const area = document.getElementById('gameArea');
+  if(gameStep === 0) startTileMatch(area);
+  else if(gameStep === 1) startSentenceFill(area);
+  else if(gameStep === 2) startWhyChain(area);
+  else {
+    area.innerHTML = `<div class="card" style="text-align:center;padding:28px">
+      <div style="font-size:28px;margin-bottom:8px">&#127942;</div>
+      <div style="font-size:16px;font-weight:600;color:var(--green);margin-bottom:16px">O'yin tanaffuslari yakunlandi!</div>
+      <button class="btn btn-p" onclick="goPhase(3)">Faza 4 ga o'tish &#8594;</button>
+    </div>`;
+  }
+}
+
+// -- TILE MATCH --
+function startTileMatch(area) {
+  const pairs = [
+    ["Iyeroglif","Rasmli/belgili yozuv"],
+    ["Mixxat","Loyga o'yilgan mix shakli"],
+    ["Finikiy","Birinchi alifbo (22 harf)"],
+    ["Sug'd","O'zbek ajdodlar yozuvi (23 harf)"],
+    ["Avesto","Xorazmda yaratilgan kitob"],
+    ["Eslatuvchi belgilar","Tosh va chig'anoqlar bilan"]
+  ];
+  let cards = [];
+  pairs.forEach((p,i) => {
+    cards.push({id:i,side:'A',text:p[0],matched:false});
+    cards.push({id:i,side:'B',text:p[1],matched:false});
+  });
+  for(let i=cards.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[cards[i],cards[j]]=[cards[j],cards[i]];}
+
+  let flipped=[], matchCount=0, tmXp=0, tmTimer=150, tmInterval;
+  area.innerHTML = `
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div><span class="tag" style="color:var(--cyan);background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25)">#3 Tile Match</span> <span class="tag" style="color:var(--blue);background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25)">Understand · PISA 1-2</span> <span class="tag" style="color:var(--purple);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25)">Transition: L1→L2: vizual assotsiatsiya</span></div>
+        <div class="timer" id="tmTimer" style="font-size:16px">2:30</div>
+      </div>
+      <p style="font-size:12px;color:var(--lo);margin-bottom:12px">Atama va uning ta'rifini juftlang. Plitalarni bosing.</p>
+      <div class="tile-grid" id="tmGrid"></div>
+      <div id="tmFb" style="min-height:24px"></div>
+      <div style="font-family:var(--mono);font-size:11px;color:var(--amber)" id="tmXp">0 XP</div>
+    </div>`;
+
+  const grid = document.getElementById('tmGrid');
+  cards.forEach((c,idx) => {
+    const t = document.createElement('div');
+    t.className='tile';
+    t.innerHTML = `<span class="tile-back">?</span>`;
+    t.dataset.idx = idx;
+    t.onclick = () => flipTile(idx);
+    grid.appendChild(t);
+  });
+
+  tmInterval = setInterval(() => {
+    tmTimer--;
+    const m=Math.floor(tmTimer/60),s=tmTimer%60;
+    document.getElementById('tmTimer').textContent=`${m}:${String(s).padStart(2,'0')}`;
+    if(tmTimer<=0){clearInterval(tmInterval);endTM();}
+  },1000);
+
+  function flipTile(idx) {
+    if(flipped.length>=2||cards[idx].matched)return;
+    const tile=grid.children[idx];
+    if(tile.classList.contains('flipped'))return;
+    tile.classList.add('flipped');
+    tile.innerHTML=`<span style="font-size:11px">${cards[idx].text}</span>`;
+    flipped.push(idx);
+    if(flipped.length===2) {
+      const a=cards[flipped[0]], b=cards[flipped[1]];
+      if(a.id===b.id && a.side!==b.side) {
+        setTimeout(()=>{
+          grid.children[flipped[0]].classList.add('matched');
+          grid.children[flipped[1]].classList.add('matched');
+          matchCount++;
+          tmXp+=100; addXp(100);
+          document.getElementById('tmXp').textContent=tmXp+' XP';
+          document.getElementById('tmFb').innerHTML=`<div class="fb fb-ok">&#10004; ${a.text} ↔ ${b.text} +100 XP</div>`;
+          flipped=[];
+          if(matchCount===pairs.length){clearInterval(tmInterval);setTimeout(endTM,800);}
+        },400);
+      } else {
+        setTimeout(()=>{
+          grid.children[flipped[0]].classList.add('shake');
+          grid.children[flipped[1]].classList.add('shake');
+          setTimeout(()=>{
+            grid.children[flipped[0]].classList.remove('flipped','shake');
+            grid.children[flipped[0]].innerHTML='<span class="tile-back">?</span>';
+            grid.children[flipped[1]].classList.remove('flipped','shake');
+            grid.children[flipped[1]].innerHTML='<span class="tile-back">?</span>';
+            flipped=[];
+          },500);
+        },600);
+      }
+    }
+  }
+
+  function endTM() {
+    if(matchCount===pairs.length) tmXp+=100;
+    addXp(matchCount===pairs.length?100:0);
+    document.getElementById('tmFb').innerHTML=`<div class="fb fb-ok">${matchCount===pairs.length?'Mukammal! Barcha juftliklar topildi. +100 bonus':'Vaqt tugadi. '+matchCount+'/'+pairs.length+' juft topildi.'}</div>`;
+    setTimeout(()=>{gameStep=1;showGame();},1800);
+  }
+}
+
+// -- SENTENCE FILL (WITH TIMER) --
+// FIX #5: Added timer to Sentence Fill
+function startSentenceFill(area) {
+  const blanks = [
+    {sentence:'Dunyoda birinchi harfli yozuvni miloddan avvalgi 2-ming yillik o\'rtalarida qadimgi ___ yaratishdi.',answer:'finikiyaliklar',distractors:['misrliklar','yunonlar']},
+    {sentence:'Finikiy alifbosi ___ ta harfdan iborat bo\'lgan.',answer:'22',distractors:['26','30']},
+    {sentence:'Misr iyerogliflari va Shumer mixxati ___ yozuvining dastlabki namunalari bo\'ldi.',answer:'so\'z',distractors:['rasmli','buyumli']},
+    {sentence:'O\'zbekistonda bugungi kunda ___ yozuviga asoslangan alifbodan foydalaniladi.',answer:'lotin',distractors:['arab','kirill']}
+  ];
+
+  let sfIdx=0, sfXp=0, sfTimer=120, sfTimerInterval;
+
+  function renderSF() {
+    if(sfIdx>=blanks.length) {
+      clearInterval(sfTimerInterval);
+      area.innerHTML=`<div class="card" style="text-align:center;padding:20px">
+        <div class="fb fb-ok" style="margin-bottom:12px">Sentence Fill yakunlandi! ${sfXp} XP yig'ildi.</div>
+        <button class="btn btn-p" onclick="gameStep=2;showGame()">Keyingi o'yin &#8594;</button>
+      </div>`;
+      return;
+    }
+    const b=blanks[sfIdx];
+    const parts=b.sentence.split('___');
+    const words=[b.answer,...b.distractors].sort(()=>Math.random()-.5);
+
+    area.innerHTML=`
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div><span class="tag" style="color:var(--cyan);background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25)">#4 Sentence Fill</span> <span class="tag" style="color:var(--blue);background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25)">Understand · PISA 2</span> <span class="tag" style="color:var(--purple);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25)">Transition: L1→L2: kontekstdan so'z tanlash</span></div>
+          <div style="display:flex;gap:12px;align-items:center">
+            <span style="font-family:var(--mono);font-size:11px;color:var(--lo)">${sfIdx+1}/${blanks.length}</span>
+            <span class="timer" id="sfTimer" style="font-size:14px">2:00</span>
+          </div>
+        </div>
+        <div class="sf-text">${parts[0]}<span class="sf-blank" id="sfBlank">___</span>${parts[1]||''}</div>
+        <div class="sf-bank" id="sfBank"></div>
+        <div id="sfFb" style="min-height:36px"></div>
+        <div style="font-family:var(--mono);font-size:11px;color:var(--amber)">${sfXp} XP</div>
+      </div>`;
+
+    const bank=document.getElementById('sfBank');
+    words.forEach(w=>{
+      const el=document.createElement('div');
+      el.className='sf-word';el.textContent=w;
+      el.onclick=()=>pickWord(w,el);
+      bank.appendChild(el);
+    });
+
+    // FIX #5: Timer
+    sfTimerInterval = setInterval(() => {
+      sfTimer--;
+      const m=Math.floor(sfTimer/60),s=sfTimer%60;
+      const timerEl = document.getElementById('sfTimer');
+      if(timerEl) timerEl.textContent=`${m}:${String(s).padStart(2,'0')}`;
+      if(sfTimer<=0){clearInterval(sfTimerInterval);renderSF();}
+    },1000);
+  }
+
+  function pickWord(w,el) {
+    clearInterval(sfTimerInterval);
+    const b=blanks[sfIdx];
+    document.getElementById('sfBlank').textContent=w;
+    document.querySelectorAll('.sf-word').forEach(e=>{e.style.pointerEvents='none';});
+    if(w===b.answer) {
+      document.getElementById('sfBlank').classList.add('filled');
+      el.style.borderColor='var(--green)';el.style.color='var(--green)';
+      const xp = sfIdx===0 ? 125 : 100;
+      sfXp+=xp; addXp(xp);
+      document.getElementById('sfFb').innerHTML=`<div class="fb fb-ok">&#10004; To'g'ri! +${xp} XP</div>`;
+    } else {
+      document.getElementById('sfBlank').classList.add('wrong-fill');
+      el.style.borderColor='var(--red)';el.style.color='var(--red)';
+      document.getElementById('sfFb').innerHTML=`<div class="fb fb-err">&#10008; To'g'ri javob: ${b.answer}</div>`;
+    }
+    sfIdx++;
+    setTimeout(renderSF, 1400);
+  }
+
+  renderSF();
+}
+
+// -- WHY CHAIN (TEXT INPUT, NOT MC) --
+// FIX #6: Replaced MC with text input dialogue
+var wcState = {idx:0, xp:0, history:[], chain:[
+  {sys:"Nima uchun yozuvning ixtiro qilinishi insoniyat uchun juda muhim bo'lgan?", keywords:["bilim","saqlash","yozib","avlod","eslab","o'tkazish","qoldirish"]},
+  {sys:"Juda yaxshi! Lekin NIMA UCHUN bilimlarni saqlab qolish zarur edi?", keywords:["xotira","cheklangan","unutadi","keyingi","avlod","yo'qol","kelajak"]},
+  {sys:"Ajoyib! Bilimlarni avlodlarga uzatish... Lekin yozuvsiz avlodlar bilimni QANDAY uzatgan?", keywords:["og'zaki","rivoyat","gapirish","eshitish","aytish","noaniq","yo'qolish"]},
+  {sys:"Mukammal! Siz yozuvning nima uchun 'insoniyatning buyuk kashfiyoti' deb atalishini tushuntirib berdingiz! Og'zaki an'ana yo'qolishi mumkin, lekin yozuv — abadiy xotira. &#127942;"}
+]};
+
+function startWhyChain(area) {
+  wcState.idx = 0;
+  wcState.xp = 0;
+  wcState.history = [];
+  renderWhyChain();
+}
+
+window.answerWC = function() {
+  var input = document.getElementById('wcInput');
+  var text = input.value.trim().toLowerCase();
+  if (!text) return;
+
+  var step = wcState.chain[wcState.idx];
+  // Check if answer contains any keyword
+  const hasKeyword = step.keywords.some(kw => text.includes(kw.toLowerCase()));
+
+  wcState.history.push({type:'user',text:input.value});
+  if (hasKeyword) {
+    wcState.xp += 150;
+    addXp(150);
+  }
+  wcState.idx++;
+  input.disabled = true;
+  document.getElementById('wcSubmit').disabled = true;
+  renderWhyChain();
+};
+
+function renderWhyChain() {
+  var area = document.getElementById('gameArea');
+  var s = wcState;
+  var chatHtml = '';
+
+  for(var i = 0; i < s.idx && i < s.chain.length; i++) {
+    chatHtml += '<div class="wc-msg wc-sys">' + s.chain[i].sys + '</div>';
+    if(s.history[i]) {
+      chatHtml += '<div class="wc-msg wc-user">' + s.history[i].text + '</div>';
+    }
+  }
+
+  var inputHtml = '';
+  var doneBtn = '';
+  if(s.idx < s.chain.length) {
+    chatHtml += '<div class="wc-msg wc-sys">' + s.chain[s.idx].sys + '</div>';
+    inputHtml = `
+      <div style="margin-top:12px">
+        <input type="text" class="text-input" id="wcInput" placeholder="O'z fikringizni yozing..." autocomplete="off">
+        <div style="margin-top:8px">
+          <button class="btn btn-p" id="wcSubmit" onclick="answerWC()">Javob berish &#8594;</button>
+        </div>
+      </div>`;
+  } else {
+    doneBtn = '<div style="text-align:center;margin-top:16px"><button class="btn btn-p" onclick="gameStep=3;showGame()">O\'yinlar yakunlandi &#8594;</button></div>';
+    addXp(250); s.xp += 250;
+  }
+
+  area.innerHTML = '<div class="card">' +
+    '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">' +
+      '<div><span class="tag" style="color:var(--purple);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25)">#10 Why Chain</span> <span class="tag" style="color:var(--blue);background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25)">Analyze · PISA 3-4</span> <span class="tag" style="color:var(--purple);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25)">Transition: L2→L3: sabab-oqibat zanjiri</span></div>' +
+      '<div style="font-family:var(--mono);font-size:11px;color:var(--lo)">Daraja ' + Math.min(s.idx+1, s.chain.length) + '/' + s.chain.length + '</div>' +
+    '</div>' +
+    '<div class="socratic-chat">' + chatHtml + '</div>' +
+    inputHtml +
+    '<div style="font-family:var(--mono);font-size:11px;color:var(--amber);margin-top:8px">' + s.xp + ' XP</div>' +
+    doneBtn +
+  '</div>';
+
+  if (s.idx < s.chain.length) {
+    document.getElementById('wcInput').focus();
+  }
+}
+
+// ===== PHASE 4: REAL-LIFE (OPEN TEXT RESPONSE) =====
+// FIX #7: Replaced MC with open text response
+function showRealLife() {
+  const area = document.getElementById('realLifeArea');
+  const qs = [
+    {q:"Agar siz Toshkentning tarix muzeyida qadimgi Sug'd yozuvi yozilgan sopol parchani ko'rsangiz — bu qaysi manba turiga kiradi? Nima uchun?",
+     answerKeywords:["moddiy","yozma","ikkala","sopol","yozuv","ashyo","matn","har ikki"],
+     meta:"PISA L3 · Apply · UZ-HIST-5-WRITING-02 · Transition: L2→L3: bir nechta toifani birlashtirish",
+     fb:"To'g'ri! Sopol parcha — moddiy manba (ashyo), lekin undagi yozuv — yozma manba. Bu bir vaqtda IKKALA turga kiradi. Bu 'chekka holat' — haqiqiy tarixchilar ham bunday murakkab manbalar bilan ishlaydi."},
+    {q:"Sizning bobongiz qadimgi arab alifbosida yozilgan xat topdi. Siz uni o'qiy olmaysiz. Nima uchun o'qiy olmasligingiz va qanday mutaxassisga murojaat qilishingiz kerakligini tushuntiring.",
+     answerKeywords:["arab","bilmay","manbashunos","arabshunos","olim","o'qiy","til","yozuv"],
+     meta:"PISA L3 · Analyze · UZ-HIST-5-WRITING-03 · Transition: L2→L3: sabab-oqibatni izohlash",
+     fb:"To'g'ri! Siz arab alifbosini bilmaysiz, lekin manbashunos olimlar buni o'qiy oladi — xuddi olimlar qadimgi yozuvlarni uzoq izlanishlar bilan o'qiganidek."}
+  ];
+  let rlIdx=0, rlXp=0;
+
+  function renderRL() {
+    if(rlIdx>=qs.length) {
+      area.innerHTML=`<div class="card" style="text-align:center;padding:24px">
+        <div style="font-size:28px;margin-bottom:8px">&#127758;</div>
+        <div style="font-size:16px;font-weight:600;color:var(--green);margin-bottom:8px">Hayotiy vaziyat yakunlandi! +${rlXp} XP</div>
+        <button class="btn btn-p" onclick="goPhase(4)">Faza 5 ga o'tish &#8594;</button>
+      </div>`;
+      return;
+    }
+    const q=qs[rlIdx];
+    area.innerHTML=`
+      <div class="card" style="border-left:3px solid var(--purple)">
+        <div style="font-size:13px;color:var(--mid);margin-bottom:12px;line-height:1.7">
+          <strong style="color:var(--hi)">Ssenariy:</strong> Siz oilangiz bilan Toshkent shahridagi O'zbekiston tarixi davlat muzeyiga tashrif buyuryapsiz. 250 mingdan ortiq eksponat bor. Siz quyidagi vaziyatga duch keldingiz:
+        </div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:8px">${q.q}</div>
+        <div class="meta"><span>${q.meta}</span></div>
+        <div style="margin-top:12px">
+          <textarea class="text-input" id="rlInput" rows="3" placeholder="Javobingizni yozing... Kamida 10 belgi."></textarea>
+          <div style="margin-top:8px;display:flex;justify-content:space-between;align-items:center">
+            <span style="font-family:var(--mono);font-size:11px;color:var(--lo)" id="rlCharCount">0 belgi</span>
+            <button class="btn btn-p" id="rlSubmit" disabled onclick="answerRL()">Javob berish &#8594;</button>
+          </div>
+        </div>
+        <div id="rlFb" style="min-height:36px;margin-top:12px"></div>
+      </div>`;
+
+    // Character counter
+    document.getElementById('rlInput').addEventListener('input', function() {
+      const len = this.value.length;
+      document.getElementById('rlCharCount').textContent = len + ' belgi';
+      document.getElementById('rlSubmit').disabled = len < 10;
+    });
+  }
+
+  window.answerRL = function() {
+    const input = document.getElementById('rlInput');
+    const text = input.value.trim().toLowerCase();
+    if (text.length < 10) return;
+
+    const q = qs[rlIdx];
+    const hasKeywords = q.answerKeywords.some(kw => text.includes(kw.toLowerCase()));
+
+    input.disabled = true;
+    document.getElementById('rlSubmit').disabled = true;
+
+    if (hasKeywords) {
+      rlXp += 200;
+      addXp(200);
+      document.getElementById('rlFb').innerHTML = `<div class="fb fb-ok">&#10004; ${q.fb} +200 XP</div>`;
+    } else {
+      document.getElementById('rlFb').innerHTML = `<div class="fb fb-info">&#128161; Qisman javob. ${q.fb}</div>`;
+      rlXp += 100;
+      addXp(100);
+    }
+
+    rlIdx++;
+    setTimeout(renderRL, 2500);
+  };
+
+  renderRL();
+}
+
+// ===== PHASE 5: MEMORY PALACE =====
+function showPalace() {
+  const concepts = [
+    {name:"Eslatuvchi belgilar",hint:"Tosh va chig'anoq"},
+    {name:"Rasmli yozuv",hint:"G'or devoridagi hayvon rasmi"},
+    {name:"Iyeroglif (So'z yozuvi)",hint:"Misr va Xitoy belgilari"},
+    {name:"Finikiy alifbosi",hint:"22 harf, o'ngdan chapga"},
+    {name:"O'zbek yozuvlari",hint:"Sug'd, arab, kirill, lotin"}
+  ];
+  const spots = [
+    {name:"Bosh darvoza",x:10,y:15},
+    {name:"Chap minora",x:10,y:55},
+    {name:"Markaziy madrasa",x:38,y:35},
+    {name:"O'ng minora",x:68,y:55},
+    {name:"Hovuz",x:68,y:15}
+  ];
+
+  let placed = new Array(5).fill(-1);
+  let selectedConcept = -1;
+
+  const area = document.getElementById('palaceArea');
+
+  function renderPalace() {
+    let spotsHtml = spots.map((s,i)=>`
+      <div class="palace-spot ${placed[i]>=0?'placed':''}" style="left:${s.x}%;top:${s.y}%" onclick="selectSpot(${i})" id="pspot${i}">
+        <div style="font-size:9px;font-weight:600">${s.name}</div>
+        ${placed[i]>=0?`<div style="font-size:9px;color:var(--amber);margin-top:2px">${concepts[placed[i]].name}</div>`:'<div style="font-size:16px">&#128205;</div>'}
+      </div>`).join('');
+
+    let conceptsHtml = concepts.map((c,i)=>`
+      <div class="palace-concept ${placed.includes(i)?'placed-c':''}" onclick="selectConcept(${i})" id="pconcept${i}">
+        ${c.name}
+      </div>`).join('');
+
+    area.innerHTML = `
+      <div class="card">
+        <div style="font-family:var(--mono);font-size:10px;color:var(--amber);margin-bottom:8px">Transition: L1→L2: xotiraga vizual joylashtirish</div>
+        <p style="font-size:12px;color:var(--lo);margin-bottom:12px">Registon maydonidagi 5 joyga 5 tushunchani joylashtiring. Avval tushunchani, keyin joyni bosing.</p>
+        <div class="palace" style="background:linear-gradient(180deg,#0c1020 0%,#12182a 100%);">
+          <div style="text-align:center;font-family:var(--mono);font-size:11px;color:var(--lo);padding-top:4px">&#127984; REGISTON MAYDONI</div>
+          ${spotsHtml}
+        </div>
+        <div style="margin-top:12px">
+          <div style="font-size:11px;color:var(--lo);margin-bottom:6px">Tushunchalar (bosing):</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">${conceptsHtml}</div>
+        </div>
+        <div id="palaceFb" style="min-height:36px;margin-top:12px"></div>
+        ${placed.every(p=>p>=0)?'<div style="text-align:center;margin-top:12px"><button class="btn btn-p" onclick="testPalace()">Esga tushirish testi &#8594;</button></div>':''}
+      </div>`;
+  }
+
+  window.selectConcept = function(i) {
+    selectedConcept = i;
+    document.getElementById('palaceFb').innerHTML=`<div class="fb fb-info">"${concepts[i].name}" tanlandi. Endi Registon xaritasida joyni bosing.</div>`;
+  };
+
+  window.selectSpot = function(i) {
+    if(selectedConcept<0) {
+      document.getElementById('palaceFb').innerHTML=`<div class="fb fb-info">Avval pastdan tushunchani tanlang.</div>`;
+      return;
+    }
+    if(placed[i]>=0) return;
+    placed[i] = selectedConcept;
+    selectedConcept = -1;
+    renderPalace();
+  };
+
+  let testIdx=0, testCorrect=0;
+  window.testPalace = function() {
+    testIdx=0;testCorrect=0;
+    showTestQ();
+  };
+
+  function showTestQ() {
+    if(testIdx>=5) {
+      const xp = testCorrect*50 + (testCorrect===5?50:0);
+      addXp(xp);
+      area.innerHTML=`<div class="card" style="text-align:center;padding:24px">
+        <div style="font-size:28px;margin-bottom:8px">${testCorrect>=4?'&#127942;':'&#128170;'}</div>
+        <div style="font-size:16px;font-weight:600;color:var(--green);margin-bottom:8px">Xotira testi: ${testCorrect}/5 to'g'ri! +${xp} XP</div>
+        <button class="btn btn-p" onclick="goPhase(5)">Faza 6: BOSS ga o'tish &#8594;</button>
+      </div>`;
+      return;
+    }
+
+    const spotIdx = testIdx;
+    const correctConcept = placed[spotIdx];
+    const opts = [correctConcept];
+    while(opts.length<3) {
+      const r=Math.floor(Math.random()*5);
+      if(!opts.includes(r))opts.push(r);
+    }
+    opts.sort(()=>Math.random()-.5);
+
+    area.innerHTML=`<div class="card">
+      <div style="font-family:var(--mono);font-size:11px;color:var(--lo);margin-bottom:8px">Esga tushirish testi: ${testIdx+1}/5</div>
+      <div style="font-size:15px;font-weight:600;margin-bottom:16px">"${spots[spotIdx].name}"da nima bor edi?</div>
+      <div id="palTestOpts"></div>
+      <div id="palTestFb" style="min-height:36px"></div>
+    </div>`;
+
+    const optsDiv=document.getElementById('palTestOpts');
+    opts.forEach(ci=>{
+      const b=document.createElement('button');
+      b.className='opt';b.textContent=concepts[ci].name;
+      b.onclick=()=>{
+        for(let bb of optsDiv.children){bb.disabled=true;bb.onclick=null;}
+        if(ci===correctConcept){
+          b.classList.add('correct');testCorrect++;
+          document.getElementById('palTestFb').innerHTML=`<div class="fb fb-ok">&#10004; To'g'ri!</div>`;
+        } else {
+          b.classList.add('wrong');
+          document.getElementById('palTestFb').innerHTML=`<div class="fb fb-err">&#10008; ${concepts[correctConcept].name} edi.</div>`;
+        }
+        testIdx++;
+        setTimeout(showTestQ,1200);
+      };
+      optsDiv.appendChild(b);
+    });
+  }
+
+  renderPalace();
+}
+
+// ===== PHASE 6: FINAL BOSS (TEXT INPUT + SOCRATIC + REGENERATION) =====
+// FIX #9: Replaced MC with short-answer text input (Grade 5-8)
+// FIX #10: Implemented Socratic tutoring on failure
+// FIX #11: Boss question regeneration on retry
+// FIX #12: Max 2 retry limit
+// FIX #13: Correct star calculation logic
+
+const bossQs = [
+  {q:"Qadimgi yozuv turlarini to'g'ri ketma-ketlikda joylashtiring: eslatuvchi belgilar, rasmli yozuv, so'z yozuvi, alifboli yozuv. Bu ketma-ketlikda asosiy rivojlanish omili nima?",
+   answerKeywords:["murakkab","ehtiyoj","ko'proq","oddiy","yetishmay","o'sdi","hayot","kerak"],
+   tier:"easy",dmg:10,
+   meta:"Oson · PISA L2 · Apply · UZ-HIST-5-WRITING-02 · Transition: L1→L2: ketma-ketlikni tushunish",
+   hints:["Yozuv turlari qanday o'zgargan — oddiydan murakkabga yoki aksincha?","Odamlarga nima uchun yangi yozuv turlari kerak bo'lgan?"]},
+  {q:"Misr iyerogliflari va Shumer mixxati 'so'z yozuvi' turiga kiradi. Bu yozuvlarning asosiy kamchiligi nima edi?",
+   answerKeywords:["ko'p","belgi","yod","qiyin","o'rganish","ming","eslab"],
+   tier:"easy",dmg:10,
+   meta:"Oson · PISA L2 · Understand · UZ-HIST-5-WRITING-02 · Transition: L1→L2: kamchilikni aniqlash",
+   hints:["So'z yozuvida har bir so'z uchun alohida belgi bor edi. Bu nimani anglatadi?","Nechta belgi yodda saqlash kerak edi?"]},
+  {q:"Finikiy alifbosi 22 ta harfdan iborat bo'lgan. Bu nima uchun 'inqilob' hisoblanadi?",
+   answerKeywords:["kam","harf","oson","o'rgan","ko'p","odam","yozish","o'qish","tarqal","sodd"],
+   tier:"medium",dmg:20,
+   meta:"O'rta · PISA L3 · Analyze · UZ-HIST-5-WRITING-03 · Transition: L2→L3: sabab-oqibat tahlili",
+   hints:["22 ta belgi bilan minglab belgi o'rniga nima yozish mumkin?","Kimlar endi yozishni o'rgana oldi?"]},
+  {q:"O'zbek xalqi tarixda 6 xil yozuvdan foydalangan. Bu ko'p marta yozuv almashishi haqida nima deyish mumkin?",
+   answerKeywords:["siyosiy","madaniy","ta'sir","davlat","hukmron","almash","o'zgar","bosqin","savdo"],
+   tier:"medium",dmg:20,
+   meta:"O'rta · PISA L3 · Analyze · UZ-HIST-5-WRITING-03 · Transition: L2→L3: tarixiy xulosa",
+   hints:["Har bir yangi yozuv qachon paydo bo'lgan — tinchlikda yoki o'zgarish paytida?","Yozuv kimning ta'sirini ko'rsatadi?"]},
+  {q:"Shampolion Rozetta toshidagi uch tildagi yozuvni solishtirish orqali iyerogliflarni o'qishga muvaffaq bo'ldi. Bu hodisadan qanday umumiy xulosa chiqarish mumkin?",
+   answerKeywords:["solishtir","ma'lum","noma'lum","til","yordam","tushun","kalit","tarjima"],
+   tier:"hard",dmg:30,
+   meta:"Qiyin · PISA L4 · Evaluate · UZ-HIST-5-WRITING-01 · Transition: L3→L4: dalillardan xulosa",
+   hints:["Noma'lum narsani tushunish uchun nima kerak?","Rozetta toshi nima uchun bu qadar muhim edi?"]},
+  {q:"Tasavvur qiling: yozuv hech ixtiro qilinmaganida, bugungi dunyodagi ilm-fan, texnologiya va madaniyat qanday bo'lardi?",
+   answerKeywords:["og'zaki","yo'qol","sekin","rivoj","boshla","nol","saqlan","uzatil","ilm","bilim"],
+   tier:"hard",dmg:30,
+   meta:"Qiyin · PISA L4 · Evaluate · UZ-HIST-5-WRITING-01 · Transition: L3→L4: gipotetik fikrlash",
+   hints:["Bilimlar qanday saqlanardi?","Har bir avlod nima qilishi kerak bo'lardi?"]}
+];
+
+// FIX #11: Regenerated boss questions for retry (same standards, different context)
+const bossQsRetry = [
+  {q:"Agar siz qadimgi Shumer shahrida yashagan bo'lsangiz, mixxat yozuvini o'rganish uchun qancha vaqt kerak bo'lar edi? Nima uchun bu yozuv maktablarida faqat boy oila bolalari o'qigan?",
+   answerKeywords:["ko'p","vaqt","qiyin","belgi","boy","oddiy","yod","murakkab","yil"],
+   tier:"easy",dmg:10,
+   meta:"Oson · PISA L2 · Apply · UZ-HIST-5-WRITING-02 · Transition: L1→L2: ijtimoiy tahlil",
+   hints:["Nechta belgi yodda saqlash kerak edi?","Kimlar vaqt va pul sarflay olardi?"]},
+  {q:"Nima uchun finikiyaliklar savdogar bo'lgani uchun ularning alifbosi boshqa mamlakatlarga tez tarqaldi?",
+   answerKeywords:["savdo","aloqa","oson","yozish","kerak","tez","mamlakat","sodd"],
+   tier:"easy",dmg:10,
+   meta:"Oson · PISA L2 · Apply · UZ-HIST-5-WRITING-02 · Transition: L1→L2: savdo-alifbo bog'liqligi",
+   hints:["Savdogarlarga nima kerak — tez yozish yoki chiroyli yozish?","Sodda alifbo kimlarga foydali?"]},
+  {q:"Sug'd alifbosi 23 ta harfdan iborat bo'lgan. Nima uchun O'zbekiston hududida bir vaqtning o'zida bir nechta alifbo mavjud edi?",
+   answerKeywords:["turli","xalq","madaniyat","savdo","aloqa","ko'p","ta'sir","davlat"],
+   tier:"medium",dmg:20,
+   meta:"O'rta · PISA L3 · Analyze · UZ-HIST-5-WRITING-03 · Transition: L2→L3: ko'p madaniyat tahlili",
+   hints:["O'zbekiston qayerda joylashgan — Ipak yo'limida emasmi?","Turli xalqlar bir-biriga qanday ta'sir qilgan?"]},
+  {q:"Arab yozuvi O'zbekistonda 1000 yildan ko'proq ishlatilgan. Nima uchun 1929-yilda lotin yozuviga, keyin 1940-yilda kirillga o'tildi?",
+   answerKeywords:["siyosat","hukumat","sovet","ittifoq","o'zgar","kuch","ta'sir","bosqin"],
+   tier:"medium",dmg:20,
+   meta:"O'rta · PISA L3 · Analyze · UZ-HIST-5-WRITING-03 · Transition: L2→L3: siyosiy tahlil",
+   hints:["1920-1940 yillarda O'zbekistonda kim hukmronlik qilgan?","Hukumatlar yozuvni nima uchun o'zgartiradi?"]},
+  {q:"Rozetta toshi uch tilda yozilgan: iyeroglif, demotik va yunon. Nima uchun aynan uch til? Bu qadimgi Misr jamiyati haqida nima aytadi?",
+   answerKeywords:["qatlam","din","oddiy","hukumat","rasmiy","xalq","tabaqa","daraja"],
+   tier:"hard",dmg:30,
+   meta:"Qiyin · PISA L4 · Evaluate · UZ-HIST-5-WRITING-01 · Transition: L3→L4: ijtimoiy tuzilma tahlili",
+   hints:["Har bir til kimlar uchun edi — ruhoniylar, oddiy xalq, hukumat?","Bu jamiyat qanday tuzilgan?"]},
+  {q:"Agar bugungi kunda barcha raqamli ma'lumotlar (internet, kompyuter fayllari) yo'qolsa, kelajak avlod o'tmish haqida qanday bilib oladi? Qadimgi yozuv ixtirosi bilan qanday bog'liq?",
+   answerKeywords:["raqamli","saqlash","qog'oz","yozma","moddiy","uzoq","saqlan","qadimgi","xuddi"],
+   tier:"hard",dmg:30,
+   meta:"Qiyin · PISA L4 · Evaluate · UZ-HIST-5-WRITING-01 · Transition: L3→L4: zamonaviy taqqoslash",
+   hints:["Qadimgi yozuv qanday saqlangan — tosh, sopol?","Raqamli ma'lumot qanday saqlanadi — qancha vaqt?"]}
+];
+
+let boss = {hp:100,maxHp:100,cur:0,combo:0,hintsUsed:0,attempt:1,questions:bossQs,hintIndex:0,responseStartTime:0};
+
+function startBoss() {
+  boss = {hp:100,maxHp:100,cur:0,combo:0,hintsUsed:0,attempt:1,questions:bossQs,hintIndex:0,responseStartTime:Date.now()};
+  updateBossHP();
+  document.getElementById('bossSummary').style.display='none';
+  document.getElementById('bossSocratic').style.display='none';
+  document.getElementById('bossStars').innerHTML='&#9734;&#9734;&#9734;';
+  document.getElementById('bossInputArea').style.display='block';
+  showBossQ();
+}
+
+function updateBossHP() {
+  const pct=Math.max(0,boss.hp);
+  document.getElementById('bossHpNum').textContent=pct;
+  document.getElementById('bossHpFill').style.width=pct+'%';
+  document.getElementById('bossHpTxt').textContent=pct+' HP';
+}
+
+function showBossQ() {
+  if(boss.cur>=boss.questions.length||boss.hp<=0){endBoss();return;}
+  const q=boss.questions[boss.cur];
+  boss.responseStartTime = Date.now();
+  boss.hintIndex = 0;
+  document.getElementById('bossProg').textContent=`${boss.cur+1} / ${boss.questions.length}`;
+  document.getElementById('bossQ').textContent=q.q;
+  document.getElementById('bossMeta').innerHTML=`<span>${q.meta}</span><span>Zarar: -${q.dmg} HP</span>`;
+  document.getElementById('bossFb').innerHTML='';
+  document.getElementById('bossInput').value='';
+  document.getElementById('bossInput').disabled=false;
+  document.getElementById('bossSubmit').disabled=false;
+  document.getElementById('bossHintBtn').style.display='inline-block';
+  document.getElementById('bossHintBtn').disabled=false;
+  document.getElementById('bossInput').focus();
+}
+
+function useBossHint() {
+  const q = boss.questions[boss.cur];
+  if (boss.hintIndex >= q.hints.length) return;
+
+  boss.hintsUsed++;
+  // FIX: Hint costs HP per spec (Grade 5-8: -10 HP)
+  boss.hp = Math.min(boss.maxHp, boss.hp + 10); // Boss heals on hint
+  updateBossHP();
+
+  document.getElementById('bossFb').innerHTML = `<div class="fb fb-info">&#128161; Hint: ${q.hints[boss.hintIndex]}</div>`;
+  boss.hintIndex++;
+
+  if (boss.hintIndex >= q.hints.length) {
+    document.getElementById('bossHintBtn').disabled = true;
+  }
+}
+
+function answerBoss() {
+  const input = document.getElementById('bossInput');
+  const userAnswer = input.value.trim().toLowerCase();
+  if (!userAnswer) return;
+
+  const q = boss.questions[boss.cur];
+  const responseTime = (Date.now() - boss.responseStartTime) / 1000;
+  trackResponseTime('boss_q' + boss.cur, responseTime);
+
+  // Check answer via keywords
+  const isCorrect = q.answerKeywords.some(kw => userAnswer.includes(kw.toLowerCase()));
+
+  input.disabled = true;
+  document.getElementById('bossSubmit').disabled = true;
+  document.getElementById('bossHintBtn').disabled = true;
+
+  const fb = document.getElementById('bossFb');
+  if (isCorrect) {
+    boss.combo++;
+    let dmg = q.dmg;
+    if (boss.combo >= 3) dmg *= 2;
+    boss.hp = Math.max(0, boss.hp - dmg);
+    fb.innerHTML = `<div class="fb fb-ok">&#10004; Boss -${dmg} HP!${boss.combo>=3?' &#128293; COMBO 2x!':''}</div>`;
+    document.getElementById('bossCombo').textContent = boss.combo >= 2 ? '&#128293; Combo: ' + boss.combo : '';
+  } else {
+    boss.combo = 0;
+    fb.innerHTML = `<div class="fb fb-err">&#10008; Boss zarar olmadi. Javobingizda asosiy kalit so'zlar yo'q. ${boss.hintIndex < q.hints.length ? '<br><span style="font-size:11px;color:var(--lo)">Hint tugmasini bosing yoki qayta urinib ko\'ring.</span>' : ''}</div>`;
+    document.getElementById('bossCombo').textContent = '';
+  }
+  updateBossHP();
+  boss.cur++;
+  setTimeout(showBossQ, 2000);
+}
+
+function endBoss() {
+  document.getElementById('bossInputArea').style.display = 'none';
+  document.getElementById('bossQ').innerHTML = '';
+  document.getElementById('bossMeta').innerHTML = '';
+  document.getElementById('bossFb').innerHTML = '';
+  document.getElementById('bossCombo').textContent = '';
+  const sum = document.getElementById('bossSummary');
+  sum.style.display = 'block';
+
+  if (boss.hp <= 0) {
+    // FIX #13: Correct star calculation
+    // ⭐ = Boss defeated (any attempt)
+    // ⭐⭐ = Boss defeated in ≤2 attempts, >50% HP remaining
+    // ⭐⭐⭐ = Boss defeated on 1st attempt, no hints, >80% HP
+    let stars = 1; // At least 1 star for defeating
+    const hpRemaining = boss.hp; // Will be 0, but we track damage taken
+    const totalDamage = boss.maxHp; // Full damage dealt = boss defeated
+
+    if (boss.attempt === 1 && boss.hintsUsed === 0) {
+      stars = 3;
+    } else if (boss.attempt <= 2) {
+      stars = 2;
+    }
+
+    const starStr = '&#11088;'.repeat(stars) + '&#9734;'.repeat(3 - stars);
+    document.getElementById('bossStars').innerHTML = starStr;
+    const xp = stars === 3 ? 1000 : stars === 2 ? 700 : 500;
+    addXp(xp);
+    sum.innerHTML = `<div class="card result-big">
+      <div style="font-size:48px">&#127942;</div>
+      <div class="stars">${starStr}</div>
+      <div style="font-size:20px;font-weight:700;color:var(--green);margin-bottom:8px">BOSS YENGILDI!</div>
+      <div class="score">+${xp} XP</div>
+      <div style="font-size:13px;color:var(--mid);margin-top:8px">${stars} yulduz &bull; ${boss.attempt}-urinish &bull; ${boss.hintsUsed} hint</div>
+      <div style="margin-top:20px"><button class="btn btn-p" onclick="goPhase(6)">Faza 7: Tafakkur &#8594;</button></div>
+    </div>`;
+  } else {
+    // Boss NOT defeated
+    // FIX #12: Max 2 retry limit
+    if (boss.attempt >= 2) {
+      sum.innerHTML = `<div class="card result-big">
+        <div style="font-size:48px">&#128128;</div>
+        <div style="font-size:20px;font-weight:700;color:var(--red);margin-bottom:8px">BOSS YENGILMADI (2/2 urinish)</div>
+        <div style="font-size:14px;color:var(--mid);margin-bottom:8px">Boss HP: ${boss.hp} qoldi</div>
+        <div style="font-size:13px;color:var(--purple);margin-bottom:16px">Boost Mode faollashtirildi — keyingi sessiyada davom etasiz</div>
+        <div style="font-size:12px;color:var(--lo);margin-bottom:16px">O'qituvchiga xabar yuborildi. Uyda qo'shimcha mashq tavsiya etiladi.</div>
+        <div style="margin-top:16px"><button class="btn btn-p" onclick="goPhase(6)">Faza 7: Tafakkur &#8594;</button></div>
+      </div>`;
+    } else {
+      // FIX #10: Socratic tutoring before retry
+      sum.innerHTML = `<div class="card result-big">
+        <div style="font-size:48px">&#128128;</div>
+        <div style="font-size:20px;font-weight:700;color:var(--red);margin-bottom:8px">BOSS YENGILMADI</div>
+        <div style="font-size:14px;color:var(--mid);margin-bottom:8px">Boss HP: ${boss.hp} qoldi</div>
+        <div style="font-size:13px;color:var(--purple);margin-bottom:16px">&#8594; Sokratik tutoring faollashtiriladi...</div>
+        <div style="margin-top:16px"><button class="btn btn-p" onclick="startSocratic()">Sokratik tutoring boshlash &#8594;</button></div>
+      </div>`;
+    }
+  }
+}
+
+// FIX #10: Socratic tutoring implementation
+window.startSocratic = function() {
+  const socraticDiv = document.getElementById('bossSocratic');
+  socraticDiv.style.display = 'block';
+
+  // Identify weak standards from failed questions
+  const failedQs = boss.questions.filter((q, i) => {
+    // Questions that weren't answered correctly
+    return i >= boss.cur; // Remaining questions are "failed"
+  });
+
+  const weakStandards = [...new Set(failedQs.map(q => q.meta.split('·').pop().trim()))];
+
+  let chatHtml = '<h4>&#128172; Sokratik Tutoring — Keling, birga o\'ylab ko\'raylik</h4>';
+  chatHtml += '<div style="font-size:11px;color:var(--lo);margin-bottom:12px">Sizning zaif standartlaringiz: ' + weakStandards.join(', ') + '</div>';
+  chatHtml += '<div class="socratic-chat" id="socraticChat">';
+
+  // Pre-written Socratic hints based on failed standards
+  const socraticPrompts = [
+    "Darslikning 30-betida yozuvning paydo bo'lishi haqida nima deyilgan? Esingizga olib keling.",
+    "Yozuv turlari qanday rivojlangan — eng oddiydan eng murakkabga. Har bir bosqichda nima o'zgardi?",
+    "Finikiy alifbosi nima uchun boshqa yozuvlardan farq qilardi? 22 ta harf — bu ko'p mi yoki kam?",
+    "O'zbekiston hududida nechta yozuv ishlatilgan? Nima uchun bir xalq bir nechta yozuvdan foydalangan?"
+  ];
+
+  socraticPrompts.forEach((prompt, i) => {
+    chatHtml += `<div class="wc-msg wc-sys">${prompt}</div>`;
+  });
+
+  chatHtml += '</div>';
+  chatHtml += `<div style="margin-top:12px">
+    <textarea class="text-input" id="socraticInput" rows="2" placeholder="O'z fikringizni yozing..."></textarea>
+    <div style="margin-top:8px">
+      <button class="btn btn-g" onclick="completeSocratic()">Tushundim, qayta urinaman &#8594;</button>
+    </div>
+  </div>`;
+
+  socraticDiv.innerHTML = chatHtml;
+};
+
+window.completeSocratic = function() {
+  // FIX #11: Regenerate boss questions for retry
+  boss.attempt++;
+  boss.hp = boss.maxHp; // Reset HP
+  boss.cur = 0;
+  boss.combo = 0;
+  boss.hintsUsed = 0;
+  boss.questions = bossQsRetry; // Use different questions
+  boss.hintIndex = 0;
+
+  document.getElementById('bossSocratic').style.display = 'none';
+  document.getElementById('bossSummary').style.display = 'none';
+  document.getElementById('bossInputArea').style.display = 'block';
+
+  updateBossHP();
+  showBossQ();
+};
+
+// ===== PHASE 7: REFLECTION =====
+function showReflection() {
+  const area = document.getElementById('reflectArea');
+  const acc = Math.round(sp.correct / sprintQs.length * 100);
+  let prompt;
+  if (acc >= 80) prompt = "Bugun qaysi strategiya sizga eng ko'p yordam berdi? Nima uchun bu siz uchun ishadi?";
+  else if (acc >= 60) prompt = "Nima qiyin bo'ldi? Qanday hal qildingiz? Keyingi safar nimani boshqacha qilasiz?";
+  else prompt = "Buni yaxshiroq tushunish uchun nima yordam beradi? Qaysi mavzuni qayta ko'rib chiqish kerak?";
+
+  area.innerHTML = `
+    <div class="card">
+      <div style="font-size:13px;color:var(--mid);margin-bottom:16px">${prompt}</div>
+      <textarea class="ref-textarea" id="refText" placeholder="O'z fikrlaringizni yozing..." oninput="updateCharCount()"></textarea>
+      <div class="char-count" id="charCount">0 / 10 belgi minimum</div>
+      <div style="margin-top:16px;text-align:right">
+        <button class="btn btn-p" id="refSubmit" disabled onclick="submitReflection()">Yuborish va yakunlash</button>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px;background:var(--bg4)">
+      <div style="font-size:11px;color:var(--lo)">&#128274; Bu yozuv FAQAT sizga ko'rinadi. O'qituvchi va ota-onangiz faqat umumiy mavzularni ko'radi.</div>
+    </div>`;
+}
+
+window.updateCharCount = function() {
+  const len = document.getElementById('refText').value.length;
+  document.getElementById('charCount').textContent = `${len} / 10 belgi minimum`;
+  document.getElementById('refSubmit').disabled = len < 10;
+};
+
+window.submitReflection = function() {
+  addXp(100);
+  goPhase(7);
+};
+
+// ===== POST-SESSION =====
+function showPostSession() {
+  pips[6].className = 'pip done';
+
+  const totalAcc = Math.round((sp.correct / sprintQs.length) * 100);
+  const area = document.getElementById('postArea');
+
+  // Anti-cheat summary
+  let antiCheatHtml = '';
+  const fastResponses = responseTimes.filter(r => r.seconds < 3);
+  if (fastResponses.length > 0) {
+    antiCheatHtml = `
+      <div class="card" style="margin-top:16px;border-color:rgba(249,115,22,.25)">
+        <div style="font-family:var(--mono);font-size:10px;color:var(--orange);margin-bottom:8px">&#9888; ANTI-CHEAT TEKSHIRUVI</div>
+        <div style="font-size:12px;color:var(--mid)">
+          ${fastResponses.length} ta javob o'qish tezligidan tez berildi:<br>
+          ${fastResponses.map(r => `<span class="ac-flag">${r.questionId}: ${r.seconds.toFixed(1)}s</span>`).join(' ')}
+        </div>
+      </div>`;
+  }
+
+  area.innerHTML = `
+    <div class="card result-big">
+      <div style="font-size:48px">&#127942;</div>
+      <div class="score">${totalXp} XP</div>
+      <div style="font-size:14px;color:var(--mid);margin:8px 0">Sessiya muvaffaqiyatli yakunlandi!</div>
+      <div style="font-size:20px">${document.getElementById('bossStars').innerHTML}</div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--amber);margin-bottom:12px">SESSIYA MA'LUMOTLARI</div>
+      <div class="prog-row">
+        <span class="prog-lbl">Umumiy aniqlik</span>
+        <div class="prog-bar"><div class="prog-fill" style="width:${totalAcc}%;background:var(--green)"></div></div>
+        <span class="prog-val">${totalAcc}%</span>
+      </div>
+      <div class="prog-row">
+        <span class="prog-lbl">PISA daraja o'zgarishi</span>
+        <div class="prog-bar"><div class="prog-fill" style="width:15%;background:var(--cyan)"></div></div>
+        <span class="prog-val" style="color:var(--green)">+0.1</span>
+      </div>
+      <div class="prog-row">
+        <span class="prog-lbl">Remember</span>
+        <div class="prog-bar"><div class="prog-fill" style="width:${totalAcc}%;background:var(--green)"></div></div>
+        <span class="prog-val">${totalAcc}%</span>
+      </div>
+      <div class="prog-row">
+        <span class="prog-lbl">Understand</span>
+        <div class="prog-bar"><div class="prog-fill" style="width:85%;background:var(--green)"></div></div>
+        <span class="prog-val">85%</span>
+      </div>
+      <div class="prog-row">
+        <span class="prog-lbl">Apply</span>
+        <div class="prog-bar"><div class="prog-fill" style="width:75%;background:var(--amber)"></div></div>
+        <span class="prog-val">75%</span>
+      </div>
+      <div class="prog-row">
+        <span class="prog-lbl">Analyze</span>
+        <div class="prog-bar"><div class="prog-fill" style="width:70%;background:var(--amber)"></div></div>
+        <span class="prog-val">70%</span>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--cyan);margin-bottom:12px">PISA PROFIL YANGILANDI</div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--mid)">
+        <div>Reading PISA: <strong style="color:var(--green)">1.4 → 1.5</strong></div>
+        <div>O'tish ko'nikmalari: <strong style="color:var(--amber)">L1→L2: oddiy tasniflash &#10004;</strong></div>
+        <div>Streak: <strong style="color:var(--amber)">5 kun &#128293;</strong></div>
+        <div>Mastery: <strong style="color:var(--green)">0.68 → 0.72</strong></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--blue);margin-bottom:12px">O'QITUVCHI HISOBOTI</div>
+      <div style="font-size:12px;color:var(--mid);line-height:1.8">
+        <strong style="color:var(--hi)">Sardor Karimov</strong> &bull; Tarix 5-sinf, 10-§ "Yozuv tarixi" &bull; ${new Date().toLocaleDateString()}<br>
+        Umumiy aniqlik: <strong>${totalAcc}%</strong> | PISA o'zgarish: <strong style="color:var(--green)">+0.1</strong> | Yulduzlar: ${document.getElementById('bossStars').innerHTML}<br>
+        <strong style="color:var(--green)">Kuchli:</strong> UZ-HIST-5-WRITING-01, UZ-HIST-5-WRITING-02<br>
+        <strong style="color:var(--amber)">Mashq kerak:</strong> UZ-HIST-5-WRITING-03 (yozuv turlarini solishtirish, Apply daraja)
+      </div>
+    </div>
+
+    ${antiCheatHtml}
+
+    <div class="parent-card">
+      <h3>&#128140; Ota-ona xulosasi</h3>
+      <p>
+        Sardor bugungi tarix uy vazifasini muvaffaqiyatli tugatdi.<br>
+        "Yozuv — insoniyatning buyuk kashfiyoti" mavzusida <strong>${document.getElementById('bossStars').innerHTML}</strong> oldi.<br>
+        Qadimgi yozuv turlari va alifbo tarixini yaxshi o'zlashtirdi. Turli yozuv turlarini solishtirish ko'nikmasida qo'shimcha mashq foydali bo'ladi.<br><br>
+        <em style="color:var(--green)">Uyda mashq:</em> Uyingizdagi turli yozuvlarni birga toping — kitobdagi lotin harflar, eski dasturdagi kirill yozuvi, pullar ustidagi raqamlar. Sardordan har birini "eslatuvchi belgilar, rasmli, so'z yozuvi yoki alifboli" deb tasniflashni so'rang.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:16px;text-align:center;padding:24px">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--lo);margin-bottom:8px">KEYINGI SESSIYAGA FEED-FORWARD</div>
+      <div style="font-size:12px;color:var(--mid)">
+        &#8594; UZ-HIST-5-WRITING-03 Memory Sprint ga kiritildi<br>
+        &#8594; Spaced repetition: "yozuv turlari" — 1 kundan keyin ko'rib chiqish<br>
+        &#8594; Keyingi mavzu: 11-§ "Avesto — ajdodlarimiz yaratgan ilk yozma tarixiy manba"
+      </div>
+    </div>`;
+}
+
+// ===== BOOT =====
+goPhase(-1);
+</script>
+</body>
+</html>

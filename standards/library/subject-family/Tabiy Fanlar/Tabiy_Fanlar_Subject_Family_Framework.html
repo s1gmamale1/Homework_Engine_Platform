@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabiy Fanlar — Natural Sciences · Family Documentation</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --accent-color: #39ff14; /* Neon Green — natural sciences */
+            --accent-glow: rgba(57, 255, 20, 0.3);
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --border-color: #333;
+            --neon-purple: #bc13fe;
+            --neon-cyan: #00f2ff;
+            --neon-amber: #ffb300;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-glow);
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--neon-purple);
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+        }
+
+        .status-bar p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        details {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            margin-right: 15px;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.02);
+            font-size: 0.92em;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: rgba(57, 255, 20, 0.08);
+            color: var(--accent-color);
+        }
+
+        code {
+            background: #2a2a2a;
+            color: var(--neon-cyan);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--header-color);
+        }
+
+        .highlight {
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+
+        .good-example {
+            border-left: 3px solid var(--neon-green, #39ff14);
+            padding-left: 12px;
+            margin: 10px 0;
+            color: #afffa3;
+        }
+
+        .bad-example {
+            border-left: 3px solid #ff3131;
+            padding-left: 12px;
+            margin: 10px 0;
+            color: #ffb1b1;
+        }
+
+        .obs-tag, .qnt-tag {
+            display: inline-block;
+            font-size: 0.75em;
+            padding: 1px 6px;
+            border-radius: 3px;
+            margin-left: 4px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        .obs-tag {
+            background: rgba(57, 255, 20, 0.15);
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+        }
+
+        .qnt-tag {
+            background: rgba(0, 242, 255, 0.15);
+            color: var(--neon-cyan);
+            border: 1px solid var(--neon-cyan);
+        }
+
+        .callout {
+            background: rgba(255, 179, 0, 0.08);
+            border-left: 3px solid var(--neon-amber);
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        h3 {
+            color: var(--neon-cyan);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Tabiy Fanlar — Natural Sciences</h1>
+
+    <div class="status-bar">
+        <p><strong>Status:</strong> Family Documentation Guide (Filter/Adapter) — Layer 1 Authoritative</p>
+        <p><strong>Target Audience:</strong> Subject-Specific Content Producers (Biology · Physics · Chemistry · Geography · Combined Science · Astronomy)</p>
+        <p><strong>Role:</strong> Bridges core NETS standards and individual subject frameworks. Subjects inherit from this doc.</p>
+        <p><strong>Parent Documents:</strong> <code>UNIFIED-Buzan v2.0</code> | <code>Library Framework v0.6</code></p>
+        <p><strong>Branch Tags:</strong> <span class="obs-tag">OBS</span> = Observational (Bio/Geo/Astro/Combined) · <span class="qnt-tag">QNT</span> = Quantitative (Physics/Chemistry)</p>
+    </div>
+
+    <details open>
+        <summary>1. What Is This Family</summary>
+        <div class="content">
+            <p>"Tabiat" translates to nature. This family studies <strong>how natural systems work</strong>. Every concept is either (a) an observation about the natural world, (b) a classification organizing observations, or (c) a causal model explaining why a system behaves as it does. Knowledge is built through a shared scientific method: <strong>observe → classify → hypothesize → explain → predict</strong>.</p>
+
+            <p><strong>What it teaches:</strong> Scientific thinking through discovery, experimentation, and causal modeling.</p>
+
+            <p><strong>What it focuses on:</strong></p>
+            <ul>
+                <li>Causal explanation and system modeling.</li>
+                <li>Classification, taxonomy, and diagram literacy.</li>
+                <li>Experimental reasoning and hypothesis formation.</li>
+                <li>Formal notation (equations, periodic table, force diagrams) <span class="qnt-tag">QNT</span></li>
+                <li>Multi-step derivation and error detection <span class="qnt-tag">QNT</span></li>
+                <li>Data interpretation from graphs, maps, satellite imagery.</li>
+            </ul>
+
+            <p><strong>What it is NOT about:</strong> Pure axiomatic derivation (now Math-only Aniq Fanlar), interpretive/opinion-based reasoning (Ijtimoiy Fanlari), linguistic form (Til Fanlari).</p>
+
+            <div class="callout">
+                <strong>Dual identity (post Library Framework v0.6):</strong> Physics and Chemistry migrated into this family. Tabiy Fanlar therefore carries two coexisting cognitive modes — <span class="obs-tag">OBS</span> observational (Bio/Geo/Astro/Combined) and <span class="qnt-tag">QNT</span> quantitative (Physics/Chemistry). Rules below apply to both unless tagged.
+            </div>
+
+            <p><strong>Permeable boundary with Aniq Fanlar (now Math-only):</strong> Quantitative natural sciences explicitly reference Math for calculation (population growth rates, stoichiometry, kinematics). The boundary is crossed by reference, not content migration.</p>
+
+            <p><strong>Cognitive Demand Profile (ranked):</strong> Causal Explanation (1), Concept Model Construction (2), Classification & Taxonomy (3), Diagram Literacy (4), Formal Notation <span class="qnt-tag">QNT</span> (5), Multi-step Calculation <span class="qnt-tag">QNT</span> (6), Experimental Reasoning (7), Data Interpretation (8), Error Detection (9), Memorization (10).</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. Subjects in This Family</summary>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>UZ Name</th>
+                        <th>RU Name</th>
+                        <th>Grades</th>
+                        <th>Branch</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Biology</strong></td>
+                        <td>Biologiya</td>
+                        <td>Биология</td>
+                        <td>G5–11</td>
+                        <td><span class="obs-tag">OBS</span></td>
+                        <td>Core observational subject. Anatomy, ecology, genetics. Diagram-first.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Physics</strong></td>
+                        <td>Fizika</td>
+                        <td>Физика</td>
+                        <td>G7–11</td>
+                        <td><span class="qnt-tag">QNT</span></td>
+                        <td>Migrated from Aniq Fanlar v0.6. Keeps CPA + Worked Examples + Error Analysis apparatus.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chemistry</strong></td>
+                        <td>Kimyo</td>
+                        <td>Химия</td>
+                        <td>G7–11</td>
+                        <td><span class="qnt-tag">QNT</span></td>
+                        <td>Migrated from Aniq Fanlar v0.6. Symbolic notation + procedural reasoning.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Geography</strong></td>
+                        <td>Geografiya</td>
+                        <td>География</td>
+                        <td>G5–11</td>
+                        <td><span class="obs-tag">OBS</span></td>
+                        <td>Spatial reasoning, map/satellite interpretation. Feeder for GIS & Cartography (CSC-009).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Combined Science</strong></td>
+                        <td>Tabiiy fanlar</td>
+                        <td>Естествознание</td>
+                        <td>G5–6</td>
+                        <td><span class="obs-tag">OBS</span></td>
+                        <td>Transitional combined science. Phenomenon-first. Splits from G7.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Astronomy</strong></td>
+                        <td>Astronomiya</td>
+                        <td>Астраномия</td>
+                        <td>G11</td>
+                        <td><span class="obs-tag">OBS</span></td>
+                        <td>Orbital mechanics + prediction-from-principles. Leans on Physics.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Why these six cluster together:</strong> All six share the scientific method — observation, classification, causal explanation, prediction. A student strong in Biology's causal reasoning transfers to Chemistry's reaction mechanisms more readily than to pure Math proofs. At the G7–11 Uzbek-school level, Physics and Chemistry are primarily experimental (observe → hypothesize → test → explain), not axiomatic. Mechanic emphasis is shared, with branch-specific adaptations for quantitative subjects.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>3. What This Family Focuses On</summary>
+        <div class="content">
+            <ul>
+                <li><strong>Discovery Narrative Framing:</strong> Every concept introduced as a problem someone faced — "Scientists noticed fossils of the same species on continents separated by oceans. How could this be?"</li>
+                <li><strong>Concrete-to-Abstract Progression (CPA adapted):</strong> Real specimen/photograph/map → classification system → abstract model. Mandatory for <span class="qnt-tag">QNT</span> formulas.</li>
+                <li><strong>Uzbek-Context Anchoring:</strong> Aral Sea for environmental science, Zarafshan river for ecology, Tien Shan for geology, Ulugh Beg observatory for astronomy. Local first, global after.</li>
+                <li><strong>Diagram as First-Class Representation:</strong> Unlike Math (formulas dominate), Tabiy Fanlar treats diagrams as primary. Students read, label, interpret, and produce. Notebook Capture heavily used.</li>
+                <li><strong>Dual Coding Mandatory:</strong> Every concept paired with visual + verbal simultaneously. Text-only presentation banned.</li>
+                <li><strong>Cross-Referencing with Aniq Fanlar:</strong> Quantitative needs (growth rates, stoichiometry, kinematics) reference Math explicitly. Boundary permeable for learning.</li>
+            </ul>
+
+            <p><strong>Do NOT focus on:</strong> Axiomatic proof (Math territory), free-form creative expression, opinion-based debates, linguistic analysis.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>4. Best Methods & Games</summary>
+        <div class="content">
+            <h3>Primary Mechanics</h3>
+
+            <p><strong>Story Mode (Discovery Arc)</strong></p>
+            <div class="good-example">Good: Frame photosynthesis as a historical mystery — "Why do plants grow heavier than the soil they consume?"</div>
+            <div class="bad-example">Bad: Start with "Photosynthesis is the process by which..."</div>
+
+            <p><strong>Notebook Capture (Diagrams + Derivations)</strong></p>
+            <div class="good-example">Good <span class="obs-tag">OBS</span>: Draw and label a cell's organelles by hand, photograph the result.</div>
+            <div class="good-example">Good <span class="qnt-tag">QNT</span>: Derive kinematic equation on paper, upload photo for partial-credit rubric.</div>
+            <div class="bad-example">Bad: Type the definition of "nucleus."</div>
+
+            <p><strong>Why Chain (Causal Reasoning)</strong></p>
+            <div class="good-example">Good: L1 "Why do leaves change color?" → L2 "Why do chlorophyll levels drop?" → L3 "Why does day length trigger this?"</div>
+            <div class="callout">Chain depth: 2 levels G5, 3 levels G6–8, 4 levels G9+.</div>
+
+            <p><strong>Memory Palace (Spatial Mnemonic)</strong></p>
+            <div class="good-example">Good: Place organ systems at Registan hotspots; recall by "walking" through.</div>
+            <div class="good-example">Good <span class="qnt-tag">QNT</span>: Map periodic-table groups onto courtyard positions.</div>
+
+            <p><strong>Worked Examples <span class="qnt-tag">QNT</span></strong></p>
+            <div class="good-example">Good: Step-by-step stoichiometry with two steps blanked; student fills in.</div>
+
+            <p><strong>Error Analysis <span class="qnt-tag">QNT</span></strong></p>
+            <div class="good-example">Good: Find the error in a "solved" kinematics problem where units were dropped.</div>
+
+            <h3>Interactive Picks</h3>
+            <table>
+                <tr>
+                    <th>Game</th>
+                    <th>Why It Fits</th>
+                    <th>Best For</th>
+                </tr>
+                <tr>
+                    <td>Tile Match</td>
+                    <td>Classification sorting / formula assembly</td>
+                    <td>Organism↔habitat, equation components</td>
+                </tr>
+                <tr>
+                    <td>Puzzle Lock</td>
+                    <td>Procedural ordering</td>
+                    <td>Lab protocols, mitosis stages, reaction steps</td>
+                </tr>
+                <tr>
+                    <td>Reaction Chain</td>
+                    <td>Fast classification fluency</td>
+                    <td>Living/non-living, acid/base, biome sorting</td>
+                </tr>
+                <tr>
+                    <td>Real-Life Challenge</td>
+                    <td>Expert POV + W5H scaffold</td>
+                    <td>Ecologist / engineer / urban-planner scenarios</td>
+                </tr>
+                <tr>
+                    <td>Connect Four vs AI <span class="qnt-tag">QNT</span></td>
+                    <td>Multi-step planning</td>
+                    <td>Balancing reactions, kinematics</td>
+                </tr>
+                <tr>
+                    <td>Peer Teaching</td>
+                    <td>Deep processing via explanation</td>
+                    <td>G8+ Ohm's law, photosynthesis, equilibrium</td>
+                </tr>
+            </table>
+
+            <h3>Buzan Alternatives (Phase 5 — select by content structure)</h3>
+            <ul>
+                <li><strong>Radiant Summary (Mind Map):</strong> Hierarchical content — taxonomy, organ systems, periodic groups.</li>
+                <li><strong>Link System:</strong> Sequential content — water cycle, photosynthesis, reaction mechanisms, mitosis.</li>
+                <li><strong>Memory Palace:</strong> Spatial content — anatomy, biomes, solar system, force diagrams.</li>
+                <li><strong>Peg System:</strong> Discrete-fact content — constants, atomic numbers, geological periods.</li>
+            </ul>
+
+            <h3>Banned / Not Recommended</h3>
+            <ul>
+                <li><strong>Word Ladder Climb:</strong> Purely linguistic. No fit.</li>
+                <li><strong>Memory Match Blitz:</strong> Visual memory without cognitive gate.</li>
+                <li><strong>Movement Breaks G5+:</strong> Breaks sustained cognitive effort.</li>
+                <li><strong>Speed Reading:</strong> Natural-science problems need deliberate reading.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. Boss Format for Tabiy Fanlar</summary>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>G5–6</th>
+                        <th>G7–8</th>
+                        <th>G9–11</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Format</strong></td>
+                        <td>Short answer + diagram labeling (0% MC)</td>
+                        <td>Multi-part explanation + causal chain (0% MC)</td>
+                        <td>Open reasoning + extended response (0% MC)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Archetype <span class="obs-tag">OBS</span></strong></td>
+                        <td>Explain-the-phenomenon</td>
+                        <td>Identify-the-causal-chain</td>
+                        <td>Predict-from-principles / evaluate competing explanations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Archetype <span class="qnt-tag">QNT</span></strong></td>
+                        <td>N/A (starts G7)</td>
+                        <td>Show-the-derivation (multi-step solve)</td>
+                        <td>Full derivation + error analysis + application</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Notebook Capture</strong></td>
+                        <td>1 in 3 Boss sessions</td>
+                        <td>1 in 2 Boss sessions</td>
+                        <td>Every session <span class="qnt-tag">QNT</span>; 1 in 2 <span class="obs-tag">OBS</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Partial Credit</strong></td>
+                        <td>Component rubric</td>
+                        <td>Causal-chain milestones</td>
+                        <td>Derivation steps <span class="qnt-tag">QNT</span> / evidence bands <span class="obs-tag">OBS</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Socratic Tutor</strong></td>
+                        <td>Tier 3 (Premium)</td>
+                        <td>Routes to specific Story Mode segment</td>
+                        <td>Redirecting questions only; never give answer</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Distribution</strong></td>
+                        <td>40% Easy · 40% Medium · 20% Hard</td>
+                        <td>Same</td>
+                        <td>Same</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Boss HP</strong></td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>150</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="callout">
+                <strong>Failure language:</strong> "Hali emas!" (Not yet) — never "Wrong" or "Noto'g'ri." TEFCAS flow: Trial → Event → Feedback → Check → Adjust → Success.
+            </div>
+
+            <h3>Design Principle</h3>
+            <p>Every Boss question must require <strong>reasoning</strong>, not recall. For <span class="obs-tag">OBS</span>: "why" and "how" dominate over "what." For <span class="qnt-tag">QNT</span>: the student must SHOW THEIR WORK — typed or photographed via Notebook Capture. A Boss question answerable by pattern-matching a memorized formula is a failed Boss question.</p>
+
+            <h3>Example Stems</h3>
+            <div class="good-example"><strong>Biology <span class="obs-tag">OBS</span>:</strong> "Explain why leaves change color in autumn. What is the underlying biological process?"</div>
+            <div class="good-example"><strong>Ecology <span class="obs-tag">OBS</span>:</strong> "If wolves disappear from a forest, predict what happens to the deer population and explain the cascade."</div>
+            <div class="good-example"><strong>Geography <span class="obs-tag">OBS</span>:</strong> "Using Earth's axial tilt, predict what season it will be in Argentina in July. Justify your reasoning."</div>
+            <div class="good-example"><strong>Astronomy <span class="obs-tag">OBS</span>:</strong> "Predict why Mars appears brighter in certain months, using orbital principles."</div>
+            <div class="good-example"><strong>Physics <span class="qnt-tag">QNT</span>:</strong> "A 2 kg block slides down a 30° frictionless incline. Derive its acceleration and show all steps."</div>
+            <div class="good-example"><strong>Chemistry <span class="qnt-tag">QNT</span>:</strong> "Balance the combustion reaction for propane. Then calculate the mass of CO₂ produced from 10 g of propane."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>6. Narrative Adaptation</summary>
+        <div class="content">
+            <h3>Story Mode (Phase 2)</h3>
+            <p><strong>Discovery Arc:</strong> Problem → Struggle → Discovery → Solution. Every concept framed as a scientist's puzzle.</p>
+            <div class="good-example"><strong>Example <span class="obs-tag">OBS</span>:</strong> Darwin notices similar finches with different beaks across islands — what explains the variation?</div>
+            <div class="good-example"><strong>Example <span class="qnt-tag">QNT</span>:</strong> Galileo drops two balls from the tower — why do they land together despite different masses?</div>
+
+            <h3>Real-Life Challenge (Phase 4)</h3>
+            <p><strong>Role:</strong> Student IS the expert. W5H Radiant scaffold mandatory G5–6; default ON G7–8.</p>
+            <table>
+                <thead>
+                    <tr><th>Subject</th><th>Wise Status Roles (UZ)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Biology</td><td>Botanika mutaxassisi, Ekologiya direktori, Genetik tahlilchi, Tibbiyot tadqiqotchisi</td></tr>
+                    <tr><td>Physics</td><td>Bosh muhandis, Energetika tahlilchi, Eksperimental fizik, Yadro fizikasi mutaxassisi</td></tr>
+                    <tr><td>Chemistry</td><td>Laboratoriya rahbari, Sintez kimyogar, Sifat nazorati tahlilchi, Farmatsevtika tadqiqotchisi</td></tr>
+                    <tr><td>Geography</td><td>Shahar rejalashtiruvchi, Kartografiya mutaxassisi, Iqlim tahlilchi, GIS mutaxassisi</td></tr>
+                    <tr><td>Combined Science</td><td>Tabiatshunos, Dala tadqiqotchisi</td></tr>
+                    <tr><td>Astronomy</td><td>Rasadxona direktori, Orbital hisob-kitob mutaxassisi</td></tr>
+                </tbody>
+            </table>
+            <div class="good-example"><strong>Example:</strong> "You are the Ecology Director at the Aral Sea basin. Three species show population decline. Identify the cause chain and propose an evidence-based intervention."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>7. National Pride Application</summary>
+        <div class="content">
+            <p>Layer 0 inheritance: 5-sec skip-lock on Phase 0-A quote · 20% all-task injection · Phase 6 "professional certification" framing · dark-mode default. Below are <strong>family-specific anchors</strong>.</p>
+
+            <h3>Uzbek-Context Anchors (55% national / 45% global rolling)</h3>
+            <p><strong>National (55%):</strong> Aral Sea desiccation, Zarafshan ecosystem, Tien Shan geology, Afrosiyob rail (materials), IT-Park research labs, Samarkand Registan (scale-model astronomy, architecture-physics), Tashkent Botanical Garden, Uzbek cotton genetics, Silk Road climate/trade, Ulugh Beg Observatory, Mirzo Ulugbek Madrasa.</p>
+            <p><strong>Global (45%):</strong> CERN, NASA/ESA, Darwin's Galápagos, Mendeleev, Marie Curie, Jane Goodall, Rosalind Franklin, Great Barrier Reef, Amazon, Apollo missions.</p>
+
+            <h3>Tagged Quote Seeds</h3>
+            <ul>
+                <li><strong>Abu Rayhon Beruniy</strong> — observation and measurement (national · Biology/Astronomy)</li>
+                <li><strong>Mirzo Ulugbek</strong> — celestial observation (national · Astronomy)</li>
+                <li><strong>Abu Ali ibn Sino (Avicenna)</strong> — medicine and observation (national · Biology/Chemistry)</li>
+                <li><strong>Charles Darwin</strong> — natural selection (global · Biology)</li>
+                <li><strong>Dmitri Mendeleev</strong> — periodic patterns (global · Chemistry)</li>
+                <li><strong>Marie Curie</strong> — experimental persistence (global · Chemistry/Physics)</li>
+            </ul>
+
+            <h3>Phase 6 Certification Framing</h3>
+            <div class="good-example">Entry: <em>"Bu — sizning professional sertifikatingiz. Global standartga mos keling."</em></div>
+            <div class="good-example">Victory: <em>"Sertifikatsiya muvaffaqiyatli! Siz [Role] sifatida tasdiqlandingiz."</em></div>
+            <p><small>Role filled from the §6 Wise Status table matching the current subject.</small></p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Technical Rules</summary>
+        <div class="content">
+            <h3>Phase Time Weight Overrides</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Standard</th>
+                        <th><span class="obs-tag">OBS</span> Duration</th>
+                        <th><span class="qnt-tag">QNT</span> Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Phase 0-A (Theme Preview)</td><td>2–3 min</td><td>2–3</td><td>2–3</td></tr>
+                    <tr><td>Phase 0-B (Flash Cards)</td><td>1–2 min</td><td>1–2</td><td>1–2</td></tr>
+                    <tr><td>Phase 1 (Memory Sprint)</td><td>2 min</td><td>2</td><td>2</td></tr>
+                    <tr><td>Phase 2 (Story Mode)</td><td>5–7 min</td><td><strong>7–9 (+2)</strong></td><td>5–7</td></tr>
+                    <tr><td>Phase 3 (Game Breaks)</td><td>6–9 min</td><td>6–9</td><td><strong>8–10 (+2)</strong></td></tr>
+                    <tr><td>Phase 4 (Real-Life)</td><td>3–5 min</td><td>3–5</td><td>3–5</td></tr>
+                    <tr><td>Phase 5 (Consolidation)</td><td>2–3 min</td><td><strong>3–4 (+1)</strong></td><td><strong>3–4 (+1)</strong></td></tr>
+                    <tr><td>Phase 6 (Final Boss)</td><td>5–10 min</td><td><strong>6–11 (+1)</strong></td><td><strong>7–12 (+2)</strong></td></tr>
+                    <tr><td>Phase 7 (Reflection)</td><td>2–3 min</td><td>2–3</td><td>2–3</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Inheritance Rules</h3>
+            <ol>
+                <li><strong>Layer 0 Constitution:</strong> <code>NETS-Homework-Engine-UNIFIED-Buzan.md</code> rules apply unchanged.</li>
+                <li><strong>Family Lock:</strong> Membership per Library Framework v0.6. Reclassification requires ADR.</li>
+                <li><strong>Dual-Catalog:</strong> Phase 3 must use ≥1 Interactive and ≥2 Default mechanics.</li>
+                <li><strong>Dual Coding Mandatory:</strong> Every concept paired with visual + verbal. Text-only banned.</li>
+                <li><strong>SMASHIN' SCOPE Gate:</strong> Mnemonics must score ≥6/12 before deployment.</li>
+                <li><strong>Layer 2 Override:</strong> Subject frameworks (Biology, Physics, Chemistry, Geography, Combined Science, Astronomy) may deviate only with formal ADR + founder approval.</li>
+            </ol>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>

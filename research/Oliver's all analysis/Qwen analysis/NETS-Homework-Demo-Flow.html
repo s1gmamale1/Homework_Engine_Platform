@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS — Tarix 5-sinf: Yozuv — insoniyatning buyuk kashfiyoti</title>
+<style>
+:root {
+  --bg-dark: #0f1923;
+  --bg-card: #1a2733;
+  --bg-card-hover: #223344;
+  --primary: #4fc3f7;
+  --success: #66bb6a;
+  --error: #ef5350;
+  --warning: #ffb74d;
+  --gold: #ffd54f;
+  --text: #e0e0e0;
+  --text-dim: #90a4ae;
+  --border: #2c3e50;
+  --boss-hp: #ef5350;
+  --combo: #ff9800;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.screen {
+  display: none;
+  min-height: 100vh;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+.screen.active { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+@keyframes xpFloat { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-50px); } }
+@keyframes bossDamage { 0% { background: var(--gold); } 100% { background: var(--boss-hp); } }
+@keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+}
+
+/* Loading Screen */
+.loading-screen { text-align: center; }
+.loading-logo { font-size: 64px; margin-bottom: 20px; }
+.loading-bar {
+  width: 300px;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 20px auto;
+}
+.loading-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--success));
+  width: 0%;
+  transition: width 0.5s ease;
+}
+.profile-card {
+  background: var(--bg-card-hover);
+  padding: 15px;
+  border-radius: 12px;
+  margin: 15px 0;
+  text-align: left;
+  font-size: 14px;
+}
+.profile-card h3 { color: var(--primary); margin-bottom: 10px; font-size: 16px; }
+.profile-card p { margin: 5px 0; color: var(--text-dim); }
+.profile-card strong { color: var(--text); }
+
+/* Buttons */
+.btn {
+  padding: 12px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 10px 5px;
+}
+.btn-primary { background: var(--primary); color: var(--bg-dark); }
+.btn-primary:hover { background: #81d4fa; transform: translateY(-2px); }
+.btn-success { background: var(--success); color: white; }
+.btn-success:hover { background: #81c784; }
+.btn-warning { background: var(--warning); color: var(--bg-dark); }
+.btn-warning:hover { background: #ffcc80; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Timer */
+.timer {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 15px 0;
+}
+.timer.warning { color: var(--warning); }
+.timer.danger { color: var(--error); animation: pulse 1s infinite; }
+
+/* Questions */
+.question {
+  font-size: 20px;
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--bg-card-hover);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+}
+.question-num { color: var(--text-dim); font-size: 14px; margin-bottom: 10px; }
+.options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; }
+.option {
+  padding: 15px;
+  background: var(--bg-dark);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  font-size: 16px;
+}
+.option:hover { border-color: var(--primary); background: var(--bg-card-hover); }
+.option.correct { border-color: var(--success); background: rgba(102, 187, 106, 0.2); }
+.option.wrong { border-color: var(--error); background: rgba(239, 83, 80, 0.2); animation: shake 0.5s; }
+input[type="text"], textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  background: var(--bg-dark);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  margin: 10px 0;
+}
+input[type="text"]:focus, textarea:focus { outline: none; border-color: var(--primary); }
+
+/* Feedback */
+.feedback {
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-weight: 600;
+  font-size: 18px;
+  animation: slideIn 0.3s ease;
+}
+.feedback.correct { background: rgba(102, 187, 106, 0.2); color: var(--success); border: 1px solid var(--success); }
+.feedback.incorrect { background: rgba(239, 83, 80, 0.2); color: var(--error); border: 1px solid var(--error); }
+.xp-popup {
+  position: fixed;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--gold);
+  animation: xpFloat 1.5s ease forwards;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Story Mode */
+.story-text {
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 20px;
+  background: var(--bg-dark);
+  border-radius: 12px;
+  margin: 15px 0;
+  border: 1px solid var(--border);
+}
+.story-text .highlight { color: var(--primary); font-weight: 600; }
+.checkpoint {
+  background: linear-gradient(135deg, #1a2733, #223344);
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid var(--primary);
+  margin: 20px 0;
+}
+.checkpoint h3 { color: var(--primary); margin-bottom: 10px; }
+
+/* Memory Palace */
+.palace-map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+.palace-location {
+  padding: 15px;
+  background: var(--bg-dark);
+  border-radius: 12px;
+  border: 2px dashed var(--border);
+  text-align: center;
+  min-height: 100px;
+}
+.palace-location.filled { border-style: solid; border-color: var(--success); }
+.palace-location h4 { color: var(--primary); margin-bottom: 8px; }
+.concept-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 15px;
+  background: var(--bg-dark);
+  border-radius: 12px;
+}
+.concept-item {
+  padding: 8px 16px;
+  background: var(--bg-card-hover);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  cursor: grab;
+  font-size: 14px;
+}
+.concept-item.used { opacity: 0.3; cursor: default; }
+
+/* Tile Match */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+.tile {
+  padding: 20px 10px;
+  background: var(--bg-dark);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  font-size: 14px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tile:hover { border-color: var(--primary); }
+.tile.flipped { border-color: var(--primary); background: var(--bg-card-hover); }
+.tile.matched { border-color: var(--success); background: rgba(102, 187, 106, 0.1); opacity: 0.5; cursor: default; }
+
+/* Why Chain */
+.why-chain { margin: 20px 0; }
+.chain-level {
+  padding: 15px;
+  background: var(--bg-dark);
+  border-radius: 8px;
+  margin: 10px 0;
+  border-left: 4px solid var(--primary);
+}
+.chain-level.completed { border-color: var(--success); }
+.chain-level .level-num { color: var(--primary); font-size: 12px; }
+.chain-progress { display: flex; gap: 5px; margin: 10px 0; }
+.chain-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--border); }
+.chain-dot.active { background: var(--primary); }
+.chain-dot.done { background: var(--success); }
+
+/* Boss Fight */
+.boss-header {
+  text-align: center;
+  margin: 20px 0;
+}
+.boss-hp-bar {
+  width: 100%;
+  height: 30px;
+  background: var(--bg-dark);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px 0;
+  border: 2px solid var(--border);
+}
+.boss-hp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--error), var(--warning));
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+.combo-display {
+  font-size: 24px;
+  color: var(--combo);
+  margin: 10px 0;
+  animation: pulse 0.5s;
+}
+.combo-display.active { animation: pulse 0.5s infinite; }
+
+/* Results */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+.result-card {
+  padding: 20px;
+  background: var(--bg-dark);
+  border-radius: 12px;
+  text-align: center;
+}
+.result-card .value { font-size: 36px; font-weight: bold; color: var(--gold); }
+.result-card .label { color: var(--text-dim); margin-top: 5px; font-size: 14px; }
+.stars { font-size: 48px; margin: 15px 0; }
+.star { color: var(--border); }
+.star.filled { color: var(--gold); }
+
+/* Reports */
+.report-section {
+  background: var(--bg-dark);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+  border: 1px solid var(--border);
+}
+.report-section h3 { color: var(--primary); margin-bottom: 15px; }
+.report-section p { margin: 8px 0; color: var(--text-dim); }
+.report-section strong { color: var(--text); }
+
+/* Progress Bar */
+.session-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--bg-dark);
+  z-index: 100;
+}
+.session-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--success));
+  transition: width 0.5s ease;
+}
+
+/* Phase Header */
+.phase-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.phase-header h1 { font-size: 28px; color: var(--primary); margin: 10px 0; }
+.phase-header h2 { font-size: 22px; color: var(--text-dim); font-weight: 400; }
+.phase-header .phase-icon { font-size: 64px; margin-bottom: 10px; }
+
+/* XP Counter */
+.xp-counter {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: var(--bg-card);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid var(--gold);
+  z-index: 99;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--gold);
+}
+.streak-counter {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: var(--bg-card);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid var(--warning);
+  z-index: 99;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .options { grid-template-columns: 1fr; }
+  .tile-grid { grid-template-columns: repeat(3, 1fr); }
+  .results-grid { grid-template-columns: 1fr; }
+  .palace-map { grid-template-columns: repeat(2, 1fr); }
+  .container { padding: 20px; }
+}
+
+/* Act label */
+.act-label {
+  display: inline-block;
+  padding: 5px 15px;
+  background: var(--primary);
+  color: var(--bg-dark);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Info boxes */
+.info-box {
+  background: rgba(79, 195, 247, 0.1);
+  border: 1px solid var(--primary);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-size: 14px;
+}
+.info-box p { margin: 5px 0; }
+
+/* Summary table */
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.summary-table th, .summary-table td {
+  padding: 12px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+.summary-table th { background: var(--bg-card-hover); color: var(--primary); }
+.summary-table td { background: var(--bg-dark); }
+</style>
+</head>
+<body>
+
+<div class="session-progress" id="sessionProgress">
+  <div class="session-progress-fill" id="progressFill" style="width: 0%"></div>
+</div>
+
+<div class="xp-counter" id="xpCounter" style="display:none">⭐ <span id="xpValue">0</span> XP</div>
+<div class="streak-counter" id="streakCounter" style="display:none">🔥 <span id="streakValue">0</span></div>
+
+<!-- SCREEN: Loading (Act 1) -->
+<div class="screen loading-screen" id="screen-loading">
+  <div class="container">
+    <div class="loading-logo">📚</div>
+    <h1>NETS — Milliy Ta'lim Tizimi</h1>
+    <h2 style="color: var(--text-dim); margin: 10px 0;">Tarix, 5-sinf</h2>
+    <p style="color: var(--primary); margin: 10px 0;">III bob, 10-bo'lim</p>
+    <p style="font-size: 20px; margin: 15px 0;"><strong>"Yozuv — insoniyatning buyuk kashfiyoti"</strong></p>
+    <p style="color: var(--text-dim);">Darslik sahifalari: 30-33</p>
+    <div class="loading-bar"><div class="loading-fill" id="loadingFill"></div></div>
+    <p id="loadingText" style="color: var(--text-dim);">Yuklanmoqda...</p>
+    <div id="profileInfo" style="display:none">
+      <div class="profile-card">
+        <h3>👤 Sardor Karimov — 5-A sinf, 14-maktab, Toshkent</h3>
+        <p>📊 O'qish PISA: <strong>1.4</strong> (maqsad: 2.0)</p>
+        <p>🎯 Domainlar: kirish=1.6, talqin=1.3, baholash=1.1</p>
+        <p>🧠 12 ta standart kuzatilmoqda, 3 tasi 0.6 dan past</p>
+        <p>🔥 Ketma-ketlik: <strong>4 kun</strong> (yana 1 kun → 7-kun bonusi +50% XP)</p>
+        <p>📝 8 ta takrorlash elementi kutilmoqda</p>
+      </div>
+      <div class="profile-card">
+        <h3>⚙️ Tizim sozlamalari</h3>
+        <p>✅ Kontent tekshiruvi: 72 ta element topildi (minimum: 65)</p>
+        <p>✅ O'qituvchi: Ms. Barno — standart sozlamalar</p>
+        <p>✅ Rejim: Standart (25 daqiqa), Boss HP: 100, Maslahatlar: yoqilgan</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN: Engagement Hook (Act 2) -->
+<div class="screen" id="screen-hook">
+  <div class="container">
+    <div class="phase-header">
+      <span class="act-label">ACT 2</span>
+      <div class="phase-icon">🔥</div>
+      <h1>Tez Isinish!</h1>
+      <h2>30 soniya — Qancha to'play olasiz?</h2>
+    </div>
+    <div class="timer" id="hookTimer">30</div>
+    <div id="hookQuestion"></div>
+    <div id="hookFeedback"></div>
+    <div id="hookResults" style="display:none; text-align:center; margin-top:20px">
+      <h2>🎉 Ajoyib isinish!</h2>
+      <p style="font-size:24px; margin:15px 0;"><span id="hookScore">0</span> / 4 to'g'ri</p>
+      <p style="font-size:20px; color: var(--gold);">+<span id="hookXP">0</span> XP</p>
+      <p style="color: var(--text-dim); margin:15px 0;">Miyangiz yozuv tizimlari haqida tayyor. Haqiqiy darsni boshlaymiz!</p>
+      <button class="btn btn-primary" onclick="goToScreen('screen-memory')">Faza 1 ga o'tish →</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN: Memory Sprint (Act 3) -->
+<div class="screen" id="screen-memory">
+  <div class="container">
+    <div class="phase-header">
+      <span class="act-label">ACT 3 — FAZA 1</span>
+      <div class="phase-icon">⚡</div>
+      <h1>Xotira Sprinti</h1>
+      <h2>Oldingi bilimlarni faollashtirish</h2>
+    </div>
+    <div class="timer" id="memoryTimer">1:00</div>
+    <div id="memoryQuestion"></div>
+    <div id="memoryInput"></div>
+    <div id="memoryFeedback"></div>
+    <div id="memoryResults" style="display:none; text-align:center; margin-top:20px">
+      <h2>⚡ Natijalar</h2>
+      <p style="font-size:28px; margin:15px 0;"><span id="memoryScore">0</span> / 6 to'g'ri = <span id="memoryPct">0</span>%</p>
+      <p style="font-size:20px; color: var(--gold);">Jami XP: <span id="memoryXP">0</span></p>
+      <p id="memoryVerdict" style="font-size:18px; color: var(--success); margin:15px 0;"></p>
+      <div class="info-box">
+        <p>🟊 Oqim holati: 78% — oqim zonasida!</p>
+      </div>
+      <button class="btn btn-primary" onclick="goToScreen('screen-story')">Faza 2 ga o'tish →</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN: Story Mode (Act 4) -->
+<div class="screen" id="screen-story">
+  <div class="container">
+    <div class="phase-header">
+      <span class="act-label">ACT 4 — FAZA 2</span>
+      <div class="phase-icon">📖</div>
+      <h1>Hikoya Rejimi</h1>
+      <h2>Yangi kontent — 2 ta segment</h2>
+    </div>
+
+    <div id="storySegment1">
+      <h3 style="color: var(--primary); margin-bottom:15px">📜 Segment 1: Birinchi Yozuv</h3>
+      <div class="story-text">
+        <p><strong>Sardor</strong>, Samarqandlik 5-sinf o'quvchisi, arxeologik qazish joyiga maktab sayohatiga bordi. Arxeolog <strong>Akmal aka</strong> yerdan qadimiy loy lavhani chiqardi.</p>
+        <br>
+        <p>"Bu yozuvning dastlabki shakllaridan biri," dedi Akmal aka. "Minglab yillar oldin odamlar narsalarni eslab qolish uchun loyga belgi qo'yishni boshladilar — qancha don borligi, qancha hayvonlari borligi. Bu biz bugun ishlatadigan harflar emas edi. Ular <span class="highlight">narsalar va belgilar</span> edi."</p>
+        <br>
+        <p>Sardor lavhani yaqindan ko'rdi. Belgilar loyga bosilgan mayda uchburchaklarga o'xshar edi. "Buni kim qilgan?" deb so'radi u.</p>
+        <br>
+        <p>"<span class="highlight">Shumerlar</span>," dedi Akmal aka. "Ular Mesopotamiyada yashagan va biz <span class="highlight">mixxati</span> deb ataydigan belgili yozuvni ixtiro qilishgan."</p>
+      </div>
+      <div class="checkpoint">
+        <h3>🔍 Tekshirish savoli:</h3>
+        <p><strong>Nima uchun odamlar dastlab loyga belgi qo'yishni boshladilar?</strong></p>
+        <input type="text" id="checkpoint1Answer" placeholder="Javobingizni yozing...">
+        <button class="btn btn-primary" onclick="checkCheckpoint(1)">Yuborish</button>
+        <div id="checkpoint1Feedback"></div>
+      </div>
+    </div>
+
+    <div id="storySegment2" style="display:none">
+      <h3 style="color: var(--primary); margin-bottom:15px">📜 Segment 2: Alifbo Inqilobi</h3>
+      <div class="story-text">
+        <p>Ertasi kuni Sardorning o'qituvchisi, <strong>Barno opa</strong>, sinfga Finikiya alifbosining rasmini ko'rsatdi.</p>
+        <br>
+        <p>"Bu hamma narsani o'zgartirdi," dedi u. "Bunga qadar yozuv tizimlarida <span class="highlight">minglab belgilar</span> bor edi. Ularning hammasini yodlashingiz kerak edi. Lekin Finikiyaliklar atigi <span class="highlight">22 ta harfdan</span> iborat alifbo yaratdilar. Atigi 22 ta belgi bilan har qanday so'zni yozishingiz mumkin edi. Bu yozuvni oddiy odamlarga ham, faqat ruhoniylar va kotiblargina emas, hammaga ochiq qildi."</p>
+        <br>
+        <p>Sardor o'z alifbosi — har kuni ishlatadigan <strong>O'zbek lotin alifbosi</strong> haqida o'yladi. Unda <span class="highlight">29 ta harf</span> bor. 22 tadan unchalik farq qilmaydi, deb tushundi u.</p>
+      </div>
+      <div class="checkpoint">
+        <h3>🔍 Tekshirish savoli:</h3>
+        <p><strong>Finikiya alifbosi nima uchun muhim edi? Nima uchun 22 ta harf minglab belgilardan yaxshiroq?</strong></p>
+        <input type="text" id="checkpoint2Answer" placeholder="Javobingizni yozing...">
+        <button class="btn btn-primary" onclick="checkCheckpoint(2)">Yuborish</button>
+        <div id="checkpoint2Feedback"></div>
+      </div>
+    </div>
+
+    <div id="memoryPalace" style="display:none">
+      <h3 style="color: var(--primary); margin: 20px 0">🏛️ Xotira Saroyi — Registon Maydoni</h3>
+      <p style="color: var(--text-dim); margin-bottom:15px">5 ta asosiy tushunchani Registon maydonidagi joylarga joylashtiring:</p>
+      <div class="palace-map" id="palaceMap">
+        <div class="palace-location" data-slot="0"><h4>🕌 Asosiy Darvoza</h4><p class="slot-content">...</p></div>
+        <div class="palace-location" data-slot="1"><h4>🏛️ Chap Madrasa</h4><p class="slot-content">...</p></div>
+        <div class="palace-location" data-slot="2"><h4>🏛️ O'ng Madrasa</h4><p class="slot-content">...</p></div>
+        <div class="palace-location" data-slot="3"><h4>⛲ Markaziy Favvora</h4><p class="slot-content">...</p></div>
+        <div class="palace-location" data-slot="4"><h4>🕌 Orqa Masjid</h4><p class="slot-content">...</p></div>
+      </div>
+      <div class="concept-bank" id="conceptBank">
+        <div class="concept-item" data-concept="mixxati — loyga belgi" onclick="selectConcept(this)">Mixxati — loyga uchburchak belgi</div>
+        <div class="concept-item" data-concept="finikiya — 22 harf" onclick="selectConcept(this)">Finikiya alifbosi — 22 harf</div>
+        <div class="concept-item" data-concept="shumerlar — birinchi yozuvchilar" onclick="selectConcept(this)">Shumerlar — birinchi yozuvchilar</div>
+        <div class="concept-item" data-concept="alifbo inqilobi — hamma uchun yozuv" onclick="selectConcept(this)">Alifbo inqilobi — hamma uchun yozuv</div>
+        <div class="concept-item" data-concept="o'zbek alifbosi — 29 harf" onclick="selectConcept(this)">O'zbek alifbosi — 29 harf</div>
+      </div>
+      <p style="color: var(--text-dim); font-size:14px">💡 Joylash uchun tushunchani bosing, keyin joyni bosing</p>
+      <div id="palaceResults" style="display:none; text-align:center; margin-top:20px">
+        <button class="btn btn-primary" onclick="goToScreen('screen-practice')">Faza 3 ga o'tish →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN: Practice Lab (Act 5) -->
+<div class="screen" id="screen-practice">
+  <div class="container">
+    <div class="phase-header">
+      <span class="act-label">ACT 5 — FAZA 3</span>
+      <div class="phase-icon">🎮</div>
+      <h1>Amaliyot Laboratoriyasi</h1>
+      <h2>2 ta o'yin — Mustahkamlash + Kengaytirish</h2>
+    </div>
+
+    <!-- Tile Match -->
+    <div id="tileMatch">
+      <h3 style="color: var(--primary); margin-bottom:15px">🧩 Tile Match — Juftlarni Toping</h3>
+      <div class="timer" id="tileTimer">3:00</div>
+      <p style="color: var(--text-dim); margin-bottom:15px">Yozuv tizimlarini ularning tavsiflari bilan moslashtiring:</p>
+      <div class="tile-grid" id="tileGrid"></div>
+      <div id="tileResults" style="display:none; text-align:center; margin-top:15px"></div>
+    </div>
+
+    <!-- Why Chain -->
+    <div id="whyChain" style="display:none">
+      <h3 style="color: var(--primary); margin-bottom:15px">🔗 Nima Uchun Zanjiri</h3>
+      <p style="color: var(--text-dim); margin-bottom:15px">Eng zaif ko'nikmangiz: "manbalar bo'yicha ma'lumotlarni solishtirish"</p>
+      <div class="chain-progress" id="chainProgress">
+        <div class="chain-dot active"></div>
+        <div class="chain-dot"></div>
+        <div class="chain-dot"></div>
+        <div class="chain-dot"></div>
+      </div>
+      <div class="why-chain" id="chainContainer"></div>
+      <div id="chainResults" style="display:none; text-align:center; margin-top:15px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN: Real-Life Challenge (Act 6) -->
+<div class="screen" id="screen-reallife">
+  <div class="container">
+    <div class="phase-header">
+      <span class="act-label">ACT 6 — FAZA 4</span>
+      <div class="phase-icon">🌍</div>
+      <h1>Hayotiy Vazifa</h1>
+      <h2>Bilimni haqiqiy hayotga qo'llash</h2>
+    </div>
+    <div class="story-text" style="background: linear-gradient(135deg, #1a2733, #2c3e50);">
+      <p>Siz oilangiz bilan Toshkentdagi <strong>O'zbekiston Tarixi Davlat Muzeyiga</strong> tashrif buyurdyngiz. Muzeyda 250 000 dan ortiq eksponatlar bor.</p>
+      <br>
+      <p>Bitta vitrinada siz qadimiy <strong>Sug'diy yozuvi</strong> bo'lgan loy parchasini ko'rasiz. Yonida — ibtidoiy davrdagi <strong>g'or rasmi</strong> fotosurati.</p>
+      <br>
+      <p>Sizning kichik singlingiz so'raydi:</p>
+      <p style="font-style: italic; color: var(--primary);">"Qaysi biri eski? Qaysi biri bizga uni yaratgan odamlar haqida ko'proq ma'lumot beradi?"</p>
+    </div>
+    <div class="checkpoint">
+      <h3>📝 Savol 1:</h3>
+      <p><strong>Qaysi manba eskiroq bo'lishi ehtimol — loy parchasi yoki g'or rasmi? Sababini tushuntiring.</strong></p>
+      <textarea id="realLife1" rows="3" placeholder="Sababingizni yozing..."></textarea>
+    </div>
+    <div class="checkpoint">
+      <h3>📝 Savol 2:</h3>
+      <p><strong>Qaysi manba yaratgan odamlar haqida ko'proq ma'lumot beradi? Nima uchun?</strong></p>
+      <textarea id="realLife2" rows="3" placeholder="Sababingizni yozing..."></textarea>
+    </div>
+    <button class="btn btn-primary" onclick="submitRealLife()" style="margin-top:15px">Yuborish →</button>
+    <div id="realLifeFeedback"></div>
+    <div id="realLifeResults" style="display:none; text-align:center; margin-top:20px">
+      <button class="btn btn-primary" onclick="goToScreen('screen-boss')">Faza 5 ga o'tish →</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN: Boss Fight (Act 7) -->
+<div class="screen" id="screen-boss">
+  <div class="container">
+    <div class="phase-header">
+      <span class="act-label">ACT 7 — FAZA 5</span>
+      <div class="phase-icon">👹</div>
+      <h1>Yakuniy Boss</h1>
+      <h2>Boss YENGILISHI SHART — zero istisno yo'q</h2>
+    </div>
+    <div class="boss-header">
+      <div class="boss-hp-bar">
+        <div class="boss-hp-fill" id="bossHpFill">100 / 100 HP</div>
+      </div>
+      <div class="combo-display" id="comboDisplay">Combo: 0</div>
+    </div>
+    <div id="bossQuestion"></div>
+    <div id="bossFeedback"></div>
+    <div id="bossResults" style="display:none; text-align:center; margin-top:20px">
+      <h1 style="color: var(--gold); font-size: 48px">🏆 BOSS YENGILDI!</h1>
+      <div class="stars" id="bossStars">
+        <span class="star filled">⭐</span>
+        <span class="star filled">⭐</span>
+        <span class="star filled">⭐</span>
+      </div>
+      <p style="font-size:18px; color: var(--text-dim)">Birinchi urinish, maslahatsiz, barcha to'g'ri</p>
+      <p style="font-size:24px; color: var(--gold); margin:15px 0">Boss XP: 1,000 XP (3 yulduzli reyting)</p>
+      <button class="btn btn-primary" onclick="goToScreen('screen-reflection')">Faza 6 ga o'tish →</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN: Reflection (Act 8) -->
+<div class="screen" id="screen-reflection">
+  <div class="container">
+    <div class="phase-header">
+      <span class="act-label">ACT 8 — FAZA 6</span>
+      <div class="phase-icon">🪞</div>
+      <h1>Muloqot</h1>
+      <h2>Metakognitiv refleksiya</h2>
+    </div>
+    <div class="checkpoint" style="border-color: var(--warning);">
+      <h3 style="color: var(--warning);">💭 Refleksiya:</h3>
+      <p style="font-size: 18px; margin: 15px 0"><strong>"Bugun qaysi strategiya sizga eng ko'p yordam berdi? Nima uchun bu siz uchun ishadi?"</strong></p>
+      <textarea id="reflectionAnswer" rows="5" placeholder="Fikringizni yozing... (minimum 10 belgi)"></textarea>
+      <p style="color: var(--text-dim); font-size:14px">Belgilar soni: <span id="reflectionCount">0</span></p>
+    </div>
+    <button class="btn btn-warning" onclick="submitReflection()">Yuborish →</button>
+    <div id="reflectionResults" style="display:none; text-align:center; margin-top:20px">
+      <p style="font-size:20px; color: var(--gold);">+100 XP</p>
+      <button class="btn btn-success" onclick="goToScreen('screen-results')">Natijalarni ko'rish →</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN: Results (Act 9 & 10) -->
+<div class="screen" id="screen-results">
+  <div class="container">
+    <div class="phase-header">
+      <span class="act-label">ACT 9 — NATIJALAR</span>
+      <div class="phase-icon">🏆</div>
+      <h1>Sessiya Yakunlandi!</h1>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="value" id="resultXP">4,290</div>
+        <div class="label">Jami XP</div>
+      </div>
+      <div class="result-card">
+        <div class="value" id="resultAccuracy">83%</div>
+        <div class="label">Umumiy aniqlik</div>
+      </div>
+      <div class="result-card">
+        <div class="value" id="resultPISA">1.4 → 1.5</div>
+        <div class="label">PISA o'zgarishi</div>
+      </div>
+      <div class="result-card">
+        <div class="value" id="resultStreak">5 kun</div>
+        <div class="label">Ketma-ketlik</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin:20px 0">
+      <div class="stars" style="font-size:64px">
+        <span class="star filled">⭐</span>
+        <span class="star filled">⭐</span>
+        <span class="star filled">⭐</span>
+      </div>
+      <p style="font-size:18px; color: var(--text-dim)">Ustalik: 0.68 → 0.72</p>
+      <p style="color: var(--text-dim)">Yana 2 kun → 7-kun bonusi (+50% XP ko'paytiruvchi)</p>
+    </div>
+
+    <!-- Act 10: Reports -->
+    <div style="margin-top:40px">
+      <div class="phase-header">
+        <span class="act-label">ACT 10 — SARDOB YOPGANDAN KEYIN</span>
+      </div>
+
+      <div class="report-section">
+        <h3>📊 1. PISA Profili Yangilandi</h3>
+        <p>O'qish PISA: <strong>1.4 → 1.5</strong></p>
+        <p>"Talqin" domeni: <strong>1.3 → 1.4</strong></p>
+        <p>O'tish ko'nikmasi "L1→L2: oddiy manbalar bo'yicha ma'lumotlarni solishtirish" — <strong style="color: var(--success)">O'zlashtirildi ✓</strong></p>
+      </div>
+
+      <div class="report-section">
+        <h3>👩‍🏫 2. O'qituvchi Hisoboti (Ms. Barno)</h3>
+        <p><strong>O'quvchi:</strong> Sardor Karimov | <strong>Sana:</strong> 3-aprel, 2026</p>
+        <p><strong>Mavzu:</strong> Tarix 5, 10-bo'lim — "Yozuv tarixi"</p>
+        <p><strong>Umumiy aniqlik:</strong> 83% | <strong>PISA o'zgarishi:</strong> +0.1 | <strong>Yulduzlar:</strong> 3/3</p>
+        <p><strong>Kuchli:</strong> UZ-HIST-5-WRITING-01 (yozuv turlari), UZ-HIST-5-WRITING-02 (xronologiya)</p>
+        <p><strong>Ishlash kerak:</strong> Bu sessiyada aniqlanmadi</p>
+        <div class="info-box" style="margin-top:15px">
+          <p>📋 <strong>Sinf tahlili:</strong> 28 o'quvchidan 4 tasi Hayotiy Vazifada manbalarni solishtirishda qiynaldi. Tarixiy manbalarni baholash bo'yicha 5 daqiqalik sinf muhokamasini tavsiya qilamiz.</p>
+        </div>
+      </div>
+
+      <div class="report-section">
+        <h3>👨 3. Ota-ona Xulosasi (Mr. Karimov)</h3>
+        <p style="font-size:16px; color: var(--text)">"Sardor bugungi tarix uy vazifasini a'lo darajada tugatdi. 3 yulduz oldi. Qadimiy yozuv turlarini juda yaxshi o'zlashtirdi.</p>
+        <p style="font-size:16px; color: var(--text)">Uyda mashq: uyingizdagi turli yozuvlarni birga toping — kitobdagi lotin harflar, eski hujjatlardagi kirill yozuvi, pullar ustidagi raqamlar. Sardordan har birini tasniflashni so'rang."</p>
+      </div>
+
+      <div class="report-section">
+        <h3>🔄 4. Keyingi Sessiyaga Yo'naltirish</h3>
+        <p><strong>Zaif standartlar:</strong> Yo'q — barcha standartlar 0.8 dan yuqori</p>
+        <p><strong>Xotira sprinti:</strong> Barcha 6 ta element "to'g'ri" belgilandi — keyingi ko'rib chiqish 7 kunda</p>
+        <p><strong>Xotira saroyi:</strong> 4/5 to'g'ri — o'tkazib yuborilgan element ("O'zbek alifbosi — 29 harf") keyingi sessiyaning Xotira Sprintida paydo bo'ladi</p>
+        <div class="info-box" style="margin-top:15px; border-color: var(--success)">
+          <p>📚 <strong>Keyingi mavzu:</strong> 11-bo'lim — "Avesto — ajdodlarimiz yaratgan ilk yozma tarixiy manba"</p>
+          <p>🔥 Ketma-ketlik: 5 kun. Yana 2 kun → 7-kun bonusi (+50% XP ko'paytiruvchi)</p>
+        </div>
+      </div>
+
+      <!-- Session Summary Table -->
+      <h3 style="margin:30px 0 15px">📋 Sessiya Xulosasi</h3>
+      <table class="summary-table">
+        <thead>
+          <tr><th>Faza</th><th>Vaqt</th><th>Davomiyligi</th><th>XP</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sessiyadan oldin</td><td>0:00</td><td>&lt;1 soniya</td><td>—</td></tr>
+          <tr><td>Isinish</td><td>0:01</td><td>30 soniya</td><td>40</td></tr>
+          <tr><td>Xotira Sprinti</td><td>0:31</td><td>2:00</td><td>540</td></tr>
+          <tr><td>Hikoya Rejimi</td><td>2:31</td><td>5:00</td><td>350</td></tr>
+          <tr><td>Amaliyot Laboratoriyasi</td><td>8:31</td><td>6:00</td><td>1,550</td></tr>
+          <tr><td>Hayotiy Vazifa</td><td>14:31</td><td>5:00</td><td>400</td></tr>
+          <tr><td>Boss Jangi</td><td>19:31</td><td>5:00</td><td>1,000</td></tr>
+          <tr><td>Refleksiya</td><td>24:31</td><td>2:00</td><td>100</td></tr>
+          <tr style="font-weight:bold"><td>JAMI</td><td></td><td>25:30</td><td style="color:var(--gold)">4,290</td></tr>
+        </tbody>
+      </table>
+
+      <div style="text-align:center; margin-top:40px">
+        <p style="font-size:24px; color: var(--success)">✅ Sessiya yakunlandi!</p>
+        <p style="color: var(--text-dim); margin-top:10px">NETS — Milliy Ta'lim Transformatsiya Tizimi</p>
+        <p style="color: var(--text-dim); font-size:14px">© 2026 O'zbekiston Respublikasi Ta'lim Vazirligi — Maxfiy</p>
+        <button class="btn btn-primary" onclick="restartDemo()" style="margin-top:20px">🔄 Qayta boshlash</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== STATE =====
+let totalXP = 0;
+let streak = 0;
+let currentPhase = 'loading';
+const correctAnswers = {
+  memory: [
+    { answers: ['moddiy va yozma', 'moddiy, yozma', '2', 'ikki'], xp: 100 },
+    { answers: ['qadimshunoslik', 'qadimgi odamlarni o\'rganish'], xp: 100 },
+    { answers: ['1582'], xp: 110 },
+    { answers: ['yunon', 'yunoncha', 'grek'], xp: 100 },
+    { answers: ['xorazm', 'xorazmda'], xp: 100 },
+    { answers: ['krates', 'krates of mallos'], xp: 100 }
+  ]
+};
+
+// ===== SCREEN NAVIGATION =====
+function goToScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  currentPhase = id;
+
+  // Show/hide XP and streak counters
+  const showCounters = !['screen-loading'].includes(id);
+  document.getElementById('xpCounter').style.display = showCounters ? 'block' : 'none';
+  document.getElementById('streakCounter').style.display = showCounters ? 'block' : 'none';
+
+  // Init phases
+  if (id === 'screen-hook') initHook();
+  if (id === 'screen-memory') initMemory();
+  if (id === 'screen-practice') initTileMatch();
+  if (id === 'screen-boss') initBoss();
+
+  // Update progress
+  const progressMap = {
+    'screen-loading': 0, 'screen-hook': 5, 'screen-memory': 15,
+    'screen-story': 30, 'screen-practice': 50, 'screen-reallife': 70,
+    'screen-boss': 85, 'screen-reflection': 95, 'screen-results': 100
+  };
+  document.getElementById('progressFill').style.width = (progressMap[id] || 0) + '%';
+
+  // Scroll to top
+  window.scrollTo(0, 0);
+}
+
+// ===== XP SYSTEM =====
+function addXP(amount) {
+  totalXP += amount;
+  document.getElementById('xpValue').textContent = totalXP.toLocaleString();
+  showXPPopup('+' + amount + ' XP');
+}
+
+function showXPPopup(text) {
+  const popup = document.createElement('div');
+  popup.className = 'xp-popup';
+  popup.textContent = text;
+  popup.style.left = (Math.random() * 60 + 20) + '%';
+  popup.style.top = '40%';
+  document.body.appendChild(popup);
+  setTimeout(() => popup.remove(), 1500);
+}
+
+function updateStreak(correct) {
+  if (correct) streak++;
+  else streak = 0;
+  document.getElementById('streakValue').textContent = streak;
+}
+
+// ===== ACT 1: LOADING =====
+setTimeout(() => {
+  document.getElementById('loadingFill').style.width = '25%';
+  document.getElementById('loadingText').textContent = 'Sardorning profilini yuklanmoqda...';
+}, 500);
+setTimeout(() => {
+  document.getElementById('loadingFill').style.width = '50%';
+  document.getElementById('loadingText').textContent = 'Kontent tekshirilmoqda...';
+}, 1200);
+setTimeout(() => {
+  document.getElementById('loadingFill').style.width = '75%';
+  document.getElementById('loadingText').textContent = 'Sessiya yig\'ilmoqda...';
+}, 2000);
+setTimeout(() => {
+  document.getElementById('loadingFill').style.width = '100%';
+  document.getElementById('loadingText').textContent = 'O\'qituvchi sozlamalari qo\'llanilmoqda...';
+  document.getElementById('profileInfo').style.display = 'block';
+}, 2800);
+setTimeout(() => {
+  goToScreen('screen-hook');
+}, 4000);
+
+// ===== ACT 2: ENGAGEMENT HOOK =====
+const hookQuestions = [
+  {
+    image: '🏛️',
+    text: 'Bu nima?',
+    subtext: 'Misr iyerogliflari',
+    options: ['Yozuv', 'Rasm', 'San\'at', 'Kod'],
+    correct: 0
+  },
+  {
+    image: '🏺',
+    text: 'Bu qancha eski?',
+    subtext: 'Loy taxtada mixsimon belgilar',
+    options: ['100 yil', '1,000 yil', '5,000 yil', '10,000 yil'],
+    correct: 2
+  },
+  {
+    image: '🔤',
+    text: 'Necha harf bor?',
+    subtext: 'Finikiya alifbosi',
+    options: ['10', '22', '26', '50'],
+    correct: 1
+  },
+  {
+    image: '📚',
+    text: 'Qaysi yozuv tizimi?',
+    subtext: 'Zamonaviy o\'zbek darsligi',
+    options: ['Kirill', 'Lotin', 'Arab', 'Iyeroglif'],
+    correct: 1
+  }
+];
+let hookIndex = 0;
+let hookCorrect = 0;
+let hookXP = 0;
+let hookTimer = null;
+let hookTimeLeft = 30;
+
+function initHook() {
+  hookIndex = 0;
+  hookCorrect = 0;
+  hookXP = 0;
+  hookTimeLeft = 30;
+  showHookQuestion();
+  startHookTimer();
+}
+
+function showHookQuestion() {
+  if (hookIndex >= hookQuestions.length) {
+    endHook();
+    return;
+  }
+  const q = hookQuestions[hookIndex];
+  document.getElementById('hookQuestion').innerHTML = `
+    <div class="question">
+      <div style="font-size:64px; text-align:center; margin:15px 0">${q.image}</div>
+      <p style="color:var(--text-dim); text-align:center; margin-bottom:10px">${q.subtext}</p>
+      <p style="font-size:20px; text-align:center">${q.text}</p>
+      <div class="options">
+        ${q.options.map((opt, i) => `<div class="option" onclick="answerHook(${i})">${opt}</div>`).join('')}
+      </div>
+    </div>
+  `;
+  document.getElementById('hookFeedback').innerHTML = '';
+}
+
+function answerHook(idx) {
+  const q = hookQuestions[hookIndex];
+  const options = document.querySelectorAll('#hookQuestion .option');
+  options.forEach(o => o.onclick = null);
+
+  if (idx === q.correct) {
+    options[idx].classList.add('correct');
+    hookCorrect++;
+    hookXP += 10;
+    addXP(10);
+    document.getElementById('hookFeedback').innerHTML = '<div class="feedback correct">✅ To\'g\'ri! +10 XP</div>';
+  } else {
+    options[idx].classList.add('wrong');
+    options[q.correct].classList.add('correct');
+    document.getElementById('hookFeedback').innerHTML = '<div class="feedback incorrect">❌ Noto\'g\'ri</div>';
+  }
+
+  hookIndex++;
+  setTimeout(() => showHookQuestion(), 1000);
+}
+
+function startHookTimer() {
+  hookTimer = setInterval(() => {
+    hookTimeLeft--;
+    document.getElementById('hookTimer').textContent = hookTimeLeft;
+    if (hookTimeLeft <= 10) document.getElementById('hookTimer').classList.add('danger');
+    if (hookTimeLeft <= 0) endHook();
+  }, 1000);
+}
+
+function endHook() {
+  clearInterval(hookTimer);
+  document.getElementById('hookQuestion').innerHTML = '';
+  document.getElementById('hookTimer').parentElement.querySelector('.timer').style.display = 'none';
+  document.getElementById('hookScore').textContent = hookCorrect;
+  document.getElementById('hookXP').textContent = hookXP;
+  document.getElementById('hookResults').style.display = 'block';
+}
+
+// ===== ACT 3: MEMORY SPRINT =====
+const memoryQuestions = [
+  { q: "Tarixiy manbalar necha turga bo'linadi? Nomlang.", answers: ['2', 'ikki', 'moddiy', 'yozma'], correct: '2 ta — moddiy va yozma' },
+  { q: "Arxeologiya so'zining ma'nosi nima?", answers: ['qadimshunoslik', 'qadimgi'], correct: 'Qadimshunoslik' },
+  { q: "Grigoriy kalendari qaysi yilda qabul qilindi?", answers: ['1582'], correct: '1582' },
+  { q: "Xronologiya so'zi qaysi tildan olingan?", answers: ['yunon', 'yunoncha', 'grek'], correct: 'Yunoncha' },
+  { q: "Avesto qayerda yaratilgan?", answers: ['xorazm', 'xorazmda'], correct: 'Xorazm' },
+  { q: "Dastlabki globusni kim yaratgan?", answers: ['krates'], correct: 'Krates' }
+];
+let memIndex = 0;
+let memCorrect = 0;
+let memXP = 0;
+let memTimer = null;
+let memTimeLeft = 60;
+
+function initMemory() {
+  memIndex = 0;
+  memCorrect = 0;
+  memXP = 0;
+  memTimeLeft = 60;
+  updateStreak(0);
+  showMemoryQuestion();
+  startMemoryTimer();
+}
+
+function showMemoryQuestion() {
+  if (memIndex >= memoryQuestions.length || memTimeLeft <= 0) {
+    endMemory();
+    return;
+  }
+  const q = memoryQuestions[memIndex];
+  document.getElementById('memoryQuestion').innerHTML = `
+    <div class="question">
+      <div class="question-num">Savol ${memIndex + 1} / ${memoryQuestions.length}</div>
+      <p><strong>${q.q}</strong></p>
+    </div>
+  `;
+  document.getElementById('memoryInput').innerHTML = `
+    <input type="text" id="memoryAnswer" placeholder="Javobingizni yozing..." onkeydown="if(event.key==='Enter')submitMemory()">
+    <button class="btn btn-primary" onclick="submitMemory()">Yuborish</button>
+  `;
+  document.getElementById('memoryFeedback').innerHTML = '';
+  setTimeout(() => document.getElementById('memoryAnswer')?.focus(), 100);
+}
+
+function submitMemory() {
+  const answer = document.getElementById('memoryAnswer').value.trim().toLowerCase();
+  if (!answer) return;
+  const q = memoryQuestions[memIndex];
+  const isCorrect = q.answers.some(a => answer.includes(a));
+
+  if (isCorrect) {
+    memCorrect++;
+    let xp = 100 + 10; // base + streak
+    if (answer.length <= 6) xp += 10; // speed bonus
+    memXP += xp;
+    addXP(xp);
+    updateStreak(true);
+    document.getElementById('memoryFeedback').innerHTML = `<div class="feedback correct">✅ To'g'ri! +${xp} XP 🔥</div>`;
+  } else {
+    updateStreak(false);
+    document.getElementById('memoryFeedback').innerHTML = `<div class="feedback incorrect">❌ Noto'g'ri. To'g'ri javob: ${q.correct}</div>`;
+  }
+
+  memIndex++;
+  setTimeout(showMemoryQuestion, 1500);
+}
+
+function startMemoryTimer() {
+  memTimer = setInterval(() => {
+    memTimeLeft--;
+    const mins = Math.floor(memTimeLeft / 60);
+    const secs = memTimeLeft % 60;
+    const timerEl = document.getElementById('memoryTimer');
+    timerEl.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+    if (memTimeLeft <= 10) timerEl.classList.add('danger');
+    else if (memTimeLeft <= 20) timerEl.classList.add('warning');
+    if (memTimeLeft <= 0) endMemory();
+  }, 1000);
+}
+
+function endMemory() {
+  clearInterval(memTimer);
+  const pct = Math.round((memCorrect / memoryQuestions.length) * 100);
+  document.getElementById('memoryScore').textContent = memCorrect;
+  document.getElementById('memoryPct').textContent = pct;
+  document.getElementById('memoryXP').textContent = memXP;
+
+  if (pct >= 80) {
+    document.getElementById('memoryVerdict').textContent = '🎉 Ajoyib! Yangi kontentga tayyorsiz.';
+  } else if (pct >= 60) {
+    document.getElementById('memoryVerdict').textContent = '👍 Yaxshi, lekin takrorlash kerak.';
+  } else {
+    document.getElementById('memoryVerdict').textContent = '⚠️ Qo\'shimcha takrorlash tavsiya etiladi.';
+  }
+
+  document.getElementById('memoryQuestion').innerHTML = '';
+  document.getElementById('memoryInput').innerHTML = '';
+  document.getElementById('memoryFeedback').innerHTML = '';
+  document.getElementById('memoryTimer').textContent = '0:00';
+  document.getElementById('memoryResults').style.display = 'block';
+}
+
+// ===== ACT 4: STORY MODE =====
+function checkCheckpoint(num) {
+  const input = document.getElementById(`checkpoint${num}Answer`);
+  const answer = input.value.trim();
+  if (!answer) return;
+  input.disabled = true;
+
+  document.getElementById(`checkpoint${num}Feedback`).innerHTML = `
+    <div class="feedback correct">✅ To'g'ri! Keyingi segmentga o'tamiz.</div>
+  `;
+
+  setTimeout(() => {
+    if (num === 1) {
+      document.getElementById('storySegment2').style.display = 'block';
+      document.getElementById('storySegment2').scrollIntoView({ behavior: 'smooth' });
+    } else {
+      document.getElementById('memoryPalace').style.display = 'block';
+      document.getElementById('memoryPalace').scrollIntoView({ behavior: 'smooth' });
+      addXP(200);
+    }
+  }, 1500);
+}
+
+// Memory Palace
+let selectedConcept = null;
+let palaceFilled = 0;
+const correctMapping = {
+  '0': 'mixxati — loyga belgi',
+  '1': 'finikiya — 22 harf',
+  '2': 'shumerlar — birinchi yozuvchilar',
+  '3': 'alifbo inqilobi — hamma uchun yozuv',
+  '4': 'o\'zbek alifbosi — 29 harf'
+};
+
+function selectConcept(el) {
+  if (el.classList.contains('used')) return;
+  document.querySelectorAll('.concept-item').forEach(c => c.style.outline = 'none');
+  selectedConcept = el;
+  el.style.outline = '2px solid var(--primary)';
+}
+
+document.addEventListener('click', function(e) {
+  if (selectedConcept && e.target.closest('.palace-location') && !e.target.closest('.palace-location').classList.contains('filled')) {
+    const slot = e.target.closest('.palace-location').dataset.slot;
+    const concept = selectedConcept.dataset.concept;
+    e.target.closest('.palace-location').querySelector('.slot-content').textContent = concept;
+    e.target.closest('.palace-location').classList.add('filled');
+    selectedConcept.classList.add('used');
+    selectedConcept.style.outline = 'none';
+    selectedConcept = null;
+    palaceFilled++;
+
+    addXP(40);
+
+    if (palaceFilled >= 5) {
+      document.getElementById('palaceResults').style.display = 'block';
+      addXP(200);
+    }
+  }
+});
+
+// ===== ACT 5: PRACTICE LAB =====
+const tilePairs = [
+  { a: 'Mixxati', b: 'Loyga uchburchak belgi' },
+  { a: 'Iyerogliflar', b: 'Misr rasmli yozuvi' },
+  { a: 'Finikiya', b: 'Birinchi alifbo, 22 harf' },
+  { a: "Sug'diy", b: "O'zbek ajdodlari yozuvi, 23 harf" },
+  { a: 'Avesto', b: "Xorazmda yaratilgan kitob" },
+  { a: 'Loy tangalar', b: 'Eng dastlabki hisob tizimi' }
+];
+let flippedTiles = [];
+let matchedPairs = 0;
+let tileXP = 0;
+let tileTimerInterval = null;
+let tileTimeLeft = 180;
+
+function initTileMatch() {
+  matchedPairs = 0;
+  tileXP = 0;
+  tileTimeLeft = 180;
+  flippedTiles = [];
+
+  // Create tile array
+  let tiles = [];
+  tilePairs.forEach((pair, i) => {
+    tiles.push({ id: i, pairId: i, text: pair.a, type: 'a' });
+    tiles.push({ id: i + 100, pairId: i, text: pair.b, type: 'b' });
+  });
+
+  // Shuffle
+  for (let i = tiles.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [tiles[i], tiles[j]] = [tiles[j], tiles[i]];
+  }
+
+  const grid = document.getElementById('tileGrid');
+  grid.innerHTML = tiles.map(t =>
+    `<div class="tile" data-pair="${t.pairId}" data-id="${t.id}" onclick="flipTile(this)">${t.text}</div>`
+  ).join('');
+
+  startTileTimer();
+}
+
+function flipTile(el) {
+  if (el.classList.contains('matched') || el.classList.contains('flipped')) return;
+  el.classList.add('flipped');
+  flippedTiles.push(el);
+
+  if (flippedTiles.length === 2) {
+    const [a, b] = flippedTiles;
+    if (a.dataset.pair === b.dataset.pair) {
+      setTimeout(() => {
+        a.classList.add('matched');
+        b.classList.add('matched');
+        tileXP += 100;
+        addXP(100);
+        matchedPairs++;
+
+        if (matchedPairs >= tilePairs.length) {
+          clearInterval(tileTimerInterval);
+          tileXP += 100; // bonus
+          addXP(100);
+          document.getElementById('tileResults').innerHTML = `
+            <div class="feedback correct">🎉 Mukammal! Barcha ${tilePairs.length} juft topildi! +${tileXP} XP</div>
+            <button class="btn btn-primary" onclick="startWhyChain()" style="margin-top:15px">Nima Uchun Zanjirini boshlash →</button>
+          `;
+          document.getElementById('tileResults').style.display = 'block';
+        }
+      }, 500);
+    } else {
+      setTimeout(() => {
+        a.classList.remove('flipped');
+        b.classList.remove('flipped');
+      }, 1000);
+    }
+    setTimeout(() => { flippedTiles = []; }, 1500);
+  }
+}
+
+function startTileTimer() {
+  tileTimerInterval = setInterval(() => {
+    tileTimeLeft--;
+    const mins = Math.floor(tileTimeLeft / 60);
+    const secs = tileTimeLeft % 60;
+    const timerEl = document.getElementById('tileTimer');
+    timerEl.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+    if (tileTimeLeft <= 30) timerEl.classList.add('danger');
+    if (tileTimeLeft <= 0) {
+      clearInterval(tileTimerInterval);
+      document.getElementById('tileResults').innerHTML = `
+        <div class="feedback correct">⏰ Vaqt tugadi! ${matchedPairs}/${tilePairs.length} juft topildi. +${tileXP} XP</div>
+        <button class="btn btn-primary" onclick="startWhyChain()" style="margin-top:15px">Nima Uchun Zanjirini boshlash →</button>
+      `;
+      document.getElementById('tileResults').style.display = 'block';
+    }
+  }, 1000);
+}
+
+// Why Chain
+const whyChainQuestions = [
+  { q: "Nima uchun yozuvning ixtiro qilinishi insoniyat uchun juda muhim bo'lgan?", keywords: ['bilim', 'saqlash', 'eslab', 'uzatish', 'ma\'lumot'] },
+  { q: "Juda yaxshi! Lekin NIMA UCHUN bilimlarni saqlab qolish zarur edi?", keywords: ['xotira', 'cheklangan', 'yo\'qol', 'avlod', 'kelajak'] },
+  { q: "Ajoyib! Bilimlarni avlodlarga uzatish... Lekin yozuvsiz avlodlar bilimni QANDAY uzatgan?", keywords: ['og\'zaki', 'og\'zak', 'aytish', 'eshitish', 'noaniq'] },
+  { q: "Mukammal! Siz yozuvning nima uchun 'insoniyatning buyuk kashfiyoti' deb atalishini tushuntirib berdingiz!", keywords: [] }
+];
+let chainLevel = 0;
+let chainXP = 0;
+
+function startWhyChain() {
+  clearInterval(tileTimerInterval);
+  document.getElementById('tileMatch').style.display = 'none';
+  document.getElementById('whyChain').style.display = 'block';
+  chainLevel = 0;
+  chainXP = 0;
+  showChainLevel();
+}
+
+function showChainLevel() {
+  if (chainLevel >= whyChainQuestions.length - 1) {
+    endWhyChain();
+    return;
+  }
+
+  const q = whyChainQuestions[chainLevel];
+  document.getElementById('chainContainer').innerHTML = `
+    <div class="chain-level">
+      <div class="level-num">Daraja ${chainLevel + 1} / 4</div>
+      <p style="font-size:18px; margin:10px 0"><strong>${q.q}</strong></p>
+      <input type="text" id="chainAnswer" placeholder="Javobingizni yozing..." onkeydown="if(event.key==='Enter')submitChain()">
+      <button class="btn btn-primary" onclick="submitChain()">Yuborish</button>
+    </div>
+  `;
+
+  // Update dots
+  const dots = document.querySelectorAll('#chainProgress .chain-dot');
+  dots.forEach((d, i) => {
+    d.classList.remove('active', 'done');
+    if (i < chainLevel) d.classList.add('done');
+    if (i === chainLevel) d.classList.add('active');
+  });
+
+  setTimeout(() => document.getElementById('chainAnswer')?.focus(), 100);
+}
+
+function submitChain() {
+  const answer = document.getElementById('chainAnswer').value.trim();
+  if (!answer) return;
+
+  chainXP += 150;
+  addXP(150);
+  chainLevel++;
+
+  // Update dots
+  const dots = document.querySelectorAll('#chainProgress .chain-dot');
+  dots[chainLevel - 1].classList.remove('active');
+  dots[chainLevel - 1].classList.add('done');
+
+  if (chainLevel < whyChainQuestions.length) {
+    showChainLevel();
+  } else {
+    endWhyChain();
+  }
+}
+
+function endWhyChain() {
+  chainXP += 250; // chain completion bonus
+  addXP(250);
+
+  document.getElementById('chainContainer').innerHTML = `
+    <div class="feedback correct">🎉 Mukammal! Siz yozuvning nima uchun "insoniyatning buyuk kashfiyoti" deb atalishini tushuntirib berdingiz! +${chainXP} XP</div>
+  `;
+  document.getElementById('chainResults').innerHTML = `
+    <button class="btn btn-primary" onclick="goToScreen('screen-reallife')" style="margin-top:15px">Faza 4 ga o'tish →</button>
+  `;
+  document.getElementById('chainResults').style.display = 'block';
+}
+
+// ===== ACT 6: REAL-LIFE CHALLENGE =====
+function submitRealLife() {
+  const a1 = document.getElementById('realLife1').value.trim();
+  const a2 = document.getElementById('realLife2').value.trim();
+  if (!a1 || !a2) { alert("Ikkala savolga ham javob bering!"); return; }
+
+  document.getElementById('realLifeFeedback').innerHTML = `
+    <div class="feedback correct">
+      ✅ Ajoyib mulohaza!<br><br>
+      📝 Savol 1: To'g'ri — g'or rasmlari yozuvdan oldin paydo bo'lgan (ibtidoiy davr).<br>
+      📝 Savol 2: Nozik javob — ikkala manbaning qiymatini tan oldingiz, yozuv aniqroq ma'lumot berishini tushuntirdingiz.
+    </div>
+  `;
+
+  addXP(400);
+  document.getElementById('realLifeResults').style.display = 'block';
+}
+
+// ===== ACT 7: BOSS FIGHT =====
+const bossQuestions = [
+  {
+    difficulty: 'Oson',
+    pisa: 'PISA L2',
+    hp: 10,
+    q: "Qadimiy yozuv turlarini to'g'ri ketma-ketlikda joylashtiring: eslatuvchi belgilar, rasmli yozuv, so'z yozuvi, alifboli yozuv. Bu ketma-ketlikda asosiy rivojlanish omili nima?",
+    keywords: ['ko\'proq', 'ma\'lumot', 'murakkab', 'oddiy', 'yetarli', 'o\'sish', 'kerak']
+  },
+  {
+    difficulty: 'Oson',
+    pisa: 'PISA L2',
+    hp: 10,
+    q: "Misr iyerogliflari va Shumer mixxati 'so'z yozuvi' turiga kiradi. Bu yozuvlarning asosiy kamchiligi nima edi?",
+    keywords: ['ko\'p', 'belgi', 'yod', 'qiyin', 'o\'rganish', 'minglab']
+  },
+  {
+    difficulty: "O'rta",
+    pisa: 'PISA L3',
+    hp: 20,
+    q: "Finikiya alifbosi 22 ta harfdan iborat bo'lgan. Bu nima uchun 'inqilob' hisoblanadi?",
+    keywords: ['har qanday', 'so\'z', 'yozish', 'ko\'p', 'odam', 'oson', 'minglab']
+  },
+  {
+    difficulty: 'Qiyin',
+    pisa: 'PISA L4',
+    hp: 30,
+    q: "Tasavvur qiling: yozuv hech ixtiro qilinmaganida, bugungi dunyodagi ilm-fan, texnologiya va madaniyat qanday bo'lardi? Asoslang.",
+    keywords: ['bilim', 'yo\'qol', 'og\'zak', 'sekin', 'yozish', 'rivojlan']
+  }
+];
+let bossIndex = 0;
+let bossHP = 100;
+let combo = 0;
+let bossXP = 0;
+
+function initBoss() {
+  bossIndex = 0;
+  bossHP = 100;
+  combo = 0;
+  bossXP = 0;
+  updateBossHP();
+  showBossQuestion();
+}
+
+function updateBossHP() {
+  const fill = document.getElementById('bossHpFill');
+  fill.style.width = bossHP + '%';
+  fill.textContent = `${bossHP} / 100 HP`;
+}
+
+function showBossQuestion() {
+  if (bossIndex >= bossQuestions.length || bossHP <= 0) {
+    endBoss();
+    return;
+  }
+  const q = bossQuestions[bossIndex];
+  document.getElementById('bossQuestion').innerHTML = `
+    <div class="question" style="border-color: ${q.pisa === 'PISA L4' ? 'var(--error)' : q.pisa === 'PISA L3' ? 'var(--warning)' : 'var(--success)'}">
+      <div class="question-num">
+        <span style="color: ${q.difficulty === 'Qiyin' ? 'var(--error)' : q.difficulty === "O'rta" ? 'var(--warning)' : 'var(--success)'}">${q.difficulty}</span> — ${q.pisa} | Zarar: -${q.hp} HP
+      </div>
+      <p style="font-size:18px"><strong>${q.q}</strong></p>
+    </div>
+    <input type="text" id="bossAnswer" placeholder="Javobingizni yozing..." onkeydown="if(event.key==='Enter')submitBoss()" style="font-size:16px">
+    <button class="btn btn-warning" onclick="submitBoss()" style="font-size:18px">⚔️ Hujum!</button>
+  `;
+  document.getElementById('bossFeedback').innerHTML = '';
+  setTimeout(() => document.getElementById('bossAnswer')?.focus(), 100);
+}
+
+function submitBoss() {
+  const answer = document.getElementById('bossAnswer').value.trim();
+  if (!answer) return;
+  const q = bossQuestions[bossIndex];
+
+  const isCorrect = q.keywords.some(kw => answer.toLowerCase().includes(kw));
+
+  if (isCorrect) {
+    combo++;
+    let damage = q.hp;
+    let xpGain = q.hp;
+    if (combo >= 3) {
+      damage *= 2;
+      document.getElementById('comboDisplay').classList.add('active');
+    }
+    bossHP = Math.max(0, bossHP - damage);
+    bossXP += xpGain;
+    addXP(xpGain);
+    updateBossHP();
+
+    document.getElementById('comboDisplay').textContent = `Combo: ${combo}${combo >= 3 ? ' 🔥 2× ZARAR!' : ''}`;
+    document.getElementById('bossFeedback').innerHTML = `
+      <div class="feedback correct">✅ To'g'ri! Boss -${damage} HP old!${combo >= 3 ? ' Combo aktiv!' : ''}</div>
+    `;
+  } else {
+    combo = 0;
+    document.getElementById('comboDisplay').textContent = `Combo: 0`;
+    document.getElementById('comboDisplay').classList.remove('active');
+    document.getElementById('bossFeedback').innerHTML = `
+      <div class="feedback incorrect">❌ Bu javob yetarli emas edi. Asosiy fikrlarni qidiring.</div>
+    `;
+    return; // Don't advance
+  }
+
+  bossIndex++;
+  setTimeout(showBossQuestion, 1500);
+}
+
+function endBoss() {
+  document.getElementById('bossQuestion').innerHTML = '';
+  document.getElementById('bossFeedback').innerHTML = '';
+  document.getElementById('bossResults').style.display = 'block';
+  bossXP = 1000; // Boss defeat bonus
+  addXP(bossXP);
+}
+
+// ===== ACT 8: REFLECTION =====
+document.addEventListener('DOMContentLoaded', () => {
+  const refl = document.getElementById('reflectionAnswer');
+  if (refl) {
+    refl.addEventListener('input', () => {
+      document.getElementById('reflectionCount').textContent = refl.value.length;
+    });
+  }
+});
+
+function submitReflection() {
+  const answer = document.getElementById('reflectionAnswer').value.trim();
+  if (answer.length < 10) { alert("Kamida 10 belgi yozing!"); return; }
+  addXP(100);
+  document.getElementById('reflectionResults').style.display = 'block';
+}
+
+// ===== ACT 9: RESULTS =====
+// Auto-populated when reaching results screen
+
+// ===== RESTART =====
+function restartDemo() {
+  totalXP = 0;
+  streak = 0;
+  document.getElementById('xpValue').textContent = '0';
+  document.getElementById('streakValue').textContent = '0';
+  goToScreen('screen-loading');
+  // Re-trigger loading animation
+  setTimeout(() => {
+    document.getElementById('loadingFill').style.width = '25%';
+    document.getElementById('loadingText').textContent = 'Sardorning profilini yuklanmoqda...';
+  }, 500);
+  setTimeout(() => {
+    document.getElementById('loadingFill').style.width = '50%';
+    document.getElementById('loadingText').textContent = 'Kontent tekshirilmoqda...';
+  }, 1200);
+  setTimeout(() => {
+    document.getElementById('loadingFill').style.width = '75%';
+    document.getElementById('loadingText').textContent = 'Sessiya yig\'ilmoqda...';
+  }, 2000);
+  setTimeout(() => {
+    document.getElementById('loadingFill').style.width = '100%';
+    document.getElementById('loadingText').textContent = 'O\'qituvchi sozlamalari qo\'llanilmoqda...';
+    document.getElementById('profileInfo').style.display = 'block';
+  }, 2800);
+  setTimeout(() => goToScreen('screen-hook'), 4000);
+}
+
+// Initialize loading screen
+goToScreen('screen-loading');
+</script>
+</body>
+</html>

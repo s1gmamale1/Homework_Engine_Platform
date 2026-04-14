@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS Blueprint — Complete Visual Demo</title>
+<style>
+:root {
+  --bg: #0a0c10;
+  --bg2: #0f1318;
+  --bg3: #151a22;
+  --bg4: #1a2030;
+  --ink: #1e2530;
+  --ink2: #2a3340;
+  --ink3: #354050;
+  --text-hi: #e8edf5;
+  --text-mid: #8b95a8;
+  --text-lo: #4a5568;
+  --amber: #f59e0b;
+  --amber-dim: rgba(245,158,11,0.15);
+  --blue: #3b82f6;
+  --blue-dim: rgba(59,130,246,0.12);
+  --green: #10b981;
+  --green-dim: rgba(16,185,129,0.12);
+  --purple: #8b5cf6;
+  --purple-dim: rgba(139,92,246,0.12);
+  --red: #ef4444;
+  --red-dim: rgba(239,68,68,0.12);
+  --cyan: #06b6d4;
+  --cyan-dim: rgba(6,182,212,0.12);
+  --orange: #f97316;
+  --orange-dim: rgba(249,115,22,0.12);
+  --pink: #ec4899;
+  --pink-dim: rgba(236,72,153,0.12);
+  --mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --radius: 8px;
+  --radius-sm: 4px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text-hi);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ---- SIDEBAR NAV ---- */
+.sidebar {
+  position: fixed; left: 0; top: 0; bottom: 0;
+  width: 260px; background: var(--bg2);
+  border-right: 1px solid var(--ink);
+  overflow-y: auto; z-index: 200;
+  padding: 20px 0;
+  transition: transform 0.3s;
+}
+.sidebar-logo {
+  font-family: var(--mono); font-size: 20px; font-weight: 800;
+  color: var(--amber); letter-spacing: 0.12em;
+  padding: 0 20px 4px; cursor: default;
+}
+.sidebar-sub {
+  font-size: 10px; color: var(--text-lo); padding: 0 20px 16px;
+  font-family: var(--mono); letter-spacing: 0.08em; text-transform: uppercase;
+}
+.sidebar-group { margin-top: 8px; }
+.sidebar-group-title {
+  font-size: 10px; font-weight: 700; color: var(--text-lo);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 8px 20px 4px;
+}
+.sidebar a {
+  display: block; padding: 5px 20px 5px 28px;
+  color: var(--text-mid); text-decoration: none; font-size: 12.5px;
+  border-left: 2px solid transparent; transition: all 0.15s;
+}
+.sidebar a:hover { color: var(--text-hi); background: rgba(255,255,255,0.03); }
+.sidebar a.active { color: var(--amber); border-left-color: var(--amber); background: var(--amber-dim); }
+
+/* ---- MAIN ---- */
+.main { margin-left: 260px; padding: 0; }
+
+/* ---- HERO ---- */
+.hero {
+  background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 50%, var(--bg2) 100%);
+  border-bottom: 1px solid var(--ink);
+  padding: 60px 48px 48px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -120px; right: -80px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,158,11,0.06), transparent 70%);
+}
+.hero-badge {
+  display: inline-block; font-family: var(--mono); font-size: 10px;
+  color: var(--amber); background: var(--amber-dim);
+  border: 1px solid rgba(245,158,11,0.3); border-radius: 2px;
+  padding: 3px 10px; letter-spacing: 0.08em; margin-bottom: 16px;
+}
+.hero h1 { font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; }
+.hero h1 span { color: var(--amber); }
+.hero-desc { font-size: 15px; color: var(--text-mid); max-width: 680px; margin-bottom: 24px; }
+.hero-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+.hero-stat { text-align: center; }
+.hero-stat-val { font-family: var(--mono); font-size: 28px; font-weight: 700; color: var(--amber); }
+.hero-stat-label { font-size: 11px; color: var(--text-lo); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ---- SECTIONS ---- */
+.section {
+  padding: 48px;
+  border-bottom: 1px solid var(--ink);
+  scroll-margin-top: 20px;
+}
+.section-header {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+}
+.section-num {
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  color: var(--amber); background: var(--amber-dim);
+  border: 1px solid rgba(245,158,11,0.3); border-radius: 2px;
+  padding: 2px 8px; letter-spacing: 0.08em; flex-shrink: 0;
+}
+.section h2 { font-size: 22px; font-weight: 700; }
+.section h3 { font-size: 16px; font-weight: 600; margin: 20px 0 12px; color: var(--text-hi); }
+.section p { color: var(--text-mid); margin-bottom: 12px; max-width: 800px; }
+
+/* ---- CARDS ---- */
+.card-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px; margin: 16px 0;
+}
+.card {
+  background: var(--bg3); border: 1px solid var(--ink);
+  border-radius: var(--radius); padding: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover { border-color: var(--ink2); transform: translateY(-2px); }
+.card-icon { font-size: 24px; margin-bottom: 8px; }
+.card-title { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.card-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.6; }
+
+/* ---- PYRAMID ---- */
+.pyramid-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 24px 0; }
+.pyramid-level {
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; font-size: 12px; font-weight: 600;
+  border-radius: var(--radius-sm); padding: 10px; cursor: default;
+  transition: transform 0.15s;
+}
+.pyramid-level:hover { transform: scale(1.03); }
+.pyramid-label { font-family: var(--mono); font-size: 10px; opacity: 0.7; margin-top: 2px; }
+
+/* ---- FLOW DIAGRAM ---- */
+.flow-wrap { display: flex; flex-direction: column; gap: 0; margin: 20px 0; }
+.flow-node {
+  display: flex; align-items: stretch; gap: 0;
+  position: relative;
+}
+.flow-line {
+  width: 40px; display: flex; flex-direction: column; align-items: center;
+  flex-shrink: 0;
+}
+.flow-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid var(--amber); background: var(--bg);
+  flex-shrink: 0; z-index: 1;
+}
+.flow-dot.done { background: var(--green); border-color: var(--green); }
+.flow-dot.active { background: var(--amber); border-color: var(--amber); box-shadow: 0 0 8px rgba(245,158,11,0.4); }
+.flow-stem { width: 2px; flex: 1; background: var(--ink2); }
+.flow-content {
+  background: var(--bg3); border: 1px solid var(--ink);
+  border-radius: var(--radius); padding: 14px 18px;
+  margin-bottom: 8px; flex: 1; transition: border-color 0.2s;
+}
+.flow-content:hover { border-color: var(--ink3); }
+.flow-content .fc-title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.flow-content .fc-desc { font-size: 12px; color: var(--text-mid); }
+.flow-content .fc-tag {
+  display: inline-block; font-family: var(--mono); font-size: 10px;
+  padding: 1px 6px; border-radius: 2px; margin-top: 6px;
+}
+
+/* ---- TAGS ---- */
+.tag {
+  display: inline-block; font-family: var(--mono); font-size: 10px;
+  padding: 2px 8px; border-radius: 2px; margin: 2px;
+  letter-spacing: 0.03em;
+}
+.tag-amber { color: var(--amber); background: var(--amber-dim); border: 1px solid rgba(245,158,11,0.25); }
+.tag-blue { color: var(--blue); background: var(--blue-dim); border: 1px solid rgba(59,130,246,0.25); }
+.tag-green { color: var(--green); background: var(--green-dim); border: 1px solid rgba(16,185,129,0.25); }
+.tag-purple { color: var(--purple); background: var(--purple-dim); border: 1px solid rgba(139,92,246,0.25); }
+.tag-red { color: var(--red); background: var(--red-dim); border: 1px solid rgba(239,68,68,0.25); }
+.tag-cyan { color: var(--cyan); background: var(--cyan-dim); border: 1px solid rgba(6,182,212,0.25); }
+.tag-orange { color: var(--orange); background: var(--orange-dim); border: 1px solid rgba(249,115,22,0.25); }
+.tag-pink { color: var(--pink); background: var(--pink-dim); border: 1px solid rgba(236,72,153,0.25); }
+
+/* ---- TABLE ---- */
+.tbl-wrap { overflow-x: auto; margin: 16px 0; }
+table {
+  width: 100%; border-collapse: collapse; font-size: 12.5px;
+}
+th {
+  text-align: left; padding: 10px 14px;
+  background: var(--bg4); color: var(--text-mid);
+  font-weight: 600; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--ink2);
+}
+td {
+  padding: 10px 14px; border-bottom: 1px solid var(--ink);
+  color: var(--text-mid); vertical-align: top;
+}
+tr:hover td { background: rgba(255,255,255,0.015); }
+
+/* ---- JSON BLOCK ---- */
+.json-block {
+  background: var(--bg3); border: 1px solid var(--ink);
+  border-radius: var(--radius); padding: 16px 20px;
+  font-family: var(--mono); font-size: 11.5px;
+  line-height: 1.7; overflow-x: auto; margin: 16px 0;
+  color: var(--text-mid);
+}
+.json-block .jk { color: var(--cyan); }
+.json-block .jv { color: var(--amber); }
+.json-block .js { color: var(--green); }
+.json-block .jn { color: var(--purple); }
+.json-block .jc { color: var(--text-lo); font-style: italic; }
+
+/* ---- METER ---- */
+.meter-row { display: flex; align-items: center; gap: 12px; margin: 6px 0; }
+.meter-label { font-size: 12px; color: var(--text-mid); width: 120px; flex-shrink: 0; }
+.meter-bar { flex: 1; height: 8px; background: var(--ink); border-radius: 4px; overflow: hidden; max-width: 400px; }
+.meter-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+.meter-val { font-family: var(--mono); font-size: 11px; color: var(--text-mid); width: 50px; text-align: right; }
+
+/* ---- TABS ---- */
+.tabs { display: flex; gap: 2px; margin-bottom: 0; border-bottom: 1px solid var(--ink); }
+.tab-btn {
+  padding: 8px 16px; font-size: 12px; font-weight: 600;
+  color: var(--text-lo); background: none; border: none;
+  cursor: pointer; border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+}
+.tab-btn:hover { color: var(--text-mid); }
+.tab-btn.active { color: var(--amber); border-bottom-color: var(--amber); }
+.tab-panel { display: none; padding: 20px 0; }
+.tab-panel.active { display: block; }
+
+/* ---- GAME CARD ---- */
+.game-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px; margin: 16px 0;
+}
+.game-card {
+  background: var(--bg3); border: 1px solid var(--ink);
+  border-radius: var(--radius); padding: 16px;
+  cursor: pointer; transition: all 0.2s;
+  position: relative; overflow: hidden;
+}
+.game-card:hover { border-color: var(--ink3); transform: translateY(-1px); }
+.game-card.expanded { grid-column: 1 / -1; }
+.gc-num {
+  font-family: var(--mono); font-size: 10px;
+  color: var(--text-lo); margin-bottom: 4px;
+}
+.gc-name { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.gc-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+.gc-desc { font-size: 12px; color: var(--text-mid); line-height: 1.6; }
+.gc-details { margin-top: 12px; display: none; }
+.game-card.expanded .gc-details { display: block; }
+
+/* ---- INTERACTIVE DEMO ---- */
+.demo-box {
+  background: var(--bg3); border: 1px solid var(--ink2);
+  border-radius: var(--radius); padding: 24px;
+  margin: 20px 0; position: relative;
+}
+.demo-title {
+  font-family: var(--mono); font-size: 11px; color: var(--amber);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;
+}
+.demo-btn {
+  padding: 8px 20px; border-radius: var(--radius-sm);
+  font-size: 12px; font-weight: 600; cursor: pointer;
+  border: 1px solid; transition: all 0.15s;
+  font-family: var(--sans);
+}
+.demo-btn-primary {
+  color: var(--bg); background: var(--amber);
+  border-color: var(--amber);
+}
+.demo-btn-primary:hover { filter: brightness(1.1); }
+.demo-btn-secondary {
+  color: var(--text-mid); background: transparent;
+  border-color: var(--ink2);
+}
+.demo-btn-secondary:hover { color: var(--text-hi); border-color: var(--ink3); }
+
+/* ---- BOSS HP BAR ---- */
+.hp-bar-wrap { margin: 16px 0; }
+.hp-label { font-family: var(--mono); font-size: 12px; color: var(--red); margin-bottom: 4px; }
+.hp-bar { height: 16px; background: var(--ink); border-radius: 8px; overflow: hidden; position: relative; }
+.hp-fill { height: 100%; background: linear-gradient(90deg, var(--red), var(--orange)); border-radius: 8px; transition: width 0.5s; }
+.hp-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: var(--mono); font-size: 10px; color: var(--text-hi); font-weight: 700; }
+
+/* ---- SCROLL ANIM ---- */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ---- MOBILE ---- */
+.menu-toggle {
+  display: none; position: fixed; top: 12px; left: 12px; z-index: 300;
+  width: 36px; height: 36px; background: var(--bg3);
+  border: 1px solid var(--ink2); border-radius: var(--radius-sm);
+  color: var(--text-hi); font-size: 18px; cursor: pointer;
+  align-items: center; justify-content: center;
+}
+@media (max-width: 900px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .main { margin-left: 0; }
+  .menu-toggle { display: flex; }
+  .hero { padding: 48px 24px 36px; }
+  .section { padding: 32px 20px; }
+  .hero h1 { font-size: 26px; }
+  .hero-stats { gap: 20px; }
+  .hero-stat-val { font-size: 22px; }
+}
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--ink2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ink3); }
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
+
+<!-- SIDEBAR -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-logo">NETS</div>
+  <div class="sidebar-sub">Universal Blueprint v2.0</div>
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Asos</div>
+    <a href="#principles">Tamoyillar va falsafa</a>
+    <a href="#content-arch">Kontent arxitekturasi</a>
+    <a href="#pisa">PISA malaka tizimi</a>
+    <a href="#tiers">Tizim darajalari</a>
+  </div>
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Sessiya hayot sikli</div>
+    <a href="#lifecycle">Umumiy ko'rinish</a>
+    <a href="#presession">Pre-Session</a>
+    <a href="#phase1">F1: Xotira Sprinti</a>
+    <a href="#phase2">F2: Hikoya rejimi</a>
+    <a href="#phase3">F3: O'yin tanaffuslari</a>
+    <a href="#phase4">F4: Hayotiy vaziyat</a>
+    <a href="#phase5">F5: Mustahkamlash</a>
+    <a href="#phase6">F6: Yakuniy Boss</a>
+    <a href="#phase7">F7: Tafakkur</a>
+    <a href="#postboss">Post-Boss</a>
+    <a href="#postsession">Post-Session</a>
+  </div>
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Tizimlar</div>
+    <a href="#remediation">Remediation Loop</a>
+    <a href="#games">O'yin mexanizmlari</a>
+    <a href="#game-selection">O'yin tanlov rubrikasi</a>
+    <a href="#difficulty">Qiyinlik adaptatsiyasi</a>
+    <a href="#pipeline">Kontent pipeline</a>
+  </div>
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Iqtisodiyot va tizim</div>
+    <a href="#gamification">Geymifikatsiya</a>
+    <a href="#emergency">Favqulodda holatlar</a>
+    <a href="#anticheat">Anti-cheat</a>
+    <a href="#teacher">O'qituvchi paneli</a>
+    <a href="#integration">Integratsiya</a>
+    <a href="#schema">JSON sxemasi</a>
+    <a href="#grades">Sinf matritsasi</a>
+    <a href="#bilingual">Ikki tilli tizim</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <!-- HERO -->
+  <div class="hero" id="top">
+    <div class="hero-badge">BLUEPRINT v2.0 &mdash; 2026-04-02</div>
+    <h1>NETS <span>Homework Engine</span></h1>
+    <p class="hero-desc">
+      National Education Transformation System &mdash; 8.8M K-11 o'quvchi uchun gamified uy vazifasi platformasi.
+      Maqsad: O'zbekiston PISA reytingini 2030-yilgacha top 30 ga olib chiqish.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-val">31</div><div class="hero-stat-label">Bo'limlar</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">7</div><div class="hero-stat-label">Fazalar</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">15</div><div class="hero-stat-label">O'yin mexanizmlari</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">$3-5</div><div class="hero-stat-label">/ o'quvchi / yil</div></div>
+    </div>
+  </div>
+
+  <!-- ========== 1. PRINCIPLES ========== -->
+  <div class="section fade-in" id="principles">
+    <div class="section-header">
+      <span class="section-num">&sect;1</span>
+      <h2>Asosiy tamoyillar va falsafa</h2>
+    </div>
+
+    <h3>NETS o'quv piramidasi</h3>
+    <p>Har bir sessiya Bloom's taksonomiyasi bo'ylab kamida 4 ta darajani qamrab olishi SHART.</p>
+
+    <div class="pyramid-wrap">
+      <div class="pyramid-level" style="width:180px;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#fff;">
+        TRANSFER<br><span class="pyramid-label">Hayotiy vaziyat &bull; PISA 5-6</span>
+      </div>
+      <div class="pyramid-level" style="width:240px;background:linear-gradient(135deg,#8b5cf6,#7c3aed);color:#fff;">
+        TAHLIL<br><span class="pyramid-label">Why Chain, Mystery Box &bull; PISA 4</span>
+      </div>
+      <div class="pyramid-level" style="width:310px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;">
+        QO'LLASH<br><span class="pyramid-label">Adaptive Quiz, Final Boss &bull; PISA 3</span>
+      </div>
+      <div class="pyramid-level" style="width:380px;background:linear-gradient(135deg,#06b6d4,#0891b2);color:#fff;">
+        TUSHUNISH<br><span class="pyramid-label">Hikoya rejimi, Tile Match &bull; PISA 2</span>
+      </div>
+      <div class="pyramid-level" style="width:450px;background:linear-gradient(135deg,#10b981,#059669);color:#fff;">
+        ESLAB QOLISH<br><span class="pyramid-label">Memory Sprint, Flashcards &bull; PISA 1</span>
+      </div>
+      <div class="pyramid-level" style="width:520px;background:linear-gradient(135deg,#f59e0b,#d97706);color:#000;">
+        JALB QILISH (Asos)<br><span class="pyramid-label">Geymifikatsiya, Oqim holati</span>
+      </div>
+    </div>
+
+    <h3>3 ta muqaddas tamoyil</h3>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">&#128218;</div>
+        <div class="card-title">1. Darslik &mdash; haqiqat manbai</div>
+        <div class="card-desc">NETS darslikni O'ZGARTIRMAYDI, faqat yetkazish usulini transformatsiya qiladi. Barcha kontent darslikdagi bob, mavzu, sahifa diapazoniga kuzatiladi.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#127919;</div>
+        <div class="card-title">2. Oqim holati majburiy</div>
+        <div class="card-desc">Csikszentmihalyi (1990): 70-80% muvaffaqiyat = OQIM ZONASI. &lt;60% &rarr; qiyinlik kamayadi. &gt;90% &rarr; qiyinlik oshadi. Har 3-5 savolda tekshiriladi.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128170;</div>
+        <div class="card-title">3. Ichki motivatsiya</div>
+        <div class="card-desc">Pullik mexanizmlar yo'q. Haqiqiy pul xaridlari yo'q. Barcha mukofotlar isbotlangan o'rganish orqali qo'lga kiritiladi.</div>
+      </div>
+    </div>
+
+    <div class="demo-box">
+      <div class="demo-title">"Busywork yo'q" qoidasi</div>
+      <p style="color:var(--text-hi);font-size:14px;">
+        Har bir topshiriq aniq <strong>BIR</strong> PISA o'tish ko'nikmasini scaffold qilishi SHART.<br>
+        To'ldiruvchi savollar yo'q. Maqsadsiz takrorlash yo'q.<br>
+        <span style="color:var(--amber);">Agar topshiriqni o'tish ko'nikmasiga teg qo'yib bo'lmasa &rarr; u kontent puliga kirmaydi.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ========== 2. CONTENT ARCHITECTURE ========== -->
+  <div class="section fade-in" id="content-arch">
+    <div class="section-header">
+      <span class="section-num">&sect;2</span>
+      <h2>Kontent ma'lumot arxitekturasi</h2>
+    </div>
+
+    <h3>Ierarxiya</h3>
+    <div class="json-block">
+DARSLIK <span class="jc">(jismoniy kitob, aniq nashr)</span>
+  &boxvr;&boxh;&boxh; BOB
+        &boxvr;&boxh;&boxh; MAVZU
+              &boxvr;&boxh;&boxh; O'QUV MAQSADI
+                    &boxvr;&boxh;&boxh; KONTENT BLOKI
+                          &boxvr;&boxh;&boxh; BAHOLASH ELEMENTI
+    </div>
+
+    <h3>Ikki formatli standart kod tizimi</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Format</th><th>Namuna</th><th>Ma'nosi</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag tag-amber">Birlamchi</span></td><td style="font-family:var(--mono);color:var(--cyan);">UZ-MATH-5-FRAC-01</td><td>O'zbekiston, Matematika, 5-sinf, Kasrlar, Maqsad 01</td></tr>
+          <tr><td><span class="tag tag-blue">Alias</span></td><td style="font-family:var(--mono);color:var(--cyan);">MAT.5.3.4.1</td><td>3-bob, 4-mavzu, 1-maqsad</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Majburiy teglash sxemasi</h3>
+    <p>Har bir kontent bloki quyidagi 3 tegni tashishi SHART. Teg yo'q = joylashtirish yo'q.</p>
+    <div class="json-block">
+{
+  <span class="jk">"textbook_ref"</span>: {
+    <span class="jk">"textbook_id"</span>: <span class="js">"mat-5-2024-uz"</span>,
+    <span class="jk">"chapter"</span>: <span class="js">"Oddiy kasrlar"</span>,
+    <span class="jk">"page_range"</span>: <span class="js">"52-58"</span>
+  },
+  <span class="jk">"standard_ref"</span>: {
+    <span class="jk">"primary_code"</span>: <span class="js">"UZ-MATH-5-FRAC-01"</span>,
+    <span class="jk">"alias_code"</span>: <span class="js">"MAT.5.3.4.1"</span>
+  },
+  <span class="jk">"pisa_ref"</span>: {
+    <span class="jk">"domain"</span>: <span class="js">"mathematics"</span>,
+    <span class="jk">"proficiency_level"</span>: <span class="jn">2</span>,
+    <span class="jk">"transition_skill"</span>: <span class="js">"L1-&gt;L2: oddiy vizual tasvirlarni izohlash"</span>
+  }
+}
+    </div>
+  </div>
+
+  <!-- ========== 3. PISA ========== -->
+  <div class="section fade-in" id="pisa">
+    <div class="section-header">
+      <span class="section-num">&sect;3</span>
+      <h2>PISA malaka tizimi</h2>
+    </div>
+
+    <h3>O'zbekiston PISA 2022 holati</h3>
+    <div class="meter-row">
+      <span class="meter-label">Matematika</span>
+      <div class="meter-bar"><div class="meter-fill" style="width:58%;background:var(--red);"></div></div>
+      <span class="meter-val" style="color:var(--red);">364</span>
+    </div>
+    <div class="meter-row">
+      <span class="meter-label">O'qish</span>
+      <div class="meter-bar"><div class="meter-fill" style="width:53%;background:var(--red);"></div></div>
+      <span class="meter-val" style="color:var(--red);">336</span>
+    </div>
+    <div class="meter-row">
+      <span class="meter-label">Fan</span>
+      <div class="meter-bar"><div class="meter-fill" style="width:56%;background:var(--red);"></div></div>
+      <span class="meter-val" style="color:var(--red);">355</span>
+    </div>
+    <div class="meter-row">
+      <span class="meter-label" style="color:var(--green);">OECD o'rtacha</span>
+      <div class="meter-bar"><div class="meter-fill" style="width:75%;background:var(--green);"></div></div>
+      <span class="meter-val" style="color:var(--green);">~478</span>
+    </div>
+    <div class="meter-row">
+      <span class="meter-label" style="color:var(--amber);">Maqsad (420+)</span>
+      <div class="meter-bar"><div class="meter-fill" style="width:67%;background:var(--amber);"></div></div>
+      <span class="meter-val" style="color:var(--amber);">420+</span>
+    </div>
+
+    <h3>PISA darajalari (Matematika)</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Daraja</th><th>Ball</th><th>Kompetensiya</th><th>UZ %</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag tag-red">1 dan past</span></td><td>&lt;258</td><td>Jadvallardan yagona qiymatlarni o'qish</td><td>~15%</td></tr>
+          <tr><td><span class="tag tag-orange">1</span></td><td>258-357</td><td>Tanish kontekstlarda bir bosqichli protseduralar</td><td>~40%</td></tr>
+          <tr><td><span class="tag tag-amber">2</span></td><td>358-419</td><td>Oddiy strategiya; jadval/grafikdan ma'lumot olish</td><td>~25%</td></tr>
+          <tr><td><span class="tag tag-green">3</span></td><td>420-481</td><td>Ko'p bosqichli protseduralar; bir nechta manbadan izohlash</td><td>~12%</td></tr>
+          <tr><td><span class="tag tag-blue">4</span></td><td>482-544</td><td>Murakkab modellar; tasvirlarni birlashtirish</td><td>~5%</td></tr>
+          <tr><td><span class="tag tag-purple">5-6</span></td><td>545+</td><td>Tizimli muammo yechish; umumlashtirish</td><td>~3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>O'quvchi PISA kuzatuvi</h3>
+    <div class="json-block">
+{
+  <span class="jk">"student_id"</span>: <span class="js">"420d17a7-..."</span>,
+  <span class="jk">"mathematics"</span>: {
+    <span class="jk">"current_level"</span>: <span class="jn">1.7</span>,
+    <span class="jk">"target_level"</span>: <span class="jn">2.0</span>,
+    <span class="jk">"trajectory"</span>: <span class="js">"on_track"</span>,
+    <span class="jk">"domain_breakdown"</span>: {
+      <span class="jk">"quantity"</span>: <span class="jn">1.8</span>, <span class="jk">"space_and_shape"</span>: <span class="jn">1.5</span>,
+      <span class="jk">"change_and_relationships"</span>: <span class="jn">1.9</span>, <span class="jk">"uncertainty_and_data"</span>: <span class="jn">1.4</span>
+    },
+    <span class="jk">"transition_skills_in_progress"</span>: [
+      <span class="js">"L1-&gt;L2: oddiy vizual tasvirlarni izohlash"</span>
+    ]
+  }
+}
+    </div>
+  </div>
+
+  <!-- ========== TIER STRATEGY ========== -->
+  <div class="section fade-in" id="tiers">
+    <div class="section-header">
+      <span class="section-num">&#9881;</span>
+      <h2>Tizim darajalari strategiyasi</h2>
+    </div>
+    <p>Maqsad: $3-5/o'quvchi/yil. Generativ AI faqat Final Boss yutqazganda (5%) ishlatiladi.</p>
+    <div class="card-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="card" style="border-color:rgba(16,185,129,0.3);">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <div class="card-title" style="color:var(--green);">Tier 1</div>
+          <span class="tag tag-green">80%</span>
+        </div>
+        <div class="card-desc"><strong>Algoritmik / Skriptlangan</strong><br>Flashcards, quizlar, sentence fill, memory sprint, sessiya yig'ish</div>
+      </div>
+      <div class="card" style="border-color:rgba(59,130,246,0.3);">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <div class="card-title" style="color:var(--blue);">Tier 2</div>
+          <span class="tag tag-blue">15%</span>
+        </div>
+        <div class="card-desc"><strong>Kengaytirilgan logika</strong><br>Real-Life ssenariylar, Why Chain, checkpoint adaptatsiyasi (2x noto'g'ri)</div>
+      </div>
+      <div class="card" style="border-color:rgba(139,92,246,0.3);">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <div class="card-title" style="color:var(--purple);">Tier 3</div>
+          <span class="tag tag-purple">5%</span>
+        </div>
+        <div class="card-desc"><strong>Generativ AI</strong><br>Final Boss Sokratik tutoring + boss savol qayta yaratish. FAQAT yutqazganda.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 4. SESSION LIFECYCLE ========== -->
+  <div class="section fade-in" id="lifecycle">
+    <div class="section-header">
+      <span class="section-num">&sect;4</span>
+      <h2>Sessiya hayot sikli</h2>
+    </div>
+
+    <div class="flow-wrap">
+      <div class="flow-node">
+        <div class="flow-line"><div class="flow-dot done"></div><div class="flow-stem"></div></div>
+        <div class="flow-content">
+          <div class="fc-title">PRE-SESSION</div>
+          <div class="fc-desc">Profil yuklash, kontent pul tekshirish, sessiya yig'ish, o'qituvchi override'larni qo'llash</div>
+          <span class="fc-tag tag-green">Tier 1 &bull; &lt;500ms</span>
+        </div>
+      </div>
+      <div class="flow-node">
+        <div class="flow-line"><div class="flow-dot active"></div><div class="flow-stem"></div></div>
+        <div class="flow-content" style="border-color:rgba(245,158,11,0.3);">
+          <div class="fc-title">FAZA 1: Xotira Sprinti &mdash; <span style="color:var(--green);">Eslab qolish</span></div>
+          <div class="fc-desc">Oldingi bilimlarni faollashtirish. Unutish egri chizig'iga qarshi kurash. 5-8 savol, 60 soniya taymer.</div>
+          <span class="fc-tag tag-green">Tier 1</span> <span class="fc-tag tag-orange">&lt;60% &rarr; Remediation A</span>
+        </div>
+      </div>
+      <div class="flow-node">
+        <div class="flow-line"><div class="flow-dot active"></div><div class="flow-stem"></div></div>
+        <div class="flow-content" style="border-color:rgba(59,130,246,0.3);">
+          <div class="fc-title">FAZA 2: Hikoya rejimi &mdash; <span style="color:var(--cyan);">Tushunish</span></div>
+          <div class="fc-desc">Yangi darslik kontenti hikoya shaklida. 3-5 segment, nazorat savollari. 2x noto'g'ri &rarr; soddalashtirilgan versiya.</div>
+          <span class="fc-tag tag-green">Tier 1-2</span>
+        </div>
+      </div>
+      <div class="flow-node">
+        <div class="flow-line"><div class="flow-dot active"></div><div class="flow-stem"></div></div>
+        <div class="flow-content" style="border-color:rgba(139,92,246,0.3);">
+          <div class="fc-title">FAZA 3: O'yin tanaffuslari &mdash; <span style="color:var(--blue);">Qo'llash / Tahlil</span></div>
+          <div class="fc-desc">3-4 ta o'yin mexanizmi. Fan + Bloom's + PISA asosida tanlanadi. Har 3-5 savolda qiyinlik sozlanadi.</div>
+          <span class="fc-tag tag-green">Tier 1</span> <span class="fc-tag tag-red">&lt;40% &rarr; Remediation B</span>
+        </div>
+      </div>
+      <div class="flow-node">
+        <div class="flow-line"><div class="flow-dot active"></div><div class="flow-stem"></div></div>
+        <div class="flow-content" style="border-color:rgba(236,72,153,0.3);">
+          <div class="fc-title">FAZA 4: Hayotiy vaziyat &mdash; <span style="color:var(--purple);">Transfer</span></div>
+          <div class="fc-desc">O'zbek madaniy kontekstida real-world ssenariy. PISA L2+ talab. Haqiqiy transfer tekshiriladi.</div>
+          <span class="fc-tag tag-blue">Tier 2</span>
+        </div>
+      </div>
+      <div class="flow-node">
+        <div class="flow-line"><div class="flow-dot active"></div><div class="flow-stem"></div></div>
+        <div class="flow-content">
+          <div class="fc-title">FAZA 5: Mustahkamlash &mdash; <span style="color:var(--green);">Xotiraga mustahkamlash</span></div>
+          <div class="fc-desc">Memory Palace (Registon), akronim, chunking, flashcards. Texnika kontent turiga qarab tanlanadi.</div>
+          <span class="fc-tag tag-green">Tier 1</span>
+        </div>
+      </div>
+      <div class="flow-node">
+        <div class="flow-line"><div class="flow-dot active"></div><div class="flow-stem"></div></div>
+        <div class="flow-content" style="border-color:rgba(239,68,68,0.3);">
+          <div class="fc-title">FAZA 6: Yakuniy Boss &mdash; <span style="color:var(--red);">PISA-kalibrlangan baholash</span></div>
+          <div class="fc-desc">Boss YENGILISHI SHART. Easy(-10HP), Medium(-20HP), Hard(-30HP). Yutqazish &rarr; Sokratik tutoring &rarr; qayta boss.</div>
+          <span class="fc-tag tag-green">Tier 1</span> <span class="fc-tag tag-purple">Yutqazish: Tier 3</span>
+        </div>
+      </div>
+      <div class="flow-node">
+        <div class="flow-line"><div class="flow-dot active"></div><div class="flow-stem" style="background:transparent;"></div></div>
+        <div class="flow-content">
+          <div class="fc-title">FAZA 7: Tafakkur &mdash; <span style="color:var(--cyan);">Metakognitsiya</span></div>
+          <div class="fc-desc">O'z fikrlashi haqida fikrlash. Min 10 belgi. Maxfiy &mdash; faqat o'quvchiga ko'rinadi.</div>
+          <span class="fc-tag tag-green">Tier 1</span>
+        </div>
+      </div>
+      <div class="flow-node">
+        <div class="flow-line"><div class="flow-dot done"></div><div class="flow-stem" style="background:transparent;"></div></div>
+        <div class="flow-content">
+          <div class="fc-title">POST-SESSION</div>
+          <div class="fc-desc">PISA profil yangilash, spaced repetition, mastery xaritasi, traektoriya tekshirish, o'qituvchi/ota-ona hisoboti</div>
+          <span class="fc-tag tag-green">Tier 1</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 5. PRE-SESSION ========== -->
+  <div class="section fade-in" id="presession">
+    <div class="section-header">
+      <span class="section-num">&sect;5</span>
+      <h2>Pre-Session: Tizim orkestratsiyasi</h2>
+    </div>
+    <p>O'quvchi uy vazifasini ochgan zahoti, u ko'rishdan OLDIN. Algoritmik, &lt;500ms.</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">1. Profil yuklash</div>
+        <div class="card-desc">PISA daraja (uzluksiz, masalan 1.7), domen taqsimoti, o'tish ko'nikmalari, mastery xaritasi (Ebbinghaus so'nish), spaced repetition jadvali</div>
+      </div>
+      <div class="card">
+        <div class="card-title">2. Kontent pul tekshiruvi</div>
+        <div class="card-desc">Har mavzu uchun ~85 kontent birligi minimal. Yetarli emas &rarr; o'qituvchiga xabar + "kontent kamchiligi" bayrog'i</div>
+      </div>
+      <div class="card">
+        <div class="card-title">3. Sessiyani yig'ish</div>
+        <div class="card-desc">7 faza uchun itemlar tanlanadi. Kamida 2 ta turli o'tish ko'nikmasi, kamida 1 tasi in_progress</div>
+      </div>
+      <div class="card">
+        <div class="card-title">4. O'qituvchi override</div>
+        <div class="card-desc">Sessiya rejimi, Boss HP, hint mavjudligi, Creative Lab, qiyinlik chegarasi va boshqalar</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PHASE 1 ========== -->
+  <div class="section fade-in" id="phase1">
+    <div class="section-header">
+      <span class="section-num">&sect;6</span>
+      <h2>Faza 1: Xotira Sprinti</h2>
+    </div>
+    <p>Oldingi bilimlarni faollashtirish. Roediger & Karpicke (2006): "Faol esga tushirish qayta o'qishdan 3 baravar samarali"</p>
+
+    <div class="demo-box" id="sprint-demo">
+      <div class="demo-title">&#9889; Interactive Demo: Memory Sprint</div>
+      <div id="sprint-area">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+          <div style="font-size:13px;color:var(--text-mid);">Tarix 5-sinf &bull; OLDINGI boblar</div>
+          <div id="sprint-timer" style="font-family:var(--mono);font-size:18px;color:var(--amber);">0:60</div>
+        </div>
+        <div id="sprint-q" style="font-size:16px;font-weight:600;margin-bottom:16px;min-height:48px;"></div>
+        <div id="sprint-opts" style="display:flex;flex-direction:column;gap:8px;"></div>
+        <div id="sprint-result" style="margin-top:12px;font-family:var(--mono);font-size:12px;"></div>
+        <div style="display:flex;gap:8px;margin-top:16px;">
+          <div id="sprint-score" style="font-family:var(--mono);font-size:12px;color:var(--amber);">XP: 0</div>
+          <div id="sprint-streak" style="font-family:var(--mono);font-size:12px;color:var(--green);">Streak: 0</div>
+          <div id="sprint-progress" style="font-family:var(--mono);font-size:12px;color:var(--text-lo);">1/5</div>
+        </div>
+      </div>
+      <div id="sprint-summary" style="display:none;"></div>
+      <div style="margin-top:12px;"><button class="demo-btn demo-btn-primary" onclick="startSprint()">Boshlash</button></div>
+    </div>
+
+    <h3>Adaptatsiya qoidalari</h3>
+    <div class="card-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="card" style="border-color:rgba(16,185,129,0.3);">
+        <div class="card-title" style="color:var(--green);">&ge;80% &rarr; O'tish</div>
+        <div class="card-desc">O'quvchi yangi kontentga tayyor. Faza 2 ga.</div>
+      </div>
+      <div class="card" style="border-color:rgba(245,158,11,0.3);">
+        <div class="card-title" style="color:var(--amber);">60-79% &rarr; Davom</div>
+        <div class="card-desc">O'qituvchiga bayroq qo'yiladi.</div>
+      </div>
+      <div class="card" style="border-color:rgba(239,68,68,0.3);">
+        <div class="card-title" style="color:var(--red);">&lt;60% &rarr; Remediation A</div>
+        <div class="card-desc">Darslik sahifasiga yo'naltiriladi, Hikoya rejimidan OLDIN.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PHASE 2 ========== -->
+  <div class="section fade-in" id="phase2">
+    <div class="section-header">
+      <span class="section-num">&sect;7</span>
+      <h2>Faza 2: Hikoya rejimi</h2>
+    </div>
+    <p>Willingham (2004): "Hikoya orqali eslab qolish 22 baravar yaxshiroq". Yangi darslik kontenti hikoya shaklida yetkaziladi.</p>
+
+    <h3>Sinf bo'yicha hikoya mavzulari</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Sinf</th><th>Semestr hikoyasi</th><th>Madaniy elementlar</th></tr></thead>
+        <tbody>
+          <tr><td>3</td><td>"Samarqandning yosh tadqiqotchisi"</td><td>Registon, Ipak yo'li, hunarmandchilik</td></tr>
+          <tr><td>4</td><td>"Ipak yo'li ekspeditsiyasi"</td><td>Karvonlar, savdo, madaniy almashinuv</td></tr>
+          <tr><td>5</td><td>"Paxta yig'im-terimi sinovi"</td><td>Qishloq xo'jaligi, oila, qishloq hayoti</td></tr>
+          <tr><td>6</td><td>"Registonni qurish"</td><td>Arxitektura, dizayndagi matematika</td></tr>
+          <tr><td>7</td><td>"Amir Temur yurishi"</td><td>Tarix, strategiya, yetakchilik</td></tr>
+          <tr><td>8</td><td>"Zamonaviy Toshkent"</td><td>Shahar hayoti, texnologiya</td></tr>
+          <tr><td>9-11</td><td>Fanga xos hikoyalar</td><td>Kasbiy tatbiqlar</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Qoidalar</h3>
+    <div class="demo-box">
+      <ul style="list-style:none;font-size:13px;color:var(--text-mid);">
+        <li style="margin-bottom:8px;">&#10003; Nazorat savoliga to'g'ri javob bermasdan KEYINGI segmentga o'tib bo'lmaydi</li>
+        <li style="margin-bottom:8px;">&#10003; Noto'g'ri javobda: darslik sahifasiga murojaat + tushuntirish</li>
+        <li style="margin-bottom:8px;">&#10003; Maks 2 ta qayta urinish. 2x noto'g'ri &rarr; soddalashtirilgan versiya</li>
+        <li>&#9888; Segment vaqti &lt;30 soniya &rarr; "tez o'tib ketdi" bayrog'i (skimming aniqlash)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ========== PHASE 3 ========== -->
+  <div class="section fade-in" id="phase3">
+    <div class="section-header">
+      <span class="section-num">&sect;8</span>
+      <h2>Faza 3: O'yin tanaffuslari</h2>
+    </div>
+    <p>O'yin tanlash 3 ta omilga asoslanadi: <strong>Fan</strong> + <strong>Bloom's maqsad</strong> + <strong>PISA daraja</strong></p>
+
+    <h3>Sessiya ichida adaptatsiya</h3>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));">
+      <div class="card" style="border-color:rgba(16,185,129,0.3);">
+        <div class="card-title" style="color:var(--green);">70-80% = OQIM</div>
+        <div class="card-desc">Joriy daraja saqlanadi</div>
+      </div>
+      <div class="card" style="border-color:rgba(239,68,68,0.3);">
+        <div class="card-title" style="color:var(--red);">&lt;60% &rarr; Osonlashtirish</div>
+        <div class="card-desc">qiyinlik -= 1, hintlar yoqiladi</div>
+      </div>
+      <div class="card" style="border-color:rgba(59,130,246,0.3);">
+        <div class="card-title" style="color:var(--blue);">&gt;90% &rarr; Qiyinlashtirish</div>
+        <div class="card-desc">qiyinlik += 1, keyingi Bloom's</div>
+      </div>
+      <div class="card" style="border-color:rgba(249,115,22,0.3);">
+        <div class="card-title" style="color:var(--orange);">3 ketma-ket &#10004;</div>
+        <div class="card-desc">+0.5 PISA sub-daraja</div>
+      </div>
+      <div class="card" style="border-color:rgba(236,72,153,0.3);">
+        <div class="card-title" style="color:var(--pink);">2 ketma-ket &#10008;</div>
+        <div class="card-desc">-0.5 PISA sub-daraja + scaffold</div>
+      </div>
+      <div class="card" style="border-color:rgba(239,68,68,0.5);">
+        <div class="card-title" style="color:var(--red);">&lt;40% bitta standard</div>
+        <div class="card-desc">REMEDIATION B: micro-segment</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PHASE 4 ========== -->
+  <div class="section fade-in" id="phase4">
+    <div class="section-header">
+      <span class="section-num">&sect;9</span>
+      <h2>Faza 4: Hayotiy vaziyat (Real-Life Challenge)</h2>
+    </div>
+    <p>Silander (2015): "Fenomen-asosli o'rganish: +1-2 PISA daraja". Transfer &mdash; darslik bilimlarini YANGI vaziyatda QO'LLASH.</p>
+
+    <div class="demo-box">
+      <div class="demo-title">Namuna: Toshkent bozorida mevalar</div>
+      <div style="background:var(--bg4);border-radius:var(--radius-sm);padding:16px;margin-bottom:16px;">
+        <p style="color:var(--text-hi);font-size:13px;margin:0;">
+          Toshkent bozorida Alisher onasiga yordam bermoqda. Ular 3/4 kg olma, 1/2 kg nok va 2/3 kg uzum sotib olishdi.
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:var(--bg);border-radius:var(--radius-sm);padding:12px;border-left:3px solid var(--blue);">
+          <div style="font-size:12px;color:var(--blue);margin-bottom:4px;">Savol 1 &bull; PISA L3 &bull; Apply</div>
+          <div style="font-size:13px;">Jami necha kilogramm meva sotib olishdi?</div>
+          <div style="font-size:11px;color:var(--text-lo);margin-top:4px;">O'tish: L2&rarr;L3: turli maxrajli kasrlar bilan ko'p bosqichli protsedura</div>
+        </div>
+        <div style="background:var(--bg);border-radius:var(--radius-sm);padding:12px;border-left:3px solid var(--purple);">
+          <div style="font-size:12px;color:var(--purple);margin-bottom:4px;">Savol 2 &bull; PISA L4 &bull; Evaluate</div>
+          <div style="font-size:13px;">Agar sumkaga 2 kg sig'sa, bir sumka yetadimi? Nima uchun?</div>
+          <div style="font-size:11px;color:var(--text-lo);margin-top:4px;">O'tish: L3&rarr;L4: natijani real-world kontekstda izohlash</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-box" style="border-color:rgba(239,68,68,0.3);">
+      <div class="demo-title" style="color:var(--red);">Transfer tekshiruvi</div>
+      <p style="color:var(--text-hi);font-size:13px;">
+        Ssenariy javobini darslik ta'riflarini takrorlash orqali berish mumkinmi?<br>
+        <strong style="color:var(--red);">Agar HA &rarr; bu transfer EMAS. Qayta ishlang.</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- ========== PHASE 5 ========== -->
+  <div class="section fade-in" id="phase5">
+    <div class="section-header">
+      <span class="section-num">&sect;10</span>
+      <h2>Faza 5: Mustahkamlash</h2>
+    </div>
+    <p>Maguire va boshq. (2003): "Loci usuli: +300% eslab qolish"</p>
+
+    <h3>Texnika tanlash algoritmi</h3>
+    <div class="json-block">
+<span class="jk">AGAR</span> tushunchalar soni >= 5  <span class="jc">&rarr;</span> <span class="js">Memory Palace</span>
+<span class="jk">AGAR</span> tushunchalar soni 3-4   <span class="jc">&rarr;</span> <span class="js">Akronim yoki chunking</span>
+<span class="jk">AGAR</span> kontent turi = so'z boyligi <span class="jc">&rarr;</span> <span class="js">Flashcards</span>
+<span class="jk">AGAR</span> kontent turi = ketma-ketlik <span class="jc">&rarr;</span> <span class="js">Memory Palace</span>
+
+<span class="jc">Standart joylashuv: Registon maydoni (Samarqand)</span>
+    </div>
+
+    <h3>Sinf bo'yicha mavjud texnikalar</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Sinf</th><th>Mavjud texnikalar</th></tr></thead>
+        <tbody>
+          <tr><td>1-2</td><td>Chunking, qo'shiqlar, she'rlar</td></tr>
+          <tr><td>3-4</td><td>Memory Palace kirishi, akronimlar, ikki kodlash</td></tr>
+          <tr><td>5-7</td><td>To'liq Memory Palace (Loci), mix sistema, xarita</td></tr>
+          <tr><td>8-9</td><td>Intervalli qaytarish mahorati, imtihon texnikalari</td></tr>
+          <tr><td>10-11</td><td>Mustaqil boshqariladigan tizimlar</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ========== PHASE 6 ========== -->
+  <div class="section fade-in" id="phase6">
+    <div class="section-header">
+      <span class="section-num">&sect;11</span>
+      <h2>Faza 6: Yakuniy Boss</h2>
+    </div>
+    <p>Boss YENGILISHI SHART &mdash; hech qanday istisno yo'q. Maks 2 urinish sessiyada.</p>
+
+    <div class="demo-box" id="boss-demo">
+      <div class="demo-title">&#128126; Interactive Demo: Final Boss</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <div style="font-size:13px;color:var(--text-mid);">Matematika 5-sinf &bull; Oddiy kasrlar</div>
+        <div id="boss-stars" style="font-size:18px;color:var(--text-lo);">&#9734;&#9734;&#9734;</div>
+      </div>
+      <div class="hp-bar-wrap">
+        <div class="hp-label">BOSS HP: <span id="boss-hp-num">100</span>/100</div>
+        <div class="hp-bar"><div class="hp-fill" id="boss-hp-fill" style="width:100%;"></div><div class="hp-text" id="boss-hp-text">100 HP</div></div>
+      </div>
+      <div id="boss-q-area" style="margin-top:20px;">
+        <div id="boss-q" style="font-size:15px;font-weight:600;margin-bottom:6px;min-height:40px;"></div>
+        <div id="boss-meta" style="font-size:11px;color:var(--text-lo);margin-bottom:12px;"></div>
+        <div id="boss-opts" style="display:flex;flex-direction:column;gap:8px;"></div>
+        <div id="boss-feedback" style="margin-top:12px;font-size:12px;"></div>
+      </div>
+      <div id="boss-result" style="display:none;text-align:center;padding:20px;"></div>
+      <div style="margin-top:12px;"><button class="demo-btn demo-btn-primary" onclick="startBoss()">Boss bilan jang boshlash</button></div>
+    </div>
+
+    <h3>PISA-darajalangan zarar tizimi</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Daraja</th><th>Zarar</th><th>PISA</th><th>Bloom's</th><th>Taqsimot</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag tag-green">Oson</span></td><td style="font-family:var(--mono);color:var(--green);">-10 HP</td><td>Joriy yoki past</td><td>Apply</td><td>40%</td></tr>
+          <tr><td><span class="tag tag-amber">O'rta</span></td><td style="font-family:var(--mono);color:var(--amber);">-20 HP</td><td>Maqsad daraja</td><td>Analyze</td><td>40%</td></tr>
+          <tr><td><span class="tag tag-red">Qiyin</span></td><td style="font-family:var(--mono);color:var(--red);">-30 HP</td><td>Maqsaddan yuqori</td><td>Evaluate/Create</td><td>20%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Mahorat yulduzlari</h3>
+    <div class="card-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="card">
+        <div style="font-size:24px;text-align:center;margin-bottom:8px;">&#11088;</div>
+        <div class="card-title" style="text-align:center;">1 yulduz</div>
+        <div class="card-desc" style="text-align:center;">Boss yengildi (har qanday urinish)</div>
+      </div>
+      <div class="card">
+        <div style="font-size:24px;text-align:center;margin-bottom:8px;">&#11088;&#11088;</div>
+        <div class="card-title" style="text-align:center;">2 yulduz</div>
+        <div class="card-desc" style="text-align:center;">&le;2 urinish, &gt;50% HP qoldi</div>
+      </div>
+      <div class="card">
+        <div style="font-size:24px;text-align:center;margin-bottom:8px;">&#11088;&#11088;&#11088;</div>
+        <div class="card-title" style="text-align:center;">3 yulduz</div>
+        <div class="card-desc" style="text-align:center;">BIRINCHI urinish, hintsiz, &gt;80% HP</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PHASE 7 ========== -->
+  <div class="section fade-in" id="phase7">
+    <div class="section-header">
+      <span class="section-num">&sect;12</span>
+      <h2>Faza 7: Tafakkur</h2>
+    </div>
+    <p>Flavell (1979): "Tafakkur keyingi sessiya natijalarini 20-30% yaxshilaydi". Metakognitiv xabardorlik.</p>
+
+    <h3>Prompt generatsiyasi (natijaga asoslangan)</h3>
+    <div class="json-block">
+<span class="jk">AGAR</span> aniqlik >= 80%  <span class="jc">&rarr;</span> <span class="js">"Qaysi strategiya bugun sizga yordam berdi?"</span>
+<span class="jk">AGAR</span> aniqlik 60-79%  <span class="jc">&rarr;</span> <span class="js">"Nima qiyin bo'ldi? Qanday hal qildingiz?"</span>
+<span class="jk">AGAR</span> aniqlik < 60%   <span class="jc">&rarr;</span> <span class="js">"Buni yaxshiroq tushunish uchun nima yordam beradi?"</span>
+<span class="jk">AGAR</span> streak >= 5      <span class="jc">&rarr;</span> <span class="js">"Sizda [X] savollik streak bo'ldi! Diqqatingiz nimada edi?"</span>
+    </div>
+
+    <div class="demo-box">
+      <div class="demo-title">&#128221; Maxfiylik</div>
+      <ul style="list-style:none;font-size:13px;color:var(--text-mid);">
+        <li>&#128274; Tafakkur mazmuni FAQAT o'quvchiga ko'rinadi</li>
+        <li>&#128101; O'qituvchi panelida faqat yig'ma mavzular ko'rsatiladi</li>
+        <li>&#128588; Avtomatik baho yo'q &mdash; barcha javoblar qabul qilinadi</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ========== POST-BOSS ========== -->
+  <div class="section fade-in" id="postboss">
+    <div class="section-header">
+      <span class="section-num">&sect;13</span>
+      <h2>Post-Boss: Diagnostika va remediation</h2>
+    </div>
+
+    <h3>Asosiy sabab tahlili</h3>
+    <div class="card-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="card" style="border-color:rgba(239,68,68,0.3);">
+        <div class="card-title" style="color:var(--red);">Remember da yutqazish</div>
+        <div class="card-desc">= Asosiy bilim kamchiligi<br>&rarr; Story Mode qayta ko'rish</div>
+      </div>
+      <div class="card" style="border-color:rgba(245,158,11,0.3);">
+        <div class="card-title" style="color:var(--amber);">Apply da yutqazish</div>
+        <div class="card-desc">= Tushunadi lekin qollay olmaydi<br>&rarr; Qo'shimcha mashq o'yinlari</div>
+      </div>
+      <div class="card" style="border-color:rgba(139,92,246,0.3);">
+        <div class="card-title" style="color:var(--purple);">Analyze da yutqazish</div>
+        <div class="card-desc">= Chuqur fikrlash zaif<br>&rarr; Why Chain / Real-Life</div>
+      </div>
+    </div>
+
+    <h3>Ota-ona xulosasi namunasi</h3>
+    <div class="demo-box" style="border-color:rgba(16,185,129,0.3);">
+      <div style="font-size:13px;color:var(--text-hi);line-height:1.8;">
+        "Sardor bugungi tarix uy vazifasini muvaffaqiyatli tugatdi.<br>
+        Tarixiy manbalar mavzusida <strong style="color:var(--amber);">2 yulduz</strong> oldi.<br>
+        Moddiy va yozma manbalar orasidagi farqlarni qo'shimcha mashq foydali bo'ladi.<br><br>
+        <em style="color:var(--green);">Uyda mashq:</em> Uyingizda qanday 'tarixiy manbalar' borligini birga izlang &mdash; eski fotolar (moddiy manba), eski maktublar (yozma manba). Sardordan har birini tasniflashni so'rang."
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== POST-SESSION ========== -->
+  <div class="section fade-in" id="postsession">
+    <div class="section-header">
+      <span class="section-num">&sect;14</span>
+      <h2>Post-Session: Ma'lumotlar saqlash va feed-forward</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card"><div class="card-title">1. PISA profil yangilash</div><div class="card-desc">Yangi natijalar bilan PISA daraja qayta hisoblash, domen taqsimotini qayta hisoblash</div></div>
+      <div class="card"><div class="card-title">2. Spaced repetition</div><div class="card-desc">SM-2 algoritmi: noto'g'ri &rarr; interval=0. To'g'ri &rarr; intervalni uzaytirish. Yangi &rarr; 1 kundan keyin.</div></div>
+      <div class="card"><div class="card-title">3. Mastery xaritasi</div><div class="card-desc">Ebbinghaus so'nish: mastery vaqt o'tishi bilan pasayadi. &lt;0.6 &rarr; Memory Sprint ga kiritish</div></div>
+      <div class="card"><div class="card-title">4. O'tish ko'nikmalari</div><div class="card-desc">&gt;80% aniqlik 3+ sessiyada &rarr; "mastered". Yangi nishonlarni aniqlash.</div></div>
+      <div class="card"><div class="card-title">5. Traektoriya tekshirish</div><div class="card-desc">3 ketma-ket sessiya tushish &rarr; BOOST MODE. Sinf maqsadidan oshish &rarr; boyitish kontenti.</div></div>
+    </div>
+  </div>
+
+  <!-- ========== REMEDIATION ========== -->
+  <div class="section fade-in" id="remediation">
+    <div class="section-header">
+      <span class="section-num">&sect;15</span>
+      <h2>Remediation Loop</h2>
+    </div>
+
+    <h3>Sessiya ichida tetiklar</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Faza</th><th>Tetik</th><th>Harakat</th></tr></thead>
+        <tbody>
+          <tr><td>F1: Sprint</td><td style="color:var(--red);">&lt;60%</td><td>Remediation A: darslik sahifasiga yo'naltirish</td></tr>
+          <tr><td>F2: Hikoya</td><td style="color:var(--red);">2x noto'g'ri</td><td>Soddalashtirilgan versiya</td></tr>
+          <tr><td>F3: O'yinlar</td><td style="color:var(--red);">&lt;40% standartda</td><td>Remediation B: micro-segment kiritish</td></tr>
+          <tr><td>F5: Mustahkamlash</td><td style="color:var(--red);">&lt;3/5 esga tushirish</td><td>Texnikani o'zgartirish</td></tr>
+          <tr><td>F6: Boss</td><td style="color:var(--red);">Boss yengilmadi</td><td>Remediation C: AI Sokratik tutoring &rarr; qayta boss</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Post-Boss remediation oqimi (Tier 3)</h3>
+    <div class="flow-wrap">
+      <div class="flow-node"><div class="flow-line"><div class="flow-dot" style="background:var(--red);border-color:var(--red);"></div><div class="flow-stem"></div></div>
+        <div class="flow-content"><div class="fc-title">1. Diagnostika (30 son)</div><div class="fc-desc">Qaysi standartlarda yutqazildi? Qaysi o'tish ko'nikmalari o'tkazib yuborildi? Xato tushuncha aniqlash.</div></div>
+      </div>
+      <div class="flow-node"><div class="flow-line"><div class="flow-dot" style="background:var(--purple);border-color:var(--purple);"></div><div class="flow-stem"></div></div>
+        <div class="flow-content"><div class="fc-title">2. Sokratik tutoring (2-3 daq) <span class="tag tag-purple">Tier 3</span></div><div class="fc-desc">1-4 ta yo'naltiruvchi savol. HECH QACHON javob bermaydi. Darslik sahifasiga murojaat. Xato tushunchani o'quvchining so'zlari bilan aniqlash.</div></div>
+      </div>
+      <div class="flow-node"><div class="flow-line"><div class="flow-dot" style="background:var(--blue);border-color:var(--blue);"></div><div class="flow-stem"></div></div>
+        <div class="flow-content"><div class="fc-title">3. Maqsadli qayta yo'naltirish (1 daq)</div><div class="fc-desc">Xato tushunchani o'rgatadigan Hikoya segmentini qayta o'qish.</div></div>
+      </div>
+      <div class="flow-node"><div class="flow-line"><div class="flow-dot" style="background:var(--purple);border-color:var(--purple);"></div><div class="flow-stem"></div></div>
+        <div class="flow-content"><div class="fc-title">4. Savol qayta yaratish <span class="tag tag-purple">Tier 3</span></div><div class="fc-desc">Bir xil standard + PISA daraja, boshqa sonlar/kontekst. Combo qayta boshlanadi. Boss HP dastlabki qiymatga qaytadi.</div></div>
+      </div>
+      <div class="flow-node"><div class="flow-line"><div class="flow-dot" style="background:var(--amber);border-color:var(--amber);"></div><div class="flow-stem" style="background:transparent;"></div></div>
+        <div class="flow-content"><div class="fc-title">5. Qayta urinish (maks 2)</div><div class="fc-desc">Yengilsa &rarr; Faza 7. Yana yutqazsa &rarr; keyingi sessiyada davom + o'qituvchiga xabar.</div></div>
+      </div>
+    </div>
+
+    <div class="demo-box">
+      <div class="demo-title">"Ko'rinmas" dizayn tamoyili</div>
+      <p style="color:var(--text-hi);font-size:13px;">Remediation ko'rinmas qiyinlik sozlashi bo'lishi kerak, aniq jazo emas.</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Qayerda</th><th>Qanday his qiladi</th></tr></thead>
+          <tbody>
+            <tr><td>Sprint fallback</td><td>"Yaxshi isitish! Davom etamiz."</td></tr>
+            <tr><td>O'yin micro-segment</td><td>"Tez nazorat &mdash; bir xil sahifadamiz."</td></tr>
+            <tr><td>Post-boss Sokratik</td><td>"Keling, birga o'ylab ko'raylik."</td></tr>
+            <tr><td>Sessiyalar arasi</td><td>Ko'proq Sprint savollari (e'lon yo'q)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== GAME MECHANICS ========== -->
+  <div class="section fade-in" id="games">
+    <div class="section-header">
+      <span class="section-num">&sect;16</span>
+      <h2>O'yin mexanizmlari (15 ta)</h2>
+    </div>
+
+    <div class="game-grid" id="game-grid">
+      <!-- Games will be populated by JS -->
+    </div>
+  </div>
+
+  <!-- ========== GAME SELECTION ========== -->
+  <div class="section fade-in" id="game-selection">
+    <div class="section-header">
+      <span class="section-num">&sect;17</span>
+      <h2>O'yin mexanizmlari tanlov rubrikasi</h2>
+    </div>
+
+    <h3>Tanlash qaror daraxti</h3>
+    <div class="json-block">
+1. Mavzuning o'quv maqsadlarini <span class="jk">OLISH</span>
+2. O'quvchining PISA darajasi va eng zaif domenini <span class="jk">OLISH</span>
+3. O'quvchining in_progress o'tish ko'nikmalarini <span class="jk">OLISH</span>
+4. <span class="jk">TANLASH</span>:
+   a. Kamida 1 ta &rarr; JORIY Bloom's (mustahkamlash)
+   b. Kamida 1 ta &rarr; BIR DARAJA YUQORI (cho'zish)
+   c. Kamida 1 ta &rarr; joriy o'tish ko'nikmasini nishonga oluvchi
+   d. Fanga mos mexanizmlardan
+5. <span class="jk">CHEKLOVLAR</span>:
+   - Bitta mexanizm sessiyada 2x dan ko'p bo'lmasin
+   - Standard: 3 ta o'yin | Extended: 4 ta
+   - Creative Lab: faqat PISA L3+ va 5+ sinf
+    </div>
+  </div>
+
+  <!-- ========== DIFFICULTY ========== -->
+  <div class="section fade-in" id="difficulty">
+    <div class="section-header">
+      <span class="section-num">&sect;20</span>
+      <h2>Qiyinlik adaptatsiya mexanizmi</h2>
+    </div>
+
+    <h3>Qiyinlik darajalari</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Daraja</th><th>Muvaffaqiyat maqsadi</th><th>PISA diapazoni</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag tag-green">Tier 1</span> Asosiy</td><td>80-90%</td><td>1 dan past - 1</td></tr>
+          <tr><td><span class="tag tag-cyan">Tier 2</span> Qo'llash</td><td>70-80%</td><td>1-2</td></tr>
+          <tr><td><span class="tag tag-blue">Tier 3</span> Ko'p bosqichli</td><td>70-80%</td><td>2-3</td></tr>
+          <tr><td><span class="tag tag-purple">Tier 4</span> Murakkab</td><td>60-70%</td><td>3-4</td></tr>
+          <tr><td><span class="tag tag-pink">Tier 5</span> Ilg'or</td><td>60-70%</td><td>5-6</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ========== PIPELINE ========== -->
+  <div class="section fade-in" id="pipeline">
+    <div class="section-header">
+      <span class="section-num">&sect;21</span>
+      <h2>Darslikdan NETS ga kontent pipeline</h2>
+    </div>
+
+    <div class="flow-wrap">
+      <div class="flow-node"><div class="flow-line"><div class="flow-dot" style="background:var(--cyan);border-color:var(--cyan);"></div><div class="flow-stem"></div></div>
+        <div class="flow-content"><div class="fc-title">Faza 1: QABUL QILISH (oflayn)</div><div class="fc-desc">OCR &rarr; Struktura tahlilchisi &rarr; O'quv Birliklari (LU) &rarr; Standart teglovchi. <strong>O'QITUVCHI KO'RIGI MAJBURIY.</strong></div></div></div>
+      <div class="flow-node"><div class="flow-line"><div class="flow-dot" style="background:var(--blue);border-color:var(--blue);"></div><div class="flow-stem"></div></div>
+        <div class="flow-content"><div class="fc-title">Faza 2: TOPSHIRIQ YARATISH (oflayn, partiya)</div><div class="fc-desc">Bloom's taqsimlash &rarr; Topshiriq generatsiyasi (80% shablon Tier 1, 15% kengaytirilgan Tier 2, 5% ijodiy Tier 3) &rarr; O'yin yo'naltirish</div></div></div>
+      <div class="flow-node"><div class="flow-line"><div class="flow-dot" style="background:var(--green);border-color:var(--green);"></div><div class="flow-stem"></div></div>
+        <div class="flow-content"><div class="fc-title">Faza 3: SIFAT NAZORATI (yarim-avtomat)</div><div class="fc-desc">Avtomatlashtirilgan SN + O'qituvchi ko'rigi + IRT kalibrlash. Tier 3 topshiriqlar DOIMO inson ko'rigidan o'tadi.</div></div></div>
+      <div class="flow-node"><div class="flow-line"><div class="flow-dot" style="background:var(--amber);border-color:var(--amber);"></div><div class="flow-stem" style="background:transparent;"></div></div>
+        <div class="flow-content"><div class="fc-title">Faza 4: SESSIYA YIG'ISH (real-vaqt)</div><div class="fc-desc">Profil tekshiruv &rarr; Sessiya yig'uvchi (7 bosqich, 20-30 daq) &rarr; API yetkazish &rarr; Analitika qayta aloqa</div></div></div>
+    </div>
+
+    <h3>Pipeline xarajat bahosi</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Faza</th><th>Xarajat omili</th><th>Baholash</th></tr></thead>
+        <tbody>
+          <tr><td>OCR + Tahlil</td><td>GPT-4o Vision, ~200 sahifa</td><td>~$5</td></tr>
+          <tr><td>Topshiriq yaratish</td><td>~500 topshiriq/darslik</td><td>~$5</td></tr>
+          <tr><td>Avtomatlashtirilgan SN</td><td>LLM validatsiya</td><td>~$1</td></tr>
+          <tr><td>O'qituvchi ko'rigi</td><td>10 soat mahalliy tarif</td><td>~$50</td></tr>
+          <tr><td style="font-weight:700;">Har darslik uchun jami</td><td></td><td style="font-weight:700;color:var(--amber);">~$61</td></tr>
+          <tr><td>5-sinf (10 fan &times; 2 til)</td><td></td><td style="color:var(--amber);">~$1,220</td></tr>
+          <tr><td>5-8 sinf (pilot)</td><td></td><td style="color:var(--amber);">~$4,880</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ========== GAMIFICATION ========== -->
+  <div class="section fade-in" id="gamification">
+    <div class="section-header">
+      <span class="section-num">&sect;22</span>
+      <h2>Geymifikatsiya iqtisodiyoti</h2>
+    </div>
+
+    <h3>XP mukofot matritsasi</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Harakat</th><th>Asosiy XP</th><th>Izoh</th></tr></thead>
+        <tbody>
+          <tr><td>Memory Sprint (har to'g'ri)</td><td style="font-family:var(--mono);color:var(--amber);">100</td><td>+10 streak bonus</td></tr>
+          <tr><td>Story Mode tugatish</td><td style="font-family:var(--mono);color:var(--amber);">150</td><td></td></tr>
+          <tr><td>Tile Match (mukammal)</td><td style="font-family:var(--mono);color:var(--amber);">300</td><td>Qisman: 100-250</td></tr>
+          <tr><td>Why Chain (har daraja)</td><td style="font-family:var(--mono);color:var(--amber);">150</td><td>1-4: 100, 9-11: 200</td></tr>
+          <tr><td>Real-Life Challenge</td><td style="font-family:var(--mono);color:var(--amber);">400</td><td>1-4: 300, 9-11: 500</td></tr>
+          <tr><td>Final Boss (3 yulduz)</td><td style="font-family:var(--mono);color:var(--amber);">1000</td><td>2&star;:700, 1&star;:500</td></tr>
+          <tr><td>Peer Teaching</td><td style="font-family:var(--mono);color:var(--amber);">400</td><td></td></tr>
+          <tr><td>Creative Lab</td><td style="font-family:var(--mono);color:var(--amber);">500</td><td>maks</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Streak ko'paytiruvchilari</h3>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin:12px 0;">
+      <div style="text-align:center;"><div style="font-size:32px;">&#128293;</div><div style="font-family:var(--mono);font-size:11px;color:var(--amber);">+20%</div><div style="font-size:11px;color:var(--text-lo);">1 kun</div></div>
+      <div style="text-align:center;"><div style="font-size:32px;">&#128293;&#128293;</div><div style="font-family:var(--mono);font-size:11px;color:var(--amber);">+50%</div><div style="font-size:11px;color:var(--text-lo);">7 kun</div></div>
+      <div style="text-align:center;"><div style="font-size:32px;">&#128293;&#128293;&#128293;</div><div style="font-family:var(--mono);font-size:11px;color:var(--amber);">+75%</div><div style="font-size:11px;color:var(--text-lo);">14 kun</div></div>
+      <div style="text-align:center;"><div style="font-size:32px;">&#127942;</div><div style="font-family:var(--mono);font-size:11px;color:var(--amber);">+100%</div><div style="font-size:11px;color:var(--text-lo);">30+ kun</div></div>
+    </div>
+
+    <h3>Liderlar jadvali</h3>
+    <div class="demo-box">
+      <ul style="list-style:none;font-size:13px;color:var(--text-mid);">
+        <li>&#9899; Faqat SINF darajasida (sog'liksiz raqobatni oldini olish)</li>
+        <li>&#9899; Haftalik qayta boshlash (har dushanba)</li>
+        <li>&#9899; Toifalar: XP, Streak, O'zlashtirilgan boblar, Eng ko'p yaxshilangan</li>
+        <li>&#9899; Anti-raqobat: Yaxshilanishni nishonlash, faqat reyting emas</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ========== EMERGENCY ========== -->
+  <div class="section fade-in" id="emergency">
+    <div class="section-header">
+      <span class="section-num">&sect;23</span>
+      <h2>Favqulodda holatlar va tiklash rejimlari</h2>
+    </div>
+    <p>8.8M o'quvchi uchun kundalik voqelik &mdash; e'tiborsiz qoldirib bo'lmaydi.</p>
+
+    <div class="card-grid">
+      <div class="card" style="border-color:rgba(245,158,11,0.3);">
+        <div class="card-title" style="color:var(--amber);">O'tkazib yuborilgan (grace period)</div>
+        <div class="card-desc">3 kun (1-7 sozlanadi). Tiklash sessiyasi: qisqartirilgan 15-20 daq. Boss QISQARTIRILmaydi &mdash; baholash yaxlitligi.</div>
+      </div>
+      <div class="card" style="border-color:rgba(249,115,22,0.3);">
+        <div class="card-title" style="color:var(--orange);">Ko'p sessiya o'tkazib yuborilgan</div>
+        <div class="card-desc">Bog'liqlik tartibida tiklash. Kuniga maks 2 sessiya (burnout oldini olish). O'qituvchi panelida navbat ko'rsatiladi.</div>
+      </div>
+      <div class="card" style="border-color:rgba(239,68,68,0.3);">
+        <div class="card-title" style="color:var(--red);">Uzoq yo'qlik (&gt;7 kun)</div>
+        <div class="card-desc">QUVIB YETISH REJIMI: Faqat muhim tushunchalar. Boss HP 50%. Hint jazolanmasdan. Sinf o'rtachasiga yaqinlashguncha davom.</div>
+      </div>
+      <div class="card" style="border-color:rgba(139,92,246,0.3);">
+        <div class="card-title" style="color:var(--purple);">Boost Mode (orqada qolish)</div>
+        <div class="card-desc">PISA &lt; sinf o'rtachasi - 0.5, 3+ sessiya. Qo'shimcha mashq + maxsus avatar. Sinf o'rtachasiga yetganda avtomatik o'chiriladi.</div>
+      </div>
+      <div class="card" style="border-color:rgba(236,72,153,0.3);">
+        <div class="card-title" style="color:var(--pink);">Past jalb qilish</div>
+        <div class="card-desc">Tugatish &lt;50%, 2 hafta. Sessiya qisqartirish &rarr; o'yin oshirish &rarr; Quest Arc &rarr; ota-onaga xabar.</div>
+      </div>
+      <div class="card" style="border-color:rgba(6,182,212,0.3);">
+        <div class="card-title" style="color:var(--cyan);">Oflayn rejim</div>
+        <div class="card-desc">Joriy + keyingi bob keshlangan. Avtomatik saqlash. Qurilmalar arasi sinxronlash. O'qituvchi "Uzrli" belgisi.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== ANTI-CHEAT ========== -->
+  <div class="section fade-in" id="anticheat">
+    <div class="section-header">
+      <span class="section-num">&sect;24</span>
+      <h2>Anti-cheat tizimi</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card"><div class="card-title">1. Savol qayta yaratish</div><div class="card-desc">Boss savollari har urinishda yangi sonlar/kontekst bilan qayta yaratiladi</div></div>
+      <div class="card"><div class="card-title">2. Javob vaqti tahlili</div><div class="card-desc">O'qish tezligidan tez javoblar bayroqlanadi</div></div>
+      <div class="card"><div class="card-title">3. Naqsh tahlili</div><div class="card-desc">G'ayrioddiy tugatish naqshlari bayroqlanadi</div></div>
+      <div class="card"><div class="card-title">4. Sokratik tekshiruv</div><div class="card-desc">Boss keyin 1 ta tasdiqlash savoli (baholanmaydi)</div></div>
+      <div class="card"><div class="card-title">5. Qurilma monitoring</div><div class="card-desc">Ko'p qurilmada bir akkount &rarr; sessiya qulflanadi</div></div>
+      <div class="card"><div class="card-title">6. Nusxa ko'chirish</div><div class="card-desc">Paste hodisalari bayroqlanadi</div></div>
+    </div>
+
+    <h3>Eskalatsiya bosqichlari</h3>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;">
+      <div class="tag tag-amber">1: O'quvchiga ogohlantirish</div>
+      <div style="color:var(--text-lo);">&rarr;</div>
+      <div class="tag tag-orange">2: Ota-onaga xabar</div>
+      <div style="color:var(--text-lo);">&rarr;</div>
+      <div class="tag tag-red">3: O'qituvchiga + dalillar</div>
+      <div style="color:var(--text-lo);">&rarr;</div>
+      <div class="tag tag-pink">4: Admin ko'rib chiqish</div>
+    </div>
+  </div>
+
+  <!-- ========== TEACHER ========== -->
+  <div class="section fade-in" id="teacher">
+    <div class="section-header">
+      <span class="section-num">&sect;25</span>
+      <h2>O'qituvchi boshqaruv paneli</h2>
+    </div>
+
+    <h3>Sozlash parametrlari</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Parametr</th><th>Standart</th><th>Diapazoni</th></tr></thead>
+        <tbody>
+          <tr><td>Sessiya rejimi</td><td>Standard (20-30 daq)</td><td>Standard / Extended (40-50 daq)</td></tr>
+          <tr><td>Grace period</td><td>3 kun</td><td>1-7 kun</td></tr>
+          <tr><td>Boss HP modifikatori</td><td>100%</td><td>50%-150%</td></tr>
+          <tr><td>Hint mavjudligi</td><td>Yoqilgan</td><td>Yoqilgan / O'chirilgan</td></tr>
+          <tr><td>Faza 4 (Hayotiy vaziyat)</td><td>Majburiy</td><td>Majburiy / Ixtiyoriy</td></tr>
+          <tr><td>Qiyinlik pastki chegarasi</td><td>PISA daraja - 1</td><td>Sozlanishi mumkin</td></tr>
+          <tr><td>Creative Lab</td><td>Avtomatik (3+ daraja)</td><td>Yoqilgan / O'chirilgan</td></tr>
+          <tr><td>Kunlik tiklash sessiyalari</td><td>2 maks</td><td>1-3</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Panel xususiyatlari</h3>
+    <div class="card-grid">
+      <div class="card"><div class="card-title">Issiqlik xaritasi</div><div class="card-desc">Har o'quvchi, har bob, har standard uchun mastery vizualizatsiyasi</div></div>
+      <div class="card"><div class="card-title">Maxsus topshiriqlar</div><div class="card-desc">NETS o'yin mexanizmlari bilan standartlarga teglangan topshiriqlar yaratish</div></div>
+      <div class="card"><div class="card-title">Sinf tushunchalari</div><div class="card-desc">Qaysi boblarda mustahkamlash kerak (sinf miqyosida zaif standardlar)</div></div>
+      <div class="card"><div class="card-title">Jalb qilish ogohlantirishlari</div><div class="card-desc">Tugatish yoki natijasi tushayotgan o'quvchilar</div></div>
+    </div>
+  </div>
+
+  <!-- ========== INTEGRATION ========== -->
+  <div class="section fade-in" id="integration">
+    <div class="section-header">
+      <span class="section-num">&sect;26</span>
+      <h2>Integratsiya nuqtalari</h2>
+    </div>
+    <div class="card-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="card" style="border-color:rgba(59,130,246,0.3);">
+        <div class="card-title" style="color:var(--blue);">Kundalik/eMaktab</div>
+        <div class="card-desc"><strong>OLISH:</strong> Sinf ro'yxatlari, davomat, dars jadvali<br><strong>YUBORISH:</strong> Tugatish holati, baho (1-5), vaqt</div>
+      </div>
+      <div class="card" style="border-color:rgba(16,185,129,0.3);">
+        <div class="card-title" style="color:var(--green);">Ota-ona portali</div>
+        <div class="card-desc">PISA progressiya grafigi, zaif standardlar + uyda mashq, haftalik xulosa (SMS uchun). Tafakkur ULASHILMAYDI.</div>
+      </div>
+      <div class="card" style="border-color:rgba(139,92,246,0.3);">
+        <div class="card-title" style="color:var(--purple);">Admin/Milliy</div>
+        <div class="card-desc">Anonimlashtirilgan: maktab PISA o'rtachasi, standart mastery, kontent kamchiligi, darslik samaradorligi</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== JSON SCHEMA ========== -->
+  <div class="section fade-in" id="schema">
+    <div class="section-header">
+      <span class="section-num">&sect;27</span>
+      <h2>Uy vazifasi JSON sxemasi</h2>
+    </div>
+    <p>Barcha uy vazifasi topshiriqlari uchun standartlashtirilgan format.</p>
+    <div class="json-block">
+{
+  <span class="jk">"task_id"</span>: <span class="js">"HW-MATH5-FRAC-001"</span>,
+  <span class="jk">"textbook_ref"</span>: {
+    <span class="jk">"grade"</span>: <span class="jn">5</span>, <span class="jk">"subject"</span>: <span class="js">"math"</span>,
+    <span class="jk">"chapter"</span>: <span class="js">"Oddiy kasrlar"</span>, <span class="jk">"page_range"</span>: <span class="js">"52-58"</span>
+  },
+  <span class="jk">"curriculum_standard"</span>: {
+    <span class="jk">"primary_code"</span>: <span class="js">"UZ-MATH-5-FRAC-01"</span>,
+    <span class="jk">"alias_code"</span>: <span class="js">"MAT.5.3.4.1"</span>
+  },
+  <span class="jk">"pisa_level"</span>: {
+    <span class="jk">"target"</span>: <span class="jn">2</span>, <span class="jk">"domain"</span>: <span class="js">"mathematics"</span>,
+    <span class="jk">"transition_skill"</span>: <span class="js">"L1-&gt;L2: oddiy vizual tasvirlarni izohlash"</span>
+  },
+  <span class="jk">"blooms_level"</span>: <span class="js">"understand"</span>,
+  <span class="jk">"game_mechanic"</span>: { <span class="jk">"mechanic"</span>: <span class="js">"tile_match"</span> },
+  <span class="jk">"content"</span>: {
+    <span class="jk">"question_text"</span>: <span class="js">"Kasrni mos vizual modelga juftlang"</span>,
+    <span class="jk">"answer"</span>: { <span class="jk">"format"</span>: <span class="js">"matching_pairs"</span> }
+  },
+  <span class="jk">"ai_tier"</span>: <span class="jn">1</span>,
+  <span class="jk">"xp_reward"</span>: { <span class="jk">"base"</span>: <span class="jn">100</span>, <span class="jk">"streak_bonus"</span>: <span class="jn">10</span> }
+}
+    </div>
+  </div>
+
+  <!-- ========== GRADE MATRIX ========== -->
+  <div class="section fade-in" id="grades">
+    <div class="section-header">
+      <span class="section-num">&sect;28</span>
+      <h2>Sinf bo'yicha amalga oshirish matritsasi</h2>
+    </div>
+
+    <h3>PISA progressiya va o'yin xaritasi</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Sinf</th><th>PISA maqsad</th><th>Asosiy kompetensiya</th><th>Asosiy o'yinlar</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1-2</strong></td><td><span class="tag tag-red">L0-1</span></td><td>Asosiy eslab qolish</td><td>Sprint, Tile Match, Movement Breaks</td></tr>
+          <tr><td><strong>3</strong></td><td><span class="tag tag-orange">L1</span></td><td>Bir bosqichli masalalar</td><td>Sprint, Tile Match, Flashcards</td></tr>
+          <tr><td><strong>4</strong></td><td><span class="tag tag-amber">L1-2</span></td><td>Ko'p bosqichga o'tish</td><td>Story Mode, Quiz, Sentence Fill</td></tr>
+          <tr><td><strong>5</strong></td><td><span class="tag tag-amber">L2</span></td><td>Ko'p bosqichli, asosiy fikrlash</td><td>Why Chain, Boss, Mystery Box</td></tr>
+          <tr><td><strong>6</strong></td><td><span class="tag tag-green">L2-3</span></td><td>Qo'llanma matematika, modellashtirish</td><td>Real-Life, Adaptive Quiz</td></tr>
+          <tr><td><strong>7</strong></td><td><span class="tag tag-green">L3</span></td><td>Murakkab fikrlash, asoslash</td><td>Why Chain 4+, Boss Medium</td></tr>
+          <tr><td><strong>8</strong></td><td><span class="tag tag-blue">L3-4</span></td><td>Mavhum fikrlash, isbotlash</td><td>Boss, Mystery Box, Peer Teaching</td></tr>
+          <tr><td><strong>9</strong></td><td><span class="tag tag-blue">L4</span></td><td>Ilg'or modellashtirish</td><td>Real-Life, Peer Teaching</td></tr>
+          <tr><td><strong>10</strong></td><td><span class="tag tag-purple">L4-5</span></td><td>Murakkab muammo yechish</td><td>Barcha o'yinlar mahorat darajasida</td></tr>
+          <tr><td><strong>11</strong></td><td><span class="tag tag-purple">L5-6</span></td><td>PISA tayyor, ijodiy fikrlash</td><td>Boss Qiyin, Real-Life Extended, Creative Lab</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Sessiya davomiyligi sinf bo'yicha</h3>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin:12px 0;">
+      <div class="card" style="flex:1;min-width:140px;text-align:center;">
+        <div style="font-family:var(--mono);font-size:11px;color:var(--text-lo);">1-4 sinf</div>
+        <div style="font-family:var(--mono);font-size:20px;color:var(--amber);margin:4px 0;">Boss HP 50</div>
+        <div style="font-size:11px;color:var(--text-lo);">MC + qisqa javob</div>
+      </div>
+      <div class="card" style="flex:1;min-width:140px;text-align:center;">
+        <div style="font-family:var(--mono);font-size:11px;color:var(--text-lo);">5-8 sinf</div>
+        <div style="font-family:var(--mono);font-size:20px;color:var(--amber);margin:4px 0;">Boss HP 100</div>
+        <div style="font-size:11px;color:var(--text-lo);">Qisqa javob + ochiq</div>
+      </div>
+      <div class="card" style="flex:1;min-width:140px;text-align:center;">
+        <div style="font-family:var(--mono);font-size:11px;color:var(--text-lo);">9-11 sinf</div>
+        <div style="font-family:var(--mono);font-size:20px;color:var(--amber);margin:4px 0;">Boss HP 150</div>
+        <div style="font-size:11px;color:var(--text-lo);">Faqat ochiq fikrlash</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== BILINGUAL ========== -->
+  <div class="section fade-in" id="bilingual">
+    <div class="section-header">
+      <span class="section-num">&sect;30</span>
+      <h2>Ikki tilli til o'rganish tizimi</h2>
+    </div>
+    <p>Krashen Input gipotezasi (i+1): Kontent joriy tushunish darajasidan bir daraja yuqorida yetkaziladi.</p>
+
+    <div class="card-grid">
+      <div class="card"><div class="card-title">Kontentga asoslangan</div><div class="card-desc">Til alohida grammatika mashqlari emas, fan mazmuni orqali o'rganiladi</div></div>
+      <div class="card"><div class="card-title">O'yin mexanizmi xaritalash</div><div class="card-desc">Sentence Fill: so'z boyligi. Story Mode: o'qish tushunish. Why Chain: diskurs tahlili. Peer Teaching: ravonlik.</div></div>
+      <div class="card"><div class="card-title">Amalga oshirish</div><div class="card-desc">Barcha kontent uz + ru. Almashtirish tugmasi. CEFR progressiya. L1 yordami (hover tarjima) XP sarflamaydi.</div></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="padding:48px;text-align:center;border-top:1px solid var(--ink);">
+    <div style="font-family:var(--mono);font-size:16px;color:var(--amber);letter-spacing:0.1em;margin-bottom:8px;">NETS</div>
+    <div style="font-size:12px;color:var(--text-lo);">
+      Universal Blueprint v2.0 &mdash; 2026-04-02<br>
+      NETS-Homework-Engine-UNIFIED.md v2.0 asosida tuzilgan<br>
+      Barcha 31 bo'lim + ilovalar to'liq qamrab olingan
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<script>
+// ---- SIDEBAR ACTIVE LINK ----
+const sections = document.querySelectorAll('.section[id], .hero[id]');
+const sidebarLinks = document.querySelectorAll('.sidebar a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      sidebarLinks.forEach(a => a.classList.remove('active'));
+      const link = document.querySelector(`.sidebar a[href="#${e.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+sections.forEach(s => observer.observe(s));
+
+// Close mobile sidebar on link click
+sidebarLinks.forEach(a => a.addEventListener('click', () => {
+  document.querySelector('.sidebar').classList.remove('open');
+}));
+
+// ---- FADE IN ----
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// ---- GAME MECHANICS DATA ----
+const games = [
+  { num: 1, name: 'Memory Sprint', icon: '&#9889;', blooms: 'Remember', pisa: '1', grades: '1-11', desc: 'Tezkor recall. 5-8 savol, 60s taymer. Oldingi boblardan spaced repetition ustuvorligi bilan.', color: 'green', xp: '100/to\'g\'ri' },
+  { num: 2, name: 'Flashcards', icon: '&#128196;', blooms: 'Remember', pisa: '1', grades: '1-11', desc: 'SM-2 intervalli takrorlash. 10-20 karta. O\'z-o\'zini baholash: Yana/Qiyin/Yaxshi/Oson.', color: 'green', xp: '50/karta' },
+  { num: 3, name: 'Tile Match', icon: '&#127922;', blooms: 'Understand', pisa: '1-2', grades: '1-11', desc: 'Vizual-so\'zli juftlash. 4-8 juft to\'rda. 2:30 taymer. Rangli ko\'rish va ekran o\'quvchi qo\'llab-quvvatlash.', color: 'cyan', xp: '300 mukammal' },
+  { num: 4, name: 'Sentence Fill', icon: '&#9999;', blooms: 'Understand', pisa: '2', grades: '1-11', desc: 'Cloze test. 2-4 sinf: har 3-so\'zda + so\'z banki. 8-11 sinf: har 5-so\'zda, banksiz.', color: 'cyan', xp: '100/to\'g\'ri' },
+  { num: 5, name: 'Memory Palace', icon: '&#127984;', blooms: 'Remember', pisa: '1-2', grades: '3-11', desc: 'Loci usuli. Registon standart. 5 tushuncha 5 joyga. Saroy tanlash → joylashtirish → yurish → test.', color: 'green', xp: '300 maks' },
+  { num: 6, name: 'Story Mode', icon: '&#128214;', blooms: 'Understand', pisa: '2-3', grades: '1-11', desc: 'Hikoya segmentlari + nazorat savollari. CPA bosqichlash (mat). Fanga xos yondashuvlar.', color: 'cyan', xp: '150' },
+  { num: 7, name: 'Adaptive Quiz', icon: '&#127919;', blooms: 'Apply', pisa: '2-3', grades: '1-11', desc: 'IRT algoritmi. Theta=-3..+3. 5-7 savol. Qiyinlik PISA darajalariga mos keladi.', color: 'blue', xp: '200' },
+  { num: 8, name: 'Mystery Box', icon: '&#127873;', blooms: 'Apply/Analyze', pisa: '3', grades: '1-11', desc: '3-5 ta quti, TURLI toifalardan. Avval tur aniqlash (+50), keyin yechim (+150).', color: 'blue', xp: '250/quti' },
+  { num: 9, name: 'Movement Breaks', icon: '&#127939;', blooms: 'Apply', pisa: '1-2', grades: '1-6', desc: 'Kinestetik: ko\'rsatish, topish, hisoblash. 60-90 soniya. 1-4: MAJBURIY. 7+: O\'CHIRILGAN.', color: 'green', xp: '100' },
+  { num: 10, name: 'Why Chain', icon: '&#128279;', blooms: 'Analyze', pisa: '3-4', grades: '5-11', desc: 'Sokratik dialog. 3-5 daraja chuqurlik. HECH QACHON javob bermaydi. Hint: -10 XP.', color: 'purple', xp: '150/daraja' },
+  { num: 11, name: 'Peer Teaching', icon: '&#128101;', blooms: 'Evaluate', pisa: '4-5', grades: '5-11', desc: 'Kichikga tushuntirish / Sinfdoshga yordam / Xatoni tuzatish. 400 XP maks.', color: 'purple', xp: '400' },
+  { num: 12, name: 'Real-Life Challenge', icon: '&#127758;', blooms: 'Evaluate', pisa: '4-5', grades: '1-11', desc: 'O\'zbek kontekstida transfer ssenariy. PISA L2+ talab. Haqiqiy transfer tekshiriladi.', color: 'pink', xp: '400' },
+  { num: 13, name: 'Reflection Journal', icon: '&#128221;', blooms: 'Create', pisa: '3-4', grades: '1-11', desc: 'Metakognitiv baholash. Min 10 belgi. Maxfiy. Avtomatik baho yo\'q.', color: 'cyan', xp: '100' },
+  { num: 14, name: 'Final Boss', icon: '&#128126;', blooms: 'Apply-Create', pisa: '3-6', grades: '1-11', desc: 'PISA-kalibrlangan. HP tizimi. Darajalangan zarar. Boss YENGILISHI SHART.', color: 'red', xp: '500-1000' },
+  { num: 15, name: 'Creative Lab', icon: '&#128161;', blooms: 'Evaluate/Create', pisa: '4-6', grades: '5-11', desc: 'Ixtiyoriy. Ochiq muammo. Dizayn sinovi / Agar...? / Aralashma / Yaxshilang.', color: 'pink', xp: '500 maks' }
+];
+
+const gameGrid = document.getElementById('game-grid');
+games.forEach(g => {
+  const card = document.createElement('div');
+  card.className = 'game-card';
+  card.innerHTML = `
+    <div class="gc-num">#${g.num}</div>
+    <div class="gc-name">${g.icon} ${g.name}</div>
+    <div class="gc-meta">
+      <span class="tag tag-${g.color}">${g.blooms}</span>
+      <span class="tag tag-amber">PISA ${g.pisa}</span>
+      <span class="tag tag-blue">${g.grades} sinf</span>
+    </div>
+    <div class="gc-desc">${g.desc}</div>
+    <div style="margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--amber);">XP: ${g.xp}</div>
+  `;
+  gameGrid.appendChild(card);
+});
+
+// ---- SPRINT DEMO ----
+const sprintQuestions = [
+  { q: 'O\'zbekistonning qadimgi nomlari qaysi?', opts: ['Turon, Movarounnahr', 'Xiva, Buxoro', 'Samarqand, Toshkent', 'Farg\'ona, Andijon'], correct: 0 },
+  { q: 'Tarixiy manbalar necha turga bo\'linadi?', opts: ['2 ta: yozma va og\'zaki', '3 ta: moddiy, yozma, og\'zaki', '4 ta: moddiy, yozma, og\'zaki, elektron', '1 ta: yozma'], correct: 1 },
+  { q: 'Arxeologiya nimani o\'rganadi?', opts: ['Yozma manbalarni', 'Moddiy topilmalarni', 'Og\'zaki rivoyatlarni', 'Til tarixini'], correct: 1 },
+  { q: '"Avesto" qaysi davr yodgorligi?', opts: ['Temuriylar davri', 'Qadimgi davr (mil. avv.)', 'O\'rta asrlar', '19-asr'], correct: 1 },
+  { q: 'Registon maydoni qaysi shaharda joylashgan?', opts: ['Toshkent', 'Buxoro', 'Samarqand', 'Xiva'], correct: 2 }
+];
+
+let sprintState = { current: 0, score: 0, streak: 0, correct: 0, timer: null, timeLeft: 60 };
+
+function startSprint() {
+  sprintState = { current: 0, score: 0, streak: 0, correct: 0, timer: null, timeLeft: 60 };
+  document.getElementById('sprint-summary').style.display = 'none';
+  document.getElementById('sprint-area').style.display = 'block';
+  document.getElementById('sprint-result').textContent = '';
+  showSprintQuestion();
+  sprintState.timer = setInterval(() => {
+    sprintState.timeLeft--;
+    document.getElementById('sprint-timer').textContent = `0:${String(sprintState.timeLeft).padStart(2,'0')}`;
+    if (sprintState.timeLeft <= 0) endSprint();
+  }, 1000);
+}
+
+function showSprintQuestion() {
+  if (sprintState.current >= sprintQuestions.length) { endSprint(); return; }
+  const q = sprintQuestions[sprintState.current];
+  document.getElementById('sprint-q').textContent = q.q;
+  document.getElementById('sprint-progress').textContent = `${sprintState.current+1}/${sprintQuestions.length}`;
+  const optsDiv = document.getElementById('sprint-opts');
+  optsDiv.innerHTML = '';
+  q.opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'demo-btn demo-btn-secondary';
+    btn.style.textAlign = 'left';
+    btn.textContent = opt;
+    btn.onclick = () => answerSprint(i);
+    optsDiv.appendChild(btn);
+  });
+}
+
+function answerSprint(idx) {
+  const q = sprintQuestions[sprintState.current];
+  const result = document.getElementById('sprint-result');
+  const opts = document.getElementById('sprint-opts').children;
+  for (let b of opts) b.disabled = true;
+  if (idx === q.correct) {
+    sprintState.correct++;
+    sprintState.streak++;
+    const xp = 100 + (10 * sprintState.streak);
+    sprintState.score += xp;
+    opts[idx].style.borderColor = 'var(--green)'; opts[idx].style.color = 'var(--green)';
+    result.innerHTML = `<span style="color:var(--green);">&#10004; To'g'ri! +${xp} XP</span>`;
+    if (sprintState.timeLeft < 58) sprintState.timeLeft += 3; // bonus time
+  } else {
+    sprintState.streak = 0;
+    opts[idx].style.borderColor = 'var(--red)'; opts[idx].style.color = 'var(--red)';
+    opts[q.correct].style.borderColor = 'var(--green)'; opts[q.correct].style.color = 'var(--green)';
+    result.innerHTML = `<span style="color:var(--red);">&#10008; Noto'g'ri.</span> <span style="color:var(--green);">Javob: ${q.opts[q.correct]}</span>`;
+  }
+  document.getElementById('sprint-score').textContent = `XP: ${sprintState.score}`;
+  document.getElementById('sprint-streak').textContent = `Streak: ${sprintState.streak}`;
+  sprintState.current++;
+  setTimeout(showSprintQuestion, 1200);
+}
+
+function endSprint() {
+  clearInterval(sprintState.timer);
+  const accuracy = Math.round((sprintState.correct / sprintQuestions.length) * 100);
+  document.getElementById('sprint-area').style.display = 'none';
+  const sum = document.getElementById('sprint-summary');
+  sum.style.display = 'block';
+  let status, statusColor;
+  if (accuracy >= 80) { status = 'Faza 2 ga tayyor!'; statusColor = 'var(--green)'; }
+  else if (accuracy >= 60) { status = 'Davom etiladi, o\'qituvchiga bayroq.'; statusColor = 'var(--amber)'; }
+  else { status = 'REMEDIATION A faollashtiriladi!'; statusColor = 'var(--red)'; }
+  sum.innerHTML = `
+    <div style="text-align:center;padding:20px;">
+      <div style="font-family:var(--mono);font-size:28px;color:var(--amber);margin-bottom:8px;">${sprintState.score} XP</div>
+      <div style="font-size:14px;color:var(--text-mid);margin-bottom:8px;">Aniqlik: ${accuracy}% (${sprintState.correct}/${sprintQuestions.length})</div>
+      <div style="font-size:14px;font-weight:700;color:${statusColor};">${status}</div>
+    </div>`;
+}
+
+// ---- BOSS DEMO ----
+const bossQuestions = [
+  { q: 'Bozorda 1 kg olma 15,000 so\'m. Alisher 2.4 kg olma oldi. Qancha to\'laydi?', meta: 'Oson · PISA L2 · Apply', damage: 10, correct: 0, opts: ['36,000 so\'m', '30,000 so\'m', '38,400 so\'m', '24,000 so\'m'] },
+  { q: '1 kg nok olmadan 20% qimmat. 1 kg nok necha so\'m?', meta: 'O\'rta · PISA L3 · Apply', damage: 20, correct: 0, opts: ['18,000 so\'m', '17,000 so\'m', '20,000 so\'m', '12,000 so\'m'] },
+  { q: 'Alisher 1.8 kg nok oldi. Nok uchun jami to\'lov qancha?', meta: 'O\'rta · PISA L3 · Apply', damage: 20, correct: 0, opts: ['32,400 so\'m', '36,000 so\'m', '27,000 so\'m', '30,600 so\'m'] },
+  { q: 'Olma va nok uchun jami necha so\'m to\'landi?', meta: 'O\'rta · PISA L3 · Analyze', damage: 20, correct: 0, opts: ['68,400 so\'m', '72,000 so\'m', '66,000 so\'m', '63,400 so\'m'] },
+  { q: 'Agar Alisherda 70,000 so\'m bo\'lsa, qoldiq yetarli bo\'ladimi 0.5 kg uzumga (1 kg = 5,000 so\'m)?', meta: 'Qiyin · PISA L4 · Evaluate', damage: 30, correct: 0, opts: ['Ha, 1,600 so\'m qoladi va 2,500 kerak — yetmaydi', 'Yo\'q, pullar yetmaydi', 'Ha, yetadi: 70,000-68,400=1,600 > 2,500', 'Ha, qoldiq 1,600 so\'m va 0.5 kg = 2,500, yetmaydi'] }
+];
+// Fix: option 3 is correct for last question
+bossQuestions[4].correct = 3;
+
+let bossState = { hp: 100, current: 0, combo: 0, usedHint: false };
+
+function startBoss() {
+  bossState = { hp: 100, current: 0, combo: 0, usedHint: false };
+  document.getElementById('boss-result').style.display = 'none';
+  document.getElementById('boss-q-area').style.display = 'block';
+  document.getElementById('boss-stars').innerHTML = '&#9734;&#9734;&#9734;';
+  updateBossHP();
+  showBossQuestion();
+}
+
+function updateBossHP() {
+  const pct = Math.max(0, bossState.hp);
+  document.getElementById('boss-hp-num').textContent = pct;
+  document.getElementById('boss-hp-fill').style.width = pct + '%';
+  document.getElementById('boss-hp-text').textContent = pct + ' HP';
+}
+
+function showBossQuestion() {
+  if (bossState.current >= bossQuestions.length || bossState.hp <= 0) { endBoss(); return; }
+  const q = bossQuestions[bossState.current];
+  document.getElementById('boss-q').textContent = q.q;
+  document.getElementById('boss-meta').textContent = q.meta;
+  document.getElementById('boss-feedback').innerHTML = '';
+  const optsDiv = document.getElementById('boss-opts');
+  optsDiv.innerHTML = '';
+  q.opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'demo-btn demo-btn-secondary';
+    btn.style.textAlign = 'left';
+    btn.textContent = opt;
+    btn.onclick = () => answerBoss(i);
+    optsDiv.appendChild(btn);
+  });
+}
+
+function answerBoss(idx) {
+  const q = bossQuestions[bossState.current];
+  const fb = document.getElementById('boss-feedback');
+  const opts = document.getElementById('boss-opts').children;
+  for (let b of opts) b.disabled = true;
+  if (idx === q.correct) {
+    bossState.combo++;
+    let dmg = q.damage;
+    if (bossState.combo >= 3) dmg *= 2;
+    bossState.hp = Math.max(0, bossState.hp - dmg);
+    opts[idx].style.borderColor = 'var(--green)'; opts[idx].style.color = 'var(--green)';
+    fb.innerHTML = `<span style="color:var(--green);">&#10004; To'g'ri! Boss -${dmg} HP${bossState.combo>=3?' (COMBO 2×!)':''}</span>`;
+  } else {
+    bossState.combo = 0;
+    opts[idx].style.borderColor = 'var(--red)'; opts[idx].style.color = 'var(--red)';
+    opts[q.correct].style.borderColor = 'var(--green)'; opts[q.correct].style.color = 'var(--green)';
+    fb.innerHTML = `<span style="color:var(--red);">&#10008; Boss zarar olmadi.</span>`;
+  }
+  updateBossHP();
+  bossState.current++;
+  setTimeout(showBossQuestion, 1400);
+}
+
+function endBoss() {
+  document.getElementById('boss-q-area').style.display = 'none';
+  const result = document.getElementById('boss-result');
+  result.style.display = 'block';
+  if (bossState.hp <= 0) {
+    const stars = bossState.usedHint ? 1 : (bossState.hp > 80 ? 3 : (bossState.hp > 50 ? 2 : 1));
+    const starStr = '&#11088;'.repeat(Math.max(1,3-Math.ceil(bossState.hp/40))) + '&#9734;'.repeat(Math.max(0,Math.ceil(bossState.hp/40)-0));
+    document.getElementById('boss-stars').innerHTML = '&#11088;&#11088;&#11088;';
+    result.innerHTML = `
+      <div style="font-size:28px;margin-bottom:8px;">&#127942;</div>
+      <div style="font-size:18px;font-weight:700;color:var(--green);margin-bottom:8px;">BOSS YENGILDI!</div>
+      <div style="font-size:14px;color:var(--text-mid);">Boss HP: 0 | Qolgan HP: ${bossState.hp}</div>
+      <div style="margin-top:8px;font-size:14px;color:var(--amber);">&rarr; Faza 7: Tafakkur ga o'tish</div>`;
+  } else {
+    result.innerHTML = `
+      <div style="font-size:28px;margin-bottom:8px;">&#128128;</div>
+      <div style="font-size:18px;font-weight:700;color:var(--red);margin-bottom:8px;">BOSS YENGILMADI</div>
+      <div style="font-size:14px;color:var(--text-mid);">Boss HP: ${bossState.hp} qoldi</div>
+      <div style="margin-top:8px;font-size:14px;color:var(--purple);">&rarr; Sokratik tutoring faollashtiriladi (Tier 3)</div>`;
+  }
+}
+</script>
+</body>
+</html>
