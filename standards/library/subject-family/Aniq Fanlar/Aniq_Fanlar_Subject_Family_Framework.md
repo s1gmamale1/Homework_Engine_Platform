@@ -45,7 +45,6 @@
 | **Geometry** | Geometriya | Геометрия | G7-9 | Spatial and deductive reasoning. |
 | **Algebra & Analysis** | Algebra va analiz asoslari | Алгебра и начала анализа | G10-11 | Advanced calculus/analysis concepts. |
 | **Geometry (Adv)** | Geometriya | Геометрия | G10-11 | Advanced spatial proofs. |
-| **Physics** | Fizika | Физика | G7-11 | Application of math to physical laws. |
 ---
 
 ## 3. What This Family Focuses On (The Content Filter)
