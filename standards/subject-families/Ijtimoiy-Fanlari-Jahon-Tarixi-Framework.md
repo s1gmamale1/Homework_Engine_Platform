@@ -1,8 +1,8 @@
 # NETS Subject Framework: Ijtimoiy Fanlari — Jahon Tarixi (World History)
 
-**Version:** 1.0 (Subject Spec)
-**Status:** Implementation Ready
-**Parent Family:** [[Ijtimoiy-Fanlari-Framework.md]]
+**Version:** 1.0 (Subject Spec)  
+**Status:** Implementation Ready  
+**Parent Family:** [[Ijtimoiy-Fanlari-Framework.md]]  
 **Target:** Grade 7-11
 
 ---
@@ -61,6 +61,39 @@ Following the Ijtimoiy Fanlari profile, Jahon Tarixi prioritizes:
 - **The Task:** "Compare the development of maritime trade during the Age of Discovery in the West with the simultaneous overland Silk Road trade in the East. How did each influence their respective regions' economies?"
 - **Evaluation:** Tier 2 LLM checks for **comparative logic**, **source awareness**, and **global-national synthesis**.
 - **No MCQs:** All sessions culminate in a comparative historical analysis.
+
+---
+
+## 6. Narrative Adaptation
+
+### Story Mode (Phase 2)
+Must follow **Discovery Narrative** across 3 segments:
+- **Segment A:** A human moment (e.g., "Imagine you are a merchant in Venice...").
+- **Segment B:** The struggle/conflict based on global trade facts.
+- **Segment C:** The resolution and the Central Asian connection.
+
+### Real-Life Challenge (Phase 4)
+- **Role:** Student IS the expert (e.g., "You are the Global Strategic Analyst").
+- **Context:** Must be Uzbek-specific (e.g., Silk Road routes, Prezident's project on global trade).
+- **Goal:** Transfer the textbook concept to a "messy" real-world scenario.
+
+---
+
+## 7. Subject Pattern Example (Standard Session)
+
+- **Phase 0:** Gate Quote + BOST Mind Map.
+- **Phase 1:** Recall of previous day's events.
+- **Phase 2:** Story: "Marco Polo meets the Great Khan..."
+- **Phase 3:** Source Comparison + Escape Room.
+- **Phase 4:** Real-Life: "Analyze the global trade impact of the new Silk Road."
+- **Phase 5:** Radiant Summary of the day’s rules.
+- **Phase 6:** Multi-step open numerical Boss fight.
+
+---
+
+## Technical Rules
+1. **Inheritance:** Inherits National Pride rules from [[NETS-Library-Framework.md]] v0.6 Part 8.
+2. **Quality Gate:** Every session must pass the "5 Feature Showcase" (Narrative, Chronology, Perspective, Pride, Buzan).
 
 ---
 *Document produced by Gemini CLI Subject Framework Engine.*

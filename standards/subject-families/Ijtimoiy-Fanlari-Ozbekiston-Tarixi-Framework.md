@@ -1,8 +1,8 @@
 # NETS Subject Framework: Ijtimoiy Fanlari — O'zbekiston Tarixi (History of Uzbekistan)
 
-**Version:** 1.0 (Subject Spec)
-**Status:** Implementation Ready
-**Parent Family:** [[Ijtimoiy-Fanlari-Framework.md]]
+**Version:** 1.0 (Subject Spec)  
+**Status:** Implementation Ready  
+**Parent Family:** [[Ijtimoiy-Fanlari-Framework.md]]  
 **Target:** Grade 7-11
 
 ---
@@ -61,6 +61,39 @@ Following the Ijtimoiy Fanlari profile, O'zbekiston Tarixi prioritizes:
 - **The Task:** "Given an architectural inscription from a 15th-century madrasa and a snippet from a traveler's diary, explain how education was prioritized during the Timurid era and why it matters for today's Third Renaissance."
 - **Evaluation:** Tier 2 LLM checks for **evidence use**, **ancestral respect**, and **analytical depth**.
 - **No MCQs:** All sessions culminate in a written historical synthesis.
+
+---
+
+## 6. Narrative Adaptation
+
+### Story Mode (Phase 2)
+Must follow **Discovery Narrative** across 3 segments:
+- **Segment A:** A human moment (e.g., "Imagine you are a judge in 14th century Bukhara...").
+- **Segment B:** The struggle/conflict based on textbook facts.
+- **Segment C:** The resolution and modern legacy.
+
+### Real-Life Challenge (Phase 4)
+- **Role:** Student IS the expert (e.g., "You are the Lead Archival Guard").
+- **Context:** Must be Uzbek-specific (e.g., Samarkand planning, Mahalla development, Prezident's project).
+- **Goal:** Transfer the textbook concept to a "messy" real-world scenario.
+
+---
+
+## 7. Subject Pattern Example (Standard Session)
+
+- **Phase 0:** Gate Quote + BOST Mind Map.
+- **Phase 1:** Recall of previous day's events.
+- **Phase 2:** Story: "Akmal is measuring the Registan courtyard..."
+- **Phase 3:** Territory Conquest + Timeline Sort.
+- **Phase 4:** Real-Life: "Analyze the archival sources for a new museum in Bukhara."
+- **Phase 5:** Radiant Summary of the day’s rules.
+- **Phase 6:** Multi-step open numerical Boss fight.
+
+---
+
+## Technical Rules
+1. **Inheritance:** Inherits National Pride rules from [[NETS-Library-Framework.md]] v0.6 Part 8.
+2. **Quality Gate:** Every session must pass the "5 Feature Showcase" (Narrative, Chronology, Perspective, Pride, Buzan).
 
 ---
 *Document produced by Gemini CLI Subject Framework Engine.*

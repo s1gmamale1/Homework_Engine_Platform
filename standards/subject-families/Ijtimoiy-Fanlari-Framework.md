@@ -1,7 +1,7 @@
 # Ijtimoiy Fanlari — Social Sciences · Family Documentation
 
-**Status:** Family Documentation Guide (Filter/Adapter)
-**Target Audience:** Subject-Specific Content Producers
+**Status:** Family Documentation Guide (Filter/Adapter)  
+**Target Audience:** Subject-Specific Content Producers  
 **Role:** Acts as a bridge between core standards and individual subject frameworks.
 
 ### Parent Documents (Referenced)
@@ -22,6 +22,24 @@ Unlike Til Fanlari (Languages), which may reference international standards like
 
 **What it teaches:** How human systems work and the reasoning required to navigate them as defined by the national curriculum.
 
+**What it focuses on:**
+- Chronological and causal modeling of historical events.
+- Source criticism and historiographical analysis.
+- Legal reasoning and constitutional application.
+- Economic modeling and resource management.
+- Perspective-taking and empathy in societal contexts.
+- Critical Thinking.
+
+**What it is NOT about:** Arithmetic derivation, laboratory experimentation, or pure linguistic grammar drills.
+
+**Cognitive Demand Profile (Priority Order):**
+1. Source Criticism (Evaluating reliability/bias)
+2. Chronological & Causal Modeling
+3. Case Reasoning (Applying principles to scenarios)
+4. Perspective-taking
+5. Concept Understanding
+6. Narrative Synthesis
+
 ---
 
 ## 2. Subjects in This Family
@@ -32,7 +50,7 @@ Unlike Til Fanlari (Languages), which may reference international standards like
 | **Law** | Huquq | Право | G8-11 | Focus on rights and the 2023 Constitution. |
 | **Economics** | Iqtisodiyot | Экономика | G8-11 | Micro/Macro and Financial Literacy. |
 
-*Note: Civic Prep (CHQBT) moved to Tarbiya/Sanat family per v0.6 specs.*
+*Note: History is the priority subject for the Toriqli branch refinement.*
 
 ---
 
@@ -97,6 +115,11 @@ Content producers must prioritize these cognitive anchors:
 | **Codebreaker** | Identifying legal articles or economic indicators | Law, Economics |
 | **Connect Four vs AI** | Strategic planning and causal anticipation | Economics, Law |
 
+### Games to AVOID
+- **Notebook Capture (Calculations):** Reserved for Aniq Fanlar.
+- **Speed Match (Arithmetic):** Reserved for Aniq Fanlar.
+- **Word Ladder:** reserved for Til Fanlari.
+
 ---
 
 ## 5. Boss Format for Ijtimoiy Fanlari
@@ -119,6 +142,7 @@ Content producers must prioritize these cognitive anchors:
 ### Real-Life Challenge (Phase 4)
 - **Role:** Assign high-status titles: `Tarixiy Tahlilchi`, `Bosh Qonunshunos`, `Strategik Iqtisodchi`.
 - **National Context:** Use hooks from the `quotes_database.json` and `Bilarmidingiz_faktlar.md`.
+- **Wise Status:** Context must be Uzbek-specific (e.g., Prezident's project, Samarkand reconstruction, Mahalla development).
 
 ---
 
