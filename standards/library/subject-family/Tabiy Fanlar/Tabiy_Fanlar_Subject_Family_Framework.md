@@ -65,6 +65,9 @@ Both share the scientific method. Where a rule differs between branches, it's ta
 - **[QNT] Worked Examples + Error Analysis** — inherited from Aniq Fanlar origins. Student sees solved problems, fills gaps, finds bugs.
 - **Diagram production** — students don't just label diagrams, they DRAW them (Notebook Capture)
 - **Classification before causation** [OBS] — organize observations into categories first, then explain why
+- **Bidirectional Thinking:** Every session must work BOTH directions — observation → model (see a phenomenon, build the explanation) AND model → prediction (know the theory, predict what you'd observe). [OBS]: "You see coral bleaching — why?" AND "If ocean temperature rises 2°C, what happens to coral?" [QNT]: "A ball takes 1.4s to fall — what height?" AND "Calculate fall time from 10m."
+- **Error Analysis is PRIMARY:** Not occasional — minimum every 2 sessions. [OBS]: "This food web is wrong — find the impossible link." [QNT]: "This derivation has an error in step 3 — find and fix it."
+- **Answer Completeness:** Every answer must include proper terminology [OBS] or correct units [QNT]. "It falls faster" is incomplete. "It accelerates at 9.8 m/s² due to gravity" is complete. "It's a mammal" is incomplete. "It's a mammal because it has fur and produces milk" is complete.
 
 **Do NOT Focus On:**
 - Pure memorization of taxonomy lists without understanding

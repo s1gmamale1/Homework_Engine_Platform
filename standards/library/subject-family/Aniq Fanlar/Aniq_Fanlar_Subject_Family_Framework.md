@@ -57,6 +57,9 @@ Content producers must prioritize these cognitive anchors:
 - **Error Detection:** Present deliberately incorrect solutions for the student to diagnose and fix.
 - **Dual Coding:** Every formula must be paired with a verbal/conceptual explanation.
 - **Interleaved Practice:** Mix different problem types (e.g., area and perimeter) to prevent mindless pattern matching.
+- **Bidirectional Thinking:** Every session must work BOTH directions — real world → formula (model a situation as an equation) AND formula → real world (given a result, explain what it means physically). A student who can solve `2x + 5 = 15` but can't recognize a real problem IS that equation hasn't learned.
+- **Error Analysis is PRIMARY:** Not occasional — minimum every 2 sessions. Students must find WHERE an error is and WHY it's wrong, not just "is this correct?"
+- **Answer Completeness:** Every numerical answer must include correct units/context. `x = 5` is incomplete. `x = 5 metr` or `x = 5 ta olma` is complete.
 
 **Do NOT Focus On:**
 - Free-form writing or essays.

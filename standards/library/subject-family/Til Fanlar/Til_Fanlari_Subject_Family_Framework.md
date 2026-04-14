@@ -58,6 +58,9 @@ Content producers must prioritize these cognitive anchors:
 - **Grammar in Context:** Grammar is introduced through sentences, dialogue, and narrative use, not isolated rule recitation.
 - **Dual Coding for Vocabulary:** Pair new words with image, sound, or native-language gloss so meaning is anchored through multiple channels.
 - **Scaffolded Production:** Writing and speaking move from guided production to prompted response to independent composition.
+- **Bidirectional Thinking:** Every session must work BOTH directions — text → grammar rule extraction (read a passage, identify the pattern) AND grammar rule → production (know the rule, write correctly). A student who knows "past tense adds -di" but can't spot it in a real text hasn't learned.
+- **Error Detection is PRIMARY:** Not occasional — minimum every 2 sessions. Students must find grammar/spelling/punctuation errors in text, explain WHERE and WHY, and fix them. Proofreading is the language equivalent of math debugging.
+- **Answer Completeness:** Every response must use correct register, punctuation, and structure appropriate to the grade band. A bare sentence without punctuation is incomplete.
 
 **Do NOT Focus On:**
 - Calculations or arithmetic drills.
