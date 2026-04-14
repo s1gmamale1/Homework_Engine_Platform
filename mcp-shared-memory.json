@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "agent-recall": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "agent-recall-mcp"
+      ],
+      "env": {
+        "MEMORY_PALACE_DIR": "C:/Users/DaddysHere/Documents/Sigma_Edu_3000/memory/palace",
+        "OBSIDIAN_VAULT_DIR": "C:/Users/DaddysHere/Documents/Sigma_Edu_3000",
+        "JOURNAL_MODE": "obsidian",
+        "AUTO_JOURNAL": "true"
+      }
+    }
+  }
+}

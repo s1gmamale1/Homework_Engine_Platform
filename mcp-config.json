@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "obsidian-memory": {
+      "command": "npx",
+      "args": ["-y", "obsidian-memory-mcp"],
+      "env": {
+        "OBSIDIAN_VAULT_PATH": "C:/Users/DaddysHere/Documents/Sigma_Edu_3000/.obsidian",
+        "MEMORY_DIR": "memory",
+        "PORT": "27123",
+        "API_KEY": "YOUR_LOCAL_REST_API_KEY_HERE"
+      }
+    }
+  }
+}

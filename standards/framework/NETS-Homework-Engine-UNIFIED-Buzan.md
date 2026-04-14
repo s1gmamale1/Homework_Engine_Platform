@@ -157,7 +157,7 @@ The NETS engine embeds Uzbek national pride and global wisdom into homework sess
 
 | Phase | What Gets Injected | How | Frequency |
 |---|---|---|---|
-| **0-A: Theme Preview** | Topic-relevant wisdom quote (dismissable, NO skip lock) | Gate quote before Panel 1. Pulled from `quotes_database.json`, subject-tagged. Student taps to continue — no forced timer. | 1 per session |
+| **0-A: Theme Preview** | Topic-relevant wisdom quote with 5-second skip lock | Gate quote before Panel 1. Pulled from `quotes_database.json`, subject-tagged. "Davom etish" (Continue) button disabled for 5 seconds with visible countdown. | 1 per session |
 | **Transitions (between phases)** | "Bilarmidingiz?" fact or "Hikmatlar" quote | Merges into existing §6.5 "Did You Know..." loading screen insights. 70/30 type balance, 55/45 origin balance. | 1 per transition |
 | **2: Story Mode** | Ambient setting tagged national or global | Narrative segments tagged `setting_origin: "national" | "global"`. Rolling 55/45 balance across sessions (not per-session — a single session about Uzbek History can be 100% national). | Per story |
 | **4: Real-Life Challenge** | "Wise Status" role + heritage hook + closing | For 30% of Phase 4 tasks: student gets a professional title ("Bosh Muhandis," "Strategik Tahlilchi"), problem anchored in Uzbek or global achievement, closing connects to national/global progress. Academic core UNTOUCHED. | ~1 in 3 sessions |
@@ -185,7 +185,7 @@ The NETS engine embeds Uzbek national pride and global wisdom into homework sess
 | Rule | Implementation |
 |---|---|
 | **5-second skip lock on Phase 0-A quote** | The gate quote in Phase 0-A has a 5-second countdown timer. The "Davom etish" (Continue) button is disabled until the timer expires. This ensures students read the mindset-setting quote before proceeding. |
-| **20% all-task injection** | Every 5th homework task across ALL phases gets national pride framing — professional title + heritage/global context anchor. This applies to Memory Sprint (brief role intro before recall), Game Breaks (arena context on the question), Phase 4 (full Wise Status recipe), and Phase 5 (heritage mnemonic anchor). Phases 0-A/0-B and Phase 6 Boss are excluded. |
+| **20% all-task injection** | Every 5th homework task across Phases 1, 2, 4, 5, and 7 gets national pride framing — professional title + heritage/global context anchor. This applies to Memory Sprint (brief role intro before recall), Phase 4 (full Wise Status recipe), and Phase 5 (heritage mnemonic anchor). Phase 0-A/0-B, Phase 3 (Game Breaks), and Phase 6 Boss are excluded. |
 | **Phase 6 "certification" framing** | Final Boss is reframed as a "professional certification." On Boss entry: *"Bu — sizning professional sertifikatingiz. Global standartga mos keling."* On Boss defeat: *"Sertifikatsiya muvaffaqiyatli! Siz [Role] sifatida tasdiqlandingiz."* The HP/Boss game mechanics remain unchanged — only the narrative framing changes. |
 | **Dark mode (#0a0a0a) as default** | The platform defaults to dark mode (#0a0a0a background) for all National Pride injection screens (gate quote, between-phase facts/quotes, milestone breaks). In-session phases use the existing theme. Students can override in settings. |
 
@@ -819,15 +819,16 @@ Every narrative segment must have its `keywords_80_20` extracted (the ~20% of wo
      and the Subject-to-Game Compatibility Matrix in NETS-Interactive-Game-Catalog.md)
 5. LOAD pre-generated game_items tagged to THIS topic's standard_ref
 6. CONSTRAINT: No mechanic appears more than 2x in one session
-6b. BUZAN — Cortical Diversity Constraint:
+6b. BUZAN — Cortical Diversity Constraint (SOFT RECOMMENDATION, not a hard gate):
    - Tag each selected game's cortical modality:
      Verbal/Logical (Sentence Fill, Why Chain, Adaptive Quiz, Codebreaker)
      Visual/Spatial (Tile Match, Memory Palace, Radiant Summary, Puzzle Lock, Memory Sprint)
      Kinesthetic/Motor (Notebook Capture, Movement Breaks)
      Strategic/Decision (Tic Tac Toe, Connect Four, Blackjack 21, Mystery Box)
      Productive/Generative (Peer Teaching, Reflection Journal)
-   - At least 2 of the 3 selected games MUST come from DIFFERENT modalities
+   - RECOMMENDATION: At least 2 of the 3 selected games SHOULD come from DIFFERENT modalities
    - This ensures left+right brain synergy per session (Buzan's Cortical Skills principle)
+   - ENFORCEMENT: This is a soft recommendation, not a production block. Sessions that naturally hit 2+ modalities (Story Mode = verbal/visual, Game Breaks = logical/spatial, Memory Palace = spatial/visual) comply automatically. A compliance check script (`scripts/check_cortical_diversity.py`) flags single-modality sessions for review but does NOT block production. Content creators should use judgment — purely mathematical chapters (e.g., algebra) may not naturally span modalities without artificial injection.
 6c. BUZAN — Von Restorff Anchor:
    - The MIDDLE game (Game Break 2 of 3) is tagged as the "Von Restorff Anchor"
    - This game instance preferentially selects content items tagged "outstanding: true"
@@ -2862,7 +2863,7 @@ Four additional checks added to the pipeline. All are additive — they suppleme
 |---|---|---|---|
 | **80/20 Keywords** | Every `narrative_segment` | Must have `keywords_80_20` array (3-8 tagged keywords carrying ~80% of meaning). Fed to Radiant Summary, Flash Cards, Sentence Fill, Memory Sprint. | Block → stays DRAFT |
 | **Dual Coding** | Every `game_item`, `mnemonic_exercise`, `boss_question` | Must declare 2+ encoding channels: VRB (verbal), VIS (visual), SPA (spatial), AUD (auditory), KIN (kinesthetic) | Block → stays DRAFT |
-| **SMASHIN' SCOPE** | Every `mnemonic_exercise` (Memory Palace, Peg System, Radiant Summary, Link Chain) | Must score 6+/12: Synaesthesia, Movement, Association, Substitution, Humor, Imagination, Number, Symbolism, Color, Order, Positive, Exaggeration | Return for enrichment |
+| **SMASHIN' SCOPE** | Every `mnemonic_exercise` (Memory Palace, Peg System, Radiant Summary, Link Chain) | Must score 6+/12: Synaesthesia, Movement, Association, Substitution, Humor, Imagination, Number, Symbolism, Color, Order, Positive, Exaggeration. **Provisional threshold — subject to empirical calibration after pilot data.** | Return for enrichment |
 | **Schema Activation** | Session plan (Step 13) | Every new concept in P2 must have ≥1 prerequisite activated in P1 or P0-B | Auto-fix (inject prerequisite into Sprint) |
 
 *Where these gates do NOT apply:* 80/20 Keywords don't apply to game items or boss questions (only narrative segments). SMASHIN' SCOPE doesn't apply to non-mnemonic content (quizzes, checkpoints, boss questions). Dual Coding doesn't apply to Movement Breaks (physical activity, not knowledge encoding).
@@ -3396,10 +3397,12 @@ AGGREGATE (anonymized):
 
 | Grade Band | Standard Mode | Extended Mode | Recovery Mode |
 |---|---|---|---|
-| Grades 1-2 | 15-20 min | 30 min | 10-15 min |
-| Grades 3-4 | 20-25 min | 35-40 min | 15-20 min |
-| Grades 5-8 | 20-30 min | 40-50 min | 15-20 min |
-| Grades 9-11 | 25-30 min | 45-50 min | 20-25 min |
+| Grades 1-2 | 15-20 min (+ 3-5 min optional pre-session) | 30 min | 10-15 min |
+| Grades 3-4 | 20-25 min (+ 3-5 min optional pre-session) | 35-40 min | 15-20 min |
+| Grades 5-8 | 20-30 min (+ 3-5 min optional pre-session) | 40-50 min | 15-20 min |
+| Grades 9-11 | 25-30 min (+ 3-5 min optional pre-session) | 45-50 min | 20-25 min |
+
+**Note:** Pre-session overhead (Theme Preview §4.4 + Flash Cards §4.5) is student-paced, optional but recommended, and does not count toward XP or assessment scoring.
 
 ---
 
@@ -3627,8 +3630,8 @@ Where source documents conflicted, this log records which version was chosen and
 | **#21 Sub-vocalization Elimination** | Pacer moves faster than inner-voice speed (~150 WPM) to break the habit of "hearing" every word | Sub-vocalization is a comprehension AID at G5-6, not a speed limiter | G9+ or advanced readers identified by reading speed data |
 | **#23 Meta-Guiding** | Visual guide maintains steady reading rhythm, reduces eye strain | Merged with Focus Guide — same deferral reason | Same as Focus Guide |
 | **#18 Forward Momentum Rule** | Previous Story Mode segment fades after advancing; back-navigation requires deliberate button press | Regression is a LEGITIMATE comprehension strategy. For process-heavy subjects (Texnologiya, Science), re-reading is often NECESSARY. Buzan was optimizing for adults, not developing readers. | G9+ only, where reading habits are established and regression is genuinely habitual rather than strategic |
-| **#17 Saccade Optimization** | Column width 50-75 chars (66 ideal) to optimize eye-jump distance | Good typography practice but belongs in a general UI/UX spec, not Buzan injection | Can be adopted in the UI/UX spec independently of the Buzan module |
-| **#19 Peripheral Vision Training** | Line height 1.5x, sans-serif font to support peripheral word recognition | Same as saccade optimization — good typography, not a Buzan-specific injection | Same |
+| **#17 Saccade Optimization** | Column width 50-75 chars (66 ideal) to optimize eye-jump distance | Good typography practice but belongs in a general UI/UX spec, not Buzan injection | **ADOPTED** — typography rules from Buzan research adopted as UI defaults in `standards/system/ui-ux/` |
+| **#19 Peripheral Vision Training** | Line height 1.5x, sans-serif font to support peripheral word recognition | Same as saccade optimization — good typography, not a Buzan-specific injection | **ADOPTED** — same as #17, part of UI defaults |
 | **#20 Semantic Chunking** | Wider gaps between 3-5 word groups in Story Mode text for G5-6 | Potentially useful but needs A/B testing — no evidence that visual chunking helps comprehension for Uzbek-language text specifically | After A/B test confirms benefit for Uzbek readers |
 
 **Validation path:** If this module is revisited, the team should:

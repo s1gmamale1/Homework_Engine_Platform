@@ -12,5 +12,6 @@
     "scripts"
   ],
   "newFileLocation": "current",
-  "attachmentFolderPath": "visuals"
+  "attachmentFolderPath": "visuals",
+  "promptDelete": false
 }

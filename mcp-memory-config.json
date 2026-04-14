@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "unified-memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "C:/Users/DaddysHere/Documents/Sigma_Edu_3000/memory/memory.json"
+      }
+    },
+    "obsidian-bridge": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "obsidian-memory-mcp"
+      ],
+      "env": {
+        "OBSIDIAN_VAULT_PATH": "C:/Users/DaddysHere/Documents/Sigma_Edu_3000",
+        "MEMORY_DIR": "memory/notes"
+      }
+    }
+  }
+}
