@@ -7,7 +7,7 @@
 > See also: [[HOME]] · [[NETS-UI-UX-Design-Spec]] · [[QUICK_REFERENCE]]
 **Purpose:** Define all interactive game mechanics that gate progression behind subject-mastery questions. Every game in this catalog integrates directly with the PISA proficiency tracking, AI question generation, and XP economy.
 
-**Note:** This catalog defines the 8 Interactive Catalog games only. The full game landscape includes 16 Default Pool mechanics (see `NETS-Game-Catalog-Summary.md`) and 4 Buzan Phase 5 mnemonic alternatives (Peg System, Link System, Radiant Summary, Major System).
+**Note:** This catalog defines the 7 Interactive Catalog games only. The full game landscape includes 16 Default Pool mechanics (see `NETS-Game-Catalog-Summary.md`) and 4 Buzan Phase 5 mnemonic alternatives (Peg System, Link System, Radiant Summary, Major System).
 
 ---
 
@@ -126,21 +126,7 @@ These are **NOT** standalone mini-games. They are **knowledge-gated experiences*
 
 ---
 
-### 8. Blackjack 21 — Knowledge Edition
-**Inspiration:** Classic Blackjack/21 (Origins ~1600s France)
-
-| Component | Specification |
-|-----------|---------------|
-| **Core Loop** | Standard Blackjack rules. Draw cards, closest to 21 without busting wins. Student vs Dealer AI. |
-| **Knowledge Gate** | Before HIT or STAND, answer question. Correct → choice executed. Wrong → AI makes choice FOR student (usually poorly). |
-| **Difficulty Scaling** | Dealer stands on softer totals at higher difficulty (plays better). Fewer double-down opportunities. Harder math questions. |
-| **Win/Loss/Retry** | Best of 3 hands. Win = standard XP + streak bonus. Loss = retry. |
-| **Best Subjects** | Math (mental arithmetic), Probability, Statistics |
-| **Implementation Tier** | Phase 2 (Enhancement) |
-
----
-
-### 9. Territory Conquest
+### 8. Territory Conquest
 **Inspiration:** Risk (Albert Lamorisse, 1957) — simplified to 1v1 area control
 
 | Component | Specification |
@@ -286,7 +272,6 @@ Total Game XP = Base XP + Strategy Bonus + Speed Bonus
 | Reaction Chain | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Word Ladder Climb | ⚠️ | ⚠️ | ✅ | ⚠️ | ✅ |
 | Puzzle Lock | ✅ | ✅ | ⚠️ | ✅ | ⚠️ |
-| Blackjack 21 | ✅ | ⚠️ | ❌ | ❌ | ❌ |
 
 **Legend:** ✅ Primary fit | ⚠️ Works with adaptation | ❌ Not recommended
 
@@ -308,7 +293,7 @@ All games run as **client-side React components** wrapped in a `GameContainer` p
 - **Tier 3 (Static Fallback):** If Ollama unreachable, use hardcoded fallback questions from `data/phases.json`.
 
 ### 3. AI Opponent Configuration
-For games with AI opponents (Tic Tac Toe, Connect Four, Territory, Blackjack):
+For games with AI opponents (Tic Tac Toe, Connect Four, Territory):
 - Use **Minimax algorithm** with alpha-beta pruning.
 - **Depth scaling:** Maps directly to student PISA level.
   - PISA < 1.5 → Depth 2 (makes obvious mistakes)
@@ -348,13 +333,13 @@ Before ANY game is deployed to production, it must pass:
 | Phase | Timeline | Games | Rationale |
 |-------|----------|-------|-----------|
 | **MVP** | Sprint 1-2 | Tic Tac Toe, Connect Four, Memory Match Blitz, Codebreaker | Lowest build complexity. Proven mechanics. Universal subject fit. |
-| **Enhancement** | Sprint 3-4 | Word Ladder, Puzzle Lock, Reaction Chain, Blackjack 21 | Medium complexity. Adds variety for returning students. |
+| **Enhancement** | Sprint 3-4 | Word Ladder, Puzzle Lock, Reaction Chain | Medium complexity. Adds variety for returning students. |
 
 ---
 
 ## References & Inspirations
 
-1. **Tic Tac Toe / Connect Four / Blackjack / Memory / Mastermind / 15 Puzzle / Word Ladder** — Classic board/card/puzzle games with centuries of documented rules. Adapted here for educational knowledge-gating. Source adaptations documented via public domain rules and educational game design literature.
+1. **Tic Tac Toe / Connect Four / Memory / Mastermind / 15 Puzzle / Word Ladder** — Classic board/card/puzzle games with centuries of documented rules. Adapted here for educational knowledge-gating. Source adaptations documented via public domain rules and educational game design literature.
 2. **Reaction Chain** — Original NETS concept inspired by rhythm game progression mechanics (*Guitar Hero*, 2005, Harmonix).
 3. **Educational Validation** — Mastermind's use in developing logic skills documented in *CBE-Life Sciences Education* (PMC3022521). Connect Four and Tic Tac Toe adaptations for classrooms documented in EF Teacher Zone and TES teaching resources.
 4. **Gamification Theory** — Octalysis Framework (Yu-kai Chou), Hook Model (Nir Eyal), Flow State Theory (Csikszentmihalyi, 1990).

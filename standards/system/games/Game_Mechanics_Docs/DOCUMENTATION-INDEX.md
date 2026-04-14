@@ -8,7 +8,7 @@
 
 ## How to Use This Index
 
-This index covers all **22 active game mechanics** in the NETS Homework Engine. Each mechanic has two types of documentation:
+This index covers all **21 active game mechanics** in the NETS Homework Engine. Each mechanic has two types of documentation:
 
 | Type | Location | Purpose |
 |---|---|---|
@@ -40,7 +40,7 @@ Core pedagogy mechanics that map 1:1 to Bloom's/PISA bands.
 
 ---
 
-## Interactive Catalog Pool — 9 Games
+## Interactive Catalog Pool — 8 Games
 
 Classic board/card/puzzle mechanics with knowledge-gated progression.
 
@@ -51,10 +51,9 @@ Classic board/card/puzzle mechanics with knowledge-gated progression.
 | 3 | **Memory Match Blitz** | Remember/Apply | 1-2 | Tier 1 | [`memory-match-blitz.html`](./memory-match-blitz.html) | N/A |
 | 4 | **Reaction Chain** | Apply | 2-3 | Tier 1 | [`reaction-chain-concept-definition.html`](./reaction-chain-concept-definition.html) | [`Demos/03-reaction-chain.html`](./Demos/03-reaction-chain.html) |
 | 5 | **Puzzle Lock (Sliding)** | Apply/Analyze | 2-4 | Tier 1 | [`puzzle-lock-sliding-tile-concept-definition.html`](./puzzle-lock-sliding-tile-concept-definition.html) | [`Demos/05-puzzle-lock.html`](./Demos/05-puzzle-lock.html) |
-| 6 | **Blackjack 21** | Apply | 2-3 | Tier 1 | *(see DOCUMENTATION.md)* | [`blackjack-21.html`](./blackjack-21.html) |
-| 7 | **Territory Conquest** | Apply/Analyze | 3 | Tier 1 | [`territory-conquest-concept-definition.html`](./territory-conquest-concept-definition.html) | [`Demos/territory-conquest.html`](./Demos/territory-conquest.html) |
-| 8 | **Escape Room** | Synthesize | 3-4 | Tier 2 | [`escape-room-subject-lock-concept-definition.html`](./escape-room-subject-lock-concept-definition.html) | [`Demos/escape-room.html`](./Demos/escape-room.html) |
-| 9 | **Real-Life Challenge** | Evaluate | 4-5 | Tier 2 | [`Real-Life Challenge.html`](./Real-Life%20Challenge.html) | [`Demos/09_real_life_challenge.html`](./Demos/09_real_life_challenge.html) |
+| 6 | **Territory Conquest** | Apply/Analyze | 3 | Tier 1 | [`territory-conquest-concept-definition.html`](./territory-conquest-concept-definition.html) | [`Demos/territory-conquest.html`](./Demos/territory-conquest.html) |
+| 7 | **Escape Room** | Synthesize | 3-4 | Tier 2 | [`escape-room-subject-lock-concept-definition.html`](./escape-room-subject-lock-concept-definition.html) | [`Demos/escape-room.html`](./Demos/escape-room.html) |
+| 8 | **Real-Life Challenge** | Evaluate | 4-5 | Tier 2 | [`Real-Life Challenge.html`](./Real-Life%20Challenge.html) | [`Demos/09_real_life_challenge.html`](./Demos/09_real_life_challenge.html) |
 
 ---
 
@@ -104,8 +103,6 @@ Every Elite Spec HTML document follows the same 5-section structure (matching th
 | Cross-subject review (Big Boss week) | Interactive: Escape Room, Territory Conquest |
 | Student engagement has dipped 3 sessions | Interactive (novelty effect) |
 | Topic maps to a spatial/strategic metaphor | Interactive: Puzzle Lock (timelines), Reaction Chain (processes), Territory Conquest (geography) |
-| Math-only | Interactive: Blackjack 21 |
-
 ---
 
 ## Tier Summary Across All Mechanics
@@ -143,7 +140,6 @@ The following mechanics have extended functional documentation in `DOCUMENTATION
 - **Peer Teaching** — Three scenario types, 3-dimension scoring rubric
 - **Reflection Journal** — Performance-based prompts, privacy rules, TEFCAS loop
 - **Puzzle Lock (Sliding Tile)** — Tile content options, wrong answer penalty psychology
-- **Blackjack 21 (Bilim 21)** — Decision table math, card mechanics, probability lessons
 
 *(See `DOCUMENTATION.md` for full extended documentation of these mechanics.)*
 

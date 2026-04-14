@@ -1,7 +1,7 @@
 # NETS Game Catalog — Quick Reference
 
 **Source:** `NETS-Homework-Engine-UNIFIED-Buzan.md` v2.0 (Section 6)
-**Dual-Catalog Rule:** Phase 3 selects 3 games per session — ≥1 from Interactive Catalog (8 games), ≥2 from Default Pool (16 mechanics).
+**Dual-Catalog Rule:** Phase 3 selects 3 games per session — ≥1 from Interactive Catalog (7 games), ≥2 from Default Pool (16 mechanics).
 
 ---
 
@@ -75,7 +75,7 @@ Core pedagogy mechanics that map 1:1 to Bloom's/PISA bands.
 
 ---
 
-## Interactive Catalog Pool — 8 Games
+## Interactive Catalog Pool — 7 Games
 
 Classic board/card/puzzle mechanics with knowledge-gated progression. Correct answers execute the chosen move; wrong answers trigger strategic penalties.
 
@@ -106,10 +106,6 @@ Classic board/card/puzzle mechanics with knowledge-gated progression. Correct an
 ### 7. Puzzle Lock (Sliding Tile)
 **What:** 3×3 or 4×4 sliding puzzle. Correct answers slide your chosen tile; wrong answers slide a random tile.
 **Use case:** Visual-spatial reasoning + content recall. Geography maps, timeline assembly, diagram reconstruction.
-
-### 8. Blackjack 21 (Knowledge Edition)
-**What:** Hit or Stand choices gated by questions. Wrong answers let the AI make the choice for you.
-**Use case:** Math-only game. Probability intuition + arithmetic recall. Risk-reward decision making with content gates.
 
 ---
 
@@ -146,7 +142,6 @@ These are NOT Phase 3 games. They are Phase 5 (Consolidation) technique alternat
 | Need a high-stakes strategic duel | Interactive: Connect Four, Codebreaker |
 | Student engagement has dipped 3 sessions | Interactive (novelty effect) |
 | Topic maps to a spatial/strategic metaphor | Interactive: Puzzle Lock (timelines), Reaction Chain (processes) |
-| Math-only | Interactive: Blackjack 21 |
 | Language/Biology only | Interactive: Word Ladder Climb |
 | **Phase 5: Hierarchical content** (classifications, categories) | Peg System, Radiant Summary |
 | **Phase 5: Sequential content** (processes, timelines) | Link System |

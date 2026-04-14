@@ -109,7 +109,7 @@ Each mechanic contributes data to the learning curve. Different mechanics measur
 
 ### Type C: Outcome-Based (Win/Loss or Efficiency)
 
-**Mechanics:** Territory Conquest, Escape Room, Final Boss, Blackjack 21, Minefield Navigator, Bridge Builder
+**Mechanics:** Territory Conquest, Final Boss
 
 **What gets recorded per session:**
 ```

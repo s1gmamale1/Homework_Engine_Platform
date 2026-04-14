@@ -1,7 +1,8 @@
 # NETS Library Framework — Subject Classification & Content Catalog
 
-**Version:** 0.5 — Draft (UNIFIED-Buzan alignment)
+**Version:** 0.6 — Draft (family membership changes)
 **Date:** 2026-04-14
+**Changelog v0.6:** Moved Chemistry from Aniq Fanlar to Tabiat Fanlari (cognitive demands align with natural sciences). Moved Informatics from Aniq Fanlar to Tarbiya/Sanat (G5 content is creative/constructive, not derivation-based). Removed Blackjack 21 from game system.
 **Changelog v0.5:** Updated dependency from UNIFIED to UNIFIED-Buzan. Added National Pride cross-family inheritance note (Part 8). Added GRADING-SYSTEM.md as Layer 4 dependency. No changes to family definitions, mechanic tables, boss formats, or Buzan integration.
 **Changelog v0.4:** Fixed TEFCAS/IRT relationship, renamed Phase 0 to Pre-Session, removed speculative features from main body, fixed SMASHIN' SCOPE terminology, removed duplicate summary, updated Weekly PISA to all-tier, added Radiance Score implementation contract.
 **Changelog v0.3:** Added Part 7 — Buzan Cognitive Science Integration (TEFCAS engine as core difficulty logic, memory systems Link/Peg/Major/Memory Palace/SMASHIN' SCOPE/SEM3, BOST study technique mapped to Phase 0-A/0-B, Mind Mapping 7 Laws with G5-G6 WM-respecting adaptations, speed reading eye-tracking/chunking/sub-vocalization with UI/UX metrics, radiant navigation architecture, anti-cheat radiance score, quantifiable metrics table with 16+ empirical values). Updated version header. Added Buzan research wave to completed list.
@@ -37,8 +38,6 @@ This is the scale mechanism. 5 families → 29 subjects → ~110 subject×grade 
 | Algebra & Analysis | Algebra va analiz asoslari | Алгебра | G10-11 | Advanced continuation |
 | Geometry (advanced) | Geometriya | Геометрия | G10-11 | Advanced continuation |
 | Physics | Fizika | Физика | G7-11 | |
-| Chemistry | Kimyo | Химия | G7-11 | |
-| Informatics | Informatika / Dasturlash / Robototexnika | Информатика | G5-11 | Includes programming track at G11. **ADR-pending:** default placement is Aniq Fanlar (algorithmic thinking, formal notation). If G5 Informatics framework reveals cognitive demands are more creative/constructive than derivation-based, raise ADR for reclassification. See System Design v1 §10 #2. |
 
 **What this family teaches:** Formal reasoning. Every concept in Aniq Fanlar is either (a) a definition/axiom, (b) a derivation from prior concepts, or (c) an application of a derived rule to solve a specific problem. The family builds the student's ability to move fluently between concrete representations (objects, diagrams), symbolic notation (formulas, equations), and verbal reasoning ("because X, therefore Y").
 
@@ -151,6 +150,7 @@ This is the scale mechanism. 5 families → 29 subjects → ~110 subject×grade 
 | Subject | UZ Name | RU Name | Grade Range | Notes |
 |---------|---------|---------|-------------|-------|
 | Biology | Biologiya | Биология | G5-11 | |
+| Chemistry | Kimyo | Химия | G7-11 | Moved from Aniq Fanlar — cognitive demands align with natural sciences (observation, classification, causal models) |
 | Geography | Geografiya | География | G5-11 | |
 | Combined Science | Science / Tabiiy fanlar / Естествознание | Естествознание | G5-6 | Transitional combined science before split |
 | Astronomy | Astronomiya | Астраномия | G11 only | |
@@ -268,6 +268,7 @@ This is the scale mechanism. 5 families → 29 subjects → ~110 subject×grade 
 | Music | Musiqa | Музыка | G5-9 | |
 | Visual Art | Tasviriy san'at | ИЗО | G5-9 | |
 | Technology | Texnologiya | Технология | G5-11 | Practical skills, crafts, digital literacy |
+| Informatics | Informatika / Dasturlash / Robototexnika | Информатика | G5-11 | Moved from Aniq Fanlar — G5 content is more creative/constructive than derivation-based. Includes programming track at G11. |
 | Physical Education | Jismoniy tarbiya | Физкультура | All grades | **EXCLUDED from Library content** — no video lessons. Note: Movement Break mechanics remain mandatory in all family sessions for Grades 1-4 per UNIFIED spec §5. PE has no standalone Library content, but its mechanics are embedded in the session engine. |
 | Drafting | Chizmachilik | Черчение | G8-9 only | Technical drawing |
 | Spirituality | Ma'naviyat asoslari | — | G5-10 UZ only | No RU equivalent |

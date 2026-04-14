@@ -1,5 +1,5 @@
 # NETS Game Mechanics — Functional Documentation
-## Why Chain · Peer Teaching · Reflection Journal · Puzzle Lock · Blackjack 21
+## Why Chain · Peer Teaching · Reflection Journal · Puzzle Lock
 
 Version: 1.0 | April 2026 | For: NETS Content & Engineering Teams
 
@@ -414,114 +414,7 @@ Movement Break
 
 ---
 
-# 6. BLACKJACK 21 — SCHOOL EDITION
-
-## Concept Reframe: Why Blackjack Works for Education
-
-Standard Blackjack has been adapted for school with one structural insight: **the gambling mechanic (betting money) is removed entirely, but the strategic decision mechanic (Hit/Stand) is preserved and gated by knowledge questions.**
-
-What remains is a pure decision-under-uncertainty game:
-- You see your hand (current score)
-- You see the dealer's visible card
-- You must decide: take another card (risk going over 21) or lock your hand (risk dealer beating you)
-- But you must EARN the right to make that decision by answering a subject question
-
-The tension is real. The math is live. The decisions matter. And there is no money, no gambling imagery, no chance mechanics beyond card drawing.
-
-**Renamed:** "Bilim 21" (Knowledge 21) — Uzbek-native name, no gambling association
-
-## How It Is Played
-
-### Setup
-- Standard 52-card deck (suits replaced with subject-themed icons: stars, books, lightbulbs, pencils)
-- Face cards (J, Q, K) = 10 points
-- Ace = 1 or 11 (student's choice — choosing correctly is itself a math decision)
-- Dealer always draws to 16, stands on 17+ (standard Blackjack dealer rule)
-
-### Step-by-step flow
-1. Two cards dealt to student (both visible), two cards to dealer (one visible, one hidden)
-2. Student sees their total (e.g. 14) and dealer's visible card (e.g. 7)
-3. Student decides: Hit (take a card) or Stand (lock the hand)
-4. **Before the action executes:** question modal appears
-5. Student answers the question
-6. **Correct:** student's chosen action executes
-7. **Wrong:** AI makes the Hit/Stand decision instead (may choose the worst option for the student's hand)
-8. Repeat until student stands or busts (goes over 21)
-9. Dealer reveals hidden card and draws to 17
-10. Compare totals: student wins, pushes (tie), or loses
-11. Outcome recorded (win, push, or loss)
-
-### Decision table the student must learn
-| Student hand | Dealer shows | Correct play |
-|---|---|---|
-| Hard 8 or less | Anything | Always Hit |
-| Hard 9–11 | Anything | Hit (high chance of getting a 10) |
-| Hard 12–16 | Dealer 2–6 | Stand (dealer likely to bust) |
-| Hard 12–16 | Dealer 7–Ace | Hit (dealer strong, must improve) |
-| Hard 17+ | Anything | Always Stand |
-
-*This decision table itself is a lesson in probability and strategic reasoning.*
-
-### Scoring
-Grade: Type C (Outcome-Based) — Win rate (W/L/%) tracked separately from question accuracy. A student who wins by guessing has a high outcome grade but low knowledge grade — flagging a mismatch.
-
-### Parameters
-- Rounds per session: 3 hands
-- Questions per hand: 1–3 depending on how many Hit/Stand decisions are made
-- Timer: per question 30 seconds, no overall hand timer
-- AI Tier: 1 (pre-generated questions, rule-based card logic)
-- Subject restriction: **Mathematics only** (all grades)
-
-## Subject Implementations (Mathematics Only)
-
-### G3–4 (Number fluency)
-Questions target basic arithmetic that reinforces the card values:
-- "Your cards show 7 and 8. What is your total?"
-- "The dealer shows a 6. If you take a 9, what will your total be?"
-- "You have 15. What is the smallest card value that would NOT bust you?"
-
-### G5–6 (Fractions and percentages)
-Questions use the game state as context:
-- "You have 14. To reach exactly 21 you need 7. Write 7/52 as a decimal (rounded to 2 places)"
-- "There are 52 cards. 16 cards are worth 10 points. What percentage of the deck can bust you if you have 12?"
-- "You need exactly 5 to reach 21 from 16. What is the probability of drawing a 5? (4 fives in 52 cards)"
-
-### G7–8 (Algebra and probability)
-- "Your hand value is 2x + 3 = 17. What is x? Should you Hit or Stand with this hand?"
-- "Dealer shows a 6. Probability of dealer busting is approximately 42%. Write this as a fraction in simplest form"
-- "If you Hit and receive a card from the set {2,3,4,5,6,7}, your new total is between 14–20. Which of these values makes the best case for Standing?"
-
-### G9–11 (Statistics and advanced probability)
-- "Calculate the expected value of Hitting when your hand is 16 and the dealer shows a 10"
-- "The remaining deck has 30 cards: 12 high (≥10) and 18 low (<10). Calculate P(bust | Hit) if your current hand is 13"
-
-## Where It Fits in the Homework
-
-**Position: Phase 3 — Any Game Break slot (G5–11, Math sessions only)**
-
-```
-Mathematics session — Phase 3:
-Game Break 1 — Tile Match (formula pairs, reinforcement)
-    ↓
-→ BLACKJACK 21 — Game Break 2 (Apply + strategic reasoning) ←
-    ↓
-Game Break 3 — Adaptive Quiz or Why Chain (stretch)
-```
-
-**Why math sessions only:**
-- The card arithmetic IS the subject matter — card values, probability, expected value
-- The strategic decision table requires understanding of probability and risk — PISA Math "uncertainty and data" domain
-- Forced math context: the game state is always a live math problem (what is my total? what is the probability of busting?)
-
-**Not recommended:**
-- Non-math subjects (no natural connection between card values and other subject content)
-- G1–4 (card strategy exceeds cognitive development for these grades — use simpler number games)
-- Recovery sessions (cognitive overhead too high for struggling students)
-- First Game Break slot (the strategic complexity requires the student to be warmed up)
-
----
-
-# 7. TILE MATCH
+# 6. TILE MATCH
 
 ## What It Is
 A card-flipping memory-and-knowledge mechanic. The board contains face-down paired cards. The student flips two cards to attempt a match — but only gets to keep the match if they answer a subject question correctly. Wrong answer and the matched pair flips back.
