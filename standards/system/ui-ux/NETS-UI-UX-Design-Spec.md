@@ -756,7 +756,225 @@ Backgrounds use dark-mode variants by default (primary at 15% on near-black), ac
 
 ---
 
-## 8. Implementation Notes for Designers
+## 8. National Pride UI Elements
+
+These screens inject the "Milliy G'urur va Taraqqiyot" (National Pride & Progress) module into the student journey. All elements inherit from UNIFIED-Buzan Section 1.5.
+
+### 8.1 Gate Quote Screen (Phase 0-A)
+
+**Trigger:** First thing displayed when a student opens a homework assignment, before Theme Preview Panel 1.
+
+**Layout:**
+```
+┌──────────────────────────────────────────────────────┐
+│  Background: #0a0a0a (pure dark)                     │
+│                                                      │
+│         "Ilm — o'rganish bilan,                       │
+│          amal — qilish bilan."                        │
+│                                                      │
+│                    — Abu Ali ibn Sino                 │
+│                                                      │
+│         [==== 3s ====]  ← visible countdown           │
+│                                                      │
+│         [ Davom etish ]  ← disabled until 0s          │
+└──────────────────────────────────────────────────────┘
+```
+
+**Behavior:**
+- Background: `#0a0a0a` (distinct from in-session theme)
+- Quote pulled from `standards/system/narrative/quotes_database.json` (subject-tagged, 55/45 national/global)
+- 5-second countdown timer visible as progress bar
+- "Davom etish" (Continue) button disabled during countdown
+- Skipped in Recovery Sessions and Boss-retry sessions
+- Quote attribution includes figure name and optionally their title/era
+
+### 8.2 "Wise Status" Title Card (Phase 4 — 30% of tasks)
+
+**Trigger:** Before the answer area opens for selected Real-Life Challenge tasks.
+
+**Layout:**
+```
+┌────────────────────────────────────────┐
+│  ┌──────────────────────────────────┐  │
+│  │  ⚙️  Siz — Bosh Muhandissiz     │  │
+│  │     You are the Chief Engineer   │  │
+│  └──────────────────────────────────┘  │
+│                                        │
+│  Problem statement appears below...    │
+└────────────────────────────────────────┘
+```
+
+**Titles pool** (from `standards/system/narrative/task_injections.json`):
+- "Bosh Muhandis" (Chief Engineer)
+- "Strategik Tahlilchi" (Strategic Analyst)
+- "Bosh Me'mor" (Chief Architect)
+- "Ilmiy Tadqiqotchi" (Research Scientist)
+- "Moliya Mutaxassisi" (Finance Expert)
+
+**Behavior:**
+- Appears as a subtle title card overlay, not a full-screen interruption
+- Professional title only — no praise language ("You're so smart!")
+- Lasts 2 seconds, auto-fades into the problem statement
+- Applied to 30% of Phase 4 tasks; 70% play without Wise Status
+
+### 8.3 Third Renaissance Closing (Phase 7)
+
+**Trigger:** After TEFCAS prompts and BOST goal recall in Phase 7, only in sessions with ≥60% accuracy.
+
+**Layout:**
+```
+┌──────────────────────────────────────────────────────┐
+│  Background: #0a0a0a (pure dark)                     │
+│                                                      │
+│  "Sizning bilimingiz                                 │
+│   Uchinchi Renessansning                             │
+│   poydevoridir."                                     │
+│                                                      │
+│  Your knowledge is the foundation                    │
+│  of the Third Renaissance.                           │
+│                                                      │
+│  [Yulduzlar: ⭐⭐⭐]  [XP: +450]                     │
+└──────────────────────────────────────────────────────┘
+```
+
+**Behavior:**
+- For sessions below 60% accuracy, skip pride framing — use TEFCAS encouragement instead: "Har bir urinish miyangizni kuchaytiryapti" (Every attempt strengthens your brain)
+- 55/45 national/global closing line balance across sessions
+
+### 8.4 Break Screens — 70/30 Balance (Between Phases)
+
+**Trigger:** At XP milestones (30% and 60% session progress), between phase transitions.
+
+**Content mix:**
+- 70% "Bilarmidingiz?" (Did you know?) facts from `standards/system/narrative/Bilarmidingiz_faktlar.md` (300 facts)
+- 30% wisdom quotes from `quotes_database.json`
+
+**Behavior:**
+- Merges into existing loading screen mechanics (§1.2)
+- 70/30 type balance, 55/45 origin balance (national/global)
+- Dismissible with swipe after 2 seconds
+
+**Data Sources:**
+- `standards/system/narrative/quotes_database.json` (600 quotes)
+- `standards/system/narrative/Bilarmidingiz_faktlar.md` (300 facts)
+- `standards/system/narrative/task_injections.json` (injection rules)
+
+---
+
+## 9. Buzan Visual Elements
+
+### 9.1 Memory Palace — Registan Square Environment (Phase 5)
+
+**Layout:** 2.5D isometric scene of Registan Square (Samarkand), divided into 6 named zones:
+1. Kirish (Entrance)
+2. Deraza (Window)
+3. Devor (Wall)
+4. Stol (Desk)
+5. Stul (Chair)
+6. Javon (Bookshelf)
+
+**Behavior:**
+- Student studies zone-item assignments, then items are hidden
+- Student taps correct zone for each presented item
+- Default location: Registan Square — with options for student's home, school building, or local bazaar
+- Visual style: warm, culturally-grounded illustration (not photorealistic)
+
+### 9.2 Radiant Summary — Mind Map Drag-and-Drop (Phase 5)
+
+**Layout:**
+```
+        ┌─────────────────────────────┐
+        │      [🏛️ Central Image]      │
+        │                             │
+   ┌────┴────┐                  ┌────┴────┐
+   │ Branch 1 │  ... empty ...   │ Branch 2 │
+   │ (color)  │                  │ (color)  │
+   └─────────┘                  └─────────┘
+   ┌─────────┐                  ┌─────────┐
+   │ Branch 3 │                  │ Branch 4 │
+   │ (color)  │                  │ (color)  │
+   └─────────┘                  └─────────┘
+   
+   [Keyword chips at bottom: drag to branches]
+```
+
+**Behavior:**
+- Partially completed mind map — student drags keywords onto correct branches
+- Follows Buzan's 7 Laws: central image, organic branches, one keyword per branch, 3+ colors
+- G5: maximum 4 branches (working memory ceiling)
+- Keywords appear as draggable chips at the bottom of the screen
+
+### 9.3 Von Restorff Anchor — Distinctive Middle Game
+
+**Rule:** The middle Game Break (Game 2 of 3 in Phase 3) is tagged as the Von Restorff Anchor — it receives visually distinctive treatment to counter the mid-session recall sag.
+
+**Visual treatment:**
+- Slightly larger card than the other two game cards
+- Subtle glow/shimmer on reveal
+- Optionally includes surprising fact, humorous framing, or unusual visual
+- The game mechanic itself is unchanged — only the presentation is enhanced
+
+### 9.4 TEFCAS Failure Language
+
+**All failure responses across all phases use TEFCAS vocabulary:**
+
+| Standard Language | TEFCAS Replacement |
+|---|---|
+| "Wrong!" / "Noto'g'ri" | **"Hali emas!"** (Not yet!) |
+| "Try again" | **"Miyangiz Feedback oldi. Qanday Adjust qilasiz?"** (Your brain received Feedback. How will you Adjust?) |
+| "You failed" | **"Trial muvaffaqiyatsiz — Check va Adjust qilaylik"** (Trial didn't succeed — let's Check and Adjust) |
+| "Correct!" | **"Success! Miyangiz Adjust qildi"** (Success! Your brain Adjusted) |
+
+**Screen design for failure:**
+```
+┌────────────────────────────────────────┐
+│  🔄  Hali emas!                        │
+│                                       │
+│  Miyangiz Feedback oldi.              │
+│  Keling, qayerda farq                 │
+│  borligini Check qilaylik...           │
+│                                       │
+│  [Qanday Adjust qilasiz?]             │
+│  [  Try again  ]  [  Hint (-10 HP)  ] │
+└────────────────────────────────────────┘
+```
+
+**Never use:** "Wrong", "Incorrect", "Failed", "X mark", red strike-through. These create anxiety, not learning.
+
+---
+
+## 10. Grading System Dashboard UI
+
+The Learning Curve Grade provides teacher/parent-facing assessment metrics that complement the student-facing XP system.
+
+### 10.1 Learning Curve Grade Display
+
+**Location:** Teacher dashboard, Parent dashboard (Premium)
+
+**Four metrics displayed:**
+
+| Metric | Visual | Range | Meaning |
+|--------|--------|-------|---------|
+| **Level** | Progress bar | 0-100% | Current mastery of the topic |
+| **Velocity** | Speedometer gauge | 0.0-1.0 | Rate of improvement per session |
+| **Efficiency** | Circular ring | 0-100% | Questions correct per attempt (fewer attempts = higher) |
+| **Attempts** | Counter | integer | Total tries to reach current level |
+
+**Layout (teacher dashboard row per student):**
+```
+┌────────────────────────────────────────────────────────────┐
+│ Malika K.  │  Level: ████████░░ 78%  │  Velocity: 0.72  │  │
+│            │  Efficiency: ◎ 85%      │  Attempts: 4     │  │
+└────────────────────────────────────────────────────────────┘
+```
+
+**Rule:** XP measures effort (how much the student engaged). The Learning Curve Grade measures learning progress (how well they learned). Both are displayed — XP for the student's motivation, Grade for the teacher/parent's assessment.
+
+**Reference:** `standards/framework/GRADING-SYSTEM.md` for full grading overlay specification.
+
+---
+
+## 11. Implementation Notes for Designers
 
 - **Prototype tool:** Figma with the Figma Motion plugin, or Framer for higher-fidelity interaction prototypes
 - **Export format:** Lottie JSON for complex animations (letter assembly, boss shatter, confetti). Native CSS/JS for simple transitions
@@ -772,4 +990,4 @@ Backgrounds use dark-mode variants by default (primary at 15% on near-black), ac
 
 ---
 
-**End of Design Spec.** Pairs with `NETS-Homework-Engine-UNIFIED-Buzan.md` (rules) and `NETS-Homework-Engine-Blueprint.docx` (session flow).
+**End of Design Spec.** Pairs with `NETS-Homework-Engine-UNIFIED-Buzan.md` (rules), `NETS-Homework-Engine-Blueprint.docx` (session flow), and `standards/framework/GRADING-SYSTEM.md` (grading overlay).
