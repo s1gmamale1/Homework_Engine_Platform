@@ -14,25 +14,13 @@
 
 "Ijtimoiy" translates to social or societal. This family is defined by its focus on human systems—institutions, events, laws, and economies. Unlike Aniq Fanlar (where truth is derived) or Tabiat Fanlari (where truth is observed), Ijtimoiy Fanlari deals with **interpretive truth**: multiple valid perspectives, source reliability, and principled reasoning under uncertainty.
 
-**What it teaches:** How human systems work and the reasoning required to navigate them.
+**The Textbook Refinement Mandate (CRITICAL):**
+Unlike Til Fanlari (Languages), which may reference international standards like IELTS/CEFR, **Ijtimoiy Fanlari must strictly refine the original Uzbek National Textbooks.** 
+- **No Outside Teaching:** Do not import external historical interpretations, Western legal theories, or global economic syllabi not present in the mandated Grade 5-11 books.
+- **Source of Truth:** The official textbook (e.g., *O'zbekiston tarixi*, *Huquq*, *Iqtisodiyot*) is the absolute source for all Phase 2 Stories and Phase 6 Boss tasks.
+- **Standard Alignment:** All L1-L3 levels must map to **DTM (State Testing Center)** competency requirements and the National Curriculum standards.
 
-**What it focuses on:**
-- Chronological and causal modeling of historical events.
-- Source criticism and historiographical analysis.
-- Legal reasoning and constitutional application.
-- Economic modeling and resource management.
-- Perspective-taking and empathy in societal contexts.
-- Critical Thinking.
-
-**What it is NOT about:** Arithmetic derivation, laboratory experimentation, or pure linguistic grammar drills.
-
-**Cognitive Demand Profile (Priority Order):**
-1. Source Criticism (Evaluating reliability/bias)
-2. Chronological & Causal Modeling
-3. Case Reasoning (Applying principles to scenarios)
-4. Perspective-taking
-5. Concept Understanding
-6. Narrative Synthesis
+**What it teaches:** How human systems work and the reasoning required to navigate them as defined by the national curriculum.
 
 ---
 
