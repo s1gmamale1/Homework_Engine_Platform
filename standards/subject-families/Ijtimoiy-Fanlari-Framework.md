@@ -1,183 +1,155 @@
-# NETS Subject Family Master Framework: Ijtimoiy Fanlari (Social Sciences)
+# Ijtimoiy Fanlari — Social Sciences · Family Documentation
 
-**Version:** 1.0 (Master Engine Spec - Ijtimoiy Fanlari)
-**Status:** Implementation Ready
-**Target:** Grade 5-11 (History, Law, Economics, Civics)
+**Status:** Family Documentation Guide (Filter/Adapter)
+**Target Audience:** Subject-Specific Content Producers
+**Role:** Acts as a bridge between core standards and individual subject frameworks.
 
----
-
-## 1. MISSION & IDENTITY: THE IJTIMOIY FANLARI FAMILY
-
-**What this family teaches:** How human systems work — institutions, events, laws, economies, and the reasoning required to navigate them. 
-
-Unlike Aniq Fanlar (where answers are derivable) or Tabiat Fanlari (where answers are observable), Ijtimoiy Fanlari deals with **interpretive truth**: multiple valid perspectives, source reliability, and principled reasoning under uncertainty.
-
-### 1.1 Subjects in this Family
-- **History (Tarix):** Ancient, World, and Uzbekistan History (G5-11).
-- **Law (Huquq):** Civil rights, Constitution, Jurisprudence (G8-11).
-- **Economics (Iqtisodiyot):** Micro/Macroeconomics, Financial Literacy (G8-11).
+### Parent Documents (Referenced)
+- **Layer 0:** [[NETS-Homework-Engine-UNIFIED-Buzan.md]] v2.0
+- **Layer 1:** [[NETS-Library-Framework.md]] v0.6 (Cheeks Edition)
 
 ---
 
-## 8. NATIONAL PRIDE — CROSS-FAMILY INHERITANCE
+## 1. What Is This Family
 
-All subjects in Ijtimoiy Fanlari inherit the National Pride & Progress Module ("Milliy G'urur va Taraqqiyot") as defined in `UNIFIED-Buzan` Section 1.5. These rules are non-negotiable:
+"Ijtimoiy" translates to social or societal. This family is defined by its focus on human systems—institutions, events, laws, and economies. Unlike Aniq Fanlar (where truth is derived) or Tabiat Fanlari (where truth is observed), Ijtimoiy Fanlari deals with **interpretive truth**: multiple valid perspectives, source reliability, and principled reasoning under uncertainty.
 
-| Rule | Implementation in Ijtimoiy Fanlari |
-| :--- | :--- |
-| **55/45 Origin Balance** | 55% of historical/legal scenarios must anchor in Uzbekistan achievements; 45% in global standards. |
-| **20% Task Injection** | Every 5th task (Phases 1, 2, 4, 5, 7) must have national pride framing. |
-| **70/30 Type Balance** | Milestone breaks: 70% "Bilarmidingiz?" facts, 30% "Hikmatlar" quotes. |
-| **Gate Quote** | Phase 0-A (Theme Preview) MUST display a wisdom quote with a 5-second skip lock. |
-| **Wise Status Titles** | 30% of Phase 4 tasks assign professional titles (e.g., `Tarixiy Tahlilchi`). |
-| **Third Renaissance Closing** | Phase 7 (Reflection) must conclude with a "Third Renaissance" closing hook. |
+**What it teaches:** How human systems work and the reasoning required to navigate them.
 
----
-*Document updated per origin/Cheeks branch specifications (2026-04-14).*
+**What it focuses on:**
+- Chronological and causal modeling of historical events.
+- Source criticism and historiographical analysis.
+- Legal reasoning and constitutional application.
+- Economic modeling and resource management.
+- Perspective-taking and empathy in societal contexts.
+- Critical Thinking.
 
-### 1.2 Cognitive Demands & Core Competencies
-- **Source Criticism:** Evaluating primary and secondary sources (who wrote this, when, why, for whom?).
-- **Chronological & Causal Modeling:** Understanding what happened first and what caused what.
-- **Case Reasoning:** Applying a legal or economic principle to a novel, everyday situation.
-- **Perspective-taking:** Understanding historical and contemporary events through different lenses.
+**What it is NOT about:** Arithmetic derivation, laboratory experimentation, or pure linguistic grammar drills.
 
----
-
-## 2. THE 4-LEVEL PROGRESSION & PATH SYSTEM
-
-Ijtimoiy Fanlari follows the Universal 4-Level progression, but the content profile is strictly tailored to social sciences.
-
-### 2.1 Level Breakdown
-| Level | Student Label | Content Profile & Cognitive Demand | Source |
-| :--- | :--- | :--- | :--- |
-| **L1** | (Standard) | **Textbook Canon:** Event recall, basic cause identification, institutional concepts. (e.g., "When did the Silk Road begin?", "What is a constitution?"). | National Curriculum |
-| **L2** | Chuqurroq | **Lyceum Delta:** Historiography intro, source criticism, Cold War deep study, 2023 Constitution analysis, criminology basics. | Lyceum/Delta |
-| **L3** | Ustoz yo'li | **DTM/Exam Prep:** High-speed source analysis, multi-cause reasoning, constitutional legal reasoning, economic modeling. | DTM Specifications |
-| **L4** | Chempion | **Olympiad/Expert:** Original historical argument construction, legal brief writing, advanced macroeconomic policy analysis. | Olympiad Syllabi |
-
-### 2.2 Path Specialties (DTM)
-For students on the DTM Path, Ijtimoiy Fanlari provides the specialty blocks for crucial university directions:
-- **Law Direction:** History (3.1 pts) + Foreign Language (2.1 pts).
-- **Economics/Finance:** Mathematics (3.1 pts) + Foreign Language (2.1 pts) [Economics subject acts as L2/L3 support].
+**Cognitive Demand Profile (Priority Order):**
+1. Source Criticism (Evaluating reliability/bias)
+2. Chronological & Causal Modeling
+3. Case Reasoning (Applying principles to scenarios)
+4. Perspective-taking
+5. Concept Understanding
+6. Narrative Synthesis
 
 ---
 
-## 3. UNIFIED 7-PHASE SESSION BLUEPRINT (IJTIMOIY FANLARI ADAPTATION)
+## 2. Subjects in This Family
 
-Every homework session in this family MUST follow the UNIFIED 7-phase architecture. Here is how Ijtimoiy Fanlari utilizes each phase:
+| Subject | UZ Name | RU Name | Grade Range | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| **History** | Tarix | История | G5-11 | Unified at G5-6; splits at G7 (World/UZ). |
+| **Law** | Huquq | Право | G8-11 | Focus on rights and the 2023 Constitution. |
+| **Economics** | Iqtisodiyot | Экономика | G8-11 | Micro/Macro and Financial Literacy. |
 
-### Phase 0: Pre-Session (Gate & Preview)
-- **0-A (Gate):** 100% Quote (Hikmatlar) from `quotes_database.json`. Mandatory mindset reset (5-second skip lock).
-- **0-B (Preview):** 5-minute BOST Mind Map preview. "What do you already know about this era/law?"
-
-### Phase 1: Memory Sprint (Recall)
-- **Goal:** Lock foundational dates, names, and vocabulary.
-- **Mechanic:** Link System chains or rapid flashcards. (e.g., Matching 1991 to "Mustaqillik").
-
-### Phase 2: Story Mode (Context)
-- **Goal:** Transform textbook facts into a **Discovery Narrative**.
-- **Execution:** All events must be introduced through a human narrative before abstraction. *Example: "In 1991, a 15-year-old in Tashkent watched the flags change on government buildings. What did that moment mean?"*
-- **Arc:** Problem → Struggle → Discovery → Resolution.
-
-### Phase 3: Game Breaks (Flow)
-- **Goal:** Maintain flow state via interactive mechanics (See Section 4 for approved games).
-
-### Phase 4: Challenge (The "Wise Status" Injection)
-- **Goal:** Peak cognitive load with National Pride integration (See Section 5).
-
-### Phase 5: Mnemonic Lock (Consolidation)
-- **Goal:** Buzan Memory Palace integration (See Section 6).
-
-### Phase 6: Final Boss (Assessment)
-- **Format:** **Case Reasoning Task**. 
-- Never use multiple-choice for G6+ Final Boss.
-- *Example:* "Given this dispute between two merchants at the Chorsu Bazaar, which civil code article applies? Justify your answer." Evaluated by Tier 2 LLM.
-
-### Phase 7: Reflection (Exit)
-- **Goal:** Metacognition. "Which perspective was hardest to understand today?"
+*Note: Civic Prep (CHQBT) moved to Tarbiya/Sanat family per v0.6 specs.*
 
 ---
 
-## 4. INTERACTIVE GAME MECHANICS: THE IJTIMOIY FANLARI CATALOG
+## 3. What This Family Focuses On (The Content Filter)
 
-Not all games fit the Social Sciences. The engine must prioritize mechanics that build chronological and causal intuition.
+Content producers must prioritize these cognitive anchors:
 
-### 4.1 Primary Mechanics (Highly Recommended)
-1. **Timeline Sort (Tarixiy Kenglik):** 
-   - *Use case:* Arranging historical events or legal procedures in chronological order.
-   - *Why:* The single most important mechanic for History to build chronological intuition.
-2. **Source Comparison (Manbalar To'qnashuvi):**
-   - *Use case:* Presenting two short texts (e.g., a Roman historian vs. a Persian historian describing the same battle). Student identifies agreements/disagreements.
-   - *Why:* Builds L2/L3 critical thinking and source criticism.
-3. **Why Chain (Sabablar Zanjiri):**
-   - *Use case:* Building cause-and-effect chains (e.g., Event → Immediate Cause → Deep Economic Cause).
-4. **Territory Conquest (Hududlar Jangi):**
-   - *Use case:* Geography and History (Empires expanding, trade routes).
+- **Perspective BEFORE Fact:** Ensure students understand *why* an actor made a choice before they memorize the date it happened.
+- **Source-to-Reasoning Flow:** Every historical or legal claim must be anchored to a source (Primary vs. Secondary).
+- **Discovery Narrative:** Transform textbook facts into a human story (The "Story Mode" default).
+- **Case-Based Assessment:** Evaluate understanding through "What would you do?" or "Which law applies?" scenarios.
+- **National-Global Dialectic:** Strictly maintain the 55/45 origin balance (Uzbekistan vs. World).
 
-### 4.2 Secondary Mechanics
-- **Tile Match:** Sorting concepts into categories (e.g., "Civil Law" vs. "Criminal Law").
-- **Escape Room:** Using historical dates as padlock codes to unlock the next narrative room.
-
-### 4.3 Mechanics to Avoid
-- **Speed Match (Arithmetic style):** Rapid-fire matching is generally too shallow for complex historical or legal concepts. Limit use to basic vocabulary definitions in Phase 1 only.
+**Do NOT Focus On:**
+- Rote memorization of dates without causal context.
+- Single-perspective "absolute" truths in complex historical events.
+- Mathematical derivation of economic formulas (focus on the *logic* of the shift).
 
 ---
 
-## 5. NATIONAL PRIDE MODULE: TONE & INJECTIONS
+## 4. Best Methods & Games (Filtered from UNIFIED-Buzan)
 
-Ijtimoiy Fanlari is the primary vehicle for cultivating **Global Citizens with National Pride**.
+### Primary Mechanics (Priority Usage)
 
-### 5.1 The Dual-Balance Architecture
-- **The 55/45 Rule:** 55% of all historical/economic contexts must anchor in National achievements (Temurids, Jadidlar, Modern Uzbekistan). 45% must anchor in Global standards (Roman Empire, Adam Smith, UN Declarations).
-- **The 70/30 Break Rule:** During XP milestones, show 70% "Bilarmidingiz?" (Facts) and 30% "Hikmatlar" (Quotes) from the database.
+#### **Timeline Sort (Tarixiy Kenglik)**
+- **What it is:** Arranging events, laws, or procedures in chronological order.
+- **Why:** Builds temporal intuition and causal sequence.
+- **Good Example:** "Arrange the stages of the Silk Road's development in Samarkand."
+- **Bad Example:** "Match the year 1991 to the word Independence." (Too simple).
 
-### 5.2 Phase 4 "Wise Status" Injection Recipe
-Do not praise the child generically. Assign a **High-Status Role**.
+#### **Source Comparison (Manbalar To'qnashuvi)**
+- **What it is:** Presenting conflicting accounts of the same event.
+- **Why:** Builds L2/L3 critical thinking and bias detection.
+- **Good Example:** "Compare a Roman historian's view of the Silk Road with a Sogdian merchant's account."
+- **Bad Example:** "Read this paragraph and answer a True/False question."
 
-**Authorized Roles for Ijtimoiy Fanlari:**
-- `Tarixiy Tahlilchi` (Historical Analyst)
-- `Bosh Qonunshunos` (Chief Legal Counsel)
-- `Strategik Iqtisodchi` (Strategic Economist)
-- `Arxivchi va Matnshunos` (Archivist & Linguist)
-- `Global Xaritashunos` (Global Cartographer)
+#### **Why Chain (Sabablar Zanjiri)**
+- **What it is:** Building multi-level cause-and-effect trees.
+- **Why:** Deepens understanding of systemic consequences.
+- **Good Example:** "Event: Inflation rises. Level 1: Prices increase. Level 2: Purchasing power drops. Level 3: Demand for exports shifts."
+- **Bad Example:** "What is the definition of inflation?"
 
-**Example Task Injection (History / Economics):**
-- **Status:** [STRATEGIK IQTISODCHI]
-- **National Context (55%):** "Buyuk Ipak Yo'li davrida Samarqand savdogarlari resurslarni boshqarishda dunyoni hayratga solganlar. Bugungi kunda Yangi O'zbekistonning iqtisodiy barqarorligi ham shunday tahlilga muhtoj."
-- **Task:** "Analyze the following trade data from the 14th century and identify the primary export advantage."
-- **Closing Hook:** "Iqtisodiy barqarorlik — millat qudratidir. Sizning aniq tahlilingiz bu qudratning bir qismidir."
+#### **Territory Conquest (Hududlar Jangi)**
+- **What it is:** Interactive map control based on knowledge gates.
+- **Why:** Excellent for History and Geography (Trade routes, empires).
+
+### Secondary Mechanics
+- **Tile Match:** Sorting legal articles or economic categories.
+- **Escape Room:** Using historical dates/codes to "unlock" the next narrative segment.
+- **Memory Palace:** Using Registan or Ark Fortress to "place" constitutional articles.
+
+### Phase 5 Buzan Alternatives
+- **Radiant Summary:** Mind maps for classifying legal systems or historical eras (minimum 3 colors).
+- **Memory Palace:** Strategic placement of "Wise Status" hooks in a 3D mental space.
+
+### Interactive Catalog Picks (≥1 required per session)
+
+| Game | Why It Fits Ijtimoiy Fanlari | Best For |
+|---|---|---|
+| **Territory Conquest** | Visualizing expansion of empires and trade | History, Geography |
+| **Escape Room** | Decoding historical sources to progress | History, Law |
+| **Codebreaker** | Identifying legal articles or economic indicators | Law, Economics |
+| **Connect Four vs AI** | Strategic planning and causal anticipation | Economics, Law |
 
 ---
 
-## 6. BUZAN COGNITIVE SCIENCE INTEGRATION
+## 5. Boss Format for Ijtimoiy Fanlari
 
-Ijtimoiy Fanlari relies heavily on Tony Buzan's frameworks to ensure long-term retention of vast amounts of qualitative data.
-
-### 6.1 TEFCAS & "Hali Emas" Error Handling
-- **T-E-F-C-A-S:** Trial → Event → Feedback → Check → Adjust → Success.
-- **Implementation:** When a student fails a Case Reasoning Boss, the AI Tutor must NEVER say "Xato" (Wrong). It must say **"Hali emas!" (Not yet!)**
-- *Prompt:* "Hali emas! Your brain just got some Feedback. Let's look at your Timeline. Which event needs a new 'Adjust' branch?"
-
-### 6.2 The Digital Memory Palace (Method of Loci)
-- **Application:** Used in Phase 5 (Consolidation).
-- **Format:** The system defaults to the **Registan Square** or **Ark Fortress** as the 3D mental architecture.
-- *Task:* "Place the adoption of the Constitution at the entrance of the Sher-Dor Madrasah. Place the Civil Code in the left courtyard." 
-
-### 6.3 Radiant Thinking & Mind Maps
-- **Application:** History and Law do not work in linear lists. They branch. 
-- **Format:** Students must drag and drop concepts into a partially completed "Radiant Anchor" (Mind Map) during Phase 5, ensuring a minimum of 3 colors (Buzan's 7 Laws of Mind Mapping) are used in the UI visualization.
+- **Core Format:** **Case Reasoning Task**.
+- **No Multiple Choice (MC):** G6+ must use open-ended reasoning evaluated by Tier 2 LLM.
+- **Perspective Check:** Must require the student to explain "Why" or "From whose perspective?"
+- **Heritage Anchor:** 30% of Bosses should be framed with a "Wise Status" injection (e.g., [BOSH QONUNSHUNOS]).
+- **HP Scaling:** G5-8: 100 | G9-11: 150.
+- **Feedback:** Must use TEFCAS "Hali emas" (Not yet) framing for errors.
 
 ---
 
-## 7. QUALITY ASSURANCE & FEATURE SHOWCASE
+## 6. Narrative Adaptation (National Pride)
 
-When the AI Engine generates a homework session for Ijtimoiy Fanlari, it must guarantee the following features are present:
+### Story Mode (Phase 2)
+- **The 55/45 Rule:** 55% Uzbekistan / 45% Global context.
+- **Narrative Hook:** Start with a human moment (e.g., "Imagine you are a judge in 14th century Bukhara...").
 
-1. **The Narrative Hook:** Is the textbook fact wrapped in a human story? (Yes/No)
-2. **The Chronology Engine:** Is the `Timeline Sort` game utilized to build temporal intuition? (Yes/No)
-3. **The Perspective Shift:** Does the Boss question require the student to evaluate a source or apply a principle, rather than just recall a date? (Yes/No)
-4. **The Pride Injection:** Is the 55/45 National/Global balance respected in the Phase 4 challenge? (Yes/No)
-5. **The Buzan Lock:** Does Phase 5 use a Memory Palace or Radiant Mind Map? (Yes/No)
+### Real-Life Challenge (Phase 4)
+- **Role:** Assign high-status titles: `Tarixiy Tahlilchi`, `Bosh Qonunshunos`, `Strategik Iqtisodchi`.
+- **National Context:** Use hooks from the `quotes_database.json` and `Bilarmidingiz_faktlar.md`.
+
+---
+
+## 7. Subject Pattern Example (Standard Session)
+
+- **Phase 0:** Gate Quote (5s lock) + BOST Mind Map.
+- **Phase 1:** Timeline Sort of yesterday's events.
+- **Phase 2:** Story: "The 1991 Independence Proclamation — a firsthand account."
+- **Phase 3:** Source Comparison game + Why Chain.
+- **Phase 4:** [BOSH QONUNSHUNOS] "Apply Article 1 of the Constitution to this modern civic dispute."
+- **Phase 5:** Memory Palace (Registan) to lock in key articles.
+- **Phase 6:** Case Reasoning Boss: "Evaluate the economic impact of the new Silk Road initiative."
+- **Phase 7:** Reflection: "Third Renaissance" closing hook.
+
+---
+
+## Technical Rules
+1. **Inheritance:** Inherits all Part 8 rules (National Pride) from [[NETS-Library-Framework.md]] v0.6.
+2. **Quality Gate:** Every session must pass the "5 Feature Showcase" (Narrative, Chronology, Perspective, Pride, Buzan).
 
 ---
 *Document produced by Gemini CLI Master Framework Engine.*
