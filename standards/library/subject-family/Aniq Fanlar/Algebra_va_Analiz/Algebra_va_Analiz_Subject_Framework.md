@@ -252,6 +252,37 @@ At least 2 modalities: Logical + Strategic.
 
 **National Pride:** Heritage anchor when natural: *"Nyuton va Leybnits hisob-kitobni yaratdi — ikkisi bir vaqtda. Bilim chegara bilmaydi."*
 
+### 4.6 Final Boss (Phase 6)
+
+**Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP, cross-subject, one tier above current PISA), Mythical Boss (<5% random, PISA L5-6, zero hints, one attempt, 5× XP).
+
+**Algebra va Analiz Sub Boss real overrides:**
+
+- **Absolutely no MC** — not anywhere in the session
+- **Question types:** Function analysis (domain/range/asymptotes/monotonicity) + Derivative application (optimization, tangent, rate interpretation) + Limit evaluation (full working)
+
+**HP, damage, stars, hints, and combo bonus:** inherit from [[UNIFIED-Buzan §5.6]], unchanged.
+
+**Boss design rules for Algebra va Analiz:**
+- At least one **optimization problem** (G10-11 mandatory)
+- At least one question requiring **interpretation** — "What does this derivative value mean in the context of the problem?"
+- At least one question involving a **graph** — reading from or sketching
+- No purely symbolic calculation without context
+- DTM difficulty code tagging where applicable
+- National Pride Boss framing: *"Bu — sizning professional sertifikatingiz. Global standartga mos keling."*
+
+**Partial credit rubric:**
+- Correct setup: 1 pt
+- Correct method: 1 pt
+- Correct answer: 1 pt
+- Correct interpretation: 1 pt
+Students who can set up and solve but misinterpret earn 3/4.
+
+**TEFCAS Failure Flow:**
+1. *"Hali emas! Miyangiz Feedback oldi."*
+2. Socratic: "Hosila belgilanishi funksiyaning qaysi xususiyatini aytadi?" — never reveals calculation method
+3. Route to specific Story Mode segment
+4. Regenerate questions (same standards, different function/context)
 
 ---
 

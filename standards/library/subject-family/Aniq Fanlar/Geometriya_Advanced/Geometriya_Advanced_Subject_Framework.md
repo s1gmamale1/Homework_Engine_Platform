@@ -257,6 +257,36 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 
 **National Pride:** Heritage anchor when natural: *"Al-Biruni yer shariga Kamchik dagi uchburchak usuli bilan o'lchadi — qo'shimcha asboblarsiz."*
 
+### 4.6 Final Boss (Phase 6)
+
+**Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP, cross-subject, one tier above current PISA), Mythical Boss (<5% random, PISA L5-6, zero hints, one attempt, 5× XP).
+
+**Geometriya Advanced Sub Boss real overrides:**
+
+- **No MC** — open-ended with full working required
+- **Question types:** 3D calculation (volume/surface with full working) + Vector proof (prove geometric property using vectors) + Coordinate geometry (find equation of conic or line from geometric conditions)
+- **Diagram requirement:** Boss questions MUST include a labeled 3D diagram as part of the question itself — no text-only geometry in Boss
+
+**HP, damage, stars, hints, and combo bonus:** inherit from [[UNIFIED-Buzan §5.6]], unchanged.
+
+**Boss design rules for Geometriya Advanced:**
+- At least one question involves a **cross-section** — hardest and most exam-relevant 3D skill
+- At least one question is solved using **vectors** (G10: 2D vector applied to plane geometry; G11: full 3D vector proof)
+- No purely formulaic volume calculation — student must first identify the solid type and decompose it
+- G11 Boss: at least one **composite solid** (two or more simple solids combined or subtracted)
+- National Pride Boss framing: *"Bu — sizning professional sertifikatingiz."* On defeat: *"Sertifikatsiya muvaffaqiyatli!"*
+
+**Partial credit rubric (Geometriya Advanced):**
+- Correct 3D setup (identifies solid correctly): 1 pt
+- Correct decomposition into calculable parts: 1 pt
+- Correct calculation: 1 pt
+- Correct interpretation or justification: 1 pt
+
+**TEFCAS Failure Flow:**
+1. *"Hali emas! Miyangiz Feedback oldi."*
+2. Socratic spatial: "Bu 3D shaklga qarang — qaysi yuz asosga parallel?" or "A dan B ga yo'nalishni vektor sifatida ifodalang." — never reveals the calculation
+3. Route to specific Story Mode segment
+4. Regenerate with new solid/diagram (same standard)
 
 ---
 

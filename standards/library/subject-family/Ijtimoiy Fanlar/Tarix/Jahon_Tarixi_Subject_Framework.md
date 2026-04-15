@@ -73,7 +73,19 @@ World History in NETS is the study of **global interactions, civilization cluste
 
 ---
 
-## 4. Game Mechanics — Jahon Tarixi Specific
+## 4. Phase 5 Buzan Options
+
+Inherits: [[UNIFIED-Buzan §5.5]]. Select technique by content structure.
+
+- **Link System** — global event chains (e.g., causes of WWI, stages of Industrial Revolution)
+- **Memory Palace** — place world leaders/events at Registan Square or global landmarks
+- **Peg System** — anchor key dates to number-shape pegs
+- **Major System (G7+)** — encode years into memorable words
+- **Radiant Summary** — compare parallel events across civilizations
+
+---
+
+## 5. Game Mechanics — Jahon Tarixi Specific
 
 ### Always Primary (The "Big Three")
 
@@ -101,10 +113,10 @@ World History in NETS is the study of **global interactions, civilization cluste
 
 ---
 
-## 5. Boss Format: Comparative Recall
+## 6. Phase 6 Boss Format: Comparative Recall
 
 - **Structure:** Retrieval of Global Facts -> Comparative Reasoning -> Evidence Check.
-- **HP Scaling:** G7-8: 100 | G9-11: 150.
+- **HP, damage, stars, and hints:** see [[UNIFIED-Buzan §5.6]].
 - **Failure:** TEFCAS framing ("Hali emas!").
 
 **Good Boss (G9):** "Explain why the Industrial Revolution began in Britain. List 3 geographical and 2 economic causes. Give the approximate dates. How did this change world trade?"
@@ -112,7 +124,7 @@ World History in NETS is the study of **global interactions, civilization cluste
 
 ---
 
-## 6. Story Mode & Historical Projection
+## 7. Story Mode & Historical Projection
 
 ### Story Mode (Phase 2)
 Focus on **Global Transitions**.
@@ -124,7 +136,7 @@ Focus on **Global Transitions**.
 
 ---
 
-## Technical Rules
+## 8. Technical Rules
 1. **Inheritance:** Inherits Ijtimoiy Fanlari family rules + National Pride (45% National anchor for World History).
 2. **Source Rule:** Source Comparison is allowed only for G9+ when specific textbook excerpts are provided.
 3. **Buzan Rule:** Major System for memorizing critical global dates (e.g., 1914, 1945) is mandatory.

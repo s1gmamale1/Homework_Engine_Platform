@@ -101,7 +101,7 @@ All subjects in this family must follow these three filters added in v0.6:
 Ijtimoiy Bosses do not use abstract analysis; they test the ability to **retrieve and connect**.
 
 - **Structure:** 1. Retrieve the fact (Who/When) -> 2. Explain the connection (Why/Result).
-- **HP Scaling:** G5-8: 100 | G9-11: 150.
+- **HP, damage, stars, and hints:** see [[UNIFIED-Buzan §5.6]].
 - **Feedback:** Use TEFCAS **"Hali emas!"** (Not yet) framing.
 
 **Good Boss Question:** "Identify the year the Constitution was adopted. List 3 key changes it introduced and explain how one affects your life today."

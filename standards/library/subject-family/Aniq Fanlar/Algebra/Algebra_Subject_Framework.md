@@ -249,6 +249,29 @@ Cap at 3 levels for G7-8, 3 levels for G9 (UNIFIED §Why Chain: Exact Sciences s
 
 **National Pride:** Heritage anchor when natural: *"Al-Xorazmiy 'al-jabr' atamasini ixtiro qildi — bu so'z 'algebra'ga aylandi."*
 
+### 4.6 Final Boss (Phase 6)
+
+**Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP), Mythical Boss (<5% chance, 5× XP, zero hints).
+
+**Algebra Sub Boss real overrides:**
+
+- **No MC.** Explicitly prohibited for algebra beyond G6. Open-ended only.
+- **Question types:** Equation solving (show steps) + word problem modeling (set up AND solve) + expression simplification
+
+**HP, damage, stars, hints, and combo bonus:** inherit from [[UNIFIED-Buzan §5.6]], unchanged.
+
+**Boss design rules for Algebra:**
+- At least one **modeling question** — student writes the equation themselves from a scenario
+- At least one **interpretation question** — "What does your answer mean in context?"
+- No purely mechanical "solve for x" without context
+- Bloom's escalation: L1 recall only in Phase 1; Boss is L3-L5
+- National Pride Boss framing: *"Bu — sizning professional sertifikatingiz. Global standartga mos keling."*
+
+**TEFCAS Failure Flow:**
+1. *"Hali emas! Miyangiz Feedback oldi."*
+2. Socratic: "x ni ajratish uchun birinchi qadam nima?" — never reveals the method
+3. Route to specific Story Mode segment
+4. Regenerate questions (same standards, different context/numbers)
 
 ---
 

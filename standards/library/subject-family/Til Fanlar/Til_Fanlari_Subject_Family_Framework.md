@@ -156,9 +156,7 @@ Content producers must prioritize these cognitive anchors:
 - **G6+:** Prompted free production such as "Write 3-5 sentences about..."
 - **G9+:** Extended composition with structure requirements.
 - **Literature Boss:** Textual analysis of passage, character, theme, or voice.
-- **HP Scaling:** G1-4: 50 | G5-8: 100 | G9-11: 150 ([[UNIFIED-Buzan §5.6]]).
-- **Stars:** 1★ / 2★ / 3★ follow the universal Boss rules from the parent spec.
-- **Hints:** Socratic hints cost -10 HP.
+- **HP, stars, and hints:** inherit from [[UNIFIED-Buzan §5.6]].
 
 **Good Boss Question:** "Write 5 sentences describing your favorite place in Uzbekistan. Use at least 3 adjectives and 1 comparison (e.g., '...dan kattaroq')."
 

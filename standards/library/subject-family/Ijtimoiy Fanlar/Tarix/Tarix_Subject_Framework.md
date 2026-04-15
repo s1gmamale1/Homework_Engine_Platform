@@ -85,12 +85,24 @@ History in Grades 5-6 is the study of **causality, sequence, and foundational id
 
 ---
 
-## 5. Boss Format: Recall + Explain
+## 5. Phase 5 Buzan Options
+
+Inherits: [[UNIFIED-Buzan §5.5]]. Select technique by content structure.
+
+- **Link System** — chronological event chains (e.g., steps leading to a historical event)
+- **Memory Palace** — place historical figures/events at Registan Square hotspots
+- **Peg System** — anchor key dates to number-shape pegs (1=Sham, 2=Oqqush, etc.)
+- **Major System (G7+)** — encode important years into memorable Uzbek words
+
+---
+
+## 6. Phase 6 Boss Format: Recall + Explain
 
 The Boss fight is a tiered challenge of retrieval and basic reasoning.
 
 - **G5:** Name 3 events + Give Dates + Describe one.
 - **G6:** Identify Event + Sequence + Explain one Cause.
+- **HP, damage, stars, and hints:** see [[UNIFIED-Buzan §5.6]].
 - **Failure framing:** Use **"Hali emas!"** (Not yet).
 
 **Good Boss Question:** "Identify the dates of the Baqtriya state. List two major cities from that time. Why was the location of these cities important for the Silk Road?"
@@ -98,7 +110,7 @@ The Boss fight is a tiered challenge of retrieval and basic reasoning.
 
 ---
 
-## 6. Story Mode & Historical Projection
+## 7. Story Mode & Historical Projection
 
 ### Story Mode (Phase 2)
 Focus on the **FEEL** of the era. Use first-person sensory details.
@@ -111,7 +123,7 @@ Light connection to today. No engineering scenarios.
 
 ---
 
-## Technical Rules
+## 8. Technical Rules
 1. **Inheritance:** Inherits Ijtimoiy Fanlari family rules + National Pride (55/45 balance).
 2. **Recall Density:** Every session must include at least one rapid-recall task (timeline ordering, date matching, figure identification).
 3. **Buzan Rule:** Memory Palace for chronology is mandatory in every chapter review session.

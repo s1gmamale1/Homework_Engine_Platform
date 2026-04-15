@@ -259,24 +259,18 @@ For 1 in 3 Real-Life Challenges:
 
 **Matematika Sub Boss parameters:**
 
-| Parameter | UNIFIED Default | Matematika G5-6 Override |
-|---|---|---|
-| **HP** | G5-8: 100 HP | **100 HP** — standard secondary value per UNIFIED §5.6 |
-| **Hint Tax** | G5-8: -10 HP | **-5 HP** — gentler; encourage hint use over quitting |
-| **MC allowed?** | No MC for G5+ | **Yes — up to 30% MC** (WM ceiling at 10-11; open reasoning overwhelms) |
-| **Question types** | Short answer + open reasoning | Short answer + multi-step word problem + visual-model matching |
-| **Combo bonus** | 3 correct → 2× damage | Unchanged |
-| **Max attempts** | TEFCAS loop | 3, with "Hali emas!" framing each time |
+| Parameter | Matematika G5-6 Override |
+|---|---|
+| **HP** | **100 HP** — standard secondary value per UNIFIED §5.6 |
+| **Hint Tax** | **-5 HP** — gentler; encourage hint use over quitting |
+| **MC allowed?** | **Yes — up to 30% MC** (WM ceiling at 10-11; open reasoning overwhelms) |
 
-**PISA-tiered damage (applied to Matematika's 100 HP):**
+**Boss question examples (damage tiers follow [[UNIFIED-Buzan §5.6]]):**
+- Easy: "Calculate the area of a triangular garden. Show your working."
+- Medium: "Two methods give different answers for the same fraction addition. Which is correct and why?"
+- Hard: "A company divides office space using a ratio of 3:5:2. One section is 120m². Design a floor plan showing all three sections with dimensions."
 
-| Tier | Damage | PISA Level | Bloom's | Matematika Example |
-|---|---|---|---|---|
-| Easy | -10 HP | L3 | Apply | "Calculate the area of a triangular garden. Show your working." |
-| Medium | -20 HP | L4 | Analyze | "Two methods give different answers for the same fraction addition. Which is correct and why?" |
-| Hard | -30 HP | L5-6 | Evaluate | "A company divides office space using a ratio of 3:5:2. One section is 120m². Design a floor plan showing all three sections with dimensions." |
-
-**Question distribution:** 40% Easy · 40% Medium · 20% Hard
+**All other Boss mechanics (damage tiers, distribution 40/40/20, stars, combo bonus):** inherit from [[UNIFIED-Buzan §5.6]].
 
 **Boss design rules for Matematika:**
 - At least one word problem (text → math translation)
@@ -290,14 +284,6 @@ For 1 in 3 Real-Life Challenges:
 2. Socratic hint for Matematika: show first step of worked example, ask student to complete
 3. Route to specific Story Mode segment
 4. Regenerate questions (same standards, different numbers/context)
-
-**Mastery Stars:**
-
-| Stars | Criteria |
-|---|---|
-| 1★ | Boss defeated (any number of attempts) |
-| 2★ | Boss defeated in ≤2 attempts, >50% HP remaining |
-| 3★ | First attempt, no hints, >80% HP remaining |
 
 ---
 

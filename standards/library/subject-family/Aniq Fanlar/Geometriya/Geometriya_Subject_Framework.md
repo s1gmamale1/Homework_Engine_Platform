@@ -252,6 +252,35 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 
 **National Pride:** Heritage anchor when natural: *"Al-Biruni Yer radiusini uchburchak geometriyasi yordamida o'lchadi — dala tajribasiz."*
 
+### 4.6 Final Boss (Phase 6)
+
+**Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP), Mythical Boss (<5% random, PISA L5-6, zero hints, 5× XP).
+
+**Geometriya Sub Boss real overrides:**
+
+- **No MC** — theorem-identification MC only acceptable in Phase 1, never in Boss
+- **Question types:** Proof construction (write logical steps) + Calculation with justification (theorem cited) + Diagram annotation
+
+**HP, damage, stars, hints, and combo bonus:** inherit from [[UNIFIED-Buzan §5.6]], unchanged.
+
+**Boss design rules for Geometriya:**
+- At least one **multi-step logical proof** — not just calculation
+- At least one question requires **reading a diagram** and extracting information
+- **Boss diagram must be a NEW figure** the student has not seen in the session — tests transfer, not memory
+- No question solvable by formula alone without understanding the geometric relationship
+- National Pride Boss framing: *"Bu — sizning professional sertifikatingiz."* On defeat: *"Sertifikatsiya muvaffaqiyatli!"*
+
+**Partial credit rubric (Geometriya-specific):**
+- Correct theorem identified: 1 pt
+- Correct proof setup: 1 pt
+- Correct conclusion: 1 pt
+- A wrong calculation with correct proof structure earns 2/3.
+
+**TEFCAS Failure Flow:**
+1. *"Hali emas! Miyangiz Feedback oldi."*
+2. Socratic: "Bu uchburchakdagi burchaklar haqida nima bilasiz?" — never reveals the next step
+3. Route to specific Story Mode segment
+4. Regenerate with new diagram (same theorem/standard)
 
 ---
 

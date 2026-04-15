@@ -172,8 +172,6 @@ Select by content structure, not by subject:
 
 ## 5. Boss Format for Tabiy Fanlar
 
-**Don't redefine — reference:** Full Boss spec at [[UNIFIED-Buzan §5.6]].
-
 **Two Boss archetypes for this family:**
 - **[OBS] Explain-the-phenomenon:** "Why does X happen? Trace the causal chain."
 - **[QNT] Show-the-derivation:** "Solve this. Show all steps."
@@ -185,10 +183,8 @@ Select by content structure, not by subject:
 | Notebook Capture | 1 in 3 Boss sessions | 1 in 2 | Every session [QNT]; 1 in 2 [OBS] |
 | Partial credit | Component-level rubric | Causal-chain milestones | Derivation steps [QNT] / evidence-quality bands [OBS] |
 
-- **HP:** G5-8: 100 | G9-11: 150
-- **Damage:** Easy -10 | Medium -20 | Hard -30. Distribution: 40/40/20.
-- **Stars:** 1★ / 2★ / 3★ follow universal Boss rules
-- **Hints:** -10 HP. TEFCAS failure framing: "Hali emas!"
+- **HP, damage, stars, and hints:** inherit unchanged from [[UNIFIED-Buzan §5.6]].
+- **TEFCAS failure framing:** "Hali emas!"
 
 **Good Boss [OBS]:** "If wolves disappear from a forest, predict what happens to deer population, then to vegetation. Explain the cascade."
 
