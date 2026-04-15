@@ -1512,7 +1512,18 @@ IF accuracy &lt; 60%  -&gt; System routes to remediation BEFORE new content
 </code></pre>
 <p><em>Source: Structure from original spec; Bazaar scenario from HOMEWORK_TASK_ENGINE.md Task 4. Cultural context confirmed by textbook analysis (Uzbek sum currency, bazaar settings, character names like Alisher, Malika, Sardor found in actual Grade 5 textbook).</em></p>
 <h3>5.5 Phase 5 -- Consolidation / Mnemonic Lock (2-3 min standard / 5 min extended)</h3>
-<p><strong>Purpose:</strong> Lock key concepts into long-term memory before the high-stakes boss fight.</p>
+<p><strong>Purpose.</strong> Consolidation is the memory-science process of moving freshly-learned concepts out of fragile short-term memory into durable long-term storage. Without it, a large share of what a student encountered in Phases 2-4 decays within 24 hours (Ebbinghaus forgetting curve). Phase 5 is the engine&#39;s anti-forgetting insurance: it re-encodes the lesson&#39;s key concepts through a second channel (visual / spatial / associative) so the memory trace is stored in multiple brain pathways, not just the verbal one used in Phase 2 Story Mode.</p>
+<p><strong>What Phase 5 does.</strong> Takes the lesson&#39;s <code>keywords_80_20</code> (the ~20% of words carrying ~80% of meaning, already extracted during the Phase 2 pipeline) and locks them into long-term memory using the Buzan mnemonic technique that best fits the CONTENT STRUCTURE — not a random pick. Hierarchical content → Radiant Summary. Sequential content → Link System. Spatial content → Memory Palace. Discrete facts → Peg System. Numeric content → Major System (G7+).</p>
+<p><strong>What Phase 5 is NOT.</strong> Not assessment (that&#39;s Phase 6). Not new teaching (that&#39;s Phase 2). Not a game break (that&#39;s Phase 3). Not a transfer task (that&#39;s Phase 4). It is a low-stakes, formative, structure-imposing rehearsal.</p>
+<p><strong>Agenda (student-facing flow):</strong></p>
+<ol>
+<li><strong>Entry card</strong> (3-5 sec): short framing — <em>&quot;Endi bilganlaringizni mustahkamlaymiz.&quot;</em> (Now we lock in what you&#39;ve learned.)</li>
+<li><strong>Technique intro</strong> (5-10 sec): brief explainer of the selected mnemonic technique with a worked example from the default palace (Registan Square) or grade-appropriate scene.</li>
+<li><strong>Exercise 1</strong> (45-75 sec): one mnemonic exercise — drag-and-drop placement, chain ordering, peg association, or mind-map branch assembly.</li>
+<li><strong>Exercise 2</strong> (45-75 sec): second exercise, same technique with different items OR recall test out of original order.</li>
+<li><strong>Transition</strong> (3-5 sec): closing line connecting to Phase 6 — <em>&quot;Yaxshi! Endi Boss uchun tayyormiz.&quot;</em> (Good! Now we&#39;re ready for the Boss.)</li>
+</ol>
+<p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
@@ -1527,14 +1538,39 @@ IF accuracy &lt; 60%  -&gt; System routes to remediation BEFORE new content
 <td>5 minutes</td>
 </tr>
 <tr>
+<td>Number of exercises</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
 <td>Technique selection</td>
-<td>Based on grade level and content type</td>
+<td>Driven by content structure (table below)</td>
 <td>Same</td>
 </tr>
 <tr>
 <td>AI Tier</td>
-<td>Tier 1 (pre-generated)</td>
+<td>Tier 1 (pre-generated; no live-AI needed)</td>
 <td>Same</td>
+</tr>
+<tr>
+<td>Gate</td>
+<td><strong>Formative — no pass/fail.</strong> Student advances to Phase 6 after attempting both exercises.</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Score shown to student</td>
+<td><strong>None.</strong> Qualitative feedback only.</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Failure language</td>
+<td><em>&quot;Yana bir marta&quot;</em> (Once more) + reveal-then-retry option. <strong>Never</strong> <em>&quot;Hali emas!&quot;</em> — that phrase is reserved for Phase 6 boss gravity.</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Hint tax</td>
+<td>None</td>
+<td>None</td>
 </tr>
 </tbody></table>
 <p><strong>Technique Selection by Grade (Buzan-Enhanced):</strong></p>
@@ -1566,7 +1602,7 @@ IF accuracy &lt; 60%  -&gt; System routes to remediation BEFORE new content
 <td>All G7-9 + Self-directed systems, Autonomous consolidation</td>
 </tr>
 </tbody></table>
-<p><strong>Buzan Injection — Phase 5 is Buzan&#39;s home phase.</strong> This is where most Buzan mnemonic methods live. The technique is selected based on the CONTENT STRUCTURE, not randomly:</p>
+<p><strong>Content Structure → Technique Mapping (Phase 5 is Buzan&#39;s home phase).</strong> The technique is selected based on the CONTENT STRUCTURE of the lesson, not randomly:</p>
 <table>
 <thead>
 <tr>
@@ -1617,27 +1653,27 @@ IF accuracy &lt; 60%  -&gt; System routes to remediation BEFORE new content
 </tr>
 </thead>
 <tbody><tr>
-<td>Science</td>
+<td>Science (Tabiy Fanlar: Biology, Physics, Chemistry, Geography, Astronomy)</td>
 <td>Radiant Summary (classification), Link System (processes), Memory Palace (anatomy)</td>
 <td>Major System (few numbers)</td>
 </tr>
 <tr>
-<td>Math</td>
+<td>Math (Aniq Fanlar)</td>
 <td>Peg System (formula names), Radiant Summary (formula families)</td>
 <td>Link System (math isn&#39;t sequential narrative), Memory Palace (abstract)</td>
 </tr>
 <tr>
-<td>History</td>
+<td>History (Ijtimoiy Fanlar)</td>
 <td>Link System (timelines), Major System (dates), Memory Palace (locations)</td>
 <td>Radiant Summary (history is temporal, not hierarchical)</td>
 </tr>
 <tr>
-<td>Geography</td>
+<td>Geography (Tabiy Fanlar)</td>
 <td>Memory Palace (locations on map), Radiant Summary (biome categories)</td>
 <td>Major System, Link System</td>
 </tr>
 <tr>
-<td>Tarbiya</td>
+<td>Tarbiya / Sanat</td>
 <td>Radiant Summary (virtue categories)</td>
 <td>Major System (no numbers), Memory Palace (abstract values don&#39;t map to locations well)</td>
 </tr>
@@ -1647,15 +1683,127 @@ IF accuracy &lt; 60%  -&gt; System routes to remediation BEFORE new content
 <td>Most other mnemonics (creative subjects need making, not memorizing)</td>
 </tr>
 <tr>
-<td>Language</td>
+<td>Language (Til Fanlari)</td>
 <td>Peg System (vocabulary sets), Link System (grammar rule chains)</td>
 <td>Major System, Radiant Summary</td>
 </tr>
 </tbody></table>
-<p><strong>SMASHIN&#39; SCOPE Quality Gate:</strong> Every mnemonic exercise in Phase 5 must score 6+/12 on the SMASHIN&#39; SCOPE checklist — <strong>S</strong>ynaesthesia, <strong>M</strong>ovement, <strong>A</strong>ssociation, <strong>S</strong>ubstitution (concrete for abstract), <strong>H</strong>umor, <strong>I</strong>magination, <strong>N</strong>umber, <strong>S</strong>ymbolism, <strong>C</strong>olor, <strong>O</strong>rder, <strong>P</strong>ositive, <strong>E</strong>xaggeration. Content scoring below 6 is returned for enrichment. This ensures mnemonic imagery is vivid and memorable, not dry.</p>
-<p><strong>Buzan Review Intervals (~10 min touchpoint):</strong> Phase 5 IS the first Buzan review touchpoint (~10 minutes after learning in Phase 2). Concepts learned in Story Mode reappear here in mnemonic form — same content, different encoding channel. This activates Dual Coding (verbal in Phase 2 → visual/spatial in Phase 5).</p>
-<p><strong>Memory Palace Default Setting:</strong> Registan Square (Samarkand) -- with options for student&#39;s home, school building, or local bazaar.</p>
-<p><strong>Memory Palace Default Setting:</strong> Registan Square (Samarkand) -- with options for student&#39;s home, school building, or local bazaar.</p>
+<p><strong>Interaction Model.</strong> Every Phase 5 exercise is active, never passive reading:</p>
+<ul>
+<li><strong>Drag-and-drop placement</strong> (Memory Palace, Radiant Summary)</li>
+<li><strong>Chain assembly</strong> (Link System — student orders items, then recalls reversed)</li>
+<li><strong>Peg-to-concept pairing</strong> (Peg System — both directions tested)</li>
+<li><strong>Word-digit conversion</strong> (Major System — student reconstructs word from digits)</li>
+</ul>
+<p>Passive viewing (&quot;read this mnemonic&quot;) is banned. Student MUST produce the recall at least once per exercise.</p>
+<p><strong>Completion Criteria.</strong> Phase 5 is complete when the student has attempted both (Standard) or all three (Extended) exercises <strong>once</strong>. Correctness is not required — attempt is sufficient. The student can opt to redo any exercise using the <em>&quot;Yana bir marta&quot;</em> button; unlimited retries are allowed within the phase&#39;s time budget. Extension beyond time budget is not allowed (Phase 6 must still fit in session window).</p>
+<p><strong>Failure / Retry Language (soft, not TEFCAS-boss).</strong> When a student&#39;s placement is wrong:</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Student-facing message (uz)</th>
+<th>Student-facing message (ru)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>First attempt wrong</td>
+<td><em>&quot;Yaqin edi — yana bir marta urinib ko&#39;ring.&quot;</em></td>
+<td><em>&quot;Почти — попробуйте ещё раз.&quot;</em></td>
+</tr>
+<tr>
+<td>Second attempt wrong</td>
+<td><em>&quot;Javobni ko&#39;rsataymi?&quot;</em> (Show the answer?) + reveal-then-retry</td>
+<td><em>&quot;Показать ответ?&quot;</em></td>
+</tr>
+<tr>
+<td>After reveal</td>
+<td><em>&quot;Yaxshi. Keyingi mashqqa o&#39;tamiz.&quot;</em></td>
+<td><em>&quot;Хорошо. Переходим к следующему.&quot;</em></td>
+</tr>
+</tbody></table>
+<p><strong>Never</strong> use <em>&quot;Hali emas!&quot;</em>, <em>&quot;Noto&#39;g&#39;ri&quot;</em>, <em>&quot;Xato&quot;</em>, or any Phase-6 boss-tier language in Phase 5. Phase 5 is rehearsal, not judgment.</p>
+<p><strong>SMASHIN&#39; SCOPE Quality Gate (content-side, not student-facing).</strong> Every mnemonic exercise authored for Phase 5 must score 6+/12 on the SMASHIN&#39; SCOPE checklist — <strong>S</strong>ynaesthesia, <strong>M</strong>ovement, <strong>A</strong>ssociation, <strong>S</strong>ubstitution (concrete for abstract), <strong>H</strong>umor, <strong>I</strong>magination, <strong>N</strong>umber, <strong>S</strong>ymbolism, <strong>C</strong>olor, <strong>O</strong>rder, <strong>P</strong>ositive, <strong>E</strong>xaggeration. Content scoring below 6 is returned for enrichment. This is a content-pipeline QA gate — students never see the score. <em>(Threshold is PROVISIONAL pending pilot calibration.)</em></p>
+<p><strong>Buzan Review-Interval Theory.</strong> Phase 5 is the first Buzan review touchpoint (~10 minutes after initial learning in Phase 2). Without this touchpoint, the Ebbinghaus forgetting curve begins dropping retention sharply within 20 minutes. Concepts taught verbally in Phase 2 reappear in Phase 5 through a different encoding channel (visual / spatial / associative) — this is <strong>Dual Coding</strong> in action. The second channel provides a backup retrieval route, dramatically improving durability.</p>
+<p><strong>Nationalism Narrative Integration (Phase 5-specific rules, inherits §1.5):</strong></p>
+<ul>
+<li><strong>Default Memory Palace:</strong> Registan Square, Samarkand. Optional student-selectable alternatives: home, school building, local bazaar, Ichan Qal&#39;a (Khiva), Amir Temur Square (Tashkent).</li>
+<li><strong>Peg System culturally-adapted shapes:</strong> 1=Sham (Candle), 2=Oqqush (Swan), 3=Yurak (Heart), 4=Kema (Sailboat), 5=Ilgak (Hook) — Uzbek-rooted imagery, not generic Western pegs.</li>
+<li><strong>Link System heritage-anchored sentences:</strong> when organically relevant, the 5-item chain may include a heritage figure as a character (e.g., <em>&quot;Mirzo Ulug&#39;bek yulduzlarni sanadi...&quot;</em> to open an astronomy chain). Not forced; only when the content genuinely fits.</li>
+<li><strong>20% all-task injection compliance:</strong> per §1.5, every 5th Phase 5 task carries an explicit heritage anchor (Wise Status-lite — professional-role framing of the mnemonic scene: <em>&quot;Siz Bosh Astronom Ulug&#39;bekning shogirdisiz — yulduzlarni pegga bog&#39;lang.&quot;</em>). Phases 0-A/0-B, 3, and 6 are excluded from this rotation; Phase 5 is included.</li>
+<li><strong>55/45 content balance</strong> applies at the rolling-10 level across Phase 5 mnemonic scenes: 55% Uzbek heritage contexts (Registan, Ulugh Beg, Silk Road, Zarafshan), 45% global (generic homes, world landmarks, global science figures).</li>
+</ul>
+<p><strong>Game Mechanic Compatibility:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mechanic</th>
+<th>Use in Phase 5</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Memory Palace (§6.14)</td>
+<td><strong>Primary</strong></td>
+<td>Spatial content. Fully specified elsewhere.</td>
+</tr>
+<tr>
+<td>Peg System exercise</td>
+<td><strong>Primary</strong></td>
+<td>Discrete-fact content.</td>
+</tr>
+<tr>
+<td>Link System chain</td>
+<td><strong>Primary</strong></td>
+<td>Sequential content.</td>
+</tr>
+<tr>
+<td>Radiant Summary drag-fill</td>
+<td><strong>Primary</strong></td>
+<td>Hierarchical content.</td>
+</tr>
+<tr>
+<td>Major System digit-word</td>
+<td><strong>Primary (G7+)</strong></td>
+<td>Numeric content.</td>
+</tr>
+<tr>
+<td>Memory Match Blitz (§6.18)</td>
+<td><strong>Secondary delivery vehicle</strong></td>
+<td>Allowed as a game-flavored skin for Peg System exercises when 5 discrete facts need pairing practice. Counts as one Phase 5 exercise.</td>
+</tr>
+<tr>
+<td>Reaction Chain (§6.19)</td>
+<td><strong>Secondary delivery vehicle</strong></td>
+<td>Allowed as a game-flavored skin for Link System exercises when the sequence has 5+ steps. Counts as one Phase 5 exercise.</td>
+</tr>
+<tr>
+<td>Tile Match, Sentence Fill, Tic Tac Toe, Connect Four, Mystery Box, Puzzle Lock, Word Ladder, Creative Lab</td>
+<td><strong>Banned in Phase 5</strong></td>
+<td>These are Phase 3 Game Break mechanics. Using them here would conflict with consolidation intent.</td>
+</tr>
+<tr>
+<td>Adaptive Quiz, Story Mode, Real-Life Challenge</td>
+<td><strong>Banned in Phase 5</strong></td>
+<td>Assessment (6), teaching (2), and transfer (4) mechanics — wrong phase.</td>
+</tr>
+</tbody></table>
+<p><strong>Tagging Requirements (Mandatory for Deployment).</strong> Every Phase 5 mnemonic exercise MUST carry:</p>
+<ul>
+<li><code>game_mechanic: &quot;mnemonic_exercise&quot;</code></li>
+<li><code>buzan_technique: &quot;memory_palace&quot; | &quot;peg_system&quot; | &quot;link_system&quot; | &quot;radiant_summary&quot; | &quot;major_system&quot;</code></li>
+<li><code>content_structure: &quot;hierarchical&quot; | &quot;sequential&quot; | &quot;spatial&quot; | &quot;discrete&quot; | &quot;numeric&quot;</code></li>
+<li><code>smashin_scope_score: &lt;integer 0-12&gt;</code> (must be ≥6 for deployment)</li>
+<li><code>heritage_anchor: &lt;boolean&gt;</code> (true if this is a 20%-injection task)</li>
+<li><code>textbook_ref</code>, <code>standard_ref</code>, <code>pisa_ref</code>, <code>blooms_level</code>, <code>language</code>, <code>ai_tier</code>, <code>review_status</code>, <code>prerequisites</code> (all universal §2.5 fields)</li>
+</ul>
+<p><strong>Edge Cases:</strong></p>
+<ul>
+<li><strong>Recovery Mode (§12.1):</strong> when student is &gt;7 days behind, Phase 5 collapses to <em>&quot;Quick flashcard review only (1 min)&quot;</em> — a single pass through the most critical <code>keywords_80_20</code> items as flashcards. Full mnemonic exercises are skipped; consolidation is done at a minimum-viable level to preserve session completion.</li>
+<li><strong>Mythical Boss / Big Boss sessions (§5.6):</strong> Phase 5 is unchanged. These special Phase 6 variants do not alter Phase 5 structure.</li>
+<li><strong>Offline Mode (§12.6):</strong> Phase 5 is fully offline-compatible — all mnemonic exercises are Tier 1 pre-generated content, no live AI required.</li>
+<li><strong>Extended Mode:</strong> 3 exercises instead of 2; the third exercise is always a recall-test variant (items out of original order, or reverse-direction Peg recall).</li>
+</ul>
 <h3>5.6 Phase 6 -- Final Boss: Assessment Gate (5-10 min standard / 10-15 min extended)</h3>
 <p><strong>Purpose:</strong> PISA-calibrated assessment that gates homework completion. The student MUST demonstrate competence at their target PISA level to pass.</p>
 <p><strong>UPDATED 2026-04-07 — 3-Tier AI Boss System.</strong> The Final Boss is no longer a single type. There are now three distinct AI Boss tiers, each serving a different pedagogical purpose. The remaining boss specification (HP system, damage tiers, failure flow, mastery stars) below applies to all three tiers unless explicitly overridden.</p>
