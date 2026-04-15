@@ -193,7 +193,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 **Hard rules:**
 - **Intuition before notation** — no limit or derivative notation introduced before the student understands what it represents
 - The "shrinking interval" visualization is mandatory for introducing derivatives for the first time in a new session context
-- 3 segments × 90-120 seconds each (slightly longer for G10-11)
+- ONE continuous story (5-7 min, slightly longer for G10-11). Arc beats are invisible ingredients, NOT segments or labels.
 - CPA: Concrete (table of instantaneous values) → Pictorial (tangent line on graph, area under curve) → Abstract (formal limit/derivative notation)
 - **No "trust the rule" teaching** — every differentiation rule shown as derivable from the limit definition at least once
 - Checkpoint questions test **conceptual understanding**: "Intervalimizni qisqartirish nima beradi?" — not "Differentiate f(x) = x³" (Phase 3)

@@ -31,7 +31,7 @@ Each homework = Pre-Session warm-up (3-5 min) + 7-phase engine (25-30 min).
 | 0-A | Theme Preview | 2-3 min | 8 components (panels 1-5: 8-10 sentences each; panels 6-8: 5-10 sentences each): summary, better explanation, examples, origin story, personal hook, why it matters, industry use, extra resources. No quiz. Student-paced. |
 | 0-B | Flash Cards | 1-2 min | All formulas/concepts/rules for this chapter. One per card. Reference deck. Ends with "Start my Homework" button. |
 | 1 | Memory Sprint | 2 min | 5-8 warm-up items from CURRENT chapter. Key terms, prerequisites. **3 FORMATS ONLY:** Multiple Choice, True/False, Yes/No/Not Given. Must mix ≥2 formats. **BANNED: fill-in-blank, gap-fill, speed match, drag-and-drop, typing, open-ended.** Tap-only. |
-| 2 | Story Mode | 5-7 min | Flowing narrative using Problem→Struggle→Discovery→Solution as invisible construction blueprint (NO section labels in output). 3 CPA segments + checkpoints. |
+| 2 | Story Mode | 5-7 min | **ONE continuous flowing story** — not segmented, not labeled. Problem→Struggle→Discovery→Solution are INGREDIENTS baked into the story invisibly, NOT output sections. Write one story like a short story in a book. Then 3 IELTS-style comprehension checkpoints. For Math: CPA (Concrete→Pictorial→Abstract) is woven into the narrative, NOT labeled as separate segments. |
 | 3 | Game Breaks | 6-9 min | 3 games × 2-3 min. **≥1 Interactive Catalog, ≥2 Default Pool.** |
 | 4 | Real-Life Challenge | 3-5 min | First-person professional scenario. Modern context. Bloom's L3-L4. (Ijtimoiy Fanlari: Historical Projection instead.) |
 | 5 | Consolidation | 2-3 min | Buzan mnemonic lock: Memory Palace, Peg, Link, Radiant Summary, or Major System. |

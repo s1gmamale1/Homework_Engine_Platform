@@ -337,7 +337,7 @@ Phase 3 requires 3 games: at least 1 Interactive + at least 2 Default. Below are
 Story Mode must deliver comprehensible input through a true narrative arc, not textbook exposition (see [[UNIFIED-Buzan §5.2]]).
 
 - **Role:** Story carries grammar, vocabulary, and comprehension inside meaningful context.
-- **Structure:** 3 segments with comprehension gates between them.
+- **Structure:** ONE continuous flowing story. Arc beats (Problem→Struggle→Discovery→Solution) are invisible ingredients, NOT segments. 3 comprehension checkpoints after the story.
 - **Goal:** Exposure first, then comprehension check, then guided production.
 
 **Good Example:** "Malika is writing a letter to her pen pal in Turkey. Segment A: she reads the incoming letter. Segment B: she plans her response. Segment C: she writes the response."

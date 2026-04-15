@@ -131,7 +131,7 @@ Using your Family + Subject framework knowledge, map the extracted content:
 
 | Content Piece | Maps To |
 |---|---|
-| Core concept explanation | Phase 2 Story Mode (3 segments, CPA) |
+| Core concept explanation | Phase 2 Story Mode (ONE continuous story with CPA woven in) |
 | Key terminology | Phase 0-B Flash Cards + Phase 1 Memory Sprint warm-up |
 | Formulas/rules | Phase 0-B Flash Cards |
 | Practice-worthy skills | Phase 3 Games (pick 3 from subject's mechanic emphasis) |
@@ -194,7 +194,7 @@ Write each phase in order. For each phase, you have THREE layers of instruction:
 | 0-B | Flash card deck | 5-7 cards max (G5). Each = concept WITH visual. 1 Common Mistake card. Ends with [ MENING UY VAZIFAMNI BOSHLASH ]. | Subject Framework §3.4 or §Pre-Session. |
 | Header | Metadata table | Fan, Sinf, Darslik, Til, Bob, Standart kod, PISA target, Bloom's, Boss HP, Vaqt | — |
 | 1 | 5-8 warm-up items + answers | CURRENT chapter. Tap-only: MC, True/False, Yes/No/Not Given. NO typing, NO drag-and-drop, NO open-ended. **MUST mix at least 2 of 3 formats.** Tag each: `[Bloom: L1 \| PISA: L1]`. ≤2 min. | **Follow Subject Framework's format mixing rules + per-format construction recipes.** All-MC = rejected. Each distractor must map to a real student error. |
-| 2 | 3 CPA segments + 3 checkpoints + answers | Use Problem→Struggle→Discovery→Solution as invisible construction blueprint — output must be a flowing story with NO section labels. Concrete→Pictorial→Abstract. Tag checkpoints: `[Bloom: L1-L2 \| PISA: L1-L2]`. | **Follow Subject Framework's Story Mode arc table.** Use the subject's characters, scenarios, and CPA guidance. |
+| 2 | **ONE continuous story** + 3 checkpoints + answers | Write ONE flowing story where the character faces a problem, struggles, discovers the concept, and solves it. Problem→Struggle→Discovery→Solution are INGREDIENTS baked into the narrative — **NOT segments, NOT labels, NOT sections.** Do NOT write "Segment 1", "Muammo:", "Concrete:" etc. CPA for math is woven into the story naturally. 3 IELTS-style comprehension checkpoints after the story. Tag: `[Bloom: L1-L2 \| PISA: L1-L2]`. | **Follow Subject Framework's Story Mode arc table** for subject-specific scenarios, characters, and CPA guidance. The arc table shows INGREDIENTS — use them to build ONE story. |
 | 3 | 3 games × 4-6 items + answers | ≥1 Interactive, ≥2 Default. Tag each: `[Bloom: L1-L3 \| PISA: L1-L2]`. | **Follow Subject Framework's Game Construction Recipes.** For EACH game: build the correct number of items, use the specified tile/node content, apply L1→L3 difficulty progression, include context and interaction detail. Bare numbers with no context = rejected. |
 | 4 | 1 scenario + W5H + 3 questions + answers | Modern professional. First-person. W5H mandatory G5-6. ~30% Wise Status. Tag: `[Bloom: L3-L4 \| PISA: L2-L3]`. (Ijtimoiy: Historical Projection.) | **Follow Subject Framework's professional role list and construction rules.** |
 | 5 | Formula-visual warmup (45s) + 1 Buzan exercise | Select by content type (hierarchical→Radiant, etc.). Explicitly verify SMASHIN' SCOPE. | **Follow Subject Framework's technique selection table.** |

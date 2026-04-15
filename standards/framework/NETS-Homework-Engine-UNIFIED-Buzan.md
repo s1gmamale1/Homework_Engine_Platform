@@ -487,9 +487,10 @@ The continuous PISA scale (e.g., 1.7) is calculated from the student's performan
 |  P1  MEMORY SPRINT -------- 2 min ----- [tap-only, current chapter] |
 |   |    +-- MC / True-False / Yes-No-Not Given (3 formats ONLY)       |
 |   |                                                                  |
-|  P2  STORY MODE ----------- 5-7 min --- [Problem->Struggle->         |
-|   |                                       Discovery->Solution arc]   |
-|   |    +-- IELTS-style comprehension checkpoints                     |
+|  P2  STORY MODE ----------- 5-7 min --- [ONE continuous story]       |
+|   |    +-- Arc beats (Problem/Struggle/Discovery/Solution) are        |
+|   |        INVISIBLE ingredients, NOT output labels or segments       |
+|   |    +-- 3 IELTS-style comprehension checkpoints after story       |
 |   |                                                                  |
 |  P3  GAME BREAKS ---------- 6-9 min --- [interleaved practice]      |
 |   |    +-- Tile Match / Sentence Fill / Why Chain / Mystery Box /    |
@@ -706,7 +707,15 @@ IF accuracy < 60%  -> System routes to remediation BEFORE new content
 | **Discovery** | The new concept is introduced as the missing tool that breaks the deadlock. This is where the textbook content lands. |
 | **Solution** | The character applies the concept and the situation resolves. The student doesn't end a segment hanging — they get the answer, but they EARNED it by following the logic. |
 
-**CRITICAL — Blueprint vs Output:** The four beats above (Problem → Struggle → Discovery → Solution) are a **CONSTRUCTION BLUEPRINT** — they guide how the content creator builds each story segment. The student-facing output must be a **normal, flowing story**. Do NOT insert beat labels ("Muammo:", "Kurash:", "Kashfiyot:", "Yechim:") into the text. Do NOT divide the story into labeled sections. The student reads a cohesive narrative where the beats are invisible scaffolding. If you can see the structure labels in the output, you did it wrong.
+**CRITICAL — Blueprint vs Output:** The four beats above (Problem → Struggle → Discovery → Solution) are **INGREDIENTS for building ONE story** — NOT an output format, NOT section headers, NOT segments. You write ONE continuous flowing story where these beats happen naturally within the narrative. The student-facing output must be a **single, cohesive story** — like a short story in a book. 
+
+**Do NOT:**
+- Insert beat labels ("Muammo:", "Kurash:", "Kashfiyot:", "Yechim:") into the text
+- Divide the story into 3 labeled segments or sections
+- Write "Segment 1: Concrete", "Segment 2: Pictorial", etc.
+- Break the narrative into separate chunks with headers between them
+
+**DO:** Write one flowing story where a character faces a problem, struggles with it, discovers the concept, and solves it. Then ask comprehension questions. That's it. If you can see ANY structural labels, segments, or beat markers in the output — you did it wrong.
 
 **Real-World Examples Preferred:** If the concept has a real historical discovery, real-world event, or documented case study — use that as the spine. Invented scenarios are a fallback, not the default.
 
@@ -731,13 +740,13 @@ Segments that fail the Stranger Test are returned to the content pipeline for re
 | Parameter | Standard Mode | Extended Mode |
 |---|---|---|
 | Duration | 5-7 minutes | ~10 minutes |
-| Segment count | 3 segments x 90 seconds | 3-5 segments x 2-3 minutes |
-| Checkpoint frequency | 1-2 per segment (MUST answer to proceed) | Same |
+| Story | **ONE continuous flowing story** covering the chapter's core concept. NOT segmented. NOT labeled. The 4-beat arc (Problem→Struggle→Discovery→Solution) is baked INTO the story invisibly. For Math: CPA progression (Concrete→Pictorial→Abstract) is woven into the narrative naturally. | Same, longer |
+| Checkpoints | **3 comprehension questions AFTER the story** (or at natural pause points within the narrative). IELTS-style: main idea, inference, compare, purpose, vocabulary in context. Student must answer to proceed. | 3-5 checkpoints |
 | Source | Textbook chapter/topic -- refined into learning script | Same |
-| CPA staging (Maths) | Concrete -> Pictorial -> Abstract | Same |
+| CPA staging (Maths) | Concrete -> Pictorial -> Abstract — woven into the story, NOT as labeled sections | Same |
 | AI Tier | Tier 1 (pre-generated) for content; Tier 2 for dynamic adaptation | Same |
 
-**Content Structure Per Segment:**
+**Content Structure (per story, NOT per segment — the story is ONE piece):**
 
 ```json
 {

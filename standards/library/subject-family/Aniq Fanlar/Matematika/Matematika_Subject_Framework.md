@@ -194,7 +194,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 
 ### 4.2 Story Mode (Phase 2)
 
-**Inherits:** UNIFIED §5.2. 3 segments × 90 sec standard. Required 4-beat arc: Problem → Struggle → Discovery → Solution. Stranger Test mandatory before deployment.
+**Inherits:** UNIFIED §5.2. ONE continuous flowing story (5-7 min). The 4-beat arc (Problem → Struggle → Discovery → Solution) are INGREDIENTS baked into the story — not segments, not labels. 3 comprehension checkpoints after the story. Stranger Test mandatory.
 
 **Matematika story arc — Mathematical Discovery:**
 

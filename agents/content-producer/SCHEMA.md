@@ -49,7 +49,7 @@ A question without a tag is INCOMPLETE. Do not skip this.
 | 0-B Flash Cards | Formulas, concepts, rules, terms ONLY (no practice items) + 1 Common Mistake card | — | — | No | 0 |
 | — | **[ MENING UY VAZIFAMNI BOSHLASH ]** | — | — | — | — |
 | 1 Memory Sprint | 5-8 tap-only items: MC, True/False, Yes/No/Not Given. NO typing. | L1 | L1 | Yes | 100/correct |
-| 2 Story Mode | 3 CPA segments as flowing narrative (use arc as invisible blueprint, NO section labels) + 3 checkpoints | L1-L2 | L1-L2 | Yes | 0 |
+| 2 Story Mode | **ONE continuous story** (arc beats are invisible ingredients, NOT segments or labels) + 3 checkpoints after story | L1-L2 | L1-L2 | Yes | 0 |
 | 3 Game Breaks | 3 games × 4-6 items (≥1 Interactive, ≥2 Default) | L1-L3 | L1-L2 | Yes | 50-400/game |
 | 4 Real-Life Challenge | 1 scenario + W5H + 3 questions + Wise Status (30%) | L3-L4 | L2-L3 | Yes | 100-400 |
 | 5 Consolidation | Buzan technique by content type + SMASHIN' SCOPE check | L1-L2 | — | — | 0 |
