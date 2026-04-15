@@ -207,7 +207,6 @@ Phase 0-A is an 8-panel visual manga preview. For Tabiy Fanlar, the opening must
 | Peer Teaching | G8+: explain photosynthesis/Ohm's law to a classmate | Both |
 | Mystery Box | Cross-chapter: which concept applies? (mitosis vs meiosis) | Both |
 | Connect Four vs AI | Multi-step planning (balancing reactions, kinematics) | QNT, G7+ |
-| Codebreaker | Periodic table recall, formula decoding | QNT |
 
 ### Interactive Catalog Picks (≥1 required per session)
 
@@ -216,7 +215,6 @@ Phase 0-A is an 8-panel visual manga preview. For Tabiy Fanlar, the opening must
 | **Puzzle Lock** | Spatial reasoning — diagram/map reconstruction | Geography maps, biological process ordering |
 | **Reaction Chain** | Sequential science — each correct answer lights the next node | Photosynthesis steps, food chains, reaction mechanisms |
 | **Connect Four vs AI** | Multi-step planning under pressure | Balancing equations, kinematics sequences [QNT] |
-| **Codebreaker** | Deductive reasoning + symbol recall | Periodic table, formula syntax [QNT] |
 | **Memory Match Blitz** | Paired recall under time pressure | Organism↔classification, element↔symbol |
 | **Tic Tac Toe vs AI** | Fast recall with strategic stakes | Taxonomy, formula recall drills |
 

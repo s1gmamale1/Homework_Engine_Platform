@@ -845,7 +845,7 @@ Every narrative segment must have its `keywords_80_20` extracted (the ~20% of wo
 6. CONSTRAINT: No mechanic appears more than 2x in one session
 6b. BUZAN — Cortical Diversity Constraint (SOFT RECOMMENDATION, not a hard gate):
    - Tag each selected game's cortical modality:
-     Verbal/Logical (Sentence Fill, Why Chain, Adaptive Quiz, Codebreaker)
+     Verbal/Logical (Sentence Fill, Why Chain, Adaptive Quiz)
      Visual/Spatial (Tile Match, Memory Palace, Radiant Summary, Puzzle Lock, Memory Sprint)
      Kinesthetic/Motor (Notebook Capture, Movement Breaks)
      Strategic/Decision (Tic Tac Toe, Connect Four, Mystery Box)
@@ -2141,7 +2141,7 @@ The zone-item assignments are generated from the lesson's key concept list:
 **Primary position: Phase 5 — Mustahkamlash (Consolidation)**
 
 **Also suitable:**
-- As alternative to Codebreaker in consolidation slot (when content is list-based rather than vocabulary-based)
+- As alternative in consolidation slot (when content is list-based rather than vocabulary-based)
 
 **Why this position:**
 - Consolidation requires organising disparate items into a coherent structure — exactly what the palace provides

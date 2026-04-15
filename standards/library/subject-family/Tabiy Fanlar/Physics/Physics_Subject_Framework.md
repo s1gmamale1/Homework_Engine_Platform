@@ -259,7 +259,6 @@ Physics inherits the QNT branch of Tabiy Fanlar and the Aniq Fanlar scaffolding 
 | Game | Best Use |
 |---|---|
 | **Connect Four vs AI** | Multi-step derivation planning and strategic calculation sequence |
-| **Codebreaker** | Formula and unit decoding, especially symbol-heavy chapters |
 | **Puzzle Lock** | Derivation step ordering and process reconstruction |
 | **Reaction Chain** | Cause-effect chains such as force -> acceleration -> velocity -> displacement |
 

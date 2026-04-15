@@ -283,7 +283,6 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 **Games to AVOID for Geometriya Advanced:**
 - Speed Sort with numbers — arithmetic, no spatial value
 - Word Ladder — linguistic
-- Codebreaker for number patterns — algebraic, not geometric
 - Why Chain without a diagram — questions without diagrams have no place here
 - Tic Tac Toe — too low-cognitive for G10-11
 

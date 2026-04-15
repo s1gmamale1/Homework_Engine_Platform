@@ -224,14 +224,14 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 | Slot | Role | Primary | Backup |
 |---|---|---|---|
 | **Slot 1** | Visual/pattern warmup | **Tile Match** — formula ↔ visual, fraction ↔ decimal, number ↔ expanded form | Speed Sort — ordering fractions, decimals, large numbers |
-| **Slot 2 (Von Restorff Anchor)** | Reasoning + procedure | **Codebreaker** — "find the rule" sequences, missing number puzzles, ratio patterns | Reaction Chain — step-by-step calculation |
+| **Slot 2 (Von Restorff Anchor)** | Reasoning + procedure | **Reaction Chain** — step-by-step calculation | Speed Sort — ordering fractions, decimals, large numbers |
 | **Slot 3** | Strategy application | **Tic Tac Toe vs AI** — gate moves with math questions | Connect Four vs AI — visual strategy with math gates |
 
 > **Von Restorff Anchor:** Slot 2 preferentially uses content items tagged `outstanding: true` — surprising math facts, unusual visuals, humorous framing. This counters the mid-session attention sag (UNIFIED §5.3 §6c).
 
 **Buzan Cortical Diversity (soft recommendation):** At least 2 of the 3 games should come from different modalities:
 - Tile Match = Visual/Spatial
-- Codebreaker = Verbal/Logical
+- Reaction Chain = Verbal/Logical
 - Tic Tac Toe = Strategic/Decision
 
 **Games to AVOID for Matematika:**
@@ -263,23 +263,6 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 - **Timer:** 2:30 (G5-6 band)
 - **What makes it GOOD:** Student must THINK about which visual matches which formula. Tiles are visually distinct. Matching requires understanding, not pattern matching on text.
 - **What makes it BAD:** Text-only on both sides. Obvious matches (same word repeated). All same difficulty level. Tiles that could match multiple partners.
-
-**Codebreaker (Slot 2) — Pattern Discovery Construction:**
-- **Format:** Student sees a partial sequence or pattern. Each guess attempt is GATED by answering a math question from the chapter. Correct answer reveals the next clue in the pattern. Wrong answer shows the question's correct answer but reveals nothing about the pattern.
-- **Item count:** 4-6 gating questions per pattern sequence
-- **How to build the pattern:**
-  - Choose a NUMBER PATTERN that requires genuine reasoning:
-    - Geometric: 2, 6, 18, 54, ? (×3 rule — student discovers the multiplier)
-    - Gap-fill: 12, ?, 48, 96 (doubling — student finds missing 24)
-    - Ratio: 3:5, 6:10, 9:?, (proportional scaling — student finds 15)
-    - Operation chain: Start 100 → ÷2 → +15 → ×3 → -20 = ? (multi-step)
-  - Pattern must connect to THIS chapter's math concepts
-- **How to build gating questions:**
-  - Each question tests a concept FROM THE CHAPTER (not the pattern itself)
-  - Questions should scaffold toward understanding the pattern's underlying math
-  - Example: If pattern uses multiplication, gating Qs test multiplication concepts
-- **What makes it GOOD:** Pattern requires genuine detective work. Gating questions relate to the pattern's underlying math. Student feels like they're uncovering a rule, not just guessing.
-- **What makes it BAD:** Pattern is obvious from first two numbers. Gating questions are random/unrelated. No conceptual connection between the questions and the pattern.
 
 **Tic Tac Toe vs AI (Slot 3) — Strategy + Practice Construction:**
 - **Format:** 3×3 grid. Student taps desired cell → math question appears → correct = X placed on chosen cell, wrong = X placed on random cell. AI plays optimally after each move. 3 games per session.

@@ -61,7 +61,7 @@ Each mechanic contributes data to the learning curve. Different mechanics measur
 
 ### Type A: Accuracy-Based (Pure Correctness)
 
-**Mechanics:** Memory Sprint, Tile Match, Sentence Fill, Memory Palace, Mystery Box, Reaction Chain, Adaptive Quiz, Connect Four, Codebreaker, Memory Match Blitz, Puzzle Lock, Tic Tac Toe vs AI
+**Mechanics:** Memory Sprint, Tile Match, Sentence Fill, Memory Palace, Mystery Box, Reaction Chain, Adaptive Quiz, Connect Four, Memory Match Blitz, Puzzle Lock, Tic Tac Toe vs AI
 
 **What gets recorded per session:**
 ```

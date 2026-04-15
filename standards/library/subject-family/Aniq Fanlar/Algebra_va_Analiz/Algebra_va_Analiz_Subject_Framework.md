@@ -209,7 +209,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 | Slot | Role | Primary | Backup |
 |---|---|---|---|
 | **Slot 1** | Analytical warmup | **Error Analysis** — find mistake in multi-step differentiation, limit, or series calculation | Worked Examples (Scaffolded Completion) — fill in missing derivation steps |
-| **Slot 2 (Von Restorff Anchor)** | Reasoning + derivation | **Reaction Chain** — sequential calculus derivation; each step must be justified to unlock the next | Codebreaker — identify function from its derivative's behavior |
+| **Slot 2 (Von Restorff Anchor)** | Reasoning + derivation | **Reaction Chain** — sequential calculus derivation; each step must be justified to unlock the next | Worked Examples (Scaffolded Completion) — fill in missing derivation steps |
 | **Slot 3** | Strategy + application | **Connect Four vs AI** — gate each move with function analysis (intervals, critical points, asymptotes) | Why Chain — 3-level Socratic on a calculus concept |
 
 > **Von Restorff Anchor (Slot 2):** Preferentially selects items tagged `outstanding: true` — counter-intuitive calculus results, surprising real-world applications of derivatives.
@@ -277,11 +277,6 @@ At least 2 modalities: Logical + Strategic.
   - Step 4: du/dx = __
   - Step 5: f'(x) = cos(x²) · 2x = 2x·cos(x²)
 - **Blank the REASONING steps (Steps 2-4), not the final answer.**
-
-**Codebreaker (Slot 2 Backup):**
-- **Structure:** 4-6 gating questions + hidden function to identify from its derivative's behavior.
-- **Example:** Student sees: f'(x) > 0 for x < 0, f'(0) = 0, f'(x) < 0 for x > 0. Gating questions test derivative interpretation. Answer: f(x) has a maximum at x = 0 (e.g., f(x) = −x²).
-- **Difficulty:** L1 = identify function type. L2 = identify specific function from derivative clues. L3 = reconstruct function from derivative + integral clues.
 
 **Games to AVOID for Algebra va Analiz:**
 - Tile Match with simple formula-answer pairs — too low-level for G10-11

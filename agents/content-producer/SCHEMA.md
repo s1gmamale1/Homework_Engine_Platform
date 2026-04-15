@@ -126,7 +126,7 @@ in a book. Should be substantial — the main teaching content of the session.}
 {Game names and emojis vary by subject — use the games from the Subject
 Framework's slot priority table. Other game emojis:
   🔗 Reaction Chain | 🧠 Memory Palace | ❌⭕ Tic Tac Toe vs AI |
-  🔴🟡 Connect Four vs AI | 🔓 Puzzle Lock | 🔍 Codebreaker |
+  🔴🟡 Connect Four vs AI | 🔓 Puzzle Lock |
   ⏱️ Speed Sort | 📓 Notebook Capture | ❓ Why Chain }
 
 ---

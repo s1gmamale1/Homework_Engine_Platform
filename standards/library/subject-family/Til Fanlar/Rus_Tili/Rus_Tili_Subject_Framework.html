@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rus tili (Russian Language) — Subject-Specific Framework</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --accent-color: #00f2ff; /* Neon Cyan */
+            --accent-glow: rgba(0, 242, 255, 0.3);
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --border-color: #333;
+            --neon-purple: #bc13fe;
+            --neon-green: #39ff14;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-glow);
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--neon-purple);
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+        }
+
+        .status-bar p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        details {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            margin-right: 15px;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        code {
+            background: #2a2a2a;
+            color: var(--neon-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--header-color);
+        }
+
+        .highlight {
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+
+        .good-example {
+            border-left: 3px solid var(--neon-green);
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #afffa3;
+        }
+
+        .bad-example {
+            border-left: 3px solid #ff3131;
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #ffb1b1;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Rus tili (Russian Language) Framework</h1>
+    
+    <div class="status-bar">
+        <p><strong>Scope:</strong> G5-11, all grades, universal</p>
+        <p><strong>Family:</strong> Til Fanlari (Languages)</p>
+        <p><strong>Parent Docs:</strong> <code>Til Fanlari Family Doc</code> | <code>UNIFIED-Buzan v2.0</code> | <code>Library Framework v0.6</code></p>
+        <p><strong>Last Updated:</strong> April 14, 2026</p>
+    </div>
+
+    <details open>
+        <summary>1. What Rus Tili Teaches</summary>
+        <div class="content">
+            <p>Russian in Uzbekistan is unique, acting as either a <strong>second language (L2)</strong> or a <strong>primary academic language (L1)</strong>.</p>
+            <ul>
+                <li><strong>UZ-stream (L2):</strong> Focus on scaffolding, vocabulary, and grammar acquisition.</li>
+                <li><strong>RU-stream (L1):</strong> Focus on grammar analysis, formal writing, and composition (similar to Ona tili).</li>
+                <li><strong>Stream Detection:</strong> Inspect the <code>{lang}</code> field to determine the production mode.</li>
+                <li><strong>Transformation:</strong> Bridge the gap between dense textbook material and student proficiency using Story Mode and Game Breaks.</li>
+            </ul>
+            <p><strong>Rule:</strong> Determine the stream first. The wrapper must match whether the student uses Russian as L1 or L2.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. Grade-Band Progression</summary>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>UZ-Stream Focus</th>
+                        <th>RU-Stream Focus</th>
+                        <th>Boss Mode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>G5</td>
+                        <td>Basic vocab, simple sentences</td>
+                        <td>Parts of speech, spelling</td>
+                        <td>UZ: Guided fill / RU: ID</td>
+                    </tr>
+                    <tr>
+                        <td>G6</td>
+                        <td>Conversations, tenses</td>
+                        <td>Compound sentences, word formation</td>
+                        <td>UZ: 3-4 sentences / RU: Parse</td>
+                    </tr>
+                    <tr>
+                        <td>G7</td>
+                        <td>Paragraphs, questions</td>
+                        <td>Complex syntax, subordinates</td>
+                        <td>UZ: Short para / RU: Rewrite</td>
+                    </tr>
+                    <tr>
+                        <td>G8</td>
+                        <td>Inferencing, summary</td>
+                        <td>Morphological analysis, style</td>
+                        <td>UZ: Full para / RU: Analytical</td>
+                    </tr>
+                    <tr>
+                        <td>G9</td>
+                        <td>Essay intro, register</td>
+                        <td>Advanced syntax, persuasive</td>
+                        <td>UZ: Structured / RU: Multi-para</td>
+                    </tr>
+                    <tr>
+                        <td>G10</td>
+                        <td>Argumentation, text analysis</td>
+                        <td>Text analysis, register mastery</td>
+                        <td>UZ: Analytical / RU: Essay</td>
+                    </tr>
+                    <tr>
+                        <td>G11</td>
+                        <td>Advanced composition</td>
+                        <td>Literary analysis, academic</td>
+                        <td>UZ: Extended / RU: Extended</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <details>
+        <summary>3. Content Production Rules by Grade Band</summary>
+        <div class="content">
+            <h3>G5-6 (Foundation)</h3>
+            <ul>
+                <li><strong>UZ-Stream:</strong> 8-10 new vocab items.Pattern-based grammar. 50-100 word passages.</li>
+                <li><strong>RU-Stream:</strong> Native-language logic. No scaffolding for everyday words. 80-120 word passages.</li>
+            </ul>
+            <div class="good-example">Good RU Pattern: "The school notice has mistakes. Fix them and explain the rule."</div>
+
+            <h3>G7-9 (Development)</h3>
+            <ul>
+                <li><strong>UZ-Stream:</strong> Reduce translation dependence. Functional grammar in social/school scenarios.</li>
+                <li><strong>RU-Stream:</strong> Deep syntax and morphological analysis. Rewriting tasks (informal -> formal).</li>
+            </ul>
+            <div class="good-example">Good UZ Pattern: "Help a Russian tourist in Samarkand. Identify the need and write a reply."</div>
+
+            <h3>G10-11 (Advanced)</h3>
+            <ul>
+                <li><strong>UZ-Stream:</strong> Formal composition and density. Extended response with clear argument.</li>
+                <li><strong>RU-Stream:</strong> Full rhetorical analysis. Extended analytical writing. Professional roles (critic, speechwriter).</li>
+            </ul>
+        </div>
+    </details>
+
+    <details>
+        <summary>4. Game Mechanics — Rus Tili Specific</summary>
+        <div class="content">
+            <h3>Primary Mechanics by Stream</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mechanic</th>
+                        <th>UZ-Stream Focus</th>
+                        <th>RU-Stream Focus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Flashcards</td>
+                        <td>Vocab reinforcement</td>
+                        <td>Rules/Exceptions only</td>
+                    </tr>
+                    <tr>
+                        <td>Sent. Fill</td>
+                        <td>Contextual grammar</td>
+                        <td>Core mechanic (ID/Fix)</td>
+                    </tr>
+                    <tr>
+                        <td>Listening</td>
+                        <td>Comprehension speed</td>
+                        <td>Not primary (use Dictation)</td>
+                    </tr>
+                    <tr>
+                        <td>Story Mode</td>
+                        <td>Functional scenarios</td>
+                        <td>Editing/Narrative wrap</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Interactive Picks</h3>
+            <ul>
+                <li><strong>Codebreaker:</strong> Perfect for Russian morphology (root/prefix/suffix).</li>
+                <li><strong>Reaction Chain:</strong> Sentence parsing or dialogue flow.</li>
+                <li><strong>Puzzle Lock:</strong> Paragraph reconstruction / coherence.</li>
+                <li><strong>Memory Match Blitz:</strong> UZ: Translation pairs; RU: Rule-Example pairs.</li>
+            </ul>
+            
+            <p><strong>Note:</strong> Skip Notebook Capture and Speed Match (math-focused).</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. Boss Format</summary>
+        <div class="content">
+            <ul>
+                <li><strong>UZ-Stream:</strong> Scaffolded production (Guided -> Prompted -> Free).</li>
+                <li><strong>RU-Stream:</strong> Grammar analysis + Composition (Native level).</li>
+                <li><strong>HP:</strong> G5-8 = 100, G9-11 = 150.</li>
+                <li><strong>Failure framing:</strong> Use TEFCAS (UZ: "Hali emas!", RU: "Eshyo ne vsyo!").</li>
+            </ul>
+            <div class="good-example">Good RU G7-9: "Rewrite the passage in formal register and explain two grammar choices."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>6. Story Mode & Real-Life Challenge</summary>
+        <div class="content">
+            <h3>Story Mode</h3>
+            <ul>
+                <li><strong>UZ G7:</strong> Help a tourist navigate Samarkand and communicate with locals.</li>
+                <li><strong>RU G8:</strong> Act as editor for the school Russian newspaper; fix errors before print.</li>
+            </ul>
+            
+            <h3>Real-Life Challenge</h3>
+            <p>Must include <strong>Role, Audience, and Purpose</strong>.</p>
+            <div class="good-example">UZ G7: "Helping a lost tourist. Write the directions in Russian."</div>
+            <div class="good-example">RU G8: "School newspaper editor. Fix 5 errors and explain corrections."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Technical Rules</summary>
+        <div class="content">
+            <ol>
+                <li><strong>Inheritance:</strong> Til Fanlari family rules + Rus Tili stream filter.</li>
+                <li><strong>Stream Rule:</strong> Inspect <code>{lang}</code> field before production.</li>
+                <li><strong>National Pride:</strong> Inherit ratios/injections from parent docs.</li>
+                <li><strong>Session Structure:</strong> Immutable 7-phase sequence (UNIFIED-Buzan).</li>
+            </ol>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>

@@ -166,7 +166,7 @@ You don't need to read all of these every time — read the ones you're less cer
 ### 📖 READ NOW — Game Mechanic Docs (for your 3 chosen games)
 `standards/system/games/Game_Mechanics_Docs/{NN}_{game}/`
 
-Read the specific game docs for the 3 games you selected. These tell you the exact content format — how to structure items for Tile Match vs Codebreaker vs Reaction Chain, etc.
+Read the specific game docs for the 3 games you selected. These tell you the exact content format — how to structure items for Tile Match vs Reaction Chain, etc.
 
 **Then apply the Subject Framework's Game Construction Recipes on top.** The Game Mechanic Doc tells you the mechanic. The Subject Framework tells you what content goes INTO that mechanic for this subject. You need BOTH. A game item without full context, scenarios, difficulty progression, and interaction detail is incomplete.
 

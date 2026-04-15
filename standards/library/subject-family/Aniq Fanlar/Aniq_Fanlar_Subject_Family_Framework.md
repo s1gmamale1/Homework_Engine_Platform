@@ -208,7 +208,6 @@ Every Aniq Fanlar session ends with Phase 7 Reflection. Structure:
 | Game | Why It Fits Aniq Fanlar | Best For |
 |---|---|---|
 | **Connect Four vs AI** | Multi-step planning — think 2-3 moves ahead | G7+ procedural reasoning, algebra sequences |
-| **Codebreaker** | Deductive reasoning + formula/constant recall | Periodic table, formula syntax, number patterns |
 | **Puzzle Lock (Sliding Tile)** | Spatial reasoning under strategic pressure | Geometry diagrams, coordinate grids, graph reconstruction |
 | **Reaction Chain** | Process sequences — each correct answer lights next node | Order of operations, algorithm flow, step-by-step proofs |
 | **Memory Match Blitz** | Formula-result pair matching under time pressure | Formula recognition, unit conversion pairs |

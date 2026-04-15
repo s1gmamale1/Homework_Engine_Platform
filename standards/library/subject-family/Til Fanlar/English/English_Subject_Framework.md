@@ -247,20 +247,6 @@ English vocabulary is the main bottleneck. Flashcards are the primary retention 
 **Example (G10 — collocation pairs):**
 > "make" ↔ "a decision" | "take" ↔ "responsibility" | "pay" ↔ "attention" | "draw" ↔ "a conclusion" | "raise" ↔ "awareness" | "reach" ↔ "an agreement"
 
-#### Codebreaker (Interactive — spelling/morphology)
-
-**Construction steps:**
-1. Choose a word with meaningful morphological structure
-2. Break into components, provide progressive clues
-3. Student assembles and explains the word formation rule
-
-**Example (G7 — prefix + root + suffix):**
-> Code: "_ _ _ _ _ _ _ _ _ _ _ _ _" (13 letters)
-> Clue 1: "Prefix meaning 'not'" → dis
-> Clue 2: "Root meaning 'to agree'" → agree
-> Clue 3: "Suffix meaning 'state of'" → -ment
-> Answer: "disagreement" = dis + agree + ment
-
 ---
 
 ## 4. Game Mechanics — English-Specific Filtering
@@ -288,7 +274,6 @@ English inherits the Til Fanlari mechanic set, then narrows it further.
 | Game | Best Use |
 |---|---|
 | **Memory Match Blitz** | G5-7 word-translation pairs; G8-11 synonym-antonym or collocation pairs |
-| **Codebreaker** | Spelling patterns, decoding, affixes, pronunciation-linked orthography |
 | **Reaction Chain** | Sentence construction or dialogue sequence, best from G7+ |
 | **Puzzle Lock** | Paragraph reconstruction, text cohesion, best from G9+ |
 

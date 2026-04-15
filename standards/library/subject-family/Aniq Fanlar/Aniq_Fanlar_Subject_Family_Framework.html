@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniq Fanlar — Exact Sciences · Family Documentation</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --accent-color: #00f2ff; /* Neon Cyan */
+            --accent-glow: rgba(0, 242, 255, 0.3);
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --border-color: #333;
+            --neon-purple: #bc13fe;
+            --neon-green: #39ff14;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-glow);
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--neon-purple);
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+        }
+
+        .status-bar p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        details {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            margin-right: 15px;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        code {
+            background: #2a2a2a;
+            color: var(--neon-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--header-color);
+        }
+
+        .highlight {
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+
+        .good-example {
+            border-left: 3px solid var(--neon-green);
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #afffa3;
+        }
+
+        .bad-example {
+            border-left: 3px solid #ff3131;
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #ffb1b1;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Aniq Fanlar — Exact Sciences</h1>
+    
+    <div class="status-bar">
+        <p><strong>Status:</strong> Family Documentation Guide (Filter/Adapter)</p>
+        <p><strong>Target Audience:</strong> Subject-Specific Content Producers</p>
+        <p><strong>Role:</strong> Acts as a bridge between core standards and individual subject frameworks.</p>
+        <p><strong>Parent Documents:</strong> <code>UNIFIED-Buzan v2.0</code> | <code>Library Framework v0.5</code></p>
+    </div>
+
+    <details open>
+        <summary>1. What Is This Family</summary>
+        <div class="content">
+            <p>"Aniq" translates to precise, exact, and derivable. This family is defined by its reliance on formal reasoning, logical proofs, and quantitative accuracy. Unlike linguistic or social sciences, knowledge in this family is not "interpreted"—it is derived from first principles and laws.</p>
+            <p><strong>What it teaches:</strong> Formal reasoning through definitions, logical derivations, and practical applications of exact laws.</p>
+            <p><strong>What it focuses on:</strong></p>
+            <ul>
+                <li>Calculations and arithmetic fluency.</li>
+                <li>Conceptual understanding of abstract laws.</li>
+                <li>Formula manipulation and transformation.</li>
+                <li>Multi-step derivation and proof sequences.</li>
+                <li>Spatial and algorithmic thinking.</li>
+                <li>Critical Thinking</li>
+            </ul>
+            <p><strong>What it is NOT about:</strong> Rote memorization of long texts, narrative interpretation, or free-form creative expression.</p>
+            <p><strong>Cognitive Demand Profile:</strong> Calculation & Execution (1), Concept Understanding (2), Formula Manipulation (3), Error Detection (4), Spatial Reasoning (5), Algorithmic Thinking (6).</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. Subjects in This Family</summary>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>UZ Name</th>
+                        <th>RU Name</th>
+                        <th>Grades</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mathematics</strong></td>
+                        <td>Matematika</td>
+                        <td>Математика</td>
+                        <td>G5-6</td>
+                        <td>Unified foundation; splits at G7.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Algebra</strong></td>
+                        <td>Algebra</td>
+                        <td>Алгебра</td>
+                        <td>G7-9</td>
+                        <td>Specialized focus on variables/functions.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Geometry</strong></td>
+                        <td>Geometriya</td>
+                        <td>Геометрия</td>
+                        <td>G7-9</td>
+                        <td>Spatial and deductive reasoning.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Algebra & Analysis</strong></td>
+                        <td>Algebra va analiz asoslari</td>
+                        <td>Алгебра и начала анализа</td>
+                        <td>G10-11</td>
+                        <td>Advanced calculus/analysis concepts.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Geometry (Adv)</strong></td>
+                        <td>Geometriya</td>
+                        <td>Геометрия</td>
+                        <td>G10-11</td>
+                        <td>Advanced spatial proofs.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <details>
+        <summary>3. What This Family Focuses On</summary>
+        <div class="content">
+            <ul>
+                <li><strong>Concept BEFORE Procedure:</strong> Understand <em>why</em> before executing 10 times.</li>
+                <li><strong>CPA Progression is MANDATORY:</strong> Concrete → Pictorial → Abstract stages.</li>
+                <li><strong>Worked Examples:</strong> Scaffolded solutions where students fill gaps.</li>
+                <li><strong>Error Detection:</strong> Diagnosing deliberately incorrect solutions.</li>
+                <li><strong>Dual Coding:</strong> Formula paired with verbal/conceptual explanation.</li>
+                <li><strong>Interleaved Practice:</strong> Mix different problem types to prevent pattern matching.</li>
+            </ul>
+            <p><strong>Do NOT Focus On:</strong> Free-form writing, Subjective interpretation, Opinion-based debates.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>4. Best Methods & Games</summary>
+        <div class="content">
+            <h3>Primary Mechanics</h3>
+            
+            <p><strong>Tile Match (Formula Assembly)</strong></p>
+            <div class="good-example">Good: Assemble quadratic formula by dragging components.</div>
+            <div class="bad-example">Bad: Match "Algebra" to dictionary definition.</div>
+
+            <p><strong>Notebook Capture (Handwritten Calculations)</strong></p>
+            <div class="good-example">Good: Solve system of equations on paper and upload photo.</div>
+            <div class="bad-example">Bad: Write definition of a triangle.</div>
+
+            <p><strong>Error Analysis (Metacognitive Fix)</strong></p>
+            <div class="good-example">Good: Find error in <code>2+3*5 = 25</code> and state rule.</div>
+
+            <h3>Interactive Picks</h3>
+            <table>
+                <tr>
+                    <th>Game</th>
+                    <th>Why It Fits</th>
+                    <th>Best For</th>
+                </tr>
+                <tr>
+                    <td>Connect Four vs AI</td>
+                    <td>Multi-step planning</td>
+                    <td>Algebra sequences</td>
+                </tr>
+                <tr>
+                    <td>Codebreaker</td>
+                    <td>Deductive reasoning</td>
+                    <td>Formula syntax</td>
+                </tr>
+                <tr>
+                    <td>Puzzle Lock</td>
+                    <td>Spatial reasoning</td>
+                    <td>Geometry diagrams</td>
+                </tr>
+                <tr>
+                    <td>Reaction Chain</td>
+                    <td>Process sequences</td>
+                    <td>Algorithm flow</td>
+                </tr>
+            </table>
+
+            <h3>Buzan Alternatives (Phase 5)</h3>
+            <ul>
+                <li><strong>Peg System:</strong> Number-Shape associations for math rules.</li>
+                <li><strong>Radiant Summary:</strong> Hierarchical mind-maps for shapes/numbers.</li>
+                <li><strong>Link System:</strong> Sequential processes (e.g., long division).</li>
+            </ul>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. Boss Format for Aniq Fanlar</summary>
+        <div class="content">
+            <ul>
+                <li><strong>Format:</strong> Open numerical or derivation-based problems.</li>
+                <li><strong>No Multiple Choice:</strong> Mandatory for G6+. G5 allows max 30%.</li>
+                <li><strong>Partial Credit:</strong> Points for correct logic despite arithmetic slips.</li>
+                <li><strong>Submissions:</strong> Notebook Capture preferred.</li>
+                <li><strong>TEFCAS UI:</strong> Mandatory "Hali emas" (Not yet) framing and TEFCAS terms.</li>
+            </ul>
+            <div class="good-example"><strong>Good Boss:</strong> "Calculate x for a fountain path with given area. Show working."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>6. Narrative Adaptation</summary>
+        <div class="content">
+            <h3>Story Mode (Phase 2)</h3>
+            <p><strong>CPA Flow:</strong> Segment A (Physical) → Segment B (Pictorial) → Segment C (Abstract).</p>
+            <div class="good-example">Example: Akmal counts apples → draws bar model → applies formula.</div>
+
+            <h3>Real-Life Challenge (Phase 4)</h3>
+            <p><strong>Role:</strong> Student is the expert: Architect, Banker, Lead Engineer.</p>
+            <div class="good-example">Example: "Calculate materials for a new school in Bukhara."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Technical Rules</summary>
+        <div class="content">
+            <ol>
+                <li><strong>Inheritance:</strong> National Pride rules (55/45 ratio) apply.</li>
+                <li><strong>Dual-Catalog:</strong> Phase 3 must use ≥1 Interactive and ≥2 Default mechanics.</li>
+            </ol>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>

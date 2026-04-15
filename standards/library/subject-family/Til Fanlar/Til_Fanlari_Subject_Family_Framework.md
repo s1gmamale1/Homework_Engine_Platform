@@ -126,7 +126,6 @@ Content producers must prioritize these cognitive anchors:
 
 | Game | Why It Fits Til Fanlari | Best For |
 |---|---|---|
-| **Codebreaker** | Decoding spelling patterns or word structures | Orthography, affixes, difficult spellings |
 | **Memory Match Blitz** | Fast pair retrieval under time pressure | Word-translation pairs, synonym-antonym sets |
 | **Reaction Chain** | Builds sequential sentence or dialogue flow | Sentence construction, narrative order |
 | **Puzzle Lock** | Reconstructs text from fragments | Paragraph cohesion, text restoration, sequencing |
@@ -274,29 +273,6 @@ Phase 3 requires 3 games: at least 1 Interactive + at least 2 Default. Below are
 
 **Example (Russian vocabulary — UZ-stream G6):**
 > Front: "здание" | Back: "bino — A large building. 'Школа — это большое здание.'" + image of school building
-
-#### Codebreaker (Interactive — spelling/morphology patterns)
-
-**What you build:** A word or phrase that must be decoded by identifying spelling patterns, morphological components, or hidden rules.
-
-**Construction steps:**
-1. Choose a word with rich morphological structure (root + prefixes/suffixes)
-2. Break it into components. Each component is a "code" the student must crack
-3. Provide 3-4 clues that progressively reveal the structure
-4. Final answer: the student assembles the complete word and explains the pattern
-
-**Example (Uzbek morphology — G7):**
-> Code: "_ _ _ _ _ _ _ _ _ _" (10 letters)
-> Clue 1: "Ildiz — 'o'qi' (read)" → o'qi
-> Clue 2: "Bu qo'shimcha ishni bajaruvchi odamni bildiradi" → -tuvchi
-> Answer: "o'qituvchi" (teacher) = o'qi + t + uvchi
-> Student explains: root "o'qi" + causative "t" + agent suffix "uvchi"
-
-**Example (English spelling — G6):**
-> Code: "_ _ _ _ _ _ _ _ _ _" (10 letters)
-> Clue 1: "Opposite of 'happy'" → un + happy
-> Clue 2: "Add a suffix meaning 'state of being'" → -ness
-> Answer: "unhappiness" = un + happy + ness
 
 ---
 

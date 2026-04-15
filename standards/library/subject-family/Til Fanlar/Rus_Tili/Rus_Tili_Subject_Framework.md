@@ -264,26 +264,6 @@ Rus tili uses 3 games per session: at least 1 Interactive + 2 Default. Priority 
 > Left: "семья" → Right: "oila"
 > Left: "город" → Right: "shahar"
 
-#### Codebreaker (Interactive — Russian morphology)
-
-Russian has rich morphology: prefixes, roots, suffixes, endings. Codebreaker works for decomposition.
-
-**Construction steps:**
-1. Choose a word with prefix + root + suffix + ending structure
-2. Break into components with progressive clues
-3. Student assembles and explains each morpheme's function
-
-**Example (G7 — word formation):**
-> Код: "_ _ _ _ _ _ _ _ _ _" (10 букв)
-> Подсказка 1: "Приставка, означающая 'заново'" → пере
-> Подсказка 2: "Корень, связанный с 'писать'" → пис
-> Подсказка 3: "Суффикс действующего лица" → -а + -тель
-> Ответ: "переписатель" (нет, правильнее) → "переписать" = пере + пис + а + ть
-> (Или более подходящий пример:)
-
-**Example (G8 — morphological decomposition):**
-> Код: "_ _ _ _ _ _ _ _ _ _ _ _ _" (13 букв)
-> Подсказка 1: "Приставка, означающая 'без'" → без
 > Подсказка 2: "Корень 'ответ'" → ответ
 > Подсказка 3: "Суффикс прилагательного" → -ственн
 > Подсказка 4: "Окончание" → -ый
@@ -327,14 +307,12 @@ Russian inherits Til Fanlari mechanics, but the primary set changes by stream.
 ### Both Streams
 - **Dictation** works well for spelling and punctuation accuracy.
 - **Memory Palace** works for grammar rule hierarchies and exception clusters.
-- **Codebreaker** fits Russian morphology well because decomposition is meaningful and teachable.
 
 ### Interactive Picks
 
 | Game | Best Use |
 |---|---|
 | **Memory Match Blitz** | UZ: word-translation pairs; RU: rule-example pairs |
-| **Codebreaker** | Word decomposition, prefix-root-suffix patterns |
 | **Reaction Chain** | Sentence parsing or dialogue sequence |
 | **Puzzle Lock** | Paragraph reconstruction and coherence work |
 

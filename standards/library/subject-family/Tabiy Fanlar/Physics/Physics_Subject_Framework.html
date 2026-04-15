@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics (Fizika) — Subject-Specific Framework</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --accent-color: #00f2ff;
+            --accent-glow: rgba(0, 242, 255, 0.3);
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --border-color: #333;
+            --neon-purple: #bc13fe;
+            --neon-green: #39ff14;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-glow);
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--neon-purple);
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+        }
+
+        .status-bar p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        details {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            margin-right: 15px;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        code {
+            background: #2a2a2a;
+            color: var(--neon-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--header-color);
+        }
+
+        .highlight {
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+
+        .good-example {
+            border-left: 3px solid var(--neon-green);
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #afffa3;
+        }
+
+        .bad-example {
+            border-left: 3px solid #ff3131;
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #ffb1b1;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Physics (Fizika) Framework</h1>
+
+    <div class="status-bar">
+        <p><strong>Scope:</strong> G7-11, all grades, universal</p>
+        <p><strong>Family:</strong> Tabiy Fanlar (Natural Sciences)</p>
+        <p><strong>Branch:</strong> QNT (Quantitative)</p>
+        <p><strong>Parent Docs:</strong> <code>Tabiy Fanlar Family Doc</code> | <code>Aniq Fanlar Family Doc</code> | <code>UNIFIED-Buzan v2.0</code> | <code>Library Framework v0.6</code></p>
+        <p><strong>Last Updated:</strong> April 14, 2026</p>
+    </div>
+
+    <details open>
+        <summary>1. What Physics Teaches</summary>
+        <div class="content">
+            <p>Physics in NETS is the subject where <strong>math meets reality</strong>. Formulas are models of motion, force, energy, electricity, waves, heat, and matter in the physical world.</p>
+            <ul>
+                <li><strong>Bidirectional Thinking:</strong> Students must go <strong>real world -&gt; formula</strong> and <strong>formula -&gt; real world</strong>.</li>
+                <li><strong>QNT Heritage:</strong> Physics inherits <strong>CPA progression</strong>, <strong>Worked Examples</strong>, and <strong>Error Analysis</strong> from its Aniq Fanlar origins.</li>
+                <li><strong>Experimental Logic:</strong> Observe -&gt; hypothesize -&gt; model -&gt; test -&gt; predict.</li>
+                <li><strong>Critical Debugging:</strong> Students must find where a derivation fails, not just compare final answers.</li>
+                <li><strong>Formula Density:</strong> Chapters often add 3-8 formulas that must be memorized and applied in the right conditions.</li>
+                <li><strong>Units Matter:</strong> A number without correct units is not a complete physics answer.</li>
+                <li><strong>Diagrams Are Core:</strong> Force vectors, circuits, rays, and waves must be drawn by the student.</li>
+                <li><strong>Transformation:</strong> NETS turns textbook formulas from given facts into discovered tools with physical meaning.</li>
+            </ul>
+            <p><strong>Core Rule:</strong> Every new formula should feel discovered through physical context, not dropped in from nowhere.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. Grade-Band Progression</summary>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>Focus</th>
+                        <th>Key Content</th>
+                        <th>Production Level</th>
+                        <th>Boss Mode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>G7</td>
+                        <td>Mechanics basics</td>
+                        <td>Speed, distance, time, Newton's laws, simple machines</td>
+                        <td>Prompted 2-step solving + diagrams</td>
+                        <td>Derivation + diagram</td>
+                    </tr>
+                    <tr>
+                        <td>G8</td>
+                        <td>Energy / Pressure / Heat</td>
+                        <td>Conservation, thermal expansion, fluid pressure</td>
+                        <td>Prompted -&gt; Free derivations</td>
+                        <td>Derive + explain meaning</td>
+                    </tr>
+                    <tr>
+                        <td>G9</td>
+                        <td>Electricity / Waves</td>
+                        <td>Ohm's law, circuits, sound, light</td>
+                        <td>Free derivations + circuit analysis</td>
+                        <td>Circuit design / analysis</td>
+                    </tr>
+                    <tr>
+                        <td>G10</td>
+                        <td>Advanced mechanics</td>
+                        <td>Kinematics, momentum, gas laws</td>
+                        <td>Multi-step + unit analysis</td>
+                        <td>Complex derivation + debugging</td>
+                    </tr>
+                    <tr>
+                        <td>G11</td>
+                        <td>Nuclear / Astrophysics</td>
+                        <td>Radioactivity, atomic models, orbital mechanics</td>
+                        <td>Independent derivation + analysis</td>
+                        <td>Derive + apply + defend</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <details>
+        <summary>3. Content Production Rules by Grade Band</summary>
+        <div class="content">
+            <h3>G7-8 (Foundation)</h3>
+            <ul>
+                <li>3-5 new formulas per session maximum.</li>
+                <li>Every formula must follow <strong>CPA: Concrete -&gt; Pictorial -&gt; Abstract</strong>.</li>
+                <li>Worked Examples use the <strong>completion effect</strong>.</li>
+                <li>Error Analysis appears at least every 2 sessions.</li>
+                <li>Every answer must include <strong>correct units</strong>.</li>
+                <li>Notebook Capture required for force diagrams, motion sketches, and simple machines.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "A trolley rolls down a ramp. Draw the motion situation, identify known values, then write the equation."</div>
+            <div class="bad-example">Bad Pattern: "Memorize these formulas and solve 20 similar exercises."</div>
+
+            <h3>G9-10 (Development)</h3>
+            <ul>
+                <li>5-8 formulas per session when the chapter supports it.</li>
+                <li>Circuit diagrams are mandatory in electricity units.</li>
+                <li>Dimensional analysis is used as a verification tool.</li>
+                <li>Error Analysis should appear every session.</li>
+                <li>Require diagram + formula + physical interpretation together.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "A room's lighting circuit keeps overheating. Draw it, calculate total resistance, and explain the heat."</div>
+            <div class="bad-example">Bad Pattern: "State Ohm's law and define current, voltage, and resistance."</div>
+
+            <h3>G10-11 (Advanced)</h3>
+            <ul>
+                <li>Require full multi-step derivations from first principles where appropriate.</li>
+                <li>Use combined-formula problems with 2-3 equations in sequence.</li>
+                <li>Include long-form Error Analysis for 5+ step derivations.</li>
+                <li>Expect modeling from scenario to equation, not just substitution.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "Check whether a satellite can maintain orbit at this altitude. Build the relationship, derive the speed, and verify units."</div>
+            <div class="bad-example">Bad Pattern: "List all formulas from the chapter in your notebook."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>4. Game Mechanics — Physics Specific</summary>
+        <div class="content">
+            <h3>Primary Mechanics</h3>
+            <ul>
+                <li><strong>Worked Examples with Completion:</strong> Mandatory every session.</li>
+                <li><strong>Error Analysis:</strong> Primary, not secondary.</li>
+                <li><strong>Tile Match:</strong> Formula assembly and unit matching.</li>
+                <li><strong>Notebook Capture:</strong> Force diagrams, circuits, ray paths, wave sketches.</li>
+                <li><strong>Speed Match:</strong> Fast formula recall after concepts are taught.</li>
+                <li><strong>CPA Progression:</strong> Mandatory for every new formula.</li>
+            </ul>
+
+            <div class="good-example">Good Worked Example: "Step 1: <code>F = ma</code>. Step 2: <code>F = 5 kg x ___</code>. Step 3: <code>F = ___ N</code>."</div>
+            <div class="good-example">Good Error Analysis: "A student calculated <code>v = 10 m / 2 s = 20 m/s</code>. Find the error and correct it."</div>
+            <div class="good-example">Good Notebook Capture: "Draw the free-body diagram for a block on an incline. Label all vectors."</div>
+            <div class="bad-example">Bad Pattern: "Write Newton's 3 laws."</div>
+
+            <h3>Interactive Picks</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Game</th>
+                        <th>Best Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Connect Four vs AI</td>
+                        <td>Multi-step derivation planning</td>
+                    </tr>
+                    <tr>
+                        <td>Codebreaker</td>
+                        <td>Formula and unit decoding</td>
+                    </tr>
+                    <tr>
+                        <td>Puzzle Lock</td>
+                        <td>Derivation step ordering</td>
+                    </tr>
+                    <tr>
+                        <td>Reaction Chain</td>
+                        <td>Force -&gt; acceleration -&gt; velocity -&gt; displacement chains</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Phase 5 Buzan Options</h3>
+            <p><strong>Peg System:</strong> formula recall. <strong>Radiant Summary:</strong> mechanics / energy hierarchies. <strong>Link System:</strong> derivation sequences. <strong>Memory Palace:</strong> lab and formula families.</p>
+
+            <p><strong>Note:</strong> Skip Word Ladder, Listening/Dictation, and Creative Lab as core Physics mechanics.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. Boss Format</summary>
+        <div class="content">
+            <p><strong>QNT Branch:</strong> Show-the-derivation + diagram + unit verification + physical interpretation.</p>
+            <ul>
+                <li><strong>G7-8:</strong> Multi-step derivation with hand-drawn force or motion diagram.</li>
+                <li><strong>G9-10:</strong> Circuit or system analysis with calculation and diagram.</li>
+                <li><strong>G11:</strong> Extended derivation with real-world application and defended reasoning.</li>
+                <li><strong>Notebook Capture:</strong> Required in every Boss session.</li>
+                <li><strong>Failure:</strong> Use TEFCAS framing ("Hali emas!").</li>
+            </ul>
+            <div class="good-example">Good Boss (G11): "A satellite orbits Earth at 400 km altitude. Derive its orbital velocity, verify units, and explain the result."</div>
+            <div class="bad-example">Bad Boss: "What is Newton's second law?"</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>6. Story Mode & Real-Life Challenge</summary>
+        <div class="content">
+            <h3>Story Mode</h3>
+            <p>Must follow <strong>CPA discovery flow</strong>: <strong>real phenomenon -&gt; diagram/model -&gt; equation/derivation</strong>.</p>
+            <div class="good-example">Good Example: "Engineers at Afrosiyob high-speed rail need braking distance. Observe the train, draw the motion diagram, then derive with <code>v^2 = u^2 + 2as</code>."</div>
+            <div class="bad-example">Bad Example: "The formula for braking distance is given below. Solve 5 problems."</div>
+
+            <h3>Real-Life Challenge</h3>
+            <ul>
+                <li><strong>Bosh muhandis:</strong> Playground slide safety and speed calculations.</li>
+                <li><strong>Energetika tahlilchi:</strong> Electrical load and efficiency scenarios.</li>
+                <li><strong>Eksperimental fizik:</strong> Build equations from measured lab conditions.</li>
+                <li><strong>Yadro fizikasi mutaxassisi:</strong> High-level orbital or atomic analysis.</li>
+            </ul>
+            <p><strong>Uzbek anchors:</strong> Afrosiyob rail, Navoi Solar Plant, Tashkent metro, Charvak dam.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Technical Rules</summary>
+        <div class="content">
+            <ol>
+                <li><strong>Inheritance:</strong> Tabiy Fanlar family rules + QNT filter + Aniq Fanlar carryovers.</li>
+                <li><strong>Starts at G7:</strong> No G5-6 production patterns.</li>
+                <li><strong>CPA:</strong> Mandatory for every new formula.</li>
+                <li><strong>Error Analysis:</strong> Primary and frequent.</li>
+                <li><strong>Bidirectional Thinking:</strong> Real world -&gt; formula and formula -&gt; real world every session.</li>
+                <li><strong>Units:</strong> Every numerical answer needs correct units and, where needed, dimensional verification.</li>
+                <li><strong>Diagrams:</strong> Notebook Capture in most sessions and every Boss.</li>
+                <li><strong>National Pride:</strong> Inherit parent ratios and Uzbek-context engineering anchors.</li>
+            </ol>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>

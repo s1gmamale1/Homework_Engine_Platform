@@ -245,7 +245,6 @@ Chemistry inherits QNT mechanics from Tabiy Fanlar and Aniq Fanlar, but it appli
 
 | Game | Best Use |
 |---|---|
-| **Codebreaker** | Element and compound decoding from symbols |
 | **Reaction Chain** | Reactants -> intermediates -> products |
 | **Connect Four vs AI** | Multi-step stoichiometry planning and decision sequence |
 | **Puzzle Lock** | Lab procedure ordering, synthesis sequence, reaction steps |

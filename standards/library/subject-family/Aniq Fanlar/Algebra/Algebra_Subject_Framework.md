@@ -205,7 +205,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 
 | Slot | Role | Primary | Backup |
 |---|---|---|---|
-| **Slot 1** | Symbolic fluency warmup | **Tile Match** — equivalent expressions, equation steps ↔ justifications, graphs ↔ equations | Codebreaker — find the algebraic rule in a sequence |
+| **Slot 1** | Symbolic fluency warmup | **Tile Match** — equivalent expressions, equation steps ↔ justifications, graphs ↔ equations | Speed Sort — ordering expressions, simplifying radicals |
 | **Slot 2 (Von Restorff Anchor)** | Procedure + reasoning | **Worked Examples (Scaffolded Completion)** — fill in missing steps of algebraic solution | Error Analysis — find and fix the bug in a multi-step solution |
 | **Slot 3** | Strategy application | **Connect Four vs AI** — gate each placement with equation solving or expression simplification | Reaction Chain — sequential algebraic steps (each step unlocks the next) |
 
@@ -270,11 +270,6 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
   - Node 5: *"2x + 1 = 11. Bu tenglamaning grafigida y-kesish nuqtasi qayerda?"* → Answer: (0, 1)
   - Node 6: *"Grafik chiziqli. Burchak koeffitsienti (gradient) nechaga teng?"* → Answer: 2
 - **Bad chain:** Unrelated questions with no logical flow between nodes.
-
-**Codebreaker (Slot 1 Backup):**
-- **Structure:** 4-6 gating questions + hidden algebraic pattern to crack.
-- **Example:** Hidden rule is `f(n) = 2n + 3`. Student sees outputs: f(1)=5, f(2)=7, f(3)=?. Gating questions test prerequisite skills. After answering, student guesses the rule.
-- **Difficulty:** L1 = linear pattern. L2 = quadratic. L3 = piecewise or conditional.
 
 **Special: Why Chain for Algebra (Secondary mechanic, G6+):**
 Cap at 3 levels for G7-8, 3 levels for G9 (UNIFIED §Why Chain: Exact Sciences secondary, 3 levels G6+).

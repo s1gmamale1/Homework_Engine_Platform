@@ -209,7 +209,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 | Slot | Role | Primary | Backup |
 |---|---|---|---|
 | **Slot 1** | Spatial reasoning warmup | **Puzzle Lock (Sliding Tile)** — reconstruct a geometric diagram, complete a shape, assemble proof from pieces | Mystery Box — identify shape from surface area or property clues |
-| **Slot 2 (Von Restorff Anchor)** | Theorem application | **Tile Match** — theorem name ↔ diagram, shape ↔ properties, formula ↔ figure | Codebreaker — identify which theorem applies to a configuration |
+| **Slot 2 (Von Restorff Anchor)** | Theorem application | **Tile Match** — theorem name ↔ diagram, shape ↔ properties, formula ↔ figure | Mystery Box — identify shape from surface area or property clues |
 | **Slot 3** | Proof and strategy | **Notebook Capture** — student draws the figure, labels it, solves, uploads photo | Reaction Chain — sequential proof steps (each step unlocks the next) |
 
 > **Von Restorff Anchor (Slot 2):** Preferentially selects items tagged `outstanding: true` — surprising theorems, unexpected relationships, architectural photographs.
@@ -271,11 +271,6 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
   - Node 5: *"∠1 = ∠A va ∠2 = ∠C bo'lgani uchun, ∠A + ∠B + ∠C = ?"* → Answer: "180°"
   - Node 6: *"Biz nima isbotladik?"* → Answer: "Uchburchak burchaklari yig'indisi 180°"
 - **Bad chain:** Each node is an unrelated geometry fact (no logical flow).
-
-**Codebreaker (Slot 2 Backup):**
-- **Structure:** 4-6 gating questions about geometric properties + hidden theorem/shape to identify.
-- **Example:** Student sees: "Shape has 4 sides, all equal, angles NOT all 90°." Gating questions test angle properties. Answer: Rhombus.
-- **Difficulty:** L1 = identify shape from properties. L2 = identify theorem from consequences. L3 = identify configuration from measurements.
 
 **Games to AVOID for Geometriya:**
 - Worked Examples completion without diagrams — text-only worked examples don't work in geometry

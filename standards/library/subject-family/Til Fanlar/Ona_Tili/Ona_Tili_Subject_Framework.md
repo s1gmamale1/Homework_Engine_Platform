@@ -226,31 +226,6 @@ Grammar must always be tested in context. Sentence Fill is the core mechanic.
 > Left: "Sabab ergash gap" → Right: "Havo issiq bo'lgani uchun"
 > Left: "Shart ergash gap" → Right: "Agar yomg'ir yog'sa"
 
-#### Codebreaker (Interactive — MORPHOLOGY PRIMARY for Ona Tili)
-
-Uzbek morphology is agglutinative — suffixes stack. Codebreaker is ideal for decomposition.
-
-**Construction steps:**
-1. Choose a word with 2-4 morphological layers (root + suffixes)
-2. Break into components. Each component is a code element
-3. Provide 3-4 progressive clues
-4. Student assembles the word and explains suffix function
-
-**Example (G6 — basic morphology):**
-> Kod: "_ _ _ _ _ _ _ _ _ _ _" (11 harf)
-> Izoh 1: "Ildiz — 'o'qi' (read)" → o'qi
-> Izoh 2: "Orttirma nisbat qo'shimchasi" → -t
-> Izoh 3: "Ish bajaruvchi shaxsni bildiruvchi qo'shimcha" → -uvchi
-> Javob: "o'qituvchi" = o'qi + t + uvchi (ildiz + orttirma + yasovchi)
-
-**Example (G9 — complex morphology):**
-> Kod: "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" (18 harf)
-> Izoh 1: "Ildiz — 'yoz' (write)" → yoz
-> Izoh 2: "Ish bajaruvchi" → -uvchi
-> Izoh 3: "Ko'plik qo'shimchasi" → -lar
-> Izoh 4: "Egalik qo'shimchasi (biz)" → -imiz
-> Javob: "yozuvchilarimiz" = yoz + uvchi + lar + imiz
-
 #### Reaction Chain (Interactive — sentence parsing sequence)
 
 **Construction steps:**
@@ -306,7 +281,6 @@ Ona tili inherits the Til Fanlari set, but the filter changes because this is a 
 
 | Game | Best Use |
 |---|---|
-| **Codebreaker** | Word decomposition: root + suffix + suffix = meaning shift |
 | **Reaction Chain** | Sentence parsing sequence: subject -> predicate -> object -> modifiers |
 | **Puzzle Lock** | Paragraph or text reconstruction from fragments |
 | **Memory Match Blitz** | Grammar rule pair: rule name <-> example sentence |
