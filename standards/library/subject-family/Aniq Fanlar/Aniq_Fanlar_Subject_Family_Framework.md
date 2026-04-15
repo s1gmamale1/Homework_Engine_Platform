@@ -107,6 +107,102 @@ Content producers must prioritize these cognitive anchors:
 - **Radiant Summary:** Hierarchical mind-maps for classifying number systems or shapes.
 - **Link System:** For sequential processes (e.g., steps of long division).
 
+### Phase 0-A Panel Construction Guide (Family-Level Patterns)
+
+All Aniq Fanlar subjects inherit these construction principles. Subject frameworks override specifics.
+
+| Panel | Construction Recipe | Aniq Fanlar Pattern |
+|---|---|---|
+| **Panel 1: Structural Scan** | Show the chapter's concept tree. Bold-chip the 3-5 key terms. Use an equation tree or formula map — NOT a paragraph of text. | Visual-first: always open with a diagram, formula tree, or concept map. Text is secondary. |
+| **Panel 2: Key Vocabulary** | List 4-6 terms from the current chapter with Uzbek + formal definition. Each term gets a symbolic example: `koeffitsient → 3x dagi 3`. | CPA principle: show Concrete example → Pictorial icon → Abstract symbol for each term. |
+| **Panel 3: Prior Knowledge Bridge** | State 1-2 prerequisite facts the student already knows. Frame as: *"Siz allaqachon [X] ni bilasiz. Bugun [Y] ga o'tamiz."* | Connect to the last successfully completed session's core concept. |
+| **Panel 4: Chapter Preview** | 2-3 sentence summary of WHAT this chapter covers. No teaching — just orientation. *"Bu bobda Siz [topic] ni o'rganasiz."* | For math: state the problem TYPE (equation, proof, calculation) before any content. |
+| **Panel 5: Personal Hook + BOST** | Relatable scenario (phone data, startup costs, building design). End with BOST Prime: *"[Topic] haqida nimalarni bilasiz?"* Student types goal → stored for Phase 7. | Hook must connect math to student's daily life. No abstract motivations. |
+| **Panel 6: BOST Goal Storage** | System stores the student's typed goal verbatim. Display: *"Maqsadingiz saqlandi. Sessiya oxirida qaytamiz."* | Goal is recalled word-for-word in Phase 7. |
+| **Panel 7: Industry Application** | Show 2-3 professionals who use this math daily. Photo + 1-sentence role description. *"Dasturchi har kuni formulalardan foydalanadi."* | Must include at least one Uzbek professional context (Tashkent IT Park, UzAuto, etc.). |
+| **Panel 8: Mathematician Spotlight** | Heritage mathematician quote or fact. 5-second gate lock. National/global 55/45 ratio. | Al-Xorazmiy appears minimum 1 per 3 sessions across all Aniq Fanlar subjects. |
+
+### Phase 1 Format Mixing + Construction (Family-Level Rule)
+
+**MUST use at least 2 of 3 formats** (Multiple Choice, True/False, Yes/No/Not Given) in every Phase 1 Memory Sprint across all Aniq Fanlar subjects. No single-format sprints.
+
+**Per-format construction recipe:**
+
+**Multiple Choice (4 options):**
+- Stem: clear question with one correct answer. Include a diagram or formula when the question involves a shape or expression.
+- Distractors: based on common student errors, not random. Example: for `3(x+2)`, distractors include `3x+2` (forgot to distribute), `3x+5` (arithmetic slip), `6x` (combined incorrectly).
+- Tag: `[Bloom: L1-L2 | PISA: L1-L2]`
+- Good: *"Qaysi ifoda 2(a+3) ga teng? A) 2a+3 B) 2a+6 C) a+6 D) 2a+5"*
+- Bad: *"Algebra nima? A) Fan B) O'yin C) Sport D) San'at"* (definitional, no math reasoning)
+
+**True / False:**
+- Statement must be precise and testable. No ambiguity.
+- Always include the rule or identity being tested.
+- Tag: `[Bloom: L1-L2 | PISA: L1-L2]`
+- Good: *"(a+b)² = a² + 2ab + b² — To'g'ri yoki Noto'g'ri?"*
+- Bad: *"Matematika qiyin — To'g'ri yoki Noto'g'ri?"* (opinion, not testable)
+
+**Yes / No / Not Given:**
+- Must reference the current chapter explicitly: *"Bobda aytilganiga ko'ra..."*
+- "Not Given" must be genuinely plausible — the chapter must be silent on the claim.
+- Tag: `[Bloom: L2 | PISA: L2]`
+- Good: *"Bobda aytilganiga ko'ra, har qanday to'rtburchak parallelogramm — Ha / Yo'q / Aytilmagan."*
+- Bad: *"Matematika foydali — Ha / Yo'q / Aytilmagan?"* (not chapter-dependent)
+
+### Phase 3 Game Construction Recipes (Family-Level Defaults)
+
+These recipes apply across all Aniq Fanlar subjects. Subject frameworks specify which games go in which slot.
+
+**Tile Match (Default Pool — all subjects):**
+- **Structure:** 6-8 pairs. Left tile = formula/expression/theorem name. Right tile = equivalent form/visual/definition.
+- **Difficulty progression:**
+  - L1: Direct match — formula ↔ its name. *Left: "a² + 2ab + b²" → Right: "(a+b)²"*
+  - L2: Transformation match — expression ↔ simplified form. *Left: "3(x+2) − x" → Right: "2x + 6"*
+  - L3: Cross-representation — formula ↔ graph/diagram. *Left: "y = 2x + 1" → Right: [graph image]*
+- **Good pair:** `"S = πr²"` ↔ `"Doira yuzasi"` (formula ↔ meaning)
+- **Bad pair:** `"Algebra"` ↔ `"Fan"` (too vague, no mathematical content)
+
+**Worked Examples / Scaffolded Completion (Default Pool):**
+- **Structure:** 4-6 step solution with 1-3 blanks. Student fills missing steps.
+- **Blank placement:** Never blank the FIRST step (student needs orientation) or the LAST step (they need closure). Blank the MIDDLE reasoning steps.
+- **Difficulty progression:**
+  - L1: 1 blank in a 4-step solution. Blank is a single operation. *Step 2: "x = 12 / __ "*
+  - L2: 2 blanks. One blank requires choosing the correct operation.
+  - L3: 3 blanks including the justification: *"Bu qadam [__] xossasi asosida amalga oshirildi."*
+- **Good:** *"Step 1: 3x + 6 = 18. Step 2: 3x = 18 − __ . Step 3: 3x = __ . Step 4: x = 4."*
+- **Bad:** All steps blank with only the problem and answer given (no scaffolding).
+
+**Error Analysis (Default Pool — minimum every 2 sessions):**
+- **Structure:** Complete worked solution with 1-2 deliberate errors. Student finds WHERE the error is and explains WHY it is wrong.
+- **Error types:** Sign error, order-of-operations violation, forgotten distribution, wrong theorem application, unit omission.
+- **Difficulty progression:**
+  - L1: 1 obvious error (sign flip). *"2 − 5 = 3" — xato qayerda?*
+  - L2: 1 subtle error in a multi-step solution. Student must trace through all steps.
+  - L3: 2 errors — one obvious distractor, one subtle. Student must find BOTH.
+- **Good:** *"Talaba yechimi: 2 + 3 × 5 = 25. Xatoni toping va to'g'ri qoidani ayting."* (Order of operations)
+- **Bad:** *"Bu javob to'g'rimi? Ha / Yo'q"* (binary, no analysis)
+
+### Phase 7 Reflection (Family-Level Template)
+
+Every Aniq Fanlar session ends with Phase 7 Reflection. Structure:
+
+1. **Session Summary (30 sec):** Recap the key formula/theorem/concept from this session. Display it visually (formula card or mini-diagram). *"Bugun Siz [concept] ni o'rgandingiz. Asosiy formula: [formula]."*
+
+2. **Metacognitive Prompts (45 sec, pick 3):**
+   - *"Bu sessiyada eng qiyin qism nima edi?"*
+   - *"Qaysi qadamda xato qildingiz va nima o'rgandingiz?"*
+   - *"Bu formulani boshqa qayerda ishlatsa bo'ladi?"*
+   - *"Agar do'stingizga tushuntirsangiz, qanday boshlardingiz?"*
+   - *"Qaysi o'yin sizga eng ko'p yordam berdi?"*
+
+3. **BOST Goal Recall (15 sec):** *"Bugun Siz '[stored goal]' ni bilmoqchi edingiz. Bildingizmi?"* Student taps: Fully / Partially / Not yet. Result logged for adaptive engine.
+
+4. **Spaced Repetition Schedule:** Display next review dates: *"Bu mavzu ertaga (1 kun), 3 kundan keyin va 7 kundan keyin qaytariladi."* Tag items for spaced rep queue based on session accuracy.
+
+5. **Closing Line:**
+   - **≥60% accuracy:** Third Renaissance line. *"Buyuk Al-Xorazmiy algebraning asosini qo'ydi. Siz uning merosini davom ettiryapsiz. Uchinchi Renessans — Sizdan boshlanadi."*
+   - **<60% accuracy:** Encouraging neutral. *"Bugun qiyin edi, lekin har bir xato — miyangiz uchun mashq. Ertaga yana bir qadam oldinga."*
+
 ### Interactive Catalog Picks (≥1 required per session)
 
 | Game | Why It Fits Aniq Fanlar | Best For |

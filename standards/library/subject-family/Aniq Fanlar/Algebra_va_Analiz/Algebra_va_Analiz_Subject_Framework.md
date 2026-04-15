@@ -119,6 +119,19 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 - Panel 7 Industry: Software engineer (neural network gradient descent = derivatives), financial analyst (GDP growth modeling = exponential), pharmacologist (drug decay = logarithmic), aerospace engineer (thrust curves = integral of force)
 - Mathematician references: **Newton and Leibniz** (co-inventors of calculus — mention the priority dispute), **Al-Khwarizmi** (algebraic foundation), **Euler** (e, notation), **Cauchy** (limits and rigor), **Gauss** (series), **Ramanujan** (infinite processes)
 
+**Phase 0-A Panel Construction Guide — Algebra va Analiz:**
+
+| Panel | Algebra va Analiz Construction Recipe |
+|---|---|
+| **Panel 1: Structural Scan** | Concept tree for this chapter. Show calculus concept hierarchy: Limit → Derivative → Integral. Bold-chip key terms: *limit, hosila, uzluksizlik, integral*. For derivative chapters, show the function → derivative → graph relationship. |
+| **Panel 2: Key Vocabulary** | 4-6 terms. Each with formal definition + informal intuition. *"Hosila → nuqtadagi urinma to'g'ri chiziqning burchak koeffitsienti = o'zgarish tezligi [tangent line diagram]."* |
+| **Panel 3: Prior Knowledge Bridge** | Connect to known algebra: *"Siz allaqachon o'rtacha o'zgarish tezligini bilasiz (Δy/Δx). Bugun lahzaviy tezlikka o'tamiz — bu hosila."* |
+| **Panel 4: Chapter Preview** | *"Bu bobda Siz hosilani o'rganasiz — funksiyaning har bir nuqtadagi o'zgarish tezligi."* State the calculus concept. |
+| **Panel 5: Personal Hook + BOST** | **Real phenomenon first.** Rocket velocity at exact moment (derivative), compound interest growth (exponential), river level over season (integral), signal decay (logarithmic). BOST Prime: *"Funksiyalar va o'zgarish haqida nimalarni bilasiz?"* |
+| **Panel 6: BOST Goal Storage** | Store student's goal. *"Maqsadingiz saqlandi. Sessiya oxirida qaytamiz."* |
+| **Panel 7: Industry Application** | ML engineer (gradient descent = derivatives), financial analyst (GDP growth = exponential), pharmacologist (drug decay = logarithmic), aerospace engineer (thrust curves = integrals). Photo + 1-sentence. |
+| **Panel 8: Mathematician Spotlight** | **Newton and Leibniz** (co-inventors, mention priority dispute). Also: Al-Khwarizmi, Euler, Cauchy, Gauss, Ramanujan. 55/45 ratio. |
+
 **0-B Flash Cards — Algebra va Analiz overrides:**
 - **7-9 cards**
 - Priority types: **Definition** (limit, derivative, continuity), **Formula** (derivative rules, integral formulas), **Theorem** (chain rule, FTC, mean value)
@@ -145,6 +158,24 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 **Algebra va Analiz additions:**
 - Include 1-2 "interpret this graph" questions: "What is the sign of f'(x) on interval (1,3)?" — connects derivative sign to function behavior
 - Wrong answer feedback: full correct derivation with annotations: *"Power rule to'g'ri, lekin chain rule unutildi. Bu yerda: d/dx[sin(3x)] = cos(3x) × 3 = 3cos(3x)"*
+
+**Phase 1 Format Mixing Rule:** MUST use at least 2 of 3 formats per sprint. Include graph-interpretation items in every sprint.
+
+**Per-format construction — Algebra va Analiz:**
+
+**Multiple Choice (4 options):**
+- Graph-interpretation is highest priority: *"(1, 3) oraliqda f'(x) ning ishorasi qanday? [function graph shown] A) Musbat B) Manfiy C) Nol D) Aniqlab bo'lmaydi"* (Answer depends on whether function is increasing on that interval)
+- Error spotting in derivation: *"Bu hosilada xato qayerda? d/dx[x³ + 2x] = 3x + 2. A) 3x noto'g'ri B) +2 noto'g'ri C) Ikkalasi ham noto'g'ri D) Xato yo'q"* (Answer: A — should be 3x², not 3x)
+- Distractors: common calculus errors — forgetting power rule exponent, missing chain rule factor, sign errors.
+
+**True / False:**
+- *"d/dx[sin(x)] = cos(x) — To'g'ri yoki Noto'g'ri?"* (True)
+- *"Har qanday uzluksiz funksiya differensiallanadi — To'g'ri yoki Noto'g'ri?"* (False — |x| is continuous but not differentiable at 0)
+- *"∫₀¹ 2x dx = 1 — To'g'ri yoki Noto'g'ri?"* (True — check: x² from 0 to 1 = 1)
+
+**Yes / No / Not Given:**
+- *"Bobda aytilganiga ko'ra, har qanday uzluksiz funksiya differensiallanadi — Ha / Yo'q / Aytilmagan."*
+- *"Bobda aytilganiga ko'ra, hosila formulasi faqat algebraik funksiyalarga tegishli — Ha / Yo'q / Aytilmagan."*
 
 ### 4.2 Story Mode (Phase 2)
 
@@ -194,6 +225,63 @@ Exact Sciences secondary, cap at **3 levels for G10, 3 levels for G11** (UNIFIED
 - Reaction Chain = Verbal/Logical + Productive/Generative
 - Connect Four = Strategic/Decision
 At least 2 modalities: Logical + Strategic.
+
+**Phase 3 Game Construction Recipes — Algebra va Analiz:**
+
+**Error Analysis (Slot 1 Primary — minimum every 2 sessions):**
+- **Structure:** Complete multi-step differentiation or integration solution with 1-2 deliberate errors. Student finds WHERE and explains WHY.
+- **Error types for calculus:** Forgotten chain rule, wrong power rule exponent, sign error in trig derivative, incorrect constant of integration, misapplied product/quotient rule.
+- **Difficulty progression:**
+  - L1: 1 obvious error in a 3-step derivative. *"d/dx[3x² + 5x] = 6x + 5x = 11x. Xatoni toping."* (Error: 5x should become 5, not stay as 5x)
+  - L2: 1 subtle error in a multi-step chain rule application. *"d/dx[sin(x²)] = cos(x²). Xatoni toping va to'g'rilang."* (Missing inner derivative: should be 2x·cos(x²))
+  - L3: 2 errors in an optimization problem — one in the derivative, one in the interpretation. Student must find BOTH.
+    - *"f(x) = x³ − 3x. f'(x) = 3x² − 3 = 0 → x = 1. f(1) = −2 — bu minimum. Xatolarni toping."* (Error 1: x = ±1, not just x = 1. Error 2: need second derivative test to confirm min/max)
+- **Good:** Full worked solution with annotation where error lives + correct version.
+- **Bad:** *"Bu javob to'g'rimi? Ha / Yo'q"* (binary, no analysis)
+
+**Reaction Chain (Slot 2 Primary):**
+- **Structure:** 6-10 nodes in a sequential derivation chain. Each correct step unlocks the next.
+- **Algebra va Analiz chain example (finding and interpreting critical points):**
+  - Node 1: *"f(x) = x³ − 6x² + 9x + 1. f'(x) ni toping."* → Answer: 3x² − 12x + 9
+  - Node 2: *"f'(x) = 0 tenglamani yeching."* → Answer: 3(x² − 4x + 3) = 0 → x = 1 va x = 3
+  - Node 3: *"f''(x) ni toping."* → Answer: 6x − 12
+  - Node 4: *"f''(1) = ? Bu nuqta minimum yoki maximum?"* → Answer: f''(1) = −6 < 0 → maximum
+  - Node 5: *"f''(3) = ? Bu nuqta minimum yoki maximum?"* → Answer: f''(3) = 6 > 0 → minimum
+  - Node 6: *"f(1) va f(3) ni hisoblab, grafik eskizini chizing."* → Answer: f(1) = 5, f(3) = 1
+  - Node 7: *"Funksiya qaysi oraliqda o'sadi?"* → Answer: (−∞, 1) va (3, +∞)
+- **Bad chain:** Unrelated derivative calculations (no logical flow from one node to the next).
+
+**Connect Four vs AI (Slot 3 Primary):**
+- **Structure:** ~18 questions gating column placement. Strategic placement + calculus reasoning.
+- **Question types:** Function analysis (domain, asymptotes), quick derivative evaluation, limit calculation, critical point identification.
+- **Difficulty:** Questions alternate: Easy (direct derivative rule), Medium (chain/product rule), Hard (interpretation question). Every 4th = Hard.
+- **Example gating questions:**
+  - Easy: *"d/dx[x⁴] = ?"* (Answer: 4x³)
+  - Medium: *"d/dx[sin(2x)] = ?"* (Answer: 2cos(2x))
+  - Hard: *"f'(a) > 0 bo'lsa, x = a atrofida f(x) qanday?"* (Answer: o'suvchi)
+- **Bad gating question:** *"Nyuton qachon tug'ilgan?"* (trivia, not calculus)
+
+**Why Chain (Slot 3 Backup — Secondary mechanic, 3 levels):**
+- **Structure:** 3-level Socratic chain on a calculus concept.
+- **Example:**
+  - L1: *"d/dx[x³] = 3x². Bu qoidaning nomi nima?"* → Answer: Power rule
+  - L2: *"Power rule nima uchun ishlaydi? Limit ta'rifidan ko'rsating."* → Answer: lim(h→0) [(x+h)³ − x³]/h = 3x²
+  - L3: *"Bu hosila x = 2 da nima deydi? Funksiya haqida nima bilasiz?"* → Answer: f'(2) = 12, funksiya x=2 da tezlik 12 bilan o'smoqda
+
+**Worked Examples / Scaffolded Completion (Slot 1 Backup):**
+- **Structure:** 5-7 step derivation with 2-3 blanks. Student fills missing derivation steps.
+- **Example (chain rule):**
+  - Step 1: f(x) = sin(x²)
+  - Step 2: Tashqi funksiya: sin(u), ichki funksiya: u = __
+  - Step 3: d/dx[sin(u)] = __
+  - Step 4: du/dx = __
+  - Step 5: f'(x) = cos(x²) · 2x = 2x·cos(x²)
+- **Blank the REASONING steps (Steps 2-4), not the final answer.**
+
+**Codebreaker (Slot 2 Backup):**
+- **Structure:** 4-6 gating questions + hidden function to identify from its derivative's behavior.
+- **Example:** Student sees: f'(x) > 0 for x < 0, f'(0) = 0, f'(x) < 0 for x > 0. Gating questions test derivative interpretation. Answer: f(x) has a maximum at x = 0 (e.g., f(x) = −x²).
+- **Difficulty:** L1 = identify function type. L2 = identify specific function from derivative clues. L3 = reconstruct function from derivative + integral clues.
 
 **Games to AVOID for Algebra va Analiz:**
 - Tile Match with simple formula-answer pairs — too low-level for G10-11
@@ -284,6 +372,27 @@ Students who can set up and solve but misinterpret earn 3/4.
 2. Socratic: "Hosila belgilanishi funksiyaning qaysi xususiyatini aytadi?" — never reveals calculation method
 3. Route to specific Story Mode segment
 4. Regenerate questions (same standards, different function/context)
+
+### 4.7 Reflection (Phase 7)
+
+**Inherits:** Family-level Phase 7 template. Algebra va Analiz overrides below.
+
+1. **Session Summary — Derivative/Integral Interpretation Recap (30 sec):** Display the key calculus concept as a formula card WITH its real-world interpretation. Example: *"Bugun Siz hosilani o'rgandingiz: f'(x) = funksiyaning x nuqtasidagi o'zgarish tezligi."* Show the tangent line on the function graph. For integral topics: *"Bugun Siz integralni o'rgandingiz: ∫f(x)dx = egri chiziq ostidagi yuza."* Show shaded area.
+
+2. **Metacognitive Prompts (45 sec, pick 3):**
+   - *"Bu sessiyada eng qiyin hosila/integral qaysi edi? Nima uchun?"*
+   - *"Chain rule qo'llashda qayerda adashib qoldingiz?"*
+   - *"Hosila natijasini so'z bilan qanday izohlaysiz? (masalan: 'tezlik kamaymoqda')"*
+   - *"Bu hosilani boshqa qaysi real vaziyatda qo'llasa bo'ladi?"*
+   - *"Agar do'stingizga limit tushunchasini tushuntirsangiz, qanday misol keltirasiz?"*
+
+3. **BOST Goal Recall (15 sec):** *"Bugun Siz '[stored goal]' ni bilmoqchi edingiz. Bildingizmi?"* Student taps: To'liq / Qisman / Hali emas. Result logged.
+
+4. **Spaced Repetition Schedule:** *"Bu qoida/teorema ertaga (1 kun), 3 kundan keyin va 7 kundan keyin qaytariladi."* Tag derivative rules, limit formulas, and their interpretations for spaced rep queue.
+
+5. **Closing Line:**
+   - **≥60%:** *"Nyuton va Leybnits hisob-kitobni yaratdi — biri mexanika, biri geometriya orqali. Siz ikkala yo'lni ham o'zlashtiryapsiz. Uchinchi Renessans — Sizdan boshlanadi."*
+   - **<60%:** *"Hisob-kitob — matematikaning eng kuchli qurollaridan biri. Har bir mashq Sizni bir qadam yaqinlashtiradi. Ertaga davom etamiz."*
 
 ---
 

@@ -484,8 +484,8 @@ The continuous PISA scale (e.g., 1.7) is calculated from the student's performan
 |  ===================================================================  |
 |  HOMEWORK ENGINE (7 phases, begins after "Start my Homework")        |
 |                                                                      |
-|  P1  MEMORY SPRINT -------- 2 min ----- [flexible format, prior]    |
-|   |    +-- MC / Speed Match / Flash Sprint / Fill-Blanks / Order     |
+|  P1  MEMORY SPRINT -------- 2 min ----- [tap-only, current chapter] |
+|   |    +-- MC / True-False / Yes-No-Not Given (3 formats ONLY)       |
 |   |                                                                  |
 |  P2  STORY MODE ----------- 5-7 min --- [Problem->Struggle->         |
 |   |                                       Discovery->Solution arc]   |
@@ -636,7 +636,7 @@ Each card = one formula, one concept, one rule, or one term. Nothing else.
 | Duration | ≤2 minutes (hard cap) | ≤2 minutes |
 | Item count | 5-8 items | 8-10 items |
 | Source | **Current chapter** — key terms, prerequisite concepts, foundational facts needed for this session | Same |
-| Format | **Flexible — any approved fast format (see table below)** | Same |
+| Format | **Tap-only — 3 approved formats ONLY (MC, T/F, YNNG — see table below). NO typing, NO drag-and-drop.** | Same |
 | Hints allowed | No | No |
 | AI Tier | Tier 1 (pre-generated pool) | Same |
 

@@ -107,6 +107,168 @@ Ona tili in NETS is a **native language** subject. Students already speak Uzbek 
 
 ---
 
+## 3a. Phase 0-A Panel Construction Guide — Ona Tili
+
+Phase 0-A previews the session with 8 visual panels. For Ona tili (native language), panels focus on **literary/cultural context** and **grammar awareness activation** — the student already speaks Uzbek, so panels awaken analytical attention, not basic comprehension.
+
+**Panel length rules:**
+- Panels 1-5: 8-10 sentences each
+- Panels 6-8: 5-10 sentences each
+
+**All panels in Uzbek. Always use formal "Siz".**
+
+| Panel | Purpose | Ona Tili Pattern |
+|---|---|---|
+| **1 — Hook** | Open with a grammar puzzle or editing scenario | A character discovers a text full of errors, or a famous quote with a hidden grammar pattern. "Sardor maktab gazetasiga maqola yozdi — lekin muharrir 5 ta xato topdi. Siz ham topa olasizmi?" |
+| **2 — Context** | Show WHY this grammar/language skill matters | Connect to real writing: school announcements, official letters, newspaper articles, social media posts. "To'g'ri yozish — bu faqat baho emas, bu Sizning fikringiz qanchalik aniq ekanligining ko'rsatkichi." |
+| **3 — Key Terms Preview** | Introduce 4-6 grammar terms or spelling patterns from the chapter | Each term in a sentence showing it in action. "**Jo'nalish kelishigi** gapda harakatning yo'nalishini bildiradi: Bola maktab**ga** ketdi." |
+| **4 — Grammar/Structure Spotlight** | Show the target pattern with two parallel examples | "Bola maktab**ga** ketdi. Ota ish**ga** bordi." — the suffix pattern is visible before the rule name appears |
+| **5 — Challenge Preview** | Foreshadow the Real-Life role | "Bugun Siz muharrir bo'lasiz — maqoladagi xatolarni topasiz va tuzatasiz." |
+| **6 — Connection** | Link to prior chapter knowledge | "O'tgan darsda Siz ot so'z turkumini o'rgandingiz. Bugun otning kelishiklari bilan tanishasiz." |
+| **7 — Cultural Anchor** | National Pride — literary or linguistic heritage | "Alisher Navoiy turkiy tilning buyukligini jahonga isbotlagan. Siz ham ona tilingiz qoidalarini o'zlashtirib, bu merosni davom ettirasiz." |
+| **8 — BOST Goal** | Student sets session goal | "Bugun Siz nimani bilmoqchisiz? Masalan: 'Kelishiklarni to'g'ri ishlata olmoqchiman' yoki 'Murakkab gaplarni tuzishni o'rganmoqchiman'." Store for Phase 7 |
+
+---
+
+## 3b. Phase 1 Format Mixing + Construction — Ona Tili
+
+Phase 1 Memory Sprint **MUST use at least 2 of the 3 allowed formats** (MC, T/F, YNNG).
+
+**Ona Tili-specific construction recipes:**
+
+**Multiple Choice — Grammar Identification Pattern:**
+- Stem: a sentence with a highlighted element or a question about grammar structure
+- Distractors: common student confusions for the grammar topic
+
+**Example MC (parts of speech — G5):**
+> "Chiroyli gullar bog'da o'sadi." — Bu gapda sifat qaysi so'z?
+> A) Chiroyli ✓  B) Gullar  C) Bog'da  D) O'sadi
+> `[Bloom: L1 | PISA: L1]`
+
+**Example MC (clause type — G8):**
+> "Quyosh chiqqanda, biz yo'lga chiqdik." — Bu gapdagi ergash gap turini aniqlang.
+> A) Payt ergash gap ✓  B) Sabab ergash gap  C) Maqsad ergash gap  D) Shart ergash gap
+> `[Bloom: L2 | PISA: L2]`
+
+**True/False — Spelling/Grammar Rule Pattern:**
+- Statement about a specific Uzbek grammar or spelling rule
+- Must be unambiguous
+
+**Example T/F (spelling — G5):**
+> "Tutuq belgisi (') faqat o'zlashma so'zlarda ishlatiladi." — To'g'ri yoki Noto'g'ri?
+> Javob: To'g'ri
+> `[Bloom: L1 | PISA: L1]`
+
+**Example T/F (grammar — G7):**
+> "Bog'lovchisiz qo'shma gaplarda vergul qo'yilmaydi." — To'g'ri yoki Noto'g'ri?
+> Javob: Noto'g'ri (vergul qo'yiladi)
+> `[Bloom: L2 | PISA: L1]`
+
+**Yes/No/Not Given — Reading/Text Analysis Pattern:**
+- Short passage (3-5 sentences) from the chapter or literary excerpt
+- Claim to verify against the text — trains textual evidence skills
+
+**Example YNNG (reading — G9):**
+> Matn: "O'zbek adabiyotida Navoiy merosi alohida o'rin tutadi. Uning asarlari turkiy tilning boy imkoniyatlarini namoyish etadi. Ko'plab olimlar uning tilshunoslikka qo'shgan hissasini tadqiq qilmoqda."
+> Da'vo: "Navoiy faqat she'riyat bilan shug'ullangan."
+> Javob: Berilmagan (Not Given)
+> `[Bloom: L3 | PISA: L2]`
+
+**Mixing rule:** Every Ona tili Phase 1 must use at least 2 of 3 formats. Grammar ID via MC + spelling rule via T/F is the most common combination.
+
+---
+
+## 3c. Phase 3 Game Construction Recipes — Ona Tili
+
+Ona tili uses 3 games per session: at least 1 Interactive + 2 Default. Priority order: **Sentence Fill MANDATORY** (grammar in context always) > **Tile Match** (clause ordering/structure) > **Why Chain** (grammar reasoning).
+
+#### Sentence Fill / Cloze (Default — MANDATORY for every Ona Tili session)
+
+Grammar must always be tested in context. Sentence Fill is the core mechanic.
+
+**Construction steps:**
+1. Write or adapt a passage using the chapter's grammar targets (3-8 sentences)
+2. Create 3-6 blanks at morphologically or syntactically critical positions
+3. G5-7: word bank with correct answers + 2-4 distractors. G8+: mix of word bank and free recall
+4. Each blank must test a specific grammar rule (suffix, punctuation, word form)
+
+**Example (kelishiklar — G5):**
+> "Bola maktab___ ketdi. Uning sumkasi parta___ turardi. Ota ish___ qaytdi."
+> So'z banki: `ga, da, dan, ni, ning` (to'g'ri: ga, da, dan + chalg'ituvchilar)
+> To'g'ri javob yashil rangda, +100 XP. Birinchi urinish bonusi: +25 har bir bo'shliq uchun.
+
+**Example (tinish belgilari — G7):**
+> "Sardor___ sen ertaga kelasanmi___ deb so'radi. Malika___ Ha___ albatta___ deb javob berdi."
+> Bo'shliqlar: vergul, so'roq belgisi, tire, vergul, nuqta (tinish belgilari)
+
+**Example (murakkab gap — G9):**
+> "Quyosh chiqqanda___ dehqonlar dalaga ___. Ular ___ chunki hosilni yig'ish vaqti ___."
+> So'z banki: `chiqdilar, kelgan edi, vergul qo'yiladi, boshlangan edi, kechikmaslik kerak edi`
+
+#### Tile Match (Default — clause ordering and structure)
+
+**Construction steps:**
+1. Define matching dimension: clause↔function, grammar term↔example, word↔part of speech
+2. Write 6-8 pairs. Pairs 1-3 L1, 4-5 L2, 6+ L3
+3. Timer: 2:00-3:00
+
+**Example (grammar term ↔ example — G6):**
+> Left: "Ot" → Right: "maktab, kitob, bola"
+> Left: "Sifat" → Right: "chiroyli, baland, kichik"
+> Left: "Fe'l" → Right: "o'qidi, yozdi, ketdi"
+> Left: "Ravish" → Right: "tez, sekin, yaxshi"
+> Left: "Ko'makchi" → Right: "bilan, uchun, haqida"
+> Left: "Bog'lovchi" → Right: "va, lekin, chunki"
+
+**Example (clause ordering — G8):**
+> Left: "Bosh gap" → Right: "Biz yo'lga chiqdik"
+> Left: "Payt ergash gap" → Right: "Quyosh chiqqanda"
+> Left: "Sabab ergash gap" → Right: "Havo issiq bo'lgani uchun"
+> Left: "Shart ergash gap" → Right: "Agar yomg'ir yog'sa"
+
+#### Codebreaker (Interactive — MORPHOLOGY PRIMARY for Ona Tili)
+
+Uzbek morphology is agglutinative — suffixes stack. Codebreaker is ideal for decomposition.
+
+**Construction steps:**
+1. Choose a word with 2-4 morphological layers (root + suffixes)
+2. Break into components. Each component is a code element
+3. Provide 3-4 progressive clues
+4. Student assembles the word and explains suffix function
+
+**Example (G6 — basic morphology):**
+> Kod: "_ _ _ _ _ _ _ _ _ _ _" (11 harf)
+> Izoh 1: "Ildiz — 'o'qi' (read)" → o'qi
+> Izoh 2: "Orttirma nisbat qo'shimchasi" → -t
+> Izoh 3: "Ish bajaruvchi shaxsni bildiruvchi qo'shimcha" → -uvchi
+> Javob: "o'qituvchi" = o'qi + t + uvchi (ildiz + orttirma + yasovchi)
+
+**Example (G9 — complex morphology):**
+> Kod: "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" (18 harf)
+> Izoh 1: "Ildiz — 'yoz' (write)" → yoz
+> Izoh 2: "Ish bajaruvchi" → -uvchi
+> Izoh 3: "Ko'plik qo'shimchasi" → -lar
+> Izoh 4: "Egalik qo'shimchasi (biz)" → -imiz
+> Javob: "yozuvchilarimiz" = yoz + uvchi + lar + imiz
+
+#### Reaction Chain (Interactive — sentence parsing sequence)
+
+**Construction steps:**
+1. Create a 6-10 node chain where each node = a parsing step
+2. Question gates each node — student must identify the grammar element before proceeding
+3. 3 wrong in a row = chain break
+
+**Example (gap bo'laklari — G7):**
+> Gap: "Kecha Sardor kutubxonada qiziqarli kitob o'qidi."
+> Node 1: "Ega kim?" → Sardor ✓
+> Node 2: "Kesim qaysi so'z?" → o'qidi ✓
+> Node 3: "Payt holi qaysi?" → Kecha ✓
+> Node 4: "O'rin holi qaysi?" → kutubxonada ✓
+> Node 5: "Aniqlovchi qaysi?" → qiziqarli ✓
+> Node 6: "To'ldiruvchi qaysi?" → kitob ✓
+
+---
+
 ## 4. Game Mechanics — Ona Tili Specific
 
 Ona tili inherits the Til Fanlari set, but the filter changes because this is a native language subject.
@@ -224,6 +386,44 @@ In Ona tili, the student should become the **language expert**.
 - The **textbook chapter** remains the content source.
 - Textbook quality varies, especially in grammar-heavy sections. The agent must transform dry drills into engaging analysis without changing the target concept.
 - This framework is **textbook-only**. No IELTS, no Premium-course logic, no DTM-mode handling here.
+
+---
+
+## Phase 7 Reflection — Ona Tili Specific
+
+Phase 7 closes the session with metacognitive reflection focused on **grammar mastery and writing awareness**.
+
+### Construction Recipe
+
+**Step 1 — Session Summary (2-3 sentences)**
+Summarize what was practiced. Reference the grammar target, the analysis skills exercised, and the writing/editing work done.
+
+> "Bugun Siz jo'nalish kelishigini gap ichida ishlatishni mashq qildingiz. Siz muharrir sifatida 5 ta xatoni topdingiz va tuzatdingiz. Kelishik qo'shimchalarini to'g'ri qo'llash ko'nikmasini mustahkamladingiz."
+
+**Step 2 — 3 Metacognitive Prompts**
+
+| Prompt Type | Example |
+|---|---|
+| **Strategy awareness** | "Qaysi usul Sizga grammatik qoidani eslab qolishda yordam berdi — misol gaplar, tahlil qilish, yoki xatolarni tuzatish?" |
+| **Difficulty reflection** | "Qaysi topshiriq eng qiyin bo'ldi? Kelishiklarni aniqlash qiyinmi yoki gap tuzish qiyinmi?" |
+| **Transfer thinking** | "Bugun o'rgangan qoidangizni qayerda ishlata olasiz — maktub yozishda, insho yozishda, yoki ijtimoiy tarmoqlarda yozishda?" |
+
+**Step 3 — BOST Goal Recall**
+Retrieve the goal from Phase 0-A Panel 8:
+
+> "Bugun Siz [stored goal] ni bilmoqchi edingiz. Bildingizmi?"
+
+Student answers Ha/Yo'q/Qisman. This closes the motivation loop.
+
+**Step 4 — Spaced Repetition Schedule**
+> "Bugungi qoidalar va so'zlar quyidagi kunlarda qaytariladi: **ertaga (1-kun)**, **3 kundan keyin**, **1 haftadan keyin**, **3 haftadan keyin**, **2 oydan keyin**."
+
+**Step 5 — Closing Line**
+
+- **Score >= 60%:** Third Renaissance line connecting grammar mastery to national heritage
+  > "Til — millatning ko'zgusi. Siz bugun ona tilingiz qoidalarini mustahkamladingiz. Uchinchi Renessans avlodi sifatida Siz Navoiy merosini davom ettirasiz."
+- **Score < 60%:** Encouraging neutral
+  > "Bugun qiyin bo'ldi, lekin har bir mashq — oldinga qadam. Grammatika sabr talab qiladi. Ertaga yana urinib ko'ramiz — Siz albatta o'zlashtirasiz."
 
 ---
 

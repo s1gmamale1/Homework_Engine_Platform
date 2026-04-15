@@ -123,6 +123,19 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 - Panel 7 Industry: Aerospace engineer (payload volumes = solid geometry), game developer (3D collision meshes = vectors), architect (vaulted ceilings = cross-sections), robotics engineer (arm movement = vector direction), structural engineer (force directions in truss = vectors)
 - Mathematician references: **Descartes** (coordinate geometry — Cartesian system, mandatory), **Euclid** (solid geometry Books XI-XIII), **Al-Biruni** (geodesic and spherical geometry), **Archimedes** (sphere and cylinder volume), **Gauss** (curvature), **Hamilton** (quaternions and origin of vectors)
 
+**Phase 0-A Panel Construction Guide — Geometriya Advanced:**
+
+| Panel | Geometriya Advanced Construction Recipe |
+|---|---|
+| **Panel 1: Structural Scan** | 3D solid hierarchy for this chapter. Show solid type tree with mini-3D diagrams: prism → pyramid → cylinder → cone → sphere. Bold-chip key terms: *kesim, proyeksiya, vektor, normal*. |
+| **Panel 2: Key Vocabulary** | 4-6 terms, each with 3D diagram. *"Kesim → jismni tekislik bilan kesganida hosil bo'lgan shakl [cross-section diagram]."* Never text-only. |
+| **Panel 3: Prior Knowledge Bridge** | Connect to G7-9 geometry: *"Siz allaqachon 2D shakllar yuzasini hisoblay olasiz. Bugun 3D jismlarning to'la yuzasiga o'tamiz."* |
+| **Panel 4: Chapter Preview** | *"Bu bobda Siz piramida hajmi va to'la yuzasini o'rganasiz — qadimgi Misr muhandislari bilgan sirlar."* State the 3D concept. |
+| **Panel 5: Personal Hook + BOST** | **3D image first.** Tashkent TV Tower as cone-cylinder composite, Sher-Dor Madrasah dome as hemisphere, UzAuto car body as surface of revolution, satellite dishes as paraboloids. BOST Prime: *"Uch o'lchamli shakllar va vektorlar haqida nimalarni bilasiz?"* |
+| **Panel 6: BOST Goal Storage** | Store student's goal. *"Maqsadingiz saqlandi. Sessiya oxirida qaytamiz."* |
+| **Panel 7: Industry Application** | Aerospace engineer (payload volumes), game developer (3D collision meshes), architect (vaulted ceilings), robotics engineer (arm movement vectors), structural engineer (force vectors). Photo + 1-sentence. |
+| **Panel 8: Mathematician Spotlight** | **Descartes** mandatory (coordinate geometry). Also: Euclid (solid geometry), Al-Biruni (spherical geometry), Archimedes (sphere/cylinder volume), Gauss, Hamilton. 55/45 ratio. |
+
 **0-B Flash Cards — Geometriya Advanced overrides:**
 - **7-9 cards**
 - Priority types: **Formula** (volume/surface area of solids, vector operations), **Definition** (cross-section, projection, normal vector), **Theorem** (sine rule, cosine rule, conic definitions)
@@ -150,6 +163,22 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 - Include 1-2 **cross-section questions** — "If this cube is cut diagonally, what shape is the cross-section?" High DTM-yield, builds spatial reasoning
 - Every Memory Sprint item must include its diagram
 - Wrong answer feedback: show 3D diagram with error annotated: *"Lateral surface area to'g'ri, lekin asos yuzasini unutdingiz."*
+
+**Phase 1 Format Mixing Rule:** MUST use at least 2 of 3 formats per sprint. Every item MUST include a 3D diagram. Include cross-section questions in every sprint.
+
+**Per-format construction — Geometriya Advanced:**
+
+**Multiple Choice (4 options):**
+- Cross-section questions are highest priority: *"Bu kesim kubni diagonal bo'ylab kesganida qanday shakl hosil bo'ladi? [3D cube diagram with cutting plane] A) Uchburchak B) To'rtburchak C) Olti burchak D) Doira"* (Answer: depends on cut — teaches spatial reasoning)
+- 3D solid identification: *"Quyidagi 3 ta ko'rinish (old, yon, yuqori) qaysi jismga tegishli? [three orthographic views] A) Silindr B) Konus C) Piramida D) Prizma"*
+- Distractors: solids that share 1-2 views but differ in the third.
+
+**True / False:**
+- *"Silindrning yon yuzasi = 2πrh — To'g'ri yoki Noto'g'ri?"* [cylinder diagram with r and h labeled] (True)
+- *"Konus kesimi doira yoki ellips bo'lishi mumkin — To'g'ri yoki Noto'g'ri?"* [cone with two cutting planes] (True — depends on angle)
+
+**Yes / No / Not Given:**
+- *"Bobda aytilganiga ko'ra, har qanday konus kesimi doira — Ha / Yo'q / Aytilmagan."* (Yo'q — parabola, ellipse, hyperbola also possible)
 
 ### 4.2 Story Mode (Phase 2)
 
@@ -198,6 +227,58 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 - Tile Match = Visual/Spatial + Verbal/Logical
 - Notebook Capture = Kinesthetic/Motor
 ≥2 modalities: Spatial + Kinesthetic.
+
+**Phase 3 Game Construction Recipes — Geometriya Advanced:**
+
+**Puzzle Lock / Sliding Tile (Slot 1 Primary):**
+- **Structure:** Scrambled 3D diagram that student must reassemble.
+- **What goes on each tile:** Fragments of a 3D solid diagram — faces, edges, vertices, labels, projection views.
+- **Difficulty progression:**
+  - L1: 4-tile — reassemble a labeled prism from its faces. *Scrambled rectangular prism → slide faces into position.*
+  - L2: 6-tile — reassemble a composite solid (cylinder + hemisphere). Student must identify how the pieces connect.
+  - L3: 9-tile — reconstruct a 3D solid from its three orthographic views (top, front, side) arranged as tiles. Timed.
+- **Alternative mode:** "Cross-section assembly" — tiles show possible cross-sections; student arranges which cross-section comes from which cutting angle.
+- **Good puzzle:** Reconstruct a pyramid with labeled height, slant height, and base diagonal — all marks must align.
+- **Bad puzzle:** Reassemble a photo of a building — no geometric reasoning.
+
+**Tile Match (Slot 2 Primary):**
+- **Structure:** 6-8 pairs. Left tile = vector/solid/conic algebraic form. Right tile = geometric representation.
+- **Pair types for Geometriya Advanced:**
+  - Vector ↔ Arrow representation: `"a⃗ = (3, 4)"` ↔ `[arrow from origin to (3,4) on grid]`
+  - Solid ↔ Net: `"Konus"` ↔ `[cone net: circle + sector]`
+  - Conic equation ↔ Graph: `"x²/9 + y²/4 = 1"` ↔ `[ellipse with a=3, b=2]`
+  - 3D solid ↔ Cross-section: `"Kubni diagonal tekislik bilan kesish"` ↔ `[rectangle cross-section]`
+- **Difficulty progression:**
+  - L1: Direct — solid name ↔ its standard 3D diagram. 6 pairs.
+  - L2: Formula ↔ 3D diagram. *`"V = ⅓πr²h"` ↔ `[cone with r and h labeled]`*. 7 pairs.
+  - L3: Cross-representation — vector algebraic form ↔ geometric arrow + solid formula ↔ real-world object. 8 pairs. *`"a⃗ · b⃗ = 0"` ↔ `[two perpendicular arrows]`*
+- **Good pair:** `"Sfera to'la yuzasi: S = 4πr²"` ↔ `[sphere diagram with radius marked]`
+- **Bad pair:** `"Vektor"` ↔ `"Yo'nalish"` (too vague, no algebraic content)
+
+**Notebook Capture (Slot 3 Primary — defining mechanic for Geometriya Advanced):**
+- **Structure:** Student draws 3D figure, labels dimensions, solves, uploads photo.
+- **Task types:**
+  - 3D construction: *"Asosi 4cm bo'lgan to'g'ri to'rtburchak piramidasi, balandligi 6cm. Barcha qirralar uzunligini toping. Diagrammada hisoblangan uzunliklarni ko'rsating."*
+  - Projection drawing: *"Bu L-shaklidagi prizmaning yuqori, old va yon ko'rinishlarini chizing."*
+  - Vector sketch: *"Berilgan a⃗ = (2, 3, 1) va b⃗ = (1, −1, 2) vektorlarini chizing. a⃗ + b⃗ ni toping va chizing."*
+- **Grading criteria:** 3D diagram accuracy, correct labeling of all dimensions, calculation steps visible, final answer with units.
+- **Frequency:** G10-11: 1 in every 2 sessions.
+
+**Reaction Chain (Slot 2 Backup):**
+- **Structure:** 6-10 nodes in a sequential vector or solid geometry calculation chain.
+- **Geometriya Advanced chain example (finding angle between vectors):**
+  - Node 1: *"a⃗ = (1, 2, 3) va b⃗ = (4, −1, 2). a⃗ · b⃗ ni toping."* → Answer: 4 + (−2) + 6 = 8
+  - Node 2: *"|a⃗| ni toping."* → Answer: √(1+4+9) = √14
+  - Node 3: *"|b⃗| ni toping."* → Answer: √(16+1+4) = √21
+  - Node 4: *"cos θ = a⃗·b⃗ / (|a⃗|·|b⃗|) formulasiga qo'ying."* → Answer: 8 / (√14 · √21)
+  - Node 5: *"8 / √294 ni soddalashtiring."* → Answer: 8 / (7√6) ≈ 0.466
+  - Node 6: *"θ ≈ ? gradus."* → Answer: ≈62.2°
+- **Bad chain:** Nodes are unrelated 3D facts (no sequential reasoning).
+
+**Connect Four vs AI (Slot 3 Backup):**
+- **Structure:** ~18 questions gating column placement. Each correct answer = place a disc.
+- **Question types:** Solid identification from cross-section, vector dot product calculation, surface area formula recall.
+- **Example gating question:** *"Kubning diagonali d = a√3 bo'lsa, a = 4 cm uchun d = ?"* (Answer: 4√3)
 
 **Games to AVOID for Geometriya Advanced:**
 - Speed Sort with numbers — arithmetic, no spatial value
@@ -288,6 +369,27 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 2. Socratic spatial: "Bu 3D shaklga qarang — qaysi yuz asosga parallel?" or "A dan B ga yo'nalishni vektor sifatida ifodalang." — never reveals the calculation
 3. Route to specific Story Mode segment
 4. Regenerate with new solid/diagram (same standard)
+
+### 4.7 Reflection (Phase 7)
+
+**Inherits:** Family-level Phase 7 template. Geometriya Advanced overrides below.
+
+1. **Session Summary — 3D/Vector Recap (30 sec):** Display the key 3D solid or vector concept from this session as a labeled 3D diagram card. Example: *"Bugun Siz silindr va yarim sfera kompozitsiyasining to'la yuzasini hisobladingiz."* Show the composite solid diagram with all calculated dimensions labeled.
+
+2. **Metacognitive Prompts (45 sec, pick 3):**
+   - *"3D diagrammani tasavvur qilishda eng qiyin qism nima edi?"*
+   - *"Kesim shaklini to'g'ri aniqlay oldingizmi? Qanday fikrladingiz?"*
+   - *"Bu formulani boshqa qaysi 3D jismga qo'llasa bo'ladi?"*
+   - *"Vektor hisoblashda qaysi qadamda xato qildingiz?"*
+   - *"Agar real muhandislik loyihasida ishlasangiz, bu bilimni qanday qo'llardingiz?"*
+
+3. **BOST Goal Recall (15 sec):** *"Bugun Siz '[stored goal]' ni bilmoqchi edingiz. Bildingizmi?"* Student taps: To'liq / Qisman / Hali emas. Result logged.
+
+4. **Spaced Repetition Schedule:** *"Bu formula/teorema ertaga (1 kun), 3 kundan keyin va 7 kundan keyin qaytariladi."* Tag 3D formulas + vector operations + their diagrams for spaced rep queue.
+
+5. **Closing Line:**
+   - **≥60%:** *"Arximed sfera va silindr hajmini isbotladi — bu kashfiyot uning qabrida ham tasvirlangan. Siz fazoviy fikrlash mahoratini rivojlantiryapsiz. Uchinchi Renessans — Sizdan boshlanadi."*
+   - **<60%:** *"3D tasavvur — eng qiyin ko'nikma. Har bir mashq miyangizni kuchaytiradi. Ertaga yana bir qadam oldinga."*
 
 ---
 

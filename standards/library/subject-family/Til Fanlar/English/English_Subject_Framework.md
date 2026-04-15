@@ -109,6 +109,160 @@ English in NETS is a **foreign language**, not a native or heritage language. Th
 
 ---
 
+## 3a. Phase 0-A Panel Construction Guide — English
+
+Phase 0-A previews the session with 8 visual panels. For English, panels must balance **bilingual scaffolding** (G5-6) with progressive **English-only immersion** (G7+).
+
+**Panel length rules:**
+- Panels 1-5: 8-10 sentences each
+- Panels 6-8: 5-10 sentences each
+
+| Panel | Purpose | English-Specific Pattern |
+|---|---|---|
+| **1 — Hook** | Grab attention with a communication scenario | G5-6: Uzbek setup, English key phrase. "Malika got a letter from her pen pal in London. It says: 'Hi! My name is Emma. What's your school like?'" / G7+: English-only opening |
+| **2 — Context** | Show WHY this English skill matters | Connect to real situations: travel, technology, careers, global communication. "Knowing how to write emails in English is essential — 80% of international business emails are in English." |
+| **3 — Key Vocabulary Preview** | Introduce 4-6 new words from the chapter | Each word in a sentence with bold + Uzbek translation (G5-6) or English definition (G7+). "She felt **confident** about her presentation. (ishonchli)" |
+| **4 — Grammar/Structure Spotlight** | Show the target grammar pattern working | Two parallel examples. "I **have visited** Bukhara. She **has visited** London." — student sees the pattern before learning the rule name |
+| **5 — Challenge Preview** | Foreshadow the Real-Life role or Boss task | "Today you will be a hotel receptionist helping an English-speaking guest. Get ready!" |
+| **6 — Connection** | Link to prior knowledge | "Last session you learned present tense. Today we add past tense — same verbs, new time frame." |
+| **7 — Cultural Anchor** | National Pride moment in English context | "Did you know? The word 'algebra' comes from Arabic 'al-jabr' — Central Asian scholars shaped global mathematics." |
+| **8 — BOST Goal** | Student sets their goal | G5-6: "Bugun Siz nimani bilmoqchisiz? / What do you want to learn today?" G7+: "What is your goal for today's session?" Store for Phase 7 |
+
+**Scaffolding taper:**
+- G5-6: Panels 1-3 may use Uzbek framing with English target content
+- G7-8: English-primary with Uzbek glossary only for hard words
+- G9+: English-only across all panels
+
+---
+
+## 3b. Phase 1 Format Mixing + Construction — English
+
+Phase 1 Memory Sprint **MUST use at least 2 of the 3 allowed formats** (MC, T/F, YNNG).
+
+**English-specific construction recipes:**
+
+**Multiple Choice — English Pattern:**
+- Stem: a sentence with a grammar blank, a vocabulary context, or a reading mini-passage
+- 1 correct + 3 distractors calibrated to CEFR level
+
+**Example MC (vocabulary — G6, A1-A2):**
+> "The weather is very ___. We need an umbrella."
+> A) rainy ✓  B) sunny  C) windy  D) cloudy
+> `[Bloom: L1 | PISA: L1]`
+
+**Example MC (grammar — G8, B1):**
+> "She ___ to Tashkent last summer."
+> A) travelled ✓  B) has travelled  C) travels  D) will travel
+> `[Bloom: L2 | PISA: L2]`
+
+**True/False — English Pattern:**
+- Statement about a grammar rule or a claim from a reading passage
+- Unambiguous — no trick wording
+
+**Example T/F (grammar rule — G7):**
+> "We use 'have been' with present perfect continuous." — True or False?
+> Answer: True
+> `[Bloom: L1 | PISA: L1]`
+
+**Yes/No/Not Given — English Pattern:**
+- Short passage (3-5 sentences) + claim to verify against the text
+- Best for G7+ where reading inference is a target skill
+
+**Example YNNG (reading — G9, B1):**
+> Passage: "Samarkand is one of the oldest cities in Central Asia. It was an important stop on the Silk Road. Today, tourists from around the world visit its famous Registan Square."
+> Claim: "Samarkand was built by Alexander the Great."
+> Answer: Not Given
+> `[Bloom: L3 | PISA: L2]`
+
+**Mixing rule:** Every English Phase 1 must use at least 2 of 3 formats. A session with 10 MC-only items fails validation.
+
+---
+
+## 3c. Phase 3 Game Construction Recipes — English
+
+English uses 3 games per session: at least 1 Interactive + 2 Default. Priority order: **Spaced Flashcards** (vocabulary primary) > **Sentence Fill** (grammar in context) > **Listening/Dialogue**.
+
+#### Spaced Flashcards (Default — VOCABULARY PRIMARY for English)
+
+English vocabulary is the main bottleneck. Flashcards are the primary retention tool.
+
+**Construction steps:**
+1. Select 8-12 words from the chapter. Include the words previewed in Phase 0-A Panel 3
+2. Front: English word or phrase
+3. Back: Uzbek translation (G5-6) OR English definition (G7+) + example sentence + image cue
+4. Order: first 4 = recall (seen before), next 4 = recognition (new context), last 4 = productive use
+
+**Example (G5, A1):**
+> Front: "library" | Back: "kutubxona — I go to the **library** every day." + image of Navoi National Library
+
+**Example (G9, B1):**
+> Front: "consequences" | Back: "the results of an action — 'Every decision has **consequences** that affect others.'"
+
+**Example (G11, B2):**
+> Front: "to advocate" | Back: "to publicly support — 'She **advocates** for equal access to education.'"
+
+#### Sentence Fill / Cloze (Default — GRAMMAR IN CONTEXT)
+
+**Construction steps:**
+1. Write or adapt a passage using chapter grammar targets (3-8 sentences)
+2. Create 3-6 blanks at grammar-critical positions
+3. G5-7: provide word bank with correct answers + 2-4 distractors per blank
+4. G8+: free recall (no word bank) for at least half the blanks
+
+**Example (G6 — present simple vs continuous):**
+> "Emma ___ (live/lives/living) in London. Right now, she ___ (write/writes/is writing) a letter to Malika. She ___ (send/sends/is sending) letters every month."
+> Word bank: `lives, is writing, sends, living, writes, send`
+
+**Example (G10 — reported speech):**
+> "The teacher said that the exam ___ the following week. She told us that we ___ to bring our dictionaries. She asked if we ___ ready."
+> (Free recall — no word bank)
+
+#### Listening / Dialogue (Default — COMPREHENSION + PRODUCTION)
+
+**Construction steps:**
+1. Write or describe an audio scenario matching the chapter topic and CEFR level
+2. G5-6: slow, clear, 30 seconds max. G7-9: natural speed, 45-60 seconds. G10-11: 2-3 minutes, multiple speakers
+3. Write 3-5 comprehension questions progressing from literal → inferential
+4. For dialogue: provide a role prompt and expected response structure
+
+**Example Listening (G7):**
+> Audio: "A tourist asks for directions to the Chorsu Bazaar in Tashkent."
+> Q1: "Where does the tourist want to go?" `[Bloom: L1 | PISA: L1]`
+> Q2: "What transport does the local suggest?" `[Bloom: L2 | PISA: L2]`
+> Q3: "Why does the tourist prefer walking?" `[Bloom: L3 | PISA: L2]`
+
+**Example Dialogue (G8):**
+> Role: "You are a hotel receptionist. A guest calls to complain about noise."
+> Expected: greeting + apology + solution offer (3-4 sentences minimum)
+
+#### Memory Match Blitz (Interactive — fast pair retrieval)
+
+**Construction steps:**
+1. Create 6-8 pairs: word↔translation (G5-7) or synonym↔antonym / collocation pairs (G8+)
+2. Timer: 2:00. Pairs 1-3 L1, 4-5 L2, 6+ L3
+
+**Example (G5 — word↔translation):**
+> "school" ↔ "maktab" | "teacher" ↔ "o'qituvchi" | "book" ↔ "kitob" | "friend" ↔ "do'st" | "happy" ↔ "baxtli" | "morning" ↔ "ertalab"
+
+**Example (G10 — collocation pairs):**
+> "make" ↔ "a decision" | "take" ↔ "responsibility" | "pay" ↔ "attention" | "draw" ↔ "a conclusion" | "raise" ↔ "awareness" | "reach" ↔ "an agreement"
+
+#### Codebreaker (Interactive — spelling/morphology)
+
+**Construction steps:**
+1. Choose a word with meaningful morphological structure
+2. Break into components, provide progressive clues
+3. Student assembles and explains the word formation rule
+
+**Example (G7 — prefix + root + suffix):**
+> Code: "_ _ _ _ _ _ _ _ _ _ _ _ _" (13 letters)
+> Clue 1: "Prefix meaning 'not'" → dis
+> Clue 2: "Root meaning 'to agree'" → agree
+> Clue 3: "Suffix meaning 'state of'" → -ment
+> Answer: "disagreement" = dis + agree + ment
+
+---
+
 ## 4. Game Mechanics — English-Specific Filtering
 
 English inherits the Til Fanlari mechanic set, then narrows it further.
@@ -231,6 +385,47 @@ English inherits the Til Fanlari Boss model: writing production, rubric-based ev
 - The **textbook chapter remains the content source**. Homework must track the chapter the student studied in class.
 - English has a special production risk: **textbook quality and depth may vary by grade**, so agents must adapt to the actual chapter rather than assume a perfectly standardized ladder.
 - In this workspace, the **English textbook directories for G5-11 exist but are currently empty**, so this framework relies on the parent standards and CEFR/library progression rather than local TOC extraction.
+
+---
+
+## Phase 7 Reflection — English Specific
+
+Phase 7 closes the session with metacognitive reflection focused on **communication skill growth**.
+
+### Construction Recipe
+
+**Step 1 — Session Summary (2-3 sentences)**
+Summarize what was practiced, referencing the CEFR-relevant skill. Bilingual for G5-7, English-only for G8+.
+
+> G6: "Today you learned 8 new words about travel and practiced present tense questions. Bugun Siz sayohat haqida 8 ta yangi so'z o'rgandingiz."
+> G10: "You practiced reported speech and wrote a formal email. Your grammar accuracy is improving."
+
+**Step 2 — 3 Metacognitive Prompts**
+
+| Prompt Type | G5-7 (bilingual allowed) | G8+ (English-only) |
+|---|---|---|
+| **Strategy awareness** | "Which helped you remember new words better — pictures, sentences, or repetition? Qaysi usul yordam berdi?" | "What strategy helped you most with today's grammar — examples, rules, or practice?" |
+| **Difficulty reflection** | "Which task was hardest? Qaysi topshiriq eng qiyin bo'ldi?" | "What was the most challenging part of today's session and why?" |
+| **Transfer thinking** | "Where can you use these words outside class? Bu so'zlarni qayerda ishlata olasiz?" | "In what real situation could you use today's grammar — writing an email, having a conversation, or reading an article?" |
+
+**Step 3 — BOST Goal Recall**
+Retrieve the goal from Phase 0-A Panel 8:
+
+> G5-7: "Bugun Siz [stored goal] ni bilmoqchi edingiz. Bildingizmi? / Did you reach your goal?"
+> G8+: "At the start, you wanted to [stored goal]. Did you achieve it?"
+
+**Step 4 — Spaced Repetition Schedule**
+> G5-7: "Bugungi so'zlar ertaga, 3 kundan keyin, 1 haftadan keyin, 3 haftadan keyin va 2 oydan keyin qaytariladi. / Your new words will return for review tomorrow, in 3 days, 1 week, 3 weeks, and 2 months."
+> G8+: "Your vocabulary and grammar items enter the review cycle: tomorrow → 3 days → 1 week → 3 weeks → 2 months."
+
+**Step 5 — Closing Line**
+
+- **Score >= 60%:** Third Renaissance line with English communication theme
+  > G5-7: "Well done! Siz Uchinchi Renessans avlodisiz — har bir inglizcha so'z yangi dunyo eshigini ochadi."
+  > G8+: "Language opens doors. Every word you master connects you to the world. You are the Third Renaissance generation."
+- **Score < 60%:** Encouraging neutral
+  > G5-7: "Bugun qiyin bo'ldi, lekin har bir urinish — oldinga qadam. Tomorrow we try again!"
+  > G8+: "Today was tough, but every attempt builds your skill. Keep going — progress is not always visible, but it is always real."
 
 ---
 

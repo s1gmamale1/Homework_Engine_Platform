@@ -132,6 +132,182 @@ Russian in NETS occupies a special position in Uzbekistan. It is neither fully n
 
 ---
 
+## 3a. Phase 0-A Panel Construction Guide — Rus Tili
+
+Phase 0-A previews the session with 8 visual panels. Rus tili is **dual-stream**, so panels must differentiate:
+- **UZ-stream:** vocabulary preview + communicative scaffolding (Uzbek framing allowed G5-6)
+- **RU-stream:** literary/cultural context + grammar awareness (Russian-only from G5)
+
+**Panel length rules:**
+- Panels 1-5: 8-10 sentences each
+- Panels 6-8: 5-10 sentences each
+
+**Pronoun rules:** Uzbek content uses "Siz" (never "sen"). Russian content uses "Вы" (never "ты").
+
+| Panel | Purpose | UZ-Stream Pattern | RU-Stream Pattern |
+|---|---|---|---|
+| **1 — Hook** | Communication scenario or grammar puzzle | G5-6: Uzbek setup + Russian key phrase. "Sardor rus tilida xat oldi: 'Привет! Как дела? Приходи в гости!' Siz ham javob yoza olasizmi?" / G7+: Russian-primary | Russian grammar puzzle. "Редактор нашёл 5 ошибок в статье. Сможете ли Вы найти их все?" |
+| **2 — Context** | WHY this skill matters | Travel, work, media scenarios where Russian is needed. "O'zbekistonda ko'plab korxonalar rus tilida hujjat yuritadi." | Formal writing and analytical skills. "Грамотная речь — это Ваша визитная карточка в профессиональном мире." |
+| **3 — Key Vocabulary/Terms Preview** | 4-6 items from the chapter | Russian word + Uzbek translation + example sentence. "**Здание** (bino) — Школа — это большое **здание**." | Grammar terms in context. "**Причастие** — особая форма глагола: 'читающий мальчик', 'написанное письмо'." |
+| **4 — Grammar/Structure Spotlight** | Show the target pattern | Two parallel examples with Uzbek gloss. "Мальчик пошёл **в** школ**у**. Девочка пошла **в** библиотек**у**." (yo'nalish) | Two parallel examples. "Мальчик, **читающий** книгу. Книга, **написанная** учеником." — pattern visible before rule |
+| **5 — Challenge Preview** | Foreshadow the session role | "Bugun Siz tarjimon bo'lasiz — turistga Samarqandni tushuntirasiz." | "Сегодня Вы будете редактором школьной газеты." |
+| **6 — Connection** | Prior knowledge link | "O'tgan darsda Siz rus tilida hozirgi zamon fe'llarini o'rgandingiz. Bugun o'tgan zamon qo'shiladi." | "На прошлом уроке Вы разобрали простые предложения. Сегодня — сложные." |
+| **7 — Cultural Anchor** | National Pride / cultural bridge | "Samarqand va Buxoro ilm markazlari dunyoga ma'lum — rus tilini bilish bu merosni jahonga ulashishga yordam beradi." | "Пушкин говорил: 'Язык — это история народа.' Вы изучаете не только правила, а целый мир." |
+| **8 — BOST Goal** | Student sets session goal | "Bugun Siz nimani bilmoqchisiz? / Что Вы хотите узнать сегодня?" Store for Phase 7 | "Что Вы хотите узнать сегодня? Например: 'Научиться различать причастия и деепричастия'." Store for Phase 7 |
+
+---
+
+## 3b. Phase 1 Format Mixing + Construction — Rus Tili
+
+Phase 1 Memory Sprint **MUST use at least 2 of the 3 allowed formats** (MC, T/F, YNNG).
+
+Stream determines content focus: UZ-stream emphasizes **vocabulary recall + basic grammar**. RU-stream emphasizes **grammar identification + rule application**.
+
+**Multiple Choice — UZ-Stream (vocabulary recall):**
+> "Что означает слово 'здание'?"
+> A) bino ✓  B) ko'cha  C) maktab  D) xona
+> `[Bloom: L1 | PISA: L1]`
+
+**Multiple Choice — RU-Stream (grammar ID):**
+> "В предложении 'Мальчик, читающий книгу, сидел в библиотеке' найдите причастие."
+> A) читающий ✓  B) сидел  C) Мальчик  D) библиотеке
+> `[Bloom: L2 | PISA: L2]`
+
+**True/False — UZ-Stream (basic grammar rule):**
+> "'Я иду в школу' gapida 'в' предлоги yo'nalishni bildiradi." — To'g'ri yoki Noto'g'ri?
+> Javob: To'g'ri
+> `[Bloom: L1 | PISA: L1]`
+
+**True/False — RU-Stream (grammar rule):**
+> "Деепричастие в русском языке изменяется по лицам и числам." — Верно или Неверно?
+> Ответ: Неверно (деепричастие — неизменяемая форма)
+> `[Bloom: L2 | PISA: L1]`
+
+**Yes/No/Not Given — UZ-Stream (reading comprehension):**
+> Matn: "Ташкент — столица Узбекистана. В городе много парков и музеев. Каждый год сюда приезжают тысячи туристов."
+> Da'vo: "В Ташкенте есть метро."
+> Javob: Berilmagan (Not Given)
+> `[Bloom: L2 | PISA: L2]`
+
+**Yes/No/Not Given — RU-Stream (text analysis):**
+> Текст: "Русский язык богат синонимами. Слова 'смелый', 'храбрый', 'отважный' передают близкие значения, но отличаются оттенками."
+> Утверждение: "Все синонимы полностью взаимозаменяемы."
+> Ответ: Нет
+> `[Bloom: L3 | PISA: L2]`
+
+**Mixing rule:** Both streams must use at least 2 of 3 formats per session.
+
+---
+
+## 3c. Phase 3 Game Construction Recipes — Rus Tili
+
+Rus tili uses 3 games per session: at least 1 Interactive + 2 Default. Priority differs by stream:
+
+- **UZ-stream:** Spaced Flashcards (vocabulary) > Sentence Fill (grammar) > Listening/Dialogue
+- **RU-stream:** Sentence Fill (grammar in context) > Tile Match (clause structure) > Why Chain (grammar reasoning)
+
+#### Spaced Flashcards (Default — UZ-STREAM PRIMARY)
+
+**Construction steps:**
+1. Select 8-12 words from the chapter
+2. Front: Russian word. Back: Uzbek translation + example sentence + image cue
+3. Order: first 4 = recall, next 4 = recognition, last 4 = productive use
+4. G5-6: always include Uzbek translation. G7+: Russian definition may replace Uzbek for stronger items
+
+**Example (G5, UZ-stream):**
+> Front: "здание" | Back: "bino — Школа — это большое **здание**." + maktab bino rasmi
+
+**Example (G8, UZ-stream):**
+> Front: "обсуждать" | Back: "muhokama qilish — 'Мы будем **обсуждать** этот вопрос на собрании.'"
+
+#### Sentence Fill / Cloze (Default — BOTH STREAMS, RU-STREAM MANDATORY)
+
+**UZ-stream construction:**
+1. Write passage with 3-6 blanks testing vocabulary or basic grammar
+2. Provide word bank with correct + 2-4 distractors per blank
+
+**Example (G6, UZ-stream — prepositions):**
+> "Мальчик пошёл ___ школу. Книга лежала ___ столе. Девочка вышла ___ дома."
+> So'z banki: `в, на, из, к, от, у` (to'g'ri: в, на, из)
+
+**RU-stream construction:**
+1. Write passage testing morphological precision: case endings, verb forms, participles
+2. G5-7: word bank. G8+: free recall for at least half the blanks
+
+**Example (G8, RU-stream — причастия):**
+> "Мальчик, ___ (читать) книгу, сидел в библиотеке. Книга, ___ (написать) известным автором, лежала на полке. Ученики, ___ (выполнить) задание, получили оценки."
+> Ответы: читающий, написанная, выполнившие (причастия в правильной форме)
+
+**Example (G10, RU-stream — деепричастия):**
+> "___  (Закончить) работу, он вышел на улицу. Она шла по парку, ___ (наслаждаться) тишиной."
+> Ответы: Закончив, наслаждаясь (деепричастия совершенного и несовершенного вида)
+
+#### Tile Match (Default — RU-STREAM for clause structure)
+
+**Construction steps:**
+1. Define matching dimension: clause↔function, grammar term↔example, word form↔case
+2. Write 6-8 pairs. Timer: 2:00-3:00
+
+**Example (RU-stream — clause types, G8):**
+> Left: "Главное предложение" → Right: "Мы пошли домой"
+> Left: "Придаточное времени" → Right: "когда начался дождь"
+> Left: "Придаточное причины" → Right: "потому что устали"
+> Left: "Придаточное условия" → Right: "если будет хорошая погода"
+> Left: "Придаточное цели" → Right: "чтобы отдохнуть"
+> Left: "Придаточное уступки" → Right: "хотя было поздно"
+
+**Example (UZ-stream — word↔translation, G5):**
+> Left: "школа" → Right: "maktab"
+> Left: "учитель" → Right: "o'qituvchi"
+> Left: "книга" → Right: "kitob"
+> Left: "друг" → Right: "do'st"
+> Left: "семья" → Right: "oila"
+> Left: "город" → Right: "shahar"
+
+#### Codebreaker (Interactive — Russian morphology)
+
+Russian has rich morphology: prefixes, roots, suffixes, endings. Codebreaker works for decomposition.
+
+**Construction steps:**
+1. Choose a word with prefix + root + suffix + ending structure
+2. Break into components with progressive clues
+3. Student assembles and explains each morpheme's function
+
+**Example (G7 — word formation):**
+> Код: "_ _ _ _ _ _ _ _ _ _" (10 букв)
+> Подсказка 1: "Приставка, означающая 'заново'" → пере
+> Подсказка 2: "Корень, связанный с 'писать'" → пис
+> Подсказка 3: "Суффикс действующего лица" → -а + -тель
+> Ответ: "переписатель" (нет, правильнее) → "переписать" = пере + пис + а + ть
+> (Или более подходящий пример:)
+
+**Example (G8 — morphological decomposition):**
+> Код: "_ _ _ _ _ _ _ _ _ _ _ _ _" (13 букв)
+> Подсказка 1: "Приставка, означающая 'без'" → без
+> Подсказка 2: "Корень 'ответ'" → ответ
+> Подсказка 3: "Суффикс прилагательного" → -ственн
+> Подсказка 4: "Окончание" → -ый
+> Ответ: "безответственный" = без + ответ + ственн + ый
+
+#### Reaction Chain (Interactive — UZ-stream dialogue / RU-stream parsing)
+
+**UZ-stream example (dialogue sequence — G7):**
+> Situation: Turист спрашивает дорогу в Самарканде
+> Node 1: "Турист: Здравствуйте! Как пройти к Регистану?" — Student selects appropriate greeting response ✓
+> Node 2: "Вы: ___" — Student writes direction (Идите прямо, потом направо) ✓
+> Node 3: "Турист: Это далеко?" — Student estimates distance ✓
+> Node 4: "Вы: ___" — Student suggests transport or walking ✓
+
+**RU-stream example (sentence parsing — G9):**
+> Sentence: "Когда наступила весна, птицы вернулись в родные края."
+> Node 1: "Найдите главное предложение" → "птицы вернулись в родные края" ✓
+> Node 2: "Найдите придаточное" → "Когда наступила весна" ✓
+> Node 3: "Определите тип придаточного" → придаточное времени ✓
+> Node 4: "Найдите подлежащее главного предложения" → птицы ✓
+> Node 5: "Найдите сказуемое" → вернулись ✓
+
+---
+
 ## 4. Game Mechanics
 
 Russian inherits Til Fanlari mechanics, but the primary set changes by stream.
@@ -241,6 +417,48 @@ Russian Boss format depends on stream.
 - Two textbook tracks exist in principle: **UZ-stream** and **RU-stream**. The agent must use the correct one.
 - The **`{lang}` field** is the operational signal for stream handling.
 - Dry textbook pages must be transformed into engaging homework through Story Mode, Game Breaks, and Real-Life Challenge without changing the target concept.
+
+---
+
+## Phase 7 Reflection — Rus Tili Specific
+
+Phase 7 closes the session with stream-specific metacognitive reflection.
+
+### Construction Recipe
+
+**Step 1 — Session Summary (2-3 sentences)**
+Stream-differentiated summary of what was practiced.
+
+> **UZ-stream G6:** "Bugun Siz 8 ta yangi ruscha so'z o'rgandingiz va hozirgi zamon gaplarini tuzdingiz. Вы научились строить простые предложения в настоящем времени."
+> **RU-stream G8:** "Сегодня Вы разобрали причастные обороты и научились отличать действительные причастия от страдательных. Вы отредактировали 3 текста."
+
+**Step 2 — 3 Metacognitive Prompts**
+
+| Prompt Type | UZ-Stream | RU-Stream |
+|---|---|---|
+| **Strategy awareness** | "Qaysi usul Sizga yangi so'zlarni eslab qolishda yordam berdi — rasm, tarjima, yoki gap ichida ishlatish? / Что помогло Вам запомнить новые слова?" | "Какой приём помог Вам лучше понять сегодняшнюю тему — примеры, анализ или исправление ошибок?" |
+| **Difficulty reflection** | "Qaysi topshiriq eng qiyin bo'ldi — tinglash, yozish, yoki grammatika? / Что было самым трудным?" | "Что было самым сложным в сегодняшнем уроке и почему?" |
+| **Transfer thinking** | "Bu so'zlarni qayerda ishlata olasiz — do'stlar bilan suhbatda, televizorda, yoki kitob o'qishda? / Где Вы сможете использовать эти слова?" | "Где Вы сможете применить сегодняшнее правило — в сочинении, в письме, или в устной речи?" |
+
+**Step 3 — BOST Goal Recall**
+Retrieve the goal from Phase 0-A Panel 8:
+
+> **UZ-stream:** "Bugun Siz [stored goal] ni bilmoqchi edingiz. Bildingizmi? / Вы хотели узнать [stored goal]. Получилось?"
+> **RU-stream:** "В начале урока Вы хотели [stored goal]. Удалось ли Вам достичь этой цели?"
+
+**Step 4 — Spaced Repetition Schedule**
+
+> **UZ-stream:** "Bugungi so'zlar va qoidalar ertaga, 3 kundan keyin, 1 haftadan keyin, 3 haftadan keyin va 2 oydan keyin qaytariladi. / Ваши новые слова вернутся: завтра, через 3 дня, через неделю, через 3 недели, через 2 месяца."
+> **RU-stream:** "Сегодняшние правила и примеры вернутся для повторения: завтра → через 3 дня → через неделю → через 3 недели → через 2 месяца."
+
+**Step 5 — Closing Line**
+
+- **Score >= 60%:**
+  > **UZ-stream:** "Молодец! Har bir o'rgangan so'zingiz — yangi imkoniyat. Siz Uchinchi Renessans avlodisiz — rus tilini bilish dunyoga yo'l ochadi."
+  > **RU-stream:** "Вы сегодня стали сильнее в русском языке. Каждое правило, которое Вы освоили — это шаг к мастерству. Поколение Третьего Ренессанса строит мосты между культурами."
+- **Score < 60%:**
+  > **UZ-stream:** "Bugun qiyin bo'ldi, lekin har bir urinish — oldinga qadam. Ertaga yana mashq qilamiz. Не сдавайтесь!"
+  > **RU-stream:** "Сегодня было непросто, но каждая попытка — это движение вперёд. Завтра мы продолжим, и у Вас обязательно получится."
 
 ---
 

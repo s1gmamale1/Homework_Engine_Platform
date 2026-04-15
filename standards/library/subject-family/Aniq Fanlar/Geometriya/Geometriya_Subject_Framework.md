@@ -118,6 +118,19 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 - Panel 7 Industry Application: Architect (angles, triangles, arches), civil engineer (road curves), tile craftsman (Islamic patterns), game developer (2D collision shapes), carpenter (cutting angles)
 - Mathematician references: **Euclid** (mandatory — father of deductive geometry, 1 per 3 sessions), **Al-Biruni** (geodesic measurements, Earth's radius — outstanding recurring example), **Thales**, **Pythagoras**, **Archimedes** (circles and area), **Omar Khayyam**
 
+**Phase 0-A Panel Construction Guide — Geometriya:**
+
+| Panel | Geometriya Construction Recipe |
+|---|---|
+| **Panel 1: Structural Scan** | Theorem tree for this chapter. Shape chips with labeled diagrams. Example: for triangle chapter, show triangle types hierarchy with mini-diagrams of each. NEVER text-only — always visual. |
+| **Panel 2: Key Vocabulary** | 4-6 geometric terms, each with labeled diagram. *"Gipotenuz → to'g'ri burchakli uchburchakda eng uzun tomon [diagram]."* No term without its visual. |
+| **Panel 3: Prior Knowledge Bridge** | Connect to what student already proved: *"Siz allaqachon uchburchak burchaklari yig'indisi 180° ekanini isbotladingiz. Bugun tashqi burchaklarni o'rganamiz."* |
+| **Panel 4: Chapter Preview** | *"Bu bobda Siz Pifagor teoremasini o'rganasiz — to'g'ri burchakli uchburchakning sirli xossasi."* State the theorem or property. |
+| **Panel 5: Personal Hook + BOST** | **Striking visual/photo first.** Islamic geometric patterns in Samarkand tilework, Chorsu Bazaar dome, Registan Square proportions, hexagonal honeycombs, spiral shells. BOST Prime: *"Geometrik shakllar haqida nimalarni bilasiz?"* |
+| **Panel 6: BOST Goal Storage** | Store student's goal. *"Maqsadingiz saqlandi. Sessiya oxirida qaytamiz."* |
+| **Panel 7: Industry Application** | Architect (angles, arches), civil engineer (road curves), tile craftsman (Islamic patterns), game developer (2D collision shapes), carpenter (cutting angles). Photo + 1-sentence. |
+| **Panel 8: Mathematician Spotlight** | **Euclid** mandatory 1 per 3 sessions. **Al-Biruni** (geodesic measurements — outstanding recurring). Also: Thales, Pythagoras, Archimedes, Omar Khayyam. 55/45 ratio. |
+
 **0-B Flash Cards — Geometriya-specific overrides:**
 - **6-8 cards**
 - Priority types: **Definition** (what a shape/angle/theorem IS), **Formula** (area, perimeter), **Theorem statement**
@@ -145,6 +158,23 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 - Include 1-2 "How many triangles in this figure?" spatial counting questions — high-DTM-yield, builds diagram literacy
 - Every Memory Sprint item must include its diagram — no symbol-only geometry questions
 - Wrong answer feedback: show annotated diagram with error highlighted
+
+**Phase 1 Format Mixing Rule:** MUST use at least 2 of 3 formats per sprint. Every item MUST include a diagram — no text-only geometry in Phase 1.
+
+**Per-format construction — Geometriya-specific:**
+
+**Multiple Choice (4 options):**
+- Every stem includes a labeled diagram. *"Bu diagrammaga qaysi teorema taalluqli? [diagram with two equal angles and two equal sides] A) Pifagor teoremasi B) Teng yonli uchburchak xossasi C) Tashqi burchak teoremasi D) O'xshashlik"*
+- Distractors: theorems that COULD apply to a similar but different diagram.
+- Spatial counting: *"Bu rasmda nechta uchburchak bor? [complex figure] A) 4 B) 6 C) 8 D) 10"*
+
+**True / False:**
+- *"Uchburchakning burchaklari yig'indisi 180° — To'g'ri yoki Noto'g'ri?"* [diagram of triangle with angle marks]
+- *"Rombning diagonallari teng — To'g'ri yoki Noto'g'ri?"* [diagram of rhombus] (False — diagonals bisect each other at right angles but are not equal)
+
+**Yes / No / Not Given:**
+- *"Bobda aytilganiga ko'ra, har qanday to'rtburchak parallelogramm — Ha / Yo'q / Aytilmagan."* [diagram showing various quadrilaterals]
+- "Not Given" must be genuinely ambiguous based on chapter scope.
 
 ### 4.2 Story Mode (Phase 2)
 
@@ -195,6 +225,57 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 - Tile Match = Visual/Spatial + Verbal/Logical
 - Notebook Capture = Kinesthetic/Motor
 ≥2 different modalities satisfied (Spatial + Kinesthetic).
+
+**Phase 3 Game Construction Recipes — Geometriya:**
+
+**Puzzle Lock / Sliding Tile (Slot 1 Primary):**
+- **Structure:** Scrambled geometric diagram that student must reconstruct by sliding tiles into correct positions.
+- **What goes on each tile:** Diagram fragments — parts of a labeled geometric figure (vertices, sides, angle marks, labels).
+- **Difficulty progression:**
+  - L1: 4-tile puzzle — reconstruct a simple triangle with labeled vertices. *Scrambled ABC triangle → slide to correct positions.*
+  - L2: 6-tile puzzle — reconstruct a proof diagram with auxiliary lines. Student must identify where construction lines go.
+  - L3: 9-tile puzzle — full theorem diagram with labels, angle marks, and equal-side markers. Timed.
+- **Alternative mode:** "Proof assembly" — tiles contain proof steps (Statement → Reason → Conclusion). Student arranges into logical order.
+- **Good puzzle:** Reconstruct a diagram of two congruent triangles with shared side, all congruence marks visible.
+- **Bad puzzle:** Reconstruct a photograph — no geometric reasoning involved.
+
+**Tile Match (Slot 2 Primary):**
+- **Structure:** 6-8 pairs. Left tile = theorem name or property statement. Right tile = labeled diagram illustrating it.
+- **Pair types for Geometriya:**
+  - Theorem ↔ Diagram: `"Pifagor teoremasi"` ↔ `[right triangle with a²+b²=c² labeled]`
+  - Shape ↔ Properties: `"Parallelogramm"` ↔ `"Qarama-qarshi tomonlar teng va parallel"`
+  - Formula ↔ Figure: `"S = ½ × a × h"` ↔ `[triangle with base a and height h marked]`
+- **Difficulty progression:**
+  - L1: Direct — theorem name ↔ its standard diagram. 6 pairs.
+  - L2: Property list ↔ shape. Student must know which properties belong to which shape. 7 pairs.
+  - L3: Non-obvious — theorem ↔ diagram where the theorem is NOT immediately visible (requires spatial reasoning). 8 pairs.
+- **Good pair:** `"Tashqi burchak teoremasi"` ↔ `[triangle with exterior angle = sum of remote interior angles marked]`
+- **Bad pair:** `"Uchburchak"` ↔ `"3 tomonli shakl"` (too trivial, no visual)
+
+**Notebook Capture (Slot 3 Primary — highest priority for Geometriya):**
+- **Structure:** Student draws geometric figure by hand, labels it, solves, uploads photo.
+- **Task types:**
+  - Construction: *"ABC uchburchagini ∠B = 90°, BC = 4cm, AB = 3cm shartida chizing. Barcha to'g'ri burchaklarni belgilang. AC ni toping."*
+  - Proof sketch: *"Teng yonli uchburchakda asos burchaklari teng ekanini diagramma yordamida isbotlang. Barcha qadamlarni yozing."*
+  - Annotation: *"Berilgan diagrammada barcha teng tomonlarni va teng burchaklarni belgilang. Keyin yuzani hisoblab yozing."*
+- **Grading criteria:** Diagram accuracy (labeled vertices, correct angle marks), solution steps visible, final answer with units.
+- **Frequency:** G7-8: 1 in every 2 sessions. G9: 1 in every 3 sessions.
+
+**Reaction Chain (Slot 3 Backup):**
+- **Structure:** 6-8 nodes in a sequential proof chain. Each correct step unlocks the next.
+- **Geometriya chain example (proving triangle angles sum to 180°):**
+  - Node 1: *"AB || CD chiziqni chizing. Bu qanday chiziq?"* → Answer: "Parallel chiziq"
+  - Node 2: *"∠1 va ∠BAC qanday burchaklar?"* → Answer: "Ichki qarama-qarshi burchaklar"
+  - Node 3: *"Demak ∠1 = ∠BAC. Nima uchun?"* → Answer: "Parallel chiziqlar orasidagi ichki qarama-qarshi burchaklar teng"
+  - Node 4: *"Xuddi shunday, ∠2 = ∠BCA. D nuqtada ∠1 + ∠B + ∠2 = ?"* → Answer: "180°"
+  - Node 5: *"∠1 = ∠A va ∠2 = ∠C bo'lgani uchun, ∠A + ∠B + ∠C = ?"* → Answer: "180°"
+  - Node 6: *"Biz nima isbotladik?"* → Answer: "Uchburchak burchaklari yig'indisi 180°"
+- **Bad chain:** Each node is an unrelated geometry fact (no logical flow).
+
+**Codebreaker (Slot 2 Backup):**
+- **Structure:** 4-6 gating questions about geometric properties + hidden theorem/shape to identify.
+- **Example:** Student sees: "Shape has 4 sides, all equal, angles NOT all 90°." Gating questions test angle properties. Answer: Rhombus.
+- **Difficulty:** L1 = identify shape from properties. L2 = identify theorem from consequences. L3 = identify configuration from measurements.
 
 **Games to AVOID for Geometriya:**
 - Worked Examples completion without diagrams — text-only worked examples don't work in geometry
@@ -282,6 +363,27 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 2. Socratic: "Bu uchburchakdagi burchaklar haqida nima bilasiz?" — never reveals the next step
 3. Route to specific Story Mode segment
 4. Regenerate with new diagram (same theorem/standard)
+
+### 4.7 Reflection (Phase 7)
+
+**Inherits:** Family-level Phase 7 template. Geometriya-specific overrides below.
+
+1. **Session Summary — Theorem Gallery (30 sec):** Display 3-4 mini-diagrams of the theorems used in this session. Each diagram labeled with theorem name. *"Bugun Siz quyidagi teoremalarn ishlatdingiz:"* followed by the visual gallery. Example: [Isosceles triangle theorem diagram] + [Exterior angle theorem diagram] + [Pythagorean theorem diagram].
+
+2. **Metacognitive Prompts (45 sec, pick 3):**
+   - *"Bu sessiyada eng qiyin isbot qaysi edi? Nima uchun?"*
+   - *"Diagrammadan qaysi ma'lumotni olish qiyin bo'ldi?"*
+   - *"Bu teoremani boshqa qaysi shaklga qo'llasa bo'ladi?"*
+   - *"Agar sinfdo'stingizga Pifagor teoremasini tushuntirsangiz, qanday diagramma chizardingiz?"*
+   - *"Notebook Capture topshirig'ida nimani boshqacha qilgan bo'lardingiz?"*
+
+3. **BOST Goal Recall (15 sec):** *"Bugun Siz '[stored goal]' ni bilmoqchi edingiz. Bildingizmi?"* Student taps: To'liq / Qisman / Hali emas. Result logged.
+
+4. **Spaced Repetition Schedule:** *"Bu teorema ertaga (1 kun), 3 kundan keyin va 7 kundan keyin qaytariladi."* Tag theorem items + their diagrams for spaced rep queue.
+
+5. **Closing Line:**
+   - **≥60%:** *"Evklid geometriyaning asosini qo'ydi. Al-Biruni Yer radiusini uchburchak yordamida o'lchadi. Siz ularning merosini davom ettiryapsiz. Uchinchi Renessans — Sizdan boshlanadi."*
+   - **<60%:** *"Har bir diagramma — miyangiz uchun mashq. Geometriya sabr va diqqat talab qiladi. Ertaga yana bir qadam oldinga."*
 
 ---
 

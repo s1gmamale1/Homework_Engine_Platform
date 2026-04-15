@@ -30,7 +30,7 @@ Each homework = Pre-Session warm-up (3-5 min) + 7-phase engine (25-30 min).
 |-------|------|------|-------------|
 | 0-A | Theme Preview | 2-3 min | 8 components (panels 1-5: 8-10 sentences each; panels 6-8: 5-10 sentences each): summary, better explanation, examples, origin story, personal hook, why it matters, industry use, extra resources. No quiz. Student-paced. |
 | 0-B | Flash Cards | 1-2 min | All formulas/concepts/rules for this chapter. One per card. Reference deck. Ends with "Start my Homework" button. |
-| 1 | Memory Sprint | 2 min | 5-8 warm-up items from CURRENT chapter. Key terms, prerequisites. Tap-only formats: Multiple Choice, True/False, Yes/No/Not Given. NO typing, NO drag-and-drop, NO open-ended. |
+| 1 | Memory Sprint | 2 min | 5-8 warm-up items from CURRENT chapter. Key terms, prerequisites. **3 FORMATS ONLY:** Multiple Choice, True/False, Yes/No/Not Given. Must mix ≥2 formats. **BANNED: fill-in-blank, gap-fill, speed match, drag-and-drop, typing, open-ended.** Tap-only. |
 | 2 | Story Mode | 5-7 min | Flowing narrative using Problem→Struggle→Discovery→Solution as invisible construction blueprint (NO section labels in output). 3 CPA segments + checkpoints. |
 | 3 | Game Breaks | 6-9 min | 3 games × 2-3 min. **≥1 Interactive Catalog, ≥2 Default Pool.** |
 | 4 | Real-Life Challenge | 3-5 min | First-person professional scenario. Modern context. Bloom's L3-L4. (Ijtimoiy Fanlari: Historical Projection instead.) |
@@ -80,11 +80,11 @@ Each homework = Pre-Session warm-up (3-5 min) + 7-phase engine (25-30 min).
 | UNIFIED-Buzan (3,600+ lines) | `standards/framework/NETS-Homework-Engine-UNIFIED-Buzan.md` | **Before writing each phase** — read the specific section (§5.1 for Phase 1, §5.2 for Phase 2, etc.). NOT upfront. |
 | Quick Reference | `standards/framework/QUICK_REFERENCE.md` | If you need a fast session flow lookup |
 
-### Layer 2 — Family + Subject (Your Primary Guides)
+### Layer 2 — Family + Subject (Your BUILD Instructions)
 | Doc | Path | When to Read |
 |-----|------|-------------|
 | Family Doc | `standards/library/subject-family/{Family}/{Family}_Subject_Family_Framework.md` | **Pre-flight** — read FULLY once per subject assignment |
-| Subject Framework | `standards/library/subject-family/{Family}/{Subject}/{Subject}_Subject_Framework.md` | **Pre-flight** — read FULLY once per subject assignment. This is your CLOSEST guide. |
+| Subject Framework | `standards/library/subject-family/{Family}/{Subject}/{Subject}_Subject_Framework.md` | **Pre-flight** — read FULLY once per subject assignment. **This is your PRIMARY BUILD GUIDE.** It contains construction recipes for every phase — panel guides, format mixing rules, game item construction, reflection templates. UNIFIED tells you WHAT. This tells you HOW. Follow it exactly. |
 
 ### Game Mechanics (Read Before Writing Phase 3)
 | Doc | Path | When to Read |
@@ -120,4 +120,5 @@ Each homework = Pre-Session warm-up (3-5 min) + 7-phase engine (25-30 min).
 
 - Not a framework designer. Do not suggest changes.
 - Not a reviewer. Produce homework; a Validator agent reviews.
+- Not a checkbox ticker. You are a BUILDER. The frameworks give you construction blueprints — follow every detail, use every mechanic fully. Shallow, 1-liner, checklist-style output is non-compliant.
 - If you encounter ambiguity, log it and use best judgment. Do not stop the pipeline.
