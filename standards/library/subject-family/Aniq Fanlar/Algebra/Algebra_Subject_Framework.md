@@ -93,7 +93,6 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 | **3** | Game Breaks | 6-9 min | 10 min | Worked Examples (Scaffolded Completion) and Reaction Chain prioritized. All games require written justification. |
 | **4** | Real-Life Challenge | 3-5 min | 10 min | Student must set up equation from scratch — not plug into given formula. W5H scaffold: G7-8 ON, G9 toggleable. |
 | **5** | Consolidation / Mnemonic Lock | 3-4 min | 5 min | Slightly longer than UNIFIED default — algebra requires more consolidation. Algebraic Structure Map primary technique. |
-| **6** | Final Boss | 5-10 min | 10-15 min | No MC anywhere. All open-ended with written steps. See §3.3. |
 
 ### 3.3 Difficulty Adaptation Engine
 
@@ -253,50 +252,6 @@ Cap at 3 levels for G7-8, 3 levels for G9 (UNIFIED §Why Chain: Exact Sciences s
 
 **National Pride:** Heritage anchor when natural: *"Al-Xorazmiy 'al-jabr' atamasini ixtiro qildi — bu so'z 'algebra'ga aylandi."*
 
-### 4.6 Final Boss (Phase 6)
-
-**Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP), Mythical Boss (<5% chance, 5× XP, zero hints).
-
-**Algebra Sub Boss parameters:**
-
-| Parameter | UNIFIED Default | Algebra G7-9 Override |
-|---|---|---|
-| **HP** | G5-8: 100 HP | **100 HP** — standard G5-8 |
-| **Hint Tax** | G5-8: -10 HP | **-10 HP** — standard |
-| **MC allowed?** | No MC for G5+ | **No MC.** Explicitly prohibited for algebra beyond G6. Open-ended only. |
-| **Question types** | Short answer + open reasoning | Equation solving (show steps) + word problem modeling (set up AND solve) + expression simplification |
-| **Combo bonus** | 3 correct → 2× damage | Unchanged |
-
-**PISA-tiered damage:**
-
-| Tier | Damage | PISA Level | Bloom's | Algebra Example |
-|---|---|---|---|---|
-| Easy | -10 HP | L3 | Apply | "Solve: 3x − 7 = 2x + 5. Show all steps." |
-| Medium | -20 HP | L4 | Analyze | "Two plans cost the same at exactly 12 km. Set up the equations and prove this." |
-| Hard | -30 HP | L5-6 | Evaluate | "A manufacturer's profit p(x) = −2x² + 40x − 150. Find the production level for maximum profit and justify." |
-
-**Question distribution:** 40% Easy · 40% Medium · 20% Hard
-
-**Boss design rules for Algebra:**
-- At least one **modeling question** — student writes the equation themselves from a scenario
-- At least one **interpretation question** — "What does your answer mean in context?"
-- No purely mechanical "solve for x" without context
-- Bloom's escalation: L1 recall only in Phase 1; Boss is L3-L5
-- National Pride Boss framing: *"Bu — sizning professional sertifikatingiz. Global standartga mos keling."*
-
-**TEFCAS Failure Flow:**
-1. *"Hali emas! Miyangiz Feedback oldi."*
-2. Socratic: "x ni ajratish uchun birinchi qadam nima?" — never reveals the method
-3. Route to specific Story Mode segment
-4. Regenerate questions (same standards, different context/numbers)
-
-**Mastery Stars (identical across all subjects):**
-
-| Stars | Criteria |
-|---|---|
-| 1★ | Boss defeated (any attempts) |
-| 2★ | ≤2 attempts, >50% HP remaining |
-| 3★ | 1st attempt, no hints, >80% HP remaining |
 
 ---
 

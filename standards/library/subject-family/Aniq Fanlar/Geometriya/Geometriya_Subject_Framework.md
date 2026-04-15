@@ -93,7 +93,6 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 | **3** | Game Breaks | 6-9 min | 10 min | Notebook Capture is highest priority for Geometriya among all Aniq Fanlar subjects. Puzzle Lock primary for Slot 1. |
 | **4** | Real-Life Challenge | 3-5 min | 10 min | Problem must include a diagram. Student must name the theorem before applying it. W5H scaffold: G7-8 ON; G9 toggleable. |
 | **5** | Consolidation / Mnemonic Lock | 3-4 min | 5 min | Radiant Summary primary (theorem classification). Memory Palace strong alternative. |
-| **6** | Final Boss | 5-10 min | 10-15 min | Boss diagram must be a new figure. Proof required. See §3.3. |
 
 ### 3.3 Difficulty Adaptation Engine
 
@@ -256,55 +255,6 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 
 **National Pride:** Heritage anchor when natural: *"Al-Biruni Yer radiusini uchburchak geometriyasi yordamida o'lchadi — dala tajribasiz."*
 
-### 4.6 Final Boss (Phase 6)
-
-**Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP), Mythical Boss (<5% random, PISA L5-6, zero hints, 5× XP).
-
-**Geometriya Sub Boss parameters:**
-
-| Parameter | UNIFIED Default | Geometriya G7-9 Override |
-|---|---|---|
-| **HP** | G5-8: 100 HP | **100 HP** — standard |
-| **Hint Tax** | G5-8: -10 HP | **-10 HP** — standard |
-| **MC allowed?** | No MC for G5+ | **No MC** — theorem-identification MC only acceptable in Phase 1, never in Boss |
-| **Question types** | Short answer + open reasoning | Proof construction (write logical steps) + Calculation with justification (theorem cited) + Diagram annotation |
-
-**PISA-tiered damage:**
-
-| Tier | Damage | PISA Level | Bloom's | Geometriya Example |
-|---|---|---|---|---|
-| Easy | -10 HP | L3 | Apply | "Calculate the area of this composite shape. Cite the formula you used." |
-| Medium | -20 HP | L4 | Analyze | "Prove that angles ABD and CBD are equal. Show each logical step and name the theorem." |
-| Hard | -30 HP | L5-6 | Evaluate | "An architect claims this quadrilateral can tile a floor without gaps. Use geometric properties to prove or disprove the claim." |
-
-**Question distribution:** 40% Easy · 40% Medium · 20% Hard
-
-**Boss design rules for Geometriya:**
-- At least one **multi-step logical proof** — not just calculation
-- At least one question requires **reading a diagram** and extracting information
-- **Boss diagram must be a NEW figure** the student has not seen in the session — tests transfer, not memory
-- No question solvable by formula alone without understanding the geometric relationship
-- National Pride Boss framing: *"Bu — sizning professional sertifikatingiz."* On defeat: *"Sertifikatsiya muvaffaqiyatli!"*
-
-**Partial credit rubric (Geometriya-specific):**
-- Correct theorem identified: 1 pt
-- Correct proof setup: 1 pt
-- Correct conclusion: 1 pt
-- A wrong calculation with correct proof structure earns 2/3.
-
-**TEFCAS Failure Flow:**
-1. *"Hali emas! Miyangiz Feedback oldi."*
-2. Socratic: "Bu uchburchakdagi burchaklar haqida nima bilasiz?" — never reveals the next step
-3. Route to specific Story Mode segment
-4. Regenerate with new diagram (same theorem/standard)
-
-**Mastery Stars:**
-
-| Stars | Criteria |
-|---|---|
-| 1★ | Boss defeated (any attempts) |
-| 2★ | ≤2 attempts, >50% HP remaining |
-| 3★ | 1st attempt, no hints, >80% HP remaining |
 
 ---
 
@@ -314,7 +264,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 
 | Element | Rule |
 |---|---|
-| **POV** | Second-person: "Sen arxitektsan. Bu uchburchakka qara. Nima isbotlay olasan?" |
+| **POV** | Second-person: "Siz arxitektsiz. Bu uchburchakka qarang. Nima isbotlay olasiz?" |
 | **Tone** | Precise, observational, structured. Geometry rewards careful attention to what is given vs what is assumed. Voice models this precision. |
 | **Language** | Uzbek or Russian. Terms: angle → "burchak", perpendicular → "perpendikulyar", congruent → "tengo'lchovli", hypotenuse → "gipotenuz". |
 | **Diagram labeling** | Vertices: capital letters (A, B, C). Sides: lowercase opposite letters (a, b, c). Angles: ∠ABC notation. Consistent with textbook. |

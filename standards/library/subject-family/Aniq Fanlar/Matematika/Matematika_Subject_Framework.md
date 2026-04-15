@@ -93,7 +93,6 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 | **3** | Game Breaks | 6-9 min | 10 min | 3 games. Tile Match is Slot 1 priority. No Speed Match with pure number sorting. |
 | **4** | Real-Life Challenge | 3-5 min | 10 min | W5H scaffold mandatory for G5-6 (4 of 6 branches). Pure calculation problems exempt. |
 | **5** | Consolidation / Mnemonic Lock | 2-3 min | 5 min | Must feel calm before Boss. Preferred: formula-visual pairing or fill-in-the-blank formula. |
-| **6** | Final Boss | 5-10 min | 10-15 min | See §3.3 for Matematika boss parameters. |
 
 ### 3.3 Difficulty Adaptation Engine
 
@@ -257,51 +256,6 @@ For 1 in 3 Real-Life Challenges:
 
 **National Pride:** Heritage anchor in mnemonic link sentences when natural. Example: *"Mirzo Ulug'bek yulduzlarni sanagan — siz ham shu aniqlikda hisoblang."* Not forced.
 
-### 4.6 Final Boss (Phase 6)
-
-**Inherits:** UNIFIED §5.6. Three-tier boss system applies: Sub Boss (every session), Big Boss (weekly), Mythical Boss (<5% random).
-
-**Matematika Sub Boss parameters:**
-
-| Parameter | UNIFIED Default | Matematika G5-6 Override |
-|---|---|---|
-| **HP** | G5-8: 100 HP | **80 HP** — bridge value between primary (50) and full secondary (100) |
-| **Hint Tax** | G5-8: -10 HP | **-5 HP** — gentler; encourage hint use over quitting |
-| **MC allowed?** | No MC for G5+ | **Yes — up to 30% MC** (WM ceiling at 10-11; open reasoning overwhelms) |
-| **Question types** | Short answer + open reasoning | Short answer + multi-step word problem + visual-model matching |
-| **Combo bonus** | 3 correct → 2× damage | Unchanged |
-| **Max attempts** | TEFCAS loop | 3, with "Hali emas!" framing each time |
-
-**PISA-tiered damage (applied to Matematika's 80 HP):**
-
-| Tier | Damage | PISA Level | Bloom's | Matematika Example |
-|---|---|---|---|---|
-| Easy | -10 HP | L3 | Apply | "Calculate the area of a triangular garden. Show your working." |
-| Medium | -20 HP | L4 | Analyze | "Two methods give different answers for the same fraction addition. Which is correct and why?" |
-| Hard | -30 HP | L5-6 | Evaluate | "A farmer divides land using a ratio of 3:5:2. One part is 120m². Design a plan showing all three parts." |
-
-**Question distribution:** 40% Easy · 40% Medium · 20% Hard
-
-**Boss design rules for Matematika:**
-- At least one word problem (text → math translation)
-- At least one visual model question (bar model, area grid, diagram)
-- No question requiring more than 3 calculation steps without scaffolding
-- No purely symbolic questions without concrete context
-- National Pride framing: Boss entry reframed as *"Bu — sizning professional sertifikatingiz."* On defeat: *"Sertifikatsiya muvaffaqiyatli!"* HP/mechanics unchanged — framing only.
-
-**TEFCAS Failure Flow:**
-1. *"Hali emas! Miyangiz Feedback oldi."* — never "Noto'g'ri"
-2. Socratic hint for Matematika: show first step of worked example, ask student to complete
-3. Route to specific Story Mode segment
-4. Regenerate questions (same standards, different numbers/context)
-
-**Mastery Stars:**
-
-| Stars | Criteria |
-|---|---|
-| 1★ | Boss defeated (any number of attempts) |
-| 2★ | Boss defeated in ≤2 attempts, >50% HP remaining |
-| 3★ | First attempt, no hints, >80% HP remaining |
 
 ---
 
@@ -311,7 +265,7 @@ For 1 in 3 Real-Life Challenges:
 
 | Element | Rule |
 |---|---|
-| **POV** | Second-person throughout: "Sen 3 taxta ko'rasan. Ular uchburchak hosil qila oladimi?" |
+| **POV** | Second-person throughout: "Siz 3 taxta ko'rasiz. Ular uchburchak hosil qila oladimi?" |
 | **Tone** | Curious, calm, encouraging. Math anxiety peaks at G5-6 — voice is a calm guide, never a drill sergeant. |
 | **Language** | Conversational Uzbek or Russian. Math terms introduced with local equivalents: numerator → "surat", denominator → "maxraj", ratio → "nisbat". |
 | **Sentence length** | Average ≤ 14 words. Long sentences in word problems cause G5-6 students to lose track. |

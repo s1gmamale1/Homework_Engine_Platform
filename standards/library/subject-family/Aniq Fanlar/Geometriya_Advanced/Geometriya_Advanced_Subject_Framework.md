@@ -99,7 +99,6 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 | **3** | Game Breaks | 6-9 min | 10 min | Notebook Capture at least 1 in every 2 sessions. Puzzle Lock primary for Slot 1. |
 | **4** | Real-Life Challenge | 3-5 min | 10 min | Problem must require 3D spatial setup first. Student must draw or annotate diagram. Notebook Capture preferred. W5H: G10 available; G11 on request. |
 | **5** | Consolidation / Mnemonic Lock | 4-5 min | 6 min | Memory Palace primary (3D spatial). Radiant Summary for theorem classification. |
-| **6** | Final Boss | 5-10 min | 10-15 min | 150 HP. -15 HP hint cost. Boss diagram must be a composite solid. Labeled 3D diagram required in every Boss question. See §3.3. |
 
 ### 3.3 Difficulty Adaptation Engine
 
@@ -260,56 +259,6 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 
 **National Pride:** Heritage anchor when natural: *"Al-Biruni yer shariga Kamchik dagi uchburchak usuli bilan o'lchadi — qo'shimcha asboblarsiz."*
 
-### 4.6 Final Boss (Phase 6)
-
-**Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP, cross-subject, one tier above current PISA), Mythical Boss (<5% random, PISA L5-6, zero hints, one attempt, 5× XP).
-
-**Geometriya Advanced Sub Boss parameters:**
-
-| Parameter | UNIFIED Default | Geometriya Advanced G10-11 Override |
-|---|---|---|
-| **HP** | G9-11: 150 HP | **150 HP** — standard G9-11 |
-| **Hint Tax** | G9-11: -15 HP | **-15 HP** — standard |
-| **MC allowed?** | No MC for G5+ | **No MC** — open-ended with full working required |
-| **Question types** | Open reasoning + extended response | 3D calculation (volume/surface with full working) + Vector proof (prove geometric property using vectors) + Coordinate geometry (find equation of conic or line from geometric conditions) |
-| **Diagram requirement** | — | **Boss questions MUST include a labeled 3D diagram as part of the question itself** — no text-only geometry in Boss |
-
-**PISA-tiered damage:**
-
-| Tier | Damage | PISA Level | Bloom's | Geometriya Advanced Example |
-|---|---|---|---|---|
-| Easy | -10 HP | L3 | Apply | "Find the total surface area of a cylinder (r=3m, h=8m). Show full working and cite each formula." |
-| Medium | -20 HP | L4 | Analyze | "A square pyramid sits on top of a cube with the same base. Find the total surface area. Show which faces contribute and why." |
-| Hard | -30 HP | L5-6 | Evaluate | "Vectors a⃗=(2,−1,3) and b⃗=(1,4,−2). Prove they are perpendicular using the dot product, then find the area of the parallelogram they form. Interpret what this area represents geometrically." |
-
-**Question distribution:** 40% Easy · 40% Medium · 20% Hard
-
-**Boss design rules for Geometriya Advanced:**
-- At least one question involves a **cross-section** — hardest and most exam-relevant 3D skill
-- At least one question is solved using **vectors** (G10: 2D vector applied to plane geometry; G11: full 3D vector proof)
-- No purely formulaic volume calculation — student must first identify the solid type and decompose it
-- G11 Boss: at least one **composite solid** (two or more simple solids combined or subtracted)
-- National Pride Boss framing: *"Bu — sizning professional sertifikatingiz."* On defeat: *"Sertifikatsiya muvaffaqiyatli!"*
-
-**Partial credit rubric (Geometriya Advanced):**
-- Correct 3D setup (identifies solid correctly): 1 pt
-- Correct decomposition into calculable parts: 1 pt
-- Correct calculation: 1 pt
-- Correct interpretation or justification: 1 pt
-
-**TEFCAS Failure Flow:**
-1. *"Hali emas! Miyangiz Feedback oldi."*
-2. Socratic spatial: "Bu 3D shaklga qarang — qaysi yuz asosga parallel?" or "A dan B ga yo'nalishni vektor sifatida ifodalang." — never reveals the calculation
-3. Route to specific Story Mode segment
-4. Regenerate with new solid/diagram (same standard)
-
-**Mastery Stars:**
-
-| Stars | Criteria |
-|---|---|
-| 1★ | Boss defeated (any attempts) |
-| 2★ | ≤2 attempts, >50% HP remaining |
-| 3★ | 1st attempt, no hints, >80% HP remaining |
 
 ---
 
