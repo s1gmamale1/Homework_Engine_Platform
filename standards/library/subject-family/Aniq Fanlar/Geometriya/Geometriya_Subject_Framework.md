@@ -131,18 +131,15 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 
 ### 4.1 Memory Sprint (Phase 1)
 
-**Inherits:** UNIFIED §5.1. Duration ≤2 min. Prior chapters only.
+**Inherits:** UNIFIED §5.1. Duration ≤2 min (hard cap). Current chapter warm-up — key terms, prerequisite concepts, foundational facts needed for this session.
 
 **Geometriya-specific format priority:**
 
-| Format | Priority | Why |
+| Format | Priority | Geometriya Examples |
 |---|---|---|
-| **Quick MC / Binary** | HIGH | Theorem identification — "Which theorem applies to this diagram?" |
-| **Speed Match** | HIGH | Theorem name ↔ diagram, shape ↔ its properties, formula ↔ correct figure |
-| **Order the Steps** | MEDIUM | Arrange proof steps in correct logical order |
-| **Fill-in-Blanks Race** | MEDIUM | Complete the proof statement or angle relationship |
-| **Flash Sprint** | LOW | For rapid theorem name recall |
-| **Link Chain** | LOW | For sequential proof steps only |
+| **Multiple Choice** | HIGH | "Bu diagrammaga qaysi teorema taalluqli?" (4 options). Theorem identification, shape property recognition. Each item MUST include a diagram. |
+| **True / False** | HIGH | "Uchburchakning burchaklari yig'indisi 180° — To'g'ri yoki Noto'g'ri?" Theorem verification, property checks. |
+| **Yes / No / Not Given** | MEDIUM | "Bobda aytilganiga ko'ra, har qanday to'rtburchak parallelogramm — Ha / Yo'q / Aytilmagan." Chapter comprehension warm-up. |
 
 **Geometriya additions:**
 - Include 1-2 "How many triangles in this figure?" spatial counting questions — high-DTM-yield, builds diagram literacy
@@ -314,7 +311,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 
 | Element | Rule |
 |---|---|
-| **POV** | Second-person: "Sen arxitektsan. Bu uchburchakka qara. Nima isbotlay olasan?" |
+| **POV** | Second-person (formal "Siz"): "Siz arxitektsiz. Bu uchburchakka qarang. Nima isbotlay olasiz?" |
 | **Tone** | Precise, observational, structured. Geometry rewards careful attention to what is given vs what is assumed. Voice models this precision. |
 | **Language** | Uzbek or Russian. Terms: angle → "burchak", perpendicular → "perpendikulyar", congruent → "tengo'lchovli", hypotenuse → "gipotenuz". |
 | **Diagram labeling** | Vertices: capital letters (A, B, C). Sides: lowercase opposite letters (a, b, c). Angles: ∠ABC notation. Consistent with textbook. |

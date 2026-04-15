@@ -136,17 +136,15 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 
 ### 4.1 Memory Sprint (Phase 1)
 
-**Inherits:** UNIFIED §5.1. Duration ≤2 min. Prior chapters only.
+**Inherits:** UNIFIED §5.1. Duration ≤2 min (hard cap). Current chapter warm-up — key terms, prerequisite concepts, foundational facts needed for this session.
 
 **Geometriya Advanced format priority:**
 
-| Format | Priority | Why |
+| Format | Priority | Geometriya Advanced Examples |
 |---|---|---|
-| **Quick MC / Binary** | HIGH | 3D identification ("Name this solid from its cross-section properties") |
-| **Speed Match** | HIGH | Solid ↔ its net, vector ↔ its geometric representation, conic ↔ its equation |
-| **Fill-in-Blanks Race** | MEDIUM | Complete a vector calculation step or surface area formula |
-| **Order the Steps** | MEDIUM | Arrange steps of a 3D decomposition or vector proof |
-| **Flash Sprint** | LOW | Rapid theorem/formula name recall |
+| **Multiple Choice** | HIGH | "Bu kesim kubni diagonal bo'ylab kesganida qanday shakl hosil bo'ladi?" (4 options). 3D identification, solid recognition from cross-sections. Each item MUST include a diagram. |
+| **True / False** | HIGH | "Silindrning yon yuzasi = 2πrh — To'g'ri yoki Noto'g'ri?" Formula verification, theorem checks. |
+| **Yes / No / Not Given** | MEDIUM | "Bobda aytilganiga ko'ra, har qanday konus kesimi doira — Ha / Yo'q / Aytilmagan." Chapter comprehension warm-up. |
 
 **Geometriya Advanced additions:**
 - Include 1-2 **cross-section questions** — "If this cube is cut diagonally, what shape is the cross-section?" High DTM-yield, builds spatial reasoning

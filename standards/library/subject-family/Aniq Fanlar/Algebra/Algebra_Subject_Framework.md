@@ -131,23 +131,20 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 
 ### 4.1 Memory Sprint (Phase 1)
 
-**Inherits:** UNIFIED §5.1. Duration ≤2 min. Prior chapters only.
+**Inherits:** UNIFIED §5.1. Duration ≤2 min (hard cap). Current chapter warm-up — key terms, prerequisite concepts, foundational facts needed for this session.
 
 **Algebra-specific format priority:**
 
-| Format | Priority | Why |
+| Format | Priority | Algebra Examples |
 |---|---|---|
-| **Error Spot (Quick MC)** | HIGH | Find the mistake in a worked algebraic solution — builds expert thinking |
-| **Fill-in-Blanks Race** | HIGH | Complete the algebraic step — symbolic fluency drill |
-| **Speed Match** | MEDIUM | Expression ↔ verbal description, graph ↔ equation type |
-| **Order the Steps** | MEDIUM | Arrange algebraic solution steps — procedural sequencing |
-| **Quick MC / Binary** | MEDIUM | "Which expression is equivalent?" — no computation required |
-| **Link Chain** | LOW | For sequential derivation processes only |
+| **Multiple Choice** | HIGH | "Qaysi ifoda teng?" (4 options). Error spotting — find the mistake in a worked algebraic solution. Expression equivalence checks. |
+| **True / False** | HIGH | "x² + 2x + 1 = (x+1)² — To'g'ri yoki Noto'g'ri?" Identity verification, rule checks. |
+| **Yes / No / Not Given** | MEDIUM | "Bobda aytilganiga ko'ra, har qanday kvadrat tenglama ikkita yechimga ega — Ha / Yo'q / Aytilmagan." Chapter comprehension warm-up. |
 
 **Algebra additions:**
 - Include 1-2 "Which expression is equivalent?" questions — builds symbolic fluency without calculation
 - Wrong answer feedback: show algebraic reasoning: *"Ikkala tomondan tenglikni saqlash uchun bir xil amal qilinadi. Bu yerda: −(x) = −1×x."*
-- Buzan Primacy Effect and review intervals apply: prior-chapter algebra identities, equation types prioritized.
+- Buzan Primacy Effect: most important current-chapter items go here — the brain is primed to encode what it sees first.
 
 ### 4.2 Story Mode (Phase 2)
 

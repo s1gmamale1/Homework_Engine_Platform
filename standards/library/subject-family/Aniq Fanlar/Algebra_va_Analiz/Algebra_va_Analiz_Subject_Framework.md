@@ -132,17 +132,15 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 
 ### 4.1 Memory Sprint (Phase 1)
 
-**Inherits:** UNIFIED §5.1. Duration ≤2 min. Prior chapters only.
+**Inherits:** UNIFIED §5.1. Duration ≤2 min (hard cap). Current chapter warm-up — key terms, prerequisite concepts, foundational facts needed for this session.
 
 **Algebra va Analiz format priority:**
 
-| Format | Priority | Why |
+| Format | Priority | Algebra va Analiz Examples |
 |---|---|---|
-| **Error Spot (Quick MC)** | HIGH | Find the mistake in a differentiation, limit, or series calculation — most effective for calculus |
-| **Quick Fill** | HIGH | Complete a derivative rule or limit step |
-| **Speed Match** | MEDIUM | Function ↔ derivative graph, limit notation ↔ meaning |
-| **Order the Steps** | MEDIUM | Arrange calculus derivation steps |
-| **Fill-in-Blanks Race** | LOW | Complete a theorem statement |
+| **Multiple Choice** | HIGH | "Bu hosilada qayerda xato bor?" (4 options). Error spotting in differentiation/integration steps. Function-derivative graph matching. |
+| **True / False** | HIGH | "d/dx[sin(x)] = cos(x) — To'g'ri yoki Noto'g'ri?" Derivative rule verification, limit property checks. |
+| **Yes / No / Not Given** | MEDIUM | "Bobda aytilganiga ko'ra, har qanday uzluksiz funksiya differensiallanadi — Ha / Yo'q / Aytilmagan." Chapter comprehension warm-up. |
 
 **Algebra va Analiz additions:**
 - Include 1-2 "interpret this graph" questions: "What is the sign of f'(x) on interval (1,3)?" — connects derivative sign to function behavior
