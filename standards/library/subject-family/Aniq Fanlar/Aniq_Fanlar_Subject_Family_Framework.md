@@ -135,9 +135,7 @@ Content producers must prioritize these cognitive anchors:
 - **No Multiple Choice (MC):** G6+ must be open-ended. G5 allows max 30% MC.
 - **Partial Credit:** Rubric-based scoring allows points for correct logic despite arithmetic slips.
 - **Submissions:** Notebook Capture is an accepted (and preferred) boss submission method.
-- **HP Scaling:** G1-4: 50 | G5-8: 100 | G9-11: 150 ([[UNIFIED-Buzan §5.6]]).
-- **Stars:** 3★ requires 1st attempt, no hints, and >80% HP remaining.
-- **Hints:** Socratic hints cost -10 HP.
+- **HP, damage, stars, and hint cost:** see [[UNIFIED-Buzan §5.6]].
 - **TEFCAS UI:** All feedback must use TEFCAS terminology (Trial/Feedback/Adjust) and G5 "Hali emas" (Not yet) framing.
 
 **Good Boss Question:** "A fountain with radius 3m has a path around it of width x. If the total area is 50m², find x to 2 decimal places. Show your working."
@@ -156,17 +154,6 @@ Must follow **CPA** across 3 narrative segments:
 - **Role:** Student IS the expert (e.g., "You are the Lead Architect").
 - **Context:** Must be Uzbek-specific (e.g., Samarkand planning, National Bank, Prezident's project and you are assigned to make it happen, You have a startup business growing in such industry you have done this but have problems).
 - **Goal:** Transfer the textbook concept to a "messy" real-world scenario.
-
----
-
-## 7. Subject Pattern Example (Standard Session)
-
-- **Phase 1:** Recall of previous day's formula.
-- **Phase 2:** Story: "Akmal is measuring the Registan courtyard..." (CPA flow).
-- **Phase 3:** Tile Match (Formula assembly) + Adaptive Quiz.
-- **Phase 4:** Real-Life: "Calculate the materials needed for a new school in Bukhara."
-- **Phase 5:** Radiant Summary of the day’s rules.
-- **Phase 6:** Multi-step open numerical Boss fight.
 
 ---
 

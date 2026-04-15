@@ -175,10 +175,9 @@ English inherits the Til Fanlari Boss model: writing production, rubric-based ev
 | **G11** | Extended composition | 150-200 word composition, intro + body + conclusion | "Technology has changed the way we learn. Explain the advantages and disadvantages, then state your view." |
 
 **All-grade Boss rules:**
-- **HP:** G5-8 = 100, G9-11 = 150 ([[UNIFIED-Buzan §5.6]]).
 - **G5 exception:** Up to 30% MC allowed where needed.
 - **Damage and stars:** universal Boss rules apply unchanged.
-- **Hint cost:** -10 HP.
+- **HP, stars, and hints:** inherit from [[UNIFIED-Buzan §5.6]].
 - **Failure framing:** use TEFCAS language, e.g. **"Hali emas! Let's try again."**
 
 **Good Boss design:** asks the student to produce meaning in context, with grammar and structure serving communication.

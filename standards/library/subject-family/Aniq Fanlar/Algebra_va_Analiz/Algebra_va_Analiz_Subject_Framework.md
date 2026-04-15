@@ -257,24 +257,12 @@ At least 2 modalities: Logical + Strategic.
 
 **Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP, cross-subject, one tier above current PISA), Mythical Boss (<5% random, PISA L5-6, zero hints, one attempt, 5× XP).
 
-**Algebra va Analiz Sub Boss parameters:**
+**Algebra va Analiz Sub Boss real overrides:**
 
-| Parameter | UNIFIED Default | Algebra va Analiz G10-11 Override |
-|---|---|---|
-| **HP** | G9-11: 150 HP | **150 HP** — standard G9-11 |
-| **Hint Tax** | G9-11: -15 HP | **-15 HP** — standard |
-| **MC allowed?** | No MC for G5+ | **Absolutely no MC** — not anywhere in the session |
-| **Question types** | Open reasoning + extended response only | Function analysis (domain/range/asymptotes/monotonicity) + Derivative application (optimization, tangent, rate interpretation) + Limit evaluation (full working) |
+- **Absolutely no MC** — not anywhere in the session
+- **Question types:** Function analysis (domain/range/asymptotes/monotonicity) + Derivative application (optimization, tangent, rate interpretation) + Limit evaluation (full working)
 
-**PISA-tiered damage:**
-
-| Tier | Damage | PISA Level | Bloom's | Algebra va Analiz Example |
-|---|---|---|---|---|
-| Easy | -10 HP | L3 | Apply | "Find f'(x) for f(x) = 3x² − 5x + 2. Show each step using the power rule." |
-| Medium | -20 HP | L4 | Analyze | "For f(x) = x³ − 3x, find critical points and determine where the function is increasing. Explain what this means about the battery discharge model." |
-| Hard | -30 HP | L5-6 | Evaluate | "A Tashkent factory's daily profit is P(x) = −2x² + 120x − 800 thousand sum. Find the optimal production level, maximum profit, and explain why this is a maximum and not a minimum." |
-
-**Question distribution:** 40% Easy · 40% Medium · 20% Hard
+**HP, damage, stars, hints, and combo bonus:** inherit from [[UNIFIED-Buzan §5.6]], unchanged.
 
 **Boss design rules for Algebra va Analiz:**
 - At least one **optimization problem** (G10-11 mandatory)
@@ -296,14 +284,6 @@ Students who can set up and solve but misinterpret earn 3/4.
 2. Socratic: "Hosila belgilanishi funksiyaning qaysi xususiyatini aytadi?" — never reveals calculation method
 3. Route to specific Story Mode segment
 4. Regenerate questions (same standards, different function/context)
-
-**Mastery Stars:**
-
-| Stars | Criteria |
-|---|---|
-| 1★ | Boss defeated (any attempts) |
-| 2★ | ≤2 attempts, >50% HP remaining |
-| 3★ | 1st attempt, no hints, >80% HP remaining |
 
 ---
 

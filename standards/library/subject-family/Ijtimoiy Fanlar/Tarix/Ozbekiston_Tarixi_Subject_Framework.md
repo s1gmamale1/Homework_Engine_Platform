@@ -73,7 +73,18 @@ O'zbekiston Tarixi in NETS is the study of **civilizational statehood, ancestral
 
 ---
 
-## 4. Game Mechanics — O'zbekiston Tarixi Specific
+## 4. Phase 5 Buzan Options
+
+Inherits: [[UNIFIED-Buzan §5.5]]. Select technique by content structure.
+
+- **Link System** — chronological chains (e.g., Temurid dynasty succession, Jadid movement timeline)
+- **Memory Palace** — place events at Registan Square, Ichan Qal'a, or Amir Temur Square
+- **Peg System** — anchor key dates (1441, 1924, 1991) to number-shape pegs
+- **Major System (G7+)** — encode years into memorable Uzbek words
+
+---
+
+## 5. Game Mechanics — O'zbekiston Tarixi Specific
 
 ### Always Primary (The "Big Three")
 
@@ -100,10 +111,10 @@ O'zbekiston Tarixi in NETS is the study of **civilizational statehood, ancestral
 
 ---
 
-## 5. Boss Format: Archival Synthesis
+## 6. Phase 6 Boss Format: Archival Synthesis
 
 - **Structure:** Retrieval of National Facts -> Continuity Reasoning -> Evidence Check.
-- **HP Scaling:** G7-8: 100 | G9-11: 150.
+- **HP, damage, stars, and hints:** see [[UNIFIED-Buzan §5.6]].
 - **Failure:** TEFCAS framing ("Hali emas!").
 
 **Good Boss (G10-11):** "Explain the significance of the year 1991 in Uzbek history. List 3 immediate political changes and 2 economic challenges. How does this event fulfill the dreams of the Jadids from 100 years prior?"
@@ -111,7 +122,7 @@ O'zbekiston Tarixi in NETS is the study of **civilizational statehood, ancestral
 
 ---
 
-## 6. Story Mode & Historical Projection
+## 7. Story Mode & Historical Projection
 
 ### Story Mode (Phase 2)
 Focus on **National Milestones**.
@@ -123,7 +134,7 @@ Focus on **National Milestones**.
 
 ---
 
-## Technical Rules
+## 8. Technical Rules
 1. **Inheritance:** Inherits Ijtimoiy Fanlari family rules + National Pride (Strict 70/30 National focus).
 2. **Identity Rule:** Every session must include at least one "Wise Role" injection (e.g., [MILLIY MEROS HIMOYACHISI]).
 3. **Buzan Rule:** Major System for memorizing the 12 signs of the *Temur Tuzuklari* is mandatory in Grade 7.

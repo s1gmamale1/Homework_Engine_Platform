@@ -262,25 +262,13 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 
 **Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP, cross-subject, one tier above current PISA), Mythical Boss (<5% random, PISA L5-6, zero hints, one attempt, 5× XP).
 
-**Geometriya Advanced Sub Boss parameters:**
+**Geometriya Advanced Sub Boss real overrides:**
 
-| Parameter | UNIFIED Default | Geometriya Advanced G10-11 Override |
-|---|---|---|
-| **HP** | G9-11: 150 HP | **150 HP** — standard G9-11 |
-| **Hint Tax** | G9-11: -15 HP | **-15 HP** — standard |
-| **MC allowed?** | No MC for G5+ | **No MC** — open-ended with full working required |
-| **Question types** | Open reasoning + extended response | 3D calculation (volume/surface with full working) + Vector proof (prove geometric property using vectors) + Coordinate geometry (find equation of conic or line from geometric conditions) |
-| **Diagram requirement** | — | **Boss questions MUST include a labeled 3D diagram as part of the question itself** — no text-only geometry in Boss |
+- **No MC** — open-ended with full working required
+- **Question types:** 3D calculation (volume/surface with full working) + Vector proof (prove geometric property using vectors) + Coordinate geometry (find equation of conic or line from geometric conditions)
+- **Diagram requirement:** Boss questions MUST include a labeled 3D diagram as part of the question itself — no text-only geometry in Boss
 
-**PISA-tiered damage:**
-
-| Tier | Damage | PISA Level | Bloom's | Geometriya Advanced Example |
-|---|---|---|---|---|
-| Easy | -10 HP | L3 | Apply | "Find the total surface area of a cylinder (r=3m, h=8m). Show full working and cite each formula." |
-| Medium | -20 HP | L4 | Analyze | "A square pyramid sits on top of a cube with the same base. Find the total surface area. Show which faces contribute and why." |
-| Hard | -30 HP | L5-6 | Evaluate | "Vectors a⃗=(2,−1,3) and b⃗=(1,4,−2). Prove they are perpendicular using the dot product, then find the area of the parallelogram they form. Interpret what this area represents geometrically." |
-
-**Question distribution:** 40% Easy · 40% Medium · 20% Hard
+**HP, damage, stars, hints, and combo bonus:** inherit from [[UNIFIED-Buzan §5.6]], unchanged.
 
 **Boss design rules for Geometriya Advanced:**
 - At least one question involves a **cross-section** — hardest and most exam-relevant 3D skill
@@ -300,14 +288,6 @@ This subject sits at the intersection of two disciplines: it inherits the **visu
 2. Socratic spatial: "Bu 3D shaklga qarang — qaysi yuz asosga parallel?" or "A dan B ga yo'nalishni vektor sifatida ifodalang." — never reveals the calculation
 3. Route to specific Story Mode segment
 4. Regenerate with new solid/diagram (same standard)
-
-**Mastery Stars:**
-
-| Stars | Criteria |
-|---|---|
-| 1★ | Boss defeated (any attempts) |
-| 2★ | ≤2 attempts, >50% HP remaining |
-| 3★ | 1st attempt, no hints, >80% HP remaining |
 
 ---
 

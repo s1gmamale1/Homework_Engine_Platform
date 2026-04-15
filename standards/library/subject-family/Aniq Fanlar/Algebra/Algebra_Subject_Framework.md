@@ -254,25 +254,12 @@ Cap at 3 levels for G7-8, 3 levels for G9 (UNIFIED §Why Chain: Exact Sciences s
 
 **Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP), Mythical Boss (<5% chance, 5× XP, zero hints).
 
-**Algebra Sub Boss parameters:**
+**Algebra Sub Boss real overrides:**
 
-| Parameter | UNIFIED Default | Algebra G7-9 Override |
-|---|---|---|
-| **HP** | G5-8: 100 HP | **100 HP** — standard G5-8 |
-| **Hint Tax** | G5-8: -10 HP | **-10 HP** — standard |
-| **MC allowed?** | No MC for G5+ | **No MC.** Explicitly prohibited for algebra beyond G6. Open-ended only. |
-| **Question types** | Short answer + open reasoning | Equation solving (show steps) + word problem modeling (set up AND solve) + expression simplification |
-| **Combo bonus** | 3 correct → 2× damage | Unchanged |
+- **No MC.** Explicitly prohibited for algebra beyond G6. Open-ended only.
+- **Question types:** Equation solving (show steps) + word problem modeling (set up AND solve) + expression simplification
 
-**PISA-tiered damage:**
-
-| Tier | Damage | PISA Level | Bloom's | Algebra Example |
-|---|---|---|---|---|
-| Easy | -10 HP | L3 | Apply | "Solve: 3x − 7 = 2x + 5. Show all steps." |
-| Medium | -20 HP | L4 | Analyze | "Two plans cost the same at exactly 12 km. Set up the equations and prove this." |
-| Hard | -30 HP | L5-6 | Evaluate | "A manufacturer's profit p(x) = −2x² + 40x − 150. Find the production level for maximum profit and justify." |
-
-**Question distribution:** 40% Easy · 40% Medium · 20% Hard
+**HP, damage, stars, hints, and combo bonus:** inherit from [[UNIFIED-Buzan §5.6]], unchanged.
 
 **Boss design rules for Algebra:**
 - At least one **modeling question** — student writes the equation themselves from a scenario
@@ -286,14 +273,6 @@ Cap at 3 levels for G7-8, 3 levels for G9 (UNIFIED §Why Chain: Exact Sciences s
 2. Socratic: "x ni ajratish uchun birinchi qadam nima?" — never reveals the method
 3. Route to specific Story Mode segment
 4. Regenerate questions (same standards, different context/numbers)
-
-**Mastery Stars (identical across all subjects):**
-
-| Stars | Criteria |
-|---|---|
-| 1★ | Boss defeated (any attempts) |
-| 2★ | ≤2 attempts, >50% HP remaining |
-| 3★ | 1st attempt, no hints, >80% HP remaining |
 
 ---
 

@@ -257,24 +257,12 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 
 **Inherits:** UNIFIED §5.6. Three-tier system: Sub Boss (every session), Big Boss (weekly, 2× XP), Mythical Boss (<5% random, PISA L5-6, zero hints, 5× XP).
 
-**Geometriya Sub Boss parameters:**
+**Geometriya Sub Boss real overrides:**
 
-| Parameter | UNIFIED Default | Geometriya G7-9 Override |
-|---|---|---|
-| **HP** | G5-8: 100 HP | **100 HP** — standard |
-| **Hint Tax** | G5-8: -10 HP | **-10 HP** — standard |
-| **MC allowed?** | No MC for G5+ | **No MC** — theorem-identification MC only acceptable in Phase 1, never in Boss |
-| **Question types** | Short answer + open reasoning | Proof construction (write logical steps) + Calculation with justification (theorem cited) + Diagram annotation |
+- **No MC** — theorem-identification MC only acceptable in Phase 1, never in Boss
+- **Question types:** Proof construction (write logical steps) + Calculation with justification (theorem cited) + Diagram annotation
 
-**PISA-tiered damage:**
-
-| Tier | Damage | PISA Level | Bloom's | Geometriya Example |
-|---|---|---|---|---|
-| Easy | -10 HP | L3 | Apply | "Calculate the area of this composite shape. Cite the formula you used." |
-| Medium | -20 HP | L4 | Analyze | "Prove that angles ABD and CBD are equal. Show each logical step and name the theorem." |
-| Hard | -30 HP | L5-6 | Evaluate | "An architect claims this quadrilateral can tile a floor without gaps. Use geometric properties to prove or disprove the claim." |
-
-**Question distribution:** 40% Easy · 40% Medium · 20% Hard
+**HP, damage, stars, hints, and combo bonus:** inherit from [[UNIFIED-Buzan §5.6]], unchanged.
 
 **Boss design rules for Geometriya:**
 - At least one **multi-step logical proof** — not just calculation
@@ -294,14 +282,6 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Geo
 2. Socratic: "Bu uchburchakdagi burchaklar haqida nima bilasiz?" — never reveals the next step
 3. Route to specific Story Mode segment
 4. Regenerate with new diagram (same theorem/standard)
-
-**Mastery Stars:**
-
-| Stars | Criteria |
-|---|---|
-| 1★ | Boss defeated (any attempts) |
-| 2★ | ≤2 attempts, >50% HP remaining |
-| 3★ | 1st attempt, no hints, >80% HP remaining |
 
 ---
 
