@@ -556,22 +556,23 @@ When a student opens a homework assignment, the engine performs:
 
 **The 8 Required Components:**
 
-| # | Component | What It Delivers |
-|---|---|---|
-| 1 | **Summary of Book Content** | A cleaner, more digestible reframing of what the textbook chapter covers. Plain language, better visual hierarchy. NOT a rewrite — a refocusing. |
-| 2 | **Better Explanation** | Concepts the textbook assumes the student understands, clarified. Fills the gap between textbook language and student comprehension. |
-| 3 | **Examples** | Additional worked examples beyond what the textbook provides, showing the concept in action step-by-step. |
-| 4 | **Real-Life Research** | The origin story of the concept. Who discovered it? What problem did it solve? What changed in the world because of it? |
-| 5 | **Personal Hook** | First-person address connecting topic to student's own life. "Remember when you saw...?" / "Maybe you've wondered why...?" |
-| 6 | **Why This Matters** | Explicit statement of real-world relevance — not "it's on the exam" but genuine why-you-need-this. |
-| 7 | **Industry Application** | How this concept is used in real industries, jobs, and technology. Shows career relevance. |
-| 8 | **Additional Materials** | Curated external resources (videos, articles, simulators). Language does NOT matter — English, Russian, or Uzbek all permitted. Student picks the language they prefer. |
+| # | Component | What It Delivers | Min Depth |
+|---|---|---|---|
+| 1 | **Summary of Book Content** | A cleaner, more digestible reframing of what the textbook chapter covers. Plain language, better visual hierarchy. NOT a rewrite — a refocusing. | **8-10 sentences** |
+| 2 | **Better Explanation** | Concepts the textbook assumes the student understands, clarified. Fills the gap between textbook language and student comprehension. | **8-10 sentences** |
+| 3 | **Examples** | Additional worked examples beyond what the textbook provides, showing the concept in action step-by-step. | **8-10 sentences** |
+| 4 | **Real-Life Research** | The origin story of the concept. Who discovered it? What problem did it solve? What changed in the world because of it? | **8-10 sentences** |
+| 5 | **Personal Hook** | First-person address connecting topic to student's own life. "Remember when you saw...?" / "Maybe you've wondered why...?" | **8-10 sentences** |
+| 6 | **Why This Matters** | Explicit statement of real-world relevance — not "it's on the exam" but genuine why-you-need-this. | **5-10 sentences** |
+| 7 | **Industry Application** | How this concept is used in real industries, jobs, and technology. Shows career relevance. | **5-10 sentences** |
+| 8 | **Additional Materials** | Curated external resources (videos, articles, simulators). Language does NOT matter — English, Russian, or Uzbek all permitted. Student picks the language they prefer. | **5-10 sentences** |
 
 **Design Rules:**
 - **No quiz, no pressure.** Exploration mode. There are no answers to give, so there are no wrong answers.
 - **Student-paced.** No timer. Student scrolls/clicks at their own speed. May skip components.
-- **Visual-first.** Diagrams, photos, short video clips preferred over walls of text.
+- **Visual-first, but substantive.** Diagrams, photos, and short video clips complement text — but each panel MUST meet its minimum sentence count (see table above). Depth of explanation is required; do not sacrifice substance for brevity. A panel with 2 sentences and a diagram is incomplete.
 - **First-person POV throughout.** "You" not "the student". Direct address, never third-person.
+- **Pronoun policy — "Siz" (formal) only.** All student-facing content in Uzbek uses "Siz" (formal/respectful second person). Never use "sen" (informal). This applies universally: narratives, questions, prompts, closings, professional framing. In Uzbek educational and cultural context, "Siz" is the appropriate form for teacher-to-student communication. For Russian content: use "Вы" (formal), not "ты". English has no equivalent distinction — use "you" naturally.
 - **Ends with explicit transition** to Flash Cards: *"Before we start — here are the key ideas you'll need."*
 
 **Why this exists:** Demos showed students felt dropped into homework cold. The original framework assumed the student arrives prepared. Theme Preview closes the gap between *reading the textbook* and *doing the homework* — that's where engagement was dying.
@@ -600,6 +601,19 @@ When a student opens a homework assignment, the engine performs:
 | **All Key Concepts** | Definitions, terminology, classifications. Example: "What is an oxide?" / "What does valence mean?" |
 | **All Key Rules** | Conditions, exceptions, boundaries. Example: "Combustion requires 3 things: fuel, oxygen, heat. If any one is missing, fire stops." |
 
+**Card Pool — what it must NOT contain:**
+
+Flash cards are a **REFERENCE DECK**, not a practice set. If an item asks the student to DO something, it does not belong here.
+
+- NO practice problems or exercises
+- NO worked examples (those belong in Phase 0-A Panel 3)
+- NO mini-quizzes or checkpoint-style questions
+- NO "try this" or "solve this" prompts
+- NO scenario-based content
+- NO hints or strategies (those belong in Story Mode)
+
+Each card = one formula, one concept, one rule, or one term. Nothing else.
+
 **Design Rules:**
 - **One concept per card.** No cramming multiple ideas into a single card. *(Buzan: "One Word Per Branch" applied to cards — max one chunk of 3-5 words per card face.)*
 - **Swipeable / scrollable.** Student flips through at their own pace.
@@ -626,18 +640,23 @@ When a student opens a homework assignment, the engine performs:
 | Hints allowed | No | No |
 | AI Tier | Tier 1 (pre-generated pool) | Same |
 
-**Approved Memory Sprint Formats:**
+**Approved Memory Sprint Formats (3 ONLY):**
 
 | Format | Description | Best For |
 |---|---|---|
-| **Quick MC / Binary** | 5-8 tap-to-answer questions on current chapter's key concepts | All subjects |
-| **Speed Match** | Drag-and-drop matching: term ↔ definition, formula ↔ result from current topic | Math, Science |
-| **Flash Sprint** | Rapid-fire flashcards — student swipes "Know" or "Review" on current chapter terms | Biology, History |
-| **Fill-in-Blanks Race** | Complete 5 sentences with missing keywords from current topic, timed | Language, Science |
-| **Order the Steps** | Arrange process steps in correct order (drag-and-drop) | Science, Math procedures |
-| **Link Chain** | 5 items from current chapter shown with a vivid story chain linking them (SMASHIN' SCOPE imagery). After 15s study, recall tested out of order: "What came after X?" | Science processes, History timelines — any sequential content. NOT for unrelated vocabulary (use Flash Sprint). |
+| **Multiple Choice** | 4 options, single correct answer. Tap to select. Basic concept checks, formula recognition, terminology. | All subjects |
+| **True / False** | Statement displayed, student taps True or False. Fact verification, rule checks, common misconception busters. | All subjects |
+| **Yes / No / Not Given** | IELTS-lite warm-up style. Statement presented, student selects Yes, No, or Not Given based on chapter content. Lighter than full IELTS — tests whether the student read/absorbed the material. | All subjects |
 
-**Format Selection Rule:** Content creator chooses the format that best fits the subject and current chapter content. All formats must have a Start button, instant per-item feedback, streak/combo bonuses, and a final score display. Mixing formats within a single Sprint is permitted.
+**Hard format restrictions:**
+- **NO manual typing.** All answers are tap-to-select. No keyboard input.
+- **NO open-ended questions.** No "explain why" or "describe how."
+- **NO drag-and-drop.** No matching, no ordering, no rearranging.
+- **Tap-only interaction.** Student reads → taps one option → gets instant feedback. That's it.
+
+**Content scope:** Items must be basic warm-up questions — simple concept checks, formula recall, terminology recognition, translation between representations. This is a warm-up, not an assessment. Questions should not overwhelm — they should activate prior knowledge and build confidence.
+
+**Format Selection Rule:** Content creator chooses from the 3 approved formats above. All items must have a Start button, instant per-item feedback, streak/combo bonuses, and a final score display. Mixing formats within a single Sprint is permitted (e.g., 3 MC + 2 T/F + 2 YNNG).
 
 **Item Selection Algorithm:**
 ```
@@ -686,6 +705,8 @@ IF accuracy < 60%  -> System routes to remediation BEFORE new content
 | **Struggle** | The character/scientist tries familiar approaches and they fail. The student feels the tension. |
 | **Discovery** | The new concept is introduced as the missing tool that breaks the deadlock. This is where the textbook content lands. |
 | **Solution** | The character applies the concept and the situation resolves. The student doesn't end a segment hanging — they get the answer, but they EARNED it by following the logic. |
+
+**CRITICAL — Blueprint vs Output:** The four beats above (Problem → Struggle → Discovery → Solution) are a **CONSTRUCTION BLUEPRINT** — they guide how the content creator builds each story segment. The student-facing output must be a **normal, flowing story**. Do NOT insert beat labels ("Muammo:", "Kurash:", "Kashfiyot:", "Yechim:") into the text. Do NOT divide the story into labeled sections. The student reads a cohesive narrative where the beats are invisible scaffolding. If you can see the structure labels in the output, you did it wrong.
 
 **Real-World Examples Preferred:** If the concept has a real historical discovery, real-world event, or documented case study — use that as the spine. Invented scenarios are a fallback, not the default.
 

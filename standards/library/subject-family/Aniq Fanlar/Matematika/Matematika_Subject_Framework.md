@@ -134,14 +134,11 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 
 **Matematika-specific format priority:**
 
-| Format | Priority | Why |
+| Format | Priority | Matematika Examples |
 |---|---|---|
-| **Speed Match** | HIGH | Formula ↔ visual model, fraction ↔ decimal, number ↔ expanded form from current chapter |
-| **Tile Match** | HIGH | Pattern recognition — match current chapter's key terms to definitions/visuals |
-| **Fill-in-Blanks Race** | MEDIUM | Complete the number pattern or calculation step from current topic |
-| **Quick MC / Binary** | MEDIUM | "Which calculation is correct?" — preview current chapter's core operations |
-| **Order the Steps** | LOW | For procedural sequences in current chapter (e.g., order of operations) |
-| **Link Chain** | LOW | Only for sequential processes in current chapter (e.g., steps of long division) |
+| **Multiple Choice** | HIGH | "Qaysi hisob to'g'ri?" (4 options, 1 correct). Formula recognition, calculation verification, concept identification. |
+| **True / False** | HIGH | "1 000 000 da 6 ta nol bor — To'g'ri yoki Noto'g'ri?" Rule checks, common misconception busters. |
+| **Yes / No / Not Given** | MEDIUM | "Bobda aytilganiga ko'ra, kasrlar faqat manfiy bo'lishi mumkin — Ha / Yo'q / Aytilmagan." Chapter comprehension warm-up. |
 
 **Matematika additions:**
 - Include 2-3 mental math speed rounds (250 × 10?) with 3-second timer — creates energy, not anxiety. Cap at 3.
@@ -310,7 +307,7 @@ For 1 in 3 Real-Life Challenges:
 
 | Element | Rule |
 |---|---|
-| **POV** | Second-person throughout: "Siz 3 taxta ko'rasiz. Ular uchburchak hosil qila oladimi?" |
+| **POV** | Second-person throughout (formal "Siz"): "Siz 3 taxta ko'rasiz. Ular uchburchak hosil qila oladimi?" |
 | **Tone** | Curious, calm, encouraging. Math anxiety peaks at G5-6 — voice is a calm guide, never a drill sergeant. |
 | **Language** | Conversational Uzbek or Russian. Math terms introduced with local equivalents: numerator → "surat", denominator → "maxraj", ratio → "nisbat". |
 | **Sentence length** | Average ≤ 14 words. Long sentences in word problems cause G5-6 students to lose track. |

@@ -4,8 +4,8 @@
 
 ## Assignment Handling
 
-**Specific chapter:** Produce one docx for that chapter.
-**Subject, no chapter:** Produce docx for EVERY chapter sequentially. One file per chapter.
+**Specific chapter:** Produce one .md for that chapter.
+**Subject, no chapter:** Produce .md for EVERY chapter sequentially. One file per chapter.
 **Unclear:** Ask: "Specific chapters or the whole book?"
 
 ---
@@ -29,7 +29,7 @@ STEP 4: DEEP READ + WRITE (per chapter)
    Read: UNIFIED-Buzan §5.1-§5.7 (the specific phase specs you're about to write)
    Read: Game Mechanic Docs for the 3 games you'll use
    Read: National Pride data (quotes_database.json, task_injections.json) if needed
-   Write: The actual docx, phase by phase
+   Write: The actual .md file, phase by phase
 
 STEP 5: LOG
    Update STATUS.md
@@ -142,9 +142,9 @@ Read the specific game docs for the 3 games you selected. These tell you the exa
 - `standards/system/narrative/task_injections.json` — for Phase 4 Wise Status injection
 - `standards/system/narrative/Bilarmidingiz_faktlar.md` — for between-phase "Did You Know" facts
 
-### ✍️ WRITE — The Docx
+### ✍️ WRITE — The Markdown File
 
-Output file: `{Subject}_Grade{N}_Ch{N}_{lang}.docx`
+Output file: `{Subject}_Grade{N}_Ch{N}_{lang}.md`
 
 Write each phase in order. For each phase, follow the template from SOUL.md (session structure table) + the UNIFIED spec section you just read + the Subject Framework's phase-specific tuning.
 
@@ -152,16 +152,16 @@ Write each phase in order. For each phase, follow the template from SOUL.md (ses
 
 | Phase | Write | Key Rules |
 |---|---|---|
-| 0-A | 8 components, gate quote, BOST goal | Visual-first, first-person POV ("sen"), no quiz. Store BOST learning goal for Phase 7. |
+| 0-A | 8 components (panels 1-5: 8-10 sentences; panels 6-8: 5-10 sentences), gate quote, BOST goal | Visual + substantive, first-person POV ("Siz" formal — never "sen"), no quiz. Store BOST learning goal for Phase 7. |
 | 0-B | Flash card deck | 5-7 cards max (G5). Each = concept WITH visual. 1 Common Mistake card. Ends with [ MENING UY VAZIFAMNI BOSHLASH ]. |
 | Header | Metadata table | Fan, Sinf, Darslik, Til, Bob, Standart kod, PISA target, Bloom's, Boss HP, Vaqt |
-| 1 | 5-8 warm-up items + answers | CURRENT chapter. Tag each: `[Bloom: L1 \| PISA: L1]`. ≤2 min. |
-| 2 | 3 CPA segments + 3 checkpoints + answers | Each segment MUST label: Muammo→Kurash→Kashfiyot→Yechim. Concrete→Pictorial→Abstract. Tag checkpoints: `[Bloom: L1-L2 \| PISA: L1-L2]`. |
+| 1 | 5-8 warm-up items + answers | CURRENT chapter. Tap-only: MC, True/False, Yes/No/Not Given. NO typing, NO drag-and-drop, NO open-ended. Basic concept checks only. Tag each: `[Bloom: L1 \| PISA: L1]`. ≤2 min. |
+| 2 | 3 CPA segments + 3 checkpoints + answers | Use Problem→Struggle→Discovery→Solution as invisible construction blueprint — output must be a flowing story with NO section labels. Concrete→Pictorial→Abstract. Tag checkpoints: `[Bloom: L1-L2 \| PISA: L1-L2]`. |
 | 3 | 3 games × 4-6 items + answers | ≥1 Interactive, ≥2 Default. Tag each: `[Bloom: L1-L3 \| PISA: L1-L2]`. |
 | 4 | 1 scenario + W5H + 3 questions + answers | Modern professional. First-person. W5H mandatory G5-6. ~30% Wise Status. Tag: `[Bloom: L3-L4 \| PISA: L2-L3]`. (Ijtimoiy: Historical Projection.) |
 | 5 | Formula-visual warmup (45s) + 1 Buzan exercise | Select by content type (hierarchical→Radiant, etc.). Explicitly verify SMASHIN' SCOPE. |
 | 6 | 3-5 boss Qs + hints + rubric + answers | HP from Subject Framework. 40/40/20. Tag: `[Bloom: L3-L5 \| PISA: L2-L4 \| Damage: -XX HP]`. At least 1 word problem + 1 visual model Q. |
-| 7 | Summary + 3 prompts + BOST recall + closing | **MUST resurface BOST goal from Phase 0-A**: "Bugun sen [goal] ni bilmoqchi eding. Bildingmi?" Spaced rep schedule. Third Renaissance closing (≥60% only). |
+| 7 | Summary + 3 prompts + BOST recall + closing | **MUST resurface BOST goal from Phase 0-A**: "Bugun Siz [goal] ni bilmoqchi edingiz. Bildingizmi?" Spaced rep schedule. Third Renaissance closing (≥60% only). |
 
 **CRITICAL: Every question/item must carry `[Bloom: LX | PISA: LX]` inline tag. A question without a tag is incomplete.**
 
@@ -171,15 +171,15 @@ Write each phase in order. For each phase, follow the template from SOUL.md (ses
 
 ### ✍️ UPDATE — STATUS.md
 
-After every docx, update STATUS.md in the output directory:
+After every .md file, update STATUS.md in the output directory:
 
 ```markdown
 ## Production Log
 
 | # | File | Chapter | Status | Timestamp | Issues |
 |---|------|---------|--------|-----------|--------|
-| 1 | Matematika_Grade5_Ch1_uz.docx | Ch1 Natural sonlar | ✅ Done | 2026-04-15 14:22 | None |
-| 2 | Matematika_Grade5_Ch2_uz.docx | Ch2 ... | 🔄 In progress | — | — |
+| 1 | Matematika_Grade5_Ch1_uz.md | Ch1 Natural sonlar | ✅ Done | 2026-04-15 14:22 | None |
+| 2 | Matematika_Grade5_Ch2_uz.md | Ch2 ... | 🔄 In progress | — | — |
 
 Total: 1/12 chapters complete
 ```

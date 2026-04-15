@@ -28,10 +28,10 @@ This document lists every tool you have access to and how to use each one. Do no
 
 ## 2. File System — Write
 
-**Purpose:** Write homework .docx files and production logs.
+**Purpose:** Write homework .md files and production logs.
 
 **When to use:**
-- Production: writing .docx homework session files
+- Production: writing .md homework session files
 - Throughout: writing/updating STATUS.md progress log
 
 **Paths you are authorized to write:**
@@ -40,8 +40,8 @@ This document lists every tool you have access to and how to use each one. Do no
 
 **Rules:**
 - Never overwrite existing files unless assignment explicitly requests regeneration
-- One .docx per chapter: `{Subject}_Grade{N}_Ch{N}_{lang}.docx`
-- STATUS.md updated after every docx creation
+- One .md per chapter: `{Subject}_Grade{N}_Ch{N}_{lang}.md`
+- STATUS.md updated after every .md file creation
 
 ---
 

@@ -64,12 +64,12 @@ memory/                    ← Shared MCP memory palace
 
 ## Content Production Pipeline
 
-Homework sessions (.docx) are produced by AI agents. The agent's pipeline:
+Homework sessions (.md) are produced by AI agents. The agent's pipeline:
 
 1. **Pre-Flight (once per subject):** Read Family Doc (FULL) + Subject Framework (FULL) + Textbook TOC
 2. **Chapter Extraction:** Read textbook chapter, extract concepts/terms/formulas
 3. **Content Mapping:** Map extracted content → session phases using framework knowledge
-4. **Deep Read + Write:** Read UNIFIED-Buzan phase specs (§5.1-§5.7) + Game Mechanic Docs + National Pride data → produce .docx
+4. **Deep Read + Write:** Read UNIFIED-Buzan phase specs (§5.1-§5.7) + Game Mechanic Docs + National Pride data → produce .md
 5. **Log:** Update STATUS.md → next chapter
 
 The agent does NOT front-load all framework docs. It reads what it needs, when it needs it. SOUL.md has a summary + reference map; actual specs are read just-in-time before writing each phase.
@@ -77,7 +77,7 @@ The agent does NOT front-load all framework docs. It reads what it needs, when i
 Agent config: `agents/content-producer/` (SOUL.md, SKILLS.md, SCHEMA.md, AGENTS.md, TOOLS.md, HEARTBEAT.md, MASTER_INSTRUCTION.md)
 
 **Production environments:** OpenClaw (WSL, prototyping) · PaperclipAI (production scale, CEO distributes tasks) · Codex CLI (direct runs)
-**Output:** Real .docx via `python-docx` (not plain text). Saved to `Homeworks/` folder.
+**Output:** Markdown (.md) files. Saved to `Homeworks/` folder. HTML demo conversion is a separate pipeline step.
 
 ## Framework Rules That Cannot Be Violated
 
@@ -86,7 +86,10 @@ Agent config: `agents/content-producer/` (SOUL.md, SKILLS.md, SCHEMA.md, AGENTS.
 - **Boss HP:** G1-4: 50 | G5-8: 100 | G9-11: 150. Damage: Easy -10, Medium -20, Hard -30. Distribution: 40/40/20.
 - **No MC for G6+ in Final Boss.** G5 allows up to 30% MC.
 - **Textbook is source of truth.** NETS transforms textbook content into better learning — never alters facts, never adds external curriculum.
-- **Every content item must carry:** `standard_ref`, `blooms_level`, `pisa_level`, `transition_skill`. Every question in homework .docx must have inline `[Bloom: LX | PISA: LX]` tags.
+- **Every content item must carry:** `standard_ref`, `blooms_level`, `pisa_level`, `transition_skill`. Every question in homework must have inline `[Bloom: LX | PISA: LX]` tags.
+- **Phase 1 Memory Sprint formats:** Multiple Choice, True/False, Yes/No/Not Given ONLY. No typing, no drag-and-drop, no open-ended.
+- **Phase 2 Story Mode:** Arc beats (Problem→Struggle→Discovery→Solution) are construction blueprints, NOT output labels. Output is a flowing story.
+- **Pronoun policy:** All Uzbek content uses "Siz" (formal). Never "sen".
 - **Phase 1 Memory Sprint:** Warm-up from CURRENT chapter (not prior chapters). Prior-chapter review is handled outside homework sessions.
 - **Phase 4 scenarios:** Modern professional context only. No bazaar/village/shopkeeper/farmer clichés.
 - **5 Subject Families are locked.** Reclassification requires formal ADR.
