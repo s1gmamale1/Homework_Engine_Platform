@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase 2 Story Mode",
+  "type": "object",
+  "required": ["phase_id", "lesson_id", "lang", "story_text", "checkpoints"],
+  "properties": {
+    "phase_id": { "const": "phase_2" },
+    "lesson_id": { "type": "string" },
+    "lang": { "type": "string", "enum": ["uz", "ru"] },
+    "story_text": {
+      "type": "string",
+      "minLength": 500,
+      "description": "ONE continuous flowing story. No segment labels, no 'Muammo:', no 'Segment 1:'. Arc beats (Problem/Struggle/Discovery/Solution) are invisible ingredients."
+    },
+    "checkpoints": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["number", "question", "answer", "tag"],
+        "properties": {
+          "number": { "type": "integer" },
+          "question": { "type": "string" },
+          "answer": { "type": "string" },
+          "tag": {
+            "type": "object",
+            "required": ["bloom", "pisa"],
+            "properties": {
+              "bloom": { "type": "string" },
+              "pisa": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

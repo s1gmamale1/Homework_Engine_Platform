@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS — Real-Life Challenge (Haqiqiy Hayot Sinovi)</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --background: 240 15% 8%;
+  --foreground: 0 0% 95%;
+  --card: 240 12% 12%;
+  --primary: 162 93% 42%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 240 10% 20%;
+  --muted-foreground: 240 5% 55%;
+  --border: 240 10% 22%;
+  --success: 142 76% 45%;
+  --warning: 38 92% 50%;
+  --destructive: 0 72% 51%;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+.container { max-width: 420px; width: 100%; }
+h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+.glass {
+  background: hsla(var(--card), 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+}
+.stats-bar {
+  display: flex; gap: 8px; padding: 12px; margin-bottom: 16px;
+  justify-content: center;
+}
+.stat {
+  text-align: center; flex: 1; padding: 8px 4px;
+  background: hsla(var(--muted), 0.5); border-radius: 0.5rem;
+}
+.stat-value { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.25rem; color: hsl(var(--primary)); }
+.stat-value.level-val { font-size: 1rem; }
+.stat-value.velocity-val { font-size: 0.85rem; color: hsl(var(--success)); }
+.stat-label { font-size: 0.7rem; color: hsl(var(--muted-foreground)); text-transform: uppercase; }
+.phase-flow { display: flex; gap: 4px; margin-bottom: 16px; flex-wrap: wrap; justify-content: center; }
+.phase-pill {
+  padding: 4px 8px; border-radius: 9999px; font-size: 0.65rem; font-weight: 700;
+  background: hsla(var(--muted), 0.4); color: hsl(var(--muted-foreground));
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.phase-pill.active { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+.phase-pill.done { background: hsla(var(--success), 0.3); color: hsl(var(--success)); }
+.card { padding: 20px; margin-bottom: 16px; }
+.card h2 { font-size: 1.2rem; margin-bottom: 8px; }
+.card p { color: hsl(var(--muted-foreground)); font-size: 0.9rem; line-height: 1.5; margin-bottom: 12px; }
+.btn {
+  display: block; width: 100%; padding: 14px; border: none; border-radius: 0.75rem;
+  background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+  color: hsl(var(--primary-foreground)); font-family: 'Space Grotesk'; font-weight: 600;
+  font-size: 1rem; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 20px hsla(var(--primary), 0.4); }
+.narrative-box {
+  background: hsla(var(--primary), 0.06); border-left: 3px solid hsl(var(--primary));
+  padding: 16px; border-radius: 0 0.5rem 0.5rem 0; margin: 12px 0;
+}
+.narrative-box p { color: hsl(var(--foreground)); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+.narrative-box .first-person { font-style: italic; }
+.decision-header {
+  display: flex; align-items: center; gap: 10px; margin: 16px 0 12px;
+}
+.decision-num {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+  font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.1rem;
+  color: hsl(var(--primary-foreground));
+}
+.decision-title { font-family: 'Space Grotesk'; font-weight: 600; font-size: 1.05rem; }
+.choice-btn {
+  display: block; width: 100%; padding: 14px 16px; margin-bottom: 8px;
+  background: hsla(var(--muted), 0.4); border: 2px solid hsl(var(--border));
+  border-radius: 0.75rem; color: hsl(var(--foreground)); font-family: 'Nunito';
+  font-size: 0.9rem; text-align: left; cursor: pointer; transition: all 0.2s; line-height: 1.5;
+}
+.choice-btn:hover { border-color: hsl(var(--primary)); background: hsla(var(--primary), 0.08); }
+.choice-btn.selected { border-color: hsl(var(--primary)); background: hsla(var(--primary), 0.12); }
+.consequence-box {
+  padding: 14px; border-radius: 0.5rem; margin: 12px 0;
+  animation: fadeSlide 0.5s ease;
+}
+@keyframes fadeSlide { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.consequence-box.good { background: hsla(var(--success), 0.08); border: 1px solid hsla(var(--success), 0.3); }
+.consequence-box.ok { background: hsla(var(--warning), 0.08); border: 1px solid hsla(var(--warning), 0.3); }
+.consequence-box.bad { background: hsla(var(--destructive), 0.08); border: 1px solid hsla(var(--destructive), 0.3); }
+.consequence-box .emoji { font-size: 1.5rem; margin-bottom: 6px; }
+.consequence-box p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+.result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+.result-item { background: hsla(var(--muted), 0.3); padding: 12px; border-radius: 0.5rem; text-align: center; }
+.result-item .val { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.3rem; color: hsl(var(--primary)); }
+.result-item .lbl { font-size: 0.75rem; color: hsl(var(--muted-foreground)); margin-top: 2px; }
+.grade-card {
+  background: hsla(var(--card), 0.8); border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem; padding: 16px; margin: 12px 0; text-align: center;
+}
+.grade-level {
+  font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700;
+  background: linear-gradient(135deg, hsl(162, 93%, 42%), hsl(180, 85%, 35%));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.grade-label { font-size: 12px; color: hsl(var(--muted-foreground)); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+.grade-detail { font-size: 14px; color: hsl(var(--foreground)); margin-top: 8px; font-weight: 600; }
+.hidden { display: none !important; }
+#confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
+.xp-popup {
+  position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-family: 'Space Grotesk'; font-weight: 700; font-size: 2rem;
+  color: hsl(var(--primary)); text-shadow: 0 0 30px hsla(var(--primary), 0.5);
+  animation: xpPop 1.5s ease-out forwards; pointer-events: none; z-index: 100;
+}
+@keyframes xpPop { 0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); } 20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); } 40% { transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; transform: translate(-50%, -80%) scale(0.8); } }
+</style>
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+<div class="container">
+  <!-- Stats Bar -->
+  <div class="stats-bar glass">
+    <div class="stat"><div class="stat-value level-val" id="level-display">0%</div><div class="stat-label">Daraja</div></div>
+    <div class="stat"><div class="stat-value velocity-val" id="velocity-display">n=0.00</div><div class="stat-label">Tezlik</div></div>
+    <div class="stat"><div class="stat-value" id="decision-num">0/3</div><div class="stat-label">Qaror</div></div>
+    <div class="stat"><div class="stat-value" id="score-display">0</div><div class="stat-label">Ball</div></div>
+  </div>
+  <!-- Phase Flow -->
+  <div class="phase-flow">
+    <span class="phase-pill active" id="ph-intro">Kirish</span>
+    <span class="phase-pill" id="ph-d1">Qaror 1</span>
+    <span class="phase-pill" id="ph-d2">Qaror 2</span>
+    <span class="phase-pill" id="ph-d3">Qaror 3</span>
+    <span class="phase-pill" id="ph-end">Xulosa</span>
+  </div>
+  <!-- Phase 1: Intro -->
+  <div id="phase-intro" class="card glass">
+    <h2>🌾 Haqiqiy Hayot Sinovi</h2>
+    <div class="narrative-box">
+      <p class="first-person">Siz Farg'ona vodiysidagi fermer xo'jaliklarida ishlovchi qishloq xo'jaligi inspektorisisiz. Sizning vazifangiz — fermerlarga to'g'ri qarorlar qabul qilishda yordam berish.</p>
+    </div>
+    <p>Bugun siz 3 ta muhim qaror qabul qilishingiz kerak. Har bir qaror real oqibatlarga ega.</p>
+    <p style="font-size:0.85rem">Har bir qaror 3 o'lchovda baholanadi: <strong>qaror sifati</strong> + <strong>asoslash</strong> + <strong>tushuncha aniqlash</strong></p>
+    <button class="btn" onclick="startGame()">Vazifani Boshlash</button>
+  </div>
+  <!-- Phase 2: Decision -->
+  <div id="phase-decision" class="hidden">
+    <div class="card glass">
+      <div class="narrative-box"><p id="narrative-text"></p></div>
+      <div class="decision-header">
+        <div class="decision-num" id="dec-num">1</div>
+        <div class="decision-title" id="dec-title"></div>
+      </div>
+      <p id="dec-desc" style="font-size:0.85rem;color:hsl(var(--muted-foreground));margin-bottom:12px"></p>
+      <div id="choices-container"></div>
+      <div id="consequence-box" class="hidden"></div>
+      <button class="btn hidden" id="next-btn" onclick="nextDecision()">Keyingi qaror</button>
+    </div>
+  </div>
+  <!-- Phase 3: Final Results -->
+  <div id="phase-end" class="hidden">
+    <div class="card glass" style="text-align:center">
+      <h2>📋 Yakuniy Hisobot</h2>
+      <div class="grade-card">
+        <div class="grade-level" id="grade-level"></div>
+        <div class="grade-label">Umumiy Daraja</div>
+        <div class="grade-detail" id="grade-detail"></div>
+      </div>
+      <div class="result-grid" style="margin-top:16px">
+        <div class="result-item"><div class="val" id="res-decision">0</div><div class="lbl">Qaror sifati</div></div>
+        <div class="result-item"><div class="val" id="res-reason">0</div><div class="lbl">Asoslash</div></div>
+        <div class="result-item"><div class="val" id="res-concept">0</div><div class="lbl">Tushuncha</div></div>
+        <div class="result-item"><div class="val" id="res-accuracy">0%</div><div class="lbl">Aniqlik</div></div>
+      </div>
+      <p id="final-feedback" style="margin-top:12px;font-size:0.9rem"></p>
+      <button class="btn" onclick="location.reload()" style="margin-top:16px">Qayta boshlash</button>
+    </div>
+  </div>
+</div>
+<script>
+const decisions = [
+  {
+    narrative: "Tonggi soat 6. Siz Chust tumanidagi 'Yashil Vodiy' fermer xo'jaligidasiz. Fermer Akrom aka sizga shikoyat qildi: 'Paxta dalasining bir qismida barglar sarg'ayib ketdi. Nima qilish kerak?'",
+    title: "Sarg'aygan Barglar Muammosi",
+    desc: "Siz dalani tekshirishingiz kerak. Quyidagi variantlardan birini tanlang:",
+    choices: [
+      { text: "Darhol pestitsid sepishni buyurish", quality: 40, reason: 20, concept: 10, consequence: "Pestitsid muammoni hal qilmadi — sababi ozuqa yetishmasligi edi. Kimyoviy moddalar foydasiz ishlatildi.", emoji: "⚠️", type: "ok", explanation: "Sarg'aygan barglar odatda azot yoki temir yetishmasligini ko'rsatadi, kasallikni emas." },
+      { text: "Tuproq namunasini olib, laboratoriyaga yuborish", quality: 90, reason: 50, concept: 25, consequence: "Ajoyib qaror! Laboratoriya natijasi: tuproqda azot yetishmayapti. To'g'ri o'g'it bilan dalani qutqarish mumkin.", emoji: "✅", type: "good", explanation: "Tuproq tahlili — muammoni aniqlashning eng ishonchli usuli." },
+      { text: "Sug'orishni ko'paytirishni maslahat berish", quality: 50, reason: 25, concept: 15, consequence: "Ko'proq sug'orish yordam bermadi. Muammi ozuqa yetishmasligi edi, suv emas. Ortiqcha suv ildizlarga zarar berdi.", emoji: "💧", type: "ok", explanation: "Sarg'ayish ko'pincha ozuqa yetishmasligi belgisi, suv muammosi emas." },
+      { text: "Kasallik tarqalmasligi uchun zararlangan o'simliklarni yo'q qilish", quality: 60, reason: 30, concept: 20, consequence: "Qisman to'g'ri — agar kasallik bo'lsa ishlaydi. Lekin bu holatda sabab ozuqa yetishmasligi edi. Foydali o'simliklar yo'q qilindi.", emoji: "🔍", type: "ok", explanation: "Avval sababni aniqlash kerak, keyin chorа ko'rish kerak." }
+    ]
+  },
+  {
+    narrative: "Tushdan keyin. Bozorda tekshiruv olib boryapsiz. Bir sotuvchi pomidorlarini 'organik' deb sotmoqda. Lekin pomidorlar juda katta va bir xil — bu shubhali.",
+    title: "Bozordagi Shubhali 'Organik'",
+    desc: "Sotuvchi bilan suhbatlashishingiz kerak. Qanday tekshirasiz?",
+    choices: [
+      { text: "Sotuvchidan organik sertifikat so'rash", quality: 85, reason: 45, concept: 25, consequence: "To'g'ri qaror! Sotuvchi sertifikati yo'qligini tan oldi. 'Organik' yorlig'ini olib tashlashga majbur bo'ldi.", emoji: "📜", type: "good", explanation: "Organik mahsulot sertifikatsiyasi talab qilinadi. Hujjatsiz — bu soxta da'vo." },
+      { text: "Pomidorlarni laboratoriya tahliliga yuborish", quality: 70, reason: 35, concept: 20, consequence: "Yaxshi fikr, lekin natija 3 kun kutish kerak. Shu vaqtgacha sotuvchi 'organik' deb sota turadi.", emoji: "🔬", type: "ok", explanation: "Laboratoriya aniq, lekin sekin. Darhol chorа ko'rish kerak." },
+      { text: "Hech narsa qilmaslik — 'organik' so'zi faqat marketing", quality: 20, reason: 5, concept: 5, consequence: "Noto'g'ri qaror! 'Organik' so'zi qonuniy atama. Soxta da'vo iste'molchilarni aldaydi va siz buni tekshirishingiz kerak.", emoji: "❌", type: "bad", explanation: "'Organik' — qonuniy atlama. Inspektor sifatida siz buni tekshirish majburiyatiga ega." }
+    ]
+  },
+  {
+    narrative: "Kechqurun. Qishloq xo'jaligi boshqarmasidan qo'ng'iroq: 'Ertaga yomg'ir kutilmoqda. Fermerlarga ogohlantirish berish kerak. Nima deyishimiz kerak?'",
+    title: "Yomg'ir Oldidan Ogohlantirish",
+    desc: "Fermerlarga qanday maslahat berasiz?",
+    choices: [
+      { text: "Barcha ekinlarni bugun yig'ib oling!", quality: 30, reason: 10, concept: 10, consequence: "Bu noto'g'ri maslahat! Hali pishmagan ekinlarni yig'ib olish — hosilni yo'qotish demakdir. Faqat tayyor ekinlarni yig'ish kerak.", emoji: "🌧️", type: "bad", explanation: "Hammani birdan yig'ishga majburlash — noto'g'ri. Faqat pishgan hosilni yig'ish kerak." },
+      { text: "Ochiq daladagi pestitsid sepishni to'xtatish. Yomg'ir uni yuvib ketadi va suv havzalarini ifloslantiradi", quality: 95, reason: 50, concept: 25, consequence: "Ajoyib! Bu eng muhim maslahat. Pestitsid yomg'ir bilan daryolarga oqib ketadi va ekologik falokatga olib kelishi mumkin.", emoji: "🌊", type: "good", explanation: "Yomg'irdan oldin pestitsid sepish — jiddiy ekologik xavf. Suv havzalarini ifloslantiradi." },
+      { text: "Ekinlarni plyonka bilan yopishni maslahat berish", quality: 65, reason: 30, concept: 15, consequence: "Yaxshi amaliy maslahat, lekin katta dalalar uchun real emas. Kichik issiqxonalar uchun ishlaydi.", emoji: "🏠", type: "ok", explanation: "Plyonka kichik maydonlar uchun yaxshi, lekin katta dalalar uchun amalga oshirib bo'lmaydi." }
+    ]
+  }
+];
+let currentDecision = 0;
+let sessionHistory = [];  // [{correct, quality, reason, concept, timestamp}]
+let decisionScore = 0;
+let reasonScore = 0;
+let conceptScore = 0;
+let maxDecision = 270; // 90+90+90 max across 3 decisions
+let maxReason = 150;   // 50+50+50 max
+let maxConcept = 75;   // 25+25+25 max
+let score = 0;
+
+function calcVelocity() {
+  if (sessionHistory.length < 2) return 0;
+  const first = sessionHistory[0].timestamp;
+  const last = sessionHistory[sessionHistory.length - 1].timestamp;
+  const elapsedMin = (last - first) / 60000;
+  if (elapsedMin < 0.1) return 0;
+  return sessionHistory.length / elapsedMin;
+}
+
+function getGradeLabel(accuracy, velocity) {
+  const score = accuracy * 0.7 + Math.min(velocity, 10) * 3;
+  if (score >= 80) return { grade: 'A+', color: 'hsl(var(--success))' };
+  if (score >= 70) return { grade: 'A', color: 'hsl(var(--success))' };
+  if (score >= 60) return { grade: 'B', color: 'hsl(var(--primary))' };
+  if (score >= 50) return { grade: 'C', color: 'hsl(var(--warning))' };
+  if (score >= 35) return { grade: 'D', color: 'hsl(var(--warning))' };
+  return { grade: 'F', color: 'hsl(var(--destructive))' };
+}
+
+function updateStats() {
+  const totalMax = maxDecision + maxReason + maxConcept;
+  const totalEarned = decisionScore + reasonScore + conceptScore;
+  const accuracy = totalMax > 0 ? Math.round(totalEarned / totalMax * 100) : 0;
+  const velocity = calcVelocity();
+  document.getElementById('level-display').textContent = accuracy + '%';
+  document.getElementById('velocity-display').textContent = 'n=' + velocity.toFixed(2);
+  document.getElementById('decision-num').textContent = currentDecision + '/3';
+  document.getElementById('score-display').textContent = score;
+}
+
+function setPhase(name) {
+  document.querySelectorAll('.phase-pill').forEach(p => { p.classList.remove('active'); p.classList.remove('done'); });
+  const phases = ['ph-intro','ph-d1','ph-d2','ph-d3','ph-end'];
+  const names = ['intro','d1','d2','d3','end'];
+  let idx = names.indexOf(name);
+  phases.forEach((p, i) => {
+    if (i < idx) document.getElementById(p).classList.add('done');
+    if (i === idx) document.getElementById(p).classList.add('active');
+  });
+}
+function startGame() {
+  document.getElementById('phase-intro').classList.add('hidden');
+  document.getElementById('phase-decision').classList.remove('hidden');
+  setPhase('d1');
+  document.getElementById('level-display').textContent = '0%';
+  document.getElementById('velocity-display').textContent = 'n=0.00';
+  loadDecision();
+}
+function loadDecision() {
+  if (currentDecision >= 3) { showResults(); return; }
+  const d = decisions[currentDecision];
+  document.getElementById('narrative-text').textContent = d.narrative;
+  document.getElementById('dec-num').textContent = currentDecision + 1;
+  document.getElementById('dec-title').textContent = d.title;
+  document.getElementById('dec-desc').textContent = d.desc;
+  document.getElementById('consequence-box').classList.add('hidden');
+  document.getElementById('next-btn').classList.add('hidden');
+  const container = document.getElementById('choices-container');
+  container.innerHTML = '';
+  d.choices.forEach((c, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'choice-btn';
+    btn.textContent = String.fromCharCode(65 + i) + '. ' + c.text;
+    btn.onclick = () => makeChoice(i);
+    container.appendChild(btn);
+  });
+  updateStats();
+}
+function makeChoice(idx) {
+  const d = decisions[currentDecision];
+  const choice = d.choices[idx];
+  // Disable all choice buttons
+  document.querySelectorAll('.choice-btn').forEach((b, i) => {
+    b.style.pointerEvents = 'none';
+    if (i === idx) b.classList.add('selected');
+  });
+  // Calculate scores
+  decisionScore += choice.quality;
+  reasonScore += choice.reason;
+  conceptScore += choice.concept;
+  const roundScore = choice.quality + choice.reason + choice.concept;
+  score += Math.round((choice.quality + choice.reason + choice.concept) / 3);
+  sessionHistory.push({ correct: choice.quality >= 70, quality: choice.quality, reason: choice.reason, concept: choice.concept, timestamp: Date.now() });
+  updateStats();
+  showXPPopup('+' + roundScore);
+  // Show consequence
+  const box = document.getElementById('consequence-box');
+  box.classList.remove('hidden');
+  box.className = 'consequence-box ' + choice.type;
+  box.innerHTML = `<div class="emoji">${choice.emoji}</div><p>${choice.consequence}</p><p style="margin-top:8px;font-size:0.85rem;color:hsl(var(--muted-foreground))">${choice.explanation}</p>`;
+  // Show next button
+  const nextBtn = document.getElementById('next-btn');
+  nextBtn.classList.remove('hidden');
+  nextBtn.textContent = currentDecision >= 2 ? 'Hisobotni ko\'rish' : 'Keyingi qaror';
+  // Update phase
+  const phaseNames = ['d1','d2','d3'];
+  setPhase(phaseNames[currentDecision]);
+}
+function nextDecision() {
+  currentDecision++;
+  if (currentDecision >= 3) {
+    showResults();
+  } else {
+    const phaseNames = ['d1','d2','d3'];
+    setPhase(phaseNames[currentDecision]);
+    loadDecision();
+  }
+}
+function showResults() {
+  document.getElementById('phase-decision').classList.add('hidden');
+  document.getElementById('phase-end').classList.remove('hidden');
+  setPhase('end');
+
+  const totalMax = maxDecision + maxReason + maxConcept;
+  const totalEarned = decisionScore + reasonScore + conceptScore;
+  const accuracy = totalMax > 0 ? Math.round(totalEarned / totalMax * 100) : 0;
+  const velocity = calcVelocity();
+  const grade = getGradeLabel(accuracy, velocity);
+
+  document.getElementById('res-decision').textContent = Math.round(decisionScore / maxDecision * 100) + '%';
+  document.getElementById('res-reason').textContent = Math.round(reasonScore / maxReason * 100) + '%';
+  document.getElementById('res-concept').textContent = Math.round(conceptScore / maxConcept * 100) + '%';
+  document.getElementById('res-accuracy').textContent = accuracy + '%';
+
+  // Grade card
+  document.getElementById('grade-level').textContent = grade.grade;
+  document.getElementById('grade-level').style.background = `linear-gradient(135deg, ${grade.color}, hsl(180, 85%, 35%))`;
+  document.getElementById('grade-level').style.webkitBackgroundClip = 'text';
+  document.getElementById('grade-level').style.webkitTextFillColor = 'transparent';
+  document.getElementById('grade-level').style.backgroundClip = 'text';
+  document.getElementById('grade-detail').textContent = `Aniqlik: ${accuracy}% | Tezlik: n=${velocity.toFixed(2)} | ${currentDecision}/3 qaror`;
+
+  const pct = Math.round(score / 3);
+  let feedback = '';
+  if (pct >= 80) feedback = '🌟 Ajoyib! Siz haqiqiy ekspert kabi qaror qabul qildingiz. Fermerlar sizga ishonadi!';
+  else if (pct >= 50) feedback = '👍 Yaxshi! Ba\'zi qarorlar to\'g\'ri edi, lekin yaxshilash mumkin.';
+  else feedback = '📚 Yana o\'rganish kerak. Har bir qarorning oqibatini yaxshiroq o\'ylang.';
+  document.getElementById('final-feedback').textContent = feedback;
+  launchConfetti();
+}
+function showXPPopup(text) {
+  const el = document.createElement('div');
+  el.className = 'xp-popup'; el.textContent = text;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 1500);
+}
+function launchConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  const particles = [];
+  const colors = ['#22c55e','#3b82f6','#f59e0b','#ef4444','#8b5cf6','#06b6d4','#ec4899'];
+  for (let i = 0; i < 130; i++) {
+    particles.push({ x: Math.random() * canvas.width, y: -20, w: Math.random() * 10 + 5, h: Math.random() * 6 + 3, color: colors[Math.floor(Math.random() * colors.length)], vx: (Math.random() - 0.5) * 4, vy: Math.random() * 3 + 2, rot: Math.random() * 360, rv: (Math.random() - 0.5) * 10 });
+  }
+  let frame = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => { p.x += p.vx; p.y += p.vy; p.vy += 0.05; p.rot += p.rv; ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot * Math.PI / 180); ctx.fillStyle = p.color; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore(); });
+    frame++; if (frame < 280) requestAnimationFrame(animate); else ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  animate();
+}
+</script>
+</body>
+</html>

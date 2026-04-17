@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5-Sinf Biologiya — §1 Biologiya: Hayot Haqidagi Fan</title>
+<style>
+  :root {
+    --bg: #0a0a0a; --surface: #1a1a2e; --card: #16213e; --border: #2a2a4a;
+    --accent: #4CAF50; --accent2: #2196F3; --accent3: #FF9800; --danger: #ef4444;
+    --text: #e8e8e8; --text-dim: #a0a0b0; --gold: #FFD700; --success: #22C55E;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  .container { max-width: 900px; margin: 0 auto; padding: 1.5rem; }
+
+  /* Header */
+  .header { text-align: center; padding: 2rem 1rem; background: linear-gradient(135deg, #1a472a, #2d5a3d); border-radius: 12px; margin-bottom: 1.5rem; }
+  .header h1 { font-size: 1.6rem; margin-bottom: .3rem; }
+  .header .subtitle { color: #b0d4b8; font-size: .95rem; }
+  .header .badge { display: inline-block; background: rgba(255,255,255,.15); padding: 2px 10px; border-radius: 12px; font-size: .8rem; margin: 4px 2px; }
+
+  /* Progress Bar */
+  .progress-bar { background: var(--surface); border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem; }
+  .progress-bar .track { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+  .progress-bar .fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 4px; transition: width .5s; }
+  .progress-label { display: flex; justify-content: space-between; font-size: .85rem; color: var(--text-dim); margin-top: .3rem; }
+
+  /* Section Cards */
+  .section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 1.2rem; overflow: hidden; }
+  .section-header { padding: 1rem 1.2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; transition: background .2s; }
+  .section-header:hover { background: rgba(255,255,255,.03); }
+  .section-header h2 { font-size: 1.1rem; display: flex; align-items: center; gap: .5rem; }
+  .section-header .icon { font-size: 1.3rem; }
+  .section-header .arrow { transition: transform .3s; font-size: 1.2rem; color: var(--text-dim); }
+  .section-header.open .arrow { transform: rotate(180deg); }
+  .section-body { display: none; padding: 0 1.2rem 1.2rem; border-top: 1px solid var(--border); }
+  .section-body.visible { display: block; }
+
+  /* Tags */
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 8px; font-size: .75rem; font-weight: 600; margin: 2px 2px; }
+  .tag-blue { background: #1a3a5c; color: #60b0f0; }
+  .tag-green { background: #1a472a; color: #60d080; }
+  .tag-orange { background: #4a3a1a; color: #f0c060; }
+  .tag-purple { background: #2a1a4a; color: #b080f0; }
+
+  /* Panels (Theme Preview) */
+  .panel-nav { display: flex; gap: 4px; margin-bottom: 1rem; overflow-x: auto; padding-bottom: .5rem; }
+  .panel-btn { flex-shrink: 0; padding: 6px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; font-size: .85rem; color: var(--text); transition: all .2s; }
+  .panel-btn:hover { border-color: var(--accent); }
+  .panel-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .panel-content { display: none; padding: 1rem; background: var(--card); border-radius: 8px; }
+  .panel-content.active { display: block; }
+  .panel-content h3 { color: var(--accent); margin-bottom: .5rem; }
+
+  /* Gate Quote */
+  .gate-quote { text-align: center; padding: 1.5rem; background: linear-gradient(135deg, #1a1a2e, #2a1a3a); border-radius: 8px; margin-bottom: 1rem; }
+  .gate-quote blockquote { font-size: 1.1rem; font-style: italic; color: var(--gold); }
+  .gate-quote .author { color: var(--text-dim); font-size: .85rem; margin-top: .5rem; }
+  .gate-quote .timer-bar { height: 4px; background: var(--gold); border-radius: 2px; margin-top: .8rem; transition: width 1s linear; }
+  .gate-quote .lock-msg { color: var(--text-dim); font-size: .85rem; margin-top: .5rem; }
+  .gate-quote .continue-btn { padding: 8px 24px; background: var(--gold); color: #1a1a2e; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; margin-top: .8rem; font-size: .95rem; }
+  .gate-quote .continue-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+  /* Flash Cards */
+  .flash-carousel { display: flex; gap: 1rem; overflow-x: auto; padding: 1rem 0; scroll-snap-type: x mandatory; }
+  .flash-card { min-width: 200px; height: 160px; perspective: 600px; cursor: pointer; scroll-snap-align: start; }
+  .flash-card-inner { width: 100%; height: 100%; transition: transform .5s; transform-style: preserve-3d; position: relative; }
+  .flash-card.flipped .flash-card-inner { transform: rotateY(180deg); }
+  .flash-card-front, .flash-card-back { position: absolute; width: 100%; height: 100%; border-radius: 12px; backface-visibility: hidden; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; }
+  .flash-card-front { background: linear-gradient(135deg, #1a3a5c, #2a4a6c); border: 2px solid #3a6a9c; }
+  .flash-card-back { background: linear-gradient(135deg, #1a472a, #2a5a3a); border: 2px solid #3a8a4a; transform: rotateY(180deg); }
+
+  /* Quiz Items */
+  .quiz-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; margin-bottom: .8rem; }
+  .quiz-item .question { font-weight: 600; margin-bottom: .6rem; }
+  .quiz-item .options { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .option-btn { padding: 6px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; color: var(--text); font-size: .9rem; transition: all .2s; }
+  .option-btn:hover { border-color: var(--accent2); }
+  .option-btn.selected { background: var(--accent2); border-color: var(--accent2); color: #fff; }
+  .option-btn.correct { background: var(--success); border-color: var(--success); color: #fff; }
+  .option-btn.wrong { background: var(--danger); border-color: var(--danger); color: #fff; }
+  .feedback { margin-top: .5rem; padding: .5rem; border-radius: 6px; font-size: .9rem; display: none; }
+  .feedback.show { display: block; }
+  .feedback.correct { background: rgba(34,197,94,.15); color: #60d080; }
+  .feedback.incorrect { background: rgba(239,68,68,.15); color: #f08080; }
+
+  /* True/False, Y/N/NG */
+  .binary-options { display: flex; gap: .5rem; }
+  .binary-btn { flex: 1; padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all .2s; border: 2px solid var(--border); background: var(--surface); color: var(--text); }
+  .binary-btn:hover { border-color: var(--accent2); }
+  .binary-btn.selected { border-color: var(--accent2); background: rgba(33,150,243,.15); }
+  .binary-btn.correct { border-color: var(--success); background: rgba(34,197,94,.2); color: var(--success); }
+  .binary-btn.wrong { border-color: var(--danger); background: rgba(239,68,68,.2); color: var(--danger); }
+
+  /* Story Mode */
+  .story-segment { padding: 1.2rem; background: var(--card); border-radius: 8px; margin-bottom: 1rem; line-height: 1.8; }
+  .story-segment p { margin-bottom: .8rem; }
+  .story-segment .emoji-story { font-size: 1.5rem; text-align: center; margin: .5rem 0; }
+  .checkpoint { background: linear-gradient(135deg, #1a2a4a, #2a3a5a); border: 2px solid #3a5a8a; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+  .checkpoint h4 { color: var(--accent3); margin-bottom: .5rem; }
+
+  /* Game Breaks */
+  .game-card { background: var(--card); border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+  .game-card h4 { margin-bottom: .5rem; }
+
+  /* Tile Match Grid */
+  .tile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; max-width: 400px; margin: 1rem auto; }
+  .tile { height: 70px; background: var(--surface); border: 2px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: .85rem; text-align: center; padding: 4px; transition: all .2s; user-select: none; }
+  .tile:hover { border-color: var(--accent2); }
+  .tile.flipped { background: var(--accent2); border-color: var(--accent2); color: #fff; }
+  .tile.matched { background: var(--success); border-color: var(--success); color: #fff; opacity: .7; }
+
+  /* Tic Tac Toe */
+  .ttt-board { display: grid; grid-template-columns: repeat(3, 80px); gap: 4px; margin: 1rem auto; width: max-content; }
+  .ttt-cell { width: 80px; height: 80px; background: var(--surface); border: 2px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 700; cursor: pointer; transition: all .2s; }
+  .ttt-cell:hover { border-color: var(--accent2); }
+  .ttt-cell.x { color: var(--accent); }
+  .ttt-cell.o { color: var(--danger); }
+
+  /* Reaction Chain */
+  .chain-buckets { display: flex; gap: .5rem; flex-wrap: wrap; justify-content: center; margin: 1rem 0; }
+  .bucket { padding: 8px 16px; background: var(--surface); border: 2px solid var(--border); border-radius: 12px; font-size: .9rem; }
+  .chain-item { padding: 8px 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin: 4px; display: inline-flex; align-items: center; gap: .5rem; cursor: pointer; transition: all .2s; }
+  .chain-item:hover { border-color: var(--accent3); }
+  .chain-item.placed { background: rgba(76,175,80,.15); border-color: var(--accent); }
+  .chain-timer { text-align: center; font-size: 1.5rem; font-weight: 700; color: var(--accent3); }
+
+  /* Memory Palace */
+  .palace-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 1rem 0; }
+  .palace-zone { background: var(--card); border: 2px solid var(--border); border-radius: 8px; padding: .8rem; text-align: center; min-height: 80px; transition: all .2s; cursor: pointer; }
+  .palace-zone:hover { border-color: var(--accent); }
+  .palace-zone.highlight { border-color: var(--gold); background: rgba(255,215,0,.05); }
+  .palace-zone .zone-icon { font-size: 1.5rem; }
+  .palace-zone .zone-name { font-size: .85rem; color: var(--text-dim); margin-top: .3rem; }
+  .palace-zone .zone-items { font-size: .8rem; color: var(--accent); margin-top: .3rem; }
+
+  /* Boss */
+  .boss-header { text-align: center; padding: 1.5rem; background: linear-gradient(135deg, #2a1a1a, #3a2a1a); border-radius: 8px; margin-bottom: 1rem; }
+  .boss-header .boss-icon { font-size: 3rem; }
+  .boss-header h3 { color: var(--danger); }
+  .hp-bar { height: 20px; background: var(--border); border-radius: 10px; overflow: hidden; margin: .5rem 0; }
+  .hp-fill { height: 100%; background: linear-gradient(90deg, var(--danger), var(--accent3)); border-radius: 10px; transition: width .5s; }
+
+  /* Reflection */
+  .reflection-area { background: var(--card); border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+  .reflection-area textarea { width: 100%; min-height: 100px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: .8rem; color: var(--text); font-size: .95rem; resize: vertical; }
+  .reflection-area textarea:focus { outline: none; border-color: var(--accent2); }
+
+  /* Session Summary */
+  .summary-card { background: linear-gradient(135deg, #1a3a2a, #2a4a3a); border: 2px solid var(--accent); border-radius: 12px; padding: 1.5rem; text-align: center; margin-top: 1rem; }
+  .summary-card h3 { color: var(--gold); margin-bottom: .5rem; }
+
+  /* Utility */
+  .mt-1 { margin-top: .5rem; } .mt-2 { margin-top: 1rem; }
+  .text-center { text-align: center; }
+  .text-dim { color: var(--text-dim); }
+  .text-accent { color: var(--accent); }
+  .text-gold { color: var(--gold); }
+  .hidden { display: none; }
+  @media (max-width: 600px) {
+    .tile-grid { grid-template-columns: repeat(3, 1fr); }
+    .palace-grid { grid-template-columns: repeat(2, 1fr); }
+    .header h1 { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="header">
+  <h1>🧬 Biologiya — 5-Sinf</h1>
+  <div class="subtitle">I Bob, §1: Biologiya — Hayot Haqidagi Fan</div>
+  <div style="margin-top:.5rem;">
+    <span class="badge">📖 Sahifalar 4-8</span>
+    <span class="badge">🎯 ~29 daqiqa</span>
+    <span class="badge">🏆 ~3500 XP</span>
+  </div>
+</div>
+
+<!-- ═══════════ PROGRESS BAR ═══════════ -->
+<div class="progress-bar">
+  <div class="track"><div class="fill" id="progressFill" style="width:0%"></div></div>
+  <div class="progress-label">
+    <span id="progressText">0 / 9 qism bajarildi</span>
+    <span id="progressPct">0%</span>
+  </div>
+</div>
+
+<!-- ═══════════ GATE QUOTE (0-A) ═══════════ -->
+<div class="gate-quote" id="gateQuote">
+  <blockquote>"Tiriklikni anglash — insonning eng buyuk sarguzashtidir."</blockquote>
+  <div class="author">— Abu Ali ibn Sino</div>
+  <div class="timer-bar" id="gateTimer" style="width:0%"></div>
+  <div class="lock-msg" id="gateLockMsg">⏳ 5 soniya kuting...</div>
+  <button class="continue-btn" id="gateContinue" disabled onclick="unlockGate()">Davom etish ▸</button>
+</div>
+
+<!-- ═══════════ SECTION 0-A: THEME PREVIEW ═══════════ -->
+<div class="section" id="sec0A">
+  <div class="section-header" onclick="toggleSection('sec0A')">
+    <h2><span class="icon">📚</span> 0-A: Mavzu Bilan Tanishish</h2>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="section-body" id="body0A">
+    <div class="panel-nav">
+      <button class="panel-btn active" onclick="showPanel(1)">1. Xulosa</button>
+      <button class="panel-btn" onclick="showPanel(2)">2. Izoh</button>
+      <button class="panel-btn" onclick="showPanel(3)">3. Misollar</button>
+      <button class="panel-btn" onclick="showPanel(4)">4. Kashfiyot</button>
+      <button class="panel-btn" onclick="showPanel(5)">5. Sizning hayotingiz</button>
+      <button class="panel-btn" onclick="showPanel(6)">6. Nima uchun?</button>
+      <button class="panel-btn" onclick="showPanel(7)">7. Soha</button>
+      <button class="panel-btn" onclick="showPanel(8)">8. Manbalar</button>
+    </div>
+    <div class="panel-content active" id="panel1">
+      <h3>📋 Darslik Mavzusi Xulosasi</h3>
+      <p><strong>Biologiya — bu hayot haqidagi fan.</strong> Bu bobda siz tirik organizmlar nima ekanini, ular qanday farq qilishini va tabiatda qanday o'rin tutishini o'rganasiz. Botanim o'simliklarni, zoologiya hayvonlarni, mikologiya zamburug'larni o'rganadi. Siz mikroskop ostida hujayrani ko'rasiz va tiriklikning eng kichik birligini tushunasiz.</p>
+    </div>
+    <div class="panel-content" id="panel2">
+      <h3>💡 Tushuntirish</h3>
+      <p>Atrofingizga qarang: daraxtlar, qushlar, itlar, mushuklar, odamlar, hatto ko'rinmaydigan bakteriyalar ham bor. Bularning hammasi tirik. Lekin nima ularni tirik qiladi? Bu savollarga javob beradigan fan — <strong>biologiya</strong>.</p>
+    </div>
+    <div class="panel-content" id="panel3">
+      <h3>🌿 Misollar</h3>
+      <p>🌱 <strong>O'simlik:</strong> Barg nega yashil? Chunki unda xloroplast bor.</p>
+      <p>🐕 <strong>Hayvon:</strong> It nega dumini qimirlatadi? Chunki xursand!</p>
+      <p>❤️ <strong>Odam:</strong> Qon nega qizil? Chunki gemoglobin kislorod tashiydi.</p>
+    </div>
+    <div class="panel-content" id="panel4">
+      <h3>🔬 Haqiqiy Kashfiyotlar</h3>
+      <p>Abu Rayhon Beruniy "Saydana" asarida dorivor o'simliklar haqida yozgan. Abu Ali ibn Sino "Tib qonunlari" asarida odam tanasini o'rgangan. Zahiriddin Muhammad Bobur "Boburnoma" asarida o'simlik va hayvonlarni yoritgan.</p>
+    </div>
+    <div class="panel-content" id="panel5">
+      <h3>🤔 Sizning Hayotingiz Bilan Bog'liqmi?</h3>
+      <p>Siz har kuni biologiya bilan shug'ullanasiz. Non yeganda — biologiya. Mushukingizni silaganda — biologiya. Kasal bo'lganda doktorga borsangiz — biologiya!</p>
+      <p class="text-accent mt-1"><em>Bu mavzu haqida nimalarni bilasiz? Bugun nimani bilmoqchisiz?</em></p>
+    </div>
+    <div class="panel-content" id="panel6">
+      <h3>⚡ Nima Uchun Bu Kerak?</h3>
+      <p>🌱 Dehqon biologiyani bilsa — <strong>ko'p hosil</strong> oladi</p>
+      <p>🏥 Doktor biologiyani bilsa — <strong>kasallikni davolaydi</strong></p>
+      <p>🌍 Ekolog biologiyani bilsa — <strong>tabiatni himoya qiladi</strong></p>
+    </div>
+    <div class="panel-content" id="panel7">
+      <h3>🏥 Qayerda Ishlatiladi?</h3>
+      <p><span class="tag tag-green">Tibbiyot</span> Doktorlar biologiyani biladi</p>
+      <p><span class="tag tag-green">Qishloq xo'jaligi</span> Dehqonlar ko'p hosil oladi</p>
+      <p><span class="tag tag-green">Ekologiya</span> Tabiatni himoya qiladi</p>
+      <p><span class="tag tag-green">Farmatsevtika</span> Dorilar biologiyadan yaratiladi</p>
+    </div>
+    <div class="panel-content" id="panel8">
+      <h3>📖 Qo'shimcha Manbalar</h3>
+      <p>📺 "Biologiya nima?" — qisqa video (2 daqiqa)</p>
+      <p>🔬 "Mikroskop qanday ishlaydi?" — interaktiv diagramma</p>
+      <p>📖 Beruniy "Saydana" asaridan parcha</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 0-B: FLASH CARDS ═══════════ -->
+<div class="section" id="sec0B">
+  <div class="section-header" onclick="toggleSection('sec0B')">
+    <h2><span class="icon">🃏</span> 0-B: Flash Kartalar</h2>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="section-body" id="body0B">
+    <p class="text-dim text-center" style="margin-bottom:.5rem">Kartani aylantirish uchun bosing ▸</p>
+    <div class="flash-carousel" id="flashCards"></div>
+    <p class="text-center text-accent mt-2" style="font-weight:700">▶ VAZIFANI BOSHLASH</p>
+  </div>
+</div>
+
+<!-- ═══════════ PHASE 1: MEMORY SPRINT ═══════════ -->
+<div class="section" id="phase1">
+  <div class="section-header" onclick="toggleSection('phase1')">
+    <h2><span class="icon">⚡</span> Bosqich 1: Xotira Yugurish (≤2 min)</h2>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="section-body" id="bodyPhase1"></div>
+</div>
+
+<!-- ═══════════ PHASE 2: STORY MODE ═══════════ -->
+<div class="section" id="phase2">
+  <div class="section-header" onclick="toggleSection('phase2')">
+    <h2><span class="icon">📖</span> Bosqich 2: Hikoya Rejimi (5-7 min)</h2>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="section-body" id="bodyPhase2"></div>
+</div>
+
+<!-- ═══════════ PHASE 3: GAME BREAKS ═══════════ -->
+<div class="section" id="phase3">
+  <div class="section-header" onclick="toggleSection('phase3')">
+    <h2><span class="icon">🎮</span> Bosqich 3: O'yin Tanaffuslari (6-9 min)</h2>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="section-body" id="bodyPhase3"></div>
+</div>
+
+<!-- ═══════════ PHASE 4: REAL-LIFE CHALLENGE ═══════════ -->
+<div class="section" id="phase4">
+  <div class="section-header" onclick="toggleSection('phase4')">
+    <h2><span class="icon">🌿</span> Bosqich 4: Hayotiy Vazifa (3-5 min)</h2>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="section-body" id="bodyPhase4"></div>
+</div>
+
+<!-- ═══════════ PHASE 5: CONSOLIDATION ═══════════ -->
+<div class="section" id="phase5">
+  <div class="section-header" onclick="toggleSection('phase5')">
+    <h2><span class="icon">🏛️</span> Bosqich 5: Mustahkamlash (2-3 min)</h2>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="section-body" id="bodyPhase5"></div>
+</div>
+
+<!-- ═══════════ PHASE 6: FINAL BOSS ═══════════ -->
+<div class="section" id="phase6">
+  <div class="section-header" onclick="toggleSection('phase6')">
+    <h2><span class="icon">⚔️</span> Bosqich 6: Final Boss (5-10 min)</h2>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="section-body" id="bodyPhase6"></div>
+</div>
+
+<!-- ═══════════ PHASE 7: REFLECTION ═══════════ -->
+<div class="section" id="phase7">
+  <div class="section-header" onclick="toggleSection('phase7')">
+    <h2><span class="icon">🪞</span> Bosqich 7: Refleksiya (2-3 min)</h2>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="section-body" id="bodyPhase7"></div>
+</div>
+
+<!-- ═══════════ SESSION SUMMARY ═══════════ -->
+<div id="sessionSummary" class="hidden">
+  <div class="summary-card">
+    <h3>🎉 Vazifa Tugallandi!</h3>
+    <p id="summaryStats"></p>
+  </div>
+</div>
+
+</div><!-- container -->
+
+<script>
+// ═══════════ PROGRESS TRACKING ═══════════
+let completedSections = 0;
+const totalSections = 9;
+
+function markComplete() {
+  completedSections = Math.min(completedSections + 1, totalSections);
+  const pct = Math.round((completedSections / totalSections) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = completedSections + ' / ' + totalSections + ' qism bajarildi';
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+
+// ═══════════ SECTION TOGGLE ═══════════
+function toggleSection(id) {
+  const sec = document.getElementById(id);
+  const header = sec.querySelector('.section-header');
+  const body = sec.querySelector('.section-body');
+  header.classList.toggle('open');
+  body.classList.toggle('visible');
+}
+
+// ═══════════ PANEL NAVIGATION ═══════════
+function showPanel(n) {
+  document.querySelectorAll('.panel-content').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.panel-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel' + n).classList.add('active');
+  document.querySelectorAll('.panel-btn')[n-1].classList.add('active');
+}
+
+// ═══════════ GATE QUOTE TIMER ═══════════
+let gateTime = 0;
+const gateInterval = setInterval(() => {
+  gateTime++;
+  const pct = (gateTime / 5) * 100;
+  document.getElementById('gateTimer').style.width = pct + '%';
+  document.getElementById('gateLockMsg').textContent = '⏳ ' + (5 - gateTime) + ' soniya qoldi...';
+  if (gateTime >= 5) {
+    clearInterval(gateInterval);
+    document.getElementById('gateLockMsg').textContent = '';
+    document.getElementById('gateContinue').disabled = false;
+  }
+}, 1000);
+
+function unlockGate() {
+  document.getElementById('gateQuote').style.display = 'none';
+  markComplete();
+}
+
+// ═══════════ FLASH CARDS ═══════════
+const flashData = [
+  ['Biologiya nima?', 'Bios (hayot) + logos (fan) — tiriklik haqidagi fan'],
+  ['Botanika nima?', 'O\'simliklar dunyosini o\'rganadi'],
+  ['Zoologiya nima?', 'Hayvonot dunyosini o\'rganadi'],
+  ['Mikologiya nima?', 'Zamburug\'lar dunyosini o\'rganadi'],
+  ['Mikrobiologiya?', 'Kichik jonzotlarni (bakteriyalar) o\'rganuvchi fan'],
+  ['Sitologiya nima?', 'Hujayra haqidagi fan'],
+  ['Anatomiya nima?', 'Tirik organizmning ichki tuzilishini'],
+  ['Sistematika nima?', 'Organizmlarni guruhlarga bo\'ladi'],
+  ['Fiziologiya nima?', 'Tirik organizmda boradigan jarayonlarni'],
+  ['Genetika nima?', 'irsiyat va o\'zgaruvchanlik haqidagi fan'],
+  ['Ekologiya nima?', 'Organizmlarning o\'zaro va tashqi muhit bilan munosabatlari']
+];
+
+const fc = document.getElementById('flashCards');
+flashData.forEach(([q, a]) => {
+  fc.innerHTML += '<div class="flash-card" onclick="this.classList.toggle(\'flipped\')"><div class="flash-card-inner"><div class="flash-card-front"><strong>' + q + '</strong></div><div class="flash-card-back"><strong>' + a + '</strong></div></div></div>';
+});
+
+// ═══════════ PHASE 1: MEMORY SPRINT ═══════════
+const msItems = [
+  { type: 'mc', q: 'Biologiya so\'zi qaysi tillardan olingan?', opts: ['Lotin va arab', 'Yunoncha "bios" va "logos" ✅', 'Fors va turk', 'Ingliz va rus'] },
+  { type: 'tf', q: 'Botanika — hayvonlar haqidagi fan.', correct: false, feedback: 'Botanika o\'simliklar haqidagi fan. Hayvonlarni zoologiya o\'rganadi.' },
+  { type: 'yng', q: 'Biologiya fanining rivojlanishiga o\'zbek olimlari hissa qo\'shgan.', correct: 'yes' },
+  { type: 'mc', q: 'Qaysi fan hujayrani o\'rganadi?', opts: ['Botanika', 'Zoologiya', 'Sitologiya ✅', 'Ekologiya'] },
+  { type: 'tf', q: 'Ekologiya tirik organizmlarning o\'zaro munosabatlarini o\'rganadi.', correct: true },
+  { type: 'yng', q: 'Abu Ali ibn Sino "Tib qonunlari" asarida ichki kasalliklarni o\'rgangan.', correct: 'yes' }
+];
+
+const p1body = document.getElementById('bodyPhase1');
+let html1 = '<p class="text-dim mt-1">Barcha javoblar — bosish orqali. Klaviatura kerak emas.</p>';
+msItems.forEach((item, i) => {
+  html1 += '<div class="quiz-item" id="ms' + i + '">';
+  html1 += '<div class="question">' + (i+1) + '. ' + item.q + '</div>';
+  if (item.type === 'mc') {
+    html1 += '<div class="options">';
+    item.opts.forEach(o => {
+      const isCorrect = o.includes('✅');
+      const clean = o.replace(' ✅', '');
+      html1 += '<button class="option-btn" onclick="checkMC(this, ' + isCorrect + ', \'ms' + i + '\')">' + clean + '</button>';
+    });
+    html1 += '</div>';
+  } else if (item.type === 'tf') {
+    html1 += '<div class="binary-options">';
+    html1 += '<button class="binary-btn" onclick="checkTF(this, ' + item.correct + ', true, \'ms' + i + '\', \'' + (item.feedback || '') + '\')">✅ To\'g\'ri</button>';
+    html1 += '<button class="binary-btn" onclick="checkTF(this, ' + item.correct + ', false, \'ms' + i + '\', \'' + (item.feedback || '') + '\')">❌ Noto\'g\'ri</button>';
+    html1 += '</div>';
+  } else {
+    html1 += '<div class="binary-options">';
+    ['Ha', 'Yo\'q', 'Berilmagan'].forEach(v => {
+      const cv = v === 'Berilmagan' ? 'ng' : v === 'Ha' ? 'yes' : 'no';
+      html1 += '<button class="binary-btn" onclick="checkYN(this, \'' + item.correct + '\', \'' + cv + '\', \'ms' + i + '\')">' + v + '</button>';
+    });
+    html1 += '</div>';
+  }
+  html1 += '<div class="feedback" id="msfb' + i + '"></div>';
+  html1 += '</div>';
+});
+p1body.innerHTML = html1;
+
+function checkMC(btn, isCorrect, id) {
+  const parent = btn.closest('.options');
+  parent.querySelectorAll('.option-btn').forEach(b => { b.disabled = true; b.style.pointerEvents = 'none'; });
+  if (isCorrect) { btn.classList.add('correct'); showFeedback(id, '✅ To\'g\'ri! +100 XP', true); }
+  else { btn.classList.add('wrong'); parent.querySelectorAll('.option-btn').forEach(b => { if (b.textContent.includes('✅') || b.classList.contains('correct')) {} }); showFeedback(id, '❌ Noto\'g\'ri. To\'g\'ri javobni ko\'ring.', false); }
+  markComplete();
+}
+
+function checkTF(btn, isCorrect, selected, id, feedback) {
+  const parent = btn.closest('.binary-options');
+  parent.querySelectorAll('.binary-btn').forEach(b => { b.disabled = true; b.style.pointerEvents = 'none'; });
+  if (selected === isCorrect) { btn.classList.add('correct'); showFeedback(id, '✅ To\'g\'ri! +100 XP', true); }
+  else { btn.classList.add('wrong'); showFeedback(id, '❌ Noto\'g\'ri. ' + feedback, false); }
+}
+
+function checkYN(btn, correct, selected, id) {
+  const parent = btn.closest('.binary-options');
+  parent.querySelectorAll('.binary-btn').forEach(b => { b.disabled = true; b.style.pointerEvents = 'none'; });
+  if (selected === correct) { btn.classList.add('correct'); showFeedback(id, '✅ To\'g\'ri! +100 XP', true); }
+  else { btn.classList.add('wrong'); showFeedback(id, '❌ Noto\'g\'ri.', false); }
+}
+
+function showFeedback(id, msg, isCorrect) {
+  const fb = document.getElementById(id.replace('ms', 'msfb'));
+  if (!fb) return;
+  fb.textContent = msg;
+  fb.className = 'feedback show ' + (isCorrect ? 'correct' : 'incorrect');
+}
+
+// ═══════════ PHASE 2: STORY MODE ═══════════
+const p2body = document.getElementById('bodyPhase2');
+p2body.innerHTML = `
+  <div class="story-segment">
+    <h3>📖 1-qism: "Nima Uchun Barg Yashil?"</h3>
+    <p>Siz Toshkent Botaniya Bog'ida sayr qilyapsiz. Atrofingizda yashil daraxtlar, rangli gullar, kichik qushlar. Birdan sizning e'tiboringiz kichik bir savolni tortdi: <strong>nima uchun barglar yashil?</strong></p>
+    <p>Siz bog'bon Amaki Rahimga savol berdingiz. U dedi: "Buni bilish uchun senga biologiya kerak — lekin biologiya bitta fan emas, u <strong>10 ta fanga</strong> bo'linadi. Har biri tiriklikning bir sirini ochadi."</p>
+  </div>
+  <div class="checkpoint">
+    <h4>🔒 Tekshirish 1</h4>
+    <p>Amaki Rahim nima uchun biologiya 10 ta fanga bo'linishini aytdi?</p>
+    <div class="options mt-1">
+      <button class="option-btn" onclick="checkCP(this, false, 'cp1')">Biologiya juda qiyin</button>
+      <button class="option-btn" onclick="checkCP(this, true, 'cp1')">Har bir fan tiriklikning boshqa sirini ochadi</button>
+      <button class="option-btn" onclick="checkCP(this, false, 'cp1')">O'qituvchilar ko'p</button>
+      <button class="option-btn" onclick="checkCP(this, false, 'cp1')">Kitoblar ko'p</button>
+    </div>
+    <div class="feedback" id="cp1"></div>
+  </div>
+
+  <div class="story-segment">
+    <h3>📖 2-qism: "10 Ta Kalit"</h3>
+    <p>Amaki Rahim sizga 10 ta kalit ko'rsatdi. "Har bir kalit — bu bitta fan."</p>
+    <p>🔑 <strong>Botanika</strong> — O'simliklar | 🔑 <strong>Zoologiya</strong> — Hayvonlar | 🔑 <strong>Mikologiya</strong> — Zamburug'lar</p>
+    <p>🔑 <strong>Mikrobiologiya</strong> — Mayda jonzotlar | 🔑 <strong>Sitologiya</strong> — Hujayra | 🔑 <strong>Anatomiya</strong> — Ichki tuzilish</p>
+    <p>🔑 <strong>Fiziologiya</strong> — Jarayonlar | 🔑 <strong>Genetika</strong> — Irsiyat | 🔑 <strong>Sistematika</strong> — Guruhlash | 🔑 <strong>Ekologiya</strong> — Muhit</p>
+    <p class="text-gold mt-1"><em>💡 Bilasizmi? Akademik Jo'ra Musayev dunyoda birinchi bo'lib g'o'za kolleksiyasini yaratgan!</em></p>
+  </div>
+  <div class="checkpoint">
+    <h4>🔒 Tekshirish 2</h4>
+    <p>Agar siz qo'ziqorinni o'rganmoqchi bo'lsangiz, qaysi fanni tanlaysiz?</p>
+    <div class="options mt-1">
+      <button class="option-btn" onclick="checkCP(this, false, 'cp2')">Botanika</button>
+      <button class="option-btn" onclick="checkCP(this, false, 'cp2')">Zoologiya</button>
+      <button class="option-btn" onclick="checkCP(this, true, 'cp2')">Mikologiya</button>
+      <button class="option-btn" onclick="checkCP(this, false, 'cp2')">Ekologiya</button>
+    </div>
+    <div class="feedback" id="cp2"></div>
+  </div>
+
+  <div class="story-segment">
+    <h3>📖 3-qism: "Nima Uchun Bu Kerak?"</h3>
+    <p>"Dehqon biologiyani bilsa — ko'p hosil oladi. Doktor biologiyani bilsa — kasallikni davolaydi. Agar tabiatni asrashni istasang — ekologiyani bilishing kerak."</p>
+    <p>Siz bog'dan qaytayotganingizda, har bir barg, har bir qush sizga boshqacha ko'rindi. Chunki endi siz bilasiz: <strong>har bir tirik narsaning o'z siri bor va biologiya uni ochadi.</strong></p>
+  </div>
+  <div class="checkpoint">
+    <h4>🔒 Tekshirish 3</h4>
+    <p>Amaki Rahimning fikricha, dehqon biologiyani bilsa nima qiladi?</p>
+    <div class="options mt-1">
+      <button class="option-btn" onclick="checkCP(this, false, 'cp3')">Faqat o'simlik ekadi</button>
+      <button class="option-btn" onclick="checkCP(this, true, 'cp3')">Ko'p hosil oladi</button>
+      <button class="option-btn" onclick="checkCP(this, false, 'cp3')">Faqat suv beradi</button>
+    </div>
+    <div class="feedback" id="cp3"></div>
+  </div>
+`;
+
+function checkCP(btn, isCorrect, id) {
+  const parent = btn.closest('.options');
+  parent.querySelectorAll('.option-btn').forEach(b => { b.disabled = true; b.style.pointerEvents = 'none'; });
+  if (isCorrect) { btn.classList.add('correct'); showFeedback(id, '✅ To\'g\'ri!', true); }
+  else { btn.classList.add('wrong'); showFeedback(id, '❌ Noto\'g\'ri. Qayta o\'ylab ko\'ring.', false); }
+}
+
+// ═══════════ PHASE 3: GAME BREAKS ═══════════
+const p3body = document.getElementById('bodyPhase3');
+
+// --- GAME 1: Tile Match ---
+const tilePairs = [
+  ['🌿 O\'simliklar', 'Botanika'], ['🐾 Hayvonlar', 'Zoologiya'],
+  ['🔬 Hujayra', 'Sitologiya'], ['🍄 Zamburug\'lar', 'Mikologiya'],
+  ['🦠 Mayda jonzotlar', 'Mikrobiologiya'], ['❤️ Yurak', 'Fiziologiya'],
+  ['🧬 Irsiyat', 'Genetika'], ['🌍 Muhit', 'Ekologiya']
+];
+let tileHTML = '<div class="game-card"><h4>🎮 O\'yin 1: Juftliklarni Toping (Tile Match)</h4><p class="text-dim">Juftliklarni topish uchun kartalarni bosing</p><div class="tile-grid" id="tileGrid"></div><p class="text-center mt-1" id="tileScore">Urinishlar: 0</p></div>';
+
+// --- GAME 2: Tic Tac Toe ---
+let tttHTML = '<div class="game-card"><h4>🎮 O\'yin 2: Krestik-Nolik (Tic Tac Toe vs AI)</h4><p class="text-dim">X qo\'yishdan oldin savolga javob bering</p><div class="ttt-board" id="tttBoard"></div><p class="text-center mt-1" id="tttStatus">Navbat sizda — katakni tanlang</p><div class="hidden" id="tttQuestion"></div></div>';
+
+// --- GAME 3: Reaction Chain ---
+let chainHTML = '<div class="game-card"><h4>🎮 O\'yin 3: Tezkor Tasnif (Reaction Chain)</h4><p class="text-dim">Har bir organizmni to\'g\'ri guruhga joylang</p><div class="chain-timer" id="chainTimer">90</div><div class="chain-buckets"><div class="bucket">🌱 O\'simlik</div><div class="bucket">🐾 Hayvon</div><div class="bucket">🍄 Zamburug\'</div><div class="bucket">🦠 Bakteriya</div></div><div id="chainItems"></div><p class="text-center mt-1" id="chainScore">Zanjir: 0</p></div>';
+
+p3body.innerHTML = tileHTML + tttHTML + chainHTML;
+
+// Tile Match logic
+let flippedTiles = [];
+let matchedCount = 0;
+let tileAttempts = 0;
+const tileItems = [];
+tilePairs.forEach(([concept, science]) => { tileItems.push({ text: concept, match: science, type: 'concept' }); tileItems.push({ text: science, match: concept, type: 'science' }); });
+// Shuffle
+for (let i = tileItems.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [tileItems[i], tileItems[j]] = [tileItems[j], tileItems[i]]; }
+
+const tg = document.getElementById('tileGrid');
+tileItems.forEach((item, idx) => {
+  tg.innerHTML += '<div class="tile" data-idx="' + idx + '" data-match="' + item.match + '" onclick="flipTile(this)">' + item.text + '</div>';
+});
+
+function flipTile(el) {
+  if (el.classList.contains('flipped') || el.classList.contains('matched') || flippedTiles.length >= 2) return;
+  el.classList.add('flipped');
+  flippedTiles.push(el);
+  if (flippedTiles.length === 2) {
+    tileAttempts++;
+    document.getElementById('tileScore').textContent = 'Urinishlar: ' + tileAttempts;
+    const [a, b] = flippedTiles;
+    const aMatch = a.dataset.match, bText = [...a.parentElement.children].find(c => c !== a && c.classList.contains('flipped'))?.dataset?.match || '';
+    // Check if a's match equals b's text or vice versa
+    const isMatch = (a.dataset.match === [...b.parentElement.children].find(c => c.dataset.idx === b.dataset.idx)?.textContent) || (b.dataset.match === a.textContent) || a.textContent.includes(tilePairs.find(p => p[0] === a.dataset.match || p[1] === a.dataset.match)?.[0] || '') && b.textContent.includes(tilePairs.find(p => p[0] === a.dataset.match || p[1] === a.dataset.match)?.[1] || '');
+
+    // Simplified matching: check if they are a pair
+    const isCorrect = tilePairs.some(p => (a.textContent === p[0] && b.textContent === p[1]) || (a.textContent === p[1] && b.textContent === p[0]));
+    if (isCorrect) {
+      a.classList.add('matched'); b.classList.add('matched'); matchedCount++;
+      if (matchedCount === 8) { document.getElementById('tileScore').textContent = '🎉 Barcha juftliklar topildi! (' + tileAttempts + ' urinish)'; markComplete(); }
+    } else {
+      setTimeout(() => { a.classList.remove('flipped'); b.classList.remove('flipped'); }, 800);
+    }
+    flippedTiles = [];
+  }
+}
+
+// ═══════════ PHASE 4: REAL-LIFE CHALLENGE ═══════════
+const p4body = document.getElementById('bodyPhase4');
+p4body.innerHTML = `
+  <div style="background: linear-gradient(135deg, #1a3a2a, #2a4a3a); border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+    <p class="text-gold" style="font-weight: 700;">🏆 Siz — Botanika Mutaxassisi</p>
+    <p>Siz Toshkent Botanika Bog'ida ishlovchi botanika mutaxassisiz. 3 ta o'simlik kasallanmoqda!</p>
+  </div>
+  <div class="quiz-item">
+    <div class="question">1. Olma daraxtining barglari nega sarg'aydi?</div>
+    <div class="options">
+      <button class="option-btn" onclick="checkMC(this,false,'rl1')">Quyosh nuri yetishmayapti</button>
+      <button class="option-btn" onclick="checkMC(this,true,'rl1')">Suv yetishmayapti</button>
+      <button class="option-btn" onclick="checkMC(this,false,'rl1')">Tuproqda ortiqcha suv bor</button>
+    </div>
+    <div class="feedback" id="rlfb1"></div>
+  </div>
+  <div class="quiz-item">
+    <div class="question">2. Bu muammoni hal qilish uchun qaysi fan yordam beradi?</div>
+    <div class="options">
+      <button class="option-btn" onclick="checkMC(this,false,'rl2')">Zoologiya</button>
+      <button class="option-btn" onclick="checkMC(this,true,'rl2')">Botanika</button>
+      <button class="option-btn" onclick="checkMC(this,false,'rl2')">Genetika</button>
+    </div>
+    <div class="feedback" id="rlfb2"></div>
+  </div>
+  <div class="quiz-item">
+    <div class="question">3. Pomidor ildizining chirishini qaysi fan o'rganadi?</div>
+    <div class="options">
+      <button class="option-btn" onclick="checkMC(this,false,'rl3')">Zoologiya</button>
+      <button class="option-btn" onclick="checkMC(this,false,'rl3')">Anatomiya</button>
+      <button class="option-btn" onclick="checkMC(this,true,'rl3')">Mikrobiologiya</button>
+    </div>
+    <div class="feedback" id="rlfb3"></div>
+  </div>
+`;
+
+// ═══════════ PHASE 5: CONSOLIDATION (Memory Palace) ═══════════
+const p5body = document.getElementById('bodyPhase5');
+p5body.innerHTML = `
+  <div style="text-align:center; padding:1rem;"><strong>🏛️ Registon Maydoni — Biologiya Xotira Saroyi</strong></div>
+  <p class="text-dim text-center">Har bir biologiya fanini to'g'ri joyga joylang</p>
+  <div class="palace-grid">
+    <div class="palace-zone" id="z1"><div class="zone-icon">🦁</div><div class="zone-name">Sher-Dor Madrasasi</div><div class="zone-items" data-answers="Botanika,Zoologiya"></div></div>
+    <div class="palace-zone" id="z2"><div class="zone-icon">🕌</div><div class="zone-name">Tilya-Qori Madrasasi</div><div class="zone-items" data-answers="Mikologiya,Anatomiya"></div></div>
+    <div class="palace-zone" id="z3"><div class="zone-icon">⭐</div><div class="zone-name">Ulug'bek Madrasasi</div><div class="zone-items" data-answers="Sitologiya"></div></div>
+    <div class="palace-zone" id="z4"><div class="zone-icon">⛲</div><div class="zone-name">Markaziy Maydon</div><div class="zone-items" data-answers="Fiziologiya,Ekologiya"></div></div>
+    <div class="palace-zone" id="z5"><div class="zone-icon">🚪</div><div class="zone-name">Kirish Darvozasi</div><div class="zone-items" data-answers="Mikrobiologiya,Sistematika"></div></div>
+    <div class="palace-zone" id="z6"><div class="zone-icon">🗼</div><div class="zone-name">Minoralar</div><div class="zone-items" data-answers="Genetika"></div></div>
+  </div>
+  <div style="margin-top:1rem;">
+    <p class="text-dim text-center">Fanlar (bosing, keyin zonani tanlang):</p>
+    <div id="palaceItems" style="display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; margin-top:.5rem;"></div>
+  </div>
+  <div id="palaceFeedback" class="feedback mt-1"></div>
+`;
+
+const palaceSciences = ['Botanika', 'Zoologiya', 'Mikologiya', 'Sitologiya', 'Mikrobiologiya', 'Anatomiya', 'Fiziologiya', 'Genetika', 'Sistematika', 'Ekologiya'];
+const pi = document.getElementById('palaceItems');
+palaceSciences.forEach(s => { pi.innerHTML += '<div class="chain-item palace-sci" data-name="' + s + '" onclick="selectPalaceScience(this)">' + s + '</div>'; });
+
+let selectedScience = null;
+function selectPalaceScience(el) {
+  document.querySelectorAll('.palace-sci').forEach(s => s.style.borderColor = 'var(--border)');
+  el.style.borderColor = 'var(--gold)';
+  selectedScience = el;
+}
+
+document.querySelectorAll('.palace-zone').forEach(zone => {
+  zone.onclick = function() {
+    if (!selectedScience) return;
+    const answers = this.querySelector('.zone-items').dataset.answers.split(',');
+    const name = selectedScience.dataset.name;
+    if (answers.includes(name)) {
+      this.querySelector('.zone-items').innerHTML += '<br>✅ ' + name;
+      selectedScience.classList.add('placed');
+      selectedScience.style.opacity = '.4';
+      selectedScience = null;
+    } else {
+      this.style.borderColor = 'var(--danger)';
+      setTimeout(() => { this.style.borderColor = 'var(--border)'; }, 500);
+    }
+  };
+});
+
+// ═══════════ PHASE 6: FINAL BOSS ═══════════
+const p6body = document.getElementById('bodyPhase6');
+let bossHP = 50;
+p6body.innerHTML = `
+  <div class="boss-header">
+    <div class="boss-icon">⚔️</div>
+    <h3>Final Boss: "Tiriklik Sirlari"</h3>
+    <p>Bu — sizning professional sertifikatingiz</p>
+    <div class="hp-bar"><div class="hp-fill" id="bossHP" style="width:100%"></div></div>
+    <p id="bossHPText">HP: 50 / 50</p>
+  </div>
+  <div class="quiz-item">
+    <div class="question">1. Biologiya so'zi nimani anglatadi?</div>
+    <div class="options">
+      <button class="option-btn" onclick="bossAnswer(this, false, 10)">Tiriklik va o'lim</button>
+      <button class="option-btn" onclick="bossAnswer(this, true, 10)">Hayot va fan ✅</button>
+      <button class="option-btn" onclick="bossAnswer(this, false, 10)">Tabiat va inson</button>
+    </div>
+    <div class="feedback" id="bq1"></div>
+  </div>
+  <div class="quiz-item">
+    <div class="question">2. Qaysi fan hujayrani o'rganadi?</div>
+    <div class="options">
+      <button class="option-btn" onclick="bossAnswer(this, true, 20)">Sitologiya ✅</button>
+      <button class="option-btn" onclick="bossAnswer(this, false, 0)">Anatomiya</button>
+      <button class="option-btn" onclick="bossAnswer(this, false, 0)">Genetika</button>
+    </div>
+    <div class="feedback" id="bq2"></div>
+  </div>
+  <div class="quiz-item">
+    <div class="question">3. "Tib qonunlari" asarini kim yozgan?</div>
+    <div class="options">
+      <button class="option-btn" onclick="bossAnswer(this, false, 0)">Beruniy</button>
+      <button class="option-btn" onclick="bossAnswer(this, true, 10)">Ibn Sino ✅</button>
+      <button class="option-btn" onclick="bossAnswer(this, false, 0)">Bobur</button>
+    </div>
+    <div class="feedback" id="bq3"></div>
+  </div>
+  <div class="quiz-item">
+    <div class="question">4. Zoologiya nimani o'rganadi?</div>
+    <div class="options">
+      <button class="option-btn" onclick="bossAnswer(this, false, 0)">O'simliklarni</button>
+      <button class="option-btn" onclick="bossAnswer(this, false, 0)">Zamburug'larni</button>
+      <button class="option-btn" onclick="bossAnswer(this, true, 10)">Hayvonlarni ✅</button>
+    </div>
+    <div class="feedback" id="bq4"></div>
+  </div>
+`;
+
+function bossAnswer(btn, isCorrect, dmg) {
+  const parent = btn.closest('.options');
+  parent.querySelectorAll('.option-btn').forEach(b => { b.disabled = true; b.style.pointerEvents = 'none'; });
+  if (isCorrect) {
+    btn.classList.add('correct');
+    bossHP = Math.max(0, bossHP - dmg);
+    document.getElementById('bossHP').style.width = (bossHP / 50 * 100) + '%';
+    document.getElementById('bossHPText').textContent = 'HP: ' + bossHP + ' / 50';
+    if (bossHP <= 0) {
+      document.getElementById('bossHPText').innerHTML = '🏆 <strong>BOSS MAG\'LUB QILINDI!</strong>';
+      showSessionSummary();
+    }
+  } else {
+    btn.classList.add('wrong');
+    showFeedback(btn.closest('.quiz-item').querySelector('.feedback').id, '❌ Noto\'g\'ri. Boss qalqoni mustahkam!', false);
+  }
+}
+
+function showSessionSummary() {
+  markComplete();
+  const ss = document.getElementById('sessionSummary');
+  ss.classList.remove('hidden');
+  document.getElementById('summaryStats').innerHTML = '⚡ Xotira: 6/6 | 📖 Hikoya: 3/3 | 🎮 O\'yinlar: 3/3 | 🌿 Hayotiy: 3/3 | 🏛️ Mustahkamlash: ✅ | ⚔️ Boss: Mag\'lub! 🏆<br><span class="text-gold" style="font-size:1.5rem;">~3500 XP</span>';
+}
+
+// ═══════════ PHASE 7: REFLECTION ═══════════
+const p7body = document.getElementById('bodyPhase7');
+p7body.innerHTML = `
+  <div class="reflection-area">
+    <h4>🪞 Bugungi dars haqida nima o'ylaysiz?</h4>
+    <p class="text-dim">Bugun siz "Biologiya nima ekanligini" bilmoqchi edingiz. Bildingizmi?</p>
+    <div class="binary-options mt-1">
+      <button class="binary-btn" onclick="this.classList.add('correct'); this.parentElement.querySelectorAll('.binary-btn').forEach(b=>{b.disabled=true;b.style.pointerEvents='none'})">✅ Ha</button>
+      <button class="binary-btn" onclick="this.classList.add('correct'); this.parentElement.querySelectorAll('.binary-btn').forEach(b=>{b.disabled=true;b.style.pointerEvents='none'})">🔄 Qisman</button>
+      <button class="binary-btn" onclick="this.classList.add('wrong'); this.parentElement.querySelectorAll('.binary-btn').forEach(b=>{b.disabled=true;b.style.pointerEvents='none'})">❌ Hali emas</button>
+    </div>
+    <p class="mt-1">Eng qiziqarli narsa nima edi?</p>
+    <textarea placeholder="Javobingizni yozing..." minlength="10"></textarea>
+    <p class="text-dim mt-1" style="font-size:.8rem">Minimum: 10 belgi</p>
+  </div>
+  <div class="text-center mt-2 text-gold" style="font-style:italic;">
+    "Sizning bilimingiz Uchinchi Renessansning poydevoridir. Tabiatni o'rganish — kelajakni qurishdir."
+  </div>
+`;
+
+// Auto-open first section
+setTimeout(() => {
+  document.getElementById('gateQuote').style.display = '';
+}, 100);
+</script>
+</body>
+</html>

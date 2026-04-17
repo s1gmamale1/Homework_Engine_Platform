@@ -1,7 +1,7 @@
 # NETS Game Catalog — Quick Reference
 
-**Source:** `NETS-Homework-Engine-UNIFIED.md` v2.0 (Section 6)
-**Dual-Catalog Rule:** Phase 3 selects 3 games per session — ≥1 from Interactive Catalog, ≥2 from Default Pool.
+**Source:** `NETS-Homework-Engine-UNIFIED-Buzan.md` v2.0 (Section 6)
+**Dual-Catalog Rule:** Phase 3 selects 3 games per session — ≥1 from Interactive Catalog (7 games), ≥2 from Default Pool (16 mechanics).
 
 ---
 
@@ -75,21 +75,17 @@ Core pedagogy mechanics that map 1:1 to Bloom's/PISA bands.
 
 ---
 
-## Interactive Catalog Pool — 12 Games
+## Interactive Catalog Pool — 7 Games
 
 Classic board/card/puzzle mechanics with knowledge-gated progression. Correct answers execute the chosen move; wrong answers trigger strategic penalties.
 
 ### 1. Tic Tac Toe vs AI
 **What:** Duel minimax AI. Correct answer places your chosen tile; wrong answer places randomly.
-**Use case:** Recall practice with strategic stakes. Quick, familiar game. Duplicate of Default #15 for convenience.
+**Use case:** Recall practice with strategic stakes. Quick, familiar game. **Note:** Dual-listed — also appears in Default Pool (#15) for convenience.
 
 ### 2. Connect Four vs AI
 **What:** 7×6 drop grid. Correct answer drops in your chosen column; wrong answer drops randomly.
 **Use case:** Sequential reasoning and planning ahead. Good for multi-step procedures (math, chemistry reactions).
-
-### 3. Codebreaker
-**What:** Mastermind-style secret code. Each guess attempt gated by a correct answer. Limited guesses.
-**Use case:** Deductive reasoning + content recall. Periodic table, math formulas, vocabulary spelling.
 
 ### 4. Memory Match Blitz
 **What:** Concentration / pairs grid. Matched pairs must be confirmed by answering a subject question.
@@ -107,25 +103,27 @@ Classic board/card/puzzle mechanics with knowledge-gated progression. Correct an
 **What:** 3×3 or 4×4 sliding puzzle. Correct answers slide your chosen tile; wrong answers slide a random tile.
 **Use case:** Visual-spatial reasoning + content recall. Geography maps, timeline assembly, diagram reconstruction.
 
-### 8. Blackjack 21 (Knowledge Edition)
-**What:** Hit or Stand choices gated by questions. Wrong answers let the AI make the choice for you.
-**Use case:** Math-only game. Probability intuition + arithmetic recall. Risk-reward decision making with content gates.
+---
 
-### 9. Territory Conquest
-**What:** Simplified Risk-style 1v1 area control. Attacks require correct answers; failures lose territory.
-**Use case:** Cross-subject review (Big Boss / Mythical Boss). High stakes, strategic depth. Good for weekly review sessions.
+## Phase 5 Consolidation Alternatives (Buzan Mnemonics)
 
-### 10. Escape Room: Subject Lock
-**What:** Unlock 4 virtual objects by answering questions. Clues cross-hint across objects — solving one helps with others.
-**Use case:** Multi-concept synthesis. Cross-subject review where answering a math question reveals a clue for a science lock.
+These are NOT Phase 3 games. They are Phase 5 (Consolidation) technique alternatives, selected based on content structure. See UNIFIED-Buzan §5.5 for selection logic.
 
-### 11. Bridge Builder
-**What:** Physics bridge construction. Each beam placement gated by a question. Wrong answers waste your budget.
-**Use case:** Engineering/math applications. Physics force analysis. Higher render cost — skip on low-end devices.
+### Peg System (Number-Shape Association)
+**What:** 5 number-shape pegs (1=Candle, 2=Swan, 3=Heart, 4=Sailboat, 5=Hook — culturally adapted for Uzbekistan). Student associates each concept with a peg image, then recalls both directions.
+**Use case:** Discrete facts — 5 key terms, dates, vocabulary. Best for History timelines, Science terminology. G5+.
 
-### 12. Minefield Navigator
-**What:** Navigate a hidden-mine grid. Correct answers move where you choose; wrong answers force adjacent moves.
-**Use case:** Spatial reasoning + content recall. History timelines, geography navigation, periodic table traversal. Higher render cost.
+### Link System (Sequential Story Chains)
+**What:** 5 items linked by a vivid story chain with SMASHIN' SCOPE imagery (movement, humor, exaggeration). Recall tested out of order: "What came after X?"
+**Use case:** Sequential content — processes, timelines, life cycles. NOT for unrelated vocabulary (use Memory Sprint instead).
+
+### Radiant Summary (Partially-Completed Mind Map)
+**What:** Partially completed mind map — student drags keywords onto correct branches. Follows Buzan's 7 Laws: central image, organic branches, one keyword per branch, 3+ colors. G5: max 4 branches (working memory ceiling).
+**Use case:** Hierarchical content — classifications, formula families, virtue categories, art elements. NOT for temporal or spatial content.
+
+### Major System (Phonetic Digit Code)
+**What:** Phonetic digit code: 1=T, 2=N, 3=M, 4=R... Digits convert to consonants, then to a memorable word. Example: 1441 → T-R-R-T → "Toshbaqa" (Turtle).
+**Use case:** Numbers — dates, constants, formulas. **G7+ only.** Requires phonetic code mastery first.
 
 ---
 
@@ -137,10 +135,11 @@ Classic board/card/puzzle mechanics with knowledge-gated progression. Correct an
 | Content is narrative-heavy | Default: Story Mode, Why Chain |
 | Task requires physical hand-work | Default: Notebook Capture |
 | Student in Recovery Session or below PISA L2 | Default (lower cognitive overhead) |
-| Need a high-stakes strategic duel | Interactive: Connect Four, Territory Conquest, Codebreaker |
-| Cross-subject review (Big Boss week) | Interactive: Escape Room, Territory Conquest |
+| Need a high-stakes strategic duel | Interactive: Connect Four |
 | Student engagement has dipped 3 sessions | Interactive (novelty effect) |
-| Topic maps to a spatial/strategic metaphor | Interactive: Puzzle Lock (timelines), Reaction Chain (processes), Territory Conquest (geography) |
-| Low-end device | Avoid Interactive: Bridge Builder, Minefield Navigator |
-| Math-only | Interactive: Blackjack 21 |
+| Topic maps to a spatial/strategic metaphor | Interactive: Puzzle Lock (timelines), Reaction Chain (processes) |
 | Language/Biology only | Interactive: Word Ladder Climb |
+| **Phase 5: Hierarchical content** (classifications, categories) | Peg System, Radiant Summary |
+| **Phase 5: Sequential content** (processes, timelines) | Link System |
+| **Phase 5: Spatial content** (locations, maps) | Memory Palace |
+| **Phase 5: Numbers/dates** | Major System (G7+ only), Peg System |

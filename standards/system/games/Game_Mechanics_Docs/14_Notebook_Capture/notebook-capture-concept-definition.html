@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Notebook Capture</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Notebook Capture</h1>
+            <p style="color: var(--text-muted)">Default Mechanic #16 — Handwritten Work AI-Evaluated Against Rubric</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Mode: Solo — Analog-to-Digital Bridge</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Apply / Analyze / Create</span>
+                <span class="tag">PISA: 2-5</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>The student <strong>does the work by hand</strong> — derivations, diagrams, sketches, proofs, calculations — on physical paper in their notebook. They then <strong>photograph their work</strong> using the device camera. An <strong>AI vision model evaluates the submission</strong> against a structured rubric and returns annotated feedback within <strong>8-10 seconds</strong>.</p>
+                <p><strong>End-to-end flow:</strong></p>
+                <ol>
+                    <li><strong>Prompt appears:</strong> The system presents the task — e.g., "Derive the quadratic formula step by step," "Draw and label the water cycle," "Sketch the graph of y = 2x² - 4x + 1 and identify the vertex."</li>
+                    <li><strong>Student works on paper:</strong> The student completes the task by hand in their notebook. No time limit on the working phase (but the session timer continues).</li>
+                    <li><strong>Client-side pre-validation:</strong> When the student taps "Submit Photo," the device runs 3 quick checks before sending:
+                        <ul>
+                            <li><strong>Focus check:</strong> Is the image sharp enough? (Laplacian variance threshold.) Blurry → prompt to retake.</li>
+                            <li><strong>Page detection:</strong> Is there a clear rectangular page/region in frame? No page detected → prompt to adjust angle.</li>
+                            <li><strong>Lighting check:</strong> Is brightness adequate and even? Too dark or blown out → prompt for better lighting.</li>
+                        </ul>
+                    </li>
+                    <li><strong>AI Vision evaluation (Tier 3 model):</strong> The validated image is sent to the AI vision pipeline. The model evaluates against the task rubric within <strong>8-10 seconds</strong>.</li>
+                    <li><strong>Results returned:</strong> The student receives:
+                        <ul>
+                            <li><strong>Overall score</strong> (percentage or rubric level)</li>
+                            <li><strong>Partial credit breakdown</strong> — which rubric criteria were met, which were partial, which were missed</li>
+                            <li><strong>Specific feedback with annotations</strong> — the AI overlays marks directly on the student's photo: green checkmarks on correct steps, yellow circles on partial/incomplete steps, red X marks on errors, with text explanations for each annotation</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p><strong>Scheduling:</strong> Notebook Capture appears approximately <strong>1 in every 3-4 sessions</strong> for students in <strong>Grade 5 and above</strong>. It is used in <strong>Phase 3</strong> (during a game break slot, as the "heavy cognitive lift" mechanic), <strong>Phase 4</strong> (as the primary assessment tool for complex tasks), or <strong>Phase 6</strong> (as the capstone demonstration of accumulated mastery).</p>
+                <p><strong>Grade scaling:</strong></p>
+                <ul>
+                    <li><strong>Grades 5-6:</strong> Tasks at PISA L2-L3. Rubric has 3 criteria. AI is lenient on handwriting quality — focuses on conceptual correctness. Tasks: label diagrams, show one-step calculations, draw basic shapes.</li>
+                    <li><strong>Grades 7-8:</strong> Tasks at PISA L3-L4. Rubric has 4 criteria. AI evaluates logical flow of multi-step work. Tasks: derive formulas, sketch function graphs with labels, explain processes in writing.</li>
+                    <li><strong>Grades 9-10:</strong> Tasks at PISA L4-L5. Rubric has 5 criteria. AI evaluates argument structure, evidence quality, and completeness. Tasks: multi-step proofs, data analysis with hand-drawn charts, essay outlines.</li>
+                    <li><strong>Grade 11:</strong> Tasks at PISA L5+. Rubric has 5+ criteria. AI evaluates synthesis, originality, and rigor. Tasks: full derivations from first principles, system diagrams, critical analysis with evidence.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Both tiers receive Notebook Capture as part of the 28-mechanic core. Premium unlocks enhanced evaluation depth and portfolio features.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Available in Phase 3, 4, or 6 (1 in 3-4 sessions, G5+)</td>
+                        <td>Same + on-demand "Practice Capture" from Library (up to 2/week)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Vision Model</strong></td>
+                        <td>Tier 3 standard model — evaluates against rubric, returns score + annotations</td>
+                        <td>Tier 3 enhanced model — same + "what if" suggestions (e.g., "If you had used method X instead, step 3 would be simpler")</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rubric Depth</strong></td>
+                        <td>3-5 criteria per task (grade-appropriate)</td>
+                        <td>Up to 7 criteria for advanced tasks (e.g., separate scoring for creativity, elegance, rigor)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Annotation Detail</strong></td>
+                        <td>Green/yellow/red marks + brief text per annotation</td>
+                        <td>Same + color-coded marginal notes, step-by-step alternative solutions overlaid on student's work</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Portfolio</strong></td>
+                        <td>Last 5 captures saved to profile</td>
+                        <td>Unlimited portfolio with timeline view, improvement trajectory graph, and "best work" showcase gallery</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Resubmission</strong></td>
+                        <td>1 resubmission allowed per task (same session)</td>
+                        <td>2 resubmissions allowed per task + "learn from feedback" guided mode that walks through each annotation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Export</strong></td>
+                        <td>Not available</td>
+                        <td>Export annotated captures as PDF (shareable with teachers or parents)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> During Phase 3/4/6 sessions, Basic students receive the full AI evaluation experience — the same rubric, the same 8-10 second turnaround, the same annotated feedback. Premium adds portfolio depth, alternative-solution suggestions, and export capabilities — these are enrichment and documentation tools, not required for PISA progression.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Embodied Creation & Color-Coded Mastery</h2>
+            <p>Notebook Capture is the <strong>most Buzan-aligned mechanic in the entire NETS system</strong> — it directly implements the Generation Effect and Embodied Cognition principles at its core.</p>
+            <ul>
+                <li><strong>Generation Effect (Slamecka & Graf, 1978):</strong> Students who <em>produce</em> information (writing, drawing, deriving by hand) retain it 25-40% better than students who only recognize or select it digitally. Notebook Capture forces generation — the student cannot tap, drag, or select. They must <em>create</em>. The physical act of forming letters, drawing lines, and structuring work on paper encodes knowledge in motor memory that screens cannot replicate. Expected retention gain: <strong>+25-40% vs. digital input</strong>.</li>
+                <li><strong>Embodied Cognition (Kiefer & Trumpp, 2012):</strong> Cognitive processing is grounded in the body's sensorimotor systems. The hand-eye coordination of writing equations, sketching diagrams, and laying out proofs on paper activates neural pathways that touchscreen taps do not. The spatial layout of a page (top-to-bottom derivations, left-to-right diagrams) creates a physical "memory palace" on the paper itself — students often remember "it was in the top-right corner of my page."</li>
+                <li><strong>Color Hooks (AI Annotation Overlay):</strong> The AI's annotations use a strict color system that maps to Buzan's radiant thinking: <strong>Green checkmarks</strong> = correct steps (positive reinforcement, color anchors "this is right"), <strong>Yellow circles</strong> = partial or incomplete (the "almost" color — signals there's more here, a branch not fully grown), <strong>Red X marks</strong> = errors (not punishment — diagnostic, always paired with a "here's why" text note). When the annotated photo appears, the colors bloom outward from each mark (0.4s animation), making the feedback visually radiant and emotionally salient.</li>
+                <li><strong>Imagery & Personal Ownership:</strong> Every Notebook Capture is <em>the student's own handwriting</em> — their personal visual identity. Unlike typed text, handwriting is uniquely idiosyncratic, making each submission a <strong>personal artifact</strong>. The system preserves the student's handwriting style in their portfolio, creating a visible record of their intellectual growth over time. Students who review their old captures often remark "I can't believe I wrote that" — a powerful metacognitive moment.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Notebook Capture does not use traditional "questions" — it uses <strong>open-ended production tasks</strong>. The student must create, derive, or explain by hand. Task complexity scales with PISA level.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Task Style</th>
+                        <th>Interaction Flow</th>
+                        <th>Cognitive Target</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L2</strong></td>
+                        <td>Direct production — follow a template</td>
+                        <td>Task shown → student works on paper → photo → AI evaluates against 3-criterion rubric → annotated results in 8-10s</td>
+                        <td>Apply — reproduce a known procedure or diagram</td>
+                        <td>"Draw a triangle and label its base, height, and three angles. Write the formula for its area."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L3</strong></td>
+                        <td>Guided derivation — show your steps</td>
+                        <td>Same flow, rubric has 4 criteria including logical flow and step completeness</td>
+                        <td>Apply/Analyze — execute multi-step process with reasoning</td>
+                        <td>"Show that the sum of interior angles of a pentagon is 540°. Draw it and explain your reasoning."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Analysis task — interpret and represent</td>
+                        <td>Same flow, task may include data or a scenario the student must analyze and represent visually</td>
+                        <td>Analyze — break down information, identify patterns, represent findings</td>
+                        <td>"Here is a table of monthly rainfall data. Draw a bar chart, identify the trend, and explain what it suggests about the climate."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5</strong></td>
+                        <td>Open synthesis — create an argument or proof</td>
+                        <td>Same flow, rubric has 5+ criteria including originality, evidence quality, and logical coherence. Evaluation may take the full 10 seconds.</td>
+                        <td>Create/Synthesize — construct novel argument, proof, or model from principles</td>
+                        <td>"Prove that √2 is irrational using a proof by contradiction. Write the full argument with clear logical steps."</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Anti-Cheating Measures:</strong> The client-side pre-validation (focus, page detection, lighting) prevents low-effort submissions. Additionally, the AI model detects: (1) printed text vs. handwritten text (printed submissions are flagged and rejected), (2) photos of screens (detects pixel grid patterns), (3) previously-submitted images (perceptual hashing — same photo submitted twice triggers a "show new work" prompt). These safeguards ensure the Generation Effect is preserved — the student must actually do the work.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type B (Rubric-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Accuracy (%)</td><td>AI rubric: % of criteria met (green = full, yellow = half, red = zero) across 3-7 criteria</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>Time per answer</td><td>Time from prompt shown to photo submitted</td><td>Secondary — feeds Efficiency metric</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total Notebook Capture sessions on this skill</td><td>Feeds curve-fitting (y = K × attempts^n) for velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Notebook Capture — [Topic]</strong><br>
+                    ████████░░ 62% (Apprentice ↗)<br>
+                    Velocity: n=0.48 (improving)<br>
+                    ~3 sessions to Proficient
+                </div>
+
+                <h3>C. "Hali Emas" (Not Yet) Framing</h3>
+                <p>Notebook Capture is designed so that <strong>there is no true failure — only diagnostic feedback.</strong> Even a "Needs Revision" result provides actionable annotations. The "Hali emas" (Not yet) message is central:</p>
+                <ul>
+                    <li>The annotated photo shows the student's <em>actual work</em> — not a generic solution. Every green checkmark validates what they did right. Every red X explains specifically what went wrong.</li>
+                    <li>The AI never says "wrong" — it says "this step has an issue" and explains why. This preserves the student's intellectual dignity while delivering honest assessment.</li>
+                    <li>Students who score below 50% enter Duolingo Mode for that specific task — the work is broken into micro-steps that can be practiced digitally. After Duolingo Mode clearance, the student may re-attempt the Notebook Capture in a future session.</li>
+                    <li>The student's annotated photo is <em>always saved to their profile</em>, even on low scores. This creates a visible record of growth — a student who revisits a "Needs Revision" capture from 3 months ago and compares it to a "Masterpiece" from today experiences a powerful mastery narrative.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Notebook Capture v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>

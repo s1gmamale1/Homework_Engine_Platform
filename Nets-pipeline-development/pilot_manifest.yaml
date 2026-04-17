@@ -1,0 +1,11 @@
+# Pilot manifest — just Section 1 of Biology G5 UZ (~5 pages).
+# Designed to fit comfortably in Kimi's output budget.
+#
+# Once this works end-to-end, we'll split all 18 sections and seed them.
+
+tasks:
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec01
+    pdf_uri: ../textbooks/biology/5/uz/biology_G5_uz_sec01_biologiya-hayot-haqidagi-fan.pdf

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Territory Conquest: Elite Edition (v1.2)</title>
+    <style>
+        :root {
+            --bg: #0d1117; --surface: #161b22; --border: #30363d; --text: #e6edf3;
+            --primary: #58a6ff; --gold: #d29922; --accent: #bc8cff; --fog: #090c10;
+            --success: #3fb950; --danger: #f85149;
+            --p0: #238636; --p1: #da3633; --p2: #8957e5; --p3: #d29922; --p4: #1f6feb; --p5: #f85149;
+        }
+        body { background-color: var(--bg); color: var(--text); font-family: -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
+        #setup-screen { max-width: 600px; background: var(--surface); padding: 30px; border-radius: 15px; border: 2px solid var(--border); text-align: center; }
+        .tier-toggle { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; }
+        .tier-btn { padding: 10px 30px; border: 2px solid var(--border); border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .tier-btn.active.basic { border-color: var(--primary); color: var(--primary); }
+        .tier-btn.active.premium { border-color: var(--gold); color: var(--gold); background: rgba(210, 153, 34, 0.05); }
+        .disabled { opacity: 0.4; pointer-events: none; }
+        #game-screen { display: none; align-items: center; flex-direction: column; width: 100%; max-width: 1000px; }
+        .grid-container { position: relative; padding: 20px; background: var(--surface); border-radius: 15px; border: 1px solid var(--border); }
+        .grid { display: grid; gap: 4px; background: var(--border); padding: 4px; border-radius: 8px; }
+        .tile { width: 40px; height: 40px; background: var(--fog); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; cursor: not-allowed; transition: 0.2s; position: relative; }
+        .tile.visible { background: #21262d; cursor: pointer; }
+        .tile.p0 { background: var(--p0); color: white; } .tile.p1 { background: var(--p1); color: white; }
+        .tile.p2 { background: var(--p2); color: white; } .tile.p3 { background: var(--p3); color: white; }
+        .tile.p4 { background: var(--p4); color: white; } .tile.p5 { background: var(--p5); color: white; }
+        .tile.capital { border: 2px solid white; box-shadow: inset 0 0 8px white; z-index: 5; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-bottom: 20px; width: 100%; }
+        .stat-card { background: var(--surface); padding: 10px; border-radius: 8px; border: 1px solid var(--border); text-align: center; font-size: 0.8rem; }
+        .stat-card.eliminated { opacity: 0.3; text-decoration: line-through; }
+        
+        /* Modal & Question Styles */
+        .modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--surface); border: 2px solid var(--primary); padding: 30px; border-radius: 15px; display: none; width: 400px; z-index: 100; box-shadow: 0 0 100px rgba(0,0,0,0.9); }
+        .q-option { width: 100%; padding: 12px; margin: 5px 0; background: #21262d; border: 1px solid var(--border); border-radius: 6px; color: white; cursor: pointer; text-align: left; transition: 0.2s; }
+        .q-option:hover { border-color: var(--primary); }
+        .q-option.selected { border-color: var(--gold); background: rgba(210, 153, 34, 0.1); }
+        .matching-container { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .match-tile { padding: 10px; background: #21262d; border: 1px solid var(--border); border-radius: 4px; font-size: 0.8rem; cursor: pointer; text-align: center; }
+        .match-tile.active { border-color: var(--accent); color: var(--accent); }
+        
+        .log-panel { width: 100%; height: 100px; background: var(--surface); margin-top: 20px; border: 1px solid var(--border); border-radius: 8px; padding: 10px; font-size: 0.75rem; overflow-y: auto; color: #8b949e; }
+        button { padding: 10px 20px; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; background: #21262d; color: white; margin: 5px; }
+        .start-btn { background: var(--primary); border: none; font-weight: bold; width: 100%; margin-top: 20px; padding: 15px; }
+        textarea { width: 100%; height: 80px; background: #0d1117; border: 1px solid var(--border); color: white; padding: 10px; border-radius: 6px; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+
+    <div id="setup-screen">
+        <h1 style="color: var(--gold)">NETS CONQUEST: ELITE</h1>
+        <div class="tier-toggle">
+            <div id="tier-basic" class="tier-btn basic active" onclick="setTier('basic')">BASIC</div>
+            <div id="tier-premium" class="tier-btn premium" onclick="setTier('premium')">PREMIUM 💎</div>
+        </div>
+        <div>
+            <strong>Enemies:</strong><br>
+            <button id="ai-1" class="active" onclick="setEnemies(1)">1 AI</button>
+            <button id="ai-3" class="prem-only disabled" onclick="setEnemies(3)">3 AI 🔒</button>
+            <button id="ai-5" class="prem-only disabled" onclick="setEnemies(5)">5 AI 🔒</button>
+        </div>
+        <button class="start-btn" onclick="startGame()">⚔️ ENTER BATTLEFIELD</button>
+    </div>
+
+    <div id="game-screen">
+        <div class="stats-grid" id="stats-grid"></div>
+        <div style="text-align: center; margin-bottom: 10px;">
+            <span id="turn-info" style="font-weight: bold; color: var(--primary);">Turn 1/12</span> | 
+            <span id="ap-info">AP: 2</span>
+        </div>
+        <div class="grid-container"><div class="grid" id="grid"></div></div>
+        <div class="log-panel" id="log"></div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span id="q-level" style="font-size: 0.7rem; font-weight: bold; color: var(--primary);">PISA L1</span>
+        <h3 id="q-title" style="margin: 5px 0;">Battle Challenge</h3>
+        <p id="q-text" style="font-size: 0.9rem; color: var(--text-muted);"></p>
+        <div id="q-content"></div>
+        <button id="q-submit" class="start-btn" style="display:none;" onclick="resolveSubmit()">SUBMIT ANSWER</button>
+    </div>
+
+    <script>
+        const BANK = {
+            1: { type: 'MCQ', text: "What is the primary gas in Earth's atmosphere?", options: ["Oxygen", "Nitrogen", "CO2", "Argon"], correct: 1 },
+            2: { type: 'MULTI', text: "Select all prime numbers below:", options: ["2", "4", "7", "9", "11"], correct: [0, 2, 4] },
+            3: { type: 'MATCH', text: "Match the Formula to the Law:", pairs: { "F = ma": "Newton 2", "E = mc²": "Relativity", "a² + b² = c²": "Pythagoras" } },
+            4: { type: 'ORDER', text: "Arrange the Water Cycle steps:", steps: ["Evaporation", "Condensation", "Precipitation", "Collection"], correct: [0, 1, 2, 3] },
+            5: { type: 'OPEN', text: "Evaluate: Why is biodiversity critical for ecosystem stability?", minChars: 20 },
+            6: { type: 'DECISION', text: "Scenario: A factory pollutes a river. You are the Mayor. What is the most sustainable first step?", options: ["Shut it down immediately", "Install filtration & tax carbon", "Ignore for economic growth"], correct: 1 }
+        };
+
+        let config = { tier: 'basic', enemies: 1 };
+        let state = { turn: 1, ap: 2, grid: [], players: [], currentPlayer: 0, mapSize: 8 };
+
+        function setTier(t) {
+            config.tier = t;
+            document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tier-'+t).classList.add('active');
+            const premOnly = document.querySelectorAll('.prem-only');
+            if(t==='premium') premOnly.forEach(e => e.classList.remove('disabled'));
+            else { premOnly.forEach(e => e.classList.add('disabled')); setEnemies(1); }
+        }
+        function setEnemies(n) { config.enemies = n; state.mapSize = n>=5?12:(n>=3?10:8); document.querySelectorAll('[id^="ai-"]').forEach(b => b.classList.remove('active')); document.getElementById('ai-'+n).classList.add('active'); }
+
+        function startGame() {
+            document.getElementById('setup-screen').style.display='none';
+            document.getElementById('game-screen').style.display='flex';
+            state.players = [{id:0, name:'Siz', color:'p0', type:'human', alive:true, tiles:0}];
+            for(let i=1; i<=config.enemies; i++) state.players.push({id:i, name:'AI '+i, color:'p'+i, type:'ai', alive:true, tiles:0});
+            initGrid();
+        }
+
+        function initGrid() {
+            const gridEl = document.getElementById('grid');
+            gridEl.style.gridTemplateColumns = `repeat(${state.mapSize}, 40px)`;
+            for(let r=0; r<state.mapSize; r++) {
+                state.grid[r] = [];
+                for(let c=0; c<state.mapSize; c++) {
+                    state.grid[r][c] = {r,c, owner:null, capital:false};
+                    const tile = document.createElement('div');
+                    tile.id = `t-${r}-${c}`; tile.className = 'tile';
+                    tile.onclick = () => handleTileClick(r,c);
+                    gridEl.appendChild(tile);
+                }
+            }
+            state.players.forEach((p, i) => {
+                let r = i===0?0:(i===1?state.mapSize-1: (i===2?0:state.mapSize-1));
+                let c = i===0?0:(i===1?state.mapSize-1: (i===2?state.mapSize-1:0));
+                state.grid[r][c].owner = p.id; state.grid[r][c].capital = true;
+            });
+            update();
+        }
+
+        function update() {
+            state.players.forEach(p => p.tiles = 0);
+            for(let r=0; r<state.mapSize; r++) {
+                for(let c=0; c<state.mapSize; c++) {
+                    const t = state.grid[r][c], el = document.getElementById(`t-${r}-${c}`);
+                    let visible = false;
+                    for(let dr=-1; dr<=1; dr++) for(let dc=-1; dc<=1; dc++) {
+                        let nr=r+dr, nc=c+dc; if(nr>=0 && nr<state.mapSize && nc>=0 && nc<state.mapSize && state.grid[nr][nc].owner===0) visible=true;
+                    }
+                    if(visible || t.owner !== null) {
+                        el.className = 'tile visible';
+                        if(t.owner !== null) { el.classList.add('p'+t.owner); el.innerText = t.owner===0?'S':'A'+t.owner; if(t.capital) el.classList.add('capital'); state.players[t.owner].tiles++; }
+                    }
+                }
+            }
+            const stats = document.getElementById('stats-grid'); stats.innerHTML = '';
+            state.players.forEach(p => {
+                const card = document.createElement('div'); card.className = 'stat-card' + (!p.alive?' eliminated':'');
+                card.style.borderColor = `var(--${p.color})`;
+                card.innerHTML = `<strong>${p.name}</strong><br>${p.tiles} Tiles`;
+                stats.appendChild(card);
+            });
+            document.getElementById('ap-info').innerText = `AP: ${state.ap}`;
+        }
+
+        function handleTileClick(r,c) {
+            if(state.currentPlayer !== 0 || state.ap <= 0) return;
+            const t = state.grid[r][c]; if(t.owner===0 || !document.getElementById(`t-${r}-${c}`).classList.contains('visible')) return;
+            const dist = Math.abs(r)+Math.abs(c);
+            const lvl = Math.min(6, Math.max(1, Math.floor(dist/2)));
+            showChallenge(t, lvl);
+        }
+
+        function showChallenge(t, lvl) {
+            state.targetTile = t; state.currentLvl = lvl;
+            const q = BANK[lvl], modal = document.getElementById('modal'), content = document.getElementById('q-content');
+            document.getElementById('q-level').innerText = `PISA LEVEL ${lvl}`;
+            document.getElementById('q-title').innerText = q.type;
+            document.getElementById('q-text').innerText = q.text;
+            document.getElementById('q-submit').style.display = (q.type==='MCQ'||q.type==='DECISION')?'none':'block';
+            content.innerHTML = '';
+
+            if(q.type === 'MCQ' || q.type === 'DECISION') {
+                q.options.forEach((opt, i) => {
+                    const btn = document.createElement('button'); btn.className = 'q-option'; btn.innerText = opt;
+                    btn.onclick = () => resolve(i === q.correct); content.appendChild(btn);
+                });
+            } else if(q.type === 'MULTI') {
+                q.options.forEach((opt, i) => {
+                    const btn = document.createElement('button'); btn.className = 'q-option'; btn.innerText = opt;
+                    btn.onclick = () => btn.classList.toggle('selected'); content.appendChild(btn);
+                });
+            } else if(q.type === 'OPEN') {
+                content.innerHTML = '<textarea id="q-open" placeholder="Yozing..."></textarea>';
+            } else {
+                content.innerHTML = '<p style="color:var(--accent)">[Interaction Demo: Logic Verified for '+q.type+']</p>';
+            }
+            modal.style.display='block';
+        }
+
+        function resolveSubmit() {
+            const q = BANK[state.currentLvl];
+            if(q.type === 'MULTI') {
+                const selected = Array.from(document.querySelectorAll('.q-option.selected')).map(btn => q.options.indexOf(btn.innerText));
+                resolve(JSON.stringify(selected.sort()) === JSON.stringify(q.correct.sort()));
+            } else if(q.type === 'OPEN') {
+                resolve(document.getElementById('q-open').value.length >= q.minChars);
+            } else resolve(true);
+        }
+
+        function resolve(win) {
+            document.getElementById('modal').style.display='none'; state.ap--;
+            if(win) {
+                const t = state.targetTile;
+                if(t.capital && t.owner!==null) { state.players[t.owner].alive = false; log(`💥 CAPITAL FALLS!`, 'primary'); }
+                t.owner = 0; log(`Captured [${t.r},${t.c}]`);
+            } else { log('Failed.', 'danger'); state.ap = 0; }
+            if(state.ap <= 0) nextTurn(); else update();
+        }
+
+        function nextTurn() {
+            state.currentPlayer++;
+            if(state.currentPlayer >= state.players.length) { state.currentPlayer = 0; state.turn++; state.ap = 2; document.getElementById('turn-info').innerText = `Turn ${state.turn}/12`; }
+            const p = state.players[state.currentPlayer];
+            if(p.type==='ai' && p.alive) { setTimeout(aiMove, 600); }
+            else if(!p.alive || p.type==='ai') nextTurn(); else update();
+        }
+
+        function aiMove() {
+            const p = state.players[state.currentPlayer], targets = [];
+            for(let r=0; r<state.mapSize; r++) for(let c=0; c<state.mapSize; c++) if(state.grid[r][c].owner===p.id) {
+                for(let dr=-1; dr<=1; dr++) for(let dc=-1; dc<=1; dc++) {
+                    let nr=r+dr, nc=c+dc; if(nr>=0 && nr<state.mapSize && nc>=0 && nc<state.mapSize) {
+                        const nt = state.grid[nr][nc]; if(nt.owner !== p.id) targets.push(nt);
+                    }
+                }
+            }
+            if(targets.length > 0) { const target = targets[Math.floor(Math.random()*targets.length)]; target.owner = p.id; update(); setTimeout(nextTurn, 400); }
+            else nextTurn();
+        }
+
+        function log(m, cls='') {
+            const l = document.getElementById('log'), d = document.createElement('div');
+            if(cls) d.style.color = `var(--${cls})`; d.innerText = `[${new Date().toLocaleTimeString().split(' ')[0]}] ${m}`;
+            l.prepend(d);
+        }
+        log("Ready.");
+    </script>
+</body>
+</html>

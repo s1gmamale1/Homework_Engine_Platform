@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase 7 Reflection",
+  "type": "object",
+  "required": ["phase_id", "lesson_id", "lang", "results", "micro_exercises", "bost_recall", "reflection_prompts", "spaced_repetition_schedule", "closing_line"],
+  "properties": {
+    "phase_id": { "const": "phase_7" },
+    "lesson_id": { "type": "string" },
+    "lang": { "type": "string", "enum": ["uz", "ru"] },
+    "results": {
+      "type": "object",
+      "required": ["strong_topics", "weak_topics"],
+      "properties": {
+        "strong_topics": { "type": "array", "items": { "type": "string" } },
+        "weak_topics": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "micro_exercises": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["number", "exercise", "answer"],
+        "properties": {
+          "number": { "type": "integer" },
+          "exercise": { "type": "string" },
+          "answer": { "type": "string" }
+        }
+      }
+    },
+    "bost_recall": {
+      "type": "string",
+      "description": "Must resurface the BOST goal from Phase 0-A: 'Bugun Siz [goal] ni bilmoqchi edingiz. Bildingizmi?'"
+    },
+    "reflection_prompts": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": { "type": "string" }
+    },
+    "spaced_repetition_schedule": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": ["ertaga (1-kun)", "3-kun", "7-kun", "21-kun"]
+    },
+    "closing_line": {
+      "type": "string",
+      "description": "Third Renaissance line if ≥60% accuracy, encouraging-neutral otherwise."
+    },
+    "accuracy_percent": { "type": "number", "minimum": 0, "maximum": 100 }
+  }
+}

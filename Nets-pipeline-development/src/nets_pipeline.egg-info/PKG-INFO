@@ -1,0 +1,120 @@
+Metadata-Version: 2.4
+Name: nets-pipeline
+Version: 0.1.0
+Summary: NETS autonomous homework generation pipeline — PDF textbook in, gamified homework.md out.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: openai>=1.50.0
+Requires-Dist: jsonschema>=4.22.0
+Requires-Dist: psycopg[binary,pool]>=3.2.0
+Requires-Dist: pdfplumber>=0.11.0
+Requires-Dist: pymupdf>=1.24.0
+Requires-Dist: typer[all]>=0.12.0
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: structlog>=24.2.0
+Requires-Dist: httpx>=0.27.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.2.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23.0; extra == "dev"
+Requires-Dist: ruff>=0.5.0; extra == "dev"
+Requires-Dist: mypy>=1.10.0; extra == "dev"
+Provides-Extra: validator
+Requires-Dist: anthropic>=0.30.0; extra == "validator"
+
+# NETS Autonomous Homework Pipeline
+
+Turns government textbook PDFs into gamified, multilingual homework sessions at curriculum scale. One command, no humans in the loop.
+
+**Full architecture spec:** see `nets-pipeline-architecture.html` in this folder.
+**Plain-English explainer:** `WHAT_IS_THIS.txt`.
+
+---
+
+## Layout
+
+```
+Nets-pipeline-development/
+├── frameworks/              Operator-authored content (rulebooks). See §09.
+│   ├── system/              Per-stage prompts: extraction, phase_worker_base, assembly
+│   ├── unified/             UNIFIED-Buzan schema + 9 phase specs
+│   ├── subjects/            Per-subject rulebooks (14 of 32 populated)
+│   ├── games/               Game mechanic docs
+│   └── schemas/             JSON Schema contracts for phase outputs
+├── migrations/              Postgres DDL
+│   └── 001_init.sql         4 tables per §10: lessons, phase_outputs, task_queue, session_log
+├── src/                     Python runner (built step-by-step per §15)
+├── phase-graph.yaml         Phase dependency edges
+├── pyproject.toml           Python project config
+├── .env.example             Copy to .env and fill in
+└── README.md                This file
+```
+
+---
+
+## Setup
+
+### 1. Python environment
+
+```bash
+cd Nets-pipeline-development
+python -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install -e ".[dev]"
+```
+
+### 2. Postgres
+
+Either reuse an existing instance or spin one up locally (Docker):
+
+```bash
+docker run -d --name nets-pg \
+  -e POSTGRES_PASSWORD=dev \
+  -e POSTGRES_DB=nets_pipeline \
+  -p 5432:5432 \
+  postgres:15
+```
+
+### 3. Env vars
+
+```bash
+cp .env.example .env
+# edit .env — fill in DATABASE_URL and MOONSHOT_API_KEY
+```
+
+### 4. Migrate
+
+```bash
+psql "$DATABASE_URL" -f migrations/001_init.sql
+```
+
+---
+
+## Implementation status
+
+Tracks the 9 steps in §15 "Implementation Sequence":
+
+| Step | Component | Status |
+|------|-----------|--------|
+| 1 | Postgres schema + frameworks/ | ✅ SQL ready; frameworks populated |
+| 2 | Session runner | ⏳ not built |
+| 3 | Extractor (Stage 01) | ⏳ not built |
+| 4 | One phase worker (Stage 02 pilot) | ⏳ not built |
+| 5 | Phase graph scheduler | ⏳ not built |
+| 6 | Assembler (Stage 03) | ⏳ not built |
+| 7 | Batch runner (CLI) | ⏳ not built |
+| 8 | Observability | ⏳ not built |
+| 9 | Post-hoc validator | ⏳ not built |
+
+---
+
+## Frameworks coverage
+
+- **Subjects with frameworks (14 of 32):** Matematika, Algebra, Algebra_va_Analiz, Geometriya, Geometriya_Advanced, Biology, Chemistry, Physics, English, Ona_Tili, Rus_Tili, Tarix, Jahon_Tarixi, Ozbekiston_Tarixi.
+- **Missing (18):** Astronomy, Geography, Combined Science, Literature, German, Law, Economy, Entrepreneurship, Civic Prep, Ancient History, and the 9 Tarbiya/Sanat subjects. Add by creating `frameworks/subjects/{name}.md` following the existing pattern.
+
+---
+
+## What the pipeline does NOT use
+
+Per §16: no LangChain, LangGraph, CrewAI, n8n, agent orchestrators, or RAG indices. This is ~600 lines of Python against a Postgres queue. That's the feature.

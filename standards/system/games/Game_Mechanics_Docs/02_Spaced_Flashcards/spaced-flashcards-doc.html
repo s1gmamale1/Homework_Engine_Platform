@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Spaced Flashcards</title>
+    <style>
+        :root {
+            --bg: #0d1117; --surface: #161b22; --border: #30363d;
+            --text: #e6edf3; --text-muted: #8b949e;
+            --primary: #58a6ff; --accent: #bc8cff;
+            --danger: #f85149; --success: #3fb950; --gold: #d29922;
+        }
+        body { background-color: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 40px; display: flex; justify-content: center; }
+        .container { max-width: 1000px; width: 100%; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 40px; }
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin: 20px 0; }
+        .premium-box { border: 2px solid var(--gold); background: rgba(210, 153, 34, 0.05); padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .buzan-box { border: 2px solid var(--accent); background: rgba(188, 140, 255, 0.05); padding: 20px; border-radius: 12px; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Spaced Flashcards: Ebbinghaus Edition</h1>
+            <p style="color: var(--text-muted)">Default Mechanic #2 — SM-2 Spaced Repetition Vocabulary & Formula Retention</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Mode: Solo Recall</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Remember</span>
+                <span class="tag">PISA: 1</span>
+                <span class="tag">AI Tier: Tier 1</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Spaced Flashcard Mechanics</h2>
+            <div class="card">
+                <p>A swipeable flashcard deck powered by a <strong>modified SM-2 spaced repetition algorithm</strong> (SuperMemo-2, adapted for K-11 education). Each card has an <strong>ease factor</strong> and a <strong>review interval</strong> that dynamically adjust based on the student's self-rated recall performance.</p>
+                <ul>
+                    <li><strong>Card display:</strong> One card at a time. Front shows term/formula/image. Student flips to reveal back (definition/answer).</li>
+                    <li><strong>Self-rating:</strong> After revealing, student rates their recall: <strong>"Yana" (Again)</strong>, <strong>"Qiyin" (Hard)</strong>, <strong>"Yaxshi" (Good)</strong>, <strong>"Oson" (Easy)</strong>.</li>
+                    <li><strong>SM-2 algorithm response:</strong>
+                        <ul>
+                            <li><strong>Again:</strong> Interval resets to 1 day. Ease factor decreases by 0.2. Card reappears in the next session within 10 minutes.</li>
+                            <li><strong>Hard:</strong> Interval × 1.2. Ease factor decreases by 0.15.</li>
+                            <li><strong>Good:</strong> Interval × 2.5 (or ease factor × previous interval for first repetitions). Ease factor unchanged.</li>
+                            <li><strong>Easy:</strong> Interval × 3.5. Ease factor increases by 0.15. Card may skip multiple sessions.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Session load:</strong> 5-10 cards per session, 2-3 minutes total.</li>
+                    <li><strong>Grade data recorded:</strong> Each card rating contributes to the student's learning curve. "Good" and "Easy" ratings count as successful recall; "Again" and "Hard" flag items for more frequent review.</li>
+                </ul>
+                <p><strong>Card types:</strong></p>
+                <ul>
+                    <li><strong>Vocabulary:</strong> Term → Definition (with example sentence)</li>
+                    <li><strong>Formulas:</strong> Formula name → Formula expression (with one worked example)</li>
+                    <li><strong>Diagrams:</strong> Diagram with labeled parts → Student must name all parts before revealing</li>
+                    <li><strong>Dates/Events:</strong> Date → Event description (or vice versa)</li>
+                    <li><strong>Translation:</strong> Word in Uzbek → Word in target language (or vice versa)</li>
+                </ul>
+            </div>
+
+            <h3>Feeds the Memory Sprint Pipeline</h3>
+            <div class="card">
+                <p>Cards rated <strong>"Again" 3+ times in a row</strong> are automatically added to the <strong>Memory Sprint question pool</strong> for the next session. This creates a closed learning loop:</p>
+                <p><strong>Spaced Flashcards</strong> (identify weak items) → <strong>Memory Sprint</strong> (rapid-fire recall on weak items) → <strong>Session Game Breaks</strong> (reinforcement) → <strong>Boss</strong> (summative test)</p>
+                <p>This loop ensures that items the student struggles with get progressively more exposure across different interaction formats — the exact mechanism that drives the +50-70% retention gain.</p>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <table>
+                <thead><tr><th>Feature</th><th>Basic Tier</th><th>Premium Tier</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Session Access</strong></td><td>Phase 0-B mandatory flashcards (5-10 cards)</td><td>Same + on-demand Library access to all past cards</td></tr>
+                    <tr><td><strong>Card Content</strong></td><td>Standard text + emoji</td><td>Enhanced: custom illustrations, audio pronunciation (for language cards)</td></tr>
+                    <tr><td><strong>Review Modes</strong></td><td>Standard flip-and-rate only</td><td>+ "Speed Drill" mode (timed rapid recall, no flip), + "Audio-Only" mode (hear term, recall definition aloud)</td></tr>
+                    <tr><td><strong>Streak Display</strong></td><td>Simple count of consecutive "Good/Easy" ratings</td><td>Visual streak bar + milestone celebrations (7-day, 30-day, 100-card)</td></tr>
+                    <tr><td><strong>Due Card Preview</strong></td><td>Not shown — cards appear automatically</td><td>Dashboard shows "X cards due tomorrow" so Premium students can plan</td></tr>
+                    <tr><td><strong>SM-2 Tuning</strong></td><td>Standard interval multipliers</td><td>Adaptive tuning: algorithm learns individual student's forgetting curve more precisely</td></tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> The SM-2 algorithm works identically for both tiers. The core spaced repetition mechanism — the educational engine — is not degraded for Basic students. Premium adds review modes and cosmetic enhancements, not algorithmic advantage.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Radiant Encoding</h2>
+            <p>Spaced Flashcards implement <strong>Tony Buzan's memory encoding</strong> principles within the SM-2 framework.</p>
+            <ul>
+                <li><strong>Color Hooks per Subject:</strong> Each subject family has a distinct card border color. Math = blue, Science = green, History = gold, Languages = purple, Art = pink. Over time, the color itself becomes a retrieval cue — the student's brain associates "blue border" with "mathematical formula."</li>
+                <li><strong>Imagery & Exaggeration:</strong> Premium flashcards include exaggerated illustrations (e.g., "Photosynthesis" shown as a plant wearing sunglasses and eating a sun like a pizza slice). Per Buzan: bizarre imagery is 3-7x more memorable than literal text. Basic flashcards use emoji-only (simpler but still visual).</li>
+                <li><strong>Associative Chains:</strong> When a student rates a card "Easy" three times in a row, the system draws an invisible "thread" to the next card in the same concept family. After 5+ Easy ratings, the card "graduates" and a branch-complete animation shows it connecting to the student's Knowledge Web (see Tile Match Buzan integration).</li>
+                <li><strong>Multi-sensory hooks (Premium):</strong> Audio pronunciation for language cards. Tapping the card plays the word spoken by a native speaker. The combination of visual + auditory encoding creates dual-channel memory traces.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Spaced Flashcards are <strong>self-rated</strong> — there is no external question. However, the card content itself scales by PISA level:</p>
+            <table>
+                <thead>
+                    <tr><th>PISA Level</th><th>Front of Card</th><th>Back of Card</th><th>Cognitive Target</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>L1</strong></td><td>Term + large icon (e.g., "△ Triangle" with visual triangle)</td><td>Simple definition: "3 sides, 3 angles"</td><td>Direct visual recognition</td></tr>
+                    <tr><td><strong>L2</strong></td><td>Term alone (e.g., "Chloroplast")</td><td>Definition + diagram showing location in cell</td><td>Property identification with visual anchor</td></tr>
+                    <tr><td><strong>L3</strong></td><td>Process name (e.g., "Photosynthesis")</td><td>Multi-step description: "CO₂ + H₂O → Glucose + O₂ (with sunlight)"</td><td>Process recall — student must remember all steps</td></tr>
+                    <tr><td><strong>L4</strong></td><td>Principle name (e.g., "Natural Selection")</td><td>Full definition + one real-world example case</td><td>Conceptual understanding with application</td></tr>
+                    <tr><td><strong>L5+</strong></td><td>Abstract framework name (e.g., "Social Contract Theory")</td><td>Definition + competing interpretations + one critique</td><td>Synthesis — student must understand nuance, not just recall</td></tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Stranger Test Compliance:</strong> L1 and L2 cards always include visual elements (icons, diagrams) so a test player who cannot read the target language can still make progress through visual association. L3+ cards may be text-only (reading comprehension is now the test).
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type A (Accuracy-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Accuracy (%)</td><td>"Good" or "Easy" ratings / total cards rated</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>SM-2 interval growth</td><td>Rate at which card intervals expand across sessions</td><td>Secondary — feeds Efficiency metric (intervals growing = student retaining longer = positive signal)</td></tr>
+                        <tr><td>"Again" frequency</td><td>Count per session and per card</td><td>Tertiary — fewer "Again" ratings = higher confidence signal</td></tr>
+                        <tr><td>Sessions (cumulative)</td><td>Total review sessions on this deck</td><td>Feeds the curve-fitting algorithm (y = K × sessions^n) to calculate velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After each flashcard session, the student sees:</p>
+                <div class="card">
+                    <strong>Spaced Flashcards — [Deck Name]</strong><br>
+                    ████████░░ 72% (Proficient ↗)<br>
+                    Velocity: n=0.52 (improving)<br>
+                    Intervals: growing ✓ (avg 8.3 days between reviews)<br>
+                    ~2 sessions to Mastered
+                </div>
+
+                <h3>C. "Hali Emas" (Not Yet) Framing</h3>
+                <p>There is no "fail" state in Spaced Flashcards. The entire mechanic is built on the principle that forgetting is normal — the SM-2 algorithm exists precisely because humans forget. A student who rates everything "Again" is not failing; they are correctly identifying what needs more work. The system responds by scheduling those cards more frequently, not by penalizing the student.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Spaced Flashcards v1.0
+        </footer>
+    </div>
+</body>
+</html>

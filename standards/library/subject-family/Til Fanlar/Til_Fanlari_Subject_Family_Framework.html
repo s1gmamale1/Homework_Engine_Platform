@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Til Fanlari — Languages · Family Documentation</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --accent-color: #00f2ff; /* Neon Cyan */
+            --accent-glow: rgba(0, 242, 255, 0.3);
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --border-color: #333;
+            --neon-purple: #bc13fe;
+            --neon-green: #39ff14;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-glow);
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--neon-purple);
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+        }
+
+        .status-bar p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        details {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            margin-right: 15px;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        code {
+            background: #2a2a2a;
+            color: var(--neon-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--header-color);
+        }
+
+        .highlight {
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+
+        .good-example {
+            border-left: 3px solid var(--neon-green);
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #afffa3;
+        }
+
+        .bad-example {
+            border-left: 3px solid #ff3131;
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #ffb1b1;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Til Fanlari — Languages</h1>
+    
+    <div class="status-bar">
+        <p><strong>Status:</strong> Family Documentation Guide (Filter/Adapter)</p>
+        <p><strong>Target Audience:</strong> Subject-Specific Content Producers</p>
+        <p><strong>Role:</strong> Acts as a bridge between core standards and individual subject frameworks.</p>
+        <p><strong>Parent Documents:</strong> <code>UNIFIED-Buzan v2.0</code> | <code>Library Framework v0.6</code></p>
+    </div>
+
+    <details open>
+        <summary>1. What Is This Family</summary>
+        <div class="content">
+            <p>"Til" translates to tongue or language. This family is defined by communication through structured language acquisition. Unlike Aniq Fanlar, language knowledge is conventional: it depends on agreed-upon patterns, usage, and meaning in context rather than derivation from fixed laws.</p>
+            <p><strong>What it teaches:</strong> Comprehension and production through reading, listening, writing, and speaking.</p>
+            <p><strong>What it focuses on:</strong></p>
+            <ul>
+                <li>Vocabulary acquisition and long-term retention.</li>
+                <li>Grammar in context.</li>
+                <li>Reading fluency and textual inference.</li>
+                <li>Listening comprehension.</li>
+                <li>Writing and speaking production.</li>
+                <li>Narrative interpretation and genre awareness.</li>
+            </ul>
+            <p><strong>What it is NOT about:</strong> Derivation, formal proofs, calculations, formula manipulation, or spatial reasoning.</p>
+            <p><strong>Cognitive Demand Profile:</strong> Vocabulary (1), Grammar (2), Reading (3), Listening (4), Writing (5), Narrative (6), Register (7).</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. Subjects in This Family</summary>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>UZ Name</th>
+                        <th>RU Name</th>
+                        <th>Grades</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Uzbek Language</strong></td>
+                        <td>Ona tili</td>
+                        <td>Узб. язык</td>
+                        <td>G5-11</td>
+                        <td>Native language grammar & composition</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Russian Language</strong></td>
+                        <td>Rus tili</td>
+                        <td>Русский язык</td>
+                        <td>G5-11</td>
+                        <td>Native/second language</td>
+                    </tr>
+                    <tr>
+                        <td><strong>English</strong></td>
+                        <td>Ingliz tili</td>
+                        <td>Англ. язык</td>
+                        <td>G5-11</td>
+                        <td>Foreign language</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Literature</strong></td>
+                        <td>Adabiyot</td>
+                        <td>Литература</td>
+                        <td>G5-11</td>
+                        <td>ADR-pending: Humanities subfamily?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>German</strong></td>
+                        <td>Nemetskiy yazyk</td>
+                        <td>Немецкий язык</td>
+                        <td>G11 RU</td>
+                        <td>Edge case — G11 RU only</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <details>
+        <summary>3. What This Family Focuses On</summary>
+        <div class="content">
+            <ul>
+                <li><strong>Comprehensible Input (Krashen's i+1):</strong> Deliver language slightly above current level.</li>
+                <li><strong>Spaced Repetition:</strong> Rhythm: 1, 3, 7, 21, 60 days.</li>
+                <li><strong>Grammar in Context:</strong> Introduced through narrative use, not isolated rules.</li>
+                <li><strong>Dual Coding:</strong> Pair new words with image, sound, or native-language gloss.</li>
+                <li><strong>Scaffolded Production:</strong> Move from guided to prompted to independent production.</li>
+            </ul>
+            <p><strong>Do NOT Focus On:</strong> Calculations, Formula manipulation, Proof logic, Spatial reasoning.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>4. Best Methods & Games</summary>
+        <div class="content">
+            <h3>Primary Mechanics</h3>
+            
+            <p><strong>Spaced Repetition Flashcards</strong></p>
+            <div class="good-example">Good: Front: "convergence" / Back: "yaqinlashish" + image.</div>
+            <div class="bad-example">Bad: Front: "What is 2+2?" / Back: "4".</div>
+
+            <p><strong>Cloze / Sentence Fill</strong></p>
+            <div class="good-example">Good: "Bola maktab___ ketdi. (ga/dan/da)"</div>
+            
+            <p><strong>Listening Tasks</strong></p>
+            <div class="good-example">Good: "Listen to the dialogue and answer: Where is Aziza going?"</div>
+
+            <h3>Interactive Picks</h3>
+            <table>
+                <tr>
+                    <th>Game</th>
+                    <th>Why It Fits</th>
+                    <th>Best For</th>
+                </tr>
+                <tr>
+                    <td>Codebreaker</td>
+                    <td>Decoding spelling patterns</td>
+                    <td>Orthography, affixes</td>
+                </tr>
+                <tr>
+                    <td>Memory Match</td>
+                    <td>Fast pair retrieval</td>
+                    <td>Word-translation pairs</td>
+                </tr>
+                <tr>
+                    <td>Reaction Chain</td>
+                    <td>Sequential sentence flow</td>
+                    <td>Sentence construction</td>
+                </tr>
+                <tr>
+                    <td>Puzzle Lock</td>
+                    <td>Reconstructs text</td>
+                    <td>Paragraph cohesion</td>
+                </tr>
+            </table>
+
+            <h3>Buzan Alternatives (Phase 5)</h3>
+            <ul>
+                <li><strong>Memory Palace:</strong> Place vocabulary clusters at Registan Square.</li>
+                <li><strong>Link System:</strong> Build story chains for idiomatic expressions.</li>
+                <li><strong>Peg System:</strong> Anchor irregular verb patterns.</li>
+                <li><strong>Radiant Summary:</strong> Grammar-rule hierarchies.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. Boss Format for Til Fanlari</summary>
+        <div class="content">
+            <ul>
+                <li><strong>Format:</strong> Writing production evaluated by Tier 2 LLM.</li>
+                <li><strong>G5:</strong> Guided production (sentence stems).</li>
+                <li><strong>G6+:</strong> Prompted free production ("Write 3-5 sentences...").</li>
+                <li><strong>G9+:</strong> Extended composition.</li>
+                <li><strong>Literature:</strong> Textual analysis (character, theme, voice).</li>
+            </ul>
+            <div class="good-example"><strong>Good Boss:</strong> "Write 5 sentences describing your favorite place in Uzbekistan. Use 3 adjectives."</div>
+            <div class="bad-example"><strong>Bad Boss:</strong> "What is the definition of an adjective?"</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>6. Narrative Adaptation</summary>
+        <div class="content">
+            <h3>Story Mode (Phase 2)</h3>
+            <p><strong>Structure:</strong> 3 segments with comprehension gates.</p>
+            <div class="good-example">Example: Malika reads a letter (A), plans response (B), writes response (C).</div>
+
+            <h3>Real-Life Challenge (Phase 4)</h3>
+            <p><strong>Role:</strong> Student is the expert: translator, presenter, editor, or guide.</p>
+            <div class="good-example">Example: "You are a translator at the UN Tashkent office. Translate a diplomat's speech summary."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Technical Rules</summary>
+        <div class="content">
+            <ol>
+                <li><strong>Inheritance:</strong> National Pride rules (55/45 ratio) apply.</li>
+                <li><strong>Dual-Catalog:</strong> Phase 3 must use ≥1 Interactive and ≥2 Default mechanics.</li>
+            </ol>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+# NETS Autonomous Homework Pipeline — runtime dependencies
+# Install with: pip install -r requirements.txt
+#
+# For Python 3.11+. Matches §12 "Tooling Stack" in nets-pipeline-architecture.md.
+
+# ──────────────────────────────────────────────────────────────────────
+# LLM client — OpenAI-compatible SDK, points at Moonshot/Kimi
+# ──────────────────────────────────────────────────────────────────────
+openai>=1.50.0
+
+# ──────────────────────────────────────────────────────────────────────
+# Schema validation — validate phase outputs against frameworks/schemas/*.json
+# ──────────────────────────────────────────────────────────────────────
+jsonschema>=4.22.0
+
+# ──────────────────────────────────────────────────────────────────────
+# Postgres — driver + async pool (§10 state layer)
+# ──────────────────────────────────────────────────────────────────────
+psycopg[binary,pool]>=3.2.0
+
+# ──────────────────────────────────────────────────────────────────────
+# PDF → text (§12). pdfplumber primary, pymupdf fallback.
+# ──────────────────────────────────────────────────────────────────────
+pdfplumber>=0.11.0
+pymupdf>=1.24.0
+
+# ──────────────────────────────────────────────────────────────────────
+# CLI — the "one click" operator surface (§03)
+# ──────────────────────────────────────────────────────────────────────
+typer[all]>=0.12.0
+
+# ──────────────────────────────────────────────────────────────────────
+# YAML — phase-graph.yaml + seed manifests
+# ──────────────────────────────────────────────────────────────────────
+pyyaml>=6.0.1
+
+# ──────────────────────────────────────────────────────────────────────
+# Config loader — reads .env
+# ──────────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.1
+
+# ──────────────────────────────────────────────────────────────────────
+# Structured logging (§13 observability)
+# ──────────────────────────────────────────────────────────────────────
+structlog>=24.2.0
+
+# ──────────────────────────────────────────────────────────────────────
+# HTTP client — pinned for stability (used transitively by openai SDK)
+# ──────────────────────────────────────────────────────────────────────
+httpx>=0.27.0
+
+# ──────────────────────────────────────────────────────────────────────
+# Async validator (§14) — cross-family model (Claude Haiku)
+# Set VALIDATOR_PROVIDER=google and install google-genai instead if
+# using Gemini Flash.
+# ──────────────────────────────────────────────────────────────────────
+anthropic>=0.30.0
+# google-genai>=0.3.0                    # uncomment if using Gemini

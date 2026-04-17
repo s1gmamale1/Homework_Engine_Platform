@@ -1,0 +1,92 @@
+Here's the plain-English version. File read: 1096 lines.
+
+  Core idea
+
+  Turn government textbook PDFs into gamified homework for all K-11 subjects, grades, and languages — autonomously. One
+  command, no human in the loop. You author framework .md files; the runner is dumb plumbing.
+
+  Six ground rules
+
+  1. One lesson, many sessions. Extract the PDF once → frozen lesson.md. Every phase reads from that file, not the PDF.
+  2. Stateless sessions. Each phase = one Kimi API call. No chat history. Input via prompt, output via JSON.
+  3. Cache-friendly prompts. Prompts are layered static-first → dynamic-last so Kimi's prefix cache hits (~75%
+  discount).
+  4. Postgres is the truth. Sessions don't pass state to each other — they read/write DB rows.
+  5. Resumable. Crash at grade 8, lesson 47, Phase 3? Restart picks up exactly there.
+  6. Validation is async. A separate linter sweeps outputs later. It never blocks generation.
+
+  Two loops
+
+  Macro Loop (batch runner): queue worker iterating subject → grade → language → lesson. Each tuple = one row in
+  task_queue. One command (nets-run --subject history ...) spawns workers that claim rows with SELECT ... FOR UPDATE
+  SKIP LOCKED.
+
+  Micro Loop (per lesson, 3 stages):
+  - Stage 01 Extractor — 1 call, sequential. PDF → clean structured lesson.md. No gamification, just faithful
+  extraction.
+  - Stage 02 Phase Workers — N calls, parallel. Each reads lesson.md + its phase spec → writes JSON to phase_outputs.
+  You supply a phase-graph.yaml declaring which phases depend on which; runner topologically sorts and parallelizes
+  within each wave.
+  - Stage 03 Assembler — 1 call, sequential. Composes all phase JSONs into final homework.md. Default: deterministic
+  template render (no LLM). Only escalate to LLM if seams show.
+
+  Prompt layering (per phase call)
+
+  [1] System base        ← cached
+  [2] Unified schema     ← cached
+  [3] Subject framework  ← cached
+  [4] Phase spec         ← cached
+  [5] Game mechanic      ← cached (if used)
+  [6] lesson.md          ← dynamic
+  [7] {grade, lang...}   ← dynamic
+  [8] Task instruction   ← dynamic
+  Layers 1-5 reuse across every call in a subject → massive cost drop after call 1.
+
+  Where YOU plug in
+
+  All under frameworks/:
+  - system/extraction.md, system/phase_worker_base.md, system/assembly.md
+  - unified/schema.md + unified/{phase_id}.md (one per phase)
+  - subjects/{subject}.md (one per subject family)
+  - games/{game_id}.md
+  - schemas/{phase_id}.json (JSON schema each phase must match)
+  - phase-graph.yaml (phase list + dependencies)
+
+  Runner doesn't know what's inside. It just reads + concatenates.
+
+  Database (4 tables)
+
+  - lessons — frozen lesson.md metadata + content hash
+  - phase_outputs — one row per (lesson, phase) with JSON + cost/latency/cache-hit
+  - task_queue — status machine: pending → extracting → phasing → assembling → done/failed
+  - session_log — append-only audit of every call
+
+  Stack
+
+  Python 3.11 + asyncio + openai SDK (pointed at Moonshot) + pydantic v2 + Postgres + pdfplumber/pymupdf. ~600 lines of
+  Python. No agent framework.
+
+  Kimi config
+
+  - Model: kimi-k2-0711-preview via api.moonshot.ai/v1
+  - $0.60/M in, $2.50/M out, $0.15/M cached (automatic)
+  - temperature: 0.3, response_format: json_object
+  - Target >70% cache hit rate
+
+  Validator (async, optional but recommended)
+
+  Cron/consumer sweeps completed homeworks with a cheaper model (Haiku 4.5 or Gemini Flash — cross-model to avoid
+  in-family blind spots). Checks: language register, framework compliance, factual grounding vs. lesson.md, age
+  appropriateness. Flags go to a review queue. It's a linter, not a gate.
+
+  Build order (5-8 focused days)
+
+  1. Postgres tables + stub framework files
+  2. Generic session runner (prompt → call → validate → persist)
+  3. Extractor
+  4. One phase worker (pick simplest, e.g. Flashcards)
+  5. Phase graph scheduler (asyncio + topological sort)
+  6. Assembler (deterministic first)
+  7. Batch runner = "one click"
+  8. Observability
+  9. Post-hoc validator

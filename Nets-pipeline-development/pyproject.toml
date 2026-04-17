@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nets-pipeline"
+version = "0.1.0"
+description = "NETS autonomous homework generation pipeline — PDF textbook in, gamified homework.md out."
+requires-python = ">=3.11"
+readme = "README.md"
+
+# Dependencies map 1:1 to §12 "Tooling Stack" in nets-pipeline-architecture.html
+dependencies = [
+  # LLM client — OpenAI-compatible SDK works against Moonshot's endpoint
+  "openai>=1.50.0",
+
+  # Schema validation — jsonschema validates against frameworks/schemas/*.json
+  "jsonschema>=4.22.0",
+
+  # Postgres driver — psycopg v3 with async support
+  "psycopg[binary,pool]>=3.2.0",
+
+  # PDF extraction — start with pdfplumber, fall back to pymupdf for scanned docs
+  "pdfplumber>=0.11.0",
+  "pymupdf>=1.24.0",
+
+  # CLI — typer is built on click, nicer ergonomics
+  "typer[all]>=0.12.0",
+
+  # YAML — for phase-graph.yaml
+  "pyyaml>=6.0.1",
+
+  # Config — load .env files
+  "python-dotenv>=1.0.1",
+
+  # Structured logging
+  "structlog>=24.2.0",
+
+  # HTTP (used indirectly by openai, but pinning for stability)
+  "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+  "pytest-asyncio>=0.23.0",
+  "ruff>=0.5.0",
+  "mypy>=1.10.0",
+]
+validator = [
+  # §15 Step 9 — post-hoc validator uses a cross-family model
+  "anthropic>=0.30.0",                    # for Claude Haiku (default validator)
+  # "google-genai>=0.3.0",                # uncomment if using Gemini Flash instead
+]
+
+[project.scripts]
+nets-run = "nets_pipeline.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

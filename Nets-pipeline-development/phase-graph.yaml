@@ -1,0 +1,93 @@
+# NETS Homework Engine — Phase Graph
+#
+# Declares every phase in Stage 02 and its dependency edges. The scheduler
+# reads this file, topologically sorts, and runs phases concurrently within
+# each wave. depends_on: [] means the phase is eligible for the first wave.
+#
+# See frameworks/schemas/{phase_id}.json for each phase's output contract.
+# See frameworks/unified/{phase_id}.md for each phase's construction spec.
+
+phases:
+
+  - id: phase_0a
+    name: "Theme Preview (8 Panels)"
+    depends_on: []
+    framework_ref: frameworks/unified/phase_0a.md
+    schema_ref: frameworks/schemas/phase_0a.json
+    games_used: []
+
+  - id: phase_0b
+    name: "Flash Cards"
+    depends_on: []
+    framework_ref: frameworks/unified/phase_0b.md
+    schema_ref: frameworks/schemas/phase_0b.json
+    games_used: []
+
+  - id: phase_1
+    name: "Memory Sprint"
+    depends_on: []
+    framework_ref: frameworks/unified/phase_1.md
+    schema_ref: frameworks/schemas/phase_1.json
+    games_used:
+      - 01_Memory_Sprint
+
+  - id: phase_2
+    name: "Story Mode"
+    depends_on: []
+    framework_ref: frameworks/unified/phase_2.md
+    schema_ref: frameworks/schemas/phase_2.json
+    games_used:
+      - 06_Story_Mode
+
+  - id: phase_3
+    name: "Game Breaks"
+    depends_on: []
+    framework_ref: frameworks/unified/phase_3.md
+    schema_ref: frameworks/schemas/phase_3.json
+    # games are chosen at runtime per subject framework's slot priority;
+    # the runner loads the three game docs the worker selected
+
+  - id: phase_4
+    name: "Real-Life Challenge"
+    depends_on: []
+    framework_ref: frameworks/unified/phase_4.md
+    schema_ref: frameworks/schemas/phase_4.json
+    games_used:
+      - 11_Real-Life_Challenge
+
+  - id: phase_5
+    name: "Consolidation / Mnemonic Lock"
+    depends_on: []
+    framework_ref: frameworks/unified/phase_5.md
+    schema_ref: frameworks/schemas/phase_5.json
+    games_used:
+      - 05_Memory_Palace
+      - 17_Reaction_Chain
+
+  - id: phase_6
+    name: "Final Boss"
+    depends_on: []
+    framework_ref: frameworks/unified/phase_6.md
+    schema_ref: frameworks/schemas/phase_6.json
+    games_used:
+      - 21_Final-Boss
+
+  - id: phase_7
+    name: "Reflection"
+    # Phase 7 needs boss results to surface accurate strong/weak topics +
+    # the ≥60% closing-line branch; it runs last.
+    depends_on:
+      - phase_1
+      - phase_3
+      - phase_4
+      - phase_6
+    framework_ref: frameworks/unified/phase_7.md
+    schema_ref: frameworks/schemas/phase_7.json
+    games_used:
+      - 12_Reflection_Journal
+
+# Execution waves (derived by scheduler topological sort):
+#   Wave 1 (parallel): phase_0a, phase_0b, phase_1, phase_2, phase_3, phase_4, phase_5, phase_6
+#   Wave 2 (after wave 1 completes): phase_7
+#
+# Assembly (Stage 03) runs after Wave 2.

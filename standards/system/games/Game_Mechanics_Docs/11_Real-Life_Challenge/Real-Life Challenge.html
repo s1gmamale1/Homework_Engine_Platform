@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Real-Life Challenge (Phenomenon-Based Expert Scenario Edition)</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Real-Life Challenge: Phenomenon-Based Expert Scenario Edition</h1>
+            <p style="color: var(--text-muted)">Default Mechanic #12 — First-Person Expert Role-Play with Authentic Case Problems</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Modes: Session Phase 4 (3-5 minutes)</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Evaluate</span>
+                <span class="tag">PISA: 4-5</span>
+                <span class="tag">AI Tier: Tier 2</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>Real-Life Challenge places the student in a <strong>first-person expert role</strong> — they are not answering a quiz question, they ARE the fire safety inspector, the structural engineer, the business consultant, the medical diagnostician. The scenario is an <strong>authentic real-world case</strong> that requires applying current lesson concepts to reach a decision.</p>
+
+                <h3>Phase 4 Placement (3-5 Minutes)</h3>
+                <p>Real-Life Challenge appears as <strong>Phase 4 of every session</strong>, immediately after the interactive game phase and before the Final Boss. This is the bridge between abstract learning and real-world application:</p>
+                <ul>
+                    <li><strong>Step 1 — Role Assignment:</strong> The student is introduced to their expert identity with a brief briefing screen. "You are a fire safety inspector visiting a Chorsu Bazaar textile stall. The owner has asked you to assess their fire risk."</li>
+                    <li><strong>Step 2 — Scenario Presentation:</strong> A rich, multi-layered case unfolds with context, constraints, and competing priorities. The scenario uses <strong>Uzbek cultural context</strong> (bazaars, local industry, family settings, community events) to make the problem feel immediate and relevant.</li>
+                    <li><strong>Step 3 — Decision Point:</strong> The student must analyze the situation and make one or more decisions. Unlike MC questions, the student must <strong>reason through the problem</strong> — the system forces reasoning, not pattern matching. Responses may involve ranking priorities, selecting a course of action with justification, or identifying the critical flaw in a proposed plan.</li>
+                    <li><strong>Step 4 — Expert Feedback:</strong> The system responds as a senior expert mentoring a junior colleague: "Good thinking on checking the electrical wiring, but you missed the fire extinguisher placement. Here's why that matters..." This framing preserves the role-play while delivering corrective feedback.</li>
+                </ul>
+
+                <h3>Creative Thinking Variant</h3>
+                <p>In Creative Thinking sessions, the Real-Life Challenge takes a different form: <strong>"Generate 3 DIFFERENT solutions. Which is best? Why?"</strong> The student must produce multiple distinct approaches, then evaluate and justify their preferred choice. This forces divergent thinking followed by convergent evaluation — the full creative cycle.</p>
+
+                <p><strong>Phenomenon-Based Learning (Silander, 2015):</strong> Rather than teaching concepts in isolation, this mechanic presents whole phenomena (real situations) and requires students to extract and apply the relevant concepts. Research shows this approach can improve PISA levels by +1-2 levels because it mirrors the actual cognitive demands of the PISA assessment itself — applying knowledge to unfamiliar contexts.</p>
+
+                <p><strong>Scenario complexity scales by grade:</strong></p>
+                <ul>
+                    <li><strong>Grades 1-3:</strong> Single-decision scenarios with heavy visual support (images, simple diagrams). 1-2 concepts required. 3-minute target.</li>
+                    <li><strong>Grades 4-6:</strong> Multi-decision scenarios. Student must make 2-3 linked decisions. 3-4 concepts required. 4-minute target.</li>
+                    <li><strong>Grades 7-9:</strong> Complex scenarios with red herrings and incomplete information. Student must identify what information is missing AND request it. 4-5 concepts required. 5-minute target.</li>
+                    <li><strong>Grades 10-11:</strong> Professional-grade case studies with competing stakeholder interests, ethical dimensions, and no single correct answer. Evaluation is based on reasoning quality, not answer correctness. 5+ concepts required. 5-minute target.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Both tiers receive Real-Life Challenge as Phase 4 of every session. Premium unlocks deeper scenario libraries, expert-mode challenges, and enhanced feedback.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Phase 4 of every session (one scenario per session)</td>
+                        <td>Same + access to "Expert Mode" bonus scenarios from Library (2 per week)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scenario Library</strong></td>
+                        <td>Standard pool: 10-15 scenarios per subject per grade band</td>
+                        <td>Extended pool: 30+ scenarios per subject per grade band, including cross-disciplinary cases</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Role Variety</strong></td>
+                        <td>2-3 expert roles per subject (e.g., math = inspector, planner)</td>
+                        <td>5+ expert roles per subject, including rare roles (forensic analyst, policy advisor, startup founder)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Feedback Depth</strong></td>
+                        <td>Expert mentoring feedback: correct/incorrect with brief explanation</td>
+                        <td>Deep-dive feedback: shows what a real expert in this field would consider, including alternative approaches and trade-off analysis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Creative Thinking Variant</strong></td>
+                        <td>Available — student generates 2 solutions + picks best</td>
+                        <td>Enhanced — student generates 3 solutions + picks best + writes justification that AI evaluates for reasoning quality</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scenario Builder</strong></td>
+                        <td>Not available</td>
+                        <td>Premium students can submit their own real-life scenarios (reviewed by teachers) — approved scenarios enter the shared pool with creator credit</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Uzbek Context Depth</strong></td>
+                        <td>Standard Uzbek references (bazaar, family, school, local landmarks)</td>
+                        <td>Rich cultural immersion: regional dialects, historical references (Silk Road, Timurid era), industry-specific cases (agriculture, textile, IT sector)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> Every student experiences the full Real-Life Challenge as Phase 4 of their session. The core scenario, role-play framing, and expert feedback are identical. Premium provides access to a broader scenario library, deeper expert analysis, and creative contribution tools — enrichment layers that extend but do not replace the core learning experience.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Episodic Memory & Emotional Anchoring</h2>
+            <p>Real-Life Challenge implements <strong>Tony Buzan's episodic encoding</strong> principles by transforming abstract concepts into vivid, emotionally-engaged lived experiences.</p>
+            <ul>
+                <li><strong>Color Hooks (Environmental Mood Lighting):</strong> Each expert role is associated with a color palette that tints the entire scenario screen. Fire safety inspector = warm amber tones, structural engineer = cool steel blue, business consultant = rich green. When the student makes a correct decision, the screen briefly shifts to a brighter, warmer variant of the palette (positive emotional reinforcement). Wrong decisions dim the palette (negative valence without harsh red flashes — preserving the expert role-play tone).</li>
+                <li><strong>Imagery & Exaggeration (Stakeholder Personification):</strong> Real-Life Challenge scenarios include vivid character portraits of the stakeholders involved. The bazaar owner who needs your advice has a distinct face, expression, and personality. When the student's decision affects them, the character's expression changes — gratitude for good advice, concern for missed risks. Per Buzan's principle: emotional imagery is 5-10x more memorable than abstract analysis. The student remembers "the worried bazaar owner" long after they forget the specific fire safety rule.</li>
+                <li><strong>Radiant Association (Consequence Web):</strong> After the student makes their decision, a "consequence web" animation shows how their choice ripples outward. A good fire safety recommendation protects the stall owner's family, their employees, neighboring stalls, and the broader market community. Each connection point lights up with a brief description of the benefit. This visually encodes the principle that expert decisions have cascading real-world impact — reinforcing the student's sense of agency and responsibility.</li>
+                <li><strong>Memory Palace (Professional Identity Anchor):</strong> Each expert role is anchored to a familiar Uzbek location. The fire safety inspector operates from the student's local mahalla office. The business consultant works from a Chorsu Bazaar corner desk. The engineer surveys a familiar local building. When a student completes a scenario, the location gains a visible "badge" (a checked clipboard, a signed report, a stamp of approval). Returning students see their accumulated professional identity growing across locations — "I am becoming a real expert." This builds intrinsic motivation through identity-based learning.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Real-Life Challenge is not a traditional quiz — it is a role-play decision engine. The interaction mechanics vary by PISA level, but all require reasoning over recall.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Scenario Complexity</th>
+                        <th>Interaction Type</th>
+                        <th>Response Format</th>
+                        <th>Cognitive Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Single-decision scenario with clear context. All relevant information is provided. One concept from current lesson is the key to the correct answer.</td>
+                        <td>Student reads the scenario, identifies the critical issue, selects a course of action from 3-4 options, then provides a one-sentence reason.</td>
+                        <td>MC selection + short text justification. Both are evaluated — correct choice with weak reasoning receives partial credit.</td>
+                        <td>Evaluate — assess the situation, identify the governing principle, justify the decision</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4 (hard)</strong></td>
+                        <td>Single-decision scenario with one piece of misleading or irrelevant information (red herring). Student must filter noise.</td>
+                        <td>Same as L4, but student must also identify which information was irrelevant and explain why it didn't matter.</td>
+                        <td>MC selection + two short text responses (justification + noise identification)</td>
+                        <td>Evaluate/Analyze — separate signal from noise, then reason from the signal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5</strong></td>
+                        <td>Multi-decision scenario with competing priorities. Student must make 2-3 linked decisions where the answer to one affects the next. No single "right" answer — some decisions are trade-offs.</td>
+                        <td>Student navigates through the scenario step by step, making decisions at each junction. The scenario adapts based on earlier choices (branching narrative).</td>
+                        <td>Ranked priority selection (rank these 4 actions by importance) + written justification for top choice. AI evaluates reasoning quality.</td>
+                        <td>Evaluate/Synthesize — weigh competing values, make defensible trade-offs, articulate reasoning</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5 (hard)</strong></td>
+                        <td>Scenario with intentionally incomplete information. Student must recognize what is missing and request it before deciding.</td>
+                        <td>Student can choose to: (a) decide with current info, (b) request specific additional information (from a list of options, each with a "cost" — time, budget, access difficulty), then decide.</td>
+                        <td>Information request selection + final decision + full justification. Scoring rewards good information-seeking behavior even if the final decision is imperfect.</td>
+                        <td>Evaluate/Meta-cognition — know what you don't know, strategically gather data, then reason from incomplete evidence</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L6</strong></td>
+                        <td>Professional-grade case study with ethical dimensions, multiple stakeholders with conflicting interests, and no universally correct answer. The scenario mirrors real PISA 6-level complex reasoning tasks.</td>
+                        <td>Student must: (1) identify all stakeholders and their interests, (2) generate at least 2 viable approaches, (3) select and justify their preferred approach, (4) anticipate and address the strongest objection to their choice.</td>
+                        <td>Open-response multi-part answer. AI evaluates comprehensiveness, reasoning quality, stakeholder empathy, and self-correction ability. No MC options available.</td>
+                        <td>Evaluate/Create/Synthesize — integrate multiple perspectives, construct a defensible position, anticipate counterarguments</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Forced Reasoning, Not Pattern Matching:</strong> Real-Life Challenge scenarios are deliberately designed so that surface-level pattern matching fails. The same concept appears in different contexts across sessions (e.g., "proportionality" appears in a bazaar pricing problem, a construction material problem, and a recipe-scaling problem). Students who memorize answers will fail when the context changes. Students who understand the underlying concept will transfer successfully. This is the core design principle that makes this mechanic a +1-2 PISA level intervention.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type B (Rubric-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Accuracy (%)</td><td>Three-dimension composite: Decision Quality % + Reasoning Quality % + Concept Identification %</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>Dimension breakdown</td><td>Individual scores for Decision Quality (0-100%), Reasoning Quality (0-100%), Concept Identification (0-100%)</td><td>Identifies which expert skill needs development</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total Real-Life Challenge sessions on this topic</td><td>Feeds curve-fitting (y = K × attempts^n) for velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Real-Life Challenge — [Scenario]</strong><br>
+                    ████████░░ 62% (Apprentice ↗)<br>
+                    Decision: 70% | Reasoning: 55% | Concept ID: 65%<br>
+                    Velocity: n=0.45 (improving)<br>
+                    ~3 sessions to Proficient
+                </div>
+
+                <h3>C. Evaluation Criteria (Dimension Percentages)</h3>
+                <table>
+                    <thead>
+                        <tr><th>Criterion</th><th>Weight</th><th>What It Measures</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Decision Quality</td><td>50%</td><td>Was the chosen action correct/optimal given the scenario constraints?</td></tr>
+                        <tr><td>Reasoning Quality</td><td>33%</td><td>Is the justification logically sound? Does it reference relevant concepts? Does it address counterarguments?</td></tr>
+                        <tr><td>Concept Identification</td><td>17%</td><td>Did the student correctly identify which lesson concepts apply to this scenario?</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>D. Scoring Tiers</h3>
+                <table>
+                    <thead>
+                        <tr><th>Score Range</th><th>Rating</th><th>Feedback Framing</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>90-100%</td><td>Expert Decision</td><td>"Siz haqiqiy mutaxassis darajasida fikrladingiz!" (You thought like a real expert!) + confetti</td></tr>
+                        <tr><td>75-89%</td><td>Strong Analysis</td><td>"Yaxshi tahlil! Bir nechta jihatlarni hisobga oldingiz." (Good analysis! You considered multiple factors.)</td></tr>
+                        <tr><td>60-74%</td><td>Passing</td><td>"Asosiy g'oyani tushundingiz, lekin ba'zi detallarni o'tkazib yubordingiz." (You grasped the main idea but missed some details.)</td></tr>
+                        <tr><td>Below 60%</td><td>Hali emas</td><td>"Hali emas — bu sizning mutaxassislik sayohatingizning bir qismi." (Not yet — this is part of your expert journey.) Full expert walkthrough provided. Scenario flagged for retry in next session.</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>E. Creative Thinking Variant</h3>
+                <p>When the Creative Thinking variant is active ("Generate 3 DIFFERENT solutions. Which is best? Why?"), the dimensions shift to: Solution Diversity (25%), Evaluation Quality (33%), Justification Depth (42%).</p>
+
+                <h3>F. "Hali Emas" (Not Yet) Framing & Retry</h3>
+                <ul>
+                    <li><strong>"Hali emas" (Not Yet) — Below 60%:</strong> The student does not "fail" — they are "not yet an expert in this case." The system provides a full expert walkthrough: what a real expert would notice, how they would reason, and why. The scenario is flagged as "pending mastery" and will reappear in a future session with slightly different parameters (same concepts, different context).</li>
+                    <li><strong>Students below 60% across 3 consecutive Real-Life Challenges:</strong> The system enters "Apprentice Mode" — the next 2 sessions will feature scaffolded Real-Life Challenges with hints at each decision point, gradually fading the support as the student improves.</li>
+                    <li><strong>Retry mechanic:</strong> Any scenario scored below 75% can be retried in the next session. The retry uses a different scenario testing the same concepts (preventing memorization of answers while allowing concept mastery). Retry scores replace original scores if higher.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Real-Life Challenge: Phenomenon-Based Expert Scenario Edition v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>

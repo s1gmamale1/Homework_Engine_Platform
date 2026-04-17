@@ -1,21 +1,23 @@
 # NETS Tier Overlay Specification — Layer 3
 
-**Document status:** Draft — pending founder review  
-**Version:** 1.0  
-**Date:** 2026-04-10  
-**Parent:** `NETS-System-Design-v1.md` Section 4  
-**Constitution:** `NETS-Homework-Engine-UNIFIED.md` v2.0 (unchanged)  
+**Document status:** Draft — pending founder review
+**Version:** 2.0 (aligned with UNIFIED-Buzan v2.0)
+**Date:** 2026-04-14
+**Parent:** `NETS-System-Design-v1.md` Section 4
+**Constitution:** `NETS-Homework-Engine-UNIFIED-Buzan.md` v2.0 (unchanged)
 **Layer:** 3 (inherits Layers 0–2; cannot contradict them)
 
 ---
 
 ## 0. Design Principle
 
+The Rule: **Basic = the full UNIFIED-Buzan product. Premium = Basic + enrichment on top.**
+
 Both Basic and Premium are **paid tiers**. There is no free tier.
 
-Basic delivers the **full product** — everything specified in UNIFIED v2.0 and all subject frameworks. A Basic student receives a complete, gamified, AI-supported learning experience covering the full national curriculum.
+Basic delivers the **full product** — everything specified in UNIFIED-Buzan v2.0 and all subject frameworks. A Basic student receives a complete, gamified, AI-supported learning experience covering the full national curriculum.
 
-Premium delivers **everything in Basic plus more** — more games, more resources, harder difficulty options, richer AI interaction, and specialized courses. Premium is an enrichment layer, not the "real" product.
+Premium delivers **everything in Basic plus more** — smarter AI (Tier 3), more practice (weekly PISA, specialized courses, on-demand games), richer feedback (parent dashboard, Notebook Capture analysis), and access equity (offline mode). Premium is an enrichment layer, not the "real" product.
 
 **The test:** If removing Premium from NETS would leave Basic students with an incomplete or inferior education, the tier split is wrong. Basic alone must be sufficient to hit the PISA mission targets.
 
@@ -25,20 +27,83 @@ Premium delivers **everything in Basic plus more** — more games, more resource
 
 ## 1. Tier Comparison Matrix
 
-| Dimension | Basic (paid) | Premium (paid — adds on top of Basic) |
+### 1.1 Session Structure
+
+| Component | Basic | Premium Adds |
 |---|---|---|
-| **Content** | Full textbook canon, on-curriculum, all chapters, all subjects assigned by school | Beyond-textbook extension content, exam preparation tracks, elective modules |
-| **Homework sessions** | Full 7-phase gamified sessions, all 28 mechanics available, dual-catalog rule enforced | Same engine + expanded difficulty band (L5-L6 challenge tasks), richer AI feedback per phase |
-| **Games** | Phase 3 Game Breaks per dual-catalog rule (≥1 Interactive + ≥2 Default per session) | On-demand game access outside sessions from Library, higher-polish game variants, Premium-exclusive game modes |
-| **AI tier** | Tier 1 (rule-based) + Tier 2 (small LLM): Boss evaluation (2 attempts, fail = marked), anti-cheat, story checkpoints | + Tier 3 (Opus-grade): personal AI tutor on Boss failure (unlimited retries with Socratic guidance + question regeneration), plus Socratic tutoring on any question in any phase, study plans, writing feedback, exam prep |
-| **Notebook Capture** | Per subject framework frequency (Science 1-in-3, Texnologiya 1-in-2, Tasviriy Sanat every session, etc.) | Same frequency + enhanced Tier 3 vision feedback (detailed rubric, technique suggestions, comparison to exemplars) |
-| **Specialized courses** | Not available | AI Literacy, Critical Thinking, Economy & Finance, Law & Civic Rights, IT & Programming, Language enrichment, Extended PISA preparation |
-| **PISA events** | Standard monthly PISA checkpoints | + Mandatory weekly PISA lesson (~20 min, async 7-day window, teacher-tracked attendance) |
-| **Metagame (Bilim Bazasi)** | Full access: base building, BT earning, hero collection, streaks, Mystery Boxes (BT-only) | + Tournament participation with faster BT ticket earning, additional cosmetic collections, seasonal event access |
-| **Parent dashboard** | Weekly auto-generated progress summary (static, 3-5 lines) | Full interactive dashboard: PISA level trajectory per domain, transition-skill heatmap, weekly AI-written narrative report, "what to practice this weekend" recommendations |
-| **Teacher dashboard** | Full access: attendance heatmap, per-student mastery map, anti-cheat flag log, session metrics | + Weekly PISA lesson completion tracker, Premium class analytics, exportable reports (CSV/PDF) |
-| **Offline mode** | Not available | Downloadable session packs for areas with unreliable internet |
-| **Session modes** | Standard (30-45 min) + Recovery (15-20 min, auto-triggered) | + Extended (45-60 min) available on-demand at home (not just teacher override) |
+| Pre-Session 0-A (Theme Preview) | Full 8 components, gate quote, 5-sec lock | Same |
+| Pre-Session 0-B (Flash Cards) | Full reference deck | Same |
+| Phase 1 Memory Sprint | Full (5-8 items, flexible format) | Same |
+| Phase 2 Story Mode | Full (3 segments + checkpoints, CPA) | Tier 3 narrative branching (personalized story paths) |
+| Phase 3 Game Breaks | Full (3 games, dual-catalog rule) | Same in-session + on-demand game access outside sessions + cosmetic polish |
+| Phase 4 Real-Life Challenge | Full | Same |
+| Phase 5 Consolidation | Full (Memory Palace, Peg, Link, Radiant, SMASHIN' SCOPE) | AI-generated connection maps linking lessons |
+| Phase 6 Final Boss | Full (HP system, 2 attempts, Tier 2 eval) | Tier 3 Socratic tutor on failure (unlimited retries + question regen) |
+| Phase 7 Reflection | Full | Tier 3 personalized "what to focus on next" |
+| National Pride injection | Full (55/45, 20% task, gate quotes) | Same |
+
+### 1.2 AI Tiers
+
+| Tier | Basic | Premium |
+|---|---|---|
+| Tier 1 (rule-based, ~$0) | ~80% of interactions | Same |
+| Tier 2 (small LLM) | Boss eval (2 attempts), anti-cheat, story checkpoints | Same |
+| Tier 3 (Opus-grade) | Not available | Personal AI tutor on Boss failure, Socratic "why?" on any question, study plans, writing feedback, exam prep |
+| Cost target | $3-5/student/year | $8-15/student/year |
+
+**This is the biggest differentiator.** Basic students who fail the Boss twice → marked as failed, next session continues. Premium students → AI tutor activates, unlimited guided retries.
+
+### 1.3 Content
+
+| Dimension | Basic | Premium Adds |
+|---|---|---|
+| Textbook curriculum | 100% — all chapters, all subjects | Same |
+| Difficulty band | Adaptive up to student's level + 1 | Level + 2 (L5-L6 stretch tasks when >85%) |
+| Specialized courses | Not available | AI Literacy, Critical Thinking, Economy & Finance, Law, IT & Programming, Language Enrichment, Extended PISA Prep |
+| Exam prep tracks | Not available | Structured revision targeting student's PISA weaknesses |
+
+### 1.4 Games
+
+| Dimension | Basic | Premium Adds |
+|---|---|---|
+| In-session (Phase 3) | All 28 mechanics, dual-catalog rule | Same |
+| Outside sessions | Not available | On-demand game access from Library anytime |
+| Game modes | Standard | + Timed challenge, head-to-head, Master Mode |
+| Visual polish | Standard | Enhanced animations/audio (cosmetic only) |
+
+### 1.5 PISA Events
+
+| | Basic | Premium |
+|---|---|---|
+| Monthly PISA checkpoint | Yes | Yes |
+| Weekly PISA lesson (~20 min) | Not available | Yes (async 7-day window, teacher-tracked) |
+
+### 1.6 Metagame (Bilim Bazasi)
+
+| | Basic | Premium |
+|---|---|---|
+| Base building, BT earning, heroes, streaks | Full | Full |
+| Mystery Boxes | BT-only (no real money) | Same |
+| Tournaments | Class-level | + School-level, regional |
+| Seasonal events | Not available | Time-limited themed events |
+| Cosmetic collections | Standard | + Premium architectural styles, extended hero lore |
+
+**Rule:** BT never has a real-money entry point in either tier.
+
+### 1.7 Dashboards
+
+| | Basic | Premium |
+|---|---|---|
+| Parent | Weekly auto-summary (3-5 lines) | Full interactive: PISA trajectory graph, skill heatmap, AI narrative report, weekend recommendations |
+| Teacher | Full: attendance, mastery map, anti-cheat, session metrics | + Weekly PISA tracker, class analytics, CSV/PDF exports |
+
+### 1.8 Infrastructure
+
+| | Basic | Premium |
+|---|---|---|
+| Offline mode | Not available | Downloadable session packs (Tier 1 only, Boss queued for online) |
+| Session modes | Standard + Recovery (auto) | + Extended on-demand at home (45-60 min) |
+| Notebook Capture frequency | Per subject framework | Same frequency + Tier 3 detailed feedback |
 
 ---
 
@@ -46,7 +111,7 @@ Premium delivers **everything in Basic plus more** — more games, more resource
 
 ### 2.1 Content
 
-**Basic:** Every chapter, every topic, every standard in the Uzbek national textbook canon. Content coverage is 100% of the curriculum assigned to the student's grade and subject. All content is tagged with dual standard codes (`UZ-MATH-5-FRAC-01` / `MAT.5.3.4.1`), PISA levels, and `transition_skill` tags per UNIFIED v2.0 Section 2.
+**Basic:** Every chapter, every topic, every standard in the Uzbek national textbook canon. Content coverage is 100% of the curriculum assigned to the student's grade and subject. All content is tagged with dual standard codes (`UZ-MATH-5-FRAC-01` / `MAT.5.3.4.1`), PISA levels, and `transition_skill` tags per UNIFIED-Buzan v2.0 Section 2.
 
 **Premium adds:**
 - **Beyond-textbook extensions:** Deeper explorations of curriculum topics that go past what the textbook covers. Example: G5 Science textbook covers "The Solar System" in one chapter → Premium adds an extended module on space exploration with PISA L4-L5 tasks.
@@ -57,7 +122,7 @@ Premium delivers **everything in Basic plus more** — more games, more resource
 
 ### 2.2 Homework Sessions
 
-**Basic:** The full 7-phase session as specified in UNIFIED v2.0 Section 4-5:
+**Basic:** The full 7-phase session as specified in UNIFIED-Buzan v2.0 Section 4-5:
 - Phase 0-A: Theme Preview (mandatory)
 - Phase 0-B: Flash Cards (mandatory)
 - Phase 1: Memory Sprint
@@ -79,7 +144,7 @@ All session parameters per subject framework apply: duration, flow targets, mech
 
 ### 2.3 Games
 
-**Basic:** Phase 3 Game Breaks operate per UNIFIED v2.0 dual-catalog rule every session. The student gets 3 games (≥1 from Interactive Catalog Pool, ≥2 from Default Pool), selected by subject eligibility + Bloom's target + PISA level. All 28 mechanics are available per subject framework allowances.
+**Basic:** Phase 3 Game Breaks operate per UNIFIED-Buzan v2.0 dual-catalog rule every session. The student gets 3 games (≥1 from Interactive Catalog Pool, ≥2 from Default Pool), selected by subject eligibility + Bloom's target + PISA level. All 28 mechanics are available per subject framework allowances.
 
 **Premium adds:**
 - **On-demand game access:** Premium students can launch any unlocked game from the Library at any time outside of sessions. Basic students access games only within Phase 3 of a session.
@@ -134,7 +199,7 @@ These are cross-subject enrichment courses not part of the standard Uzbek curric
 | Language Enrichment | Beyond-curriculum vocabulary, advanced grammar, literary analysis | Reading |
 | Extended PISA Preparation | Intensive PISA-style practice across Math, Reading, Science | All domains |
 
-**Rule:** These courses follow UNIFIED v2.0 100% — same 7 phases, same tagging requirements, same immutables. The only difference is their content is not textbook-derived (Principle 1 exception: these supplement, not transform, the textbook). Each task still requires a `transition_skill` tag (Principle 2: every task earns its existence).
+**Rule:** These courses follow UNIFIED-Buzan v2.0 100% — same 7 phases, same tagging requirements, same immutables. The only difference is their content is not textbook-derived (Principle 1 exception: these supplement, not transform, the textbook). Each task still requires a `transition_skill` tag (Principle 2: every task earns its existence).
 
 ### 2.7 PISA Events
 
@@ -221,23 +286,19 @@ These elements are identical in both tiers and cannot be moved to Premium:
 
 | Element | Reason |
 |---|---|
-| 7-phase session structure | Core learning loop — removing phases breaks pedagogical design |
-| Phase 0-A and 0-B (mandatory) | Pre-homework priming is foundational, not optional enrichment |
-| Full textbook curriculum coverage | Basic students pay for education — curriculum is not a Premium feature |
-| All 28 mechanics (per subject allowances) | Mechanics are pedagogical tools, not entertainment features |
-| Dual-catalog rule in Phase 3 | Session game selection is part of the learning design |
-| Stranger Test | Universal safety requirement |
-| transition_skill tagging | Quality control — applies to all content |
-| Flow state targets (70-80% / 75-85%) | Adaptive difficulty is core, not premium |
-| Boss must be defeated rule | Mastery requirement is universal |
-| Remediation routing (Memory Sprint < 60%) | Support for struggling students is not gated |
+| 7-phase structure + Phase 0-A/0-B | Core learning loop — removing phases breaks pedagogical design |
+| Full curriculum coverage | Basic students pay for education — curriculum is not a Premium feature |
+| All 28 game mechanics | Mechanics are pedagogical tools, not entertainment features |
+| Dual-catalog rule | Session game selection is part of the learning design |
+| Flow state targets (70-80%) | Adaptive difficulty is core, not premium |
+| Boss must be defeated | Mastery requirement is universal |
 | Anti-cheat (Tier 2 for both) | Academic integrity is universal |
 | Notebook Capture frequency | Per subject framework — frequency is pedagogical, not tier-based |
-| Custom tracks (MR, TR, VA, ML, etc.) | Subject-specific progression ladders are core curriculum delivery |
-| Cosmetics-never-purchasable | Applies to both tiers — Premium cosmetics are unlocked by BT, not bought with money |
+| Remediation routing | Support for struggling students is not gated |
+| TEFCAS failure framing ("Hali emas!") | G5 psychology requirement — universal |
+| National Pride injection | Universal design principle — 55/45 ratio, 20% task injection, gate quotes |
 | Uzbek-first cultural framing | Universal design principle |
-| "Hali emas" fail framing | G5 psychology requirement — universal |
-| Scholar pairing rule | Cultural representation — universal |
+| Cosmetics-never-purchasable | Applies to both tiers — Premium cosmetics are unlocked by BT, not bought with money |
 
 ---
 
@@ -326,10 +387,10 @@ For the existing 5 G5 frameworks (Science, Tarbiya, Texnologiya, Tasviriy Sanat,
 
 8. **Extended mode on-demand impact on learning outcomes.** Does letting Premium students self-select 45-60 min sessions at home improve or hurt outcomes? Longer sessions risk attention fatigue (G5 psychology: 20-30 min attention window). May need a "recommended break" prompt at the 35-min mark.
 
-9. **RESOLVED — Tier 3 Boss failure.** Basic students get 2 Boss attempts with Tier 2 evaluation; fail twice = marked as failed, next session continues. Premium students get a Tier 3 personal AI tutor on Boss failure with unlimited guided retries + question regeneration. The AI tutor is framed as a personal teacher, not a paywall on learning. UNIFIED v2.0 needs a versioned note that Tier 3 Boss tutoring is now a Premium feature, with Basic retaining the existing "max 2 retries, next session continues" behavior.
+9. **RESOLVED — Tier 3 Boss failure.** Basic students get 2 Boss attempts with Tier 2 evaluation; fail twice = marked as failed, next session continues. Premium students get a Tier 3 personal AI tutor on Boss failure with unlimited guided retries + question regeneration. The AI tutor is framed as a personal teacher, not a paywall on learning. UNIFIED-Buzan v2.0 needs a versioned note that Tier 3 Boss tutoring is now a Premium feature, with Basic retaining the existing "max 2 retries, next session continues" behavior.
 
 ---
 
 *Document path: `All analysis/Full Design Rework/NETS-Tier-Overlay-Spec.md`*  
 *Parent: `All analysis/NETS-System-Design-v1.md` Section 4*  
-*Constitution: `All analysis/Universal Specs/NETS-Homework-Engine-UNIFIED.md` v2.0*
+*Constitution: `All analysis/Universal Specs/NETS-Homework-Engine-UNIFIED-Buzan.md` v2.0*

@@ -273,6 +273,6 @@ Loading screens (`Did You Know` / quote / corny line) appear between every phase
 
 - **Whiteboard source:** `standards/Flow_diagram.jpg`
 - **Full Blueprint:** `standards/NETS-Homework-Engine-Blueprint.docx`
-- **Full UNIFIED spec:** `standards/NETS-Homework-Engine-UNIFIED.md`
+- **Full UNIFIED spec:** `standards/NETS-Homework-Engine-UNIFIED-Buzan.md`
 - **UI/UX & Animation Spec:** `standards/NETS-UI-UX-Design-Spec.md` (loading screens, panel transitions, carousel, per-phase animations)
 - **Improvements log:** `standards/IMPROVEMENTS_TO_THE_CURRENT_FRAMEWORKS.md`

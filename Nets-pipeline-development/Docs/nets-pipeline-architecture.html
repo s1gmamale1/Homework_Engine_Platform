@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETS — Autonomous Homework Generation Pipeline · Architecture Specification</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0d0b;
+    --bg-raised: #141310;
+    --bg-sunken: #080706;
+    --ink: #e9e3d4;
+    --ink-dim: #9a9282;
+    --ink-faint: #5c574c;
+    --rule: #2a2720;
+    --amber: #d9a152;
+    --amber-soft: #8b6a38;
+    --teal: #6fb5a5;
+    --rust: #d86a4e;
+    --rust-bg: rgba(216, 106, 78, 0.08);
+    --ok: #7fb36a;
+    --max-w: 960px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 24px 120px;
+    background-image:
+      radial-gradient(circle at 20% 0%, rgba(217, 161, 82, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 40%, rgba(111, 181, 165, 0.03) 0%, transparent 50%);
+  }
+
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  /* ——— Header block ——— */
+  header.doc-header {
+    padding: 80px 0 48px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 64px;
+    position: relative;
+  }
+
+  .doc-meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 32px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .doc-meta span::before {
+    content: "▸ ";
+    color: var(--amber);
+  }
+
+  h1.doc-title {
+    font-family: "Fraunces", serif;
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    font-variation-settings: "opsz" 144;
+  }
+  h1.doc-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--amber);
+  }
+
+  .doc-subtitle {
+    font-family: "Fraunces", serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--ink-dim);
+    font-weight: 400;
+    max-width: 720px;
+    line-height: 1.5;
+  }
+
+  .doc-author {
+    margin-top: 40px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+  }
+  .doc-author strong { color: var(--amber); font-weight: 500; }
+
+  /* ——— Table of contents ——— */
+  nav.toc {
+    margin: 64px 0;
+    padding: 28px 32px;
+    border: 1px solid var(--rule);
+    background: var(--bg-raised);
+  }
+  nav.toc h3 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  nav.toc ol {
+    list-style: none;
+    counter-reset: toc;
+    columns: 2;
+    column-gap: 48px;
+  }
+  nav.toc li {
+    counter-increment: toc;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    padding: 4px 0;
+    break-inside: avoid;
+  }
+  nav.toc li::before {
+    content: counter(toc, decimal-leading-zero) " ";
+    color: var(--amber-soft);
+    margin-right: 10px;
+  }
+  nav.toc a {
+    color: var(--ink-dim);
+    text-decoration: none;
+    border-bottom: 1px dotted transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  nav.toc a:hover {
+    color: var(--amber);
+    border-bottom-color: var(--amber);
+  }
+
+  /* ——— Section structure ——— */
+  section.chapter {
+    margin: 96px 0;
+    scroll-margin-top: 24px;
+  }
+
+  .chapter-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--amber);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(28px, 3.5vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+    font-variation-settings: "opsz" 60;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin: 40px 0 16px;
+    color: var(--ink);
+    font-style: italic;
+  }
+
+  h4 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin: 28px 0 12px;
+    font-weight: 500;
+  }
+
+  p {
+    margin-bottom: 18px;
+    max-width: 72ch;
+  }
+
+  strong { color: var(--amber); font-weight: 600; }
+  em { color: var(--ink); font-style: italic; }
+
+  a {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  a:hover { border-bottom-color: var(--teal); }
+
+  /* ——— Code blocks ——— */
+  pre, code {
+    font-family: "JetBrains Mono", monospace;
+  }
+  code {
+    font-size: 0.88em;
+    color: var(--teal);
+    background: var(--bg-sunken);
+    padding: 2px 6px;
+    border-radius: 2px;
+    border: 1px solid var(--rule);
+  }
+  pre {
+    background: var(--bg-sunken);
+    border: 1px solid var(--rule);
+    border-left: 2px solid var(--amber);
+    padding: 20px 24px;
+    overflow-x: auto;
+    margin: 24px 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+  }
+  pre .cmt { color: var(--ink-faint); font-style: italic; }
+  pre .key { color: var(--amber); }
+  pre .str { color: var(--teal); }
+  pre .num { color: var(--rust); }
+
+  /* ——— Lists ——— */
+  ul, ol {
+    margin: 0 0 24px 0;
+    padding-left: 0;
+  }
+  ul li, ol li {
+    list-style: none;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    max-width: 72ch;
+  }
+  ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--amber-soft);
+  }
+  ol { counter-reset: steps; }
+  ol li { counter-increment: steps; }
+  ol li::before {
+    content: counter(steps, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    color: var(--amber-soft);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    top: 5px;
+  }
+
+  /* ——— Callouts ——— */
+  .callout {
+    margin: 32px 0;
+    padding: 20px 24px;
+    border: 1px solid var(--rule);
+    background: var(--bg-raised);
+    position: relative;
+  }
+  .callout-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+
+  .plug {
+    border: 1px dashed var(--rust);
+    background: var(--rust-bg);
+    padding: 24px 28px;
+    margin: 28px 0;
+    position: relative;
+  }
+  .plug::before {
+    content: "◆";
+    position: absolute;
+    top: -10px;
+    left: 24px;
+    background: var(--bg);
+    padding: 0 10px;
+    color: var(--rust);
+    font-size: 14px;
+  }
+  .plug-title {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .plug p { margin-bottom: 12px; }
+  .plug p:last-child { margin-bottom: 0; }
+  .plug ul li::before { color: var(--rust); }
+
+  .note {
+    border-left: 2px solid var(--teal);
+    padding: 4px 0 4px 20px;
+    margin: 24px 0;
+    color: var(--ink-dim);
+    font-style: italic;
+    font-size: 0.95em;
+  }
+
+  /* ——— Tables ——— */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  th {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+    font-weight: 500;
+    border-bottom: 1px solid var(--amber-soft);
+  }
+  td code { font-size: 12px; }
+
+  /* ——— ASCII diagrams ——— */
+  .diagram {
+    background: var(--bg-sunken);
+    border: 1px solid var(--rule);
+    padding: 28px;
+    margin: 32px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--ink-dim);
+    white-space: pre;
+    overflow-x: auto;
+  }
+  .diagram .h { color: var(--amber); font-weight: 700; }
+  .diagram .a { color: var(--teal); }
+  .diagram .r { color: var(--rust); }
+  .diagram .f { color: var(--ink); font-weight: 500; }
+
+  /* ——— Pipeline stage cards ——— */
+  .stage {
+    margin: 32px 0;
+    padding: 28px 32px;
+    border: 1px solid var(--rule);
+    background: var(--bg-raised);
+    position: relative;
+  }
+  .stage-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--rule);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .stage-name {
+    font-family: "Fraunces", serif;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .stage-tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--amber);
+    text-transform: uppercase;
+  }
+  .io-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 16px 0 8px;
+  }
+  .io-grid h5 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .io-grid ul li { font-size: 14px; margin-bottom: 6px; }
+  @media (max-width: 640px) {
+    .io-grid { grid-template-columns: 1fr; }
+    nav.toc ol { columns: 1; }
+  }
+
+  /* ——— Rule/divider ——— */
+  hr.section-break {
+    border: none;
+    text-align: center;
+    margin: 80px 0;
+    color: var(--amber-soft);
+    font-size: 14px;
+    letter-spacing: 1em;
+  }
+  hr.section-break::before { content: "◆ ◆ ◆"; }
+
+  /* ——— Footer ——— */
+  footer.doc-footer {
+    margin-top: 120px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    body { font-size: 16px; padding: 0 20px 80px; }
+    .stage, .callout, .plug { padding: 20px; }
+    .doc-meta { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header class="doc-header">
+  <div class="doc-meta">
+    <span>Architecture Specification</span>
+    <span>v0.1 · Draft</span>
+    <span>Claude Satter / NETS</span>
+  </div>
+  <h1 class="doc-title">A pipeline for <em>autonomous</em><br>homework generation.</h1>
+  <p class="doc-subtitle">System-level design for the NETS content engine — turning government textbooks into gamified, grade-calibrated, multilingual homework at the scale of an entire curriculum, without a human in the loop.</p>
+  <div class="doc-author">
+    AUDIENCE: <strong>ENGINEERING</strong> &nbsp;·&nbsp; SCOPE: <strong>SYSTEM + CYCLE + INTEGRATION POINTS</strong> &nbsp;·&nbsp; OUT OF SCOPE: <strong>FRAMEWORK CONTENT</strong>
+  </div>
+</header>
+
+<nav class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li><a href="#principles">Architectural Principles</a></li>
+    <li><a href="#topology">System Topology</a></li>
+    <li><a href="#macro">The Macro Cycle — Batch Runner</a></li>
+    <li><a href="#micro">The Micro Cycle — Per-Lesson Pipeline</a></li>
+    <li><a href="#extraction">Stage 01 — PDF Extraction Session</a></li>
+    <li><a href="#phases">Stage 02 — Phase Sessions (Parallel)</a></li>
+    <li><a href="#assembly">Stage 03 — Assembly Session</a></li>
+    <li><a href="#session-anatomy">Session Anatomy</a></li>
+    <li><a href="#framework-points">Framework Integration Points</a></li>
+    <li><a href="#state">State &amp; Persistence</a></li>
+    <li><a href="#api">Kimi API Configuration</a></li>
+    <li><a href="#stack">Tooling Stack</a></li>
+    <li><a href="#observability">Observability &amp; Failure Modes</a></li>
+    <li><a href="#validation">Post-Hoc Validation (Async)</a></li>
+    <li><a href="#sequence">Implementation Sequence</a></li>
+    <li><a href="#research">Research &amp; Patterns Referenced</a></li>
+  </ol>
+</nav>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="principles">
+  <span class="chapter-num">§ 01</span>
+  <h2>Architectural Principles</h2>
+  <p>Every decision downstream follows from these six rules. They exist to keep the system cheap, deterministic, and resumable across a full K–11 curriculum run.</p>
+
+  <ol>
+    <li><strong>One canonical lesson, many sessions.</strong> PDF extraction runs once per lesson and produces a frozen <code>lesson.md</code>. Every phase session reads from that artifact — never from the PDF directly.</li>
+    <li><strong>Sessions are independent and stateless.</strong> Each phase session is a single Kimi API call (or a short retry loop around one). No conversation history, no chained turns. Context travels in via prompt, out via structured JSON.</li>
+    <li><strong>Cache-friendly prefix discipline.</strong> Every prompt is assembled in the same order: <em>static system → static framework → dynamic lesson → dynamic state → dynamic instruction</em>. This lets Kimi's native context cache hit on the first two layers across every call.</li>
+    <li><strong>State is a database, not a message.</strong> No session "passes state" to another session. Sessions read and write rows in Postgres. The pipeline is a DAG over DB rows, not a chain of API calls.</li>
+    <li><strong>Batch is resumable.</strong> If the machine dies at grade 8, lesson 47, subject "History", phase "Story Mode" — restart picks up at that exact task, not at the top.</li>
+    <li><strong>Validation is asynchronous.</strong> Generation runs at full speed. A separate process sweeps outputs and flags failures for review. Quality gates never block generation throughput.</li>
+  </ol>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="topology">
+  <span class="chapter-num">§ 02</span>
+  <h2>System Topology</h2>
+  <p>Three concentric layers. The innermost does work; the outer two coordinate.</p>
+
+  <div class="diagram">
+<span class="h">┌──────────────────────────────────────────────────────────────────────┐</span>
+<span class="h">│  MACRO LOOP · Batch Runner                                           │</span>
+<span class="h">│  iterates: subject → grade (5..11) → lang → lesson_id                │</span>
+<span class="h">│                                                                      │</span>
+<span class="h">│   ┌────────────────────────────────────────────────────────────┐     │</span>
+<span class="h">│   │  MICRO LOOP · Per-Lesson Pipeline                          │     │</span>
+<span class="h">│   │                                                            │     │</span>
+<span class="h">│   │   ┌─────────────┐   ┌──────────────────────────────┐       │     │</span>
+<span class="h">│   │   │             │   │                              │       │     │</span>
+<span class="h">│   │   │  [01]       │──▶│  [02] PHASE SESSIONS         │──┐    │     │</span>
+<span class="h">│   │   │  EXTRACTOR  │   │      (parallel fan-out)      │  │    │     │</span>
+<span class="h">│   │   │             │   │                              │  │    │     │</span>
+<span class="h">│   │   └─────────────┘   └──────────────────────────────┘  │    │     │</span>
+<span class="h">│   │         │                                             │    │     │</span>
+<span class="h">│   │         ▼                                             ▼    │     │</span>
+<span class="h">│   │   <span class="a">lesson.md</span>                                     <span class="a">[03] ASSEMBLY</span>  │     │</span>
+<span class="h">│   │   (frozen)                                            │    │     │</span>
+<span class="h">│   │                                                       ▼    │     │</span>
+<span class="h">│   │                                               <span class="f">homework.md</span>  │     │</span>
+<span class="h">│   └────────────────────────────────────────────────────────────┘     │</span>
+<span class="h">│                                                                      │</span>
+<span class="h">│   <span class="r">◆</span> Postgres · state of record for every row                       │</span>
+<span class="h">│   <span class="r">◆</span> Object storage · PDFs in, homework.md out                      │</span>
+<span class="h">│   <span class="r">◆</span> Async validator · sweeps completed rows, flags issues          │</span>
+<span class="h">└──────────────────────────────────────────────────────────────────────┘</span></div>
+
+  <p>The <strong>Macro Loop</strong> is the "one click" — a queue worker that iterates through every combination of subject, grade, language, and lesson. The <strong>Micro Loop</strong> is what happens for a single lesson. Everything else — storage, logging, validation — is ambient infrastructure.</p>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="macro">
+  <span class="chapter-num">§ 03</span>
+  <h2>The Macro Cycle — Batch Runner</h2>
+
+  <p>The runner is a worker loop over a task table. It's not an "AI orchestrator". It's a queue consumer with idempotency and retry semantics. This is the "1 click autonomous" surface the operator touches.</p>
+
+  <h4>Task shape</h4>
+  <p>Before a run starts, the system enumerates every (subject, grade, language, lesson) tuple that has a source PDF, and writes one row per tuple into <code>task_queue</code> with status <code>pending</code>. From that moment the run is resumable — pull the queue and execute.</p>
+
+<pre><code><span class="cmt">-- task_queue row</span>
+<span class="key">task_id</span>        uuid         pk
+<span class="key">subject</span>        text         <span class="cmt">-- 'history' | 'math' | 'biology' ...</span>
+<span class="key">grade</span>          int          <span class="cmt">-- 5..11</span>
+<span class="key">lang</span>           text         <span class="cmt">-- 'uz' | 'ru'</span>
+<span class="key">lesson_id</span>      text         <span class="cmt">-- stable reference to a PDF chapter</span>
+<span class="key">pdf_uri</span>        text
+<span class="key">status</span>         text         <span class="cmt">-- pending | extracting | phasing | assembling | done | failed</span>
+<span class="key">attempts</span>       int          <span class="cmt">-- retry counter, capped</span>
+<span class="key">last_error</span>     text
+<span class="key">created_at</span>     timestamptz
+<span class="key">updated_at</span>     timestamptz</code></pre>
+
+  <h4>Iteration order</h4>
+  <p>Subject → grade (ascending) → language → lesson. This isn't arbitrary: it optimizes Kimi cache hit rate. Consecutive tasks share the same subject-specific framework prompt, so the static prefix stays cached across many calls.</p>
+
+  <h4>Concurrency</h4>
+  <p>The runner pulls up to <code>N</code> tasks concurrently from the queue (where <code>N</code> is bounded by Kimi rate limits). Each task runs its full Micro Cycle independently. Crashes leave the row in its last <code>status</code> — the next run picks it back up from that stage.</p>
+
+  <div class="callout">
+    <div class="callout-label">Operator Interface</div>
+    <p>A single command: <code>nets-run --subject history --grades 5-11 --lang uz</code>. It enumerates the queue, spawns the worker pool, streams progress, and is interruptible at any point without corrupting state.</p>
+  </div>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="micro">
+  <span class="chapter-num">§ 04</span>
+  <h2>The Micro Cycle — Per-Lesson Pipeline</h2>
+
+  <p>Three stages. The first is sequential and must finish before anything else runs. The second is a parallel fan-out. The third is the final join.</p>
+
+  <div class="diagram">   PDF in object storage
+       │
+       ▼
+   <span class="h">[ STAGE 01 ]</span>  <span class="a">Extraction Session</span>           <span class="f">1 call</span>   · sequential
+       │    output: <code>lesson.md</code> (canonical, frozen)
+       ▼
+   <span class="h">[ STAGE 02 ]</span>  <span class="a">Phase Sessions</span>                <span class="f">N calls</span>  · parallel
+       │    each reads <code>lesson.md</code> + its framework spec
+       │    each writes its output row to <code>phase_outputs</code>
+       ▼
+   <span class="h">[ STAGE 03 ]</span>  <span class="a">Assembly Session</span>              <span class="f">1 call</span>   · sequential
+            output: <code>homework.md</code> + queue row marked <code>done</code></div>
+
+  <p>The user's framework defines how many phase sessions run in Stage 02 and which of them (if any) depend on each other. This document treats Stage 02 as a parameter: the operator supplies a list of phase definitions and the runner executes them with the concurrency model the framework allows.</p>
+
+  <div class="plug">
+    <div class="plug-title">◆ Framework Integration Point · Phase Graph</div>
+    <p>The framework author supplies a manifest that declares which phases exist and their dependency edges. The runner consumes this manifest and schedules accordingly. If all phases are independent, all run in parallel. If some depend on others, the runner honors a topological order and parallelizes within each tier.</p>
+<pre><code><span class="cmt"># phase-graph.yaml (operator-supplied)</span>
+<span class="key">phases:</span>
+  - <span class="key">id:</span> phase_0a
+    <span class="key">name:</span> <span class="str">"Preview · 8 Panels"</span>
+    <span class="key">depends_on:</span> []
+    <span class="key">framework_ref:</span> <span class="str">frameworks/unified/phase_0a.md</span>
+  - <span class="key">id:</span> phase_0b
+    <span class="key">name:</span> <span class="str">"Flashcards"</span>
+    <span class="key">depends_on:</span> []
+    <span class="key">framework_ref:</span> <span class="str">frameworks/unified/phase_0b.md</span>
+  <span class="cmt"># ... one block per phase. depends_on is empty = eligible for parallel wave.</span></code></pre>
+    <p>You own this file. The system doesn't care what's in it as long as the graph is valid (no cycles, every <code>framework_ref</code> resolves).</p>
+  </div>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="extraction">
+  <span class="chapter-num">§ 05</span>
+  <h2>Stage 01 — PDF Extraction Session</h2>
+
+  <div class="stage">
+    <div class="stage-head">
+      <span class="stage-name">Extractor</span>
+      <span class="stage-tag">1 call · sequential · blocking</span>
+    </div>
+    <div class="io-grid">
+      <div>
+        <h5>Inputs</h5>
+        <ul>
+          <li>Source PDF (or pre-OCR'd text)</li>
+          <li>Task metadata: subject, grade, lang, lesson_id</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Outputs</h5>
+        <ul>
+          <li>Canonical <code>lesson.md</code> (frozen, hash-addressable)</li>
+          <li>Row in <code>lessons</code> table with path + hash</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top: 16px;">This session's job is narrow: read the raw textbook chapter and produce a clean, structured Markdown document with headings, body, vocabulary, examples, and any tables or numbered content preserved. No gamification. No interpretation. No translation. Just a faithful, structured representation of the source material.</p>
+  </div>
+
+  <div class="plug">
+    <div class="plug-title">◆ Framework Integration Point · Extraction Prompt</div>
+    <p>The operator supplies the Extractor's full prompt template at <code>frameworks/system/extraction.md</code>. The runner composes the final prompt as:</p>
+    <ul>
+      <li><strong>SYSTEM</strong> — your extraction persona, output constraints, structural requirements (headings, vocabulary sections, etc.). Static. Cached.</li>
+      <li><strong>CONTEXT</strong> — runner-injected: <code>{{subject}}, {{grade}}, {{lang}}</code>. Small, dynamic.</li>
+      <li><strong>INPUT</strong> — the PDF content (pre-OCR'd text, or the raw PDF if using Kimi vision).</li>
+      <li><strong>TASK</strong> — "produce <code>lesson.md</code> matching schema X".</li>
+    </ul>
+    <p>The runner doesn't know or care what Uzbek/Russian structural conventions you want. You encode those in the SYSTEM block.</p>
+  </div>
+
+  <div class="note">The extracted <code>lesson.md</code> is immutable for the rest of the pipeline. Every phase session sees the exact same bytes. This eliminates a class of subtle bugs where two sessions interpret the PDF differently.</div>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="phases">
+  <span class="chapter-num">§ 06</span>
+  <h2>Stage 02 — Phase Sessions (Parallel)</h2>
+
+  <div class="stage">
+    <div class="stage-head">
+      <span class="stage-name">Phase Worker</span>
+      <span class="stage-tag">N calls · parallel (honoring phase graph) · retryable</span>
+    </div>
+    <div class="io-grid">
+      <div>
+        <h5>Inputs</h5>
+        <ul>
+          <li><code>lesson.md</code> (from Stage 01)</li>
+          <li>Phase framework spec (<code>framework_ref</code>)</li>
+          <li>Subject-specific framework</li>
+          <li>Game mechanic docs (if referenced by the phase)</li>
+          <li>Task metadata: grade, lang, subject</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Outputs</h5>
+        <ul>
+          <li>Structured JSON output for this phase</li>
+          <li>Row in <code>phase_outputs</code> table</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p>Each phase worker is the same code. Only the prompt differs, and the prompt is composed at runtime from files on disk. This means adding a new phase = adding a markdown file and one line to the phase graph, nothing else.</p>
+
+  <h4>Prompt composition (per phase call)</h4>
+
+<pre><code><span class="cmt">-- Order matters for cache efficiency. Cached layers first.</span>
+
+<span class="key">[ LAYER 1 · SYSTEM ]</span>
+  frameworks/system/phase_worker_base.md
+  <span class="cmt">// invariant instructions: output JSON, follow schema, refuse to ad-lib, etc.</span>
+
+<span class="key">[ LAYER 2 · UNIFIED FRAMEWORK ]</span>
+  frameworks/unified/schema.md
+  <span class="cmt">// the Buzan-unified schema reference that applies to all phases</span>
+
+<span class="key">[ LAYER 3 · SUBJECT FRAMEWORK ]</span>
+  frameworks/subjects/{{subject}}.md
+  <span class="cmt">// subject-specific adaptation rules (history vs math vs biology)</span>
+
+<span class="key">[ LAYER 4 · PHASE SPEC ]</span>
+  {{framework_ref}}
+  <span class="cmt">// THIS phase's rules, steps, examples, output contract</span>
+
+<span class="key">[ LAYER 5 · GAME MECHANICS ]</span>  <span class="cmt">(only if referenced)</span>
+  frameworks/games/{{game_id}}.md
+
+<span class="key">[ LAYER 6 · LESSON INPUT ]</span>
+  lesson.md  <span class="cmt">// the extracted content, verbatim</span>
+
+<span class="key">[ LAYER 7 · DYNAMIC CONTEXT ]</span>
+  { grade: 7, lang: "uz", subject: "history", lesson_id: "..." }
+
+<span class="key">[ LAYER 8 · TASK ]</span>
+  "Produce the phase deliverable matching schema X. Return JSON only."</code></pre>
+
+  <p>Layers 1–5 are fully cached on the second call onward (within cache TTL). Layers 6–8 change per call. Every phase of every lesson reuses the same Layers 1–3. The Micro Cycle's per-phase cost drops sharply after the first call in a subject.</p>
+
+  <div class="plug">
+    <div class="plug-title">◆ Framework Integration Point · Where You Plug In</div>
+    <p>You are the author of everything in <code>frameworks/</code>. The runner supplies the machinery. Specifically, you define:</p>
+    <ul>
+      <li><code>frameworks/system/phase_worker_base.md</code> — worker-wide invariants (output JSON, refuse to invent, language register rules)</li>
+      <li><code>frameworks/unified/schema.md</code> — the Buzan-unified framework as a single reference doc</li>
+      <li><code>frameworks/subjects/{subject}.md</code> — one file per subject family</li>
+      <li><code>frameworks/unified/{phase_id}.md</code> — one file per phase (0-A, 0-B, Memory Sprint, Story Mode, Game Break, Real Life Challenge, AI Sub Boss, Reflection)</li>
+      <li><code>frameworks/games/{game_id}.md</code> — one per game mechanic</li>
+      <li><code>frameworks/schemas/{phase_id}.json</code> — the JSON schema the phase must return</li>
+    </ul>
+    <p>The runner validates outputs against the schemas and rejects malformed returns before they touch the DB.</p>
+  </div>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="assembly">
+  <span class="chapter-num">§ 07</span>
+  <h2>Stage 03 — Assembly Session</h2>
+
+  <div class="stage">
+    <div class="stage-head">
+      <span class="stage-name">Assembler</span>
+      <span class="stage-tag">1 call · sequential · blocking</span>
+    </div>
+    <div class="io-grid">
+      <div>
+        <h5>Inputs</h5>
+        <ul>
+          <li>All rows from <code>phase_outputs</code> for this lesson</li>
+          <li>Assembly template (<code>frameworks/system/assembly.md</code>)</li>
+          <li>Task metadata</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Outputs</h5>
+        <ul>
+          <li>Final <code>homework.md</code> written to object storage</li>
+          <li>Queue row transitioned to <code>done</code></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p>The Assembler doesn't "generate" content — it composes what already exists. It takes each phase's structured JSON and renders it into the final student-facing Markdown document, respecting order, section headers, and any cross-references the framework defines.</p>
+
+  <p>Depending on framework complexity, the Assembler is either (a) a deterministic template renderer with zero LLM calls — cheapest, fastest, most reliable — or (b) a thin LLM call for cases where final polish (transitions, wrap-up narrative) needs to feel cohesive. Default to (a); escalate to (b) only if deterministic rendering produces visibly seam-ridden output.</p>
+
+  <div class="plug">
+    <div class="plug-title">◆ Framework Integration Point · Assembly Template</div>
+    <p>You supply the order of phases in the final document and any static scaffolding (student greeting, section dividers, navigation). The runner fills in the dynamic content from <code>phase_outputs</code>.</p>
+  </div>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="session-anatomy">
+  <span class="chapter-num">§ 08</span>
+  <h2>Session Anatomy</h2>
+
+  <p>Every session in this system — Extractor, any Phase Worker, Assembler — has the same internal shape. The runner code is the same; only the prompt layers differ.</p>
+
+  <div class="diagram">   <span class="h">SESSION</span>
+   ├─ <span class="a">compose_prompt()</span>
+   │    └─ reads framework files from disk → builds layered prompt
+   ├─ <span class="a">call_model()</span>
+   │    └─ Kimi K2.5 API · structured output mode · JSON schema enforced
+   ├─ <span class="a">validate_output()</span>
+   │    └─ JSON schema check · reject + retry on fail (bounded)
+   ├─ <span class="a">persist()</span>
+   │    └─ write row to Postgres with prompt hash + model response + cost
+   └─ <span class="a">emit_log()</span>
+        └─ structured event: { task_id, phase_id, tokens, cost, latency, cache_hit }</div>
+
+  <p>No shared runtime state between sessions. No in-process handoff. The DB is the integration surface. This is what makes the pipeline resumable, observable, and debuggable — every session's full input and output is on disk, addressable by task_id + phase_id.</p>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="framework-points">
+  <span class="chapter-num">§ 09</span>
+  <h2>Framework Integration Points — Summary</h2>
+
+  <p>Every place the operator (you) plugs in framework content. The runner owns none of this; it reads these files at session start.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Path</th>
+        <th>Purpose</th>
+        <th>Consumed By</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><code>frameworks/system/extraction.md</code></td><td>Extraction session prompt</td><td>Stage 01</td></tr>
+      <tr><td><code>frameworks/system/phase_worker_base.md</code></td><td>Phase-worker invariants (always included)</td><td>Stage 02</td></tr>
+      <tr><td><code>frameworks/system/assembly.md</code></td><td>Final document composition template</td><td>Stage 03</td></tr>
+      <tr><td><code>frameworks/unified/schema.md</code></td><td>Unified framework reference</td><td>Stage 02</td></tr>
+      <tr><td><code>frameworks/unified/{phase_id}.md</code></td><td>One file per phase (0-A through Reflection)</td><td>Stage 02</td></tr>
+      <tr><td><code>frameworks/subjects/{subject}.md</code></td><td>Subject-specific adaptation rules</td><td>Stage 02</td></tr>
+      <tr><td><code>frameworks/games/{game_id}.md</code></td><td>Game mechanic documentation</td><td>Stage 02 (phases referencing games)</td></tr>
+      <tr><td><code>frameworks/schemas/{phase_id}.json</code></td><td>JSON schema each phase output must match</td><td>Stage 02 (validation)</td></tr>
+      <tr><td><code>phase-graph.yaml</code></td><td>Phase list + dependency edges</td><td>Stage 02 (scheduler)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">These paths are a suggestion, not a hard requirement. The runner accepts a config that maps logical roles to file paths — rename or restructure as you prefer.</div>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="state">
+  <span class="chapter-num">§ 10</span>
+  <h2>State &amp; Persistence</h2>
+
+  <p>Postgres. You already run an instance for Paperclip. Add the following tables.</p>
+
+<pre><code><span class="cmt">-- The canonical lesson after extraction. Immutable once written.</span>
+<span class="key">CREATE TABLE</span> lessons (
+  lesson_id      text <span class="key">PRIMARY KEY</span>,
+  subject        text,
+  grade          int,
+  lang           text,
+  pdf_uri        text,
+  md_uri         text,            <span class="cmt">-- path to lesson.md in storage</span>
+  md_hash        text,            <span class="cmt">-- content hash; identity of the frozen doc</span>
+  extracted_at   timestamptz
+);
+
+<span class="cmt">-- One row per phase per lesson. Many-to-one with lessons.</span>
+<span class="key">CREATE TABLE</span> phase_outputs (
+  task_id        uuid,
+  lesson_id      text <span class="key">REFERENCES</span> lessons(lesson_id),
+  phase_id       text,            <span class="cmt">-- 'phase_0a', 'memory_sprint', etc.</span>
+  output_json    jsonb,           <span class="cmt">-- the structured phase deliverable</span>
+  schema_valid   boolean,
+  prompt_hash    text,            <span class="cmt">-- for cache analysis + reproducibility</span>
+  tokens_in      int,
+  tokens_out     int,
+  cost_usd       numeric(10,6),
+  latency_ms     int,
+  cache_hit_pct  numeric(5,2),
+  created_at     timestamptz,
+  <span class="key">PRIMARY KEY</span> (lesson_id, phase_id)
+);
+
+<span class="cmt">-- The batch queue. Status machine drives the runner.</span>
+<span class="key">CREATE TABLE</span> task_queue (
+  task_id        uuid <span class="key">PRIMARY KEY</span>,
+  subject        text, grade int, lang text, lesson_id text,
+  pdf_uri        text,
+  status         text,
+  attempts       int <span class="key">DEFAULT</span> <span class="num">0</span>,
+  last_error     text,
+  created_at     timestamptz, updated_at timestamptz
+);
+
+<span class="cmt">-- Append-only audit log. Every session emits one row.</span>
+<span class="key">CREATE TABLE</span> session_log (
+  id             bigserial <span class="key">PRIMARY KEY</span>,
+  task_id        uuid,
+  stage          text,            <span class="cmt">-- 'extract' | 'phase' | 'assemble'</span>
+  phase_id       text,            <span class="cmt">-- null for extract/assemble</span>
+  event          text,            <span class="cmt">-- 'start' | 'success' | 'retry' | 'fail'</span>
+  payload        jsonb,
+  ts             timestamptz <span class="key">DEFAULT</span> now()
+);</code></pre>
+
+  <p>No coordination tables. No locks. The queue's <code>status</code> field is the source of truth for what stage a task is in; concurrent workers claim rows with <code>SELECT ... FOR UPDATE SKIP LOCKED</code>.</p>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="api">
+  <span class="chapter-num">§ 11</span>
+  <h2>Kimi API Configuration</h2>
+
+  <h4>Model</h4>
+  <p>Kimi K2.5 via <code>api.moonshot.ai/v1</code>. OpenAI-compatible SDK — any OpenAI client library works with the base URL swapped. At writing, pricing is $0.60/M input, $2.50/M output, with automatic context caching at $0.15/M for cached prefixes (75% discount). No caching configuration required; the platform handles it as long as prompt prefixes are stable.</p>
+
+  <h4>Request shape</h4>
+<pre><code>{
+  <span class="key">"model"</span>: <span class="str">"kimi-k2-0711-preview"</span>,
+  <span class="key">"messages"</span>: [
+    { <span class="key">"role"</span>: <span class="str">"system"</span>, <span class="key">"content"</span>: &lt;Layers 1–5, concatenated&gt; },
+    { <span class="key">"role"</span>: <span class="str">"user"</span>,   <span class="key">"content"</span>: &lt;Layers 6–8, concatenated&gt; }
+  ],
+  <span class="key">"response_format"</span>: { <span class="key">"type"</span>: <span class="str">"json_object"</span> },
+  <span class="key">"temperature"</span>: <span class="num">0.3</span>,
+  <span class="key">"max_tokens"</span>: <span class="num">8000</span>
+}</code></pre>
+
+  <h4>Cache discipline</h4>
+  <ul>
+    <li>System message is the <strong>cacheable prefix</strong>. Never inject dynamic values into it.</li>
+    <li>User message holds everything volatile: lesson content, grade, lang, task instruction.</li>
+    <li>Within a run, prompt-prefix hash collisions across tasks should exceed 80% — monitor this (see Observability).</li>
+    <li>Iteration order in the Macro Loop (subject → grade → lang → lesson) is chosen specifically to maximize cache stickiness.</li>
+  </ul>
+
+  <h4>Retry policy</h4>
+  <ul>
+    <li>Transient errors (429, 5xx, timeouts) → exponential backoff, max 5 attempts.</li>
+    <li>Schema validation failures → re-prompt once with the specific error, then fail the task.</li>
+    <li>All retries logged to <code>session_log</code>.</li>
+  </ul>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="stack">
+  <span class="chapter-num">§ 12</span>
+  <h2>Tooling Stack</h2>
+
+  <table>
+    <thead>
+      <tr><th>Layer</th><th>Choice</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Language / runtime</td><td>Python 3.11+</td><td>Ecosystem for LLM, PDF, and DB work is unmatched; async-first for the parallel phase wave.</td></tr>
+      <tr><td>Model API</td><td>Kimi K2.5 (Moonshot)</td><td>Uzbek quality + pricing + automatic caching.</td></tr>
+      <tr><td>HTTP client</td><td>openai python SDK</td><td>Works against Moonshot's OpenAI-compatible endpoint; zero custom HTTP code.</td></tr>
+      <tr><td>Concurrency</td><td><code>asyncio</code> + <code>asyncio.Semaphore</code></td><td>Native to Python, bounded parallelism without task frameworks.</td></tr>
+      <tr><td>DB</td><td>Postgres 15+ (existing)</td><td>Row locks (<code>SKIP LOCKED</code>) give you a queue for free.</td></tr>
+      <tr><td>Object storage</td><td>Local filesystem → S3/R2 later</td><td>Storing <code>lesson.md</code> and <code>homework.md</code>; cheap.</td></tr>
+      <tr><td>Schema validation</td><td><code>pydantic</code> v2</td><td>Per-phase output models; rejects malformed JSON before DB writes.</td></tr>
+      <tr><td>PDF → text</td><td><code>pdfplumber</code> or <code>pymupdf</code></td><td>Fallback to Kimi vision for scanned/complex PDFs.</td></tr>
+      <tr><td>CLI</td><td><code>typer</code> or <code>click</code></td><td>The "one click" surface.</td></tr>
+      <tr><td>Observability</td><td>Structured logs → Postgres + a CLI dashboard</td><td>No need for LangSmith etc.; your data is in your DB.</td></tr>
+    </tbody>
+  </table>
+
+  <p>Total dependencies: fewer than 10. No agent framework, no orchestration engine, no workflow GUI, no Docker mandate. The system is ~600 lines of Python that you can fully read in an afternoon.</p>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="observability">
+  <span class="chapter-num">§ 13</span>
+  <h2>Observability &amp; Failure Modes</h2>
+
+  <h4>What to log per session</h4>
+  <ul>
+    <li><code>task_id</code>, <code>stage</code>, <code>phase_id</code></li>
+    <li>Tokens in / out, latency, USD cost</li>
+    <li><strong>Cache hit percentage</strong> — reported by Moonshot in the usage block; track it, target &gt; 70%.</li>
+    <li>Prompt prefix hash (to correlate cache behavior with prompt structure)</li>
+    <li>Schema validation result + any validator errors</li>
+    <li>Raw response JSON (for post-hoc audit)</li>
+  </ul>
+
+  <h4>Failure modes to plan for</h4>
+  <ol>
+    <li><strong>Malformed JSON</strong> — retry once with error shown to model; fail task on second miss.</li>
+    <li><strong>Hallucinated content</strong> (phase invents facts not in <code>lesson.md</code>) — caught by async validator (§14), not pipeline.</li>
+    <li><strong>Language register drift</strong> (Uzbek slides toward Russian) — caught by async validator.</li>
+    <li><strong>Rate limit</strong> — bounded semaphore throttles outgoing calls; 429 triggers exponential backoff.</li>
+    <li><strong>Runner crash mid-batch</strong> — <code>task_queue.status</code> row remains in its pre-crash state; next run reclaims it.</li>
+    <li><strong>PDF unreadable</strong> (corrupted, scanned at low DPI) — task marked <code>failed</code> with reason; sidelined from batch, doesn't block others.</li>
+  </ol>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="validation">
+  <span class="chapter-num">§ 14</span>
+  <h2>Post-Hoc Validation (Async, Non-Blocking)</h2>
+
+  <p>A separate process. Runs after generation, sweeps completed rows, never blocks the pipeline. Optional but strongly recommended — it's the feedback loop that tells you whether the generator is actually producing good Uzbek and framework-compliant homework.</p>
+
+  <div class="diagram">   homework.md · completed
+       │
+       ▼
+   <span class="h">VALIDATOR SWEEP</span>  (cron / queue consumer)
+   ├─ language register check   (is this Uzbek? academic-appropriate?)
+   ├─ framework compliance      (does each phase match schema + rubric?)
+   ├─ factual grounding         (do claims trace back to lesson.md?)
+   └─ age appropriateness       (grade-calibrated vocabulary + complexity)
+       │
+       ▼
+   <span class="a">validation_results</span>  →  dashboard · review queue · retraining corpus</div>
+
+  <p>Implementation: a cheaper model (Haiku 4.5 or Gemini Flash — cross-model evaluation reduces in-family blind spots) runs a rubric check per phase output. Flagged items go to a review queue for you or a teacher to examine. Passing items contribute to a clean corpus you can use later for evaluation benchmarks or fine-tuning.</p>
+
+  <div class="note">The validator is a <em>linter</em>, not a gatekeeper. Pipeline throughput is never blocked. You trade instant-quality-enforcement for simplicity, then pay back the debt with a visible review surface.</div>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="sequence">
+  <span class="chapter-num">§ 15</span>
+  <h2>Implementation Sequence</h2>
+
+  <p>Build order, from highest-leverage to lowest. Don't build what you don't need yet.</p>
+
+  <ol>
+    <li><strong>Schema + storage</strong> — create the four Postgres tables. Stub out <code>frameworks/</code> with empty placeholder files.</li>
+    <li><strong>Session runner</strong> — single Python function: compose prompt, call Kimi, validate JSON, write row. Used by all three stages.</li>
+    <li><strong>Extractor</strong> — wire the session runner to the extraction prompt. Test on one PDF.</li>
+    <li><strong>One phase worker</strong> — implement against one real phase (pick the simplest, e.g., Flashcards). Prove the layered prompt + cache behavior works.</li>
+    <li><strong>Phase graph + scheduler</strong> — parse <code>phase-graph.yaml</code>, topologically sort, run eligible phases in parallel via asyncio.</li>
+    <li><strong>Assembler</strong> — start with deterministic template rendering. Only add an LLM pass if the output feels seam-ridden.</li>
+    <li><strong>Batch runner</strong> — task queue enumerator + worker pool. This is the "one click" surface.</li>
+    <li><strong>Observability</strong> — structured logs, cost rollup, cache-hit percentage dashboard (even a terminal-only view is fine).</li>
+    <li><strong>Post-hoc validator</strong> — last. Build it against a batch of real outputs; you'll know what rubric to encode only after you've seen the failure modes.</li>
+  </ol>
+
+  <p>Stages 1–7 should be achievable in roughly 5–8 focused days with Claude Code. Stages 8–9 are incremental and can be added without touching the core pipeline.</p>
+</section>
+
+<!-- =========================================================== -->
+
+<section class="chapter" id="research">
+  <span class="chapter-num">§ 16</span>
+  <h2>Research &amp; Patterns Referenced</h2>
+
+  <p>This architecture is deliberately conservative — it uses established patterns rather than novel ones. For reference:</p>
+
+  <ul>
+    <li><strong>Anthropic · <em>Building Effective Agents</em></strong> (<a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener">anthropic.com/research/building-effective-agents</a>) — the distinction between workflows (this system) and agents (not this system), and the Prompt Chaining / Routing / Orchestrator-Workers / Evaluator-Optimizer patterns.</li>
+    <li><strong>Cloudflare Agents Reference</strong> (<a href="https://github.com/cloudflare/agents" target="_blank" rel="noopener">github.com/cloudflare/agents</a>) — open-source implementations of all five Anthropic patterns using Durable Objects. Useful as a concrete reference.</li>
+    <li><strong>Moonshot Kimi K2 · Context Caching</strong> — automatic prefix caching at $0.15/M cached tokens (75% discount). Cache discipline in §11 is built around this.</li>
+    <li><strong>DSPy</strong> (<a href="https://dspy.ai" target="_blank" rel="noopener">dspy.ai</a>) — Stanford framework for compiling LM pipelines with optimizable prompts. Consider it as a later optimization if Uzbek quality plateaus and you have an eval metric.</li>
+    <li><strong>Postgres <code>FOR UPDATE SKIP LOCKED</code></strong> — the pattern that makes the task queue safe under concurrent workers without a separate queue service.</li>
+  </ul>
+
+  <p>What this system deliberately does <em>not</em> use: LangChain, LangGraph, CrewAI, n8n, any agent orchestrator, any RAG index. The pipeline is a sequence of typed function calls against a database. That's the feature, not a limitation.</p>
+</section>
+
+<hr class="section-break">
+
+<section>
+  <p style="font-family: 'Fraunces', serif; font-style: italic; font-size: 22px; max-width: 68ch; margin: 0 auto; text-align: center; color: var(--ink-dim); line-height: 1.4;">
+    "The path to success is measuring performance and iterating on implementations. Add complexity only when it demonstrably improves outcomes."
+  </p>
+  <p style="text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-faint); margin-top: 20px; letter-spacing: 0.2em;">— BUILDING EFFECTIVE AGENTS · ANTHROPIC</p>
+</section>
+
+<footer class="doc-footer">
+  <div>NETS · AUTONOMOUS HOMEWORK PIPELINE</div>
+  <div>ARCHITECTURE SPEC · v0.1 DRAFT</div>
+  <div>CLAUDE SATTER RECRUITING / NETS</div>
+</footer>
+
+</div>
+
+</body>
+</html>

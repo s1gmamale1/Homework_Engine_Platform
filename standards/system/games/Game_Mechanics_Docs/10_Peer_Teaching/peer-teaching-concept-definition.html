@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Peer Teaching</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Peer Teaching (O'rgatuvchi bo'ling!)</h1>
+            <p style="color: var(--text-muted)">Default Mechanic #12 — Protege Effect Teaching Simulation</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Mode: Solo + AI Evaluation</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Evaluate</span>
+                <span class="tag">PISA: 4-5</span>
+                <span class="tag">AI Tier: Tier 1</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>Peer Teaching places the student in the role of <strong>teacher explaining a concept to a hypothetical classmate</strong>. The AI evaluates the explanation across three dimensions: completeness, clarity, and accuracy.</p>
+                <p><strong>Three scenario types:</strong></p>
+                <ul>
+                    <li><strong>Scenario A — "Tushuntiring" (Explain from scratch):</strong> A fictional student (e.g., "Hamza, 4-sinf") asks a genuine question about a concept they don't understand. The teaching student must explain the concept from the ground up, as if to a beginner. Example: "1/2 nima degani? Nima uchun tepada va pastda raqam bor?"</li>
+                    <li><strong>Scenario B — "Yordam bering" (Help someone stuck):</strong> A fictional student is stuck on a problem or has started solving it but is confused. The teaching student must diagnose the confusion and provide targeted guidance. Example: "2/3 + 1/4 = 3/7 deb hisobladim. Nima uchun bu xato?"</li>
+                    <li><strong>Scenario C — "Xatoni toping" (Correct a wrong answer):</strong> A fictional student has given a wrong answer and the teaching student must identify what went wrong and explain why it's incorrect. Example: "1/2 + 1/3 = 2/5 dedim. O'qituvchi xato dedi. Nima noto'g'ri?"</li>
+                </ul>
+                <p><strong>Evaluation criteria (AI-scored, three dimensions):</strong></p>
+                <ul>
+                    <li><strong>Completeness (To'liqlik) — percentage score:</strong> Does the explanation cover all essential elements of the concept? Are key terms defined? Are steps not skipped?</li>
+                    <li><strong>Clarity (Aniqlik) — percentage score:</strong> Is the explanation well-structured? Does it use appropriate language for the target student's grade? Are examples or analogies provided?</li>
+                    <li><strong>Accuracy (To'g'rilik) — percentage score (weighted highest):</strong> Is the content factually correct? Are there misconceptions or errors in the explanation? This dimension carries the highest weight because accuracy is the most critical teaching quality.</li>
+                </ul>
+                <p><strong>Grade range:</strong> Grades 5-11 only. The mechanic requires sufficient metacognitive maturity to explain concepts to others. Below Grade 5, students are still developing their own understanding and cannot reliably teach.</p>
+                <p><strong>Subject coverage:</strong> All subject families — Matematika, Biologiya, Tarix, Ingliz tili, Fizika, Kimyo, and any future additions. The scenario library is topic-specific and aligned to the current lesson content.</p>
+                <p><strong>Minimum response:</strong> 20 characters. The system rejects responses below this threshold with a prompt to write more.</p>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Peer Teaching is available to all tiers during Phase 3 sessions. Premium adds scenario variety, evaluation depth, and teaching tools.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Available in Phase 3 (Game Break rotation)</td>
+                        <td>Same + on-demand access from Library for extra practice</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scenario Variety</strong></td>
+                        <td>3 scenarios per subject (9 total across 3 subjects shown)</td>
+                        <td>6+ scenarios per subject (18+ total), refreshed weekly</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Evaluation Engine</strong></td>
+                        <td>Keyword-based matching against predefined answer criteria</td>
+                        <td>LLM-powered holistic evaluation — assesses reasoning quality, not just keyword presence</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Feedback Detail</strong></td>
+                        <td>3-level feedback (low/medium/high) with generic encouragement messages</td>
+                        <td>Personalized feedback — identifies specific strengths and gaps in the explanation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scenario Types</strong></td>
+                        <td>All three types (A, B, C) available</td>
+                        <td>All three + Scenario D: "Debate Defense" — defend a position against a fictional opponent's counterarguments</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Retry System</strong></td>
+                        <td>One attempt per scenario per session</td>
+                        <td>Unlimited retries within a session — each retry generates a fresh evaluation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scoring</strong></td>
+                        <td>Standard (three dimensions, each 0-100%)</td>
+                        <td>Standard + "Master Teacher" bonus when all three dimensions at 100%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> The core teaching experience is identical for both tiers — the student reads a scenario, writes an explanation, and receives three-dimensional scoring. Premium adds evaluation sophistication, more scenarios, and a fourth scenario type. The Protege Effect benefit is available to all.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Teaching as Radiant Organization</h2>
+            <p>Peer Teaching implements <strong>Tony Buzan's Hierarchical Order and Association</strong> principles by requiring students to organize knowledge for transmission to another mind.</p>
+            <ul>
+                <li><strong>Color Hooks (Three-Dimension Encoding):</strong> Each evaluation dimension has a signature color displayed in the results bar: Completeness = indigo (structure), Clarity = gold (illumination), Accuracy = green (correctness). When the results appear, each bar animates in its color, creating a visual triad that the student can quickly scan. Per Buzan, color-coded categories help the brain organize feedback into distinct cognitive buckets — the student immediately knows whether their weakness was in coverage, communication, or correctness.</li>
+                <li><strong>Radiant Branches (Explanation Structure):</strong> A good explanation radiates from a central concept outward to examples, applications, and connections. The AI evaluation implicitly assesses whether the student's explanation follows this radiant structure — starting from the core concept, branching to supporting details, then connecting to broader knowledge. Students who write linear, single-point explanations score lower on Clarity than those who build branching explanatory structures.</li>
+                <li><strong>Imagery Through Character Personas:</strong> Each scenario features a fictional student with a name, grade, and avatar emoji (e.g., "Hamza (4-sinf)" with a boy emoji). These personas create an emotional anchor — the teaching student is not writing to an abstract grader but to "Hamza," a real-seeming peer who needs help. Buzan emphasizes that personal, emotional connections strengthen memory encoding. The avatar and persona make the teaching act feel socially meaningful, not academically abstract.</li>
+                <li><strong>The Protege Effect as Self-Teaching:</strong> The core mechanism — explaining a concept to someone else — forces the student to reorganize their own knowledge into a coherent structure. Buzan's Radiant Thinking describes exactly this process: knowledge becomes stronger when it is re-expressed from a new angle (the teacher's perspective). The student who can explain fractions to "Hamza" has a deeper understanding than the student who can only solve fraction problems.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Peer Teaching presents a scenario (a fictional student's question or mistake) and the teaching student writes a free-text explanation. The AI evaluates across three dimensions using keyword matching and structural analysis.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Scenario Type</th>
+                        <th>Scenario Prompt Style</th>
+                        <th>Acceptance Criteria (AI Evaluation)</th>
+                        <th>Cognitive Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L1-L3</strong></td>
+                        <td colspan="4" style="text-align:center;">Peer Teaching does not operate below L4 — students need sufficient conceptual mastery before they can teach. Minimum entry is L4.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Scenario A (Explain) or B (Help stuck)</td>
+                        <td>A fictional student asks a direct question about a process or principle. The teaching student must explain the full mechanism.</td>
+                        <td>Completeness: 2+ key concepts mentioned. Clarity: structured explanation (not just keywords). Accuracy: no factual errors in the explanation.</td>
+                        <td>Process analysis — explain how and why a system works</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5</strong></td>
+                        <td>Scenario B (Help stuck) or C (Correct wrong)</td>
+                        <td>A fictional student has made a reasoning error or partial attempt. The teaching student must diagnose the error and explain the correct approach.</td>
+                        <td>Completeness: identifies the error AND provides the correction. Clarity: uses the fictional student's framing (meets them where they are). Accuracy: correction is fully correct.</td>
+                        <td>Evaluation — diagnose reasoning errors and construct corrections</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L6</strong></td>
+                        <td>Scenario C (Correct wrong) or D (Debate — Premium)</td>
+                        <td>A fictional student has proposed a sophisticated but flawed argument. Or a fictional opponent challenges the student's position.</td>
+                        <td>Completeness: addresses all dimensions of the error/challenge. Clarity: builds a structured counterargument. Accuracy: demonstrates mastery of competing theories.</td>
+                        <td>Synthesis — construct novel arguments from first principles, evaluate competing frameworks</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Teacher Flag System:</strong> When the AI scores Accuracy at 0/200 (the explanation contains significant factual errors), a "Teacher Warning" flag appears: "O'qituvchi tekshiradi" (Teacher will review). This signals that the student's explanation contains misconceptions that require human teacher intervention. The flag is visible to the teacher dashboard and triggers a notification. This is the only mechanic where the AI can escalate to a human reviewer.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type B (Rubric-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Accuracy (%)</td><td>Three-dimension composite: Completeness % + Clarity % + Accuracy % (Accuracy weighted 2x)</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>Dimension breakdown</td><td>Individual scores for Completeness (0-100%), Clarity (0-100%), Accuracy (0-100%)</td><td>Identifies which teaching skill needs development</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total Peer Teaching sessions on this topic</td><td>Feeds curve-fitting (y = K × attempts^n) for velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Peer Teaching — [Topic]</strong><br>
+                    ████████░░ 62% (Apprentice ↗)<br>
+                    Completeness: 70% | Clarity: 55% | Accuracy: 65%<br>
+                    Velocity: n=0.42 (improving)<br>
+                    ~3 sessions to Proficient
+                </div>
+
+                <h3>C. Score Levels and Feedback</h3>
+                <table>
+                    <thead>
+                        <tr><th>Accuracy Score</th><th>Feedback Message</th><th>Teacher Flag</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>0%</strong></td><td>"Urinish uchun rahmat! Ko'proq tafsilot qo'shishga harakat qiling."</td><td>⚠️ "O'qituvchi tekshiradi" — explanation contains significant errors</td></tr>
+                        <tr><td><strong>50%</strong></td><td>"Ajoyib! Siz asosiy tushunchalarni yaxshi tushuntiryapsiz."</td><td>None — partial accuracy, encouragement to refine</td></tr>
+                        <tr><td><strong>100%</strong></td><td>"Mukammal! Siz haqiqiy o'qituvchisiz!"</td><td>None — full mastery demonstrated</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>D. "Hali Emas" (Not Yet) Framing</h3>
+                <p>Every submitted explanation receives three-dimensional scoring regardless of quality. There is no true failure — the Protege Effect itself is the reward. Even an explanation scored at 0% Accuracy triggers the teacher flag for human review, ensuring no misconception goes unaddressed:</p>
+                <ul>
+                    <li><strong>Teacher Flag System:</strong> When the AI scores Accuracy at 0%, a "Teacher Warning" flag appears: "O'qituvchi tekshiradi" (Teacher will review). This signals that the student's explanation contains misconceptions that require human teacher intervention.</li>
+                    <li>Students who score below 60% overall are encouraged to retry — each retry is a fresh evaluation, not a penalty. The act of re-explforcing knowledge through re-teaching strengthens understanding regardless of score.</li>
+                    <li><strong>Research basis:</strong> The Protege Effect (Chase et al., 2009) demonstrates that students who teach material to others show +25% better retention than students who study for themselves.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Peer Teaching (O'rgatuvchi bo'ling!) v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>

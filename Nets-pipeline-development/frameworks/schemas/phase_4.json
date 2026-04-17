@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase 4 Real-Life Challenge",
+  "type": "object",
+  "required": ["phase_id", "lesson_id", "lang", "scenario", "questions", "full_answer_key"],
+  "properties": {
+    "phase_id": { "const": "phase_4" },
+    "lesson_id": { "type": "string" },
+    "lang": { "type": "string", "enum": ["uz", "ru"] },
+    "scenario": {
+      "type": "object",
+      "required": ["title", "emoji", "body_text"],
+      "properties": {
+        "title": { "type": "string" },
+        "emoji": { "type": "string" },
+        "body_text": {
+          "type": "string",
+          "description": "First-person professional scenario. 'Siz {role}siz...'. Modern context. No bazaar/village/shopkeeper clichés."
+        },
+        "wise_status": {
+          "type": "object",
+          "description": "Present when this task is part of the ~30% Wise Status injection.",
+          "properties": {
+            "role": { "type": "string" },
+            "arena": { "type": "string", "enum": ["national", "global"] },
+            "closing_line": { "type": "string" }
+          }
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["number", "text", "tag"],
+        "properties": {
+          "number": { "type": "integer" },
+          "text": { "type": "string" },
+          "tag": {
+            "type": "object",
+            "required": ["bloom", "pisa"],
+            "properties": {
+              "bloom": { "type": "string" },
+              "pisa": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "full_answer_key": { "type": "string" }
+  }
+}

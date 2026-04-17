@@ -1,0 +1,2 @@
+[console_scripts]
+nets-run = nets_pipeline.cli:app

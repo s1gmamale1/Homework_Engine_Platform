@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Reflection Journal</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reflection Journal (Aks Etdirish Jurnali)</h1>
+            <p style="color: var(--text-muted)">Default Mechanic #13 — Metacognitive Self-Review</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Mode: Solo</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Create</span>
+                <span class="tag">PISA: 3-4</span>
+                <span class="tag">AI Tier: Tier 1</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>Reflection Journal is a <strong>metacognitive self-review</strong> activity that appears as the <strong>final element of Phase 7</strong> — the session closer. The AI generates a personalized reflection prompt based on the student's performance pattern during the session, and the student writes or records their answer.</p>
+                <p><strong>Session context display:</strong></p>
+                <ul>
+                    <li>Before the reflection prompt, the system displays a <strong>session summary card</strong> showing: the subject studied, the student's performance rating (star system), total XP earned, specific topics mastered (green checkmarks), and topics that need work (yellow warnings).</li>
+                    <li>Example: "Matematika — Kasrlar | 2/3 stars | 850 XP | Kasrlarni qo'shish | Aralash kasrlar (needs work)"</li>
+                </ul>
+                <p><strong>AI-generated prompt:</strong></p>
+                <ul>
+                    <li>The prompt is dynamically generated based on the session's performance data. Examples:</li>
+                    <li><em>"Mashqlarda yaxshi natija ko'rsatdingiz, lekin Bossda qiynaldingiz. Boss savollari nima bilan farq qildi? Keyingi safar nimani o'zgartirasiz?"</em></li>
+                    <li><em>"Bugun hamma narsa oson edi. Eng qiyin narsa nima edi? Agar siz o'qituvchi bo'lsangiz, qanday savol berardingiz?"</em></li>
+                    <li><em>"Aralash kasrlar sizni qiynadi. Nima uchun qiyin bo'ldi? Qaysi qismi eng noaniq?"</em></li>
+                    <li>The prompt always references specific performance data — it is never generic.</li>
+                </ul>
+                <p><strong>Unique properties — the only mechanic with these rules:</strong></p>
+                <ul>
+                    <li><strong>No timer.</strong> The student can spend as long as they want. Reflection is not speed-dependent.</li>
+                    <li><strong>No grading.</strong> There is no right or wrong answer. The AI does not evaluate the quality of the reflection.</li>
+                    <li><strong>No minimum quality.</strong> Any text above the 10-character minimum is accepted. There is no "correct" reflection.</li>
+                    <li><strong>Skippable.</strong> This is the <strong>only non-mandatory phase element</strong> in the entire NETS system. The student can click "Keyingi safar" (Next time) and proceed without writing anything. No XP penalty, no session block.</li>
+                    <li><strong>Privacy: content visible to student only.</strong> Individual journal entries are never shown to teachers, parents, or other students. They are the student's private space.</li>
+                </ul>
+                <p><strong>Minimum response:</strong> 10 characters. This is an extremely low bar — it exists only to prevent accidental submissions, not to enforce quality. The "Tugatdim" (Done) button remains disabled until 10 characters are typed.</p>
+                <p><strong>Grade range:</strong> All grades where Phase 7 appears. No additional grade gating beyond the session structure itself.</p>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Reflection Journal is available to all tiers as a core Phase 7 element. Premium adds prompt sophistication, historical tracking, and export features.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Phase 7 (session closer) — always available</td>
+                        <td>Same + optional mid-session reflection checkpoints for long sessions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prompt Generation</strong></td>
+                        <td>Template-based prompts selected from a pool based on performance pattern (good/struggled/perfect)</td>
+                        <td>LLM-generated personalized prompts referencing specific answers, mistakes, and breakthrough moments</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Journal History</strong></td>
+                        <td>Student can view their own past entries (text only, chronological list)</td>
+                        <td>Visual journal timeline with mood indicators, topic heat maps, and search functionality</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Export</strong></td>
+                        <td>Not available</td>
+                        <td>Student can export their journal as a PDF portfolio for self-review or (voluntarily) sharing with a teacher</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Voice Input</strong></td>
+                        <td>Text only</td>
+                        <td>Text or voice recording — students who prefer speaking to writing can record their reflection</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Theme Detection</strong></td>
+                        <td>Not available</td>
+                        <td>AI identifies recurring themes across journal entries (e.g., "Student frequently mentions difficulty with fractions") and surfaces them in the teacher dashboard as aggregate themes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teaser Message</strong></td>
+                        <td>Generic next-session preview ("Keyingi dars: yangi mavzu!")</td>
+                        <td>Personalized teaser based on session performance ("Keyingi dars: kasrlarni ko'paytirish — siz qo'shishni yaxshi bajardingiz, endi ko'paytirishni sinab ko'ring!")</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> The core reflection experience is identical for both tiers — the student sees their session summary, receives a performance-based prompt, and writes their reflection. Premium adds prompt sophistication, voice input, and historical analytics. The metacognitive benefit is available to all.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Self-Generated Mental Maps</h2>
+            <p>Reflection Journal implements <strong>Tony Buzan's Self-Reflection and Associative Integration</strong> principles by requiring students to consciously examine their own learning process.</p>
+            <ul>
+                <li><strong>Color Hooks (Performance Encoding):</strong> The session summary card uses the same color system as the rest of NETS — green checkmarks for mastered topics, yellow warnings for areas needing work. When the reflection prompt appears, it is displayed with a left-border accent in indigo (the color of introspection). Per Buzan, consistent color associations help the brain quickly categorize information — green means "done well," yellow means "needs attention," indigo means "think about this."</li>
+                <li><strong>Radiant Branches (Connecting Session to Self):</strong> The reflection prompt asks the student to connect the session's external events (scores, mistakes, successes) to their internal experience (confusion, confidence, strategy). This creates a radiant structure: the session is the central node, and the student's reflections branch outward to emotions, strategies, and future plans. Buzan emphasizes that self-generated connections are stronger than externally imposed ones — the student who writes "I struggled with mixed fractions because I forgot the common denominator step" has created a personal knowledge link that no teacher-provided summary could match.</li>
+                <li><strong>Imagery Through Personal Narrative:</strong> The journal entry becomes a personal narrative artifact. Over time, the student builds a collection of self-reflections that tell the story of their learning journey. Buzan emphasizes that personal meaning is the strongest memory anchor — a student who writes about their frustration with Boss questions and their satisfaction with finally understanding will remember that session far better than a student who simply sees a score.</li>
+                <li><strong>Metacognition as Memory Tool:</strong> The act of reflecting on "what was hardest and why" forces the student to retrieve and re-examine their own cognitive experience during the session. This retrieval is itself a memory-strengthening event. Buzan's principle of review and self-testing applies here: the student who reflects on their learning is implicitly reviewing the material while simultaneously building metacognitive awareness.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Reflection Journal presents an AI-generated prompt based on session performance, and the student writes a free-text response. There is no evaluation layer — any response meeting the 10-character minimum is accepted. The prompt complexity scales with the student's demonstrated PISA level.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Prompt Style</th>
+                        <th>Prompt Examples</th>
+                        <th>Cognitive Target</th>
+                        <th>Response Expectation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L1-L2</strong></td>
+                        <td>Simple self-assessment</td>
+                        <td>"Bugun nima o'rgandingiz?" (What did you learn today?)<br>"Eng qiziqarli narsa nima edi?" (What was the most interesting thing?)</td>
+                        <td>Basic self-awareness — identify what was learned</td>
+                        <td>Simple statement of fact or preference. Any coherent sentence is sufficient.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L3</strong></td>
+                        <td>Process reflection</td>
+                        <td>"Qaysi mashq eng oson edi? Nima uchun?" (Which exercise was easiest? Why?)<br>"Nima uchun Bossda qiynaldingiz?" (Why did you struggle on the Boss?)</td>
+                        <td>Causal self-analysis — connect outcomes to personal factors</td>
+                        <td>At least one causal statement ("because...") linking a session event to a personal factor.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Strategy evaluation</td>
+                        <td>"Boss savollari nima bilan farq qildi?" (How were the Boss questions different?)<br>"Keyingi safar nimani o'zgartirasiz?" (What will you change next time?)</td>
+                        <td>Strategic metacognition — evaluate one's own approach and plan adjustments</td>
+                        <td>Identification of a difference or strategy + a forward-looking intention.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5-L6</strong></td>
+                        <td>Meta-level reasoning</td>
+                        <td>"Agar siz o'qituvchi bo'lsangiz, qanday savol berardingiz?" (If you were the teacher, what question would you ask?)<br>"Bugungi dars sizning fikrlashingizni qanday o'zgartirdi?" (How did today's lesson change your thinking?)</td>
+                        <td>Epistemic reflection — examine how one's own understanding has shifted</td>
+                        <td>Recognition of a cognitive shift or a novel question demonstrating perspective-taking.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Privacy Architecture:</strong> Individual journal entries are stored encrypted and visible only to the student. The teacher dashboard shows <strong>aggregate themes only</strong> — for example, "This week, 60% of students mentioned difficulty with fractions in their reflections" — but never "Student X wrote that they don't understand fractions." The student's private thoughts about their own learning are protected. This is a deliberate design choice: metacognition requires honesty, and honesty requires safety.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Standard Completion</h3>
+                <p>The student writes at least 10 characters and clicks "Tugatdim" (Done):</p>
+                <ul>
+                    <li><strong>No XP reward.</strong> Reflection Journal does not award XP. This is the only mechanic in NETS with zero XP value. The rationale: metacognition is intrinsically motivated — attaching XP would externalize the motivation and reduce the authenticity of the reflection.</li>
+                    <li><strong>"Hali emas" framing does not apply.</strong> There is no failure state. The student who skips the journal experiences no penalty — the session simply proceeds to the next step.</li>
+                </ul>
+
+                <h3>B. Skip Condition (Unique)</h3>
+                <p>The student clicks "Keyingi safar" (Next time):</p>
+                <ul>
+                    <li><strong>No penalty.</strong> The session continues normally. The skip is recorded internally (for the student's own history) but does not affect XP, session completion status, or teacher reports.</li>
+                    <li><strong>Encouraging message:</strong> "Mayli! Keyingi safar yozasiz" (That's okay! You'll write next time). The message is warm and non-judgmental — the system never shames a student for skipping reflection.</li>
+                </ul>
+
+                <h3>C. Scoring Breakdown</h3>
+                <table>
+                    <thead>
+                        <tr><th>Event</th><th>XP</th><th>Notes</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Journal entry submitted (10+ characters)</td><td>0</td><td>No XP — intrinsic motivation only</td></tr>
+                        <tr><td>Journal entry skipped</td><td>0</td><td>No penalty — session continues</td></tr>
+                        <tr><td>Premium: Voice recording submitted</td><td>0</td><td>Same as text — no XP difference for input mode</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>D. Completion Tracking</h3>
+                <ul>
+                    <li><strong>Student-facing:</strong> The student can see their own journal history — a chronological list of their past entries (text only in Basic; with visual analytics in Premium). This serves as a personal learning diary.</li>
+                    <li><strong>Teacher-facing:</strong> The teacher dashboard shows <strong>aggregate theme analysis</strong> across all students' journal entries — not individual entries. Example themes: "Difficulty with fractions (mentioned by 45% of students this week)," "Boss anxiety (mentioned by 30%)," "High confidence in story-based learning (mentioned by 60%)." This gives teachers actionable intelligence without violating student privacy.</li>
+                    <li><strong>Session gating:</strong> Reflection Journal is skippable — it does NOT block session completion. A student can skip the journal and the session is still counted as complete. This is unique: every other Phase 7 element (if any) is mandatory.</li>
+                </ul>
+
+                <h3>E. Teaser Message (Post-Reflection)</h3>
+                <p>After submission or skip, the system shows a brief teaser for the next session:</p>
+                <ul>
+                    <li><strong>Basic:</strong> "Keyingi dars: yangi mavzu!" (Next lesson: a new topic!)</li>
+                    <li><strong>Premium:</strong> Personalized teaser referencing session performance — "Keyingi dars: Kasrlarni ko'paytirish — siz qo'shishni yaxshi bajardingiz, endi ko'paytirishni sinab ko'ring!" (Next lesson: Multiplying fractions — you did well with addition, now try multiplication!)</li>
+                </ul>
+
+                <p><strong>Research basis:</strong> Metacognition (Flavell, 1979) demonstrates that students who reflect on their own learning processes show +20-30% better performance than those who do not. The Reflection Journal operationalizes this by making metacognition a structured, session-closing ritual. The decision to award zero XP is intentional — research on intrinsic vs. extrinsic motivation (Deci, 1971; Kohn, 1993) shows that attaching rewards to reflective activities can undermine their authenticity. The journal must remain a genuine space for self-examination, not a points-collecting exercise.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Reflection Journal (Aks Etdirish Jurnali) v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>

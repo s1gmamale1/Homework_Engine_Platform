@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Tile Match (Concept-Definition Edition)</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tile Match: Concept-Definition Edition</h1>
+            <p style="color: var(--text-muted)">Default Mechanic #3 — Dual-Coding Concept-Definition Matching</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1-2</span>
+                <span class="tag">Modes: Solo, Head-to-Head (Premium)</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Understand</span>
+                <span class="tag">PISA: 1-2</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Concept-Definition Match Mechanics</h2>
+            <div class="card">
+                <p>All tiles are <strong>face-up</strong> from the start. The board is split into two columns:</p>
+                <ul>
+                    <li><strong>Left Column (Concepts):</strong> Terms, formulas, symbols, diagrams, dates, images — the "what."</li>
+                    <li><strong>Right Column (Definitions):</strong> Explanations, descriptions, visual counterparts, examples, applications — the "meaning."</li>
+                </ul>
+                <p>The student selects <strong>one tile from the left</strong> and <strong>one tile from the right</strong> to form a pair. The system evaluates the match:</p>
+                <ul>
+                    <li><strong>Correct match:</strong> Both tiles glow green, fade out (+100 XP, timer +3s bonus). The pair is removed from the board.</li>
+                    <li><strong>Incorrect match:</strong> Both tiles shake red, flash the correct concept on the matched definition tile for 1.5s (instant feedback, no penalty to progress), timer -5s. Tiles return to selectable state.</li>
+                </ul>
+                <p><strong>Board sizes scale by grade:</strong></p>
+                <ul>
+                    <li><strong>Grades 1-2:</strong> 4 pairs (8 tiles), 3:00 timer, large tile size, high-contrast colors.</li>
+                    <li><strong>Grades 3-4:</strong> 5 pairs (10 tiles), 2:45 timer.</li>
+                    <li><strong>Grades 5-7:</strong> 6 pairs (12 tiles), 2:30 timer.</li>
+                    <li><strong>Grades 8-11:</strong> 8 pairs (16 tiles), 2:00 timer.</li>
+                </ul>
+                <p><strong>Distractor rule:</strong> Every definition tile has exactly one correct concept match. No orphan tiles. No ambiguous pairs.</p>
+            </div>
+
+            <h3>Head-to-Head Mode (Premium)</h3>
+            <div class="card">
+                <p>Two students share the same board (synchronous, same session or Library on-demand). Each student has their own selection cursor. Rules:</p>
+                <ul>
+                    <li>Both players race to claim pairs on the same board.</li>
+                    <li>If Player A claims a pair first, that pair is removed — Player B cannot claim it.</li>
+                    <li>Correct match: +100 XP + bonus speed points based on time elapsed since board appeared.</li>
+                    <li>Incorrect match: -5s penalty on that player's timer only, no visual reveal of correct answer to the opponent (anti-griefing).</li>
+                    <li>First player to claim >50% of pairs wins. If timer expires, most pairs claimed wins.</li>
+                    <li>Tiebreaker: whoever made fewer wrong attempts wins. Still tied = sudden death on the last remaining pair.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Both tiers receive Tile Match as part of the 28-mechanic core during Phase 3 sessions. Premium unlocks additional modes and cosmetic polish.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Available in Phase 3 Game Breaks (dual-catalog selection)</td>
+                        <td>Same + on-demand access from Library</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Game Modes</strong></td>
+                        <td>Solo Concept-Definition Match only</td>
+                        <td>Solo + Head-to-Head (synchronous 2-player)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Board Size</strong></td>
+                        <td>Up to 6 pairs (standard spec)</td>
+                        <td>Up to 8 pairs (extended challenge)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Visual Polish</strong></td>
+                        <td>Standard tile animations, basic colors</td>
+                        <td>Enhanced particle effects, custom tile themes, animated transitions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Speed Mode</strong></td>
+                        <td>Not available</td>
+                        <td>Timer reduced by 25%, same pair count — pure fluency drill</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wrong Match Feedback</strong></td>
+                        <td>Shake + flash correct answer on definition tile (1.5s)</td>
+                        <td>Same + optional "Why this is wrong" micro-explanation on tap</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Streak Bonus</strong></td>
+                        <td>Standard (+50 XP per 3-correct streak)</td>
+                        <td>Amplified (+75 XP per 3-correct streak) + visual combo counter</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> During Phase 3 sessions, Basic students receive the full learning experience. Head-to-Head and Speed Mode are enrichment, not required for PISA progression. The same concept-definition pairs are presented to both tiers — only the delivery mode and cosmetic polish differ.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Radiant Association</h2>
+            <p>Tile Match implements <strong>Tony Buzan's Radiant Thinking</strong> principles to strengthen concept-definition neural pathways.</p>
+            <ul>
+                <li><strong>Color Hooks (Synesthesia):</strong> Each concept family is assigned a distinct high-contrast color. Math formulas = blue, biological processes = green, historical dates = gold, literary terms = purple. When a student correctly matches a pair, the color briefly floods the entire board (0.3s pulse), reinforcing the category association. Wrong matches flash a muted gray (no positive color reinforcement).</li>
+                <li><strong>Radiant Branches (Visual Tree):</strong> When a student completes a concept family (e.g., all 3 fraction pairs), a "branch complete" animation draws connecting lines from all matched pairs to a central hub tile. This visually encodes the concept as a node in a larger knowledge network. Capturing a full branch grants a "Fog-Lifting" preview of the next related concept family's tiles in the following board.</li>
+                <li><strong>Imagery & Exaggeration:</strong> Definition tiles for abstract concepts include exaggerated visual metaphors (e.g., "Denominator" shown as a giant floor dividing a pizza, with a character slipping on it). Per Buzan's principle: bizarre imagery is 3-7x more memorable than literal text. These visuals persist in the student's match history gallery.</li>
+                <li><strong>Memory Palace Anchor (Special Tile — rare, ~5% of boards):</strong> One pair on the board carries a 🏛️ icon. Matching it triggers a 5-second mini-palace sequence: a familiar location appears (Registan, home, school), and the matched concept is placed at one location within it. Students who match all Palace Tiles across sessions unlock the "Memory Architect" achievement in the Bilim Bazasi.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Tile Match IS the question — there is no separate quiz layer. The interaction complexity scales with the PISA level of the content being tested.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Concept Tile Type</th>
+                        <th>Definition Tile Type</th>
+                        <th>Cognitive Target</th>
+                        <th>Distractor Style</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L1</strong></td>
+                        <td>Literal term + icon (e.g., "Triangle" with △)</td>
+                        <td>Simple visual or 1-3 word label</td>
+                        <td>Direct recall recognition</td>
+                        <td>Obvious mismatches (circle icon for "Triangle" definition)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L2</strong></td>
+                        <td>Term alone or formula alone (e.g., "1/2", "Chloroplast")</td>
+                        <td>Definition phrase or corresponding visual (fraction bar, cell diagram)</td>
+                        <td>Property identification</td>
+                        <td>Plausible distractors (wrong fraction visual that looks similar)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L3</strong></td>
+                        <td>Abstract concept or process name (e.g., "Photosynthesis")</td>
+                        <td>Multi-step description or causal diagram</td>
+                        <td>Causal/definitional pairing with inference</td>
+                        <td>Same-family distractors (respiration description for photosynthesis)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Scenario or case summary (e.g., "A plant in a dark room for 7 days...")</td>
+                        <td>Outcome analysis or principle identification</td>
+                        <td>Process analysis — apply rule to context</td>
+                        <td>Competing hypotheses (each plausible, only one correct given the facts)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5</strong></td>
+                        <td>Multi-source data snippet (chart excerpt, quote, measurement)</td>
+                        <td>Interpretation or argument claim</td>
+                        <td>Evaluation — synthesize from data to conclusion</td>
+                        <td>Partially-correct claims (true statement but not supported by the given data)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L6</strong></td>
+                        <td>Open problem or paradox statement</td>
+                        <td>Competing theoretical frameworks</td>
+                        <td>Synthesis — map problem to best explanatory model</td>
+                        <td>All frameworks are valid theories; only one best fits this specific problem</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Stranger Test Compliance:</strong> A test player who has never seen the content must be able to complete L1-L2 boards using visual cues and prior knowledge alone, without text comprehension. L1 concept tiles always include an icon. L2 definition tiles always include a visual counterpart. L3+ may be text-only (reading comprehension is now part of the test).
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Time Victory (Standard)</h3>
+                <p>Match all pairs before the timer reaches zero. Victory screen shows:</p>
+                <ul>
+                    <li><strong>Perfect Clear:</strong> 0 wrong attempts. Confetti celebration + bonus 200 XP.</li>
+                    <li><strong>Flawless (1 wrong):</strong> +100 XP bonus.</li>
+                    <li><strong>Cleared (2+ wrong):</strong> Standard XP, no bonus. Encouraging "Hali emas" (not yet) framing for misses.</li>
+                </ul>
+
+                <h3>B. Time Exhaustion (Defeat)</h3>
+                <p>Timer reaches 0 with unmatched pairs remaining:</p>
+                <ul>
+                    <li><strong>Below 60% matched:</strong> "Hali emas" screen. Board is shown with all correct pairs revealed for 5 seconds. Student must replay this board in the next session (tracked as a pending mastery item).</li>
+                    <li><strong>60-99% matched:</strong> Partial credit awarded. Unmatched pairs are shown with correct answers. Student earns XP for matched pairs only. No forced replay — counted as a learning session, not a failure.</li>
+                </ul>
+
+                <h3>C. Scoring Breakdown</h3>
+                <table>
+                    <thead>
+                        <tr><th>Event</th><th>XP</th><th>Notes</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Correct match</td><td>+100</td><td>Base reward per pair</td></tr>
+                        <tr><td>Speed bonus (per match)</td><td>+10-50</td><td>Based on time remaining: 50+ sec = +50, 30-49 sec = +30, <30 sec = +10</td></tr>
+                        <tr><td>3-correct streak</td><td>+50 (Basic) / +75 (Premium)</td><td>Consecutive correct matches without error</td></tr>
+                        <tr><td>Perfect Clear</td><td>+200</td><td>Zero wrong attempts all board</td></tr>
+                        <tr><td>Flawless (1 wrong)</td><td>+100</td><td>Single mistake recovery</td></tr>
+                        <tr><td>Memory Palace match</td><td>+150</td><td>Rare 🏛️ tile pair (base + bonus)</td></tr>
+                        <tr><td>Branch complete</td><td>+100</td><td>All pairs from one concept family matched</td></tr>
+                        <tr><td>Wrong match</td><td>-5s timer</td><td>No XP penalty — the time cost is the penalty</td></tr>
+                        <tr><td>Timer exhaustion (<60%)</td><td>0</td><td>Must replay; no XP awarded on failed board</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>D. Head-to-Head Victory (Premium Mode)</h3>
+                <p>When two players compete on the same board:</p>
+                <ul>
+                    <li><strong>Domination Victory:</strong> First player to claim >50% of pairs wins instantly.</li>
+                    <li><strong>Time Victory:</strong> If timer expires, player with most pairs wins.</li>
+                    <li><strong>Tiebreaker cascade:</strong> Most pairs → fewest wrong attempts → speed on first correct match → sudden death on last unclaimed pair.</li>
+                    <li><strong>Winner bonus:</strong> +150 XP + "Conqueror" badge for the session. Loser: standard XP for pairs they claimed (no shame in losing — the losing student's effort still counts toward mastery).</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Tile Match: Concept-Definition Edition v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>

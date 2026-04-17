@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>NETS — Elite Spec: Mystery Box (Interleaved Problem-Solving Edition)</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --accent: #bc8cff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --gold: #d29922;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--primary); }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--primary); margin-top: 25px; }
+
+        .tag-row { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--surface); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .premium-box {
+            border: 2px solid var(--gold);
+            background: rgba(210, 153, 34, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .buzan-box {
+            border: 2px solid var(--accent);
+            background: rgba(188, 140, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mystery Box: Interleaved Problem-Solving Edition</h1>
+            <p style="color: var(--text-muted)">Default + Interactive Mechanic #8 — Interleaved Category Recognition & Problem Solving</p>
+            <div class="tag-row">
+                <span class="tag">Players: 1</span>
+                <span class="tag">Modes: Session Phase, Random Case-Opening Event</span>
+                <span class="tag">Buzan Integrated</span>
+                <span class="tag">Bloom's: Apply/Analyze</span>
+                <span class="tag">PISA: 3</span>
+                <span class="tag">AI Tier: Tier 1</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Core Game Mechanics</h2>
+            <div class="card">
+                <p>The Mystery Box mechanic operates in <strong>two distinct modes</strong>, both serving the same cognitive purpose: forcing the brain to recognize <em>which</em> tool to use, not just <em>how</em> to use it.</p>
+
+                <h3>Mode A: Session Phase Mystery Box (Structured)</h3>
+                <p>Presented during Phase 3 Game Break as part of the dual-catalog selection. The student sees <strong>3-5 closed boxes</strong> on screen, each visually distinct (different colors, symbols, or shapes). Each box contains <strong>one problem from a different subject category</strong> (interleaved):</p>
+                <ul>
+                    <li><strong>Step 1 — Identify:</strong> The student selects a box. The box opens with an animation, revealing a problem. The student must first <strong>identify the problem type</strong> (e.g., "This is a fraction problem," "This is a geometry problem," "This is a reading comprehension problem").</li>
+                    <li><strong>Step 2 — Solve:</strong> After identifying the category, the student solves the problem using the appropriate method.</li>
+                    <li><strong>Step 3 — Feedback:</strong> The system evaluates both the category identification and the solution. Correct identification + correct solution = full accuracy credit. Correct identification + wrong solution = partial credit. Wrong identification = reduced credit with corrective feedback.</li>
+                </ul>
+
+                <h3>Mode B: Random Case-Opening Event (Surprise)</h3>
+                <p>At random milestones (session completions, streak achievements, level-ups), a Mystery Box <strong>appears unexpectedly</strong> as a case-opening event. This contains a <strong>single challenging question</strong> drawn from a broader difficulty pool than the structured mode. Every attempt contributes grade data — there is no zero-reward outcome.</p>
+
+                <p><strong>Interleaving Design (Rohrer & Taylor, 2007):</strong> Problems are deliberately mixed across categories rather than blocked by type. This forces the student to engage in <em>discriminative contrast</em> — comparing problems to determine which strategy applies. Research shows interleaving improves transfer performance by +43% compared to blocked practice, because it trains the recognition step that blocked practice skips entirely.</p>
+
+                <p><strong>Box count scales by grade:</strong></p>
+                <ul>
+                    <li><strong>Grades 1-3:</strong> 3 boxes, 2 categories max, heavy visual cues on boxes (icons hint at content type).</li>
+                    <li><strong>Grades 4-6:</strong> 4 boxes, 3-4 categories, subtle visual cues (color coding only, no explicit icons).</li>
+                    <li><strong>Grades 7-9:</strong> 4-5 boxes, 4-5 categories, no visual cues — boxes are visually identical.</li>
+                    <li><strong>Grades 10-11:</strong> 5 boxes, 5+ categories, no cues + problems may span cross-disciplinary boundaries.</li>
+                </ul>
+
+                <p><strong>Category pool:</strong> Boxes are drawn from the current session's subjects plus one "wildcard" category from a previously mastered topic (spaced interleaving). The wildcard ensures previously-learned material does not decay.</p>
+            </div>
+        </section>
+
+        <section class="premium-box">
+            <h2 style="color: var(--gold); margin-top: 0;">💎 Tier-Based Access Control</h2>
+            <p>Both tiers receive Mystery Box as part of the 28-mechanic core. Premium unlocks enhanced reward pools and strategic control over box selection.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic Tier</th>
+                        <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Access</strong></td>
+                        <td>Mystery Box appears in Phase 3 (dual-catalog selection) and at random milestones</td>
+                        <td>Same + on-demand access from Library (1 per day cooldown)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Box Count</strong></td>
+                        <td>3-4 boxes per session board</td>
+                        <td>Up to 5 boxes per session board</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reward Pool</strong></td>
+                        <td>Standard: Grade accuracy tracking + bonus items (Extra AI Usage 25%, Avatar Frame 15%, Customization Item 10%, Coupon 7%, Mythical Boss Event Ticket 3%)</td>
+                        <td>Enhanced pool: Higher odds for premium rewards (Mythical Boss Ticket 6%, exclusive "Golden Key" cosmetic at 2%)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Category Preview</strong></td>
+                        <td>No preview — boxes are fully opaque</td>
+                        <td>"X-Ray Peek" ability: Once per session, tap a box to see its category icon (not the problem) before committing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wrong Identification Penalty</strong></td>
+                        <td>Reduced accuracy credit, corrective feedback shown</td>
+                        <td>Same credit reduction, but can retry identification once for partial recovery</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Case-Opening Animation</strong></td>
+                        <td>Standard box-open animation, 2 seconds</td>
+                        <td>Enhanced animation with particle effects, customizable box skins, rare "legendary open" animation (~5% chance)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Streak Multiplier</strong></td>
+                        <td>Not available</td>
+                        <td>Consecutive correct Mystery Box solves grant bonus recognition (max 3-streak tracked)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top:15px; border: 1px dashed var(--gold);">
+                <strong>Basic Tier Guarantee:</strong> The core interleaving practice — identifying problem types and solving them — is identical for both tiers. Premium adds strategic advantages (X-Ray Peek, retry, streak tracking) and cosmetic/enhanced reward polish, but does not change the fundamental learning activity or grade baseline.
+            </div>
+        </section>
+
+        <section class="buzan-box">
+            <h2 style="color: var(--accent); margin-top: 0;">🧠 Buzan Integration: Curiosity & Sensory Anchoring</h2>
+            <p>Mystery Box leverages <strong>Tony Buzan's curiosity-driven learning</strong> and <strong>multi-sensory encoding</strong> principles to maximize problem-type recognition and retention.</p>
+            <ul>
+                <li><strong>Color Hooks (Category Chromatics):</strong> Each problem category is assigned a distinct color that is <em>hidden</em> during box selection but <em>revealed</em> when the box opens. The entire screen floods with the category's color for 0.5 seconds upon reveal, creating a strong chromatic anchor. Over repeated exposures, students begin to subconsciously associate box visual patterns with category colors, training implicit pattern recognition alongside explicit problem-type identification.</li>
+                <li><strong>Sensory Anticipation (Curiosity Gap):</strong> The closed-box state creates a deliberate information gap. Per Buzan's principle, curiosity is the brain's strongest encoding state. The moment between selection and reveal is maximized with a 1.5-second suspense animation (box rattling, light leaking from seams). This anticipatory arousal activates the locus coeruleus-norepinephrine system, enhancing memory consolidation for whatever problem appears inside.</li>
+                <li><strong>Imagery & Exaggeration (Problem-Type Personification):</strong> Each problem category has a recurring "character" that appears in the corner of the revealed problem. Fractions = a pie-splitting character, geometry = a shape-shifting creature, reading comprehension = a scroll-bearing scholar. These characters use exaggerated expressions matching the problem's difficulty (confused for tricky problems, excited for straightforward ones). Over time, the character becomes a retrieval cue for the problem-solving strategy.</li>
+                <li><strong>Radiant Association (Cross-Link Web):</strong> When a student correctly identifies a problem type AND solves it, a "radiant web" animation draws connections from this problem to 2-3 previously-solved problems of the same category that appeared in earlier sessions. This visually encodes the idea that problems are not isolated events but nodes in a growing knowledge network. Students who build webs connecting 10+ problems across sessions unlock the "Pattern Recognizer" achievement in Bilim Bazasi.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Question Styles & Interaction Mechanics</h2>
+            <p>Mystery Box problems are drawn from the current session's content pool plus wildcard categories. The interaction follows a two-stage process: (1) identify the problem type, (2) solve it.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PISA Level</th>
+                        <th>Problem Type</th>
+                        <th>Identification Stage</th>
+                        <th>Solution Stage</th>
+                        <th>Cognitive Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>L3</strong></td>
+                        <td>Standard curriculum problem from a recognizable category (e.g., "Solve 3/4 + 1/2")</td>
+                        <td>Student selects from 3-4 visible category labels (e.g., "Addition," "Geometry," "Reading")</td>
+                        <td>Standard solution input (numeric, text, or MC depending on subject)</td>
+                        <td>Apply — recognize the operation, execute the procedure</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L3 (hard)</strong></td>
+                        <td>Problem with surface features that mimic a different category (e.g., a word problem that looks like reading but requires math)</td>
+                        <td>Student selects from 4-5 category labels; distractor categories are deliberately plausible</td>
+                        <td>Standard solution input</td>
+                        <td>Analyze — see through surface features to the underlying structure</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L4</strong></td>
+                        <td>Multi-step problem requiring two concepts from different categories (e.g., calculate area then compare as a fraction)</td>
+                        <td>Student identifies BOTH category labels (e.g., "Geometry + Fractions") — partial credit for identifying one</td>
+                        <td>Multi-step solution with intermediate checkpoints</td>
+                        <td>Apply/Analyze — decompose, map sub-problems to tools, execute in sequence</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L5</strong></td>
+                        <td>Real-world scenario with ambiguous category boundaries (e.g., a bazaar pricing problem involving math, economics, and logic)</td>
+                        <td>Student identifies the PRIMARY category and explains why (short text or MC rationale)</td>
+                        <td>Open-response solution requiring justification, not just a numeric answer</td>
+                        <td>Evaluate — determine which analytical lens is most appropriate, then apply it rigorously</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L6</strong></td>
+                        <td>Cross-disciplinary problem with no single correct category (e.g., a historical data analysis requiring math + history + reasoning)</td>
+                        <td>Student must identify ALL relevant categories AND rank them by importance</td>
+                        <td>Open-response solution requiring synthesis of multiple disciplinary perspectives</td>
+                        <td>Synthesis — integrate tools from multiple domains into a coherent solution strategy</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card" style="margin-top: 15px;">
+                <strong>Identification Accuracy Tracking:</strong> The system tracks not just whether the student solved the problem, but whether they correctly identified the problem type. A student who solves correctly but identifies wrong has a <em>lucky guess</em> profile — they may be pattern-matching without understanding. This triggers adaptive adjustment: future boxes will include more surface-mimic problems to force deeper analysis.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Victory Conditions & Scoring</h2>
+            <div class="card">
+                <h3>A. Grade Computation</h3>
+                <p>This mechanic feeds <strong>Type A (Accuracy-Based)</strong> data into the student's learning curve:</p>
+                <table>
+                    <thead><tr><th>What Gets Recorded</th><th>Source</th><th>Curve Impact</th></tr></thead>
+                    <tbody>
+                        <tr><td>Accuracy (%)</td><td>Correct boxes (correct ID + correct solution) / total boxes</td><td>Primary — determines Level (Novice → Apprentice → Proficient → Mastered)</td></tr>
+                        <tr><td>Identification accuracy</td><td>Correct category IDs / total identifications</td><td>Secondary — distinguishes "knows what tool to use" from "knows how to use it"</td></tr>
+                        <tr><td>Partial credit patterns</td><td>Correct ID + wrong solution vs wrong ID + correct solution</td><td>Tertiary — flags "Strategy Gap" or "Lucky Guess" profiles for adaptive adjustment</td></tr>
+                        <tr><td>Attempts (cumulative)</td><td>Total Mystery Box sessions completed</td><td>Feeds the curve-fitting algorithm (y = K × attempts^n) to calculate velocity n</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>B. Session Report Card</h3>
+                <p>After this mechanic, the student sees:</p>
+                <div class="card">
+                    <strong>Mystery Box — Interleaved Practice</strong><br>
+                    ███████░░░ 68% (Apprentice ↗)<br>
+                    ID Accuracy: 80% | Solution Accuracy: 60%<br>
+                    Velocity: n=0.44 (improving)<br>
+                    Profile: "Knows what to do, still practicing how"
+                </div>
+
+                <h3>C. Random Case-Opening Events</h3>
+                <p>Case-opening events use a <strong>performance-based tracking system</strong> with guaranteed data capture:</p>
+                <table>
+                    <thead>
+                        <tr><th>Outcome</th><th>Recorded Data</th><th>Bonus Reward Pool</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Correct solution</td><td>Accuracy credit + efficiency tracked</td><td>Extra AI Usage 25%, Avatar Frame 15%, Customization Item 10%, Coupon 7%, Mythical Boss Event Ticket 3%</td></tr>
+                        <tr><td>Wrong solution (attempt made)</td><td>Accuracy recorded, full solution walkthrough provided</td><td>No bonus reward, but data still captured for the learning curve</td></tr>
+                        <tr><td>Challenging question correct (L5+)</td><td>High-weight accuracy signal</td><td>Same bonus pool + 2x Mythical Boss Ticket odds (6%)</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>D. Bonus Reward Pool Details</h3>
+                <p>When a student solves a case-opening question correctly, they receive <strong>accuracy credit plus one random bonus reward</strong> from the pool:</p>
+                <ul>
+                    <li><strong>Extra AI Usage (25%):</strong> +3 AI assistant uses added to daily quota.</li>
+                    <li><strong>Avatar Frame (15%):</strong> Cosmetic border for the student's avatar, themed to the subject category of the solved problem.</li>
+                    <li><strong>Customization Item (10%):</strong> Unlockable skin, color, or accessory for the student's profile or game board.</li>
+                    <li><strong>Coupon (7%):</strong> Redeemable for a hint skip, a boss redo, or a peer challenge invitation.</li>
+                    <li><strong>Mythical Boss Event Ticket (3%):</strong> Entry to a rare, elite Mythical Boss challenge (cross-subject, PISA 6-level difficulty, exclusive rewards).</li>
+                </ul>
+
+                <h3>E. Defeat Framing</h3>
+                <p>Mystery Box has <strong>no true defeat state</strong> — every attempt contributes grade data. However:</p>
+                <ul>
+                    <li><strong>All wrong (every box: wrong ID + wrong solution):</strong> "Hali emas" (not yet) screen. The system shows all correct category identifications and provides worked solutions. The student is offered an optional "Retry Board" in the next session with the same boxes (re-shuffled order) for mastery credit.</li>
+                    <li><strong>Below 50% correct identification:</strong> The system flags "Category Confusion" and adapts future box compositions to include more practice on the confused categories.</li>
+                    <li><strong>Below 50% correct solution (but good identification):</strong> The system flags "Strategy Gap" — the student knows what tool to use but cannot execute it. Future sessions will include more scaffolded practice of the weak skill.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            NETS Elite Mechanic Specification — Mystery Box: Interleaved Problem-Solving Edition v1.0
+        </footer>
+    </div>
+
+    <script>
+        // Collapsible dimension cards (if needed for future expansion)
+    </script>
+</body>
+</html>

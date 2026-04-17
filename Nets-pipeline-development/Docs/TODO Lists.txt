@@ -1,0 +1,119 @@
+Organized by critical path. Items are ordered so each unblocks the next; ‖ = can run in parallel with the line above.
+
+  ---
+  Phase 0 — Decisions (1 hour, must do first)
+
+  - Pick pilot lesson — suggest Biology G5 UZ, Chapter 1 (you have the PDF extract scripts already staged)
+  - Decide UNIFIED split strategy — either (a) split §5.1–§5.7 into per-phase .md files, or (b) pass the whole UNIFIED into every phase call and cache it
+  - Get Moonshot API key + verify billing + test one call end-to-end
+  - Confirm Postgres target — reuse Paperclip DB or spin up a local dev DB first
+
+  Exit criteria: One working curl against Kimi returning JSON.
+
+  ---
+  Phase 1 — Foundation (half day)
+
+  - Run DDL for the 4 tables (lessons, phase_outputs, task_queue, session_log)
+  - Create frameworks/ directory skeleton matching §09 paths
+  - Create empty Python project (pyproject.toml, venv, dependencies from the §12 list)
+  - Env var setup (MOONSHOT_API_KEY, DATABASE_URL, STORAGE_PATH)
+
+  ---
+  Phase 2 — Framework prep (1–2 days, can run ‖ Phase 3)
+
+  Prompts (new)
+
+  - Write frameworks/system/extraction.md (Extractor persona + output schema)
+  - Write frameworks/system/phase_worker_base.md (invariants: JSON only, no ad-libbing, Siz register, etc.)
+  - Write frameworks/system/assembly.md (final doc template)
+
+  Existing content → map/symlink into frameworks/
+
+  - ✓ frameworks/unified/schema.md ← standards/framework/NETS-Homework-Engine-UNIFIED-Buzan.md
+  - Split UNIFIED §5.1–§5.7 → frameworks/unified/{phase_id}.md (or skip if strategy = pass whole)
+  - Map standards/system/games/Game_Mechanics_Docs/* → frameworks/games/{game_id}.md
+  - Map standards/library/subject-family/Tabiy Fanlar/Biology/Biology.md → frameworks/subjects/biology.md (pilot only)
+
+  Contracts
+
+  - Write frameworks/schemas/{phase_id}.json — ~9 JSON schemas (one per phase)
+  - Write phase-graph.yaml — phases + dependency edges
+
+  Exit criteria: All files the runner needs exist on disk for the pilot subject.
+
+  ---
+  Phase 3 — Core pipeline (2–3 days)
+
+  - Generic session runner function: compose_prompt → call_model → validate_output → persist → emit_log
+  - Pydantic models for phase outputs (mirror the JSON schemas)
+  - Postgres repo layer (insert lesson, upsert phase_output, claim task with SKIP LOCKED)
+  - Stage 01 Extractor wired to session runner
+    - Test: pilot PDF → lesson.md written to storage + row in lessons
+  - One phase worker wired (pick simplest — Phase 0-B Flashcards)
+    - Test: lesson.md → valid JSON → row in phase_outputs
+  - Prove cache behavior — run 2 phase calls back-to-back, verify cache-hit % >50% on call 2
+
+  Exit criteria: lesson.md + one phase JSON for pilot lesson, both in DB.
+
+  ---
+  Phase 4 — Orchestration (1 day)
+
+  - Phase-graph parser + topological sort
+  - asyncio fan-out with Semaphore(N) for bounded concurrency
+  - Remaining ~8 phase workers wired (same code, different framework_ref)
+  - Stage 03 Assembler — deterministic template render first
+    - Add LLM polish pass ONLY if seam-ridden
+  - End-to-end test: pilot lesson PDF → homework.md
+
+  Exit criteria: One full homework.md produced from one PDF by one command.
+
+  ---
+  Phase 5 — Batch runner (1 day)
+
+  - Task-queue seeder — walks textbooks/, writes pending rows
+  - CLI: nets-run --subject biology --grades 5 --lang uz
+  - Worker pool claims rows, runs Micro Cycle, updates status
+  - Graceful shutdown (SIGTERM → finish current task, don't claim new ones)
+  - Pilot batch: Biology G5 UZ, all lessons end-to-end
+
+  Exit criteria: One command produces homework for a whole grade+subject+lang.
+
+  ---
+  Phase 6 — Observability (half day)
+
+  - Structured logs to session_log
+  - Terminal dashboard (tasks by status, cost rollup, cache-hit %, failures)
+  - Alert threshold: cache-hit <70% or failure rate >5%
+
+  ---
+  Phase 7 — Async validator (1 day, build LAST)
+
+  - Pick eval model (Haiku 4.5 or Gemini Flash — cross-model from Kimi)
+  - Rubric: language register, framework compliance, factual grounding vs. lesson.md, age-appropriate
+  - Cron/consumer sweeps done tasks, writes to validation_results
+  - Review queue surface (CLI list of flagged items)
+
+  ---
+  Phase 8 — Content backfill (parallel, ongoing)
+
+  - Layer 2 subject frameworks for remaining 31 subjects (1 per subject)
+    - Start: Physics, Chemistry, Geography (rest of Tabiy Fanlar family — already have family framework)
+    - Then: each remaining family's subjects
+  - This runs ‖ pipeline development — adding a subject = adding one .md file, no code change
+
+  ---
+  Critical path (minimum to ship)
+
+  Phase 0 → 1 → 2 (pilot only) → 3 → 4 → 5 → pilot batch
+
+  ~5–8 focused days to first full automated batch (matches §15 estimate).
+
+  Phases 6, 7, 8 are incremental and additive — don't let them block the first batch.
+
+  ---
+  Risk watch list
+
+  - 🔴 UNIFIED split decision — if you skip splitting, every phase call carries ~3500 lines of context. Kimi cache makes this cheap after call 1, but first call in a new subject is expensive.
+  - 🟡 PDF extraction quality — your existing Biology _extract_*.py scripts indicate pre-work. Make sure Stage 01 either uses those as input or replaces them cleanly.
+  - 🟡 JSON schema rigor — if schemas are too loose, bad outputs pass; too strict, valid outputs get rejected. Budget iteration here.
+  - 🟢 Framework content — mostly already exists, just needs mapping/symlinking.

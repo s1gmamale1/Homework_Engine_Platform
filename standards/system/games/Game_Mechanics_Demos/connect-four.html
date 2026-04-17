@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Connect Four vs AI — NETS Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--background:240 15% 8%;--foreground:0 0% 95%;--card:240 12% 12%;
+--primary:162 93% 42%;--primary-foreground:0 0% 100%;--muted:240 10% 20%;
+--muted-foreground:240 5% 55%;--border:240 10% 22%;--success:142 76% 45%;
+--warning:38 92% 50%;--destructive:0 72% 51%
+}
+body{font-family:'Nunito',sans-serif;background:hsl(var(--background));color:hsl(var(--foreground));min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:12px;max-width:420px;margin:0 auto}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+.stats-bar{display:flex;gap:8px;width:100%;margin-bottom:12px}
+.stat-card{flex:1;background:rgba(255,255,255,0.06);backdrop-filter:blur(24px);border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:8px;text-align:center}
+.stat-label{font-size:0.65rem;color:hsl(var(--muted-foreground));text-transform:uppercase;letter-spacing:0.05em}
+.stat-value{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;color:hsl(var(--primary))}
+.stat-value.level-val{color:hsl(var(--success))}
+.stat-value.velocity-val{color:hsl(var(--warning))}
+.grade-card{background:hsla(var(--card),0.8);backdrop-filter:blur(24px);border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:20px;text-align:center;margin:16px 0}
+.grade-level{font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:800;background:linear-gradient(135deg,hsl(162,93%,42%),hsl(180,85%,35%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.grade-label{font-size:18px;font-weight:700;margin:4px 0}
+.grade-detail{font-size:13px;color:hsl(var(--muted-foreground));margin:2px 0}
+.game-title{text-align:center;margin-bottom:8px}
+.game-title h1{font-size:1.3rem;background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.game-title p{font-size:0.75rem;color:hsl(var(--muted-foreground))}
+.board-wrapper{position:relative;width:100%;margin:8px 0}
+.board{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;background:hsla(var(--card),0.8);backdrop-filter:blur(24px);border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:8px}
+.cell{aspect-ratio:1;border-radius:50%;background:hsl(var(--background));border:2px solid hsla(var(--border),0.3);transition:all 0.3s}
+.cell.player{background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));border-color:hsl(var(--primary));box-shadow:0 0 12px hsla(var(--primary),0.4)}
+.cell.ai{background:linear-gradient(135deg,hsl(var(--destructive)),hsl(0,72%,40%));border-color:hsl(var(--destructive));box-shadow:0 0 12px hsla(var(--destructive),0.4)}
+.cell.win{animation:winPulse 0.6s ease-in-out infinite alternate}
+@keyframes winPulse{0%{transform:scale(1);box-shadow:0 0 12px hsla(var(--success),0.4)}100%{transform:scale(1.15);box-shadow:0 0 20px hsla(var(--success),0.7)}}
+.col-click{cursor:pointer;position:relative}
+.col-click:hover .cell{background:hsla(var(--muted),0.5)}
+#confetti-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1000}
+.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;z-index:100;padding:16px;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.modal-overlay.active{opacity:1;pointer-events:auto}
+.modal{background:hsl(var(--card));border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:20px;width:100%;max-width:360px;transform:scale(0.9);transition:transform 0.3s}
+.modal-overlay.active .modal{transform:scale(1)}
+.modal h3{font-size:1rem;margin-bottom:12px;color:hsl(var(--primary))}
+.modal p{font-size:0.85rem;line-height:1.5;margin-bottom:16px}
+.modal-options{display:flex;flex-direction:column;gap:8px}
+.modal-option{background:hsla(var(--muted),0.5);border:1px solid hsla(var(--border),0.3);border-radius:0.5rem;padding:10px;font-size:0.85rem;color:hsl(var(--foreground));cursor:pointer;transition:all 0.2s;font-family:'Nunito',sans-serif;text-align:left}
+.modal-option:hover{background:hsla(var(--primary),0.2);border-color:hsl(var(--primary))}
+.modal-option.correct{background:hsla(var(--success),0.3);border-color:hsl(var(--success))}
+.modal-option.wrong{background:hsla(var(--destructive),0.3);border-color:hsl(var(--destructive))}
+.result-banner{background:hsla(var(--card),0.9);backdrop-filter:blur(24px);border:1px solid hsla(var(--border),0.5);border-radius:0.75rem;padding:16px;text-align:center;margin-top:12px;display:none}
+.result-banner.show{display:block}
+.result-banner h2{font-size:1.2rem;margin-bottom:8px}
+.btn{background:linear-gradient(135deg,hsl(var(--primary)),hsl(180,85%,35%));color:hsl(var(--primary-foreground));border:none;border-radius:0.5rem;padding:10px 20px;font-size:0.85rem;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;transition:opacity 0.2s;width:100%;margin-top:8px}
+.btn:hover{opacity:0.9}
+.turn-indicator{text-align:center;padding:8px;font-size:0.8rem;color:hsl(var(--muted-foreground));margin-bottom:4px}
+.turn-indicator.active{color:hsl(var(--primary));font-weight:700}
+</style>
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+<div class="game-title"><h1>Connect Four vs AI</h1><p>Ustunni tanlang, savolga javob bering!</p></div>
+<div class="stats-bar">
+<div class="stat-card"><div class="stat-label">Daraja</div><div class="stat-value level-val" id="level">0%</div></div>
+<div class="stat-card"><div class="stat-label">Tezlik</div><div class="stat-value velocity-val" id="velocity">n=0.00</div></div>
+<div class="stat-card"><div class="stat-label">Natija</div><div class="stat-value" id="result">—</div></div>
+</div>
+<div class="turn-indicator active" id="turn-text">Sizning navbatingiz (qizil)</div>
+<div class="board-wrapper"><div class="board" id="board"></div></div>
+<div class="result-banner" id="result-banner">
+<div class="grade-card">
+<div class="grade-level" id="end-level">0%</div>
+<div class="grade-label" id="end-label">Novice ○</div>
+<div class="grade-detail" id="end-velocity">Velocity: n=0.00</div>
+<div class="grade-detail" id="end-detail">To'g'ri javoblar: 0/0</div>
+</div>
+<h2 id="result-title"></h2>
+<button class="btn" onclick="resetGame()">Qayta boshlash</button>
+</div>
+<div class="modal-overlay" id="modal">
+<div class="modal">
+<h3 id="modal-title">Savol</h3>
+<p id="modal-question"></p>
+<div class="modal-options" id="modal-options"></div>
+</div>
+</div>
+<script>
+const ROWS=5,COLS=7;
+const questions=[
+{q:"Suvning kimyoviy formulasi qanday?",o:["H2O","CO2","NaCl","O2"],a:0},
+{q:"Yerning Quyosh atrofida aylanishi qancha vaqt oladi?",o:["24 soat","365 kun","30 kun","7 kun"],a:1},
+{q:"Eng katta sayyora qaysi?",o:["Mars","Saturn","Yupiter","Neptun"],a:2},
+{q:"Fotosintezda o'simlik nima chiqaradi?",o:["CO2","Azot","Kislorod","Vodorod"],a:2},
+{q:"Elektr zaryadi birligi nima?",o:["Volt","Amper","Kulon","Vatt"],a:2},
+{q:"DNA qanday tuzilishga ega?",o:["Uch spiral","Ikki spiral","Halqa","Chiziq"],a:1},
+{q:"Quyosh qanday yulduz turiga kiradi?",o:["Qizil gigant","Oq mitti","Sariq mitti","Neutron"],a:2},
+{q:"Eng kichik zarracha nima?",o:["Atom","Molekula","Elektron","Proton"],a:2},
+{q:"Fotosintez uchun nima kerak?",o:["Faqat suv","Faqat yorug'lik","Suv va yorug'lik","Faqat CO2"],a:2},
+{q:"Muzning erish harorati qancha?",o:["100 C","0 C","-10 C","50 C"],a:1},
+{q:"Qaysi organ qonni haydaydi?",o:["O'pka","Jigar","Yurak","Buyrak"],a:2},
+{q:"Oyning Yerga ta'siri nima?",o:["Shamol","Tortishish okeanlarga","Yomg'ir","Qor"],a:1},
+];
+let board=[],currentPlayer='player',gameOver=false,qIdx=0,wrongAnswers=0;
+let pendingCol=-1,qCorrect=0,qTotal=0;
+var sessionHistory=[
+{session:1,accuracy:20,outcome:'loss'},
+{session:2,accuracy:35,outcome:'loss'},
+{session:3,accuracy:50,outcome:'draw'}
+];
+
+function calcVelocity(){
+if(sessionHistory.length<2)return 0.3;
+var f=sessionHistory[0].accuracy,l=sessionHistory[sessionHistory.length-1].accuracy,s=sessionHistory.length;
+return Math.min(0.9,Math.max(0.1,(l-f)/(s*15)));
+}
+function getGradeLabel(acc){
+if(acc>=85)return{label:'Mastered ★',color:'hsl(var(--success))'};
+if(acc>=60)return{label:'Proficient ✓',color:'hsl(var(--success))'};
+if(acc>=30)return{label:'Apprentice △',color:'hsl(var(--warning))'};
+return{label:'Novice ○',color:'hsl(var(--muted-foreground))'};
+}
+function updateGradeDisplay(acc){
+var n=calcVelocity(),g=getGradeLabel(acc);
+document.getElementById('level').textContent=acc+'%';
+document.getElementById('velocity').textContent='n='+n.toFixed(2);
+}
+
+function init(){
+board=Array.from({length:ROWS},()=>Array(COLS).fill(0));
+buildBoard();gameOver=false;currentPlayer='player';wrongAnswers=0;qIdx=0;
+qCorrect=0;qTotal=0;
+document.getElementById('result').textContent='—';
+document.getElementById('result-banner').classList.remove('show');
+document.getElementById('turn-text').textContent='Sizning navbatingiz (qizil)';
+document.getElementById('turn-text').classList.add('active');
+updateGradeDisplay(35);
+}
+function buildBoard(){
+const el=document.getElementById('board');el.innerHTML='';
+for(let r=0;r<ROWS;r++)for(let c=0;c<COLS;c++){
+const d=document.createElement('div');d.className='cell';d.dataset.r=r;d.dataset.c=c;
+d.addEventListener('click',()=>onColClick(c));el.appendChild(d);
+}
+}
+function renderBoard(){
+const cells=document.querySelectorAll('#board .cell');
+cells.forEach(c=>{const r=+c.dataset.r,co=+c.dataset.c;
+c.className='cell';
+if(board[r][co]===1)c.classList.add('player');
+if(board[r][co]===2)c.classList.add('ai');
+});
+}
+function onColClick(col){
+if(gameOver||currentPlayer!=='player')return;
+if(board[0][col]!==0)return;
+pendingCol=col;showQuestion();
+}
+function showQuestion(){
+const q=questions[qIdx%questions.length];qIdx++;
+document.getElementById('modal-title').textContent='Savol #'+qIdx;
+document.getElementById('modal-question').textContent=q.q;
+const opts=document.getElementById('modal-options');opts.innerHTML='';
+q.o.forEach((o,i)=>{
+const b=document.createElement('button');b.className='modal-option';b.textContent=o;
+b.addEventListener('click',()=>onAnswer(i,q.a,b));opts.appendChild(b);
+});
+document.getElementById('modal').classList.add('active');
+}
+function onAnswer(sel,correct,btn){
+const btns=document.querySelectorAll('.modal-option');
+btns.forEach((b,i)=>{b.disabled=true;if(i===correct)b.classList.add('correct');if(i===sel&&i!==correct)b.classList.add('wrong')});
+qTotal++;
+if(sel===correct){qCorrect++;
+setTimeout(()=>{document.getElementById('modal').classList.remove('active');dropDisc(pendingCol,1)},400);
+}else{wrongAnswers++;
+setTimeout(()=>{document.getElementById('modal').classList.remove('active');
+const rc=getRandomEmptyCol();if(rc>=0)dropDisc(rc,1)},400);
+}
+}
+function dropDisc(col,player){
+for(let r=ROWS-1;r>=0;r--){if(board[r][col]===0){board[r][col]=player;renderBoard();
+const w=checkWin(r,col,player);
+if(w){gameOver=true;highlightWin(w);showResult(player);return;}
+if(isDraw()){gameOver=true;showResult(0);return;}
+currentPlayer=player===1?'ai':'player';
+if(currentPlayer==='ai'){document.getElementById('turn-text').textContent="AI navbati...";document.getElementById('turn-text').classList.remove('active');
+setTimeout(aiMove,600);}
+else{document.getElementById('turn-text').textContent='Sizning navbatingiz (qizil)';document.getElementById('turn-text').classList.add('active');}
+return;}}
+}
+function getRandomEmptyCol(){const cols=[];for(let c=0;c<COLS;c++)if(board[0][c]===0)cols.push(c);
+if(!cols.length)return-1;return cols[Math.floor(Math.random()*cols.length)];}
+function aiMove(){
+for(let c=0;c<COLS;c++){if(canDrop(c)){const r=dropAt(c,2);if(checkWin(r,c,2)){removeAt(r,c);dropDisc(c,2);return;}removeAt(r,c);}}
+for(let c=0;c<COLS;c++){if(canDrop(c)){const r=dropAt(c,1);if(checkWin(r,c,1)){removeAt(r,c);dropDisc(c,2);return;}removeAt(r,c);}}
+const c2=getRandomEmptyCol();if(c2>=0)dropDisc(c2,2);
+}
+function canDrop(c){return board[0][c]===0;}
+function dropAt(c,p){for(let r=ROWS-1;r>=0;r--)if(board[r][c]===0){board[r][c]=p;return r;}return-1;}
+function removeAt(r,c){board[r][c]=0;}
+function checkWin(r,c,p){
+const dirs=[[0,1],[1,0],[1,1],[1,-1]];
+for(const[dr,dc]of dirs){let cells=[[r,c]];
+for(let d=-1;d<=1;d+=2){let nr=r+dr*d,nc=c+dc*d;
+while(nr>=0&&nr<ROWS&&nc>=0&&nc<COLS&&board[nr][nc]===p){cells.push([nr,nc]);nr+=dr*d;nc+=dc*d;}}
+if(cells.length>=4)return cells;}return null;
+}
+function isDraw(){return board[0].every(c=>c!==0);}
+function highlightWin(cells){
+const cellEls=document.querySelectorAll('#board .cell');
+cells.forEach(([r,c])=>{cellEls.forEach(el=>{if(+el.dataset.r===r&&+el.dataset.c===c)el.classList.add('win')});});
+}
+function showResult(winner){
+const banner=document.getElementById('result-banner');
+const title=document.getElementById('result-title');
+banner.classList.add('show');
+const qAcc=qTotal>0?Math.round((qCorrect/qTotal)*100):0;
+sessionHistory.push({session:sessionHistory.length+1,accuracy:qAcc,outcome:winner===1?'win':winner===2?'loss':'draw'});
+const n=calcVelocity();
+const g=getGradeLabel(qAcc);
+document.getElementById('end-level').textContent=qAcc+'%';
+document.getElementById('end-label').textContent=g.label;
+document.getElementById('end-velocity').textContent='Velocity: n='+n.toFixed(2);
+document.getElementById('end-detail').textContent="To'g'ri javoblar: "+qCorrect+'/'+qTotal;
+if(winner===1){title.textContent='🏆 Siz yutdingiz!';title.style.color='hsl(var(--success))';launchConfetti();}
+else if(winner===2){title.textContent='AI yutdi — hali emas!';title.style.color='hsl(var(--destructive))';}
+else{title.textContent='Durrang!';title.style.color='hsl(var(--warning))';}
+document.getElementById('result').textContent=winner===1?'G\'alaba':winner===2?'Mag\'lubiyat':'Durrang';
+document.getElementById('turn-text').textContent='O\'yin tugadi!';
+updateGradeDisplay(qAcc);
+}
+function resetGame(){init();}
+function launchConfetti(){
+const canvas=document.getElementById('confetti-canvas');const ctx=canvas.getContext('2d');
+canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+const pieces=[],colors=['hsl(162,93%,42%)','hsl(180,85%,35%)','hsl(142,76%,45%)','hsl(38,92%,50%)','hsl(0,72%,51%)'];
+for(let i=0;i<150;i++)pieces.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height-canvas.height,
+w:Math.random()*10+5,h:Math.random()*6+3,color:colors[Math.floor(Math.random()*colors.length)],
+vx:(Math.random()-0.5)*4,vy:Math.random()*3+2,rot:Math.random()*360,rs:(Math.random()-0.5)*10});
+let frame=0;
+function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);
+pieces.forEach(p=>{ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot*Math.PI/180);
+ctx.fillStyle=p.color;ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);ctx.restore();
+p.x+=p.vx;p.y+=p.vy;p.rot+=p.rs;p.vy+=0.05;});
+frame++;if(frame<200)requestAnimationFrame(animate);else ctx.clearRect(0,0,canvas.width,canvas.height);}
+animate();
+}
+init();
+</script>
+</body>
+</html>

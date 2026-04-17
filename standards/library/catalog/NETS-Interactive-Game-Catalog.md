@@ -1,11 +1,13 @@
 # NETS Interactive Knowledge-Gated Game Catalog
 
-**Version:** 1.0 — April 7, 2026
+**Version:** 1.1 — April 14, 2026
 **Status:** Specification for Phase 3 Integration
-**Applies To:** [[NETS-Homework-Engine-UNIFIED]] §5.3, §6.2, §6.3
+**Applies To:** [[NETS-Homework-Engine-UNIFIED-Buzan]] §5.3, §6.2, §6.3
 
 > See also: [[HOME]] · [[NETS-UI-UX-Design-Spec]] · [[QUICK_REFERENCE]]
 **Purpose:** Define all interactive game mechanics that gate progression behind subject-mastery questions. Every game in this catalog integrates directly with the PISA proficiency tracking, AI question generation, and XP economy.
+
+**Note:** This catalog defines the 7 Interactive Catalog games only. The full game landscape includes 16 Default Pool mechanics (see `NETS-Game-Catalog-Summary.md`) and 4 Buzan Phase 5 mnemonic alternatives (Peg System, Link System, Radiant Summary, Major System).
 
 ---
 
@@ -50,20 +52,6 @@ These are **NOT** standalone mini-games. They are **knowledge-gated experiences*
 | **Difficulty Scaling** | AI uses minimax with depth scaling (2-6). Wrong answers reduce AI depth, giving student strategic breathing room. |
 | **Win/Loss/Retry** | Win = standard XP + column bonus. 3 attempts max. All 3 failed = task failure. |
 | **Best Subjects** | Math, Science, Biology, History |
-| **Implementation Tier** | Phase 1 (MVP) |
-
----
-
-### 3. Codebreaker
-**Inspiration:** Mastermind (Mordecai Meirowitz, 1970) — Educational use documented in *CBE-Life Sciences Education* (PMC3022521)
-
-| Component | Specification |
-|-----------|---------------|
-| **Core Loop** | AI generates secret code (4-5 symbols). Student has 8 attempts to crack it. After each guess, AI gives feedback (right value + right position, right value + wrong position). |
-| **Knowledge Gate** | Each guess attempt requires answering a question. Correct → guess submitted and scored. Wrong → guess attempt consumed WITHOUT submission (lost turn). |
-| **Difficulty Scaling** | Code length (3 easy → 4 medium → 5 hard). Symbol pool size expands. Fewer allowed attempts at higher difficulty. |
-| **Win/Loss/Retry** | Crack code in ≤8 attempts = WIN. Fail = LOSS + reveal code. 1 attempt. |
-| **Best Subjects** | Math (number sequences), Chemistry (element symbols), Biology (taxonomic classifications), History (chronological dates) |
 | **Implementation Tier** | Phase 1 (MVP) |
 
 ---
@@ -124,21 +112,7 @@ These are **NOT** standalone mini-games. They are **knowledge-gated experiences*
 
 ---
 
-### 8. Blackjack 21 — Knowledge Edition
-**Inspiration:** Classic Blackjack/21 (Origins ~1600s France)
-
-| Component | Specification |
-|-----------|---------------|
-| **Core Loop** | Standard Blackjack rules. Draw cards, closest to 21 without busting wins. Student vs Dealer AI. |
-| **Knowledge Gate** | Before HIT or STAND, answer question. Correct → choice executed. Wrong → AI makes choice FOR student (usually poorly). |
-| **Difficulty Scaling** | Dealer stands on softer totals at higher difficulty (plays better). Fewer double-down opportunities. Harder math questions. |
-| **Win/Loss/Retry** | Best of 3 hands. Win = standard XP + streak bonus. Loss = retry. |
-| **Best Subjects** | Math (mental arithmetic), Probability, Statistics |
-| **Implementation Tier** | Phase 2 (Enhancement) |
-
----
-
-### 9. Territory Conquest
+### 8. Territory Conquest
 **Inspiration:** Risk (Albert Lamorisse, 1957) — simplified to 1v1 area control
 
 | Component | Specification |
@@ -202,8 +176,8 @@ These are **NOT** standalone mini-games. They are **knowledge-gated experiences*
 |---------|-------|----------------------|
 | **Phase 3 (Game Breaks)** | 2-3 games per homework session. Core practice. | Content creator tags game in JSON. Engine validates against Subject-to-Game Matrix. |
 | **Mystery Box Event** | Random pop-up OR pre-placed. Single challenging question tied to game outcome. | Performance-based rewards. Correct answer = game win + reward. Wrong = participation XP only. |
-| **Big Boss (Weekly)** | Territory Conquest, Escape Room, or Codebreaker configured for cross-subject review. | AI targets 3 weakest standards. Game difficulty = PISA level +1. |
-| **Mythical Boss (Elite)** | Escape Room or Bridge Builder at PISA 5-6 difficulty. Zero hints. One attempt. | Multi-subject reasoning required. Win = 5× XP + exclusive title. |
+| **Big Boss (Weekly)** | Connect Four configured for cross-subject review. | AI targets 3 weakest standards. Game difficulty = PISA level +1. |
+| **Mythical Boss (Elite)** | Connect Four at PISA 5-6 difficulty. Zero hints. One attempt. | Multi-subject reasoning required. Win = 5× XP + exclusive title. |
 
 ### Game Selection & Validation Flow
 
@@ -279,18 +253,14 @@ Total Game XP = Base XP + Strategy Bonus + Speed Bonus
 |------|:----:|:-------------------:|:-------:|:-------:|:--------:|
 | Tic Tac Toe vs AI | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Connect Four vs AI | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Codebreaker | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Memory Match Blitz | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Reaction Chain | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Word Ladder Climb | ⚠️ | ⚠️ | ✅ | ⚠️ | ✅ |
 | Puzzle Lock | ✅ | ✅ | ⚠️ | ✅ | ⚠️ |
-| Blackjack 21 | ✅ | ⚠️ | ❌ | ❌ | ❌ |
-| Territory Conquest | ✅ | ✅ | ⚠️ | ✅ | ⚠️ |
-| Escape Room | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Bridge Builder | ✅ | ✅ | ⚠️ | ❌ | ❌ |
-| Minefield Navigator | ✅ | ⚠️ | ⚠️ | ✅ | ⚠️ |
 
 **Legend:** ✅ Primary fit | ⚠️ Works with adaptation | ❌ Not recommended
+
+**Note:** Tic Tac Toe vs AI is dual-listed — it appears in both the Default Pool (as mechanic #15) and the Interactive Catalog (as game #1). Both references point to the same implementation.
 
 ---
 
@@ -308,7 +278,7 @@ All games run as **client-side React components** wrapped in a `GameContainer` p
 - **Tier 3 (Static Fallback):** If Ollama unreachable, use hardcoded fallback questions from `data/phases.json`.
 
 ### 3. AI Opponent Configuration
-For games with AI opponents (Tic Tac Toe, Connect Four, Territory, Blackjack):
+For games with AI opponents (Tic Tac Toe, Connect Four, Territory):
 - Use **Minimax algorithm** with alpha-beta pruning.
 - **Depth scaling:** Maps directly to student PISA level.
   - PISA < 1.5 → Depth 2 (makes obvious mistakes)
@@ -347,21 +317,17 @@ Before ANY game is deployed to production, it must pass:
 
 | Phase | Timeline | Games | Rationale |
 |-------|----------|-------|-----------|
-| **MVP** | Sprint 1-2 | Tic Tac Toe, Connect Four, Memory Match Blitz, Codebreaker | Lowest build complexity. Proven mechanics. Universal subject fit. |
-| **Enhancement** | Sprint 3-4 | Word Ladder, Puzzle Lock, Reaction Chain, Blackjack 21 | Medium complexity. Adds variety for returning students. |
-| **Premium** | Sprint 5-6 | Territory Conquest, Escape Room, Bridge Builder, Minefield Navigator | Highest complexity. Reserved for Big Boss / Mythical Boss events. High reward, high prestige. |
+| **MVP** | Sprint 1-2 | Tic Tac Toe, Connect Four, Memory Match Blitz | Lowest build complexity. Proven mechanics. Universal subject fit. |
+| **Enhancement** | Sprint 3-4 | Word Ladder, Puzzle Lock, Reaction Chain | Medium complexity. Adds variety for returning students. |
 
 ---
 
 ## References & Inspirations
 
-1. **Tic Tac Toe / Connect Four / Blackjack / Risk / Memory / Mastermind / 15 Puzzle / Word Ladder / Minesweeper** — Classic board/card/puzzle games with centuries of documented rules. Adapted here for educational knowledge-gating. Source adaptations documented via public domain rules and educational game design literature.
-2. **Tower Defense** — Inspired by *Desktop Tower Defense* (2007, Paul Preece) and modern mobile TD mechanics.
-3. **Reaction Chain** — Original NETS concept inspired by rhythm game progression mechanics (*Guitar Hero*, 2005, Harmonix).
-4. **Bridge Builder** — Inspired by physics-based construction games (*Bridge Constructor*, Headup Games).
-5. **Escape Room** — Inspired by real-world escape rooms (2007, Takao Kato) and digital puzzle games (*The Room* series, Fireproof Games).
-6. **Educational Validation** — Mastermind's use in developing logic skills documented in *CBE-Life Sciences Education* (PMC3022521). Connect Four and Tic Tac Toe adaptations for classrooms documented in EF Teacher Zone and TES teaching resources.
-7. **Gamification Theory** — Octalysis Framework (Yu-kai Chou), Hook Model (Nir Eyal), Flow State Theory (Csikszentmihalyi, 1990).
+1. **Tic Tac Toe / Connect Four / Memory / Mastermind / 15 Puzzle / Word Ladder** — Classic board/card/puzzle games with centuries of documented rules. Adapted here for educational knowledge-gating. Source adaptations documented via public domain rules and educational game design literature.
+2. **Reaction Chain** — Original NETS concept inspired by rhythm game progression mechanics (*Guitar Hero*, 2005, Harmonix).
+3. **Educational Validation** — Mastermind's use in developing logic skills documented in *CBE-Life Sciences Education* (PMC3022521). Connect Four and Tic Tac Toe adaptations for classrooms documented in EF Teacher Zone and TES teaching resources.
+4. **Gamification Theory** — Octalysis Framework (Yu-kai Chou), Hook Model (Nir Eyal), Flow State Theory (Csikszentmihalyi, 1990).
 
 ---
 

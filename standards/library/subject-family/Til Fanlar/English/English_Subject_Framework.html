@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English (Ingliz tili) — Subject-Specific Framework</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --accent-color: #00f2ff; /* Neon Cyan */
+            --accent-glow: rgba(0, 242, 255, 0.3);
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --border-color: #333;
+            --neon-purple: #bc13fe;
+            --neon-green: #39ff14;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-glow);
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--neon-purple);
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+        }
+
+        .status-bar p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        details {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            margin-right: 15px;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        code {
+            background: #2a2a2a;
+            color: var(--neon-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--header-color);
+        }
+
+        .highlight {
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+
+        .good-example {
+            border-left: 3px solid var(--neon-green);
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #afffa3;
+        }
+
+        .bad-example {
+            border-left: 3px solid #ff3131;
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #ffb1b1;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>English (Ingliz tili) Framework</h1>
+    
+    <div class="status-bar">
+        <p><strong>Scope:</strong> G5-11, all grades, universal</p>
+        <p><strong>Family:</strong> Til Fanlari (Languages)</p>
+        <p><strong>Parent Docs:</strong> <code>Til Fanlari Family Doc</code> | <code>UNIFIED-Buzan v2.0</code> | <code>Library Framework v0.6</code></p>
+        <p><strong>Last Updated:</strong> April 14, 2026</p>
+    </div>
+
+    <details open>
+        <summary>1. What English Teaches</summary>
+        <div class="content">
+            <p>English in NETS is a <strong>foreign language</strong>, not a native or heritage language. This changes the production rules:</p>
+            <ul>
+                <li><strong>i+1 calibration:</strong> Pacing is tighter to prevent session breakage.</li>
+                <li><strong>CEFR Spine:</strong> A1 (G5) -> A2 (G6-7) -> B1 (G8-9) -> B2 (G10-11).</li>
+                <li><strong>Transformation Philosophy:</strong> Transform textbook topics into strong homework; do not copy weak pedagogy. Use <strong>Story Mode</strong> for dry explanations and <strong>Real-Life Challenge</strong> for engagement.</li>
+                <li><strong>Production lag:</strong> Production lags comprehension by 1-2 levels.</li>
+            </ul>
+            <p><strong>Rule:</strong> Assume less background knowledge, more support, and slower release from scaffolding.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. Grade-Band Progression</summary>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>CEFR</th>
+                        <th>Focus</th>
+                        <th>Production</th>
+                        <th>Boss Expectations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>G5</td>
+                        <td>A1</td>
+                        <td>Vocab, basic patterns, phonics</td>
+                        <td>Guided (stems)</td>
+                        <td>Guided 1-2 sentences</td>
+                    </tr>
+                    <tr>
+                        <td>G6</td>
+                        <td>A1->A2</td>
+                        <td>Simple conversations, tenses</td>
+                        <td>Guided->Prompted</td>
+                        <td>3-4 sentence guided</td>
+                    </tr>
+                    <tr>
+                        <td>G7</td>
+                        <td>A2</td>
+                        <td>Paragraphs, questions</td>
+                        <td>Prompted (3-5 sentences)</td>
+                        <td>Short paragraph w/ cues</td>
+                    </tr>
+                    <tr>
+                        <td>G8</td>
+                        <td>A2->B1</td>
+                        <td>Complex sentences, summary</td>
+                        <td>Prompted->Free</td>
+                        <td>Full paragraph, reasoning</td>
+                    </tr>
+                    <tr>
+                        <td>G9</td>
+                        <td>B1</td>
+                        <td>Essay structure intro, register</td>
+                        <td>Free (Intro+Body+Concl)</td>
+                        <td>5-8 sentence structured</td>
+                    </tr>
+                    <tr>
+                        <td>G10</td>
+                        <td>B1->B2</td>
+                        <td>Argumentation, text analysis</td>
+                        <td>Free (Multi-para)</td>
+                        <td>Analytical w/ evidence</td>
+                    </tr>
+                    <tr>
+                        <td>G11</td>
+                        <td>B2</td>
+                        <td>Adv. textbook grammar, composition</td>
+                        <td>Independent (Essay)</td>
+                        <td>Extended composition</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <details>
+        <summary>3. Content Production Rules by Grade Band</summary>
+        <div class="content">
+            <h3>G5-6 (Foundation)</h3>
+            <ul>
+                <li>Max 5 new vocab items per session.</li>
+                <li>Pair every word: <strong>image + UZ translation + audio + example</strong>.</li>
+                <li>Reading: 50-80 words max. Listening: 30 sec max.</li>
+                <li><strong>Make it alive:</strong> Use Story Mode to add narrative and Real-Life Challenge for concrete purpose.</li>
+            </ul>
+            <div class="good-example">Good Phase 4: Tour guide role-play using SAMARKAND, BEAUTIFUL, OLD.</div>
+
+            <h3>G7-9 (Development)</h3>
+            <ul>
+                <li>8-12 new vocab items.</li>
+                <li>Reading: 100-200 words. Listening: 45-60 sec (natural speed).</li>
+                <li><strong>Make it alive:</strong> Build narrative around target grammar; create role-based communication tasks.</li>
+            </ul>
+            <div class="good-example">Good Phase 4: Hotel receptionist responding to guest complaint.</div>
+
+            <h3>G10-11 (Advanced)</h3>
+            <ul>
+                <li>15+ vocab items (Academic sets).</li>
+                <li>Reading: 300-500 words. Listening: 2-3 min (authentic).</li>
+                <li><strong>Make it alive:</strong> Story Mode should create interpretive tension; Real-Life Challenge should create professional or civic context.</li>
+            </ul>
+            <div class="good-example">Good Phase 4: Environmental consultant report (150-200 words).</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>4. Game Mechanics — English-Specific</summary>
+        <div class="content">
+            <h3>Primary Mechanics by Grade Band</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mechanic</th>
+                        <th>G5-6</th>
+                        <th>G7-9</th>
+                        <th>G10-11</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Flashcards</td>
+                        <td>5 words, UZ + Image</td>
+                        <td>10 words, EN Def + Ex</td>
+                        <td>15 words, Acad, EN-only</td>
+                    </tr>
+                    <tr>
+                        <td>Sent. Fill</td>
+                        <td>Word bank, 1 blank</td>
+                        <td>2-3 blanks, no bank</td>
+                        <td>Full cloze paragraph</td>
+                    </tr>
+                    <tr>
+                        <td>Listening</td>
+                        <td>30s, Slow/Clear</td>
+                        <td>60s, Natural</td>
+                        <td>2-3m, Authentic</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Interactive Picks</h3>
+            <ul>
+                <li><strong>Memory Match Blitz:</strong> Word pairs / collocations.</li>
+                <li><strong>Codebreaker:</strong> Spelling patterns, affixes.</li>
+                <li><strong>Reaction Chain:</strong> Sentence/Dialogue flow (G7+).</li>
+                <li><strong>Puzzle Lock:</strong> Paragraph reconstruction (G9+).</li>
+            </ul>
+            
+            <p><strong>Tile Match Note:</strong> Use for <strong>word order</strong>, not formula matching.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. Boss Format — English Specific</summary>
+        <div class="content">
+            <ul>
+                <li><strong>G5:</strong> Guided production (stems).</li>
+                <li><strong>G7:</strong> Prompted (5 sentences, grammar req).</li>
+                <li><strong>G11:</strong> Extended composition (150-200 words).</li>
+                <li><strong>HP:</strong> G5-8 = 100, G9-11 = 150.</li>
+                <li><strong>Failure:</strong> Use "Hali emas! Let's try again."</li>
+            </ul>
+            <div class="bad-example">Bad Boss: "What is the definition of the present perfect?"</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>6. Story Mode & Real-Life Challenge</summary>
+        <div class="content">
+            <h3>Story Mode</h3>
+            <div class="good-example">G7: Alex visits Bukhara. Help him navigate and communicate with locals.</div>
+            
+            <h3>Real-Life Challenge</h3>
+            <ul>
+                <li><strong>G5-6 Helper:</strong> Meet a lost tourist.</li>
+                <li><strong>G7-8 Professional:</strong> Hotel receptionist email.</li>
+                <li><strong>G11 Academic:</strong> IT Park internship application / cover letter.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details>
+        <summary>Technical Rules</summary>
+        <div class="content">
+            <ol>
+                <li><strong>Inheritance:</strong> Til Fanlari family rules + this filter.</li>
+                <li><strong>CEFR Backbone:</strong> Check content against target CEFR band.</li>
+                <li><strong>National Pride:</strong> Inherit ratios/injections from parent docs.</li>
+            </ol>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>
