@@ -56,7 +56,8 @@ async def seed_from_manifest(db: DB, manifest_path: Path) -> int:
     for i, t in enumerate(tasks):
         try:
             raw_uri = t["pdf_uri"]
-            pdf_path = Path(raw_uri)
+            path_str, fragment = _split_fragment(raw_uri)
+            pdf_path = Path(path_str)
             if not pdf_path.is_absolute():
                 pdf_path = (manifest_dir / pdf_path).resolve()
             if not pdf_path.exists():
@@ -70,7 +71,7 @@ async def seed_from_manifest(db: DB, manifest_path: Path) -> int:
                     grade=int(t["grade"]),
                     lang=t["lang"],
                     lesson_id=t["lesson_id"],
-                    pdf_uri=str(pdf_path),
+                    pdf_uri=str(pdf_path) + fragment,
                 )
             )
         except KeyError as e:
@@ -163,3 +164,11 @@ def default_textbooks_root(settings: Settings | None = None) -> Path:
     """Conventional textbooks/ location under the main repo root (parent of
     Nets-pipeline-development)."""
     return PROJECT_ROOT.parent / "textbooks"
+
+
+def _split_fragment(uri: str) -> tuple[str, str]:
+    """Return (path_part, '#fragment' or '')."""
+    if "#" not in uri:
+        return uri, ""
+    path_part, frag = uri.split("#", 1)
+    return path_part, "#" + frag

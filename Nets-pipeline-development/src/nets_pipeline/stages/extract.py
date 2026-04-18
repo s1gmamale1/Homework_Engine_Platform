@@ -28,7 +28,7 @@ from ..config import SCHEMAS_DIR
 from ..db import DB
 from ..kimi_client import KimiClient
 from ..logging_setup import get_logger
-from ..pdf_reader import read_pdf
+from ..pdf_reader import parse_pdf_uri, read_pdf
 from ..prompt import compose_extraction_prompt
 from ..session import run_session
 from ..storage import Storage
@@ -57,8 +57,8 @@ async def extract_lesson(
     storage: Storage,
 ) -> ExtractResult:
     """Run Stage 01 for a single (subject, grade, lang, lesson) task."""
-    pdf_path = Path(pdf_uri)
-    raw_text = read_pdf(pdf_path)
+    pdf_path, page_range = parse_pdf_uri(pdf_uri)
+    raw_text = read_pdf(pdf_path, pages=page_range)
     source_hash = hashlib.sha256(raw_text.encode("utf-8")).hexdigest()
 
     context = {

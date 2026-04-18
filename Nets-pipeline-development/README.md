@@ -47,6 +47,9 @@ docker run -d --name nets-pg \
   -p 5433:5432 \
   postgres:15
 
+# If the container already exists (e.g. after a reboot), just restart it:
+#   docker start nets-pg
+
 # 3. Apply the database schema
 docker exec -i nets-pg psql -U nets -d nets_pipeline -f - < migrations/001_init.sql
 docker exec -i nets-pg psql -U nets -d nets_pipeline -f - < migrations/002_validation.sql
@@ -89,24 +92,34 @@ That's the core loop. Seed, run, check.
 
 ### 3. How to add more textbooks
 
-Edit `pilot_manifest.yaml` and list each chapter as its own task:
+Edit `pilot_manifest.yaml` and list each chapter as its own task. You can either point at a pre-split chapter PDF, or at a full-book PDF with a `#pages=N-M` range (1-based, inclusive):
 
 ```yaml
 tasks:
+  # Page range into a full-book PDF (preferred — no file splitting needed):
   - subject: biology
     grade: 5
     lang: uz
     lesson_id: biology_G5_uz_sec01
-    pdf_uri: ../textbooks/biology/5/uz/biology_G5_uz_sec01.pdf
+    pdf_uri: ../textbooks/biology/5/uz/biology_G5_full.pdf#pages=5-9
 
   - subject: biology
     grade: 5
     lang: uz
     lesson_id: biology_G5_uz_sec02
-    pdf_uri: ../textbooks/biology/5/uz/biology_G5_uz_sec02.pdf
+    pdf_uri: ../textbooks/biology/5/uz/biology_G5_full.pdf#pages=10-12
+
+  # Or a pre-split chapter PDF (works too):
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec03
+    pdf_uri: ../textbooks/biology/5/uz/biology_G5_sec03.pdf
 ```
 
-The important rule: **one task = one chapter**, not one task = whole textbook. The language model has a token budget per call, so a 60-page book won't fit in one extraction. Split your PDFs by chapter first.
+The important rule: **one task = one chapter**, not one task = whole textbook. The language model has a token budget per call, so a 60-page book won't fit in one extraction. The page-range syntax lets you keep one PDF on disk per book and carve out chapters in the manifest.
+
+To find page ranges, open the PDF and match each chapter heading to its PDF page number (which may differ from the printed page number by 1–2 due to cover/front-matter).
 
 ---
 

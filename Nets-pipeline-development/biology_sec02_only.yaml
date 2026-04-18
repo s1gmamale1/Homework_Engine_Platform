@@ -1,0 +1,10 @@
+# One-chapter seed — Biology G5 UZ Section 2 only.
+# Used to validate the page-range URI code path end-to-end before seeding the
+# full 18-section manifest.
+
+tasks:
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec02
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=10-12

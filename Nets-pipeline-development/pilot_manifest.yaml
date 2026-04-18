@@ -1,11 +1,121 @@
-# Pilot manifest — just Section 1 of Biology G5 UZ (~5 pages).
-# Designed to fit comfortably in Kimi's output budget.
+# Biology Grade 5 (Uzbek) — all 18 sections.
 #
-# Once this works end-to-end, we'll split all 18 sections and seed them.
+# Uses the page-range URI syntax: '<pdf>#pages=N-M' (1-based, inclusive).
+# PDF page numbers were derived by scanning the book body for section headings
+# (e.g. '1-§.', '9-§', '10-§'), not from the printed page numbers which differ
+# by one (cover page offset).
+#
+# Source book: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf
+# Total pages in PDF: 195. Body content ends ~p92 (glossary follows, ~p93-...).
+#
+# Section 1 (biology_G5_uz_sec01) was already seeded and processed during the
+# pilot using a pre-split PDF. Re-seeding skips duplicates by lesson_id.
 
 tasks:
   - subject: biology
     grade: 5
     lang: uz
     lesson_id: biology_G5_uz_sec01
-    pdf_uri: ../textbooks/biology/5/uz/biology_G5_uz_sec01_biologiya-hayot-haqidagi-fan.pdf
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=5-9
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec02
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=10-12
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec03
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=13-17
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec04
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=18-23
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec05
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=24-26
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec06
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=27-30
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec07
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=31-35
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec08
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=36-40
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec09
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=41-43
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec10
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=44-54
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec11
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=55-59
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec12
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=60-62
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec13
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=63-70
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec14
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=71-75
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec15
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=76-80
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec16
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=81-83
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec17
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=84-86
+
+  - subject: biology
+    grade: 5
+    lang: uz
+    lesson_id: biology_G5_uz_sec18
+    pdf_uri: ../textbooks/biology/5/uz/5-sinf_biologiya_2020_(elekton_darslikbot).pdf#pages=87-92
