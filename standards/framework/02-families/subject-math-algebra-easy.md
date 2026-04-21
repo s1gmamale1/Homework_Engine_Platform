@@ -41,18 +41,19 @@ Practical time: ~20 min (cap: 45 min). Learning time (Preview + Flash Cards): ~1
 
 ---
 
-### 1. Preview (Panels 1, 2, 3, 4)
+### 1. Preview (5 panels)
 
 **Time:** ~10 min | **Not scored**
 
-4 panels. Panel 4 (Origin) included because the genetic method applies — show where the concept came from.
+5 panels. Origin + Industry Application included to build context.
 
 | Panel | What to build |
 |-------|---------------|
-| **1. Summary** | Reframe the chapter as a PROBLEM, not a definition. Open with "Nima uchun bu kerak?" Use a visual overview — concept map or key diagram. Structural scan: heading tree + bold-term chips. No flowing paragraphs. |
+| **1. Summary** | Reframe the chapter as a PROBLEM, not a definition. Open with "Nima uchun bu kerak?" Visual overview — concept map or key diagram. Structural scan: heading tree + bold-term chips. No flowing paragraphs. |
 | **2. Better Explanation** | Break the textbook's explanation into CPA steps. Start with a concrete analogy (splitting pizza, measuring a room), show a labeled diagram, then introduce notation/formula. Explain what the textbook SHOULD have said more clearly. |
 | **3. Examples** | 3-4 worked examples, simple → complex. Each: setup → visual (bar model, grid, number line) → step-by-step → answer with units. Show THINKING, not just answer. |
-| **4. Origin** | Mini-narrative: who discovered this, what problem they solved, what changed. Priority: Al-Xorazmiy, Al-Beruniy, Ulug'bek (55%), then Pythagoras, Euclid, Fibonacci (45%). Write as a STORY, not a Wikipedia entry. |
+| **4. Origin** | Mini-narrative: who invented this, what problem they solved, what changed. Tell the truth — credit the actual inventor. If it's Al-Xorazmiy, great. If it's Pythagoras, say Pythagoras. National pride = honesty. Write as a STORY, not a Wikipedia entry. |
+| **5. Industry Application** | Where professionals use this math. 2-3 roles with specific tasks: "Muhandis bino uchun material hisobini chiqaradi — yuza formulasi noto'g'ri bo'lsa, material yetishmaydi." Concrete task + consequence. |
 
 **Two-layer explanation in every panel:**
 1. Full mathematical rigor (formal language)

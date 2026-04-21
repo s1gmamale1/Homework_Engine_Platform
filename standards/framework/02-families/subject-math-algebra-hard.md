@@ -45,22 +45,21 @@ Practical time: ~50-53 min (cap: 60 min). Learning time (Preview + Flash Cards):
 
 ---
 
-### 1. Preview (Panels 1-6)
+### 1. Preview (7 panels)
 
 **Time:** ~15 min | **Not scored**
 
-6 panels. Full depth. Panel 4 (Origin) is the narrative backbone — genetic method.
+7 panels. Full depth. Panel 4 (Origin) = genetic method. Panel 5 (Word→Formula) = bridge to Real-Life.
 
 | Panel | What to build |
 |-------|---------------|
 | **1. Summary** | Reframe the chapter as a PROBLEM, not a definition. "Nima uchun bu kerak?" Visual overview — concept map, equation tree, or chapter roadmap. Structural scan with bold-term chips. |
 | **2. Better Explanation** | CPA steps: concrete analogy → labeled diagram → notation/formula. Explain what the textbook SHOULD have said. Each sentence adds understanding — no filler. |
-| **3. Examples** | 3-5 worked examples, simple → complex. Each: setup → visual → step-by-step → answer with units. G7-9: include one "set up the equation from a word problem" example. |
-| **4. Origin** | The genetic method core. Who invented this, what problem forced its creation, how it evolved into today's notation. Al-Xorazmiy, Al-Beruniy, Ulug'bek (55%) / Pythagoras, Euclid, Descartes, Euler (45%). Write as a discovery STORY. This IS teaching, not trivia. |
-| **5. Personal Hook** | G5-6: sharing food, saving money, measuring rooms, comparing scores. G7-9: phone data plans, startup profits, game scoring with variables. BOST prompt: "Bu mavzu haqida nimalarni bilasiz?" |
-| **6. Why This Matters** | What breaks if you DON'T know this + what opens UP if you DO. End with BOST goal: "Bugun [topic] haqida nimani bilmoqchisiz?" — stored for Reflection. |
-
-**MUST INCLUDE word→formula translation teaching** — Preview must teach how to convert real-life problems into mathematical expressions, because Real-Life (Phase 6) will test this.
+| **3. Examples** | 3-5 worked examples, simple → complex. Each: setup → visual → step-by-step → answer with units. |
+| **4. Origin** | Genetic method: who invented this, what problem forced its creation, how it evolved. Tell the truth — if Pythagoras invented it, say Pythagoras. If Al-Xorazmiy, say Al-Xorazmiy. National pride comes from honesty, not forced attribution. Write as a discovery STORY — this IS teaching, not trivia. |
+| **5. Word → Formula Translation** | THIS IS THE BRIDGE TO REAL-LIFE. Teach the student HOW to: (1) Read a real-world problem and understand what's being asked, (2) Extract the relevant data — what numbers matter, what's noise, (3) Convert extracted data into this chapter's formula/equation. Show 2-3 mini-cases: real sentence → underline key data → write the formula → solve. Start simple, build to chapter-level complexity. Without this panel, Real-Life Challenge becomes guesswork. |
+| **6. Industry Application** | Where professionals use this math. Pick 2-3 roles: muhandis, tahlilchi, dasturchi, me'mor, tadbirkor. Show SPECIFIC tasks with consequences: "Me'mor xona rejasini chizayotganda yuza formulasidan foydalanadi — formula noto'g'ri bo'lsa, bino sig'maydi." Not vague — concrete task + what breaks if wrong. |
+| **7. Why This Matters** | What breaks if you DON'T know this + what opens UP if you DO. End with BOST goal: "Bugun [topic] haqida nimani bilmoqchisiz?" — stored for Reflection. |
 
 **Two-layer explanation in every panel:**
 1. Full mathematical rigor
