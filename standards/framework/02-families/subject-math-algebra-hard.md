@@ -123,7 +123,6 @@ Warm-up. Tap-only. MC + T/F + YNNG. Must mix ≥2 formats.
 | **Tile Match** | Formula ↔ visual, expression ↔ simplified, equation ↔ graph | Concept has visual/symbolic pairs to match |
 | **Memory Match** | Formula �� name, term ↔ definition, identity pairs | Chapter has 8+ terms/formulas to pair |
 | **Sentence Fill** | Drag equation parts into position, fill missing step/operation, cloze formula | Procedural chapters — solving steps, order of operations, proofs |
-| **Notebook Capture** | Standalone handwritten practice with camera verify | Heavy calculation chapters needing extended written work |
 
 **Construction notes:**
 - **Tile Match:** 6-8 pairs. G5-6: fraction ↔ visual, formula ↔ bar model. G7-9: expression ↔ equivalent, equation step ↔ justification. Von Restorff slot: load surprising math facts, unusual visuals.
@@ -240,4 +239,4 @@ HP combat. Damage tiers: Easy -10, Medium -20, Hard -30. Distribution: 40/40/20.
 - **MA-H8:** Real-Life scope locked to Preview content — no new concepts
 - **MA-H9:** Pronoun: "Siz" always, never "sen"
 - **MA-H10:** No bazaar/village cliches — modern professional contexts only
-- **MA-H11:** v1 games only: Adaptive Quiz, Tile Match, Memory Match, Sentence Fill, Notebook Capture. Pick based on chapter content — don't default to same combo every session.
+- **MA-H11:** v1 games: Adaptive Quiz (mandatory, Notebook Capture built in), Tile Match, Memory Match, Sentence Fill. Pick based on chapter content — don't default to same combo every session.

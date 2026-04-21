@@ -19,11 +19,10 @@ You are building the Game Breaks (Phase 3) for a Math/Algebra homework session. 
 
 | Game | How it works | Good for |
 |------|-------------|----------|
-| **Adaptive Quiz** | Question → student answers → difficulty adjusts. Notebook Capture on calculation steps. | Multi-step problems, equation solving |
+| **Adaptive Quiz** | Question → student answers → difficulty adjusts. Student photographs written work (Notebook Capture built in). | Multi-step problems, equation solving |
 | **Tile Match** | Drag pairs to match. 6-8 pairs. | Formula ↔ visual, expression ↔ simplified, term ↔ definition |
 | **Memory Match** | 4×4 flip grid, find matching pairs. | Formula ↔ name, number ↔ representation |
 | **Sentence Fill** | Statement with gap, student drags/selects the missing piece. | Fill missing operation, missing step, missing term in a procedure |
-| **Notebook Capture** | Student solves on paper, photographs work. | Extended calculation practice |
 
 ## Game Selection
 
@@ -37,7 +36,6 @@ Pick based on what fits the chapter:
 - Procedural chapter (solving methods) → Sentence Fill (fill the missing step)
 - Vocabulary-heavy chapter (new terms) → Memory Match (term pairs)
 - Formula-heavy chapter → Tile Match (formula ↔ visual)
-- Calculation-heavy chapter → Notebook Capture (extended written work)
 
 ---
 
@@ -70,16 +68,12 @@ Pick based on what fits the chapter:
 - G5-6: "43 × 20 = 43 × ___ × 10" (answer: 2)
 - G7-9: "2x + 4 = 10 → 2x = 10 ___ 4" (answer: −)
 
-### Notebook Capture (standalone)
-- 3-5 problems, student solves on paper and photographs
-- Use for heavy calculation chapters where written work matters
-
 ---
 
 ## Rules
 
 - Every item tagged: `[Bloom: LX | PISA: LX]`
-- Capture: Notebook Capture triggers on Adaptive Quiz calculation steps only (unless Notebook Capture selected as standalone game)
+- Notebook Capture is built into Adaptive Quiz — not a separate game
 - No frozen/removed games: no Why Chain, Territory Conquest, Connect Four, Word Ladder, Puzzle Lock, Reaction Chain, Blackjack, Bridge Builder, Minefield Navigator, Escape Room, Codebreaker
 - Current chapter content only
 - Language: Uzbek, "Siz" formal

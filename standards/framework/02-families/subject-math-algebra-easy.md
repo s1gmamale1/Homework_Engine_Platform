@@ -121,7 +121,6 @@ Warm-up. Tap-only. 3 formats ONLY: Multiple Choice, True/False, Yes/No/Not Given
 | **Tile Match** | Formula ↔ visual, expression ↔ simplified form, equation ↔ graph | Concept has visual/symbolic pairs to match |
 | **Memory Match** | Formula ↔ name, term ↔ definition, number ↔ word form | Chapter has 8+ terms/formulas to pair |
 | **Sentence Fill** | Drag equation components into position, fill missing operation in a step, cloze formula completion | Procedural chapters — steps of solving, order of operations |
-| **Notebook Capture** | Standalone handwritten practice with camera verify | Heavy calculation chapters needing extended written work |
 
 **Construction notes:**
 - **Tile Match:** 6 pairs. G5-6: fraction ↔ shaded circle, formula ↔ bar model. G7-9: expression ↔ equivalent, equation step ↔ justification.
@@ -155,4 +154,4 @@ Warm-up. Tap-only. 3 formats ONLY: Multiple Choice, True/False, Yes/No/Not Given
 - **MA-E5:** Pronoun: "Siz" always, never "sen"
 - **MA-E6:** No bazaar/village cliches — modern contexts only
 - **MA-E7:** Matematika G5-6 Boss HP override = 80 (not in Easy mode, noted for reference)
-- **MA-E8:** v1 games only: Adaptive Quiz, Tile Match, Memory Match, Sentence Fill, Notebook Capture. Pick based on chapter content — don't default to same combo every session.
+- **MA-E8:** v1 games: Adaptive Quiz (mandatory, Notebook Capture built in), Tile Match, Memory Match, Sentence Fill. Pick based on chapter content — don't default to same combo every session.
