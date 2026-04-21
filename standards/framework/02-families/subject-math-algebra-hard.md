@@ -28,7 +28,7 @@ Matematika (G5-6) and Algebra (G7-9) are the same progression: numbers → patte
 - **CPA:** G5-6 must show concrete object → diagram → formula for every new concept. G7-9 compresses concrete phase but never skips pictorial.
 - **No magic moves:** Every algebraic step traced to its source. If a student would ask "where did that come from?", answer BEFORE they ask.
 - **Genetic method:** Teach by retracing the concept's origin — original problem → struggle → invention → formalization. The formula becomes inevitable, not arbitrary.
-- **Variable naming:** Never write an equation with x before defining what x represents.
+- **Variable naming (first introduction only):** When a chapter introduces variables for the first time, define what x represents before writing the equation.
 - **Derivation transparency:** Expand every formula template before using it. No step assumed valid.
 - **Units always required:** `x = 5` is incomplete. `x = 5 m` or `x = 5 ta` is correct.
 - **Bidirectional thinking:** Every session has ≥1 real-world→formula AND ≥1 formula→real-world item.
@@ -114,30 +114,26 @@ Warm-up. Tap-only. MC + T/F + YNNG. Must mix ≥2 formats.
 
 **Time:** ~20 min | **Weight: 30%**
 
-| Slot | Game | Role |
-|------|------|------|
-| 1 | **Adaptive Quiz** (mandatory) | Calculation + equation solving with Notebook Capture |
-| 2 | **Tile Match** | Visual pattern matching — Von Restorff Anchor slot |
-| 3 | **Memory Match Blitz** | Formula pairs, 4×4 flip grid |
+**Mandatory:** Adaptive Quiz in one slot (Notebook Capture on every solve step).
+**Remaining 2 slots:** Pick from v1 pool based on chapter content. Slot 2 is the Von Restorff Anchor — load outstanding/surprising items there.
 
-**Adaptive Quiz construction:**
-- Items from THIS chapter. Multi-step: student shows work → camera capture.
-- G5-6: scaffolded steps. G7-9: IRT-calibrated, open-ended (no MC).
-- All calculation steps trigger Notebook Capture.
+**v1 game pool (all 5 available):**
 
-**Tile Match construction (Von Restorff — load outstanding items here):**
-- 6-8 pairs.
-- G5-6: formula ↔ bar model, fraction ↔ visual, number ↔ expanded form
-- G7-9: expression ↔ simplified form, equation ↔ graph, equation step ↔ justification ("2x+4=10 → 2x=6" ↔ "Ikkala tomondan 4 ayirildi")
-- Pairs 1-2: recall. Pairs 3-4: property. Pairs 5-6+: cross-representation.
-- Von Restorff items: surprising math facts, unusual visuals, real engineering contexts.
+| Game | Math/Algebra use | When to pick |
+|------|-----------------|--------------|
+| **Adaptive Quiz** | Multi-step calculation, equation solving | MANDATORY — always 1 slot |
+| **Tile Match** | Formula ↔ visual, expression ↔ simplified, equation ↔ graph | Concept has visual/symbolic pairs to match |
+| **Memory Match** | Formula �� name, term ↔ definition, identity pairs | Chapter has 8+ terms/formulas to pair |
+| **Sentence Fill** | Drag equation parts into position, fill missing step/operation, cloze formula | Procedural chapters — solving steps, order of operations, proofs |
+| **Notebook Capture** | Standalone handwritten practice with camera verify | Heavy calculation chapters needing extended written work |
 
-**Memory Match Blitz construction:**
-- 4×4 grid (8 pairs) + confirm question after each match.
-- G5-6: number ↔ word, fraction ↔ visual, formula ↔ name
-- G7-9: identity pairs, function ↔ graph, term ↔ definition
+**Construction notes:**
+- **Tile Match:** 6-8 pairs. G5-6: fraction ↔ visual, formula ↔ bar model. G7-9: expression ↔ equivalent, equation step ↔ justification. Von Restorff slot: load surprising math facts, unusual visuals.
+- **Memory Match:** 4×4 grid (8 pairs). G5-6: number ↔ visual. G7-9: identity pairs, function ↔ graph.
+- **Sentence Fill:** 5-8 items. Gap = the operation, variable, or next step. Must test mathematical understanding, not random word removal. G7-9: fill missing algebraic manipulation + justification.
+- **Notebook Capture (standalone):** 3-5 problems, camera verify each. Use when chapter is pure calculation (long division, multi-step equations).
 
-**Capture:** Adaptive Quiz only (AF-1).
+**Capture:** Notebook Capture on Adaptive Quiz only (AF-1). Other games = no capture unless Notebook Capture selected as standalone.
 
 ---
 
@@ -243,8 +239,8 @@ HP combat. Damage tiers: Easy -10, Medium -20, Hard -30. Distribution: 40/40/20.
 - **MA-H5:** Bidirectional thinking every session: ≥1 real→formula + ≥1 formula→real
 - **MA-H6:** Error Analysis every 2 sessions minimum
 - **MA-H7:** All answers must include units or context labels
-- **MA-H8:** Variable must be named before equation is written (G7-9)
+- **MA-H8:** Variable must be named before equation is written (G7-9, first introduction only)
 - **MA-H9:** Real-Life scope locked to Preview content — no new concepts
 - **MA-H10:** Pronoun: "Siz" always, never "sen"
 - **MA-H11:** No bazaar/village cliches — modern professional contexts only
-- **MA-H12:** v1 games only: Tile Match, Memory Match, Adaptive Quiz, Notebook Capture
+- **MA-H12:** v1 games only: Adaptive Quiz, Tile Match, Memory Match, Sentence Fill, Notebook Capture. Pick based on chapter content — don't default to same combo every session.

@@ -27,7 +27,7 @@ Matematika (G5-6) and Algebra (G7-9) are the same progression: numbers → patte
 **Teaching rules:**
 - **CPA:** G5-6 must show concrete object → diagram → formula for every new concept. G7-9 compresses concrete phase but never skips pictorial.
 - **No magic moves:** Every algebraic step traced to its source. If a student would ask "where did that come from?", answer BEFORE they ask.
-- **Variable naming:** Never write an equation with x before defining what x represents.
+- **Variable naming (first introduction only):** When a chapter introduces variables for the first time, define what x represents before writing the equation.
 - **Units always required:** `x = 5` is incomplete. `x = 5 m` or `x = 5 ta` is correct.
 
 ---
@@ -110,27 +110,23 @@ Warm-up. Tap-only. 3 formats ONLY: Multiple Choice, True/False, Yes/No/Not Given
 
 **Time:** ~15 min | **Weight: 50%**
 
-| Slot | Game | Role |
-|------|------|------|
-| 1 | **Adaptive Quiz** (mandatory) | Calculation practice with Notebook Capture on every solve step |
-| 2 | **Tile Match** OR **Memory Match** | Visual pattern matching / formula-visual pairing |
+**Mandatory:** Adaptive Quiz in one slot (Notebook Capture on every solve step).
+**Second slot:** Pick from remaining v1 pool based on chapter content.
 
-**Adaptive Quiz construction:**
-- Items from THIS chapter only
-- Multi-step calculation: student shows work → camera capture
-- IRT-calibrated difficulty for G7+
-- G5-6: scaffolded — show first step, student completes
+**v1 game pool (all 5 available):**
 
-**Tile Match construction (if selected):**
-- 6 pairs. Left tile = formula/expression. Right tile = visual/equivalent form.
-- G5-6: formula ↔ bar model, fraction ↔ shaded circle, number ↔ expanded form
-- G7-9: expression ↔ simplified form, equation ↔ graph, equation step ↔ justification
-- Difficulty: pairs 1-2 = recall, pairs 3-4 = property identification, pairs 5-6 = cross-representation
+| Game | Math/Algebra use | When to pick |
+|------|-----------------|--------------|
+| **Adaptive Quiz** | Multi-step calculation, equation solving | MANDATORY — always 1 slot |
+| **Tile Match** | Formula ↔ visual, expression ↔ simplified form, equation ↔ graph | Concept has visual/symbolic pairs to match |
+| **Memory Match** | Formula ↔ name, term ↔ definition, number ↔ word form | Chapter has 8+ terms/formulas to pair |
+| **Sentence Fill** | Drag equation components into position, fill missing operation in a step, cloze formula completion | Procedural chapters — steps of solving, order of operations |
+| **Notebook Capture** | Standalone handwritten practice with camera verify | Heavy calculation chapters needing extended written work |
 
-**Memory Match construction (if selected):**
-- 4×4 grid (8 pairs). Formula ↔ name, term ↔ definition, expression ↔ equivalent
-- G5-6: number ↔ word form, fraction ↔ visual
-- G7-9: algebraic identity pairs, function ↔ graph pairs
+**Construction notes:**
+- **Tile Match:** 6 pairs. G5-6: fraction ↔ shaded circle, formula ↔ bar model. G7-9: expression ↔ equivalent, equation step ↔ justification.
+- **Memory Match:** 4×4 grid (8 pairs). G5-6: number ↔ visual. G7-9: identity pairs, function ↔ graph.
+- **Sentence Fill:** 5-7 items. Gap = the operation, the variable, or the next step. NOT just removing random words — gaps must test mathematical understanding.
 
 **Capture:** Notebook Capture on Adaptive Quiz only (AF-1). Other games = no capture.
 
@@ -159,4 +155,4 @@ Warm-up. Tap-only. 3 formats ONLY: Multiple Choice, True/False, Yes/No/Not Given
 - **MA-E5:** Pronoun: "Siz" always, never "sen"
 - **MA-E6:** No bazaar/village cliches — modern contexts only
 - **MA-E7:** Matematika G5-6 Boss HP override = 80 (not in Easy mode, noted for reference)
-- **MA-E8:** v1 games only: Tile Match, Memory Match, Sentence Fill, Adaptive Quiz, Notebook Capture
+- **MA-E8:** v1 games only: Adaptive Quiz, Tile Match, Memory Match, Sentence Fill, Notebook Capture. Pick based on chapter content — don't default to same combo every session.
