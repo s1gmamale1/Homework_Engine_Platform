@@ -56,20 +56,6 @@ These are **NOT** standalone mini-games. They are **knowledge-gated experiences*
 
 ---
 
-### 3. Codebreaker
-**Inspiration:** Mastermind (Mordecai Meirowitz, 1970) — Educational use documented in *CBE-Life Sciences Education* (PMC3022521)
-
-| Component | Specification |
-|-----------|---------------|
-| **Core Loop** | AI generates secret code (4-5 symbols). Student has 8 attempts to crack it. After each guess, AI gives feedback (right value + right position, right value + wrong position). |
-| **Knowledge Gate** | Each guess attempt requires answering a question. Correct → guess submitted and scored. Wrong → guess attempt consumed WITHOUT submission (lost turn). |
-| **Difficulty Scaling** | Code length (3 easy → 4 medium → 5 hard). Symbol pool size expands. Fewer allowed attempts at higher difficulty. |
-| **Win/Loss/Retry** | Crack code in ≤8 attempts = WIN. Fail = LOSS + reveal code. 1 attempt. |
-| **Best Subjects** | Math (number sequences), Chemistry (element symbols), Biology (taxonomic classifications), History (chronological dates) |
-| **Implementation Tier** | Phase 1 (MVP) |
-
----
-
 ### 4. Memory Match Blitz
 **Inspiration:** Classic Memory/Concentration (Centuries-old folk game, no single originator)
 
@@ -190,8 +176,8 @@ These are **NOT** standalone mini-games. They are **knowledge-gated experiences*
 |---------|-------|----------------------|
 | **Phase 3 (Game Breaks)** | 2-3 games per homework session. Core practice. | Content creator tags game in JSON. Engine validates against Subject-to-Game Matrix. |
 | **Mystery Box Event** | Random pop-up OR pre-placed. Single challenging question tied to game outcome. | Performance-based rewards. Correct answer = game win + reward. Wrong = participation XP only. |
-| **Big Boss (Weekly)** | Codebreaker or Connect Four configured for cross-subject review. | AI targets 3 weakest standards. Game difficulty = PISA level +1. |
-| **Mythical Boss (Elite)** | Codebreaker at PISA 5-6 difficulty. Zero hints. One attempt. | Multi-subject reasoning required. Win = 5× XP + exclusive title. |
+| **Big Boss (Weekly)** | Connect Four configured for cross-subject review. | AI targets 3 weakest standards. Game difficulty = PISA level +1. |
+| **Mythical Boss (Elite)** | Connect Four at PISA 5-6 difficulty. Zero hints. One attempt. | Multi-subject reasoning required. Win = 5× XP + exclusive title. |
 
 ### Game Selection & Validation Flow
 
@@ -267,7 +253,6 @@ Total Game XP = Base XP + Strategy Bonus + Speed Bonus
 |------|:----:|:-------------------:|:-------:|:-------:|:--------:|
 | Tic Tac Toe vs AI | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Connect Four vs AI | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Codebreaker | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Memory Match Blitz | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Reaction Chain | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Word Ladder Climb | ⚠️ | ⚠️ | ✅ | ⚠️ | ✅ |
@@ -332,7 +317,7 @@ Before ANY game is deployed to production, it must pass:
 
 | Phase | Timeline | Games | Rationale |
 |-------|----------|-------|-----------|
-| **MVP** | Sprint 1-2 | Tic Tac Toe, Connect Four, Memory Match Blitz, Codebreaker | Lowest build complexity. Proven mechanics. Universal subject fit. |
+| **MVP** | Sprint 1-2 | Tic Tac Toe, Connect Four, Memory Match Blitz | Lowest build complexity. Proven mechanics. Universal subject fit. |
 | **Enhancement** | Sprint 3-4 | Word Ladder, Puzzle Lock, Reaction Chain | Medium complexity. Adds variety for returning students. |
 
 ---

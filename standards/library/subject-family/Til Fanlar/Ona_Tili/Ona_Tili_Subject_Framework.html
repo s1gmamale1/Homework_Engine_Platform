@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ona tili (Uzbek Language) — Subject-Specific Framework</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --accent-color: #00f2ff; /* Neon Cyan */
+            --accent-glow: rgba(0, 242, 255, 0.3);
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --border-color: #333;
+            --neon-purple: #bc13fe;
+            --neon-green: #39ff14;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-glow);
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--neon-purple);
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.1);
+        }
+
+        .status-bar p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        details {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            margin-right: 15px;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        code {
+            background: #2a2a2a;
+            color: var(--neon-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--header-color);
+        }
+
+        .highlight {
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+
+        .good-example {
+            border-left: 3px solid var(--neon-green);
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #afffa3;
+        }
+
+        .bad-example {
+            border-left: 3px solid #ff3131;
+            padding-left: 10px;
+            margin: 10px 0;
+            color: #ffb1b1;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ona tili (Uzbek Language) Framework</h1>
+    
+    <div class="status-bar">
+        <p><strong>Scope:</strong> G5-11, all grades, universal</p>
+        <p><strong>Family:</strong> Til Fanlari (Languages)</p>
+        <p><strong>Parent Docs:</strong> <code>Til Fanlari Family Doc</code> | <code>UNIFIED-Buzan v2.0</code> | <code>Library Framework v0.6</code></p>
+        <p><strong>Last Updated:</strong> April 14, 2026</p>
+    </div>
+
+    <details open>
+        <summary>1. What Ona Tili Teaches</summary>
+        <div class="content">
+            <p>Ona tili in NETS is a <strong>native language</strong> subject. Students already speak Uzbek fluently. Homework formalizes and sharpens what they already know intuitively.</p>
+            <ul>
+                <li><strong>Grammar awareness:</strong> Focus on analysis, structure, punctuation, and formal register.</li>
+                <li><strong>Transformation:</strong> Transform dry textbook grammar drills into engaging homework.</li>
+                <li><strong>Story Mode:</strong> Make flat textbook explanations vivid.</li>
+                <li><strong>Active Analysis:</strong> Turn boring drills into Game Breaks and Real-Life Challenges.</li>
+            </ul>
+            <p><strong>Ona Tili is NOT about:</strong> Basic communication, word-translation, or heavy vocab acquisition.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. Grade-Band Progression</summary>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>Focus</th>
+                        <th>Production Level</th>
+                        <th>Boss Expectations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>G5</td>
+                        <td>Parts of speech, sentence types, basic punctuation, spelling</td>
+                        <td>Guided: identify parts, fill blanks</td>
+                        <td>Identify grammar elements, write 2-3 sentences</td>
+                    </tr>
+                    <tr>
+                        <td>G6</td>
+                        <td>Compound sentences, word formation, reading comprehension</td>
+                        <td>Guided -> Prompted: parse, short answers</td>
+                        <td>Break down compound sentence, explain word formation</td>
+                    </tr>
+                    <tr>
+                        <td>G7</td>
+                        <td>Complex structure, subordinate clauses, formal composition intro</td>
+                        <td>Prompted: 5-sentence paragraph</td>
+                        <td>Rewrite informal to formal, parse clause structure</td>
+                    </tr>
+                    <tr>
+                        <td>G8</td>
+                        <td>Morphological analysis, stylistics intro, essay structure</td>
+                        <td>Prompted -> Free: structured paragraph</td>
+                        <td>Analyze morphology of 3 words, write structured paragraph</td>
+                    </tr>
+                    <tr>
+                        <td>G9</td>
+                        <td>Advanced syntax, literary analysis, persuasive writing</td>
+                        <td>Free: multi-paragraph with argument</td>
+                        <td>Write persuasive paragraph, analyze sentence rhythm</td>
+                    </tr>
+                    <tr>
+                        <td>G10</td>
+                        <td>Text analysis, register mastery, advanced punctuation, composition</td>
+                        <td>Free: analytical essay</td>
+                        <td>Analyze text structure, produce formal composition</td>
+                    </tr>
+                    <tr>
+                        <td>G11</td>
+                        <td>Advanced literary analysis, grammar mastery, academic writing</td>
+                        <td>Independent: extended analytical writing</td>
+                        <td>Complex grammar analysis + extended composition</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <details>
+        <summary>3. Content Production Rules by Grade Band</summary>
+        <div class="content">
+            <h3>G5-6 (Foundation)</h3>
+            <ul>
+                <li>Grammar through <strong>sentence context</strong>, never isolated rule recitation first.</li>
+                <li>Focus on parts of speech, spelling rules (apostrophes), and basic punctuation.</li>
+                <li>Use <strong>chunking</strong>: break complex sentences into parts, then reassemble.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "Aziza wrote a letter but forgot all the commas. Help her fix it and explain why each comma matters."</div>
+
+            <h3>G7-9 (Development)</h3>
+            <ul>
+                <li>Emphasize complex sentence breakdown and subordinate clauses.</li>
+                <li>Use morphology actively: <strong>root -> suffix -> meaning chain</strong>.</li>
+                <li>Teach word formation as a system (how suffixes shift meaning).</li>
+            </ul>
+            <div class="good-example">Good Pattern: "You found two versions of the same message: one informal, one formal. Compare them and rewrite the informal version for a school newspaper."</div>
+
+            <h3>G10-11 (Advanced)</h3>
+            <ul>
+                <li>Require full morphological decomposition.</li>
+                <li>Add stylistic analysis of literary and formal texts.</li>
+                <li>Formal composition must include thesis, evidence, and conclusion.</li>
+            </ul>
+            <div class="good-example">Good Pattern: "You are revising a formal article for publication. Identify weak sentence structure, improve punctuation, and explain how the revision changes tone."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>4. Game Mechanics — Ona Tili Specific</summary>
+        <div class="content">
+            <h3>Primary Mechanics</h3>
+            <ul>
+                <li><strong>Sentence Fill / Cloze:</strong> Core mechanic, test grammar in context.</li>
+                <li><strong>Tile Match:</strong> Use for sentence structure, not vocab matching.</li>
+                <li><strong>Story Mode:</strong> Narrative wrap for grammar/editing/punctuation.</li>
+                <li><strong>Why Chain:</strong> Grammar reasoning and structure awareness (up to 3 levels).</li>
+            </ul>
+
+            <h3>Interactive Picks</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Game</th>
+                        <th>Best Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Codebreaker</td>
+                        <td>Word decomposition (root + suffix)</td>
+                    </tr>
+                    <tr>
+                        <td>Reaction Chain</td>
+                        <td>Sentence parsing sequence</td>
+                    </tr>
+                    <tr>
+                        <td>Puzzle Lock</td>
+                        <td>Paragraph or text reconstruction</td>
+                    </tr>
+                    <tr>
+                        <td>Memory Match Blitz</td>
+                        <td>Grammar rule <-> Example pairs</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Phase 5 Buzan Options</h3>
+            <ul>
+                <li><strong>Radiant Summary:</strong> Rule hierarchies, suffix trees.</li>
+                <li><strong>Link System:</strong> Morphological chains as memorable sequences.</li>
+                <li><strong>Peg System:</strong> Punctuation rules anchored to stable pegs.</li>
+            </ul>
+
+            <h3>Games to Avoid</h3>
+            <p>Word Ladder, Listening Tasks (use Dictation instead), Notebook Capture.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. Boss Format</summary>
+        <div class="content">
+            <p>Combine <strong>writing production + grammar analysis</strong>.</p>
+            <ul>
+                <li><strong>G5-6:</strong> Passage correction + short production (2-3 sentences).</li>
+                <li><strong>G7-8:</strong> Structure parse + rewrite in different register.</li>
+                <li><strong>G9-11:</strong> Analytical writing with explicit grammar/style focus.</li>
+                <li><strong>Failure framing:</strong> Use TEFCAS language ("Hali emas!").</li>
+            </ul>
+            <div class="good-example">Good Boss (G7): "Break this sentence into clauses. Label each: main/subordinate. Rewrite it as two simple sentences."</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>6. Story Mode & Real-Life Challenge</summary>
+        <div class="content">
+            <h3>Story Mode</h3>
+            <p>Turn grammar into a narrative problem: editing, proofreading, rewriting, or structure repair.</p>
+            <div class="good-example">Good Example: "You received a letter full of errors. Each segment has 3 mistakes. Find and explain each."</div>
+            
+            <h3>Real-Life Challenge</h3>
+            <p>The student becomes the <strong>language expert</strong>.</p>
+            <ul>
+                <li><strong>G5-6 Helper:</strong> Fix a class notice with punctuation mistakes.</li>
+                <li><strong>G7-8 Editor:</strong> Edit a junior reporter's article with grammar errors.</li>
+                <li><strong>G9-10 Official:</strong> Rewrite informal message as official school announcement.</li>
+                <li><strong>G10-11 Critic:</strong> Write an official speech for Independence Day ceremony.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details>
+        <summary>Technical Rules</summary>
+        <div class="content">
+            <ol>
+                <li><strong>Inheritance:</strong> Til Fanlari family rules + this subject filter.</li>
+                <li><strong>Session Structure:</strong> 7-phase session (UNIFIED-Buzan §5).</li>
+                <li><strong>National Pride:</strong> Inherit ratios/injections from parent docs.</li>
+                <li><strong>Core Mechanic Rule:</strong> Sentence Fill / Cloze is mandatory.</li>
+            </ol>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>

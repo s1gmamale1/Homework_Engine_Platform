@@ -126,12 +126,155 @@ Content producers must prioritize these cognitive anchors:
 
 | Game | Why It Fits Til Fanlari | Best For |
 |---|---|---|
-| **Codebreaker** | Decoding spelling patterns or word structures | Orthography, affixes, difficult spellings |
 | **Memory Match Blitz** | Fast pair retrieval under time pressure | Word-translation pairs, synonym-antonym sets |
 | **Reaction Chain** | Builds sequential sentence or dialogue flow | Sentence construction, narrative order |
 | **Puzzle Lock** | Reconstructs text from fragments | Paragraph cohesion, text restoration, sequencing |
 
 *Full specs: [[NETS-Interactive-Game-Catalog.md]]*
+
+### Phase 0-A Panel Construction Guide
+
+Phase 0-A is an 8-panel visual story that previews the session theme. For Til Fanlari, panels serve dual duty: vocabulary preview AND cultural/communicative context setting. The student should finish Phase 0-A knowing WHAT the session is about and WHY the language content matters.
+
+**Panel length rules:**
+- Panels 1-5: 8-10 sentences each (narrative core)
+- Panels 6-8: 5-10 sentences each (consolidation and transition)
+
+**Construction recipe for each panel:**
+
+| Panel | Purpose | Language-Family Pattern | Construction Notes |
+|---|---|---|---|
+| **1 — Hook** | Open with a vivid communicative situation | A character faces a language challenge: writing a letter, reading a sign, decoding a message, giving a speech | Lead with action, not definition. "Malika stared at the letter — half the words were unfamiliar." NOT "Today we learn new vocabulary." |
+| **2 — Context** | Show why this language skill matters in real life | Connect the chapter topic to a real Uzbek or global communication scenario | Ground the abstract grammar/vocab topic in a concrete need: a job interview, a school announcement, a travel situation |
+| **3 — Key Vocabulary Preview** | Introduce 4-6 key terms from the chapter | Each term appears in a meaningful sentence, not a glossary list. Bold the target word. Provide L1 gloss for foreign languages | "The ambassador spoke with **eloquence** — har bir so'zi aniq va ta'sirli edi." NOT "eloquence = notiqlik" |
+| **4 — Grammar/Structure Spotlight** | Show the grammar pattern or text structure in action | One clear example sentence, then a second sentence with the SAME pattern but different content. Highlight the pattern visually | Show the pattern working, not the rule name. "Bola maktab**ga** ketdi. Ota ish**ga** bordi." — the student sees the suffix pattern before being told its name |
+| **5 — Challenge Preview** | Foreshadow what the student will DO in the session | Briefly describe the Real-Life role or Boss task shape without revealing exact content | "Bugun Siz muharrir bo'lasiz — maqoladagi xatolarni topasiz." This primes motivation |
+| **6 — Connection** | Link today's topic to something the student already knows | Reference a prior chapter concept, a familiar word pattern, or a known grammar rule | "Eslatma: o'tgan darsda Siz kelishiklarni o'rgandingiz. Bugun ularni gap ichida ishlatamiz." |
+| **7 — Cultural Anchor** | National Pride or cultural context moment | A quote, historical fact, or literary reference connected to the language topic. Draw from `quotes_database.json` or `facts` | "Alisher Navoiy 15 yoshida she'r yozgan — til kuchi yoshlikdan boshlanadi." |
+| **8 — BOST Goal** | Student sets their session goal | Direct address: "Bugun Siz nimani bilmoqchisiz?" Student types or selects a goal. Store for Phase 7 recall | Always use formal "Siz". Goal must connect to the chapter topic. The system stores this response for Phase 7 BOST recall |
+
+**Family-level rules for all language panels:**
+- Foreign languages (English, Russian for UZ-stream): bilingual scaffolding allowed in panels 1-3 for G5-6, then taper to target-language-only by G8+
+- Native language (Ona tili, Russian for RU-stream): all panels in the target language from G5
+- Every panel must contain at least ONE sentence with a chapter keyword bolded
+- Panel 3 vocabulary items MUST reappear in Phase 1 Memory Sprint — this is the spaced repetition entry point
+
+---
+
+### Phase 1 Format Mixing + Construction
+
+Phase 1 Memory Sprint for Til Fanlari **MUST use at least 2 of the 3 allowed formats** in every session:
+
+| Format | What It Tests | Language-Family Use |
+|---|---|---|
+| **Multiple Choice** | Recognition, vocabulary recall, grammar pattern ID | "Which suffix makes this word dative? (a) -ga (b) -da (c) -dan (d) -ni" |
+| **True/False** | Rule confirmation, reading comprehension | "The sentence 'Bola maktabga ketdi' uses the dative case. True or False?" |
+| **Yes/No/Not Given** | Inference, textual evidence checking | "Based on the passage, the author supports bilingual education. Yes / No / Not Given" |
+
+**Construction recipe per format:**
+
+**Multiple Choice (MC) — Language Pattern:**
+1. Write the **stem** as a complete sentence or short passage with one element highlighted or blanked
+2. Write 1 correct answer that demonstrates the target grammar rule, vocabulary meaning, or reading comprehension skill
+3. Write 3 distractors: (a) one that is a common student error for this topic, (b) one that uses a related but wrong grammar form, (c) one that is clearly wrong but uses vocabulary from the chapter
+4. Tag: `[Bloom: L1-L2 | PISA: L1-L2]` for recall items; `[Bloom: L3 | PISA: L2]` for application items
+
+**Example MC (grammar ID):**
+> "Bola maktab___ ketdi." — Bu gapda qaysi kelishik ishlatilgan?
+> A) Jo'nalish (-ga) ✓  B) O'rin (-da)  C) Chiqish (-dan)  D) Tushum (-ni)
+> `[Bloom: L1 | PISA: L1]`
+
+**True/False (T/F) — Language Pattern:**
+1. Write a **statement** about a grammar rule, vocabulary meaning, or reading passage claim
+2. The statement must be unambiguously true OR false — no trick wording
+3. If false, the student should be able to explain WHY after answering (this primes Phase 2 deeper thinking)
+4. Tag: `[Bloom: L1-L2 | PISA: L1]`
+
+**Example T/F (spelling rule):**
+> "Tutuq belgisi (') faqat o'zlashma so'zlarda ishlatiladi." — True or False?
+> Answer: True
+> `[Bloom: L1 | PISA: L1]`
+
+**Yes/No/Not Given (YNNG) — Language Pattern:**
+1. Provide a **short passage** (3-5 sentences) from the chapter or adapted from it
+2. Write a claim that requires checking against the passage text
+3. "Yes" = passage explicitly supports it. "No" = passage explicitly contradicts it. "Not Given" = passage does not address it
+4. Tag: `[Bloom: L2-L3 | PISA: L2]`
+
+**Example YNNG (reading comprehension):**
+> Passage: "O'zbekistonda 130 dan ortiq millat vakillari yashaydi. Ularning har biri o'z tilida gaplasha oladi."
+> Claim: "O'zbekistonda faqat o'zbek tilida gaplashiladi."
+> Answer: No
+> `[Bloom: L2 | PISA: L2]`
+
+**Mixing rule enforcement:** If a session uses ONLY MC for all 8-10 items, it fails validation. Minimum 2 formats per session, distributed across the item set.
+
+---
+
+### Phase 3 Game Construction Recipes
+
+Phase 3 requires 3 games: at least 1 Interactive + at least 2 Default. Below are construction recipes for the primary Til Fanlari mechanics.
+
+#### Sentence Fill / Cloze (Default — PRIMARY for all languages)
+
+**What you build:** A text passage (3-8 sentences) with 3-6 strategically placed blanks. Each blank tests a specific grammar or vocabulary target.
+
+**Construction steps:**
+1. Select a passage from the chapter or write one using chapter vocabulary and grammar targets
+2. Identify 3-6 positions where grammar forms, vocabulary items, or spelling patterns are tested
+3. Remove those elements to create blanks
+4. Build a word bank: correct answers + 2-4 distractors per blank (G2-7). For G8+, consider free recall (no word bank)
+5. Tag each blank: `[Bloom: LX | PISA: LX]`
+
+**Example (Uzbek grammar — dative suffix):**
+> "Ota ish___ bordi. Bola maktab___ ketdi. Ona bozor___ yurdi."
+> Word bank: `ga, da, dan, ni, ning` (3 correct: ga, ga, ga + 2 distractors)
+> Correct fills highlight green, +100 XP each. First-attempt bonus: +25 per blank.
+
+**Example (English vocabulary — G7):**
+> "The scientist made an important ___. Her ___ changed the way we understand climate. The government ___ her research immediately."
+> Word bank: `discovery, research, funded, ignored, invention, rejected`
+
+**Example (Russian grammar — case endings):**
+> "Мальчик пошёл в школ___. Учитель стоял у доск___. Книга лежала на стол___."
+> Word bank: `у, е, и, ой, а` (correct: у, и, е + distractors)
+
+#### Tile Match (Default — structure and pairing)
+
+**What you build:** 6-8 pairs where left tiles match to right tiles. Timer: 2:00-3:00.
+
+**Construction steps:**
+1. Define the matching dimension: word↔definition, grammar rule↔example, L1↔L2, clause↔function
+2. Write 6-8 pairs. Pairs 1-3 should be L1 (Bloom: Remember), pairs 4-5 L2 (Understand), pairs 6+ L3 (Apply)
+3. Ensure no two right-side tiles could reasonably match the same left-side tile — ambiguity breaks the mechanic
+
+**Example (Grammar rule ↔ example sentence):**
+> Left: "Jo'nalish kelishigi" → Right: "Bola maktab**ga** ketdi"
+> Left: "O'rin kelishigi" → Right: "Kitob stol**da** turibdi"
+> Left: "Chiqish kelishigi" → Right: "U uy**dan** chiqdi"
+
+**Example (English word ↔ definition, G6):**
+> Left: "brave" → Right: "not afraid of danger"
+> Left: "curious" → Right: "wanting to learn or know"
+> Left: "ancient" → Right: "very old, from long ago"
+
+#### Spaced Flashcards (Default — vocabulary retention)
+
+**What you build:** 8-12 flashcard pairs for timed review. Front = prompt, Back = answer + reinforcement.
+
+**Construction steps:**
+1. Select 8-12 items from the chapter: new vocabulary, spelling exceptions, grammar patterns
+2. Front side: the word, phrase, or grammar prompt
+3. Back side: definition/translation + example sentence + image cue (where applicable)
+4. Order by difficulty: first 4 cards = recall (seen in Phase 0-A), next 4 = recognition (new context), last 4 = application (use in sentence)
+
+**Example (English vocabulary — G5):**
+> Front: "library" | Back: "kutubxona — A place with many books. 'I go to the library every Saturday.'" + image of Navoi Library
+
+**Example (Russian vocabulary — UZ-stream G6):**
+> Front: "здание" | Back: "bino — A large building. 'Школа — это большое здание.'" + image of school building
+
+---
 
 ### Phase 5 Buzan Alternatives
 - **Memory Palace:** Place vocabulary clusters at Registan Square locations.
@@ -170,7 +313,7 @@ Content producers must prioritize these cognitive anchors:
 Story Mode must deliver comprehensible input through a true narrative arc, not textbook exposition (see [[UNIFIED-Buzan §5.2]]).
 
 - **Role:** Story carries grammar, vocabulary, and comprehension inside meaningful context.
-- **Structure:** 3 segments with comprehension gates between them.
+- **Structure:** ONE continuous flowing story. Arc beats (Problem→Struggle→Discovery→Solution) are invisible ingredients, NOT segments. 3 comprehension checkpoints after the story.
 - **Goal:** Exposure first, then comprehension check, then guided production.
 
 **Good Example:** "Malika is writing a letter to her pen pal in Turkey. Segment A: she reads the incoming letter. Segment B: she plans her response. Segment C: she writes the response."
@@ -185,6 +328,59 @@ Story Mode must deliver comprehensible input through a true narrative arc, not t
 **Good Example:** "You are a translator at the UN Tashkent office. A diplomat's speech needs translating. Read the speech, identify 3 key terms, and produce an accurate summary in Uzbek."
 
 **Bad Example:** "Translate this sentence: The cat sat on the mat."
+
+---
+
+## Phase 7 Reflection — Language Family Pattern
+
+Phase 7 closes the session with structured metacognition. For Til Fanlari, reflection centers on **language production awareness** — what the student can now DO with language that they could not do before.
+
+### Construction Recipe
+
+**Step 1 — Session Summary (2-3 sentences)**
+Summarize what the student practiced. Reference the chapter topic, the grammar/vocabulary targets, and the communication skill exercised.
+
+> **Example:** "Bugun Siz jo'nalish kelishigini gap ichida ishlatishni mashq qildingiz. Siz 8 ta yangi so'z o'rgandingiz va muharrir sifatida xatolarni topdingiz."
+
+**Step 2 — 3 Metacognitive Prompts**
+Ask the student to reflect on HOW they learned, not just WHAT. One prompt per type:
+
+| Prompt Type | Purpose | Example |
+|---|---|---|
+| **Strategy awareness** | What approach worked? | "Qaysi usul Sizga yangi so'zlarni eslab qolishda yordam berdi — rasm, gap ichida ishlatish, yoki takrorlash?" |
+| **Difficulty reflection** | What was hardest and why? | "Qaysi topshiriq eng qiyin bo'ldi? Nima uchun?" |
+| **Transfer thinking** | Where else can you use this? | "Bugun o'rgangan grammatik qoidangizni qayerda — maktubda, hikoyada, yoki suhbatda — ishlata olasiz?" |
+
+**Step 3 — BOST Goal Recall**
+Retrieve the goal the student set in Phase 0-A Panel 8. Present it back:
+
+> **"Bugun Siz [stored goal] ni bilmoqchi edingiz. Bildingizmi?"**
+
+The student answers Yes/No/Partially. This closes the motivation loop opened in Phase 0-A.
+
+**Step 4 — Spaced Repetition Schedule**
+Display the review schedule for items from this session:
+
+> "Bugungi so'zlar va qoidalar quyidagi kunlarda qaytariladi: **ertaga (1-kun)**, **3 kundan keyin**, **1 haftadan keyin**, **3 haftadan keyin**, **2 oydan keyin**."
+
+**Step 5 — Closing Line**
+Score-dependent closing that reinforces motivation:
+
+- **Score >= 60%:** Third Renaissance line connecting language mastery to Uzbekistan's future.
+  > "Til bilgan — dunyo biladi. Siz Uchinchi Renessans avlodisiz — har bir o'rgangan so'zingiz kelajak eshigini ochadi."
+- **Score < 60%:** Encouraging neutral — no shame, no false praise.
+  > "Bugun qiyin bo'ldi, lekin har bir urinish — oldinga qadam. Ertaga yana mashq qilamiz. Siz albatta o'zlashtirasiz."
+
+### Language-Specific Closing Variants
+- **English sessions:** Closing may be bilingual (Uzbek frame + English key phrase) for G5-7, English-only for G8+
+  > G6: "Great work today! Siz bugun 8 ta yangi inglizcha so'z o'rgandingiz."
+  > G10: "Every word you master opens a door. Keep building."
+- **Russian sessions (UZ-stream):** Uzbek frame + Russian key phrase
+  > "Молодец! Bugun Siz rus tilida yangi gaplar tuza oldingiz."
+- **Russian sessions (RU-stream):** Russian-only
+  > "Вы сегодня разобрали сложные конструкции. Каждый урок делает Вас сильнее."
+- **Ona tili sessions:** Full Uzbek
+  > "Til — millatning ko'zgusi. Siz bugun ona tilingiz qoidalarini mustahkamladingiz."
 
 ---
 

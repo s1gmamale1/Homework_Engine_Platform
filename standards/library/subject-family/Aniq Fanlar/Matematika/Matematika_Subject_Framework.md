@@ -93,6 +93,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 | **3** | Game Breaks | 6-9 min | 10 min | 3 games. Tile Match is Slot 1 priority. No Speed Match with pure number sorting. |
 | **4** | Real-Life Challenge | 3-5 min | 10 min | W5H scaffold mandatory for G5-6 (4 of 6 branches). Pure calculation problems exempt. |
 | **5** | Consolidation / Mnemonic Lock | 2-3 min | 5 min | Must feel calm before Boss. Preferred: formula-visual pairing or fill-in-the-blank formula. |
+| **6** | Final Boss | 5-10 min | 10-15 min | See §3.3 for Matematika boss parameters. |
 
 ### 3.3 Difficulty Adaptation Engine
 
@@ -115,6 +116,19 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 - Panel 6 Why This Matters: BOST Goals prompt: *"Bugun raqamlar haqida nimani bilmoqchisiz?"* — stored and resurfaced in Phase 7
 - Panel 7 Industry Application: Engineer (`muhandis`), analyst (`tahlilchi`), architect (`me'mor`), developer (`dasturchi`), entrepreneur (`tadbirkor`)
 - Mathematician references: **Al-Khwarizmi** (first, at least 1 per 5 sessions), **Al-Biruni**, **Ulugh Beg**, then Pythagoras, Euclid, Fibonacci
+
+**Panel-by-Panel Construction Guide (8 panels, formal "Siz" throughout):**
+
+| Panel | How to Build | Min Depth |
+|---|---|---|
+| **1. Summary** | Reframe the chapter as a PROBLEM to solve, not a definition to memorize. Open with "Nima uchun bu kerak?" Lead with a visual overview — concept map, key diagram, or chapter roadmap with bold-term chips. Write as structural scan: heading tree + diagram thumbnails. Do NOT write flowing paragraphs — this is a visual reference panel. | 8-10 sentences |
+| **2. Better Explanation** | Break the textbook's explanation into CPA steps: start with a concrete analogy the student already understands (splitting pizza, measuring a room), then show a labeled diagram, then introduce the notation/formula. Explain what the textbook SHOULD have said more clearly. Each sentence adds understanding — no filler. | 8-10 sentences |
+| **3. Examples** | 3-4 worked examples from simple → complex. Each: setup sentence → visual (bar model, grid, number line) → step-by-step solution → final answer with units. Use textbook examples but add the visual scaffolding the textbook lacks. Show the THINKING process, not just the answer. | 8-10 sentences |
+| **4. Origin Story** | Mini-narrative about who discovered/formalized this concept. Priority: Al-Khwarizmi, Al-Biruni, Ulugh Beg (national 55%), then Pythagoras, Euclid, Fibonacci (global 45%). What problem were they solving? What changed because of their work? Write as a STORY — "9-asrda Xorazmda bir olim..." — not a Wikipedia entry. | 8-10 sentences |
+| **5. Personal Hook** | Connect to G5-6 daily life with specific scenarios: sharing pizza equally (fractions), saving allowance money (percentages), measuring a room for new furniture (area), comparing game scores with friends (ratios), splitting a restaurant bill (division). BOST Prime prompt at end: *"Bu mavzu haqida nimalarni bilasiz?"* Must feel like the student's OWN question, not a teacher's. | 8-10 sentences |
+| **6. Why It Matters** | Two parts: (1) What breaks if you DON'T know this — can't split a bill fairly, can't measure fabric for sewing, can't read a map scale, can't check if a shop gave correct change. (2) What opens UP if you DO know it — you can plan, estimate, verify, build. BOST Goals prompt at end: *"Bugun [topic] haqida nimani bilmoqchisiz?"* — stored and resurfaced in Phase 7. | 5-10 sentences |
+| **7. Industry Application** | Pick 2-3 roles: muhandis (floor plans, material estimates), tahlilchi (sales data, growth projections), me'mor (building dimensions, scale models), dasturchi (server capacity, user metrics), tadbirkor (profit margins, pricing). Show SPECIFIC professional tasks: "Me'mor xona rejasini chizayotganda yuza formulasidan foydalanadi — formula noto'g'ri bo'lsa, bino sig'maydi." Not vague — concrete task + consequence. | 5-10 sentences |
+| **8. Additional Materials** | Visual reference sheet: key formulas with paired diagrams (the "cheat sheet" student can return to anytime). Summary of Flash Card deck topics. If applicable: animated diagram recommendation (≤45 sec). End with encouragement: "Tayyor bo'lsangiz, uy vazifangizni boshlang!" | 5-10 sentences |
 
 **0-B Flash Cards — Matematika-specific overrides:**
 - **5-7 cards max** — strictly enforced for G5-6 working memory
@@ -145,11 +159,42 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 - Wrong answer feedback: show the CORRECT calculation visually: *"34 × 100 = 3 400, ikki nol qo'shiladi."* Never just the answer.
 - Buzan Primacy Effect: most important current-topic items go here — the brain is primed to encode what it sees first.
 
+**Format mixing rule:** Every Memory Sprint MUST use at least 2 of the 3 approved formats. Never all-MC. Recommended distribution:
+- 5 items: 3 MC + 2 T/F
+- 6 items: 3 MC + 2 T/F + 1 YNNG
+- 7 items: 3 MC + 2 T/F + 2 YNNG
+- 8 items: 4 MC + 2 T/F + 2 YNNG
+
+**Per-format construction recipe:**
+
+**Multiple Choice (MC):**
+- Stem: clear question or incomplete statement. ONE concept per question. No compound questions.
+- 4 options: 1 correct + 3 distractors. Each distractor MUST map to a specific common error:
+  - Distractor A: wrong operation (added instead of multiplied)
+  - Distractor B: place value error (forgot a zero, misread position)
+  - Distractor C: partial answer (stopped one step early, left off units)
+- Example: *"325 146 da 2 raqami qaysi xonada? A) Yuzliklar B) Mingliklar ✓ C) O'nliklar D) Birliklar"*
+- Visual feedback on wrong answer: show the CORRECT reasoning — *"Chapdan o'ngga: yuz minglar, o'n minglar, minglar... 2 minglar xonasida."*
+
+**True / False (T/F):**
+- Statement tests a RULE or common MISCONCEPTION — not a trivial calculation.
+- BAD: *"5 + 3 = 8 — To'g'ri yoki Noto'g'ri?"* (trivial — tests arithmetic, not understanding)
+- GOOD: *"Har qanday sonni 0 ga ko'paytirsak, natija shu sonning o'zi bo'ladi — To'g'ri yoki Noto'g'ri?"* (tests misconception: answer is Noto'g'ri, result is always 0)
+- GOOD: *"1 000 000 da 6 ta nol bor — To'g'ri yoki Noto'g'ri?"* (tests place value knowledge)
+- Each T/F must teach something when answered wrong — feedback explains WHY.
+
+**Yes / No / Not Given (YNNG):**
+- Statement about THIS CHAPTER's content. Tests whether student READ and ABSORBED the material.
+- "Not Given" = the chapter doesn't address this claim — forces careful reading vs. guessing.
+- GOOD: *"Bobda aytilganiga ko'ra, milliard soni 9 ta noldan iborat — Ha / Yo'q / Aytilmagan"*
+- GOOD: *"Bobda natural sonlarning eng kichigi 0 ekanligi aytilgan — Ha / Yo'q / Aytilmagan"*
+- Include at least 1 "Aytilmagan" answer per sprint — students must learn this option exists.
+
 **National Pride:** Not injected in Phase 1 (UNIFIED §1.5 — 2-min speed format, adding role framing wastes seconds).
 
 ### 4.2 Story Mode (Phase 2)
 
-**Inherits:** UNIFIED §5.2. 3 segments × 90 sec standard. Required 4-beat arc: Problem → Struggle → Discovery → Solution. Stranger Test mandatory before deployment.
+**Inherits:** UNIFIED §5.2. ONE continuous flowing story (5-7 min). The 4-beat arc (Problem → Struggle → Discovery → Solution) are INGREDIENTS baked into the story — not segments, not labels. 3 comprehension checkpoints after the story. Stranger Test mandatory.
 
 **Matematika story arc — Mathematical Discovery:**
 
@@ -179,14 +224,14 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 | Slot | Role | Primary | Backup |
 |---|---|---|---|
 | **Slot 1** | Visual/pattern warmup | **Tile Match** — formula ↔ visual, fraction ↔ decimal, number ↔ expanded form | Speed Sort — ordering fractions, decimals, large numbers |
-| **Slot 2 (Von Restorff Anchor)** | Reasoning + procedure | **Codebreaker** — "find the rule" sequences, missing number puzzles, ratio patterns | Reaction Chain — step-by-step calculation |
+| **Slot 2 (Von Restorff Anchor)** | Reasoning + procedure | **Reaction Chain** — step-by-step calculation | Speed Sort — ordering fractions, decimals, large numbers |
 | **Slot 3** | Strategy application | **Tic Tac Toe vs AI** — gate moves with math questions | Connect Four vs AI — visual strategy with math gates |
 
 > **Von Restorff Anchor:** Slot 2 preferentially uses content items tagged `outstanding: true` — surprising math facts, unusual visuals, humorous framing. This counters the mid-session attention sag (UNIFIED §5.3 §6c).
 
 **Buzan Cortical Diversity (soft recommendation):** At least 2 of the 3 games should come from different modalities:
 - Tile Match = Visual/Spatial
-- Codebreaker = Verbal/Logical
+- Reaction Chain = Verbal/Logical
 - Tic Tac Toe = Strategic/Decision
 
 **Games to AVOID for Matematika:**
@@ -195,6 +240,42 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Mat
 - Bridge Builder — physics-flavored
 - Any real-time multiplayer — wide skill gaps demoralize at G5-6
 - Word Ladder — linguistic
+
+**Game Construction Recipes:**
+
+> These recipes tell you HOW to build content items for each game mechanic. Read the game mechanic doc FIRST (`standards/system/games/Game_Mechanics_Docs/`), then apply these subject-specific construction rules ON TOP.
+
+**Tile Match (Slot 1) — Formula ↔ Visual Construction:**
+- **Item count:** 6 pairs (G5-6 band)
+- **Left tiles:** Formula, number, math term, or expression
+- **Right tiles:** Visual representation — bar model, area grid, number line segment, expanded form diagram, shape with labels
+- **How to build each pair:**
+  - Pairs 1-2 (Bloom L1 — direct recall): Formula matches its standard visual. Student recognizes on sight.
+    - Example: `"S = a × b"` ↔ `[Rectangle with sides labeled a and b, area shaded]`
+    - Example: `"½"` ↔ `[Circle with left half shaded]`
+  - Pairs 3-4 (Bloom L2 — property identification): Concept matches a property diagram. Requires understanding, not just recognition.
+    - Example: `"Teng yonli uchburchak"` ↔ `[Triangle with two equal sides marked with tick marks]`
+    - Example: `"3:5 nisbat"` ↔ `[Bar model: 3 blue sections, 5 red sections]`
+  - Pairs 5-6 (Bloom L3 — inference): Abstract concept matches a real-world visual. Requires connecting math to context.
+    - Example: `"Yuza = 24 m²"` ↔ `[Grid showing 4×6 arrangement of unit squares]`
+    - Example: `"Perimetr"` ↔ `[Ant walking around the outside edge of a shape]`
+- **Distractor design:** Every tile has EXACTLY ONE correct match. No orphans. Distractors must be plausible — area formula tile near a perimeter diagram, fraction tile near a similar-looking decimal visual.
+- **Timer:** 2:30 (G5-6 band)
+- **What makes it GOOD:** Student must THINK about which visual matches which formula. Tiles are visually distinct. Matching requires understanding, not pattern matching on text.
+- **What makes it BAD:** Text-only on both sides. Obvious matches (same word repeated). All same difficulty level. Tiles that could match multiple partners.
+
+**Tic Tac Toe vs AI (Slot 3) — Strategy + Practice Construction:**
+- **Format:** 3×3 grid. Student taps desired cell → math question appears → correct = X placed on chosen cell, wrong = X placed on random cell. AI plays optimally after each move. 3 games per session.
+- **Item count:** ~27 questions total (3 games × ~9 student moves)
+- **How to build the question bank:**
+  - ALL questions from THIS chapter's content. Mix:
+    - Calculation questions: "48 × 25 = ?" (4 MC options)
+    - Concept questions: "Qaysi son natural son emas?" (4 MC options)
+    - Visual questions: "Qaysi shakl 12 birlik kvadratdan iborat?" (4 diagram options)
+  - 4 MC options per question. Distractors map to common errors (same rules as Phase 1 MC).
+  - Difficulty scaling within each game: moves 1-3 = L1 (recall), moves 4-6 = L2 (apply), moves 7-9 = L3 (reason)
+- **What makes it GOOD:** Questions test the chapter's core skills. Mix of calculation + concept + visual. Strategic placement adds engagement. Each game feels different because questions vary.
+- **What makes it BAD:** All questions same type (only calculation). Questions unrelated to chapter. No difficulty scaling. All 27 questions feel identical.
 
 **National Pride:** Not injected in Phase 3 (UNIFIED §1.5 — game mechanics own the engagement).
 
@@ -261,7 +342,7 @@ For 1 in 3 Real-Life Challenges:
 
 | Parameter | Matematika G5-6 Override |
 |---|---|
-| **HP** | **100 HP** — standard secondary value per UNIFIED §5.6 |
+| **HP** | **80 HP** — bridge value between primary (50) and full secondary (100) |
 | **Hint Tax** | **-5 HP** — gentler; encourage hint use over quitting |
 | **MC allowed?** | **Yes — up to 30% MC** (WM ceiling at 10-11; open reasoning overwhelms) |
 
@@ -284,6 +365,38 @@ For 1 in 3 Real-Life Challenges:
 2. Socratic hint for Matematika: show first step of worked example, ask student to complete
 3. Route to specific Story Mode segment
 4. Regenerate questions (same standards, different numbers/context)
+
+### 4.7 Reflection (Phase 7)
+
+**Inherits:** UNIFIED §5.7. Summary + 3 metacognitive prompts + BOST recall + spaced repetition schedule + closing line.
+
+**Matematika reflection construction:**
+
+**Session Summary (3-5 sentences):**
+Recap what was learned in student-friendly language. Include: (1) the core concept name, (2) the key formula or rule, (3) one real-world connection from Phase 4. Write as "Bugun Siz [concept] ni o'rgandingiz..." not a dry list.
+
+**3 Metacognitive Prompts (student selects 1 to answer):**
+1. *"Bu bobda eng qiyin qismi nima edi? Nima uchun?"* — identifies struggle points for adaptive engine
+2. *"Agar do'stingizga bu mavzuni tushuntirsangiz, qanday tushuntirgan bo'lar edingiz?"* — tests transfer ability
+3. *"Bu mavzuni kundalik hayotda qayerda ishlatishingiz mumkin?"* — reinforces Phase 4 connection
+
+Prompts must be specific to the session content. Replace generic [concept] with actual topic: "kasrlar," "yuza formulasi," "natural sonlar." Generic prompts = lazy production.
+
+**BOST Goal Recall (MANDATORY — do NOT skip):**
+Resurface the BOST goal stored from Phase 0-A Panel 6: *"Bugun Siz [stored goal] ni bilmoqchi edingiz. Bildingizmi?"*
+- Student responds: Ha / Qisman / Hali yo'q
+- This closes the learning loop opened in Phase 0-A. If BOST goal is missing, the session is structurally broken.
+
+**Spaced Repetition Schedule:**
+Display: *"Keyingi takrorlash: ertaga (1-kun), 3-kun, 7-kun, 21-kun"*
+Flag the 2-3 most-missed concepts from this session (from Phase 1, 3, 6 error data) for priority review.
+
+**Closing Line:**
+- Session accuracy ≥60%: Third Renaissance line — *"Sizning aniqligingiz va qat'iyatingiz — Uchinchi Renessansning poydevori."*
+- Session accuracy <60%: Encouraging but neutral — *"Har bir mashq miyangizni kuchaytirad. Ertaga davom etamiz!"*
+- Never punitive. Never "you failed." TEFCAS framing: every attempt = feedback for the brain.
+
+**National Pride:** Third Renaissance closing line only (≥60%). Not injected elsewhere in Phase 7.
 
 ---
 
@@ -333,29 +446,6 @@ Corny lines (rotated per UI/UX spec):
 | **Units always required** | Every measurement answer must include units. Unit-less = incomplete. |
 | **Estimation before precision** | "About how much?" before "Exactly how much?" — PISA L2 skill |
 | **Reasonable numbers** | No absurd quantities ("47,382 items in stock"). Keep numbers realistic for the scenario. |
-
-### 5.5 Aniq Fanlar Family Rules (added v1.1)
-
-*Source: `Aniq_Fanlar_Subject_Family_Framework.md` §3 update. Applies to all Aniq Fanlar subjects.*
-
-**Bidirectional Thinking — mandatory every session:**
-Every session must practice BOTH directions:
-- Real world → formula: "Madina has 3 equal pieces of non. There are 7 students. Write the fraction each student gets."
-- Formula → real world: "You solved `7 ÷ 3 ≈ 2.33`. What does this mean for Madina's problem? Is the answer reasonable in this context?"
-
-A student who can calculate `7 ÷ 3` but cannot explain what the decimal result means has not learned the concept.
-
-**Error Analysis is PRIMARY — not optional:**
-Minimum 1 in every 2 sessions must include an error analysis task. The task must ask WHERE the error is and WHY it is wrong — not just "is this correct?" (binary yes/no has no diagnostic value).
-- Good: "A student calculated ½ + ⅓ = 2/5. Find the exact step where the error occurred and state the correct rule."
-- Bad: "Is this calculation correct? [Yes / No]"
-
-**Answer Completeness — enforced at all phases:**
-Every numerical answer must include correct units or context. A bare number is marked incomplete — partial credit applies.
-- Incomplete: `x = 5`
-- Complete: `x = 5 ta non bo'lagi` or `5 metr` or `5 000 so'm`
-
-Content agents must not accept bare number answers in any phase of a Matematika session.
 
 ---
 

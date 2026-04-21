@@ -85,6 +85,208 @@ History in Grades 5-6 is the study of **causality, sequence, and foundational id
 
 ---
 
+## 4-A. Phase 0-A Panel Construction Guide (Tarix G5-6)
+
+Phase 0-A for Tarix G5-6 is an **8-panel visual comic** focused on **memory and chronology**. The goal is sensory immersion — make the student FEEL the ancient world before testing recall.
+
+**Panel Length Rules:**
+- Panels 1-5: **8-10 sentences each.** Narrative core with sensory detail.
+- Panels 6-8: **5-10 sentences each.** Resolution and curiosity hook.
+
+**Tarix G5-6 Panel Priorities:**
+- **Sensory immersion is mandatory.** Every panel set must include at least 2 sensory details (smell, sound, sight, texture).
+- **Chronology focus:** Panel 5 (Discovery) must anchor the chapter's KEY DATE.
+- **Simple language:** G5-6 vocabulary. Short sentences. No academic jargon.
+
+**Panel-by-Panel Recipe (Tarix-specific):**
+
+| Panel | Tarix G5-6 Focus | Example (Ancient Khorezm chapter) |
+|-------|------------------|-----------------------------------|
+| **1 — Setting** | Open with year + place. Use 2-3 sensory details. Make the student "arrive" at the location. | "Miloddan avvalgi VI asr. Siz Xorazm shahri darvozasi oldida turibsiz. Issiq shamol yuzingizga urilayapti. Darvoza oldida savdogarlar tuya va eshaklar bilan navbatda turibdi. Devorlar loydan qurilgan — baland va mustahkam. Ichkarida bozor shovqini eshitilayapti. Bu eng qadimgi shaharlardan biri..." |
+| **2 — Character** | Introduce the era's key figure with 2-3 vivid traits. Show them DOING something. | "Shahar hokimi — oqsoqol va dono. U har kuni ertalab shahar devorlarini aylanib chiqadi. Bugun u yangi ariqni ko'rmoqda — sug'orish tizimi shaharning hayoti..." |
+| **3 — Problem** | State the chapter's central challenge simply. | "Lekin muammo bor: cho'l kengaymoqda. Suv kam. Qo'shni qabilalar hujum qilmoqda. Shahar qanday omon qoladi?" |
+| **4 — Struggle** | Show difficulty with textbook-specific details. | "Boshqa shaharlar suvsizlikdan so'lgan. Xorazmliklar boshqacha yo'l topdi — ular kanallar qurdi. Lekin kanal qurish oson emas..." |
+| **5 — Discovery** | The chapter's CORE FACT with specific date. | "Mil. avv. VI asrda Xorazm sug'orish tizimi yaratildi. Bu tizim shaharni gullatdi. Savdo yo'llari ochildi. Xorazm kuchli davlatga aylandi..." |
+| **6 — Solution** | Outcome with 2-3 concrete results. | "Xorazm yuz yillab davom etdi. Olimlar yetishdi. Savdo rivojlandi. Shahar devorlar ortida himoyalangan edi." |
+| **7 — Reflection** | Connect to heritage/pride. | "Ajdodlarimiz cho'lda ham buyuk shahar qura olgan. Bu — O'zbek xalqining aql-zakovati." |
+| **8 — Hook** | 1-2 questions that Phase 1 will answer. | "Xorazm qachon tashkil topgan? Qanday kashfiyotlar qilgan? Bugun shu savollarni bilib olasiz!" |
+
+**Sensory Library for Tarix G5-6:**
+Use these sensory cues to bring ancient eras alive:
+- **Smell:** Ziravor hidi, tuya teri hidi, non hidi, o'tin tutuni
+- **Sound:** Qo'ng'iroq jarangi, bozor shovqini, daryo shildirashi, shamol uvullashi
+- **Sight:** Quyosh botishi, devor soyalari, karvon chang-to'zoni, yulduzli osmon
+- **Touch:** Issiq qum, sovuq tosh, dag'al arqon, silliq kulolchilik
+
+---
+
+## 4-B. Phase 1 Format Mixing + Construction (Tarix G5-6)
+
+### Mixing Rule (Mandatory)
+
+Every Phase 1 Memory Sprint MUST use **at least 2 of the 3 allowed formats:**
+1. Multiple Choice (MC)
+2. True/False (T/F)
+3. Yes/No/Not Given (Y/N/NG)
+
+**No other formats.** Phase 1 = rapid chronological recall from the CURRENT chapter.
+
+### Tarix G5-6 Construction Recipes
+
+#### Multiple Choice — Tarix G5-6
+- **Stem:** Always ask about a specific date, name, place, or event from the chapter.
+- **Distractors:** Use real dates/names from OTHER chapters in the same textbook (not random numbers).
+- **G5 rule:** Maximum 4 options. Simple language.
+
+**Example (G5):**
+```
+Qadimgi Xorazm davlati qayerda joylashgan?
+A) Farg'ona vodiysida
+B) Amudaryo quyi oqimida  ✓
+C) Zarafshon daryosi bo'yida
+D) Toshkent vohasida
+[Bloom: L1 | PISA: L1]
+```
+
+#### True/False — Tarix G5-6
+- **G5 rule:** One simple factual statement. No compound claims.
+- **Error in False items:** Always a specific wrong detail (wrong date, wrong city, wrong name).
+
+**Example (G5):**
+```
+"Qadimgi Xorazm aholisi dehqonchilik bilan shug'ullangan." — To'g'ri yoki Noto'g'ri?
+Javob: To'g'ri. ✓
+[Bloom: L1 | PISA: L1]
+```
+
+**Example (G6, False):**
+```
+"Ipak Yo'li faqat ipak tashish uchun ishlatilgan." — To'g'ri yoki Noto'g'ri?
+Javob: Noto'g'ri. Ipak Yo'lida ziravor, qimmatbaho tosh, va bilimlar ham almashilgan.
+[Bloom: L2 | PISA: L2]
+```
+
+#### Yes/No/Not Given — Tarix G5-6
+- **G5:** Use sparingly (1-2 per session). "Not Given" is hard for young learners.
+- **G6:** Use more freely (2-3 per session). Train textbook fidelity.
+
+**Example (G6):**
+```
+"Darslikda Ipak Yo'li orqali Xitoydan qog'oz keltirilgani haqida yozilgan." — Ha / Yo'q / Ma'lumot berilmagan?
+[Bloom: L2 | PISA: L2]
+```
+
+### Phase 1 Item Count
+- **G5:** 6-8 items total. 70% MC/T-F (pure recall), 30% Y/N/NG (comprehension).
+- **G6:** 8-10 items total. Same 70/30 split.
+
+---
+
+## 4-C. Phase 3 Game Construction Recipes (Tarix G5-6)
+
+### Big Three — Mandatory
+
+#### 1. Spaced Flashcards — Tarix G5-6
+
+**Rules:**
+- 8-10 cards per session for G5, 10-12 for G6.
+- **Front:** A date, name, or term. One item only.
+- **Back:** The paired fact + a vivid image cue. Always pair the date with a mental picture.
+
+**G5 Examples:**
+```
+Front: Mil. avv. VI asr
+Back: Qadimgi Xorazm davlati tashkil topdi. 🏛️ (Baland loy devorlarni tasavvur qiling)
+
+Front: Afrosiyob
+Back: Qadimgi Samarqand nomi. 🏺 (Tepaliklarni tasavvur qiling)
+
+Front: Ipak Yo'li
+Back: Sharqdan G'arbga cho'zilgan savdo yo'li. 🐪 (Tuya karvonini tasavvur qiling)
+```
+
+**G6 Examples:**
+```
+Front: 1220-yil
+Back: Mo'g'ullarning Movarounnahrga bostirib kelishi. ⚔️ (Yonayotgan shaharni tasavvur qiling)
+
+Front: Chingizxon
+Back: Mo'g'ul imperiyasi asoschisi, 1162-1227. 🏇 (Ot ustidagi jangchini tasavvur qiling)
+```
+
+#### 2. Memory Palace — Tarix G5-6
+
+**Landmark rule for G5-6:** Use ONLY Uzbek landmarks that students may know:
+- Registon Maydoni (3 madrasa = 3 stations)
+- Ark Qal'asi (darvoza → hovli → taxt xonasi)
+- Ichan Qal'a (4 darvoza = 4 stations)
+
+**G5 Example (Ark Qal'asi, 4 stations):**
+```
+Station 1 — Darvoza: "Mil. avv. VI asr — Xorazm davlati paydo bo'ldi."
+Station 2 — Hovli: "Mil. avv. IV asr — Aleksandr Makedonskiy yurishi."
+Station 3 — Taxt xonasi: "Mil. avv. III asr — Qang' davlati shakllandi."
+Station 4 — Minora: "Milodiy I asr — Kushon davlati yuksaldi."
+```
+
+**G5 rule:** Maximum 4 stations. Each station = 1 short sentence.
+**G6 rule:** Maximum 6 stations. Each station = 1-2 sentences.
+
+#### 3. Tile Match — Tarix G5-6
+
+**G5:** 6 pairs. Simple figure↔achievement or date↔event.
+**G6:** 6-7 pairs. Add cause↔effect pairs.
+
+**G5 Example:**
+```
+LEFT                    RIGHT
+Xorazm               →  Amudaryo quyi oqimi
+Baqtriya              →  Janubiy O'zbekiston
+Ipak Yo'li            →  Savdo yo'li
+Afrosiyob             →  Qadimgi Samarqand
+Kushon                →  Buyuk imperiya
+Sug'orish             →  Kanallar tizimi
+```
+
+**G6 Example (with cause↔effect):**
+```
+LEFT                    RIGHT
+Mo'g'ul bosqini       →  Shaharlar vayron bo'ldi
+Ipak Yo'li            →  Savdo rivojlandi
+Sug'orish kanallari   →  Dehqonchilik gullab-yashnadi
+Chingizxon            →  Mo'g'ul imperiyasi
+Aleksandr             →  Sharqqa yurish
+Kesh                  →  Amir Temur vatani
+```
+
+### Secondary Games — Tarix G5-6
+
+#### Error Detection ("Broken Timeline") — Every 2 sessions
+
+**G5 Example:**
+```
+"Qadimgi Xorazm Farg'ona vodiysida joylashgan. U miloddan avvalgi VI asrda paydo bo'lgan."
+Xato: Xorazm Farg'ona vodiysida emas, Amudaryo quyi oqimida joylashgan. ✓
+```
+
+**G6 Example:**
+```
+"Chingizxon 1991-yilda tug'ilgan. U Mo'g'ul imperiyasini asos solgan."
+Xato: Chingizxon 1991-yilda emas, 1162-yilda tug'ilgan. ✓
+```
+
+#### Why Chain — Max 2 levels for G5-6
+
+**Example:**
+```
+Savol: Nima uchun Ipak Yo'li muhim edi?
+1-daraja: Chunki u Sharq va G'arbni bog'lagan.
+2-daraja: Bu esa shaharlarni boyitgan va madaniyat almashinuviga olib kelgan.
+(STOP — 2 levels maximum for G5-6)
+```
+
+---
+
 ## 5. Phase 5 Buzan Options
 
 Inherits: [[UNIFIED-Buzan §5.5]]. Select technique by content structure.
@@ -120,6 +322,83 @@ Focus on the **FEEL** of the era. Use first-person sensory details.
 Light connection to today. No engineering scenarios.
 - **Pattern:** "The way Amir Temur organized his mail system (Pochta) is similar to how we use X today."
 - **Goal:** Show relevance, not application.
+
+---
+
+## Phase 7: Reflection (Tarix G5-6)
+
+Phase 7 closes the session with a timeline recap, metacognitive prompts, and heritage pride connection.
+
+### 7.1 Session Summary (Timeline Recap)
+
+Provide a **3-5 sentence chronological summary** of what was learned. For G5-6, use simple language and always include dates.
+
+**Construction Pattern:**
+```
+"Bugun Siz quyidagi voqealarni o'rgandingiz:
+1. [Earliest event + date]
+2. [Middle event + date]
+3. [Latest event + date]
+Bu voqealar shuni ko'rsatadiki, [1-sentence heritage connection]."
+```
+
+**G5 Example:**
+```
+"Bugun Siz quyidagi voqealarni o'rgandingiz:
+1. Mil. avv. VI asr — Xorazm davlati paydo bo'ldi.
+2. Mil. avv. IV asr — Aleksandr Makedonskiy Markaziy Osiyoga yetib keldi.
+3. Milodiy I asr — Kushon davlati kuchaydi.
+Bu voqealar shuni ko'rsatadiki, ajdodlarimiz minglab yillar oldin ham buyuk davlatlar qurgan."
+```
+
+### 7.2 Metacognitive Prompts (3 questions)
+
+Exactly **3 questions**, adapted for G5-6 simplicity:
+
+1. **Retrieval:** "Bugun o'rgangan sanalaringizdan qaysi birini eng yaxshi eslab qoldingiz?"
+2. **Connection:** "Qaysi voqea Sizga eng qiziqarli tuyuldi? Nima uchun?"
+3. **Confidence:** "Agar sinfdoshingiz so'rasa, bugungi mavzuni tushuntira olasizmi?"
+
+Display-only. No typed answers required.
+
+### 7.3 BOST Goal Recall (Mandatory)
+
+**Template:**
+```
+"Bugun Siz [stored goal from Phase 0-B] ni bilmoqchi edingiz. Bildingizmi?"
+```
+
+**G5 Example:**
+```
+"Bugun Siz Qadimgi Xorazm qayerda joylashganini bilmoqchi edingiz. Bildingizmi?"
+```
+
+Student taps: Ha / Yo'q / Qisman.
+
+### 7.4 Spaced Repetition Schedule
+
+| Performance | Next Review | Message |
+|-------------|-------------|---------|
+| ≥80% | 3 kun keyin | "Zo'r! 3 kundan keyin qayta takrorlaymiz." |
+| 60-79% | 2 kun keyin | "Yaxshi! 2 kundan keyin yana mashq qilamiz." |
+| <60% | Ertaga | "Hech gap yo'q! Ertaga yana birga o'rganamiz." |
+
+### 7.5 Closing Line
+
+**Score ≥60% — Heritage pride:**
+```
+"Siz bugun ajdodlarimiz tarixini o'rgandingiz. Ular qurgan buyuk davlatlar — Sizning merosingiz! 🌟"
+```
+
+**Score <60% — Encouraging neutral:**
+```
+"Tarix — katta kitob. Har safar bir sahifa o'qiymiz. Ertaga davom etamiz!"
+```
+
+**Rules:**
+- Always "Siz" (formal).
+- G5-6: Keep language simple, sentences short.
+- Never shame the student. "Hali emas!" spirit.
 
 ---
 

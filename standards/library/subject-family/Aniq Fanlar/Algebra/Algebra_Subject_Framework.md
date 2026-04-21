@@ -93,6 +93,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 | **3** | Game Breaks | 6-9 min | 10 min | Worked Examples (Scaffolded Completion) and Reaction Chain prioritized. All games require written justification. |
 | **4** | Real-Life Challenge | 3-5 min | 10 min | Student must set up equation from scratch — not plug into given formula. W5H scaffold: G7-8 ON, G9 toggleable. |
 | **5** | Consolidation / Mnemonic Lock | 3-4 min | 5 min | Slightly longer than UNIFIED default — algebra requires more consolidation. Algebraic Structure Map primary technique. |
+| **6** | Final Boss | 5-10 min | 10-15 min | No MC anywhere. All open-ended with written steps. See §3.3. |
 
 ### 3.3 Difficulty Adaptation Engine
 
@@ -116,6 +117,19 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 - Panel 6: BOST Goals prompt stored for Phase 7 recall
 - Panel 7 Industry: Software engineer writing a formula, economist modeling price changes, pharmacist calculating dosages, data analyst finding trends
 - Mathematician references: **Al-Khwarizmi** (mandatory — father of algebra, minimum 1 per 3 sessions), **Omar Khayyam** (cubic equations), **al-Kindi**, then Descartes, Euler, Gauss
+
+**Phase 0-A Panel Construction Guide — Algebra:**
+
+| Panel | Algebra Construction Recipe |
+|---|---|
+| **Panel 1: Structural Scan** | Show equation tree for this chapter. Bold-chip key terms: *o'zgaruvchi, koeffitsient, ifoda, tenglama*. Example: for linear equations chapter, show `ax + b = c` with labeled parts. |
+| **Panel 2: Key Vocabulary** | 4-6 algebraic terms. Each with symbolic + contextual example. *"Koeffitsient → 3x dagi 3. Bu — x oldidagi ko'paytiruvchi."* |
+| **Panel 3: Prior Knowledge Bridge** | Connect to the real pattern: *"Siz allaqachon o'suvchi ketma-ketliklarni bilasiz: 2, 5, 8, 11... Bugun bu qoidani formulaga aylantiramiz."* Use growing sequences, balance scales, or tables of values — not abstract statements. |
+| **Panel 4: Chapter Preview** | *"Bu bobda Siz chiziqli tenglamalarni yechishni o'rganasiz — tarozidagi muvozanat kabi."* State the equation TYPE. |
+| **Panel 5: Personal Hook + BOST** | Connect to real patterns: phone data plan costs (linear functions), comparing mobile top-up options (inequalities), splitting startup profit (equations), game scoring with variable bonuses. BOST Prime: *"Tenglamalar haqida nimalarni bilasiz?"* |
+| **Panel 6: BOST Goal Storage** | Store student's typed goal. *"Maqsadingiz saqlandi. Sessiya oxirida qaytamiz."* |
+| **Panel 7: Industry Application** | Software engineer writing formulas, economist modeling price changes, pharmacist calculating dosages, data analyst finding trends. At least one Uzbek context. |
+| **Panel 8: Mathematician Spotlight** | **Al-Khwarizmi** mandatory 1 per 3 sessions. Also: Omar Khayyam, al-Kindi, Descartes, Euler, Gauss. 55/45 national/global ratio. |
 
 **0-B Flash Cards — Algebra-specific overrides:**
 - **6-8 cards** (G7-9 can handle more)
@@ -144,6 +158,22 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 - Include 1-2 "Which expression is equivalent?" questions — builds symbolic fluency without calculation
 - Wrong answer feedback: show algebraic reasoning: *"Ikkala tomondan tenglikni saqlash uchun bir xil amal qilinadi. Bu yerda: −(x) = −1×x."*
 - Buzan Primacy Effect: most important current-chapter items go here — the brain is primed to encode what it sees first.
+
+**Phase 1 Format Mixing Rule:** MUST use at least 2 of 3 formats (MC, T/F, Y/N/NG) per sprint. No all-MC sprints.
+
+**Per-format construction — Algebra-specific:**
+
+**Multiple Choice (4 options):**
+- Include "equivalent expression" items: *"Qaysi ifoda 3(x+2) ga teng? A) 3x+2 B) 3x+6 C) x+6 D) 3x+5"*
+- Distractors from real student errors: forgot distribution (3x+2), added coefficients wrong (3x+5), dropped coefficient (x+6).
+- Error Spot variant: *"Bu yechimda xato qayerda? Step1: 2x+4=10 → Step2: 2x=14 → Step3: x=7. A) Step 1 B) Step 2 C) Step 3 D) Xato yo'q"* (Answer: B — should be 2x=6)
+
+**True / False:**
+- Test algebraic identities: *"x² − 9 = (x−3)(x+3) — To'g'ri yoki Noto'g'ri?"* (True — difference of squares)
+- Test rules: *"Agar a > b bo'lsa, −a > −b — To'g'ri yoki Noto'g'ri?"* (False — inequality flips)
+
+**Yes / No / Not Given:**
+- *"Bobda aytilganiga ko'ra, har qanday kvadrat tenglama ikkita yechimga ega — Ha / Yo'q / Aytilmagan."* (Answer depends on chapter — discriminant may not be covered yet, making it "Not Given")
 
 ### 4.2 Story Mode (Phase 2)
 
@@ -175,7 +205,7 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 
 | Slot | Role | Primary | Backup |
 |---|---|---|---|
-| **Slot 1** | Symbolic fluency warmup | **Tile Match** — equivalent expressions, equation steps ↔ justifications, graphs ↔ equations | Codebreaker — find the algebraic rule in a sequence |
+| **Slot 1** | Symbolic fluency warmup | **Tile Match** — equivalent expressions, equation steps ↔ justifications, graphs ↔ equations | Speed Sort — ordering expressions, simplifying radicals |
 | **Slot 2 (Von Restorff Anchor)** | Procedure + reasoning | **Worked Examples (Scaffolded Completion)** — fill in missing steps of algebraic solution | Error Analysis — find and fix the bug in a multi-step solution |
 | **Slot 3** | Strategy application | **Connect Four vs AI** — gate each placement with equation solving or expression simplification | Reaction Chain — sequential algebraic steps (each step unlocks the next) |
 
@@ -192,6 +222,54 @@ This document is a **delta layer** — it defines only what is DIFFERENT for Alg
 - Word Ladder — linguistic
 - Puzzle Lock — spatial (Geometry's domain)
 - Any game not requiring written justification
+
+**Phase 3 Game Construction Recipes — Algebra:**
+
+**Tile Match (Slot 1 Primary):**
+- **Structure:** 6-8 pairs. Left tile = algebraic expression/equation. Right tile = equivalent form, graph, or justification.
+- **Pair types for Algebra:**
+  - Expression ↔ Simplified form: `"2(x+3)+x"` ↔ `"3x+6"`
+  - Equation step ↔ Justification: `"2x+4=10 → 2x=6"` ↔ `"Ikkala tomondan 4 ayirildi"`
+  - Equation ↔ Graph: `"y = −x + 3"` ↔ `[declining line, y-intercept at 3]`
+- **Difficulty progression:**
+  - L1: Direct equivalence — factor ↔ expanded. *`"(x+2)(x−2)"` ↔ `"x²−4"`*
+  - L2: Multi-step equivalence — expression requires 2 operations to verify. *`"3(2x−1)+x"` ↔ `"7x−3"`*
+  - L3: Cross-representation — equation ↔ graph or table. *`"y = x² − 4x + 3"` ↔ `[parabola with roots at 1 and 3]`*
+- **Bad pair:** `"Algebra"` ↔ `"Fanlar"` (no algebraic content)
+
+**Worked Examples / Scaffolded Completion (Slot 2 Primary):**
+- **Structure:** 4-6 step equation solution with 1-3 blanks.
+- **Algebra-specific blank placement:** Blank the algebraic operation step, not the arithmetic.
+  - Good: *"Step 1: 5x − 3 = 12. Step 2: 5x = 12 + __ . Step 3: 5x = __ . Step 4: x = 3."*
+  - Better (L2): *"Step 1: 2(x+3) = 14. Step 2: ______ = 14. Step 3: 2x = __ . Step 4: x = __."* (Student must expand AND solve)
+  - Best (L3): *"Step 1: 2(x+3) = 14. Step 2: [__]. Sabab: [__]. Step 3: [__]. Step 4: x = 4."* (Student fills operation AND justification)
+- **Bad:** Only first and last step shown with everything else blank (no scaffolding).
+
+**Error Analysis (Slot 2 Backup — minimum every 2 sessions):**
+- **Structure:** Full worked algebraic solution with 1-2 deliberate errors.
+- **Algebra error types:** Sign error when moving terms, forgetting to distribute, dividing only one side, dropping a variable.
+- **Example L1:** *"Talaba yechimi: 3x + 2 = 11 → 3x = 11 + 2 → 3x = 13 → x = 13/3. Xatoni toping."* (Error: should be 11 − 2 = 9, not 11 + 2)
+- **Example L2:** *"Talaba yechimi: (x+2)² = x² + 4. To'g'rimi? Agar noto'g'ri bo'lsa, xatoni toping va to'g'ri javobni yozing."* (Missing 4x term)
+- **Example L3:** *"Talaba yechimi: 2(x−3) + 4 = 2x → 2x − 6 + 4 = 2x → 2x − 2 = 2x → −2 = 0 → 'Yechim yo'q'. Talaba to'g'rimi yoki xato qildimi?"* (Actually correct — no solution. Tests if student can verify a valid conclusion.)
+
+**Connect Four vs AI (Slot 3 Primary):**
+- **Structure:** ~18 questions gating column placement. Each correct answer = place a disc.
+- **Question types for Algebra:** Equation solving, expression simplification, function evaluation.
+- **Difficulty:** Questions alternate Easy (−10 HP equivalent) and Medium (−20 HP). Every 4th question is Hard.
+- **Example gating question:** *"f(x) = 2x − 1 bo'lsa, f(3) = ?"* (Answer: 5 → place disc)
+- **Bad gating question:** *"Algebra kim ixtiro qilgan?"* (trivia, not algebraic reasoning)
+
+**Reaction Chain (Slot 3 Backup):**
+- **Structure:** 6-10 nodes in a causal chain. Each correct answer lights the next node.
+- **Algebra chain:** Sequential equation-solving steps where each answer feeds the next.
+- **Example chain (6 nodes):**
+  - Node 1: *"3x + 6 = 21. Birinchi qadam?"* → Answer: "Ikkala tomondan 6 ayirish"
+  - Node 2: *"3x = 15. Keyingi qadam?"* → Answer: "Ikkala tomonni 3 ga bo'lish"
+  - Node 3: *"x = 5. x ni tekshiring: 3(5) + 6 = ?"* → Answer: 21
+  - Node 4: *"Tekshiruv: 21 = 21 ✓. Endi: agar x = 5 bo'lsa, 2x + 1 = ?"* → Answer: 11
+  - Node 5: *"2x + 1 = 11. Bu tenglamaning grafigida y-kesish nuqtasi qayerda?"* → Answer: (0, 1)
+  - Node 6: *"Grafik chiziqli. Burchak koeffitsienti (gradient) nechaga teng?"* → Answer: 2
+- **Bad chain:** Unrelated questions with no logical flow between nodes.
 
 **Special: Why Chain for Algebra (Secondary mechanic, G6+):**
 Cap at 3 levels for G7-8, 3 levels for G9 (UNIFIED §Why Chain: Exact Sciences secondary, 3 levels G6+).
@@ -273,6 +351,27 @@ Cap at 3 levels for G7-8, 3 levels for G9 (UNIFIED §Why Chain: Exact Sciences s
 3. Route to specific Story Mode segment
 4. Regenerate questions (same standards, different context/numbers)
 
+### 4.7 Reflection (Phase 7)
+
+**Inherits:** Family-level Phase 7 template. Algebra-specific overrides below.
+
+1. **Session Summary (30 sec):** Display the key formula or equation type from this session as a visual card. Example: *"Bugun Siz chiziqli tenglamalarni yechdingiz. Asosiy usul: tarozida muvozanat — ikkala tomondan bir xil amal."* Show the balanced equation visual: `ax + b = c → ax = c − b → x = (c−b)/a`.
+
+2. **Metacognitive Prompts (45 sec, pick 3):**
+   - *"Bu sessiyada eng qiyin tenglama qaysi edi? Nima uchun?"*
+   - *"Qaysi qadamda xato qildingiz? Xatoning sababi nima edi?"*
+   - *"Bu turdagi tenglamani hayotda qayerda uchratasiz?"*
+   - *"Agar sinfdo'stingizga tushuntirsangiz, birinchi qanday boshlardingiz?"*
+   - *"Qaysi o'yin (Tile Match, Worked Examples, Connect Four) sizga eng ko'p yordam berdi?"*
+
+3. **BOST Goal Recall (15 sec):** *"Bugun Siz '[stored goal]' ni bilmoqchi edingiz. Bildingizmi?"* Student taps: To'liq / Qisman / Hali emas. Result logged.
+
+4. **Spaced Repetition Schedule:** *"Bu mavzu ertaga (1 kun), 3 kundan keyin va 7 kundan keyin qaytariladi."* Tag variable/equation items for spaced rep queue.
+
+5. **Closing Line:**
+   - **≥60%:** *"Al-Xorazmiy 'al-jabr' atamasini ixtiro qildi — bugun Siz uning merosini davom ettirdingiz. Uchinchi Renessans — Sizdan boshlanadi."*
+   - **<60%:** *"Har bir tenglama — miyangiz uchun mashq. Ertaga yana bir qadam oldinga. Algebraning kuchi — sabr bilan keladi."*
+
 ---
 
 ## 5. Content Rules
@@ -306,29 +405,6 @@ Cap at 3 levels for G7-8, 3 levels for G9 (UNIFIED §Why Chain: Exact Sciences s
 | **Grade scope** | G7: linear one-variable. G8: two-variable, systems. G9: quadratic, non-linear introduction. |
 | **Factoring before formula** | Quadratic formula introduced only after factoring — students must understand why |
 | **No "magic steps"** | Every algebraic manipulation justified by a named property |
-
-### 5.4 Aniq Fanlar Family Rules (added v1.1)
-
-*Source: `Aniq_Fanlar_Subject_Family_Framework.md` §3 update. Applies to all Aniq Fanlar subjects.*
-
-**Bidirectional Thinking — mandatory every session:**
-Every session must practice BOTH directions:
-- Real world → equation: "Jahongir earns 5 000 so'm per phone case and has fixed costs of 30 000 so'm. Write the profit equation."
-- Equation → real world: "You solved `5x − 30 000 = 0`, so `x = 6`. What does x represent? What decision does this answer tell Jahongir to make?"
-
-A student who can solve `5x − 30 000 = 0` but cannot interpret the answer in context has not learned algebra — they have learned symbol manipulation.
-
-**Error Analysis is PRIMARY — not optional:**
-Minimum 1 in every 2 sessions must include an error analysis task. The task must ask WHERE the error is and WHY it is wrong — binary yes/no is not acceptable.
-- Good: "A student solved `2(x + 3) = 10` and wrote `2x + 3 = 10`. Find the step where the error occurred and name the property that was violated."
-- Bad: "Is this solution correct? [Yes / No]"
-
-**Answer Completeness — enforced at all phases:**
-Every numerical answer must include correct units or contextual meaning. A bare number is marked incomplete — partial credit applies.
-- Incomplete: `x = 6`
-- Complete: `x = 6 ta chexol` or "Jahongir must sell at least 6 cases to cover his costs."
-
-This applies equally to equation solutions, function values, and inequality solutions — the answer must be interpreted, not just stated.
 
 ---
 

@@ -87,10 +87,6 @@ Classic board/card/puzzle mechanics with knowledge-gated progression. Correct an
 **What:** 7×6 drop grid. Correct answer drops in your chosen column; wrong answer drops randomly.
 **Use case:** Sequential reasoning and planning ahead. Good for multi-step procedures (math, chemistry reactions).
 
-### 3. Codebreaker
-**What:** Mastermind-style secret code. Each guess attempt gated by a correct answer. Limited guesses.
-**Use case:** Deductive reasoning + content recall. Periodic table, math formulas, vocabulary spelling.
-
 ### 4. Memory Match Blitz
 **What:** Concentration / pairs grid. Matched pairs must be confirmed by answering a subject question.
 **Use case:** Term-definition pairs, equation-result matching. Good for vocabulary and formula recognition.
@@ -139,7 +135,7 @@ These are NOT Phase 3 games. They are Phase 5 (Consolidation) technique alternat
 | Content is narrative-heavy | Default: Story Mode, Why Chain |
 | Task requires physical hand-work | Default: Notebook Capture |
 | Student in Recovery Session or below PISA L2 | Default (lower cognitive overhead) |
-| Need a high-stakes strategic duel | Interactive: Connect Four, Codebreaker |
+| Need a high-stakes strategic duel | Interactive: Connect Four |
 | Student engagement has dipped 3 sessions | Interactive (novelty effect) |
 | Topic maps to a spatial/strategic metaphor | Interactive: Puzzle Lock (timelines), Reaction Chain (processes) |
 | Language/Biology only | Interactive: Word Ladder Climb |
