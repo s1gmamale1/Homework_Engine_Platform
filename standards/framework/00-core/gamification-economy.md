@@ -102,7 +102,7 @@ This economy applies across all grade bands (G1-G11) and all subjects. It govern
 - `core-principles.md §1.2 Principle 3` — Intrinsic Motivation constraint is the foundational rule this entire section must satisfy. Any change to §11 must be re-evaluated against Principle 3.
 - `NETS-Homework-Engine-UNIFIED-Buzan.md §5.6` — Final Boss star criteria (referenced in §11.3).
 - `NETS-Tier-Overlay-Spec.md` — Basic/Premium tier split; Premium enrichment must not introduce pay-to-win mechanics or alter base XP values.
-- `standards/framework/GRADING-SYSTEM.md` — Learning Curve Grade (Level, Velocity, Efficiency, Attempts) is a parallel assessment layer; XP economy and Grade are separate systems and must not be conflated.
+- Grading System was deleted (not approved for production). XP economy is the sole student-facing progress system.
 - All subject frameworks (standards/library/subject-family/) — inherit these XP values verbatim; subject frameworks may not define custom XP amounts.
 
 ## Verification

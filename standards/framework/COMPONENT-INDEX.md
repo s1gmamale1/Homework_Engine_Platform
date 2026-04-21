@@ -42,8 +42,8 @@
 | | `family-til-fanlar.md` | Language pipeline blueprint: Krashen i+1, immersion-first, Reading phase active, no capture, CEFR progression |
 | | `family-ijtimoiy-fanlar.md` | History pipeline blueprint: narrative IS content, causal chains, leanest Hard mode (6 components), no Real-Life |
 | | `subject-english.md` | English override: always Hard, 5 sub-type dynamic profiles (Vocab/Grammar/Reading/Literature/Writing), forced by pipeline |
-| **03-modes** | `easy-mode.md` | 5 components, ~35 min, panels 1-2-3 (+4 for Math/Sci), 2 games, 60% pass |
-| | `hard-mode.md` | 6-8 components, ~70-90 min, full panels, 3 games, Real-Life/Reading/Boss per family, 60% pass |
+| **03-modes** | `easy-mode.md` | 5 components, practical ≤45 min, panels 1-2-3 (+4 for Math/Sci), 2 games, 60% pass |
+| | `hard-mode.md` | 6-8 components, practical ≤60 min, full panels, 3 games, Real-Life/Reading/Boss per family, 60% pass |
 | **04-difficulty** | `phase-weights.md` | Scoring weights per mode per family (Easy: 20/50, Hard Math: 10/30/30/30, etc.) |
 | | `item-tier-distribution.md` | 40/40/20 easy/medium/hard, Bloom per tier, grade-band shifts |
 | | `per-family-difficulty.md` | HP pools per family x grade, session duration, Bloom targets, game availability matrix |

@@ -27,7 +27,7 @@ Hard pipeline (from family adapter):
 Preview (Panels 1,2,3,6) → Flash Cards (8-12) → Sprint (7 items) → Reading (IELTS-style) → Games (3) → Final Challenge (Boss) → Reflection
 ```
 
-Always 7 components. Always ~70 min. No shortcuts.
+Always 7 components. Practical part ~42 min (within 60-min cap). Learning part ~23 min additional. No shortcuts.
 
 ## Dynamic adaptation within Hard mode
 

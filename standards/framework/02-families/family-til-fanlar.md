@@ -39,7 +39,7 @@ Language acquisition and communicative competence — reading, writing, grammar,
 
 ```
 Preview (Panels 1,2,3) → Flash Cards (5-8) → Sprint (5 items) → Games (2) → Reflection
-~35 min
+Practical ≤45 min (~20 min typical)
 ```
 
 Games: Sentence Fill (primary) + Memory Match (standard). No Adaptive Quiz. No Notebook Capture.
@@ -50,7 +50,7 @@ See `03-modes/easy-mode.md` for component specs and scaling.
 
 ```
 Preview (Panels 1,2,3,6) → Flash Cards (8-12) → Sprint (7 items) → Reading → Games (3) → Final Challenge → Reflection
-~70 min | 7 components
+Practical ≤60 min (~42 min typical) | 7 components
 ```
 
 **Reading phase ACTIVE** — Language is the ONLY family that uses Phase 2.

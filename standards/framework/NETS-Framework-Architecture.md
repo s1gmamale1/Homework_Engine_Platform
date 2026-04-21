@@ -18,7 +18,7 @@ Move from a monolithic UNIFIED spec + delta subject frameworks to a **layered co
 Current state:
 - `NETS-Homework-Engine-UNIFIED-Buzan.md` ~ 600+ lines, covers all phases, all rules, all examples
 - Subject-specific frameworks are "delta" layers that reference UNIFIED
-- Tier Overlay, Grading System, Quick Reference sit alongside
+- Tier Overlay, Quick Reference sit alongside
 - Matrix v0.3 (routing layer) sits on top
 
 Problems surfaced by §22 build:

@@ -8,7 +8,9 @@ layer: 3 (mode)
 
 ## Definition
 
-A lighter homework session for introductory lessons, vocabulary-heavy content, and early-chapter sections. Approximately 35-40 minutes total.
+A lighter homework session for introductory lessons, vocabulary-heavy content, and early-chapter sections.
+
+**Duration cap:** Practical part (Sprint → Reflection) ≤ **45 min**. Learning part (Preview + Flash Cards) is additional time, not counted toward the cap. Typical practical time is ~20 min — well within the cap.
 
 ---
 
@@ -33,12 +35,15 @@ EXACTLY 5 components, same structure for ALL subject families.
 
 | # | Component | Phase file | Scoring weight | Time |
 |---|-----------|------------|:-:|---|
-| 1 | Preview | phase-0a-preview.md | — (not scored) | ~10 min |
-| 2 | Flash Cards | phase-0b-flashcards.md | — (not scored) | ~5 min |
-| 3 | Memory Sprint | phase-01-memory-sprint.md | 20% | ~3 min |
-| 4 | Game Breaks | phase-03-game-breaks.md | 50% | ~15 min |
-| 5 | Reflection | phase-07-reflection.md | — (analytics) | ~2 min |
-| | **Total** | | **70% graded** | **~35 min** |
+| # | Component | Phase file | Scoring weight | Time | Part |
+|---|-----------|------------|:-:|---|---|
+| 1 | Preview | phase-0a-preview.md | — (not scored) | ~10 min | Learning |
+| 2 | Flash Cards | phase-0b-flashcards.md | — (not scored) | ~5 min | Learning |
+| 3 | Memory Sprint | phase-01-memory-sprint.md | 20% | ~3 min | Practical |
+| 4 | Game Breaks | phase-03-game-breaks.md | 50% | ~15 min | Practical |
+| 5 | Reflection | phase-07-reflection.md | — (analytics) | ~2 min | Practical |
+| | **Practical total** | | **70% graded** | **~20 min** (cap: 45) | |
+| | **Learning total** | | — | **~15 min** | |
 
 > Note: scoring weights (20/50) are proposals, pending pilot calibration. Reflection adds 30% for routing purposes as a combined "session score."
 

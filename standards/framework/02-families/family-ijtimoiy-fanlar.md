@@ -42,7 +42,7 @@ Understanding human societies — past events, political systems, legal framewor
 
 ```
 Preview (Panels 1,2,3) → Flash Cards (5-8) → Sprint (5 items) → Games (2) → Reflection
-~35 min
+Practical ≤45 min (~20 min typical)
 ```
 
 Games: Tile Match (primary, mandatory — cause↔effect, date↔event) + Memory Match. No Adaptive Quiz. No Notebook Capture.

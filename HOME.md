@@ -12,7 +12,7 @@
 | 1 | [[standards/library/framework/NETS-Library-Framework\|Library Framework v0.6]] — 5 families, mechanic mapping | Done |
 | 2 | [[standards/library/subject-family/\|Subject Frameworks]] — per-subject production guides | 18 / ~110 |
 | 3 | [[standards/framework/NETS-Tier-Overlay-Spec\|Tier Overlay v2.0]] — Basic/Premium split | Done |
-| 4 | [[standards/framework/GRADING-SYSTEM\|Grading System v1.0]] — Learning Curve Grade (L, n, E, A) | Draft |
+| 4 | ~~Grading System~~ — DELETED (not approved for production) | — |
 
 Supporting:
 - [[standards/framework/NETS-Homework-Engine-Universal-Blueprint-Flow-Diagram\|Blueprint Flow Diagram]]
@@ -158,6 +158,16 @@ Key docs: [[standards/system/games/Game_Mechanics_Docs/DOCUMENTATION\|Extended D
 | `scripts/launch_squad.sh` | Multi-agent squad launcher |
 | `scripts/squad-tui.sh` | Squad terminal UI |
 | `scripts/scaffold_subject_family.ps1` | Subject family scaffolder |
+| `build_matematika_grade5_ch1s1_uz.py` | `python-docx` builder for Grade 5 Matematika Chapter 1 Section 1.1 homework |
+| `build_matematika_grade5_ch1s1_2_uz.py` | Alternate builder variant for the same chapter workflow |
+
+---
+
+## Recent Outputs
+
+- `Matematika_Grade5_Ch1S1_uz.docx` — Grade 5 Matematika, Chapter 1 Section 1.1 homework in Uzbek
+- `STATUS.md` — production log with completed homework entries
+- `output/Matematika_Grade5_Ch1S1.1_uz.docx` — mirrored export of the same generated session
 
 ---
 

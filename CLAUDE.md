@@ -30,13 +30,11 @@ NETS (National Education Transformation System) — AI-powered gamified LMS for 
 
 **Tier Overlay** (`standards/framework/NETS-Tier-Overlay-Spec.md` v2.0) — Basic/Premium split. Basic = full product. Premium = enrichment on top.
 
-**Grading System** (`standards/framework/GRADING-SYSTEM.md`) — Learning Curve Grade (Level, Velocity, Efficiency, Attempts). Not yet approved for production.
-
 ## Repository Structure
 
 ```
 standards/
-  framework/               ← UNIFIED-Buzan, Tier Overlay, Grading System, Quick Reference, Blueprint
+  framework/               ← UNIFIED-Buzan, Tier Overlay, Quick Reference, Blueprint
   library/
     framework/             ← Library Framework
     catalog/               ← Game Catalog (16 Default + 6 Interactive), Interactive Game Catalog
@@ -97,7 +95,7 @@ Homework sessions are produced by AI agents using the component architecture. Th
 
 ## Framework Rules That Cannot Be Violated
 
-- **Two modes:** Easy (5 components, ~35 min) or Hard (6-8 components, ~70-90 min). English is always Hard. Pipeline decides mode, not the LLM.
+- **Two modes:** Easy (5 components, practical ≤45 min) or Hard (6-8 components, practical ≤60 min). Learning part (Preview + Flash Cards) is additional time, not counted toward the cap. English is always Hard. Pipeline decides mode, not the LLM.
 - **v1 active games only:** Tile Match, Memory Match, Sentence Fill, Adaptive Quiz, Notebook Capture. All others frozen for v2.
 - **Decision enforcement:** No "optional" content. Every conditional element has MUST IF / MUST SKIP IF gates. LLM must log reasoning for every include/skip decision. See `00-core/decision-enforcement.md`.
 - **Boss HP:** G1-4: 50 | G5-8: 100 | G9-11: 150. Damage: Easy -10, Medium -20, Hard -30. Distribution: 40/40/20. (Matematika G5-6 override: 80 HP)
