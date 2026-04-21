@@ -1,0 +1,63 @@
+# Matnli hujjat bilan ishlash — 8-dars
+
+18
+5-amaliy ko‘nikma
+Hujjatga mos nom berish
+Hujjatga qisqa vaqtda va tez topish mumkin bo‘lgan nom beriladi. Demak,
+hujjatni ochib tekshirmasdan ham uning ichida qanday ma’lumot borligini
+ko‘rsatadigan nom tanlanadi.
+Mening_xatim nomli hujjat bu xat ekanini anglatadi, lekin boshqa ma’lumot
+bermaydi. Agar hujjatlar ichida koʻplab xatlar saqlangan boʻlsa, ushbu nom
+bilan uni qayta topish qiyin boʻladi.
+Hujjat nomi:
+•	 juda uzun boʻlmasin;
+•	 hujjatda nima borligini ko‘rsatib tursin;
+•	 probelsiz yozilsin.
+Ayrim dasturlar probel qoʻyilgan fayl nomini tanimaydi va faylni oʻqishga
+qiynaladi. Shu bois probel oʻrniga pastki chiziqdan (_) foydalansa boʻladi.
+Bu chiziq har bir soʻz orasiga yoziladi. Masalan, Mening_xatim.docx. Pastki
+chiziqni kirituvchi tugma klaviaturada joylashgan.
+5.1-mashg‘ulot
+Quyidagi savollarning javobini daftaringizga yozing.
+Doʻstingizga yozgan elektron xatingizni hujjat ko‘rinishida saqlamoqchisiz.
+Xatda matn bilan ishlashga oid o‘zlashtirgan ko‘nikmalaringiz haqida
+o‘rtoqlashgansiz. Xatni Mening_xatim deb saqlamoqchi boʻldingiz, lekin bu
+nom mos emasligini tushunib yetdingiz.
+Quyidagi nomlardan qaysi biri hujjat uchun mos keladi? Nima uchun?
+Matnni QaytaIshlash Haqida Doʻstimga Yozgan Xatim
+MQI_Haqida_Xat
+DoʻstimgaXat
+Fikrlaringizni daftarda yozma ravishda izohlang.
+@edurtm_uz
+
+19
+Matnli hujjat bilan ishlash
+Nima uchun boshqa nomlar mos emas? Fikrlaringizni yozma ravishda
+izohlang.
+Matnni tekshirish
+Xatni tekshirish va xatosiz ekaniga ishonch hosil qilish kerak. Hujjatni
+tekshirayotganda quyidagilarga ahamiyat beriladi:
+•	 Barcha soʻzlar xatosiz yozilganmi? Ba’zan soʻzning ham imlosi, ham
+mazmunida xato bo‘lishi mumkin. Masalan, “Bu juda chiroyli manzara”
+o‘rniga “Bu juda chiroyli mastava” deb yozib qoʻyilgan bo‘ladi. Bu yerda
+“mastava” soʻzi imloviy bexato bo‘lsa-da, yozilayotgan jumla mazmuniga
+mos emas.
+•	 Barcha tinish belgilari to‘g‘ri qo‘llanganmi? Masalan, gaplar oxirida nuqta
+yoki mos tinish belgilari bormi?
+•	 Bosh harflar toʻgʻri qo‘llanganmi? Masalan, barcha gaplar va atoqli otlar
+(jumladan, kishilarning ismi) bosh harf bilan boshlanganmi?
+Hujjatdagi xatolarni ekranda yoki qog‘ozga chop qilgan holda tekshirib,
+tuzatish mumkin.
+6.1-mashg‘ulot
+Oʻqituvchingiz bergan Proofread_Me.doc nomli faylni oching.
+Ko‘rsatmalardan foydalanib faylni mavjud xatolarni aniqlash uchun
+tekshiring. Topilgan barcha xatolarni tuzating.
+6-amaliy ko‘nikma
+Tekshirish:
+matndagi
+xatolarni aniqlash
+va to‘g‘rilash
+maqsadida
+hujjatni to‘liq
+oʻqib chiqish.
+Kalit soʻz

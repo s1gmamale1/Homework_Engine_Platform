@@ -1,0 +1,221 @@
+# Matnli masalalar
+
+2  Mahallada o‘lchamlari 8,5 m, 6 m, 2,5 m bo‘lgan hovuz bor. Hovuzning sig‘imini 
+toping.
+ 
+Hovuzning sig‘imi = 8,5 × 6 × 2,5
+ 
+ 
+                            = 127,5 m3
+3  O‘lchamlari 36 cm, 28 cm, 20 cm bo‘lgan kuboid shaklidagi idish yarmigacha 
+suv bilan to‘ldirilgan. Idishdagi suv bir xil bo‘sh stakanlarga quyildi. Agar har bir 
+stakanning sig‘imi 120 cm3 bo‘lsa, idishdagi suv nechta stakanga quyilgan? 
+ 
+20 cm
+28 cm
+36 cm
+? dona stakan
+ 
+Idishdagi suv hajmi = 1
+2 × 36 × 28 × 20
+ 
+ 
+                    = 10 080 cm3
+Suv bilan to‘ldirilgan stakanlar soni = 10 080 ÷ 120
+ 
+ 
+                                                     = 84
+132
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   132
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   132
+09/08/24   19:32
+09/08/24   19:32
+
+4  O‘lchamlari 32 cm, 20 cm, 18 cm bo‘lgan kuboid shaklidagi idishda dastlab 3,2 ℓ suv 
+bor edi. Keyin idishning  2
+3 qismi suv bilan to‘ldirildi. Idishga qancha suv quyilganini 
+toping. 
+ 
+ 
+18 cm
+20 cm
+32 cm
+ 
+ 
+ 
+ 
+ 
+1-usul
+Idishning 2
+3 qismi to‘ldirilgandagi suv hajmi = 2
+3 × 32 × 20 × 18 
+                                                            
+     = 7680 cm3
+  
+3,2 ℓ  = 3200 ml 
+    
+ = 3200 cm3
+ Idishga quyilgan suv hajmi = 7680 – 3200
+                                                         = 4480 cm3
+2-usul
+Idishning 2
+3 qismi to‘ldirilgandagi suv sathi balandligi = 2
+3 × 18
+  
+                           = 12 cm
+ Idishning 2
+3 qismi to‘ldirilgandagi hajmi = 32 × 20 × 12
+                                                                                   = 7680 cm3 
+                                                                         3,2 ℓ = 3200 ml 
+                                                                                     = 3200 cm3
+ Idishga quyilgan suv hajmi = 7680 – 320 = 4480 cm3
+133
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   133
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   133
+09/08/24   19:32
+09/08/24   19:32
+
+Bajaring va o‘rganing
+Matnli masalalarni yeching.
+1  O‘lchamlari 36 cm, 20 cm, 24 cm bo‘lgan kuboid shaklidagi idishga qanchadir suv   
+ 
+quyilgach, undagi suv sathi 13 cm ni tashkil qilgan.
+ 
+(a)  Idishdagi suvning hajmini toping. 
+  
+(b)  Idishni to‘ldirish uchun kerak bo‘ladigan suv hajmini toping.
+ 
+Javoblarni litr va millilitrlarda ifodalang. 
+           (1 ℓ = 1000 cm3)
+  
+ 
+ 
+24 cm
+13 cm
+36 cm
+20 cm
+2   Katta idishda dastlab 5 ℓ  suv bor edi. Aziza opa idishdagi suvdan o‘lchamlari                    
+ 
+16 cm, 15 cm, 12 cm bo‘lgan kuboid shaklidagi bo‘sh idishga quydi. Idish bir  
+ 
+ 
+tomchi suv to‘kilmasdan liq to‘ldi. Katta idishda qolgan suv miqdorini aniqlang.
+ 
+16 cm
+15 cm
+12 cm
+5 ℓ
+134
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   134
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   134
+09/08/24   19:32
+09/08/24   19:32
+
+3   O‘lchamlari 40 cm, 15 cm, 20 cm bo‘lgan kuboid shaklidagi idishga suv sathi            
+ balandligi 8 cm bo‘lgunga qadar suv quyilgan. Idishni to‘ldirish uchun sig‘imi                   
+ 800 ml bo‘lgan ko‘zada necha marta suv quyish kerak?
+800 ml
+8 cm
+20 cm
+15 cm
+40 cm
+4    6 ta bir xil shisha idishdagi suv o‘lchamlari 24 cm, 20 cm, 18 cm bo‘lgan, kuboid   
+   shaklidagi bo‘sh idishga quyildi. Shunda idishning  2
+3  qismi to‘ldi. Har bir shisha   
+ idishning sig‘imini toping.
+20 cm
+18 cm
+24 cm
+135
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   135
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   135
+09/08/24   19:32
+09/08/24   19:32
+
+5  O‘lchamlari 18 cm, 10 cm, 9 cm bo‘lgan kuboid shaklidagi idishning  4
+5  qismi suv       
+ 
+bilan to‘ldirilgan. So‘ng idishdan 432 ml suv to‘kib tashlandi. Idishda qolgan  
+ 
+ 
+suvning hajmini toping. Javobingizni litrda ifodalang.
+9 cm
+18 cm
+10 cm
+6  Qirrasi 14 cm bo‘lgan kub shaklidagi idish suv bilan to‘ldirilgan. Suvning bir  
+ 
+ 
+qismi o‘lchamlari 18 cm, 16 cm, 16 cm bo‘lgan kuboid shaklidagi idishga yarmi  
+ 
+ 
+to‘lgunicha quyildi. Kub shaklidagi idishda qancha suv qoldi? Javobni santimetr   
+ 
+kubda ifodalang.
+14 cm
+18 cm
+16 cm
+16 cm
+136
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   136
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   136
+09/08/24   19:32
+09/08/24   19:32
+
+7  Azimjon kuboid shaklidagi idishni yarmigacha to‘ldirish uchun 880 cm3 suv quydi.
+Idishning sig‘imini toping va natijani litrda ifodalang.
+8  Olimjonda kuboid shaklidagi ikkita A va B idish bor. A idishning o‘lchamlari: 
+10 cm, 5 cm, 4 cm. B idishning o‘lchamlari: 20 cm, 10 cm, 8 cm. 
+ 
+Olimjonning fikricha, B idishning sig‘imi A idishning sig‘imidan 2 baravar katta.
+Uning fikriga qo‘shilasizmi?
+ 
+10 cm
+20 cm
+8 cm
+B
+5 cm
+10 cm
+4 cm
+A
+O‘zingizni tekshiring
+a) 
+Men litr (yoki ml) va santimetr kub (cm3) o‘rtasidagi bog‘liqlikni bilaman.  
+ 
+b) 
+Men kuboid shaklidagi idishdagi suv hajmini qanday o‘lchashni bilaman.  
+ 
+c) 
+Men suyuqliklar hajmi va sig‘imiga oid masalalarni yechishni bilaman.   
+153–160
+Mashq daftariga o‘ting
+137
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   137
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   137
+09/08/24   19:32
+09/08/24   19:32
+
+O‘ylab ko‘ring
+Jasurbek quyida ko‘rsatilgan shakldagi jismlarni yasash uchun qirrasi 1 cm bo‘lgan 
+kublardan foydalandi. 1-jismda bitta kub joylashgan. 2-jismda kvadrat asos hosil qilish 
+uchun yangi kublar qo‘shilgan. 3-jismda yanada kattaroq kvadrat asos hosil qilish uchun 
+yana bitta qatlam qo‘shilgan. Agar Jasurbek shu usulda qatlamlarni qo‘shishda davom 
+etsa, 6-jismning hajmi qancha bo‘ladi?
+ 
+ 
+1-jism
+2-jism
+3-jism
+4-jism
+kvadrat asoslar
+kvadrat asos
+Qirrasi 1 cm bo‘lgan kublardan iborat har  
+bir qatlam hajmini toping. Jadval tuzing  
+va qonuniyatni aniqlang.
+161–164
+Mashq daftariga o‘ting
+138
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   138
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   138
+09/08/24   19:32
+09/08/24   19:32
+

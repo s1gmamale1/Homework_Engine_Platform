@@ -1,0 +1,10832 @@
+i
+Mashq 
+Mashq 
+daftariga 
+daftariga o‘
+o‘ting 
+ting 
+darslikning tegishli 
+joylariga qo‘yilgan bo‘lib, 
+mashq daftari bilan ishlash 
+zarurligini bildiradi.
+Qarang va o‘rganing
+Qarang va o‘rganing
+rukni matematik tushunchalarni 
+rasm orqali tanishtiradi, ularni 
+abstrakt (timsolli) darajada 
+tushunishga yordam beradi.
+Eslang
+Eslang
+rukni o‘quvchilarni yangi 
+mavzuga oid oldin o‘rgangan 
+tayanch bilimlarini 
+takrorlashga yo‘naltiradi.
+O‘ylab ko‘ring
+O‘ylab ko‘ring
+rukni o‘quvchilarni topshiriq 
+yoki mashqlarni bajarishdan 
+oldin o‘ylashga va mulohaza 
+yuritishga undaydi. 
+Muhokama qiling
+rukni o‘quvchilarni yangi 
+matematik tushunchalarni 
+o‘rganishga tayyorlaydi.
+O‘qituvchi o‘quvchilarni 
+mavzuga oid rasm yoki video 
+asosida suhbat (muhokama)ga 
+jalb qiladi va uni boshqaradi.
+So‘zboshi
+“AHA! Matematika” – qo‘lingizdagi darslikni shunday nomladik. “AHA!” so‘zi, bir tomondan, 
+matematika fani sirlarini kashf qilish jarayonidagi zavqli hayqiriq bo‘lsa, ikkinchi tomondan, 
+bu mo‘jizakor fanga berilgan “aniq”, “hayratlanarli” va “ajoyib” ta’riflarining bosh harflaridan 
+yasalgan so‘zdir.
+“AHA! Matematika” O‘zbekiston sharoitiga moslab mahalliylashtirilgan darslikdir.  
+U “Moddiy-rasmli-timsolli” yondashuviga asoslangan bo‘lib, AKT yordamida matematik 
+tushunchalarni yaxshiroq o‘rganishga yordam beradi. Darslik tarkibidagi amaliy topshiriqlar 
+matematikani o‘qitish samaradorligini oshirishga xizmat qiladi.
+Darslikdagi ruknlar o‘quvchilarning faol o‘rganishini rivojlantirishga yo‘naltirilgan. 
+O‘quvchilar ushbu darslik yordamida nafaqat yangi matematik bilim va ko‘nikmalarni 
+o‘zlashtiradi, balki muammoli vaziyatlarda kerak bo‘ladigan mantiqiy fikrlash va mulohaza 
+yuritish kabi hayotiy ko‘nikmalarga ham ega bo‘ladi.
+Matematika olamiga sayohatingiz qiziqarli va maroqli bo‘lsin!
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   3
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   3
+13/11/24   14:49
+13/11/24   14:49
+
+ii
+AKT mashqi
+AKT mashqi
+rukni egallangan bilimlarni 
+maxsus platformadagi axborot 
+texnologiyalaridan foydalangan holda 
+namoyish qilish kerakligini anglatadi.
+Hamrohlar 
+Hamrohlar 
+Madina, Aziza, Akmal, Sardor 
+va Robi – qalin do‘stlar. Ular 
+o‘zlarining fikrlari, takliflari, 
+izohlari va savollari  orqali siz bilan 
+birgalikda matematikani o‘rganadi. 
+Juftlikda ishlang
+Juftlikda ishlang
+rukni o‘quvchilarga bir-
+birining o‘rganganlarini 
+baholash uchun juft bo‘lib 
+ishlash sharoitini yaratadi.
+O‘zingizni tekshiring
+O‘zingizni tekshiring
+rukni o‘quvchilarga bilimini 
+tekshirish va o‘z-o‘zini baholashda 
+yordam beradi.
+O‘rganing  
+va bo‘lishing
+rukni o‘quvchilarga 
+muloqot qilish va o‘rgangan 
+bilimlarini bir-birlari bilan 
+bo‘lishish imkonini beradi.
+Qo‘lda bajariladigan 
+Qo‘lda bajariladigan 
+mashq
+mashq
+rukni o‘quvchilarni matematik 
+tushunchalarini rivojlantirish uchun 
+maxsus ko‘rgazmali materiallardan 
+foydalanishga undaydi.
+Tekshirish
+Tekshirish
+O‘quvchilar masalalar javoblarini 
+tekshirish uchun kalkulyatordan 
+foydalanishi mumkin.
+Bajaring va 
+Bajaring va 
+o‘rganing
+o‘rganing
+ruknida o‘quvchilar 
+mashqlarni bajarish 
+orqali o‘z bilimlarini 
+tekshiradi.
+Masalani  
+yechishda  
+kalkulyatordan 
+foydalanishga 
+ruxsat beriladi.
+Turmushda 
+Turmushda 
+matematika
+matematika
+rukni o‘quvchilarga kundalik 
+turmushda uchraydigan 
+vaziyatlarda matematikaning 
+qo‘llanishini ko‘rsatadi.
+O‘ynang va o‘rganing
+O‘ynang va o‘rganing
+rukni o‘quvchilarda topshiriq va o‘yinlar 
+orqali matematik tushunchalarni 
+mustahkamlaydi.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   4
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   4
+13/11/24   14:49
+13/11/24   14:49
+
+iii
+MUNDARIJA
+O‘NLI KASRLAR 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 1
+Eslang  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2
+O‘nli kasrni 10, 100 va 1000 ga ko‘paytirish   
+ 
+ 
+ 
+ 4
+O‘nli kasrni o‘nlik, yuzlik va mingliklarga ko‘paytirish  
+ 
+ 9
+O‘nli kasrni 10, 100 va 1000 ga bo‘lish  
+ 
+ 
+ 
+ 
+ 12
+O‘nli kasrni  o‘nliklar, yuzliklar va mingliklarga bo‘lish  
+ 
+ 17
+Eslang                                                                                                                  19
+O‘lchov birliklarini almashtirish  
+ 
+ 
+ 
+ 
+ 20
+Matnli masalalar  
+ 
+ 26
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 
+ 
+ 
+ 
+ 
+ 32
+7
+ME’YOR 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 33
+Me’yorni topish   
+ 
+ 
+ 34
+Me’yorga ko‘ra umumiy miqdorni topish  
+ 
+ 
+ 
+ 
+ 38
+Birliklar sonini topish   
+ 
+ 
+ 
+ 
+ 43
+Matnli masalalar  
+ 
+ 
+ 
+ 
+ 
+ 
+ 46
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 
+ 
+ 
+ 
+ 
+ 50
+8
+FOIZLAR   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 51
+Eslang 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 52
+Foiz tushunchasi  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 53
+Oddiy kasr, o‘nli kasr va foizlar orasidagi munosabatlar   
+ 56
+Miqdorning foizi  
+ 
+ 
+ 
+ 
+ 
+ 
+ 62
+Matnli masalalar  
+ 
+ 
+ 
+ 
+ 
+ 
+ 65
+QQS (qo‘shilgan qiymat solig‘i), chegirma va omonat foizi  
+ 
+ 69 
+Matnli masalalar  
+ 
+ 
+ 
+ 
+ 
+ 
+ 73
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 
+ 
+ 
+ 77
+9
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   5
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   5
+13/11/24   14:49
+13/11/24   14:49
+
+O‘RTACHA QIYMAT  
+ 
+ 
+ 
+ 
+ 
+ 78
+O‘rtacha qiymat tushunchasi  
+ 
+ 
+ 
+ 
+ 
+ 
+ 79
+Miqdorlarning o‘rtacha va jami qiymati hamda soni 
+ 
+ 83
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 
+ 
+ 
+ 
+ 
+ 89
+10
+UCHBURCHAKNING XOSSALARI  
+ 
+ 110
+Uchburchakning turlari  
+ 
+ 
+ 
+ 
+ 
+ 
+ 111
+Uchburchaklarni chizish  
+ 
+ 
+ 
+ 
+ 118
+Uchburchakning burchaklari  
+ 
+ 
+ 
+ 
+ 
+ 123
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 
+ 
+ 
+ 
+ 131
+12
+PARALLELOGRAMM, ROMB VA 
+TRAPETSIYA 
+ 132
+Eslang 
+ 
+ 133
+Parallelogramm, romb va trapetsiyaning xossalari   
+ 134
+To‘rtburchaklarni chizish  
+ 
+ 
+ 
+ 
+144
+To‘rtburchakning noma’lum burchaklarini topish  
+ 
+ 
+ 150
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 
+ 
+ 
+ 
+ 156
+13
+BURCHAKLAR  
+ 
+ 
+ 
+ 
+ 
+ 
+ 90
+Eslang  
+  
+ 
+ 
+ 
+ 
+ 91
+To‘g‘ri chiziqdagi burchaklar  
+ 
+ 
+ 92
+Vertikal burchaklar  
+ 
+ 
+ 
+ 
+ 
+ 96
+Nuqta atrofidagi burchaklar  
+ 
+ 
+ 
+ 
+ 100
+Noma’lum burchaklarni topish  
+ 
+ 
+ 105
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 
+ 
+ 
+ 
+ 109
+11
+iv
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   6
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   6
+13/11/24   14:49
+13/11/24   14:49
+
+1
+(Har 100 g mahsulotda)
+Donli yorma tarkibi
+Uzum shinnisi
+Olma sharbati
+Shokolad
+Sut tarkibi
+Energetik  
+qiymati              377 kkal
+Oqsillar  
+5,0 g
+Yog‘lar 
+0,5 g
+Uglevodlar  
+2,0 g
+A vitamini  
+266 mg
+(Har 250 ml mahsulotda)
+Energetik 
+qiymati              133 kkal
+Oqsillar   
+9,5 g
+Yog‘lar 
+3,8 g
+Uglevodlar 
+0,0 g
+D vitamini   
+1,8 mg
+O‘nli kasrlar
+7
+Idishdagi sutning
+umumiy massasi
+1000 ml. Demak,
+uning tarkibida
+jami 9,5 × 4 = 38 g
+oqsil bor ekan.
+Men 8 ta shokolad
+sotib olmoqchiman.
+Buning uchun 
+qancha to‘lashim 
+kerak?
+AJOYIB TAKLIF!
+AJOYIB TAKLIF!
+ Aziza va Madina oziq-ovqat mahsulotlarining narxi va tarkibini ko‘rib chiqmoqda.
+8650 so‘m
+10 200 so‘m
+9500 so‘m
+18 600 so‘m
+24 250 so‘m
+Muhokama qiling
+YORMA
+YORMA
+SUT
+SUT
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   1
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   1
+13/11/24   14:49
+13/11/24   14:49
+
+2
+O‘nli kasrlar
+O‘nli kasrlar  
+1  
+Sonli tugmalar qanday o‘nli kasrni ifodalayapti?
+ 
+a)   
+1 ta
+o‘ndan bir
+
+
+
+
+
+
+
+
+3 ta
+yuzdan bir
+4 ta
+mingdan bir
+ 
+ 
+ 
+ 
+0,1 + 0,03 + 0,004 = 0,134
+ 
+ 
+b) 
+o‘n
+
+5 ta mingdan bir
+
+
+
+
+
+2 ta o‘ndan bir
+
+
+ 
+ 
+ 
+ 
+ 
+10 + 0,2 + 0,005 = 10,205
+2  
+Hisoblang.
+ 
+a) 
+3,675 + 4,13 = 7,805 
+ 
+ 
+ 
+ 
+ 
+b) 
+9,056 – 2,484 = 6,572 
+ 
+ 
+ 
+1
+ 
+3 ,  6 7 5
++  4 , 1  3
+ 
+7 , 8 0 5
+10
+ 
+9 ,  0 5 6
+–  2 , 4  8 4
+ 
+6 , 5 7 2
+8
+15
+9
+Eslang
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   2
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   2
+13/11/24   14:49
+13/11/24   14:49
+
+3
+3  
+2,36 va 4 ning ko‘paytmasini toping.  
+ 
+ 
+2,36 × 4 = 9,44 
+ 
+ 
+4  
+5,93 ni 5 ga bo‘ling. 
+ 
+ 
+ 
+ 
+Javobni yuzdan birlar xonasigacha yaxlitlang. 
+ 
+ 
+ 
+5,93 ÷ 5 = 1,19   (yuzdan birlar xonasigacha yaxlitlangan) 
+ 
+ 
+ 
+ 
+5  
+3 2
+5 ni o‘nli kasr ko‘rinishida ifodalang.
+ 
+ 
+ 
+ 
+3 2
+5 = 3  4
+10 
+ 
+       = 3,4 
+ 
+ 
+6  
+8,25 ni qisqarmas aralash son ko‘rinishida ifodalang. 
+ 
+8,25 = 8 + 0,25 
+ 
+ 
+ 
+ 
+ 
+= 8 + 25
+100
+ 
+ 
+= 8 1
+4 
+1–4
+Mashq daftariga o‘ting
+1
+ 
+2 ,  3 6
+×  
+    4
+ 
+9 , 4 4
+2
+5,930
+5
+9
+1,186
+5
+–
+– 5
+43
+30
+–
+–
+40
+30
+0
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   3
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   3
+13/11/24   14:49
+13/11/24   14:49
+
+O‘nli kasrni 10,  100 va 1000 ga ko‘paytirish
+4
+Qarang va o‘rganing
+1  a) 
+0,3 ni 10 ga ko‘paytiring.                
+ 
+ 
+× 10
+0,3 × 10 = 3
+
+
+
+
+
+
+ 
+b) 
+2,3 ni 10 ga ko‘paytiring.
+ 
+ 
+× 10
+2,3 × 10 = 23
+
+
+
+
+
+
+
+
+
+
+ 
+c) 
+1,23 ni 10 ga ko‘paytiring.
+ 
+ 
+1,23 × 10 = 12,3
+× 10
+
+
+
+
+
+
+
+
+
+
+
+
+O‘nli kasrni 10 ga 
+ko‘paytirish uchun 
+o‘nli kasrdagi vergulni bir 
+xona o‘ngga suring.
+0,3  × 10  3
+2,3  × 10  23
+1,23  × 10  12,3
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   4
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   4
+13/11/24   14:49
+13/11/24   14:49
+
+5
+2  2,134 × 10 = ?        
+ 
+1
+3
+2
+1
+3
+4
+4
+Yuzdan birlar
+Mingdan birlar
+2
+O‘nlar
+O‘ndan birlar
+Birlar
+× 10
+ 
+ 
+ 
+ 
+ 
+ 
+2,134 × 10 = 21,34
+3  a) 
+0,4 ni 100 ga ko‘paytiring.     
+ 
+ 
+× 10
+0,4 × 10 = 4
+
+
+
+
+
+
+
+
+
+
+
+
+× 10
+4 × 10 = 40
+0,4 × 100 = 40
+ 
+b) 
+3,21 va 100 ning ko‘paytmasini toping.
+ 
+ 
+3,21 × 100 = 321
+× 100
+
+
+
+
+
+
+
+
+
+
+
+
+100 = 10 × 10
+O‘nli kasrni 100 ga 
+ko‘paytirish uchun 
+o‘nli kasrdagi vergulni ikki xona 
+o‘ngga suring.
+0,4  
+× 100
+ 40
+3,21  
+× 100
+ 321
+,
+,
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   5
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   5
+13/11/24   14:49
+13/11/24   14:49
+
+6
+4  4,163 × 100 = ?
+ 
+3
+× 100
+1
+3
+4
+6
+6
+Yuzdan birlar
+Mingdan birlar
+1
+O‘nlar
+O‘ndan birlar
+Birlar
+4
+Yuzlar
+ 
+ 
+ 
+4,163 × 100 = 416,3
+5  a) 
+0,002 ni 1000 ga ko‘paytiring.
+ 
+ 
+0,002 × 1000 = 2
+0,002 × 10 = 0,02
+× 10
+× 10
+
+
+
+
+
+
+
+
+× 10
+0,02 × 10 = 0,2
+0,2 × 10 = 2
+ 
+ 
+ 
+b) 
+5,8 va 1000 ning ko‘paytmasini toping.
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× 1000
+5,8 × 1000 = 5800
+5,8
+ × 1000  5800
+O‘nli kasrni 1000 ga 
+ko‘paytirish uchun o‘nli 
+kasrdagi vergulni uch xona 
+o‘ngga suring.
+0,002  × 1000
+2
+1000 = 10 × 10 × 10
+,
+,
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   6
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   6
+13/11/24   14:49
+13/11/24   14:49
+
+7
+Namuna
+6  8,765 x 1000 = ?
+5
+× 1000
+6
+7
+8
+5
+Yuzdan birlar
+Mingdan birlar
+6
+O‘nlar
+O‘ndan birlar
+Birlar
+7
+Yuzlar
+ 
+ 
+ 
+8,765 × 1000 = 8765
+Guruh bo‘lib ishlang. 
+Sonli tugmalardan foydalanib o‘nli kasrlarni 10, 100 yoki 1000 ga ko‘paytiring. 
+1  a) 
+1,3 × 10  
+b) 
+4,21 × 10  
+c) 
+15,308 × 10 
+2  a) 
+5,2 × 100      
+b) 
+8,65 × 100  
+c) 
+12,286 × 100 
+3  a)  0,005 × 1000  
+b) 
+0,09 × 1000        
+c) 
+7,349 × 1000   
+
+
+
+
+
+
+2,13 soni 10 ga ko‘paytirilsa, 
+ko‘paytma 21,3 bo‘ladi.
+
+
+
+
+
+
+
+Yuzdan birlar
+
+
+O‘nlar
+O‘ndan birlar
+Birlar
+× 10
+2,13 × 10 = 21,3
+O‘nli kasrni 10, 100 yoki 1000 ga 
+ko‘paytirish natural sonni 10, 100 
+yoki 1000 ga ko‘paytirish kabi amalga 
+oshiriladi.  
+2 × 10 = 20 
+2,0 × 10 = 20
+Qo‘lda bajariladigan mashq
+
+
+
+8
+Minglar
+,
+,
+,
+,
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   7
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   7
+13/11/24   14:49
+13/11/24   14:49
+
+8
+Bajaring va o‘rganing
+1  Ko‘paytmani toping.
+  
+a)  
+0,9 × 10 
+b)  
+0,08 × 10 
+ 
+c) 
+1,84 × 10 
+d)  
+0,8 × 100 
+ 
+e)  
+0,03 × 100 
+f)  
+1,537 × 100
+ 
+g)  
+0,05 × 1000 
+h)  
+4,75 × 1000 
+ 
+i)  
+13,03 × 1000 
+j)  
+120,068 × 1000
+2  Tushirib qoldirilgan sonlarni toping.
+      
+a)  
+0,105 × 
+ = 1,05 
+b)  
+20,432 × 
+ = 2043,2
+     
+c)  
+1,894 × 
+ = 1894 
+d) 
+ × 0,09 = 90
+       
+e) 
+ × 30,08 = 3008 
+f) 
+ × 163,8 = 1638
+5–8
+Mashq daftariga o‘ting
+O‘nli kasrni 10, 100 yoki 1000 ga ko‘paytirishdagi 
+har bir holatda o‘nli kasrning verguli necha xona 
+o‘ngga suriladi?
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   8
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   8
+13/11/24   14:49
+13/11/24   14:49
+
+O‘nli kasrni o‘nlik, yuzlik va mingliklarga 
+ko‘paytirish
+9
+Qarang va o‘rganing
+1  a) 
+2,3 ni 20 ga ko‘paytiring.
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+× 10
+× 2
+
+
+
+
+
+
+
+
+
+
+2,3 × 10 = 23
+23 × 2 = 46
+yoki
+× 2
+× 10
+
+
+
+
+
+2,3 × 2 = 4,6
+4,6 × 10 = 46
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2,3 × 20 = 46
+× 20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+2,3 × 20
+20 = 2,3 × 10
+10 × 2 
+ 
+= 2,3 × 2 × 10
+10
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   9
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   9
+13/11/24   14:49
+13/11/24   14:49
+
+3,12 × 3  9,36 × 10  93,6 
+Men ko‘paytmani quyidagicha  
+topishim ham mumkin:              
+10
+ 
+b) 
+3,12 va 30 ning ko‘paytmasini toping. 
+ 
+× 10
+× 3
+3,12 × 10 = 31,2
+31,2 × 3 = 93,6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+2  6,085 ni 500 ga ko‘paytiring.                                                           
+ 
+6,085 × 500 = 6,085 × 100 × 5    
+  
+ 
+              = 608,5 × 5 
+ 
+ 
+              = 3042,5
+3  9,124 ni 7000 ga ko‘paytiring.    
+ 
+9,124 × 7000 = 9,124 × 1000 × 7    
+  
+ 
+              = 9124 × 7 
+ 
+ 
+              = 63 868
+4  Akmal qurilish uchun har biri 0,10 kg dan bo‘lgan 200 ta mix ishlatdi. U jami  
+ 
+ 
+necha kilogramm  mix ishlatgan?
+ 
+0,10 kg × 200 = 0,10 kg × 100 × 2
+ 
+ 
+       = 10 kg × 2
+ 
+ 
+       = 20 kg
+ 
+Jami 20  kg mix ishlatgan.
+5  Laylo  80 ta shisha idishda suv buyurtma qildi. Har bir shisha 0,5 litr sig‘imga ega   
+           bo‘lsa, Laylo jami necha litr suv buyurtma qilgan?
+ 
+0,5 × 80 = 0,5 × 10 × 8 
+ 
+ 
+      = 5 × 8 
+ 
+ 
+      = 40
+ 
+Jami 40 ℓ suv buyurtma qilgan.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   10
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   10
+13/11/24   14:49
+13/11/24   14:49
+
+11
+Juftlikda ishlang
+Jadvalni do‘stingiz bilan to‘ldiring.
+Javoblaringizni muhokama qiling.
+× 20
+× 200
+× 2000
+ 
+0,08
+ 
+2,08
+12,08
+Bajaring va o‘rganing
+1  Ko‘paytiring. 
+ 
+a) 
+0,42 × 20  
+b) 
+0,06 × 30  
+ 
+c) 
+4,453 × 50  
+d) 
+0,19 × 200  
+ 
+e) 
+0,432 × 400  
+f) 
+51,04 × 800   
+ 
+g) 
+0,62 × 3000  
+h) 
+2,67 × 2000  
+ 
+i) 
+8,905 × 6000    
+j) 
+65,73 × 4000
+2  Jami miqdorni toping.
+ 
+ 
+ 
+Massasi
+Soni
+Jami miqdori
+Sovun qutisi
+0,20 kg
+600 ta
+ 
+Choy qutisi
+0,175 kg
+40 ta
+ kg
+ 
+a)
+ 
+b)
+3  Ali hafta davomida 2000 dona muzqaymoq sotdi.   
+ 
+ 
+ 
+ 
+Agar bitta muzqaymoq massasi 0,15 kg bo‘lsa,  Ali hafta davomida necha kilogramm 
+muzqaymoq sotgan? 
+9–12
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) 
+Men o‘nli kasrni 10, 100 va 1000 ga ko‘paytirishni bilaman.  
+b)  
+Men o‘nli kasrni o‘nliklar, yuzliklar va mingliklarga ko‘paytirishni 
+ 
+bilaman.  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   11
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   11
+13/11/24   14:49
+13/11/24   14:49
+
+Qarang va o‘rganing
+1  a) 
+4 ni 10 ga bo‘ling.
+ 
+ 
+÷ 10
+
+
+
+
+
+
+
+
+4 ÷ 10 = 0,4
+ 
+ 
+ 
+ 
+b) 
+2,4 ni 10 ga bo‘ling.
+ 
+ 
+2,4 ÷ 10 = 0,24
+÷ 10
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+c) 
+3,15 ni 10 ga bo‘ling.
+ 
+ 
+3,15 ÷ 10 = 0,315
+÷ 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+2,4 ÷ 10  0,24
+3,15 ÷ 10  0,315
+O‘nli kasrni 10, 100 va 1000 ga bo‘lish
+12
+Sonni 10 ga bo‘lish:                    
+                 
+4 ÷ 10 = 4,0 ÷ 10
+O‘nli kasrdagi vergulni bir 
+xona chapga suring.
+4,0 ÷  10  0,4
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   12
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   12
+13/11/24   14:49
+13/11/24   14:49
+
+5,76 
+÷ 10  0,576
+13
+2  5,76 ÷ 10 = ?
+ 
+ 
+7
+5
+5
+0
+6
+7
+Yuzdan birlar
+6
+Mingdan birlar
+O‘ndan birlar
+Birlar
+÷ 10
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+5,76 ÷ 10 = 0,576
+3  a) 
+3 ni 100 ga bo‘ling.
+ 
+ 
+3 ÷ 100 = 0,03
+÷ 10
+3 ÷ 10 = 0,3
+0,3 ÷ 10 = 0,03
+÷ 10
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+b) 
+4,2 ni 100 ga bo‘ling.
+ 
+ 
+4,2 ÷ 100 = 0,042
+÷ 100
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+c) 
+12,4 ni 100 ga bo‘ling.
+ 
+ 
+12,4 ÷ 100 = 0,124
+÷ 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sonni 100 ga bo‘lish: 
+3 ÷ 100 = 3,0 ÷ 100
+3 ÷ 100 = 3,0 ÷ 100  
+ O‘nli kasrdagi vergulni ikki 
+xona chapga suring.
+3,0 ÷ 100  0,03
+,
+,
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   13
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   13
+13/11/24   14:49
+13/11/24   14:49
+
+14
+4  237,9 ÷ 100 = ?
+ 
+3
+O‘nlar
+2
+Yuzlar
+9
+3
+7
+2
+7
+Yuzdan birlar
+9
+Mingdan birlar
+O‘ndan birlar
+Birlar
+÷ 100
+ 
+ 
+ 
+237,9 ÷ 100 = 2,379
+5  a) 
+2 ni 1000 ga bo‘ling.
+ 
+ 
+2 ÷ 1000 = 0,002
+÷ 10
+
+
+÷ 10
+
+
+
+
+
+
+÷ 10
+0,2 ÷ 10 = 0,02
+0,02 ÷ 10 = 0,002
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+b) 
+31 ni 1000 ga bo‘ling.
+ 
+ 
+÷ 1000
+31 ÷ 1000 = 0,031
+
+
+
+
+
+
+
+
+ 
+ 
+Sonni 1000 ga bo‘lish:  
+2 ÷ 1000 = 2,0 ÷ 1000
+O‘nli kasrdagi vergulni uch xona chapga 
+suring. 
+ 
+2,0 ÷ 1000  0,002
+3 1,0 ÷ 1000  0,031
+,
+,
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   14
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   14
+13/11/24   14:49
+13/11/24   14:49
+
+Guruh bo‘lib ishlang.
+Sonli tugmalardan foydalanib o‘nli kasrlarni 10, 100 va 1000 ga bo‘ling. 
+1  a) 
+0,7 ÷ 10  
+b) 
+2,64 ÷ 10  
+c) 
+32,09 ÷ 10 
+2  a) 
+0,9 ÷ 100      
+b) 
+40,3 ÷ 100  
+c) 
+743,5 ÷ 100 
+3  a)  18 ÷ 1000  
+b) 
+208 ÷ 1000        
+c) 
+10 341 ÷ 1000
+
+
+
+
+
+
+10 000
+1 000 000
+100 000
+Qo‘lda bajariladigan mashq
+15
+6  9378 ÷ 1000 = ?
+ 
+÷ 1000
+3
+8
+9
+7
+Yuzdan birlar
+8
+Mingdan birlar
+7
+O‘nlar
+O‘ndan birlar
+Birlar
+3
+Yuzlar
+ 
+ 
+ 
+9378 ÷ 1000 = 9,378
+4,8 soni 10 ga 
+bo‘linsa, bo‘linma  
+0,48 chiqadi.
+Namuna
+4,8 ni 10 ga bo‘ling.
+
+
+
+
+
+
+
+
+
+
+
+
+Yuzdan birlar
+O‘ndan birlar
+Birlar
+÷ 10
+O‘nli kasrni 10, 100 yoki 1000 
+ga bo‘lish bilan natural sonni 10, 
+100 yoki 1000 ga bo‘lish orasida 
+bog‘liqlik bormi?  Ularning qanday 
+o‘xshashligi bor?
+
+
+
+
+
+
+
+
+
+
+
+
+9
+Minglar
+,
+,
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   15
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   15
+13/11/24   14:49
+13/11/24   14:49
+
+16
+Bajaring va o‘rganing
+1  Bo‘lishni bajaring. 
+ 
+a) 
+0,9 ÷ 10   
+b) 
+1,47 ÷ 10  
+ 
+c) 
+16,09 ÷ 10 
+d) 
+0,5 ÷ 100   
+ 
+e) 
+1,6 ÷ 100  
+f) 
+743,5 ÷ 100 
+ 
+g) 
+25 ÷ 1000   
+h) 
+647 ÷ 1000  
+ 
+i) 
+12 984 ÷ 1000    
+j) 
+937 400 ÷ 1000
+2  Qaysi sonlar tushirib qoldirilgan?
+      
+a)  
+8,5 ÷ 
+ = 0,085 
+b)  
+30,43 ÷ 
+ = 3,043
+      
+c)  
+1894 ÷ 
+ = 1,894   
+d)   925 ÷ 
+ = 9,25
+13–16
+Mashq daftariga o‘ting
+Juftlikda ishlang
+Jadvalni do‘stingiz bilan to‘ldiring. 
+Javobingizni Muhokama qiling.
+÷ 10
+÷ 100
+÷ 1000
+4
+35
+O‘nli kasrni 10, 100 yoki 1000 ga bo‘lishda har 
+bir holatda o‘nli kasr verguli necha xona chapga  
+suriladi?
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   16
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   16
+13/11/24   14:49
+13/11/24   14:49
+
+17
+O‘nli kasrni o‘nliklar, yuzliklar  
+va mingliklarga bo‘lish
+Qarang va o‘rganing
+1  a) 
+6,3 ni 30 ga bo‘ling.
+ 
+ 
+÷ 10
+÷ 3
+6,3 ÷ 10 = 0,63
+0,63 ÷ 3 = 0,21
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+yoki
+÷ 10
+÷ 3
+6,3 ÷ 3 = 2,1
+2,1 ÷ 10 = 0,21
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6,3 ÷ 30 = 0,21
+ 
+b) 
+20,85 ni 50 ga bo‘ling.     
+                                                    
+6,3 ÷ 30
+30 = 6,3 ÷ 10
+10 ÷ 3 
+= 6,3 ÷ 3 ÷ 10
+10
+20,85 ÷ 50 = 20,85 ÷ 5 ÷ 10    
+ 
+ 
+ = 4,17 ÷ 10
+ 
+ 
+ = 0,417
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   17
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   17
+13/11/24   14:49
+13/11/24   14:49
+
+18
+2  12,4 ni 400 ga bo‘ling.  
+ 
+12,4 ÷ 400 = 12,4 ÷ 4 ÷ 100    
+  
+ 
+  
+= 3,1 ÷ 100 
+ 
+ 
+  
+= 0,031
+3  208 ni 8000 ga bo‘ling.
+ 
+208 ÷ 8000 = 208 ÷ 8 ÷ 1000    
+  
+ 
+  
+= 26 ÷ 1000 
+ 
+ 
+  
+= 0,026
+Juftlikda ishlang
+Jadvalni do‘stingiz bilan to‘ldiring. 
+Javobingizni Muhokama qiling.
+÷ 20
+÷ 200
+÷ 2000
+ 
+128
+1280
+Bajaring va o‘rganing
+Bo‘lishni bajaring. 
+a) 
+0,84 ÷ 20   
+b) 
+3,45 ÷ 30  
+c) 
+0,9 ÷ 300 
+d) 
+4,8 ÷ 600 
+e)  
+75,5 ÷ 500 
+f) 
+14 ÷ 2000 
+g) 
+252 ÷ 4000  
+h) 
+8256 ÷ 6000   
+i) 
+9084 ÷ 3000
+17–20
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a)  
+Men sonni 10, 100 va 1000 ga bo‘lishni bilaman.  
+b)  
+Men sonni o‘nliklar, yuzliklar va mingliklarga bo‘lishni bilaman.  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   18
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   18
+13/11/24   14:49
+13/11/24   14:49
+
+19
+Eslang
+Uzunlik, massa, hajm va sig‘im o‘lchov birliklarini almashtirish 
+Uzunlik, massa, hajm va sig‘im o‘lchov birliklarini almashtirish 
+1  
+Metr va santimetr orasidagi munosabat.
+ 
+  a) 
+1 m = 100 cm
+ 
+  b) 
+3 m 28 cm  = 300 cm + 28 cm
+ 
+ 
+ 
+ 
+= 328 cm
+ 
+  c) 
+285 cm = 200 cm + 85 cm
+ 
+ 
+ 
+   = 2 m 85 cm
+2  
+Metr va kilometr orasidagi munosabat. 
+ 
+a) 
+1 km = 1000 m
+      
+b)  
+2 km 315 m = 2000 m + 315 m
+ 
+ 
+ 
+            = 2315 m
+ 
+c)  
+4018 m = 4000 m + 18 m
+ 
+ 
+                = 4 km 18 m
+3  
+Kilogramm va gramm orasidagi munosabat.
+ 
+a) 
+1 kg = 1000 g
+ 
+b) 
+5 kg 482 g = 5000 g + 482 g
+ 
+ 
+ 
+         = 5482 g
+ 
+c)  
+3109 g = 3000 g + 109 g
+ 
+ 
+              = 3 kg 109 g
+4  
+Litr va millilitr orasidagi munosabat.
+ 
+a) 
+1 ℓ = 1000 ml
+ 
+b) 
+2 ℓ 5 ml = 2000 ml + 5 ml
+ 
+ 
+                 = 2005 ml
+ 
+c) 
+4625 ml = 4000 ml + 625 ml
+ 
+ 
+                 = 4 ℓ 625 ml
+ Kilogramm kichikroq o‘lchov 
+birligimi yoki gramm?
+Metr – santimetrdan katta 
+o‘lchov birligi.
+Kilometr metrdan katta o‘lchov 
+birligimi?
+ Litr kichikroq o‘lchov birligimi yoki 
+millilitr?
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   19
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   19
+13/11/24   14:49
+13/11/24   14:49
+
+20
+O‘lchov birliklarini almashtirish
+Qarang va o‘rganing
+1  Sonlar o‘qida katta va kichik o‘lchov birliklari ifodalangan.
+ 
+a) 
+A va B harflariga qanday miqdor mos keladi?        
+ 
+ 
+0   
+1000   2000  3000  
+A  
+5000  6000
+0   
+1   
+2  
+3  
+4  
+5  
+B
+km
+m
+ 
+ 
+A = 4000 m,    B = 6 km
+ 
+b) 
+C va D harflariga qanday miqdor mos keladi?             
+ 
+ 
+0   
+100   
+C  
+300  
+400  
+500  
+600
+0   
+1   
+2  
+3  
+D  
+5  
+6
+m
+cm
+ 
+ 
+C = 200 cm,      D = 4 m
+ 
+c) 
+E va F harflariga qanday miqdor mos keladi?              
+ 
+ 
+0   
+500   1000  1500  2000  
+F  
+3000
+0   
+0,5   
+1  
+1,5  
+2  
+E  
+3
+kg
+g
+ 
+ 
+E = 2,5 kg,     F = 2500 g
+ 
+d) 
+G va H harflariga qanday miqdor mos keladi?                              
+ 
+ 
+0   
+500   1000  1500  2000  
+H  
+3000
+0   
+0,5   
+1  
+G  
+2  
+2,5  
+3
+ℓ
+ml
+ 
+ 
+ 
+ 
+G = 1,5 ℓ     H = 2500 ml 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   20
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   20
+13/11/24   14:49
+13/11/24   14:49
+
+21
+2  Quyidagi o‘lchov birliklarini kichkinasiga almashtiring.
+ 
+a) 
+0,9 m  = 0,9 × 100
+ 
+ 
+ = 90 cm
+b) 
+4,7 m  = 4,7 × 100
+ 
+ 
+ = 470 cm
+c) 
+1,8 km = 1,8 × 1000
+ 
+ 
+= 1800 m
+d) 
+5,64 km = 5,64 × 1000
+ 
+ 
+= 5640 m
+e) 
+19,3 kg = 19,3 × 1000
+ 
+ 
+= 19 300 g
+f) 
+2,42 kg = 2,42 × 1000
+ 
+ 
+= 2420 g
+g) 
+4,06 ℓ = 4,06 × 1000
+ 
+ 
+= 4060 ml
+h) 
+8,314 ℓ = 8,314 × 1000
+ 
+ 
+= 8314 ml
+3  Quyidagi o‘lchov birliklarini kattasiga almashtiring.
+ 
+a) 
+78 cm  = 78 ÷ 100
+ 
+ 
+ = 0,78 m
+b) 
+5 cm = 5 ÷ 100
+ 
+ 
+= 0,05 m
+c) 
+60 m = 60 ÷ 1000
+ 
+ 
+= 0,06 km
+d) 
+132 m = 132 ÷ 1000
+ 
+ 
+= 0,132 km
+e) 
+64 g = 64 ÷ 1000
+ 
+ 
+ = 0,064 kg
+f) 
+2176 g = 2176 ÷ 1000
+ 
+ 
+= 2,176 kg
+g) 
+20 ml = 20 ÷ 1000
+ 
+ 
+= 0,02 ℓ
+h) 
+509 ml = 509 ÷ 1000
+ 
+ 
+= 0,509 ℓ
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   21
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   21
+13/11/24   14:49
+13/11/24   14:49
+
+22
+4  a) 
+Metrda ifodalang. 
+ 
+ 
+6 m 47 cm = 6 m + 47 cm       
+                       
+= 6 m + 0,47 m  
+ 
+                      
+= 6,47 m                                    
+         
+     
+b) 
+Kilometrda ifodalang. 
+ 
+ 
+6 km 13 m = 6 km + 0,013 km
+ 
+ 
+ 
+= 6,013 km    
+        c)  
+Kilogrammda ifodalang. 
+ 
+ 
+4 kg 250 g = 4 kg + 250 g 
+                               
+= 4 kg + 0,25 kg
+                                
+= 4,25 kg
+ 
+d)  Litrda ifodalang. 
+ 
+ 
+7 ℓ 5 ml = 7 ℓ + 5 ml
+                         
+= 7 ℓ + 0,005 ℓ
+                            
+= 7,005 ℓ
+5  a) 
+Metr va santimetrda ifodalang.
+ 
+ 
+5,04 m = 5 m + 0,04 m
+ 
+ 
+ 
+= 5 m 4 cm
+ 
+b) 
+Kilometr va metrda ifodalang. 
+ 
+ 
+8,35 km = 8 km + 0,35 km
+ 
+ 
+ 
+= 8 km 350 m
+ 
+1 m = 100 cm
+ 0,04 m  = 0,04 × 100
+ 
+ = 4 cm
+    1 km = 1000 m
+ 0,35 km  = 0,35 × 1000
+ 
+ = 350 m
+   1 km = 1000 m
+ 13 m = 13 ÷ 1000
+ 
+ = 0,013 km
+ 
+    1 kg = 1000 g
+ 
+250 g = 250 ÷ 1000
+ 
+= 0,25 kg
+ 1 ℓ = 1000 ml
+ 5 ml = 5 ÷ 1000
+ 
+ = 0,005 ℓ
+      1 m = 100 cm
+  47 cm = 47 ÷ 100
+ 
+= 0,47 m
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   22
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   22
+13/11/24   14:49
+13/11/24   14:49
+
+23
+Qiziqarli matematika
+ 
+c) 
+Kilogramm va grammda ifodalang.
+ 
+ 
+10,408 kg = 10 kg + 0,408 kg
+ 
+ 
+ 
+= 10 kg 408 g
+ 
+d) 
+Litr va millilitrda ifodalang.
+ 
+ 
+24,6 ℓ = 24 ℓ + 0,6 ℓ
+ 
+ 
+ 
+= 24 ℓ 600 ml
+                1 kg = 1000 g
+        0,408 kg = 0,408 × 1000
+  
+= 408 g
+ 
+1 ℓ = 1000 ml
+ 
+0,6 ℓ = 0,6 × 1000
+ 
+ = 600 ml
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+1   Turli o‘lchov birliklariga doir hayotiy misollar keltiring (masalan: cm, m, km, g, 
+kg, ml va ℓ). Qaysi o‘lchov birliklari ishlatilganini boshqalarga ayting.
+ 
+Namuna
+a) 
+Avtomobil dvigatelining sig‘imi 1600 cm3.
+b) 
+Jomolungma cho‘qqisi dengiz sathidan 8848 m balandlikda joylashgan.
+2   Suvning litrdagi hajmini millilitrga o‘tkazish uchun shkalali o‘lchov idishi va 
+stakandan foydalaning. Natijalarni jadvalga yozing.
+ 
+Litrdagi hajmi
+Millilitrdagi hajmi
+Keling, buni aniqlash 
+uchun suvni shkalali 
+stakanga quyib 
+ko‘ramiz.
+Shkalali o‘lchov idishida 
+0,2 ℓ suv bor. Idishdagi 
+suvning millilitrdagi hajmi 
+qancha?
+ 50 ml 
+ 100 ml 
+ 150 ml 
+200 ml 
+250 ml 
+1 ℓ
+0,2 ℓ
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   23
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   23
+13/11/24   14:49
+13/11/24   14:49
+
+24
+Qiziqarli matematika
+O‘ynang va o‘rganing
+Juftliklarga bo‘linib o‘ynang.
+Dastlab har bir o‘quvchiga bittadan loto varag‘i tarqatiladi. So‘ng har bir juftlikka 
+bir dastadan turli miqdorlar yozilgan kartochkalar bo‘lib beriladi. Kartochkalar 
+teskari qilib juftliklar oldiga qo‘yiladi.
+O‘quvchilar bir vaqtning o‘zida bittadan kartochka ochishadi. Agar kartochka va  
+loto varag‘idagi miqdorlar teng bo‘lsa, loto varag‘idagi miqdor o‘chiriladi. Ko‘proq 
+o‘chirgan o‘quvchi g‘olib bo‘ladi.
+Namuna
+0,625 kg
+10,02 m
+10 020 g
+Kartochkalar
+Loto varag‘i
+625 m
+10,02 kg
+1 ℓ 625 ml
+1,10 ℓ
+1002 cm
+6,02 m
+10 000 m
+625 g
+1,02 km
+Juftlikda ishlang
+a) 
+Do‘stingiz bilan Muhokama qiling.
+ 
+Ko‘rsatilgan harflarga qanday miqdor mos keladi?
+ 
+0 m 
+A 
+1000 m 
+                         D           2000 m
+0 km   
+0,5 km   
+1 km  
+B  
+C  
+2 km
+b) 
+Do‘stingiz bilan boshqa o‘lchov birliklari uchun (masalan: ℓ va ml, kg va g, m va  
+ 
+ 
+cm) ham yuqoridagi kabi savollar tuzing. Tuzgan savollaringizni boshqa  
+ 
+ 
+ 
+sinfdoshingizga ham bering. 
+ 
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   24
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   24
+13/11/24   14:49
+13/11/24   14:49
+
+25
+Bajaring va o‘rganing
+1  Santimetrda ifodalang.
+ 
+a) 
+0,54 m  
+b)  
+3,1 m 
+c)  10,05 m
+2  Metrda ifodalang.
+ 
+a) 
+0,23 km 
+b)  
+4,5 km 
+c)  12,06 km
+ 
+d) 
+6 cm 
+e)  
+19 cm 
+f)  
+212 cm
+3  Kilometrda ifodalang.
+ 
+a) 
+75 m 
+b)  
+104 m 
+c)  9310 m
+4  Grammda ifodalang.
+ 
+a) 
+2,6 kg 
+b)  
+0,042 kg 
+c)  15 kg 16 g
+5  Kilogrammda ifodalang.
+ 
+a) 
+30 g  
+b)  
+278 g 
+c)  7040 g
+6  Millilitrda ifodalang.
+ 
+a) 
+7 ℓ 
+b)  
+9,03 ℓ 
+c)  16 ℓ 8 ml
+7  Litrda ifodalang.
+ 
+a) 
+372 ml 
+b)  
+12 ml 
+c)  5989 ml
+8  Kilogramm va grammda ifodalang.
+ 
+a) 
+9,5 kg 
+b)  
+2,03 kg 
+c)  15,672 kg
+21–26
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) 
+Men o‘nli kasrda ifodalangan katta o‘lchov birligini kichikroq o‘lchov birligiga
+ 
+almashtirishni bilaman.  
+b)  
+Men kichik o‘lchov birligini katta o‘lchov birligiga almashtirishni va uni
+ 
+o‘nli kasrda ifodalashni bilaman.  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   25
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   25
+13/11/24   14:49
+13/11/24   14:49
+
+26
+Matnli masalalar
+Qarang va o‘rganing
+1  Idishda dastlab 5 ℓ suv bor edi. Undan har gal 150 millilitrdan 11 marta suv quyib 
+olindi. Idishda qancha suv qoldi? 
+ 
+Javobni litrda ifodalang.
+ 
+150 × 11 = 1650 
+ 
+Demak, idishdan jami 1650 ml suv olingan.
+ 
+ 5 ℓ = 5000 ml  
+5000 – 1650 
+= 3350 
+ 
+ 
+  
+ 
+3350 ml  = 3350 ÷ 1000 
+ 
+ 
+  
+ 
+ 
+ 
+= 3,35 ℓ
+ 
+Idishda 3,35 ℓ suv qoldi.
+2  Dastlab ishchida 150 m sim bor edi. U 73,6 m sim ishlatdi va qolganini 40 ta teng 
+bo‘lakka bo‘ldi.  
+ 
+Sim bo‘laklarining har biri necha santimetr uzunlikda bo‘lgan?
+ 
+ 150 – 73,6 = 76,4 m
+ 
+ 76,4 ÷ 40  = 1,91 m 
+ 
+ 
+1,91 m  = 1,91 × 100 
+               
+ = 191 cm
+ 
+Sim bo‘laklarining har biri 191 cm uzunlikda bo‘lgan.   
+ 150 –  73,6
+ 
+  
+ 150  –  70 = 80
+ 80 ÷ 40 = 2 m
+  
+ 
+ = 200 cm
+191 cm uzunlikning  200 cm 
+ga yaqinligidan javobning 
+to‘g‘riligiga ishonch hosil 
+qilish mumkin.
+AC tugmasini bosing.
+So‘ng quyidagi tugmalarni bosing:  
+Buni quyidagicha hisoblash ham mumkin:
+(150 – 73,6) ÷ 40 × 100 = 191
+Tekshirish
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+(    1    5    0    –     7    3    ,     6     )     ÷    4    0    ×    1    0    0    =
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   26
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   26
+13/11/24   14:49
+13/11/24   14:49
+
+27
+3  To‘g‘ri to‘rtburchak shaklidagi yer maydonining yuzi 112,8 m2.  
+ 
+Uning bo‘yi 16 m bo‘lsa, maydonning perimetrini toping.
+ 
+112,8 ÷ 16 = 7,05
+        Maydonning eni 7,05 m ekan.
+ 
+16 + 7,05 = 23,05 
+ 
+2 × 23,05 = 46,1
+ 
+Demak, yer maydonining perimetri 46,1 m.
+   
+4  Murod va Jasurning umumiy vazni 95,25 kg. Murod va Erkinning umumiy vazni esa 
+78,85 kg. Jasur Erkindan ikki barobar og‘irroq bo‘lsa, Murodning vazni qancha?
+Murod
+  Ja sur
+?
+95,25 kg
+Murod
+Erkin
+?
+78,85 kg
+ 
+ 
+95,25 – 78,85 = 16,4
+ 
+78,85 – 16,4 = 62,45
+ 
+Murodning vazni 62,45 kg.
+AC tugmasini bosing.
+So‘ng tugmalarni quyidagi tartibda bosing: 
+Javob to‘g‘rimi?
+Buni quyidagicha topish  ham mumkin: 
+(112,8 ÷ 16 + 16) × 2 = 46,1
+Tekshirish
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+ 
+ 
+  
+  
+ 
+ 
+  
+(   1   1   2     ,     8     ÷    1    6     +    1    6     )     ×    2    =
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   27
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   27
+13/11/24   14:49
+13/11/24   14:49
+
+28
+5  3 xalta un va 4 xalta shakar solingan qutining umumiy massasi 8,235 kg. Bir xalta 
+un va bir xalta shakarning umumiy massasi esa 2,04 kg. Bo‘sh qutining massasi bir 
+xalta shakar massasidan ikki marta og‘ir bo‘lsa, qutining massasi qanchaga teng?
+quti
+un
+un
+un
+shakar
+shakar
+shakar
+shakar
+8,235 kg
+2,04 kg
+2,04 kg
+2,04 kg
+ 
+3 × 2,04  = 6,12
+ 
+8,235 – 6,12 = 2,115
+ 
+Demak, bo‘sh quti va bir xalta shakarning umumiy massasi 2,115 kg.
+     
+2,115 ÷ 3  = 0,705
+ 
+2 × 0,705  = 1,41 
+ 
+Bo‘sh qutining massasi 1,41 kg.
+Javobni asoslash uchun chamalab 
+hisoblashdan foydalaning.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   28
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   28
+13/11/24   14:49
+13/11/24   14:49
+
+29
+Qiziqarli matematika
+ Juftlikda ishlang
+Javobni chamalash orqali toping. Chamalab topgan javobingiz bilan kalkulyatorda 
+topilgan javobni solishtiring. Chamalash orqali topgan javobingiz aniq javobga 
+qanchalik yaqin?
+a) 
+81,5 + 68,01 
+b) 
+79,01 – 6,45
+c) 
+40,08 × 9 
+d) 
+65,7 ÷ 9
+e) 
+312,98 × 6 
+f) 
+0,96 ÷ 8
+O‘ynang va o‘rganing
+Bo‘lish amalini kalkulyatordan foydalanib bajaring. Yulduzcha qo‘yilgan misollarda 
+kalkulyatordan foydalanmang va javobni qanday topganingizni tushuntiring.
+Amal
+Javob
+3 ga bo‘ling
+ 
+ 1 ÷ 3
+ 
+*  2 ÷ 3
+7 ga bo‘ling
+ 
+ 1 ÷ 7
+ 
+ 2 ÷ 7
+ 
+ 3 ÷ 7
+ 
+*  4 ÷ 7
+ 
+*  5 ÷ 7
+9 ga bo‘ling
+ 
+ 1 ÷ 9
+ 
+ 2 ÷ 9
+ 
+ 3 ÷ 9
+ 
+*  4 ÷ 9
+ 
+*  5 ÷ 9
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   29
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   29
+13/11/24   14:49
+13/11/24   14:49
+
+30
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. Keltirilgan ma’lumotlardan foydalanib ikkita matnli masala 
+tuzing. Tuzilgan masalalarni sinfdoshingiz bilan birgalikda yeching.
+Qarsildoq
+Supermarket
+Apelsin
+17,5 
+ming so‘m
+3,8 ming so‘m
+(2 quti)
+Qarsildoq
+11,6 
+ming so‘m
+(1 paket)
+             Pomidor
+   Batareyalar
+6,8 
+ming so‘m
+(2 dona)
+14,3 
+ming so‘m
+(5 dona)
+         Olma
+18,2 
+ming so‘m
+(1 kg)
+   Banan
+    Mineral suv
+6,2 
+ming so‘m
+(3 ta idish)
+Bajaring va o‘rganing
+Matnli masalalarni yeching va javobingizni asoslang.
+1  Katta idishda 4,5 ℓ meva sharbati bor edi. Dilshoda undan 8 ta bir xil stakanga teng 
+miqdorda sharbat quyganidan keyin idishda 1,3 ℓ sharbat qoldi. Har bir stakanga 
+qanchadan sharbat quyilgan?
+2  Ko‘k tasma qizil tasmadan 7 marta uzunroq. Sariq tasma esa qizilidan 33,3 cm 
+uzun. Ko‘k tasmaning uzunligi 4,06 m bo‘lsa, sariq tasmaning uzunligini toping.
+3  Kolbaning  1
+4 qismida suv bor. Kolba to‘lishi uchun yana 0,72 ℓ suv quyish kerak. 
+Kolbaning sig‘imi necha litr?
+4  A idishda  B idishdagidan 5 marta ko‘p suv bor. A idishdan 15,5 ℓ suv B idishga 
+quyilgach, har ikki idishdagi suv miqdori tenglashdi. Dastlab A idishda qancha suv 
+bo‘lgan?
+(5 dona)
+6,8 
+ming so‘m
+       Sut
+   (1 quti)
+Sut
+Qarsildoq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   30
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   30
+13/11/24   14:49
+13/11/24   14:49
+
+31
+5  Muzlatkichda jami 6,25 kg qiyma go‘sht bor edi. Undan 200 ta kotlet tayyorlandi. 
+Har bir kotletga 25 g qiyma go‘sht ishlatildi. Muzlatkichda qancha qiyma go‘sht 
+qoldi? Javobni kilogrammda ifodalang.
+6  6,576 kg guruch 12 ta idishga teng miqdorda taqsimlandi. So‘ng 4 ta idishdagi 
+guruch taom tayyorlash uchun ishlatildi. Necha kilogramm guruch ishlatilmay 
+qoldi?
+7  Jamila va Sitoraning umumiy vazni 109,45 kg. Jamila va Diyoraning umumiy vazni 
+esa 73,65 kg. Sitora Diyoradan 3 baravar og‘irroq bo‘lsa, Jamilaning vazni qancha?
+8  4 ta futbolka va 8 ta shortining jami narxi 490 000 so‘m. Bitta futbolka bitta 
+shortidan 3 baravar qimmat turadi. Bir dona futbolkaning narxi qancha?
+9  Qandolatchi 3,12 kg un va 2,43 kg shakarni aralashtirib xamir qordi va uni bir 
+nechta idishga teng miqdorda taqsimlab chiqdi. Agar har biriga 0,111 kg dan 
+ 
+xamir solingan bo‘lsa, qandolatchi nechta idishdan foydalangan?
+10  9 ta gulkaramning massasi 13,05 kg ni, 6 ta karamning massasi esa 12,90 kg ni 
+tashkil etadi. Xuddi shunday 3 ta gulkaram va 3 ta karamning umumiy massasi 
+qancha?
+11  Sayohat sumkasi maktab sumkasidan 130,90 ming so‘mga, ryukzakdan esa 4 
+marta qimmat turadi. Sayohat sumkasi, maktab sumkasi va ryukzakning umumiy 
+narxi 195,80 ming so‘m. Maktab sumkasining narxini toping. Yechimni qanday 
+topganingizni tushuntiring.
+ 
+130,90 ming so‘m
+Sayohat sumkasi
+Maktab sumkasi
+Ryukzak
+195,80 ming so‘m
+27–36
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+Men o‘nli kasrlar ustida to‘rt amalga doir matnli masalalarni yechishni bilaman.  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   31
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   31
+13/11/24   14:49
+13/11/24   14:49
+
+32
+O‘ylab ko‘ring
+Sitora, Jamila va Xolidaning 63,50 ming so‘m puli bor. Jamilada Sitoradan 11,30 ming so‘m, 
+Xolidadan esa 24,80 ming so‘m ko‘p pul bor. Sitora va Xolidaning jami qancha puli bor?
+37–40
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   32
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   32
+13/11/24   14:49
+13/11/24   14:49
+
+ 
+BANAN
+PAPAYYA
+APELSIN
+1 shodasi
+18 000 so‘m
+100 grammi
+5000 so‘m
+1 qutisi 
+5000 so‘m,
+3 qutisi 
+13 000 so‘m
+Me’yor
+8
+Muhokama qiling
+ 
+Sardor va uning onasi supermarketda.
+LIMON
+OLMA
+NOK
+1 kg 
+12 000 so‘m, 
+3 kg 
+30 000 so‘m
+1 kg 
+14 000 so‘m,
+3 kg 
+40 000 so‘m
+5 tasi 
+12 000 so‘m
+Har bir idishda 1,5 litr
+limon choy bor. Biz 10 ta
+idishda limon choy sotib
+oldik. Oyi, jami necha litr
+limon choy sotib oldik?
+1 kg olma 14 000 so‘m. 3 kg olmani  
+40 000 so‘mga sotib olish arzonroq tushar ekan.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   33
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   33
+13/11/24   14:49
+13/11/24   14:49
+
+34
+Qarang va o‘rganing
+1  Printer 5 minutda 600 sahifa chop etadi. U har minutda bir xil miqdordagi
+ 
+sahifalarni chop etsa, bir minutda nechta sahifa chop etadi?
+ 
+ 
+   
+ 
+5 min 
+ 600 sahifa
+ 
+1 min 
+ 600 ÷ 5 = 120 sahifa
+ 
+Printer minutiga 120 sahifa chop etadi. 
+Me’yor ma’lum vaqt birligida bajarilgan
+ish hajmini ifodalaydi.
+5 min 
+ 600 sahifa
+1 min 
+ 120 sahifa
+÷ 5
+÷ 5
+Printerning ish me’yori
+120 sahifa/min ga teng. 
+Bu printer har minutda 120
+sahifa chop etishini bildiradi.
+Me’yorni topish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   34
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   34
+13/11/24   14:49
+13/11/24   14:49
+
+35
+2  Ali 6 soatda idishga jo‘mrakdan tomchilatib 9 litr suv to‘pladi.
+ 
+Bu jo‘mrakdan soatiga necha litr suv tomadi?
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6 h 
+ 9 ℓ
+ 
+ 
+ 
+1 h 
+ 9 ÷ 6 = 1,5 ℓ
+                                     
+                        
+Jo‘mrakdan bir soatda 
+ 
+ 
+ 
+1,5 ℓ suv tomar ekan.
+ 
+3  Supermarketda kir yuvish kukuni ikki xil qadoqda sotilmoqda.      
+     
+3 kg li A qadoq narxi 69 000 so‘m. 5 kg li B qadoq narxi 90 000 so‘m.  
+Qaysi qadoqdagi kukun arzonroq?  
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A qadoqdagi kir yuvish kukunining bir kilogrammi 23 000 so‘m.  
+ 
+ 
+ 
+B qadoqdagi kir yuvish kukunining bir kilogrammi 18 000 so‘m. 
+ 
+Demak, B qadoqdagi kir yuvish kukuni arzonroq ekan.
+6 h 
+ 9 ℓ
+1 h 
+ 1,5 ℓ
+÷ 6
+÷ 6
+Men bir soatda necha litr 
+suv to‘plashim mumkin?
+Qaysi qadoqni 
+sotib olish foydali?
+A qadoq
+3 kg 
+ 69 000 so‘m
+1  kg 
+ 69 0000 ÷ 3 = 23 000 so‘m
+B qadoq
+5 kg 
+ 90 000 so‘m
+1  kg 
+ 90 000 ÷ 5 = 18 000 so‘m
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   35
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   35
+13/11/24   14:49
+13/11/24   14:49
+
+36
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+Kundalik hayotingizda uchraydigan mahsulot va xizmatlarga doir misollarni  
+Muhokama qiling. Narxlarni ifodalaydigan rasm, e’lon yoki cheklarni  to‘plang  
+va ularni sinfdoshlaringiz bilan bo‘lishing. 
+Guruh bo‘lib ishlang. 
+Dastlab yuragingiz bir minutda necha marta urishini sanang. Keyin 2–3 minut 
+sakrang va yuragingiz bir minutda necha marta urishini qayta sanang.  
+Natijalarni jadvalga yozing.  
+Sakraganingizdan so‘ng yurak urishida 
+qanday o‘zgarishni his qildingiz?
+Ism
+Sakrashdan oldin
+Sakrashdan keyin
+Soni
+Me’yor
+Soni
+Me’yor
+Sakraganimdan so‘ng 
+yuragim tezroq urishini his 
+qildim.
+ Joriy oyda foydalanilgan kommunal xizmat turlari va xarajatlari
+(30.04.2023 sanasidagi yoki undan keyingi to‘lovlar bu hisobga kiritilmaydi)
+Joriy oydagi kommunal xizmat turlari va ko‘rsatkichlar
+Ishlatilgan 
+miqdor
+1 birlik uchun narx 
+me’yori (ming so‘m)
+Umumiy narxi 
+(ming so‘m)
+Elektr ta’minoti. 30.04.2023 sanasidagi ko‘rsatkich 44969
+167 kWh
+0,295
+49,265
+Tabiiy gaz. 30.04.2023 sanasidagi ko‘rsatkich 12348
+126 m3
+0,38
+47,88
+Sovuq suv. 30.04.2023 sanasidagi ko‘rsatkich 284,4
+13,4 m3
+2,6
+34,84
+Chiqindi. 30.04.2023 sanasigacha 4 nafar kishi uchun
+4
+7,5
+30
+Issiq suv. 30.04.2023 sanasidagi ko‘rsatkich 3714
+25,6 m3
+5,24
+134,144
+Jami xarajat
+355,547
+Namuna
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   36
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   36
+13/11/24   14:49
+13/11/24   14:49
+
+37
+Bajaring va o‘rganing
+Matnli masalalarni yeching. 
+1  Hovuzga 4 minutda 30 litr suv quyildi. Hovuzga bir minutda qancha suv quyilgan? 
+2  Mebel ishlab chiqaruvchi korxona 9 kunda 828 ta stul ishlab chiqaradi. Bu korxona 
+bir kunda nechta stul ishlab chiqaradi? 
+3  Quyidagi grafikda har minutda hovuzga quyilayotgan suv hajmini ifodalovchi 
+chiziq berilgan. 
+ 
+ 
+ 
+ 
+ 
+ 
+24
+20
+16
+12
+8
+4
+0
+ 
+1  
+2  
+3  
+4
+Vaqt (min)
+Suv hajmi 
+(ℓ)
+Hovuzdagi suvning hajmi
+ 
+Hovuzga har minutda necha litr suv quyilmoqda? 
+4  A do‘konda 2 m atlasning narxi 84 000 so‘m. B do‘konda esa 5 m atlasning narxi 
+135 000 so‘m. Qaysi do‘konda atlasning narxi qimmatroq? 
+41–44
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+Men berilgan miqdorga asosan me’yorni topishni bilaman.   
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   37
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   37
+13/11/24   14:49
+13/11/24   14:49
+
+38
+Qarang va o‘rganing
+1  Malika kafeda ishlaydi. Kelishuvga ko‘ra, uning bir soatlik ish haqi 15 000 so‘m. 
+ 
+Agar Malika shu surʼatda 10 soat ishlasa, jami qancha ish haqi oladi? 
+ 
+ 
+   
+  1  h 
+ 15 000 so‘m
+ 
+ 
+   
+10 h 
+ 15 000 so‘m × 10 = 150 000 so‘m
+ 
+ 
+   
+Malika 10 soat ishlab, 150 000 so‘m ish haqi oladi.
+2  Ma’lum suyuqlik qizdirilganda uning harorati 2 minutda 10 °C ga ko‘tariladi. 
+ 
+Suyuqlik shunday surʼatda qizdirib borilsa, uning harorati 7 minutda qanchaga 
+ko‘tariladi?
+ 
+ 
+ 
+ 
+2 min 
+ 10 °C
+ 
+ 
+ 
+1 min  
+ 10 °C ÷ 2 = 5 °C
+ 
+ 
+ 
+7 min 
+ 5 °C × 7 = 35 °C
+ 
+ 
+ 
+7 minutda harorat 35 °C ga ko‘tariladi. 
+ 1 h 
+ 15 000 so‘m
+ 10 h
+ 150 000 so‘m 
+× 10
+× 10
+ 2 min 
+ 10 ºC
+ 1 min 
+ 5 ºC
+ 7 min 
+ 35 ºC
+÷ 2
+× 7
+÷ 2
+× 7
+Me’yorga ko‘ra umumiy miqdorni topish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   38
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   38
+13/11/24   14:49
+13/11/24   14:49
+
+39
+3  Zavodda 13 minutda 520 ta banka ishlab chiqariladi. Agar ishlab chiqarish shunday
+ 
+surʼatda davom ettirilsa, 1 soatda nechta banka ishlab chiqariladi? 
+      
+ 13 min 
+ 520 ta banka
+         1 min 
+ 520 ÷ 13 = 40 ta banka
+     
+ 60 min 
+ 40 × 60 = 2400 ta banka 
+      
+Zavodda 1 soatda 2400 ta banka 
+ 
+ishlab chiqariladi. 
+4  Quyidagi jadvalda mahalliy pochta xizmati narxlari keltirilgan.
+Jo‘natma massasi (gacha)
+Yetkazish narxi
+100 g
+2500 so‘m
+250 g
+4100 so‘m
+500 g
+8500 so‘m
+1 kg
+14 900 so‘m
+2 kg
+24 500 so‘m
+ 
+Quyidagi jo‘natmalarning yetkazish narxini toping:
+ 
+a) 
+80 g 
+ 
+ 
+b) 
+300 g 
+ 
+ 
+c) 
+1,5 kg  
+ 
+ 13 min 
+ 520
+ 1 min 
+ 40
+ 60 min 
+ 2400
+ 
+÷ 13
+× 60
+÷ 13
+× 60
+Massasi 100 grammdan 
+og‘ir va 250 grammdan 
+yengil har qanday 
+jo‘natmaning yetkazish 
+narxi 4100 so‘m ekan.
+ 
+Massasi 100 grammdan
+oshmagan har qanday
+jo‘natmaning yetkazish
+narxi 2500 so‘m ekan. 
+A jo‘natma massasi 800 g, B jo‘natma
+massasi esa 1 kg. Bu jo‘natmalarni bitta
+manzilga alohida-alohida yetkazish arzonmi yoki 
+birgalikda yetkazish?
+   1 h  =  60 min 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   39
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   39
+13/11/24   14:49
+13/11/24   14:49
+
+40
+5  Quyidagi jadvalda avtoturargoh narxi berilgan. 
+ 
+Avtoturargoh to‘lovlari
+Dastlabki bir soatgacha
+3000 so‘m
+Keyingi har yarim soat uchun
+1000 so‘m
+ 
+ 
+Nodir avtomobilini ertalab soat 10:00 dan 12:30 gacha avtoturargohda qoldirdi.
+ 
+U avtoturargoh uchun qancha pul to‘lagan?
+10:00
+11:00
+11:30
+12:00
+12:30
+1
+2 h
+1
+2 h
+1
+2 h
+1 h
+ 
+ 
+ 
+1-soat 
+ 3000 so‘m
+Keyingi 3 ta yarim soat uchun 
+ 3 × 1000 so‘m = 3000 so‘m
+ 
+3000 so‘m + 3000 so‘m = 6000 so‘m
+Nodir avtoturargoh uchun 6000 so‘m to‘lagan. 
+Turmushda matematika
+Avtomobil haydovchisi ushbu 
+avtoturargohdan foydalangani uchun 
+qancha to‘lov qilishi lozimligini toping.
+a) 
+07:00 dan 10:30 gacha. 
+b) 
+20:00 dan 00:15 gacha. 
+Tungi vaqt:  
+22:30 dan 07:00 gacha
+Sutka davomida
+07:00 dan 22:30 
+gacha har yarim soat 
+uchun 1300 so‘m 
+yoki 22:30 dan 07:00 
+gacha 8000 so‘m
+07:00 dan 22:30 
+gacha har yarim soat 
+uchun 1000 so‘m 
+yoki 22:30 dan 07:00 
+gacha 8000 so‘m
+P
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   40
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   40
+13/11/24   14:49
+13/11/24   14:49
+
+41
+Bajaring va o‘rganing
+Matnli masalalarni yeching.
+1  Zavodda bir minutda 275 ta banka ishlab chiqarilsa, 100 minutda nechta
+ 
+banka ishlab chiqariladi?  
+2  1 m temir panjara 380 000 so‘m turadi. Bo‘yi 60 m, eni 45 m bo‘lgan to‘g‘ri
+ 
+to‘rtburchak shaklidagi maydonni panjara bilan o‘rash uchun qancha pul kerak  
+bo‘ladi?   
+ 
+60 m
+45 m
+  
+    
+       
+3  Quyidagi jadvalda mahalliy pochta xizmati narxlari keltirilgan. 
+Jo‘natma massasi (gacha)
+Narxi
+100 g
+2500 so‘m
+250 g
+4100 so‘m
+500 g
+8500 so‘m
+1 kg
+14 900 so‘m
+2 kg
+24 500 so‘m
+ 
+a) Po‘lat turli hududlarga jo‘natmalarni pochta orqali yubormoqchi.  
+ 
+Buning uchun u jami qancha to‘lov qilishi kerak?
+Jo‘natma nomi
+Massasi
+Narxi
+A
+200 g
+B
+600 g
+C
+1,8 kg
+Jami
+ 
+ 
+ 
+ 
+b) Rasul X va Y jo‘natmalarni turli manzillarga yubormoqchi.   
+ 
+ 
+Jo‘natmalar uchun u jami qancha to‘lov qilishi kerak?
+ 
+ 
+Jo‘natma nomi
+Massasi
+Soni
+Narxi
+X
+90 g
+2
+Y
+120 g
+1
+Jami
+ 
+ 
+ 
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   41
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   41
+13/11/24   14:49
+13/11/24   14:49
+
+42
+4  Quyidagi jadvalda mobil aloqa kompaniyasining Qozog‘istondan O‘zbekistonga 
+kiruvchi va chiquvchi qo‘ng‘iroq narxlari berilgan.
+Qozog‘istondan kiruvchi qo‘ng‘iroq
+Qozog‘istonga chiquvchi 
+qo‘ng‘iroq
+1 minuti 2,5 ming so‘m
+1 minuti 2,35 ming so‘m
+ 
+a) Tolibga Qozog‘istondan qo‘ng‘iroq bo‘ldi va u 7 minut gaplashdi. 
+ 
+ 
+U kompaniyaga qancha to‘lagan?  
+ 
+ 
+ 
+ 
+ 
+b) Kamol Qozog‘istonga qo‘ng‘iroq qilib, 9 minut gaplashdi.
+ 
+ 
+U kompaniyaga qancha to‘lagan?  
+ 
+ 
+ 
+5  Changyutkich har 4 minutda 10 m2 maydonni tozalaydi.  Ushbu
+ 
+changyutkich bilan 0,5 soatda qancha maydonni tozalash mumkin?  
+6  Siz quyidagi tarif jadvali asosida xizmat ko‘rsatuvchi taksiga buyurtma berishingiz 
+mumkin: 
+Taksi tariflari
+Buyurtma va 1 km dan kamroq masofa uchun
+1,2 ming so‘m
+1 km dan keyin 10 km gacha har 500 m uchun
+0,35 ming so‘m
+10 km dan keyin har 500 m uchun
+0,25 ming so‘m
+ 
+Quyidagi masofalarga taksi xizmatidan foydalanish uchun siz qancha to‘laysiz?
+ 
+a) 0,85 km  
+ 
+ 
+b)  4,5 km   
+45–50
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+Men berilgan me’yorga ko‘ra umumiy miqdorni topishni bilaman.  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   42
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   42
+13/11/24   14:49
+13/11/24   14:49
+
+43
+Qarang va o‘rganing
+1  Po‘lat kompyuterda bir minutda 50 ta so‘z yozadi. U 150 ta so‘zni yozish uchun 
+qancha vaqt sarflaydi? 
+      
+ 50 ta so‘z  
+ 1 min
+ 
+ 1 ta so‘z  
+ 1
+50 min
+ 
+ 1 ta so‘z 
+ 1
+50 × 150 = 3 min
+ 
+Po‘lat 150 ta so‘zni 3 minutda yozadi.
+2  Bo‘yi 90 cm, eni 30 cm va balandligi 20 cm bo‘lgan kuboid shaklidagi bo‘sh idishga 
+minutiga 6 litrdan suv quyilmoqda. Idish qancha vaqtda to‘ladi? 
+ 
+      Idish hajmi = 90 × 30 × 20 
+ 
+     
+90 cm
+30 cm
+20 cm
+ 
+    
+ 
+ 
+ 
+= 54 000 cm3 
+ 
+ 
+ 
+ 
+ 
+ 
+54 000 cm3 = 54 ℓ
+ 
+ 6 ℓ 
+ 1 min
+ 
+ 1 ℓ 
+ 1
+6 min
+ 
+ 54 ℓ 
+ 1
+6 × 54 = 9 min
+ 
+Idish 9 minutda to‘ladi. 
+ 50 ta so‘z 
+ 1 min
+ 150 ta so‘z 
+ 3 min
+× 3
+× 3
+   Idish hajmi = 
+= bo‘yi × eni × balandligi
+Birliklar sonini topish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   43
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   43
+13/11/24   14:49
+13/11/24   14:49
+
+Qiziqarli matematika
+44
+3  Chilangar 5 soat ishlasa, 45 ta detal yasay oladi. U 117 ta detal yasashi uchun 
+qancha vaqt ishlashi kerak?
+     
+ 45 ta 
+ 5 h  
+    
+ 1 ta 
+ 5
+45 = 1
+9 h
+ 
+117 ta 
+ 1
+9 × 117 = 13 h
+     
+13 soat ishlashi kerak. 
+4  Uskuna 14 soatda 140 ta qo‘g‘irchoq ishlab chiqaradi. Bu uskuna 50 ta 
+qo‘g‘irchoqni qancha vaqtda ishlab chiqaradi? 
+     
+140 ta qo‘g‘irchoq 
+ 14 h
+       
+1 ta qo‘g‘irchoq 
+ 14
+140
+ = 1
+10
+ h
+    
+ 50 ta qo‘g‘irchoq
+ 1
+10
+ × 50 = 5 h
+     
+Uskuna 50 ta qo‘g‘irchoqni 5 soatda ishlab chiqaradi.
+    140 ta  
+ 14 h
+          1 ta 
+ 
+1
+10
+      50 ta  
+ 
+5
+÷ 140
+× 50
+÷ 140
+× 50
+ 
+   45 ta 
+ 5 h
+  1 ta 
+  1
+9  h
+ 117 ta 
+ 13 h
+÷ 45
+× 117
+÷ 45
+× 117
+Juftlikda ishlang
+Matnli masalani yeching va Muhokama qiling. 
+Yuzi 12 m2 bo‘lgan maydonni kafel bilan qoplash uchun 3 360 000 so‘m mablag‘ sarflandi.
+a) 
+Bir kvadrat metrni  kafel bilan qoplash uchun sarflangan mablag‘ni toping. 
+b) 
+Yuzi 20 m2 bo‘lgan maydonni kafel bilan qoplashga qancha mablag‘ ketishini toping.
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang.
+Bir-biriga bog‘liq miqdorlar: me’yor, umumiy miqdor va birliklar sonini misollar orqali 
+Muhokama qiling. Bir miqdor qolgan ikkitasi orqali qanday topilishini tushuntiring.
+Zavod
+Har 30 sekundda 480 ta idish
+Bir kishiga 
+3000 so‘m, 
+5 kishiga 
+10 000 so‘m
+Ko‘rgazmaga kirish narxi
+Nusxa 
+ko‘chirish
+Bir varaq 
+uchun  
+1500 so‘m
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   44
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   44
+13/11/24   14:49
+13/11/24   14:49
+
+45
+ 
+O‘zingizni tekshiring
+Men berilgan me’yor va umumiy miqdorga ko‘ra birliklar sonini topishni bilaman.   
+Bajaring va o‘rganing
+Matnli masalalarni yeching.
+1  Quyidagi jadvalda 3 nafar o‘quvchining kompyuterda matn yozish me’yori 
+berilgan. Har bir o‘quvchi berilgan miqdordagi so‘zlarni yozish uchun qancha vaqt 
+sarflashini toping.
+ 
+Ismi
+Yozish me’yori 
+(so‘z/min)
+So‘zlar soni
+Yozish vaqti
+Jamila
+40
+240
+Sitora
+45
+180
+Rahima
+35
+350
+2  Quyidagi jadvalda turli o‘chirg‘ichlar narxi berilgan. Ali sotib olmoqchi bo‘lgan 
+o‘chirg‘ichlar sonini toping.
+ 
+O‘chirg‘ich turi
+Donasining narxi 
+Soni
+Jami narxi
+A
+0,60 ming so‘m
+6,00 ming so‘m
+B
+1,00 ming so‘m
+8,00 ming so‘m
+C
+1,50 ming so‘m
+18,00 ming so‘m
+3  Doniyor do‘konda ishlaydi. U bir soat uchun 6000 so‘m ish haqi oladi. Agar hafta 
+davomida  4 kun ishlab, jami 144 000 so‘m ish haqi olgan bo‘lsa, ushbu haftada 
+Doniyor necha soat ishlagan?    
+4  Quyidagi jadvalda mototsikl ijarasining narxlari berilgan.
+Mototsikl ijarasi narxlari
+Dastlabki 1 soat uchun
+4 ming so‘m
+Keyingi har 1 soat uchun
+2 ming so‘m
+ 
+Po‘lat mototsikl ijarasi uchun 10 ming so‘m to‘ladi. U mototsiklni qancha vaqtga 
+ijaraga olgan? 
+51–52
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   45
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   45
+13/11/24   14:49
+13/11/24   14:49
+
+46
+Qarang va o‘rganing
+1  O‘lchamlari 50 cm, 50 cm va 36 cm  bo‘lgan kuboid shaklidagi idish suv bilan 
+to‘ldirildi. Idishdagi suvni unga o‘rnatilgan jo‘mrak orqali to‘kish mumkin. Suvning 
+jo‘mrak orqali chiqish me’yori 18 litr/min bo‘lsa, idishdagi suvning yarmini to‘kish 
+uchun qancha vaqt ketadi?
+ 
+Idish hajmi  = 50 × 50 × 36  
+ 
+             
+50 cm
+50 cm
+36 cm
+ 
+                        = 90 000 cm3
+ 
+                   
+= 90 ℓ 
+ 
+Idishning yarmidagi suv miqdori = 90
+2  
+ 
+ 
+ 
+= 45 ℓ
+ 
+ 18 ℓ  
+ 1 min
+          1 ℓ  
+ 1
+18 min 
+    
+45 ℓ 
+ 1
+18 × 45 = 2 1
+2 min
+5
+2
+ 
+Demak, idishdagi suvning yarmini to‘kish uchun 2 1
+2 minut ketadi.         
+2  Avtomobil 7 litr benzin bilan 98 km masofani bosib o‘tadi. Bir litr benzin narxi 
+ 
+7,2 ming so‘m bo‘lsa, ...
+ 
+a) 
+avtomobil 12 litr benzin bilan necha kilometr yuradi?
+          b)   126 km masofaga yetadigan benzin uchun qancha mablag‘ kerak bo‘ladi? 
+ 
+a) 
+ 7 ℓ  
+ 98 km
+ 
+ 
+ 1 ℓ  
+ 98 ÷ 7 = 14 km
+ 
+ 
+ 12 ℓ 
+ 12 × 14 = 168 km
+ 
+ 
+Avtomobil 12 litr benzin bilan 168 km yuradi.
+ 
+b) 
+ 98 km  
+ 7 ℓ  
+ 
+ 
+ 
+1 km  
+ 7
+98 ℓ
+ 
+ 
+ 126 km  
+ 7
+98 × 126 = 9 ℓ
+ 
+ 
+9 × 7,2 ming so‘m = 64,8 ming so‘m
+ 
+ 
+ Avtomobil 126 km masofani bosib o‘tish uchun 64,8 ming so‘mlik benzin 
+sarflaydi.
+  
+ 
+Matnli masalalar
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   46
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   46
+13/11/24   14:50
+13/11/24   14:50
+
+47
+3  Meva do‘konida 100 gramm  do‘lana 4500 so‘mdan sotilyapti.
+     
+a) 
+1 kg do‘lana necha so‘m?
+ 
+b) 
+Ravshan 1,5 kg do‘lana sotib olmoqchi. Buning uchun
+ 
+ 
+u qancha to‘lashi kerak?  
+ 
+ 
+ 
+a) 
+ 100 g 
+ 4500 so‘m
+      
+ 
+ 1000 g 
+ 4500 so‘m × 10 = 45 000 so‘m         
+     
+ 
+1  kg do‘lana narxi 45 000 so‘m.
+ 
+b) 
+ 1,5 kg = 1500 g
+         
+1500 g 
+ 4500 so‘m × 15 = 67 500 so‘m
+               
+Ravshan 67 500 so‘m to‘lashi kerak.
+4  Bo‘sh idishga jo‘mrakdan sekundiga 4 ml dan suv quyilmoqda. Idishning sig‘imi 
+ 
+12 litr bo‘lsa, ...
+ 
+a) 
+1 minutda idishga qancha suv quyiladi?
+ 
+b) 
+idish qancha vaqtda to‘ladi? 
+ 
+a) 
+1 min = 60 s 
+ 
+ 
+  1 s 
+ 4 ml
+         
+60 s  
+ 4 × 60 = 240 ml
+   
+ 
+Idishga 1 minutda 240 ml suv quyiladi.
+ 
+b) 
+12 ℓ = 12 000 ml
+ 
+ 
+ 
+240 ml 
+ 1 min
+ 
+ 
+ 
+1 ml 
+ 1
+240 min
+     
+ 
+12 000 ml  
+ = 1
+240 × 12 000 = 50 min
+ 
+ 
+Idish 50 minutda to‘ladi.
+100 × 10 = 1000
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   47
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   47
+13/11/24   14:50
+13/11/24   14:50
+
+48
+Bajaring va o‘rganing
+Matnli masalalarni yeching. 
+1  Temur  9 soat ishlagani uchun 72 000 so‘m ish haqi oldi. 
+     
+a)  Uning bir soatlik ish haqi qancha?  
+     
+b)  Temur 120 000 so‘m ish haqi olish uchun qancha  ishlashi kerak?           
+2  Printer 10 sekundda 25 sahifani chop etadi. 
+     
+a) 
+Printer shu me’yorda ishlasa, 1 minutda nechta sahifani chop etadi?  
+     
+b)  Printer 180 sahifani chop etishi uchun qancha vaqt talab etiladi? Javobni  
+ 
+ 
+sekundda ifodalang.   
+3  Said kompyuterda 90 ta so‘zni 5 minutda yozadi. 
+     
+a)  
+U bir minutda nechta so‘z yozishini toping.  
+     
+b)  U so‘zlarni shu me’yorda yozsa, 288 ta so‘z yozishga qancha vaqt sarflaydi?  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4  Yuk mashinasi 80 litr yonilg‘i bilan 240 km masofani bosib o‘tadi. Bir litr yonilg‘i 
+narxi 7,2 ming so‘m bo‘lsa, ... 
+     
+a) yuk mashinasi 1 litr yonilg‘i bilan qancha masofani bosib o‘tadi? 
+     
+b)  yuk mashinasi 360 km masofani bosib o‘tishi uchun necha litr yonilg‘i 
+ 
+ 
+kerak? 
+ 
+c)  yuk mashinasi 360 km masofani bosib o‘tishga ishlatadigan yonilg‘i uchun  
+ 
+ 
+sarflanadigan mablag‘ni toping.
+5  O‘lchamlari 50 cm, 40 cm va 15 cm bo‘lgan bo‘sh idishni to‘ldirish uchun jo‘mrak 
+ochildi. Jo‘mrakdan suvning quyilish me’yori 6 litr/min va 3 minutdan keyin jo‘mrak 
+yopildi. Idish to‘lishi uchun yana qancha suv kerak? Javobni litrda ifodalang.
+6  Quyidagi jadvalda istirohat bog‘i chiptalarining narxlari berilgan. 
+ 
+ 
+A tarifi (qo‘shimcha 
+xizmatlarsiz)
+B tarifi (qo‘shimcha 
+xizmatlar bilan)
+Kattalar
+3000 so‘m
+5500 so‘m
+Bolalar
+2200 so‘m
+3200 so‘m
+ 
+Bilol amaki o‘zi va rafiqasiga chipta uchun jami 11 000 so‘m to‘ladi. Ular qaysi tarifni 
+tanlagan?  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   48
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   48
+13/11/24   14:50
+13/11/24   14:50
+
+49
+7  Tohir restoranlardan biriga ishga kirmoqchi.  A restoranda 7 soatlik ish vaqti uchun 
+ 
+45,50 ming so‘m, B restoranda esa 6 soatlik ish vaqti uchun 40,80 ming so‘m 
+to‘lanadi. Tohir 5 soat ishlamoqchi bo‘lsa, qaysi restoranga ishga kirgani foydaliroq? 
+ 
+Javobingizni asoslang.  
+8  Kuboid shaklidagi idish qisman suv bilan to‘ldirildi. So‘ng idish butunlay to‘lishi 
+uchun jo‘mrak 40 minut ochib qo‘yildi. 
+ 
+Quyidagi grafikda har 10 minutda idishga quyilayotgan suv miqdori berilgan.
+Vaqt (min)
+Suv hajmi 
+(ℓ)
+0 
+10 
+20 
+30 
+40 
+50
+160
+120
+80
+40
+Idishdagi suv hajmi
+ 
+a) 
+ O‘quvchi grafikka qaradi va  jo‘mrakdan quyilayotgan suvning tezligi   
+4 litr/minut ekanini aniqladi. Uning javobi to‘g‘rimi? Tushuntiring.
+    
+b)  Idishga jo‘mrak orqali 60 litr suv quyish uchun qancha vaqt sarflangan? 
+53–60
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+Men me’yorga doir matnli masalalarni yechishni bilaman.  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   49
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   49
+13/11/24   14:50
+13/11/24   14:50
+
+50
+O‘ylab ko‘ring
+O‘lchamlari 80 cm, 60 cm va 50 cm bo‘lgan ikkita bir xil A va B idishga bir vaqtda mos 
+ravishda 1- va 2-jo‘mrakdan suv ochildi. A idishga 1-jo‘mrakdan 4 litr/min, B idishga 
+2-jo‘mrakdan 3 litr/min tezlikda suv quyilmoqda. Idishlarni to‘ldirish uchun ketadigan 
+vaqtlar orasidagi farqni toping.
+80 cm
+60 cm
+2-jo‘mrak
+B idish
+80 cm
+60 cm
+50 cm
+ 1-jo‘mrak
+A idish
+50 cm
+ 
+61–64
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   50
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   50
+13/11/24   14:50
+13/11/24   14:50
+
+Foizlar
+9
+“Yulduz” mobil aloqa 
+kompaniyasi xizmatlari
+Ro‘yxatdan o‘ting va ikki yil
+davomida oylik tarifdan 10%
+chegirmaga ega bo‘ling.
+2 kishiga 20% chegirma
+3 kishiga 25% chegirma
+Oylik tarif 40 000 so‘m
+4 kishiga
+30% 
+chegirma
+Muhokama qiling
+ 
+ Akmal va uning otasi mobil aloqa tariflarining 
+narxlarini o‘rganib chiqmoqda.
+Akmal, mening hisobim 
+orqali ro‘yxatdan o‘tsang, 
+20% chegirmaga ega 
+bo‘lasan. 
+Rahmat, dada 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   51
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   51
+13/11/24   14:50
+13/11/24   14:50
+
+52
+Eslang
+Bir butunning qismlari
+Bir butunning qismlari
+1  Kvadrat 100 ta bir xil katakka bo‘lingan va ulardan 25 tasi bo‘yalgan.
+ 
+ 
+ 
+ 
+ 
+  
+100 tadan 25 tasi  = 25
+100  
+ 
+ 
+  
+ 
+ 
+  
+25
+100 = 0,25
+ 
+ 
+  
+Demak, kvadratning 25
+100 yoki 0,25 
+ 
+ 
+  
+qismi bo‘yalgan.
+ 
+2  Butunning qanday qismi bo‘yalgan?
+ 
+Javobni kasrning qisqarmas ko‘rinishida va o‘nli kasr shaklida ifodalang. 
+ 
+ 
+ 
+ 
+100 tadan 40 ta = 40
+100
+ 
+40
+100 = 4
+10 = 2
+5 
+ 
+ 
+2
+5 = 0,4
+ 
+ 
+2
+5  yoki 0,4 qismi bo‘yalgan.
+ 
+ 
+ 
+ 
+  
+3  Oddiy va o‘nli kasrlarni maxraji 100 bo‘lgan oddiy kasrlarga aylantiring.
+ 
+a)   9
+20 = 45
+100 
+ 
+b)  14
+25 = 56
+100  
+c)  0,06 = 6
+100 
+d)  0,28 = 28
+100
+ 
+ 
+=
+× 5
+× 5
+45
+100
+9
+20
+ 
+ 
+=
+× 4
+× 4
+56
+100
+14
+25
+65–66
+Mashq daftariga o‘ting
+25
+100  = 5
+20  = 1
+4 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   52
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   52
+13/11/24   14:50
+13/11/24   14:50
+
+53
+Foiz tushunchasi
+Qarang va o‘rganing
+1  Kvadrat 100 ta bir xil katakka bo‘lingan va ulardan 35 tasi bo‘yalgan.
+ 
+ 
+ 
+100 tadan 35 ta = 35
+100   
+ 
+ 
+  
+35
+100 kasrni 100 dan 35 yoki 35 foiz deb o‘qiymiz. 
+ 
+ 
+  
+35
+100 = 35% kabi yozamiz.
+ 
+ 
+  
+Demak, kvadratning 35% i bo‘yalgan.
+2  Kvadratning necha foizi bo‘yalgan?
+ 
+ 
+ 
+12
+100 = 12% 
+ 
+ 
+  
+Butun kvadratning 12% i bo‘yalgan.
+% belgisi foizni 
+belgilash uchun 
+ishlatiladi.
+Bir butun 100% deb 
+olinadi.
+1% bu 1
+100 yoki 
+yuzdan birni bildiradi. 
+100% – 12% = 88%
+Butun kvadratning 88% 
+i bo‘yalmagan.
+12
+100 va 0,12 o‘zaro teng. 
+Demak, 0,12 = 12%.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   53
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   53
+13/11/24   14:50
+13/11/24   14:50
+
+54
+3  Konsertga kelgan 100 nafar tomoshabindan 62 nafari erkak, qolgani esa 
+ayollardan iborat. 
+      
+a)  
+Tomoshabinlarning necha foizi erkaklar?
+      
+b)  Tomoshabinlarning necha foizi ayollar?
+ 
+a) 
+62
+100 = 62%
+            
+Erkaklar 62% ni tashkil etadi.
+    
+      
+b)  100% – 62% = 38% 
+             
+Ayollar esa 38% ni tashkil etadi. 
+4  a) 
+0,91 ni foiz ko‘rinishida ifodalang. 
+            
+0,91 = 91
+100 = 91%
+      
+      
+b)  0,05 ni foiz ko‘rinishida ifodalang. 
+             
+0,05 = 5
+100  = 5%
+Juftlikda ishlang
+Do‘stingiz bilan Muhokama qiling.
+ 
+ 
+a)  
+Ko‘k kataklar kvadratning necha foizini tashkil etadi?
+b)  
+Pushti kataklar kvadratning necha foizini tashkil etadi?
+c)  
+To‘q sariq kataklar kvadratning necha foizini tashkil etadi?
+Nechta katak ko‘k, nechtasi pushti va 
+qanchasi to‘q sariq rangga bo‘yalgan?
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   54
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   54
+13/11/24   14:50
+13/11/24   14:50
+
+Qiziqarli matematika
+55
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+Kundalik hayotda uchraydigan foizga doir misollardan o‘ylab ko‘ring. 
+Rasmlar to‘plab keling. Qanday foizlar ishlatilgani haqida sinfdoshlaringizga 
+aytib bering. 
+Namuna
+Tushlik taomlarga 
+5% chegirma
+Oshxona 
+A bankdagi
+omonat stavkasi 
+24 oygacha, kamida  
+2 000 000 so‘m
+23%
+Doimiy mijozlar uchun
+barcha tovarlarga
+10% chegirma
+Sport dunyosi 
+761 600 so‘m
+1 juft tufli                300 000 so‘m
+1 ta shim                  258 000 so‘m
+1 ta futbolka          122 000 so‘m
+ QQS---                      
+12%
+ QQS miqdori         81 600  so‘m
+Bajaring va o‘rganing
+1  Berilgan shakllarning necha foizi bo‘yalgan? 
+ 
+a) 
+ 
+ 
+b) 
+ 
+ 
+ 
+ 
+ 
+2  Kasrlarni foiz ko‘rinishida ifodalang. 
+ 
+a) 
+2
+100
+  
+b) 
+42
+100
+  
+c) 
+100
+100
+  
+3  O‘nli kasrlarni foiz ko‘rinishida ifodalang. 
+ 
+a) 
+0,43 
+b) 
+0,04 
+c) 
+0,89
+4  Jamilaning 100 000 so‘m puli bor edi. U 15 000 so‘mni ishlatdi. 
+ 
+a) 
+U pulining necha foizini ishlatgan?
+ 
+b) 
+Unda jami pulining necha foizi qoldi? 
+GSSN43304NOP-2001-60.0001
+Jami:
+67–68
+Mashq daftariga o‘ting
+Xarid cheki
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   55
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   55
+13/11/24   14:50
+13/11/24   14:50
+
+56
+Oddiy kasr, o‘nli kasr va foizlar  
+orasidagi munosabatlar
+Qarang va o‘rganing
+1  3
+5  ni foiz ko‘rinishida ifodalang. 
+ 
+ 
+ 
+ 
+Quyida kasrni foiz ko‘rinishida ifodalashning bir nechta usuli berilgan.
+ 
+ 
+1-usul
+Berilgan kasrni maxraji 
+100 bo‘lgan oddiy kasrga 
+aylantiring.     
+× 20
+× 20
+3
+5  =  
+60
+100  =  60%
+2-usul
+Berilgan kasrni 100% ga 
+ko‘paytiring.
+3
+5 × 100% = 60%
+20
+1
+ 
+5 ta teng qismga ajratilgan kvadratni 100 
+ta teng kataklarga bo‘lingan kvadratga 
+aylantiring.
+Demak, 3
+5 = 60
+100.
+100
+100  kasrni foiz ko‘rinishida 
+ifodalay olasizmi?
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   56
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   56
+13/11/24   14:50
+13/11/24   14:50
+
+57
+2  
+16
+200  ni foiz ko‘rinishida ifodalang.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1-usul
+÷ 2
+÷ 2
+16
+200  = 8
+100 = 8%
+2-usul
+16
+200 × 100%
+= 8%
+1
+2
+3  Kasrlarni foiz ko‘rinishida ifodalang. 
+ 
+a) 
+8
+25
+  
+b) 
+3
+20
+  
+  
+ 
+ 
+1-usul
+× 4
+× 4
+8
+25 = 32
+100 = 32%
+ 
+2-usul
+8
+25 × 100% = 32%
+4
+1
+ 
+1-usul
+× 5
+× 5
+3
+20 = 15
+100 = 15%
+2-usul
+3
+20 × 100% = 15%
+5
+1
+ 
+ 
+ 
+ 
+ 
+200 ta teng qismga ajratilgan kvadratni 100 ta 
+teng katakka bo‘lingan kvadratga aylantiring.
+Demak, 16
+200  = 8
+100.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   57
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   57
+13/11/24   14:50
+13/11/24   14:50
+
+58
+4  Kasrlarni foiz ko‘rinishida  ifodalang. Javoblarni yuzdan birlar xonasigacha 
+yaxlitlang.
+ 
+a) 
+3
+22
+  
+b) 
+8
+15
+ 
+ 
+ 
+3
+22 × 100%  ≈ 13,636% 
+ 
+ 
+ 8
+15 × 100% ≈ 53,333%
+ 
+ 
+ 
+= 13,64%  
+ 
+ 
+ 
+ = 53,33%
+ 
+ 
+ 
+ 
+ 
+5  0,7 ni foiz ko‘rinishida ifodalang. 
+ 
+ 
+1-usul
+0,7 = 7
+10      
+ 
+= 70
+100   
+ 
+= 70%
+2-usul
+0,7 = 0,7 × 100%
+ 
+= 70%
+ 
+ 
+ 
+ 
+ 
+6  Foizni qisqarmas oddiy kasr ko‘rinishida ifodalang. 
+ 
+a) 
+75% 
+b) 
+80% 
+c) 
+6%
+ 
+ 
+75% = 75
+100
+÷ 25
+÷ 25
+75
+100  =  3
+4 
+75% = 3
+4
+ 
+ 
+80% = 80
+100
+ 
+= 4
+5
+4
+5
+ 
+ 
+6% = 6
+100
+ 
+= 3
+50
+3
+50
+ 
+ 
+ 
+7  Foizni o‘nli kasr ko‘rinishida ifodalang. 
+ 
+a) 
+52% 
+b) 
+99% 
+c) 
+7%
+ 
+ 
+52% = 52
+100
+ 
+= 0,52
+ 
+ 
+99% = 99
+100
+ 
+= 0,99
+ 
+ 
+7% = 
+7
+100
+ 
+= 0,07
+  
+ 
+ 
+(yuzdan birlar xonasigacha 
+   yaxlitlangan)
+(yuzdan birlar xonasigacha  
+yaxlitlangan)
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   58
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   58
+13/11/24   14:50
+13/11/24   14:50
+
+59
+Turmushda matematika
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+Butunning qismini ifodalash usullarini Muhokama qiling. Berilgan foizlarni  
+100 katakli va 200 katakli to‘rda aniqlang.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+100 katakli to‘r 
+ 
+ 
+200 katakli to‘r  
+AKT mashqi
+“Teng kuchli kartachalar” dasturi yordamida oddiy kasr, o‘nli kasr va foizlarni biridan 
+ikkinchisiga o‘tkazishni mashq qiling.   
+O‘zbekiston aholisining necha foizi 
+shaharlarda yashaydi?
+a) 
+Maydonning 30 foizi qizil va 
+ 
+6 foizi ko‘k.
+b)    Maydonning 30 foizi qizil va 
+ 
+8 foizi ko‘k.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   59
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   59
+13/11/24   14:50
+13/11/24   14:50
+
+60
+Juftlikda ishlang
+Sherigingiz bilan Muhokama qiling. 
+1  60% ni ko‘rsatish uchun qaysi kataklarni bo‘yash kerak? 60% ni kasr 
+ 
+ko‘rinishida ifodalang.
+ 
+    
+ 
+   
+0% 
+10%   
+20% 
+30%  
+40%  
+50%  
+60% 
+70% 
+80% 
+90% 
+100% 
+2  Tushirib qoldirilgan o‘nli kasrlarni aniqlang.
+ 
+ 
+0% 
+10%   
+20% 
+30%  
+40%  
+50%  
+60% 
+70% 
+80% 
+90% 
+100%
+0 
+0,1   
+ 
+0,3  
+  
+0,5  
+ 
+ 
+0,8 
+ 
+1,0
+3  O‘lchov tasmasi yordamida foizlarni oddiy va o‘nli kasr ko‘rinishida ifodalang.
+ 
+a) 
+20% = 
+ = 
+ 
+ 
+ 
+           (oddiy  kasr) (o‘nli kasr)
+ 
+ 
+ 0 
+ 
+ 
+ 
+ 
+ 
+0,5  
+ 
+ 
+ 
+1
+0% 
+10%   
+20% 
+30%  
+40%  
+50%  
+60% 
+70% 
+80% 
+90% 
+100%
+ 
+ 
+ 
+ 
+b) 
+86% = 
+  = 
+ 
+ 
+ 
+           (oddiy  kasr)  (o‘nli kasr)
+ 
+ 
+ 0 
+ 
+ 
+ 
+ 
+ 
+0,5  
+ 
+ 
+ 
+1
+0% 
+10%   
+20% 
+30%  
+40%  
+50%  
+60% 
+70% 
+80% 
+90% 
+100%
+ 
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   60
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   60
+13/11/24   14:50
+13/11/24   14:50
+
+61
+Bajaring va o‘rganing
+1  Kasrlarni foiz ko‘rinishida ifodalang. 
+ 
+a) 
+13
+20
+ 
+b) 
+7
+10  
+c) 
+1
+5
+ 
+d) 
+13
+50
+ 
+e) 
+3
+4
+ 
+f) 
+9
+25
+ 
+g) 
+32
+200
+ 
+h) 
+75
+500
+ 
+i) 
+64
+400
+2  O‘nli kasrlarni foiz ko‘rinishida ifodalang. 
+ 
+a) 
+0,03 
+b) 
+0,26 
+c) 
+0,82
+ 
+d) 
+0,78 
+e) 
+0,8 
+f) 
+1,0
+3  Foizlarni qisqarmas oddiy kasr ko‘rinishida ifodalang. 
+ 
+a) 
+1% 
+b) 
+14% 
+c) 
+27% 
+ 
+d) 
+40% 
+e) 
+85% 
+f) 
+74%
+4  Foizlarni o‘nli kasr ko‘rinishida ifodalang. 
+ 
+a) 
+34% 
+b) 
+90% 
+c) 
+5%
+ 
+d) 
+62% 
+e) 
+81% 
+f) 
+93%
+69–72
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a)  Men butunning qismini foiz ko‘rinishida ifodalashni bilaman.  
+b)  Men oddiy kasrni foiz ko‘rinishida va foizni kasr ko‘rinishida ifodalashni bilaman.  
+c) 
+ Men o‘nli kasrni foiz ko‘rinishida va foizni o‘nli kasr ko‘rinishida ifodalashni bilaman. 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   61
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   61
+13/11/24   14:50
+13/11/24   14:50
+
+62
+Miqdorning foizi
+Qarang va o‘rganing
+1  Maktabda 600 nafar o‘quvchi bor. Ularning 55 foizi – qizlar. Maktabda o‘qiydigan 
+qizlar sonini toping.
+ 
+ 
+qizlar
+o‘g‘il bolalar
+?
+600
+55%
+100%
+0%
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+1-usul
+55% = 55
+100   
+ 600 ning 55
+100  qismi = 55
+100 × 600 
+ 
+                 = 330
+1
+6
+2-usul
+100% 
+ 600  
+ 1%  
+ 600 ÷ 100 = 6  
+ 55% 
+ 55 × 6 = 330
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Maktabda 330 nafar qiz o‘qiydi. 
+ 
+2  Diyoraning uyida 200 ta ertak kitobi bor. Ulardan 60 tasi rus tilida. Rus tilidagi 
+ertak kitoblari jami kitoblarning necha foizini tashkil qiladi? 
+ 
+1-usul
+60
+200 × 100% = 30%
+1
+2
+2-usul
+60
+200 = 30
+100  
+ 
+= 30%
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Barcha ertak kitoblarining 30% i rus tilida.
+100% – 55% = ?%
+Tekshirish
+Tekshirish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   62
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   62
+13/11/24   14:50
+13/11/24   14:50
+
+63
+Qiziqarli matematika
+3  80 kg ning necha foizi 60 kg ga teng? 
+ 
+60
+80 × 100% = 3
+4 × 100% 
+ 
+ 
+ 
+= 75% 
+   
+Demak, 80 kg ning 75 foizi 60 kg ga teng ekan.
+ 
+300 ml 800 ml ning necha foizini tashkil etadi?
+          300
+800 × 100% = 3
+8 × 100%
+                      
+       = 37,5% 
+ 
+ 
+300 ml  800 ml ning 37,5 foiziga teng ekan. 
+ 
+Juftlikda ishlang
+1  280 litrning 15% ini toping.  
+2  Butun shaklning bo‘yalgan qismini foizda ifodalashning turli usullarini ayting. 
+ 
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+Sinfingizdagi quyida berilgan xususiyatlarga ega
+o‘quvchilar sonini toping.
+a) 
+ko‘zoynak taqadiganlar    
+b) 
+suzishni biladiganlar
+c)  
+chapaqaylar 
+d)  maktabga piyoda qatnaydiganlar
+e)  
+a’lochilar 
+Ularning sonini foizda ifodalang. Natijalarni sinfdoshlaringiz bilan o‘rtoqlashing.
+Sinfdoshlaringiz haqidagi 
+boshqa ma’lumotlarni ham  
+qo‘shishingiz mumkin.
+3
+4  = 75
+100
+× 25
+× 25
+Masalan, quyidagi usuldan foydalanish 
+mumkin: 
+6
+40 × 100% = 
+ 
+Yana qanday usullarni bilasiz?
+Tekshirish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   63
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   63
+13/11/24   14:50
+13/11/24   14:50
+
+64
+Bajaring va o‘rganing
+1  Hisoblang.
+ 
+a) 
+150 ning 30 foizi  
+b) 
+300 ning 55 foizi         
+ 
+c) 
+75 kg ning 62 foizi   
+d) 480 g ning 90 foizi       
+ 
+e) 
+45 litrning 78 foizi  
+f) 
+750 ml ning 82 foizi      
+2  a)  
+20 metrning necha foizi 9 m ga teng?       
+     
+b)  7500 so‘mning necha foizi 1500 so‘mga teng?    
+3  Rasulda 10 ta shar bor. Sharlarning 6 tasi qizil rangda. Jami sharlarning necha foizi 
+qizil?      
+4  Layloda 200 ta tugma bor. Ularning 56 tasi dumaloq. Tugmalarning necha foizi 
+dumaloq? 
+5  Matematika fani bo‘yicha testda jami 120 ball to‘plash mumkin. Po‘lat umumiy 
+ballning 60 foizini to‘pladi. Po‘lat  necha ball to‘plagan?          
+6  Sirojiddin har oy maoshining 30% ini jamg‘arib boradi. Uning oylik maoshi  
+5 700 000 so‘m. Sirojiddin har oy qancha mablag‘  jamg‘aradi? 
+7  Yoqub akada 2 800 000 so‘m pul bor edi. U pullarining 35% ini avtomobilini 
+ta’mirlashga sarfladi. Yoqub akaning qancha puli qoldi? 
+8  Lolaga matematikadan 120 ta savol berildi. U savollarning 45% iga to‘g‘ri javob 
+berdi. U nechta savolga to‘g‘ri javob bergan?    
+9  Jasur 42 km li masofaning 75% ini yugurib, qolgan qismini esa yugurmasdan sekin 
+yurib bosib o‘tdi. U qancha masofani yugurmasdan sekin yurib bosib o‘tgan? 
+10  Kamol kitobning 12% ini dushanba kuni, 24% ini seshanba kuni o‘qidi. 
+ 
+Kitob 175 sahifa bo‘lsa, uni tugatish uchun yana necha sahifa o‘qish kerak? 
+73–76
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   64
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   64
+13/11/24   14:50
+13/11/24   14:50
+
+65
+Matnli masalalar
+Qarang va o‘rganing
+1  Akmalning 750 000 so‘m puli bor edi. U sport anjomi sotib olish uchun pulining 
+ 
+25% ini sarfladi.
+ 
+a) 
+U sport anjomini qanchaga sotib olgan?
+ 
+b) 
+Uning qancha puli qoldi?
+ 
+a) 
+sarfladi
+qoldi 
+a) ?
+750 000 so‘m
+25%
+100%
+0%
+b) ?
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+1-usul
+25% = 25
+100  
+750 000 so‘mning 25% i = 25
+100 × 750 000 so‘m  
+ 
+ 
+ 
+ 
+ 
+                    = 187 500  so‘m
+ 
+ 
+ 
+2-usul
+100% 
+ 750 000 so‘m   
+ 1% 
+ 750 000 so‘m ÷ 100 = 7500 so‘m  
+ 25% 
+ 25 × 7500 so‘m = 187 500 so‘m
+ 
+ 
+ U 187 500 so‘m sarfladi.
+ 
+b) 
+1-usul
+750 000 so‘m – 187 500 so‘m 
+ 
+          = 562 500 so‘m
+     
+2-usul
+100% – 25% = 75% 
+750 000 so‘mning 75% i = 75
+100  × 750 000 
+ 
+            = 562 500 so‘m
+ 
+ 
+ 
+Unda 562 500 so‘m pul qoldi. 
+ 
+ 
+100% − 25% = ?
+Tekshirish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   65
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   65
+13/11/24   14:50
+13/11/24   14:50
+
+66
+2  Uy hayvonlari ko‘rgazmasiga 80 ta hayvon olib kelindi. Hayvonlarning 70% i  
+kuchuklar,  25% i  mushuklar, qolganlari esa quyonlar. Ko‘rgazmadagi kuchuklar 
+soni mushuklar sonidan nechta ko‘p? 
+ 
+?
+?
+70%
+25%
+5%
+Kuchuklar
+Mushuklar
+Quyonlar
+80 ta
+?
+ 
+ 
+ 
+1-usul
+70
+100 × 80 = 56
+56 ta kuchuk bo‘lgan.
+25
+100  × 80 = 20
+20 ta mushuk bo‘lgan.
+56 – 20 = 36
+2-usul
+70% – 25% = 45%
+       45
+100 × 80  = 45
+5  × 4
+4
+5
+9
+1
+ 
+= 36
+ 
+  
+ 
+ 
+ 
+ 
+ 
+Kuchuklar soni mushuklar sonidan 36 ta ko‘p ekan.
+3  Jadvalda 5-sinf o‘quvchilarining soni keltirilgan. 4 ta sinfda jami 160 nafar o‘quvchi 
+bor. 5-sinf o‘quvchilarining necha foizi 5-“E” sinfda o‘qiydi?
+ 
+ 
+Sinf
+O‘quvchilar soni
+5-“A”
+42
+5-“B”
+38
+5-“D”
+40
+5-“E”
+?
+ 
+160 – (42 + 38 + 40) = 160 – 120
+                                         
+ = 40
+ 
+ 
+40
+160 × 100%  = 25%
+ 
+5-sinf o‘quvchilarining 25% i 5-“E” sinfda o‘qiydi.  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   66
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   66
+13/11/24   14:50
+13/11/24   14:50
+
+67
+4  Quyidagi jadvalda kutubxona javonidagi badiiy kitob, gazeta va jurnallar uchun 
+ajratilgan joylar mos ranglarda ko‘rsatilgan.  
+ 
+ 
+Jurnallar
+ 
+a)  
+Badiiy kitoblar javonning necha foizini egallagan?  
+ 
+ 
+6
+20 × 100% = 30%
+5
+1
+ 
+ 
+Badiiy kitoblar javonning  30% ini egallagan.   
+ 
+ 
+ 
+ 
+b) 
+Gazetalar javonning necha foizini egallagan? 
+ 
+ 
+3
+20 × 100% = 15%
+5
+1
+ 
+ 
+Gazetalar javonning  15% ini egallagan. 
+ 
+c) 
+Jurnallar javonning necha foizini egallagan? 
+           
+ 
+ 
+2
+20 × 100% = 10%
+5
+1
+ 
+ 
+Jurnallar javonning  10% ini egallagan. 
+ 
+Juftlikda ishlang
+Matnli masalalarni yeching.  
+Sherigingiz bilan matnli masalalarni yechish usullarini Muhokama qiling.
+1  Konsertni 350 nafar erkak, 280 nafar ayol, 200 nafar qiz va 170 nafar o‘g‘il bola 
+tomosha qilmoqda. Tomoshabinlarning necha foizi ayollar?
+2  Yugurish musobaqasida 700 nafar o‘quvchi qatnashmoqda. Sportchilarning 45 foizi   
+ 
+qiz bola. Musobaqada nechta o‘g‘il bola qatnashmoqda?
+Badiiy 
+kitoblar
+Gazetalar
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   67
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   67
+13/11/24   14:50
+13/11/24   14:50
+
+68
+Bajaring va o‘rganing
+Matnli masalalarni yeching.
+1  Basketbol o‘yinini 360 nafar tomoshabin kuzatmoqda. Ularning 45% i erkaklar, 30% 
+i ayollar va qolganlari bolalar. 
+ 
+a) 
+Tomoshabinlarning necha foizi bolalar?    
+ 
+b) 
+Katta yoshdagi tomoshabinlar necha nafar?        
+ 
+c) 
+Bolalar necha nafar? 
+2  Sarvar amakining oylik maoshi 1 500 000 so‘m. U bir oyda yo‘lkira uchun 210 000 so‘m, 
+ovqatlanish uchun 450 000 so‘m sarflaydi. Qolgan mablag‘ni esa  jamg‘arib boradi. 
+ 
+a)  
+U oylik maoshining necha foizini yo‘lkiraga sarflaydi?    
+ 
+b)  U oylik maoshining necha foizini ovqatlanishga sarflaydi?      
+     
+c)  
+U oylik maoshining necha foizini jamg‘aradi?        
+3  Ko‘rgazmadagi tomoshabinlarning  4
+5  qismi katta yoshlilar, qolgani esa bolalardan 
+iborat. 
+     
+a)  
+Tomoshabinlarning necha foizi katta yoshlilar?           
+     
+b)  Tomoshabinlarning necha foizi bolalar?  
+4  Konsert uchun 4000 ta chipta sotuvga qo‘yildi. Ularning 800 tasi chiptaxonada,                
+11
+20  qismi esa onlayn tarzda sotildi.  
+ 
+a)  
+Necha foiz chipta onlayn tarzda sotilgan?            
+ 
+b)  Necha foiz chipta sotilmay qoldi?       
+5  5-sinf o‘quvchilarining 55% i o‘g‘il bolalar. 5-sinf o‘quvchilarining umumiy soni  
+420 nafar. O‘g‘il bolalar qizlardan qanchaga ko‘p?     
+6  Sport to‘garagiga 1250 nafar o‘quvchi qatnashadi. Ularning 750 nafari qizlar.  
+To‘garakdagi o‘g‘il bolalar jami o‘quvchilarning necha foiziga teng? Javobingizni 
+tushuntiring.      
+77–84
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) Men berilgan miqdorning foizini topishni bilaman.  
+b) Men foiz qatnashgan matnli masalalarni yechishni bilaman.  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   68
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   68
+13/11/24   14:50
+13/11/24   14:50
+
+69
+QQS (qo‘shilgan qiymat solig‘i),  
+chegirma va omonat foizi
+Qarang va o‘rganing
+1  Televizorning QQS (qo‘shilgan qiymat solig‘i)siz narxi 880 000 so‘m edi. Bu narxga 
+12% QQS belgilandi. Belgilangan QQS miqdorini toping.
+ 
+QQS miqdori = 880 000 so‘mning 12 foizi
+                          
+= 12
+100 × 880 000 so‘m
+                         
+= 105 600 so‘m
+ 
+Demak, QQS miqdori 105 600 so‘m ekan.
+2  Jamila do‘kondan sumka xarid qildi. U sumka narxiga qo‘shimcha 12% QQS 
+to‘ladi. Jamila jami qancha to‘lagan?
+                             
+450 000
+so‘m
+sumka
+ 
+ 
+QQS miqdori = 450 000 so‘mning 12 foizi
+                          
+ = 12
+100  × 450 000 so‘m
+                         
+ = 54 000 so‘m
+ 
+450 000 so‘m + 54 000 so‘m = 504 000 so‘m
+ 
+Jamila jami 504 000 so‘m to‘lagan.
+QQS (qo‘shilgan qiymat solig‘i) mahsulot va 
+xizmatlar uchun belgilangan soliq bo‘lib, uni 
+12% ga teng deb olamiz.
+1 ta sumka                450 000 so‘m
+Jami (QQSsiz)            450 000 so‘m
+ QQS--- 
+12%
+ QQS miqdori             54 000 so‘m
+Jami (QQS bilan)          504 000 so‘m
+Xarid cheki
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   69
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   69
+13/11/24   14:50
+13/11/24   14:50
+
+70
+3  Po‘lat kiyim do‘konidan 25% lik chegirma 
+bilan futbolka sotib oldi. Chegirmadan 
+so‘ng futbolkaning narxi qancha bo‘lgan?
+ 
+Chegirma = narxning 25 foizi
+ 
+ 
+     
+= 25
+100 ×  136 000 so‘m
+                       
+= 34 000 so‘m
+         Chegirmadan keyingi narx = 136 000 so‘m – 34 000 so‘m
+ 
+ 
+                     
+= 102 000 so‘m
+           Chegirmadan so‘ng futbolkaning narxi 102 000 so‘m bo‘lgan.
+4  Quyidagi jadvallarda A va B banklarning omonat miqdoriga qarab to‘laydigan 
+foyda foizlari keltirilgan ($ – AQSH dollari belgisi).
+ 
+ 
+ 
+Omonat miqdori
+Yillik foizi 
+15 001$ – 25 000$
+2%
+25 000$ dan yuqori
+3%
+Omonat miqdori
+Yillik foizi 
+10 001$ – 20 000$
+1%
+20 000$ dan yuqori
+2%
+A bank
+ 
+a)  Murod amaki A bankka bir yil muddatga 12 000$ omonat qo‘ydi. Bank 
+belgilagan yillik foizga ko‘ra, uning mablag‘i  bir yilda qanchaga ortadi?
+ 
+ 
+Foyda = 12 000$ ning 1 foizi
+                  
+= 1
+100  × 12 000$ 
+ 
+ 
+ 
+= 120$
+ 
+ 
+Bir yilda uning mablag‘iga 120$ qo‘shiladi. 
+ 
+b) Sevara opa B bankka bir yil muddatga 26 000$ omonat qo‘ydi. Yil oxirida uning 
+mablag‘i qancha bo‘ladi?
+ 
+ 
+Foyda = 26 000$ ning 3 foizi
+                 
+ 
+= 3
+100 × 26 000$
+                 
+ 
+= 780$
+ 
+ 
+26 000$ + 780$ = 26 780$
+ 
+ 
+Yil oxirida uning mablag‘i 26 780$ bo‘ladi.
+Sevara bankka 28 000$ omonat 
+qo‘ymoqchi. U qaysi bankni 
+tanlagani ma’qul? Nima uchun? 
+B bank
+25%
+25%
+Chegirma
+Chegirma
+ Narxi
+ Narxi
+136 000 
+136 000 
+so‘m
+so‘m
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   70
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   70
+13/11/24   14:50
+13/11/24   14:50
+
+71
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+a) 
+Chegirmalar, QQS va xizmat narxlari ko‘rsatilgan xarid 
+ 
+cheklarini to‘plang. Bu miqdorlar qanday hisoblanganini 
+ 
+tekshirish uchun kalkulyatordan foydalaning.
+b) 
+Ikkita bankning yillik omonat foizlari haqidagi ma’lumotlarni to‘plang.  
+25 000 AQSH dollarini omonat uchun qo‘yilganda bir yilda qancha mablag‘ 
+qo‘shilishini hisoblang.
+ 
+Omonat miqdori
+Yillik foizi
+15 001 – 25 000
+2%
+25 000 dan ortiq
+3%
+Omonat miqdori 
+(AQSH dollarida)
+Yillik foizi
+10 001 – 20 000
+1%
+20 000 dan ortiq
+2%
+A bank
+ 
+c) 
+Supermarketning chegirmalar haqidagi e’lonlarini to‘plang. 100 000 so‘m 
+mablag‘ uchun xarid rejangizni tuzing. Qanday mahsulotlar xarid qilishni 
+rejalashtirganingizni sinfdoshlaringizga ham ayting.
+Oziq-ovqat   
+yarmarkasi
+Supermarket
+Supermarket
+Pishloq 
+13 500 so‘m (1 bo‘lak)
+Qahva
+35 000 so‘m 
+(1 quti)
+Yeryong‘oqli 
+pasta
+30 000 so‘m 
+(2 banka)
+Sut
+25 000 so‘m
+(2 tasi)
+Go‘sht
+85 000 so‘m 
+(1 kg)
+Barcha 
+mahsulotlarga 
+10%
+chegirma
+B bank
+1 ta sumka           
+450 000 so‘m
+Jami (QQSsiz)      
+450 000 so‘m
+QQS---  
+12%
+QQS miqdori              54 000 so‘m
+Jami (QQS bilan)           504 000 so‘m
+Xarid cheki
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   71
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   71
+13/11/24   14:50
+13/11/24   14:50
+
+72
+20%
+20%
+Chegirma
+Chegirma
+Asl narx
+Asl narx
+9 000 000 so‘m
+Bajaring va o‘rganing
+1  QQS  12% bo‘lsa, quyidagi mahsulotlarni xarid qilganingizda qancha QQS to‘laysiz? 
+ 
+a) 
+1 500 000 so‘m
+ b) 
+ 
+ 
+QQS miqdori =  
+ 
+QQS miqdori = 
+2  Chegirmani hisoblang.
+      
+a) 
+ 
+b)     
+ 455 000 so‘m
+(chegirma 30%)
+  
+ 
+               
+Chegirma = 
+ 
+ 
+Chegirma = 
+3  Sitora 20% chegirma bilan oyoq kiyimi sotib oldi. 
+ 
+U qancha pul to‘lagan? 
+4  A bank omonatlar uchun quyidagi yillik foizlarni taklif qiladi.
+ 
+Omonat miqdori (AQSH dollarida)
+Muddat
+5 000–9 999
+10 000–15 000
+15 000 dan ko‘p
+1 yil
+0,5%
+1%
+2%
+A
+Bank
+ 
+ 
+ 
+ 
+ 
+a)  Aziza opa A bankka 15 000 AQSH dollar omonat qo‘ydi. Bir yildan keyin uning   
+ 
+omonatiga qancha mablag‘ qo‘shiladi?       
+  
+ 
+b)  Laziza opa A bankka 8000 AQSH dollar omonat qo‘ydi. Bir yildan keyin uning   
+ 
+omonatiga qancha mablag‘ qo‘shiladi?     
+85–88
+Mashq daftariga o‘ting
+5 500 000 so‘m
+(chegirma 15%)
+400 000 
+400 000 
+so‘m
+so‘m
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   72
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   72
+13/11/24   14:50
+13/11/24   14:50
+
+73
+Qarang va o‘rganing
+1  Kir yuvish mashinasining QQSsiz narxi 1 200 000 so‘m. Lola opa kir yuvish mashinasi 
+sotib oldi va 12% QQS to‘ladi. 
+ 
+a) 
+QQS miqdori qanchaga teng?
+ 
+b) 
+Lola opa kir yuvish mashinasi sotib olishga jami qancha mablag‘ sarflagan?
+ 
+         
+Kir yuvish mashinasining QQSsiz narxi
+QQS
+b) ?
+1 200 000 so‘m
+a) ?
+100%
+112%
+0%
+ 
+ 
+ 
+ 
+a) 
+2-usul
+QQSsiz narx 100% 
+  1 200 000 so‘m
+1% 
+ 1 200 000 so‘m ÷ 100 = 12 000  so‘m
+ 12% 
+ 12 × 12 000 so‘m = 144 000 so‘m
+1-usul
+QQS miqdori = 1 200 000 so‘mning  
+12 foizi  = 12
+100  × 1 200 000 so‘m
+                 = 144 000 so‘m
+ 
+ 
+ 
+ 
+ 
+QQS miqdori 144 000 so‘mga teng.
+ 
+b) 
+1 200 000 so‘m + 144 000 so‘m = 1 344 000 so‘m
+ 
+Lola opa jami 1 344 000 so‘m mablag‘ sarflagan.
+ 
+ 
+Matnli masalalar
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   73
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   73
+13/11/24   14:50
+13/11/24   14:50
+
+74
+2  Bayram munosabati bilan supermarket barcha mahsulotlarga 30% chegirma e’lon 
+qildi. Televizorning chegirmadan oldingi narxi 2 500 000 so‘m.   
+      
+a)  
+Televizorga belgilangan chegirma miqdori qanchaga teng?
+      
+b)  Chegirmadan keyin televizor narxi qancha bo‘ladi? 
+ 
+ 
+ 
+ 
+2-usul
+100%
+?
+2 500 000 so‘m
+70%
+30% chegirma
+Avvalgi narx
+Chegirmadan 
+keyingi narx
+a) 
+100% 
+ 2 500 000 so‘m
+ 
+ 1%  
+ 2 500 000 so‘m ÷ 100 = 25 000 so‘m
+ 
+ 30% 
+ 30 × 25 000 so‘m = 750 000 so‘m 
+ 
+Televizorga 750 000 so‘m chegirma belgilangan. 
+b)  
+ 70% 
+ 70 × 25 000 so‘m = 1 750 000 so‘m
+  Chegirmadan keyin televizor narxi 1 750 000 so‘m bo‘ladi. 
+1-usul
+a) 
+2 500 000 so‘mning 30 foizi = 30
+100 × 2 500 000 so‘m
+ 
+ 
+ 
+         = 750 000 so‘m
+      
+Televizorga 750 000 so‘m chegirma belgilangan. 
+b) 
+2 500 000 so‘m − 750 000 so‘m = 1 750 000 so‘m 
+  
+Chegirmadan keyin televizor narxi 1 750 000 so‘m bo‘ladi. 
+“Televizor narxiga 30% chegirma” degani chegirmadan 
+keyin uning narxi avvalgi narxining 70% iga teng bo‘lishini 
+bildiradi. 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   74
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   74
+13/11/24   14:50
+13/11/24   14:50
+
+75
+3  Muzlatkichning narxi 6 500 000 so‘m edi. Tohir amaki uni 12% chegirma bilan sotib 
+oldi. 
+      
+a)  
+Chegirma miqdori qanchaga teng? 
+      
+b)  Tohir amaki muzlatkich uchun qancha mablag‘ sarflagan? 
+ 
+ 
+6 500 000 so‘m
+Muzlatkichning narxi
+chegirma
+b) ? (chegirmadan keyin)
+a) ?
+88%
+100%
+0%
+ 
+a) 
+12
+100  × 6 500 000 so‘m  = 780 000 so‘m  
+ 
+ 
+Chegirma miqdori 780 000 so‘mga teng. 
+ 
+b) 
+6 500 000 so‘m – 780 000 so‘m  = 5 720 000  so‘m 
+ 
+ 
+Tohir amaki muzlatkich uchun 5 720 000 so‘m to‘lagan.  
+4  Zamira opa bankka 20 000$ omonat qo‘ydi. Bankning omonat foizi yiliga 2%.  
+Yil oxirida Zamira opaning mablag‘i qancha bo‘ladi?
+ 
+Foyda  = 20 000$ ning 2 foizi
+ 
+ 
+= 2
+100 × 20 000$
+ 
+ 
+= 400$
+ 
+  
+20 000 + 400 = 20 400 ($) 
+ 
+Zamira opaning mablag‘i yil oxirida 20 400$ ni tashkil etadi. 
+ 
+Tekshirish
+Javobni kalkulyator yordamida 
+tekshiring. 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   75
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   75
+13/11/24   14:50
+13/11/24   14:50
+
+76
+Juftlikda ishlang
+Matnli masalalarni sherigingiz bilan yeching.
+1  Mototsiklning QQSsiz narxi 8 000 000 so‘m edi. Tohir amaki mototsikl sotib   
+ 
+ 
+olayotganida 12% QQS  to‘ladi. U mototsikl uchun jami qancha to‘lagan? 
+2  Muzlatkichning narxi 2 250 000 so‘m. Laziza opa muzlatkichni 28% chegirma bilan    
+ 
+sotib oldi. U muzlatkich xarid qilish uchun qancha mablag‘ sarflagan?
+Bajaring va o‘rganing
+Matnli masalalarni yeching. 
+1  Videokameraning narxi 1 650 000 so‘m. Akmal uni 20% chegirma bilan sotib oldi. 
+      
+a)  Chegirma miqdori qanchaga teng?     
+      
+b)  Videokamera qanchaga sotib olingan?       
+2  Ko‘ylakning QQSsiz narxi 300 000 so‘m. Diyora ko‘ylak uchun 12% QQS to‘ladi.  
+U ko‘ylakni qanchaga sotib olgan?   
+3  Omina opa bankka bir yilga 2986$ omonat qo‘ydi. Uning omonatiga bir yilda 
+ 
+1,5% foyda qo‘shiladi. Yil oxirida uning jami mablag‘i qancha bo‘ladi?    
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+4  Jasur amaki sarmoya jamg‘armasiga 7000$ mablag‘ qo‘ydi. Qo‘yilgan sarmoya 
+unga yiliga 4% foyda keltiradi. Yil oxirida uning foydasi qancha bo‘ladi? 
+5  Restoran dushanba kunidan juma kunigacha mijozlarga tushlik uchun 10% 
+chegirma belgiladi.  Po‘lat amaki juma va yakshanba kuni restoranda tushlik qildi. 
+Buning uchun u jami qancha to‘lagan?      
+ 
+Sho‘rva, choy va 
+non
+Ish kunlarida 
+10% chegirma
+ 25 000 so‘m
+Narxi 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   76
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   76
+13/11/24   14:50
+13/11/24   14:50
+
+77
+6  A va B do‘konlar bir xil rusumdagi mobil telefon narxiga chegirma e’lon qildi.  
+Qaysi do‘konda mobil telefon narxi arzonroq? Tushuntiring. 
+ 
+ Narxi: 6 800 000 so‘m 
+Chegirma: 12%
+A do‘kon
+Narxi: 8 000 000 so‘m 
+Chegirma: 25%
+B do‘kon
+7  Malika opa yillik omonat foizi 2% bo‘lgan A bankka 20 000 AQSH dollar omonat 
+qo‘ydi. Jamila opa B bankka 10 000 AQSH dollar va C bankka esa 10 000 AQSH 
+dollar omonat qo‘ydi. Har ikki bankning yillik omonat foizlari 1% dan belgilangan. 
+Bir yildan so‘ng Malika opaning bankdagi pullari Jamila opanikidan ko‘proq 
+bo‘ladimi? Javobni izohlang. 
+89–96
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) 
+Men chegirma, QQS va omonat foizini hisoblashni bilaman.  
+b)  
+Men foizga doir matnli masalalarni yechishni bilaman.  
+O‘ylab ko‘ring
+Guldonning narxi 64 000 so‘m. Yanvar oyida Aziza guldonni 20% chegirma bilan xarid 
+qildi. Iyun oyidagi katta chegirmalar vaqtida esa u xuddi shunday guldonni 30% chegirma 
+bilan xarid qildi. Agar Aziza har ikki guldonni iyundagi chegirma vaqtida sotib olganida, 
+qancha mablag‘ tejashi mumkin edi? 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   77
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   77
+13/11/24   14:50
+13/11/24   14:50
+
+78
+1,48 m
+44,2 kg
+1,52 m
+46,3 kg
+1,35 m
+38,8 kg
+3 nafar bolaning o‘rtacha bo‘yi 
+qanchaga teng?
+Ularning o‘rtacha vazni qancha?
+O‘rtacha qiymat
+10
+Muhokama qiling
+ Kamolaning sinfida ko‘pchilik o‘g‘il bolalarning bo‘yi 1,30 m va 1,60 m oralig‘ida.
+Siz “o‘rtacha bo‘y”
+va “o‘rtacha vazn”
+deganda nimani
+tushunasiz?
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   78
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   78
+13/11/24   14:50
+13/11/24   14:50
+
+O‘rtacha qiymat tushunchasi
+79
+Qarang va o‘rganing
+Miqdorlarning o‘rtacha qiymatini topish
+Miqdorlarning o‘rtacha qiymatini topish
+1  3 ta likopchaga turli miqdordagi shirinliklar qo‘yib chiqildi.
+ 
+2
+7
+6
+5
+5
+5
+      
+ 
+ 
+ 
+ 
+ 
+  
+ 
+Shirinliklarning bitta likopchadagi o‘rtacha miqdori 5 ga teng.
+ 
+5 soni 2, 7 va 6 sonlarining o‘rtacha qiymatidir.
+Miqdorlarning o‘rtacha qiymatini topish deganda
+ularning qiymatlarini teng taqsimlash tushuniladi.
+Agar shirinliklar 3 ta
+likopchaga teng 
+taqsimlansa,
+har bir likopchada 
+nechtadan
+shirinlik bo‘ladi?
+Shirinliklarni 3 ta 
+likopchaga teng miqdorda 
+taqsimlash orqali ularning 
+bitta likopchaga mos 
+keladigan o‘rtacha sonini 
+topamiz. 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   79
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   79
+13/11/24   14:50
+13/11/24   14:50
+
+80
+Guruh bo‘lib ishlang. 
+a) 
+Birinchi likopchaga 6 ta, ikkinchisiga esa 10 ta kub qo‘ying. Kublarning jami 
+soni nechta?
+b) 
+Har ikki likopchada kublar bir xil miqdorda bo‘lishi uchun bir necha kubni bir 
+likopchadan ikkinchisiga o‘tkazing. Har bir likopchadagi kublarning o‘rtacha 
+soni nechaga teng?
+ 
+?
+?
+tadan kub
+6 ta kub
+10 ta kub
+c) 
+Kublarning umumiy sonini toping va ularni teng ikki guruhga bo‘ling. Har bir 
+guruhda nechtadan kub bor? 
+ 
+ 
+Miqdorlarning 
+o‘rtacha qiymati
+miqdorlarning 
+jami qiymati
+=
+÷
+miqdorlar 
+soni
+Miqdorlarning o‘rtacha qiymati qisqa shaklda “o‘rtachasi” deb ham yuritiladi.
+ 
+2  Har bir likopchadagi sharlar sonining o‘rtacha qiymatini toping.
+ 
+3
+3
+3
+3
+3
+1
+3
+5
+ 
+ 
+ 
+ Jami = 3 + 1 + 3 + 5
+ 
+           = 12 
+ 
+O‘rtachasi = jami ÷ miqdorlar soni
+                 
+= 12 ÷ 4 
+                 
+= 3
+ 
+Sharlarning o‘rtacha soni 3 ga teng.
+Bu yerda 4 ta likopcha
+bo‘lgani uchun 12 ni
+4 ga bo‘lamiz.
+Har bir likopchadagi kublarning o‘rtacha sonini topish
+ularning umumiy sonini teng 2 guruhga bo‘lishga o‘xshaydimi? 
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   80
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   80
+13/11/24   14:50
+13/11/24   14:50
+
+81
+3  Karim matematika fanidan test sinovlarida 4 marta ishtirok etdi. Uning o‘rtacha 
+ballini aniqlang. 
+      
+Ball
+1-test
+83
+2-test
+76
+3-test
+78
+4-test
+80
+ 
+Jami ball = 83 + 76 + 78 + 80
+ 
+ 
+ 
+  
+ 
+= 317 ball
+ 
+ 
+ 
+O‘rtacha ball = 317 ÷ 4
+ 
+ 
+ 
+  
+ 
+ 
+= 79,25 ball
+ 
+ 
+Karim 4 marta test topshirib, o‘rtacha 79,25 ball to‘plagan.
+4  Diagrammada A, B, C, D va E idishlardagi suvning hajmi berilgan. Suv hajmining 
+o‘rtacha hajmini aniqlang. 
+ 
+Idishlardagi suv hajmi
+450
+400
+350
+300
+250
+200
+150
+100
+50
+0
+Suv  
+hajmi    
+(ml)
+           A              B              C               D              E
+ 
+ 
+ 
+ 
+Suvning jami hajmi  
+ 
+ 
+ 
+ 
+= 400 + 200 + 300 + 100 + 200
+ 
+ 
+ 
+= 1200 ml
+ 
+ 
+ 
+ 
+Suvning o‘rtacha hajmi 
+ 
+ 
+ 
+= 1200 ÷ 5
+ 
+ 
+ 
+= 240 ml
+ 
+ 
+Suvning o‘rtacha hajmi 240 ml ekan.
+Juftlikda ishlang
+Sherigingiz bilan Muhokama qiling.
+1  Apelsinlar sonining o‘rtachasini toping.
+ 
+10
+8
+0
+ 
+2  Kamola 7 kunda jami 45 850 so‘m sarfladi.
+     
+U bir kunda o‘rtacha qancha pul sarflagan?
+Miqdorlar soni = 3
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   81
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   81
+13/11/24   14:50
+13/11/24   14:50
+
+Bajaring va o‘rganing
+1  Quyidagi sonlarning o‘rtachasini toping.
+ 
+a)  
+12, 18, 25, 45  
+ 
+b) 
+100, 85, 90, 112 
+ 
+c)  
+1,5, 2,3, 4,9, 8,5, 0,8  
+ 
+d)  3,8,  4,6, 9,2, 5,4, 10,5 
+2  Quyidagi miqdorlarning o‘rtachasini toping.
+ 
+a)  
+13,2 kg, 7,1 kg, 4,36 kg, 10,12 kg 
+ 
+b)  1000 m, 580 m, 600 m, 350 m, 815 m  
+3  Quyidagi chizmada Po‘latning 4 oy davomida jamg‘argan 
+mablag‘ ko‘rsatilgan. U har oyda o‘rtacha qanchadan mablag‘ 
+jamg‘argan?  
+ 
+Po‘latning jamg‘armasi
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+Jamg‘arma 
+miqdori  
+(ming so‘m)
+ Yanvar  
+Fevral  
+Mart 
+Aprel
+82
+O‘ynang va o‘rganing
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang.
+Hayotiy misollar yordamida “o‘rtacha qiymat” tushunchasining ma’nosini Muhokama 
+qiling. O‘rtacha qiymatga doir topgan misollaringizni sinfdoshlaringizga ayting.
+Namuna
+a) 
+3 nafar sinfdoshingizning o‘rtacha bo‘yi;
+b)  
+viloyatingiz yoki shahringizda bir oy davomidagi o‘rtacha havo harorati;
+c)  
+uy vazifalarni bajarishga ketadigan kunlik o‘rtacha vaqt;
+d)  
+mobil telefoningizga 1 hafta davomida kelgan SMS xabarlarning 
+ 
+kunlik o‘rtacha soni.
+Miqdorlarning 
+o‘rtacha 
+qiymati berilgan 
+miqdorlarning eng 
+kichik va eng katta 
+qiymatlari orasida 
+bo‘ladi. Masalan,     
+2, 4, 6, 8 va 10 
+sonlarining 
+o‘rtacha qiymati  
+6 ga teng.
+115–118
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   82
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   82
+13/11/24   14:50
+13/11/24   14:50
+
+83
+Qarang va o‘rganing
+1  3 ta tasmaning o‘rtacha uzunligi 15 cm ga teng. Tasmalarning umumiy uzunligi 
+nechaga teng?
+ 
+Jami uzunlik = ?
+O‘rtacha uzunlik = 15 cm
+ 
+ 
+ 
+ 
+Umumiy uzunlik = 15 × 3 = 45 cm
+ 
+ 
+Tasmalarning umumiy uzunligi 45 cm.
+2  4 nafar bolaning o‘rtacha massasi 36,8 kg. Ularning umumiy massasi qancha?
+ 
+ 
+ 
+ 
+ 
+O‘rtacha massasi = 36,8 kg
+ 
+Umumiy massasi = 36,8 × 4 = 147,2 kg
+ 
+  
+ 
+ 
+Demak, ularning umumiy massasi 147,2 kg ga teng.
+Miqdorlar jami qiymati = o‘rtacha qiymat × miqdorlar soni
+Miqdorlar jami qiymati =
+o‘rtacha qiymat × miqdorlar soni
+Miqdorlarning o‘rtacha va jami qiymati hamda soni
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   83
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   83
+13/11/24   14:50
+13/11/24   14:50
+
+84
+3  Rasul bir nechta kitob sotib oldi. Kitoblarning jami narxi 45 000 so‘m va o‘rtacha
+ 
+narxi 9000 so‘mga teng. U nechta kitob sotib olgan?
+     
+Kitoblar soni = 45 000 ÷ 9000
+ 
+ 
+= 5        
+ 
+Rasul 5 ta kitob sotib olgan.
+Miqdorlar soni = miqdorlarning jami qiymati ÷ o‘rtacha qiymat
+                    
+4  2 nafar talabaning o‘rtacha yoshi 19 ga teng. Ulardan biri 22 yoshda bo‘lsa,
+ 
+ikkinchi talaba necha yoshda?
+ 
+Jami yosh = 19 × 2
+ 
+ 
+ = 38
+ 
+Ikkinchisining yoshi = 38 – 22
+ 
+  
+= 16
+ 
+Ikkinchi talaba 16 yosh.
+5  Rasul, Po‘lat, Sitora va Jamila kompyuterda o‘yin o‘ynamoqda. Ularning o‘rtacha
+ 
+natijasi 48 ballga teng. Quyidagi diagrammada ular to‘plagan ballar berilgan.  
+Faqat Jamilaning natijasi ko‘rinmayapti. Jamila qancha ball to‘plagan?
+ 
+ 
+Bolalarning natijalari
+60
+50
+40
+30
+20
+10
+0
+To‘plagan
+ballari
+ Rasul    Po‘lat  
+Sitora   Jamila
+ 
+Jami ball = 48 × 4
+      
+          
+= 192 ball
+ 
+Jamilaning balli  = 192 – 56 – 44 – 52 
+                            
+= 40 ball
+ 
+Jamila o‘yinda 40 ball to‘plagan.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   84
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   84
+13/11/24   14:50
+13/11/24   14:50
+
+85
+6  Quyidagi grafikda shifoxonaga bir hafta davomida murojaat qilgan bemorlar soni 
+ko‘rsatilgan.
+Shifoxonaga murojaat qilgan bemorlar
+70
+60
+50
+40
+30
+20
+10
+0
+Bemorlar
+soni
+ Dushanba    Seshanba   Chorshanba   Payshanba   Juma
+ 
+a) 
+Bemorlarning kunlik o‘rtacha murojaatlari sonini toping.  
+b)  
+Agar dushanbadan shanbagacha har kuni o‘rtacha 45 tadan bemor murojaat  
+  
+qilgan bo‘lsa, shanba kuni nechta bemor murojaat qilgan?
+          a)    43 + 60 + 48 + 52 + 32 = 235  
+235 ÷ 5 = 47
+                     Har kuni o‘rtacha 47 ta bemor murojaat qilgan.
+ 
+b)  
+ 45 × 6 = 270
+           
+ 270 – 235 = 35 
+ 
+  
+Shanba kuni 35 ta bemor murojaat qilgan.
+7  Akmalning imtihon natijalari varag‘iga siyoh to‘kilib ketdi.   
+Akmal 3 ta fandan o‘rtacha 89 ball to‘pladi. 
+ 
+U matematika va fizika fanlarining har biridan 
+ 
+necha ball to‘plagan? Javobni tushuntiring.
+ 
+ 
+89 × 3 = 267
+ 
+U 3 ta fandan jami 267 ball to‘plagan.
+ 
+ 
+267 – 89 = 178
+ 
+U matematika va fizika fanlaridan 
+ 
+jami 178 ball to‘plagan.
+ 
+ 
+178 – 87 = 91
+ 
+Matematikadan 91 ball to‘plagan.
+178 sonining oxirgi raqami 8. 
+Matematikadan to‘plangan ballning 
+oxirgi raqami esa 1.  
+Demak, fizikadan to‘plangan ball  
+87 ga teng. Matematikadan esa 91 ball 
+to‘plangan.
+Test natijalari
+Ingliz tili       
+89
+Matematika  
+   1
+Fizika  
+8
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   85
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   85
+13/11/24   14:50
+13/11/24   14:50
+
+86
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang va Muhokama qiling.
+1  Berilgan miqdorlarning o‘rtacha qiymatini toping. 
+ 
+a)   
+ 
+ 
+b) 
+ 
+1ℓ
+500 ml
+400
+300
+200
+100
+900
+800
+700
+600
+1ℓ
+500 ml
+400
+300
+200
+100
+900
+800
+700
+600
+1ℓ
+500 ml
+400
+300
+200
+100
+900
+800
+700
+600
+ 
+2  Mahsulotlar soni va jami massasini toping.  
+ a)  
+ Mahsulotlar o‘rtacha 
+ 
+narxi = 20 000 so‘m 
+ 
+Jami narxi = 200 000 so‘m
+ Mahsulotlar soni = ?
+ b)  
+ Mahsulotlar o‘rtacha 
+ 
+massasi = 8,5 kg 
+ Mahsulotlar soni = 8
+ 
+Jami massasi = ?
+3  Tushirib qoldirilgan sonni toping. 
+ 
+a) 
+Uchinchi sonni yozing. 
+b) 
+Oxirgi avtobusda nechta 
+ 
+ 
+ 
+  
+ 
+yo‘lovchi bor? 
+ 
+ 
+O‘rtacha qiymati = 12
+10   18   
+?
+ 
+ 
+O‘rtacha = 50 ta yo‘lovchi
+34
+  
+85
+  
+68
+  
+ 
+?
+Bir nechta miqdorga oid bir-
+biri bilan bog‘langan uchta 
+tushuncha mavjud. Bular – 
+miqdorlarning o‘rtacha qiymati, 
+miqdorlarning jami qiymati va 
+miqdorlar soni. Ulardan ikkitasi 
+berilgan bo‘lsa, uchinchisini 
+topishingiz mumkin.
+Juftlikda ishlang
+Sherigingiz bilan miqdorlarning o‘rtacha qiymatini toping.
+1 - va 2 -misollarda o‘rtacha qiymatni topishda nimalarga e’tibor berish kerak?
+1  a) 
+2, 4, 6 
+b) 
+2, 6
+2  a) 
+15, 20, 25 
+b) 
+15, 25
+3  Quyidagi misollarda miqdorlarning  o‘rtacha qiymatini qanday topish mumkinligini 
+aniqlang. Javobni tushuntiring. 
+ 
+a) 
+10, 14 
+b) 
+13, 15   
+c) 
+4, 5
+28 000
+so‘m
+32 000
+so‘m
+25 000
+so‘m
+43 000
+so‘m
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   86
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   86
+13/11/24   14:50
+13/11/24   14:50
+
+87
+Bajaring va o‘rganing
+Masalalarni yeching. 
+1  a) 
+3 ta sonning o‘rtachasi 28 ga teng. Ularning yig‘indisi nechaga teng?
+ 
+b)  5 ta sonning o‘rtachasi 66 ga teng. Ularning yig‘indisi nechaga teng?
+2  Jadvalda Jamila va Sitoraning imtihon natijalari berilgan. 
+ 
+Tushirib qoldirilgan ballni toping.
+ 
+ 
+ 
+Jamilaning natijasi
+O‘rtachasi = 74 ball
+Ingliz tili = 68 ball
+Matematika = 79 ball
+Fizika = ? 
+ 
+Sitoraning natijasi
+O‘rtachasi = 77 ball
+Ingliz tili = 66 ball
+Matematika = ? 
+Fizika = 75 ball 
+ 
+3  Diagrammada 3 nafar qizning jamg‘armalari miqdori keltirilgan.
+ 
+a) 
+Ular jamg‘argan o‘rtacha mablag‘ni toping.  
+ 
+b) 
+Qaysi qizning jamg‘armasi o‘rtachaga yaqinroq? 
+300
+250
+200
+150
+100
+50
+0
+Pul   
+miqdori    
+(ming so‘m)
+ 
+Aziza   
+Sitora   
+Xolida
+Jamg‘arma
+ 
+4  Jadvalda 3 nafar o‘quvchining 3 ta testdan olgan natijalari keltirilgan. 
+ 
+ 
+Ismi
+1-test
+2-test
+3-test
+Aziza
+72
+76
+70
+Bobur
+74
+80
+69
+Charos
+90
+63
+80
+ 
+a) 
+ Har bir o‘quvchining testlardan olgan o‘rtacha ballarini toping va o‘ndan 
+birlar xonasigacha yaxlitlang. 
+ 
+b)  Kimning balli o‘rtacha balldan ko‘proq? 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   87
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   87
+13/11/24   14:50
+13/11/24   14:50
+
+88
+5  Po‘lat 5 kun davomida xayriya uchun mablag‘ to‘pladi.
+Dush
+Sesh
+Chor
+Pay
+Juma
+34 000 so‘m 18 000 so‘m 40 000 so‘m 10 000 so‘m
+?
+ 
+U bir kunda o‘rtacha 24 000 so‘m mablag‘ to‘pladi. U juma kuni qancha mablag‘ 
+to‘plagan? 
+6  Quyidagi jadvalda  dushanbadan payshanbagacha do‘konda sotilgan nonlar 
+soni keltirilgan. 4 kunda sotilgan nonlarning o‘rtacha miqdori 610 taga teng. 
+Chorshanba kuni nechta non sotilgan?  
+Kunlar
+Nonlar soni
+Dushanba
+600
+Seshanba
+680
+   Chorshanba
+?
+ Payshanba
+540
+ 
+7  Tohir supermarketdan 3 xil mahsulot sotib oldi. Biroq uning xarid cheki yirtilib 
+qoldi. U xarid qilgan mahsulotlarning o‘rtacha narxi 12 000 so‘mga teng. Eng arzon 
+mahsulotning narxi 1000 ga karrali natural son ekani ma’lum. Idish yuvish geli va 
+olma sharbati narxlarini qanday aniqlash mumkin?  
+119–128
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) 
+Men miqdorlarning jami qiymati va soniga ko‘ra ularning o‘rtacha qiymatini  
+topishni bilaman.  
+b) 
+Men miqdorlarning soni va o‘rtacha qiymatiga ko‘ra ularning jami qiymatini 
+topishni bilaman.  
+c) 
+Men miqdorlarning jami va o‘rtacha qiymatiga ko‘ra ularning sonini topishni 
+bilaman.  
+d) 
+Men o‘rtacha qiymatni topishga doir matnli masalalarni yechishni 
+ 
+bilaman.  
+X a r i d  c h e k i
+Pista yog‘i                   10 500 so‘m 
+Idish yuvish geli 
+18  
+Olma sharbati 
+          
+Jami  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   88
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   88
+13/11/24   14:50
+13/11/24   14:50
+
+129-130
+Mashq daftariga o‘ting
+89
+O‘ylab ko‘ring
+Sarvar imtihon natijalari varag‘iga siyoh to‘kib qo‘ydi. 
+U o‘rtacha  83 ball to‘plagan edi.
+a) 
+Matematika va fizika fanlaridan to‘plangan ballar orasidagi farq eng ko‘pi bilan 
+nechaga teng?
+b) 
+Matematika va fizika fanlaridan to‘plangan ballar orasidagi farq eng kamida 
+nechaga teng?
+ 
+a) 
+b)  
+ 
+129–130
+Mashq daftariga o‘ting
+ 
+ 
+   
+    
+ 
+ 
+ 
+  
+Ingliz tili       
+76
+Matematika   
+8
+Fizika  
+9
+Ona tili 
+79
+Natijalar 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   89
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   89
+13/11/24   14:50
+13/11/24   14:50
+
+Chorraha 
+Charxpalak
+Ko‘prik
+Charxpalakka qarang.
+Uning markazi va
+aylanasini bog‘lab turgan
+qismlar orasidagi
+burchakni topish
+mumkinmi?
+Ko‘prikka qarang.
+Unda qanday burchak
+turlarini ko‘ryapsiz?
+Burchaklar
+11
+Chorrahaga qarang.
+Vertikal burchaklar
+tengmi?
+Muhokama qiling
+ Quyidagi rasmlarda qanday burchak turlarini ko‘ryapsiz?
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   90
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   90
+13/11/24   14:50
+13/11/24   14:50
+
+91
+Eslang
+Burchakning gradus o‘lchovi
+Burchakning gradus o‘lchovi
+Burchakning gradus o‘lchovini transportir yordamida o‘lchaymiz.
+a) 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+B
+C
+A
+  
+ 
+  
+ 
+ 
+ 
+∠ ABC = 30°
+b) 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+F
+E
+D
+ 
+ 
+ 
+ 
+ 
+ 
+∠ DEF = 115°
+c) 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+R
+Q
+P
+S
+ 
+ 
+ 
+∠ RQP = 130°
+ 
+ 
+ 
+∠ PQS = 50°
+131–132
+Mashq daftariga o‘ting
+Burchakni 0° dan boshlab,  
+transportirning ichki yoki tashqi 
+shkalasi bilan o‘lchaymiz. 
+∠ ABC – o‘tkir burchak.
+∠ DEF – o‘tmas burchak.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   91
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   91
+13/11/24   14:50
+13/11/24   14:50
+
+92
+Qarang va o‘rganing
+1  a) 
+AOB to‘g‘ri chiziq berilgan. 
+ 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+B
+A
+O
+C
+ 
+ 
+ 
+ 
+∠ AOC = 90°
+ 
+ 
+ 
+ 
+∠ BOC = 90°
+ 
+ 
+  
+∠ AOC + ∠ BOC = 90° + 90°
+ 
+ 
+  
+ 
+ 
+ = 180°
+ 
+b) 
+JOK to‘g‘ri chiziq berilgan.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+K
+J
+O
+L
+  ∠ JOL = 100°
+ 
+ 
+ 
+ 
+∠ KOL = 80°
+ 
+ 
+  
+∠ JOL + ∠ KOL = 100° + 80°
+ 
+ 
+  
+ 
+ 
+  = 180°
+ 
+c) 
+TOQ to‘g‘ri chiziq berilgan. 
+ 
+ 
+ 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+Q
+T
+O
+R
+Qanday burchaklar yig‘indisi 
+180° ni tashkil qiladi?
+To‘g‘ri chiziqdagi burchaklar
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   92
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   92
+13/11/24   14:51
+13/11/24   14:51
+
+93
+2  a) 
+PQR to‘g‘ri chiziq berilgan. 
+ 
+ 
+ 
+R
+P
+Q
+S
+ 
+ 
+∠ PQS = 30°
+ 
+ 
+ 
+ 
+∠ RQS = 150°
+ 
+ 
+ 
+ 
+∠ PQS + ∠ RQS  = 30° + 1500° 
+ 
+ 
+ 
+ 
+ 
+  = 180° 
+ 
+ 
+ 
+ 
+∠ PQS va ∠ RQS – to‘g‘ri chiziqdagi burchaklar. 
+ 
+ 
+ Ularni qo‘shni burchaklar deb ham ataymiz.  
+ 
+b) 
+EFG to‘g‘ri chiziq berilgan. 
+ 
+ 
+ 
+ 
+∠ a = 50°
+ 
+ 
+ 
+ 
+∠ b = 105°
+ 
+ 
+ 
+G
+E
+F
+a
+b
+c
+ 
+∠ c = 25°
+ 
+ 
+ 
+ 
+∠ a + ∠ b + ∠ c = 50° + 105° + 25° 
+                           
+ 
+ 
+= 180°
+ 
+ 
+∠ a, ∠ b va ∠ c  – to‘g‘ri chiziqdagi burchaklar.
+ 
+c) 
+XYZ to‘g‘ri chiziq berilgan. 
+ 
+ 
+ 
+Z
+X
+Y
+p q
+r
+  
+∠ p = 90°
+ 
+ 
+ 
+ 
+∠ q = 42°
+ 
+ 
+  
+ 
+∠ r = 48°
+ 
+ 
+  
+ 
+∠ p + ∠ q + ∠ r = 90° + 42° + 48° 
+                           
+ 
+ 
+= 180°
+ 
+ 
+∠ p , ∠ q va ∠ r  – to‘g‘ri chiziqdagi burchaklar.
+ To‘g‘ri chiziqdagi burchaklar yig‘indisi 180° ga teng.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   93
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   93
+13/11/24   14:51
+13/11/24   14:51
+
+94
+3  a) 
+PQR to‘g‘ri chiziq berilgan. ∠ a ni toping.
+ 
+ 
+R
+P
+Q
+37°
+a
+ 
+ 
+∠ a = 180° – 37°
+ 
+ 
+ 
+ 
+  
+ 
+= 143°
+                           
+ 
+ 
+ 
+b) 
+WXY to‘g‘ri chiziq berilgan. ∠ b ni toping.
+ 
+ 
+Y
+W
+X
+142°
+b
+ 
+∠ b = 180° – 142°
+ 
+ 
+ 
+ 
+= 38°
+                           
+ 
+ 
+ 
+c) 
+DEF to‘g‘ri chiziq berilgan. ∠ c ni toping.
+ 
+ 
+F
+D
+E
+46°
+c
+33°
+ 
+∠ c = 180° – 33° – 46°
+ 
+ 
+ 
+ 
+= 101°
+                           
+ 
+  
+ 
+ 
+ 
+d) 
+GOH to‘g‘ri chiziq va ∠ c = ∠ d berilgan. ∠ d ni toping.
+ 
+ 
+ 
+∠ c + ∠ d  = 180° – 30°
+ 
+ 
+H
+G
+O
+c
+30°
+d
+ 
+ 
+   = 150°
+ 
+ 
+ 
+ 
+∠ d = 150° ÷ 2
+ 
+ 
+ 
+ 
+ = 75°
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+37° + ∠ a = 180°
+33° + ∠c + 46° = 180°
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   94
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   94
+13/11/24   14:51
+13/11/24   14:51
+
+Juftlikda ishlang
+Sherigingiz javobini tekshiring. 
+1  Quyidagi burchaklarni transportir yordamida o‘lchang.
+ 
+a) 
+ABC – to‘g‘ri chiziq. ∠ p , ∠ q va ∠ r  larni o‘lchang.
+ 
+ 
+∠ p , ∠ q va ∠ r  lar yig‘indisini toping.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+C
+A
+B
+p q
+r
+ 
+ 
+  
+  
+  
+ 
+  
+  
+ 
+ 
+b) 
+∠ JKM, ∠ MKN va ∠ NKL larni o‘lchang. JKL to‘g‘ri chiziqmi?  
+ 
+ 
+ 
+ 
+Tushuntiring.
+ 
+ 
+ 
+ 
+L
+J
+K
+N
+M
+ 
+   
+ 
+   
+ 
+ 
+2  To‘g‘ri chiziqda 3 ta burchak chizing va ularni o‘lchang. 3 ta burchakning 
+yig‘indisini hisoblang.
+Bajaring va o‘rganing
+a)  AOB – to‘g‘ri chiziq. ∠ x =?
+ 
+B
+A
+O
+x
+130°
+35°
+b)  DEF – to‘g‘ri chiziq. ∠ y = ∠ z. ∠ y =?  
+ 
+F
+E
+y
+40° 36°
+D
+z
+133–136
+Mashq daftariga o‘ting
+95
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   95
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   95
+13/11/24   14:51
+13/11/24   14:51
+
+96
+Qarang va o‘rganing
+1  Bir nuqtada kesishuvchi AB va CD to‘g‘ri chiziqlar berilgan. 
+a) 
+C
+A
+D
+w
+B
+y
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+∠ w  va ∠ y  vertikal burchaklar deyiladi.
+ 
+ 
+∠ w = ∠ y = 140°
+ 
+b) 
+C
+A
+D
+z
+B
+x
+ 
+ 
+∠ x  va ∠ z  ham vertikal burchaklar bo‘ladi.
+ 
+ 
+∠ x = ∠ z = 40°
+2  EF va GH to‘g‘ri chiziqlar berilgan.
+ 
+∠ j va ∠ n – vertikal burchaklar.
+ 
+∠ m va ∠ k ham vertikal burchaklar.
+ 
+ 
+G
+E
+H
+m
+F
+k
+j
+n
+ 
+ 
+ 
+ 
+ 
+ ∠ j = ∠ n
+      
+ 
+ 
+ 
+ = 65°
+ 
+ 
+ 
+∠ m = ∠ k
+          
+ 
+ 
+ = 115°
+Vertikal burchaklar o‘zaro teng bo‘ladi.
+∠ j  va ∠ k – qo‘shni
+burchaklar jufti.
+∠ j + ∠ k = 180°
+Boshqa qo‘shni burchaklar jufti
+ham bormi?
+∠ w va ∠ y  larni o‘lchang.
+∠ x  va ∠ z  larni o‘lchang.
+Vertikal burchaklar
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   96
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   96
+13/11/24   14:51
+13/11/24   14:51
+
+97
+3  KL va MN – to‘g‘ri chiziqlar. Noma’lum burchaklarni toping. 
+ 
+M
+K
+53°
+L
+b
+a
+c
+ 
+∠ a = 180° − 53° 
+       
+ 
+= 127°
+ 
+∠ b = 53° 
+                                                
+ 
+∠ c = ∠ a
+       
+ 
+= 127°
+4  PQ va RS – to‘g‘ri chiziqlar. ∠a, ∠b va ∠c ni toping.
+ 
+ 
+28°
+a
+c
+P
+R
+Q
+S
+78°
+b
+∠ a va ∠ c – vertikal 
+burchaklar.
+Demak, ∠ a = ∠ c.
+Noma’lum burchaklarni topishda
+burchakning qaysi xossalaridan
+foydalanasiz?
+∠ b = ?
+b
+P
+Q
+R
+28°
+S
+∠ c = ?
+c
+Q
+R
+28°
+S
+78°
+∠ a ni qanday topish
+mumkin?
+a
+53°
+N
+K
+M
+∠ a = ?
+a
+P
+Q
+R
+28°
+N
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   97
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   97
+13/11/24   14:51
+13/11/24   14:51
+
+98
+Guruh bo‘lib ishlang.
+Ikkita tayoq olib, ularning o‘rtasini mix bilan mahkamlang. 
+Transportir bilan vertikal burchaklarni o‘lchang.
+Tayoqlarni burib, burchaklar o‘lchamini o‘zgartiring va hosil bo‘lgan burchaklarni 
+qaytadan o‘lchang. 
+ 
+ 
+d
+a
+c
+b
+ 
+d
+a
+c
+b
+Qanday o‘zgarishni sezdingiz? Muhokama qiling.
+a) 
+∠ a = ∠ b  o‘rinlimi? ∠ c = ∠ d -chi?
+b)  ∠ a + ∠ c = ∠ b + ∠ d  o‘rinlimi? 
+c)  ∠ a + ∠ d = ∠ b + ∠ c o‘rinlimi? 
+Juftlikda ishlang
+Sherigingiz bilan Muhokama qiling.
+AOD va BOE kesishuvchi to‘g‘ri chiziqlar berilgan. 
+a) 
+Vertikal burchaklar juftligini aniqlang.
+b) ∠ EOF = ∠ DOC. Bu burchaklar vertikalmi? Tushuntiring.
+ 
+ 
+ 
+F
+75°
+O
+E
+D
+C
+A
+B
+34°
+71°
+75°
+71°
+34°
+ 
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   98
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   98
+13/11/24   14:51
+13/11/24   14:51
+
+99
+Turmushda matematika
+Dazmol taxtasiga qarab vertikal
+burchaklarni ayting. Uyingizdagi yana
+qaysi jihozlarda vertikal burchaklarni
+ko‘rish mumkin?
+Bajaring va o‘rganing
+a)  
+AOB va COD – to‘g‘ri chiziqlar. 
+ 
+Qaysi burchak AOC burchakka teng?
+50°
+D
+B
+C
+A
+O
+b) 
+EOF va GOH – to‘g‘ri chiziqlar. 
+        Qaysi burchak GOF burchakka teng?
+140°
+H
+F
+G
+E
+O
+c) 
+MN, OP va QR – to‘g‘ri chiziqlar. 
+ 
+∠ g va ∠ h larni toping.
+46°
+R
+h
+g
+O
+92°
+M
+P
+Q
+N
+d) 
+GH va KL – to‘g‘ri chiziqlar. 
+   
+∠ d, ∠ e va ∠ f  larni toping.
+ 
+e
+68°
+H
+f
+d
+L
+G
+K
+ 
+137–140
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   99
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   99
+13/11/24   14:51
+13/11/24   14:51
+
+100
+Qarang va o‘rganing
+ 
+1  Nuqta atrofida bir marta to‘liq aylanishdan 360° li burchak hosil bo‘ladi. 
+ 
+ 
+2  Quyidagi chizmalarda AB va CD perpendikulyar to‘g‘ri chiziqlar berilgan.
+ 
+∠ w, ∠ x, ∠ y va ∠ z – to‘g‘ri burchaklar.
+ 
+  
+ 
+A
+B
+D
+C
+w
+x
+y
+z
+ 
+A
+C
+B
+D
+z
+x
+w
+y
+ 
+ 
+ 
+ 
+∠ w + ∠ x + ∠ y + ∠ z = 4 × 90° 
+                                    
+ 
+= 360° 
+3  ∠ a, ∠ b, ∠ c va ∠ d – O nuqta atrofidagi burchaklar.
+ 
+Ularning yig‘indisini toping. 
+ 
+ 
+ 
+ 
+∠ a = 60°
+ 
+d
+b
+a
+c
+O
+ ∠ b = 70°
+ 
+ 
+ 
+∠ c = 130°
+ 
+ 
+ 
+∠ d = 100°
+ 
+ 
+ 
+∠ a + ∠ b + ∠ c + ∠ d = 60° + 70° + 130° + 100°
+                                     
+ 
+= 360°
+Nuqta atrofidagi burchaklar yig‘indisi 360° ga teng.
+∠ w  va ∠ x, ∠ y va ∠ z qo‘shni
+burchaklar juftligini tashkil qiladi.
+∠ w + ∠ x = 180°
+∠ y + ∠ z = 180°
+Demak, ∠ w + ∠ x + ∠ y + ∠ z = 360°.
+Nuqta atrofidagi burchaklar
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   100
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   100
+13/11/24   14:51
+13/11/24   14:51
+
+101
+4  Quyidagi chizmalarda nuqta atrofidagi burchaklar tasvirlangan.
+ 
+Noma’lum burchaklarni toping.   
+ 
+ 
+a)  
+ 
+ 
+ 
+ 
+ 
+O
+h
+110°
+ 
+∠ h = 360° − 110° − 90°
+                                 
+ 
+ 
+= 160°
+b)  
+ 
+ 
+O
+x
+25°
+313°
+  
+∠ x = 360° − 313° − 25°
+       
+ 
+ 
+ 
+ 
+= 22°
+ 
+ 
+ 
+c)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+∠ k = 360° − 90° − 90° − 80° − 50°
+       
+O
+k
+80°
+50°
+ 
+ 
+= 50°
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   101
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   101
+13/11/24   14:51
+13/11/24   14:51
+
+102
+Sherigingiz bilan ishlang.
+Quyidagi aylanada rasmda ko‘rsatilganidek 4 ta radius chizing. Hosil bo‘lgan 4 ta 
+burchakni transportir yordamida o‘lchang va ularning yig‘indisini toping.
+Namuna
+ ∠a = 
+ 
+ ∠b = 
+ 
+ ∠c = 
+ 
+ ∠d = 
+∠a + ∠b + ∠c + ∠d = 
+O
+b
+a
+d
+c
+ 
+ 
+Juftlikda ishlang
+Sherigingiz bilan Muhokama qiling.
+Noma’lum burchaklarni topish uchun burchakning qaysi xossalaridan
+foydalanasiz?
+AOB va COD – to‘g‘ri chiziqlar va ∠w = 128°. O nuqta atrofidagi 
+burchaklar yig‘indisini toping. 
+ 
+  
+ 
+ 
+  
+ 
+ 
+O
+A
+C
+B
+D
+w
+y
+x
+z
+ 
+ 
+  
+ 
+ 
+  
+ 
+O nuqta atrofida qaysi
+burchaklar turibdi?
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   102
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   102
+13/11/24   14:51
+13/11/24   14:51
+
+103
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+Burchakning quyidagi xossalarini ko‘rsatish uchun chizma 
+chizing va sinfdoshlaringiz bilan Muhokama qiling.
+a) 
+to‘g‘ri chiziqdagi burchaklar;
+b) vertikal burchaklar;
+c) 
+nuqta atrofidagi burchaklar.
+ Burchak xossalarini  
+namoyish qilish 
+uchun “Power Point” 
+taqdimotlaridan 
+ham foydalanishingiz 
+mumkin.
+Bajaring va o‘rganing
+Noma’lum burchaklarni toping.
+a)  
+ 
+j
+20°
+23°
+b)    
+k
+30°
+c) 
+∠a = ∠b = ∠c
+a
+b
+c
+d) 
+ 
+x
+60°
+ 
+ 
+141–142
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   103
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   103
+13/11/24   14:51
+13/11/24   14:51
+
+104
+Turmushda matematika
+Quyida burchaklarga oid kundalik hayotda uchraydigan misollar keltirilgan. 
+Ularda burchakning qaysi xossalari ifodalangan? 
+Burchakka oid yana qanday misollarni bilasiz?
+   
+  
+ 
+          
+    
+a
+c
+b
+d
+    
+d
+e
+ 
+g
+f
+h
+Juftlikda ishlang
+Tabiatda uchraydigan burchakka oid turli misollarni sherigingiz bilan Muhokama qiling. 
+AKT mashqi
+“Burchak xossalari” dasturi yordamida quyidagilarni tekshiring. 
+a) 
+Vertikal burchaklar teng.
+b) 
+Nuqta atrofidagi burchaklar yig‘indisi 360º ga teng.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   104
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   104
+13/11/24   14:51
+13/11/24   14:51
+
+105
+Qarang va o‘rganing
+1  AB to‘g‘ri chiziq berilgan. Noma’lum burchaklarni toping.
+ 
+ 
+73°
+y
+A
+B
+x
+34°
+ 
+   
+ 
+ 
+∠ x = 180°
+ 
+ 
+ 
+ 
+∠ y = 180° − 73° − 34° 
+ 
+ 
+ 
+ 
+ = 73°
+2  AOB, COD va EOF to‘g‘ri chiziqlar berilgan. ∠ q ni toping.
+ 
+q
+28°
+D
+B
+F
+C
+A
+E
+63°
+45°
+O
+ 
+ ∠ BOF = 28°
+                    
+∠ q = 180° − 63° − 28° − 45°
+                           
+         = 44°
+3  WX to‘g‘ri chiziq va ∠ a = ∠ b = ∠c berilgan. ∠ a ni toping.
+ 
+             
+a
+W
+b
+c
+X
+    
+  ∠ a + ∠ b + ∠ c = 180° − 90°
+                              
+ 
+   = 90°
+                      
+  ∠ a = 90° ÷ 3
+                             
+          = 30°
+Noma’lum burchaklarni topish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   105
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   105
+13/11/24   14:51
+13/11/24   14:51
+
+106
+Juftlikda ishlang
+Noma’lum burchaklarni toping. Javobingizni tushuntiring.
+a) 
+AOB to‘g‘ri chiziq berilgan.
+ 
+∠ x ni toping.
+ 
+O
+50°
+x
+A
+B
+ 
+         
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+b) COD to‘g‘ri chiziq berilgan.
+ 
+∠ a va ∠ b ni toping.
+84°
+a
+b
+39°
+C
+O
+D
+ 
+ 
+ 
+ 
+ 
+ 
+c) 
+EOJ to‘g‘ri chiziq berilgan va ∠FOH  
+– to‘g‘ri burchak. ∠ m va ∠ n ni toping.
+ 
+ 
+n
+E
+J
+36°
+m
+27°
+O
+G
+H
+F
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+d) TOQ va LOM to‘g‘ri chiziqlar berilgan.
+ 
+∠ y  va ∠ z ni toping.
+ 
+z
+L
+M
+110°
+y
+22°
+O
+Q
+T
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   106
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   106
+13/11/24   14:51
+13/11/24   14:51
+
+107
+Bajaring va o‘rganing
+Noma’lum burchaklarni toping.
+a)   Bir nuqtada kesishuvchi ST va UV 
+to‘g‘ri chiziqlar berilgan. 
+ 
+75°
+n
+m
+S
+V
+70°
+T
+U
+W
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ b) 
+130°
+p
+C
+D
+B
+A
+ 
+ 
+  
+ 
+  
+ 
+  
+c) 
+Bir nuqtada kesishuvchi MN, OP va 
+         QR to‘g‘ri chiziqlar berilgan. 
+ 
+  
+d
+105°
+32°
+Q
+O
+M
+R
+P
+N
+c
+b
+a
+ 
+  
+ 
+ d) 
+r
+X
+Z
+Y
+89°
+89°
+W
+ 
+  
+ 
+  
+ 
+143–148
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) 
+Men to‘g‘ri chiziqdagi, vertikal va nuqta atrofidagi burchaklarni farqlashni bilaman.  
+b) 
+Men to‘g‘ri chiziqdagi, vertikal va nuqta atrofidagi burchaklarning xossalarini 
+bilaman.  
+c) 
+Men burchak xossalaridan foydalanib noma’lum burchaklarni topishni bilaman.  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   107
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   107
+13/11/24   14:51
+13/11/24   14:51
+
+108
+Do‘stingiz bilan ishlang.
+1  
+Ustozingiz bergan ikkita shaklni qirqib oling.
+ 
+Shakllardan birining bitta uchini transportir markaziga chizmadagidek joylashtiring.
+ 
+To‘g‘ri chiziqdagi burchaklar xossalaridan foydalanib noma’lum burchakni
+ 
+toping.
+ 
+Namuna
+∠ b = 180° – 50° – 115°
+ 
+= 15°
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+a
+c
+b
+ 
+ 
+ 
+2  
+A4 o‘lchamli qog‘ozini quyidagi rasmdagidek buklang.  
+ 
+Buklangan qog‘oz tomonlaridan hosil bo‘lgan ∠a ni transportir yordamida o‘lchang.
+ 
+So‘ng ∠ b, ∠ c va ∠ d  larni transportirsiz toping.
+ 
+Bu usulni sherigingiz bilan Muhokama qiling.
+a
+b
+c
+d
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   108
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   108
+13/11/24   14:51
+13/11/24   14:51
+
+109
+O‘ylab ko‘ring
+Chizmada MON to‘g‘ri chiziq berilgan. ∠ MOP = 134° va ∠ NOQ = 132°.
+∠w ni toping.  
+N
+M
+w
+P
+Q
+134°
+132°
+O
+ 
+149–150
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   109
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   109
+13/11/24   14:51
+13/11/24   14:51
+
+Uchburchaklar
+qanday farqlanadi?
+Bu bayroq shakli 
+qanday uchburchak 
+turiga mos?
+Uchburchakning xossalari
+12
+Xiyobonda turli xil
+uchburchaklarni ko‘rish 
+mumkin.
+Muhokama qiling
+ Bolalar xiyobonda o‘ynashmoqda.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   110
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   110
+13/11/24   14:51
+13/11/24   14:51
+
+111
+Qarang va o‘rganing
+Uchburchaklarning bir nechta turi mavjud.
+1  Rasmda  teng tomonli uchburchaklar tasvirlangan.  
+   
+ 
+3,5 cm
+3,5 cm
+B
+C
+A
+3,5 cm
+2 cm
+2 cm
+B
+C
+A
+2 cm
+ 
+  
+Bu uchburchaklarda: 
+AB = BC = AC.
+Sherigingiz bilan ishlang. 
+Ustozingiz bergan qog‘ozdagi teng tomonli uchburchakni qirqib oling. 
+Uchburchakni teng ikkiga bo‘lish uchun uni turli usullarda buklang.
+a
+b
+a
+c
+c
+b
+a
+ 
+a) 
+Teng tomonli uchburchaklarning burchaklari haqida nima deyish mumkin?
+b) 
+Har bir burchakni transportir yordamida o‘lchang. Burchaklarning gradus
+ 
+o‘lchamini ayting.
+∠ a = ∠ b = ∠ c = 
+Teng tomonli uchburchakning uchta teng tomoni va uchta teng 
+burchagi bor. Uning har bir burchagi 60° ga teng.     
+Uchburchakning turlari
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   111
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   111
+13/11/24   14:51
+13/11/24   14:51
+
+112
+2  Rasmda  teng yonli uchburchaklar tasvirlangan.    
+ 
+ 
+ 
+ 
+ 
+ 
+Q
+R
+P
+3,5 cm
+3,5 cm
+2,5 cm
+7 cm
+R
+P
+4 cm
+4 cm
+Q
+ 
+Sherigingiz bilan ishlang. 
+Ustozingiz bergan qog‘ozdagi teng yonli uchburchakni qirqib oling. 
+Uchburchakni teng ikkiga bo‘lish uchun uni rasmdagidek buklang.
+a) Teng yonli uchburchakning burchaklari haqida nima deyish mumkin?
+b) Burchaklarni transportir yordamida o‘lchang. Har bir burchakning o‘lchamini ayting.
+c) Teng tomonlar qarshisidagi burchaklar haqida nima deyish mumkin? Ular tengmi?
+Bu uchburchaklarda: 
+PR = PQ.
+Teng yonli uchburchakning ikkita tomoni va ikkita burchagi teng. 
+Uning teng tomonlari qarshisidagi burchaklari teng bo‘ladi.
+p
+r
+q
+p
+r
+q
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   112
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   112
+13/11/24   14:51
+13/11/24   14:51
+
+113
+3  Rasmda to‘g‘ri burchakli uchburchaklar tasvirlangan.    
+ 
+ 
+Z
+X
+Y
+X
+Y
+Z
+ 
+ 
+ 
+ 
+ 
+Bu uchburchaklarda:  
+∠ XYZ = 90°.
+Sherigingiz bilan ishlang. 
+Ustozingiz bergan qog‘ozdagi to‘g‘ri burchakli uchburchakni qirqib oling. 
+Uchburchakni rasmdagidek buklab, X va Z uchlarini Y uch bilan ustma-ust tushiring. 
+Z
+X
+Y
+z
+Z
+X
+Y
+z
+z
+x
+z
+x
+x
+x
+z
+X
+Y
+Z
+∠ x va ∠ z  lar yig‘indisi haqida nima deyish mumkin?
+To‘g‘ri burchakli uchburchakning bitta to‘g‘ri burchagi bor, 
+qolgan ikkita burchagining yig‘indisi esa 90° ga teng.
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   113
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   113
+13/11/24   14:51
+13/11/24   14:51
+
+114
+4  Rasmda  o‘tkir burchakli uchburchaklar tasvirlangan. 
+ 
+Bu uchburchaklarning barcha burchaklari – o‘tkir burchaklar.
+a
+c
+b
+P
+g
+i
+h
+R
+d
+e
+f
+Q
+ 
+90° dan kichik burchakka o‘tkir burchak deyiladi.
+ 
+O‘tkir burchakli uchburchakning barcha burchaklari 
+o‘tkir burchak bo‘ladi.
+ 
+5  Rasmda  o‘tmas burchakli uchburchaklar tasvirlangan.
+ 
+∠ a, ∠ d  va ∠ g  – o‘tmas burchaklar.
+ 
+g
+i
+h
+U
+a
+c
+b
+S
+f
+e
+d
+T
+ 
+ 
+90° dan katta va 180° dan kichik burchak o‘tmas burchak deyiladi.
+ 
+O‘tmas burchakli uchburchakning bitta burchagi o‘tmas burchak bo‘ladi.
+O‘tmas burchakli uchburchak teng 
+yonli bo‘lishi mumkin.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   114
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   114
+13/11/24   14:51
+13/11/24   14:51
+
+115
+O‘ynang va o‘rganing
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+Quyidagi uchburchaklar tomonlari va burchaklariga ko‘ra turlarga qanday 
+ajratilishini ko‘rsating. Ajratish usullaringizni sinfdoshlaringizga ayting. 
+ 
+Uchburchakning turlari:
+teng tomonli, teng yonli, to‘g‘ri burchakli, o‘tkir burchakli, 
+o‘tmas burchakli.
+A
+B
+C
+D
+E
+H
+L
+K
+G
+J
+F
+Teng yonli uchburchak albatta o‘tkir burchakli uchburchak bo‘ladimi? 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   115
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   115
+13/11/24   14:51
+13/11/24   14:51
+
+116
+Qiziqarli matematika
+Turmushda matematika
+Guruh bo‘lib ishlang. 
+Kundalik hayotda uchraydigan turli uchburchaklarga misollar keltiring. 
+Ularning rasmlarini ko‘rsating. Sinfdoshlaringizdan uchburchaklarni turlarga 
+ajratishni so‘rang. 
+Namuna:
+O‘ynang va o‘rganing
+Quyidagi uchburchaklar “mos”.
+A
+B
+D
+C
+Quyidagi uchburchaklar “mos” emas.
+E
+G
+H
+F
+Qaysi uchburchaklar “mos”?
+L
+J
+K
+M
+Uchburchakning qanday turlari “mos” bo‘ladi? Ularni tasvirlang.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   116
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   116
+13/11/24   14:51
+13/11/24   14:51
+
+117
+Bajaring va o‘rganing
+1  a) 
+p
+q
+r
+R
+Q
+P
+ 
+ 
+ 
+ PQ = 
+ = 
+ 
+ 
+ 
+ 
+ ∠ p = ∠ q = ∠ 
+ = 
+°
+ 
+b) 
+e
+F
+g
+f
+E
+G
+ 
+ 
+ 
+ 
+∠ g  = ∠ 
+ 
+ 
+ 
+ EG = 
+ 
+ 
+c) 
+    
+U
+v
+w
+V
+W
+u
+ 
+ 
+ 
+ ∠ v = 
+°
+ 
+ 
+ 
+∠ u + ∠ w = 
+°
+2  Uchburchaklarning turini aniqlang.
+ 
+a) 
+S
+U
+T
+47°
+53°
+80°
+ 
+b) 
+ 
+ 
+ 
+ 
+X
+Z
+Y
+25°
+40°
+115°
+151–154
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   117
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   117
+13/11/24   14:51
+13/11/24   14:51
+
+118
+Qarang va o‘rganing
+Katakli daftarga uchburchak chizish
+Katakli daftarga uchburchak chizish
+1  Shunday ABC to‘g‘ri burchakli uchburchak chizing: unda AC ⊥ BC bo‘lsin.
+ 
+B
+C
+A
+ 
+2  Shunday teng yonli DEF uchburchak chizing: unda DE = DF bo‘lsin.
+ 
+D
+E
+F
+Juftlikda ishlang
+Sherigingiz bilan Muhokama qiling.
+1  Katak daftarga yuqorida berilgan uchburchaklardan o‘lchami va joylashuvi bilan 
+farqlanuvchi to‘g‘ri burchakli uchburchak va teng yonli uchburchak chizing. Ularni 
+bo‘yang.
+2  Katak daftarga quyidagi uchburchaklarni chizing:
+ 
+a) 
+o‘tkir burchakli uchburchak;
+ 
+b) 
+o‘tmas burchakli uchburchak; 
+Uchburchaklarni chizish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   118
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   118
+13/11/24   14:51
+13/11/24   14:51
+
+119
+Qarang va o‘rganing
+Berilgan o‘lchamlar bo‘yicha uchburchak chizish
+Berilgan o‘lchamlar bo‘yicha uchburchak chizish
+1  Shunday ABC uchburchak chizing: unda  BC = 5 cm, ∠ ABC = 50° va ∠ ACB = 45° 
+bo‘lsin.
+ 
+1-qadam    Uzunligi 5 cm bo‘lgan BC kesma chizing.
+ 
+ 
+ 
+ 
+B
+C
+5 cm
+ 
+2-qadam  Transportirni B nuqtaga qo‘ying.  
+ 
+B nuqtadan 50° burchakni o‘lchang va chizing.  
+ 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+C
+B
+5 cm
+ 
+ 
+ 
+3-qadam    Transportirni C nuqtaga qo‘ying.  
+ 
+C nuqtadan 45° burchakni o‘lchang va chizing.
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+                                             
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+C
+B
+5 cm
+50°
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+     
+ 
+ 
+4-qadam    A nuqtani belgilang.
+ 
+ 
+ 
+ 
+C
+B
+5 cm
+50°
+45°
+A
+45°
+50°
+5 cm
+B
+C
+A
+Chizma
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   119
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   119
+13/11/24   14:51
+13/11/24   14:51
+
+120
+2  Shunday PQR uchburchak chizing: unda PQ = 5 cm, QR = 6 cm va ∠ PQR = 60° 
+bo‘lsin.
+ 
+1-qadam    Uzunligi 6 cm bo‘lgan QR kesma chizing.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2-qadam    Transportirni Q nuqtaga qo‘ying. 
+ 
+ 
+Q nuqtadan 60° burchakni o‘lchang va chizing.   
+ 
+ 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+R
+Q
+6 cm
+ 
+ 
+ 
+3-qadam    Q nuqtadan 5 cm masofadagi P nuqtani belgilang. P va R   
+ 
+nuqtalarni to‘g‘ri chiziq bilan tutashtiring.
+ 
+ 
+  
+R
+Q
+6 cm
+60°
+P
+5 cm
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+Chizma
+6 cm
+P
+Q
+R
+60º
+5 cm
+Q
+R
+6 cm
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   120
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   120
+13/11/24   14:51
+13/11/24   14:51
+
+121
+3  Shunday XYZ uchburchak chizing: unda XY = YZ = 5 cm va ∠ XYZ = 90° bo‘lsin.
+ 
+1-qadam    Uzunligi 5 cm bo‘lgan YZ kesma chizing.
+ 
+ 
+ 
+ 
+ 
+ 
+2-qadam    Uchburchakli chizg‘ichni YZ kesmaga chizmadagidek joylashtiring va  
+ 
+YZ kesmaning Y nuqtasiga perpendikulyar tushiring. 
+ 
+ 
+ 
+ 
+ 
+ 
+                       
+ 
+ 
+ 
+                            
+Y
+Z
+5 cm
+ 
+ 
+ 
+3-qadam    Y nuqtadan 5 cm uzoqlikda X nuqtani belgilang. X va Z nuqtalarni
+ 
+ 
+tutashtiring. 
+ 
+ 
+  
+ 
+ 
+  
+ 
+Z
+Y
+5 cm
+X
+5 cm
+  
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+Chizma
+5 cm
+X
+Y
+Z
+5 cm
+Y
+Z
+5 cm
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   121
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   121
+13/11/24   14:51
+13/11/24   14:51
+
+122
+Guruh bo‘lib ishlang.
+Dastlab har bir uchburchakni chamalab chizing. Keyin chizg‘ich, transportir va
+uchburchakli chizg‘ich yordamida ularni qayta aniq chizing.
+a) 
+ABC uchburchak
+  
+∠ ABC = 50°, ∠ ACB = 70°, BC = 7 cm
+ 
+b) 
+PQR uchburchak
+      PQ = 8 cm, QR = 5 cm, ∠ PQR = 90°
+ 
+155–156
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+Men berilgan o‘lchamlarga ko‘ra uchburchakni chizishni bilaman.  
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   122
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   122
+13/11/24   14:51
+13/11/24   14:51
+
+123
+Uchburchakning burchaklari
+Sherigingiz bilan ishlang.
+1  Ustozingiz bergan qog‘ozdan uchburchakni qirqib oling. Uchburchak 
+burchaklarini chizmadagi kabi a, b, c harflari bilan belgilang. 
+ 
+orqa tomoni
+a
+b
+c
+old tomoni
+a
+c
+b
+ 
+Uchburchakni rasmda ko‘rsatilganidek 3 ta uchi bir tomonidagi bitta nuqtada
+ 
+ustma-ust tushadigan qilib buklang.
+ 
+Uning burchaklari yig‘indisi haqida nima deyish mumkin? 
+ 
+ 
+2  Quyida berilgan uchburchakdagi ∠ x, ∠ y  va ∠ z ni o‘lchash uchun  
+ 
+ 
+ 
+transportirdan foydalaning. Uchburchakning burchaklari yig‘indisi haqida nima  
+ 
+deyish mumkin?
+ 
+ 
+  
+x
+z
+y
+ 
+∠ x = 
+  
+ 
+ 
+ 
+∠ y = 
+ 
+ 
+ 
+∠ z = 
+ 
+ 
+ 
+∠ x + ∠ y + ∠ z = 
+Uchburchakning burchaklari yig‘indisi 180° ga teng.
+b
+c a
+∠  a, ∠ 
+∠ b va ∠ c  – to‘g‘ri
+chiziqda yotuvchi burchaklar.
+Demak, 
+∠ 
+∠ a + ∠  b + ∠ c = 180°.
+ 
+Uchburchak burchaklarini o‘lchash uchun
+transportirdan foydalaning. Burchaklar yig‘indisi 180° ga tengmi?
+Tekshirish
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   123
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   123
+13/11/24   14:51
+13/11/24   14:51
+
+124
+Juftlikda ishlang
+Sherigingiz bilan ishlang. 
+Transportir yordamida noma’lum burchakni o‘lchang.
+a) 
+ABC – teng tomonli uchburchak.
+ 
+∠a, ∠b va ∠c lar yig‘indisi nechaga teng?           
+A
+B
+C
+a
+b
+c
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+b) 
+PQR – teng yonli uchburchak.
+ 
+ ∠p, ∠q va ∠r lar yig‘indisi nechaga teng? 
+           
+P
+Q
+R
+q
+r
+p
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+c) 
+XYZ – o‘tmas burchakli uchburchak.
+ 
+∠x, ∠y  va ∠z lar yig‘indisi nechaga teng?           
+X
+Z
+Y
+x
+z
+y
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AKT mashqi
+“Burchaklar yig‘indisi” dasturidan foydalanib uchburchakning burchaklari yig‘indisi 
+180° ga teng ekanini ko‘rsating.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   124
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   124
+13/11/24   14:51
+13/11/24   14:51
+
+125
+Qarang va o‘rganing
+1  Uchburchaklarning noma’lum burchaklarini toping. 
+ 
+a) 
+X
+30°
+50°
+Y
+Z
+ 
+       
+ 
+ 
+ 
+ 
+∠ XZY = 180° – 30° – 50°
+ 
+ 
+  
+ 
+ = 100°
+               
+  
+ 
+ 
+b) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ∠ FEG = 180° – 120° – 35°
+            
+  
+ 
+                   = 25°
+2  ABC – teng yonli uchburchak. ∠ ACB ni toping. 
+ 
+ 
+A
+C
+B
+68°
+ 
+ 
+ 
+ 
+∠ ACB  = ∠ ABC
+ 
+ ∠ ACB + ∠ ABC = 180° – 68°
+ 
+ 
+ = 112°
+                 
+∠ ACB  = 112° ÷ 2
+                             
+ = 56°
+Teng yonli uchburchakning 
+teng tomonlari qarshisidagi 
+burchaklari teng bo‘ladi.
+F
+120°
+35°
+E
+G
+Uchburchakning burchaklari 
+yig‘indisi 180°.
+30° + 50° + ∠ XZY = 180°
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   125
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   125
+13/11/24   14:51
+13/11/24   14:51
+
+126
+3  DEF uchburchakda DF = EF va ∠ EDF = 42°. ∠ EFD ni toping.
+ 
+E
+D
+42°
+F
+   
+ ∠ EDF = ∠ DEF 
+ 
+ 
+  = 42°   
+  
+ ∠ EFD = 180° – 42° – 42°
+                
+  = 96°
+4  KLM – teng yonli uchburchak. ∠LKM ni toping.
+ 
+L
+K
+M
+ 
+ 
+∠ LKM + ∠ LMK = 180° – 90°
+ 
+ 
+ 
+ = 90°
+ 
+ 
+ 
+∠ LKM = ∠ LMK
+ 
+ 
+ 
+∠ LKM = 90° ÷ 2 
+                              
+ = 45°
+DEF – teng yonli uchburchak. 
+Demak,  
+∠ EDF = ∠ DEF.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   126
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   126
+13/11/24   14:51
+13/11/24   14:51
+
+127
+5  EFH – to‘g‘ri burchakli uchburchak, EGH esa teng yonli uchburchak. EH = GH va  
+ 
+∠ EHG = 66°. ∠ a va ∠ b ni toping. 
+ 
+ 
+ 
+b
+a
+E
+G
+66°
+F
+H
+ 
+∠ b = 180° – 90° – 66°
+       
+ 
+= 24°
+ 
+∠ GEH = (180° – 66°) ÷ 2
+            
+      = 57°
+ 
+∠ a = 90° – 57° 
+       
+ 
+= 33°
+6  Chizmada BCD – to‘g‘ri chiziq. Agar ∠ DAC = 72°, ∠ ADC = 48° va ∠ ABC = 26° bo‘lsa,
+        ∠ x ni toping. 
+ 
+A
+D
+C
+72°
+B
+48°
+26°
+x
+ 
+ 
+1-usul
+ ∠ ACD = 180° – 48° – 72°
+  
+= 60°
+ ∠ x = 180° – 60°
+   = 120°
+2-usul
+ ∠ CAB = 180° – 48° – 26° – 72°
+  
+= 34°
+ ∠ x = 180° – 26° – 34°
+  
+ = 120°
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   127
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   127
+13/11/24   14:51
+13/11/24   14:51
+
+128
+7  PSQ – to‘g‘ri burchakli uchburchak. PQR esa teng yonli uchburchak. PR = QR va  
+∠ PQR = 38°. SRQ – to‘g‘ri chiziq. ∠ SPR ni toping.
+ 
+ 
+Q
+S
+P
+R
+38°
+ 
+1-usul
+ ∠ RPQ = ∠ RQP 
+ 
+ = 38°
+ ∠ PRQ = 180° – 38° – 38°   
+      
+ = 104°
+ ∠ PRS = 180° – 104°   
+        
+ = 76°
+ ∠ SPR = 180° – 90° – 76°   
+      
+ = 14°
+ 
+ 
+ 
+2-usul
+ ∠ SPR = 180° – 90° – 38° – 38° 
+  
+ = 14°
+Uchburchakning 
+burchaklari yig‘indisi 
+180º ga teng.
+Qo‘shni burchaklar yig‘indisi 
+180º ga teng.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   128
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   128
+13/11/24   14:51
+13/11/24   14:51
+
+129
+Juftlikda ishlang
+Juftlikda ishlang. 
+Belgilangan noma’lum burchaklarni toping. Sherigingizga masalani yechish
+bosqichlarini tushuntiring.
+1  PQR va STU – teng yonli uchburchaklar.
+ 
+120°
+a
+P
+R
+Q
+ 
+28°
+b
+T
+U
+S
+ 
+ 
+ 
+2  BCD – to‘g‘ri chiziq va ABC – teng yonli uchburchak.
+ 
+ 
+A
+C
+B
+35°
+x
+D
+3  WYZ – to‘g‘ri chiziq. WXY – teng tomonli uchburchak va XYZ – teng yonli  
+ 
+ 
+ 
+uchburchak.
+ 
+ 
+ 
+ 
+X
+y
+z
+W
+Y
+Z
+4  ABC va ACD – teng yonli uchburchaklar. ∠BAD ni toping.
+ 
+ 
+A
+D
+C
+50°
+62°
+B
+ 
+ 
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   129
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   129
+13/11/24   14:51
+13/11/24   14:51
+
+130
+Bajaring va o‘rganing
+1  Quyidagi uchburchaklarning belgilangan noma’lum burchaklarini toping.
+ 
+a) 
+48°
+105°
+a
+  
+b) 
+55°
+b
+ 
+ 
+c) 
+136°
+22°
+c
+ 
+d) 
+46°
+d
+47°
+ 
+ 
+ 
+e) 
+e
+  
+f) 
+36°
+f
+  
+ 
+ 
+ 
+ 
+ 
+2  Har bir shakldagi belgilangan noma’lum burchaklarni toping. ABC, EFG va PQR –   
+ 
+to‘g‘ri chiziqlar.
+ 
+a) 
+64°
+g
+C
+A
+B
+D
+h
+ 
+b) 
+35°
+j
+k
+E
+F
+G
+H
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+c) 
+Q
+P
+R
+S
+26°
+m
+ 
+ 
+ 
+ 
+157–162
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) 
+Men uchburchaklarning turlarini farqlashni bilaman.  
+b) Men turli uchburchaklarning xossalarini bilaman.  
+c) 
+Men bir nechta uchburchaklarni o‘z ichiga olgan shakllardagi noma’lum  
+ 
+ 
+ 
+burchaklarni topishni bilaman.  
+   
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   130
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   130
+13/11/24   14:51
+13/11/24   14:51
+
+131
+163–164
+Mashq daftariga o‘ting
+O‘ylab ko‘ring
+Quyidagi shaklda ikkita uchburchak tasvirlangan. ABC – teng yonli uchburchak va  
+DBC – teng tomonli uchburchak. ∠ ACD ni toping.
+ 
+A
+40°
+B
+C
+D
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   131
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   131
+13/11/24   14:51
+13/11/24   14:51
+
+Muhokama qiling
+ Bolalar rasmlar ko‘rgazmasida.
+Bu to‘rtburchaklar
+qanday xossalarga ega?
+Parallelogramm, romb va 
+trapetsiya
+13
+Mening savatcham ham 
+to‘rtburchaklardan 
+yasalgan.
+Jasur, men 
+to‘rtburchaklardan 
+ba’zi hayvonlarning 
+shaklini yasadim.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   132
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   132
+13/11/24   14:51
+13/11/24   14:51
+
+133
+Eslang
+Kvadrat va to‘g‘ri to‘rtburchakning xossalari
+Kvadrat va to‘g‘ri to‘rtburchakning xossalari
+Kvadrat va to‘g‘ri to‘rtburchak eng sodda to‘rtburchaklar hisoblanadi.
+Shakl
+Xossalari
+Kvadratning xossalari:
+a) 
+4 ta to‘g‘ri burchagi bor;
+b) 
+4 ta teng tomoni bor;
+c) 
+qarama-qarshi tomonlari parallel. 
+To‘g‘ri to‘rtburchakning xossalari:
+a) 
+4 ta to‘g‘ri burchagi bor;
+b) 
+qarama-qarshi tomonlari teng;
+c) 
+qarama-qarshi tomonlari parallel.
+165–166
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   133
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   133
+13/11/24   14:51
+13/11/24   14:51
+
+134
+Parallelogramm 
+Parallelogramm 
+Quyidagi to‘rtburchakka parallelogramm deyiladi. 
+B
+A
+C
+D
+a
+b
+d
+c
+Juftlikda ishlang. 
+Ustozingiz bergan qog‘ozdan parallelogrammni qirqib oling. 
+Parallelogrammning xossalarini ayting.
+1  Katakli daftarga ABCD parallelogrammni joylashtiring.
+ 
+ 
+ 
+B
+A
+C
+D
+a
+b
+d
+c
+ 
+AB tomoni DC tomoniga parallelmi? 
+ 
+AD tomoni BC tomoniga parallelmi? 
+Parallelogramm tomonlarining 
+uzunligi haqida nima deyish 
+mumkin? 
+Parallelogrammning qanday 
+xossalari bor?
+Parallelogramm, romb va trapetsiyaning xossalari
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   134
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   134
+13/11/24   14:51
+13/11/24   14:51
+
+135
+2  Parallelogrammni ikki bo‘lakka bo‘ling. Chizmadagi kabi c burchak ustiga  
+a burchakni va b burchak ustiga d  burchakni qo‘ying.
+ 
+qirqing
+c
+b
+a
+d
+ 
+∠ a  = ∠c tenglik to‘g‘rimi? ∠b = ∠d  tenglik-chi?
+3  Ikkita parallelogrammni shtrix chiziq bo‘yicha qirqing. Keyin qirqilgan 
+qismlarni rasmdagidek joylashtiring.
+ 
+a) 
+a
+b
+d
+c
+a
+b
+d
+c
+qirqing
+ 
+b) 
+a
+b
+d
+c
+a
+b
+d
+c
+qirqing
+ 
+ 
+∠ a + ∠ b = 180° tenglik to‘g‘rimi?  ∠ c + ∠ d = 180° tenglik to‘g‘rimi?  
+ 
+ 
+∠ a + ∠ d = 180° tenglik to‘g‘rimi? ∠ b + ∠ c = 180° tenglik to‘g‘rimi?
+Burchaklarni 
+o‘lchashda 
+transportirdan 
+foydalanishingiz 
+mumkin.
+Parallelogrammning bir tomoniga yopishgan 
+burchaklari yig‘indisi haqida nima deyish 
+mumkin?
+a
+b
+d
+c
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   135
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   135
+13/11/24   14:51
+13/11/24   14:51
+
+136
+167–168
+Mashq daftariga o‘ting
+Qarang va o‘rganing
+Parallelogramm quyidagi xossalarga ega to‘rtburchakdir.
+Parallelogramm
+Xossalari
+B
+A
+C
+D
+Qarama-qarshi tomonlari teng.
+AB = DC
+AD = BC
+Qarama-qarshi tomonlari parallel.
+AB || DC
+DA || CB
+a
+b
+d
+c
+B
+A
+C
+D
+Qarama-qarshi burchaklari teng.
+∠ a = ∠ c
+∠ b = ∠ d
+Har bir tomoniga yopishgan 
+burchaklari yig‘indisi 180° ga teng.
+∠ a + ∠ b = 180°
+∠ c + ∠ d = 180°
+∠ a + ∠ d = 180°
+∠ b + ∠ c = 180°
+Bajaring va o‘rganing
+WXYZ – parallelogramm.
+X
+W
+Y
+Z
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a) 
+WX = 
+ va WZ = 
+ 
+b) 
+WX || 
+ va WZ || 
+ 
+c) 
+∠ XWZ = ∠
+ va ∠ WXY = ∠
+ 
+d) 
+∠ XWZ + ∠
+ = 180° 
+e) 
+∠ XWZ + ∠
+ = 180°
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   136
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   136
+13/11/24   14:51
+13/11/24   14:51
+
+137
+Romb 
+Romb 
+Quyidagi to‘rtburchakka romb deyiladi.
+E
+G
+H
+F
+h
+e
+g
+f
+Juftlikda ishlang.
+Ustozingiz bergan qog‘ozdan rombni qirqib oling. 
+Rombning xossalarini ayting.
+1  EFGH rombni katak daftarga joylashtiring.
+ 
+E
+G
+H
+F
+h
+e
+g
+f
+ 
+HE tomon GF tomonga parallelmi? EF tomon HG tomonga parallelmi? 
+Romb tomonlarining 
+uzunliklari haqida nima 
+deyish mumkin?
+Romb qanday xossalarga ega?
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   137
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   137
+13/11/24   14:51
+13/11/24   14:51
+
+138
+2  EFGH rombni quyidagi rasmda ko‘rsatilganidek buklang.
+ 
+ 
+E
+G
+H
+F
+h
+f
+e
+g
+hf
+e
+g
+ 
+ 
+∠ e = ∠ g va ∠ f = ∠ h tengliklar to‘g‘rimi?
+3  Ikkita rombni shtrix chiziq bo‘yicha qirqing. Keyin bo‘laklarni rasmda 
+ko‘rsatilganidek burchaklarini moslab joylashtiring.
+ 
+a) 
+h
+f
+e
+g
+h
+f
+e
+g
+qirqing
+ 
+b) 
+qirqing
+h
+f
+e
+g
+e
+h
+g
+f
+ 
+ 
+ 
+∠ e + ∠ f = 180°  va ∠ g + ∠ h = 180° tengliklar to‘g‘rimi? 
+ 
+ 
+∠ e + ∠ h = 180°  va ∠ f + ∠ g = 180° tengliklar to‘g‘rimi? 
+Rombning 
+burchaklari haqida 
+nima deyish mumkin?
+Rombning bir tomoniga yopishgan burchaklari 
+yig‘indisi haqida nima deyish mumkin?
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   138
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   138
+13/11/24   14:51
+13/11/24   14:51
+
+139
+Qarang va o‘rganing
+Romb quyidagi xossalarga ega to‘rtburchakdir.
+Romb
+Xossalari
+E
+G
+H
+F
+4 ta tomoni teng.
+ EF = FG = GH = EH 
+Qarama-qarshi tomonlari parallel.
+HE || GF
+EF || HG
+E
+G
+H
+F
+e
+g
+f
+h
+Qarama-qarshi burchaklari teng.
+ 
+ ∠ e = ∠ g
+ 
+∠ f = ∠ h
+Bir tomoniga yopishgan burchaklari 
+yig‘indisi 180° ga teng.
+ ∠ e  + ∠ f = 180°
+ ∠ h + ∠ g = 180°
+ ∠ e + ∠ h = 180°
+ ∠ f  + ∠ g = 180°
+169–170
+Mashq daftariga o‘ting
+Bajaring va o‘rganing
+PQRS – romb.
+ 
+p
+q
+s
+r
+R
+Q
+S
+P
+ 
+ 
+ 
+ a) 
+PQ = QR = 
+ = 
+b) 
+PQ || 
+ va PS || 
+c) 
+∠ p = ∠
+ va ∠q = ∠
+d) 
+∠ p + ∠q = 
+ va ∠ p + ∠ s = 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   139
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   139
+13/11/24   14:51
+13/11/24   14:51
+
+140
+Trapetsiya
+Trapetsiya
+Quyidagi to‘rtburchakka trapetsiya deyiladi.
+P
+S
+R
+Q
+p
+q
+s
+r
+Juftlikda ishlang.
+Ustozingiz bergan qog‘ozdan trapetsiyani  qirqib oling. 
+Trapetsiyaning xossalarini kashf qiling.
+1  PQRS trapetsiyani katak daftarga joylashtiring. 
+ 
+P
+S
+R
+Q
+p
+q
+s
+r
+ 
+PQ tomoni SR tomoniga parallelmi? PS tomoni QR tomoniga parallelmi?
+ 
+Trapetsiyaning parallel tomonlari – uning asoslari, parallel bo‘lmagan 
+tomonlari esa uning yon tomonlari deb ataladi. 
+2  Trapetsiyani shtrix chiziq bo‘ylab qirqing va hosil bo‘lgan qismlarni rasmda 
+ko‘rsatilganidek joylashtiring.
+ 
+qirqish
+p
+q
+s
+r
+s
+r
+p
+q
+qirqish
+ 
+ 
+ 
+∠p  + ∠s = 180°  tenglik to‘g‘rimi?  ∠q + ∠r = 180°  tenglik-chi? 
+Trapetsiya tomonlarining 
+uzunliklari haqida nima deyish 
+mumkin?
+Trapetsiyaning har bir yon tomoniga yopishgan 
+burchaklar yig‘indisi haqida nima deyish mumkin?
+Trapetsiyaning qanday 
+xossalari bor?
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   140
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   140
+13/11/24   14:51
+13/11/24   14:51
+
+141
+171–172
+Mashq daftariga o‘ting
+Qarang va o‘rganing
+Trapetsiya quyidagi xossalarga ega to‘rtburchakdir.
+Trapetsiya
+Xossalari
+P
+S
+R
+Q
+p
+q
+s
+r
+Trapetsiya bir juft parallel tomonlarga ega.
+PQ || SR
+Trapetsiyaning yon tomonlarning har biriga 
+yopishgan burchaklar yig‘indisi 180° ga 
+teng.
+ ∠ 
+ ∠ p + ∠ 
+∠ s = 180°
+ ∠ 
+∠ q + ∠ 
+∠ r = 180°
+Bajaring va o‘rganing
+1  ABCD – ikkita to‘g‘ri burchagi bor trapetsiya.
+ 
+ 
+A
+D
+C
+B
+ 
+a) 
+AB || 
+ 
+ 
+ 
+b) 
+∠ BAD + ∠ ADC = 
+°
+ 
+ 
+ 
+c) 
+∠ ABC + ∠ BCD = 
+°
+2  EFGH trapetsiyada EH = FG.
+ 
+ 
+E
+H
+G
+F
+ 
+a) 
+EF || 
+ 
+ 
+ 
+b) 
+∠ FEH + ∠ EHG = 
+° 
+ 
+ 
+ 
+c) 
+∠ EFG + ∠ FGH = 
+°
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   141
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   141
+13/11/24   14:51
+13/11/24   14:51
+
+142
+Juftlikda ishlang
+To‘rtburchaklarning xossalarini solishtiring va Muhokama qiling. 
+Ularning o‘xshash va farqli jihatlari nimada?
+Har bir shaklga mos xossaga  ✓ belgisini qo‘ying.
+Xossa
+To‘g‘ri 
+to‘rtburchak
+Kvadrat
+Parallelogramm
+Romb
+Trapetsiya
+Barcha 
+tomonlari teng
+Qarama-qarshi 
+tomonlari teng
+Faqat bitta 
+qarama-qarshi 
+tomonlari 
+juftligi o‘zaro 
+parallel
+Qarama-qarshi 
+tomonlari 
+parallel
+4 ta burchagi 
+ham to‘g‘ri 
+burchak
+Qarama-qarshi 
+burchaklari teng
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   142
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   142
+13/11/24   14:51
+13/11/24   14:51
+
+143
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+To‘g‘ri to‘rtburchak, kvadrat, parallelogramm, romb va trapetsiyadan yasalgan turli 
+obyektlarning rasmlarini to‘plang. Rasmlarni sinfxonangiz devoriga osib qo‘ying. 
+Sinfdoshlaringizdan qanday to‘rtburchaklar tasvirlanganini so‘rang.
+Guruh bo‘lib ishlang.
+Quyidagi shakllarni yasash uchun tangram shakllarning kamida ikkitasidan 
+foydalaning.
+a) 
+parallelogramm
+b) romb
+c) 
+trapetsiya
+Namuna
+ko‘prik
+belgi
+surat ramkasi
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   143
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   143
+13/11/24   14:51
+13/11/24   14:51
+
+144
+Qarang va o‘rganing
+Katak daftarda parallelogramm, romb va trapetsiya chizish
+Katak daftarda parallelogramm, romb va trapetsiya chizish
+1  Shunday ABCD parallelogramm chizing: unda AD = 6 cm, BC = 6 cm,  AD || BC va                     
+AB || DC bo‘lsin.
+ 
+1-qadam  Uzunligi 6 cm bo‘lgan AD  
+2-qadam  ABCD parallelogramm hosil   
+ 
+ 
+kesma chizing. Keyin AD  
+ 
+qilish uchun AB va DC
+ 
+ 
+ 
+kesmaga parallel BC  
+ 
+kesmalarni chizing.
+ 
+ 
+ 
+kesma chizing. 
+ 
+ 
+   
+1 cm
+1 cm
+A
+D
+B
+C
+A
+D
+B
+C
+ 
+ 
+2  Shunday EFGH romb chizing: unda EF || HG va EH || FG bo‘lsin.
+ 
+1-qadam  Rasmdagidek uzunlikdagi  
+2-qadam    EF kesmaga teng va unga
+ 
+ 
+ EF va EH kesmalarni chizing.   
+parallel bo‘lgan HG kesmani  
+ 
+ 
+ 
+chizing. EFGH romb hosil 
+ 
+ 
+ 
+ 
+qilish uchun FG kesmani 
+ 
+ 
+ 
+ 
+chizing.  
+ 
+   
+1 cm
+1 cm
+E
+H
+F
+E
+H
+F
+G
+To‘rtburchaklarni chizish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   144
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   144
+13/11/24   14:51
+13/11/24   14:51
+
+145
+3  Shunday PQRS trapetsiya chizing: unda PS = 5 cm, QR = 8 cm va PS || QR bo‘lsin.
+ 
+   
+ 
+    
+1 cm
+1 cm
+P
+S
+Q
+R
+P
+S
+Q
+R
+Juftlikda ishlang
+1  Katak daftarga berilgan kesmalarni ko‘chiring va shaklni to‘liq chizing.
+ 
+a) 
+D
+A
+B
+ 
+b) 
+G
+H
+E
+ 
+ 
+ABCD parallelogramm 
+ 
+EFGH trapetsiya, 
+ 
+ 
+ 
+ 
+bunda EH || FG.
+2  Do‘stingiz bilan quyidagi shakllarni katak daftarda turli o‘lcham va ko‘rinishda 
+chizing. Do‘stingizning chizmasini tekshiring.
+ 
+a) 
+parallelogramm      
+b) 
+romb 
+c) 
+trapetsiya
+ 
+ 
+ 
+Misol
+ 
+5 cm uzunlikdagi PS kesma
+chizing. Keyin PS kesmaga 
+parallel va 8 cm uzunlikdagi 
+QR kesma chizing.  
+ 
+PQRS trapetsiya hosil qilish 
+uchun PQ va SR kesmalarni 
+chizing.
+1-qadam
+2-qadam
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   145
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   145
+13/11/24   14:51
+13/11/24   14:51
+
+146
+Qarang va o‘rganing
+Berilgan o‘lchamlari bo‘yicha parallelogramm, romb va 
+Berilgan o‘lchamlari bo‘yicha parallelogramm, romb va 
+trapetsiya chizish
+trapetsiya chizish
+1  Shunday ABCD parallelogramm chizing: unda AB = 3 cm, BC = 5 cm va ∠ ABC = 50° 
+bo‘lsin.
+     
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+B
+C
+5 cm
+ 
+ 
+ 
+ 
+ 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+C
+B
+5 cm
+C
+B
+5 cm
+A
+3 cm
+50°
+ 
+   
+ 
+ 
+ 
+ 
+ 
+     
+ 
+      
+ 
+      
+C
+B
+A
+3 cm
+50°
+C
+B
+5 cm
+A
+3 cm
+50°
+D
+ 
+     
+Chizma
+50°
+5 cm
+A
+D
+C
+3 cm
+B
+5 cm uzunlikdagi BC kesma chizing.
+Transportirni B nuqtaga qo‘ying. B nuqtadan 50° li burchak hosil qiling. 
+So‘ng 3 cm uzunlikdagi AB kesma chizing.
+Chizg‘ich va uchburchakli chizg‘ich yordamida BC kesmaga parallel va      
+5 cm uzunlikdagi AD kesma chizing. Parallelogramm hosil qilish uchun  
+C va D nuqtalarni tutashtiring.
+1-qadam
+2-qadam
+3-qadam
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   146
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   146
+13/11/24   14:51
+13/11/24   14:51
+
+147
+2  WXYZ trapetsiya chizing: unda WX = XY = 4 cm, ∠ WXY = 110° va ∠ XYZ = 120°,                  
+WZ || XY bo‘lsin.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+X
+Y
+4 cm
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+Y
+X
+4 cm
+W
+110°
+Y
+X
+4 cm
+4 cm
+Chizma
+4 cm
+W
+Z
+Y
+4 cm
+X
+110° 120°
+4 cm uzunlikdagi XY kesma chizing.
+1-qadam
+Transportirni X nuqtaga qo‘ying.
+X nuqtadan 110° li burchak hosil qiling. So‘ng 4 cm uzunlikdagi 
+WX kesma chizing.
+2-qadam
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   147
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   147
+13/11/24   14:51
+13/11/24   14:51
+
+148
+    
+ 
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+0
+W
+110°
+Y
+X
+4 cm
+120°
+W
+110°
+Y
+X
+4 cm
+120°
+4 cm
+4 cm
+    
+ 
+ 
+    
+W
+110°
+Y
+X
+4 cm
+120°
+Z
+W
+Y
+120°
+4 cm
+Z
+4 cm
+X
+4 cm
+     
+ 
+   
+Rombni xuddi parallelogrammdek 
+chizish mumkin.
+Rombni qanday chizish 
+mumkin?
+Transportirni Y nuqtaga qo‘ying. Y nuqtada 120° li burchak hosil qiling.
+3-qadam
+Chizg‘ich va uchburchakli chizg‘ich yordamida XY kesmaga parallel  
+WZ kesma chizing.
+4-qadam
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   148
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   148
+13/11/24   14:51
+13/11/24   14:51
+
+149
+Guruh bo‘lib ishlang. 
+Dastlab har bir shaklni chamalab chizing. 
+Keyin chizg‘ich, transportir va uchburchakli chizg‘ich yordamida shakllarni qaytadan 
+aniq chizing.
+a) 
+ABCD parallelogramm
+ 
+AB = 5 cm, AD = 4 cm, ∠ BAD = 45°
+b) EFGH romb
+         HG = 4 cm, ∠ GHE = 60°
+c) 
+ABCD trapetsiya 
+      AB = 6 cm, AD = 4 cm, ∠ DAB = 80°, ∠ ABC = 110°
+173–176
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) 
+Men parallelogramm, romb va trapetsiyaning xossalarini bilaman.  
+b) 
+Men katak daftarda parallelogramm, romb va trapetsiyani chizishni bilaman.  
+c) 
+Men berilgan o‘lchamlari bo‘yicha parallelogramm, romb va trapetsiyani  
+ 
+chizishni bilaman.  
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   149
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   149
+13/11/24   14:51
+13/11/24   14:51
+
+150
+Qarang va o‘rganing
+1  Quyidagi parallelogrammlarning belgilangan noma’lum burchaklarini toping. 
+    
+a) 
+65°
+c
+A
+B
+D
+C
+ 
+ 
+ 
+ 
+ 
+     ∠ c = 65°
+ 
+b) 
+120°
+h
+g
+f
+E
+H
+F
+G
+ 
+ 
+           
+ 
+ 
+ 
+∠ g  = 120° 
+ 
+ 
+∠ h  = 180° – 120°   
+ 
+         
+ = 60° 
+ 
+ 
+∠ h = ∠f   
+ 
+ 
+ 
+ = 60°  
+Qolgan burchaklarni 
+topish mumkinmi?
+∠ f  va ∠ h – qarama-qarshi 
+burchaklar.  
+Demak, ∠ f = ∠ h va ∠ g = 120°.
+Bir tomonga yopishgan 
+burchaklari yig‘indisi 180° ga teng.
+To‘rtburchakning noma’lum burchaklarini topish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   150
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   150
+13/11/24   14:52
+13/11/24   14:52
+
+151
+2  PQRS – romb va ∠ QRS = 135°. ∠ p, ∠ q va ∠ s ni toping.
+    
+p
+135°
+q
+s
+S
+R
+Q
+P
+ 
+ 
+∠ p = 135°
+ 
+∠ q = 180° – 135°
+ 
+ 
+= 45°
+ 
+∠ s = ∠ q
+ 
+ 
+= 45°
+3  ABCD trapetsiyada AB || DC. ∠ a va ∠ c ni toping.
+    
+78°
+c
+125°
+a
+B
+A
+C
+D
+ 
+ 
+ 
+ 
+∠ a = 180° – 78°   
+ 
+     = 102° 
+ 
+∠ c = 180° – 125°   
+ 
+      = 55° 
+Rombning qarama-qarshi burchaklari teng. 
+Qolgan ikkita burchagini topish mumkinmi?
+Yon tomoniga yopishgan 
+burchaklar yig‘indisi 180° ga teng.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   151
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   151
+13/11/24   14:52
+13/11/24   14:52
+
+152
+4  PQRS – parallelogramm. ∠p ni toping.
+ 
+ 
+ 
+ 
+Q
+P
+R
+S
+p
+51°
+ 
+  
+  
+ 
+ 
+∠ QRS = 180° – 90° – 51°
+ 
+ 
+ 
+ = 39°
+ 
+ 
+ 
+∠ p = ∠ QRS 
+ 
+ 
+ 
+ = 39°
+5  EFGH rombda  ∠ FEH = 40°. ∠ FHG ni toping. 
+    
+ 
+H
+40°
+F
+G
+E
+ 
+ 
+ 
+ 
+∠ FGH = ∠ FEH
+ 
+ 
+ = 40°
+ 
+ 
+180° – 40° = 140°
+ 
+ 
+∠ FHG = 140° ÷ 2
+            
+ = 70°
+ 
+ 
+Parallelogrammning qarama-
+qarshi burchaklari teng.
+Uchburchakning 
+burchaklari yig‘indisi 180° 
+ga teng.
+GH = GF bo‘lgani uchun HFG teng 
+yonli uchburchakdir.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   152
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   152
+13/11/24   14:52
+13/11/24   14:52
+
+153
+6  ABCD trapetsiyada AB || DC. Agar ACD teng yonli uchburchak bo‘lsa, ∠ y  ni toping.
+ 
+A
+y
+100°
+74°
+B
+D
+C
+ 
+∠ DAC = 74°  
+ 
+ 
+ 
+∠ ACD  = 180° – 74° – 74°
+ 
+ 
+ 
+ 
+ = 32° 
+ 
+ 
+ 
+ 
+∠ y = 180° – 100° – 32°
+ 
+ 
+ 
+ 
+ = 48°
+ 
+ 
+ 
+ 
+7  EFGH trapetsiyada EF || HG. ∠ x ni toping.
+ 
+x
+30°
+126°
+F
+E
+G
+H
+ 
+∠ x = 180° – 126° – 30°
+ 
+ 
+ 
+ 
+ = 24°
+ 
+ 
+  
+8  ABCD – romb. ∠ ABC ni toping.
+ 
+ 
+ 
+ 
+∠ ADC = 360° – 280°
+ 
+ 
+ 
+ 
+ = 80°
+ 
+D
+C
+B
+A
+280°
+ 
+ ∠ ABC = 80° 
+Trapetsiyaning yon tomoniga yopishgan 
+burchaklari yig‘indisi  
+180° ga teng. 
+126° + 30° + ∠ x = 180°
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   153
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   153
+13/11/24   14:52
+13/11/24   14:52
+
+154
+To‘rtburchakning barcha 
+burchaklari yig‘indisi 
+nechaga teng?
+Juftlikda ishlang
+Navbati bilan noma’lum burchaklarni toping. 
+Javobni qanday topganingizni do‘stingizga tushuntirib bering.
+a) 
+ABCD parallelogrammda ∠ ABC = 50° va ∠ ADB = 25°. ∠ ADC va ∠ BCD ni toping.
+ 
+ 
+ 
+A
+C
+50°
+25°
+D
+B
+b) 
+PQRS rombda ∠ PQR = 48° va ∠ PSQ = 24°. ∠ PSR va ∠ QRS ni toping.
+ 
+ 
+ S
+R
+Q
+P
+24°
+48°
+c) 
+WXYZ trapetsiyada WX || ZY. Agar WXY – teng yonli uchburchak, WX = XY va                 
+∠ WXY = 110° bo‘lsa, ∠ y  ni toping.
+ 
+W
+y
+110°
+X
+Z
+Y
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   154
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   154
+13/11/24   14:52
+13/11/24   14:52
+
+155
+Bajaring va o‘rganing
+1  Belgilangan noma’lum burchaklarni toping.
+    
+a) 
+ABCD – parallelogramm. 
+b) 
+ABCD – parallelogramm. 
+ 
+ 
+ 
+b
+118°
+a
+B
+A
+C
+D
+ 
+ 
+C
+A
+147°
+b
+D
+B
+E
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2  Quyidagi romblarning belgilangan noma’lum burchaklarini toping.
+ 
+a) 
+B
+D
+A
+C
+a
+d
+b
+137°
+ 
+b) 
+S
+P
+Q
+s
+r
+55°
+R
+ 
+ 
+ 
+3  Quyidagi trapetsiyalarning kichik harf bilan belgilangan noma’lum burchaklarini 
+toping.
+ 
+a) 
+d
+110°
+G
+E
+H
+F 
+b) 
+PQ va RST – to‘g‘ri chiziqlar.
+ 
+ 
+  
+ 
+T
+R
+Q
+P
+148°
+e
+S
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   155
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   155
+13/11/24   14:52
+13/11/24   14:52
+
+156
+ 
+c) 
+C
+B
+A
+D
+75°
+130°
+j
+ d) 
+ 
+F
+E
+D
+H
+k
+m
+125°
+G
+ 
+e) 
+K
+J
+a
+65°
+23°
+M
+50°
+L
+N
+ 
+f) 
+ 
+ 
+  
+    
+P
+78°
+88°
+s
+Q
+R
+S
+177–180
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+Men parallelogramm, romb va trapetsiyalarning noma’lum burchaklarini 
+topishni bilaman.   
+O‘ylab ko‘ring
+Rasmda AB || DC bo‘lgan ABCD trapetsiya berilgan. ADG – teng yonli uchburchak. 
+AD = AG va ∠ ADG = 65°. ∠ x ni toping.
+C
+B
+65°
+x
+G
+A
+D
+181–182
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   156
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   156
+13/11/24   14:52
+13/11/24   14:52
+

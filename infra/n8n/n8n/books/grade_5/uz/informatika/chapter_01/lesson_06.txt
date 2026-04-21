@@ -1,0 +1,62 @@
+# Matnli hujjat bilan ishlash — 6-dars
+
+14
+Hujjat bilan ishlashda ko‘plab tugmalardan foydalaniladi. Ularning aksariyati
+ish oynasining yuqorisida, ekranning Tasma deb ataluvchi qismida
+joylashadi. Tugma — kichik tasvir, soʻz yoki tasvir va so‘z birikmasidan iborat
+boʻlishi mumkin. Siz Print va Save tugmalaridan foydalanishni o‘rganasiz.
+Tasmaning yuqori qismida File, Home, Insert, Draw va Design kabi turli
+soʻzlar bor. Bu so‘zlarning har birini tanlab ochsangiz, tasmada turli buyruq
+tugmalari ko‘rinadi.
+Barcha tugmalarni bitta maydonga joylashtirish deyarli imkonsiz. Shuning
+uchun tasma bir nechta menyu bo‘limlariga ajratilgan. Menyu bo‘limlarining
+tugmalari bir-birini takrorlamaydi va ularni farqlab olish qiyin emas.
+Spell check tugmasi
+Hujjatga matn kiritilayotganda so‘zlarning imlosini tekshirish kerak. Buning
+uchun Spelling & Grammar (faqat ingliz tilida yozilgan matn uchun)
+buyrug‘idan foydalaniladi.
+Imloni tekshirish tugmasi Review menyu bo‘limida joylashgan.
+Hujjatdagi matnning imlo xatolarini tekshirish uchun matn kursori satr
+boshida turishi kerak. Shundan so‘ng Spelling & Grammar tugmasi
+bosiladi.
+4-amaliy ko‘nikma
+Tasma: sahifa
+yuqorisidagi
+maydon. Unda
+menyu bo‘limlarini
+topish mumkin.
+Print: elektron
+hujjatning
+qog‘oz nusxasini
+printerdan
+chiqarish buyrug‘i.
+Kalit soʻzlar
+
+@edurtm_uz
+
+15
+Matnli hujjat bilan ishlash
+Hujjatda imlo xatolari bo‘lmasa, ekranga Spelling and grammar check is
+complete xabari chiqadi.
+Hujjatda imlo xatolari bo‘lsa, ekranning o‘ng tarafida tahrir qilish oynasi
+ochiladi. Bu oynadan so‘zning to‘g‘ri yozilgan variantlarini tanlab olish
+mumkin.
+To‘g‘ri yozilgan so‘zni qo‘llash uchun sichqoncha kursori tanlangan so‘z
+ustiga keltiriladi va sichqonchaning chap tugmasi bir marta bosiladi.
+Matndagi imlo xatolarini tekshirish funksiyasi shu usulda matndagi barcha
+so‘zlarni tekshiradi.
+Matn bilan ishlash dasturining bu funksiyasi grammatikani ham tekshiradi.
+Shuning uchun jumlani grammatik jihatdan to‘g‘ri tuzish variantlarini ham
+taklif etishi mumkin.
+Imlo xatolarini tekshirib bo‘lgandan so‘ng tahrir qilish oynasining yuqori o‘ng
+burchagidagi × belgisini bosish kerak.
+Print tugmasi
+Tayyor bo‘lgan hujjatni qog‘ozga chop etish mumkin.
+Chop etilgan hujjat o‘qituvchiga berish yoki keyinchalik foydalanish uchun
+qulay.
+Tasmadagi File menyu bo‘limini ochib, Print buyrug‘i tanlansa, hujjatni
+chop etish oynasi ochiladi.
+Oyna: ekrandagi
+ish maydonining
+bir qismi.
+Kalit soʻz

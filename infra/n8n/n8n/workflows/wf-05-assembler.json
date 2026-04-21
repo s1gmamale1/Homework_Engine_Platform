@@ -1,0 +1,83 @@
+{
+  "name": "NETS WF-05 Assembler",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "c3d4e5f6-0005-0005-0005-000000000001",
+      "name": "Start",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT phase_id, output_json FROM nets_phase_outputs WHERE lesson_id='{{ $json.lesson_id }}' ORDER BY CASE phase_id WHEN 'phase_0a' THEN 1 WHEN 'phase_0b' THEN 2 WHEN 'phase_1' THEN 3 WHEN 'phase_2' THEN 4 WHEN 'phase_3' THEN 5 WHEN 'phase_4' THEN 6 WHEN 'phase_5' THEN 7 WHEN 'phase_6' THEN 8 WHEN 'phase_7' THEN 9 END",
+        "options": {}
+      },
+      "id": "c3d4e5f6-0005-0005-0005-000000000002",
+      "name": "Load All Phases",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [460, 300],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "jsCode": "const task = $('Start').item.json;\nconst phaseRows = $('Load All Phases').all();\nconst fs = require('fs');\n\nconst phases = {};\nphaseRows.forEach(row => {\n  phases[row.json.phase_id] = row.json.output_json;\n});\n\nconst p0a = phases.phase_0a || {};\nconst p0b = phases.phase_0b || {};\nconst p1  = phases.phase_1  || {};\nconst p2  = phases.phase_2  || {};\nconst p3  = phases.phase_3  || {};\nconst p4  = phases.phase_4  || {};\nconst p5  = phases.phase_5  || {};\nconst p6  = phases.phase_6  || {};\nconst p7  = phases.phase_7  || {};\n\nlet md = [];\n\n// HEADER\nmd.push(`# NETS Uy Vazifasi — Matematika, ${task.grade}-sinf, 1-mavzu`);\nmd.push(`**Fan:** Matematika | **Sinf:** ${task.grade} | **Til:** ${task.lang} | **Maqsad:** PISA L1→L2 | **Boss HP:** 100 | **Vaqt:** 25-35 daqiqa`);\nmd.push('');\n\n// PHASE 0-A\nmd.push('---');\nmd.push('## PHASE 0-A: MAVZU KO\\'RIGI / Theme Preview');\nif (p0a.gate_quote) {\n  md.push(`> *\"${p0a.gate_quote.text}\"* — ${p0a.gate_quote.author}`);\n  md.push('*(5 soniya kutiladi...)*');\n  md.push('');\n}\n(p0a.panels || []).forEach(panel => {\n  md.push(`### ${panel.panel_number}-panel: ${panel.title}`);\n  md.push(panel.content);\n  md.push('');\n});\nif (p0a.bost_goal) {\n  md.push(`**📌 Bugungi Maqsad:** ${p0a.bost_goal}`);\n  md.push('');\n}\n\n// PHASE 0-B\nmd.push('---');\nmd.push('## PHASE 0-B: FLASH KARTALAR / Flash Cards');\n(p0b.cards || []).forEach(card => {\n  const icon = card.card_type === 'mistake' ? '⚠️' : '📋';\n  md.push(`- ${icon} **${card.front_text}** → ${card.back_text}`);\n});\nmd.push('');\nmd.push('**[ MENING UY VAZIFAMNI BOSHLASH ]**');\nmd.push('');\n\n// PHASE 1\nmd.push('---');\nmd.push('## PHASE 1: XOTIRA SPRINTI / Memory Sprint');\nmd.push('*≤2 daqiqa · Faqat bosish*');\nmd.push('');\n(p1.items || []).forEach(item => {\n  md.push(`${item.item_number}. ${item.question_text} ${item.tag || '[Bloom: L1 | PISA: L1]'}`);\n  if (item.options) {\n    item.options.forEach((opt, i) => md.push(`   ${String.fromCharCode(65+i)}) ${opt}`));\n  }\n  md.push(`   **✅ Javob:** ${item.correct_answer}`);\n  if (item.wrong_answer_feedback) md.push(`   *${item.wrong_answer_feedback}*`);\n  md.push('');\n});\n\n// PHASE 2\nmd.push('---');\nmd.push('## PHASE 2: HIKOYA REJIMI / Story Mode');\nmd.push('*5-7 daqiqa*');\nmd.push('');\n(p2.segments || []).forEach(seg => {\n  md.push(seg.narrative_text);\n  md.push('');\n  if (seg.checkpoint) {\n    const cp = seg.checkpoint;\n    md.push(`**Savol:** ${cp.question} ${cp.tag || '[Bloom: L1-L2 | PISA: L1-L2]'}`);\n    if (cp.options) cp.options.forEach((o,i) => md.push(`${String.fromCharCode(65+i)}) ${o}`));\n    md.push(`**✅ Javob:** ${cp.correct_answer}`);\n    md.push(`*${cp.explanation}*`);\n    md.push('');\n  }\n});\n\n// PHASE 3\nmd.push('---');\nmd.push('## PHASE 3: O\\'YIN TANAFFUSLARI / Game Breaks');\nmd.push('*6-9 daqiqa · 3 ta o\\'yin*');\nmd.push('');\n(p3.games || []).forEach(game => {\n  md.push(`### ${game.slot}-o'yin: ${game.game_name}`);\n  (game.items || []).forEach(item => {\n    if (item.question_or_prompt) {\n      md.push(`${item.item_number}. ${item.question_or_prompt} ${item.tag || '[Bloom: L1-L3 | PISA: L1-L2]'}`);\n    } else if (item.left_item) {\n      md.push(`${item.pair_number}. ${item.left_item} ↔ ${item.right_item}`);\n    }\n    if (item.correct_answer) md.push(`   **✅ Javob:** ${item.correct_answer}`);\n    md.push('');\n  });\n});\n\n// PHASE 4\nmd.push('---');\nmd.push('## PHASE 4: HAYOTIY VAZIFA / Real-Life Challenge');\nmd.push('*3-5 daqiqa*');\nmd.push('');\nif (p4.scenario_text) md.push(p4.scenario_text + '\\n');\nif (p4.w5h_scaffold) {\n  const w = p4.w5h_scaffold;\n  md.push('**W5H:**');\n  if (w.who) md.push(`- **Kim:** ${w.who}`);\n  if (w.what) md.push(`- **Nima:** ${w.what}`);\n  if (w.where) md.push(`- **Qayerda:** ${w.where}`);\n  if (w.why) md.push(`- **Nima uchun:** ${w.why}`);\n  if (w.how) md.push(`- **Qanday:** ${w.how}`);\n  md.push('');\n}\n(p4.questions || []).forEach(q => {\n  md.push(`${q.question_number}. ${q.question_text} ${q.tag || '[Bloom: L3-L4 | PISA: L2-L3]'}`);\n  if (q.wise_status_text) md.push(`   *${q.wise_status_text}*`);\n  md.push(`   **✅ Javob:** ${q.correct_answer}`);\n  md.push('');\n});\n\n// PHASE 5\nmd.push('---');\nmd.push('## PHASE 5: MUSTAHKAMLASH / Consolidation');\nmd.push('*2-3 daqiqa · Baholanmaydi*');\nmd.push('');\nif (p5.formula_warmup) {\n  md.push(`**Formula tekshiruvi:** ${p5.formula_warmup.formula_shown}`);\n  md.push('');\n}\nif (p5.technique_chosen) md.push(`**Usul:** ${p5.technique_chosen} — ${p5.technique_rationale || ''}`);\nif (p5.mnemonic_exercise) md.push('\\n' + p5.mnemonic_exercise);\nmd.push('');\n\n// PHASE 6\nmd.push('---');\nmd.push('## PHASE 6: YAKUNIY BOSS / Final Boss');\nmd.push(`*Boss HP: ${p6.boss_hp || 100} · 5-10 daqiqa*`);\nmd.push('');\n(p6.questions || []).forEach(q => {\n  md.push(`${q.question_number}. [${q.difficulty?.toUpperCase()} | ${q.damage_hp} HP] ${q.question_text} ${q.tag || ''}`);\n  md.push(`   *Yordam: ${q.hint_text}*`);\n  md.push(`   **✅ Javob:** ${q.correct_answer}`);\n  if (q.rubric) {\n    md.push(`   *Rubrika: To'liq=${q.rubric.full_credit} | Qisman=${q.rubric.partial_credit}*`);\n  }\n  md.push('');\n});\n\n// PHASE 7\nmd.push('---');\nmd.push('## PHASE 7: FIKRLASH / Reflection');\nmd.push('*2-3 daqiqa*');\nmd.push('');\nif (p7.session_summary) {\n  md.push('**Bugungi asosiy o\\'rganishlar:**');\n  p7.session_summary.forEach(s => md.push(`- ${s}`));\n  md.push('');\n}\nif (p7.bost_recall) {\n  md.push(`**📌 Maqsad yodga olish:** ${p7.bost_recall}`);\n  md.push('');\n}\n(p7.reflection_prompts || []).forEach(p => {\n  const text = typeof p === 'string' ? p : p.prompt_text;\n  md.push(`${p.prompt_number || '•'}. ${text}`);\n});\nmd.push('');\nif (p7.spaced_rep_schedule) {\n  const s = p7.spaced_rep_schedule;\n  md.push(`**Qayta ko'rish jadvali:** ${s.day1} → ${s.day3} → ${s.day7} → ${s.day21}`);\n}\nif (p7.third_renaissance_closing) {\n  md.push('');\nmd.push(`*${p7.third_renaissance_closing}*`);\n}\n\nconst finalMd = md.join('\\n');\nconst mdPath = `/home/node/nets/nets-output/${task.lesson_id}_homework.md`;\n\nreturn [{ json: { md_content: finalMd, md_path: mdPath, task_id: task.task_id, lesson_id: task.lesson_id } }];"
+      },
+      "id": "c3d4e5f6-0005-0005-0005-000000000003",
+      "name": "Assemble Homework",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $json.md_path }}",
+        "dataPropertyName": "md_content"
+      },
+      "id": "c3d4e5f6-0005-0005-0005-000000000004",
+      "name": "Save homework.md",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE nets_task_queue SET status='done', updated_at=now() WHERE task_id='{{ $json.task_id }}'",
+        "options": {}
+      },
+      "id": "c3d4e5f6-0005-0005-0005-000000000005",
+      "name": "Mark Done",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [1120, 300],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_session_log (task_id, stage, event, payload) VALUES ('{{ $json.task_id }}', 'assemble', 'success', '{\"md_path\": \"{{ $json.md_path }}\"}'::jsonb)",
+        "options": {}
+      },
+      "id": "c3d4e5f6-0005-0005-0005-000000000006",
+      "name": "Log Assembly",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [1340, 300],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    }
+  ],
+  "connections": {
+    "Start": {"main": [[{"node": "Load All Phases", "type": "main", "index": 0}]]},
+    "Load All Phases": {"main": [[{"node": "Assemble Homework", "type": "main", "index": 0}]]},
+    "Assemble Homework": {"main": [[{"node": "Save homework.md", "type": "main", "index": 0}]]},
+    "Save homework.md": {"main": [[{"node": "Mark Done", "type": "main", "index": 0}]]},
+    "Mark Done": {"main": [[{"node": "Log Assembly", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1"},
+  "active": false
+}

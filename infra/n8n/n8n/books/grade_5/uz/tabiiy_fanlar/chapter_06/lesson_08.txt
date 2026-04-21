@@ -1,0 +1,35 @@
+# VI bob — 8-dars
+
+Eritmani modda tuzilishi modeli yordamida
+qanday tavsiflash mumkin?
+Eritmalarni tavsiflash uchun modda tuzilishi modelidan foydalanishimiz mumkin.
+Eruvchi modda erituvchida eriydi va erituvchi bilan aralashadi.
+Daftaringizda 3-stakandagi eritmada eruvchi va erituvchi moddalar zarralarining
+joylashuvini tasvirlang.
+Eruvchi modda zarralari bir-biridan ajralib, erituvchi modda zarralari bilan
+birxilda aralashadi va eritma hosil qiladi.
+Eritmadan erigan modda qanday ajratib olinadi?
+Qattiq moddalar aralashmasini yoki qattiq va suyuq moddalar aralashmasini
+elakdan o'tkazish va filtrlash orqali bir-biridan ajratish mumkin.
+Erish - qaytar jarayon. Bu erigan moddani eritmadan ajratib olish mumkinligini
+bildiradi. Biroq bu ishni elakdan o'tkazish yoki filtrlash orqali amalga oshirib
+bo'lmaydi. Chunki erigan modda zarralari juda kichik bo'lgani sababli ular filtr
+qog'ozdan o'tib ketishi mumkin.
+70
+
+и ho^a erigan moddani eritmadan qanday ajratib olish mumkin?
+V Buni aniqlash uchun tadqiqot o'tkazing.
+Erigan moddani eritmadan qanday ajratib olish mumkinligini aniqlash uchun
+tadqiqot rejasini tuzing.
+Tadqiqot rejasini tuzishda quyidagilarni e’tiborga oling:
+•
+Qanday material vajihozlarni tanlaysiz? Ulardan qanday qilib
+to'g'ri foydalanasiz?
+•
+Tadqiqot davomida qanday xavflarga duch kelishingiz mumkin?
+Ularni qanday kamaytirasiz?
+Eritma tarkibidagisuv to‘Hq bug‘lanib ketganda idishda
+faqat eruvchi modda - tuz qoladi.
+Erigan moddani eritma tarkibidan suyuqlikni bug'latish orqali ajratib olish
+mumkin. Buni eritmani qizdirish yoki undagi suvto‘liq bug'lanib ketgunga qadar
+ochiq havoda qoldirish orqali amalga oshirish mumkin.

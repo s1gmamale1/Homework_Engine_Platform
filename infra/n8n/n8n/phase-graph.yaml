@@ -1,0 +1,66 @@
+phases:
+  - id: phase_0a
+    name: "Theme Preview"
+    depends_on: []
+    framework_ref: frameworks/unified/phase_0a.md
+    schema_ref: frameworks/schemas/phase_0a.json
+    game_refs: []
+
+  - id: phase_0b
+    name: "Flash Cards"
+    depends_on: []
+    framework_ref: frameworks/unified/phase_0b.md
+    schema_ref: frameworks/schemas/phase_0b.json
+    game_refs: []
+
+  - id: phase_1
+    name: "Memory Sprint"
+    depends_on: [phase_0a, phase_0b]
+    framework_ref: frameworks/unified/phase_1.md
+    schema_ref: frameworks/schemas/phase_1.json
+    game_refs: []
+
+  - id: phase_2
+    name: "Story Mode"
+    depends_on: [phase_1]
+    framework_ref: frameworks/unified/phase_2.md
+    schema_ref: frameworks/schemas/phase_2.json
+    game_refs: []
+
+  - id: phase_3
+    name: "Game Breaks"
+    depends_on: [phase_1]
+    framework_ref: frameworks/unified/phase_3.md
+    schema_ref: frameworks/schemas/phase_3.json
+    game_refs:
+      - frameworks/games/tile_match.md
+      - frameworks/games/codebreaker.md
+      - frameworks/games/tic_tac_toe.md
+
+  - id: phase_4
+    name: "Real-Life Challenge"
+    depends_on: [phase_2]
+    framework_ref: frameworks/unified/phase_4.md
+    schema_ref: frameworks/schemas/phase_4.json
+    game_refs: []
+
+  - id: phase_5
+    name: "Consolidation"
+    depends_on: [phase_2]
+    framework_ref: frameworks/unified/phase_5.md
+    schema_ref: frameworks/schemas/phase_5.json
+    game_refs: []
+
+  - id: phase_6
+    name: "Final Boss"
+    depends_on: [phase_4, phase_5]
+    framework_ref: frameworks/unified/phase_6.md
+    schema_ref: frameworks/schemas/phase_6.json
+    game_refs: []
+
+  - id: phase_7
+    name: "Reflection"
+    depends_on: [phase_6]
+    framework_ref: frameworks/unified/phase_7.md
+    schema_ref: frameworks/schemas/phase_7.json
+    game_refs: []

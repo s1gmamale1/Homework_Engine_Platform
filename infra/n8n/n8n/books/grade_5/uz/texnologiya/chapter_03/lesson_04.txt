@@ -1,0 +1,377 @@
+# Energiya va Mexatronika — 4-dars
+
+4-§.
+Loyiha ishi VA UNING BOSQICHLARI. Harakatlanuvchi
+sodda mexanizmLARNI LOYIHALASH VA YASASH
+Loyiha ishi – mustaqil bajariladigan ijodiy ish hisoblanadi. Bu ish Sizga ta’lim
+olish jarayonida olgan bilim va malakalaringizni nafaqat texnologiya darslarida, balki
+boshqa fanlarni o‘zlashtirishda ham namoyon qilish imkoniyatini beradi. Bu ishdagi
+muvaffaqiyatingiz ko‘p jihatdan loyiha ishi mavzusini to‘g‘ri tanlanganiga bog‘liq.
+Loyiha ishi quyidagi bosqichlarda olib boriladi:
+1. Tayyorgarlik bosqichi. Bu bosqichda loyiha ishi bo‘yicha ma’lumotlarni yig‘ib,
+tahlil qilish natijasida mavzu tanlanadi.
+2. Konstruktorlik bosqichi. Loyiha konstruksiyasini tayyorlash bo‘yicha
+talablar: mahsulot konstruksiyasini o‘rganish, tashqi ko‘rinishi va dizayni, loyiha
+eskizini ishlab chiqish.
+3. Texnologik bosqich. Mahsulotni tayyorlash bosqichlari ketma-ketligi bel­
+gi­lanadi yoki texnologik xaritasi ishlab chiqiladi. Mahsulotni ishlab chiqarishda
+zarur bo‘lgan asbob-uskuna va moslamalar tayyorlab olinadi.
+4. Mahsulotni tayyorlash bosqichi. Ish o‘rni tashkil qilinadi va xavfsizlik
+texnikasi qoidalariga amal qilgan holda ishlar bajariladi. Ish joyi yig‘ishtiriladi va ish
+yakunlanadi.
+5. Yakuniy bosqichda yasalgan buyumning taqdimoti o‘tkaziladi.
+Loyiha ishi bo‘yicha quyidagi namunalar bilan tanishib chiqing va o‘z loyiha
+ishingizni tayyorlang.
+3
+1
+2
+4
+5
+6
+7
+8
+
+206
+206
+1. Tayyorgarlik bosqichi.
+Loyiha ishi.  Mavzu: Harakatlanuvchi sodda gidravlik ekskavatorni
+loyihalash va yasash.
+2. Konstruktorlik bosqichi.
+I. Harakatlanuvchi sodda gidravlik ekskavator yasashda foydalanila­digan ma­
+te­riallar: yog‘och brusok (reyka), faner, shpris (2 ta 10 ml va 2 ta 20 ml), polimer
+naychasi, bolt-gayka, burama mixlar, neylon qisqich (xomut).
+II. Konstruktorlik yechimlar variantlari eskizi yoki maketi.
+Harakatlanuvchi sodda gidravlik ekska­vator maketi.
+3. Texnologik bosqich.
+Harakatlanuvchi sodda gidravlik ekskavator yasashning texnologik xaritasi
+23 cm
+12 cm
+11 cm
+T/r
+1
+2
+3
+4
+Ish
+ketma-ketligi
+Ish eskizi
+(yoki texnik
+rasmi)
+Asboblar
+Jihoz va
+moslama-
+lar
+О‘lchov va
+rejalash
+Ish
+Ekskavatorning
+ishchi qismlari uchun
+yog‘och brusoklar
+tayyorlanib, drel
+yordamida teshiklar
+ochiladi
+Ekskavator taglik
+qismi fanerdan
+11×12 cm o‘lchamda
+kesib olinadi
+Burama mixlar yor­
+damida tag­lik qismiga
+aso­siy tayanchlar
+mahkamlanadi
+Ekskavatorning kovshi
+tayanch qismlariga
+bolt-gaykalar
+yordamida mahkamlab
+qotiriladi
+chizg‘ich,
+metr,
+qalam
+–
+–
+arra
+otvyortka
+klyuch
+drel
+–
+burama mix
+bolt-gayka
+
+207
+207
+4. Mahsulotni tayyorlash bosqichi.
+Ish o‘rni tashkil qilinib, kerakli asbob-uskuna va xomashyolar bilan jihozlab
+olindi. Ekskavator texnologik xarita asosida xavfsizlik texnikasi qoidalariga amal
+qilgan holda yasaldi.
+5. Yakuniy bosqich.
+Harakatlanuvchi sodda gidravlik ekskavatorni ishlash tartibi va uning im­
+koniyatlari to‘g‘risida taqdimot o‘tkazildi.
+Loyiha ishi bosqichlari va berilgan loyiha ishi namunasidan kelib chiqqan holda
+batareya asosida, tok ishlab chi­qaruvchi energiya generatori asosida ishlaydigan
+ventilator yasashning texnologik xaritasi bo‘yicha mustaqil loyihalash va yasash
+ishlarini amalga oshirish mumkin.
+5
+6
+7
+8
+Kovshni ko‘tarib
+tushirish vazifasini
+bajaruvchi ishchi qismi
+kovsh tayanchi orasiga
+bolt-gayka yordamida
+birlashtiriladi hamda
+u taglik qismiga
+o‘rnatilgan asosiy
+tayanchlar orasiga
+gidravlik harakat­
+lanishini ta’minlash
+uchun 2 ta 10 ml va
+2 ta 20 ml shpris,
+polimer naychasi,
+neylon qisqich (xomut)
+olinadi
+Shpris va polimer
+naychalar birlashtirilib,
+ekskavatorga
+maxsus o‘rnatilgan
+teshiklardan o‘tkazilib
+Naychalar ekskavator
+tayanchlariga neylon
+qisqich (xomut)
+bilan mustahkamlab
+qo‘yiladi. Harakat­
+lanuvchi sodda
+gidravlik ekskavator
+tayyor bo‘ladi
+–
+–
+–
+–
+–
+–
+–
+shpris,
+polimer
+naycha,
+neylon
+qisqich
+(xomut)
+naycha
+
+208
+208
+1. Batareya asosida ishlaydigan ventilator yasashning
+texnologik xaritasi
+T/r
+1
+2
+3
+4
+Ish
+Ishni bajarish
+bo‘yicha
+ko‘rsatma
+lar
+Ish
+Yog‘och materialidan
+kvadrat shaklida
+10×5 cm li taglik
+tayyorlanadi
+15 cm o‘lchamda
+yog‘och reykadan
+asosiy tayanch va 10
+cm o‘lchamda taglik
+oyoq qismlari uchun
+brusok tayyorlanadi
+Tayyorlangan brusok
+burama mix bilan
+kvadrat shaklidagi
+taglikka qotirib
+mustahkamlanadi
+Ikki tomonlama
+yopishqoq lenta (yoki
+yelimli pistolet)
+asosida kvadrat
+shaklidagi taglikka
+biriktirilgan asosiy
+tayanch brusok va
+batareya ushlagichi
+oyoq qismlarga
+–
+–
+arra, jilvir
+qog‘oz
+–
+–
+–
+yopishqoq
+lenta,
+(yoki
+yelimli
+pistolet)
+
+209
+209
+5
+6
+7
+8
+9
+10
+Plastik idish qopqog‘i
+olinib, yuza qismi
+o‘rtasidan mix bilan
+teshik ochiladi. Yuza
+qismiga yaqin joydan
+pichoq yordamida
+kesib tashlanadi
+CD disk olinib, uning
+markaziga kesilgan
+qopqog‘i super
+yelim yordamida
+yopishtiriladi
+Sirkul uchi disk
+markaziga o‘rnatilib
+aylana chiziladi va
+chizilgan aylana
+8 ta qismga bo‘linadi.
+Qaychi yordamida
+ajratilgan qismlar
+markaz tomonga qarab
+kesiladi va bittadan
+oralatib 4 ta qism kesib
+tashlanadi
+Diskda qolgan 4 ta
+qismga bargsimon
+shakl berilib, olov
+yordamida qirralari
+kuydiriladi. Tayyor
+holga keltirilgan
+ventilator parragi
+tanlangan rangga
+bo‘yaladi
+DC markali 3–9 yoki
+12 voltli dvigatel
+tanlab olinadi
+Tayyorlangan
+dvigatelga yelimli
+pistolet yordamida
+o‘rnatiladi
+–
+–
+–
+–
+–
+–
+pichoq
+–
+qaychi,
+sirkul
+–
+–
+–
+mix
+super
+yelimi
+–
+bo‘yoq
+dvigatel
+pistolet
+14 – Texnologiya,  5-sinf
+
+210
+210
+11
+Ventilator parragi
+va unga biriktirilgan
+dvigatel yelimli
+tayyorlangan asosiy
+qismga o‘rnatiladi.
+Batareya ushlagichi
+simlari ulanib,
+yelimli pistolet
+yordamida dvigatelga
+–
+–
+2. Tok ishlab chiqaruvchi energiya generatori asosida ishlaydigan
+ventilator yasashning texnologik xaritasi
+T/r
+1
+2
+3
+Ish
+lar
+Ish
+DC markali 9 yoki 12
+voltli dvigatel tanlab
+Dvigatelga ulash
+uchun sim olinadi
+Olingan sim dvigatelga
+ulanadi va yelimli
+–
+–
+–
+–
+keskich
+sim
+pistolet,
+
+211
+211
+4
+5
+6
+7
+8
+9
+10
+Dvigatelni aylantirib
+tok hosil qilish
+uchun faner va qattiq
+simdan aylanma
+harakatlantiruvchi
+dasta tayyorlanadi
+Dasta dvigatelga
+yordamida о‘rnatiladi
+Ikkinchi DC markali 9
+yoki 12 voltli dvigatel
+Dvigatelga sim
+Ventilator uchun
+parrak tanlab olinadi
+Tanlangan ventilator
+parragi dvigatelga
+о‘rnatiladi
+Dvigatel simlari bir-
+biriga ulanadi. Tayyor
+bo‘lgan ventilator dastasi
+tez aylantirilib, ventilator
+ishlashi tekshiriladi
+–
+–
+–
+–
+–
+–
+arra,
+ombur
+–
+–
+–
+–
+–
+jilvir
+qog‘oz,
+faner,
+qattiq sim
+dasta,
+sim,
+parrak
+–
+
+212
+212
+MEXATRONIKA – LEGO EDUCATION
+“ODDIY MEXANIZMLAR”
+b
+o
+b
+-

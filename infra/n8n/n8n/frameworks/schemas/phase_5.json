@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase 5 Consolidation",
+  "type": "object",
+  "required": ["phase_id", "lesson_id", "lang", "technique", "content_structure", "exercises", "entry_card", "transition_line"],
+  "properties": {
+    "phase_id": { "const": "phase_5" },
+    "lesson_id": { "type": "string" },
+    "lang": { "type": "string", "enum": ["uz", "ru"] },
+    "technique": {
+      "type": "string",
+      "enum": ["memory_palace", "peg_system", "link_system", "radiant_summary", "major_system"]
+    },
+    "content_structure": {
+      "type": "string",
+      "enum": ["hierarchical", "sequential", "spatial", "discrete", "numeric"]
+    },
+    "entry_card": { "type": "string" },
+    "exercises": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["number", "title", "items", "interaction_model"],
+        "properties": {
+          "number": { "type": "integer" },
+          "title": { "type": "string" },
+          "items": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "object",
+              "required": ["label", "concept", "vivid_image"],
+              "properties": {
+                "label": { "type": "string" },
+                "concept": { "type": "string" },
+                "vivid_image": { "type": "string" }
+              }
+            }
+          },
+          "interaction_model": {
+            "type": "string",
+            "enum": ["drag_drop", "chain_assembly", "peg_pairing", "digit_word_conversion", "branch_assembly"]
+          }
+        }
+      }
+    },
+    "smashin_scope_score": { "type": "integer", "minimum": 0, "maximum": 12 },
+    "heritage_anchor": { "type": "boolean" },
+    "transition_line": { "type": "string" }
+  }
+}

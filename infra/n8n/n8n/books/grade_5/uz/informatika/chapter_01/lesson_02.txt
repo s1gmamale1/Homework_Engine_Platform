@@ -1,0 +1,52 @@
+# Matnli hujjat bilan ishlash — 2-dars
+
+8
+Odatda sichqonchaning ikkita ― chap va oʻng tugmasi boʻladi. Aksariyat
+hollarda chap tugmadan foydalaniladi. Uning vazifasi turli elementlarni
+belgilashdan iborat.
+Belgilash uchun sichqonchaning chap tugmasini bir yoki ketma-ket ikki
+marta bosish kerak.
+1.1-mashg‘ulot
+Kompyuteringiz ish stolidagi Microsoft Word ikonkasini ikki marta bosing va
+yangi hujjat yarating. Ekranda boʻsh sahifa ochiladi. Sichqoncha kursorini
+toping.
+Sichqoncha kursorini avval ekranning chap, keyin oʻng tomoniga
+harakatlantiring. Sichqoncha kursori Microsoft Word sahifasining ichida va
+tashqarisida turganida qanday o‘zgarish sezdingiz?
+Sichqoncha kursorini avval ekranning yuqori, keyin pastki qismiga olib
+boring.
+1.2-mashg‘ulot
+Microsoft Word hujjati sahifasining yuqori chap burchagidagi o‘chib-yonib
+turgan chiziqni toping. Bu chiziq matn kursori deb ataladi va sizga matn
+hujjatning qayeridan boshlab kiritilishini ko‘rsatadi.
+Sichqoncha kursorini sahifa markaziga harakatlantiring va chap tugmasini
+ikki marta bosing. Matn kursori sahifaning yuqorisidan markaziy qismiga
+o‘tganini koʻrasiz.
+Klaviaturadan foydalanish
+Elektron hujjatga matn kiritishda klaviaturadan foydalaniladi. Matn ekranda
+ko‘rinishi uchun klaviaturadagi tugmalar bosilishi kerak. Klaviaturaning turli
+tugmalarini bosish orqali matn terishni o‘rganasiz.
+2-amaliy ko‘nikma
+Belgilash:
+tahrirlanayotgan
+matnni rang bilan
+ajratish.
+Sichqoncha
+kursori:
+sichqoncha
+kursori
+qayerdaligini
+bildiruvchi ekran
+belgisi.
+Ekran: kiritilgan
+matnni koʻrish
+imkonini beruvchi
+kompyuter qismi.
+Kursor: matn
+oynasida o‘chib-
+yonuvchi belgi.
+U matn qayerga
+kiritilishini
+ko‘rsatadi.
+Kalit soʻzlar
+@edurtm_uz

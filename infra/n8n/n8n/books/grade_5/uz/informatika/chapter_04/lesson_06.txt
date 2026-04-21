@@ -1,0 +1,91 @@
+# Dasturlash — 6-dars
+
+82
+Turn burilish
+bloklari Motion
+menyusida
+joylashgan
+bo‘ladi. Blok oʻng
+tomonga suriladi
+va boshqa
+blok(lar) tagiga
+joylanadi.
+Maslahat
+Sprayt strelka
+koʻrsatgan
+tomonga
+buriladi. Burilish
+darajasining
+qiymati qanchalik
+katta bo‘lsa,
+burilish ham
+shunchalik katta
+bo‘ladi.
+6-amaliy ko‘nikma
+Spraytni turli yoʻnalishlarda harakatlantirish
+Sprayt o‘ng yoki chapga hamda ixtiyoriy burchakka burilish orqali turli
+yo‘nalishlarda harakatlanishi mumkin.
+Bu buyruqlar Spraytga oʻng (birinchisi) yoki chapga (ikkinchisi) burilish
+kerakligini aytadi.
+Katakdagi raqam obyekt buriladigan burchak darajasidir.
+Agar Spraytni 90 daraja chapga burish kerak bo‘lsa, ikkinchi variant
+tanlanadi va qiymat 90 ga o‘zgartiriladi.
+Bu chizmada eng koʻp foydalaniladigan burchaklar tasvirlangan.
+315°
+0°
+45°
+90°
+135°
+180°
+225°
+270°
+Agar topshiriq xato bajarilsa yoki yana boshidan boshlanmoqchi bo‘lsa,
+Sprayt obyekti xohlagan joyga olib boriladi, keyin ko‘rsatilgan
+kod bloki yaratiladi.
+Yashil bayroqni tanlash dastur
+kodi ishga tushishini anglatadi. Point in direction
+90 bloki Sprayt yuzini oʻng tomonga buradi.
+Point in
+direction
+Spraytga qaysi
+tomonga qarash
+kerakligini
+ko‘rsatadi. U
+burilishning
+boshqa usulidir.
+Bu blok
+Motion
+joylashgan, uni
+olib, oʻng
+blok(lar) tagidan
+@edurtm_uz
+
+83
+Dasturlash
+6.1-mashg‘ulot
+Spraytni:
+•	 100 qadam oldinga harakatlantiring;
+•	 90 daraja chapga buring;
+•	 yana 100 qadam oldinga harakatlantiring.
+Kod o‘ngdagi tasvirga oʻxshashi kerak:
+6.2-mashg‘ulot
+Sprayt obyektini kvadrat shaklida harakatlantiring:
+•	 90 darajaga chapga buring;
+•	 100 qadam oldinga harakatlantiring.
+Bu koʻrsatmalar shunchalik tez bajariladiki,
+Spraytning harakatlanishini ko‘ra olmaysiz. Har bir
+koʻrsatma orasiga Wait buyrug‘ini qoʻyish mumkin.
+Bu Sprayt harakatini sekinlashtiradi.
+Wait buyrugʻi Control menyu bo‘limida joylashgan.
+6.3-mashg‘ulot
+Spraytni chapga emas, oʻngga burgan holda
+kvadrat shaklida harakatlantiring.
+6.4-mashg‘ulot
+Spraytni turli burchaklar ostida harakatlantiring.
+Turli sonlarni kiriting va Spraytning harakatlanishini
+kuzating.
+U siz kutgandek harakatlandimi?
+90 daraja to‘liq
+aylanishning
+chorak qismiga
+teng.

@@ -1,0 +1,59 @@
+# Tasvirlar bilan ishlash — 4-dars
+
+30
+Brush uskunasidan foydalanish
+Brush uskunasi ― ajoyib kreativ uskuna. U chizilayotgan tasvir uchun turli
+teksturalar hosil qilish imkonini beradi. Brushdan xuddi qalam uskunasi kabi
+foydalaniladi, lekin teksturani, oddiy chiziqdan farqli ravishda, oʻzgartirish
+mumkin.
+Brush uskunasi yordamida chizish uchun quyidagi ikonka tanlanadi.
+Sichqoncha kursori kanvasdagi, chizish boshlanmoqchi boʻlgan joyga
+keltiriladi.
+Sichqonchani chap tugmani bosib turgan holda harakatlantiriladi.
+Brush teksturasini almashtirish uchun uskuna ikonkasining pastki qismida
+joylashgan strelka bosilsa, kerakli menyu boʻlimi ochiladi.
+3-amaliy ko‘nikma
+Brush uskunasi:
+turli boʻyoq
+choʻtkalari yoki
+qalamlarga
+oʻxshash chiziqlar
+yaratish uchun
+uskuna.
+Tekstura: Brush
+uskunasida turli
+koʻrinishdagi
+chiziqlar chizish
+usullari.
+Kalit soʻzlar
+Menyu: tanlash
+uchun buyruqlar
+ro‘yxatini
+ko‘rsatuvchi oyna.
+Kalit soʻz
+@edurtm_uz
+
+31
+Tasvirlar bilan ishlash
+Ushbu menyudan turli moʻyqalam teksturalarini tanlash va chizish mumkin.
+Har birini sinab koʻring va qanday teksturalar hosil bo‘lishiga e’tibor bering!
+3.1-mashg‘ulot
+Microsoft Paint dasturida oʻqituvchingiz bergan Shapes.png faylini oching.
+Birinchi shaklga rang berish uchun Crayon brush uskunasidan foydalaning.
+3.2-mashg‘ulot
+Ikkinchi shaklga rang berish uchun Airbrush uskunasidan foydalaning.
+3.3-mashg‘ulot
+Uchinchi shaklga rang berish uchun Watercolor uskunasidan foydalaning.
+4-amaliy ko‘nikma
+Chiziqning qalinligi va rangini oʻzgartirish
+Chiziqning qalinligini oʻzgartirish
+Dastur chizilayotgan tasvirda ayrim chiziqlarni qalin, ayrimlarini esa ingichka
+qilish imkonini beradi.
+Bu amalni bajarishda qalinlik sozlamasi bilan ishlash kerak.
+Chiziq qalinligini oʻzgartirish uchun Size uskunasi tanlansa, menyu boʻlimi
+ochiladi.
+Kerakli oʻlchamni tanlang, so‘ngra chizishni boshlang.
+Airbrush:
+bo‘yoq purkagich
+vazifasini
+bajaruvchi

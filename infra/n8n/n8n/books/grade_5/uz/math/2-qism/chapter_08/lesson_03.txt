@@ -1,0 +1,244 @@
+# Birliklar sonini topish
+
+Qiziqarli matematika
+44
+3  Chilangar 5 soat ishlasa, 45 ta detal yasay oladi. U 117 ta detal yasashi uchun 
+qancha vaqt ishlashi kerak?
+     
+ 45 ta 
+ 5 h  
+    
+ 1 ta 
+ 5
+45 = 1
+9 h
+ 
+117 ta 
+ 1
+9 × 117 = 13 h
+     
+13 soat ishlashi kerak. 
+4  Uskuna 14 soatda 140 ta qo‘g‘irchoq ishlab chiqaradi. Bu uskuna 50 ta 
+qo‘g‘irchoqni qancha vaqtda ishlab chiqaradi? 
+     
+140 ta qo‘g‘irchoq 
+ 14 h
+       
+1 ta qo‘g‘irchoq 
+ 14
+140
+ = 1
+10
+ h
+    
+ 50 ta qo‘g‘irchoq
+ 1
+10
+ × 50 = 5 h
+     
+Uskuna 50 ta qo‘g‘irchoqni 5 soatda ishlab chiqaradi.
+    140 ta  
+ 14 h
+          1 ta 
+ 
+1
+10
+      50 ta  
+ 
+5
+÷ 140
+× 50
+÷ 140
+× 50
+ 
+   45 ta 
+ 5 h
+  1 ta 
+  1
+9  h
+ 117 ta 
+ 13 h
+÷ 45
+× 117
+÷ 45
+× 117
+Juftlikda ishlang
+Matnli masalani yeching va Muhokama qiling. 
+Yuzi 12 m2 bo‘lgan maydonni kafel bilan qoplash uchun 3 360 000 so‘m mablag‘ sarflandi.
+a) 
+Bir kvadrat metrni  kafel bilan qoplash uchun sarflangan mablag‘ni toping. 
+b) 
+Yuzi 20 m2 bo‘lgan maydonni kafel bilan qoplashga qancha mablag‘ ketishini toping.
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang.
+Bir-biriga bog‘liq miqdorlar: me’yor, umumiy miqdor va birliklar sonini misollar orqali 
+Muhokama qiling. Bir miqdor qolgan ikkitasi orqali qanday topilishini tushuntiring.
+Zavod
+Har 30 sekundda 480 ta idish
+Bir kishiga 
+3000 so‘m, 
+5 kishiga 
+10 000 so‘m
+Ko‘rgazmaga kirish narxi
+Nusxa 
+ko‘chirish
+Bir varaq 
+uchun  
+1500 so‘m
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   44
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   44
+13/11/24   14:49
+13/11/24   14:49
+
+45
+ 
+O‘zingizni tekshiring
+Men berilgan me’yor va umumiy miqdorga ko‘ra birliklar sonini topishni bilaman.   
+Bajaring va o‘rganing
+Matnli masalalarni yeching.
+1  Quyidagi jadvalda 3 nafar o‘quvchining kompyuterda matn yozish me’yori 
+berilgan. Har bir o‘quvchi berilgan miqdordagi so‘zlarni yozish uchun qancha vaqt 
+sarflashini toping.
+ 
+Ismi
+Yozish me’yori 
+(so‘z/min)
+So‘zlar soni
+Yozish vaqti
+Jamila
+40
+240
+Sitora
+45
+180
+Rahima
+35
+350
+2  Quyidagi jadvalda turli o‘chirg‘ichlar narxi berilgan. Ali sotib olmoqchi bo‘lgan 
+o‘chirg‘ichlar sonini toping.
+ 
+O‘chirg‘ich turi
+Donasining narxi 
+Soni
+Jami narxi
+A
+0,60 ming so‘m
+6,00 ming so‘m
+B
+1,00 ming so‘m
+8,00 ming so‘m
+C
+1,50 ming so‘m
+18,00 ming so‘m
+3  Doniyor do‘konda ishlaydi. U bir soat uchun 6000 so‘m ish haqi oladi. Agar hafta 
+davomida  4 kun ishlab, jami 144 000 so‘m ish haqi olgan bo‘lsa, ushbu haftada 
+Doniyor necha soat ishlagan?    
+4  Quyidagi jadvalda mototsikl ijarasining narxlari berilgan.
+Mototsikl ijarasi narxlari
+Dastlabki 1 soat uchun
+4 ming so‘m
+Keyingi har 1 soat uchun
+2 ming so‘m
+ 
+Po‘lat mototsikl ijarasi uchun 10 ming so‘m to‘ladi. U mototsiklni qancha vaqtga 
+ijaraga olgan? 
+51–52
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   45
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   45
+13/11/24   14:49
+13/11/24   14:49
+
+46
+Qarang va o‘rganing
+1  O‘lchamlari 50 cm, 50 cm va 36 cm  bo‘lgan kuboid shaklidagi idish suv bilan 
+to‘ldirildi. Idishdagi suvni unga o‘rnatilgan jo‘mrak orqali to‘kish mumkin. Suvning 
+jo‘mrak orqali chiqish me’yori 18 litr/min bo‘lsa, idishdagi suvning yarmini to‘kish 
+uchun qancha vaqt ketadi?
+ 
+Idish hajmi  = 50 × 50 × 36  
+ 
+             
+50 cm
+50 cm
+36 cm
+ 
+                        = 90 000 cm3
+ 
+                   
+= 90 ℓ 
+ 
+Idishning yarmidagi suv miqdori = 90
+2  
+ 
+ 
+ 
+= 45 ℓ
+ 
+ 18 ℓ  
+ 1 min
+          1 ℓ  
+ 1
+18 min 
+    
+45 ℓ 
+ 1
+18 × 45 = 2 1
+2 min
+5
+2
+ 
+Demak, idishdagi suvning yarmini to‘kish uchun 2 1
+2 minut ketadi.         
+2  Avtomobil 7 litr benzin bilan 98 km masofani bosib o‘tadi. Bir litr benzin narxi 
+ 
+7,2 ming so‘m bo‘lsa, ...
+ 
+a) 
+avtomobil 12 litr benzin bilan necha kilometr yuradi?
+          b)   126 km masofaga yetadigan benzin uchun qancha mablag‘ kerak bo‘ladi? 
+ 
+a) 
+ 7 ℓ  
+ 98 km
+ 
+ 
+ 1 ℓ  
+ 98 ÷ 7 = 14 km
+ 
+ 
+ 12 ℓ 
+ 12 × 14 = 168 km
+ 
+ 
+Avtomobil 12 litr benzin bilan 168 km yuradi.
+ 
+b) 
+ 98 km  
+ 7 ℓ  
+ 
+ 
+ 
+1 km  
+ 7
+98 ℓ
+ 
+ 
+ 126 km  
+ 7
+98 × 126 = 9 ℓ
+ 
+ 
+9 × 7,2 ming so‘m = 64,8 ming so‘m
+ 
+ 
+ Avtomobil 126 km masofani bosib o‘tish uchun 64,8 ming so‘mlik benzin 
+sarflaydi.
+  
+ 
+Matnli masalalar
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   46
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   46
+13/11/24   14:50
+13/11/24   14:50
+

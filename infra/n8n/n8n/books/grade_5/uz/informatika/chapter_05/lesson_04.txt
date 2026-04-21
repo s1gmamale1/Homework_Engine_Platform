@@ -1,0 +1,48 @@
+# Qidirish tizimlarida ishlash — 4-dars
+
+95
+Qidirish tizimlarida ishlash
+2-amaliy ko‘nikma
+Qidirish tizimlari
+Qidirish tizimlari butunjahon internet tarmog‘idan (WWW) maʼlumotlarni
+qidirish imkonini beradi.
+Koʻplab qidirish tizimlari bor: Google, Bing, Yandex, Yahoo, Kiddle,
+www.uz va boshqalar.
+Qidirish tizimlari kitoblarga oʻxshaydi, faqat ulardan ma’lumotning hajmi
+jihatidan ancha katta bo‘ladi. Kitobning oxiri ochilsa, odatda u yerda
+indekslar bo‘ladi.
+Kitobdagi maʼlumotni qidirish uchun indeks orqali sahifa raqamini topasiz.
+Shundan keyin kitobning kerakli sahifasini ochish mumkin.
+Koʻpgina qidirish tizimlarida qidirish satri mavjud boʻlib, qidirishni boshlash
+uchun ushbu qatorga matnni kiritish kerak.
+Butunjahon internet tarmog‘ida mavjud boʻlgan barcha veb saytlar
+maʼlumotlar bazasida joylashadi. Qidirish tizimi kerakli maʼlumotni topish
+uchun maʼlumotlar bazasidan foydalanadi.
+2.1-mashg‘ulot
+O‘zingiz tanlagan qidirish tizimini oching.
+Qidirish qatoriga mamlakatingizning nomini kiriting. Enter tugmasini bosing
+yoki
+ko‘rinishidagi qidirish belgisini tanlang.
+Sahifangizda qidirish natijalari paydo bo‘ladi, ular bilan tanishib chiqing.
+Mamlakatingizning poytaxti haqida maʼlumot olish uchun havolani aniqlang
+va ishga tushiring.
+Indeks: odatda
+alifbo tartibida
+joylashadigan
+kalit soʻz yoki
+mavzular roʻyxati.
+Maʼlumotlar
+bazasi: qidirishni
+osonlashtiradigan
+va foydalanish
+uchun tartibga
+solingan
+ma’lumotlar
+to‘plami.
+Kalit soʻzlar
+DIQQAT!
+Faqat ishonchli
+va yoshga mos
+linklarni ishga
+tushirish kerak!
+@edurtm_uz

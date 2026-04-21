@@ -1,0 +1,49 @@
+# Tasvirlar bilan ishlash — 2-dars
+
+26
+1-amaliy ko‘nikma
+Line uskunasidan foydalanish
+Line uskunasidan foydalanish ko‘nikmasini o‘zlashtirsangiz, turli tasvirlar
+yaratishni boshlay olasiz. U Paint dasturiy taʼminotining asosiy uskunalaridan
+biridir.
+Microsoft Paint dasturi ishga tushirilgach, katta oq hudud koʻrinadi. Bu
+hudud kanvas deb ataladi. Ya’ni qo‘lda tasvir chizishda qogʻoz qanday
+vazifani bajarsa, bu maydon ham xuddi shunday vazifani bajaradi.
+Toʻgʻri chiziq chizish uchun Line uskunasidan foydalaniladi. Toʻgʻri chiziq
+yordamida tasvir uchun koʻplab ajoyib shakllar yaratsa boʻladi.
+Agar chizilgan chiziq yoki shakl yoqmasa, Undo tugmasi bosiladi. Natijada
+oxirgi bajarilgan amal, masalan, chizilgan chiziq g‘oyib bo‘ladi.
+Undo tugmasini bosishda davom etilsa, oxirgi amallar teskari tartibda birin-
+ketin bekor bo‘ladi.
+Line: chiziq
+va moʻyqalam
+uskunalaridan
+foydalanib
+hosil qilingan
+geometrik shakl.
+Kanvas:
+chizish uchun
+mo‘ljallangan,
+sahifaga oʻxshash
+maydon.
+Kalit soʻzlar
+Undo: oxirgi
+bajarilgan amalni
+bekor qilish.
+Kalit soʻz
+@edurtm_uz
+
+27
+Tasvirlar bilan ishlash
+Toʻgʻri chiziq uskunasini sahifa yuqorisidagi Shapes boʻlimidan topish
+mumkin. U bo‘limidagi birinchi uskuna hisoblanadi.
+Toʻgʻri chiziq chizish uchun Line uskunasidan foydalaniladi.
+Sichqoncha kursori kanvasga, chiziq chizish boshlanadigan joyga keltirib
+qo‘yiladi.
+Chiziq chizishni boshlash uchun sichqonchaning chap tugmasi bosib turiladi.
+Sichqoncha kanvas bo‘ylab chiziq chizilmoqchi boʻlgan tomonga
+harakatlantiriladi.
+Chiziq yakunlanmoqchi boʻlgan joyga yetganda sichqonchaning tugmasi
+qoʻyib yuboriladi. Shunda kanvasda chiziq paydo bo‘ladi.
+Paintda ham toʻgʻri, ham egri chiziqlarni chizish mumkin. Curved line
+uskunasi yordamida egri chiziqlar chiziladi.

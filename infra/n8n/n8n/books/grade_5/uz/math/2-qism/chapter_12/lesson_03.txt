@@ -1,0 +1,466 @@
+# Uchburchakning burchaklari
+
+124
+Juftlikda ishlang
+Sherigingiz bilan ishlang. 
+Transportir yordamida noma’lum burchakni o‘lchang.
+a) 
+ABC – teng tomonli uchburchak.
+ 
+∠a, ∠b va ∠c lar yig‘indisi nechaga teng?           
+A
+B
+C
+a
+b
+c
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+b) 
+PQR – teng yonli uchburchak.
+ 
+ ∠p, ∠q va ∠r lar yig‘indisi nechaga teng? 
+           
+P
+Q
+R
+q
+r
+p
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+c) 
+XYZ – o‘tmas burchakli uchburchak.
+ 
+∠x, ∠y  va ∠z lar yig‘indisi nechaga teng?           
+X
+Z
+Y
+x
+z
+y
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AKT mashqi
+“Burchaklar yig‘indisi” dasturidan foydalanib uchburchakning burchaklari yig‘indisi 
+180° ga teng ekanini ko‘rsating.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   124
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   124
+13/11/24   14:51
+13/11/24   14:51
+
+125
+Qarang va o‘rganing
+1  Uchburchaklarning noma’lum burchaklarini toping. 
+ 
+a) 
+X
+30°
+50°
+Y
+Z
+ 
+       
+ 
+ 
+ 
+ 
+∠ XZY = 180° – 30° – 50°
+ 
+ 
+  
+ 
+ = 100°
+               
+  
+ 
+ 
+b) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ∠ FEG = 180° – 120° – 35°
+            
+  
+ 
+                   = 25°
+2  ABC – teng yonli uchburchak. ∠ ACB ni toping. 
+ 
+ 
+A
+C
+B
+68°
+ 
+ 
+ 
+ 
+∠ ACB  = ∠ ABC
+ 
+ ∠ ACB + ∠ ABC = 180° – 68°
+ 
+ 
+ = 112°
+                 
+∠ ACB  = 112° ÷ 2
+                             
+ = 56°
+Teng yonli uchburchakning 
+teng tomonlari qarshisidagi 
+burchaklari teng bo‘ladi.
+F
+120°
+35°
+E
+G
+Uchburchakning burchaklari 
+yig‘indisi 180°.
+30° + 50° + ∠ XZY = 180°
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   125
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   125
+13/11/24   14:51
+13/11/24   14:51
+
+126
+3  DEF uchburchakda DF = EF va ∠ EDF = 42°. ∠ EFD ni toping.
+ 
+E
+D
+42°
+F
+   
+ ∠ EDF = ∠ DEF 
+ 
+ 
+  = 42°   
+  
+ ∠ EFD = 180° – 42° – 42°
+                
+  = 96°
+4  KLM – teng yonli uchburchak. ∠LKM ni toping.
+ 
+L
+K
+M
+ 
+ 
+∠ LKM + ∠ LMK = 180° – 90°
+ 
+ 
+ 
+ = 90°
+ 
+ 
+ 
+∠ LKM = ∠ LMK
+ 
+ 
+ 
+∠ LKM = 90° ÷ 2 
+                              
+ = 45°
+DEF – teng yonli uchburchak. 
+Demak,  
+∠ EDF = ∠ DEF.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   126
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   126
+13/11/24   14:51
+13/11/24   14:51
+
+127
+5  EFH – to‘g‘ri burchakli uchburchak, EGH esa teng yonli uchburchak. EH = GH va  
+ 
+∠ EHG = 66°. ∠ a va ∠ b ni toping. 
+ 
+ 
+ 
+b
+a
+E
+G
+66°
+F
+H
+ 
+∠ b = 180° – 90° – 66°
+       
+ 
+= 24°
+ 
+∠ GEH = (180° – 66°) ÷ 2
+            
+      = 57°
+ 
+∠ a = 90° – 57° 
+       
+ 
+= 33°
+6  Chizmada BCD – to‘g‘ri chiziq. Agar ∠ DAC = 72°, ∠ ADC = 48° va ∠ ABC = 26° bo‘lsa,
+        ∠ x ni toping. 
+ 
+A
+D
+C
+72°
+B
+48°
+26°
+x
+ 
+ 
+1-usul
+ ∠ ACD = 180° – 48° – 72°
+  
+= 60°
+ ∠ x = 180° – 60°
+   = 120°
+2-usul
+ ∠ CAB = 180° – 48° – 26° – 72°
+  
+= 34°
+ ∠ x = 180° – 26° – 34°
+  
+ = 120°
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   127
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   127
+13/11/24   14:51
+13/11/24   14:51
+
+128
+7  PSQ – to‘g‘ri burchakli uchburchak. PQR esa teng yonli uchburchak. PR = QR va  
+∠ PQR = 38°. SRQ – to‘g‘ri chiziq. ∠ SPR ni toping.
+ 
+ 
+Q
+S
+P
+R
+38°
+ 
+1-usul
+ ∠ RPQ = ∠ RQP 
+ 
+ = 38°
+ ∠ PRQ = 180° – 38° – 38°   
+      
+ = 104°
+ ∠ PRS = 180° – 104°   
+        
+ = 76°
+ ∠ SPR = 180° – 90° – 76°   
+      
+ = 14°
+ 
+ 
+ 
+2-usul
+ ∠ SPR = 180° – 90° – 38° – 38° 
+  
+ = 14°
+Uchburchakning 
+burchaklari yig‘indisi 
+180º ga teng.
+Qo‘shni burchaklar yig‘indisi 
+180º ga teng.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   128
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   128
+13/11/24   14:51
+13/11/24   14:51
+
+129
+Juftlikda ishlang
+Juftlikda ishlang. 
+Belgilangan noma’lum burchaklarni toping. Sherigingizga masalani yechish
+bosqichlarini tushuntiring.
+1  PQR va STU – teng yonli uchburchaklar.
+ 
+120°
+a
+P
+R
+Q
+ 
+28°
+b
+T
+U
+S
+ 
+ 
+ 
+2  BCD – to‘g‘ri chiziq va ABC – teng yonli uchburchak.
+ 
+ 
+A
+C
+B
+35°
+x
+D
+3  WYZ – to‘g‘ri chiziq. WXY – teng tomonli uchburchak va XYZ – teng yonli  
+ 
+ 
+ 
+uchburchak.
+ 
+ 
+ 
+ 
+X
+y
+z
+W
+Y
+Z
+4  ABC va ACD – teng yonli uchburchaklar. ∠BAD ni toping.
+ 
+ 
+A
+D
+C
+50°
+62°
+B
+ 
+ 
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   129
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   129
+13/11/24   14:51
+13/11/24   14:51
+
+130
+Bajaring va o‘rganing
+1  Quyidagi uchburchaklarning belgilangan noma’lum burchaklarini toping.
+ 
+a) 
+48°
+105°
+a
+  
+b) 
+55°
+b
+ 
+ 
+c) 
+136°
+22°
+c
+ 
+d) 
+46°
+d
+47°
+ 
+ 
+ 
+e) 
+e
+  
+f) 
+36°
+f
+  
+ 
+ 
+ 
+ 
+ 
+2  Har bir shakldagi belgilangan noma’lum burchaklarni toping. ABC, EFG va PQR –   
+ 
+to‘g‘ri chiziqlar.
+ 
+a) 
+64°
+g
+C
+A
+B
+D
+h
+ 
+b) 
+35°
+j
+k
+E
+F
+G
+H
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+c) 
+Q
+P
+R
+S
+26°
+m
+ 
+ 
+ 
+ 
+157–162
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) 
+Men uchburchaklarning turlarini farqlashni bilaman.  
+b) Men turli uchburchaklarning xossalarini bilaman.  
+c) 
+Men bir nechta uchburchaklarni o‘z ichiga olgan shakllardagi noma’lum  
+ 
+ 
+ 
+burchaklarni topishni bilaman.  
+   
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   130
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   130
+13/11/24   14:51
+13/11/24   14:51
+
+131
+163–164
+Mashq daftariga o‘ting
+O‘ylab ko‘ring
+Quyidagi shaklda ikkita uchburchak tasvirlangan. ABC – teng yonli uchburchak va  
+DBC – teng tomonli uchburchak. ∠ ACD ni toping.
+ 
+A
+40°
+B
+C
+D
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   131
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   131
+13/11/24   14:51
+13/11/24   14:51
+

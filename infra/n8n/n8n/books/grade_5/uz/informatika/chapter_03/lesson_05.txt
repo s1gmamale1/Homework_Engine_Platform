@@ -1,0 +1,54 @@
+# Diagrammalar bilan ishlash — 5-dars
+
+54
+4.2-mashg‘ulot
+Sinfdoshlaringiz hayvonot bogʻiga bormoqchi. Oʻqituvchingiz siz koʻrishni
+istayotgan hayvonning rasmini chizishni soʻradi.
+Quyidagi tasvirda sinf oʻquvchilari chizgan hayvonlar toʻplami aks etgan.
+Oʻqituvchingiz bergan zooAnimals.xlsx hujjatini oching.
+Tasvirdagi hayvonlar nomini A ustunga yozing.
+Tasvirdagi har bir hayvonning jami miqdorini hisoblab, B ustunga yozing.
+@edurtm_uz
+
+55
+Diagrammalar bilan ishlash
+4.3-mashg‘ulot
+Microsoft Excel dasturida piktogrammalar yaratsa ham bo‘ladi.
+Tasvirdagi hayvonlar miqdorini ifodalovchi piktogramma tayyorlang.
+Oʻqituvchingiz bergan animals_1.xlsx hujjatini oching.
+Har bir hayvondan nechtaligini hisoblash uchun tasvirlarni ishchi kataklarga
+drag and drop usulida ko‘chiring.
+
+56
+Grafik nima?
+Diagrammalar murakkab maʼlumotlarni oson tushunish imkoniyatini taqdim
+qiladi.
+Quyidagi ustunli diagrammada O‘zbekistondagi bir yillik soyabonlar savdosi
+haqida ma’lumot aks etgan.
+Vertikal oʻq (y oʻq) sotilgan soyabonlar miqdorini koʻrsatadi.
+Gorizontal oʻq (x oʻq) soyabonlar sotilgan oylarni koʻrsatadi.
+5.1-mashg‘ulot
+Quyidagi savollarning javobini daftaringizga yozing.
+Qaysi oy(lar)da eng koʻp soyabon sotilgan?
+Qaysi oy(lar)da eng kam soyabon sotilgan?
+5-amaliy ko‘nikma
+Vertikal oʻq:
+ustunli
+diagrammaning
+yuqoriga qaragan
+oʻqi (y oʻq).
+Gorizontal
+oʻq: ustunli
+eni bo‘ylab
+joylashgan oʻqi
+(x oʻq).
+Kalit soʻzlar
+Topshiriqlarga
+javob to‘liq
+jumlalar bilan
+yozilishi kerak,
+masalan,
+“Maʼlumotlar
+shuni
+ko‘rsatadiki,...”
+Maslahat

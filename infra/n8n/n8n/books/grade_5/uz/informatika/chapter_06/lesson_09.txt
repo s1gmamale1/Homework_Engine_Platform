@@ -1,0 +1,61 @@
+# Elektron pochtada ishlash — 9-dars
+
+124
+3-mashg‘ulot
+1. Elektron pochta akkauntingizdagi papkalarning roʻyxatini Microsoft Word
+matn bilan ishlash dasturida ochilgan hujjatga yozing.
+2. Har bir papka nima uchun kerakligini yozing.
+4-mashg‘ulot
+Oʻqituvchingiz sizga yuborgan elektron xabarni doʻstingiz ham ko‘rishni
+xohladi. Bu xatni doʻstlaringizdan biriga uzating.
+Xatdagi “Cc” maydoniga o‘qituvchingiz manzilini kiriting. Chunki u bu xatni
+kimga yuborganingizni bilishi kerak.
+Bir nechta qabul qiluvchini qoʻshish
+1-mashg‘ulot
+Bitta xatni bir nechta qabul qiluvchilarga yuborish mumkin. Yangi xat yozing.
+To maydoniga bir nechta elektron pochta manzilini kiriting (yoki ularni
+manzillar kitobidan tanlang).
+Masala
+@edurtm_uz
+
+125
+Elektron pochtada ishlash
+Elektron pochta xabarini formatlash
+2-mashg‘ulot
+Elektron pochta xabariga joylashtiriladigan matn formatini, masalan, shrift
+turi, o‘lchami va rangini oʻzgartirsa bo‘ladi.
+Oʻzgartirish lozim boʻlgan matn kursorni harakatlantirish orqali belgilanadi.
+A tugmasi bosiladi.
+Uskunalar paneli shrift turi, o‘lchami va rangini oʻzgartirish imkonini beradi.
+Shuningdek, ro‘yxat bandlarini ham qoʻshish mumkin.
+Format:
+matnning
+ko‘rinishi,
+masalan, shrift
+turi, uning rangi
+va balandligini
+o‘zgartirish.
+Shrift: harf va
+belgilarning
+tashqi ko‘rinishi.
+Masalan, Arial,
+Times New
+Roman, Calibri.
+Kalit soʻzlar
+
+126
+Agar rasmiy elektron xat yozilayotgan bo‘lsa, juda katta yoki juda kichik
+bo‘lmagan, bezaklari kam va qora rangdagi oddiy shriftdan foydalangan
+ma’qul.
+Matndagi muhim fikrlarni ajratish uchun qalin, kursiv yoki tagiga chizilgan
+tarzda yozgan ma’qul.
+Yakuniy loyiha — guruh bo‘lib hikoya yozish
+Hikoya yozish uchun ikki do‘stingiz bilan birga ishlaysiz.
+Do‘stlaringizning elektron pochta manzillari Manzillar kitobiga kiritilganmi?
+O‘qituvchingizdan yordam so‘rang.
+1.	Yangi elektron xatni yozishni boshlang.
+2.	Hikoyaning dastlabki ikkita gapini kiriting.
+3.	 Hikoyangizga nom bering va uni mavzu satrida yozing.
+4.	Doʻstlaringizdan birining manzilini “to” maydoniga kiriting.
+5.	 Oʻqituvchingizni “Cc” sifatida qoʻshing.
+6.	Xatni yuboring.

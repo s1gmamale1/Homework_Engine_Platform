@@ -1,0 +1,62 @@
+# VI bob — 12-dars
+
+"Ф\ Bobur birxil balandlikdan
+Tx qo'yib yuborilgan qog'oz
+bo‘laklarining qaysi biri
+yerga birinchi bo'lib
+tushishini bilmoqchi.
+U har bir qog‘oz bo‘laginingyerga tushish vaqtini o'lchab, jadvalga yozdi.
+Qog‘oz
+Yerga tushish vaqti (sekund)
+buklanmagan
+4
+ya rim
+buklangan
+2,5
+g'ijimlangan
+1
+^Sizningcha, Bobur o‘z
+tadqiqotini qanday qilib
+yaxshilashi mumkin?
+Javobingizni tushuntiring.
+Bobur natijalar ishonchli bo'lishini ta’minlash uchun
+tajribani yana ikki marta takrorladi.
+Agar tajriba takrorlanganda ham natijalar o'xshash
+bo‘lsa, biz ularni ishonchli natija deb aytamiz.
+Agar natijalarda juda katta farq bo'lsa, Bobur tajriba
+o‘tkazish davomida qanday xatoga yo‘l qo'yganini
+aniqlashi kerak.
+
+Aerodinamika bilan shug'ullanuvchi muhandislar havo transport!
+vositalarining konstruksiyalari yuklanish ostida yaxshi ishlashiga ishonch
+hosil qilish uchun ularni tekshirib ko‘radi. Bunda samolyot atrofidagi havo
+harakatini o‘rganish juda muhimdir. Bu gravitatsiya kuchini yengish va
+havo qarshiligini kamaytirishni ta’minlaydi.
+Samolyot havoga ko‘tarilishi uchun unga ta’sir qiluvchi turli kuchlarni
+qanday yengishini aniqlang.
+
+Jismning suvda harakatlanishiga to'sqintik qiluvchi kuch suvning qarshilik kuchi
+deb ataladi. Siz darslikning 2-bobida ba’zi baliqlarning suyri shakldagi uzun tanasi
+suvda tezroq harakatlanishga imkon berishini bilib oldingiz. Baliq tanasining bunday
+tuzilishi suvning qarshilik kuchi ta’sir qiladigan sirt yuzasining kamayishiga olib
+keladi. Natijada suvning qarshiligi kamayadi.
+A baliq В baliqqa
+nisbatan tezroq
+suzmoqda.
+Bilimingizni sinab ko‘ring
+Velosipedda ketayotgan odamning
+tanasiga qanday kuchlar ta’sir qiladi?
+Quyidagi qaysi ko‘nikmalarni egalladingiz?
+Javoblarni daftaringizga belgilang.
+1. Turli kuchlarni aniqlay olaman.
+2. Ishonchli natijalar olish uchun kuzatishlarni takrorlash zarurligi yuzasidan
+qaror qabul qila olaman.
+3. Tadqiqotni yaxshilash yuzasidan taklif beraman va uni izohlay olaman.
+4. Bahs-munozarada o‘z nuqtayi nazarimni ilmiy dalillardan foydalanib
+asoslay olaman.
+5.
+Tabiiy fanlarning muayyan sohasida faoliyat yurituvchi
+kasb egalarini aniqlayman va ularning faoliyatini
+tavsiflay olaman.
+Mashq daftari
+5.1-amaLiy ish, 51-bet

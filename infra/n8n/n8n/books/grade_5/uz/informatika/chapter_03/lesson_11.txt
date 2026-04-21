@@ -1,0 +1,94 @@
+# Diagrammalar bilan ishlash — 11-dars
+
+68
+Ustunli diagramma ustunlari rangini oʻzgartirish
+1-mashg‘ulot
+Diagrammaning ustunlari (yoki doira boʻlaklari) ranglarini oʻzgartirish
+imkoniyati bor.
+Ustun rangi uning ustiga ikki marta bosish orqali o‘zgartiriladi (bitta
+bosganda diagramma, ikki marta bosilganda ustun tanlanadi).
+Ustunning har bir burchagida doiracha paydo boʻladi.
+Kursorni ustunga olib borib, sichqonchaning oʻng tugmasi bosilganda
+Format menyu bo‘limi ochiladi.
+Masala
+“Fill” yordamida
+ichki rang
+o‘zgartiriladi
+“Outline” yordamida
+hoshiya rangi
+@edurtm_uz
+
+69
+Diagrammalar bilan ishlash
+Bu amalni har bir ustunga qo‘llash mumkin.
+Doirasimon diagrammaning bo‘laklari rangini o‘zgartirishda ushbu usuldan
+foydalaniladi. Boʻlakning rangini oʻzgartirish uchun unga ikki marta bosiladi.
+Oʻq chiziq qiymatlarini oʻzgartirish
+2-mashg‘ulot
+Ba’zan quyida tasvirlanganidek, ma’lumotlari bir-biriga juda oʻxshash
+diagrammaga duch kelishingiz hamda undagi maʼlumotlarni yaxshi anglay
+olmasligingiz mumkin.
+Siz y oʻqidagi qiymatlarni xohlaganingizdek oʻzgartirishingiz mumkin.
+Diagrammaning y oʻqini tanlang (diagramma yon qismida joylashgan vertikal
+raqamlar nazarda tutilyapti). Sichqonchaning oʻng tugmasini bosib, Format
+Axis buyrug‘ini tanlang.
+
+70
+Yangi oyna ochiladi.
+Graph tugmasini bosing.
+Qiymatlarni oʻzgartiring.
+Diagrammada yuz bergan oʻzgarishga e’tibor qarating.
+Agar bu ko‘rinish sizga yoqmasa, undagi ma’lumotlarni ortga qaytarishingiz
+mumkin.
+Yakuniy loyiha — “Do‘stlarimning xobbilari”
+mavzusida diagramma yaratish
+Ba’zilarda bir nechta xobbi (boʻsh vaqtida bajarishni yoqtiradigan mashg‘uloti)
+bo‘lishi mumkin.
+Masalan, ba’zi odamlar kitob oʻqishni yoqtirsa, ayrimlari kompyuter oʻyinlari
+oʻynashni va qolganlari taom pishirishni yoqtiradi.
+Quyidagi savollarga javob topishga urinib ko‘ring:
+1.	Kompyuter o‘yinlariga qiziqadiganlar kitob o‘qishni yoqtiradiganlardan
+ko‘pmi?
+2.	Sport bilan shug‘ullanish sinfdoshlaringizning eng yoqtirgan mashg‘ulotimi?
+3.	 Ularning nechtasi komikslarni va nechtasi romanlarni o‘qishni yoqtiradi?
+4.	 O‘quvchilarning aksariyati televizor ko‘rishni yoqtiradimi yoki kompyuter
+o‘yinlari o‘ynashni?
+
+71
+Sinfingizdagi har bir o‘quvchidan sevimli xobbisi haqida so‘rang (faqat bitta
+xobbi nomini aytish mumkin).
+Aniqlagan ma’lumotlaringizni koʻrsatuvchi maʼlumotlar jadvalini yarating.
+Sinfdoshlaringizning sevimli xobbilarini koʻrsatish uchun doirasimon diagramma
+yarating.
+Doirasimon diagrammaga qarang hamda yuqorida berilgan toʻrtta savolga javob
+bering.
+Sinfingizdagi har bir o‘quvchining barcha xobbilari haqidagi maʼlumotlarni
+to‘plang.
+Aniqlagan ma’lumotlaringizni koʻrsatish uchun maʼlumotlar jadvalini yarating.
+Sinfdoshlaringizning xobbilarini koʻrsatish uchun ustunli diagramma yarating.
+Kiritilgan maʼlumotlar haqida bir nechta savol tuzing. Javoblar orqali sizning
+ma’lumotingiz haqida axborot paydo bo‘ladi.
+Diagrammaga
+mos nom berishni
+unutmaslik kerak.
+Maslahat
+To‘plash:
+ma’lumotlarni
+birlashtirib,
+yig‘ish.
+Kalit soʻz
+
+72
+O‘ylab ko‘ring
+Quyidagi savollarning javobini daftaringizga yozing.
+1. Kundalik hayotda qog‘ozga diagramma chizganmisiz? O‘sha
+diagrammada nima tasvirlangan edi?
+1. Qogʻozga diagramma chizish bilan uni kompyuterda yaratish orasida qanday
+farq bor?
+1. O‘quv yili davomida o‘quvchilar qoldirgan darslar sonini ko‘rsatadigan
+diagramma tuzing.
+Maktab bu diagrammadan qanday maqsadda foydalanishi mumkin? Unda
+qanday maʼlumotlar berilishi mumkin?
+
+73
+Dasturlash

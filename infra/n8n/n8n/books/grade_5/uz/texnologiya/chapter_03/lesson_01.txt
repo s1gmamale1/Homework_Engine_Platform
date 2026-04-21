@@ -1,0 +1,91 @@
+# Energiya va Mexatronika — 1-dars
+
+TEXNOLOGIYA VA
+DIZAYN, SERVIS XIZMATI
+YO‘NALISHLARI
+
+200
+200
+ENERGIYA ISHLAB CHIQARISH
+VA UNDAN FOYDALANISH
+bob
+-
+1-§.
+Energiya turlari
+(mexanik, elektr, Quyosh VA atom energiyasi)
+Bizning mamlakatimiz shunday jannatmakon o‘lkaki, bu o‘lkada barcha ne’matlar
+mavjud. Shunday ne’matlardan biri bu elektr ener­giyasi hisoblanadi.
+“Energiya” so‘zi yunonchadan olingan bo‘lib, “harakat, faollik, kuch, quvvat”
+degan ma’nolarni bildiradi. Energiyaning o‘zgarishi shu o‘zgarishlarni sodir qilish
+uchun bajariladigan ish bilan belgilanadi. Masalan, bolta bilan o‘tin yorganda ish
+bajariladi.  Shu bajarilgan ishga energiya deb ataladi.
+Energiya resurslari yoqilgʻi (koʻmir, neft, gaz, oʻtin) va yoqilgʻi boʻlmagan vosi­
+talarga (suv, shamol, quyosh energiyasi va boshqalar) boʻlinadi.
+Yoqilgʻi bilan bogʻliq energiya resurslari tiklanmaydigan, yoqilgʻi bilan bogʻliq
+boʻlmaganlari esa tiklanadigan resurslar hisoblanadi. Bular muqobil energiya
+manbalari deb ham ataladi.
+Tabiatda mexanik, elektr, quyosh, atom, shamol va boshqa turdagi energiyalar
+mavjud.
+Mexanik energiya deb mexanik harakatlarning va o‘zaro ta’sirlarning miqdoriy
+o‘lchoviga aytiladi.
+Gidroenergetika – dunyoda qayta tik­
+lanadigan energiya manbalarining eng
+ko‘p ishlatiladigan turidir. Shuningdek, bu
+elektr energiya ishlab chiqarishning eng
+qadimgi usuli hisoblanadi. Energiyaning
+bu turi suv resurslari asosida energiya
+ishlab chiqarishga asoslangandir. Suv re­
+surslari energiyasidan foydalanish uchun
+suv oqimi maxsus qurilgan inshootlar va
+jihozlar majmuyi – gidroelektr stansiyalar
+(GES) yordamida elektr energiyasiga aylantiriladi.
+Oʻzbekistonning energiya tizimi xalq xoʻjaligi va aholining yoqilgʻi (koʻmir, gaz,
+neft), elektr energiyasiga boʻlgan ehtiyojini toʻliq qon­diradi va boshqa davlatlarga
+eksport ham qilinadi.
+Gelioelektr (“gelio” yunoncha “quyosh”) stan­siya­lar – quyosh energiyasini katta
+miqdordagi elektr ener­giyasiga aylantiradigan za­mo­naviy stansiyadir.
+Bu stansiyaning ishlashi oddiy bo‘lib, bir necha ming kvadrat metr maydonga o‘r­
+natilgan geliostat oynalar quyosh bilan barobar ayla­nib, quyosh nurlarini suyuq­lik,
+
+201
+201
+ko‘pincha suv bilan to‘ldirilgan sig‘imga yo‘naltiradi. Keyingi jarayonlar esa odatdagi
+issiqlik elektr stansiyalaridagi kabi davom etadi. Ya’ni, suv isib qaynaydi va bug‘ga
+aylanadi. Bug‘ turbinani, turbina esa generator rotorini aylantiradi va shu tariqa elektr
+energiyasi ishlab chiqariladi.
+Quyosh batareyalari – elektr energiyasini muntazam ishlab chiqarish yoki
+keyinchalik foydalanish uchun uni to‘plash imkoniyatiga ega. Quyosh batareyalari
+tuzilishining oddiyligi, o‘rnatishning osonligi, ko‘p xizmat talab etmasligi va uzoq
+muddat foydalanish mumkinligi bilan ajralib turadi.
+Atom energiyasi – atomlarning mar­
+kazida joylashgan atom yadrosida sodir
+bo‘ladigan jarayonlar natijasida ajralib
+chiqadigan energiyadir.
+Bu energiya bir tomondan elektr ener­
+giyaning tannarxini kamaytirsa, ikkinchi
+tomondan insoniyatni bir necha yuz yillar
+davomida energetika muammolaridan xa­
+los qiladi.
+Batareyalar
+zaxirasi
+Zaryad
+boshqaruvchisi
+Quyosh paneli
+Invertor
+volt
+
+202
+202
+Mamlakatimizda ilk atom elektr stansiyasi Rossiyaning “Rosatom” korporatsiyasi
+bilan hamkorlikda barpo etilmoqda. U Navoiy va Buxoro viloyatlari chega­ra­
+sida joylashgan To‘dako‘l suv ombori yaqinida quriladi. Atom elektr stansiyasini
+2028-yilgacha ishga tushirish rejalashtirilgan.
+Shamol energiyasidan, asosan, elektr
+energiyasi olish uchun foydalaniladi. Qu­
+yosh mavjud ekan, shamol esadi va u qayta
+tiklanadigan energiya manbasi hisob­
+lanadi. Ushbu muqobil energiya bosh­qa
+energiya manbalariga nisbatan arzon va
+qulay, hech qanday yoqilg‘i ta­lab et­
+maydi, atrof-muhitni zararli chiqindilar
+bilan ifloslantirmaydi.

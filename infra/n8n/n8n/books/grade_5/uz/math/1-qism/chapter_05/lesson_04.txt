@@ -1,0 +1,116 @@
+# Kvadratli panjarada fazoviy jismlarni chizish
+
+b) 
+ 
+yuqoridan ko‘rinishi
+olddan ko‘rinishi
+yondan ko‘rinishi
+ 
+ 
+ 
+yondan ko‘rinishi
+olddan ko‘rinishi
+yuqoridan ko‘rinishi
+Guruh bo‘lib ishlang. Har bir jismning yuqoridan, olddan va yondan ko‘rinishini kvadrat 
+panjarada chizing. 
+a) 
+yuqoridan ko‘rinishi
+yondan ko‘rinishi
+olddan ko‘rinishi
+ 
+b) 
+yuqoridan ko‘rinishi
+yondan ko‘rinishi
+olddan ko‘rinishi
+c) 
+yondan ko‘rinishi
+olddan ko‘rinishi
+yuqoridan ko‘rinishi
+ 
+d) 
+yuqoridan ko‘rinishi
+yondan ko‘rinishi
+olddan ko‘rinishi
+Juftlikda ishlang
+119
+143–144
+Mashq daftariga o‘ting
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   119
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   119
+09/08/24   19:32
+09/08/24   19:32
+
+1  Bu kubning o‘lchamlari: 1 cm, 1 cm, 1 cm. Uni birlik kub sifatida olamiz.
+ 
+     
+1 cm
+1 cm
+1 cm
+    
+         
+ 
+2  Quyidagi jismlar qirrasi 1 cm bo‘lgan kublardan yasalgan.
+a) 
+A jism
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+Birlik kublar soni 6 ta
+ 
+A jismning hajmi = 6 cm3
+b) 
+B jism
+  
+ 
+ 
+ 
+ 
+ 
+Birlik kublar soni 8 ta 
+ 
+B jismning hajmi = 8 cm3
+c) 
+ 
+ 
+C jism
+             
+ 
+   
+ 
+Birlik kublar soni 7 ta
+ 
+C jismning hajmi = 7 cm3
+d) 
+D jism
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+      
+ 
+ 
+Birlik kublar soni 7 ta
+ 
+D jismning hajmi = 7 cm3
+A jism eng kichik hajmga, B jism eng katta hajmga ega.
+Qirrasi 1 cm bo‘lgan birlik kubning hajmi 1 santimetr kub 
+yoki 1 cm3 ga teng.
+Yuqoridagi jismlardan qaysilari
+bir xil hajmga ega?
+Hajmni santimetr kub va metr kubda o‘lchash
+Qarang va o‘rganing
+120
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   120
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   120
+09/08/24   19:32
+09/08/24   19:32
+

@@ -1,0 +1,112 @@
+# X bob — 10-dars
+
+W\ Daftaringizga Quyosh, Yer va Oyning nisbiy harakatini tasvirlovchi rasm chizing.
+ularning orbitadagi harakat yo'nalishini strelkalar orqali ko‘rsating.
+Bu rasm Quyosh, Yer va Oyning nisbiy harakatini ifodalovchi modeldir.
+Bilimingizni sinab ko‘ring
+Sun’iy yo'Ldosh nima?
+Quyidagi qaysi ko‘nikmalarni egalladingiz?
+Javoblarni daftaringizga belgilang.
+1. Yo'ldosh nima ekanini izohlay olaman.
+2. Modelda o'rganilayotgan obyektning asosiy xususiyatlari
+aks etishini bayon eta olaman.
+3. Ilmiy bilimlar vaqt o'tishi bilan o'zgarishihi ko‘rsatish
+uchun to‘plangan dalillardan foydalana olaman.
+Mashq daftan
+10.2-amaliy ish, 108-bet
+Ilmiy atamalar
+E
+ekvator
+Yer sirti bo'ylab qutblardan teng uzoqlikda
+o'tkazilgan xayoliy aylana chiziq
+F
+fast
+yilning to‘rt davri - bahor, yoz, kuz, qishdan biri
+Janubiy qutb
+Yer aylanish o'qining Janubiy yarimshardagi
+Yer sirti bilan tutashgan nuqtasi
+Janubiy yarimshar
+Janubiy qutb bilan ekvator orasidagi hudud
+О
+orbita
+sayyoraning Quyosh atrofidagi harakat yo'lini
+ko'rsatuvchi chiziq
+s
+soat miliga qarama-qarshi
+mexanik soat milining harakat yo‘nalishiga
+qarama-qarshi yo'nalish
+Y
+Yer opining og'maligi
+Yer o'qining harakat orbitasiga nisbatan qiya
+holatda joylashishi
+yo'Ldosh
+koinotdagi biror yirik obyekt atrofida
+aylanuvchi jism
+Sh
+Shimoliy qutb
+Yer aylanish o'qining Shimoliy yarimshardagi
+Shimoliy yarimshar
+Shimoliy qutb bilan ekvator orasidagi hudud
+149
+
+O‘quv nashri
+Aleksandr Grey
+Tabiiy fanlar
+5-sinf
+Umumiy o'rta ta’lim maktablari uchun darslik
+“Novda Edutainment”
+Toshkent-2024
+Muharrir:
+Badiiy muharrir:
+Musahhih:
+Rassom:
+Kompyuterda sahifaiovchi:
+X. Ibrohimov
+M. Zaimbetov
+O. Madvaliyev
+A. Pan
+A. Alixonov
+Nashriyot litsenziyasi Al №158.
+26.07.2024-yilda original-maketdan bosishga ruxsat etildi.
+Bichimi 60x90 1/8. Kegli 14 n/shponli. "Source Sans 3” garniturasi.
+Ofset bosma usulida bosildi.
+Mashinada yengil bo'rlangan (Machine Finished Coated) 80 g/m2 qog‘oz.
+Shartli b.t. 20,5. Hisob-nashriyot t 16,97.
+Adadi 635 186 nusxa. Buyurtma raqami 24-331.
+“0‘zbekiston” NMIUda chop etildi.
+
+Darslik holati haqida ma’lumot
+№
+0‘quvchining
+F. 1.0.
+O'quv
+yili
+Darslikning
+olingan vaqtdagi
+holati
+Sinf rahbarining
+imzosi
+qaytarib berilgan
+vaqtdagi holati
+1
+2
+3
+4
+5
+6
+5
+Darslikni olish va o‘quv yili oxirida uni qaytarishda yuqoridagi jadval
+sinf rahbari tomonidan quyidagi mezonlarga muvofiq toldiriladi
+Yangi
+Darslikning holati a’lo darajada.
+Yaxshi
+Muqovasi butun, kitobning asosiy qismidan uzilmagan. Barcha sahifalar mavjud,
+butun, yirtilmagan, yelimi ko’chmagan.
+Qoniqarli
+Muqovasi ezilgan, shikastlangan, kitobning asosiy qismidan qisman ajralgan va
+foydalanuvchi tomonidan tiklangan. Qayta tikiash ishlari qoniqarli. Yirtilgan sahifalar
+yopishtirilgan, ba’zi sahifalari yirtilgan.
+Qoniqarsiz
+Muqovasiga chizilgan, kitobning asosiy qismidan to‘liq yoki qisman yirtilib, uzilgan,
+qoniqarli tiklangan. Sahifalari yirtilgan, ba’zi sahifalari yo‘q, bo’yalgan, ifloslangan,
+tikiash mumkin emas.

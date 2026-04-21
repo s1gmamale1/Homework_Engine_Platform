@@ -1,0 +1,49 @@
+# Tasvirlar bilan ishlash — 5-dars
+
+32
+Uskunalarning rangini oʻzgartirish
+Chizilayotgan tasvirda turli ranglardan foydalanish uchun ushbu uskunaning
+rang sozlamasini oʻzgartirishni bilish kerak. Tanlangan uskuna uchun
+palitradagi turli ranglardan foydalansa boʻladi.
+Istalgan rang tanlanadi va chiziq chizish boshlanadi.
+Endi barcha chiziqlar tanlangan rangda hosil bo‘ladi.
+Palitrada berilmagan boshqa ranglarni tanlash uchun Edit colors ikonkasi
+bosiladi.
+Yangi hosil bo‘lgan oynada boshqa ranglar ham bor. Shuningdek, chap
+tarafdagi rang kataklaridan birini tanlash yoki maxsus rang yaratish mumkin.
+@edurtm_uz
+
+33
+Tasvirlar bilan ishlash
+Maxsus rang yaratish uchun ranglar aralashmasi maydonining istalgan qismi
+bosiladi. Natijada oynaning o‘ng tomonida tanlangan rangdagi ustun paydo
+boʻladi.
+Chiziqning kerakli rang aks etgan nuqtasi bosilib, Add to Custom Colors
+buyrug‘i belgilanadi. Tanlangan rang oynaning pastki chap tomonidagi maxsus
+palitra katakchalaridan biriga qoʻshiladi.
+Nihoyat, OK buyrug‘i bosilsa, yangi rang hosil bo‘ladi.
+4.1-mashg‘ulot
+Toʻrtta gorizontal toʻgʻri chiziq chizing. Ularning har biri oldingisiga nisbatan
+balandroqda joylashsin.
+Birinchi chiziqni juda ingichka, keyingilarini avvalgisiga nisbatan qalinroq qiling.
+4.2-mashg‘ulot
+Brush yoki Line uskunasi yordamida chiziq rangini bir necha marta
+almashtirib, kamalak tasvirini chizing.
+
+34
+5-amaliy ko‘nikma
+Shakllar chizish
+Microsoft Paint bilan nafaqat chiziqlar, balki koʻplab shakllarni ham chizish
+mumkin.
+Berilgan shakllar orasidan ma’quli tanlanadi. Mavjud barcha shakllar Shapes
+menyu bo‘limidan topiladi.
+Shaklni tanlagach, sichqoncha kursori kanvasga keltiriladi.
+Sichqonchani chap tugmani bosib turgan holda shakl chizilmoqchi boʻlgan
+tomonga harakatlantiriladi.
+Paydo bo‘lgan shakl kerakli o‘lchamga yetgach, sichqoncha tugmasi qo‘yib
+yuboriladi.
+Fill uskunasi shaklning ichki qismini bo‘yashga xizmat qiladi.
+Fill: shaklning
+ichini bir xil
+rangga boʻyash.
+Kalit soʻz

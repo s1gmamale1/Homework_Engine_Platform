@@ -1,0 +1,150 @@
+# Texnologiya va Dizayn — 25-dars
+
+26-§.
+3D ruchkada har xil uch o‘lchamli
+obYektlar yasash
+3D ruchka – har xil uch о‘lchamli shakllar chizish uchun ishlati­ladigan asbobdir.
+Uning asosiy xomashyosi polimer materiallari hisoblanadi.
+“D” – bu inglizcha “doodler” sо‘zidan olingan bо‘lib, “ixtiyoriy ravishda
+boshqa biror narsa bilan shug‘ullanish” ma’nosini bildiradi. Masalan, telefonda gap­
+lashayotganingizda yoki televizor tomosha qilayotganingizda ixtiyoriy ravishda turli
+shakl va rasmlarni chizish.
+Bu asbob Sizga uch о‘lchamli shakllarni yaratishga yordam beradi. U Sizning
+ijodkorlik qobiliyatlaringizni yanada rivojlantirishga xizmat qiladi. Bundan tashqari,
+havoda betakror tasvirlar hosil qilish imkoniyatini ham yaratadi.
+Siz 3D printer haqida eshitgansiz. Uning yordamida hajmli qismlar, turli mahsulot
+va modellar yaratiladi.
+“3Doodler” deb atalgan dunyodagi birinchi 3D ruchka Amerikaning “Wobble­
+Works” kompaniyasi tomonidan ishlab chiqilgan. 3D ruchkani ishlab chiqarilishiga
+asosiy sabab, 3D printer yordamida tayyorlangan turli mahsulot va modellarning
+kamchiliklarini tuzatishdan iborat bо‘lgan. Bu g‘oya kompaniyaning asoschilari
+Maks Boug va Piter Dilvortlar tomonidan о‘ylab topilgan.
+“3Doodler” muvaffaqiyatidan sо‘ng boshqa kompaniyalar tomonidan ham 3D
+ruchkalar ishlab chiqarila boshlangan. 3D ruchkalarni ishlab chiqarilishi natijasida
+yangi san’at turi “3D ruchka art” (3D ruchka yordamida yaratilgan san’at) paydo
+bо‘ldi.
+Bugungi kunda foydalanilayotgan 3D ruchkalar ishlash prinsipiga kо‘ra ikki turga
+bо‘linadi:
+1. Issiq 3D ruchka (103–104-rasmlar).
+Issiq 3D ruchka ishlash prinsipi juda oddiy bо‘lib, ruchka plastikni isitadi,
+u tezda soviydi va unda har qanday uch о‘lchamli shaklni yaratish mumkin.
+Ruchkaning ishlashi uchun hech qanday dasturiy ta’minot va kompyuter kerak
+emas, uning imkoniyatlari faqat Sizning tasavvuringizga bog‘liqdir.
+Issiq 3D ruchka ishlashi uchun 12 volt kuchlanishli quvvat manbayi kerak bо‘ladi.
+3D ruchka harorati 160–210 gradusni tashkil qiladi.
+Issiq 3D ruchkalarning afzalliklariga yengil vaznga egaligi, ixchamligi,
+foy­dalanish qulayligi, sarflanadigan materiallarning arzonligi kabilar kirsa,
+kamchiligiga haroratning yuqori darajada emasligi kiradi.
+
+91
+91
+103-rasm. Issiq 3D ruchka tuzilishi: 1 – quvvat manbayi; 2 – plastik sim teshigi; 3 – plastik
+simni orqaga qaytarish tugmasi; 4 – plastik simni oldinga о‘tkazish tugmasi; 5 – ishchi
+qismi; 6–7 – haroratni rostlash “+”, “–” tugmalari; 8 – LED ekran, 9 – tezlikni rostlash
+tugmasi.
+104-rasm. Foydalanish tartibi: 1 – quvvat manbayini ulash; 2 – plastik simni vertikal ravishda
+joylashtirish; 3 – kerakli haroratni rostlab, oldinga о‘tkazish tugmasini bosish; 4 – ishni tugatgach,
+quvvat manbayini elektr tarmoqdan va 3D ruchkadan uzish hamda plastik simni chiqarish.
+1
+3
+2
+4
+1
+2
+3
+4
+5
+9
+8
+6
+7
+
+92
+92
+Issiq 3D ruchkada ishlatiladigan asosiy xomashyolarga ABS va PLA plastiklari
+kiradi (105-rasm).
+ABS (akrilonitril butadiyen stirol, (plastik nomi shu moddalar ismlarining bosh
+harflaridan olingan) plastik neftdan olingan aralashmalarga asoslangan. U buzilmaydi,
+ju­da bardoshli, 100–110 °C haroratda qotadi, yuqori darajada jilolanadi, qayta
+ishlash im­koniyatiga ega, ishlov berish oson bо‘lgan plastmassa hisoblanadi. Ma­
+terialning asosiy kamchiligi qizdirilganda о‘zidan hid chiqaradi. Shuning uchun
+un­dan foydalanganda maska taqish va tez-tez xonani shamollatib turish lozim.
+PLA (polilaktid nomining qisqartirilgan shakli) plastik  shakar yoki makkajо‘xori
+asosida tayyorlangan tabiiy parchalanadigan plastmassadir. U 160–180 °C haroratda
+eriydi, tez soviydi, matoga ham yaxshi yopishadi, qizdirilganda о‘zidan zararli moddalar
+chiqarmaydi va hidi yо‘q plastmassa bо‘lganligi tufayli undan keng foydalaniladi.
+PLA plastikning asosiy kamchiligi undan yasalgan buyumlarning mо‘rtligidir.
+Ushbu plastmassadan tayyorlangan mahsulotlar kamida bir yildan keyin asta-sekin
+parchalanishni boshlaydi.
+2. Sovuq 3D ruchka (106-rasm).
+Sovuq 3D ruchka nomidan kо‘rinib turganidek, issiq 3D ruchkadan farq qiladigan
+prinsip asosida ishlaydi va unda isitish elementi yо‘q.
+ABS plastik
+PLA plastik
+105-rasm. Issiq 3D ruchkada ishlatiladigan asosiy xomashyo turlari.
+106-rasm. Sovuq 3D ruchka tuzilishi:
+1 – quvvat manbayi; 2 – yoqish va
+o‘chirish tugmasi; 3 – LED ekran, 4 – tez­
+lik darajalari; 5 – batareya; 6 – suyuq
+polimerli kartrij kapsulasi; 7 – ishlash
+rejimini boshqarish tugmasi; 8 – LED
+yoritkichlar.
+1
+2
+3
+4
+5
+6
+7
+8
+
+93
+93
+Bu ruchkaning issiq 3D ruchkadan yana bir farqli tomoni u batareya asosida
+2 soatgacha va batareya tugagach, USB ulagichi orqali elektr tokiga ulab ham
+ishlashni davom ettirish mumkin. Bunda ruchkaning о‘zi avtomatik ravishda
+batareya tugayotganligi va uni USB ulagichiga ulash kerakligi haqida xabar beradi.
+Ruchkaning uchidagi LED yoritkichlar chizish jarayonida plastmassaning qotib
+qolishini ta’minlaydi.
+Bu ruchkada ishlatiladigan asosiy material suyuq polimerli kartrij kapsulasidir.
+Sovuq 3D ruchkaning afzalliklariga issiq elementlarning yо‘qligi, sim­lar­
+siz batareya yordamida ishlashi, turli xil xususiyatlarga ega kо‘p sonli poli­
+merlardan foydalanish imkoniyati mavjudligi, shovqinsiz ishlashi kabilar kirsa,
+kamchiliklariga ruchka va uning materiali tannarxining yuqoriligi kiradi.
+Issiq va sovuq 3D ruchkalar orqali Siz ajoyib ijodkorlik namunalarini yaratish
+imkoniyatiga ega bо‘lasiz. Masalan, zargarlik buyumlari, me’moriy modellar, turli xil
+muhandislik loyihalari uchun qismlar, haqiqiy obyekt maketlari, uy-rо‘zg‘or buyumlari
+va ularning buzilgan qismlarini tuzatish, turli aksessuarlar, buyum va о‘yinchoqlar
+ustiga gul shakllari va boshqalar.
+Xavfsizlik texnikasi qoidalari
+1. 3D tipidagi ruchkalardan foydalanishdan oldin berilgan kо‘rsat­ma­larni о‘rganib
+chiqish va unga amal qilish.
+2. 3D tipidagi ruchkalardan о‘qituvchi ruxsati bilan uning nazorati ostida foy­
+dalanish.
+3. Issiq 3D ruchka issiqlik elementlariga ega bо‘lganligi sababli, ular bilan
+ishlaganda niqob taqish va tez-tez xonani shamollatib turish lozim.
+4. Sovuq 3D ruchkadan foydalanganda kо‘zlarni ultrabinafsha nurlanishidan
+himoya qiluvchi maxsus kо‘zoynak taqish shart.
+10-amaliy mashg‘ulot. 3D ruchkadan foydalanib turli geometrik shakllar
+yasash.
+Jihozlar: issiq 3D ruchka, ABS yoki PLA plastik, chizg‘ich, qalam,
+geometrik shakl namunalari.
+Ishni bajarish tartibi:
+1. Turli geometrik shakllardan birini ixtiyoriy tanlab oling. Masalan,
+konus yoki kub shakllaridan birini (107-rasm).
+2.  Tanlagan geometrik shakl tuzilishining murakkab tomonlarini о‘rganib chiqing.
+3. Tanlagan geometrik shaklni taxminiy о‘lchamlarini belgilab, tо‘liq holdagi
+variantini oq qog‘ozga chizing. Agar shakl murakkab bо‘lsa, uning о‘xshash
+tomonlaridan bittasini chizib oling.
+4. 3D ruchkadan foydalanib, tanlangan geometrik shakl tomonlarini yasang.
+Yasalgan tomonlarni о‘zaro birlashtirib chiqing.
+
+94
+94
+5. Geometrik shakl atroflarini ruchka yordamida tо‘ldiring.
+6. Xavfsizlik texnikasi qoidalariga amal qilgan holda ishlarni bajaring.
+Konus shakli
+Ko‘pburchaklar
+Kо‘pburchakli charxpalak
+Kub shakli
+107-rasm. Turli geometrik shakl namunalari.

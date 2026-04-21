@@ -1,0 +1,91 @@
+# Tasvirlar bilan ishlash — 9-dars
+
+41
+Tasvirlar bilan ishlash
+Yakuniy loyiha ― “Sevimli qahramonim”
+Oʻqituvchingiz sizga sevimli multfilm qahramoningiz tasvirini yaratish vazifasini
+berdi.
+Topshiriqni bajarishda Shape, Brush va Line uskunalaridan foydalaning.
+1-mashg‘ulot
+Yangi Microsoft Paint hujjatini yarating va sevimli qahramoningiz rasmini chizish
+uchun Shape, Brush va Line uskunalarini qo‘llang. Yodda tuting, avval chizilgan
+chiziq yoki shaklga aynan o‘xshash bir nechta shakl va chiziqni yaratish uchun
+Copy va Paste amallarini bajarasiz.
+2-mashg‘ulot
+Rasmni yorqin ranglarda tasvirlash uchun Fill va Brush uskunalaridan
+foydalaning.
+3-mashg‘ulot
+Hujjatingizni mos nom bilan saqlang.
+@edurtm_uz
+
+42
+O‘ylab ko‘ring
+Quyidagi savollarning javobini daftaringizga yozing.
+1. Tasvir bilan ishlashda o‘zlashtirgan yangi ko‘nikmalaringizdan qanday
+foydalanasiz? Uchta misol keltiring.
+2. Copy va Paste buyruqlarining afzalligi nimada?
+3. Yaratgan tasvirlaringizni qayta ko‘rib chiqing. Ularni yanada yaxshilash uchun
+qanday o‘zgartirishlar kiritgan boʻlardingiz?
+
+43
+Bu modulda maʼlumotlar bilan ishlash ko‘nikmalarini rivojlantirasiz, qolaversa,
+Microsoft Excel dasturi yordamida maʼlumotlarni jamlash, diagramma, grafik
+yasashni oʻrganib borasiz. Yakuniy loyiha sifatida o‘zlashtirgan ko‘nikmalaringizni
+amalda qo‘llab, doʻstlaringizning xobbisi haqidagi maʼlumotlar aks etgan
+diagramma yaratasiz.
+Shuningdek, quyidagilarni ham bilib olasiz:
+•	 maʼlumotlarni guruhlarga ajratish (tasniflash);
+•	 grafik yoki diagramma yaratish;
+•	 grafik yoki diagrammani formatlash;
+•	 grafik yoki diagrammaga oʻq belgisini qoʻshish;
+•	 grafik yoki diagrammadan xulosalar chiqarish.
+Darsni boshlashdan avval
+quyidagilarni bilishingiz kerak:
+•	 maʼlumotlarni kiritish uchun klaviaturadan hamda variantlardan birini tanlash
+uchun sichqonchadan (yoki sensorli ekrandan) foydalana olish;
+•	 maʼlumotlar jadvalining nomi (sarlavhasi) mavjud ekani;
+•	 jadvalda foydalanilayotgan maʼlumotlar sarlavhalar boʻyicha tartiblangan
+ekani.
+Kirish
+Diagramma ― raqamli axborotni namoyish etuvchi grafik (turli qiymatlarni
+tasvirlovchi axborot) bo‘lib, uning koʻplab turlari mavjud.
+Keyingi sahifaning yuqori qismida joylashgan ustunli diagrammadagi yashil
+ustun diagrammaning eng katta ko‘rsatkichini anglatadi.
+Ustunli diagrammaning pastida joylashgan doirasimon diagrammadagi yashil
+boʻlak diagrammaning eng katta ko‘rsatkichini anglatadi.
+Bu modulda quyidagilarni oʻrganasiz:
+1
+Maʼlumotlarni saqlash va ularni guruhlarga ajratish
+2
+Maʼlumotlarni grafiklar va diagrammalarda tasvirlash
+3
+Grafiklar va diagrammalardan foydalanib savollarga javob berish
+4
+Grafiklar va diagrammalardan foydalanib xulosalar chiqarish
+Diagramma:
+raqamli axborotni
+vizual namoyish
+etuvchi tasvir.
+Axborot: kishi,
+predmet yoki
+voqea-hodisalarga
+oid fakt.
+Ustunli
+diagramma:
+predmetlar
+soni aks
+etuvchi vertikal
+chiziqlardan
+iborat grafik.
+Doirasimon
+butun doirani
+umumiy miqdor,
+uning har bir
+boʻlagini esa
+miqdorning bir
+qismi sifatida
+aks ettiruvchi
+diagramma.
+Kalit soʻzlar
+3
+Diagrammalar bilan ishlash

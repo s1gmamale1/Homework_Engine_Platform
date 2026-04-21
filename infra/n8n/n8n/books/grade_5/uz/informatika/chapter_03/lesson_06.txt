@@ -1,0 +1,51 @@
+# Diagrammalar bilan ishlash — 6-dars
+
+57
+Diagrammalar bilan ishlash
+5.2-mashg‘ulot
+Diagrammada yana qanday ma’lumotlar ifodalangan?
+Ustunlar diagramma boʻylab o‘sish yoki kamayish tartibida joylashganmi?
+Yoki ularning barchasi aralash holatdami?
+5.3-mashg‘ulot
+Tasavvur qiling, xususiy doʻkoningiz bor. Soyabonlar sotish haqida
+oʻylayapsiz. Qaysi oyda sizga sotish uchun koʻp miqdorda soyabon kerak
+boʻladi?
+6-amaliy ko‘nikma
+Diagrammaga maʼlumot kiritish
+Elektron jadvaldagi maʼlumotlar asosida diagramma yaratiladi.
+Avvalo bu jarayonda maʼlumotlar jadvali kerak boʻladi.
+Quyidagi elektron jadvalga qarang.
+Tasvirda maʼlumotlar jadvali va boʻsh diagrammani ko‘rish mumkin.
+Diagramma boʻsh, chunki jadvalga maʼlumotlar kiritilmagan. Jadvalga
+maʼlumotlar kiritilsa, grafik ham shu ma’lumotlar asosida oʻzgaradi.
+6.1-mashg‘ulot
+Oʻqituvchingiz bergan colour_2.xlsx hujjatini oching.
+Oʻqda joylashgan
+raqamlar
+qiymatlar
+kiritilganda
+oʻzgaradi.
+Maslahat
+@edurtm_uz
+
+58
+Quyidagi raqamlarni jadvalga kiriting:
+olovrang – 2;
+qizil – 6;
+yashil – 8;
+sariq – 1.
+Quyidagi savollarning javobini daftaringizga yozing.
+1.	Sizga berilgan diagrammada qanday ma’lumotlar paydo bo‘ldi.
+2.	Diagrammadagi oʻzgarishlarni yozing.
+6.2-mashg‘ulot
+Mevalar sonini oʻzgartiring (istalgan miqdorni yozishingiz mumkin).
+1.	Sizga berilgan diagrammada qanday ma’lumotlar paydo bo‘ldi?
+6.3-mashg‘ulot
+Quyida ko‘plab shakllar aks etgan. Ularni besh guruhga bo‘lish mumkin.
+Oʻqituvchingiz bergan shapes_1.xlsx hujjatini oching.
+Diagramma yaratish uchun hujjatdagi maʼlumotlar jadvalini toʻldiring.
+Tasvirdagi shakllar
+nomi va har
+bir shakl soni
+haqida ma’lumot
+kiriting.

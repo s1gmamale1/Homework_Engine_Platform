@@ -1,0 +1,112 @@
+# Elektron pochtada ishlash — 1-dars
+
+Elektron pochtada ishlash
+Bu modulda siz quyidagilarni oʻrganasiz:
+1
+Elektron pochta xatlarini yaratish va yuborish
+2
+Elektron pochta xatlariga javob yozish
+3
+Elektron pochta xatlarini toʻplash va oʻqish
+4
+Elektron pochta papkalaridan foydalanish
+5
+Xatlarni boshqa qabul qiluvchiga qayta jo‘natish yoki nusxasini yuborish
+Bu modulda yakuniy loyihani ishlab chiqish uchun elektron pochta bilan ishlash
+ko‘nikmasi rivojlantiriladi. Elektron pochta orqali yuboriladigan xatlarni yozish
+uchun doʻstlaringiz bilan birga ishlaysiz.
+Emaildagi “e”
+harfi “elektron”,
+“mail” so‘zi
+“pochta” degan
+maʼnoni bildiradi.
+Bilasizmi?
+Elektron
+pochta birinchi
+marta AQSh
+universitetlarining
+birida 1960-yilda
+ishlatilgan.
+Bundan tashqari quyidagilarni oʻrganasiz:
+•	 bitta elektron xatni bir nechta odamga yuborish;
+•	 elektron xatlarga javob qaytarish;
+•	 elektron xatlardagi matnni formatlash (masalan, shrift turi, o‘lchami va rangini
+oʻzgartirish);
+•	 elektron xatlarni papkalarga joylash;
+•	 elektron pochtadan foydalanishda xavfsizlikni ta’minlash.
+6
+@edurtm_uz
+
+107
+Kirish
+Elektron pochta (Email)
+Elektron xatlarni yuborish va qabul qilish uchun elektron pochta akkaunti
+boʻlishi kerak.
+Elektron pochta manzilini turli provayderlardan olish mumkin. Masalan, Gmail
+yoki Microsoft Outlook kabilardan foydalansa bo‘ladi.
+Bu modulda Gmail xizmatidan foydalanish haqida ko‘nikmalarga ega bo‘lasiz.
+Barcha provayderlarda deyarli bir xil uskunalar mavjud, lekin tugmalar turli
+qismlarda joylashishi mumkin.
+Elektron pochta akkauntiga ega bo‘lishingiz bilan elektron pochta
+manziliga ham ega bo‘lasiz. Umuman olganda, ikkita bir xil elektron
+pochta manzili boʻlmaydi. Ya’ni har bir insonning elektron pochtasi nomi
+betakrordir. Agar kim bilandir elektron pochta manzilingiz bir xil boʻlsa, siz
+uning, u esa sizning elektron pochta xabarlaringizni olgan boʻlardi.
+Elektron pochta:
+elektron pochta
+akkaunti orqali
+boshqalardan
+elektron xatlarni
+qabul qilish va
+ularga javob
+qaytarish vositasi.
+Elektron pochta
+provayderi:
+manzilini
+taqdim etuvchi
+kompaniya.
+Elektron ­pochta
+manzili: Turli
+foydalanuv­
+chilarga elektron
+xat ­yuborish
+yoki ­yuborilgan
+xatlarni
+o‘qish ­uchun
+foydalaniladigan
+takrorlanmas
+manzil.
+Betakror:
+xususiyatga ega
+narsa. Ikkita
+manzili hech
+qachon bir xil
+bo‘lmaydi.
+Kalit soʻzlar
+manzilining
+birinchi qismi (qizil
+rangda) qanday
+boʻlishini o‘zingiz
+tanlay olasiz.
+@ belgisi elektron
+pochta manzilini
+bildiradi.
+Yashil matn ―
+foydalanilayotgan elektron
+pochta provayderi. Uni
+tanlash yoki oʻzgartirish
+mumkin emas, u avtomatik
+tarzda beriladi.
+Ushbu elektron pochta manzili namunasiga qarang:
+jamila.a7@gmail.com
+Tanlangan elektron pochta manzili boshqalarniki bilan bir xil bo‘lsa, birinchi
+qismni (qizil rangdagi) oʻzgartirish kerak. Masalan, oxirida biror maʼnoga ega
+raqamlarni qoʻyish mumkin. Masalan, sevimli raqamni.
+Darsni boshlashdan avval
+Quyidagilarni bilishingiz kerak:
+•	 elektron pochta nima ekani va undan qanday foydalanish kerakligi
+(siz elektron pochtadan hali foydalanmagan boʻlishingiz ham mumkin);
+•	 elektron pochta akkauntiga ega boʻlish;
+•	 elektron pochta akkauntiga kirish;
+•	 kompyuterda sichqoncha kursorini boshqarish va sichqoncha tugmalaridan
+foydalanish.

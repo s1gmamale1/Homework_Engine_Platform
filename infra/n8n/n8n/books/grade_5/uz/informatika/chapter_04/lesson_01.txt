@@ -1,0 +1,52 @@
+# Dasturlash — 1-dars
+
+Dasturlash
+Bu modulda yakuniy loyiha tayyorlash uchun dasturlash ko‘nikmalarini
+rivojlantirasiz. Bu loyiha Scratch dasturi imkoniyatlaridan foydalanib, Taq-tuq
+laqabli otning hayvonot bogʻiga kelishi hamda barcha hayvonlarni ko‘rishi
+vazifasidan iborat.
+Shuningdek, quyidagilarni bilib olasiz:
+•	 algoritm nima ekani, uni tuzish va tuzatish (sozlash);
+•	 koʻrsatmalar ketma-ket berilganida Sprayt qanday harakatlarni amalga
+oshirishini bashorat qilish;
+•	 Scratch dasturida Spraytni harakatlantira olish;
+•	 Scratch dasturida Spraytni aylantira olish;
+•	 Scratch dasturida Spraytni gapirtirish.
+Darsni boshlashdan avval
+Quyidagilarni bilishingiz kerak:
+•	 odamlar va predmetlar turli yo‘nalishlarda — yuqori, past, chap va oʻngga
+harakatlanishi;
+•	 burchaklarga burilishdan oldin ham foydalangan boʻlish:
+•	 90 daraja (chorak burilish);
+•	 180 daraja (yarim aylana burilish);
+•	 360 daraja (toʻliq aylana burilish).
+Bu modulda quyidagilarni oʻrganasiz:
+1
+Maqsadli qisqa ko‘rsatmalar ketma-ketligini (algoritm) yaratish
+2
+Koʻrsatmalar ketma-ketligi asosida maqsadli dastur yaratish
+3
+Koʻrsatmalar ketma-ketligi asosida Spraytning harakatlarini bashorat qila
+olish
+4
+Quyidagilarni o‘z ichiga olgan dastur yaratish:
+•  Spraytni kamida 5 marta harakatlantirish
+•  Spraytni 90 va 180 darajadan boshqa burchaklarga burish
+5
+Kamida bitta xatosi bor dasturni sozlash (Debagging jarayoni)
+4
+Har safar
+kompyuter
+tugmasi yoki
+klaviaturadagi
+harf bosilganda,
+dasturida
+saqlanayotgan
+koʻrsatmalar
+yo‘naltirib turiladi.
+Bu koʻrsatmalarsiz
+shunchaki
+foydasiz bir quti
+boʻlib qolar edi.
+Bilasizmi?
+@edurtm_uz

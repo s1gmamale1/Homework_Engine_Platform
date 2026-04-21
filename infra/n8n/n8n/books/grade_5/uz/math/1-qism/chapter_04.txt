@@ -1,0 +1,1271 @@
+# Uchburchakning yuzi
+
+Uchburchakning yuzi
+4
+Bolalar dam olishda
+Muhokama qiling
+Menimcha, 
+varragimning 
+yuzi eng katta.
+Varragimning 
+yuzi Madinadagi 
+varrak yuzidan 
+kattaroqmikan?
+Bu chodirning 
+balandligi 
+qancha?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   89
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   89
+09/08/24   19:31
+09/08/24   19:31
+
+90
+Kvadrat va to‘g‘ri to‘rtburchak
+1  ABCD – to‘g‘ri to‘rtburchak. 
+ 
+AD va BC — to‘g‘ri to‘rtburchakning bo‘yi.        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AB va DC — to‘g‘ri to‘rtburchakning eni.
+AB va BC tomonlar o‘zaro perpendikulyar (AB ⊥ 
+⊥ BC). Yana 
+boshqa o‘zaro perpendikulyar kesmalarni ayta olasizmi?
+ 
+A
+D
+B
+C
+ 
+ 
+To‘g‘ri to‘rtburchakning yuzi = bo‘yi × eni
+2  ABCD – kvadrat. 
+ 
+           AB, BC, CD va AD — kvadratning tomonlari.
+           AB va BC tomonlar o‘zaro perpendikulyar (AB ⊥ 
+⊥ BC).
+ 
+           Yana boshqa o‘zaro perpendikulyar kesmalarni ayta olasizmi?
+ 
+A
+D
+B
+C
+ 
+Kvadratning yuzi = tomoni × tomoni
+ 
+Ikkita to‘g‘ri chiziq 
+to‘g‘ri burchak ostida 
+kesishsa, ular o‘zaro 
+perpendikulyar bo‘ladi.
+Shu sahifadagi to‘g‘ri 
+to‘rtburchak yoki  
+kvadratda AC kesma 
+o‘tkazsangiz, qanday  
+shakllar hosil bo‘ladi?
+115–116
+Mashq daftariga o‘ting
+Eslang
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   90
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   90
+09/08/24   19:31
+09/08/24   19:31
+
+91
+1  ABC uchburchakning 3 ta tomoni va 3 ta burchagi bor.
+ 
+a) 
+ABC uchburchakda BC uning asosi, AC uning balandligi hisoblanadi.  
+      
+ 
+ 
+ 
+ 
+          
+ 
+ 
+ 
+ 
+    
+A
+B
+C
+balandlik
+asos
+     
+ 
+ 
+ 
+ 
+ 
+AC ⊥ 
+⊥ BC
+ 
+ 
+ 
+   
+ 
+ 
+ 
+       
+ 
+ 
+ 
+ 
+ 
+b) DEF uchburchakda EF uning asosi, DG uning balandligi hisoblanadi.
+ 
+ 
+D
+F
+E
+balandlik
+asos
+G
+ 
+ 
+ 
+ 
+ 
+DG ⊥ EF
+ 
+ 
+ 
+ 
+c) 
+WXY uchburchakda XY uning asosi, WZ uning balandligi hisoblanadi.
+ 
+ 
+W
+X
+Z
+balandlik
+asos
+Y
+ 
+ 
+ 
+ 
+ 
+ 
+ WZ ⊥ XY 
+ 
+ 
+   
+Uchburchakning balandligi uning asosiga perpendikulyar bo‘ladi.
+AB, AC va BC – ABC
+uchburchakning
+tomonlari.
+Uchburchakning asosi va balandligi
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   91
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   91
+09/08/24   19:31
+09/08/24   19:31
+
+2  EFG uchburchakda berilgan asosga tushirilgan balandlikni toping.
+ 
+a) 
+uch
+asos
+E
+G
+F
+H
+EG — uchburchak asosi.
+FH — uchburchak balandligi, chunki 
+FH ⊥ 
+⊥ EG.
+F — uchburchakning asosi qarshisidagi 
+uchi.
+b) 
+E
+asos
+G
+F
+J
+ 
+ 
+EF — uchburchak asosi.
+GJ — uchburchak balandligi,
+chunki GJ ⊥ EF.
+G — uchburchakning asosi qarshisidagi 
+uchi.
+c) 
+E
+asos
+G
+F
+K
+ 
+ 
+ 
+  
+ 
+Uchburchakning asosi uning uchta tomonidan istalgan biri bo‘lishi mumkin.
+O‘tkir burchakli uchburchakning balandligi uning asosi qarshisidagi
+uchidan tushirilgan perpendikulyar kesma uzunligiga teng.
+ 
+FG uchburchakning asosi  
+bo‘lsa, uchburchakning 
+balandligini topa olasizmi?
+92
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   92
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   92
+09/08/24   19:31
+09/08/24   19:31
+
+1  Berilgan ABC uchburchakda AC asos bo‘lsa, BD kesma balandlik bo‘ladimi?
+Javobingizni tushuntiring.
+ 
+ 
+a) 
+ 
+D
+asos
+C
+B
+A
+ 
+  
+b)
+ 
+C
+asos
+A
+B
+D
+ 
+2  Uchburchakning asosi berilgan. To‘g‘ri burchakli chizg‘ichdan foydalanib 
+uchburchaklarning balandligini aniqlang.  
+ 
+ 
+a) 
+ 
+C
+A
+B
+AC – asos.
+b)
+ 
+G
+E
+F
+FG – asos.
+c) 
+    
+KL – asos.
+J
+K
+L
+3  Navbat bilan katakli qog‘ozga turli o‘lchamdagi uchburchaklarni chizing. 
+Sherigingizdan berilgan asosga ko‘ra uchburchaklarning balandligini aniqlashni 
+so‘rang. Zarur holatlarda to‘g‘ri burchakli chizg‘ichdan foydalaning.
+Juftlikda ishlang
+93
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   93
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   93
+09/08/24   19:31
+09/08/24   19:31
+
+1  Berilgan asosga ko‘ra uchburchakning balandligini aniqlang. 
+ 
+a) 
+ 
+C
+A
+B
+ 
+ 
+  
+ 
+ABC uchburchakda AB – asos,
+           
+ – balandlik.
+b) 
+ 
+ 
+F 
+E
+D
+G
+ 
+ 
+DEF uchburchakda DF – asos, 
+           
+ – balandlik.
+c) 
+P 
+Q
+S
+R
+T
+ 
+ 
+ 
+PQR uchburchakda PQ – asos,
+ 
+           
+ – balandlik.
+d) 
+L
+M
+K
+N
+P
+ 
+ 
+KLM uchburchakda LM – asos,
+           
+ – balandlik.
+Bajaring va o‘rganing
+94
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   94
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   94
+09/08/24   19:31
+09/08/24   19:31
+
+2  Berilgan balandlikka ko‘ra uchburchakning asosini aniqlang.
+ 
+a) 
+C
+B
+D
+A
+ 
+ 
+  
+ 
+ABC uchburchakda BD – balandlik,
+           
+ – asos.
+b) 
+F
+H
+G
+E
+ 
+ 
+EFG uchburchakda FH – balandlik,  
+ – asos.
+c) 
+Q
+P
+S
+R
+T
+ 
+ 
+PQR uchburchakda PS – balandlik,
+           
+ – asos.
+d) 
+ 
+W 
+X
+Z
+Y
+U
+V
+ 
+ 
+WXY uchburchakda YZ – balandlik,
+            
+ – asos.
+O‘zingizni tekshiring
+a) 
+Men berilgan asosga ko‘ra uchburchakning balandligini topishni bilaman. 
+  
+b) Men berilgan balandlikka ko‘ra uchburchakning asosini topishni bilaman. 
+  
+117–118
+Mashq daftariga o‘ting
+95
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   95
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   95
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  Quyida uchburchakka mos to‘g‘ri to‘rtburchakni aniqlash keltirilgan.
+ 
+ 
+asos
+balandlik
+B
+A
+C
+asos
+asos
+balandlik
+balandlik
+ 
+2  a) 
+ABCD to‘g‘ri to‘rtburchakning bo‘yi 4 cm, eni 6 cm.  
+ 
+ 
+1 cm
+A 1 cm
+B
+D
+C
+ 
+ 
+ 
+ 
+  
+ 
+         
+ 
+      
+ 
+ 
+ 
+ 
+ABCD to‘g‘ri to‘rtburchakning yuzi = 6 × 4 
+ 
+ 
+ 
+ 
+ 
+ 
+        = 24 (cm2)
+ 
+ 
+ACD uchburchak yuzi = 1
+2  × ABCD to‘g‘ri to‘rtburchak yuzi 
+ 
+ 
+ 
+ 
+ = 1
+2 × 24 
+ 
+ 
+ 
+ 
+ = 12 (cm2)
+b)
+ACD uchburchak bilan ABCD 
+to‘g‘ri to‘rtburchakning yuzlari 
+orasida qanday bog‘liqlikni 
+sezdingiz?
+96
+Uchburchakning yuzini topish
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   96
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   96
+09/08/24   19:31
+09/08/24   19:31
+
+b) 
+       
+ 
+ 
+1 cm
+A 1 cm
+B
+D
+C
+E
+F
+A
+B
+D
+C
+E
+F
+ 
+ 
+ABCD to‘g‘ri to‘rtburchak – ACD uchburchakka mos to‘g‘ri to‘rtburchak. 
+ 
+AEFD to‘g‘ri to‘rtburchak yuzi = 1
+2  × ABCD to‘g‘ri to‘rtburchak yuzi 
+ 
+ 
+ 
+ 
+   = 1
+2 × 6 × 4 
+ 
+ 
+ 
+ 
+   = 12 (cm2)
+ 
+ 
+ 
+3
+ 
+1 cm
+P 1 cm
+Q
+S
+R
+T
+P
+Q
+S
+R
+T
+ 
+ 
+  
+ 
+ 
+      
+ 
+PQRS kvadrat – STR uchburchakka mos kvadrat. 
+ 
+STR uchburchak yuzi = 1
+2  × PQRS kvadrat yuzi
+ 
+ 
+ 
+ 
+  = 1
+2 × 4 × 4 
+ 
+ 
+ 
+ 
+  = 8 (cm2)
+97
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   97
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   97
+09/08/24   19:31
+09/08/24   19:31
+
+4  
+1 cm
+E 1 cm
+F
+K
+G
+J
+K
+G
+F
+J
+E
+H
+H
+ 
+ 
+  
+ 
+  
+ 
+ 
+JFGK to‘g‘ri to‘rtburchak – EGK uchburchakka mos to‘g‘ri to‘rtburchak. 
+ 
+EGK uchburchak yuzi = 1
+2  × JFGK to‘g‘ri to‘rtburchak yuzi
+ 
+ 
+  
+  = 1
+2 × 2 × 4 
+ 
+ 
+  
+   = 1
+2 × 8 
+ 
+ 
+  
+   = 4 (cm2)
+Uchburchakning yuzi unga mos to‘g‘ri to‘rtburchak yuzining yarmiga teng.
+Juftlikda ishlang
+Juftlikda muhokama qiling.
+a) 
+Uchburchaklarga mos to‘g‘ri to‘rtburchaklarni chizib ko‘rsating.
+ 
+ 
+ 
+ 
+ 
+  
+asos
+       
+asos
+2-uchburchak
+       
+3-uchburchak
+asos
+1-uchburchak
+98
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   98
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   98
+09/08/24   19:31
+09/08/24   19:31
+
+b) 
+Yuqorida berilgan uchburchaklarning asosi, balandligi va yuzini toping.
+         Uchburchaklarga mos to‘g‘ri to‘rtburchaklarning bo‘yi, eni va yuzi qanday?
+ 
+Javoblaringizni jadvalga yozing.
+Uchbur- 
+chak
+Uchbur-
+chakning 
+asosi (cm)
+Uchbur-
+chakning 
+balandligi 
+(cm)
+Uchbur-
+chakning 
+yuzi (cm2)
+Mos to‘g‘ri 
+to‘rtbur- 
+chak
+To‘g‘ri  
+to‘rtbur-
+chakning 
+bo‘yi (cm)
+To‘g‘ri
+to‘rtbur- 
+chakning 
+eni (cm)
+To‘g‘ri
+to‘rtbur- 
+chakning
+yuzi (cm2)
+1
+1
+2
+2
+3
+3
+ 
+ 
+ 
+Uchburchakning yuzi = 
+ × mos to‘g‘ri to‘rtburchak yuzi
+                                                                  = 
+ × mos to‘g‘ri to‘rtburchakning bo‘yi × eni
+ 
+ 
+ 
+           = 
+ × uchburchakning asosi × balandligi
+ 
+   
+ 
+AKT mashqi
+Uchburchakning yuzi unga mos to‘g‘ri to‘rtburchak yuzining yarmiga teng   
+ 
+ 
+ekanini ko‘rsatish uchun “Uchburchak-to‘g‘ri to‘rtburchak” dasturidan foydalaning. 
+Har bir uchburchak  
+va unga mos to‘g‘ri 
+to‘rtburchakning  
+yuzi o‘rtasida qanday  
+bog‘liqlikni payqadingiz?
+Uchburchakning asosi va balandligi 
+hamda unga mos  
+to‘g‘ri to‘rtburchakning  
+bo‘yi va eni o‘rtasida qanday 
+bog‘liqlikni payqadingiz?
+99
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   99
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   99
+09/08/24   19:31
+09/08/24   19:31
+
+5  Uchburchakning yuzini toping.
+Uchburchakning yuzi = 1
+2  × asosi × balandligi
+ 
+                                  
+ 
+a) 
+ 
+ 
+ 
+ 
+ 
+ 
+3 cm
+4 cm
+A
+B
+C
+ 
+ ABC uchburchakning yuzi =  1
+2 × 4 × 3 
+ 
+ 
+ 
+ 
+ 
+  
+  = 6 (cm2)
+ 
+b) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DEF uchburchakning yuzi = 1
+2 × 10 × 6
+6 cm
+D
+10 cm
+F
+E
+ 
+  
+            = 30 (cm2)
+ 
+c) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+K
+J
+L
+7 cm
+16 cm
+ 
+JKL uchburchakning yuzi = 1
+2 × 7 × 16 
+ 
+ 
+ 
+ 
+  
+           = 56 (cm2)
+ 
+d) 
+ 
+ 
+ 
+ 
+ 
+PQR uchburchakning yuzi = 1
+2 × 24 × 10 
+ 
+ 
+ 
+10 cm
+Q
+P
+R
+24 cm
+ 
+  
+            = 120 (cm2)
+100
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   100
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   100
+09/08/24   19:31
+09/08/24   19:31
+
+Qiziqarli matematika
+AKT mashqi
+Quyidagilarni aniqlash uchun “Uchburchakning yuzi” dasturidan foydalaning.
+a) 
+Asosi ham, balandligi ham teng bo‘lgan uchburchaklarning yuzi teng bo‘ladimi?
+ 
+A
+asos
+C
+B
+A1
+A2
+b)  Uchburchakning balandligi ortsa, uning yuzi qanday o‘zgaradi?
+A1
+asos
+C
+B
+A
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+Sinf xonasidan yuzi 20 cm2 ga teng bo‘lgan uchta turli uchburchak toping. 
+Uchburchaklarning
+balandligi va  
+asosining
+uzunligi qancha? 
+Uchburchaklarga mos 
+to‘g‘ri to‘rtburchak
+tomonlarining uzunligi
+qancha?
+101
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   101
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   101
+09/08/24   19:31
+09/08/24   19:31
+
+Bajaring va o‘rganing
+Bo‘yalgan uchburchaklarning yuzini toping. 
+a) 
+6 cm
+8 cm
+ 
+b) 
+13 cm
+12 cm
+5 cm
+ 
+ 
+ 
+ 
+   
+ 
+c) 
+14 m
+6 m
+ 
+d) 
+25 cm
+40 cm
+15 cm
+ 
+ 
+ 
+   
+e) 
+2 m
+6 m
+10 m
+6 m
+ 
+f) 
+14 m
+12 m
+20 m
+16 m
+ 
+ 
+  
+g) 
+25 m
+7 m
+14 m
+10 m
+ 
+h) 
+9 m
+24 m
+28 m
+ 
+ 
+119–122
+Mashq daftariga o‘ting
+102
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   102
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   102
+09/08/24   19:31
+09/08/24   19:31
+
+1-usul
+2-usul
+Qarang va o‘rganing
+1  PQRS – to‘g‘ri to‘rtburchak, PTUS esa kvadrat. Bo‘yalgan shaklning yuzini toping.
+ 
+P
+T
+S
+U
+R
+B
+A
+6 cm
+6 cm
+10 cm
+Q
+          A kvadratning yuzi = 6 × 6 
+ 
+              = 36 (cm2)
+                                         RU = 10 – 6 
+                                                = 4 (cm)
+B uchburchakning yuzi = 1
+2 × 4 × 6 
+                                                = 12 (cm2)
+     PTRS shaklning yuzi  = 36 + 12  
+ 
+              = 48 (cm2)
+PQRS to‘g‘ri to‘rtburchakning yuzi = 10 × 6
+                                                                       = 60 (cm2)
+ 
+                  TQ = 10 – 6 
+ 
+                         = 4 (cm)
+                 TQR uchburchakning yuzi =  1
+2 × 4 × 6 
+ 
+                        = 12 (cm2)
+                             PTRS shaklning yuzi = 60 – 12 
+ 
+                        = 48 (cm2)
+2  ABCD to‘g‘ri to‘rtburchakning bo‘yalgan qismi yuzini toping. 
+ 
+ 
+ 
+ 
+ 
+ 
+8 cm
+A
+B
+D
+C
+E
+12 cm
+ 
+ ABCD to‘g‘ri to‘rtburchakning yuzi = 12 × 8 
+ 
+ 
+ 
+ 
+                      = 96 (cm2)
+ 
+ 
+   
+ DEC uchburchakning yuzi =  1
+2 × 12 × 8 
+ 
+ 
+ 
+ 
+     = 48 (cm2)
+ 
+ 
+ 
+Bo‘yalgan qismning yuzi = 96 – 48 
+           
+ 
+ 
+  = 48 (cm2)
+To‘g‘ri to‘rtburchak va uchburchaklardan tuzilgan 
+murakkab shakllarning yuzi
+1-usul
+2-usul
+103
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   103
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   103
+09/08/24   19:31
+09/08/24   19:31
+
+3  JKLM to‘g‘ri to‘rtburchak berilgan. Bo‘yalgan uchburchak yuzini toping. 
+ 
+16 cm
+N
+M
+K
+J
+L
+18 cm
+7 cm
+  
+MN kesma KMN uchburchakning asosidir.
+ 
+ 
+ 
+ 
+                                             MN = 16 – 7 = 9 (cm) 
+ 
+ 
+ 
+ 
+                                                                        Bo‘yalgan uchburchak yuzi =  1
+2 × 9 × 18 
+  
+ 
+ 
+ 
+ 
+  
+= 81 (cm2)
+4  Quyidagi rasmda keltirilgan shakl nimalardan tashkil topganini aniqlang va
+ 
+uning yuzini toping.
+ 
+3 cm
+3 cm
+5 cm
+3 cm
+3 cm
+5 cm
+15 cm
+15 cm
+C
+B
+A
+     
+ 
+A uchburchakning yuzi = 1
+2 × 5 × 3 = 7,5 (cm2)          
+ 
+B to‘g‘ri to‘rtburchakning yuzi = 15 × 5 = 75 (cm2)
+ 
+C to‘g‘ri to‘rtburchakning yuzi = 5 × 3 = 15 (cm2)
+ 
+ Shaklning yuzi = 7,5 + 75 + 15 = 97,5 (cm2)
+Men A, B, C va D 
+shakllarning yuzini qo‘shib, 
+umumiy shaklning yuzini  
+topa olaman.
+C
+A
+D
+B
+104
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   104
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   104
+09/08/24   19:31
+09/08/24   19:31
+
+Qiziqarli matematika
+5  Uchburchak, to‘g‘ri to‘rtburchak va kvadratdan tashkil topgan shaklning yuzini          
+ 
+toping. 
+ 
+5 m
+6 m
+6 m
+4 m
+C
+A
+B
+ 
+ A uchburchakning yuzi =  1
+2 × 5 × 4 = 10 (m2)
+ 
+ 
+ 
+  B to‘g‘ri to‘rtburchakning yuzi = 6 × 5 = 30 (m2)
+ 
+ 
+ 
+ C kvadratning yuzi = 6 × 6 = 36 (m2)
+ 
+ 
+ 
+ Shaklning yuzi = 10 + 30 + 36 = 76 (m2)
+O‘rganing va bo‘lishing
+Quyidagi rasmda keltirilgan shakllar nimalardan tashkil topganini aniqlang va 
+ularning yuzini toping. Javobingizni sinfdoshlaringiz bilan o‘rtoqlashing. 
+a) 
+33 cm
+24 cm
+28 cm
+ 
+         b)
+7 m
+8 m
+1 m
+3 m
+4 m
+1 m
+2 m
+2 m
+ 
+ 
+c) 
+15 m
+31 m
+40 m
+6 m
+ 
+ 
+105
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   105
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   105
+09/08/24   19:31
+09/08/24   19:31
+
+Bajaring va o‘rganing
+1  Berilgan shakllardagi bo‘yalgan qismning yuzini toping.  
+ 
+a) ABCD – to‘g‘ri to‘rtburchak. 
+b) EFGH kvadrat va bo‘yalmagan 4 ta
+                                                                                                     uchburchak o‘zaro teng.  
+ 
+  
+14 cm
+30 cm
+16 cm
+A
+B
+D
+C
+18 cm
+18 cm
+E
+F
+H
+G  
+ 
+c) PQRS – to‘g‘ri to‘rtburchak. 
+d) EFGH – kvadrat. 
+ 
+  
+ 
+ 
+ 
+   
+16 cm
+30 cm
+Q
+P
+R
+S
+ 
+ 
+2 cm
+8 cm
+2 cm
+8 cm
+8 cm
+E
+F
+H
+G
+J
+K
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+e) 
+7 cm
+7 cm
+8 cm
+6 cm
+14 cm
+ 
+f) 
+26 m
+7 m
+14 m
+6 m
+5 m
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+106
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   106
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   106
+09/08/24   19:31
+09/08/24   19:31
+
+2  Shakllarning bo‘yalgan qismi yuzini qanday topish mumkinligini tushuntiring.
+ 
+a) 
+ 
+ 
+ 
+b) 
+WXYZ – kvadrat.
+ 
+ 
+6 cm
+4 cm
+4 cm
+4 cm
+4 cm
+6 cm
+4 cm
+ 
+ 
+12 cm
+Z
+Y
+X
+W
+ 
+c) Bo‘yalgan shakl tomoni 2 cm boʻlgan  
+    d) Bo‘yalgan uchburchak 1 cm li
+                  kvadrat panjarada chizilgan.                                    nuqtali panjarada chizilgan. 
+ 
+ 
+2 cm
+2 cm
+ 
+ 
+1 cm
+1 cm
+3  ABHJ, BCDK va KEFG – kvadratlar. Bo‘yalgan ACF uchburchakning yuzini 2 xil usul 
+bilan toping va tushuntiring.
+ 
+12 cm
+6 cm
+A
+B
+E
+D
+K
+J
+C
+H
+4 cm
+G
+F
+ 
+ 
+O‘zingizni tekshiring
+a) 
+Men uchburchakning yuzi unga mos to‘g‘ri to‘rtburchak yuzining yarmiga teng ekanini 
+bilaman. 
+  
+b) Men uchburchakning yuzini qanday topishni bilaman. 
+  
+c) 
+Men kvadrat, to‘g‘ri to‘rtburchak va uchburchaklardan tashkil topgan shaklning yuzini 
+qanday topishni bilaman. 
+  
+123–134
+Mashq daftariga o‘ting
+107
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   107
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   107
+09/08/24   19:32
+09/08/24   19:32
+
+108
+O‘ylab ko‘ring
+A va B kvadratlar berilgan. C shaklni hosil qilish uchun rasmda ko‘rsatilganidek kichkina 
+kvadratning yarmi katta kvadrat bilan yopildi. Hosil bo‘lgan C shaklning yuzini toping.
+B kvadrat
+8 cm
+8 cm
+A kvadrat
+8 cm
+C shakl
+8 cm
+135–138
+Mashq daftariga o‘ting
+C shaklda ko‘rsatilgan kvadratni 4 ta teng
+uchburchakka bo‘la olasizmi? Har bir
+uchburchakning yuzi nechaga teng?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   108
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   108
+09/08/24   19:32
+09/08/24   19:32
+

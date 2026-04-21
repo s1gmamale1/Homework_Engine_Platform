@@ -1,0 +1,60 @@
+{
+  "topic": "1 milliongacha va 10 milliongacha bo'lgan sonlar",
+  "learning_objectives": [
+    "1 milliongacha va 10 milliongacha bo'lgan sonlarni o'qish va yozish",
+    "Sonlarni xonalar bo'yicha tahlil qilish va yoyma ko'rinishda ifodalash",
+    "Sonlarni raqamlar va so'zlar shaklida ifodalash",
+    "Sonli tugmalar yordamida sonlarni tasvirlash"
+  ],
+  "key_concepts": [
+    {
+      "term": "Sonli tugmalar",
+      "definition": "Sonlarni xonalar bo'yicha ifodalash usuli: birlar, o'nlar, yuzlar, minglar, o'n minglar, yuz minglar, millionlar"
+    },
+    {
+      "term": "Yoyma ko'rinish",
+      "definition": "Sonni xonalardagi qiymatlar yig'indisi ko'rinishida yozish, masalan: 325 146 = 300 000 + 20 000 + 5 000 + 100 + 40 + 6"
+    },
+    {
+      "term": "Million",
+      "definition": "1 000 000 dan iborat son bo'lib, 7-xonali sonlarning boshlang'ich qiymati. 10 million = 10 000 000"
+    }
+  ],
+  "worked_examples": [
+    {
+      "problem": "Sonli tugmalar yordamida 325 146 sonini aniqlang va yoyma ko'rinishda yozing",
+      "solution": "3 yuz ming (300 000) + 2 o'n ming (20 000) + 5 ming (5 000) + 1 yuz (100) + 4 o'n (40) + 6 bir (6) = 325 146. So'zlar bilan: uch yuz yigirma besh ming bir yuz qirq olti."
+    },
+    {
+      "problem": "700 000 + 4000 + 800 + 30 + 5 ni hisoblang va yoyma ko'rinishda ifodalang",
+      "solution": "704 835 (yetti yuz to'rt ming sakkiz yuz o'ttiz besh). Yoyma ko'rinish: (7 × 100 000) + (4 × 1000) + (8 × 100) + (3 × 10) + (5 × 1) = 704 835"
+    },
+    {
+      "problem": "3 594 627 sonini xonalar bo'yicha tahlil qiling",
+      "solution": "3 million (3 000 000) + 5 yuz ming (500 000) + 9 o'n ming (90 000) + 4 ming (4000) + 6 yuz (600) + 2 o'n (20) + 7 bir (7). So'zlar bilan: uch million besh yuz to'qson to'rt ming olti yuz yigirma yetti."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "Raqamlar bilan yozing: Ikki yuz olti ming; Yetti yuz ming to'qson to'qqiz",
+      "answer": "206 000; 700 099"
+    },
+    {
+      "question": "So'zlar bilan yozing: 800 200; 750 040",
+      "answer": "Sakkiz yuz ming ikki yuz; Yetmish besh ming qirq"
+    },
+    {
+      "question": "Tushirib qoldirilgan sonlarni yozing: 491 862 = ___ + 862; 549 607 = 549 000 + ___",
+      "answer": "491 000; 607"
+    },
+    {
+      "question": "720 265 sonini sonli tugmalar yordamida tasvirlang va o'qing",
+      "answer": "7 yuz ming + 2 o'n ming + 2 ming + 2 yuz + 6 o'n + 5 bir; yetti yuz yigirma ikki ming ikki yuz oltmish besh"
+    },
+    {
+      "question": "Bir milliondan o'n milliongacha sanang",
+      "answer": "1 000 000, 2 000 000, 3 000 000, ..., 9 000 000, 10 000 000"
+    }
+  ],
+  "summary": "Darsda 1 milliongacha va 10 milliongacha bo'lgan sonlarni o'qish, yozish va xonalar (birlar, o'nlar, yuzlar, minglar, o'n minglar, yuz minglar, millionlar) bo'yicha tahlil qilish o'rganildi. Sonlarni yoyma ko'rinishda ifodalash, sonli tugmalar yordamida tasvirlash hamda raqam va so'z shakllarida yozish ko'nikmalari shakllantirildi."
+}

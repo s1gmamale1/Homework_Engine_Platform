@@ -1,0 +1,54 @@
+# Eslang
+
+53
+Foiz tushunchasi
+Qarang va o‘rganing
+1  Kvadrat 100 ta bir xil katakka bo‘lingan va ulardan 35 tasi bo‘yalgan.
+ 
+ 
+ 
+100 tadan 35 ta = 35
+100   
+ 
+ 
+  
+35
+100 kasrni 100 dan 35 yoki 35 foiz deb o‘qiymiz. 
+ 
+ 
+  
+35
+100 = 35% kabi yozamiz.
+ 
+ 
+  
+Demak, kvadratning 35% i bo‘yalgan.
+2  Kvadratning necha foizi bo‘yalgan?
+ 
+ 
+ 
+12
+100 = 12% 
+ 
+ 
+  
+Butun kvadratning 12% i bo‘yalgan.
+% belgisi foizni 
+belgilash uchun 
+ishlatiladi.
+Bir butun 100% deb 
+olinadi.
+1% bu 1
+100 yoki 
+yuzdan birni bildiradi. 
+100% – 12% = 88%
+Butun kvadratning 88% 
+i bo‘yalmagan.
+12
+100 va 0,12 o‘zaro teng. 
+Demak, 0,12 = 12%.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   53
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   53
+13/11/24   14:50
+13/11/24   14:50
+

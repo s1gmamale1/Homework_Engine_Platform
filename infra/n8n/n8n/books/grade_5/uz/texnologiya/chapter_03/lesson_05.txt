@@ -1,0 +1,97 @@
+# Energiya va Mexatronika — 5-dars
+
+5-§.
+Mexatronika haqida tushuncha.
+Oddiy mexanizmlar
+Siz mexatronika bobini o‘rganishni boshlaganingizda o‘z-o‘zidan savol tug‘iladi:
+Mexatronika o‘zi nima?
+Mexatronika zamonaviy ilm-fan va texnologiyaning yangi yo‘nalishi bo‘lib, so‘ng­
+gi o‘n yillikda butun dunyoda jadal rivojlanmoqda. Bu rivojlanish barcha soha­larda,
+jumladan, ishlab chiqarish sohasidagi kasb egalarining yuqori faolligini rag‘bat­
+lantiradigan, mehnat sifati va samaradorligini oshiradigan mexatronik tizimlar­ning
+yangiligidir.
+Zamonaviy “Mexatronika” atamasi, yapon manbalariga ko‘ra, “Yaskawa
+Electric” kompaniyasining katta muhandisi Tetsuro Mori tomonidan 1969-yilda
+joriy etilgan va 1972-yilda savdo belgisi sifatida ro‘yxatdan o‘tgan. Ushbu atama
+ikkita qismdan iborat – “mexan”, MEXANIKA va “tronik”, ELEKTRONIKA
+so‘zlari birikmasidan olingan bo‘lib, mexanika va elektronikaning yutuqlarini
+birlashtirish natijasida paydo bo‘lgan.
+Mexanika [yun – mechanike (teche) – qurol, inshoot] – tashqi kuch ta’sirida jismning
+fazoda harakatlanishi va muvozanatini o‘rganish bilan shug‘ullanadigan fan.
+Elektronika – fan va texnikaning elektronlar zaryadlangan zarra­larning turli
+jismlar bilan o‘zaro ta’siri qonuniyatlarini o‘rganish, bu o‘za­ro ta’sirdan foydalanib,
+energiyani o‘zgartiradigan elektron asbob va qurilmalarni yaratish usullarini ishlab
+chiqish bilan shug‘ullanadigan soha.
+1980-yilning boshlariga kelib, “Mexatronika” atamasi dunyo texnik ada­
+biyotlarida kompyuter tomonidan boshqariladigan harakatga ega mashina va
+mexanizmlarni loyi­ha­lashga nisbatan ishlatilgan.
+Shu tariqa mexanika, informatika sohalaridagi hamda texnikaning ayrim
+tarmoq­laridagi (mikroprotsessorli texnika, mashinalar va agre­gatlarning harakatini
+kompyuterda boshqarish) bilimlar negizida ho­zirgi kunda jadal rivojlanayotgan
+yangi texnika fani sifatida vujudga keldi.
+Mexatronikaning maqsadi – yangi imkoniyatlarga ega bo‘lgan aqlli va harakat­
+lanuvchi mashina va mexanizmlarni loyihalash va ishlab chiqarishdan iborat.
+Mexatronikaning vazifasi – mexanika, elektronika va axborot texnologiyalari
+(kompyuter) sohalaridagi bilimlarni birlashtirishdir. Ushbu sohalardagi bilimlarni
+birlashtirilishi natijasida mexatronika­ning yangi g‘oyalari paydo bo‘ladi.
+Mexatronika – dastur asosida boshqariladigan mashina va mexanizmlar yaratish
+hamda ulardan foydalanishga yo‘naltirilgan mexanika, informatika va elektronika
+vositalari va tamoyillari majmuyidir.
+
+213
+213
+Ushbu ta’rif mexatronik tizimlarning mexanika, elektronika va kompyuter
+ele­mentlarining chuqur o‘zaro bog‘liqligi g‘oyasiga asoslangan uch mohiyatni
+ta’kidlaydi. Shu sababli, mexatronikaning ramziga aylangan va eng keng
+tarqalgan grafik shaklda “Ishlab chiqarish”, “Menejment (boshqaruv)” va
+“Bozor talablari”ning ichki qobig‘iga joylashtirilgan uchta kesishuvchi aylana bilan
+ifodalanadi (6-rasm).
+Shunday qilib, ushbu uch turdagi ele­ment­
+larning tizimli bog‘la­nishi mexat­ronik tizimni
+tashkil etishning zaruriy sharti hi­soblanadi.
+Mexatronika nafaqat professional, bal­ki
+oddiy insonlarning kundalik hayotiga ham kirib
+ulgurdi. Masalan, aqlli uylar, zamonaviy uy-
+ro‘zg‘or texnikalari, raqamli video­kameralar
+kabilar mexatronik prin­siplarga asoslanadi.
+Mexatronika va robototexnika tu­shun­
+chalari nima uchun birga­likda ish­la­tiladi?
+Ushbu tushunchalarning ­ko‘­pin­cha bir­
+galikda qo‘llanilishi sababi oddiy: robo­to­
+texnika mexatroni­kaning eng mashhur sohasi hisob­lanadi. Bundan tashqari,
+mexat­ro­nika aynan robototexnika va robototexnik tizimlar, mashinalar kabi qu­
+rilmalarni ishlab chiqish bilan shug‘ullanadi.
+Mexatronika va uning eng mash­hur sohasi bo‘lgan robototexnika
+bugungi kunda eng istiqbolli yo‘nalishlardan hisoblanadi.
+LEGO haqida nimalarni bilasiz?
+LEGO (Leg-godt – “yaxshi o‘ynang”) – turli xil obyekt­larni yi­g‘ish
+va modellash uchun har xil o‘lchamdagi detallar to‘plamidir.
+LEGO Group kompaniyasining asosiy idorasi Daniyada joy­
+lashgan bo‘lib, 1932-yilda tashkil etilgan. LEGO de­tallari dastlab
+oddiy yog‘ochdan yasalgan bo‘lib, asosan, o‘yinchoqlar ishlab chiqa­rilgan.
+LEGOdan transport vositalari, binolar va harakatlanuvchi robotlar kabi obyekt­
+larni yig‘ishda foydalanish mumkin. Bundan tashqari, LEGO to‘plamlarida odamlar
+va hay­vonlarning figuralari, g‘ildiraklar, elektr dvigatellari, turli xil sensorlar va
+hatto mikro­kontrollerlar ham mavjud. Bu to‘plamlar Sizga avtomobillar, samolyotlar,
+poyezdlar, kemalar, binolar, robotlarning modellarini yig‘ish uchun imkon beradi.
+Siz birinchi bobning 4-paragrafidagi “Texnikaning asosiy konstruktiv elementlari.
+Texnikaning ishchi organlari” mavzusini o‘rganish davomida oddiy mexanizmlar va
+ularning turlari bilan tanishgansiz (qarang).
+6-rasm. Mexatronika tizimi.
+Mustahkamlash uchun savollar
+1. Mexatronika o‘zi nima?
+2. Mexatronikaning maqsadi va vazifasini tushuntirib bering.
+3. Mexatronika va robototexnika tushunchalari nima uchun birga­likda ishla­
+tiladi?
+Ishlab chiqarish
+Elektronika
+Menejment
+Mexanika
+Bozor talablari
+Kompyuter
+texnologiyasi
+MEXA-
+TRONIKA
+
+214
+214

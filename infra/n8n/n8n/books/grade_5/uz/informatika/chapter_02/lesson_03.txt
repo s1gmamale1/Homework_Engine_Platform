@@ -1,0 +1,53 @@
+# Tasvirlar bilan ishlash — 3-dars
+
+28
+Egri chiziq chizish uchun Curved line uskunasi tanlanadi.
+Sichqoncha kursori kanvasga, chiziq chizish boshlanadigan joyga keltirib
+qoʻyiladi.
+Avval to‘g‘ri chiziq chiziladi. Shundan keyin ushbu chiziqdan egri shakl
+yaratish mumkin.
+Microsoft Paint dasturi chiziqni ikki joyidan qayirgan holda egri chiziq
+yaratish imkonini beradi.
+Egri shakl hosil qilish uchun sichqoncha kursori chiziq ustiga, qayriltiriladigan
+nuqtaga joylashtiriladi. Sichqonchaning chap tugmasi qo‘yib yuborilmagan
+holda chiziq egri shakl hosil qilinmoqchi boʻlgan tomonga tortiladi.
+1.1-mashg‘ulot
+Line uskunasi yordamida kvadrat hosil qilish uchun toʻrtta toʻgʻri chiziq
+chizing.
+1.2-mashg‘ulot
+Line va Curved Line uskunalari yordamida quyidagi ko‘rinishda bayroq
+@edurtm_uz
+
+29
+Tasvirlar bilan ishlash
+Bu jarayon
+xuddi qogʻozga
+qalamda chizish
+kabi: kanvas
+qogʻozga
+oʻxshaydi,
+sichqoncha
+esa qalam kabi
+harakatlantiriladi.
+Maslahat
+Pencil: chiziqlarni
+qalam kabi
+chizuvchi uskuna.
+Kalit soʻz
+Pencil uskunasidan foydalanish
+Pencil uskunasi tasvirni qo‘lda chizish imkonini beradi.
+Bu uskunani ishga tushirish uchun Pencil tugmasi bosiladi.
+Sichqoncha kursori kanvasga, chizish boshlanmoqchi boʻlgan joyga
+keltiriladi.
+Sichqonchaning chap tugmasi bosib turiladi.
+Pencil uskunasi yordamida chizishni boshlash uchun sichqoncha
+Sichqoncha tasvir chiziladigan tomonga harakatlantiriladi.
+2.1-mashg‘ulot
+Microsoft Paint dasturida oʻqituvchingiz bergan Face.png faylini oching.
+Qiyofaga tabassum chizish uchun Pencil uskunasidan foydalaning.
+2.2-mashg‘ulot
+Qiyofadagi tabassumni o‘chiring va xomush yuz yasash uchun Pencil
+uskunasidan foydalaning.
+2.3-mashg‘ulot
+Sevimli gulingiz yoki tasavvuringizdagi hayvonni chizish uchun Pencil
+2-amaliy ko‘nikma

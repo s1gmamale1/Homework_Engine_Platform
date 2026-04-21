@@ -1,0 +1,45 @@
+# Eslang
+
+134
+Parallelogramm 
+Parallelogramm 
+Quyidagi to‘rtburchakka parallelogramm deyiladi. 
+B
+A
+C
+D
+a
+b
+d
+c
+Juftlikda ishlang. 
+Ustozingiz bergan qog‘ozdan parallelogrammni qirqib oling. 
+Parallelogrammning xossalarini ayting.
+1  Katakli daftarga ABCD parallelogrammni joylashtiring.
+ 
+ 
+ 
+B
+A
+C
+D
+a
+b
+d
+c
+ 
+AB tomoni DC tomoniga parallelmi? 
+ 
+AD tomoni BC tomoniga parallelmi? 
+Parallelogramm tomonlarining 
+uzunligi haqida nima deyish 
+mumkin? 
+Parallelogrammning qanday 
+xossalari bor?
+Parallelogramm, romb va trapetsiyaning xossalari
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   134
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   134
+13/11/24   14:51
+13/11/24   14:51
+

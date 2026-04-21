@@ -1,0 +1,136 @@
+# V bob — 6-dars
+
+22-§. ALOQA VOSITALARINING IXTIRO
+ETILISHI
+Telegrafning ixtiro etilishi. Telegraf  turli xabarlarni uzoq
+masofalarga yozuv orqali tez uzatishga mo‘ljallangan quril-
+madir.
+1 O‘TIL. – T.: «¤çÌÝ». 2006. 1-jild. 430-bet.
+2 O‘TIL. – T.: «¤çÌÝ». 2006. 2-jild. 401-bet.
+3 O‘TIL. – T.: «¤çÌÝ». 2007. 3-jild. 227-bet.
+4  O‘TIL. – T.: «¤çÌÝ». 2007. 3-jild. 226-bet.
+
+74
+Bunday qurilmani birinchi bo‘lib 1832-yilda rus olimi
+Pavel Shilling ixtiro qildi. Qurilma xabarlarni nuqta va tirelar (chiziq)
+ko‘rinishida uzatgan.
+1837-yilda amerikalik olim Semyuel Morze ham shunday qurilma
+va unda foydalaniladigan maxsus alifbo yaratdi. Bu alifbo tarixga
+«Morze alifbosi» nomi bilan kirdi.
+Bu alifboda harflar o‘rniga nuqta va tire (chiziq)lar  ishlatiladi.
+Masalan, nuqta va bitta tire A harfini; tire va uch nuqta «B»
+harfini; nuqta, tire va yana ikki nuqta «V» harfini anglatgan. Bu
+alifbo dunyo xalqlari uchun ko‘p yillar xizmat qildi.
+Hozirgi kunda esa undan hamon dengiz halokati ro‘y berganligi
+haqidagi xabarni berish chog‘ida foydalanilmoqda.
+Balki siz dengiz halokati ro‘y berganligini anglatuvchi belgi «SOS»
+ekanligini bilarsiz? Dengizlarda halokatga uchragan kemalar «SOS»
+xabarini yuborish uchun Morze alifbosidagi «Uchta nuqta, uchta tire
+va yana uchta nuqta» belgisi – (signali)ni yuboradilar.
+Bu belgilarni qabul qilib olgan boshqa kema yoki qirg‘oq qutqaruv
+guruhi tezda yordamga yetib kelish choralarini ko‘radi. Xalqaro
+qoidalarda shunday tartib o‘rnatilgan.
+Yodda tuting!
+Dengizda uzatilgan halokat xabarlarini qabul qilib olish uchun har
+5 daqiqada «radiosukunat» vaqti joriy qilingan.
+Morze qurilmasida nuqta va tirelar telegraf kaliti yordamida uza-
+tiladi. Xabar beruvchi kalitni bosganida qurilmadagi batareya quril-
+ma tarmog‘iga tok beradi.
+Elektr toki suyuq bo‘yoq ichiga botirib qo‘yilgan g‘ildirakcha (harf
+bosuvchi)ni harakatga keltiradi. G‘ildirakcha esa tasmaga o‘xshab
+tayyorlangan qog‘ozga harflar belgisini tushiradi.
+Kalit bosilgach darhol qo‘yib yuborilsa «nuqta», uzoqroq bosib
+turilsa «tire» belgisini tushiradi. Har bir belgining qaysi harfni
+anglatishini bilib olgan kishi Morze alifbosida yozilgan yozuvni
+bemalol o‘qiy oladi. Hozirgi kunda Morze alifbosiga moslashtiril-
+gan telegraf qurilmasi o‘rniga teletayp qurilmasidan foydala-
+nilmoqda.
+
+75
+Diqqat bilan o‘qing!
+Teletayp –  yozuv mashinkasiga o‘xshash klaviaturali, uzoqdan
+yuborilgan axborotlarni qog‘oz lentaga avtomatik ravishda yozib oladigan
+mexanizmli telegraf apparati.
+Teletaypda kalit yo‘q, lekin yozuv mashinasidagi yoki kom-
+pyuterdagiga o‘xshash harf klavishlari bor. Xabar jo‘natuvchi uzatuvchi
+qurilmaga xabar matnini yozadi.
+Teletayp qurilmasi.
+
+76
+Aleksandr Stepanovich
+Popov.
+Qabul qiluvchi qurilma esa xabarni qog‘oz tasmasi (lentasi)ga
+yozib oladi. Olimlarning izlanishlari natijasida ushbu qurilma
+takomillashdi.
+Bugungi kunda qulay aloqa vositalaridan yana biri faksdir. U matn-
+li, jadvalli, rasmli va boshqa shu kabi xabarlarni qanday bo‘lsa
+shundayligicha belgilangan joyga yetkaza oladi. Aloqaning bu vositasi
+deyarli barcha yirik korxona va tashkilotlarda mavjud. Faks qurilmasi
+yana ko‘p narsalarga qodir. Masalan, u istalgan rasm va hujjatdan
+nusxa (kopiya) ham olishi mumkin. Bundan tashqari, istalgan tilda
+yozilgan xabarni ham qabul qila oladi.
+Telefonning yaratilishi. Bugungi kunda
+deyarli barcha oilalarda hech bo‘lmaganda
+bitta uyali telefon apparati bor.
+U xabar uzatish va qabul qilish uchun
+juda qulay. Bir so‘z bilan aytganimizda,
+odamlarning uzog‘ini yaqin qiladigan
+«dastyor». Xo‘sh, bu dastyorning o‘t-
+mishdoshi bo‘lgan simli telefon apparati
+qachon yaratilgan?
+Dastlabki telefon apparatini 1876-yilda
+Angliyada tug‘ilib, Amerikada yashagan
+Aleksandr Bell yaratdi. Keyinchalik
+dunyoning boshqa mamlakatlari ixtirochilari
+uni takomillashtirdilar. Bugungi kunda
+insonlar dunyoning istalgan qismi bilan
+telefonda aloqa qila oladilar.
+Radio tarixi. Radio nima ekanligini
+hammamiz yaxshi bilamiz. U turli xil
+xabarlarni tarqatishda katta ahamiyatga
+ega. Dunyoda birinchi radioni rus olimi
+Aleksandr Stepanovich Popov 1895-yilda
+ixtiro qildi. Shu yilning 7-may kuni Rossiya
+poytaxti Peterburg shahrida u ixtiro qilgan
+radio namoyish qilindi.
+Aleksandr Stepanovich Popov  dunyoda
+birinchi bo‘lib xabarni dastlab 250 metrga,
+Zamonaviy telefon
+apparatlari.
+
+77
+keyinchalik 45 km ga, nihoyat, 150 km ga radio orqali yetkazishga
+muvaffaq bo‘ldi. Radio uchun simlarning keragi yo‘q. Radioto‘lqinlarga
+hech qanday masofa to‘siq bo‘la olmaydi.
+Radioto‘lqinlar soniyasiga 300 ming km tezlikda tarqaladi.
+Biz bilan Siz tomosha qilayotgan televizordagi teleko‘rsatuvlar ham
+radio to‘lqinlari orqali ekranimizga yetib keladi.
+Hozirgi kunda radioning ahamiyati cheksiz. Radioaloqa borligi
+tufayli samolyotlar bexavotir parvoz qiladi. Kosmosga uchgan kosmik
+raketalar bilan ham radioto‘lqinlar orqali doimiy aloqa ushlab
+turiladi.
+Ha, radioning xizmati beqiyos. Shuning uchun ham kishilar rus
+olimi  Aleksandr Stepanovich Popovning nomini hurmat bilan tilga
+oladilar.
+Atamalar mazmunini bilib oling
+Faks (bajar) – matn, jadval, rasm va boshqalarning tasvirlarini telefon
+tarmog‘i orqali uzatish.1
+Radio (tarqataman) – xabarlarni radio to‘lqinlari orqali simsiz uzatuvchi
+va qabul qiluvchi qurilma.2
+Savol va topshiriqlar
+1. Telegrafning ixtiro qilinishi kishilar uchun qanday ahamiyatga ega
+bo‘ldi?
+2. «SOS» xabarini yuborish uchun Morze alifbosidan teriladigan belgilarni
+qayd eting.
+3. Telefonning yaratilishi va uning kishilar hayotida tutgan o‘rni haqida
+so‘zlab bering.
+4. Radioning yaratilishi qanday ahamiyatga ega bo‘ldi?
+MUSTAQIL ISH
+O‘quvchilarning maktabda qo‘l telefonlaridan foydalanishlari tartibi haqida
+nimalarni bilishingizni daftaringizga yozib keling.
+1  O‘TIL. – T.: «¤çÌÝ». 2008. 4-jild. 59-bet.
+2  O‘TIL. – T.: «¤çÌÝ». 2007. 3-jild. 337-bet.
+
+78
+Maktab (XX asr boshlari).
+VI bob.

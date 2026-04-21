@@ -1,0 +1,42 @@
+# Geografik xaritalar — 11-dars
+
+GEOGRAFIK
+XARITALAR
+'i
+11 -§ .
+GEOGRAFIK KOORDINATALAR
+Q edurtm _uz
+Y er yuzidagi biror joyni, uning o‘rnini, xarita yoki globusdan
+qanday topish mumkin? Bolalar, siz shaxmat, shashka taxtasini
+bilasiz. Undagi har bir katakning o‘rni harf va raqamlar bilan belgilab
+qo‘yilgan. Bu harf va raqamlar yordamida kerakli katakni osongina
+topib olasiz. Agar sizlar geografik xarita va globusga e’tibor berib
+qarasangiz, ularning katakchalar bilan qoplanganini ko‘rasiz. Ular
+meridian va parallel chiziqlarining kesishishidan hosil bo‘lgan. Xarita
+va globuslarni qoplagan katakchalarni bir-biridan ajratib turgan
+chiziqlar to‘ri daraja (gradus) to ‘ri deyiladi.
+Daraja to‘ri yordamida Yer yuzidagi har bir shahar, tog‘ cho‘qqisi,
+daryo boshlanadigan, quyiladigan joylarni, okean va dengizlardagi
+orollar o‘rnini aniqlash mumkin.
+AFI
+Globus va xaritalardagi parallel chiziqlar geografik kenglikni bil-
+diradi. Geografik kenglik deb ekvatordan berilgan nuqtagacha bo‘lgan
+meridian yoyining daraja (gradus) hisobidagi kattaligiga aytiladi.
+Ekvator chizig‘i 0° kenglik deb qabul qilingan. Qutblar kengligi esa
+90° deb olingan. Globus yoki xaritadagi istalgan nuqtaning geografik
+kengligini aniqlash uchun uning qaysi parallelda joylashganini bilish
+zarur. Masalan, Toshkent 40° va 50° parallellar oralig‘ida, aniqrog‘i
+41° parallelda, Qohira shahri 30°, Kiyev esa 50° parallelda joylashgan.
+Bu parallellarning hammasi ekvatordan shimolda joylashganligi sababli
+ularning kengligi shim oliy kenglik deyiladi. Ekvatordan janubda
+joylashgan nuqtalar (joylar)ning kengligi esa janubiy kenglik deb
+belgilanadi (26-rasm).
+Lekin har bir parallelda bitta nuqta emas, juda ko‘p nuqtalar bor.
+Shuning uchun globus va xaritalardagi kerakli nuqtaning o‘rnini aniq-
+38
+lashda geografik kenglikni bilishning o‘zi yetarli emas. Buning uchun
+geografik uzunlikni aniqlash ham zarur. Geografik uzunlik deb Bosh
+meridiandan berilgan nuqtagacha bo‘lgan parallel yoyining daraja
+(gradus) hisobidagi uzunligiga aytiladi. London shahri yaqinidagi
+Grinvich rasadxonasidan o‘tgan meridian Bosh meridian deb qabul
+qilingan. Geografik uzunlik shu meridiandan parallellar bo‘ylab sharq

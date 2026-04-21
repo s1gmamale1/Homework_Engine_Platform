@@ -1,0 +1,420 @@
+# Uchburchaklarni chizish
+
+119
+Qarang va o‘rganing
+Berilgan o‘lchamlar bo‘yicha uchburchak chizish
+Berilgan o‘lchamlar bo‘yicha uchburchak chizish
+1  Shunday ABC uchburchak chizing: unda  BC = 5 cm, ∠ ABC = 50° va ∠ ACB = 45° 
+bo‘lsin.
+ 
+1-qadam    Uzunligi 5 cm bo‘lgan BC kesma chizing.
+ 
+ 
+ 
+ 
+B
+C
+5 cm
+ 
+2-qadam  Transportirni B nuqtaga qo‘ying.  
+ 
+B nuqtadan 50° burchakni o‘lchang va chizing.  
+ 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+C
+B
+5 cm
+ 
+ 
+ 
+3-qadam    Transportirni C nuqtaga qo‘ying.  
+ 
+C nuqtadan 45° burchakni o‘lchang va chizing.
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+                                             
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+C
+B
+5 cm
+50°
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+     
+ 
+ 
+4-qadam    A nuqtani belgilang.
+ 
+ 
+ 
+ 
+C
+B
+5 cm
+50°
+45°
+A
+45°
+50°
+5 cm
+B
+C
+A
+Chizma
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   119
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   119
+13/11/24   14:51
+13/11/24   14:51
+
+120
+2  Shunday PQR uchburchak chizing: unda PQ = 5 cm, QR = 6 cm va ∠ PQR = 60° 
+bo‘lsin.
+ 
+1-qadam    Uzunligi 6 cm bo‘lgan QR kesma chizing.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2-qadam    Transportirni Q nuqtaga qo‘ying. 
+ 
+ 
+Q nuqtadan 60° burchakni o‘lchang va chizing.   
+ 
+ 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+150
+140
+180
+170
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+100
+110
+120
+130
+140
+160
+150
+170
+180
+R
+Q
+6 cm
+ 
+ 
+ 
+3-qadam    Q nuqtadan 5 cm masofadagi P nuqtani belgilang. P va R   
+ 
+nuqtalarni to‘g‘ri chiziq bilan tutashtiring.
+ 
+ 
+  
+R
+Q
+6 cm
+60°
+P
+5 cm
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+Chizma
+6 cm
+P
+Q
+R
+60º
+5 cm
+Q
+R
+6 cm
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   120
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   120
+13/11/24   14:51
+13/11/24   14:51
+
+121
+3  Shunday XYZ uchburchak chizing: unda XY = YZ = 5 cm va ∠ XYZ = 90° bo‘lsin.
+ 
+1-qadam    Uzunligi 5 cm bo‘lgan YZ kesma chizing.
+ 
+ 
+ 
+ 
+ 
+ 
+2-qadam    Uchburchakli chizg‘ichni YZ kesmaga chizmadagidek joylashtiring va  
+ 
+YZ kesmaning Y nuqtasiga perpendikulyar tushiring. 
+ 
+ 
+ 
+ 
+ 
+ 
+                       
+ 
+ 
+ 
+                            
+Y
+Z
+5 cm
+ 
+ 
+ 
+3-qadam    Y nuqtadan 5 cm uzoqlikda X nuqtani belgilang. X va Z nuqtalarni
+ 
+ 
+tutashtiring. 
+ 
+ 
+  
+ 
+ 
+  
+ 
+Z
+Y
+5 cm
+X
+5 cm
+  
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+Chizma
+5 cm
+X
+Y
+Z
+5 cm
+Y
+Z
+5 cm
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   121
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   121
+13/11/24   14:51
+13/11/24   14:51
+
+122
+Guruh bo‘lib ishlang.
+Dastlab har bir uchburchakni chamalab chizing. Keyin chizg‘ich, transportir va
+uchburchakli chizg‘ich yordamida ularni qayta aniq chizing.
+a) 
+ABC uchburchak
+  
+∠ ABC = 50°, ∠ ACB = 70°, BC = 7 cm
+ 
+b) 
+PQR uchburchak
+      PQ = 8 cm, QR = 5 cm, ∠ PQR = 90°
+ 
+155–156
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+Men berilgan o‘lchamlarga ko‘ra uchburchakni chizishni bilaman.  
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   122
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   122
+13/11/24   14:51
+13/11/24   14:51
+
+123
+Uchburchakning burchaklari
+Sherigingiz bilan ishlang.
+1  Ustozingiz bergan qog‘ozdan uchburchakni qirqib oling. Uchburchak 
+burchaklarini chizmadagi kabi a, b, c harflari bilan belgilang. 
+ 
+orqa tomoni
+a
+b
+c
+old tomoni
+a
+c
+b
+ 
+Uchburchakni rasmda ko‘rsatilganidek 3 ta uchi bir tomonidagi bitta nuqtada
+ 
+ustma-ust tushadigan qilib buklang.
+ 
+Uning burchaklari yig‘indisi haqida nima deyish mumkin? 
+ 
+ 
+2  Quyida berilgan uchburchakdagi ∠ x, ∠ y  va ∠ z ni o‘lchash uchun  
+ 
+ 
+ 
+transportirdan foydalaning. Uchburchakning burchaklari yig‘indisi haqida nima  
+ 
+deyish mumkin?
+ 
+ 
+  
+x
+z
+y
+ 
+∠ x = 
+  
+ 
+ 
+ 
+∠ y = 
+ 
+ 
+ 
+∠ z = 
+ 
+ 
+ 
+∠ x + ∠ y + ∠ z = 
+Uchburchakning burchaklari yig‘indisi 180° ga teng.
+b
+c a
+∠  a, ∠ 
+∠ b va ∠ c  – to‘g‘ri
+chiziqda yotuvchi burchaklar.
+Demak, 
+∠ 
+∠ a + ∠  b + ∠ c = 180°.
+ 
+Uchburchak burchaklarini o‘lchash uchun
+transportirdan foydalaning. Burchaklar yig‘indisi 180° ga tengmi?
+Tekshirish
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   123
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   123
+13/11/24   14:51
+13/11/24   14:51
+

@@ -1,0 +1,43 @@
+# Geografik xaritalar — 3-dars
+
+GEOGRAFIK
+XARITALAR
+olib (gugurt cho‘pi bo‘laveradi), uni kompas ustiga shunday qo‘yish
+kerakki, cho‘p strelka markazi bilan 40° li belgini tutashtirsin. Shunda
+cho‘p yo‘nalishi 40° li azimut yo‘nalishini ko‘rsatadi. Sizning o‘rtacha
+qadamingiz yarim metr edi. Endi, Siz 200 m yurish uchun 400 qadam
+tashlaysiz. Keyin to‘xtab kompasni yana oriyentirlaysiz, ya’ni shimolni
+ko‘rsatuvchi strelkani 0° ga keltirasiz. So‘ng cho‘p bilan 180° belgini
+strelka markazi bilan tutashtirib, 180° li azimutni topasiz va kerakli
+masofani yurib o‘tasiz. Keyingi azimut bo‘yicha yurish ham shu
+tartibda bajariladi.
+edurtm_uz
+Tayanch so‘z va tushunchalar
+Kompas
+ufq
+ufq tomonlari
+azim ut
+M etr
+Ruletka
+Yasama o‘lchov g‘ildirak
+Qadamlab o‘lchash
+1. Ufq deb nimaga aytiladi? Ufq tekisligi nima?
+2. Azimut deb nimaga aytiladi? Azimut qaysi asbob yor-
+damida aniqlanadi?
+3. Ufq tomonlarini kompas yordamida va mahalliy belgilar-
+ga qarab qanday aniqlash mumkin?
+4. Xurshid va Aziza o‘z uylaridan maktabgacha bo‘lgan
+masofani o‘lchamoqchi bo‘lishdi. Buning uchun Xur­
+shid yasama o‘lchov g‘ildirakdan, Aziza esa qadamlab
+o‘lchashdan foydalandi. Aytingchi, ularning qaysi biri
+masofani o‘lchashda nisbatan aniqroq natijaga erishadi?
+Nima uchun?
+5. Uyingizdan yaqindagi savdo do‘koni yoki bekatgacha
+bo‘lgan yo‘nalish azimutini ufqning asosiy va oraliq to-
+monlaridan foydalanib aniqlang. So‘ngra yasama o‘lchov
+g‘ildirak yoki qadamlab o‘lchash yordamida uyingizdan
+savdo do‘koni (yoki bekat)gacha bo‘lgan masofani
+aniqlang.
+6. Abror uyidan kutubxonagacha bo‘lgan masofani 45 da-
+qiqa vaqt ichida bosib o‘tdi. Ushbu ma’lumotdan foyda­
+lanib, Abrorning uyi va kutubxona orasidagi masofani

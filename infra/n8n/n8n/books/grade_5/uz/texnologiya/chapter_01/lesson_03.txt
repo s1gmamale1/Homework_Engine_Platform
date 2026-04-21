@@ -1,0 +1,64 @@
+# Texnologiya va Dizayn — 3-dars
+
+3-§.
+Texnik tizimlar haqida tushuncha.
+Texnologik mashinalar
+Har bir insonning hayoti davomidagi faoliyati turli xil texnik obyektlar bilan uzviy
+bog‘liqdir.
+Texnik obyekt – bu ma’lum ehtiyojlarni qondirish uchun mo‘ljal­langan asbob-
+uskunalar, moslamalar va turli materiallardir.
+Ish jarayonida asbob-uskunalardan foydalanish orqali ma’lum ehtiyojlarni
+qondirish uchun bajariladigan ish ketma-ketligi texnik tizim deyiladi.
+Bu esa buyum yasash jarayonida bitta asbobdan foydalanish boshqa asbob-uskuna
+va moslamalardan ham foydalanishga ta’sir qilishidan iborat. Masalan, yog‘ochga
+ishlov berish stanoklari turli murakkab qism­larni o‘z ichiga oladi. Undagi bitta
+mexanizmning ishlashi bosh­qa­la­ri­ni ishlashi uchun ta’sir ko‘rsatishi texnik tizim
+hisoblanadi.
+Hozirgi zamon texnikasining asosini mashinalar tashkil etadi. Ular bajaradigan
+ishi­ga ko‘ra bir-biridan farqlanadi. Masalan, ener­getika mashinalari (turbina, ichki
+yonish dvigateli, elektrodvigatel, elektrogenerator va b.); transport mashinalari
+(samolyot, avtomobil, vertolyot, velosiped va b.).
+Mashina – bu о‘ziga biriktirilgan vazifalarni bajarish uchun ener­giya sarflay­di­gan,
+bir-biriga bog‘langan qismlardan (detal, mexanizm) iborat bо‘lgan texnik qurilma.
+Mexanizm (yunoncha “mechane” – mashina) – bu harakatni o‘zgar­tiruvchi va
+uzatuvchi qurilma. Bunda yetakchi detalning harakati bir yoki bir nechta detallar­ning
+ma’lum bir harakatini keltirib chiqaradi. Eng oddiy mexanizmlarga osma blok, richag,
+g‘ildirak (charxpalak) va boshqalar kiradi (1-rasm).
+Detal – mashinaning bir xil materiallardan tayyorlangan va alohida bo‘laklarga
+ajralmaydigan qismi.
+Texnologik mashinalarning tasnifi. Hozirgi bosqichda mashinalar dunyosi juda
+katta va xilma-xildir. Shuning uchun ular maqsad va bajaradigan vazifalariga ko‘ra 3 ta
+katta guruhga bo‘lingan:
+a) osma blok	                                     b) richag	                    d) g‘ildirak (charxpalak)
+1-rasm. Oddiy mexanizm turlari.
+
+11
+11
+Ishchi
+mashinalar
+Energiya hosil qila­
+digan mashinalar
+Ma’lumot beruvchi
+Muayyan ishni
+bajaradigan va
+shunga mos
+ravishda ishlarni
+osonlashtiradigan
+mashinalar.
+Masalan, stanok,
+konveyer, lift,
+transport va
+boshqalar
+Bir turdagi
+energiyani
+boshqasiga
+o‘zgartiradigan
+Masalan, elektr
+dvigatel, shamol
+generatori va
+ma’lumotni
+yetkazadigan
+Masalan, magni­
+tofon, kompyuter,
+videokamera,
+smartfon va

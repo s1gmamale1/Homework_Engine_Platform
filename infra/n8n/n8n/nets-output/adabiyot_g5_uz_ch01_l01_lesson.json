@@ -1,0 +1,63 @@
+{
+  "topic": "Adabiyot olamiga sayohat",
+  "learning_objectives": [
+    "Badiiy adabiyotda xayoliy to'qima va haqiqiy yolg'on o'rtasidagi farqni tushunish",
+    "Tasavvurning ijodiy fikrlash va adabiyotdagi ahamiyatini anglash",
+    "Adabiyot orqali bilim olaman va dunyoqarashni kengaytirish"
+  ],
+  "key_concepts": [
+    {
+      "term": "Xayoliy to'qima",
+      "definition": "Boshqalarga ziyon yetkazmaydigan, suhbatni qiziqarli qilish yoki ijodiy maqsadlar uchun haqiqatdan oshirilgan tasavvur va uydirma"
+    },
+    {
+      "term": "Yolg'on",
+      "definition": "Birovni aldash, foyda ko'rish yoki zarar yetkazish maqsadida aytilgan haqiqatga zid gaplar; tuhmat va aldov"
+    },
+    {
+      "term": "Tasavvur",
+      "definition": "Haqiqatdan oshirilgan fikrlash jarayoni; bilimdan ko'ra kengroq bo'lib, butun olamni va kelajakdagi bilimlarni ham qamraydi"
+    },
+    {
+      "term": "Badiiy adabiyot",
+      "definition": "Tasavvur va xayoliy to'qima orqali yaratilgan, insonga ma'naviy ziyo va ezgulik bag'ishlaydigan asarlar yig'indisi"
+    }
+  ],
+  "worked_examples": [
+    {
+      "problem": "Boybek va Oynur bobolari haqidagi 'osmonga tegay-tegay' degan gaplarini qanday baholash mumkin?",
+      "solution": "Bu xayoliy to'qima. Ular hech kimga zarar yetkazmasdan, suhbatni qiziqarli qilish uchun haqiqatdan oshirilgan tasavvurdan foydalandilar. Maqsad — ezgulik va qiziqarli o'tkazish."
+    },
+    {
+      "problem": "Oybekning qulupnay haqidagi gaplari nima uchun haqiqiy yolg'on hisoblanadi?",
+      "solution": "U o'z foydasini ko'rish uchun ukasini aybladi va aldadi. Natijada ukasi jazolandi. Bu aldov va tuhmatga qaratilgan, boshqaga ziyon yetkazgan yolg'on."
+    },
+    {
+      "problem": "Xattaxtadagi so'zlarni ikki ustunga ajrating: Xayoliy to'qima va Yolg'on.",
+      "solution": "Xayoliy to'qima: Xayol, To'qima, Tasavvur, Uydirma, Qiziqarli, Ezgulik. Yolg'on: Yolg'on, Aldov, Laqillatish, Tuhmat, Ziyon, Yomonlik."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "Oqilbekning aytganlaridan qanday xulosaga keldingiz? Izohlang.",
+      "answer": "Adabiyot olami xayol va tasavvur dunyosidir. Bu yerda xayoliy to'qimalar qiziqarli va foydali, lekin haqiqiy yolg'on qabul qilinmaydi. Adabiyot bilan do'stlashgan odam aqlli va ko'ngli toza bo'ladi."
+    },
+    {
+      "question": "Yolg'onning xayoliy to'qimadan farqini o'z misolingiz bilan tushuntiring.",
+      "answer": "Xayoliy to'qima boshqalarga ziyon yetkazmaydi (masalan, ertaklar). Yolg'on esa aldov va zarar keltiradi (masalan, sinov natijasini o'zgartirib ko'rsatish)."
+    },
+    {
+      "question": "Albert Eynshteynning 'Tasavvur bilimdan ko'ra ko'proq ahamiyatga ega' fikrini tahlil qiling.",
+      "answer": "Bilim faqat hozirgi tushunadigan narsalarimizga tayanadi. Tasavvur esa kelajakdagi bilimlarni, yangi g'oyalarni va butun olamni qamrab oladi. Adabiyot uchun tasavvur muhimroq, chunki u yangi dunyolar yaratadi."
+    },
+    {
+      "question": "Boybek va Oynurning xatti-harakatlarini baholang.",
+      "answer": "Ularni xayolparast va to'qimachi deb atash mumkin. Ular yolg'onchi emaslar, chunki ziyon yetkazish niyatida emas, balki suhbatni qiziqarli qilish uchun xayol qilganlar."
+    },
+    {
+      "question": "O'zingiz o'qigan ertakdan xayoliy to'qima misolini keltiring.",
+      "answer": "Masalan, 'Qo'rg'onchi va O'g'ri' ertagida osmon yetib bo'lmas daraxt yoki kuchli superqahramonlar haqidagi tavsiflar — bu badiiy xayoliy to'qima."
+    }
+  ],
+  "summary": "Ushbu dars adabiyot olamiga kirishni o'rgatib, xayoliy to'qima (tasavvur, ijodiy hikoya) bilan haqiqiy yolg'on (aldov, tuhmat) o'rtasidagi asosiy farqni ko'rsatadi. Adabiyotda tasavvur va xayoliy hikoyalar qiziqarli bo'lib, insonga ziyo yetkazadi, lekin yolg'on zarar keltiradi. Tasavvur bilimdan katta ahamiyatga ega bo'lib, adabiyotning asosiy vositalaridan biridir."
+}

@@ -1,0 +1,85 @@
+# Tasviriy san'at — 20-dars
+
+34-dars. «SANOAT ROBOTI» MAVZUSIDA RASM
+ISHLASH
+Aziz o‘quvchilar, bugungi kunda zamonaviy texnika va tex­
+nologiyalar jadal  rivojlanib bormoqda. Yaqindagina ­dunyo
+ahli uchun «buyuk mo‘jiza»dek tuyulgan, usti mato bilan oc­
+hib-yopib suratga oladigan fotoapparatlar, burab aylantirib
+ishlatiladigan turli xil shakldagi telefonlar, otlar tortib yuradi­
+gan tramvaylar, pilikli chiroq, oq-qora rangli televizorlar ho­
+zirda o‘tmishdagi afsonadek tuyuladi. Boisi, hozirgi yoshlarni
+uncha-muncha ixtirolar bilan hayratlantirib bo‘lmaydi. Yillab
+fazoda uchib yurgan kosmik kemalar, metro, suv ostida va
+ustida suzib yurgan ulkan kemalar, turli  xil markadagi yen­
+gil va yuk avtomobillari, tovushdan tezuchar samolyot va po­
+yezdlar, kompyuterlar va boshqa ko‘plab mo‘jizakor buyum­
+lar bugungi kun inson aql-zakovatining mahsulidir. Ilm, fan
+va texnika yuksalib, yutuqlarga erishgani sari insonlar ularni
+
+117
+o‘z kundalik hayotidagi og‘ir yumushlarni yengillatishga tatbiq
+eta boshladi. Endilikda bunday ishlarni sanoat robotlari bajar­
+moqda.
+
+118
+1920-yili «Robot» degan tushuncha, chex fantast yo­
+zuvchisi Karel Chapek tomonidan dunyo leksikoniga kiritila­
+di, u «juda og‘ir mehnatni bajaruvchi temir odam» – de­
+gan ma’noni bildiradi. Hozircha olimlar va konstruktorlar
+insonga xos harakatdagi robotlarni modellashtirishini ko‘zda
+tutishmagan. Ma’lumki, robotlar uchta guruhga bo‘linadi:
+Sanoat robotlari - mashinasozlik, energetika, metallurgiya
+va boshqa sanoat korxonalarida ishlatiladi. Maishiy xizmat
+va uy robotlari - sotuvchilikda, uy xo‘jaligida, xalq xizma­
+ti sanoatlarida foydalanishadi. Axborot robotlari esa kos­
+mosda, yer va okean ostida ish olib borish uchun insonga
+yordam beradi.
+Zamonaviy robotlarning birinchi ixtiro ishlari Katsuxiko
+Noda, Fudzio Isaxara, Djon Yang, E.  Nakano, F.  Kaufe,
+R.  Eyris, S.  Miller, P.N.  Belyanin, Ye.I. Yurevich, B.Ye.
+Paton kabilarning  qalamiga mansubdir.
+Sanoat roboti bu nima? Sanoat roboti - bu, avtonom ish­
+lovchi mashina-avtomat bo‘lib, inson harakatlariga mos ha­
+rakatlarini bajaradi, ammo bu yerda inson ishtirok etmaydi,
+lekin insonga xos bo‘lgan xususiyatlarga ega (ya’ni, kuch, xo­
+tira, sezgi, ko‘rish,...), shuningdek, boshqa mashina-jihozlar
+bilan ishlashda o‘zi o‘rganish va sanoat muhitiga moslashish
+xususiyatiga ega bo‘ladi.
+Hurmatli o‘quvchilar! Bugungi darsimizda «Sanoat roboti»­
+ning rasmini chizamiz. Avvalo robot rasmiga e’tibor qiling.
+U to‘g‘ri to‘rtburchak, aylana, kvadrat, ellips kabi geometrik
+shakllardan iborat. Dastlab ko‘rinishini qog‘oz yuzasiga to‘g‘ri
+joylashtirib olamiz. So‘ng berilgan namuna asosida bosqich­
+ma-bosqich ishlab rasmni tugatamiz.
+
+119
+Robot rasmini tasvirlash
+O‘tilgan mavzuni mustahkamlash uchun savollar:
+1. «Robot» so‘zi qanday ma’no anglatadi?
+2. Robotlar necha guruhga bo‘linadi?
+3. Sanoat roboti qanday vazifa bajaradi?
+Uyga topshiriq. Mustaqil ravishda turli xil ko‘rinishdagi ro­
+botlar rasmini ishlab kelish.
+
+120
+Foydalanilgan adabiyotlar
+1. Abdirasilov S., Tolipov N., Oripova N. Rangtasvir. – T.:
+«O‘zbekiston», 2006.
+2. Abdirasilov S., Boymetov B., Tolipov N. Tasviriy san’at.
+– T.: «Cho‘lpon» nashriyoti. 2012.
+3. Abdirasilov S. Tasviriy san’at va uni o‘qitish metodi­
+kasi. – T.: «Ilm-Ziyo» nashriyoti. 2011.
+4. Abdirasilov S. Tasviriy san’at o‘qitish metodikasi.
+– T.: «Fan va texnologiya» nashriyoti. 2012.
+5. Kuziyev T., Egamov A., Qanoatov T., Nurqobilov  A.
+Rangtasvir. 5–9-sinflar. «San’at» jurnali nashriyoti, – T.:
+2004.
+6. Nurtayev O’.N.  Rangshunoslik asoslari. – T.: «Ilm-
+Ziyo» nashriyoti, 2008.
+7. Xasanov R. Maktabda  tasviriy  san’at  o‘qitish  meto­
+dikasi.  – T.: «Fan», 2004.
+
+121
+MUNDARIJA
+I CHORAK

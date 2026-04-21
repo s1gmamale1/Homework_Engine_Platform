@@ -1,0 +1,73 @@
+# Dasturlash — 7-dars
+
+84
+7-amaliy ko‘nikma
+Debaglash jarayoni
+Yaratilgan dasturlar hech qachon ilk urinishdayoq ishlayvermaydi. Bu odatiy
+jarayon bo‘lib, ishni uddalay olmaganingizni anglatmaydi.
+Bu – xato qayerdaligini aniqlash va uni tuzatish kerak degani.
+Xatoni topish debaglash jarayoni (xatolarni aniqlash) deb ataladi.
+7.1-mashg‘ulot
+Oʻqituvchingiz sizga bergan debugging.sb2
+Scratch faylini oching.
+Dino ismli ajdarho:
+•	 100 qadam oʻngga yurishni;
+•	 90 darajaga chapga burilishni;
+•	 50 qadam oldinga yurishni istaydi.
+Dastur ishlamayapti. Negaligini aniqlay
+olasizmi?
+Dino ajdarho harakatning boshlanish nuqtasiga qaytish uchun Restart
+tugmasini bosing.
+7.2-mashg‘ulot
+Oʻqituvchingiz sizga bergan debugging2.sb2 Scratch faylini oching. Kim ismli
+ajdarho:
+•	 pastga qarash uchun burilishni (burchak bilan ishlash kerak boʻladi);
+•	 100 qadam oldinga harakatlanishni istaydi.
+Dastur ishlamayapti. Negaligini aniqlay olasizmi?
+Ajdarho harakatning boshlanish nuqtasiga qaytishi
+uchun Restart tugmasini bosing.
+7.3-mashg‘ulot
+Oʻqituvchingiz bergan debugging3.sb2 Scratch faylini
+oching.
+Imani ismli kiyik Yer shariga tegish uchun harakat
+qilmoqchi. Dastur ishlamayapti. Buning sababini
+aniqlay olasizmi?
+Imani harakatning boshlanish nuqtasiga qaytishi
+Debaglash
+jarayoni: tuzatish
+uchun dasturdagi
+xatolarni topish.
+Kalit soʻz
+Yashil bayroq
+ustiga bosiladi
+va nima bo‘lishi
+ko‘riladi. U qayerga
+harakatlandi?
+Qaysi buyruq xato
+edi? Uni tuzatsa
+bo‘ladimi?
+Maslahat
+Chapga
+yoʻnaltirilgan
+strelkali Turn
+bloki tanlanadi
+va katakchaga 90
+soni kiritiladi.
+Birinchi yaratilgan
+kompyuterlardan
+biri ishlamay
+qolgan. Bunga
+uning ichiga
+qoʻng‘iz tushib
+qolgani sabab
+bo‘lgan.
+Kompyuter ishlashi
+uchun qoʻng‘iz olib
+tashlanishi kerak
+bo‘lgan. Ushbu
+jarayon ingliz
+tilida nomi “to be
+debugged” deb
+nomlanadi.
+Bilasizmi?
+@edurtm_uz

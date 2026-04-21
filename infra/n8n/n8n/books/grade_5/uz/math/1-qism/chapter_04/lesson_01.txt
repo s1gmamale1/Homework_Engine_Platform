@@ -1,0 +1,94 @@
+# Eslang
+
+91
+1  ABC uchburchakning 3 ta tomoni va 3 ta burchagi bor.
+ 
+a) 
+ABC uchburchakda BC uning asosi, AC uning balandligi hisoblanadi.  
+      
+ 
+ 
+ 
+ 
+          
+ 
+ 
+ 
+ 
+    
+A
+B
+C
+balandlik
+asos
+     
+ 
+ 
+ 
+ 
+ 
+AC ⊥ 
+⊥ BC
+ 
+ 
+ 
+   
+ 
+ 
+ 
+       
+ 
+ 
+ 
+ 
+ 
+b) DEF uchburchakda EF uning asosi, DG uning balandligi hisoblanadi.
+ 
+ 
+D
+F
+E
+balandlik
+asos
+G
+ 
+ 
+ 
+ 
+ 
+DG ⊥ EF
+ 
+ 
+ 
+ 
+c) 
+WXY uchburchakda XY uning asosi, WZ uning balandligi hisoblanadi.
+ 
+ 
+W
+X
+Z
+balandlik
+asos
+Y
+ 
+ 
+ 
+ 
+ 
+ 
+ WZ ⊥ XY 
+ 
+ 
+   
+Uchburchakning balandligi uning asosiga perpendikulyar bo‘ladi.
+AB, AC va BC – ABC
+uchburchakning
+tomonlari.
+Uchburchakning asosi va balandligi
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   91
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   91
+09/08/24   19:31
+09/08/24   19:31
+

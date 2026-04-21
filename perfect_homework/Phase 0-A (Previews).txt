@@ -1,0 +1,259 @@
+---
+     PANEL 1 — XULOSA
+
+     Kvadrat tenglama — noma'lumning kvadratda uchragan har qanday tenglama. Standart shakli:
+
+     ▎ ax² + bx + c = 0
+
+     bunda a, b, c — masala beradigan sonlar, va a ≠ 0 muhim — agar a nol bo'lsa, x² hadi yo'qoladi va sizda faqat chiziqli tenglama bx + c = 0 qoladi, uni yechishni allaqachon bilasiz.
+
+     Ushbu bo'lim uchta ko'nikmani shakllantiradi:
+     1. Kvadrat tenglamani ko'rganingizda uni aniqlash
+     2. Eng sodda holat x² = d ni yechish
+     3. Sonlar chiroyli kelishganda ko'paytuvchilarga ajratish orqali yechish
+
+     Yana ikkita yechish usuli — to'liq kvadratga keltirish va to'liq kvadrat tenglama formulasi — 24 va 25-bo'lmlarda joylashgan. Bugun poydevor.
+
+     Sodda so'zlar bilan:
+     Kvadrat — ichida x² bo'lgan har qanday tenglama. Sizning vazifangiz x ni topish. Buni qilishning bir necha yo'li bor va ushbu bo'lim sizga eng oson ikkitasini ko'rsatadi. Qiyinroq usullar keyingilarda keladi.
+
+     ---
+     PANEL 2 — YAXSHIROQ TUSHUNTIRISH
+
+     Darslik bu bo'limni tez o'tadi. Keling, har bir qadamni to'liq mantiq bilan kengaytiramiz.
+
+     ① Ko'paytuvchilarga ajratish bo'linishi orqasida qoida bor
+
+     x² + 10x – 24 = 0 tenglamasini guruhlash usuli bilan yechayotganda, biz quyidagicha yozamiz:
+
+     ▎ x² + 10x – 24 = x² + 12x – 2x – 24 = x(x + 12) – 2(x + 12) = (x + 12)(x – 2)
+
+     10x = 12x – 2x bo'linishi hech qayerdan paydo bo'lgandek ko'rinadi. Aslida unday emas — orqasida qoida bor. Keling, uni ochib beraylik.
+
+     Biz (x + p)(x + q) ko'rinishida ko'paytuvchilarga ajratmoqchimiz. Agar uni ochsak:
+
+     ▎ (x + p)(x + q) = x² + (p + q)·x + p·q
+
+     Endi bizning tenglamamiz x² + 10x – 24 bilan solishtiramiz. Hadma-had solishtirish:
+     - p + q = 10 (o'rta koeffitsient)
+     - p · q = –24 (ozod had)
+
+     Shunday qilib, bizga 10 ga yig'indisi va –24 ga ko'paytmasi teng bo'lgan ikkita son kerak. –24 ning har mumkin bo'lgan ko'paytuvchi juftlarini ro'yxatlang va har bir yig'indini tekshiring:
+
+     ┌─────────────┬──────────┐
+     │    p, q     │  p + q   │
+     ├─────────────┼──────────┤
+     │   1, –24    │   –23    │
+     │  –1,  24    │    23    │
+     │   2, –12    │   –10    │
+     │  –2,  12    │    10  ← ✓ g'olib
+     │   3,  –8    │    –5    │
+     │  –3,   8    │     5    │
+     │   4,  –6    │    –2    │
+     │  –4,   6    │     2    │
+     └─────────────┴──────────┘
+
+     Faqat bitta juft ishlaydi: (–2, 12). Shuning uchun kitob 10x ni 12x – 2x ga bo'ladi va, masalan, 7x + 3x emas — (7, 3) jufti –24 ga ko'paymaydi. Bo'linish bu qidiruv natijasi, omadli taxmin emas.
+
+     Sodda so'zlar bilan:
+     Ko'paytuvchilarga ajratish uchun ikkita son toping. Ularning yig'indisi o'rta koeffitsientga teng bo'lishi kerak. Ularning ko'paytmasi oxirgi songa teng bo'lishi kerak. Ko'paytuvchi juftlarining qisqa jadvalini tuzing va yig'indilarni tekshiring. Faqat bitta juft ishlaydi — shu sizning ko'paytuvchingiz.
+
+     ② Ikki javob, bitta haqiqat
+
+     Kvadrat tenglamalar odatda ikkita yechim beradi. Ba'zan ikkala javob ham haqiqiy dunyoda ishlaydi. Ba'zan faqat bittasi. Ba'zan hech biri.
+
+     Tenglama o'zi to'rtburchak, otilgan to'p yoki chipta narxi haqida ekanini bilmaydi. U faqat x ning har bir matematik jihatdan to'g'ri qiymatini qaytaradi. Siz muammo haqiqatan nimani anglatishiga qarab filtrlaysiz.
+
+     1-masalada tenglama bizga x = 2 va x = –12 berdi. Ikkalasi ham matematik jihatdan to'g'ri yechimlar. Lekin muammo balandlikni so'radi va balandliklar manfiy bo'lishi mumkin emas, shuning uchun biz x = 2 ni saqlab, x = –12 ni tashlab yuboramiz. Bu
+   normal va kutilgan. Uzunlik, vaqt yoki son muammosiga manfiy javob ko'rsangiz, bu tenglama o'z ishini qilmoqda — siz uni tashlab yuborasiz.
+
+     Sodda so'zlar bilan:
+     Kvadratlar sizga ikkita javob beradi. Matematika har doim ikkisini ham topshiradi. Keyin tekshirasiz: har bir javob ushbu muammoga mos keladimi? Mos keladiganlarni saqlang, mos kelmaydiganlarni tashlab yuboring.
+
+     ③ Kvadrat ildizlar vs ko'paytuvchilarga ajratish — qaysi birini qachon ishlatish
+
+     Toza holat x² = d uchun (chap tomonda faqat x², o'ng tomonda son) eng tez harakat — ikkala tomondan ham kvadrat ildiz olish:
+
+     ▎ x² = d → x = ±√d
+
+     Bir qadam, bir qator, tayyor.
+
+     To'liq shakl ax² + bx + c = 0 (uch had) uchun faqat kvadrat ildiz olish ishlamaydi — yonida bx o'tirganida x² ni ajratib olishning iloji yo'q. Sizga ko'paytuvchilarga ajratish, to'liq kvadratga keltirish yoki
+   kvadrat tenglama formulasi kerak.
+
+     Shunday qilib, nima uchun darslik x² = 64 ni uzun yo'l bilan, ko'paytuvchilarga ajratish orqali yechadi, faqat ildiz olish o'rniga? Bu isinish mashqi. x² = 64 da mashq qilayotgan xuddi shu ko'paytuvchilarga ajratish texnikasi keyinchalik
+   x² +
+      5x + 6 = 0 muammosida kerak bo'ladi. Ikkala usul ham x² = 64 uchun ±8 beradi — bir xil javob — lekin faqat ko'paytuvchilarga ajratish qiyinroq muammolarda omon qoladi.
+
+       sodda holat                     to'liq holat
+       ───────────                     ─────────
+       x² = d                          ax² + bx + c = 0
+       |                               |
+       ildizdan foydalaning → x = ±√d  ildiz ishlamaydi
+                                       |
+                                       ko'paytuvchilarga ajrating, yoki
+                                       to'liq kvadratga keltiring, yoki
+                                       formuladan foydalaning
+
+     Sodda so'zlar bilan:
+     Ikkita usul. Kvadrat ildiz tez, lekin faqat tenglama x² = son bo'lganda ishlaydi. Ko'paytuvchilarga ajratish sekinroq, lekin ko'proq tenglamalar bilan ishlaydi. Darslik sizga avval oson muammoda ko'paytuvchilarga ajratishni ko'rsatadi, shunda
+   kerak bo'lganda
+     qulay bo'lasiz.
+
+     ④ ±√d belgisi va (√d)² qayta yozish
+
+     Nima uchun ± belgisi? √64 ni olsangiz, konventsiya bo'yicha faqat musbat javob olasiz — √64 = 8, –8 emas. Bu arifmetik kvadrat ildiz deb ataladi. Lekin x² = 64 tenglamasining ikkita yechimi bor,
+   chunki
+     ham 8, ham –8 ning kvadrati 64. Ikkisini ham bitta belgida ifodalash uchun biz quyidagicha yozamiz:
+
+     ▎ x₁,₂ = ±√64 = ±8
+
+     ± "javobni qo'shish VA ayirish" degani. Bu ikkita sonni bir nafasda yozishning qisqacha usuli.
+
+     Nima uchun d ni (√d)² qilib qayta yozamiz? Chunki kvadrat ildiz qanday aniqlanishiga qarab. d ning kvadrat ildizi so'zma-so'z "kvadrati d ga teng bo'lgan son". Shunday qilib, agar kvadrat ildizni kvadratlatsangiz, asl songa qaytasiz:
+
+     ▎ (√d)² = d   — har doim, har qanday d ≥ 0 uchun
+
+     Darslik bu qayta yozishdan x² – d = 0 ni x² – (√d)² = 0 ga aylantirish uchun foydalanadi. Nega bezovta? Chunki endi u allaqachon bilgan narsangizga mos keladi — kvadratlar ayirmasi a² – b² = (a – b)(a + b):
+
+     ▎ x² – (√d)² = (x – √d)(x + √d) = 0
+
+     Undan keyin, x = √d yoki x = –√d. Xuddi shu ±√d javobi, taxmindan emas, naqshdan toza kelib chiqadi.
+
+     Sodda so'zlar bilan:
+     √64 o'zidan musbat 8 ni anglatadi. Lekin x² = 64 tenglamasining ikkita javobi bor, +8 va –8. ± ikkisini ham bitta belgiga joylashtiradi. Va d ni (√d)² ga almashtirish mumkin, chunki bu so'zma-so'z kvadrat ildizning ma'nosi —
+     kvadrat ildizni kvadratlash sizni songa qaytaradi. Bu foydaliroq shaklda qayta yozish, yangi hiyl emas.
+
+     ---
+     PANEL 3 — KELIB CHIQISHI
+
+     Kvadrat tenglamalar 4000 yillik. Siz ular bilan o'tirgan birinchi odam emassiz.
+
+     Mil. av. ~2000, Bobil. Mirzaboplar loy tabletkalarga quyidagicha muammolar bilan klin simvol bosdi:
+
+     ▎ "Dalaning maydoni 24. Uzunligi kengligidan 10 ga ko'p. Ikkala o'lchamni toping."
+
+     Bu sizning darsligingizdagi 1-muammo, to'rt ming yil avval boshqa tilda boshqa vosita ustida yozilgan. Xuddi shu insoniy ehtiyoq — soliq ro'yxatlari, meros,
+   qurilish
+     uchun yer o'lchash — asl savolni keltirdi.
+
+     Bobilliklarning algebraik belgilanishi, manfiy sonlar, nol yo'q edi. Shuning uchun ular kvadratlarni geometrik yechdi: to'rtburchakni chizib, uni bo'laklarga kesib va bo'laklarni
+   kvadratga
+     qayta joylashtirish. Asosiy harakatni tomosha qiling:
+
+        x ga (x+10) to'rtburchak       Ortiqchaning yarmini (5) kesib          Deyarli kvadratga
+                                        ostiga yopishtiring                    qayta joylashtiring
+        ┌──────────────────────┐        ┌──────────┬───────────┐            ┌──────────┬────┐
+        │                      │        │          │           │            │          │    │
+        │        x · (x+10)    │  →     │   x·x    │    5·x    │      →     │    x²    │ 5x │
+        │         = 24         │        │          │           │            │          │    │
+        │                      │        │          ├───────────┤            ├──────────┼────┤
+        │                      │        │          │    5·x    │            │    5x    │ ?? │
+        └──────────────────────┘        └──────────┴───────────┘            └──────────┴────┘
+                                                                              yetishmayotgan burchak
+                                                                              = 5² = 25
+
+     Keyin ular yetishmayotgan burchakni (maydoni 5² = 25) to'ldirish uchun kvadratni to'ldirdilar, (x + 5) tomonli va maydoni 24 + 25 = 49 bo'lgan to'liq kvadrat berdi. Chunki 49 = 7², tomon (x + 5) = 7, shuning uchun x = 2. Siz zamonaviy algebra bilan olgan xuddi shu javob,
+   to'liq
+      rasmlar bilan olingan.
+
+     "Kvadrat" so'zi lotincha quadratus = "kvadratlangan" dan keladi — chunki Bobilliklar uchun bu haqiqatan ham yer kvadratlari haqida edi.
+
+     Mil. ~820, Bag'dod. Al-Xorazmiy nomli fors matematik al-jabr ("tiklash") nomli kitob yozadi. Bu kitob zamonaviy matematikaga uchta asosiy narsa beradi:
+     - Algebra so'zi (al-jabrdan)
+     - Algoritm so'zi (uning ismining lotinlashtirilgan shaklidan)
+     - Har bir muammo ushbu turga mos keladi — ax² + bx + c = 0 — va bitta tizimli usul ularning hammasini yecha oladi degan tushuncha
+
+     Al-Xorazmiydan oldin, har bir muammo o'zining geometrik hiylasini talab qildi. Undan keyin, bitta jarayon ularning hammasini boshqardi.
+
+     Bugun. Xuddi shu tenglama, zamonaviy belgilanish, butun dunyoda o'qitiladi. Siz bu asbobni yer o'lchash, o'qni nishonga qo'yish, arka qurish va raketa uchirish uchun 4000 yillik insonlar zanjirining oxirgi bog'chisiz.
+
+     Sodda so'zlar bilan:
+     Odamlar 4000 yil davomida kvadratlarni yechishgan. Bobilliklar ularni loy ustida kvadratlar sifatida chizishgan. Bag'doddan Al-Xorazmiy ularni birinchi marta tizimli ravishda ko'rib chiqqan — va uning kitobi bizga "algebra" so'zini berdi. Siz piramidalarni qurgan xuddi shu matematikani o'rganmoqdasiz.
+
+     ---
+     PANEL 4 — HAYOTDA QO'LLASH
+
+     Kvadratlar faqat uy vazifasi matematikasi emas. Ular deyarli hamma narsada, egri chiziqda harakatlanadigan yoki kvadratga bog'liq bo'lgan hamma narsada ishlaydi.
+
+     🏀 Basketbol zarbasi
+
+     Chiqarilgandan keyin t soniyada to'pning balandligi:
+
+     ▎ h(t) = v₀·t – ½·g·t²
+
+     bunda v₀ chiqarish tezligi va g ≈ 9.8 m/s² gravitatsiya. Bu t bo'yicha kvadrat. "To'p qachon halqaga yetadi?" yoki "Eng yuqori balandlik qancha?" kabi savollar bu kvadratni t uchun yechishga olib keladi.
+     Har bir basketbol video o'yinidagi har bir fizika dvigateli uni har kadrda yechadi.
+
+           cho'qqi ✦
+               ╱ ╲
+              ╱   ╲
+             ╱     ╲
+            ╱       ╲
+           ╱         ✦ halqa
+         ─●─────────────── yer
+         chiqarish
+
+     🚗 To'xtash masofasi
+
+     Yo'ldagi mashinangizning to'xtash masofasi:
+
+     ▎ d = v² / (2·μ·g)
+
+     Masofa tezlikning kvadrati bilan o'sadi. Tezlikni ikki baravar oshiring → to'xtash masofasi 4 baravar. Uch baravar oshiring → 9 baravar. Shuning uchun avtomagistral tezlik chegaralari qat'iy va 120 km/soat da xavfsizlik masofasini buzish haqiqatan xavfli.
+
+       tezlik     to'xtash masofasi
+       30 km/soat  ▓▓                            ~5 m
+       60 km/soat  ▓▓▓▓▓▓▓▓                     ~20 m   (2× emas 4×)
+       90 km/soat  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           ~45 m   (3× emas 9×)
+       120 km/soat ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ~80 m   (4× emas 16×)
+
+     Bu v² amalda kvadrat munosabat.
+
+     📡 Sun'iy yo'ldosh idishlari, faralar, teleskoplar
+
+     Hammasi parabolalar shaklida — y = x² grafigi. Parabolalar go'zal geometrik xususiyatga ega: o'qqa parallel kelgan har qanday nur bitta fokus nuqtasiga qaytadi. Shuning uchun televizor idishi kuchsiz signalni jamlaydi, avtomobil farasi kichik lampadan zich nur hosil qiladi va teleskop uzoq yulduz nurini fokuslaydi. Bu egri chiziq so'zma-so'z kvadrat tenglamaning rasmi.
+
+                 parallel nur kiradi
+                 ↓   ↓   ↓   ↓   ↓
+                ╲    │   │   │    ╱
+                 ╲   │   │   │   ╱
+                  ╲  │   │   │  ╱
+                   ╲ │   │   │ ╱
+                    ╲│   │   │╱
+                     ● ← hammasi fokus nuqtasida jamlanadi
+
+     💰 Biznes va daromad
+
+     Chipta narxi va umumiy daromad. Narxni juda past qo'ying → to'la zal lekin o'rindoshga past daromad. Juda yuqori qo'ying → bo'sh zal. O'rtada daromad cho'qqiga chiqadigan shirin nuqta bor. Daromad =
+     narx × tashrif buyuruvchilar munosabati odatda kvadratga keladi va shirin nuqtani topish uni yechishni anglatadi.
+
+     🌉 Ko'priklar
+
+     Osmondagi ko'prik kabellar parabola shaklida osiladi. Muhandislar kvadratlarni yechish orqali kabellarni o'lchaydi, har bir tirgakdagi kuchlanishni hisoblaydi va ko'prikning qulamayishini tasdiqlaydi.
+     Dunyodagi har bir osmon ko'prigi — Bruklin ko'prigi, Golden Gate, Akashi Kaikyo — ushbu matematika bilan ishlab chiqilgan.
+
+     Ushbu misollarning har biri siz endi egallayotgan xuddi shu tenglamadan foydalanadi.
+
+     Sodda so'zlar bilan:
+     Otgan to'p → kvadrat. To'xtagan mashina → kvadrat. Sun'iy yo'ldosh idishi → kvadrat. Qulamaydigan ko'prik → kvadrat. Haqiqiy dunyodagi ko'pchilik egri chiziqlarning ichida kvadrat tenglama yashiringan.
+
+     ---
+     PANEL 5 — NEGA SIZGA SHAXSAN BU KERAK
+
+     Uch joyda siz bu tenglama bilan yana uchrashasiz, kafolat:
+
+     ① Fizika (9-11-sinf). Har bir otilma muammosi kvadrat. Balandlikdan ob'ektni tashlang — ½gt² tenglamada. Toshni yuqoriga otib yuboring → kvadrat. Har qanday burchakda narsa ishga tushiring → kvadrat. "Qachon yerga tushadi?" yoki "Qancha uzoqqa boradi?" topish kvadratni yechishni anglatadi. Fizika darsi 10-sinfga kelib reflektor ravishda ko'paytuvchilarga ajrata olmasangiz haqiqatan og'riqli bo'ladi.
+
+     ② Kirish imtihonlari (DTM, universitet qabuli, Olimpiadalar). Kvadratlar har bir jiddiy o'zbek va xalqaro matematika imtihonida eng ko'p sinovdan o'tkazilgan algebra mavzularidan biri. Ular ayniqsa qiyin emasligi uchun emas — bitta ixcham kvadrat savoli sizning algebrangiz, arifmetikangiz va mantiqiy fikrlashingizni bir vaqtning o'zida sinaydi. Ularni egallagan o'quvchilar oson ballar yig'adi; egallamaganlar xuddi shu oson ballarni yo'qotadi.
+
+     ③ Egri chiziqlar yoki optimallashtirish bilan bog'liq har qanday narsa — dasturlash, o'yin rivojlantirish, muhandislik, moliya, iqtisod. O'yinlarda to'qnashuvni aniqlash, animatsiya yumshatish, biznes modelida foyda optimallashtirish, linza
+   dizayni,
+     antenna dizayni, foiz va o'sish egri chiziqlari — hammasi o'zida kvadrat. Agar siz hech qachon o'yin yaratmoqchi, biznes modelini yaratmoqchi, mahsulot ishlab chiqmoqchi yoki ma'lumotlarni tahlil qilmoqchi bo'lsangiz, bu tenglama asosiy talab.
+
+     Bir haftada ushbu bo'limni egallang va siz o'rta maktab matematikasining yarmida paydo bo'ladigan va keyingi o'n yil davomida foydali bo'ladigan asbobni ochdingiz.
+
+     Sodda so'zlar bilan:
+     Siz fizikada bunga yana duch kelasiz. Katta imtihonlaringizda ko'rasiz. Agar dasturlash, biznes boshqarish yoki haqiqiy narsa qurishni xohlasangiz, ko'rasiz. Bir hafta hozir keyinchalik yillar chalkashlikdan saqlaydi.
+
+     ---

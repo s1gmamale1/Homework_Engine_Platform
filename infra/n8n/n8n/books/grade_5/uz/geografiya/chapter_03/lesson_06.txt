@@ -1,0 +1,85 @@
+# Geografik xaritalar — 6-dars
+
+edurtm uz
+1:100 000 ..................Sonli masshtab
+1 cm da 1 km .......... Nomli masshtab
+1000 m 0
+1
+2
+3
+4
+5
+6
+7
+8
+9 km
+I.....I
+I
+I
+I
+I
+I
+I
+I —I-----1
+Chiziqli masshtab
+22-rasm. Masshtab turlari.
+23-rasm. Xaritadagi masofani
+chiziqli masshtab
+yordamida aniqlash.
+Shunda masshtab 1:10000 bo‘ladi. Har qanday globus va xaritada
+uning masshtabi, ya’ni masofalar necha marta qisqartirilgani yozib
+qo‘yiladi.
+Masshtab uch xil ko‘rinishda bo‘ladi: sonli m asshtab, nom li
+m asshtab va chiziqli m asshtab (22-rasm).
+Agar masshtab 1 santimetrda 100 metr deb yozilsa, nomli masshtab
+deb, 1:10000 deb yozilsa, sonli masshtab deb ataladi.
+Chiziqli masshtabdan foydalanish eng qulay. Chiziqli masshtab
+teng qismlarga bo‘lingan to‘g‘ri chiziq shaklida bo‘ladi.
+Yarimsharlar tabiiy xaritasining sonli masshtabi 1:22000000. Bunda
+1 cm da necha km borligini aniqlash uchun 5 ta nolni o‘chiramiz.
+Shunda nomli masshtab 1 cm da 220 kilometr bo‘ladi.
+Chiziqli masshtabdan masofani aniqlashda foydalanish uchun sir-
+kulning ikki uchini xaritadagi oraliq masofa aniqlanishi lozim bo‘lgan
+nuqtalarga qo‘yib, so‘ng uni masshtabga ham qo‘yiladi. Shunda masofa
+aniq bo‘ladi (23-rasm).
+Tayanch so‘z va tushunchalar
+Masshtab
+Nomli masshtab
+Sonli masshtab
+GEOGRAFIK
+XARITALAR
+
+1. Masshtab nima? Uning qanday turlari bor?
+2. Sonli masshtab qanday masshtab, misollar bilan tu-
+shuntirib bering.
+3. Agar ikki shahar orasidagi 900 km li masofa xaritada
+5 cm ga teng qilib tasvirlangan bo‘lsa, shu xaritaning
+masshtabini aniqlang.
+4. Masshtabi 1:11000000 bo‘lgan xaritada Toshkent va
+Samarqand shaharlari orasidagi masofa 3 cm ga teng
+bo‘lsa, shaharlar orasidagi haqiqiy masofani aniqlang.
+5. 5-sinf o‘quv atlasidagi «Yarimsharlar tabiiy xaritasi»ning
+m asshtabini k o ‘rib chiqing. Bu xaritaning sonli
+masshtabini nomli masshtabga aylantiring. So‘ngra Tosh-
+kentdan ekvatorgacha bo‘lgan eng yaqin masofaning
+necha km ekanini aniqlang.
+9- §.
+a m a l iy  m a s h g ‘u l o t
+u fq  tom onlari va ularni joyda aniqlash.
+1. Agar siz yuzingiz bilan janubga qarab turgan bo‘lsangiz, sharq,
+shimol, janubi-g‘arb va shimoli-sharq yo‘nalishlari sizning qaysi to-
+moningizda ekanligini aniqlang.
+2. Kun yorug‘ bo‘lishiga qaramasdan Hasan o‘rmonda, Zuhra
+esa cho‘lda adashib qoldi. Hasan yuzini o‘nglab turgan tomonda
+daraxtlarning shoxlari kam va siyrak edi. Zuhra qarab turgan tomonda
+esa Quyosh endi botayotgan edi. O ‘quvchilar, Hasan va Zuhraga
+ufqning qaysi tomonlariga qarab turganliklarini aniqlashga yordam
+bering. So‘ngra, ularning o‘ng, chap va orqa tomonlarida ufqning qaysi
+yo‘nalishlari turishini aniqlang.
+Azimutni kompas yordam ida aniqlash.
+1. Kompas ustiga gugurt cho‘pini qo‘yganimizda uning bir uchi 90°
+azimutni ko‘rsatsa, gugurtning ikkinchi uchi qanday azimut va ufqning
+qaysi yo‘nalishini ko‘rsatadi?
+2. O ‘quvchi A nuqtadan B nuqtaga 360° li azimut bo‘yicha 100
+metr yurdi. U B nuqtadan D nuqtagacha 90° li azimut bo‘yicha yana
+100 metr yurdi. O‘quvchi D nuqtadan 180° li azimut bo‘yicha yana

@@ -1,0 +1,66 @@
+# Matnli hujjat bilan ishlash — 9-dars
+
+20
+Ssenariy
+Asalarining hayoti
+Do‘stingiz siz bilan birgalikda ishlab chiqilayotgan
+loyiha uchun hujjat tayyorladi. Ushbu hujjatni
+tekshirishingiz kerak.
+Loyiha asalarilarning hayoti haqida. Doʻstingiz matnni
+qanday tahrirlash haqida ko‘rsatma ham berdi.
+1-mashg‘ulot
+Oʻqituvchingiz bergan Asalarilar.doc hujjatini oching.
+Hujjat davomiga quyidagi matnni qoʻshing:
+Bu bizning asalarilar haqidagi loyihamiz. Unda asalarilar haqida
+ma’lumotlar hamda ularning ahamiyati bayon qilingan.
+Yangi xatboshi yarating va matnni ko‘chiring.
+2-mashg‘ulot
+“davron” ismi boshidagi kichik harfni katta D harfiga almashtiring.
+3-mashg‘ulot
+Hujjatdagi imlo xatolarini tekshiring.
+4-mashg‘ulot
+Hujjatni “Asalarilar” nomidan koʻra mosroq nom bilan saqlang.
+5-mashg‘ulot
+Hujjatni boshqa xatolarni ham aniqlash uchun tekshirib chiqing.
+@edurtm_uz
+
+21
+Matnli hujjat bilan ishlash
+Deylik, avval saqlangan hujjatning nomini yanada mosrog‘iga
+oʻzgartirmoqchisiz. Bu qanday bajariladi?
+Avvalo hujjatning o‘zini topishingiz kerak.
+Topilgan hujjatning ustiga kursorni olib borib, sichqonchaning chap
+tugmasini bir marta bosing. Bu orqali hujjatni belgilaysiz.
+Hujjat belgilangach, sichqonchaning oʻng tugmasini bir marta bossangiz,
+menyu ochiladi. U yerdan Rename buyrug‘ini tanlang. Shunda hujjat nomi
+atrofida ko‘k maydon paydo bo‘lib, matn belgilanib qoladi.
+Endi fayl nomini oʻchirishingiz va yangisini yozishingiz mumkin.
+Masala
+Yakuniy loyiha – “Sevimli kunim”
+Devoriy gazeta ustida ishlayotgan jamoa eng esda qolgan kuningiz haqida
+maqola yozib berishni so‘radi. Matn ustida ishlash ko‘nikmalaringizdan
+foydalanib maqolani yozing.
+
+22
+Yangi Microsoft Word hujjati yarating va sevimli kuningiz haqida matn yozing.
+Unda quyidagi savollarga javob bo‘lsin:
+•	 Qayerga borgandingiz?
+•	 U yerda nima qilgandingiz?
+•	 Kim bilan borgandingiz?
+•	 Qanday qiziqarli hodisa yuz bergandi?
+Hujjatni tayyorlaganingizdan so‘ng undagi imlo xatolarini tekshiring.
+Hujjatingizni mos nom bilan saqlang.
+Hujjatingizni imlo xatolarini yana bir bor tekshiring.
+O‘ylab ko‘ring
+Quyidagi savollarning javobini daftaringizga yozing.
+1. Matn bilan ishlash bo‘yicha egallangan yangi ko‘nikmalardan foydalanishning
+uchta usulini tasvirlab bering.
+
+23
+2. Matn bilan ishlash ko‘nikmalaridan foydalanayotganingizda xavfsizligingizni
+ta’minlashning ikkita usulini tasvirlab bering.
+3. Nega kompyuterda matnli hujjat yaratish qoʻlda tayyorlagandan ko‘ra
+yaxshiroq? Buning ikkita afzalligini yozing.
+
+24
+Tasvirlar bilan ishlash

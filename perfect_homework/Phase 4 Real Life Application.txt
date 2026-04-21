@@ -1,0 +1,170 @@
+┌───────────────────────┬───────────────────┬──────────────────┐
+│                       │ Ko'p sathi        │     Bitta chuqur │
+├───────────────────────┼───────────────────┼──────────────────┤
+│ Sho'ng'in             │ Zaif              │ Kuchli           │
+├───────────────────────┼───────────────────┼──────────────────┤
+│ Hikoya izchilligi     │ Uzilgan           │ Yagona yoyilma   │
+├───────────────────────┼───────────────────┼──────────────────┤
+│ Har bir savol chuqurligi │ Cheklangan     │ Boy              │
+├───────────────────────┼───────────────────┼──────────────────┤
+│ Ko'chirish xilma-xilligi │ 3 ta kontekst sinovdan o'tgan │ 1 ta kontekst sinovdan o'tgan │
+├───────────────────────┼───────────────────┼──────────────────┤
+│ O'quvchi o'zini...    │ Viktorina ishtirokchisi │ Loyiha menejeri │
+└───────────────────────┴───────────────────┴──────────────────┘
+
+Birinchi tanishuv uchun Tushuncha Kirish darsida, bitta chuqur stsenariya g'alaba qozonadi — o'quvchi rolga kiradi, muammoga sodiq bo'ladi va matematika oqibatdor his qiladi. 4-Fazani hozir qayta ko'rib chiqmoqda.
+
+---
+
+4-Faza Haqiqiy Hayotiy Qiyinlik — 22-Bo'lim (v2, yagona stsenariya)
+
+Stsenariya — Yashil Makon loyihasi · Toshkent ekologik zonasi
+
+Hikoya
+
+▎ Vazifa
+▎
+▎ Prezidentimiz Shavkat Miromonovich Mirziyoyev tomonidan imzolangan "Yashil Makon" davlat dasturi doirasida Toshkent viloyatida yangi ekologik dam olish zonasi barpo etilmoqda. Siz bu strategik loyihaning
+▎ biznes-proyekt menejeri sifatida tayinlandingiz.
+▎
+▎ Sizning vazifangiz — hududning aniq chegaralarini hisoblash, byudjetni boshqarish va Prezident Administratsiyasiga aniq hisobot topshirish.
+▎
+▎ Berilgan ma'lumotlar:
+▎
+▎ - Ajratilgan byudjet: 43 200 000 so'm (tuproq tayyorlash + daraxtlar + ma'muriy xarajatlar)
+▎ - Tuproq va daraxt o'rnatish narxi: 1 m² uchun 1 000 so'm
+▎ - Hudud to'rtburchak shaklida (shahar arxitektura byurosi qarori)
+▎ - Hududning uzunligi kengligidan 60 metr ortiq bo'lishi shart (suv kanali va favqulodda xizmatlar uchun ruxsat chegarasi)
+▎ - Byudjet to'liq sarflanishi kerak — bir m² ham qoldirib bo'lmaydi
+▎
+▎ Prezident ertaga hisobot kutmoqda.
+
+Savollar (yagona izchillik yoyilmasi)
+
+#: 1
+Tur: Model
+Savol: "Hudud kengligini x (metr) deb oling. Uzunlikni va umumiy maydonni x orqali ifodalang. Byudjet shartidan tenglama tuzing."
+Kutilgan: uzunlik = x + 60; maydon = x(x + 60); byudjet: x(x + 60) × 1000 = 43 200 000 → x(x + 60) = 43 200
+Teglar: [L3 | P3]
+📸: —
+────────────────────────────────────────
+#: 2
+Tur: Standart shakl
+Savol: "Tenglamani standart shaklga keltiring. a, b, c koeffitsiyentlarini aniqlang."
+Kutilgan: x² + 60x – 43 200 = 0; a = 1, b = 60, c = –43 200
+Teglar: [L2 | P2]
+📸: —
+────────────────────────────────────────
+#: 3
+Tur: Yechish
+Savol: "Ko'paytuvchilarga ajratish usuli bilan (p + q = b, p · q = c) tenglamani yeching."
+Kutilgan: p + q = 60, pq = –43 200. Juftlik: (240, –180) (chunki 240 + (–180) = 60 va 240 · (–180) = –43 200). Demak (x – 180)(x + 240) = 0 → x = 180 yoki x = –240
+Teglar: [L4 | P3]
+📸: ✅
+────────────────────────────────────────
+#: 4
+Tur: Filtrlash
+Savol: "Menejer sifatida qaysi javobni tanlaysiz? Ikkinchi javob nega rad etiladi?"
+Kutilgan: x = 180 (hudud kengligi manfiy bo'lmaydi; –240 m fizik jihatdan mumkin emas)
+Teglar: [L4 | P3]
+📸: —
+────────────────────────────────────────
+#: 5
+Tur: Hisobot
+Savol: "Prezident Administratsiyasi uchun hisobot to'ldiring: kenglik, uzunlik, umumiy maydon, umumiy xarajat. Raqamlar bir-biriga mos kelishini tekshiring."
+Kutilgan: Kenglik: 180 m · Uzunlik: 240 m · Maydon: 43 200 m² · Xarajat: 43 200 000 so'm. Tekshirish: 180 × 240 = 43 200 ✓; 43 200 × 1 000 = 43 200 000 ✓
+Teglar: [L3 | P2]
+📸: —
+────────────────────────────────────────
+#: 6
+Tur: Cho'zma baholash
+Savol: "Agar Prezident Administratsiyasi so'ngra 'uzunlik kenglikdan atigi 40 metr ortiq bo'lsin' desa, yangi kenglik qancha bo'lishi va byudjet qanday o'zgartirilishi kerak? Qisqa tahlil yozing."
+Kutilgan: x(x + 40) = byudjet/1000. Yangi kenglik uchun: agar byudjet o'zgarmasa, x² + 40x – 43 200 = 0. Disc = 1 600 + 172 800 = 174 400 — to'liq kvadrat emas. Xulosa: yangi shart kvadrat tenglama beradi,
+lekin butun son yechimi yo'q → byudjetni moslashtirish kerak (masalan, 45 000 m² uchun: x(x + 40) = 45 000 → (x – 180)(x + ...) ... ushbu shartga moslashuvchi byudjet kerak). Menejerning tavsiyasi: byudjet
+
+```
+aniq butun o'lcham beradigan qilib qayta tuzilsin.
+```
+
+Teglar: [L5 | P4]
+📸: —
+
+Suratga olish mezonlari (S3)
+
+Suratda ko'rsatilishi kerak:
+
+1. Standart shakl (x² + 60x – 43 200 = 0)
+2. p + q va p · q qiymatlari
+3. To'g'ri faktor juftligi topilgan: (240, –180) YOKI (–180, 240)
+4. Ko'paytuvchilarga ajratilgan shakl: (x – 180)(x + 240) = 0
+5. Ikkala ildiz: x = 180, x = –240
+
+5 tadan 4 ta bo'lsa + javob mos kelsa o'tadi.
+
+---
+
+Ko'nikma qamrovi (barcha 5 atomar + cho'zma)
+
+┌────────────────────────────────────────────┬────────┐
+│                   Ko'nikma                 │ Qayerda│
+├────────────────────────────────────────────┼────────┤
+│ 1. Kvadrat shaklni aniqlash                │ S1, S2 │
+├────────────────────────────────────────────┼────────┤
+│ 2. a/b/c koeffitsiyentlarini nomlash       │ S2     │
+├────────────────────────────────────────────┼────────┤
+│ 3. Ko'paytuvchilarga ajratish orqali yechish (p+q, pq) │ S3 │
+├────────────────────────────────────────────┼────────┤
+│ 4. So'zli masalani tenglamaga aylantirish  │ S1     │
+├────────────────────────────────────────────┼────────┤
+│ 5. Kontekst bo'yicha ildizlarni filtrlash  │ S4, S5 │
+├────────────────────────────────────────────┼────────┤
+│ 💡 Cheklov o'zgarishini baholash (cho'zma L5) │ S6  │
+└────────────────────────────────────────────┴────────┘
+
+Yagona stsenariya. Oltita savol. Bitta suratga olish. Barcha besh asosiy ko'nikma + metakognitsiya.
+
+---
+
+Vaqt jadvali va muvofiqlik
+
+┌────────────────────────────────────┬─────────┐
+│                Bosqich             │  Vaqt   │
+├────────────────────────────────────┼─────────┤
+│ Stsenariyni o'qish + cheklovlarni hazm qilish │  3 daqiqa │
+├────────────────────────────────────┼─────────┤
+│ S1-S2 (model + standart shakl)     │  3 daqiqa │
+├────────────────────────────────────┼─────────┤
+│ S3 (yechish + suratga olish)       │  4 daqiqa │
+├────────────────────────────────────┼─────────┤
+│ S4-S5 (filtrlash + hisobot)        │  2 daqiqa │
+├────────────────────────────────────┼─────────┤
+│ S6 (cho'zma baholash)              │  3 daqiqa │
+├────────────────────────────────────┼─────────┤
+│ 4-Faza jami                        │ ~15 daqiqa│
+└────────────────────────────────────┴─────────┘
+
+┌─────────────────────────────────────────┬─────────────────────────────────────────────────────┐
+│                  Qoida                  │                       Holat                         │
+├─────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ Yagona sho'ng'inchi stsenariya          │ ✅                                                  │
+├─────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ Zamonaviy professional kontekst         │ ✅ (prezidentning strategik loyihasi)               │
+├─────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ O'zbek madaniy muvofiqligi              │ ✅ (Yashil Makon haqiqiy tashabbus, Mirziyoyev nomi)│
+├─────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ Bloom L3-L5 (ko'chirish/tahlil/baholash)│ ✅                                                  │
+├─────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ Har bir element teglangan               │ ✅                                                  │
+├─────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ Olmosh: Siz                             │ ✅                                                  │
+├─────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ Faqat joriy bob                         │ ✅                                                  │
+├─────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ Yechish bosqichida suratga olish        │ ✅ (S3)                                             │
+├─────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ 5 ta atomar ko'nikma qamrovi            │ ✅                                                  │
+├─────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ Darslik sodiqligi (§23+ o'quv dasturi yo'q) │ ✅                                            │
+└─────────────────────────────────────────┴─────────────────────────────────────────────────────┘
+
+---

@@ -1,0 +1,572 @@
+# Parallelogramm, romb va trapetsiya xossalari
+
+135
+2  Parallelogrammni ikki bo‘lakka bo‘ling. Chizmadagi kabi c burchak ustiga  
+a burchakni va b burchak ustiga d  burchakni qo‘ying.
+ 
+qirqing
+c
+b
+a
+d
+ 
+∠ a  = ∠c tenglik to‘g‘rimi? ∠b = ∠d  tenglik-chi?
+3  Ikkita parallelogrammni shtrix chiziq bo‘yicha qirqing. Keyin qirqilgan 
+qismlarni rasmdagidek joylashtiring.
+ 
+a) 
+a
+b
+d
+c
+a
+b
+d
+c
+qirqing
+ 
+b) 
+a
+b
+d
+c
+a
+b
+d
+c
+qirqing
+ 
+ 
+∠ a + ∠ b = 180° tenglik to‘g‘rimi?  ∠ c + ∠ d = 180° tenglik to‘g‘rimi?  
+ 
+ 
+∠ a + ∠ d = 180° tenglik to‘g‘rimi? ∠ b + ∠ c = 180° tenglik to‘g‘rimi?
+Burchaklarni 
+o‘lchashda 
+transportirdan 
+foydalanishingiz 
+mumkin.
+Parallelogrammning bir tomoniga yopishgan 
+burchaklari yig‘indisi haqida nima deyish 
+mumkin?
+a
+b
+d
+c
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   135
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   135
+13/11/24   14:51
+13/11/24   14:51
+
+136
+167–168
+Mashq daftariga o‘ting
+Qarang va o‘rganing
+Parallelogramm quyidagi xossalarga ega to‘rtburchakdir.
+Parallelogramm
+Xossalari
+B
+A
+C
+D
+Qarama-qarshi tomonlari teng.
+AB = DC
+AD = BC
+Qarama-qarshi tomonlari parallel.
+AB || DC
+DA || CB
+a
+b
+d
+c
+B
+A
+C
+D
+Qarama-qarshi burchaklari teng.
+∠ a = ∠ c
+∠ b = ∠ d
+Har bir tomoniga yopishgan 
+burchaklari yig‘indisi 180° ga teng.
+∠ a + ∠ b = 180°
+∠ c + ∠ d = 180°
+∠ a + ∠ d = 180°
+∠ b + ∠ c = 180°
+Bajaring va o‘rganing
+WXYZ – parallelogramm.
+X
+W
+Y
+Z
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a) 
+WX = 
+ va WZ = 
+ 
+b) 
+WX || 
+ va WZ || 
+ 
+c) 
+∠ XWZ = ∠
+ va ∠ WXY = ∠
+ 
+d) 
+∠ XWZ + ∠
+ = 180° 
+e) 
+∠ XWZ + ∠
+ = 180°
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   136
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   136
+13/11/24   14:51
+13/11/24   14:51
+
+137
+Romb 
+Romb 
+Quyidagi to‘rtburchakka romb deyiladi.
+E
+G
+H
+F
+h
+e
+g
+f
+Juftlikda ishlang.
+Ustozingiz bergan qog‘ozdan rombni qirqib oling. 
+Rombning xossalarini ayting.
+1  EFGH rombni katak daftarga joylashtiring.
+ 
+E
+G
+H
+F
+h
+e
+g
+f
+ 
+HE tomon GF tomonga parallelmi? EF tomon HG tomonga parallelmi? 
+Romb tomonlarining 
+uzunliklari haqida nima 
+deyish mumkin?
+Romb qanday xossalarga ega?
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   137
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   137
+13/11/24   14:51
+13/11/24   14:51
+
+138
+2  EFGH rombni quyidagi rasmda ko‘rsatilganidek buklang.
+ 
+ 
+E
+G
+H
+F
+h
+f
+e
+g
+hf
+e
+g
+ 
+ 
+∠ e = ∠ g va ∠ f = ∠ h tengliklar to‘g‘rimi?
+3  Ikkita rombni shtrix chiziq bo‘yicha qirqing. Keyin bo‘laklarni rasmda 
+ko‘rsatilganidek burchaklarini moslab joylashtiring.
+ 
+a) 
+h
+f
+e
+g
+h
+f
+e
+g
+qirqing
+ 
+b) 
+qirqing
+h
+f
+e
+g
+e
+h
+g
+f
+ 
+ 
+ 
+∠ e + ∠ f = 180°  va ∠ g + ∠ h = 180° tengliklar to‘g‘rimi? 
+ 
+ 
+∠ e + ∠ h = 180°  va ∠ f + ∠ g = 180° tengliklar to‘g‘rimi? 
+Rombning 
+burchaklari haqida 
+nima deyish mumkin?
+Rombning bir tomoniga yopishgan burchaklari 
+yig‘indisi haqida nima deyish mumkin?
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   138
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   138
+13/11/24   14:51
+13/11/24   14:51
+
+139
+Qarang va o‘rganing
+Romb quyidagi xossalarga ega to‘rtburchakdir.
+Romb
+Xossalari
+E
+G
+H
+F
+4 ta tomoni teng.
+ EF = FG = GH = EH 
+Qarama-qarshi tomonlari parallel.
+HE || GF
+EF || HG
+E
+G
+H
+F
+e
+g
+f
+h
+Qarama-qarshi burchaklari teng.
+ 
+ ∠ e = ∠ g
+ 
+∠ f = ∠ h
+Bir tomoniga yopishgan burchaklari 
+yig‘indisi 180° ga teng.
+ ∠ e  + ∠ f = 180°
+ ∠ h + ∠ g = 180°
+ ∠ e + ∠ h = 180°
+ ∠ f  + ∠ g = 180°
+169–170
+Mashq daftariga o‘ting
+Bajaring va o‘rganing
+PQRS – romb.
+ 
+p
+q
+s
+r
+R
+Q
+S
+P
+ 
+ 
+ 
+ a) 
+PQ = QR = 
+ = 
+b) 
+PQ || 
+ va PS || 
+c) 
+∠ p = ∠
+ va ∠q = ∠
+d) 
+∠ p + ∠q = 
+ va ∠ p + ∠ s = 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   139
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   139
+13/11/24   14:51
+13/11/24   14:51
+
+140
+Trapetsiya
+Trapetsiya
+Quyidagi to‘rtburchakka trapetsiya deyiladi.
+P
+S
+R
+Q
+p
+q
+s
+r
+Juftlikda ishlang.
+Ustozingiz bergan qog‘ozdan trapetsiyani  qirqib oling. 
+Trapetsiyaning xossalarini kashf qiling.
+1  PQRS trapetsiyani katak daftarga joylashtiring. 
+ 
+P
+S
+R
+Q
+p
+q
+s
+r
+ 
+PQ tomoni SR tomoniga parallelmi? PS tomoni QR tomoniga parallelmi?
+ 
+Trapetsiyaning parallel tomonlari – uning asoslari, parallel bo‘lmagan 
+tomonlari esa uning yon tomonlari deb ataladi. 
+2  Trapetsiyani shtrix chiziq bo‘ylab qirqing va hosil bo‘lgan qismlarni rasmda 
+ko‘rsatilganidek joylashtiring.
+ 
+qirqish
+p
+q
+s
+r
+s
+r
+p
+q
+qirqish
+ 
+ 
+ 
+∠p  + ∠s = 180°  tenglik to‘g‘rimi?  ∠q + ∠r = 180°  tenglik-chi? 
+Trapetsiya tomonlarining 
+uzunliklari haqida nima deyish 
+mumkin?
+Trapetsiyaning har bir yon tomoniga yopishgan 
+burchaklar yig‘indisi haqida nima deyish mumkin?
+Trapetsiyaning qanday 
+xossalari bor?
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   140
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   140
+13/11/24   14:51
+13/11/24   14:51
+
+141
+171–172
+Mashq daftariga o‘ting
+Qarang va o‘rganing
+Trapetsiya quyidagi xossalarga ega to‘rtburchakdir.
+Trapetsiya
+Xossalari
+P
+S
+R
+Q
+p
+q
+s
+r
+Trapetsiya bir juft parallel tomonlarga ega.
+PQ || SR
+Trapetsiyaning yon tomonlarning har biriga 
+yopishgan burchaklar yig‘indisi 180° ga 
+teng.
+ ∠ 
+ ∠ p + ∠ 
+∠ s = 180°
+ ∠ 
+∠ q + ∠ 
+∠ r = 180°
+Bajaring va o‘rganing
+1  ABCD – ikkita to‘g‘ri burchagi bor trapetsiya.
+ 
+ 
+A
+D
+C
+B
+ 
+a) 
+AB || 
+ 
+ 
+ 
+b) 
+∠ BAD + ∠ ADC = 
+°
+ 
+ 
+ 
+c) 
+∠ ABC + ∠ BCD = 
+°
+2  EFGH trapetsiyada EH = FG.
+ 
+ 
+E
+H
+G
+F
+ 
+a) 
+EF || 
+ 
+ 
+ 
+b) 
+∠ FEH + ∠ EHG = 
+° 
+ 
+ 
+ 
+c) 
+∠ EFG + ∠ FGH = 
+°
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   141
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   141
+13/11/24   14:51
+13/11/24   14:51
+
+142
+Juftlikda ishlang
+To‘rtburchaklarning xossalarini solishtiring va Muhokama qiling. 
+Ularning o‘xshash va farqli jihatlari nimada?
+Har bir shaklga mos xossaga  ✓ belgisini qo‘ying.
+Xossa
+To‘g‘ri 
+to‘rtburchak
+Kvadrat
+Parallelogramm
+Romb
+Trapetsiya
+Barcha 
+tomonlari teng
+Qarama-qarshi 
+tomonlari teng
+Faqat bitta 
+qarama-qarshi 
+tomonlari 
+juftligi o‘zaro 
+parallel
+Qarama-qarshi 
+tomonlari 
+parallel
+4 ta burchagi 
+ham to‘g‘ri 
+burchak
+Qarama-qarshi 
+burchaklari teng
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   142
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   142
+13/11/24   14:51
+13/11/24   14:51
+
+143
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+To‘g‘ri to‘rtburchak, kvadrat, parallelogramm, romb va trapetsiyadan yasalgan turli 
+obyektlarning rasmlarini to‘plang. Rasmlarni sinfxonangiz devoriga osib qo‘ying. 
+Sinfdoshlaringizdan qanday to‘rtburchaklar tasvirlanganini so‘rang.
+Guruh bo‘lib ishlang.
+Quyidagi shakllarni yasash uchun tangram shakllarning kamida ikkitasidan 
+foydalaning.
+a) 
+parallelogramm
+b) romb
+c) 
+trapetsiya
+Namuna
+ko‘prik
+belgi
+surat ramkasi
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   143
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   143
+13/11/24   14:51
+13/11/24   14:51
+
+144
+Qarang va o‘rganing
+Katak daftarda parallelogramm, romb va trapetsiya chizish
+Katak daftarda parallelogramm, romb va trapetsiya chizish
+1  Shunday ABCD parallelogramm chizing: unda AD = 6 cm, BC = 6 cm,  AD || BC va                     
+AB || DC bo‘lsin.
+ 
+1-qadam  Uzunligi 6 cm bo‘lgan AD  
+2-qadam  ABCD parallelogramm hosil   
+ 
+ 
+kesma chizing. Keyin AD  
+ 
+qilish uchun AB va DC
+ 
+ 
+ 
+kesmaga parallel BC  
+ 
+kesmalarni chizing.
+ 
+ 
+ 
+kesma chizing. 
+ 
+ 
+   
+1 cm
+1 cm
+A
+D
+B
+C
+A
+D
+B
+C
+ 
+ 
+2  Shunday EFGH romb chizing: unda EF || HG va EH || FG bo‘lsin.
+ 
+1-qadam  Rasmdagidek uzunlikdagi  
+2-qadam    EF kesmaga teng va unga
+ 
+ 
+ EF va EH kesmalarni chizing.   
+parallel bo‘lgan HG kesmani  
+ 
+ 
+ 
+chizing. EFGH romb hosil 
+ 
+ 
+ 
+ 
+qilish uchun FG kesmani 
+ 
+ 
+ 
+ 
+chizing.  
+ 
+   
+1 cm
+1 cm
+E
+H
+F
+E
+H
+F
+G
+To‘rtburchaklarni chizish
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   144
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   144
+13/11/24   14:51
+13/11/24   14:51
+

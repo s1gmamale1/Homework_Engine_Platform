@@ -1,0 +1,348 @@
+# Kuboid va kubning hajmini topish
+
+3  
+Quyidagi kublarni yasash uchun birlik kublardan foydalanilgan. Kublarning 
+hajmini toping.
+ 
+a) 
+ 
+ 
+b) 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+   
+W
+ 
+ 
+ 
+X
+ 
+ 
+ 
+ 
+d) 
+ 
+ 
+e) 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+  
+Y
+ 
+ 
+ 
+Z
+Kublarning hajmini o‘lchashning birlik kublar sonini sanashdan boshqa yana 
+qanday yo‘li bor? 
+ 
+ 
+ 
+ 
+ 
+ 
+Kubning hajmi = 
+ × 
+ × 
+ 
+Kub
+Birlik kublarni sanash
+orqali topilgan hajm
+(kub birliklarda) 
+Qirrasi
+(birliklarda)
+Qirrasi
+(birliklarda)
+Qirrasi
+(birliklarda)
+W
+1
+1
+1
+1
+X
+Y
+Z
+124
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   124
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   124
+09/08/24   19:32
+09/08/24   19:32
+
+1  Kuboid yoki kub hajmi quyidagicha topiladi: 
+ 
+ 
+Kuboid hajmi = bo‘yi × eni × balandligi
+ 
+Kub hajmi = qirrasi × qirrasi × qirrasi
+ 
+2  a) 
+O‘lchamlari 3 cm, 2 cm, 3 cm bo‘lgan kuboidning hajmini toping.
+2 cm
+3 cm
+3 cm
+1 cm
+1 cm
+ 
+ 
+ 
+Kuboid hajmi = bo‘yi × eni × balandligi = 3 × 2 × 3 = 18 (cm3)
+                                    
+ 
+b) 
+O‘lchamlari 12 m, 8 m, 4 m bo‘lgan kuboidning hajmini toping.
+4 m
+8 m
+12 m
+ 
+ 
+ 
+Kuboid hajmi = 12 × 8 × 4 = 384 (m3)
+Qarang va o‘rganing
+125
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   125
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   125
+09/08/24   19:32
+09/08/24   19:32
+
+3  a)  
+O‘lchamlari 2 cm, 2 cm, 2 cm bo‘lgan kubning hajmini toping.
+ 
+ 
+2 cm
+2 cm
+2 cm
+ 
+ 
+ 
+ 
+Kub hajmi = qirrasi × qirrasi × qirrasi  
+ 
+ 
+ 
+ 
+= 2 × 2 × 2
+ 
+ 
+ 
+ 
+= 8 cm3
+ 
+b) 
+O‘lchamlari 3 m, 3 m, 3 m bo‘lgan kubning hajmini toping.
+ 
+ 
+3 m
+3 m
+3 m
+ 
+ 
+ 
+ 
+ 
+ 
+Kub hajmi = qirrasi × qirrasi × qirrasi
+ 
+ 
+ 
+ 
+ 
+= 3 × 3 × 3 
+ 
+ 
+ 
+ 
+ 
+= 27 m3
+4  Kuboid shaklidagi shisha idish pastda ko‘rsatilganidek qirrasi 1 cm boʻlgan kublar 
+bilan qisman to‘ldirilgan. Maʼlumotlar asosida idishning hajmini toping.
+ 
+10 cm
+ 
+ Bo‘yi = 10 cm 
+ 
+ 
+ 
+ Eni = 6 cm 
+ 
+ 
+ 
+ Balandligi = 4 cm
+ 
+ 
+ 
+Shisha idish hajmi = 10 × 6 × 4
+ 
+ 
+ 
+                                       = 240 cm3 
+ 
+ 
+ 
+126
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   126
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   126
+09/08/24   19:32
+09/08/24   19:32
+
+Guruh bo‘lib ishlang.
+1  
+Tomoni 1 cm bo‘lgan kvadrat va qirrasi 1 cm bo‘lgan kubni taqqoslang. 
+Kvadratning yuzi va kubning hajmi o‘rtasidagi farqni toping. Qanday farqni 
+payqadingiz?
+2  
+Pol ustida yopishqoq tasmadan foydalanib rasmda ko‘rsatilgandek, tomoni 
+1 m bo‘lgan kvadrat hosil qiling. So‘ng eski gazetalarni o‘rab, uzunligi 1 m bo‘lgan 
+o‘ramlarni qirqib oling. Qirrasi 1 m bo‘lgan kub hosil qilish uchun 12 ta gazeta 
+o‘ramlarini bir-biriga skotch bilan birlashtiring. Kvadratning yuzi va kubning hajmini 
+toping.
+ 
+Xalqaro savdo-sotiqda katta hajmdagi yuklar 
+odatda konteynerlarda tashiladi. Dengiz 
+portlarida har kuni minglab konteynerlar yuk 
+tashuvchi kemaga yuklanadi yoki tushiriladi.
+Konteyner o‘lchami
+Hajmi
+20 futli yuk konteyneri
+33,150 m3
+40 futli yuk konteyneri
+67,700 m3
+Qo‘lda bajariladigan mashq
+Turmushda matematika
+127
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   127
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   127
+09/08/24   19:32
+09/08/24   19:32
+
+Bajaring va o‘rganing
+1  Kuboidlarning hajmini toping.
+ 
+a) 
+3 cm
+2 cm
+5 cm
+ 
+b) 
+10 cm
+12 cm
+5 cm
+2  Kubning hajmini toping.
+ 
+ 
+       
+6 cm
+3  Asosi kvadrat bo‘lgan kuboidning hajmini toping.
+ 
+ 
+ 
+ 
+ 
+ 
+        
+18 cm
+5 cm
+5 cm
+4  Kuboidlarning hajmini toping.
+ 
+a) 
+5 m
+1 m
+7 m
+ 
+b) 
+7 m
+12 m
+4 m
+O‘zingizni tekshiring
+a) 
+Men kub va kuboidni farqlay olaman. 
+  
+b) Men formula yordamida kuboidning hajmini topishni bilaman. 
+ 
+c) 
+Men formula yordamida kubning hajmini topishni bilaman. 
+ 
+147–150
+Mashq daftariga o‘ting
+128
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   128
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   128
+09/08/24   19:32
+09/08/24   19:32
+
+Guruh bo‘lib ishlang.
+1  
+Silindr shaklidagi o‘lchov idishini 1 ℓ suv bilan to‘ldiring. So‘ng undagi suvni
+o‘lchamlari 10 cm, 10 cm, 10 cm bo‘lgan kub shaklidagi idishga quying.
+ 
+a) Idishning hajmi qanday?
+ 
+ 
+Idish hajmi = 
+ cm × 
+ cm × 
+ cm
+            
+                                      = 
+ cm3
+ 
+b)  ml va cm3 o‘rtasida qanday bog‘liqlik bor?
+                 
+ 
+1 ℓ  = 1000 ml
+         
+1000 ml = 
+ cm3
+                   1 ml  = 
+ cm3
+                   1 ℓ  = 
+ cm3
+2  
+Uydan 4 ta bo‘sh idish olib keling. Ularga A, B, C va D harflarini yopishtiring. 
+Idishlarni suv bilan liq to‘ldiring. So‘ng suvni kub shaklidagi idishga quying va har safar 
+suv sathini aniqlang. Formuladan foydalanib har bir idishning sig‘imini toping.
+ 
+ 
+Idish
+Suv hajmi
+(cm3) 
+Idishdagi suv
+hajmi
+Idish
+sig‘imi
+A
+10 × 10 × 
+ = 
+B
+C
+D
+ 
+ 
+10 cm
+10 cm
+10 cm
+1 ℓ
+1 ℓ
+Suyuqliklar hajmini santimetr kub va metr 
+kubda o‘lchash
+Qo‘lda bajariladigan mashq
+129
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   129
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   129
+09/08/24   19:32
+09/08/24   19:32
+
+ 

@@ -1,0 +1,47 @@
+# Matnli hujjat bilan ishlash — 7-dars
+
+16
+Hujjat chop etishga tayyor boʻlganida ekranning yuqori chap qismidagi
+Print tugmasi bosiladi.
+Save tugmasi
+Hujjatga matn kiritishni yakunlagach, mehnatingiz natijasini saqlash yoddan
+chiqmasin. Bu hujjatdan kelgusida qayta foydalanishga imkon beradi.
+Hujjatni saqlash uchun ekranning yuqori chap burchagidagi Save
+tugmasidan foydalaniladi.
+Avval saqlangan hujjat ustida ishlanayotganda Save tugmasi bosilsa,
+kiritilgan o‘zgarishlar saqlanadi.
+Agar hujjat birinchi marta saqlanayotgan boʻlsa, ekranda Save as deb
+nomlangan boshqa oyna hosil bo‘ladi.
+DIQQAT!
+Yozilayotgan
+matnning biror
+qismini tasodifan
+yo‘qotib
+qo‘ymaslik
+uchun matn
+bilan ishlash
+jarayonida
+Save tugmasini
+muntazam bosib
+turish kerak.
+@edurtm_uz
+
+17
+Matnli hujjat bilan ishlash
+Kompyuterdan hujjatni saqlash uchun joy tanlanadi. Keyin Enter filename
+here maydoniga hujjat uchun mos nom yoziladi. Hujjatlarga mos nom
+berish usullari bilan amaliy ko‘nikmalar qismida kengroq tanishasiz.
+Hujjat nomi yozilgach, Save tugmasi bosiladi. Microsoft Word ba’zida
+hujjatning birinchi qatoridagi matnni hujjatning avtomatik nomi sifatida
+ko‘rsatadi. Ushbu taklif etilgan nomni oʻchirib, foydalanish uchun qulayrog‘ini
+yozish mumkin.
+Hujjat birinchi marta saqlanganidan keyin istalgan vaqtda Save tugmasini
+bosish va qayta saqlash mumkin. Bu holatda hujjatni qayta nomlash talab
+qilinmaydi.
+4.1-mashg‘ulot
+Oʻqituvchingiz bergan Letter.doc faylini oching. Xatda biror xato borligini
+bilish uchun imloni tekshiring.
+4.2-mashg‘ulot
+Doʻstingiz yoki oʻqituvchingizga xatni qanday chop etishingizni tushuntiring.
+4.3-mashg‘ulot
+Hujjatni Save tugmasi yordamida saqlang.

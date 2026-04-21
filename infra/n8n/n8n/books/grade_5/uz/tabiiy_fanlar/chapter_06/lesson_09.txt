@@ -1,0 +1,53 @@
+# VI bob — 9-dars
+
+Texnologiya haqida suhbat
+Membrana texnologiyasi ajratish usuliga asoslangan bo'lib, u yerosti, yerusti
+yoki oqova suvlardan toza suv ajratib olishda qo'llanadi.
+Ushbu texnologiya yordamida suvda erigan keraksiz qattiq moddalar ajratib
+olinadi. Bu aholini foydalanishga yaroqli suv bilan ta’minlash imkonini
+yaratadi.
+Siz yashaydigan hududda suvni tozalash va filtrlash uchun qanday usullardan
+foydalanilishini aniqlang.
+Bilimingizni sinab ko*ring!
+Tuzli eritmadan tuz va suvni qanday
+ajratish mumkin?
+Quyidagi qaysi ko‘nikmalarni egalladingiz?
+Javoblarni daftaringizga belgilang.
+1. Qattiq moddalarning suyuqlikda qanday erishini tekshira olaman va uni
+tavsiflay olaman.
+2. Eritmadan erigan moddani ajratib olish usulini tavsiflay olaman.
+3. Tadqiqot natijalariga asoslanib bashoratning aniqligini bayon eta olaman.
+4. Ilmiy tushunchani tasvirlashda modeldan foydalana olaman.
+5. Tadqiqot uchun kerakli jihozlarni tanlayman va ulardan to‘g‘ri foydalana
+olaman.
+6. Amaliy ishni bajarish davomida yuzaga kelishi mumkin bo'lgan xavflarni hamda
+ularni kamaytirish yo'llarini bayon eta olaman.
+7. Amaliy ishni bajarish davomida xavfsizlik qoidalariga rioya qilaman.
+8. Kuzatish natijalarini taqdim etish uchun jadval tuza olaman.
+9. Bahs-munozarada o‘z nuqtayi nazarimni ilmiy
+dalillardan foydalanib asoslay olaman.
+Mashq daftari
+4.2-amaliy ish, 42-bet
+4.3-amaliy ish, 43-bet
+
+Ilmiy atamalar
+E
+eritma
+eruvchi modda erituvchida erishidan hosil
+bo'lgan aralashma
+erituvchi
+eruvchini eritadigan suyuqlik
+erish harorati
+qattiq modda suyuqlikka aylanadigan harorat
+eruvchi
+erituvchiga solinganda eriydigan modda
+2
+qaynash
+suyuqlikning butun hajmi bo'ylab havo
+pufakchalarining hosil bo‘lish jarayoni
+qaynash harorati
+suyuqlikning qaynashi boshlanadigan harorat
+qaytar jarayon
+dastlabki holatiga qaytadigan jarayon
+termometr
+haroratni o'lchaydigan asbob

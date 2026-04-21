@@ -1,0 +1,230 @@
+# Texnologiya va Dizayn — 22-dars
+
+23-§.
+2.3. KomPozit materiallar
+KomPozit materiallar va ularning turlari.
+KomPozit materiAllardan foydalanish
+Kompozit materiallarni ishlab chiqarishdan maqsad nima?
+Ishlab chiqarishda keng foydalanilayotgan metall va metallmas
+materiallardan chiqindi sifatida ajralib qolayotgan turli qismlardan
+(kukun, tola, qirindi, payraha va boshqa) kam chiqindi chiqadigan hamda
+chiqindi chiqmaydigan zamonaviy mahsulotlar yaratishdir.
+Fan-texnika taraqqiyotining rivojlanishi natijasida metall va metallmas mahsu­
+lotlarning sifatini va assortimentini yaxshilash, yangi konstruksion materiallar, metall
+va metallmas materiallar kukunlari asosida tayyorlanadigan qoplama va buyumlar
+ishlab chiqarishni ko‘paytirish, talab etilgan xossalarga ega bo‘lgan yangi polimer va
+kompozitsion materiallar ishlab chiqarishni rivojlantirish, kam chiqindi chiqadigan,
+chiqindi chiqmaydigan va kam operatsiyali texnologik jarayonlarni keng qo‘llash,
+ishlov berishning yuqori samarali usullaridan foydalanishga xizmat qilmoqda.
+Odamlar oddiy narsalardan elektron moslamalarga qadar har bir narsani
+qurish uchun ming yillar davomida turli kompozitsiyalar yaratganlar. Birinchi
+kompozitsiyalar loy va somon kabi tabiiy materiallardan tayyorlangan bo‘lsa-da,
+bugungi kompozitlar sintetik moddalardan laboratoriya sharoitida yaratilmoqda.
+Siz kompozit materiallar va ularning turlari haqida eshitgan­dirsiz. Bu turli
+materiallarning har xil usullarda birikishi (kompozi­tsiyasi)dan iborat bo‘ladi.
+Kompozitsiya (lotincha “compositio” – tuzilish, birlashish, bogʻ­lanish) – turli xil
+ma­te­riallarning o‘zaro bogʻlanishidir.
+Kompozitlar – bir necha qismlardan iborat materiallar guruhi, ulardan biri mus­
+tahkamlovchi (armatura) vazifasini bajarsa, ikkinchisi bog‘lovchi (matritsa) vazifasini
+bajaradi. Masalan, temir-beton – bu kompozit materialning bir turi. Ushbu birikmada
+temir mustahkam­lovchi vazifaga, beton esa birlashtiruvchi moddaga ega.
+Ikki yoki undan ortiq turli xil materiallarning birikishidan hosil bo‘lgan mahsu­lot­
+ga kompozit material deyiladi. Ular bir-biridan aniq chegara bilan ajralib turadi.
+Kompozit materialning bir butunligini ta’minlovchi komponent (aralash­
+ma)ni tashkil etuvchiga bog‘lovchi material matritsa deb ataladi. Matritsa bilan
+qo‘shimcha­lar orasida maxsus yupqa qatlam bo‘lib, u ajralish yuzasini belgilaydi
+(89-rasm). Matritsa armatura, to‘ldiruvchi va boshqa qo‘shimchalarni tashqi muhit
+ta’siridan saq­laydi. To‘ldiruvchilar  mayda kukun yoki tola holatida bo‘lishi mumkin.
+
+71
+71
+89-rasm. Kompozit material tuzilishi: 1 – matritsa (bog‘lovchi material);
+2 – armatura (mustahkamlovchi) elementi; 3 – ajralish yuzasi (chegarasi).
+Kompozit materiallar – oʻzaro uncha taʼsirlashmaydigan, komponent (ara­
+lashma)larning hajmiy birikishidan hosil boʻladigan va komponentlar bir-biridan
+aniq chegara bilan ajralib turadigan materiallardir.
+Kompozit materiallar har qaysi komponentning eng yaxshi xossalari (mus­
+tahkamligi, yeyilishga chidamliligi, yengilligi va boshqalar)ni oʻzida mujas­
+samlashtirganligi uchun ularning hech biriga xos boʻlmagan koʻrsatkichlar bilan
+ifodalanadi. Odatda, kompozit materiallar plastik (metall yoki metallmas) asos yoki
+matritsa (bog‘lovchi material) hamda qoʻshilmalar: metall kukunlari, tolalar, yupqa
+payraha, gazlama va boshqalardan iborat boʻladi (90-rasm).
+2
+3
+1
+2
+50 %
+90-rasm. Yog‘och va polimer asosli kompozit materiallar tuzilishi.
+(shakl o‘zgartiruvchi qo‘shimcha)
+Modifikator
+30 %
+2 %
+14 %
+4 %
+3
+1
+Yog‘och qipig‘i
+Bo‘yoq (pigment)
+Polimerlar
+Eko qo‘shimcha
+
+72
+72
+Kompozit materiallardan turli buyumlar tayyorlashda tanlangan xomashyo
+materiallari tarkibiga katta e’tibor qaratish lozim. Chunki ularning biri metall,
+biri plastmassa, biri yog‘och va boshqa materiallarning birikishidan hosil bo‘lgan
+kompozit materiallardir.
+Shu sababli kompozit materialning issiq va korroziyabardoshliligi, elektr va
+issiqlikni saqlash qobiliyati, qayta ishlash texnologiyasi kabi muhim xossalari
+bog‘lovchining xususiyatlariga bog‘liq bо‘ladi.
+Armatura (mustahkamlovchi) va qo‘shimcha elementlarning turiga hamda
+ularning matritsada (bog‘lovchi material) joylashishi va geometrik o‘lchamlariga
+qarab kompozit materiallarning xossalari o‘zgaradi.
+Kompozit materiallar xossalariga qo‘shimcha elementlar (to‘ldiruvchi)ning
+ta’siri juda katta bo‘lganligi uchun ko‘pincha shu kompozit materialning nomi
+uning to‘ldiruvchisi nomi bilan ham aytiladi. Masalan, yog‘och, aluminiy, po‘lat,
+polimer, shisha tolali kompozitlar va hokazo (91-rasm).
+a  – yog‘och asosli: 1 – himoya (lok)
+qatlami, 2 – yuqori qatlam (faner);
+3 – yelim; 4 – o‘rta qatlam (taxta);
+5 – ulanish qismi; 6 – pastki qatlam.
+d – pо‘lat asosli: 1 – himoya plyonkasi, 2 – emal,
+3 – grunt, 4 – termopolimer yelimi, 5 – hi­
+moya qoplamasi, 6 – innovatsion kompozit
+materiallar (alcotek), 7 – pо‘lat listlar.
+b – aluminiy asosli: 1 – himoya plyonkasi,
+2 – emal; 3, 7 – aluminiy qatlami;
+4, 6 – yopishqoq qatlam; 5 – plastik qatlam;
+8 – himoya qatlamlari.
+e – polimer asosli: 1 – himoya plyonkasi, 2 –
+bо‘yoq bilan qoplangan qismi, 3 – aluminiy
+qatlam, 4 – yopishqoq qatlam, 5 – polietilen.
+91-rasm. Kompozit materiallar: a – yog‘och asosli, b – aluminiy asosli,
+d – pо‘lat asosli, e – polimer asosli.
+а)
+1
+2
+3
+4
+5
+6
+d)
+b)
+e)
+b)
+1
+1
+1
+2
+3
+4
+5
+6
+7
+2
+3
+4
+5
+2
+3
+4
+5
+6
+7
+8
+
+73
+73
+13-shakl
+Kompozit materiallar tasnifi
+12-shakl
+Kompozit material turlari
+1. Qatlamli kompozit materiallarda birinchi qatlam mustahkamlikni ta’minlasa,
+ikkinchisi korroziyaga qarshilik ko‘rsatadi.
+2. Tolali kompozit materiallarda metall asos shisha tolalar va boshqa materiallar
+bilan mustahkamlanadi.
+3. Dispersiyalangan (zichlangan) kompozit materiallar qiyin eriydigan zarralar bilan
+mustahkamlanadi.
+Kompozit materiallar qanday tasniflanadi? Kompozit materiallar tasnifi o‘ta
+murakkab emas. Ular asosan biz bilgan metall va metallmas materiallardan tuzilgan
+bo‘ladi (13-shakl).
+Kompozit materiallar asosan 3 turga bo‘linadi (12-shakl).
+Metall kompozit materiallarning ishlash xususiyatlari, olovbardoshliligi, bikr­
+ligi, solishtirma mustahkamligi metall va metall qotishmalardan ustun turadi.
+Polimer kompozit materiallarning o‘ziga xosligi shundan iboratki, ularning
+asosini, ya’ni matritsa vazifasini bajaruvchi har xil polimerlar (polietilen, polipropilen,
+polistirol va boshqalar) hosil qilib, bu asos tola, to‘qima, plyonka, shisha kabi metall va
+metallmaslar bilan mustahkamlanadi.
+Keramika kompozit materiallarining tolalar bilan, shuningdek, metall va keramik
+dispersiyalangan zarralar bilan mustahkamlash, yuqori kuchli kompozitlarni olish
+imkonini beradi.
+Kompozit
+Metall
+kompozit
+materiallar
+Polimer
+Keramika
+Uglerodli
+Olinishi
+Qatlamli
+Tolali
+Disper-
+siyalan-
+gan
+bosim bilan ishlov berish
+yo‘li asosida
+
+74
+74
+Uglerodli kompozit materiallari uglerod tolalari va uglerod matritsasi asosida
+yaratilgan yuqori issiqlikka chidamli kompozit materiallardir.
+Kompozit materiallar, odatda, matritsa tarkibiy qismlariga ko‘ra ham tasniflanadi.
+Kompozit materiallarni tasniflash matritsa (bog‘lovchi material) yoki armatura
+(mustahkamlovchi) va qo‘shimchalarning turiga asoslanadi (14-shakl).
+Matritsa materiali sifatida metall va uning qotishmalari; polimer; keramika, shisha
+va boshqa materiallar ishlatiladi. Ushbu matritsalar ikkita keng tarqalgan turdagi
+kompozitlarni hosil qiladi.
+Kompozit materiallardan foydalanish
+Birinchi kompozit material fransuz bog‘boni J.Mone tomonidan 1867-yilda
+ishlab chiqilib, patent olingan. U hovli gultuvaklari, sim va sementdan kompozitsion
+materiallar tayyorlagan.
+1942-yilda samolyot konstruksiyasida  oyna tolasi bilan sinchlangan “armirovan”
+kompozit material qo‘llanilgan.
+Kompozit materiallar mashinasozlik konstruksiyalariga qo‘yilgan quyidagi
+talablarga javob berishi kerak (15-shakl)
+Yengil
+bo‘lishi
+Harorat-
+bardoshligi
+Mustah-
+kamligi
+Korroziya-
+Ishlatilishi-
+ning osonligi
+15-shakl
+Kompozit materiallarga qo‘yiladigan talablar
+14-shakl
+Matritsa turlari bo‘yicha kompozit materiallar tasnifi
+Metallar
+Qora
+Rangli
+Shisha
+Metallmaslar
+Kompozit material matritsasi
+
+75
+75
+92-rasm. Fasad qismida kompozit materiallardan foydalanilgan zamonaviy binolar
+(Toshkent shahri).
+Bugungi kunda kompozit mate­rial­lardan aviatsiya (masalan: dvi­ga­tel, korpus,
+parrak, haroratbar­dosh detallar va bosh­qalar), kosmo­nav­tika, energetika, elektro­texnika
+va radiotexnika, mashi­na­sozlik (masa­lan: avtomobil kuzovlari, ishqala­nishga chidamli
+tormoz quril­ma­lari va boshqalar), kemasozlik, kim­yo, konchilik, qurilish (bino va
+inshoot­larning fasad qismlarida (92-rasm), to‘qimachilik, yengil va og‘ir sanoatlarda,
+tibbiyot asboblari yasash­da, qishloq xo‘jaligi, uy-ro‘zg‘or texnikasi kabi ko‘plab
+sohalarda foydalaniladi.
+Humo arena
+Hilton mehmonxonasi
+
+76
+76

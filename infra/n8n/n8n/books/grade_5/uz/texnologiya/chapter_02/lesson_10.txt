@@ -1,0 +1,184 @@
+# Servis Xizmati — 10-dars
+
+10-§.
+Tikuv  mashinasining  turlari  va  tuzilishi
+
+149
+149
+1. Maxovoy g‘ildirak.
+2. Elektr manbayini va mashina
+lampochkasini yoquvchi tugma.
+3. Tepkini ishga tushiruvchi tugma.
+4. Changyutkich.
+5. Bostirma tepki richagi.
+6. Tepki.
+7. Yechiluvchi stolcha.
+kichik mexanizatsiya vositalari yordamida gazlama chetiga mag‘iz qo‘yish,
+shakldor choklarni bajarishga mo‘ljallangan. Maxsus tikuv mashinasida yetarli
+tajribaga ega bo‘lgan, o‘z  kasbining ustalari, tikuvchilar ishlaydi. Tikuv mashi­
+nalari turiga qarab qo‘l yuritmali, oyoq yuritmali hamda elektr yuritmali bo‘ladi.
+Zamonaviy tikuv mashinalarida barcha jarayonlar avtomat das­turlashtirilgan
+bo‘lib, tikuv mashinasi “start/stop” tugmalari orqali boshqariladi. Tikuv
+mashinalari turlicha bo‘lsa-da, uning ishlash mexanizmlari bir xil. Tikuv
+mashinasida ishlashdan avval boshqaruv  yo‘riqnomasi bilan tanishib chiqish
+kerak bo‘ladi.
+Tikuv mashinasining asosiy qismlari:
+8. Igna.
+9. Bostirma tepki.
+10. Gazlamani surgich.
+11. Igna plastinkasi.
+12. Moki uyasi.
+13. Moki uyasi qop­qog‘i.
+Yodda tuting!
+Gazlama ustiga chizg‘ich yoki shablonni yotqizib,
+tikuvchilik bo‘ri bilan perpendikular holatda chiziq torting.
+Chiziq aniq va tekis hosil bo‘ladi. Hech qachon tikuvchilik
+bo‘ri o‘rniga qalam ishlatmang.
+
+150
+150
+1. Tikuv mashinasiga yorug‘lik chap to­
+mondan yoki to‘g‘ridan tushib turishi
+ke­rak.
+2	 O‘rindiq stuli  mashina ignasiga to‘g‘ri­
+lab joylashtiriladi.
+3. Mashina qarshisida boshni biroz egib,
+tikuv mashinasi bilan 10–15 cm oraliqda
+o‘tirish kerak.
+4. Tikuvchilik buyumi va ko‘z oralig‘idagi
+masofa 30–35 cm ni tashkil etishi kerak.
+5. Tikuv mashinasi platformasiga tikuv­
+chining tirsagi qulay joy­lashishi lozim.
+Tikuv mashinasi bilan ishlaganda quyidagi sanitariya-gigiyena
+qoidalariga rioya qilinadi:
+Tikuv mashinasida ishlaganda quyidagi texnika
+xavfsizligi qoidalariga rioya qilinadi
+1. O‘qituvchining ruxsatisiz tikuv mashinasida ish boshlamang.
+2. Mashinani ishga tushirish vaqtida oyog‘ingizni tepkiga qo‘ymang.
+3. Tikuvchilik buyumini tikishdan oldin igna va to‘g‘­na­g‘ichlarni olib tash­
+lang.
+4. Tikuv mashinasida tikish vaqtida qo‘llaringiz mashina igna­siga kirib ket­
+masligini nazorat qiling.
+5. Tikuv mashinasining aylanma harakatlanuvchi qismlari ish­layotganda
+teginmang.
+6. Tikuv mashinasi ishlab turganda boshqa ishlarga chalg‘imang hamda ma­
+shinani yoqiq holda qoldirmang.
+7.  Ishni yakunlaganingizdan keyin mashinani o‘chirib, bostirma tepki tagiga
+gazlama bo‘lagidan to‘shab, bostirma tepki va ignani pastga tushirib
+qo‘ying.
+
+151
+151
+7-amaliy mashg‘ulot
+Mustahkamlash uchun savol va topshiriqlar
+1. Tikuv mashinasining afzallik taraflarini aytib bering.
+2. Tikuv mashinasining qanday turlari bor?
+3. Tikuv mashinasida ishlashda qanday sanitariya-gigiyena qoi­da­lariga rioya
+qi­lish kerak?
+4. Tikuv mashinasida ishlashda qanday texnika xavfsizligi qoi­dalariga rioya
+qilish kerak?
+5. Tikuv mashinasining tuzilishini gapirib bering.
+Q i z i q a r l i  m a ’ l u m o t
+2014-yil amerikalik ixtirochi Jonatan Zor­nou
+“Sew­bo” nomli robot-tikuvchini ixtiro qildi. U 30 da­
+qiqada ko‘ylak tikib beradi. Buning uchun gazlama
+suvda qorishtirilgan termoplast bilan qoplanadi va u
+qattiq holatga keladi. Robot gazlamani oddiy tikuv
+mashinasida tikadi. Kiyim tayyor bo‘lgach, uni issiq
+suvda chayib olish natijasida plastik yuza yuvilib, gazlama o‘z holiga qaytadi.
+Kerakli material va mos­lamalar: paxta tola­li gazlama qirqimi (30x30 cm),
+qaychi, tikuvchilik bo‘­ri, chizg‘ich. Ti­kuv ma­shinasidan foyda­la­nish­dan oldin uni
+ishla­tish yo‘riqnomasi bilan tani­shib chiqing.
+1. Yeng
+6. Chokni
+rost­lovchi
+regulator
+7. Maxovoy
+g‘ildirak
+8. Mashina­ning
+korpusi
+4. Harakatla-
+nuvchi
+plastinka
+3. Ip keskich
+2. Ustki ip
+ta­rangligini
+5. Platforma
+Tikuv  mashinasini  ishga  tayyorlash  va ipsiz tikish
+
+152
+152
+Ishning borish tartibi
+T/r
+Bajariladigan ishlar
+Grаfik ko‘rinishi
+1
+Pахtа tоlаsidаn
+tаy­yorlаb
+оlin­gаn
+30х30 cm li gаzlаmаni
+yaхshilаb dаzmоllаb
+оlаmiz
+2
+Gаzlаmаni orqasiga
+o‘girib,
+buklаb оlаmiz
+3
+Gаzlаmа
+chеtlаri
+tеkis o‘lchаb
+оlinadi
+4
+Тikuvchilik bo‘ri
+yordаmidа to‘g‘ri,
+pаrаllеl, zigzаg shаklidаgi
+chiziqlаr chizilаdi
+5
+Маshinаni elеktr tоkigа
+ulаymiz. Маshinа ignаsini
+ko‘tаrаmiz. Мохоvоy
+g‘ildirаkni o‘zimizgа
+qаrаtib аylаntirаmiz.
+Маshinа tеpkisini richаg
+оrqаli tеpаgа ko‘tаrаmiz.
+Gаzlаmа bo‘lаgini
+bostirma tepki to‘g‘risigа
+jоylаshtirаmiz
+
+153
+153
+6
+Lаpkаni tushirib, ignаni
+bеlgilаngаn
+chiziqqа
+tushirаmiz.
+Маshinаning
+elеktr
+tugmаsini
+bоsib ishgа tushirаmiz
+7
+Теpkini оyoqlа­ri­miz
+bilаn аstа bоsаmiz. Bеlgi­
+lаngаn chiziqlаr bo‘yichа
+diqqаt bilаn bахyaqаtоr
+yurgizаmiz. Теpkini
+qаnchа qаttiq bоssаngiz,
+bахyaqаtоr tikilishi
+shunchа tеzlаshаdi
+8
+Gаzlаmаdаgi chiziqni tikib bo‘lgаch, оyoqni tеpkidаn оlаmiz, bostirma
+tepki richаgini tеpаgа ko‘tаrаmiz. Gаzlаmаni bоshqа chizilgаn yo‘lаkkа
+yo‘nаltirаmiz. Vаzifаni qаytаdаn tаkrоrlаymiz. Shu tаriqа ipsiz tikishni bir
+nеchа mаrоtаbа tаkrоrlаymiz. Ishni yakunlаgаch, mаshinаni elеktr tоkidаn
+o‘chirаmiz.
+1. Nima sababdan tikuv mashinasini ishlatishdan oldin yo‘­riqnoma bilan
+tanishib chiqiladi? Uy-ro‘zg‘orda foy­da­laniladigan qanday tikuv
+mashinalarini bilasiz?
+2.	Tikuv mashinasini ishga tayyorlash jarayonida nimalarga ahamiyat
+berish kerak?
+3.	 Tikuv mashinasida ipsiz tikishni bilib oldingizmi? Tikish jarayonida
+nimalarga rioya qildingiz?
+4.	 Uyda mustaqil ipsiz tikishni mashq qiling.
+
+154
+154

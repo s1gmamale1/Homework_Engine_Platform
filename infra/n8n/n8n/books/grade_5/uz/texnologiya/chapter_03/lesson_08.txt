@@ -1,0 +1,106 @@
+# Energiya va Mexatronika — 8-dars
+
+9-§.
+Robototexnik  tizimni  loyihalash.
+Robotlar  musobaqasi
+2-amaliy mashg‘ulot. Otto robotini yig‘ish.
+Jihozlar: Otto – yig‘ma roboti jamlanmasi, asosiy algoritmik konstruk­
+siyalar, yo‘riqnoma, xavfsizlik texnikasi qoidalari.
+Ishni bajarish tartibi:
+Otto robotini yig‘ish berilgan texnologik xarita asosida amalga oshiriladi.
+14
+15
+Otvyortka
+Kabel ulagichlari F/F 10 cm ×6
+Izoh: “×1” – shu konstruksiyalar soni.
+
+222
+222
+Otto robotini yig‘ishning texnologik xaritasi
+T/r
+Ish ketma-ketligi
+Ishni bajarish bo‘yicha
+ko‘rsatma
+Asbob-
+uskunalar
+1
+2
+Robotning chap oyoq qismiga
+servo motor o‘rnatiladi
+otvyortka
+Robotning o‘ng oyoq qismiga
+
+223
+223
+3
+4
+5
+Robotning gavda qismiga
+Robotning tizza qismlari
+o‘rnatiladi
+Robotning chap va o‘ng
+oyoqlarini tizza qismlariga
+
+224
+224
+6
+7
+8
+Robotning bosh qismiga ultra-
+tovush masofa aniqlagich
+sensori o‘rnatiladi
+Robotning bosh qismiga
+Arduino qurilmalari o‘rnatiladi
+Robotning elektr quvvati
+manbayi bloki o‘rnatiladi
+
+225
+225
+10
+9
+Robotning ovoz chiqaruvchi
+moslamasini o‘rnatish va
+elektron qismlarini sim orqali
+ulash
+Robotning bosh qismini
+o‘rnatish
+15 – Texnologiya,  5-sinf
+
+226
+226
+“Arduino. lDE” dasturini kompyuterga o‘rnatish yo‘riqnomasi
+1. DVD diskdan arduino–1.7.10 papkasini kompyuteringizning C: yoki D: diskiga
+ko‘chirib oling.
+2. Kompyuteringizdagi arduino – 1.7.10 papkasi ichiga kiring. Driver papkasi
+ichidan kompyuteringizga o‘rnatilgan Windows sistemasining razryadiga qarab, agar
+Windows sistemangiz 64 razryadli bo‘lsa dpinst-amd64 faylini ishga tushirib, Adruno
+platformasi uchun drayverni o‘rnatib olasiz. Agarda Windows sistemangiz 32 razryadli
+bo‘lsa, dpinst-x86 faylini ishga tushirib, Adruno platformasi uchun drayverni o‘rnatib
+olasiz.
+3. Shundan so‘ng C: yoki D: diskka ko‘chirib olingan arduino – 1.7.10 dasturi
+setup.exe faylini ishga tushirib, drayverni o‘rnatib olasiz.
+4. Kompyuteringiz ekranida hosil bo‘lgan arduino dasturi oynasi bo‘yicha
+ko‘rsatilgan ketma-ketlikda ishlarni bajaring.
+Eslatma. Qо‘shimcha ma’lumotlar olish uchun https://www.instructables.com/id/
+Otto-Build-You-Own-Robot-in-Two-Hours/ saytidan foydalanishingiz mumkin.
+11
+Robotni USB kabeli
+orqali dastur yozish uchun
+kompyuterga ulash
+kompyuter
+1-qadam
+Arduino dasturi oynasi
+
+227
+227
+Otto roboti qismlarini yig‘ib va dasturlab bo‘lgach, ishlashi tekshirib ko‘riladi va
+sinovdan o‘tkaziladi.
+Robot imkoniyatlaridan kelib chiqqan holda musobaqa tashkil qilinadi.
+2-qadam
+Arduino dasturi oynasida joylashgan menyular qatoridan
+Инструменты – Порт – COMni belgilab olasiz.
+3-qadam
+Инструменты – Плата – Arduino Nanoni belgilab olasiz.
+
+228
+228

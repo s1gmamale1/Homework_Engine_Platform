@@ -1,0 +1,51 @@
+# Diagrammalar bilan ishlash — 4-dars
+
+52
+Jadvallar yaratishda Microsoft Excel dasturidan foydalanish
+Microsoft Excel elektron jadval yaratuvchi dasturiy ta’minot hisoblanadi.
+Elektron jadvallar dasturi raqamli ma’lumotlar bilan ishlash imkonini beradi.
+Bu jadvalga maʼlumot kiritish mumkin.
+Agar tegishli buyruqlar kiritilsa, dastur matematik amallarni ham bajara
+oladi. Elektron jadvallar kataklardan tashkil topgan.
+Bu amalni bajarish uchun sichqoncha kursori istalgan katakka olib boriladi
+va chap tugma bosiladi. Shunda katak ichida kursor ko‘rinadi va unga matn
+yozsa bo‘ladi. Boshqa katakka yozish uchun ham xuddi shu amal bajariladi.
+Bu bitta katak
+4.1-mashg‘ulot
+Darsda “Sogʻlom ovqatlanish” mavzusi o‘rganilmoqda. Sinfdoshlaringiz bilan
+birga “Sogʻlom ovqatlanish” jadvaliga ma’lumot kiritish uchun turli mevalar
+olib keldingiz.
+4-amaliy ko‘nikma
+Elektron jadvallar
+bilan ishlovchi
+koʻplab dasturiy
+taʼminotlar bor.
+Masalan, iWorks
+paketidagi
+Numbers dasturi.
+Bilasizmi?
+Microsoft Excel:
+maʼlumotlarni
+kiritish, hisob-
+kitoblarni
+bajarish, tasvir
+va diagrammalar
+yaratish uchun
+elektron
+jadvallardan
+foydalanuvchi
+dasturiy taʼminot.
+Katak: elektron
+jadvaldagi bitta
+toʻrtburchak.
+Kalit soʻzlar
+@edurtm_uz
+
+53
+Diagrammalar bilan ishlash
+Tasvirda sinfda jamlangan mevalar keltirilgan.
+Sizga mevalarni jadvalda ifodalash vazifasi berildi. O‘qituvchingiz bergan
+colours_1.xlsx hujjatini oching.
+Tasvirdagi har bir rang nomini A ustunga kiriting. Har bir rang yangi katakka
+yozilishiga ahamiyat bering.
+Har bir rangning jami miqdorini B ustunga kiriting.

@@ -1,0 +1,788 @@
+# O'rtacha qiymat
+
+O‘rtacha qiymat
+10
+Muhokama qiling
+ Kamolaning sinfida ko‘pchilik o‘g‘il bolalarning bo‘yi 1,30 m va 1,60 m oralig‘ida.
+Siz “o‘rtacha bo‘y”
+va “o‘rtacha vazn”
+deganda nimani
+tushunasiz?
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   78
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   78
+13/11/24   14:50
+13/11/24   14:50
+
+O‘rtacha qiymat tushunchasi
+79
+Qarang va o‘rganing
+Miqdorlarning o‘rtacha qiymatini topish
+Miqdorlarning o‘rtacha qiymatini topish
+1  3 ta likopchaga turli miqdordagi shirinliklar qo‘yib chiqildi.
+ 
+2
+7
+6
+5
+5
+5
+      
+ 
+ 
+ 
+ 
+ 
+  
+ 
+Shirinliklarning bitta likopchadagi o‘rtacha miqdori 5 ga teng.
+ 
+5 soni 2, 7 va 6 sonlarining o‘rtacha qiymatidir.
+Miqdorlarning o‘rtacha qiymatini topish deganda
+ularning qiymatlarini teng taqsimlash tushuniladi.
+Agar shirinliklar 3 ta
+likopchaga teng 
+taqsimlansa,
+har bir likopchada 
+nechtadan
+shirinlik bo‘ladi?
+Shirinliklarni 3 ta 
+likopchaga teng miqdorda 
+taqsimlash orqali ularning 
+bitta likopchaga mos 
+keladigan o‘rtacha sonini 
+topamiz. 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   79
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   79
+13/11/24   14:50
+13/11/24   14:50
+
+80
+Guruh bo‘lib ishlang. 
+a) 
+Birinchi likopchaga 6 ta, ikkinchisiga esa 10 ta kub qo‘ying. Kublarning jami 
+soni nechta?
+b) 
+Har ikki likopchada kublar bir xil miqdorda bo‘lishi uchun bir necha kubni bir 
+likopchadan ikkinchisiga o‘tkazing. Har bir likopchadagi kublarning o‘rtacha 
+soni nechaga teng?
+ 
+?
+?
+tadan kub
+6 ta kub
+10 ta kub
+c) 
+Kublarning umumiy sonini toping va ularni teng ikki guruhga bo‘ling. Har bir 
+guruhda nechtadan kub bor? 
+ 
+ 
+Miqdorlarning 
+o‘rtacha qiymati
+miqdorlarning 
+jami qiymati
+=
+÷
+miqdorlar 
+soni
+Miqdorlarning o‘rtacha qiymati qisqa shaklda “o‘rtachasi” deb ham yuritiladi.
+ 
+2  Har bir likopchadagi sharlar sonining o‘rtacha qiymatini toping.
+ 
+3
+3
+3
+3
+3
+1
+3
+5
+ 
+ 
+ 
+ Jami = 3 + 1 + 3 + 5
+ 
+           = 12 
+ 
+O‘rtachasi = jami ÷ miqdorlar soni
+                 
+= 12 ÷ 4 
+                 
+= 3
+ 
+Sharlarning o‘rtacha soni 3 ga teng.
+Bu yerda 4 ta likopcha
+bo‘lgani uchun 12 ni
+4 ga bo‘lamiz.
+Har bir likopchadagi kublarning o‘rtacha sonini topish
+ularning umumiy sonini teng 2 guruhga bo‘lishga o‘xshaydimi? 
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   80
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   80
+13/11/24   14:50
+13/11/24   14:50
+
+81
+3  Karim matematika fanidan test sinovlarida 4 marta ishtirok etdi. Uning o‘rtacha 
+ballini aniqlang. 
+      
+Ball
+1-test
+83
+2-test
+76
+3-test
+78
+4-test
+80
+ 
+Jami ball = 83 + 76 + 78 + 80
+ 
+ 
+ 
+  
+ 
+= 317 ball
+ 
+ 
+ 
+O‘rtacha ball = 317 ÷ 4
+ 
+ 
+ 
+  
+ 
+ 
+= 79,25 ball
+ 
+ 
+Karim 4 marta test topshirib, o‘rtacha 79,25 ball to‘plagan.
+4  Diagrammada A, B, C, D va E idishlardagi suvning hajmi berilgan. Suv hajmining 
+o‘rtacha hajmini aniqlang. 
+ 
+Idishlardagi suv hajmi
+450
+400
+350
+300
+250
+200
+150
+100
+50
+0
+Suv  
+hajmi    
+(ml)
+           A              B              C               D              E
+ 
+ 
+ 
+ 
+Suvning jami hajmi  
+ 
+ 
+ 
+ 
+= 400 + 200 + 300 + 100 + 200
+ 
+ 
+ 
+= 1200 ml
+ 
+ 
+ 
+ 
+Suvning o‘rtacha hajmi 
+ 
+ 
+ 
+= 1200 ÷ 5
+ 
+ 
+ 
+= 240 ml
+ 
+ 
+Suvning o‘rtacha hajmi 240 ml ekan.
+Juftlikda ishlang
+Sherigingiz bilan Muhokama qiling.
+1  Apelsinlar sonining o‘rtachasini toping.
+ 
+10
+8
+0
+ 
+2  Kamola 7 kunda jami 45 850 so‘m sarfladi.
+     
+U bir kunda o‘rtacha qancha pul sarflagan?
+Miqdorlar soni = 3
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   81
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   81
+13/11/24   14:50
+13/11/24   14:50
+
+Bajaring va o‘rganing
+1  Quyidagi sonlarning o‘rtachasini toping.
+ 
+a)  
+12, 18, 25, 45  
+ 
+b) 
+100, 85, 90, 112 
+ 
+c)  
+1,5, 2,3, 4,9, 8,5, 0,8  
+ 
+d)  3,8,  4,6, 9,2, 5,4, 10,5 
+2  Quyidagi miqdorlarning o‘rtachasini toping.
+ 
+a)  
+13,2 kg, 7,1 kg, 4,36 kg, 10,12 kg 
+ 
+b)  1000 m, 580 m, 600 m, 350 m, 815 m  
+3  Quyidagi chizmada Po‘latning 4 oy davomida jamg‘argan 
+mablag‘ ko‘rsatilgan. U har oyda o‘rtacha qanchadan mablag‘ 
+jamg‘argan?  
+ 
+Po‘latning jamg‘armasi
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+Jamg‘arma 
+miqdori  
+(ming so‘m)
+ Yanvar  
+Fevral  
+Mart 
+Aprel
+82
+O‘ynang va o‘rganing
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang.
+Hayotiy misollar yordamida “o‘rtacha qiymat” tushunchasining ma’nosini Muhokama 
+qiling. O‘rtacha qiymatga doir topgan misollaringizni sinfdoshlaringizga ayting.
+Namuna
+a) 
+3 nafar sinfdoshingizning o‘rtacha bo‘yi;
+b)  
+viloyatingiz yoki shahringizda bir oy davomidagi o‘rtacha havo harorati;
+c)  
+uy vazifalarni bajarishga ketadigan kunlik o‘rtacha vaqt;
+d)  
+mobil telefoningizga 1 hafta davomida kelgan SMS xabarlarning 
+ 
+kunlik o‘rtacha soni.
+Miqdorlarning 
+o‘rtacha 
+qiymati berilgan 
+miqdorlarning eng 
+kichik va eng katta 
+qiymatlari orasida 
+bo‘ladi. Masalan,     
+2, 4, 6, 8 va 10 
+sonlarining 
+o‘rtacha qiymati  
+6 ga teng.
+115–118
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   82
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   82
+13/11/24   14:50
+13/11/24   14:50
+
+83
+Qarang va o‘rganing
+1  3 ta tasmaning o‘rtacha uzunligi 15 cm ga teng. Tasmalarning umumiy uzunligi 
+nechaga teng?
+ 
+Jami uzunlik = ?
+O‘rtacha uzunlik = 15 cm
+ 
+ 
+ 
+ 
+Umumiy uzunlik = 15 × 3 = 45 cm
+ 
+ 
+Tasmalarning umumiy uzunligi 45 cm.
+2  4 nafar bolaning o‘rtacha massasi 36,8 kg. Ularning umumiy massasi qancha?
+ 
+ 
+ 
+ 
+ 
+O‘rtacha massasi = 36,8 kg
+ 
+Umumiy massasi = 36,8 × 4 = 147,2 kg
+ 
+  
+ 
+ 
+Demak, ularning umumiy massasi 147,2 kg ga teng.
+Miqdorlar jami qiymati = o‘rtacha qiymat × miqdorlar soni
+Miqdorlar jami qiymati =
+o‘rtacha qiymat × miqdorlar soni
+Miqdorlarning o‘rtacha va jami qiymati hamda soni
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   83
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   83
+13/11/24   14:50
+13/11/24   14:50
+
+84
+3  Rasul bir nechta kitob sotib oldi. Kitoblarning jami narxi 45 000 so‘m va o‘rtacha
+ 
+narxi 9000 so‘mga teng. U nechta kitob sotib olgan?
+     
+Kitoblar soni = 45 000 ÷ 9000
+ 
+ 
+= 5        
+ 
+Rasul 5 ta kitob sotib olgan.
+Miqdorlar soni = miqdorlarning jami qiymati ÷ o‘rtacha qiymat
+                    
+4  2 nafar talabaning o‘rtacha yoshi 19 ga teng. Ulardan biri 22 yoshda bo‘lsa,
+ 
+ikkinchi talaba necha yoshda?
+ 
+Jami yosh = 19 × 2
+ 
+ 
+ = 38
+ 
+Ikkinchisining yoshi = 38 – 22
+ 
+  
+= 16
+ 
+Ikkinchi talaba 16 yosh.
+5  Rasul, Po‘lat, Sitora va Jamila kompyuterda o‘yin o‘ynamoqda. Ularning o‘rtacha
+ 
+natijasi 48 ballga teng. Quyidagi diagrammada ular to‘plagan ballar berilgan.  
+Faqat Jamilaning natijasi ko‘rinmayapti. Jamila qancha ball to‘plagan?
+ 
+ 
+Bolalarning natijalari
+60
+50
+40
+30
+20
+10
+0
+To‘plagan
+ballari
+ Rasul    Po‘lat  
+Sitora   Jamila
+ 
+Jami ball = 48 × 4
+      
+          
+= 192 ball
+ 
+Jamilaning balli  = 192 – 56 – 44 – 52 
+                            
+= 40 ball
+ 
+Jamila o‘yinda 40 ball to‘plagan.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   84
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   84
+13/11/24   14:50
+13/11/24   14:50
+
+85
+6  Quyidagi grafikda shifoxonaga bir hafta davomida murojaat qilgan bemorlar soni 
+ko‘rsatilgan.
+Shifoxonaga murojaat qilgan bemorlar
+70
+60
+50
+40
+30
+20
+10
+0
+Bemorlar
+soni
+ Dushanba    Seshanba   Chorshanba   Payshanba   Juma
+ 
+a) 
+Bemorlarning kunlik o‘rtacha murojaatlari sonini toping.  
+b)  
+Agar dushanbadan shanbagacha har kuni o‘rtacha 45 tadan bemor murojaat  
+  
+qilgan bo‘lsa, shanba kuni nechta bemor murojaat qilgan?
+          a)    43 + 60 + 48 + 52 + 32 = 235  
+235 ÷ 5 = 47
+                     Har kuni o‘rtacha 47 ta bemor murojaat qilgan.
+ 
+b)  
+ 45 × 6 = 270
+           
+ 270 – 235 = 35 
+ 
+  
+Shanba kuni 35 ta bemor murojaat qilgan.
+7  Akmalning imtihon natijalari varag‘iga siyoh to‘kilib ketdi.   
+Akmal 3 ta fandan o‘rtacha 89 ball to‘pladi. 
+ 
+U matematika va fizika fanlarining har biridan 
+ 
+necha ball to‘plagan? Javobni tushuntiring.
+ 
+ 
+89 × 3 = 267
+ 
+U 3 ta fandan jami 267 ball to‘plagan.
+ 
+ 
+267 – 89 = 178
+ 
+U matematika va fizika fanlaridan 
+ 
+jami 178 ball to‘plagan.
+ 
+ 
+178 – 87 = 91
+ 
+Matematikadan 91 ball to‘plagan.
+178 sonining oxirgi raqami 8. 
+Matematikadan to‘plangan ballning 
+oxirgi raqami esa 1.  
+Demak, fizikadan to‘plangan ball  
+87 ga teng. Matematikadan esa 91 ball 
+to‘plangan.
+Test natijalari
+Ingliz tili       
+89
+Matematika  
+   1
+Fizika  
+8
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   85
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   85
+13/11/24   14:50
+13/11/24   14:50
+
+86
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang va Muhokama qiling.
+1  Berilgan miqdorlarning o‘rtacha qiymatini toping. 
+ 
+a)   
+ 
+ 
+b) 
+ 
+1ℓ
+500 ml
+400
+300
+200
+100
+900
+800
+700
+600
+1ℓ
+500 ml
+400
+300
+200
+100
+900
+800
+700
+600
+1ℓ
+500 ml
+400
+300
+200
+100
+900
+800
+700
+600
+ 
+2  Mahsulotlar soni va jami massasini toping.  
+ a)  
+ Mahsulotlar o‘rtacha 
+ 
+narxi = 20 000 so‘m 
+ 
+Jami narxi = 200 000 so‘m
+ Mahsulotlar soni = ?
+ b)  
+ Mahsulotlar o‘rtacha 
+ 
+massasi = 8,5 kg 
+ Mahsulotlar soni = 8
+ 
+Jami massasi = ?
+3  Tushirib qoldirilgan sonni toping. 
+ 
+a) 
+Uchinchi sonni yozing. 
+b) 
+Oxirgi avtobusda nechta 
+ 
+ 
+ 
+  
+ 
+yo‘lovchi bor? 
+ 
+ 
+O‘rtacha qiymati = 12
+10   18   
+?
+ 
+ 
+O‘rtacha = 50 ta yo‘lovchi
+34
+  
+85
+  
+68
+  
+ 
+?
+Bir nechta miqdorga oid bir-
+biri bilan bog‘langan uchta 
+tushuncha mavjud. Bular – 
+miqdorlarning o‘rtacha qiymati, 
+miqdorlarning jami qiymati va 
+miqdorlar soni. Ulardan ikkitasi 
+berilgan bo‘lsa, uchinchisini 
+topishingiz mumkin.
+Juftlikda ishlang
+Sherigingiz bilan miqdorlarning o‘rtacha qiymatini toping.
+1 - va 2 -misollarda o‘rtacha qiymatni topishda nimalarga e’tibor berish kerak?
+1  a) 
+2, 4, 6 
+b) 
+2, 6
+2  a) 
+15, 20, 25 
+b) 
+15, 25
+3  Quyidagi misollarda miqdorlarning  o‘rtacha qiymatini qanday topish mumkinligini 
+aniqlang. Javobni tushuntiring. 
+ 
+a) 
+10, 14 
+b) 
+13, 15   
+c) 
+4, 5
+28 000
+so‘m
+32 000
+so‘m
+25 000
+so‘m
+43 000
+so‘m
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   86
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   86
+13/11/24   14:50
+13/11/24   14:50
+
+87
+Bajaring va o‘rganing
+Masalalarni yeching. 
+1  a) 
+3 ta sonning o‘rtachasi 28 ga teng. Ularning yig‘indisi nechaga teng?
+ 
+b)  5 ta sonning o‘rtachasi 66 ga teng. Ularning yig‘indisi nechaga teng?
+2  Jadvalda Jamila va Sitoraning imtihon natijalari berilgan. 
+ 
+Tushirib qoldirilgan ballni toping.
+ 
+ 
+ 
+Jamilaning natijasi
+O‘rtachasi = 74 ball
+Ingliz tili = 68 ball
+Matematika = 79 ball
+Fizika = ? 
+ 
+Sitoraning natijasi
+O‘rtachasi = 77 ball
+Ingliz tili = 66 ball
+Matematika = ? 
+Fizika = 75 ball 
+ 
+3  Diagrammada 3 nafar qizning jamg‘armalari miqdori keltirilgan.
+ 
+a) 
+Ular jamg‘argan o‘rtacha mablag‘ni toping.  
+ 
+b) 
+Qaysi qizning jamg‘armasi o‘rtachaga yaqinroq? 
+300
+250
+200
+150
+100
+50
+0
+Pul   
+miqdori    
+(ming so‘m)
+ 
+Aziza   
+Sitora   
+Xolida
+Jamg‘arma
+ 
+4  Jadvalda 3 nafar o‘quvchining 3 ta testdan olgan natijalari keltirilgan. 
+ 
+ 
+Ismi
+1-test
+2-test
+3-test
+Aziza
+72
+76
+70
+Bobur
+74
+80
+69
+Charos
+90
+63
+80
+ 
+a) 
+ Har bir o‘quvchining testlardan olgan o‘rtacha ballarini toping va o‘ndan 
+birlar xonasigacha yaxlitlang. 
+ 
+b)  Kimning balli o‘rtacha balldan ko‘proq? 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   87
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   87
+13/11/24   14:50
+13/11/24   14:50
+
+88
+5  Po‘lat 5 kun davomida xayriya uchun mablag‘ to‘pladi.
+Dush
+Sesh
+Chor
+Pay
+Juma
+34 000 so‘m 18 000 so‘m 40 000 so‘m 10 000 so‘m
+?
+ 
+U bir kunda o‘rtacha 24 000 so‘m mablag‘ to‘pladi. U juma kuni qancha mablag‘ 
+to‘plagan? 
+6  Quyidagi jadvalda  dushanbadan payshanbagacha do‘konda sotilgan nonlar 
+soni keltirilgan. 4 kunda sotilgan nonlarning o‘rtacha miqdori 610 taga teng. 
+Chorshanba kuni nechta non sotilgan?  
+Kunlar
+Nonlar soni
+Dushanba
+600
+Seshanba
+680
+   Chorshanba
+?
+ Payshanba
+540
+ 
+7  Tohir supermarketdan 3 xil mahsulot sotib oldi. Biroq uning xarid cheki yirtilib 
+qoldi. U xarid qilgan mahsulotlarning o‘rtacha narxi 12 000 so‘mga teng. Eng arzon 
+mahsulotning narxi 1000 ga karrali natural son ekani ma’lum. Idish yuvish geli va 
+olma sharbati narxlarini qanday aniqlash mumkin?  
+119–128
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) 
+Men miqdorlarning jami qiymati va soniga ko‘ra ularning o‘rtacha qiymatini  
+topishni bilaman.  
+b) 
+Men miqdorlarning soni va o‘rtacha qiymatiga ko‘ra ularning jami qiymatini 
+topishni bilaman.  
+c) 
+Men miqdorlarning jami va o‘rtacha qiymatiga ko‘ra ularning sonini topishni 
+bilaman.  
+d) 
+Men o‘rtacha qiymatni topishga doir matnli masalalarni yechishni 
+ 
+bilaman.  
+X a r i d  c h e k i
+Pista yog‘i                   10 500 so‘m 
+Idish yuvish geli 
+18  
+Olma sharbati 
+          
+Jami  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   88
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   88
+13/11/24   14:50
+13/11/24   14:50
+
+129-130
+Mashq daftariga o‘ting
+89
+O‘ylab ko‘ring
+Sarvar imtihon natijalari varag‘iga siyoh to‘kib qo‘ydi. 
+U o‘rtacha  83 ball to‘plagan edi.
+a) 
+Matematika va fizika fanlaridan to‘plangan ballar orasidagi farq eng ko‘pi bilan 
+nechaga teng?
+b) 
+Matematika va fizika fanlaridan to‘plangan ballar orasidagi farq eng kamida 
+nechaga teng?
+ 
+a) 
+b)  
+ 
+129–130
+Mashq daftariga o‘ting
+ 
+ 
+   
+    
+ 
+ 
+ 
+  
+Ingliz tili       
+76
+Matematika   
+8
+Fizika  
+9
+Ona tili 
+79
+Natijalar 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   89
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   89
+13/11/24   14:50
+13/11/24   14:50
+
+Chorraha 
+Charxpalak
+Ko‘prik
+Charxpalakka qarang.
+Uning markazi va
+aylanasini bog‘lab turgan
+qismlar orasidagi
+burchakni topish
+mumkinmi?
+Ko‘prikka qarang.
+Unda qanday burchak
+turlarini ko‘ryapsiz?

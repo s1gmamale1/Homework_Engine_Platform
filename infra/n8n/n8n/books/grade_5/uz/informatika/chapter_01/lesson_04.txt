@@ -1,0 +1,92 @@
+# Matnli hujjat bilan ishlash — 4-dars
+
+10
+<
+,
+Nuqta qo‘yish uchun klaviaturaning quyidagi tugmasi bosiladi.
+>
+.
+Ba’zan bitta tugmada ikki-uchta belgi (yuqori va pastki qismida) aks etadi.
+Klaviatura oddiy holatda bosilganda tugmaning pastki qismidagi belgi
+yoziladi.
+Tugmaning yuqori qismidagi belgini yozish uchun Shift tugmasini bosib
+turgan holda o‘sha belgi joylashgan tugma bosiladi.
+2.1-mashg‘ulot
+Hujjatingizga quyidagi jumlani yozing:
+Men informatika fanini yaxshi ko‘raman, chunki u juda qiziqarli va
+foydali fan.
+Tinish belgilari o‘z o‘rnida qo‘llanganini tekshiring.
+2.2-mashg‘ulot
+Soʻz va gaplar orasida probel qoldirish haqidagi yuqorida berilgan
+ma’lumotlarga qarang. Hujjatingizda yangi xatboshi yaratib, AKTga oid biror
+qiziqarli gap yozing.
+Avvalgi va keyingi gaplar orasida yangi xatboshini koʻrsatuvchi probel
+borligini tekshiring.
+Enter: matn
+kursorini
+keyingi qatorga
+tushiruvchi
+klaviaturadagi
+tugma.
+Tinish belgilari:
+vergul, nuqta,
+undov, soʻroq
+belgisi va
+boshqalar.
+Kalit soʻzlar
+@edurtm_uz
+
+11
+Matnli hujjat bilan ishlash
+Matnni belgilash va tahrirlash
+Ba’zan matnni yozish jarayonida qandaydir xato yuzaga kelishi, ba’zan esa
+tayyor matn yoqmay qolishi mumkin. Shunda matnga o‘zgartirish kiritiladi.
+Bu jarayon tahrirlash deb ataladi.
+Matnni oʻchirish
+Tahrirlash uchun, avvalo, matnning keraksiz qismini olib tashlash, ya’ni
+oʻchirish zarur. Matnni o‘chirish harflab, shuningdek, soʻz yoki gapni to‘liq
+belgilash orqali amalga oshiriladi.
+Matnni harflab o‘chirish uchun matn kursori keraksiz harfning oʻng tomoniga
+olib borilib, sichqonchaning chap tugmasi bir marta bosiladi. Shunda matn
+kursori harfdan keyin joylashadi.
+Endi klaviaturadagi Backspace tugmasini bir marta bosing. Kursordan
+oldingi harf o‘chib ketadi. Bu tugma necha marta bosilsa, shuncha harf
+o‘chiriladi. Backspace tugmasi uzmasdan bosilsa, harflar uzluksiz oʻchirilishi
+mumkin.
+Backspace
+Matnda soʻz yoki gapni birdan oʻchirish uchun avval matnning keraksiz qismi
+belgilanadi. Buning uchun sichqoncha kursori shu so‘z yoki gapning oʻng
+tomoniga joylashtiriladi.
+Sichqonchaning chap tugmasi bosilib, qo‘yib yubormasdan, matn kursori
+chapga, o‘chiriladigan soʻz yoki gapning boshiga olib kelinadi. Keyin
+sichqonchaning chap tugmasi qo‘yib yuborilsa, so‘z yoki gap belgilanadi.
+Bunday matn belgilangan deb ataladi va uning foni boshqa rangda ajralib
+turadi.
+Bu yerda matnning qaysi qismi belgilanganini ayta olasizmi?
+3-amaliy ko‘nikma
+Tahrirlash:
+matnga
+oʻzgartirish
+kiritish.
+Oʻchirish:
+matnni olib
+tashlash.
+Matndagi bitta
+soʻzni to‘liq
+belgilashning
+yana bir usuli
+kursorni soʻz
+ustiga olib kelib,
+sichqonchaning
+chap tugmasini
+ikki marta
+bosishdir.
+Bunda soʻz toʻliq
+belgilanadi.
+Maslahat
+Belgilash:
+belgilangan matn
+fonini boshqa
+rangda ajratib
+koʻrsatish.
+Kalit soʻz

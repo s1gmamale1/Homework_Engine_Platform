@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase 0-A Theme Preview",
+  "type": "object",
+  "required": ["phase_id", "lesson_id", "lang", "gate_quote", "panels", "bost_goal"],
+  "properties": {
+    "phase_id": { "const": "phase_0a" },
+    "lesson_id": { "type": "string" },
+    "lang": { "type": "string", "enum": ["uz", "ru"] },
+    "gate_quote": {
+      "type": "object",
+      "required": ["text", "author", "skip_lock_seconds"],
+      "properties": {
+        "text": { "type": "string" },
+        "author": { "type": "string" },
+        "skip_lock_seconds": { "const": 5 }
+      }
+    },
+    "panels": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["number", "title", "content", "min_sentences"],
+        "properties": {
+          "number": { "type": "integer", "minimum": 1, "maximum": 8 },
+          "title": { "type": "string" },
+          "content": { "type": "string" },
+          "min_sentences": { "type": "integer" }
+        }
+      }
+    },
+    "bost_goal": { "type": "string" }
+  }
+}

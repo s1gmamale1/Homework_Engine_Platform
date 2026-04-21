@@ -1,0 +1,255 @@
+# Matnli masalalar
+
+40
+3  Madina opaning 28 quti tugmasi boʻlib, har bir qutida 200 tadan tugma bor. 
+U 600 ta tugma sotdi va qolgan tugmalarni 40 tadan qilib qopchalarga solib qo‘ydi. 
+U nechta qopchaga tugma solgan? 
+ 
+ 
+?
+1 ta qopcha
+40 ta tugma
+40 ta tugma
+ 
+ 
+200 × 28 = 5600
+ 5600 – 600 = 5000
+ 
+5000 ÷ 40 = 125 
+ 
+ 
+ 
+U 125 ta qopchaga tugma solgan.
+ 
+4  Sarvar amaki 45 yoshda. Uning o‘g‘li Oybek 9 yoshda. Necha yildan keyin Sarvar 
+amaki o‘g‘lidan 4 marta katta bo‘ladi?
+ 
+ 
+45 – 9 = 36
+ 
+Yoshdagi farq 36 yil.
+ 
+Bu yosh farqi hech qachon o‘zgarmaydi.
+   
+ 
+Sarvar  amaki
+Oybek
+36
+ 
+ 
+ 3 bo‘lak = 36
+  1 bo‘lak = 36 ÷ 3 
+ 
+   = 12
+ 
+ 
+Oybek 12 yosh bo‘lganda otasi undan 4 marta katta bo‘ladi.
+ 
+12 – 9 = 3
+ 
+Sarvar amaki uch yildan keyin o‘g‘lidan 4 marta katta bo‘ladi.
+Men masalani quyidagi usulda 
+ham yecha olaman:
+(200 × 28 – 600) ÷ 40 = 125
+Tekshirish
+    Javob to‘g‘rimi?
+Men masalani quyidagi 
+usulda ham yecha olaman: 
+(45 – 9) ÷ 3 – 9 = 3
+Tekshirish
+Javob to‘g‘rimi?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   40
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   40
+09/08/24   19:30
+09/08/24   19:30
+
+41
+Qiziqarli matematika
+5  Dastlab Kamolaning puli Dononikidan 6000 so‘m ko‘p edi. So‘ng Dono Kamolaga 
+8000 so‘m berdi. Endi Kamolaning puli Dononikidan ikki baravar ko‘p bo‘ldi. 
+Kamolada dastlab qancha pul bo‘lgan?
+ 
+ 
+ 
+ 
+1 bo‘lak
+Keyin
+Kamola
+Dono
+8000 
+6000 8000 so‘m
+Oldin
+Kamola
+Dono
+6000 so‘m 
+ 
+ 
+Keyin 
+ 
+1 bo‘lak = (2 × 8000) + 6000
+ 
+ 
+= 22 000 (so‘m)
+ 
+Oldin
+ 
+22 000 + 8000 + 6000 = 36 000 (so‘m)
+ 
+Kamolada dastlab 36 000 so‘m pul bo‘lgan.
+Guruh bo‘lib ishlang.
+Quyidagi masalalarni muhokama qiling va yeching. 
+1  Doʻkondan 205 400 so‘mga 9 ta daftar va 17 ta qalam sotib olindi. Bitta qalam 
+6550 so‘m tursa, bitta daftarning narxini toping.
+2  Tadbirda dastlab 90 nafar oʻgʻil bola va 150 nafar qiz bor edi. Tushga borib 
+tadbirni teng sondagi oʻgʻil bolalar va qizlar tark etdi. Shundan soʻng tadbirda 
+qolgan qizlar soni oʻgʻil bolalar sonidan uch baravar koʻp bo‘ldi. Jami nechta 
+oʻgʻil bola va qizlar tadbirdan ketgan?
+3  Dono va Kamolada jami 478 ta stiker bor edi. Akmal va Donoda esa 232 
+ta stiker bor edi. Kamolaning stikerlari soni Akmalnikidan 4 baravar ko‘p. 
+Donoda nechta stiker bor?
+O‘rganing va bo‘lishing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   41
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   41
+09/08/24   19:30
+09/08/24   19:30
+
+Matnli masalalarni yeching.
+1  O‘quv kursida ishtirok etish uchun 28 nafar o‘quvchi ro‘yxatdan o‘tdi. Har bir o‘quvchi 
+oyiga 50 000 so‘m to‘ladi va kurs 4 oy davom etdi. O‘quv kursi uchun yig‘ilgan 
+umumiy mablag‘ning miqdori qancha? 
+2  Perimetri 272 m bo‘lgan to‘g‘ri to‘rtburchak shaklidagi dalaning eni bo‘yidan 16 m 
+uzun. Dalaning enini toping. 
+3  Jadvalda ko‘ngilochar bog‘dagi chiptalar narxi 
+ko‘rsatilgan. 87 nafar katta yoshli va 96 nafar bola 
+chipta uchun jami qancha pul to‘lashi kerak?  
+ 
+4  Ishchiga haftaning birinchi 5 kuniga 72  000 so‘mdan va shanba kuni uchun 85 000 
+so‘m ish haqi to‘lanadi. Agar ishchi dushanbadan shanbagacha ishlagan bo‘lsa, jami 
+qancha ish haqi olgan?
+5  Jamshid amaki 6 948 000 so‘mga xonadoniga uchta konditsioner o‘rnatdi. U dastlab 
+2 508 000 so‘m to‘ladi va qolgan pulni 24 oy davomida teng miqdorda to‘lab bordi. U 
+har oy qancha pul to‘lagan?
+6  Stol va 7 ta bir xil stul jami 8 550 000 so‘m turadi. Bitta stul stoldan 250 000 so‘m 
+arzonroq bo‘lsa, stolning narxini toping.
+7  Novvoy 308 ta nonni savatlarga 12 tadan soldi. U har bir savat nonni 23 000 so‘mdan, 
+qolgan nonlarning donasini 3000 so‘mdan sotdi. Novvoy nonlarni jami necha so‘mga 
+sotgan?
+8  Akmal va Sardorda dastlab bir xil miqdorda pul bor edi. Har kuni Akmal 6000 so‘m, 
+Sardor 8000 so‘m sarfladi. Bir necha kundan keyin Sardorda 4000 so‘m qoldi, 
+Akmalda esa Sardordan 4 baravar ko‘p pul qoldi. Bolalarning har birida dastlab 
+qanchadan pul bo‘lgan?
+ 
+12 000 so‘m
+4000
+Akmal
+Sardor
+ 
+Masalani yechish uchun chizmali modeldan foydalaning.
+Ko‘ngilochar bog‘
+Kattalar chiptasi
+25  000 so‘m
+Bolalar chiptasi
+13 000 so‘m
+Bajaring va o‘rganing
+37–46
+Mashq daftariga o‘ting
+42
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   42
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   42
+09/08/24   19:30
+09/08/24   19:30
+
+a) Men qavssiz ifodalarda amallarni bajarish tartibini bilaman.  
+b) Men qavsli ifodalarda amallarni bajarish tartibini bilaman.  
+c)  Men to‘rtta amal qatnashgan masalalarni yechishni bilaman.  
+43
+Qiziqarli matematika
+Guruh bo‘lib ishlang.
+Javoblarni guruhdoshlaringiz bilan muhokama qiling. 
+1  10 nafar tennischi bor edi. 
+ 
+Har bir tennischi qolgan 9 nafar raqibi bilan bittadan o‘yin o‘tkazadi. Jami 
+nechta o‘yin rejalashtirilgan? 
+ 
+Jadval tuzing. Rejalashtirilgan o‘yinlarni belgilang va ularni sanang.
+ 
+A
+B
+C
+D 
+E
+F
+G
+H 
+I  
+J
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+2  Jamoa matematika musobaqasida 20 ta savolga javob berib, 120 ball to‘pladi. 
+Har bir to‘g‘ri javob uchun 8 ball beriladi, har bir noto‘g‘ri javob uchun esa  
+2 ball olib tashlanadi. 
+ 
+Jamoa jami nechta savolga to‘g‘ri javob bergan?
+Bu 
+masalalarni 
+yechishning 
+boshqa 
+usullari 
+bormi?
+O‘rganing va bo‘lishing
+O‘zingizni tekshiring
+47–50
+Mashq daftariga o‘ting
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   43
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   43
+09/08/24   19:30
+09/08/24   19:30
+
+Berilgan 4 ta sonni quyidagicha tartiblab, sonlar ketma-ketligi hosil qilindi. 
+ 
+ 
+ 
+ 
+1
+2
+3
+4       
+ 
++ 1    
++ 1    
++ 1 
+ 
+ 
+ 
+1 + 2 + 3 + 4 = 10
+4 ta raqamning yig‘indisi 10 ga teng.
+Boshqa 4 ta sonni xuddi shunday usulda tartiblab, sonlar ketma-ketligi hosil qilindi.
+Berilgan 4 ta sonning yig‘indisi 250 bo‘lsa, ushbu sonlarni toping.
+ 
+       
+       
+       
+ 
++ 1    
++ 1    
++ 1 
+ 
+Sonlar ketma-ketligidagi 
+qonuniyatni toping.
+O‘ylab ko‘ring
+51–54
+Mashq daftariga o‘ting
+44
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   44
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   44
+09/08/24   19:30
+09/08/24   19:30
+

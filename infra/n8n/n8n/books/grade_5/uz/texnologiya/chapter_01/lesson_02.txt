@@ -1,0 +1,78 @@
+# Texnologiya va Dizayn — 2-dars
+
+2-§.
+Texnika turlari. Texnikaning klassifikatsiyasi
+va tavsiflari
+Dunyoda turmoq uchun dunyoviy fan va ilm lozimdur,
+zamona ilmi va fanidan bebahra millat boshqalarga poymol bo‘lur.
+M. Behbudiy
+Zamonaviy texnika va texnologiyalarning rivojlanish davrining boshlang‘ich
+nuq­tasi birinchi sanoat inqilobining boshlanishi hisob­lanadi. XVIII asrning birinchi
+yarmida bug‘ dvigatellari va yigirish mashinalarining ixtiro qilinishi qo‘l mehnatini
+yengillashishi va mashi­nasozlik ishlab chiqarishiga o‘tish davrini belgilab berdi.
+XIX asr oxirida ichki yonish dvigatelining yaratilishi dengiz va temiryo‘l
+transportining texnik xususiyatlarini sezilarli darajada yaxshi­lashga imkon berdi. U
+benzin yoqilg‘isida ishlovchi dvigatelli avtomobilning paydo bo‘lishiga olib keldi.
+Elektr energiyasini ishlab chiqarish va undan foydalanish texnolo­giyasi elektrotex­
+nika sanoatining jadal rivojlanishiga sabab bo‘ldi va hozirgi kungacha davom etmoqda.
+XX asr boshlarida esa radiotexnika va radioelektronika sohalari rivojlana boshladi.
+XX asr oxirida bio va nanotexnologiya sohasida izlanishlar bosh­lan­di. Bu inson
+faoliyatining ko‘plab sohalarida yana bir inqilobga olib kelmoqda. Masalan, nano­
+texnologiyada mashina o‘zini o‘zi ta’minlaydi, hech qanday yoqilg‘i iste’mol qilmaydi.
+Ya’ni, 4 ta g‘ildirak tok ishlab chiqaradi. Ishlab chiqilgan tokni esa bulutus orqali
+akkumulatorga yuboradi va mashina hech qanday xarajatlarsiz harakatga keladi.
+XXI asrda qo‘llaniladigan texnika qaysi sohalarga, tarmoqlarga yoki ishlab chiqa­
+rish korxonasiga tegishli bo‘lmasin, ularga kompyuter elementlari kiritilmoqda.
+Ilm-fan va texnologiyalarning shu darajada rivojlanishiga qaramas­dan texnika­ning
+klassifikatsiyasi (tasnifi) hali yaratilmagan.
+Hozirgi vaqtda, asosan, uskunalar foydalanish sohasiga ko‘ra klas­sifi­katsiyala­
+nadi, masalan: sanoat uskunalari, transport, maishiy texnika, kompyuter uskunalari,
+qurilish uskunalari va boshqalar.
+Shu jihatdan uskunalar quyidagi turlarga bo‘linadi:
+1. Ishlab chiqarish uskunalari. 2. Noishlab chiqarish uskunalari.
+Sanoat ishlab chiqarish uskunalari tarkibiga mashinalar, dvigatellar, dastgohlar,
+asbob-uskunalar, kompyuter uskunalari, qurilish uskuna­lari,  aloqa vositalari, o‘lchash
+asboblari va boshqalar kiradi.
+Noishlab chiqarish uskunalariga kommunal va maishiy texnika, ta’lim va madani­
+yat, sport anjomlari va boshqalar kiradi.
+Texnika insonning og‘ir mehnatini yengillashtiradi, uning samara­dor­ligini
+oshirish bilan birga aqliy va jismoniy mehnat bilan bog‘liq texnologik vazifalarini
+asta-sekin o‘z zimmasiga oladi.
+Texnikaning asosiy maqsadi – odamni og‘ir yoki muntazam ishlarni bajarishdan
+xalos qilish, hayotini yengillashtirishdan iborat. Hozirda ishlab chiqarilayotgan
+texnikalar quyidagi xususiyatlarga ega bo‘lishi kerak (2-shakl):
+
+9
+2-shakl
+Texnika xususiyatlari
+Texnologik taraqqiyotning asosi barcha turdagi uskunalarning aso­siy xususiyat­
+larini oshirishdan iborat. Bunday jarayon moderni­zat­siya deb ataladi.
+Modernizatsiya, modernizatsiyalash (fransuzcha “moderne” – eng yangi, zamona­
+viy) – biror narsani yangilash, unga zamonaviy tus berish, uni zamonaviy talablarga
+muvofiq oʻzgartirish. Modernizatsiyalash­da mashina, turli texnologik qurilmalar,
+muhim kashfiyotlar texnika taraqqiyoti talablariga muvofiq qayta ishlanadi.
+Demak, texnikadan moddiy va madaniy boylik yaratishda, energiya hosil qilish,
+uzatish va bir turdan ikkinchi turga aylantirish, tabiat va jamiyatni rivojlantirish,
+transport va aloqa, axborotlarni yig‘ish, saqlash, qayta ishlash va uzatish, maishiy
+xizmat, tibbiyot va mudofaani ta’minlashda keng foydalaniladi.
+Ishonchlilik – texnik asbobning o‘z vazifalarini tegish­li sifat
+darajasida uzilishlarsiz bajarish yoki muayyan vaqt davomida
+o‘rna­tilgan talablarga javob berish qobiliyati;
+2
+3
+4
+Chidamlilik – uzoq vaqt foydalanish samaradorligi;
+Daromadlilik – mahsulot ishlab chiqarishda sarfla­nadi­gan
+moddiy resurslar, vaqt, energiya va boshqa xarajatlarni qop­
+laydigan mahsulot miqdori.
+Mahsuldorlik – maʼlum vaqt davomida hosil  qilinadi­gan
+mahsulot miqdori;
+1
+Mustahkamlash uchun savollar
+1. Texnikaning asosiy maqsadi nimadan iborat?
+2. Uskunalar foydalanish sohasiga ko‘ra qanday turlarga bо‘linadi?
+3. Ishlab chiqarilayotgan texnikalar qanday xususiyatlarga ega bo‘lishi kerak?
+4. Modernizatsiya nima?
+
+10
+10

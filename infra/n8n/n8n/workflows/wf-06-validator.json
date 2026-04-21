@@ -1,0 +1,122 @@
+{
+  "name": "NETS WF-06 Validator (Async)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{"field": "hours", "hoursInterval": 6}]
+        }
+      },
+      "id": "f6a7b8c9-0006-0006-0006-000000000001",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT tq.task_id::text, tq.lesson_id, tq.subject, tq.grade, tq.lang FROM nets_task_queue tq WHERE tq.status='done' AND tq.task_id NOT IN (SELECT DISTINCT task_id FROM nets_validation_results) LIMIT 10",
+        "options": {}
+      },
+      "id": "f6a7b8c9-0006-0006-0006-000000000002",
+      "name": "Find Unvalidated",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [460, 300],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "f6a7b8c9-0006-0006-0006-000000000003",
+      "name": "Loop Tasks",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT phase_id, output_json FROM nets_phase_outputs WHERE lesson_id='{{ $json.lesson_id }}'",
+        "options": {}
+      },
+      "id": "f6a7b8c9-0006-0006-0006-000000000004",
+      "name": "Load Phase Outputs",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [900, 300],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "jsCode": "const task = $('Loop Tasks').item.json;\nconst phases = $('Load Phase Outputs').all();\n\nconst phaseSummary = phases.map(p => `${p.json.phase_id}: ${JSON.stringify(p.json.output_json).substring(0, 500)}`).join('\\n\\n');\n\nconst payload = {\n  model: 'claude-haiku-4-5-20251001',\n  messages: [\n    {\n      role: 'system',\n      content: 'You are a NETS homework quality validator. Check the provided homework phase outputs and return a JSON object with validation results for each of 4 checks.'\n    },\n    {\n      role: 'user',\n      content: `Validate this NETS homework for: subject=${task.subject}, grade=${task.grade}, lang=${task.lang}\\n\\nPhase outputs:\\n${phaseSummary}\\n\\nReturn JSON: {\"language_register\": {\"passed\": bool, \"notes\": str}, \"framework_compliance\": {\"passed\": bool, \"notes\": str}, \"factual_grounding\": {\"passed\": bool, \"notes\": str}, \"age_appropriateness\": {\"passed\": bool, \"notes\": str}}`\n    }\n  ],\n  response_format: { type: 'json_object' },\n  temperature: 0.1,\n  max_tokens: 2000\n};\n\nreturn [{ json: { payload, task_id: task.task_id, lesson_id: task.lesson_id } }];"
+      },
+      "id": "f6a7b8c9-0006-0006-0006-000000000005",
+      "name": "Build Validation Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "specifyHeaders": "keypair",
+        "headerParameters": {
+          "parameters": [
+            {"name": "x-api-key", "value": "YOUR_ANTHROPIC_KEY_HERE"},
+            {"name": "anthropic-version", "value": "2023-06-01"},
+            {"name": "Content-Type", "value": "application/json"}
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify($json.payload) }}"
+      },
+      "id": "f6a7b8c9-0006-0006-0006-000000000006",
+      "name": "Call Validator (Claude Haiku)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [1340, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $json;\nconst meta = $('Build Validation Prompt').item.json;\n\nlet results;\ntry {\n  const content = response.content?.[0]?.text || response.choices?.[0]?.message?.content;\n  results = JSON.parse(content);\n} catch(e) {\n  throw new Error('Validator returned invalid JSON: ' + e.message);\n}\n\nconst checks = ['language_register','framework_compliance','factual_grounding','age_appropriateness'];\nconst rows = checks.map(check => ({\n  task_id: meta.task_id,\n  lesson_id: meta.lesson_id,\n  phase_id: 'all',\n  check_type: check,\n  passed: results[check]?.passed || false,\n  notes: results[check]?.notes || ''\n}));\n\nreturn rows.map(r => ({ json: r }));"
+      },
+      "id": "f6a7b8c9-0006-0006-0006-000000000007",
+      "name": "Parse Validation Results",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1560, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_validation_results (task_id, lesson_id, phase_id, check_type, passed, notes) VALUES ('{{ $json.task_id }}', '{{ $json.lesson_id }}', '{{ $json.phase_id }}', '{{ $json.check_type }}', {{ $json.passed }}, '{{ $json.notes }}')",
+        "options": {}
+      },
+      "id": "f6a7b8c9-0006-0006-0006-000000000008",
+      "name": "Save Results",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [1780, 300],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {"main": [[{"node": "Find Unvalidated", "type": "main", "index": 0}]]},
+    "Find Unvalidated": {"main": [[{"node": "Loop Tasks", "type": "main", "index": 0}]]},
+    "Loop Tasks": {"main": [[{"node": "Load Phase Outputs", "type": "main", "index": 0}]]},
+    "Load Phase Outputs": {"main": [[{"node": "Build Validation Prompt", "type": "main", "index": 0}]]},
+    "Build Validation Prompt": {"main": [[{"node": "Call Validator (Claude Haiku)", "type": "main", "index": 0}]]},
+    "Call Validator (Claude Haiku)": {"main": [[{"node": "Parse Validation Results", "type": "main", "index": 0}]]},
+    "Parse Validation Results": {"main": [[{"node": "Save Results", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1"},
+  "active": false
+}

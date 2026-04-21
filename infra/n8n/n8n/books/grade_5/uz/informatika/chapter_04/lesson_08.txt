@@ -1,0 +1,84 @@
+# Dasturlash — 8-dars
+
+85
+Dasturlash
+Sprayt qaysi
+tomonga (chap
+yoki oʻngga)
+burilishini
+oldindan o‘ylab
+qo‘yish kerak.
+Oʻzingizni
+Spraytning oʻrniga
+qoʻyib koʻring.
+Qaysi tomonga
+harakatlangan
+boʻlardingiz?
+Maslahat
+Qasrdan qochish
+Sizga topshiriq bor! Anora va Amira ismli doʻstlaringiz qasrda tuzoqqa tushib
+qoldi. Ularga qochishda yordam berishingiz kerak. Ularni chiqish joyiga
+yetkazish uchun qanday yo‘l tutasiz?
+Anora va Amira START nuqtasidan xonaga kiradi. Ular kalitni olishi va EXIT
+nuqtasiga borishi kerak.
+START
+EXIT
+1-mashg‘ulot
+Anora va Amira avval kalitga, keyin EXIT eshigiga borishi uchun blok-sxema
+chizing.
+Ular qancha qadam bosishi kerakligini bashorat qilishingiz mumkin.
+Buni keyinchalik dasturingizda o‘zgartirsangiz bo‘ladi.
+2-mashg‘ulot
+Blok-sxemangizni doʻstingizniki bilan almashtiring.
+Doʻstingizning blok-sxemasini ko‘rib chiqing. U Anora va Amirani xonadan
+tashqariga olib chiqa oladimi?
+3-mashg‘ulot
+Oʻqituvchingiz bergan castle1.sb2 Scratch faylini oching.
+Anora va Amirani avval kalitga, keyin esa chiqish joyiga olib boradigan
+blok-sxemadan foydalaning.
+Dasturni qayta ishga tushirish uchun olma ustiga bosing. Bu Anora va
+Amirani boshlang‘ich nuqtaga qaytaradi.
+Dasturda mavjud bo‘lgan kodga e’tibor bermang. Bu dastur kodi qayta
+o‘rnatiladi.
+Ssenariy
+Bashorat:
+biror narsani
+bajarishdan
+oldin nima yuz
+berishini taxmin
+qilish.
+Kalit soʻz
+@edurtm_uz
+
+86
+4-mashg‘ulot
+Anora va Amira birinchi xonadan chiqishga muvaffaq bo‘ldi, lekin ular yana
+tuzoqqa tushdi!
+Oʻqituvchingiz bergan castle2.sb2 Scratch faylini oching. Dasturni ishga
+tushirishga shoshilmang.
+Nimalar yuz beradi deb o‘ylaysiz? Buyruqlarni ko‘rib chiqib, keyin nima sodir
+bo‘lishini bashorat qiling.
+Anora va Amira chiqish joyiga bora oladimi?
+5-mashg‘ulot
+Oʻqituvchingiz bergan castle2.sb2 nomli faylni ishga tushiring. Anora va
+Amira chiqish joyiga bora olmadi.
+Dastur xatosini aniqlang. Anora va Amira nima uchun chiqib keta olmadi?
+Anora va Amiraning chiqib ketishiga yordam berish uchun kodni oʻzgartiring.
+Spraytni “gapiradigan” qilishingiz mumkin. Ovozli buyruqlar Looks menyu
+bo‘limida joylashgan.
+Blokka Say buyrugʻini qoʻshing.
+Xabaringizni birinchi maydonga kiriting.
+Xabaringiz ekranda necha soniya chiqib turishini yozing.
+Dasturning boshida Sprayt “Men tayyorman, qani, ketdik!” desin.
+Dasturlaringizdan biriga xabarlar qoʻshing.
+Think buyrug‘i ham mavjud.
+Dasturga Think buyrugʻini kiriting.
+Think va Say buyruqlari orasidagi farq nimada?
+Masala
+Qizil doirali
+tugma dasturni
+qayta tiklaydi va
+qahramonlarni
+boshlang‘ich
+nuqtaga
+qaytaradi.

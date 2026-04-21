@@ -1,0 +1,63 @@
+{
+  "topic": "1 milliongacha bo'lgan sonlar",
+  "learning_objectives": [
+    "1 milliongacha bo'lgan sonlarni o'qish, yozish va taqqoslash",
+    "Sonlarni o'nlik, yuzlik va mingliklarga yaxlitlash",
+    "Sonli ketma-ketliklardagi qonuniyatni aniqlash va davom ettirish"
+  ],
+  "key_concepts": [
+    {
+      "term": "Million",
+      "definition": "1 000 000 ga teng bo'lgan katta son. 10 ta yuz mingdan yoki 1000 ta mingdan iborat."
+    },
+    {
+      "term": "Yaxlitlash",
+      "definition": "Sonni berilgan razryadgacha (o'nlik, yuzlik, minglik) eng yaqin butun songa yaqinlashtirish."
+    },
+    {
+      "term": "O'sish tartibi",
+      "definition": "Sonlarni eng kichikdan boshlab eng kattagacha tartiblash."
+    },
+    {
+      "term": "Ketma-ketlik",
+      "definition": "Sonlarning ma'lum qonuniyat (masalan, qo'shish yoki ayirish) asosida tuzilgan qatori."
+    }
+  ],
+  "worked_examples": [
+    {
+      "problem": "43 029, 43 209 va 43 092 sonlarini o'sish tartibida joylashtiring.",
+      "solution": "Uchala sondaham 43 ta minglik bor. Yuzliklar razryadini solishtiramiz: 0 < 2, demak 43 029 eng kichik. O'nliklar razryadida 0 < 9, demak 43 092 < 43 209. Javob: 43 029, 43 092, 43 209."
+    },
+    {
+      "problem": "192 759 sonini mingliklarga yaxlitlang.",
+      "solution": "192 759 da 192 ta to'liq minglik bor. Qoldiq 759 bo'lib, bu 500 dan katta. Shuning uchun 1 qo'shiladi: 192 + 1 = 193. Javob: 193 000."
+    },
+    {
+      "problem": "Ketma-ketlik: 74 395, 73 395, 72 395, ... Qonuniyat: oldingisidan 1000 ayirish. Keyingi hadini toping.",
+      "solution": "72 395 dan 1000 ni ayiramiz: 72 395 - 1000 = 71 395. Keyingi had: 71 395, undan keyingisi 70 395 va 69 395."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "56 782, 56 287 va 56 827 sonlarini o'sish tartibida joylashtiring.",
+      "answer": "56 287, 56 782, 56 827"
+    },
+    {
+      "question": "345 678 sonini yuzliklarga yaxlitlang.",
+      "answer": "345 700"
+    },
+    {
+      "question": "86 420 sonini mingliklarga yaxlitlang.",
+      "answer": "86 000"
+    },
+    {
+      "question": "90 000, 80 000, 70 000, ... ketma-ketlikning keyingi hadini toping.",
+      "answer": "60 000"
+    },
+    {
+      "question": "Bir millionda nechta ming bor?",
+      "answer": "1000 ta"
+    }
+  ],
+  "summary": "Darsda 1 milliongacha bo'lgan sonlar, ularni o'sish tartibida joylashtirish, turli razryadlarga yaxlitlash va ketma-ketliklardagi qonuniyatlarni aniqlash ko'nikmalari shakllantirildi."
+}

@@ -1,0 +1,225 @@
+# Texnologiya va Dizayn — 23-dars
+
+24-§.
+asbob-uskuna va moslamalar. XAVFSIZLIK TEXNIKASI
+QOIDALARI
+Siz yog‘och va metallar bilan ishlashda foydalaniladigan asbob-uskuna va mos­
+lamalar bilan tanishgansiz. Kompozit materiallarga ishlov berishda ham shu kabi
+asbob-uskuna va moslamalardan keng foydalaniladi. Bundan tashqari, ishlab chiqarish
+sanoatida kompozit materiallarga ishlov berish va ulardan turli buyumlar tayyorlash
+bosim bilan ishlov berish turlari asosida amalga oshiriladi.
+Hozirda yog‘och, metall va polimer asosidagi yuqori mustahkam kompozit ma­
+teriallar ko‘plab ishlab chiqarilmoqda. Ularni afzallik jihatlari shundaki, turli usullar
+asosida istalgan shaklda tayyorlash imkoniyatining mavjudligidir.
+Yog‘ochga ishlov berishda chiqadigan yog‘och qipiqlarini yoki metallga ishlov
+berishda anchagina metallni qirindiga aylanishini ko‘rgansiz. Ko‘p hollarda dastlabki
+materialning 70–80 foizini chiqin­dilar tashkil qiladi. Xuddi shu sababli, xususan,
+duradgorlik va mashinasozlikda yog‘och hamda metallarni qirqish bilan ishlash
+o‘rniga chiqindisiz va kam chiqindili texnologik usullarni qo‘llash nihoyatda muhim
+ahamiyatga egadir.
+Yog‘ochlarga qo‘shimcha ishlov berish va ularning chiqindilaridan unumli
+foydalanish, undagi mavjud kamchiliklarini (chirish, yonish) yo‘qotib, turli polimer
+yoki metall bog‘lovchilar asosida hozirgi zamon talablariga javob beradigan kompozit
+materiallar ishlab chiqarish imkonini (DVP, DSP, MDF) beradi. Bu esa, o‘z navbatida,
+ularning xalq xo‘jaligidagi ahamiyatini yanada oshiradi.
+DVP (yog‘och tolali) – maydalangan yog‘och tolalarini va issiq holda presslab
+olinadi.
+Presslash deb materiallarni bosim ostida zichlash va muayyan shakl berish
+maqsadida qayta ishlash usuliga aytiladi.
+Bunda quyidagi ishlar bajariladi:
+1. Daraxt shoxlari, yog‘och va yog‘och chiqindilari maydalanadi.
+2. Maydalangan massa elanadi, bug‘lanadi va ezib tolali massa oli­nadi.
+Mustahkamlash uchun savollar
+1. Qandаy materiallar kompozit materiallar deyiladi?
+2. Matritsa va armatura deganda nimani tushunasiz?
+3. Kompozit materiallar tuzilishiga ko‘ra boshqa materiallardan qaysi jihat­
+lari bilan farq qiladi?
+4. Kompozit materiallarning qanday turlarini bilasiz va ulardan qanday maq­
+sadlarda foydalaniladi?
+Muammoli topshiriq
+Yog‘och kompozit material hisoblanadimi? Nima uchun?
+
+77
+77
+3. Tolali massa smola, antiseptiklar va antipirenlar bilan aralash­tiriladi.
+4. Hosil bo‘lgan aralashmadan ortiqcha suvlar siqib chiqarilib, plita shakliga
+keltiriladi.
+5. Ko‘p qavatli presslarda issiq holda presslanadi.
+6. 110–120 gradus haroratda maxsus kameralarda 5–7 soat quritilib, so‘ngra
+7–8 % gacha namlanadi.
+7. Chetlari qirqib tekislanadi.
+DSP (yog‘och payrahalik (qipiqlik) plita) – tolalik massa o‘rniga payraha, arra­
+to‘pon va boshqa yog‘och chiqindilarini maydalab elakdan o‘tkazilgach, DVP kabi
+tayyorlanadi.
+Metall asosli kompozit materiallarni tayyorlashda bosim bilan ishlov berishning
+barcha turlaridan foydalaniladi. Bundan tashqari, kukunli (poroshokli deb ham ataladi)
+metallurgiya usulidan ham foydalanish o‘ta samarali hisoblanadi.
+Metall va nometall materiallar kukunlaridan turli xil detallar tayyorlash usuli
+kukunli metallurgiya deyiladi.
+Bu usulda tayyorlangan detallar geometrik shaklining aniqligi, yuza g‘adir-bu­
+durligining kichikligi, yeyilishga chidamliligi, metall tejalishi, metall kesib ish­
+lovchi stanok va keskichlarga zaruriyat yo‘qligi, malakali ishchilar talab etmas­li­
+gi, ish unumining yuqoriligi, maxsus xossali detallar tayyorlanishi va boshqa ko‘r­
+satkichlarga ko‘ra mashinasozlikda tobora keng qo‘llanilmoqda. Masalan, kukun
+materiallaridan avtomobil hamda traktorlarning moy nasosi, shesternalari, paxta
+terish mashinalarining shpindellari, sirpanish podshipniklari, kirya asboblar, turli
+keskichlar kallaklariga kavsharlanadigan qattiq qotishma plastinka va boshqalar
+Bu usulda kompozit material detallarini tayyorlashda asosiy xomashyo metall va
+nometall materiallar kukunlaridir. Metall va nometall materiallar kukunlarini olishda
+shar tegirmonlardan foydalaniladi.
+Kukun materiallardan kompozit material detallarini tayyorlash texnologiyasi
+quyidagi bosqichlarda amalga oshiriladi:
+1. Kukun materiallarni tayyorlash.
+2. Kukunlardan kutilgan tarkibli kukun olish.
+3. Ma’lum miqdordagi kukunni qolipga kiritib presslash.
+4. Olingan buyumga zarur xossalar berish uchun ularni termik ishlash.
+5. Zaruratga ko‘ra turli (masalan, podshipniklar, kirya asboblarga qo‘shimcha
+(kalibrlash, g‘ovaklarini moyga to‘ldirish va boshqa)) ishlovlar berish.
+Kukunlarni biriktirishda kukun qolipga kiritilib, puanson bilan presslanib, ma’lum
+vaqtdan so‘ng ajratib olinadi (93-rasm).
+Kukunli metallurgiya usulida detallarni tayyorlashga ilgari minutlar, ba’zan
+soatlar sarflangan bo‘lsa, hozirda aniq forma va o‘lchamlar asosida bu ish sekundlarda
+amalga oshirilmoqda. Ana shu usulda metall kukuni po‘lat press-qolipga solinadi va
+katta bosim bilan presslanadi. Shunda metall zarralari bir-biriga jipslashadi, natijada
+geometrik parametrlari bo‘yicha tayyor detalga mos zagotovka hosil bo‘ladi.
+
+78
+78
+Keyin zagotovkani maxsus pechlarda juda yuqori haroratda qizdiriladi – metall
+zarralari birlashib, jips bir jinsli detalga aylanadi.
+Bu usul bilan tayyorlanadigan detallar uchun kerakli asbob-uskunalar ayrim
+hollarda odatdagi metall qirqish stanoklariga qaraganda soddaroq va arzonroq
+bo‘ladi. Bu usuldan issiqqa, korroziyaga chidamli yangi materiallar olishda ham keng
+foydalaniladi.
+Polimer kompozit materiallar tayyorlash texnologiyasi ularning tarkibi,
+bog‘lovchining turi va ishlatish sohasi bilan belgilanadi. Polimer materiallar va
+buyumlar olish texnologiyasi nozik hisoblanib, jarayonlarning borishi o‘ta aniqlikda
+bo‘lishi talab etiladi.
+Polimer kompozit materiallar olishda presslash, shtamplash, quyish, surkash,
+shimdirish, sepish, payvandlash, yelimlash va boshqa usullardan keng foydalaniladi.
+Jumladan, presslash usulida plastmassa ishchi organi qizdiriladigan presslarda
+tayyorlanadi. Press-qoliplarda press kukunlar issiq holatda presslanib yoki ko‘p
+qatlamli press qoliplarda listlar, plitalar va panellar bir nechtasi presslanib olinishi
+mumkin (94-rasm). Ko‘p qavatli presslarda yog‘och tolali va yog‘och payrahali
+plitalar, qog‘oz qatlamli plastiklar, uch qatlamli yelimlangan panellar va boshqa
+kompozit polimer qatlamli buyumlar tayyorlanadi.
+94-rasm. Press-qoliplash (shtamplash) sxemasi.
+a) press-material solish; b) qolipni yopish va presslash; v) buyumni chiqarib olish;
+1– press-material; 2 – press-qolipning isitiladigan matritsasi; 3 – isitiladigan puanson;
+4 – press polzuni; 5 – elektr isitkich; 6 – buyum; 7 – buyumni chiqaruvchi moslama.
+93-rasm. Kukunlarni biriktirish sxemasi: a – bir tomonlama presslash; b – ikki tomonlama
+presslash; 1 – puanson; 2 – qolip; 3 – kukun.
+a)                                         b)                                    d)
+4
+2
+1
+5
+6
+7
+3
+2
+3
+a)
+b)
+P
+1
+1
+P
+P
+1
+2
+3
+
+79
+79
+Press-qoliplarda sanitariya-texnika buyumlari, uy-ro‘zg‘or buyumlari, rom va
+eshik qismlari, qurilish materiallari, mashina va mexanizmlar qismlari va boshqalar
+ham qoliplanib olinadi (95-rasm).
+95-rasm. Turli buyumlarning press-qolip namunalari:
+a – xokandoz; b – gultuvak; d – cherepitsa.
+a)                                         b)                                                    d)
+Qoliplarni tayyorlashda foydalaniladigan texnologik moslamalarga model, model
+tagligi, sterjen yashigi va opoka  kiradi.
+Model. Model deb qolip materialidan olinuvchi quyma yoki buyumning tashqi
+ko‘rinishini hosil qiluvchi moslamaga aytiladi.
+Modelning tashqi kо‘rinishi olinuvchi quyma yoki buyum shakliga o‘xshash
+bo‘ladi. Modellar yengil, oson kesib ishlanadigan, chidamli, arzon materiallardan
+tayyorlanib, ular qolip materialiga yopishmaydigan, undan oson ajraladigan bo‘lishi
+kerak.
+Modellar oddiy, yaxlit, murakkab shaklli, kichik va o‘rtacha o‘lchamli bo‘ladi.
+Ular ajraluvchi va ayrim-ayrim bo‘laklardan yig‘iladi (96-rasm).
+Buyum chizmalari asosida g‘o‘la, taxta, brus shaklidagi quritilgan yog‘ochlardan
+(qarag‘ay, archa va boshqalar) bir martalik qoliplar tayyorlanadi. Biroq yog‘ochlar
+nam tortib tob tashlashi, tez chirishi va deyarli puxtamasligi tufayli ulardan keng
+foydalanib bo‘lmaydi.
+Shu boisdan ko‘plab texnologik moslamalar aluminiy qotishmalar va plastmas­
+96-rasm. Modellar xili: a – yaxlit model;
+b – ikki bo‘lak model; d – ajraluvchi model.
+a)
+b)
+Ajraluvchi qismi
+Shiplar
+Belgi qismi
+d)
+
+80
+80
+salardan tayyorlanadi. Ular ancha qimmat bo‘lsa-da, uzoq vaqt turli muhitlarda
+ishlashi davomida shakli va o‘lchamlarini saqlashi, qolip materialida aniq model
+ko‘rinishini olishi kabi afzalliklarga ega. Modellar qaysi materialdan tayyorlanmasin,
+qolipdan osonroq chiqarish uchun uning vertikal tekisliklariga kichik qiyalik beriladi
+va yuzalari nafis ishlanadi.
+Model tagligi. Qoliplarni tayyorlashda foydalaniladigan model tagligi yog‘ochdan
+tayyorlansa, bu taglikka model taglik taxtasi deyiladi. Agar model taglik metall yoki
+plastmassa materiallaridan tayyorlangan bo‘lsa, unga model plitasi deyiladi.
+Sterjen yashigi. Quyma yoki bu­yumlarda turli shaklli teshiklar, o‘yiqlar olish uchun
+foydalanuvchi texnologik moslamalarga sterjen yashigi deyiladi. Ular ham model
+materialidan tayyor­lanadi.
+Kam seriyali, oddiy shaklli, kichik o‘lchamli sterjenlar yaxlit, murakkab, ikki va
+ayrim-ayrim bo‘laklar kо‘ri­nishida tayyorlanadi (97-rasm).
+Opoka. Qolipni tayyorlashga xizmat qiluvchi ochiq rama (quti)ga opoka deyiladi
+(98-rasm). Opokalar po‘lat, cho‘yan va aluminiy qotishmalaridan tayyorlanadi. Ular
+konstruksiyasiga ko‘ra yaxlit, bo‘laklarga ajraluvchi qovurg‘ali va ajralmaydigan
+qovurg‘asiz bo‘lib, o‘lchamlari standart bo‘yicha turlicha bo‘ladi.
+97-rasm. Sterjen yashiklari:
+a – yaxlit sterjen yashigi; b – ikki bo‘lakli sterjen yashigi.
+98-rasm. Opoka.
+b)
+a)
+Sterjen
+
+81
+81
+1. Kompozit materiallar ishlab chiqarishda qanday usullardan foydalaniladi?
+2. Presslash deb nimaga aytiladi?
+3. Kompozit materiallarni press-qoliplash asosida qanday buyumlar olinadi?
+4. Qanday turdagi texnologik moslamalar va asboblarni bilasiz?
+5. Kompozit materiallarga ishlov berishda xavfsizlik texnikasi qoidalarini
+ayting.
+Qolip va sterjenlarni tayyorlashda foydalaniladigan asboblarga qoliplash asboblari
+deyiladi. Ularga belkurak, g‘alvir, tekislashda ishlatiladigan shibbalar, ilgak qoshiq,
+andava, chizgich kabilar kiradi (99-rasm).
+Xavfsizlik texnikasi qoidalari
+Siz maktab o‘quv ustaxonasida yog‘och va metallar bilan ishlashda amal qilinadigan
+tartib va qoidalarni bilasiz. Shu sababli kompozit materiallarga ishlov berishda quyidagi
+xavfsizlik texnikasi qoidalariga ham qat’iy rioya qilish kerak.
+1. Kompozit materiallar turli qatlamli bo‘lganligi uchun ularga ishlov berishda
+qo‘lga qo‘lqop kiyish kerak.
+2. Ish vaqtida ko‘zoynik taqish shart.
+3. Asbob-uskuna va moslamalar hamda xomashyolarni ehtiyotkorlik bilan te­
+jamkorlik asosida ishlatish.
+4. Ish o‘rnini payraha va qipiqlardan maxsus cho‘tka bilan tozalash.
+5. O‘qituvchi tomonidan berilgan topshiriqni belgilangan tartibga rioya qilgan holda
+bajarish. Ishni texnologik xarita asosida yoki ko‘rsatilgan usullar bilan olib bo­rish.
+99-rasm. Qoliplash asboblari:
+a – belkurak; b – g‘alvir; d – shibba; e – ilgak qoshiq; f – andava; g – chizgich.
+a)
+b)
+e)
+f)
+g)
+d)
+6 – Texnologiya,  5-sinf
+
+82
+82
