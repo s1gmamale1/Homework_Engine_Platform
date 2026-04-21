@@ -27,7 +27,6 @@ Matematika (G5-6) and Algebra (G7-9) are the same progression: numbers → patte
 **Teaching rules:**
 - **CPA:** G5-6 must show concrete object → diagram → formula for every new concept. G7-9 compresses concrete phase but never skips pictorial.
 - **No magic moves:** Every algebraic step traced to its source. If a student would ask "where did that come from?", answer BEFORE they ask.
-- **Variable naming (first introduction only):** When a chapter introduces variables for the first time, define what x represents before writing the equation.
 - **Units always required:** `x = 5` is incomplete. `x = 5 m` or `x = 5 ta` is correct.
 
 ---

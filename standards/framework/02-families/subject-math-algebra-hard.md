@@ -28,7 +28,6 @@ Matematika (G5-6) and Algebra (G7-9) are the same progression: numbers → patte
 - **CPA:** G5-6 must show concrete object → diagram → formula for every new concept. G7-9 compresses concrete phase but never skips pictorial.
 - **No magic moves:** Every algebraic step traced to its source. If a student would ask "where did that come from?", answer BEFORE they ask.
 - **Genetic method:** Teach by retracing the concept's origin — original problem → struggle → invention → formalization. The formula becomes inevitable, not arbitrary.
-- **Variable naming (first introduction only):** When a chapter introduces variables for the first time, define what x represents before writing the equation.
 - **Derivation transparency:** Expand every formula template before using it. No step assumed valid.
 - **Units always required:** `x = 5` is incomplete. `x = 5 m` or `x = 5 ta` is correct.
 - **Bidirectional thinking:** Every session has ≥1 real-world→formula AND ≥1 formula→real-world item.
@@ -239,8 +238,7 @@ HP combat. Damage tiers: Easy -10, Medium -20, Hard -30. Distribution: 40/40/20.
 - **MA-H5:** Bidirectional thinking every session: ≥1 real→formula + ≥1 formula→real
 - **MA-H6:** Error Analysis every 2 sessions minimum
 - **MA-H7:** All answers must include units or context labels
-- **MA-H8:** Variable must be named before equation is written (G7-9, first introduction only)
-- **MA-H9:** Real-Life scope locked to Preview content — no new concepts
-- **MA-H10:** Pronoun: "Siz" always, never "sen"
-- **MA-H11:** No bazaar/village cliches — modern professional contexts only
-- **MA-H12:** v1 games only: Adaptive Quiz, Tile Match, Memory Match, Sentence Fill, Notebook Capture. Pick based on chapter content — don't default to same combo every session.
+- **MA-H8:** Real-Life scope locked to Preview content — no new concepts
+- **MA-H9:** Pronoun: "Siz" always, never "sen"
+- **MA-H10:** No bazaar/village cliches — modern professional contexts only
+- **MA-H11:** v1 games only: Adaptive Quiz, Tile Match, Memory Match, Sentence Fill, Notebook Capture. Pick based on chapter content — don't default to same combo every session.
