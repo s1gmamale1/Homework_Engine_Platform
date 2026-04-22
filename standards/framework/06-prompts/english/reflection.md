@@ -3,8 +3,10 @@ subject: english
 phase: reflection
 mode: hard
 grades: 5-11
-cefr: A1+ to B2
-version: 1.0
+cefr: detected per unit (A1 to B2) via classify.md
+grade-anchored-fields: [pro-roles, memory-palace-locations]
+level-anchored-fields: [question-count, word-count, tense-set, card-count, complexity]
+version: 1.1
 supersedes: reference_nets_english_master_instruction.md (Section 7 per-phase block)
 originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
@@ -15,12 +17,31 @@ You are building the Reflection phase (final phase) for an English homework sess
 ## Input
 
 - All previous phase outputs
-- Grade: G5–G11 (English)
+- Detected CEFR level (from classify.md): A1 · A1+ · A2 · A2+ · B1 · B1+ · B2
+- Grade (for UZ location references and language calibration)
 - English is always Hard mode
 
 ## Output
 
 6 parts, ~2 minutes total.
+
+---
+
+## CEFR Level Parameters
+
+**Parameters:** question/card/word counts from the CEFR level table (set by classify.md). Cultural anchors (pro-roles, locations) from the grade (set by instruction.md Step 3).
+
+| Level | Micro-exercises |
+|:-:|:-:|
+| A1 | 2 |
+| A1+ | 2–3 |
+| A2 | 3 |
+| A2+ | 3 |
+| B1 | 3 |
+| B1+ | 3–4 |
+| B2 | 4 |
+
+Micro-exercises at A1/A2 are simpler (tap-level, one-word answers acceptable). At B1/B2 they are sentence-level.
 
 ---
 
@@ -34,20 +55,21 @@ Format:
 > ✅ Present perfect formula — demonstrated correctly in Boss Q2
 > ⚠️ Time adverb placement (yet / already) — error in Boss Q3
 
-## 2. Micro-exercises (3 items)
+## 2. Micro-exercises
 
-3 short exercises targeting the weak topics ONLY. Each has an answer.
-- Tap-level difficulty — not a second boss fight. Max 1 sentence per exercise.
-- Cover the gap the student showed, using grade-allowed tenses.
+Count per level table above. Target the weak topics ONLY. Each has an answer.
+- Tap-level difficulty at A1/A2 — not a second boss fight. Max 1 sentence per exercise.
+- Sentence-level at B1/B2 — short production, not analysis.
+- Cover the gap the student showed, using level-allowed tenses only.
 
-Example (G7 weak topic: time adverb placement):
+Example (B1 weak topic: time adverb placement):
 > a. Put "already" in the correct place: "She has finished the report." → She has **already** finished the report.
 > b. True or False: "I haven't eaten yet" means I am still hungry now. → True.
 > c. Complete: "Have you ___ been to Registan?" (ever/already) → ever.
 
 ## 3. BOST Check-In
 
-> "Today you learned [goal from Card 2 of preview] — can you name it in one line?"
+> "Today you learned [goal from Preview Panel 2's key rule] — can you name it in one line?"
 
 Student responds freely. Not scored. The goal string is pulled from Preview Panel 2's key rule.
 
@@ -81,7 +103,7 @@ Never punitive. Never "you failed."
 
 ---
 
-## Example: G7 reflection — past simple unit
+## Example: B1 level reflection — past simple unit
 
 > ✅ Past simple irregular verbs (go/went, see/saw, have/had) — Boss Q1 correct
 > ⚠️ Did + base verb in questions — Boss Q2 error: "Did she went?" instead of "Did she go?"
@@ -99,11 +121,15 @@ Never punitive. Never "you failed."
 
 ## Rules
 
+**Parameters:** question/card/word counts from the CEFR level table (set by classify.md). Cultural anchors (pro-roles, locations) from the grade (set by instruction.md Step 3).
+
 - ~2 minutes, 6 parts
 - Not scored — calm close
-- Micro-exercises target weak topics only, not a full review
+- Micro-exercises count per level table. Target weak topics only, not a full review.
+- Micro-exercise complexity matches level: A1/A2 = tap or one-word; B1/B2 = short sentences.
 - BOST string pulled from Preview Panel 2 — not invented
 - Language: student-facing English. UZ bridge allowed in metacognitive prompts.
 - Closing line is tied to score performance — never generic
 - Summary must reference actual content from this session, not generic placeholders
+- Use level-allowed tenses only in micro-exercise model answers — never a banned tense
 - **Visuals:** Generate actual SVG code inline where visuals aid understanding. Priority: SVG > Mermaid > ASCII. Use SVG for: timelines (past/present/future bridge), stress-dot patterns (Ooo / oOoo rendered as actual dots), IPA pronunciation charts, sentence diagrams (subject/verb/object trees), word-family trees (suffix branching), collocation grids, Buzan mind maps for vocabulary domains. Use Mermaid for: concept maps, decision trees, grammar-rule flowcharts. Keep SVGs under 300×200px, legible on mobile. Place SVG immediately after the text it illustrates. ASCII boxes still OK for the 8-panel preview card layout — they are the UI chrome, not the teaching visual.

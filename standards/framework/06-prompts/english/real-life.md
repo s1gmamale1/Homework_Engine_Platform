@@ -3,8 +3,10 @@ subject: english
 phase: real-life
 mode: hard
 grades: 5-11
-cefr: A1+ to B2
-version: 1.0
+cefr: detected per unit (A1 to B2) via classify.md
+grade-anchored-fields: [pro-roles, memory-palace-locations]
+level-anchored-fields: [question-count, word-count, tense-set, card-count, complexity]
+version: 1.1
 supersedes: reference_nets_english_master_instruction.md (Section 7 per-phase block)
 originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
@@ -18,11 +20,34 @@ This phase tests whether Preview's Word→Structure Translation teaching actuall
 
 - Textbook page (image or text)
 - All previous phase outputs
-- Grade: G5–G11 (English)
+- Detected CEFR level (from classify.md): A1 · A1+ · A2 · A2+ · B1 · B1+ · B2
+- Grade (for pro-role selection — grade-anchored)
 
 ## Output
 
-ONE scenario with 3 open-ended questions. Answer key included.
+ONE scenario with questions (count from CEFR level table). Answer key included.
+
+---
+
+## CEFR Level Parameters
+
+**Parameters:** question/card/word counts from the CEFR level table (set by classify.md). Cultural anchors (pro-roles, locations) from the grade (set by instruction.md Step 3).
+
+| Level | Scenario words | Questions |
+|:-:|:-:|:-:|
+| A1 | 40–60 | 2 |
+| A1+ | 50–70 | 2 |
+| A2 | 60–90 | 3 |
+| A2+ | 75–110 | 3 |
+| B1 | 90–130 | 3 |
+| B1+ | 110–155 | 3–4 |
+| B2 | 130–180 | 4 |
+
+**Tenses allowed by level (applies to all model answers):**
+- **A1:** present simple + can + have got only
+- **A2:** + past simple regular, going-to, have to
+- **B1:** + past continuous, present perfect, will, 1st conditional, modals (should/might/could)
+- **B2:** full arsenal — all tenses, inversion, cleft, participles, modal perfects
 
 ---
 
@@ -34,7 +59,7 @@ ONE scenario with 3 open-ended questions. Answer key included.
 
 Never third person ("Dilnoza needs to..."). Always direct: "You", "Your".
 
-**Pick a professional role from the grade-appropriate list:**
+**Pick a professional role from the grade-anchored list (grade drives pro-role, NOT level):**
 - G5–6: LOCAL ONLY — Chorsu bozor helper, mahalla football captain, school monitor, young Samarkand kid-tourist guide, family bakery helper, Telegram-group admin
 - G7–8: Tashkent IT intern, Chorsu export seller, Hilton Tashkent receptionist, BBC Tashkent young reporter, NASA young-scholar, airline ground staff, CoderDojo mentor
 - G9–10: NASA stringer, BBC Tashkent reporter trainee, UN interpreter trainee, airline cabin crew applicant, Uzbekistan Airways customer-service lead, Presidential School IELTS tutor, Samarkand heritage-site docent
@@ -45,7 +70,7 @@ Never third person ("Dilnoza needs to..."). Always direct: "You", "Your".
 2. Anchor the scenario in UZ (55%) or global (45%) — do not exceed 45% global
 3. Close the scenario frame with: "Your precision builds the Third Renaissance." OR "Your accuracy meets Global Standards."
 
-**G5–6: W5H scaffold required.** Include 4 of 6 W5H branches (Who / What / When / Where / Why / How) as visible scaffolding inside the scenario prompt.
+**A1/A2 levels: W5H scaffold required.** Include 4 of 6 W5H branches (Who / What / When / Where / Why / How) as visible scaffolding inside the scenario prompt.
 
 **Scope lock:** Every skill tested must have been taught in Preview. No new grammar or vocabulary. Same difficulty as the hardest Preview example — different context, different numbers/names.
 
@@ -53,19 +78,22 @@ Never third person ("Dilnoza needs to..."). Always direct: "You", "Your".
 
 ## Sub-question construction
 
-3 questions per scenario:
+Questions per level from table above. Bloom progression:
 1. **Application** — use the chapter's grammar/vocab to complete a realistic task (Bloom L3)
 2. **Analysis** — compare two English options and explain which is correct for this context (Bloom L4)
 3. **Transfer** — adapt the language from this scenario to a different but related professional moment (Bloom L4–L5)
+4. **(B1+/B2 only)** **Evaluation** — critique a piece of English for register, accuracy, or effect in a professional context (Bloom L5–L6)
+
+A1/A2 levels: questions 1–2 only (Application + simple Analysis). No Transfer or Evaluation.
 
 Each question:
 - Requires producing English (writing a sentence, a short dialogue, a 2–3 sentence response)
-- Uses grade-allowed tenses only in the model answer
+- Uses level-allowed tenses only in the model answer
 - Tagged: `[Bloom: LX | PISA: LX]`
 
 ---
 
-## Example (G7 pro-role)
+## Example (B1 level, G7 pro-role)
 
 > You are a **BBC Tashkent junior reporter**. Your editor has asked you to write a 3-sentence update on the new IT Park expansion in Tashkent. You **have already** visited the site and interviewed two engineers. Your accuracy meets Global Standards.
 
@@ -86,12 +114,15 @@ Each question:
 
 ## Rules
 
+**Parameters:** question/card/word counts from the CEFR level table (set by classify.md). Cultural anchors (pro-roles, locations) from the grade (set by instruction.md Step 3).
+
 - ONE scenario only — not multiple
 - First-person "You" POV. Never third person.
+- Pro-role selected from grade table above — grade drives role, not level
 - All grammar must come from Preview content — no new methods
 - Every question tagged with Bloom + PISA
-- G5–6: W5H scaffold visible in scenario prompt
-- Model answers use grade-allowed tenses only — never a banned tense
+- A1/A2 levels: W5H scaffold visible in scenario prompt
+- Model answers use level-allowed tenses only — never a banned tense
 - Language: student-facing English. UZ bridge allowed in model answers.
 - No bazaar/village/shopkeeper clichés
 - Apply Wise Status Injection Recipe on every scenario

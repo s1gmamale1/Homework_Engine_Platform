@@ -3,8 +3,10 @@ subject: english
 phase: final-challenge
 mode: hard
 grades: 5-11
-cefr: A1+ to B2
-version: 1.0
+cefr: detected per unit (A1 to B2) via classify.md
+grade-anchored-fields: [pro-roles, memory-palace-locations]
+level-anchored-fields: [question-count, word-count, tense-set, card-count, complexity]
+version: 1.1
 supersedes: reference_nets_english_master_instruction.md (Section 7 per-phase block)
 originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
@@ -16,37 +18,51 @@ You are building the Final Challenge for an English homework session. This is th
 
 - Textbook page (image or text)
 - All previous phase outputs
-- Grade: G5–G11 (English)
+- Detected CEFR level (from classify.md): A1 · A1+ · A2 · A2+ · B1 · B1+ · B2
+- Grade (for HP override rules — see below)
 
 ## Output
 
-3–5 boss questions with HP damage tags. Mix of difficulty tiers.
+Boss questions with HP damage tags (count from CEFR level table). Mix of difficulty tiers.
 
 ---
 
-## HP and Damage
+## CEFR Level Parameters
 
-| Grade | HP |
-|-------|:--:|
-| G5–6 | **80** |
-| G7–8 | **100** |
-| G9–10 | **150** |
-| G11 | **150** |
+**Parameters:** question/card/word counts from the CEFR level table (set by classify.md). Cultural anchors (pro-roles, locations) from the grade (set by instruction.md Step 3).
+
+| Level | HP | Question count | Essay requirement |
+|:-:|:-:|:-:|---|
+| A1 | 60 | 3 | none |
+| A1+ | 60–80 | 3 | none |
+| A2 | 80 | 3–4 | none |
+| A2+ | 80 | 4 | none |
+| B1 | 100 | 4 | 80-word paragraph |
+| B1+ | 100–150 | 4–5 | 80-word paragraph |
+| B2 | 150 | 5 | 150-word IELTS Task-2 |
+
+**Grade HP override (applied when grade HP differs from level HP — take the higher value):**
+- G5–6 grade default: 80 HP
+- G7–8 grade default: 100 HP
+- G9–11 grade default: 150 HP
+
+When a G5 student has a detected level of A2 (HP 80) but grade default is also 80, these align. If a G7 student has a detected level of A1 (HP 60) but grade default is 100, take 100 — never punish higher-grade students with lower HP on detected-easier units.
+
+**Tenses allowed by level (applies to all model answers):**
+- **A1:** present simple + can + have got only
+- **A2:** + past simple regular, going-to, have to
+- **B1:** + past continuous, present perfect, will, 1st conditional, modals (should/might/could)
+- **B2:** full arsenal — all tenses, inversion, cleft, participles, modal perfects
+
+---
+
+## Damage table (all levels)
 
 | Difficulty | Damage | Distribution |
 |-----------|:------:|:----------:|
 | Easy | -10 HP | 40% |
 | Medium | -20 HP | 40% |
 | Hard | -30 HP | 20% |
-
----
-
-## Question counts by grade
-
-- G5–6: 3 questions
-- G7–8: 4 questions
-- G9–10: 5 questions
-- G11: 5 questions
 
 ---
 
@@ -57,23 +73,23 @@ Every question tagged: `[UZ-ENG{G}-UNIT{N}-{SEQ}] | Bloom: L{N} | PISA: L{N} | D
 **Must include:**
 - ≥1 reading/vocab-in-context Q (student reads a short text extract and answers)
 - ≥1 production Q (write a paragraph, dialogue, or transform a sentence)
-- G9–10: 1 short essay (~80 words, argument or description, grade-allowed tenses)
-- G11: 1 IELTS Task-2 argument essay (~150 words, 4-para: intro + 2 body + conclusion) + 1 register transformation (informal→formal) + 1 rhetorical analysis (name the device, explain the effect)
+- B1 level: 1 short essay (~80 words, argument or description, level-allowed tenses)
+- B2 level: 1 IELTS Task-2 argument essay (~150 words, 4-para: intro + 2 body + conclusion) + 1 register transformation (informal→formal) + 1 rhetorical analysis (name the device, explain the effect)
 
 **MC restriction:**
-- G5: up to 30% MC allowed (max 1 question out of 3)
-- G6+: **NO MC.** All open-ended with written production.
+- A1 level: up to 30% MC allowed (max 1 question out of 3)
+- A2+ and above: **NO MC.** All open-ended with written production.
 
 **Difficulty scaling:**
 - Easy (-10 HP): single-skill recognition or controlled production (fill one blank in a fixed frame)
 - Medium (-20 HP): 2-step task (read + produce OR identify + explain)
-- Hard (-30 HP): multi-step with context (read + analyse + write + justify using grade-allowed tenses)
+- Hard (-30 HP): multi-step with context (read + analyse + write + justify using level-allowed tenses)
 
-**Visual question variants (G7+):** a Hard-tier boss question may present an inline SVG instead of plain text — an IPA chart for the student to read and produce, a sentence-diagram tree with one branch missing, or a timeline diagram showing a tense sequence the student must convert to prose. Reserve for one question maximum per boss.
+**Visual question variants (B1+ levels):** a Hard-tier boss question may present an inline SVG instead of plain text — an IPA chart for the student to read and produce, a sentence-diagram tree with one branch missing, or a timeline diagram showing a tense sequence the student must convert to prose. Reserve for one question maximum per boss.
 
 ---
 
-## Example: G7 — 4-question distribution (present perfect unit)
+## Example: B1 level, 4-question distribution (present perfect unit)
 
 > **Q1** `[UZ-ENG7-UNIT4-01] | Bloom: L2 | PISA: L1 | Damage: -10 HP`
 > Read the sentence: "Scientists have discovered a new species in the Zarafshon river delta."
@@ -106,12 +122,14 @@ Show WHY the correct answer is correct. Route back to the relevant Preview card.
 
 ## Rules
 
-- Question count: 3 (G5–6) / 4 (G7–8) / 5 (G9–10, G11)
+**Parameters:** question/card/word counts from the CEFR level table (set by classify.md). Cultural anchors (pro-roles, locations) from the grade (set by instruction.md Step 3).
+
+- Question count and HP from level table above. Grade HP override applies (take the higher value).
 - Distribution 40/40/20 (easy/medium/hard)
 - All questions from THIS chapter's content only
 - Every question tagged with full inline tag format
-- G6+: no MC — all open-ended production
-- Model answers use grade-allowed tenses only — never a banned tense
+- A1: up to 30% MC allowed. A2+ and above: no MC — all open-ended production
+- Model answers use level-allowed tenses only — never a banned tense
 - Hints cost HP, not free
 - Language: student-facing English
 - "Hali emas!" / "Not yet" — never "Noto'g'ri"

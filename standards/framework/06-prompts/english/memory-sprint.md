@@ -3,8 +3,10 @@ subject: english
 phase: memory-sprint
 mode: hard
 grades: 5-11
-cefr: A1+ to B2
-version: 1.0
+cefr: detected per unit (A1 to B2) via classify.md
+grade-anchored-fields: [pro-roles, memory-palace-locations]
+level-anchored-fields: [question-count, word-count, tense-set, card-count, complexity]
+version: 1.1
 supersedes: reference_nets_english_master_instruction.md (Section 7 per-phase block)
 originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
@@ -17,13 +19,26 @@ This is NOT new practice. No writing, no production, no multi-step analysis. Jus
 ## Input
 
 - Textbook page (image or text)
-- Grade: G5–G11 (English)
+- Detected CEFR level (from classify.md): A1 · A1+ · A2 · A2+ · B1 · B1+ · B2
 - Prior unit reference (for item content)
-- English is always Hard mode → always **5 items**
 
 ## Output
 
-5 items. Each item is one of 3 formats. Must use at least 2 different formats.
+Item count and format distribution by detected CEFR level:
+
+**Parameters:** question/card/word counts from the CEFR level table (set by classify.md). Cultural anchors (pro-roles, locations) from the grade (set by instruction.md Step 3).
+
+| Level | Item count | Format distribution |
+|:-:|:-:|---|
+| A1 | 3 | 2 MC + 1 T/F |
+| A1+ | 3–4 | 2 MC + 1 T/F |
+| A2 | 4 | 2 MC + 1 T/F + 1 YNNG |
+| A2+ | 4–5 | 2 MC + 1 T/F + 1 YNNG |
+| B1 | 5 | 3 MC + 1 T/F + 1 YNNG |
+| B1+ | 5–6 | 3 MC + 1 T/F + 1 YNNG |
+| B2 | 7 | 3 MC + 2 T/F + 2 YNNG |
+
+Must use at least 2 different formats at every level.
 
 ---
 
@@ -52,7 +67,7 @@ Example:
 - Statement about what the PRIOR unit's chapter states or implies.
 - Student taps Yes / No / Not Given.
 - "Not Given" = the chapter does not address this claim.
-- Include at least 1 item with "Not Given" / "Aytilmagan" as the correct answer.
+- Include at least 1 item with "Not Given" / "Aytilmagan" as the correct answer where YNNG is used.
 
 Example:
 > "According to the previous unit, a receptionist always answers calls in formal English — Yes / No / Not Given"
@@ -61,15 +76,9 @@ Example:
 
 ---
 
-## Item distribution
-
-**5 items (Hard — English default):** 3 MC + 1 T/F + 1 YNNG
-
-Put the most important prior-unit concept as item 1. Primacy effect — the brain encodes what it sees first.
-
----
-
 ## Rules
+
+**Parameters:** question/card/word counts from the CEFR level table (set by classify.md). Cultural anchors (pro-roles, locations) from the grade (set by instruction.md Step 3).
 
 - **Tap only.** No typing, no drag-and-drop, no fill-in-blank, no open-ended.
 - **2 minutes max.** Every item must be readable and answerable in ≤25 seconds.
@@ -78,5 +87,6 @@ Put the most important prior-unit concept as item 1. Primacy effect — the brai
 - **No production.** If solving the item requires writing a sentence, it doesn't belong here.
 - **Wrong answer feedback:** one line showing the gap + UZ bridge. Show WHY the correct answer is correct, not just what it is.
 - Language: student-facing English. UZ bridge in feedback uses formal "Siz".
+- Put the most important prior-unit concept as item 1. Primacy effect — the brain encodes what it sees first.
 - Tags: each item tagged `[Bloom: L1–L2 | PISA: L1]` — Sprint is recognition only, never L3+.
 - **Visuals:** Generate actual SVG code inline where visuals aid understanding. Priority: SVG > Mermaid > ASCII. Use SVG for: timelines (past/present/future bridge), stress-dot patterns (Ooo / oOoo rendered as actual dots), IPA pronunciation charts, sentence diagrams (subject/verb/object trees), word-family trees (suffix branching), collocation grids, Buzan mind maps for vocabulary domains. Use Mermaid for: concept maps, decision trees, grammar-rule flowcharts. Keep SVGs under 300×200px, legible on mobile. Place SVG immediately after the text it illustrates. ASCII boxes still OK for the 8-panel preview card layout — they are the UI chrome, not the teaching visual.
