@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tenglama va uning ildizi — Uy vazifasi</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --primary: #1D4ED8;
+    --primary-light: #DBEAFE;
+    --primary-dark: #1E3A8A;
+    --accent: #F59E0B;
+    --green: #10B981;
+    --green-light: #D1FAE5;
+    --red: #EF4444;
+    --red-light: #FEE2E2;
+    --purple: #8B5CF6;
+    --purple-light: #EDE9FE;
+    --bg: #F9FAFB;
+    --surface: #FFFFFF;
+    --text: #111827;
+    --muted: #6B7280;
+    --border: #E5E7EB;
+    --shadow: 0 1px 3px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding-bottom: 60px;
+  }
+
+  /* ==== Header ==== */
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px 12px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .header-row {
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .title-block h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+
+  .title-block .sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .timer {
+    font-size: 13px;
+    color: var(--primary-dark);
+    background: var(--primary-light);
+    padding: 6px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  .progress-bar {
+    max-width: 820px;
+    margin: 12px auto 0;
+    display: flex;
+    gap: 3px;
+  }
+
+  .progress-bar .step {
+    flex: 1;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+
+  .progress-bar .step.active { background: var(--primary); }
+  .progress-bar .step.visited { background: var(--accent); }
+
+  /* ==== Phase tabs ==== */
+  nav.phase-tabs {
+    max-width: 820px;
+    margin: 16px auto 0;
+    padding: 0 24px;
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  nav.phase-tabs::-webkit-scrollbar { height: 4px; }
+  nav.phase-tabs::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  nav.phase-tabs button {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--text);
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+
+  nav.phase-tabs button:hover { border-color: var(--primary); }
+
+  nav.phase-tabs button.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+
+  /* ==== Main layout ==== */
+  main {
+    max-width: 820px;
+    margin: 24px auto;
+    padding: 0 24px;
+  }
+
+  .phase { display: none; }
+  .phase.active { display: block; animation: fadeIn 0.25s ease-out; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .phase-kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+
+  .phase-heading {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+  }
+
+  .phase-meta {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .phase-meta span + span::before {
+    content: " · ";
+    margin: 0 4px;
+  }
+
+  /* ==== Generic card ==== */
+  .card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+
+  .card h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: var(--primary-dark);
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.1s, background 0.15s;
+  }
+
+  .btn:hover { background: var(--primary-dark); }
+  .btn:active { transform: translateY(1px); }
+
+  .btn-secondary {
+    background: var(--surface);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+
+  .btn-secondary:hover { background: var(--primary-light); }
+
+  code {
+    background: #F3F4F6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "SF Mono", Monaco, "Cascadia Mono", Consolas, monospace;
+    font-size: 0.9em;
+  }
+
+  /* ==== Phase 0-A ==== */
+  .screen { display: none; }
+  .screen.active { display: block; animation: fadeIn 0.25s; }
+
+  .screen-indicator {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .screen-indicator .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+  }
+
+  .screen-indicator .dot.active { background: var(--primary); }
+
+  .notebook-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .notebook {
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 2px dashed;
+  }
+
+  .notebook-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+  }
+
+  .notebook-content {
+    font-family: "SF Mono", Monaco, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .notebook.correct {
+    background: var(--green-light);
+    border-color: var(--green);
+  }
+
+  .notebook.wrong {
+    background: var(--red-light);
+    border-color: var(--red);
+  }
+
+  .notebook-verdict {
+    font-size: 18px;
+    margin-top: 6px;
+  }
+
+  .diagram-box {
+    background: #F3F4F6;
+    padding: 16px 18px;
+    border-radius: 8px;
+    font-family: "SF Mono", Monaco, monospace;
+    font-size: 13px;
+    margin: 16px 0 20px;
+    white-space: pre;
+    line-height: 1.7;
+    border-left: 3px solid var(--primary);
+  }
+
+  .hook-text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hook-text strong { color: var(--primary-dark); }
+
+  .hook-text p { margin-bottom: 14px; }
+
+  .bost-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 12px 0;
+    font-family: inherit;
+    resize: vertical;
+  }
+
+  .bost-input:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 16px;
+  }
+
+  .chip {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+  }
+
+  .chip:hover { background: #BFDBFE; }
+
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .bullet-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0 16px;
+  }
+
+  .bullet-list li {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .bullet-list li::before {
+    content: "•";
+    color: var(--primary);
+    font-weight: 700;
+    position: absolute;
+    left: 6px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  /* ==== Screen 2 — Better explanation blocks ==== */
+  .better-block {
+    background: #F9FAFB;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px 18px 52px;
+    margin-bottom: 14px;
+    position: relative;
+  }
+
+  .better-num {
+    position: absolute;
+    left: 14px;
+    top: 18px;
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  .better-block h4 {
+    font-size: 15px;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+  }
+
+  .hierarchy-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+    font-size: 13px;
+  }
+
+  .hierarchy-table td {
+    padding: 10px 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  .hierarchy-table td:first-child { border-right: none; border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
+  .hierarchy-table td:nth-child(2) { border-left: none; border-right: none; }
+  .hierarchy-table td:last-child { border-left: none; border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
+
+  .hierarchy-table .h-term {
+    font-weight: 700;
+    color: var(--primary-dark);
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  .hierarchy-table .h-ex {
+    font-family: "SF Mono", Monaco, monospace;
+    color: var(--text);
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  .hierarchy-table .h-note {
+    color: var(--muted);
+    line-height: 1.45;
+  }
+
+  .hierarchy-table .highlight-row td {
+    background: var(--primary-light);
+    border-color: var(--primary);
+  }
+
+  .hierarchy-table .highlight-row .h-term,
+  .hierarchy-table .highlight-row .h-note {
+    color: var(--primary-dark);
+  }
+
+  .analogy-box {
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-style: italic;
+    color: #78350F;
+    text-align: center;
+    font-weight: 600;
+    border-left: 3px solid var(--accent);
+  }
+
+  .identity-box {
+    background: #F0FDF4;
+    border: 1px solid var(--green);
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-family: "SF Mono", Monaco, monospace;
+    font-size: 13.5px;
+    line-height: 1.9;
+    color: #065F46;
+  }
+
+  .arrow-note {
+    color: var(--green);
+    font-weight: 700;
+    font-family: -apple-system, sans-serif;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  @media (max-width: 640px) {
+    .hierarchy-table {
+      display: block;
+    }
+    .hierarchy-table tr {
+      display: block;
+      margin-bottom: 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px;
+      background: var(--surface);
+    }
+    .hierarchy-table td {
+      display: block;
+      border: none !important;
+      background: transparent !important;
+      padding: 3px 0;
+      white-space: normal !important;
+      width: auto !important;
+    }
+    .hierarchy-table .highlight-row {
+      background: var(--primary-light);
+      border-color: var(--primary);
+    }
+  }
+
+  /* ==== Phase 0-B — flashcards ==== */
+  .flashcard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .flashcard {
+    perspective: 1000px;
+    height: 220px;
+  }
+
+  .flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  .flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+
+  .flashcard-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flashcard-front {
+    background: linear-gradient(135deg, var(--primary), #2563EB);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .flashcard-front .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .flashcard-front .term {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
+
+  .flashcard-front .flip-hint {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-top: auto;
+    padding-top: 12px;
+  }
+
+  .flashcard-back {
+    background: var(--surface);
+    color: var(--text);
+    transform: rotateY(180deg);
+    font-size: 12.5px;
+    line-height: 1.55;
+    overflow-y: auto;
+  }
+
+  .flashcard-back .def { margin-bottom: 10px; }
+  .flashcard-back .example { font-family: "SF Mono", Monaco, monospace; background: var(--primary-light); padding: 4px 8px; border-radius: 4px; display: inline-block; margin: 2px 0; }
+
+  /* ==== Phase 1 — quiz ==== */
+  .q-block {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+  }
+
+  .q-num-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .q-num {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+  .q-format-badge {
+    font-size: 10px;
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .q-text {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    line-height: 1.55;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .option {
+    padding: 11px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    font-family: inherit;
+    color: var(--text);
+    transition: all 0.12s;
+  }
+
+  .option:hover { border-color: var(--primary); background: var(--primary-light); }
+  .option:disabled { cursor: default; }
+
+  .option.selected-correct {
+    background: var(--green-light);
+    border-color: var(--green);
+    color: #065F46;
+    font-weight: 600;
+  }
+
+  .option.selected-wrong {
+    background: var(--red-light);
+    border-color: var(--red);
+    color: #991B1B;
+  }
+
+  .option.reveal-correct {
+    background: var(--green-light);
+    border-color: var(--green);
+    color: #065F46;
+    font-weight: 600;
+  }
+
+  .feedback {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #FEF3C7;
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    font-size: 13px;
+    color: #78350F;
+    display: none;
+    line-height: 1.5;
+  }
+
+  .feedback.visible { display: block; }
+
+  /* ==== Phase 2 — story ==== */
+  .story {
+    background: var(--surface);
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .story p { margin-bottom: 14px; }
+
+  .story .equations-box {
+    background: #F3F4F6;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 14px 0;
+    font-family: "SF Mono", Monaco, monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    border-left: 3px solid var(--primary);
+  }
+
+  .story em { color: var(--primary-dark); font-style: italic; }
+
+  .checkpoint-section {
+    margin-top: 24px;
+  }
+
+  .checkpoint-section h2 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: var(--primary-dark);
+  }
+
+  /* ==== Phase 3 — games ==== */
+  .game-section { margin-bottom: 24px; }
+
+  .game-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .game-header-left h3 { font-size: 15px; margin-bottom: 2px; }
+  .game-header-left .sub { font-size: 12px; opacity: 0.85; }
+
+  .game-badge {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .game-body {
+    background: var(--surface);
+    padding: 22px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: var(--shadow);
+  }
+
+  .game-task {
+    background: #FEF3C7;
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 16px;
+    color: #78350F;
+  }
+
+  .tile-columns {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .tile-column h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .tile {
+    background: #F3F4F6;
+    border: 1.5px solid var(--border);
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-family: "SF Mono", Monaco, monospace;
+  }
+
+  .tile.one-root { background: var(--green-light); border-color: var(--green); color: #065F46; }
+  .tile.no-root { background: var(--red-light); border-color: var(--red); color: #991B1B; }
+  .tile.infinite { background: var(--purple-light); border-color: var(--purple); color: #5B21B6; }
+
+  .tile-arrow {
+    font-size: 24px;
+    color: var(--muted);
+    align-self: center;
+  }
+
+  .mystery-boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .mystery-box {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-weight: 800;
+  }
+
+  .mystery-box:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(29, 78, 216, 0.25); }
+
+  .mystery-stages {
+    background: #F9FAFB;
+    border-radius: 8px;
+    padding: 14px;
+    margin-top: 14px;
+    font-size: 13px;
+  }
+
+  .stage {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  .stage:last-child { border-bottom: none; }
+
+  .stage-label {
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .adaptive-ladder {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ladder-row {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 12px;
+    padding: 10px 14px;
+    background: #F9FAFB;
+    border-radius: 8px;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .theta {
+    font-family: "SF Mono", monospace;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .diff-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .diff-tag.easy { background: var(--green-light); color: #065F46; }
+  .diff-tag.grade { background: var(--primary-light); color: var(--primary-dark); }
+  .diff-tag.hard { background: var(--purple-light); color: #5B21B6; }
+
+  /* ==== Phase 4 — olympiad ==== */
+  .olympiad-banner {
+    background: linear-gradient(135deg, var(--accent), #D97706);
+    color: white;
+    padding: 20px 24px;
+    border-radius: 12px 12px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .olympiad-banner .role {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    opacity: 0.9;
+  }
+
+  .competitor {
+    background: var(--surface);
+    padding: 20px 22px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 12px;
+  }
+
+  .competitor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .competitor-name {
+    font-weight: 700;
+    color: var(--primary-dark);
+  }
+
+  .competitor-loc {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .competitor-claim {
+    background: #FEF3C7;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    font-family: "SF Mono", monospace;
+  }
+
+  /* ==== Phase 5 — radiant map ==== */
+  .radiant-map {
+    background: var(--surface);
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .radiant-center {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 14px 26px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+  }
+
+  .radiant-branches {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .radiant-branch {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .radiant-branch.highlighted {
+    background: var(--accent);
+    color: white;
+  }
+
+  .radiant-ildiz-section {
+    border-top: 2px dashed var(--border);
+    padding-top: 18px;
+    margin-top: 8px;
+  }
+
+  .radiant-ildiz-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .radiant-cases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .radiant-case {
+    padding: 14px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .radiant-case strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .radiant-case code { background: rgba(255,255,255,0.5); }
+
+  .radiant-case.green { background: var(--green-light); color: #065F46; }
+  .radiant-case.red { background: var(--red-light); color: #991B1B; }
+  .radiant-case.purple { background: var(--purple-light); color: #5B21B6; }
+
+  .step-recon {
+    background: var(--surface);
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+
+  .step-list {
+    background: #F9FAFB;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 12px 0 16px;
+    font-family: "SF Mono", Monaco, monospace;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .step-blank {
+    display: inline-block;
+    min-width: 140px;
+    padding: 2px 10px;
+    background: #FEF3C7;
+    border: 1px dashed var(--accent);
+    border-radius: 4px;
+    margin: 0 2px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ==== Phase 6 — boss ==== */
+  .hp-panel {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .hp-label-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .hp-bar {
+    height: 12px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .hp-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green), #FBBF24);
+    width: 100%;
+    transition: width 0.6s;
+  }
+
+  .boss-question {
+    background: var(--surface);
+    padding: 20px 22px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 12px;
+  }
+
+  .difficulty-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .q-diff-tag {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 10px;
+  }
+
+  .q-diff-tag.oson { background: var(--green-light); color: #065F46; }
+  .q-diff-tag.orta { background: var(--primary-light); color: var(--primary-dark); }
+  .q-diff-tag.qiyin { background: var(--purple-light); color: #5B21B6; }
+
+  .damage-tag {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .expected-box {
+    margin-top: 10px;
+    padding: 14px 16px;
+    background: var(--green-light);
+    border-left: 3px solid var(--green);
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.6;
+    display: none;
+  }
+
+  .expected-box.visible { display: block; }
+
+  .tefcas-box {
+    margin-top: 8px;
+    padding: 12px 14px;
+    background: #FEF3C7;
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    font-size: 12.5px;
+    color: #78350F;
+    line-height: 1.5;
+    display: none;
+  }
+
+  .tefcas-box.visible { display: block; }
+
+  .reveal-btn-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .reveal-btn {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+  }
+
+  .reveal-btn:hover { background: var(--primary-light); }
+
+  .stars-row {
+    background: var(--surface);
+    padding: 18px 22px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-top: 16px;
+  }
+
+  .stars-row h3 { margin-bottom: 10px; font-size: 14px; }
+
+  .star-item {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 13px;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  .star-item:last-child { border-bottom: none; }
+
+  .star-icons { min-width: 60px; font-size: 16px; }
+
+  /* ==== Phase 7 — reflection ==== */
+  .reflection-beat {
+    background: var(--surface);
+    padding: 20px 22px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 12px;
+  }
+
+  .beat-kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+
+  .beat-kicker .time {
+    color: var(--muted);
+    font-weight: 600;
+    margin-left: 6px;
+  }
+
+  .beat-body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .summary-card {
+    background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+    padding: 18px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  .summary-row {
+    padding: 6px 0;
+    font-size: 14px;
+  }
+
+  .summary-row strong { color: var(--primary-dark); }
+
+  .three-cases-box {
+    margin-top: 10px;
+    padding: 12px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 6px;
+  }
+
+  .radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #F9FAFB;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.12s;
+  }
+
+  .radio-option:hover { border-color: var(--primary); background: var(--primary-light); }
+
+  .radio-circle {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--muted);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .metacog-pool {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .metacog-item {
+    padding: 12px 14px;
+    background: #F9FAFB;
+    border-left: 3px solid var(--primary);
+    border-radius: 4px;
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+
+  .schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .schedule-row {
+    display: flex;
+    gap: 12px;
+    padding: 10px 14px;
+    background: #F9FAFB;
+    border-radius: 8px;
+    font-size: 13px;
+    align-items: center;
+  }
+
+  .schedule-date {
+    font-weight: 700;
+    color: var(--primary-dark);
+    min-width: 120px;
+  }
+
+  .closing-box {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 24px 26px;
+    border-radius: 12px;
+    margin-top: 16px;
+    line-height: 1.7;
+  }
+
+  .closing-box .kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .closing-box p { margin-bottom: 12px; font-size: 14.5px; }
+
+  .closing-box .final-line {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+
+  /* Utility */
+  .section-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 24px 0;
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .notebook-split,
+    .radiant-branches,
+    .radiant-cases,
+    .tile-columns {
+      grid-template-columns: 1fr;
+    }
+    .tile-arrow { display: none; }
+    .mystery-boxes-grid { grid-template-columns: repeat(2, 1fr); }
+    .phase-heading { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <div class="title-block">
+      <h1>Tenglama va uning ildizi</h1>
+      <div class="sub">Algebra · 7-sinf · IV bob 1-dars</div>
+    </div>
+    <div class="timer">⏱ 30–35 daqiqa</div>
+  </div>
+  <div class="progress-bar" id="progressBar"></div>
+</header>
+
+<nav class="phase-tabs" id="phaseTabs"></nav>
+
+<main>
+
+<!-- ============== PHASE 0-A ============== -->
+<section class="phase" data-phase="0">
+  <div class="phase-kicker">Faza 0-A</div>
+  <h2 class="phase-heading">Mavzu ko'rigi</h2>
+  <div class="phase-meta"><span>60–90 soniya</span><span>3 ekran</span><span>o'quvchi sur'atida</span></div>
+
+  <div class="card">
+    <div class="screen-indicator" id="s0a-indicator">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- Screen 1 -->
+    <div class="screen active" data-screen="1">
+      <div class="notebook-split">
+        <div class="notebook correct">
+          <div class="notebook-label">Aziza</div>
+          <div class="notebook-content">5x + 10 = 25<br>x = 3</div>
+          <div class="notebook-verdict">✓</div>
+        </div>
+        <div class="notebook wrong">
+          <div class="notebook-label">Dilshod</div>
+          <div class="notebook-content">5x + 10 = 25<br>x = 7</div>
+          <div class="notebook-verdict">⚠️</div>
+        </div>
+      </div>
+
+      <div class="hook-text">
+        <p><strong>Bugun siz tenglamaning ildizi nima ekanligini rasmiy tarzda bilib olasiz — va yangi ko'nikma: javobni yechmasdan tekshirish.</strong></p>
+
+        <p>6-sinfda oddiy tenglamalarni yechgansiz (<code>5x = 20 → x = 4</code>). Endi esa qiyinroqlariga duch kelasiz — masalan, <code>x</code> ikkala tomonda bo'ladiganlari. Ularning tekshirish usulini bugun o'rganamiz. Yechishning tezkor usulini esa — 2–3 hafta ichida.</p>
+
+        <p>Yuqoridagi misolda Aziza ham, Dilshod ham bitta tenglamani yechishgan. Lekin bittasi xato qilgan. Sizning bugungi ko'nikmangiz — kimning to'g'ri, kimning xato ekanligini <strong>yechmasdan</strong> ham ayta olish.</p>
+      </div>
+
+      <div class="nav-row">
+        <span></span>
+        <button class="btn" onclick="nextScreen('0a', 2)">Davom etish →</button>
+      </div>
+    </div>
+
+    <!-- Screen 2 — Yaxshiroq tushuntirish -->
+    <div class="screen" data-screen="2">
+      <div style="background: var(--primary-light); color: var(--primary-dark); padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 18px; border-left: 3px solid var(--primary);">
+        <strong>📚 Yaxshiroq tushuntirish</strong><br>
+        Darslik qisqa o'tgan 3 ta nozik nuqta. Keyingi fazalarga tayyorlanish uchun.
+      </div>
+
+      <!-- Clarification 1: word hierarchy -->
+      <div class="better-block">
+        <div class="better-num">1</div>
+        <h4>So'zlar ierarxiyasi — aniq ma'nosi</h4>
+        <table class="hierarchy-table">
+          <tr>
+            <td class="h-term">Tenglik</td>
+            <td class="h-ex"><code>3 + 5 = 8</code></td>
+            <td class="h-note">Faqat sonlar. Topiladigan narsa yo'q.</td>
+          </tr>
+          <tr class="highlight-row">
+            <td class="h-term">Tenglama</td>
+            <td class="h-ex"><code>4x + 1 = 21</code></td>
+            <td class="h-note"><strong>Harf bor</strong> — biz uni topamiz.</td>
+          </tr>
+          <tr class="highlight-row">
+            <td class="h-term">Ildiz</td>
+            <td class="h-ex"><code>x = 5</code></td>
+            <td class="h-note">Shu savolning <strong>aniq javobi</strong>.</td>
+          </tr>
+          <tr>
+            <td class="h-term">Teng kuchli</td>
+            <td class="h-ex"><code>4x = 20</code> va <code>2x = 10</code></td>
+            <td class="h-note">Boshqa ko'rinish, <strong>bir xil ildiz</strong>.</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Clarification 2: no root -->
+      <div class="better-block">
+        <div class="better-num">2</div>
+        <h4>Nega ba'zida "ildiz yo'q"?</h4>
+        <p style="font-size: 14px; line-height: 1.65; margin-bottom: 10px;"><code>x + 5 = x</code> ni <strong>hayotiy qilib o'qing:</strong></p>
+        <div class="analogy-box">"Mening yoshim + 5 = mening yoshim."</div>
+        <p style="font-size: 14px; line-height: 1.65; margin-top: 10px;">
+          Bu qanday yosh bo'lishi mumkin? <strong>Hech qaysi.</strong> Har qanday yoshga 5 qo'shsangiz, u o'zidan katta bo'ladi — o'zi bo'la olmaydi.
+        </p>
+        <p style="font-size: 14px; line-height: 1.65; margin-top: 10px;">
+          Shuning uchun <strong>"ildiz yo'q"</strong> — javob topilmagani emas, balki <strong>javob mumkin emas</strong>ligi. Tenglama imkonsiz savol beryapti.
+        </p>
+      </div>
+
+      <!-- Clarification 3: infinite roots -->
+      <div class="better-block">
+        <div class="better-num">3</div>
+        <h4>Nega ba'zida "cheksiz ildiz"?</h4>
+        <p style="font-size: 14px; line-height: 1.65; margin-bottom: 10px;"><code>3(x + 2) = 3x + 6</code> — qavsni ochib ko'raylik:</p>
+        <div class="identity-box">
+          <div>3(x + 2)  =  3x + 6</div>
+          <div>3x + 6    =  3x + 6   <span class="arrow-note">← ikki tomon aynan bir xil!</span></div>
+        </div>
+        <p style="font-size: 14px; line-height: 1.65; margin-top: 10px;">
+          Bu aslida "tenglama" emas. Bu — <strong>ayniyat</strong>. Har doim to'g'ri bo'lgan tenglik.
+        </p>
+        <p style="font-size: 14px; line-height: 1.65; margin-top: 10px;">
+          <code>x</code> nima bo'lishidan qat'iy nazar, ikki tomon bir xil natija beradi — shuning uchun <strong>har qanday son ildiz.</strong>
+        </p>
+      </div>
+
+      <div class="nav-row">
+        <button class="btn btn-secondary" onclick="nextScreen('0a', 1)">← Orqaga</button>
+        <button class="btn" onclick="nextScreen('0a', 3)">Davom etish →</button>
+      </div>
+    </div>
+
+    <!-- Screen 3 -->
+    <div class="screen" data-screen="3">
+      <div class="hook-text">
+        <p><strong>Bitta savol: bugun eng ko'p nimani aniq tushunib olishni xohlaysiz?</strong></p>
+        <p>O'zingizning so'zlaringiz bilan yozing. Sessiya oxirida qaytamiz.</p>
+      </div>
+
+      <textarea class="bost-input" rows="2" maxlength="80" placeholder="Masalan: ildiz nima ekanligini..." id="bostInput"></textarea>
+
+      <div class="chip-row">
+        <button class="chip" onclick="fillBost(this)">&quot;ildiz&quot; so'zining ma'nosi</button>
+        <button class="chip" onclick="fillBost(this)">nega yechmasdan tekshirish kerak</button>
+        <button class="chip" onclick="fillBost(this)">0 ta yoki cheksiz ildiz bo'lishi qanday</button>
+      </div>
+
+      <div class="nav-row">
+        <button class="btn btn-secondary" onclick="nextScreen('0a', 2)">← Orqaga</button>
+        <button class="btn" onclick="goNext()">Boshladik →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PHASE 0-B ============== -->
+<section class="phase" data-phase="1">
+  <div class="phase-kicker">Faza 0-B</div>
+  <h2 class="phase-heading">Flesh kartalar</h2>
+  <div class="phase-meta"><span>20–30 soniya</span><span>6 karta</span><span>butun davomida mavjud</span></div>
+
+  <div class="card" style="text-align: center; background: var(--primary-light); color: var(--primary-dark); font-size: 13px;">
+    👆 Har bir kartani aylantirish uchun bosing. Kartalar uy vazifasi davomida doim qo'lingizda bo'ladi.
+  </div>
+
+  <div class="flashcard-grid">
+
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="flashcard-face flashcard-front">
+          <div class="icon">🟰</div>
+          <div class="term">TENGLAMA</div>
+          <div class="flip-hint">↻ bosib aylantiring</div>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <div class="def">Harf bilan belgilangan noma'lum son bor bo'lgan tenglik.</div>
+          <div><strong>Misol:</strong></div>
+          <div class="example">4x − 15 = x + 15</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="flashcard-face flashcard-front">
+          <div class="icon">❓</div>
+          <div class="term">NOMA'LUM</div>
+          <div class="flip-hint">↻ bosib aylantiring</div>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <div class="def">Tenglamadagi topilishi kerak bo'lgan son. Odatda <strong>x, y</strong> yoki <strong>a, b</strong> bilan belgilanadi.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="flashcard-face flashcard-front">
+          <div class="icon">⚖️</div>
+          <div class="term">ILDIZ</div>
+          <div class="flip-hint">↻ bosib aylantiring</div>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <div class="def">Noma'lumning o'rniga qo'yilganda tenglamani to'g'ri tenglikka aylantiruvchi son.</div>
+          <div><strong>Misol:</strong> <code>4x − 15 = x + 15</code> → ildiz = <strong>10</strong></div>
+          <div style="margin-top: 4px;"><strong>Tekshirish:</strong> <code>4(10) − 15 = 10 + 15</code> → <code>25 = 25</code> ✓</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="flashcard-face flashcard-front">
+          <div class="icon">🔍</div>
+          <div class="term">YECHISH</div>
+          <div class="flip-hint">↻ bosib aylantiring</div>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <div class="def">Tenglamaning <strong>barcha</strong> ildizlarini topish <strong>yoki</strong> ildiz yo'qligini ko'rsatish.</div>
+          <div style="color: var(--red); font-weight: 600;">⚠️ "Barcha" — bitta ildizni topib to'xtash emas.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="flashcard-face flashcard-front">
+          <div class="icon">🟰🟰</div>
+          <div class="term">TENG KUCHLI</div>
+          <div class="flip-hint">↻ bosib aylantiring</div>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <div class="def">Aynan bir xil ildizlarga ega bo'lgan tenglamalar.</div>
+          <div><strong>Misol:</strong> <code>x − 8 = 4</code> va <code>4(x − 8) = 16</code> — har ikkisining ildizi <strong>x = 12</strong>.</div>
+          <div style="margin-top: 4px; font-style: italic;">Ildizi yo'q tenglamalar ham teng kuchli hisoblanadi.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="flashcard-face flashcard-front">
+          <div class="icon">🎯</div>
+          <div class="term">3 HOLAT</div>
+          <div class="flip-hint">↻ bosib aylantiring</div>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <div style="font-size: 12px; line-height: 1.6;">
+            <div><strong style="color: var(--green);">1 ta ildiz</strong> — normal. <code>5x = 20 → x = 4</code></div>
+            <div style="margin-top: 4px;"><strong style="color: var(--red);">Ildiz yo'q</strong> — hech bir son. <code>x + 5 = x</code></div>
+            <div style="margin-top: 4px;"><strong style="color: var(--purple);">Cheksiz ildiz</strong> — har qanday son. <code>x + 4 = 4 + x</code></div>
+            <div style="margin-top: 6px; color: var(--red); font-weight: 600;">⚠️ Oxirgi 2 — yangi.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="nav-row" style="margin-top: 20px;">
+    <button class="btn btn-secondary" onclick="goPrev()">← Orqaga</button>
+    <button class="btn" onclick="goNext()">Boshladim →</button>
+  </div>
+</section>
+
+<!-- ============== PHASE 1 ============== -->
+<section class="phase" data-phase="2">
+  <div class="phase-kicker">Faza 1</div>
+  <h2 class="phase-heading">Xotira hurrasi</h2>
+  <div class="phase-meta"><span>≤2 daqiqa</span><span>6 savol</span><span>bir bosishli</span></div>
+
+  <div class="q-block">
+    <div class="q-num-row"><span class="q-num">1-savol</span><span class="q-format-badge">MC</span></div>
+    <div class="q-text">Bulardan qaysi biri TENGLAMA?</div>
+    <div class="options">
+      <button class="option" onclick="answer(this, false, 'Hali emas. Tenglama = tenglik + noma\\'lum. 3 + 5 = 8 — bu oddiy tenglik, noma\\'lum yo\\'q.')"><strong>A)</strong> <code>3 + 5 = 8</code></button>
+      <button class="option" onclick="answer(this, true)"><strong>B)</strong> <code>4x + 1 = 21</code></button>
+      <button class="option" onclick="answer(this, false, 'Hali emas. Bu ifoda — tenglik belgisi (=) yo\\'q.')"><strong>C)</strong> <code>x + y</code></button>
+      <button class="option" onclick="answer(this, false, 'Hali emas. Bu tengsizlik — &gt; belgisi ishlatilgan, = emas.')"><strong>D)</strong> <code>3 > 2</code></button>
+    </div>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-num-row"><span class="q-num">2-savol</span><span class="q-format-badge">T/F</span></div>
+    <div class="q-text"><code>5x = 20</code> tenglamasida <code>4</code> soni ildiz bo'ladi.</div>
+    <div class="options">
+      <button class="option" onclick="answer(this, true)"><strong>TO'G'RI</strong></button>
+      <button class="option" onclick="answer(this, false, 'Tekshiring: 5 × 4 = 20. 20 = 20. Demak ildiz.')"><strong>NOTO'G'RI</strong></button>
+    </div>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-num-row"><span class="q-num">3-savol</span><span class="q-format-badge">MC</span></div>
+    <div class="q-text"><code>3(x + 2) = 3x + 6</code> tenglamasi necha ildizga ega?</div>
+    <div class="options">
+      <button class="option" onclick="answer(this, false, 'Hali emas. Qo\\'shimcha sonlar bilan tekshirib ko\\'ring: x=0, x=5, x=−1... Hammasi to\\'g\\'ri chiqadi.')"><strong>A)</strong> 1 ta ildiz</button>
+      <button class="option" onclick="answer(this, false, 'Hali emas. x=0 qo\\'yib tekshiring: 3(2) = 6. Va 3(0)+6 = 6. Ildiz bor.')"><strong>B)</strong> Ildiz yo'q</button>
+      <button class="option" onclick="answer(this, true)"><strong>C)</strong> Cheksiz ko'p ildiz</button>
+      <button class="option" onclick="answer(this, false, 'Hali emas. Bu tenglama distributiv qonun — har doim to\\'g\\'ri, demak har bir son ildiz.')"><strong>D)</strong> Javob berib bo'lmaydi</button>
+    </div>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-num-row"><span class="q-num">4-savol</span><span class="q-format-badge">MC</span></div>
+    <div class="q-text"><code>x + 5 = x</code> tenglamasi...</div>
+    <div class="options">
+      <button class="option" onclick="answer(this, false, 'Hali emas. 5 + 5 = 10, lekin RHS = 5. Teng emas.')"><strong>A)</strong> <code>x = 5</code> ildizga ega</button>
+      <button class="option" onclick="answer(this, false, 'Hali emas. 0 + 5 = 5, lekin RHS = 0. Teng emas.')"><strong>B)</strong> <code>x = 0</code> ildizga ega</button>
+      <button class="option" onclick="answer(this, true)"><strong>C)</strong> Ildizga ega emas</button>
+      <button class="option" onclick="answer(this, false, 'Hali emas. −5 + 5 = 0, lekin RHS = −5. Teng emas.')"><strong>D)</strong> <code>x = −5</code> ildizga ega</button>
+    </div>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-num-row"><span class="q-num">5-savol</span><span class="q-format-badge">YNNG</span></div>
+    <div class="q-text">Bobda aytilganiga ko'ra, har bir tenglama aniq bitta ildizga ega bo'ladi.</div>
+    <div class="options">
+      <button class="option" onclick="answer(this, false, 'Ayrim tenglamalarda ildiz yo\\'q (x + 5 = x), ayrimlarida cheksiz ko\\'p (x + 4 = 4 + x).')"><strong>HA</strong></button>
+      <button class="option" onclick="answer(this, true)"><strong>YO'Q</strong></button>
+      <button class="option" onclick="answer(this, false, 'Bobda aniq aytilgan — 3 holat bor.')"><strong>AYTILMAGAN</strong></button>
+    </div>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-num-row"><span class="q-num">6-savol</span><span class="q-format-badge">MC</span></div>
+    <div class="q-text"><code>−3x + 7 = 1</code> tenglamasida <code>x = 2</code> ildizmi?</div>
+    <div class="options">
+      <button class="option" onclick="answer(this, true)"><strong>A)</strong> Ha, chunki <code>−3(2) + 7 = −6 + 7 = 1</code></button>
+      <button class="option" onclick="answer(this, false, 'Belgilarga diqqat: −3 × 2 = −6 (manfiy), +6 emas.')"><strong>B)</strong> Yo'q, chunki <code>−3(2) + 7 = 6 + 7 = 13</code></button>
+      <button class="option" onclick="answer(this, false, 'Ko\\'paytirish tushib qolmasin: −3 × 2 = −6, faqat qo\\'shish emas.')"><strong>C)</strong> Yo'q, chunki <code>−3(2) + 7 = 2 + 7 = 9</code></button>
+      <button class="option" onclick="answer(this, false, 'Aniqlash mumkin — son qo\\'yib hisoblang.')"><strong>D)</strong> Aniqlash mumkin emas</button>
+    </div>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="nav-row" style="margin-top: 20px;">
+    <button class="btn btn-secondary" onclick="goPrev()">← Orqaga</button>
+    <button class="btn" onclick="goNext()">Keyingi faza →</button>
+  </div>
+</section>
+
+<!-- ============== PHASE 2 ============== -->
+<section class="phase" data-phase="3">
+  <div class="phase-kicker">Faza 2</div>
+  <h2 class="phase-heading">Hikoya rejimi</h2>
+  <div class="phase-meta"><span>~5 daqiqa</span><span>Bir butun hikoya</span><span>3 checkpoint</span></div>
+
+  <div class="story">
+    <p>Sevinch 7-sinfda o'qiydi. Dushanba kuni matematika o'qituvchisi Malika opa doskaga uchta tenglama yozib qo'ydi:</p>
+
+    <div class="equations-box">
+<strong>A:</strong> 4x + 1 = 21
+<strong>B:</strong> x + 5 = x
+<strong>C:</strong> 3(x + 2) = 3x + 6
+    </div>
+
+    <p><em>"Har bir tenglamada x — biz topmoqchi bo'lgan noma'lum son,"</em> — dedi Malika opa. <em>"Sizning vazifangiz: qaysi son tenglamani to'g'ri tenglikka aylantiradi?"</em></p>
+
+    <p>Sevinchning oldingi partadoshi Jasur A tenglamasini yechishga kirishdi: <em>"1 ni ayiraman... 4x = 20... demak x = 5."</em> U faxr bilan qo'l ko'tardi: <strong>"5 soni!"</strong></p>
+
+    <p>Ikkinchi partadosh Dilshod B ga qaradi va qoshlarini chimirdi. <em>"x + 5 = x? Demak 5 = 0? Bu qanday mumkin?"</em> U bir necha daqiqa qog'ozga qaradi, lekin yechim topolmay qoldi.</p>
+
+    <p>Sevinch tenglamalarga boshqa ko'z bilan qaradi. <strong>Men yechmasam-chi? — o'yladi u. — Faqat son qo'yib ko'rib tekshirsam?</strong></p>
+
+    <p>U Jasur aytgan <strong>5</strong> ni A ga qo'ydi: <code>4(5) + 1 = 20 + 1 = 21</code>. O'ng tomon ham <code>21</code>. <strong>Ikki tomon teng.</strong> Demak 5 haqiqatan ham A ning ildizi — Jasur to'g'ri topibdi.</p>
+
+    <p>Keyin B ga o'tdi. Agar <code>x = 0</code> bo'lsa: chap tomon <code>0 + 5 = 5</code>, o'ng tomon <code>0</code>. <code>5 ≠ 0</code>. Demak 0 yaramaydi. <code>x = 100</code> bo'lsa? Chap <code>105</code>, o'ng <code>100</code>. Yana farq — <strong>5 ta</strong>. Qancha urinmasin, chap tomon doim o'ng tomondan aynan 5 tasiga ko'p bo'lib chiqardi. <em>"Hech qaysi son yaramaydi,"</em> — xulosa qildi Sevinch. <em>"B da ildiz yo'q."</em></p>
+
+    <p>C ga navbat keldi. <code>x = 0</code> uchun: chap <code>3(0+2) = 6</code>, o'ng <code>3(0) + 6 = 6</code>. <strong>Teng.</strong> <code>x = 7</code> uchun: chap <code>3(9) = 27</code>, o'ng <code>21 + 6 = 27</code>. <strong>Yana teng.</strong> <code>x = −4</code> uchun: chap <code>3(−2) = −6</code>, o'ng <code>−12 + 6 = −6</code>. <strong>Yana.</strong> <em>"Har qanday son to'g'ri chiqyapti,"</em> — hayron bo'ldi Sevinch.</p>
+
+    <p>U partasiga suyandi va uchalasiga qayta qaradi. <strong>A da bitta javob. B da javob yo'q. C da har bir son javob.</strong></p>
+
+    <p>Darsdan keyin u Malika opadan so'radi. Opa jilmaydi: <em>"Siz muhim narsani kashf qildingiz, Sevinch. Har bir tenglama uch xil bo'lishi mumkin — bitta ildizli, ildizsiz yoki cheksiz ildizli. Va buni bilish uchun tenglamani to'liq yechish shart emas — yechmasdan, faqat son qo'yib tekshirishning o'zi yetarli."</em></p>
+
+    <p><em>"Bu usulni biz <strong>tekshirish</strong> deb ataymiz. Bu sizga umrbod kerak bo'ladi — o'z yechimingizni tekshirishda, boshqalarning ishini baholashda, hatto tenglamani o'zingiz yechmagan paytingizda ham."</em></p>
+
+    <p><em>"Aytgancha,"</em> — qo'shib qo'ydi opa, <em>"tenglamalar bilan shunday qat'iy ishlashni birinchi bo'lib xorazmlik olim Al-Xorazmiy IX asrda boshlagan. Siz bugun uning merosini davom ettiryapsiz."</em></p>
+  </div>
+
+  <div class="checkpoint-section">
+    <h2>Checkpoint savollar</h2>
+
+    <div class="q-block">
+      <div class="q-num-row"><span class="q-num">1-checkpoint</span><span class="q-format-badge">Recall</span></div>
+      <div class="q-text">Sevinch qaysi usulni kashf qildi, A tenglamasini hal qilishda?</div>
+      <div class="options">
+        <button class="option" onclick="answer(this, false, 'Sevinch A ni qaytadan yechmadi — u Jasur aytgan 5 ni qo\\'yib tekshirdi.')"><strong>A)</strong> U A ni oddiy qadamlar bilan yechdi</button>
+        <button class="option" onclick="answer(this, true)"><strong>B)</strong> U 5 ni x o'rniga qo'ydi va ikki tomon teng ekanligini tekshirdi</button>
+        <button class="option" onclick="answer(this, false, 'Sevinch javobni birovdan so\\'ramadi — u Jasur aytganini tekshirdi.')"><strong>C)</strong> U Jasurdan javobni so'radi</button>
+        <button class="option" onclick="answer(this, false, 'Malika opa darsdan KEYIN yordam berdi, yechishda emas.')"><strong>D)</strong> U Malika opadan yordam oldi</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num-row"><span class="q-num">2-checkpoint</span><span class="q-format-badge">Inference</span></div>
+      <div class="q-text">Nima uchun B tenglamasi (<code>x + 5 = x</code>) ildizga ega emas?</div>
+      <div class="options">
+        <button class="option" onclick="answer(this, false, 'x ning qiymati noma\\'lum — lekin bu har qanday tenglamada shunday.')"><strong>A)</strong> Chunki x ning qiymati noma'lum</button>
+        <button class="option" onclick="answer(this, true)"><strong>B)</strong> Chunki chap tomon o'ng tomondan doim 5 ga ko'p — qaysi sonni qo'ysa ham tenglik saqlanmaydi</button>
+        <button class="option" onclick="answer(this, false, 'Dilshodning xatosi emas — tenglamaning o\\'zida javob yo\\'q.')"><strong>C)</strong> Chunki Dilshod yanglish tushundi</button>
+        <button class="option" onclick="answer(this, false, 'Hech qaysi son to\\'g\\'ri emas, faqat 5 emas.')"><strong>D)</strong> Chunki x = 5 to'g'ri javob emas</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num-row"><span class="q-num">3-checkpoint</span><span class="q-format-badge">Analysis</span></div>
+      <div class="q-text">Nima uchun C tenglamasi (<code>3(x + 2) = 3x + 6</code>) da har qanday son ildiz bo'ladi?</div>
+      <div class="options">
+        <button class="option" onclick="answer(this, false, 'Sevinch 7 va −4 ni ham tekshirdi — ular ham to\\'g\\'ri chiqdi, demak faqat 0 emas.')"><strong>A)</strong> Chunki x = 0 da to'g'ri chiqdi</button>
+        <button class="option" onclick="answer(this, true)"><strong>B)</strong> Chunki tenglamaning ikki tomoni aslida bir xil ifodadir — faqat turlicha yozilgan</button>
+        <button class="option" onclick="answer(this, false, 'Malika opa buni xulosa sifatida aytdi, lekin sabab matematik.')"><strong>C)</strong> Chunki Malika opa shunday dedi</button>
+        <button class="option" onclick="answer(this, false, 'Tenglama qiyinlikdan kelib chiqmaydi — ikki tomon bir xil.')"><strong>D)</strong> Chunki tenglama juda qiyin</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+  </div>
+
+  <div class="nav-row" style="margin-top: 20px;">
+    <button class="btn btn-secondary" onclick="goPrev()">← Orqaga</button>
+    <button class="btn" onclick="goNext()">Keyingi faza →</button>
+  </div>
+</section>
+
+<!-- ============== PHASE 3 ============== -->
+<section class="phase" data-phase="4">
+  <div class="phase-kicker">Faza 3</div>
+  <h2 class="phase-heading">O'yin tanafuslari</h2>
+  <div class="phase-meta"><span>~7–9 daqiqa</span><span>3 o'yin</span><span>1 Interaktiv + 2 Standart</span></div>
+
+  <!-- Game 1: Tile Match -->
+  <div class="game-section">
+    <div class="game-header">
+      <div class="game-header-left">
+        <h3>1-slot · Tile Match</h3>
+        <div class="sub">Qaysi tenglamada ildiz nechta?</div>
+      </div>
+      <div class="game-badge">2:30</div>
+    </div>
+    <div class="game-body">
+      <div class="game-task">Har bir tenglamani natija plitkasi bilan juftlang. To'g'ri juft yashashaydi.</div>
+      <div class="tile-columns">
+        <div class="tile-column">
+          <h4>Tenglamalar</h4>
+          <div class="tile">5x = 20</div>
+          <div class="tile">2x + 3 = 11</div>
+          <div class="tile">x + 5 = x</div>
+          <div class="tile">7y + 6 = 7y − 11</div>
+          <div class="tile">x + 4 = 4 + x</div>
+          <div class="tile">3(x + 2) = 3x + 6</div>
+        </div>
+        <div class="tile-arrow">↔</div>
+        <div class="tile-column">
+          <h4>Natija</h4>
+          <div class="tile one-root">1 ta ildiz</div>
+          <div class="tile one-root">1 ta ildiz</div>
+          <div class="tile no-root">Ildiz yo'q</div>
+          <div class="tile no-root">Ildiz yo'q</div>
+          <div class="tile infinite">Cheksiz ildiz</div>
+          <div class="tile infinite">Cheksiz ildiz</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game 2: Mystery Box -->
+  <div class="game-section">
+    <div class="game-header">
+      <div class="game-header-left">
+        <h3>2-slot · Mystery Box <span style="font-size: 10px; background: var(--accent); padding: 2px 8px; border-radius: 10px; margin-left: 4px;">⭐ Anchor</span></h3>
+        <div class="sub">Qutini och: bashorat qil, keyin tekshir</div>
+      </div>
+      <div class="game-badge">~3 daqiqa</div>
+    </div>
+    <div class="game-body">
+      <div class="game-task">Qutini bosing. Tenglamani ko'ring. Bashorat qiling: 1/0/∞. Keyin son qo'yib tekshiring.</div>
+      <div class="mystery-boxes-grid">
+        <div class="mystery-box" onclick="openBox(this, 1)">?</div>
+        <div class="mystery-box" onclick="openBox(this, 2)">?</div>
+        <div class="mystery-box" onclick="openBox(this, 3)">?</div>
+        <div class="mystery-box" onclick="openBox(this, 4)">?</div>
+      </div>
+      <div id="boxContent"></div>
+    </div>
+  </div>
+
+  <!-- Game 3: Adaptive Quiz -->
+  <div class="game-section">
+    <div class="game-header">
+      <div class="game-header-left">
+        <h3>3-slot · Adaptive Quiz</h3>
+        <div class="sub">Ildizni tekshir — tezroq!</div>
+      </div>
+      <div class="game-badge">~2–3 daqiqa</div>
+    </div>
+    <div class="game-body">
+      <div class="game-task">IRT-moslashtiriladigan: to'g'ri javob bersangiz qiyinroq, xato bersangiz osonroq.</div>
+      <div class="adaptive-ladder">
+        <div class="ladder-row">
+          <span class="theta">θ = −0.5</span>
+          <span><code>3x = 21</code> — "7 ildizmi?"</span>
+          <span class="diff-tag easy">Oson</span>
+        </div>
+        <div class="ladder-row">
+          <span class="theta">θ = 0.0</span>
+          <span><code>2x + 5 = 13</code> — "4 ildizmi?"</span>
+          <span class="diff-tag grade">Sinf</span>
+        </div>
+        <div class="ladder-row">
+          <span class="theta">θ = +0.3</span>
+          <span><code>5(x − 1) = 2x + 7</code> — "4 ildizmi?"</span>
+          <span class="diff-tag grade">Sinf</span>
+        </div>
+        <div class="ladder-row">
+          <span class="theta">θ = +0.6</span>
+          <span><code>−2(x + 3) = 3x − 1</code> — "−1 ildizmi?"</span>
+          <span class="diff-tag hard">Yuqori</span>
+        </div>
+        <div class="ladder-row">
+          <span class="theta">θ = +1.0</span>
+          <span><code>(x + 2)² = x² + 4x + 4</code> — "har qanday son ildizmi?"</span>
+          <span class="diff-tag hard">Yuqori</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-row" style="margin-top: 20px;">
+    <button class="btn btn-secondary" onclick="goPrev()">← Orqaga</button>
+    <button class="btn" onclick="goNext()">Keyingi faza →</button>
+  </div>
+</section>
+
+<!-- ============== PHASE 4 ============== -->
+<section class="phase" data-phase="5">
+  <div class="phase-kicker">Faza 4</div>
+  <h2 class="phase-heading">Hayotiy vazifa</h2>
+  <div class="phase-meta"><span>~4 daqiqa</span><span>1 sahna</span><span>3 savol</span></div>
+
+  <div class="olympiad-banner">
+    <div class="role">Sizning rolingiz</div>
+    <div><strong>"Al-Xorazmiy" Matematika Olimpiadasi — yordamchi sudya</strong></div>
+    <div style="margin-top: 10px; font-size: 13.5px; opacity: 0.95;">
+      Bugun 3 ta ishtirokchidan javob qog'ozlari keldi. Vazifangiz: ishtirokchi aytgan sonni tenglamaga qo'yib, javob to'g'riligini tekshirish. Qayta yechmang — faqat tekshiring.
+    </div>
+  </div>
+
+  <div style="height: 16px;"></div>
+
+  <div class="competitor">
+    <div class="competitor-header">
+      <div>
+        <div class="competitor-name">1-ishtirokchi — Bekzod</div>
+        <div class="competitor-loc">Toshkent</div>
+      </div>
+    </div>
+    <div class="competitor-claim">
+      <strong>Tenglama:</strong> <code>5x + 10 = 25</code><br>
+      <strong>Da'vo:</strong> "Ildiz x = 3."
+    </div>
+    <div class="q-text" style="font-size: 14px;">Bekzod to'g'ri javob berdimi? Tekshiruvingizni yozing.</div>
+    <div class="reveal-btn-row">
+      <button class="reveal-btn" onclick="revealExpected(this, 'b1')">💡 Kutilgan javobni ko'rsatish</button>
+    </div>
+    <div class="expected-box" id="exp-b1">
+      <strong>To'g'ri.</strong> Tekshiruv: <code>5(3) + 10 = 15 + 10 = 25</code>. O'ng tomon ham <code>25</code>. Tenglik saqlanadi. Bekzod haq.
+    </div>
+  </div>
+
+  <div class="competitor">
+    <div class="competitor-header">
+      <div>
+        <div class="competitor-name">2-ishtirokchi — Malika</div>
+        <div class="competitor-loc">Samarqand</div>
+      </div>
+    </div>
+    <div class="competitor-claim">
+      <strong>Tenglama:</strong> <code>x + 7 = x</code><br>
+      <strong>Da'vo:</strong> "Ildiz x = 0."
+    </div>
+    <div class="q-text" style="font-size: 14px;">Malika to'g'rimi? Agar xato bo'lsa, to'g'ri javob nima?</div>
+    <div class="reveal-btn-row">
+      <button class="reveal-btn" onclick="revealExpected(this, 'b2')">💡 Kutilgan javobni ko'rsatish</button>
+    </div>
+    <div class="expected-box" id="exp-b2">
+      <strong>Xato.</strong> Tekshiruv: <code>0 + 7 = 7</code>, lekin o'ng tomon <code>0</code>. <code>7 ≠ 0</code>. To'g'ri javob: bu tenglamaning <strong>ildizi yo'q</strong> — chap tomon har doim o'ng tomondan 7 tasiga ko'p.
+    </div>
+  </div>
+
+  <div class="competitor">
+    <div class="competitor-header">
+      <div>
+        <div class="competitor-name">3-ishtirokchi — Sardor</div>
+        <div class="competitor-loc">Andijon · ⚠️ tuzoq</div>
+      </div>
+    </div>
+    <div class="competitor-claim">
+      <strong>Tenglama:</strong> <code>2(x + 3) = 2x + 6</code><br>
+      <strong>Da'vo:</strong> "Yagona ildiz x = 5."
+    </div>
+    <div class="q-text" style="font-size: 14px;">Sardor to'g'rimi? Agar qisman to'g'ri bo'lsa, uning xatosi nimada?</div>
+    <div class="reveal-btn-row">
+      <button class="reveal-btn" onclick="revealExpected(this, 'b3')">💡 Kutilgan javobni ko'rsatish</button>
+    </div>
+    <div class="expected-box" id="exp-b3">
+      <strong>Qisman to'g'ri.</strong> x = 5 haqiqatan ildiz: <code>2(5+3) = 16</code> va <code>2(5)+6 = 16</code>. Lekin "yagona" so'zi xato. <code>x = 0</code>: <code>6 = 6</code>. <code>x = −4</code>: <code>−2 = −2</code>. Aslida bu tenglamada <strong>har qanday son ildiz</strong> (distributiv qonun). Sardor faqat bittasini topdi.
+    </div>
+  </div>
+
+  <div class="closing-box" style="margin-top: 8px;">
+    <div class="kicker">Yopilish</div>
+    <p>✨ Sizning aniqligingizsiz olimpiada adolatsiz bo'lar edi. Har bir tenglama har xil — bittasida yagona javob, bittasida javob yo'q, bittasida esa har bir son javob bo'ladi. Siz buni yechmasdan ham ajrata oldingiz.</p>
+    <p>1200 yil oldin xorazmlik olim <strong>Al-Xorazmiy</strong> bu qoidalarni birinchi bo'lib ifodalab bergan. Bugun siz uning merosini davom ettiryapsiz.</p>
+  </div>
+
+  <div class="nav-row" style="margin-top: 20px;">
+    <button class="btn btn-secondary" onclick="goPrev()">← Orqaga</button>
+    <button class="btn" onclick="goNext()">Keyingi faza →</button>
+  </div>
+</section>
+
+<!-- ============== PHASE 5 ============== -->
+<section class="phase" data-phase="6">
+  <div class="phase-kicker">Faza 5</div>
+  <h2 class="phase-heading">Xotira mustahkamlash</h2>
+  <div class="phase-meta"><span>~3 daqiqa</span><span>2 mashq</span><span>Radiant Summary</span></div>
+
+  <div class="card">
+    <h3>1-mashq — Tenglama xaritasini to'ldir</h3>
+    <div class="game-task">3 ta to'g'ri plitkani Ildiz ostidagi 3 ta slotga tortib keling.</div>
+
+    <div class="radiant-map">
+      <div class="radiant-center">TENGLAMA</div>
+      <div class="radiant-branches">
+        <div class="radiant-branch">Noma'lum</div>
+        <div class="radiant-branch highlighted">Ildiz</div>
+        <div class="radiant-branch">Yechish</div>
+        <div class="radiant-branch">Teng kuchli</div>
+      </div>
+      <div class="radiant-ildiz-section">
+        <div class="radiant-ildiz-label">↓ Ildiz — 3 holat</div>
+        <div class="radiant-cases">
+          <div class="radiant-case green">
+            <strong>1 ta ildiz</strong>
+            <code>5x = 20 → x = 4</code>
+          </div>
+          <div class="radiant-case red">
+            <strong>Ildiz yo'q</strong>
+            <code>x + 5 = x</code>
+          </div>
+          <div class="radiant-case purple">
+            <strong>Cheksiz ildiz</strong>
+            <code>x + 4 = 4 + x</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step-recon">
+    <h3 style="color: var(--primary-dark); font-size: 15px; margin-bottom: 12px;">2-mashq — Tekshiruv qadamlarini to'ldir</h3>
+    <div style="font-size: 13.5px; margin-bottom: 4px;"><strong>Tenglama:</strong> <code>5x − 7 = 8</code></div>
+    <div style="font-size: 13.5px; margin-bottom: 14px;"><strong>Tekshirilayotgan son:</strong> <code>x = 3</code></div>
+
+    <div class="step-list">
+      <div><strong>Birinchi qadam:</strong> x o'rniga 3 ni qo'yamiz</div>
+      <div><span class="step-blank">5(3) − 7 = 8</span></div>
+      <div><span class="step-blank">15 − 7 = 8</span></div>
+      <div><strong>Oxirgi qadam:</strong> 8 = 8 ✓ Demak x = 3 ildiz.</div>
+    </div>
+
+    <div style="font-size: 12px; color: var(--muted); font-style: italic; text-align: center;">
+      ↑ O'quvchi plitkalardan to'g'ri qadamlarni tanlab joylashtiradi.
+    </div>
+  </div>
+
+  <div class="nav-row" style="margin-top: 20px;">
+    <button class="btn btn-secondary" onclick="goPrev()">← Orqaga</button>
+    <button class="btn" onclick="goNext()">Keyingi faza →</button>
+  </div>
+</section>
+
+<!-- ============== PHASE 6 ============== -->
+<section class="phase" data-phase="7">
+  <div class="phase-kicker">Faza 6</div>
+  <h2 class="phase-heading">Yakuniy sinov</h2>
+  <div class="phase-meta"><span>~7 daqiqa</span><span>5 savol</span><span>Faqat ochiq javoblar</span></div>
+
+  <div class="hp-panel">
+    <div class="hp-label-row">
+      <span>👹 BOSS</span>
+      <span id="hpText">HP: 100 / 100</span>
+    </div>
+    <div class="hp-bar"><div class="hp-bar-fill" id="hpFill"></div></div>
+    <div style="font-size: 11px; opacity: 0.8; margin-top: 6px;">Har to'g'ri javob — zarar. 3 ketma-ket to'g'ri = kombo · 2× zarar.</div>
+  </div>
+
+  <div class="boss-question">
+    <div class="difficulty-row">
+      <span class="q-num">1-savol</span>
+      <span><span class="q-diff-tag oson">Oson</span> <span class="damage-tag">−10 HP</span></span>
+    </div>
+    <div class="q-text"><code>3x − 4 = 11</code> tenglamasida <code>x = 5</code> ildizmi? Tekshiruvingizni yozing.</div>
+    <div class="reveal-btn-row">
+      <button class="reveal-btn" onclick="revealExpected(this, 'boss1')">💡 Kutilgan ish</button>
+      <button class="reveal-btn" onclick="revealTefcas(this, 'tefcas1')">⚠️ TEFCAS fikr-mulohaza</button>
+    </div>
+    <div class="expected-box" id="exp-boss1">
+      <code>3(5) − 4 = 15 − 4 = 11</code>. O'ng tomon ham <code>11</code>. <strong>Ha, x = 5 ildiz.</strong>
+    </div>
+    <div class="tefcas-box" id="tefcas1">
+      <strong>Hali emas! Miyangiz Feedback oldi.</strong> Birinchi qadam: x o'rniga 5 ni qo'ying. 3 × 5 qanchaga teng?
+    </div>
+  </div>
+
+  <div class="boss-question">
+    <div class="difficulty-row">
+      <span class="q-num">2-savol</span>
+      <span><span class="q-diff-tag oson">Oson</span> <span class="damage-tag">−10 HP</span></span>
+    </div>
+    <div class="q-text"><code>−2(x + 4) = x − 5</code> tenglamasida <code>x = −1</code> ildizmi? Har ikki tomonni hisoblang.</div>
+    <div class="reveal-btn-row">
+      <button class="reveal-btn" onclick="revealExpected(this, 'boss2')">💡 Kutilgan ish</button>
+      <button class="reveal-btn" onclick="revealTefcas(this, 'tefcas2')">⚠️ TEFCAS fikr-mulohaza</button>
+    </div>
+    <div class="expected-box" id="exp-boss2">
+      Chap: <code>−2(−1 + 4) = −2(3) = −6</code>. O'ng: <code>−1 − 5 = −6</code>. <code>−6 = −6</code>. <strong>Ha, x = −1 ildiz.</strong>
+    </div>
+    <div class="tefcas-box" id="tefcas2">
+      <strong>Hali emas!</strong> Qavsning ichini birinchi hisoblang: <code>−1 + 4 = ?</code> Keyin −2 ga ko'paytiring. Belgiga e'tibor bering.
+    </div>
+  </div>
+
+  <div class="boss-question">
+    <div class="difficulty-row">
+      <span class="q-num">3-savol</span>
+      <span><span class="q-diff-tag orta">O'rta</span> <span class="damage-tag">−20 HP</span></span>
+    </div>
+    <div class="q-text"><code>4y − 6 = 4y + 9</code> tenglamasi necha ildizga ega? Javobingizni asoslang — nima uchun shunday?</div>
+    <div class="reveal-btn-row">
+      <button class="reveal-btn" onclick="revealExpected(this, 'boss3')">💡 Kutilgan ish</button>
+      <button class="reveal-btn" onclick="revealTefcas(this, 'tefcas3')">⚠️ TEFCAS fikr-mulohaza</button>
+    </div>
+    <div class="expected-box" id="exp-boss3">
+      Har qanday y uchun chap tomon <code>4y − 6</code>, o'ng tomon <code>4y + 9</code>. Chap tomon doim o'ng tomondan 15 ga kam. Hech qanday y tenglikni saqlay olmaydi. <strong>Ildiz yo'q.</strong>
+    </div>
+    <div class="tefcas-box" id="tefcas3">
+      <strong>Hali emas!</strong> y = 0 qo'ying va ko'ring: chap qancha? O'ng qancha? Farqi nima? Endi y = 100 qo'ying — farqi o'zgaradimi?
+    </div>
+  </div>
+
+  <div class="boss-question">
+    <div class="difficulty-row">
+      <span class="q-num">4-savol</span>
+      <span><span class="q-diff-tag orta">O'rta</span> <span class="damage-tag">−20 HP · Kombo: 2×</span></span>
+    </div>
+    <div class="q-text">
+      Quyidagi 2 ta tenglama teng kuchlimi? Ildizlarini topib solishtiring.<br>
+      <strong>A:</strong> <code>5(x − 2) = 10</code> · <strong>B:</strong> <code>x − 2 = 2</code>
+    </div>
+    <div class="reveal-btn-row">
+      <button class="reveal-btn" onclick="revealExpected(this, 'boss4')">💡 Kutilgan ish</button>
+      <button class="reveal-btn" onclick="revealTefcas(this, 'tefcas4')">⚠️ TEFCAS fikr-mulohaza</button>
+    </div>
+    <div class="expected-box" id="exp-boss4">
+      A: <code>x = 4</code> qo'ysak <code>5(4−2) = 10</code>. Ildiz <code>x = 4</code>. B: <code>x − 2 = 2</code>, demak <code>x = 4</code>. Har ikkisining ildizi bir xil. <strong>Ha, teng kuchli.</strong>
+    </div>
+    <div class="tefcas-box" id="tefcas4">
+      <strong>Hali emas!</strong> Har bir tenglamaning ildizini alohida toping. A uchun: 5(x−2) = 10 dan qanday qilib x ni topasiz?
+    </div>
+  </div>
+
+  <div class="boss-question">
+    <div class="difficulty-row">
+      <span class="q-num">5-savol</span>
+      <span><span class="q-diff-tag qiyin">Qiyin</span> <span class="damage-tag">−30 HP</span></span>
+    </div>
+    <div class="q-text">Ildizi <code>6</code> bo'lgan istalgan tenglamani o'zingiz yozing. Keyin tekshirish orqali <code>6</code> ning haqiqatan ildiz ekanligini ko'rsating.</div>
+    <div class="reveal-btn-row">
+      <button class="reveal-btn" onclick="revealExpected(this, 'boss5')">💡 Kutilgan ish</button>
+      <button class="reveal-btn" onclick="revealTefcas(this, 'tefcas5')">⚠️ TEFCAS fikr-mulohaza</button>
+    </div>
+    <div class="expected-box" id="exp-boss5">
+      <strong>Misol:</strong> <code>2x + 3 = 15</code>. <strong>Tekshirish:</strong> <code>2(6) + 3 = 12 + 3 = 15</code>. O'ng tomon ham <code>15</code>. <code>15 = 15</code>. <strong>x = 6 haqiqatan ildiz.</strong> (Boshqa to'g'ri misollar: <code>5x = 30</code>, <code>x + 7 = 13</code>, <code>3x − 8 = 10</code>.)
+    </div>
+    <div class="tefcas-box" id="tefcas5">
+      <strong>Hali emas!</strong> Oddiy yo'l: 6 bilan nimadir qilib, keyin nimadir qo'shib bir son oling. Masalan, 6 + 7 = 13. Demak <code>x + 7 = 13</code> — bu tenglamaning ildizi 6.
+    </div>
+  </div>
+
+  <div class="stars-row">
+    <h3>⭐ Yulduzlar</h3>
+    <div class="star-item">
+      <span class="star-icons">⭐</span>
+      <span>Boss yengildi — HP 0 ga tushirildi</span>
+    </div>
+    <div class="star-item">
+      <span class="star-icons">⭐⭐</span>
+      <span>≤2 urinishda yengildi VA HP ≤ 50</span>
+    </div>
+    <div class="star-item">
+      <span class="star-icons">⭐⭐⭐</span>
+      <span>Birinchi urinishda, maslahatlarsiz, HP ≤ 20</span>
+    </div>
+  </div>
+
+  <div class="nav-row" style="margin-top: 20px;">
+    <button class="btn btn-secondary" onclick="goPrev()">← Orqaga</button>
+    <button class="btn" onclick="goNext()">Keyingi faza →</button>
+  </div>
+</section>
+
+<!-- ============== PHASE 7 ============== -->
+<section class="phase" data-phase="8">
+  <div class="phase-kicker">Faza 7</div>
+  <h2 class="phase-heading">Aks ettirish</h2>
+  <div class="phase-meta"><span>~2 daqiqa</span><span>6 beat</span><span>Faqat siz ko'rasiz</span></div>
+
+  <div class="reflection-beat">
+    <div class="beat-kicker">Tezkor xulosa <span class="time">(30s)</span></div>
+    <div class="summary-card">
+      <div class="summary-row">⚖️ <strong>Tenglama</strong> = tenglik + noma'lum harf</div>
+      <div class="summary-row">🔢 <strong>Ildiz</strong> = tenglamani to'g'ri qiluvchi son</div>
+      <div class="summary-row">✅ <strong>Tekshirish</strong> = son qo'y → hisobla → tenglik saqlanishini ko'r</div>
+      <div class="three-cases-box">
+        <strong>Tenglamaning 3 holati:</strong>
+        <div style="margin-top: 6px; font-size: 13px;">
+          • <span style="color: #065F46;">1 ta ildiz</span> — <code>5x = 20 → x = 4</code><br>
+          • <span style="color: #991B1B;">Ildiz yo'q</span> — <code>x + 5 = x</code><br>
+          • <span style="color: #5B21B6;">Cheksiz ildiz</span> — <code>x + 4 = 4 + x</code>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection-beat">
+    <div class="beat-kicker">Kuriozlik savoli <span class="time">(15s)</span></div>
+    <div class="beat-body">
+      <p>Siz bugun tenglama va uning ildizi bilan birinchi bor rasmiy tanishdingiz. Qaysi yangi tushuncha sizni eng ko'p hayratlantirdi?</p>
+      <div class="radio-options">
+        <label class="radio-option"><span class="radio-circle"></span>Tenglamalarda ildiz umuman bo'lmasligi</label>
+        <label class="radio-option"><span class="radio-circle"></span>Har bir son ildiz bo'lishi mumkinligi</label>
+        <label class="radio-option"><span class="radio-circle"></span>Yechmasdan tekshirish mumkinligi</label>
+        <label class="radio-option"><span class="radio-circle"></span>Teng kuchli tenglamalar tushunchasi</label>
+        <label class="radio-option"><span class="radio-circle"></span>Boshqa narsa — [erkin matn]</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection-beat">
+    <div class="beat-kicker">Metakognitiv savollar <span class="time">(45s · 3 ta)</span></div>
+    <div class="beat-body">
+      <p style="font-size: 12.5px; color: var(--muted);">Sessiya aniqligiga qarab 3 ta savol tanlanadi.</p>
+      <div class="metacog-pool">
+        <div class="metacog-item">Bu darsda eng qiyin qism qaysi edi?</div>
+        <div class="metacog-item">Qaysi qadamda xato qildingiz? Sababi arifmetikami, belgi edi, yoki tushuncha?</div>
+        <div class="metacog-item">Ildiz topish va tenglikni tekshirish orasida qanday farq bor?</div>
+        <div class="metacog-item">Agar ukangizga yoki sinfdoshingizga tushuntirsangiz, birinchi qanday boshlardingiz?</div>
+        <div class="metacog-item">Uchta o'yindan qaysi biri sizga eng ko'p yordam berdi?</div>
+        <div class="metacog-item">Ildizsiz tenglamani tanib olish oson edimi — yoki qiyin?</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection-beat">
+    <div class="beat-kicker">BOST maqsadi qaytarish <span class="time">(15s)</span></div>
+    <div class="beat-body">
+      <p>Darsning boshida siz yozgan edingiz:</p>
+      <div style="background: #FEF3C7; padding: 10px 14px; border-radius: 6px; font-style: italic; margin: 10px 0;" id="bostRecall">
+        [Darsning boshida yozilgan maqsadingiz shu yerda ko'rsatiladi]
+      </div>
+      <p style="font-weight: 600; margin-top: 10px;">Maqsadingizga erishdingizmi?</p>
+      <div class="radio-options">
+        <label class="radio-option"><span class="radio-circle"></span>To'liq</label>
+        <label class="radio-option"><span class="radio-circle"></span>Qisman</label>
+        <label class="radio-option"><span class="radio-circle"></span>Hali emas</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection-beat">
+    <div class="beat-kicker">Takrorlash jadvali <span class="time">(10s)</span></div>
+    <div class="beat-body">
+      <p style="font-size: 13.5px;">Bu mavzu unutilmasligi uchun:</p>
+      <div class="schedule-list">
+        <div class="schedule-row"><span class="schedule-date">📅 Ertaga</span><span>5 daqiqalik qayta ko'rib chiqish</span></div>
+        <div class="schedule-row"><span class="schedule-date">📅 3 kundan keyin</span><span>5 daqiqa</span></div>
+        <div class="schedule-row"><span class="schedule-date">📅 7 kundan keyin</span><span>5 daqiqa</span></div>
+        <div class="schedule-row"><span class="schedule-date">📅 21 kundan keyin</span><span>10 daqiqa</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-box">
+    <div class="kicker">✨ Yopilish (aniqlik ≥60%)</div>
+    <p>Bugun siz tenglamaning asosiy ma'nosini tushundingiz: tenglikni saqlovchi son — ildiz.</p>
+    <p>1200 yil oldin xorazmlik olim <strong>Abu Abdulloh Muhammad ibn Muso Al-Xorazmiy</strong> bu ilmni birinchi bo'lib aniq qoidalarga solgan. "Algebra" so'zi uning kitobidan — <em>"Al-jabr"</em> dan kelgan. Bu so'z "buzilgan narsani qaytadan tiklash" degan ma'noni anglatadi.</p>
+    <p>Siz bugun uning merosini davom ettirdingiz. Keyingi darsda esa tenglamalarni yechishning <strong>Al-Xorazmiy usulini</strong> o'rganasiz.</p>
+    <div class="final-line">Uchinchi Renessans — Sizdan boshlanadi.</div>
+  </div>
+
+  <div class="nav-row" style="margin-top: 20px;">
+    <button class="btn btn-secondary" onclick="goPrev()">← Orqaga</button>
+    <button class="btn" onclick="completeHomework()">🎉 Uy vazifasini yakunlash</button>
+  </div>
+</section>
+
+</main>
+
+<script>
+  const phases = [
+    { id: '0a', name: 'Mavzu Ko\'rigi' },
+    { id: '0b', name: 'Flesh Kartalar' },
+    { id: '1', name: '1 · Xotira Hurrasi' },
+    { id: '2', name: '2 · Hikoya' },
+    { id: '3', name: '3 · O\'yinlar' },
+    { id: '4', name: '4 · Hayotiy Vazifa' },
+    { id: '5', name: '5 · Mustahkamlash' },
+    { id: '6', name: '6 · Yakuniy Sinov' },
+    { id: '7', name: '7 · Aks Ettirish' }
+  ];
+
+  let currentPhase = 0;
+  let visited = new Set([0]);
+  let bossHP = 100;
+
+  // Build tabs
+  const tabContainer = document.getElementById('phaseTabs');
+  phases.forEach((p, i) => {
+    const btn = document.createElement('button');
+    btn.textContent = p.name;
+    btn.onclick = () => goPhase(i);
+    tabContainer.appendChild(btn);
+  });
+
+  // Build progress bar
+  const progressBar = document.getElementById('progressBar');
+  phases.forEach(() => {
+    const s = document.createElement('span');
+    s.className = 'step';
+    progressBar.appendChild(s);
+  });
+
+  function goPhase(idx) {
+    document.querySelectorAll('.phase').forEach((el, i) => {
+      el.classList.toggle('active', i === idx);
+    });
+    document.querySelectorAll('nav.phase-tabs button').forEach((el, i) => {
+      el.classList.toggle('active', i === idx);
+    });
+    currentPhase = idx;
+    visited.add(idx);
+    updateProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function updateProgress() {
+    document.querySelectorAll('#progressBar .step').forEach((el, i) => {
+      el.classList.remove('active', 'visited');
+      if (i === currentPhase) el.classList.add('active');
+      else if (visited.has(i)) el.classList.add('visited');
+    });
+  }
+
+  function goNext() {
+    if (currentPhase < phases.length - 1) goPhase(currentPhase + 1);
+  }
+
+  function goPrev() {
+    if (currentPhase > 0) goPhase(currentPhase - 1);
+  }
+
+  // Phase 0-A screen navigation
+  function nextScreen(phaseId, screenNum) {
+    const container = document.querySelector('[data-phase="0"] .card');
+    container.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    container.querySelector(`[data-screen="${screenNum}"]`).classList.add('active');
+    const dots = container.querySelectorAll('.dot');
+    dots.forEach((d, i) => d.classList.toggle('active', i === screenNum - 1));
+  }
+
+  function fillBost(chip) {
+    document.getElementById('bostInput').value = chip.textContent.trim();
+    document.getElementById('bostRecall').textContent = `"${chip.textContent.trim()}"`;
+  }
+
+  // Question answering
+  function answer(btn, isCorrect, feedbackText) {
+    const block = btn.closest('.q-block');
+    const options = block.querySelectorAll('.option');
+    const feedback = block.querySelector('.feedback');
+
+    options.forEach(o => o.disabled = true);
+
+    if (isCorrect) {
+      btn.classList.add('selected-correct');
+      feedback.classList.remove('visible');
+    } else {
+      btn.classList.add('selected-wrong');
+      // Reveal correct answer
+      options.forEach(o => {
+        if (o.getAttribute('onclick')?.includes('answer(this, true')) {
+          o.classList.add('reveal-correct');
+        }
+      });
+      if (feedbackText) {
+        feedback.textContent = feedbackText;
+        feedback.classList.add('visible');
+      }
+    }
+  }
+
+  // Mystery Box
+  const boxContents = {
+    1: { eq: '3x = 15', candidate: 'x = 5', prediction: '1 ta ildiz', check: '15 = 15 ✓', color: 'green' },
+    2: { eq: '4x + 7 = 4x + 2', candidate: 'x = 1', prediction: 'Ildiz yo\'q', check: '11 ≠ 6 (tasdiqlaydi)', color: 'red' },
+    3: { eq: '2(x + 3) = 2x + 6', candidate: 'x = 10, x = −4', prediction: 'Cheksiz ildiz', check: '26 = 26 va −2 = −2', color: 'purple' },
+    4: { eq: '−3(x + 3) = 4x + 5', candidate: 'x = −2', prediction: '1 ta ildiz (sirtdan ko\'rinishga qaramay)', check: '−3 = −3 ✓', color: 'green' }
+  };
+
+  function openBox(el, n) {
+    el.classList.add('opened');
+    const data = boxContents[n];
+    el.innerHTML = `<div style="font-size: 11px; color: var(--muted);">${n}-quti</div><code style="font-size: 12px;">${data.eq}</code>`;
+
+    const contentDiv = document.getElementById('boxContent');
+    contentDiv.innerHTML = `
+      <div class="mystery-stages">
+        <div class="stage">
+          <div class="stage-label">1-bosqich · Bashorat</div>
+          <div>Tenglama: <code>${data.eq}</code></div>
+          <div>Bashorat: <strong style="color: ${data.color === 'green' ? '#065F46' : data.color === 'red' ? '#991B1B' : '#5B21B6'}">${data.prediction}</strong></div>
+        </div>
+        <div class="stage">
+          <div class="stage-label">2-bosqich · Tekshirish</div>
+          <div>Nomzod: <code>${data.candidate}</code></div>
+          <div>Natija: <strong>${data.check}</strong></div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Phase 4/6 expected answer reveal
+  function revealExpected(btn, id) {
+    const box = document.getElementById('exp-' + id);
+    if (box) {
+      box.classList.toggle('visible');
+      btn.textContent = box.classList.contains('visible') ? '🙈 Yashirish' : '💡 Kutilgan javobni ko\'rsatish';
+    }
+  }
+
+  function revealTefcas(btn, id) {
+    const box = document.getElementById(id);
+    if (box) {
+      box.classList.toggle('visible');
+      btn.textContent = box.classList.contains('visible') ? '🙈 Yashirish' : '⚠️ TEFCAS fikr-mulohaza';
+    }
+  }
+
+  function completeHomework() {
+    alert('🎉 Tabriklaymiz! Uy vazifasi muvaffaqiyatli yakunlandi.\n\nSessiya: ~32 daqiqa\nFazalar: 9/9\n\nAl-Xorazmiy sizdan iftixor qiladi!');
+  }
+
+  // Initialize
+  goPhase(0);
+</script>
+
+</body>
+</html>
