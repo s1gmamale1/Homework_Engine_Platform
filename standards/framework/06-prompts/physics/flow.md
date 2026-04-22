@@ -43,6 +43,12 @@ classify → preview-hard → flashcards → memory-sprint (7) → game-breaks (
 
 ---
 
+## Assembly
+
+All phase outputs are assembled into a single `.md` file — that is the final homework. Each phase becomes a section in order.
+
+---
+
 ## Notes
 
 - Covers: Fizika G7-11
