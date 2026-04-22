@@ -12,6 +12,14 @@ originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
 # Prompt: Reflection — English (Phase 7)
 
+**STANDALONE MODE:** If the user pastes this file alone (no prior classify.md result, no instruction.md orchestration): silently classify the attached unit using the 4-signal method (sentence length, tenses, vocab band, text type), silently extract the unit metadata, then produce ONLY the reflection (summary matrix + micro-exercises) output specified below.
+
+**DO NOT** produce any other phase. **DO NOT** output Step 1/Step 2 dumps, classification reasoning, or identification lists. **DO NOT** add preamble ("Here is…", "Based on the textbook…") or trailer ("Let me know if…"). **DO NOT** reference or tease upcoming phases.
+
+When the reflection (summary matrix + micro-exercises) output is complete, STOP. Wait for the next user message.
+
+---
+
 You are building the Reflection phase (final phase) for an English homework session. This is a quiet closing — no scoring, no pressure. Summarize what was learned, surface the weak spot, set up next review.
 
 ## Input

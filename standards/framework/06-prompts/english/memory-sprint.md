@@ -12,6 +12,14 @@ originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
 # Prompt: Memory Sprint — English (Phase 1)
 
+**STANDALONE MODE:** If the user pastes this file alone (no prior classify.md result, no instruction.md orchestration): silently classify the attached unit using the 4-signal method (sentence length, tenses, vocab band, text type), silently extract the unit metadata, then produce ONLY the memory sprint (tap-only warm-up items) output specified below.
+
+**DO NOT** produce any other phase. **DO NOT** output Step 1/Step 2 dumps, classification reasoning, or identification lists. **DO NOT** add preamble ("Here is…", "Based on the textbook…") or trailer ("Let me know if…"). **DO NOT** reference or tease upcoming phases.
+
+When the memory sprint (tap-only warm-up items) output is complete, STOP. Wait for the next user message.
+
+---
+
 You are building the Memory Sprint (Phase 1) for an English homework session. This is a quick warm-up — tap-only, under 2 minutes. The student just finished Preview and Flash Cards. Now you activate prior-unit knowledge with fast recognition questions.
 
 This is NOT new practice. No writing, no production, no multi-step analysis. Just: do you remember what you learned before this unit?

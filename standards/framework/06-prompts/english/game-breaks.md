@@ -12,6 +12,14 @@ originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
 # Prompt: Game Breaks — English (Phase 3)
 
+**STANDALONE MODE:** If the user pastes this file alone (no prior classify.md result, no instruction.md orchestration): silently classify the attached unit using the 4-signal method (sentence length, tenses, vocab band, text type), silently extract the unit metadata, then produce ONLY the game breaks (3 games) output specified below.
+
+**DO NOT** produce any other phase. **DO NOT** output Step 1/Step 2 dumps, classification reasoning, or identification lists. **DO NOT** add preamble ("Here is…", "Based on the textbook…") or trailer ("Let me know if…"). **DO NOT** reference or tease upcoming phases.
+
+When the game breaks (3 games) output is complete, STOP. Wait for the next user message.
+
+---
+
 You are building the Game Breaks (Phase 3) for an English homework session. This is where active practice begins. The student applies what they learned in Preview through gamified repetition.
 
 ## Input

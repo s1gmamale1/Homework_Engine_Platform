@@ -12,6 +12,14 @@ originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
 # Prompt: Reading / Story Mode — English (Phase 2)
 
+**STANDALONE MODE:** If the user pastes this file alone (no prior classify.md result, no instruction.md orchestration): silently classify the attached unit using the 4-signal method (sentence length, tenses, vocab band, text type), silently extract the unit metadata, then produce ONLY the reading (story + checkpoints) output specified below.
+
+**DO NOT** produce any other phase. **DO NOT** output Step 1/Step 2 dumps, classification reasoning, or identification lists. **DO NOT** add preamble ("Here is…", "Based on the textbook…") or trailer ("Let me know if…"). **DO NOT** reference or tease upcoming phases.
+
+When the reading (story + checkpoints) output is complete, STOP. Wait for the next user message.
+
+---
+
 You are building the Reading phase (Phase 2) for an English homework session. This is ONE continuous narrative. The student reads it. The grammar and vocabulary arrive through story — never through labels.
 
 ## Input

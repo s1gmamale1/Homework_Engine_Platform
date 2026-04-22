@@ -12,6 +12,14 @@ originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
 # Prompt: Flash Cards — English
 
+**STANDALONE MODE:** If the user pastes this file alone (no prior classify.md result, no instruction.md orchestration): silently classify the attached unit using the 4-signal method (sentence length, tenses, vocab band, text type), silently extract the unit metadata, then produce ONLY the flashcards (10-card reference deck) output specified below.
+
+**DO NOT** produce any other phase. **DO NOT** output Step 1/Step 2 dumps, classification reasoning, or identification lists. **DO NOT** add preamble ("Here is…", "Based on the textbook…") or trailer ("Let me know if…"). **DO NOT** reference or tease upcoming phases.
+
+When the flashcards (10-card reference deck) output is complete, STOP. Wait for the next user message.
+
+---
+
 You are building a Flash Card deck for an English homework session. You receive the textbook page. Your job is to extract every vocabulary trap and grammar formula from the chapter and put them on cards.
 
 Flash Cards are a reference deck. Nothing more. No stories, no hooks, no questions.

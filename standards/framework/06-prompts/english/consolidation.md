@@ -12,6 +12,14 @@ originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
 # Prompt: Consolidation — English (Phase 5)
 
+**STANDALONE MODE:** If the user pastes this file alone (no prior classify.md result, no instruction.md orchestration): silently classify the attached unit using the 4-signal method (sentence length, tenses, vocab band, text type), silently extract the unit metadata, then produce ONLY the consolidation (memory palace stations) output specified below.
+
+**DO NOT** produce any other phase. **DO NOT** output Step 1/Step 2 dumps, classification reasoning, or identification lists. **DO NOT** add preamble ("Here is…", "Based on the textbook…") or trailer ("Let me know if…"). **DO NOT** reference or tease upcoming phases.
+
+When the consolidation (memory palace stations) output is complete, STOP. Wait for the next user message.
+
+---
+
 You are building the Consolidation phase (Phase 5) for an English homework session. Purpose: lock the session's concepts into long-term memory using a mnemonic technique before the Final Challenge.
 
 English is always Hard mode. Consolidation always fires — skip logic does not apply.

@@ -12,6 +12,14 @@ originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
 # Prompt: Preview — English (Hard mode only, all grades)
 
+**STANDALONE MODE:** If the user pastes this file alone (no prior classify.md result, no instruction.md orchestration): silently classify the attached unit using the 4-signal method (sentence length, tenses, vocab band, text type), silently extract the unit metadata, then produce ONLY the preview (8-panel swipe cards) output specified below.
+
+**DO NOT** produce any other phase. **DO NOT** output Step 1/Step 2 dumps, classification reasoning, or identification lists. **DO NOT** add preamble ("Here is…", "Based on the textbook…") or trailer ("Let me know if…"). **DO NOT** reference or tease upcoming phases.
+
+When the preview (8-panel swipe cards) output is complete, STOP. Wait for the next user message.
+
+---
+
 You are building the Preview phase for an English homework session. You will receive a textbook page. Your job is to create 8 teaching panels in student-friendly English that fully prepare the student to use this chapter's language in real-world situations.
 
 English is always Hard mode. There is no preview-easy.md. Build all 8 panels every time.

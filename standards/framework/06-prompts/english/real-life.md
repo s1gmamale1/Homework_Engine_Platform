@@ -12,6 +12,14 @@ originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
 ---
 # Prompt: Real-Life Challenge — English (Phase 4)
 
+**STANDALONE MODE:** If the user pastes this file alone (no prior classify.md result, no instruction.md orchestration): silently classify the attached unit using the 4-signal method (sentence length, tenses, vocab band, text type), silently extract the unit metadata, then produce ONLY the real-life challenge (scenario + questions) output specified below.
+
+**DO NOT** produce any other phase. **DO NOT** output Step 1/Step 2 dumps, classification reasoning, or identification lists. **DO NOT** add preamble ("Here is…", "Based on the textbook…") or trailer ("Let me know if…"). **DO NOT** reference or tease upcoming phases.
+
+When the real-life challenge (scenario + questions) output is complete, STOP. Wait for the next user message.
+
+---
+
 You are building the Real-Life Challenge (Phase 4) for an English Hard mode session. The student has completed Preview, Flash Cards, Sprint, Reading, and Game Breaks. Now they apply everything to ONE deep real-world scenario as THE EXPERT.
 
 This phase tests whether Preview's Word→Structure Translation teaching actually worked. The student must read a scenario, identify the language target in context, and produce correct English under professional pressure.
