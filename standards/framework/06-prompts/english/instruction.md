@@ -1,94 +1,52 @@
----
-subject: english
-phase: instruction
-mode: hard
-grades: 5-11
-cefr: detected per unit (A1 to B2) via classify.md
-grade-anchored-fields: [pro-roles, memory-palace-locations]
-level-anchored-fields: [question-count, word-count, tense-set, card-count, complexity]
-version: 1.1
-supersedes: reference_nets_english_master_instruction.md (Section 7 per-phase block)
-originSessionId: 190c4f0e-0c6e-4917-937c-8be234f1347a
----
 # English — Homework Builder Instruction
 
-You are building a homework session for English (G5–G11). Follow these steps in order.
+You are building a homework session for English (G5-11). Follow these steps in order.
 
-## Step 1: Identify the lesson
+## Step 1: Identify the unit
 
 You receive a grade + unit reference (e.g., "Grade 7 English, Unit 4 — Jobs and Workplaces").
 
 Find and read the corresponding textbook pages. Extract:
-- Topic name and unit title
-- 2–3 big ideas a student could name in one breath
-- 10 vocabulary items (traps, stress patterns, spelling, false friends, register)
-- Grammar formulas shown only by example (extract algebraically)
-- Page refs for every example you will use
-- Target tenses present in the chapter
-- One UZ↔EN bridge per big idea
+- Unit title and 2-3 big ideas
+- Every vocabulary item, collocation, false friend, stress trap present
+- Every grammar pattern shown in the chapter (including patterns shown only by example)
+- Every worked example and exercise prompt
+- Any diagrams, picture prompts, or audio scripts
 
-## Step 2: Detect CEFR level
+## Step 2: Classify the lesson
 
-Run `classify.md` on the unit. Measure all four signal axes (sentence length, tenses, vocabulary band, text type). Output one level: `A1` · `A1+` · `A2` · `A2+` · `B1` · `B1+` · `B2`.
+Read `06-prompts/english/classify.md` and apply it.
 
-**Carry this detected level forward through all phases.** All quantitative parameters (question counts, word counts, card counts, tense complexity) are driven by this level — not by the grade.
+Two axes:
+1. **Mode:** EASY or HARD (drives phase count — see `flow.md`)
+2. **CEFR Level:** A1 · A1+ · A2 · A2+ · B1 · B1+ · B2 (drives complexity parameters)
 
-Grade-default reference for mismatch checking:
+Output: one Mode + one Level + one-sentence reason. Both carry forward through all phases.
 
-| Grade | Default level |
-|:-:|:-:|
-| G5 | A1 |
-| G6 | A1+ |
-| G7 | A2+/B1 |
-| G8 | B1 |
-| G9 | B1+ |
-| G10 | B1+/B2 |
-| G11 | B2 |
+## Step 3: Load the right prompts
 
-If the detected level differs from the grade default, log the mismatch here before proceeding. Signals override grade default when they disagree by more than one level.
+Read `06-prompts/english/flow.md` — it tells you which phase prompts to run for your Mode.
 
-## Step 3: Identify grade (for cultural anchors only)
+- If EASY → 5 phases starting with `preview-easy.md`
+- If HARD → 8 phases starting with `preview-hard.md`
 
-Read the grade from the textbook cover or unit header. The grade drives:
-- Phase 4 pro-roles (real-life.md)
-- Memory Palace location concreteness (consolidation.md — G5–6 may use student's own maktab/mahalla)
+## Step 4: Build
 
-Note if grade default level and classify.md detected level differ. Do not re-negotiate the detected level.
+Follow each loaded prompt exactly. Use the extracted textbook content as the source — never invent grammar rules, vocabulary items, or examples not present in the source chapter.
 
-## Step 4: Load phase prompts in order
+Apply the detected **CEFR level** to quantitative parameters (card count, sentence length, tenses allowed, word count).
+Apply the **grade** to cultural anchors (pro-roles in real-life.md, location concreteness in consolidation.md).
 
-Read each file and hold its rules in context before building that phase:
+## Step 5: Verify
 
-1. `preview-hard.md` → Phase 0-A (swipe cards — count from CEFR level table)
-2. `flashcards.md` → Phase 0-B (reference cards — count from CEFR level table)
-3. `memory-sprint.md` → Phase 1 (warm-up items — count from CEFR level table)
-4. `reading.md` → Phase 2 (story + checkpoints — length from CEFR level table)
-5. `game-breaks.md` → Phase 3 (3 games — items per game from CEFR level table)
-6. `real-life.md` → Phase 4 (pro-role scenario — questions from CEFR level table, role from grade)
-7. `consolidation.md` → Phase 5 (mnemonic — stations from CEFR level table)
-8. `final-challenge.md` → Phase 6 (boss fight — questions + HP from CEFR level table)
-9. `reflection.md` → Phase 7 (closing — micro-exercises from CEFR level table)
+Before outputting each phase:
 
-## Step 5: Build each phase
-
-Feed previous outputs forward. Every phase may reference content produced in earlier phases.
-Use only the textbook page as content source. Never invent grammar rules or vocabulary items not present in the source chapter.
-
-Apply the detected CEFR level for all quantitative parameters. Apply the grade for cultural anchors (pro-roles in Phase 4, location concreteness in Phase 5).
-
-## Step 6: Verify
-
-Before outputting, check:
-- [ ] CEFR level detected and logged (Step 2). Mismatch with grade default noted if present.
-- [ ] All quantitative outputs match the detected level parameters (question count, word count, card count, tense set)
-- [ ] **Level-appropriate question counts?** (from classify.md → phase tables)
-- [ ] **Grade-appropriate pro-roles?** (from grade → real-life.md pro-role table)
-- [ ] Tenses: level-allowed set only — never a banned tense
-- [ ] UZ↔EN bridge present (A1: every card; A2+: preview Cards 2, 5, 7 minimum)
-- [ ] Stress + IPA on all 2+-syllable words with non-initial stress or UZ/RU mispronunciation (B1+ levels only)
-- [ ] 55/45 national-pride balance — Uzbekistan 55%, global 45%
-- [ ] No meta-talk, no preamble, no "Here is the…" opener
-- [ ] ASCII boxes consistent (~53 chars wide) on all swipe cards
+- [ ] Mode and Level detected and stamped on output
+- [ ] Tenses stay in the level-allowed set — no banned tense, not even in examples
+- [ ] UZ↔EN bridge present where the prompt requires it
+- [ ] 55/45 national-pride balance — modern Uzbek contexts, no bazaar/village/cowboy clichés
+- [ ] Every item traces to actual chapter content — no inventions
 - [ ] Tags on every Q, checkpoint, and boss item: `[Bloom: LX | PISA: LX]`
-- [ ] Phase 1: tap-only formats only (MC4, T/F, YNNG) — no fill-in, no typing
-- [ ] Phase 2: zero segment labels in the narrative — beats invisible
+- [ ] Phase 1: tap-only formats (MC4, T/F, YNNG) — no typing or open-ended
+- [ ] Phase 2: zero segment labels in the narrative — beats are invisible
+- [ ] No meta-talk, no preamble, no "Here is the..." opener
