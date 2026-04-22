@@ -1,0 +1,100 @@
+# Eslang
+
+20
+O‘lchov birliklarini almashtirish
+Qarang va o‘rganing
+1  Sonlar o‘qida katta va kichik o‘lchov birliklari ifodalangan.
+ 
+a) 
+A va B harflariga qanday miqdor mos keladi?        
+ 
+ 
+0   
+1000   2000  3000  
+A  
+5000  6000
+0   
+1   
+2  
+3  
+4  
+5  
+B
+km
+m
+ 
+ 
+A = 4000 m,    B = 6 km
+ 
+b) 
+C va D harflariga qanday miqdor mos keladi?             
+ 
+ 
+0   
+100   
+C  
+300  
+400  
+500  
+600
+0   
+1   
+2  
+3  
+D  
+5  
+6
+m
+cm
+ 
+ 
+C = 200 cm,      D = 4 m
+ 
+c) 
+E va F harflariga qanday miqdor mos keladi?              
+ 
+ 
+0   
+500   1000  1500  2000  
+F  
+3000
+0   
+0,5   
+1  
+1,5  
+2  
+E  
+3
+kg
+g
+ 
+ 
+E = 2,5 kg,     F = 2500 g
+ 
+d) 
+G va H harflariga qanday miqdor mos keladi?                              
+ 
+ 
+0   
+500   1000  1500  2000  
+H  
+3000
+0   
+0,5   
+1  
+G  
+2  
+2,5  
+3
+ℓ
+ml
+ 
+ 
+ 
+ 
+G = 1,5 ℓ     H = 2500 ml 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   20
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   20
+13/11/24   14:49
+13/11/24   14:49
+

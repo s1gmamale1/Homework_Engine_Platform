@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase 3 Game Breaks",
+  "type": "object",
+  "required": ["phase_id", "lesson_id", "lang", "games"],
+  "properties": {
+    "phase_id": { "const": "phase_3" },
+    "lesson_id": { "type": "string" },
+    "lang": { "type": "string", "enum": ["uz", "ru"] },
+    "games": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "description": "Must include ≥1 Interactive Catalog game and ≥2 Default Pool games.",
+      "items": {
+        "type": "object",
+        "required": ["game_id", "catalog", "title", "items", "answer_key"],
+        "properties": {
+          "game_id": { "type": "string" },
+          "catalog": { "type": "string", "enum": ["default", "interactive"] },
+          "title": { "type": "string" },
+          "items": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 6,
+            "items": {
+              "type": "object",
+              "required": ["content", "tag"],
+              "properties": {
+                "content": {},
+                "hint": { "type": "string" },
+                "tag": {
+                  "type": "object",
+                  "required": ["bloom", "pisa"],
+                  "properties": {
+                    "bloom": { "type": "string" },
+                    "pisa": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "answer_key": { "type": "string" }
+        }
+      }
+    }
+  }
+}

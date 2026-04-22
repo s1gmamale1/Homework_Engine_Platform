@@ -1,0 +1,60 @@
+# Diagrammalar bilan ishlash — 7-dars
+
+59
+Diagrammalar bilan ishlash
+7-amaliy ko‘nikma
+Diagramma turini tanlash
+Diagrammaning har xil turi bor.
+Har bir diagrammaning oʻziga xos vazifasi bor. Demak, qanday ma’lumotlar
+aks ettirilishiga qarab diagramma yaratiladi.
+Bu modulda diagrammalarning faqat ikki turi: ustunli va doirasimon
+diagrammalar o‘rganiladi.
+Ustunli diagramma
+Ustunli diagramma obyektning miqdorini koʻrsatadi. Uning ikkita oʻq chizig‘i
+bor:
+•	 x oʻq (diagrammaning eni bo‘ylab joylashgan gorizontal o‘q);
+•	 y oʻq (diagrammaning bo‘yi bo‘ylab joylashgan vertikal o‘q).
+Doirasimon diagramma
+Doirasimon diagramma har bir obyekt umumiy miqdorning qancha
+ulushiga mos kelishini koʻrsatadi. Butun doirani umumiy miqdor sifatida
+olsak, har bir boʻlak shu umumiy miqdorning bir ulushi demakdir. Quyida
+doirasimon diagramma tasvirlangan.
+Har ikki turdagi: ustunli va doirasimon diagrammadan foydalanib koʻplab
+maʼlumotlarni taqdim etish mumkin.
+Ulush: butunning
+bir qismi.
+Umumiy
+miqdor: jami
+miqdorning
+qoʻshilgan
+qiymati.
+Ramz/Legenda:
+doirasimon
+diagrammaning
+har bir boʻlagi
+ma’nosini
+anglatuvchi ifoda.
+Kalit soʻzlar
+Oʻqlar: bittadan
+ko‘p o‘q chiziqlar.
+Kalit soʻz
+Har bir rangning soni
+Soni
+@edurtm_uz
+
+60
+7.1-mashg‘ulot
+Quyidagi savollarning javobini daftaringizga yozing.
+Maktabingizdagi o‘quvchilardan nechtasi ko‘zoynak taqishi, nechtasi taqmasligini
+aniqlang.
+1.	Bu maʼlumotni ustunli yoki doirasimon diagrammaning qay biridan
+foydalanib namoyish etgan ma’qul?
+2.	Nega aynan diagrammaning bu turini tanladingiz?
+7.2-mashg‘ulot
+Sinfdoshlaringizdan o‘tgan haftada qancha sabzavot iste’mol qilganlarini
+so‘rang.
+foydalanib namoyish etgan ma’qul deb o‘ylaysiz?
+8-amaliy ko‘nikma
+Maʼlumotlar jadvali asosida diagramma yaratish
+Diagrammani yaratishdan avval butun maʼlumot jadvalini, jumladan,
+mavzusini ham ajratib ko‘rsatish kerak bo‘ladi.

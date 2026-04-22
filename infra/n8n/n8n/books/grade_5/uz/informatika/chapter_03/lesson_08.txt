@@ -1,0 +1,62 @@
+# Diagrammalar bilan ishlash — 8-dars
+
+61
+Diagrammalar bilan ishlash
+Keyin ekranning yuqorisidagi Insert menyu bo‘limi tanlanadi.
+Istalgan ko‘rinishdagi ikonkani tanlash va ustunli diagrammadan
+foydalanish mumkin.
+Ustunli diagramma belgisi tanlansa, menyu bo‘limi hosil bo‘ladi. Menyu
+bo‘limidan birinchi tugma tanlanadi.
+8.1-mashg‘ulot
+Oʻqituvchingiz bergan shapes_2.xlsx faylini oching.
+Mazkur tasvirdagi shakllardan foydalanib maʼlumotlar jadvalini toʻldiring.
+1.	Shakllarning nomlarini 1-ustunga yozing.
+2.	Har bir shaklning jami miqdorini ko‘rsatuvchi sonni 2-ustunga yozing.
+Ikonka: aniq bir
+vazifani bajarish
+uchun tanlash
+mumkin boʻlgan
+tasvir, soʻz yoki
+soʻz birikmasidan
+iborat tugma.
+Kalit soʻz
+@edurtm_uz
+
+62
+8.2-mashg‘ulot
+O‘zingiz to‘ldirgan ma’lumotlar jadvali uchun ustunli diagramma yarating.
+8.3-mashg‘ulot
+Keyin xuddi shu ma’lumotlar uchun doirasimon diagramma yarating.
+Endi sizda bitta ustunli va bitta doirasimon diagramma bor.
+Ushbu faylni keyinroq 9.4-mashg‘ulotni bajarish uchun saqlab qo‘ying.
+Butun jadval, shu
+jumladan, jadval
+mavzusi ham
+belgilanadi.
+Maslahat
+9-amaliy ko‘nikma
+Diagrammaga x oʻqi, y oʻqi hamda diagramma nomini joylash
+Jadval yaratganingizda unga munosib mavzu va yorliq tanlaganingizga
+ishonch hosil qiling.
+Ustunli diagramma nima haqida ekani bilinib turishi uchun uning mavzusi
+hamda gorizontal va vertikal o‘qlari bo‘lishi kerak. Har bir oʻqning yorlig‘i
+bo‘lsin.
+Har bir rangning soni
+Soni
+
+63
+Doirasimon diagrammaning sarlavhasi u nima haqida ekanini ko‘rsatib
+turadi. Doirasimon diagrammada o‘q chiziqlari emas, legendalar bo‘ladi
+(Microsoft Excel buni avtomatik tarzda amalga oshiradi).
+Ustunli diagramma yoki doirasimon diagrammaga yangi sarlavha yozish
+uchun quyidagi amallar bajariladi:
+1)	diagramma tanlanadi;
+2)	mavzu blokiga sichqonchani olib borib, bir yoki ikki marta bosiladi;
+3)	matn o‘chiriladi;
+4)	yangi sarlavha yoziladi.
+Ustunli diagrammaga oʻq belgilarini kiritish uchun quyidagi amallar
+bajariladi:
+1)	Design menyu bo‘limi ochiladi;
+2)	Add Chart Element tugmasi tanlanadi;
+3)	Axis Titles tugmasi tanlanadi;
+4)	x oʻqqa yorliq joylashtirish uchun Horizontal tugmasi bosiladi;

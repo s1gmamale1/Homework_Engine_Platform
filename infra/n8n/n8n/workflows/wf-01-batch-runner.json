@@ -1,0 +1,101 @@
+{
+  "name": "NETS WF-01 Batch Runner",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{"field": "hours", "hoursInterval": 1}]
+        }
+      },
+      "id": "e5f6a7b8-0001-0001-0001-000000000001",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {},
+      "id": "e5f6a7b8-0001-0001-0001-000000000011",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [240, 480]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT task_id::text AS task_id, subject, grade, lang, lesson_id, pdf_uri FROM nets_task_queue WHERE status='pending' ORDER BY subject, grade, lang, lesson_id LIMIT 5",
+        "options": {}
+      },
+      "id": "e5f6a7b8-0001-0001-0001-000000000002",
+      "name": "Pull Pending Tasks",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [460, 380],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {"caseSensitive": true},
+          "conditions": [{"leftValue": "={{ $json.length }}", "rightValue": 0, "operator": {"type": "number", "operation": "notEquals"}}]
+        }
+      },
+      "id": "e5f6a7b8-0001-0001-0001-000000000003",
+      "name": "Any Tasks?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [680, 380]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "e5f6a7b8-0001-0001-0001-000000000004",
+      "name": "Loop Tasks",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "workflowId": { "value": "NETS WF-02 Micro Loop", "__rl": true, "mode": "name" },
+        "options": {}
+      },
+      "id": "e5f6a7b8-0001-0001-0001-000000000005",
+      "name": "Run Micro Loop",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 2,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE nets_task_queue SET attempts=attempts+1, last_error='Micro loop failed', updated_at=now() WHERE task_id='{{ $json.task_id }}'",
+        "options": {}
+      },
+      "id": "e5f6a7b8-0001-0001-0001-000000000006",
+      "name": "Log Failure",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [1120, 480],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {"main": [[{"node": "Pull Pending Tasks", "type": "main", "index": 0}]]},
+    "Manual Trigger": {"main": [[{"node": "Pull Pending Tasks", "type": "main", "index": 0}]]},
+    "Pull Pending Tasks": {"main": [[{"node": "Any Tasks?", "type": "main", "index": 0}]]},
+    "Any Tasks?": {
+      "main": [
+        [{"node": "Loop Tasks", "type": "main", "index": 0}],
+        []
+      ]
+    },
+    "Loop Tasks": {"main": [[{"node": "Run Micro Loop", "type": "main", "index": 0}]]},
+    "Run Micro Loop": {"main": [[{"node": "Loop Tasks", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1"},
+  "active": false
+}

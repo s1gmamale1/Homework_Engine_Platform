@@ -1,0 +1,816 @@
+{
+  "name": "NETS Main Pipeline v2",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "v2-manual-trigger",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2000,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "formTitle": "NETS Homework Generator v2",
+        "formDescription": "Select a textbook chapter to generate a homework session",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Subject",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Matematika"
+                  },
+                  {
+                    "option": "Ona_tili"
+                  },
+                  {
+                    "option": "Ingliz_tili"
+                  },
+                  {
+                    "option": "Adabiyot"
+                  },
+                  {
+                    "option": "Tarix"
+                  },
+                  {
+                    "option": "Geografiya"
+                  },
+                  {
+                    "option": "Tabiiy_fanlar"
+                  },
+                  {
+                    "option": "Informatika"
+                  },
+                  {
+                    "option": "Rus_tili"
+                  },
+                  {
+                    "option": "Musiqa"
+                  },
+                  {
+                    "option": "Tasviriy_sanat"
+                  },
+                  {
+                    "option": "Texnologiya"
+                  },
+                  {
+                    "option": "Tarbiya"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Grade",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "5"
+                  },
+                  {
+                    "option": "6"
+                  },
+                  {
+                    "option": "7"
+                  },
+                  {
+                    "option": "8"
+                  },
+                  {
+                    "option": "9"
+                  },
+                  {
+                    "option": "10"
+                  },
+                  {
+                    "option": "11"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Language",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "uz"
+                  },
+                  {
+                    "option": "ru"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Qism",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "none"
+                  },
+                  {
+                    "option": "1-qism"
+                  },
+                  {
+                    "option": "2-qism"
+                  }
+                ]
+              },
+              "requiredField": false
+            },
+            {
+              "fieldLabel": "Chapter",
+              "fieldType": "number",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Lesson",
+              "fieldType": "number",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Theme",
+              "fieldType": "text",
+              "requiredField": false
+            }
+          ]
+        },
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "v2-form-trigger",
+      "name": "Form Trigger",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -2000,
+        300
+      ],
+      "webhookId": "nets-homework-form-v2"
+    },
+    {
+      "parameters": {
+        "jsCode": "const crypto = require('crypto');\nconst form = $input.item.json;\n\nconst subject = String(form['Subject'] || '').trim();\nconst grade = String(form['Grade'] || '5').trim();\nconst lang = String(form['Language'] || 'uz').trim();\nconst theme = String(form['Theme'] || '').trim();\nconst qism = String(form['Qism'] || '').trim();\nconst chapter = String(form['Chapter'] || '1').trim();\nconst lesson = String(form['Lesson'] || '1').trim();\n\nif (!subject) throw new Error('Subject is required');\nif (!chapter || chapter === '0') throw new Error('Chapter number is required');\nif (!lesson || lesson === '0') throw new Error('Lesson number is required');\n\nconst folderMap = {\n  'Matematika': 'math',\n  'Ona_tili': 'ona_tili',\n  'Ingliz_tili': 'ingliz_tili',\n  'Adabiyot': 'adabiyot',\n  'Tarix': 'tarix',\n  'Geografiya': 'geografiya',\n  'Tabiiy_fanlar': 'tabiiy_fanlar',\n  'Informatika': 'informatika',\n  'Rus_tili': 'rus_tili',\n  'Musiqa': 'musiqa',\n  'Tasviriy_sanat': 'tasviriy_sanat',\n  'Texnologiya': 'texnologiya',\n  'Tarbiya': 'tarbiya'\n};\n\nconst subjectFolder = folderMap[subject] || subject.toLowerCase();\nconst qismPart = (qism && qism !== 'none') ? '/' + qism : '';\nconst chapterNum = String(parseInt(chapter, 10)).padStart(2, '0');\nconst lessonNum = String(parseInt(lesson, 10)).padStart(2, '0');\nconst chapterUri = `/home/node/nets/books/grade_${grade}/${lang}/${subjectFolder}${qismPart}/chapter_${chapterNum}/lesson_${lessonNum}.txt`;\n\nconst taskId = crypto.randomUUID();\nconst lessonId = `${subjectFolder}_g${grade}_${lang}_ch${chapterNum}_l${lessonNum}`;\n\nreturn [{ json: {\n  task_id: taskId,\n  lesson_id: lessonId,\n  subject,\n  grade: Number(grade),\n  lang,\n  theme,\n  chapter: chapterNum,\n  lesson: lessonNum,\n  qism: qism || '',\n  chapter_uri: chapterUri\n} }];"
+      },
+      "id": "v2-build-task",
+      "name": "Build Task From Form",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1750,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT task_id::text AS task_id, subject, grade, lang, lesson_id, pdf_uri AS chapter_uri FROM nets_task_queue WHERE status='pending' ORDER BY subject, grade, lang, lesson_id LIMIT 1",
+        "options": {}
+      },
+      "id": "v2-pull-task",
+      "name": "Pull One Task",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [
+        -1750,
+        112
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "cnT5xam3vJPZGyCU",
+          "name": "NETS Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.task_id || '' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "v2-has-task",
+      "name": "Has Task?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -1500,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const t = $input.item.json;\nif (!t.task_id) throw new Error('No task_id in input: ' + JSON.stringify(t));\nreturn [{ json: {\n  task_id: String(t.task_id),\n  lesson_id: String(t.lesson_id),\n  subject: String(t.subject),\n  grade: Number(t.grade),\n  lang: String(t.lang),\n  theme: String(t.theme || ''),\n  chapter: String(t.chapter || '01'),\n  qism: String(t.qism || ''),\n  chapter_uri: String(t.chapter_uri || '')\n}}];"
+      },
+      "id": "v2-set-task",
+      "name": "Set Task",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1250,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_task_queue (task_id, subject, grade, lang, lesson_id, pdf_uri, status, created_at, updated_at) VALUES ('{{ $json.task_id }}'::uuid, '{{ $json.subject }}', {{ $json.grade }}, '{{ $json.lang }}', '{{ $json.lesson_id }}', '{{ $json.chapter_uri }}', 'extracting', now(), now()) ON CONFLICT (task_id) DO UPDATE SET status='extracting', updated_at=now()",
+        "options": {}
+      },
+      "id": "v2-mark-extracting",
+      "name": "Mark Extracting",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [
+        -1000,
+        200
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "cnT5xam3vJPZGyCU",
+          "name": "NETS Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $('Set Task').item.json;\nconst fs = require('fs');\n\nconst chapterPath = item.chapter_uri;\n\nif (!chapterPath) {\n  throw new Error('No chapter_uri — use the form trigger to select a chapter.');\n}\n\nif (!fs.existsSync(chapterPath)) {\n  throw new Error('Chapter file not found: ' + chapterPath + '\\nExpected location inside Docker. Place the chapter .txt file there first.');\n}\n\nconst rawText = fs.readFileSync(chapterPath, 'utf8');\n\nif (!rawText || rawText.trim().length < 10) {\n  throw new Error('Chapter file is empty: ' + chapterPath);\n}\n\n// Clean the text: remove printer lines, timestamps, duplicate lines\nconst lines = rawText.split('\\n');\nconst seen = new Set();\nconst cleaned = [];\nfor (const line of lines) {\n  const s = line.trim();\n  // Skip printer/publisher lines\n  if (s.includes('SCHOOLBOOK') || s.includes('MATEMATICS')) continue;\n  // Skip timestamps like 09/08/24   19:30\n  if (/^\\d{2}\\/\\d{2}\\/\\d{2}/.test(s)) continue;\n  // Skip duplicate consecutive lines\n  if (seen.has(s) && s.length > 0) continue;\n  seen.add(s);\n  cleaned.push(s);\n}\n// Collapse multiple blank lines into one\nconst chapterText = cleaned.join('\\n').replace(/\\n{3,}/g, '\\n\\n').trim();\n\nreturn [{ json: {\n  pdf_text: chapterText,\n  task_id: item.task_id,\n  lesson_id: item.lesson_id,\n  subject: item.subject,\n  grade: item.grade,\n  lang: item.lang,\n  theme: item.theme,\n  chapter: item.chapter,\n  chapter_uri: item.chapter_uri\n} }];"
+      },
+      "id": "v2-extract-chapter",
+      "name": "Extract Chapter Text",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -750,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const task = $('Set Task').item.json;\nconst pdfContent = $json.pdf_text || 'Chapter content unavailable';\n\nconst chapterContext = `subject=${task.subject}, grade=${task.grade}, lang=${task.lang}, chapter=${task.chapter}${task.qism ? ', qism=' + task.qism : ''}${task.theme ? ', theme=' + task.theme : ''}`;\n\nconst schema = `{\n  \"topic\": \"lesson topic name\",\n  \"learning_objectives\": [\"objective 1\", \"objective 2\"],\n  \"key_concepts\": [{\"term\": \"...\", \"definition\": \"...\"}],\n  \"worked_examples\": [{\"problem\": \"...\", \"solution\": \"...\"}],\n  \"exercises\": [{\"question\": \"...\", \"answer\": \"...\"}],\n  \"summary\": \"brief summary of the lesson\"\n}`;\n\nconst payload = {\n  model: 'kimi-k2.5',\n  messages: [\n    { role: 'system', content: 'You are a curriculum extraction assistant. Extract structured lesson content from the provided textbook text. Be concise — do not copy large blocks of text verbatim. Maximum 3 worked examples and 5 exercises.' },\n    { role: 'user', content: `CONTEXT: ${chapterContext}\\n\\nLESSON TEXT:\\n${pdfContent}\\n\\nTASK: Extract the lesson content. Return ONLY valid JSON matching this schema exactly (no markdown, no extra fields):\\n${schema}` }\n  ],\n  response_format: { type: 'json_object' },\n  temperature: 1,\n  max_tokens: 6000\n};\n\nreturn [{ json: { payload, task_id: task.task_id, lesson_id: task.lesson_id, subject: task.subject, grade: task.grade, lang: task.lang, theme: task.theme || '', chapter: task.chapter, chapter_uri: task.chapter_uri, call_start: Date.now() } }];"
+      },
+      "id": "v2-build-extraction",
+      "name": "Build Extraction Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -500,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.moonshot.ai/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer sk-pJEISM5dnKSswgqkChu3vpLAAXZS1Yx0GdqXQdcpESZvuC2X"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify($json.payload) }}",
+        "options": {}
+      },
+      "id": "v2-kimi-extract",
+      "name": "Kimi Extract",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        -250,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $json;\nconst meta = $('Build Extraction Prompt').item.json;\n\nlet lessonJson;\ntry {\n  let raw = response.choices[0].message.content || '';\n  raw = raw.replace(/^\\s*```json\\s*/i, '').replace(/^\\s*```\\s*/i, '').replace(/\\s*```\\s*$/i, '').trim();\n  if (!raw) throw new Error('empty response from Kimi');\n  lessonJson = JSON.parse(raw);\n} catch(e) {\n  throw new Error('Invalid JSON from extraction: ' + e.message);\n}\n\nconst fs = require('fs');\ntry { fs.mkdirSync('/home/node/nets/nets-output', { recursive: true }); } catch(e) {}\nconst lessonPath = `/home/node/nets/nets-output/${meta.lesson_id}_lesson.json`;\nfs.writeFileSync(lessonPath, JSON.stringify(lessonJson, null, 2));\n\nconst tokensIn = response.usage?.prompt_tokens || 0;\nconst tokensOut = response.usage?.completion_tokens || 0;\nconst costUsd = (tokensIn * 0.60 + tokensOut * 2.50) / 1000000;\n\nreturn [{ json: {\n  lesson_path: lessonPath,\n  task_id: meta.task_id,\n  lesson_id: meta.lesson_id,\n  subject: meta.subject,\n  grade: meta.grade,\n  lang: meta.lang,\n  chapter: meta.chapter,\n  chapter_uri: meta.chapter_uri,\n  tokens_in: tokensIn,\n  tokens_out: tokensOut,\n  cost_usd: costUsd\n}}];"
+      },
+      "id": "v2-parse-save-lesson",
+      "name": "Parse & Save Lesson",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_lessons (lesson_id, subject, grade, lang, pdf_uri, md_uri, extracted_at) VALUES ('{{ $json.lesson_id }}', '{{ $json.subject }}', {{ $json.grade }}, '{{ $json.lang }}', '{{ $json.chapter_uri }}', '{{ $json.lesson_path }}', now()) ON CONFLICT (lesson_id) DO UPDATE SET md_uri=EXCLUDED.md_uri, extracted_at=now()",
+        "options": {}
+      },
+      "id": "v2-save-lesson-db",
+      "name": "Save Lesson to DB",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [
+        250,
+        200
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "cnT5xam3vJPZGyCU",
+          "name": "NETS Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT phase_id FROM nets_phase_outputs WHERE lesson_id='{{ $('Set Task').first().json.lesson_id }}'",
+        "options": {}
+      },
+      "id": "v2-check-phases",
+      "name": "Check Done Phases",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [
+        250,
+        400
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "cnT5xam3vJPZGyCU",
+          "name": "NETS Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const task = $('Parse & Save Lesson').item.json;\nconst allPhases = [\n  { id: 'phase_0a', name: 'Theme Preview',      game_refs: [] },\n  { id: 'phase_0b', name: 'Flash Cards',         game_refs: [] },\n  { id: 'phase_1',  name: 'Memory Sprint',       game_refs: [] },\n  { id: 'phase_2',  name: 'Story Mode',          game_refs: [] },\n  { id: 'phase_3',  name: 'Game Breaks',         game_refs: ['03_Tile_Match','18_Puzzle_Lock','13_Tic_Tac_Toe_AI'] },\n  { id: 'phase_4',  name: 'Real-Life Challenge', game_refs: [] },\n  { id: 'phase_5',  name: 'Consolidation',       game_refs: [] },\n  { id: 'phase_6',  name: 'Final Boss',          game_refs: [] },\n  { id: 'phase_7',  name: 'Reflection',          game_refs: [] }\n];\n\nconst doneRows = $('Check Done Phases').all();\nconst donePhaseIds = new Set(doneRows.map(r => r.json.phase_id).filter(Boolean));\nconst pendingPhases = allPhases.filter(p => !donePhaseIds.has(p.id));\nconst phasesToRun = pendingPhases.length > 0 ? pendingPhases : allPhases;\n\nreturn phasesToRun.map(p => ({ json: {\n  task_id: task.task_id,\n  lesson_id: task.lesson_id,\n  subject: task.subject,\n  grade: task.grade,\n  lang: task.lang,\n  lesson_path: task.lesson_path,\n  phase_id: p.id,\n  phase_name: p.name,\n  game_refs: p.game_refs\n} }));"
+      },
+      "id": "v2-build-phase-list",
+      "name": "Build Phase List",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        500,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "v2-loop-phases",
+      "name": "Loop Phases",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        750,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.item.json;\nconst fs = require('fs');\nconst FW = '/home/node/nets/frameworks';\n\nconst subjectFileMap = {\n  'matematika': 'matematika', 'algebra': 'algebra', 'geometriya': 'geometriya',\n  'algebra_va_analiz': 'algebra_va_analiz', 'fizika': 'physics', 'kimyo': 'chemistry',\n  'biologiya': 'biology', 'tabiiy_fanlar': 'biology', 'ona_tili': 'ona_tili',\n  'adabiyot': 'ona_tili', 'ingliz_tili': 'english', 'rus_tili': 'rus_tili',\n  'tarix': 'tarix', 'ozbekiston_tarixi': 'ozbekiston_tarixi', 'jahon_tarixi': 'jahon_tarixi',\n  'geografiya': 'tarix', 'informatika': 'matematika'\n};\nconst subjectKey = (item.subject || 'matematika').toLowerCase();\nconst subjectFile = subjectFileMap[subjectKey] || 'matematika';\n\n// Extract shared header + phase-specific section from subject framework\n// This sends ~100% of the relevant rules without truncating anything important\nfunction extractSubjectFramework(fullText, phaseId) {\n  // Shared header: everything up to the phase-by-phase tuning section\n  const phaseTuningMarker = '## 4. Phase-by-Phase Tuning';\n  const headerEnd = fullText.indexOf(phaseTuningMarker);\n  const header = headerEnd > -1 ? fullText.slice(0, headerEnd) : fullText.slice(0, 10000);\n\n  // Phase-specific section markers\n  const markers = {\n    phase_0a: { start: '### 3.4 Pre-Session Tuning',  end: '## 4. Phase-by-Phase' },\n    phase_0b: { start: '**0-B Flash Cards',            end: '---\\n\\n## 4. Phase-by-Phase' },\n    phase_1:  { start: '### 4.1 Memory Sprint',        end: '### 4.2 Story Mode' },\n    phase_2:  { start: '### 4.2 Story Mode',           end: '### 4.3 Game Breaks' },\n    phase_3:  { start: '### 4.3 Game Breaks',          end: '### 4.4 Real-Life' },\n    phase_4:  { start: '### 4.4 Real-Life Challenge',  end: '### 4.5 Consolidation' },\n    phase_5:  { start: '### 4.5 Consolidation',        end: '### 4.6 Final Boss' },\n    phase_6:  { start: '### 4.6 Final Boss',           end: '### 4.7 Reflection' },\n    phase_7:  { start: '### 4.7 Reflection',           end: '\\n---\\n\\n## 5.' },\n  };\n\n  const m = markers[phaseId];\n  if (!m) return header;\n\n  const startIdx = fullText.indexOf(m.start);\n  if (startIdx === -1) return header;\n  const endIdx = m.end ? fullText.indexOf(m.end, startIdx) : -1;\n  const phaseSection = endIdx > -1 ? fullText.slice(startIdx, endIdx) : fullText.slice(startIdx);\n\n  return header + '\\n\\n---\\n\\n## PHASE-SPECIFIC RULES FOR THIS CALL\\n\\n' + phaseSection;\n}\n\nlet basePrompt = 'You are a NETS homework phase generator for Uzbekistan K-11 students.';\nlet subjectFramework = '';\nlet phaseSpec = '';\nlet outputSchema = '{}';\n\ntry { basePrompt = fs.readFileSync(`${FW}/system/phase_worker_base.md`, 'utf8'); } catch(e) {}\ntry {\n  const sf = fs.readFileSync(`${FW}/subjects/${subjectFile}.md`, 'utf8');\n  subjectFramework = extractSubjectFramework(sf, item.phase_id);\n} catch(e) {}\ntry { phaseSpec = fs.readFileSync(`${FW}/unified/${item.phase_id}.md`, 'utf8'); } catch(e) { phaseSpec = `Phase: ${item.phase_id}`; }\ntry { outputSchema = fs.readFileSync(`${FW}/schemas/${item.phase_id}.json`, 'utf8'); } catch(e) {}\n\nlet lessonText = 'Lesson content unavailable.';\ntry { lessonText = fs.readFileSync(item.lesson_path, 'utf8'); } catch(e) {}\n\nconst lang = item.lang === 'uz' ? 'Uzbek' : 'Russian';\n\nconst systemMessage = [\n  `## SYSTEM INVARIANTS\\n${basePrompt}`,\n  subjectFramework ? `## SUBJECT FRAMEWORK (${item.subject})\\n${subjectFramework}` : '',\n  phaseSpec ? `## PHASE SPECIFICATION (${item.phase_id})\\n${phaseSpec}` : ''\n].filter(Boolean).join('\\n\\n---\\n\\n');\n\nconst userMessage = [\n  `## LESSON CONTENT\\n${lessonText}`,\n  `## TASK CONTEXT\\n{\"grade\": ${item.grade}, \"lang\": \"${item.lang}\", \"subject\": \"${item.subject}\", \"lesson_id\": \"${item.lesson_id}\", \"phase_id\": \"${item.phase_id}\"}`,\n  `## OUTPUT SCHEMA — match every field name exactly\\n${outputSchema}`,\n  `## TASK\\nGenerate the ${item.phase_id} (${item.phase_name}) phase. Fill every required field. Write all student-facing text in ${lang}. Return ONLY valid JSON — no markdown fences, no extra text.`\n].join('\\n\\n---\\n\\n');\n\nconst payload = {\n  model: 'kimi-k2-turbo-preview',\n  messages: [\n    { role: 'system', content: systemMessage },\n    { role: 'user', content: userMessage }\n  ],\n  response_format: { type: 'json_object' },\n  temperature: 1,\n  max_tokens: { phase_0a: 16000, phase_0b: 8000, phase_1: 8000, phase_2: 12000, phase_3: 16000, phase_4: 10000, phase_5: 8000, phase_6: 12000, phase_7: 6000 }[item.phase_id] || 4000\n};\n\nreturn [{ json: { payload, task_id: item.task_id, lesson_id: item.lesson_id, phase_id: item.phase_id, phase_name: item.phase_name, subject: item.subject, grade: item.grade, lang: item.lang, lesson_path: item.lesson_path, call_start: Date.now() } }];"
+      },
+      "id": "v2-compose-phase",
+      "name": "Compose Phase Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.moonshot.ai/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer sk-pJEISM5dnKSswgqkChu3vpLAAXZS1Yx0GdqXQdcpESZvuC2X"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify($json.payload) }}",
+        "options": {}
+      },
+      "id": "v2-kimi-phase",
+      "name": "Kimi Phase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1250,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $json;\nconst meta = $('Compose Phase Prompt').item.json;\n\nlet phaseJson;\ntry {\n  let raw = response.choices[0].message.content || '';\n  raw = raw.replace(/^\\s*```json\\s*/i, '').replace(/^\\s*```\\s*/i, '').replace(/\\s*```\\s*$/i, '').trim();\n  if (!raw) throw new Error('empty response from model');\n  phaseJson = JSON.parse(raw);\n} catch(e) {\n  throw new Error(`Phase ${meta.phase_id} invalid JSON: ` + e.message);\n}\n\nconst tokensIn = response.usage?.prompt_tokens || 0;\nconst tokensOut = response.usage?.completion_tokens || 0;\nconst costUsd = (tokensIn * 0.60 + tokensOut * 2.50) / 1000000;\nconst latency = Date.now() - meta.call_start;\nconst phaseJsonStr = JSON.stringify(phaseJson).replace(/'/g, \"''\");\n\nreturn [{ json: {\n  phase_output_json: phaseJsonStr,\n  task_id: meta.task_id,\n  lesson_id: meta.lesson_id,\n  phase_id: meta.phase_id,\n  subject: meta.subject,\n  grade: meta.grade,\n  lang: meta.lang,\n  lesson_path: meta.lesson_path,\n  tokens_in: tokensIn,\n  tokens_out: tokensOut,\n  cost_usd: costUsd,\n  latency_ms: latency\n}}];"
+      },
+      "id": "v2-parse-phase",
+      "name": "Parse Phase Output",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1500,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_phase_outputs (task_id, lesson_id, phase_id, output_json, schema_valid, tokens_in, tokens_out, cost_usd, latency_ms) VALUES ('{{ $json.task_id }}'::uuid, '{{ $json.lesson_id }}', '{{ $json.phase_id }}', '{{ $json.phase_output_json }}'::jsonb, true, {{ $json.tokens_in }}, {{ $json.tokens_out }}, {{ $json.cost_usd }}, {{ $json.latency_ms }}) ON CONFLICT (lesson_id, phase_id) DO UPDATE SET output_json=EXCLUDED.output_json, tokens_in=EXCLUDED.tokens_in, tokens_out=EXCLUDED.tokens_out, cost_usd=EXCLUDED.cost_usd",
+        "options": {}
+      },
+      "id": "v2-save-phase-db",
+      "name": "Save Phase to DB",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [
+        1750,
+        400
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "cnT5xam3vJPZGyCU",
+          "name": "NETS Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT po.task_id::text AS task_id, po.lesson_id, po.phase_id, po.output_json FROM nets_phase_outputs po WHERE po.lesson_id='{{ $('Set Task').first().json.lesson_id }}' ORDER BY CASE po.phase_id WHEN 'phase_0a' THEN 1 WHEN 'phase_0b' THEN 2 WHEN 'phase_1' THEN 3 WHEN 'phase_2' THEN 4 WHEN 'phase_3' THEN 5 WHEN 'phase_4' THEN 6 WHEN 'phase_5' THEN 7 WHEN 'phase_6' THEN 8 WHEN 'phase_7' THEN 9 END",
+        "options": {}
+      },
+      "id": "v2-load-all-phases",
+      "name": "Load All Phases",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        200
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "cnT5xam3vJPZGyCU",
+          "name": "NETS Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const allRows = $input.all();\nif (allRows.length === 0) throw new Error('No phase outputs found in DB');\n\nconst task_id = allRows[0].json.task_id;\nconst lesson_id = allRows[0].json.lesson_id;\n\nconst phases = {};\nallRows.forEach(row => {\n  const raw = row.json.output_json;\n  phases[row.json.phase_id] = (typeof raw === 'string') ? JSON.parse(raw) : raw;\n});\n\nconst p0a = phases.phase_0a || {};\nconst p0b = phases.phase_0b || {};\nconst p1  = phases.phase_1  || {};\nconst p2  = phases.phase_2  || {};\nconst p3  = phases.phase_3  || {};\nconst p4  = phases.phase_4  || {};\nconst p5  = phases.phase_5  || {};\nconst p6  = phases.phase_6  || {};\nconst p7  = phases.phase_7  || {};\n\nlet md = [];\nmd.push(`# NETS Uy Vazifasi — ${lesson_id}`);\nmd.push('');\n\n// PHASE 0-A — schema: gate_quote{text,author}, panels[]{number,title,content}, bost_goal\nmd.push('---\\n## PHASE 0-A: MAVZU KO\\'RIGI');\nif (p0a.gate_quote) { md.push(`> *\"${p0a.gate_quote.text}\"* — ${p0a.gate_quote.author}`); md.push(''); }\n(p0a.panels || []).forEach(p => { md.push(`### Panel ${p.number}: ${p.title}`); md.push(p.content || ''); md.push(''); });\nif (p0a.bost_goal) md.push(`**Bugungi Maqsad:** ${p0a.bost_goal}\\n`);\n\n// PHASE 0-B — schema: cards[]{number,concept,visual_description,is_common_mistake}\nmd.push('---\\n## PHASE 0-B: FLASH KARTALAR');\n(p0b.cards || []).forEach(c => { md.push(`- **${c.concept}** — ${c.visual_description}${c.is_common_mistake ? ' ⚠️' : ''}`); });\nmd.push('');\n\n// PHASE 1 — schema: questions[]{number,format,prompt,options,answer,tag{bloom,pisa}}\nmd.push('---\\n## PHASE 1: XOTIRA SPRINTI');\n(p1.questions || []).forEach(q => {\n  md.push(`${q.number}. [${q.format}] ${q.prompt}`);\n  if (q.options) q.options.forEach((o, i) => md.push(`   ${String.fromCharCode(65+i)}) ${o}`));\n  md.push(`   **Javob:** ${q.answer}`);\n  if (q.tag) md.push(`   *[Bloom: ${q.tag.bloom} | PISA: ${q.tag.pisa}]*`);\n  md.push('');\n});\nif (p1.adaptation_rule) md.push(`*${p1.adaptation_rule}*\\n`);\n\n// PHASE 2 — schema: story_text (string), checkpoints[]{number,question,answer,tag}\nmd.push('---\\n## PHASE 2: HIKOYA REJIMI');\nif (p2.story_text) { md.push(p2.story_text); md.push(''); }\n(p2.checkpoints || []).forEach(cp => {\n  md.push(`**Savol ${cp.number}:** ${cp.question}`);\n  md.push(`**Javob:** ${cp.answer}`);\n  if (cp.tag) md.push(`*[Bloom: ${cp.tag.bloom} | PISA: ${cp.tag.pisa}]*`);\n  md.push('');\n});\n\n// PHASE 3 — schema: games[]{game_id,catalog,title,items[]{content,hint,tag},answer_key}\nmd.push('---\\n## PHASE 3: O\\'YIN TANAFFUSLARI');\n(p3.games || []).forEach((game, gi) => {\n  md.push(`### ${gi+1}-o'yin: ${game.title} [${game.catalog}]`);\n  (game.items || []).forEach((item, ii) => {\n    const content = typeof item.content === 'string' ? item.content : JSON.stringify(item.content);\n    md.push(`${ii+1}. ${content}`);\n    if (item.hint) md.push(`   *Yordam: ${item.hint}*`);\n    if (item.tag) md.push(`   *[Bloom: ${item.tag.bloom} | PISA: ${item.tag.pisa}]*`);\n  });\n  if (game.answer_key) md.push(`**Javoblar:** ${game.answer_key}`);\n  md.push('');\n});\n\n// PHASE 4 — schema: scenario{title,emoji,body_text}, questions[]{number,text,tag}, full_answer_key\nmd.push('---\\n## PHASE 4: HAYOTIY VAZIFA');\nif (p4.scenario) {\n  md.push(`### ${p4.scenario.emoji || ''} ${p4.scenario.title}`);\n  md.push(p4.scenario.body_text || '');\n  md.push('');\n}\n(p4.questions || []).forEach(q => {\n  md.push(`${q.number}. ${q.text}`);\n  if (q.tag) md.push(`   *[Bloom: ${q.tag.bloom} | PISA: ${q.tag.pisa}]*`);\n  md.push('');\n});\nif (p4.full_answer_key) md.push(`**Javoblar:** ${p4.full_answer_key}\\n`);\n\n// PHASE 5 — schema: technique, content_structure, entry_card, exercises[]{number,title,items[]{label,concept,vivid_image},interaction_model}, transition_line\nmd.push('---\\n## PHASE 5: MUSTAHKAMLASH');\nif (p5.technique) md.push(`**Usul:** ${p5.technique} (${p5.content_structure})`);\nif (p5.entry_card) md.push(p5.entry_card + '\\n');\n(p5.exercises || []).forEach(ex => {\n  md.push(`#### ${ex.number}. ${ex.title} [${ex.interaction_model}]`);\n  (ex.items || []).forEach(it => {\n    md.push(`- **${it.label}** — ${it.concept}`);\n    if (it.vivid_image) md.push(`  _${it.vivid_image}_`);\n  });\n  md.push('');\n});\nif (p5.transition_line) md.push(`*${p5.transition_line}*\\n`);\n\n// PHASE 6 — schema: boss_hp, questions[]{number,difficulty,damage,question_text,socratic_hints[],rubric{full,partial,minimal},tag}\nmd.push('---\\n## PHASE 6: YAKUNIY BOSS');\nif (p6.boss_hp) md.push(`**Boss HP:** ${p6.boss_hp}\\n`);\n(p6.questions || []).forEach(q => {\n  const dmg = Math.abs(q.damage || 0);\n  md.push(`${q.number}. [${(q.difficulty||'').toUpperCase()} | -${dmg} HP] ${q.question_text}`);\n  if (q.socratic_hints && q.socratic_hints.length) {\n    q.socratic_hints.forEach((h, i) => md.push(`   Yordam ${i+1}: ${h}`));\n  }\n  if (q.rubric) md.push(`   *To'liq ball: ${q.rubric.full}*`);\n  if (q.tag) md.push(`   *[Bloom: ${q.tag.bloom} | PISA: ${q.tag.pisa}]*`);\n  md.push('');\n});\n\n// PHASE 7 — schema: results{strong_topics,weak_topics}, micro_exercises[]{number,exercise,answer}, bost_recall, reflection_prompts[], spaced_repetition_schedule[], closing_line\nmd.push('---\\n## PHASE 7: FIKRLASH');\nif (p7.results) {\n  if (p7.results.strong_topics && p7.results.strong_topics.length) md.push(`**Kuchli:** ${p7.results.strong_topics.join(', ')}`);\n  if (p7.results.weak_topics && p7.results.weak_topics.length) md.push(`**Zaif:** ${p7.results.weak_topics.join(', ')}`);\n  md.push('');\n}\n(p7.micro_exercises || []).forEach(ex => {\n  md.push(`${ex.number}. ${ex.exercise}`);\n  md.push(`   **Javob:** ${ex.answer}`);\n  md.push('');\n});\nif (p7.bost_recall) md.push(`**BOST:** ${p7.bost_recall}\\n`);\n(p7.reflection_prompts || []).forEach(p => { md.push(`• ${typeof p === 'string' ? p : p.prompt_text}`); });\nif (p7.spaced_repetition_schedule && p7.spaced_repetition_schedule.length) md.push(`\\n**Qayta ko'rish:** ${p7.spaced_repetition_schedule.join(' → ')}`);\nif (p7.closing_line) md.push(`\\n*${p7.closing_line}*`);\n\nconst fs = require('fs');\nconst mdPath = `/home/node/nets/nets-output/${lesson_id}_homework.md`;\nfs.writeFileSync(mdPath, md.join('\\n'));\n\nreturn [{ json: { md_path: mdPath, task_id, lesson_id } }];"
+      },
+      "id": "v2-assemble",
+      "name": "Assemble Homework",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2250,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE nets_task_queue SET status='done', updated_at=now() WHERE lesson_id='{{ $json.lesson_id }}'",
+        "options": {}
+      },
+      "id": "v2-mark-done",
+      "name": "Mark Done",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [
+        2500,
+        200
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "cnT5xam3vJPZGyCU",
+          "name": "NETS Postgres"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_session_log (task_id, stage, event, payload) VALUES ('{{ $('Set Task').first().json.task_id }}'::uuid, 'assemble', 'success', '{\"md_path\": \"{{ $json.md_path }}\"}'::jsonb)",
+        "options": {}
+      },
+      "id": "v2-log-done",
+      "name": "Log Done",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [
+        2750,
+        200
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "cnT5xam3vJPZGyCU",
+          "name": "NETS Postgres"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Pull One Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "Build Task From Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Task From Form": {
+      "main": [
+        [
+          {
+            "node": "Set Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pull One Task": {
+      "main": [
+        [
+          {
+            "node": "Has Task?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Task?": {
+      "main": [
+        [
+          {
+            "node": "Set Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Task": {
+      "main": [
+        [
+          {
+            "node": "Mark Extracting",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Extracting": {
+      "main": [
+        [
+          {
+            "node": "Extract Chapter Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Chapter Text": {
+      "main": [
+        [
+          {
+            "node": "Build Extraction Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Extraction Prompt": {
+      "main": [
+        [
+          {
+            "node": "Kimi Extract",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Kimi Extract": {
+      "main": [
+        [
+          {
+            "node": "Parse & Save Lesson",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse & Save Lesson": {
+      "main": [
+        [
+          {
+            "node": "Save Lesson to DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Lesson to DB": {
+      "main": [
+        [
+          {
+            "node": "Check Done Phases",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Done Phases": {
+      "main": [
+        [
+          {
+            "node": "Build Phase List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Phase List": {
+      "main": [
+        [
+          {
+            "node": "Loop Phases",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Phases": {
+      "main": [
+        [
+          {
+            "node": "Load All Phases",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Compose Phase Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compose Phase Prompt": {
+      "main": [
+        [
+          {
+            "node": "Kimi Phase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Kimi Phase": {
+      "main": [
+        [
+          {
+            "node": "Parse Phase Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Phase Output": {
+      "main": [
+        [
+          {
+            "node": "Save Phase to DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Phase to DB": {
+      "main": [
+        [
+          {
+            "node": "Loop Phases",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Load All Phases": {
+      "main": [
+        [
+          {
+            "node": "Assemble Homework",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Assemble Homework": {
+      "main": [
+        [
+          {
+            "node": "Mark Done",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Done": {
+      "main": [
+        [
+          {
+            "node": "Log Done",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "2cd88044-c4ff-4e77-b2ea-46cf745f00ef",
+  "meta": {
+    "instanceId": "a25b28084abe55522d0ab0e4bf3663d42a16233d3121be9d21c642b518037327"
+  },
+  "id": "v2NETSMainPipeline",
+  "tags": []
+}

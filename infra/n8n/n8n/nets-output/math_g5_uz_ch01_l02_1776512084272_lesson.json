@@ -1,0 +1,59 @@
+{
+  "topic": "1 milliongacha bo'lgan sonlar",
+  "learning_objectives": [
+    "1 milliongacha bo'lgan sonlarning o'rnilari (birlar, o'nlar, yuzlar, minglar, o'n minglar, yuz minglar) bilan tanishish",
+    "Sonlarni raqamlar va so'zlar bilan to'g'ri yozishni o'rganish",
+    "Sonlarni yoyilgan shaklda (o'rnilari bo'yicha) ifodalashni qo'llash"
+  ],
+  "key_concepts": [
+    {
+      "term": "Yuz minglar xonasi",
+      "definition": "100 000 (yuz ming) qiymatni ifodalovchi oltinchi xona"
+    },
+    {
+      "term": "Sonli tugmalar",
+      "definition": "Sonning har bir raqamini o'z xonasidagi qiymatini ko'rsatish usuli (masalan, 3 ta yuz ming = 300 000)"
+    },
+    {
+      "term": "Yoyilgan shakl",
+      "definition": "Sonni har bir o'rnining qiymati yig'indisi sifatida yozish (masalan: 325 146 = 300 000 + 20 000 + 5 000 + 100 + 40 + 6)"
+    }
+  ],
+  "worked_examples": [
+    {
+      "problem": "325 146 sonini o'rnilari bo'yicha yoyilgan shaklda yozing va so'zlar bilan ifodalang.",
+      "solution": "Yoyilgan shakl: 300 000 + 20 000 + 5 000 + 100 + 40 + 6. So'zlar bilan: uch yuz yigirma besh ming bir yuz qirq olti."
+    },
+    {
+      "problem": "700 000 + 4 000 + 800 + 30 + 5 yig'indisini aniqlang.",
+      "solution": "704 835 (yetdi yuz to'rt ming sakkiz yuz o'ttiz besh). Izoh: 7 yuz minglar, 4 minglar, 8 yuzlar, 3 o'nlar, 5 birlar xonasida."
+    },
+    {
+      "problem": "3 594 627 sonini millionlar, minglar va birlar sinflari bo'yicha tahlil qiling.",
+      "solution": "3 000 000 + 500 000 + 90 000 + 4 000 + 600 + 20 + 7. So'zlar bilan: uch million besh yuz to'qson to'rt ming olti yuz yigirma yetti."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "Sonni raqamlar bilan yozing: Ikki yuz olti ming",
+      "answer": "206 000"
+    },
+    {
+      "question": "Sonni so'zlar bilan yozing: 645 279",
+      "answer": "Olti yuz qirq besh ming ikki yuz yetmish to'qqiz"
+    },
+    {
+      "question": "Tushirib qoldirilgan sonni yozing: 491 862 = ___ + 862",
+      "answer": "491 000"
+    },
+    {
+      "question": "Hisoblang: 823 000 + 943 = ?",
+      "answer": "823 943"
+    },
+    {
+      "question": "720 265 sonini sonli tugmalar (o'rnilari) yordamida tasvirlang.",
+      "answer": "7 yuz minglar (700 000), 2 o'n minglar (20 000), 0 minglar (0), 2 yuzlar (200), 6 o'nlar (60), 5 birlar (5)"
+    }
+  ],
+  "summary": "Ushbu darsda 1 milliongacha bo'lgan katta sonlarning o'rnilari (birlar, o'nlar, yuzlar, minglar, o'n minglar, yuz minglar) o'rganildi. Sonlarni raqamlar va so'zlar bilan yozish, shuningdek yoyilgan shaklda (har bir o'rnining qiymati yig'indisi) ifodalash ko'nikmalari shakllantirildi. 1 000 000 (bir million) va undan katta sonlar bilan tanishish boshlandi."
+}

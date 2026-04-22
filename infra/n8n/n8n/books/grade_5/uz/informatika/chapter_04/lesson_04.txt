@@ -1,0 +1,55 @@
+# Dasturlash — 4-dars
+
+78
+4–amaliy ko‘nikma
+Burchaklar bilan ishlash
+Burilgan kattalik burchak deb ataladi. Burchaklar darajalarda oʻlchanadi.
+Siz toʻliq, yarim va chorak burilishlar nima ekanini bilasiz.
+Burilish
+Burchak
+Toʻliq burilish
+360 daraja
+Yarim burilish
+180 daraja
+Chorak burilish
+90 daraja
+4.1-mashg‘ulot
+2-amaliy ko‘nikma bo‘limidagi labirintga qarang.
+Tasavvur qiling, siz START katagida kulrang kataklar tomonga qarab turibsiz.
+Bir nechta katak oldinga yurishingiz mumkin. Chapga, oʻngga yoki biror
+burchak ostida burilsangiz ham bo‘ladi.
+END
+START
+Masalan:
+OLDINGA 4 KATAK
+CHAPGA 90 DARAJA
+OLDINGA 2 KATAK
+Bu ketma-ketlikdan keyin qayerdaligingiz labirint chizmasida ko‘rsatiladi.
+Labirintni yakunlash uchun qolgan ketma-ketlikni tuzib chiqing.
+@edurtm_uz
+
+79
+Dasturlash
+4.2-mashg‘ulot
+Bitta aylana 360 daraja bo‘lib, 0 va 360 daraja orasida
+koʻplab burchaklar mavjud.
+90 darajaga burilishning yarmi 45 daraja boʻladi.
+Oʻrningizdan turib, 90 darajaning yarmiga buriling
+(chorak burilishning yarmi).
+4.3-mashg‘ulot
+Mana bu yangi labirintga qarang.
+END
+Burchaklari bir-biriga tegib turgan ikkita katak 45 daraja burilishingiz va
+keyin oldinga harakatlanishingiz kerakligini bildiradi.
+Tasavvur qiling, START katagida birinchi kulrang katakka qarab turibsiz.
+Quyidagi koʻrsatmalar sizni ikkinchi kulrang katakka olib boradi:
+OLDINGA 1 KATAK
+CHAPGA 45 DARAJA
+Labirintni yakunlash uchun ketma-ketlikni yozib chiqing.
+45º
+Burchaklar muhim
+tushuncha bo‘lib,
+ular matematika
+fanida ham
+oʻrganiladi.
+Bilasizmi?

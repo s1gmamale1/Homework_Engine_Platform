@@ -1,0 +1,63 @@
+# V bob — 9-dars
+
+Gazsimon moddalarni modda tuzilishi modeli yordamida
+qanday tavsiflash mumkin?
+Olimlar moddalarning qattiq, suyuq va gazsimon holatlarini tavsiflash uchun modda
+tuzilishi modelidan foydalanadi.
+Moddalar doimiy harakatda bo£Igan mayda zarralardan tashkiI topgan. Bu zarralar
+moddaning turli agregat holatida o'zaro turlicha joylashadi. Shuning uchun
+moddalar har xil xossalarga ega bo‘ladi.
+Qattiq modda
+• zarralar bir-biriga
+yaqin va muntazam
+tartibda, ma’lum bir
+shakl hosil qilgan
+holda joylashadi;
+• zarralar muvozanat
+vaziyati atrofida
+tebranma harakatda
+bo'ladi.
+Suyuq modda
+o'rtacha yaqinlikda
+va tartibsiz holatda
+joylashadi;
+• zarralarjoylashuv
+vaziyatini o'zgartirib
+turadi.
+Gazsimon modda
+• zarralar bir-biridan
+uzoq masofada va
+tartibsiz holatda
+• zarralar turli
+yo'nalishlarda
+tez va tartibsiz
+harakatlanadi.
+Qattiq jismlaraniq
+shaklga va hajmga
+ega bo'ladi. Ularni
+siqib, hajmini
+o'zgartirib bo'lmaydi.
+Suyuqliklar aniq
+hajmga ega bo'ladi,
+lekin shaklga ega emas.
+Ularni siqib, hajmini
+Gazlar aniq shakl va
+hajmga ega emas.
+o'zgartirish mumkin
+48
+
+Daftaringizga qattiq, suyuq va gazsimon moddalar tuzilishining modelini chizing.
+Bilimingizni sinab ko‘ring!
+Gazsimon modda zarralarining joylashuvi
+suyuqlik va qattiq modda zarralarining
+joylashuvidan qanday farq qiladi?
+Quyidagi qaysi ko‘nikmalarni egalladingiz?
+Javoblarni daftaringizga belgilang.
+1. Qattiq, suyuq va gazsimon moddalarningtuzilishini tavsiflash uchun modda
+tuzilishi modelidan foydalana olaman.
+2. Xona haroratida gazsimon holatda uchraydigan ba’zi moddalar nomini ayta
+olaman.
+3. Modelda o‘rganilayotgan obyektning asosiy xususiyatlari aks etishini bayon eta
+Mashq daftari
+3.1- amaliy ish, 28-bet
+49

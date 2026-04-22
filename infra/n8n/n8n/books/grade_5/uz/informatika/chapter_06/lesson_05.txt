@@ -1,0 +1,70 @@
+# Elektron pochtada ishlash — 5-dars
+
+113
+Elektron pochtada ishlash
+2.2-mashg‘ulot
+Xatingiz tayyor boʻldi. Endi uni yuborishingiz mumkin.
+Send tugmasi yordamida elektron xat yuboriladi.
+Elektron pochta akkauntiga ulansa, xat toʻgʻridan toʻgʻri yuboriladi. Bu
+onlayn yuborish hisoblanadi.
+Ayrim vaqtlarda xatlarni internetga ulanmasdan yozish mumkin. Bunday
+holda xat Drafts yoki Outbox papkasida saqlanadi hamda internetga
+ulanish bilan yuboriladi. Bu oflayn yuborish hisoblanadi.
+Onlayn
+yuborish:
+elektron pochta
+akkauntiga
+ulangan holda
+elektron xatni
+yozilgan vaqtning
+o‘zidayoq
+jo‘natish.
+Outbox: Send
+tugmasini
+bosgandan
+keyin provayder
+yuborguniga
+qadar xatlar
+saqlanadigan
+papka.
+Oflayn yuborish:
+internet orqali
+ulanmagan holda
+xat yozish va uni
+yuborish.
+Kalit soʻzlar
+@edurtm_uz
+
+114
+Address book:
+akkauntidagi
+boshqalarning
+manzillari
+saqlanadigan joy.
+Kalit so‘z
+Manzillar kitobiga kirish
+Elektron pochta akkauntlarida odamlarning ismlari va elektron pochta
+manzillari joylashgan Address book boʻladi. Bu har bir elektron pochta
+manzilini eslab qolish shart emasligini anglatadi.
+Oʻqituvchingiz manzillar kitobiga allaqachon siz va do‘stlaringiz email
+manzillarini qoʻshgan bo‘lishi kerak.
+3.1-mashg‘ulot
+Yangi elektron xat yozing.
+To soʻzini tanlasangiz, manzillar kitobi ochiladi.
+3-amaliy ko‘nikma
+
+115
+3.2-mashg‘ulot
+Yangi oynada oʻqituvchi manzillar kitobingizga qoʻshgan barcha insonlar
+haqida ma’lumot ko‘rsatiladi.
+O‘zingiz xat yubormoqchi bo‘lgan inson ismi va familiyasi yonida joylashgan
+kichik kvadratni belgilang. Select tugmasini tanlang.
+3.3-mashg‘ulot
+Xatingizni yuboring.
+2-amaliy ko‘nikma
+bo‘limidagi
+ko‘rsatmalari
+bajariladi.
+Maslahat
+Elektron xatni oʻqish va unga javob qaytarish
+4-amaliy ko‘nikma

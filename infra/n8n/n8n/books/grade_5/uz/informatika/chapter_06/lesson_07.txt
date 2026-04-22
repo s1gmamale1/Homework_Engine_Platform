@@ -1,0 +1,66 @@
+# Elektron pochtada ishlash — 7-dars
+
+119
+Elektron pochtada ishlash
+5.1-mashg‘ulot
+Elektron pochta akkauntingizdagi har bir papka ustiga bosing. Ularning
+ichida birorta xat bormi?
+5.2-mashg‘ulot
+Yangi xat yozishni boshlang. Drafts papkasiga qarang, nimadir oʻzgardimi?
+Xatingiz qoralama sifatida saqlanganmi?
+Papka
+Ta’rifi
+Sent Mail
+Yuborilgan xatlar shu papkada saqlanadi.
+Drafts
+Yozish boshlangan, lekin jo‘natilmagan xatlar ushbu
+papkada saqlanadi.
+Yozilayotgan xat tasodifan oʻchirib yuborilganda uni tiklash
+uchun kerak boʻladi.
+Xatni yozishni boshlab, lekin keyinroq tugatish kerak bo‘lsa,
+uni qoralama sifatida saqlash mumkin.
+Bin/Trash
+Keraksiz xatlarni oʻchirish mumkin. Ular Trash papkasiga
+koʻchiriladi.
+Papkadan o‘chirilmasa, ular shu yerda turaveradi.
+Bu yerdan oʻchirilsa, ularni qayta tiklashning iloji yo‘q.
+Sent mail:
+elektron pochta
+akkauntidagi
+boshqalarga
+yuborilgan
+barcha xatlar
+saqlanadigan
+papka.
+Drafts:
+yuborishdan oldin
+xatning
+qoralama shakli.
+Uni keyinroq
+tahrirlash
+mumkin.
+Kalit soʻzlar
+@edurtm_uz
+
+120
+5.3-mashg‘ulot
+Sent Mail papkasiga qarang. Boshqalarga nechta xat yuborgansiz?
+5.4-mashg‘ulot
+Trash papkasiga qarang. Papka ichida xatlar bormi? Bu xatlardan birortasini
+butunlay oʻchirib tashlashingiz kerakmi?
+Unda ularni oʻchiring. Hozir oʻchirishni istamasangiz, buni keyinroq qilsangiz
+ham boʻladi.
+Forward:
+elektron xatni
+qabul qilib, keyin
+uni bir yoki bir
+nechta manzilga
+yuborish.
+Kalit soʻz
+Elektron xabarlarni uzatish
+Biror kimdan olingan elektron xatni boshqa kishiga yuborish mumkin. Bu
+uzatish (forward) deyiladi.
+6.1-mashg‘ulot
+Boshqalarga uzatmoqchi bo‘lgan elektron xatingizni oching. Forward
+tugmasini tanlang.
+6-amaliy ko‘nikma

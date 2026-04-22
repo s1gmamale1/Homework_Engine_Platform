@@ -1,0 +1,67 @@
+# Diagrammalar bilan ishlash — 9-dars
+
+64
+5)	y oʻqqa yorliq joylashtirish uchun Vertical tugmasi bosiladi.
+Kiritilgan yorliq belgilansa, matnni o‘chirib, yangisini kiritish mumkin.
+9.1-mashg‘ulot
+Oʻqituvchingiz bergan animals_2.xlsx faylini oching.
+Faylda maʼlumotlar jadvali va ikkita diagramma mavjud: ustunli va
+doirasimon. Har ikki diagramma mavzusini “Hayvonlar soni” deb oʻzgartiring.
+9.2-mashg‘ulot
+Ustunli jadvalning x o‘qiga yorliq kiriting.
+Uni “Hayvonlar” deb nomlang.
+9.3-mashg‘ulot
+Ustunli jadvalning y o‘qiga yorliq kiriting.
+Uni “Soni” deb nomlang.
+9.4-mashg‘ulot
+8-amaliy ko‘nikma qismida yaratilgan diagrammalarga sarlavha hamda oʻq
+nomlarini qoʻshing.
+Diagrammadagi
+har bir yorliq
+va har bir o‘q
+tomoni uning
+ma’lumotlarini
+to‘g‘ri
+tasvirlaydigan
+bo‘lishi kerak.
+Maslahat
+@edurtm_uz
+
+65
+Diagrammalar bilan ishlash
+10-amaliy ko‘nikma
+Diagrammadan xulosa chiqarish
+Diagrammalar maʼlumotlarni jadvallardan koʻra osonroq tushunish imkonini
+beradi.
+Ustunli digrammada:
+•	 Eng baland ustun – eng katta qiymatga ega bo‘lgan predmet.
+•	 Eng past ustun – eng kichik qiymatga ega bo‘lgan predmet.
+•	 Agar ustunlarning balandligi bir-biriga yaqin boʻlsa, demak, ularning
+qiymatlari orasidagi farq katta emas.
+•	 Agar ustunlar balandliklari o‘rtasidagi farq katta bo‘lsa (ayrimlari juda
+baland, boshqalari past), ular orasidagi farq ham katta boʻladi.
+Doirasimon diagrammada:
+•	 Doira ichidagi eng katta boʻlak – eng katta qiymat yoki ulushga ega
+predmet.
+•	 Eng kichik bo‘lak – eng kam ulushga ega predmet.
+10.1-mashg‘ulot
+Quyidagi savollarning javobini daftaringizga yozing.
+Savollarga javob berishda ushbu diagrammadan foydalaning.
+1.	Berilgan ranglarning qaysi biri eng katta qiymatga ega?
+2.	Berilgan ranglarning qaysi biri eng kichik qiymatga ega?
+3.	 Ranglarni eng katta qiymatdan eng kichik qiymatga qarab kamayish
+tartibida yozib chiqing.
+Xulosa:
+ma’lumotlardan
+foydalanib, qabul
+qilingan qaror
+yoki bayonot.
+Kalit soʻz
+Qaysi ustunni
+eng baland deb
+hisoblaysiz?
+Qaysi ustun eng
+past ko‘rsatkichga
+ega?
+Har bir rangning soni
+Soni

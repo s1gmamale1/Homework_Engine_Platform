@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase 6 Final Boss",
+  "type": "object",
+  "required": ["phase_id", "lesson_id", "lang", "grade", "boss_hp", "questions"],
+  "properties": {
+    "phase_id": { "const": "phase_6" },
+    "lesson_id": { "type": "string" },
+    "lang": { "type": "string", "enum": ["uz", "ru"] },
+    "grade": { "type": "integer", "minimum": 1, "maximum": 11 },
+    "boss_hp": {
+      "type": "integer",
+      "description": "50 for G1-4, 100 for G5-8, 150 for G9-11",
+      "enum": [50, 100, 150]
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "description": "Distribution: 40% Easy, 40% Medium, 20% Hard. At least 1 word problem and 1 visual model question. No MC for G6+.",
+      "items": {
+        "type": "object",
+        "required": ["number", "difficulty", "damage", "question_text", "socratic_hints", "rubric", "tag"],
+        "properties": {
+          "number": { "type": "integer" },
+          "difficulty": { "type": "string", "enum": ["easy", "medium", "hard"] },
+          "damage": { "type": "integer", "enum": [-10, -20, -30] },
+          "question_text": { "type": "string" },
+          "socratic_hints": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": { "type": "string" }
+          },
+          "rubric": {
+            "type": "object",
+            "required": ["full", "partial", "minimal"],
+            "properties": {
+              "full": { "type": "string" },
+              "partial": { "type": "string" },
+              "minimal": { "type": "string" }
+            }
+          },
+          "tag": {
+            "type": "object",
+            "required": ["id", "bloom", "pisa", "transition_skill"],
+            "properties": {
+              "id": { "type": "string" },
+              "bloom": { "type": "string" },
+              "pisa": { "type": "string" },
+              "transition_skill": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

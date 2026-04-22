@@ -1,0 +1,59 @@
+# VI bob — 3-dars
+
+Ichidagi suvi muzlagan shisha
+idishni xonadagi stol ustiga
+qo'ying. Birozdan so‘ng shisha
+idish sirtida suvtomchilari
+paydo bo‘Iganini kuzatishingiz
+mumkin.
+Suvtomchilari qanday
+paydo bo'ldi?
+suyuq modda zarrasi
+Havoda erkin harakatlanayotgan suv bug‘i zarralari shishaning sovuq sirtiga
+tegganda o‘z issiqligini yo‘qotadi va harakati sekinlashadi. Ular shisha sirtida erkin
+harakatlanmasdan, balki bir-biriga yaqin masofada harakatlanadi. Shunday qilib, suv
+bug£i sovuq shisha sirtida suvtomchilariga a^lanadi.
+Ko'zoynak va ko‘zgu
+sirtida mayda suv
+tomchilarininghosil
+bo‘lishi havodagi
+suv burning
+kondensatsiyalanishi
+tufayli sodir bo‘ladi.
+Choynakdagi suv qaynayotganda
+jo‘mragidan chiqayotgan “bug‘”ni
+ko‘rganmisiz?
+Issiq suv bug‘i choynak jo‘mragi
+atrofidagi nisbatan sovuqroq havo
+bilan ta’sirlashib, o‘z issiqligini
+yo'qotadi va mayda suvtomchilariga
+aylanadi. Bu tomchilar suv burning
+kondensatsiyalanishi tufayli hosil
+bo'ladi.
+Kundalik hayotdan kondensatsiyaga
+misollar keltiring.
+Mashq daftari
+3.2-amaliy ish, 30-bet
+”!
+
+Bilimingizni sinab ko‘ring!
+Bug'lanish va kondensatsiya jarayonini
+modda tuzilishi modelidan foydalanib
+izohlang.
+Quyidagi qaysi ko‘nikmalarni egalladingiz?
+Javoblarni daftaringizga belgilang.
+1. Bug'lanish va kondensatsiya jarayonlarini tavsiflay olaman.
+2. Jarayonni izohlashda modeldan foydalana olaman.
+3. Nazorat qilinadigan tajriba rejasini tuzaman va uch xil o'zgaruvchini aniqlay
+olaman.
+4. Tadqiqot uchun kerakli jihozlarni tanlayman va ulardan to'g'ri foydalana olaman.
+5. Amaliy ishni bajarish davomida yuzaga kelishi mumkin bo'lgan xavflarni hamda
+ularni kamaytirish yo'llarini bayon eta olaman.
+6. Egallagan bilimlarimni qo'llab tadqiqot natijalarini bashorat qila olaman.
+7. Ishonchli natijalar olish uchun kuzatishlarni takrorlash zarurligi yuzasidan qaror
+qabul qila olaman.
+8. Amaliy ishni bajarish davomida xavfsizlik qoidalariga rioya qilaman.
+9. O'lchash ishlarini to'g'ri va aniq bajara olaman.
+10. Kuzatish natijalarini taqdim etish uchun jadval tuza olaman.
+11. Turli tadqiqot metodlarining o'ziga xos xususiyatlarini bayon eta olaman.
+12. Tabiiy fanlaryutuqlaridan kundalik hayotda foydalanilishini bayon eta olaman.

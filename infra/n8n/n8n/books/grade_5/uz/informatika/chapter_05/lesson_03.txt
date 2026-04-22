@@ -1,0 +1,78 @@
+# Qidirish tizimlarida ishlash — 3-dars
+
+93
+Qidirish tizimlarida ishlash
+1-amaliy ko‘nikma
+Veb brauzerlar
+Veb brauzer — butunjahon internet tarmog‘ida joylashgan veb sahifalarni
+koʻrsatuvchi dasturiy taʼminot.
+Veb sahifalar internetga gipermatnli belgilash tili (HTML) kabi kompyuter
+tilida yuboriladi. Veb brauzer uni biz oʻqiy oladigan tilga tarjima qilb beradi.
+Mashhur veb brauzerlarga quyidagilar kiradi:
+•	 Google Chrome;
+•	 Safari;
+•	 Microsoft Edge;
+•	 Firefox.
+Har bir veb brauzerda foydalanishingiz mumkin boʻlgan toʻrtta asosiy
+qism bor:
+•	 Manzil paneli;
+•	 Oldinga tugmasi;
+•	 Ortga tugmasi;
+•	 Yangilash tugmasi.
+Veb manzil
+ba’zida URL
+(Universal
+Resource Locator)
+deb ham ataladi.
+Bilasizmi?
+@edurtm_uz
+
+94
+Reload: avval
+kirilgan veb
+sahifani qayta
+ochish.
+Load: veb sayt
+yoki undagi
+sahifani ochish.
+Kalit soʻzlar
+Link: raqamli
+sahifadagi
+element boʻlib,
+uni tanlab, ochish
+mumkin.
+Kalit soʻz
+ga
+oʻzgarguniga
+qadar
+sichqonchani
+ekran bo‘ylab
+harakatlantirish
+orqali sahifadagi
+linkni topish
+Maslahat
+Ortga tugmasi qaytish lozim boʻlgan har qanday veb sahifaga oʻtish
+imkonini beradi.
+Veb sahifaga qaytish uchun Ortga tugmasidan foydalaniladi. Oldinga
+tugmasi orqali hozir kirilgan veb sahifaga oʻtish mumkin.
+Yangilash tugmasi sahifani qayta yuklash imkonini beradi. Bu tugma sahifa
+to‘liq yuklanmay qolganda foyda beradi. Saytda oʻzgargan va yangilangan
+maʼlumot boʻlsa ham, ushbu tugmadan foydalanish kerak. Yangilash
+tugmasi bosilganda foydalanilayotgan veb sahifa qayta yuklanadi va
+yangilangan holati koʻrsatiladi.
+Manzil paneli – foydalanuvchi kirishni xohlagan veb sayt manzili yoziladigan
+maydon. Har bir veb saytning o‘ziga xos nomi bor. Masalan: NASA veb
+manzili: www.nasa.gov. Uni “www” qismini yozmasdan ham (yozishga oson
+boʻlishi uchun) kiritish mumkin.
+1.1-mashg‘ulot
+Veb brauzerni oching.
+Manzil yoziladigan satrga www.nasa.gov/kidsclub manzilini kiriting.
+1.2-mashg‘ulot
+Bosh sahifadan boshqa sahifaga oʻtish uchun link ustiga bosing.
+1.3-mashg‘ulot
+Bosh sahifaga qaytish uchun Ortga tugmasini bosing.
+1.4-mashg‘ulot
+Boshqa sahifaga qayta o‘tish uchun Oldinga tugmasini bosing.
+1.5-mashg‘ulot
+Sahifani qayta yuklash uchun Yangilash tugmasini bosing.
+Yaxshi! Siz hozir veb brauzerning asosiy funksiyalaridan foydalandingiz.

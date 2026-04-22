@@ -1,0 +1,84 @@
+# Dasturlash — 3-dars
+
+76
+Ketma-ketlik:
+yozilgan tartibda
+bajariluvchi
+qadamlar yoki
+harakatlar
+toʻplami.
+Kalit soʻz
+Sizda oʻngga, chapga, tepaga va pastga harakatlanish imkoni bor.
+END
+START
+Chap
+Tepa
+Past
+O‘ng
+2.1-mashg‘ulot
+START deb yozilgan yashil katakdan harakatni boshlab, FINISH deb yozilgan
+qizil katakka yetib kelish uchun harakatlar ketma-ketligini tuzing.
+Faqat oʻngga, chapga, yuqoriga va pastga buyruqlarini hamda
+harakatlanish uchun qadamlar sonini yozishingiz mumkin.
+Masalan, oʻngga 4 qadam ― oʻng tomonga 4 ta katak harakatlanish
+imkoniyatini beradi.
+2.2-mashg‘ulot
+Labirintda uchta sariq katak mavjud.
+Barcha sariq kataklarga borish uchun ketma-ketlikni oʻzgartiring, keyin
+“FINISH” katagiga boring.
+2.3-mashg‘ulot
+Oʻz labirintingizni yarating. Buni qogʻozda yoki kompyuterda bajarishingiz
+mumkin.
+Doʻstlaringizdan siz chizgan labirintdan chiqish yoʻlini topishni soʻrang.
+Ulardan labirint yakuniga borish uchun bajarilgan amallar ketma-ketligini
+yozishini soʻrang.
+@edurtm_uz
+
+77
+Dasturlash
+3-amaliy ko‘nikma
+Blok-sxema yaratish
+Blok-sxemalar sizga koʻrsatmalar qanday ketma-ketlikda ekanini ko‘rish
+uchun yordam beradi.
+Blok-sxema koʻrsatmalar ketma-ketligini koʻrsatuvchi chizma hisoblanadi.
+Unda:
+•	 qayerdan boshlashni bildiruvchi Boshlash
+katagi;
+•	 qayerda toʻxtashni bildiruvchi Tugatish katagi;
+•	 qanday vazifalarni bajarishingizni ko‘rsatuvchi Jarayon
+kataklari;
+•	 keyingi katakni bildirish uchun strelkalar bor.
+Har bir katak maxsus shaklga ega.
+Strelkalar koʻrsatmalarning bajarilish tartibini bildiradi.
+3.1-mashg‘ulot
+Blok-sxemaga qarang.
+Koʻrsatmalarni bajaring.
+“Boshlash” maydonidan boshlang. Strelka birinchi
+toʻrtburchakka borishingizni aytmoqda. Strelkalar boʻyicha
+yuring va har bir jarayonni bajaring.
+Buni toʻgʻri tushundingizmi?
+Quyidagilarni bajarishingiz kerak:
+•	 oʻrningizdan turish;
+•	 keyin oʻtirish;
+•	 uch marta qarsak chalish;
+•	 oʻrningizdan qayta turish;
+•	 so‘ng oldinga ikki qadam yurish.
+3.2-mashg‘ulot
+2-amaliy ko‘nikma bo‘limida labirintdan chiqish uchun yozgan ketma-
+ketligingizni toping. Ketma-ketlikni blok-sxema koʻrinishida yozib chiqing.
+Undagi amallarni tekshirish uchun blok-sxemangizni doʻstingiz bilan
+almashing.
+Blok-sxema:
+strelkalar bilan
+tutashgan
+maydonlar
+Jarayon: vazifani
+bajaruvchi yoki
+biror narsani
+oʻzgartiruvchi
+harakat.
+Tartib:
+predmetlarning
+joylashish
+ketma-ketligi.
+Kalit soʻzlar

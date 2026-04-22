@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase 1 Memory Sprint",
+  "type": "object",
+  "required": ["phase_id", "lesson_id", "lang", "questions", "adaptation_rule"],
+  "properties": {
+    "phase_id": { "const": "phase_1" },
+    "lesson_id": { "type": "string" },
+    "lang": { "type": "string", "enum": ["uz", "ru"] },
+    "questions": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["number", "format", "prompt", "answer", "tag"],
+        "properties": {
+          "number": { "type": "integer" },
+          "format": { "type": "string", "enum": ["multiple_choice", "true_false", "yes_no_not_given"] },
+          "prompt": { "type": "string" },
+          "options": { "type": "array", "items": { "type": "string" } },
+          "answer": { "type": "string" },
+          "tag": {
+            "type": "object",
+            "required": ["id", "bloom", "pisa"],
+            "properties": {
+              "id": { "type": "string" },
+              "bloom": { "type": "string" },
+              "pisa": { "type": "string" },
+              "transition_skill": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "adaptation_rule": { "type": "string" }
+  }
+}

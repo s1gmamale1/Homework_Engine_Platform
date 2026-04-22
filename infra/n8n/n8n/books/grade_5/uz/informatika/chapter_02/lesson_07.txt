@@ -1,0 +1,63 @@
+# Tasvirlar bilan ishlash — 7-dars
+
+37
+Tasvirlar bilan ishlash
+Paste buyrug‘i orqali nusxalangan tasvir yoki uning qismi kanvasga
+joylanadi.
+Bu vazifani bajarishda sichqoncha kursori kerakli joyga olib boriladi va
+Paste tugmasi bosiladi.
+Natijada belgilangan tasvir qismi kanvasda paydo bo‘ladi.
+Tasvirning belgilangan qismini kanvasdan oʻchirish yoki ko‘chirish uchun Cut
+uskunasi qo‘l keladi.
+Tasvirning noo‘rin qismini belgilab, menyudan Cut buyrug‘i tanlanadi.
+Belgilangan qism Clipboardga nusxalanib, kanvasdan g‘oyib bo‘ladi.
+Cut: butun
+tasvirni
+hammasini yoki
+uning bir qismini
+kesib olish.
+Kalit soʻz
+@edurtm_uz
+
+38
+Eraser uskunasi
+Tasvirning ayrim qismlarini oʻchirish uchun Eraser uskunasidan foydalanish
+ham mumkin. Bu uskuna hammamiz biladigan oʻchirgʻichga juda oʻxshaydi.
+Eraser uskunasi tanlanadi.
+Kursor tasvirning o‘chiriladigan qismiga keltiriladi, sichqoncha chap tugmasi
+bosiladi va harakatlantiriladi. Shunda xuddi qogʻozdagi tasvirni oʻchirganingiz
+kabi holat yuz beradi.
+6.1-mashg‘ulot
+Oʻqituvchingiz bergan Bee.png hujjatini oching.
+Asalarini belgilang va nusxa oling.
+Uchta asalari hosil qilish uchun nusxa olingan asalarini ikki marta qayta
+joylang.
+Asalarilar joylashgan fonda moviy osmon tasvirini hosil qilish uchun Brush
+uskunasidan foydalaning.
+
+39
+7-amaliy ko‘nikma
+Tasvirni saqlash
+Yangi tasvir tayyor bo‘lgach, hujjat shaklida saqlash uchun Save as
+tugmasidan foydalaniladi. Hujjatni birinchi marta saqlashda nomlash talab
+qilinadi.
+File menyusidagi Save as buyrug‘i tanlanadi.
+Ochilgan oynada tasvir hujjati uchun nom yozish maydoni hosil bo‘ladi.
+Tasvir kerak boʻlganida oson topishga yordam beruvchi nom yoziladi va
+Save tugmasi bosiladi. Shu tariqa tasvir kompyuter xotirasida saqlab
+qo‘yiladi.
+7.1-mashg‘ulot
+Oʻqituvchingiz bergan House.png hujjatini oching.
+Unda toʻrtburchak shaklni ko‘rasiz.
+Ushbu toʻrtburchakdan uy yasash uchun boshqa kerakli shakl va chiziqlarni
+qoʻshing.
+7.2-mashg‘ulot
+Uy tasviriga osmon va maysalarni qoʻshish uchun Brush uskunasidan
+foydalaning.
+Osmonga quyosh tasvirini joylash uchun Shape uskunasidan foydalaning.
+7.3-mashg‘ulot
+Uy tasvirini mos nom bilan saqlang.
+Save as: tasvirni
+birinchi marta
+nom berib
+saqlash.

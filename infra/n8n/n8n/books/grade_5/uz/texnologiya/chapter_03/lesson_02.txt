@@ -1,0 +1,64 @@
+# Energiya va Mexatronika — 2-dars
+
+2-§.
+Elektr dvigAtEllar (motorlar).
+Batareyalar va ularning turlari
+Elektr energiyasini mexanik energiyaga aylantirib beradigan elektr mashinalar
+dvigatellar (motorlar) deyiladi. Elektr dvigatellar xalq xo‘jaligining deyarli hamma
+sohasida ishlatiladi. O‘zgaruvchan elektr mashinalarining yana bir turi bu asinxron
+dvigatellardir.
+Asinxron dvigatellar elektr energiyasini mexanik energiyaga aylantirib beradi
+(1-rasm). Bu dvigatellar konstruksiyasining soddaligi, arzonligi, ishda ishonchliligi sa­
+babli sanoat, qishloq xo‘jaligi va xalq xo‘jaligining barcha sohalarida keng qo‘llaniladi.
+1-rasm. Elektr dvigatel (motor): 1 – val; 2 – startor obmotkasi; 3 – startor yadrosi;
+4 – sintofiliks izolatsiya; 5 – rotor; 6 – ventilator; 7 – stanina.
+Mustahkamlash uchun savollar
+1. Energiya deb nimaga aytiladi? Uning qanday turlari bor?
+2. Yoqilgʻi bilan bogʻliq va bogʻliq boʻlmagan energiya resurslari nima deb
+ataladi?
+3. Mamlakatimizda ilk atom elektr stansiyasini qurishdan maqsad nima? O‘z
+javobingizni misollar bilan tushuntirib bering.
+1
+2
+3
+4
+5 6
+7
+
+203
+203
+Batareya – bu elektr energiyasi bilan ishlaydigan turli xil qurilmalar uchun quvvat
+manbayidir.
+Batareyalarning eng keng tarqalgan dumaloq (silindrsimon) shakldagi 5 ta turi
+mavjud: sho‘r, ishqorli, litiyli, kumushli va havo-ruxli (2-rasm).
+Nima uchun batareyalarga tushirilgan chiqindi qutisi belgisi ustidan taqiq chizig‘i
+tortib qo‘yilgan bo‘ladi? (3-rasm)
+Bu belgi ishlatilgan batareyalarni chiqindi qutilariga tashlash qat’iyan
+taqiqlanishini anglatadi. Chunki o‘zi barmoqdek keladigan bu mitti energiya
+manbalari inson salomatligi va tabiat uchun juda katta zarar yetkazadi.
+Bu energiya manbalari kichkina bo‘li­
+shiga qaramay, zarari anchagina. Chiqindiga
+tashlangan batareyaning ustki qoplamasi turli
+issiqlik natijasida eriydi va unda saqlanuvchi
+zaharli moddalar “ozodlikka chiqadi”.
+Bitta batareya 20 metr kvadrat yer, 400 litr
+suv, 1 ta tipratikan, ikkita daraxt, bir necha
+ming yer qurtini zaharlashga yetadigan kuchga ega.
+3-rasm. Batareyalarga tushirilgan chiqindi qutisi belgisi.
+2-rasm. Batareya turlari.
+Sho‘r
+batareya
+Ishqorli
+Litiyli
+Kumushli
+Havo-ruxli
+Unutmang!
+1. Muddati o‘tgan va foydalanib bo‘lingan batareyalarni chiqindi qutisiga
+tashlash mumkin emas!
+2. Batareyalarni og‘izga solishga mutlaqo yo‘l qo‘ymaslik kerak!
+3. Ishlatib bo‘lingan batareyalarni utilizatsiya (qayta ishlash) qilish uchun yig‘ib
+topshirish kerak.
+20 m2
+
+204
+204

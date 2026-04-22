@@ -1,0 +1,36 @@
+# Servis Xizmati — 14-dars
+
+14-§.
+Modellashtirish  va  andAza  tayyorlash
+Detallarga o‘zgartirish kiritish bilan birga ularga tasma, to‘r, kant, mag‘iz qo‘yib,
+applikatsiya bezaklari bilan bezatish mumkin.
+Bundan tashqari, fartuk detallarini boshqa gazlamadan foydalanib bezash mo­
+dellashtirishning murakkab usuli hisoblanadi. Boshqa gazlamadan burma, mag‘iz,
+applikatsiya yordamida bezash mumkin bo‘ladi.
+
+168
+168
+10-amaliy mashg‘ulot
+Fartukni modellashtirish
+Kerakli jihozlar: qalam, chizg‘ich, o‘chirg‘ich, rangli qog‘oz, yelim, ishchi daftar.
+1.	 Fason bo‘yicha model chiziqlari va fartuk bo‘laklari aniqlab olinadi.
+2.	 Fartuk asos chizmasi va bo‘laklari eskizi tayyorlanadi.
+3.	 Eskiz andazalardan rangli qog‘ozlarga shablon tushirilib, model chiziqlari
+o‘zgartiriladi hamda ishchi daftarga yopishtiriladi.
+4.	 Modellashtirilgan fartuk eskizi bo‘yicha asos andazaga o‘zgarti­rishlar kiritiladi.
+Mustahkamlash uchun savol va topshiriqlar
+1.	 Modellashtirish deganda nimani tushunasiz?
+2.	 Andazaga model bo‘yicha o‘zgartirish kiritish jarayonini aytib bering.
+3.	 Tanlagan fasoningizni mustaqil modellashtiring va andazaga o‘zgar­tirish
+kiriting.
+1 dona
+3 сm
+Yaxlit bichimli fartukni modellashtirish ketma-ketligi.
+Bichishga tayyor bo‘lgan andaza detallari ketma-ketligi.
+
+169
+169
+Bo‘r  chizig‘i
+Gazlamani bichishga tayyorlash tartibi.
+А) gazlamani buklab bichish usuli.
+B) tukli yoki gulli gazlamani eni, bo‘yi bo‘yicha o‘ngini teskarisiga ag‘darib bichish usuli.

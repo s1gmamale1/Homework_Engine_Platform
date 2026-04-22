@@ -1,0 +1,68 @@
+# Texnologiya va Dizayn — 5-dars
+
+5-§.
+TraNsPort vositalarini
+konstruksiyalash va modellashtirish
+Transport vositalarini texnik konstruksiyalash va modellashtirish jarayonida turli
+texnologik operatsiyalar о‘zlashtiriladi; metallar va metallmas materiallarning har xil
+turlari va markazlari bilib olinadi; zamonaviy texnikaning haqiqiy namunalari tuzi­
+lishi va ishlash tar­tibi tushuniladi, amaliy ishlarni bajarish jarayonida bilimlar mus­tah­
+kamlanadi.
+Ma’lumki, amaliy mashg‘ulotlarda texnik konstruksiyalash va model­lashtirish ha­
+qiqiy mashina, mexanizm, asboblarning faqatgina kich­ray­tirilgan nusxasini yasash
+emas, balki ijodiy faoliyat asosida tex­nik modellarning konstruksiyasini ham, ishlash
+tartibini ham ancha sodda­lashgan, lekin ularga о‘xshashlikni saqlagan namunalarini
+yaratishdir.
+Texnik modellashtirishga kirishishdan oldin “konstruksiya”, “mo­del” va “maket”
+tushunchalarining farqini aniq bilib olish zarur.
+Konstruksiya – har qanday obyektning qismlari, tuzilishi.
+Model – namuna, me’yor ma’nosini anglatadi. U haqiqiy obyekt­ning yoki undagi
+asosiy uzellarning nusxasidir. Shuningdek, u haqiqiy obyektga mos bо‘lishi ham kerak.
+Masalan: avtomobil modeli.
+Maket – obyektning konstruksiyasini yaqqolroq tasavvur etish ­im­ko­nini beradigan
+umumiy hajmli tasvirdir. Masalan: binolar, in­shoot­lar va boshqalarning maketlari shular
+jumlasiga kiradi.
+Texnik konstruksiyalash va modellashtirish mashinalar hamda me­xanizmlarni
+ya­ra­tish jarayoni bilan, detallarni tayyorlash va buyum­larni yig‘ishning zamonaviy
+texnologiyasi bilan yaqindan tanishish imkoniyatini yaratadi (2-rasm, a).
+2-rasm, а. Yengil avtomobil konstruksiyasi: 1 – avto­matik boshqarila­digan rul; 2 – tormoz
+kuchaytirish moslamasi; 3 – amor­tizatorlar; 4 – bosh­qarish uskunalari; 5 – piyoda­larga qarshi
+ogohlan­tiruvchi tormoz tizimi; 6 – oldingi most (ko‘prik); 7 – disk tormozi supporti birikmasi;
+8 – tor­moz pedali; 9 – shinalar; 10 – qotish­ma g‘ildiraklar; 11 – orqa most (ko‘prik).
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+14
+14
+Modellashtirish insonning tashqi va ichki dunyosi, materiallar xusu­siyatlari,
+atrof­dagi muhit sharoitlarini e’tiborga olgan holda, yangi model yaratishning ijodiy
+jarayonini anglatadi.
+Modellashtirishda buyumning shakli va tuzilishi, ranglari о‘zga­ri­shi mumkin.
+Tay­yor bazaviy model yoki uning chizmasi bо‘yicha buyum­ning konstruktiv asosi
+yorda­mida yangi model chizmasini va namu­nasini tayyorlash jarayoni texnik
+modellash deyiladi (2-rasm, b).
+Turli transport vositalarini konstruksiyalash va modellashtirish ­ja­rayoni quyidagi
+bosqichlardan iborat:
+1. Modelni о‘rganish va uning tahlili.
+2. Modelga mos tuzilishga ega bazaviy asos tanlash.
+3. Tanlangan asosga kerakli aniqlik yoki о‘zgartirish, unga yangi modelga xos
+xususiyatlarni kiritish.
+4. О‘xshash model bо‘lmagan holda yangi model tasvirini ishlab chiqish.
+5. Yangi model konstruksiyasini tekshirish va modellashtirish.
+Mustahkamlash uchun savollar
+1. Konstruksiya, model va maket tushunchalarining farqi nimada?
+2. Texnik modellash deb nimaga aytiladi?
+3. Modellashtirish nima?
+2-rasm, b. Yengil avtomobilni texnik modellashtirish.
+
+15
+15

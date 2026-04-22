@@ -1,0 +1,296 @@
+# Uchburchakning asosi va balandligi
+
+2  EFG uchburchakda berilgan asosga tushirilgan balandlikni toping.
+ 
+a) 
+uch
+asos
+E
+G
+F
+H
+EG — uchburchak asosi.
+FH — uchburchak balandligi, chunki 
+FH ⊥ 
+⊥ EG.
+F — uchburchakning asosi qarshisidagi 
+uchi.
+b) 
+E
+asos
+G
+F
+J
+ 
+ 
+EF — uchburchak asosi.
+GJ — uchburchak balandligi,
+chunki GJ ⊥ EF.
+G — uchburchakning asosi qarshisidagi 
+uchi.
+c) 
+E
+asos
+G
+F
+K
+ 
+ 
+ 
+  
+ 
+Uchburchakning asosi uning uchta tomonidan istalgan biri bo‘lishi mumkin.
+O‘tkir burchakli uchburchakning balandligi uning asosi qarshisidagi
+uchidan tushirilgan perpendikulyar kesma uzunligiga teng.
+ 
+FG uchburchakning asosi  
+bo‘lsa, uchburchakning 
+balandligini topa olasizmi?
+92
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   92
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   92
+09/08/24   19:31
+09/08/24   19:31
+
+1  Berilgan ABC uchburchakda AC asos bo‘lsa, BD kesma balandlik bo‘ladimi?
+Javobingizni tushuntiring.
+ 
+ 
+a) 
+ 
+D
+asos
+C
+B
+A
+ 
+  
+b)
+ 
+C
+asos
+A
+B
+D
+ 
+2  Uchburchakning asosi berilgan. To‘g‘ri burchakli chizg‘ichdan foydalanib 
+uchburchaklarning balandligini aniqlang.  
+ 
+ 
+a) 
+ 
+C
+A
+B
+AC – asos.
+b)
+ 
+G
+E
+F
+FG – asos.
+c) 
+    
+KL – asos.
+J
+K
+L
+3  Navbat bilan katakli qog‘ozga turli o‘lchamdagi uchburchaklarni chizing. 
+Sherigingizdan berilgan asosga ko‘ra uchburchaklarning balandligini aniqlashni 
+so‘rang. Zarur holatlarda to‘g‘ri burchakli chizg‘ichdan foydalaning.
+Juftlikda ishlang
+93
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   93
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   93
+09/08/24   19:31
+09/08/24   19:31
+
+1  Berilgan asosga ko‘ra uchburchakning balandligini aniqlang. 
+ 
+a) 
+ 
+C
+A
+B
+ 
+ 
+  
+ 
+ABC uchburchakda AB – asos,
+           
+ – balandlik.
+b) 
+ 
+ 
+F 
+E
+D
+G
+ 
+ 
+DEF uchburchakda DF – asos, 
+           
+ – balandlik.
+c) 
+P 
+Q
+S
+R
+T
+ 
+ 
+ 
+PQR uchburchakda PQ – asos,
+ 
+           
+ – balandlik.
+d) 
+L
+M
+K
+N
+P
+ 
+ 
+KLM uchburchakda LM – asos,
+           
+ – balandlik.
+Bajaring va o‘rganing
+94
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   94
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   94
+09/08/24   19:31
+09/08/24   19:31
+
+2  Berilgan balandlikka ko‘ra uchburchakning asosini aniqlang.
+ 
+a) 
+C
+B
+D
+A
+ 
+ 
+  
+ 
+ABC uchburchakda BD – balandlik,
+           
+ – asos.
+b) 
+F
+H
+G
+E
+ 
+ 
+EFG uchburchakda FH – balandlik,  
+ – asos.
+c) 
+Q
+P
+S
+R
+T
+ 
+ 
+PQR uchburchakda PS – balandlik,
+           
+ – asos.
+d) 
+ 
+W 
+X
+Z
+Y
+U
+V
+ 
+ 
+WXY uchburchakda YZ – balandlik,
+            
+ – asos.
+O‘zingizni tekshiring
+a) 
+Men berilgan asosga ko‘ra uchburchakning balandligini topishni bilaman. 
+  
+b) Men berilgan balandlikka ko‘ra uchburchakning asosini topishni bilaman. 
+  
+117–118
+Mashq daftariga o‘ting
+95
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   95
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   95
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  Quyida uchburchakka mos to‘g‘ri to‘rtburchakni aniqlash keltirilgan.
+ 
+ 
+asos
+balandlik
+B
+A
+C
+asos
+asos
+balandlik
+balandlik
+ 
+2  a) 
+ABCD to‘g‘ri to‘rtburchakning bo‘yi 4 cm, eni 6 cm.  
+ 
+ 
+1 cm
+A 1 cm
+B
+D
+C
+ 
+ 
+ 
+ 
+  
+ 
+         
+ 
+      
+ 
+ 
+ 
+ 
+ABCD to‘g‘ri to‘rtburchakning yuzi = 6 × 4 
+ 
+ 
+ 
+ 
+ 
+ 
+        = 24 (cm2)
+ 
+ 
+ACD uchburchak yuzi = 1
+2  × ABCD to‘g‘ri to‘rtburchak yuzi 
+ 
+ 
+ 
+ 
+ = 1
+2 × 24 
+ 
+ 
+ 
+ 
+ = 12 (cm2)
+b)
+ACD uchburchak bilan ABCD 
+to‘g‘ri to‘rtburchakning yuzlari 
+orasida qanday bog‘liqlikni 
+sezdingiz?
+96
+Uchburchakning yuzini topish
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   96
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   96
+09/08/24   19:31
+09/08/24   19:31
+

@@ -1,0 +1,29 @@
+# III bob — 4-dars
+
+Shakarning suvda erish tezligiga haroratning ta’sirini aniqlash bo'yicha o'tkaziladigan tajribada
+suv harorati erkli o‘zgaruvchi hisoblanadi. Tajribada ushbu o'zgaruvchi (ya’ni harorat) tadqiqotchi
+tomonidan o'zgartiriladi.
+Erksiz o'zgaruvchi - erkli o'zgaruvchi qiymatining o'zgarishiga bog'liq bo'lgan kattalik. Erksiz
+o'zgaruvchining qiymati erkli o'zgaruvchining qiymatiga bog'liq holda o'zgaradi. Erksiz o'zgaruvchi
+tadqiqotchi o'lchaydigan kattalikdir.
+Yuqoridagi misolda shakarning erishi uchun sarflangan vaqt erksiz o'zgaruvchi hisoblanadi. Nazorat
+qilinadigan tajribada shakarning erish vaqti suv haroratiga bog'liq holda qanday o'zgarishini
+aniqlaymiz.
+Nazorat o'zgaruvchilar tajriba natijalariga ta’sir etishi mumkin bo'lgan boshqa omillardir. Ularning
+o'zgarishi tajriba natijalarining o'zgarishiga olib keladi. Bunday tajriba natijalari asosida chiqarilgan
+xulosa haqiqiy hisoblanmaydi. Shuning uchun nazorat o'zgaruvchilari tadqiqot davomida doimiy,
+ya’ni o'zgarishsiz saqlanishi kerak. Tadqiqotchi erksiz o'zgaruvchining qiymati boshqa omillar
+ta’sirida emas, aynan erkli o'zgaruvchiga bog'liq holda o'zgarganiga ishonch hosil qilishi zarur.
+Ushbu tadqiqot metodi yordamida quyidagi kabi savollarga
+javob izlash mumkin:
+Torning uzunligi musiqa asbobidan tarqaladigan tovush
+balandligiga qanday ta’sir etadi?
+Harorat muz bo'laklarining erish tezligiga qanday ta’sir ko'rsatadi?
+Kuzatish
+Jonli va jonsiz tabiatda ro'y beradigan hodisalarni muayyan vaqt (minut, soat, sutka, hafta,
+oyyoki yil) davomida kuzatasiz. Kuzatish natijasida to'plangan dalillarva ma’lumotlarasosida
+xulosa chiqarasiz.
+• Toza suv solingan shaffof idishga bir tomchi rangli bo'yoq tomizilsa,
+qanday hodisa kuzatiladi?
+• O'simliklar hayot siklida fasllar almashinishi bilan bog'liq qanday
+o'zgarishlar sodir bo'ladi?

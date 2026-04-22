@@ -1,0 +1,91 @@
+# Elektron pochtada ishlash — 6-dars
+
+116
+Elektron pochta akkauntiga ulanilsa, yangi xatlar Inbox papkasida koʻrinadi.
+Inbox papkasining yonida kelgan yangi xabarlar soni koʻrinadi. Yangi xatlar
+qalin shriftda yoziladi.
+4.1-mashg‘ulot
+Inbox papkasi qabul qilingan xatlar to‘g‘risida ko‘p ma’lumotlarni ko‘rsatadi.
+Elektron pochta akkauntingizga kiring.
+Receive: biror
+ma’lumotni qabul
+qilish, masalan,
+Inbox papkasiga
+biror kishidan xat
+kelsa, uni qabul
+qilish.
+Kalit soʻz
+Inbox: elektron
+pochta
+akkauntidagi
+kelgan xabarlar
+joylashadigan
+papka. Ularni
+keyinroq oʻqish
+ham mumkin.
+@edurtm_uz
+
+117
+Elektron pochtada ishlash
+Quyidagi savollarning javobini daftaringizga yozing.
+Biror xabar oldingizmi?
+Agar olgan boʻlsangiz:
+•	 Ular yangi xatlarmi?
+•	 Ularni sizga kim yuborgan?
+•	 Ular nima haqida ekanini qanday bilib olish mumkin?
+4.2-mashg‘ulot
+Yangi elektron xatlardan birining ustiga bosing.
+Xabarni toʻliq oʻqishingiz va javob yozishingiz mumkin.
+Xabar pastidagi maydonda joylashgan Reply tugmasini tanlang. Yoki strelka
+ustiga bosing. Bu buyruq xatni yuborgan kishiga javob qaytarish imkonini
+beradi.
+Maydonga xabar matnini kiriting.
+Xabarni tekshirganingizdan keyin Send tugmasini tanlang.
+Qabul qiluvchining elektron pochta manzilini yozish shart emas. Bu
+avtomatik amalga oshiriladi.
+Reply: yuborilgan
+elektron xatga
+javoban uni
+yuborgan
+kishiga javob
+xatini yozish va
+jo‘natish. Odatda
+yuborilgan
+elektron xat javob
+xatining tagida
+ko‘rinadi.
+
+118
+Mavzu oʻzgarmaydi, lekin u “Re:” bilan boshlanadi.
+Xatlarga javob
+yozganda
+mavzu satriga
+qo‘shiladigan
+“Re” soʻzi lotin
+tilidan kirib
+kelgan.
+U “tegishli”
+degan ma’noni
+anglatadi.
+Bilasizmi?
+Elektron xatlar papkalaridan foydalanish
+Papka — ma’lum turdagi xabarlarni saqlash mumkin bo‘lgan joy.
+Elektron pochta oynasining chap tomonida turli papkalar joylashgan. Har bir
+papkaning takrorlanmaydigan nomi boʻladi.
+Elektron pochta akkauntida oldindan sozlangan papkalar bo‘ladi. Ularning
+nomlari ingliz tilida quyidagicha:
+5-amaliy ko‘nikma
+Papka
+Ta’rifi
+Inbox
+Qabul qilingan yangi xatlar saqlanadigan papka.
+Bu yerda o‘qilgan, lekin boshqa papkaga koʻchirilmagan
+xatlar ham saqlanadi.
+Outbox
+Xatni tayyorlab, Send tugmasi bosilsa, bu xat Outbox
+papkasiga saqlanadi.
+Provayder xatlarni yuborganidan keyin ular Outbox
+papkasidan o‘chib ketadi.
+Papka: xabarlar
+turiga qarab
+saqlanadigan joy.

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase 0-B Flash Cards",
+  "type": "object",
+  "required": ["phase_id", "lesson_id", "lang", "cards"],
+  "properties": {
+    "phase_id": { "const": "phase_0b" },
+    "lesson_id": { "type": "string" },
+    "lang": { "type": "string", "enum": ["uz", "ru"] },
+    "cards": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["number", "concept", "visual_description", "is_common_mistake"],
+        "properties": {
+          "number": { "type": "integer" },
+          "concept": { "type": "string" },
+          "visual_description": { "type": "string" },
+          "is_common_mistake": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

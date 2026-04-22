@@ -1,0 +1,4813 @@
+Q edurtm _uz
+P. GULYAMOV, 
+R. QURBONNIYOZOV, 
+M. AYEZOY, N. SAIDOYA
+GEO GRAF IYA
+T A B IIY  G E O G R A F IY A  
+B O S H L A N G ‘IC H  K U R S I
+O‘zbekiston Respublikasi Xalq ta’limi vazirligi 
+umumiy o‘rta ta’lim maktablarining
+5-sinfi uchun darslik sifatida tavsiya etgan
+Qayta ishlangan va to‘ldirilgan 5-nashri
+TOSHKENT 
+«MITTI YULDUZ» 
+2020
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+Respublika 
+Ta'lim Markazi
+UO‘K: 91(075.3)+ 26.8ya72 
+KBK 26.8ya72
+Gulyamov Pataxkamal Nasirovich.
+G 35 
+«Geografiya» (Tabiiy geografiya boshlang‘ich kursi): umumiy o‘rta ta’lim
+Mas’ul muharrirlar:
+A.Nig‘matov -  geografiya fanlari doktori, professor;
+M. Mirakmalov -  geografiya fanlari nomzodi, dotsent.
+Taqrizchilar:
+R. Ibragimova -  geografiya fanlari nomzodi, dotsent;
+Y. Fedorko -  
+Toshkent shahar Olmazor tumanidagi 233 -maktabning oliy toifali geogra­
+fiya fani o‘qituvchisi, geografiya fanlari bo‘yicha falsafa doktori (PhD); 
+R.Abdiyev -  
+Navoiy shahar 11-AFCHO‘IMning oliy toifali geografiya fani o‘qituvchisi, 
+Xalq ta’limi a’lochisi;
+R. Abdullayev -  Jizzax viloyati Yangiobod tumanidagi 3-maktabning oliy toifali geografiya 
+fani o‘qituvchisi, Xalq ta’limi a’lochisi.
+maktablarining 5-sinfi uchun darslik /P.Gulyamov/ - Qayta ishlangan va 
+to‘ldirilgan 5-nashri.- T.: «MITTI YULDUZ», 2020. — 112 bet.
+I. Gulyamov P.N.
+ISBN 978-9943-64-87-0-8
+UO‘K: 91(075.3)+26.8ya72 
+KBK 26.8ya72
+Respublika maqsadli kitob jam g‘armasi mablag‘lari hisobidan
+chop etildi.
+SHARTLI BELGILAR:
+— TAYANCH SO‘Z YA TUSHUNCHALAR
+SAYOL YA TOPSHIRIQLAR
+ISBN 978-9943-64-87-0-8
+© P.Gulyamov va boshq., 2020-y. 
+© «MITTI YULDUZ», 2020-y.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+edurtm uz
+DARSLIK BILAN QANDAY ISHLASH KERAK?
+Siz bu yildan boshlab yangi fan -  Geografiyani o‘rganasiz. Bizning 
+buyuk bobokalonlarim iz geografiyani yaxshi bilishgan, shuning 
+uchun ham ushbu fanga oid qimmatli va qiziqarli m a’lumotlarni yozib 
+qoldirganlar.
+Geografiyani yaxshi o‘rganish uchun sizda qo‘lingizdagi darslikdan 
+tashqari, «Tabiiy geograf iya boshlang‘ich kursi» atlasi, yozuvsiz 
+xarita hamda katak chiziqli daftar bo‘lishi zarur. Shuningdek, rangli 
+qalamlar, chizg‘ich, o‘chirg‘ich, sirkul va ba’zi topshiriqlarni bajarish 
+uchun kompas va globus ham kerak bo‘ladi. Paragraf oxirida berilgan 
+topshiriqlarni bajarganingizda, savollarga javob berganingizda dars- 
+likdagi rasm va xaritalardan foydalanishni unutmang.
+Matnning har bir qismini alohida o‘qib chiqib, mazmunini o‘z 
+fikringiz bilan gapirib berishga harakat qiling. Terminlar, geografik 
+nomlarni daftaringizga, albatta, yozib qo‘ying. Tayanch so‘z, tushuncha 
+va geografik nomlarga alohida e’tibor bering.
+Agar matnda geografik nomlar uchrab qolsa, uni tezda xaritadan 
+topib, qayerdaligini bilib oling. Matn mazmunini tushunib, esda yaxshi 
+saqlab qolishda xaritadagi mashqlar va yozuvsiz xaritani doimiy 
+ravishda to‘ldirib borish katta yordam beradi.
+M amlakatimizda «Tabiiy geografiya boshlang‘ich kursi»dan 
+o‘quv atlasi nashr qilingan. Atlas ham darslik kitobingizga o‘xshab 
+sermazmun va juda qiziqarli. Xaritalarning masshtabi va shartli belgilari 
+berilgan. Ularni o‘rganib, xaritalar mazmunini bemalol bilib olish 
+mumkin. QR-kod belgilarini skaner qilish orqali esa mavzularga oid 
+internet m a’lumotlaridan foydalanishingiz mumkin.
+Aziz o‘quvchilar, darslikni o‘rganishda sizlarga Sayyoh va Laylak- 
+voy yordam berishadi.
+Men Laylakvoym an.
+Dunyo bo‘ylab ucha- 
+man. Sizlarga qiziqarli 
+m a’lum otlarim  bilan 
+ко'mak lash am an.
+Shunda bilag‘on bo‘lasiz!
+Men Sayyohman. Butun dun- 
+yoni kezib chiqqanman, ko‘p 
+narsani bilaman. Bolalar! Men 
+bergan savol va topshiriqlarni 
+qoldirmay hammasini bajaring.
+DARSLIK 
+BILAN 
+QANDAY 
+ISHLASH 
+KERAK?
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIYA FANI VA UNING RIVOJLANISHI
+edurtm uz
+I BOB. GEOGRAFIYA FANI VA UNING RIVOJLANISHI
+1 -§ . KIRISH. GEOGRAFIYA NIM ANI
+► 
+O ‘RGANADI?
+G eografiya va uning tarm oqlari haqida tushuncha. G eogra­
+fiya juda qadimgi fan. Qadimgi yunon olimi Eratosfen kitob yozib, uni 
+«G eografika» deb atagan. Yunoncha «ge» -  Yer, «grafo» -  yozaman 
+degan m a’noni bildiradi. Binobarin, «Geografiya» so‘zi «Yerni tasvir- 
+lab yozaman», «Yerning tasviri» degan m a’nolarni anglatadi. Geogra­
+fiya Yer yuzining tabiati, aholisi, uning xo‘jaligini, insonning tabiatdan 
+foydalanish va uni muhofaza qilish masalalarini o‘rganadigan fandir. 
+Geografiya bilan shug‘ullanadigan kishilarni geograflar deb ataymiz.
+Uzoq vaqtgacha geograflar Yer yuzi tabiatini, aholisi va mamla- 
+katlarning xo‘jaligini tasvirlab yozish bilan shug‘ullanib kelishdi. 
+Geograf-sayyohlar yangi yerlarni, dengiz va okeanlarni kashf qilishdi. 
+Biroq Yer yuzini tasvirlash, sayyoramizning kattaligini aniqlash, 
+xaritasini tuzish uchun bir necha ming yillar kerak bo‘ldi.
+Geografiya fani rivojlanib borgan sari unda ikkita asosiy yo‘nalish: 
+tabiiy geografiya va ijtimoiy-iqtisodiy geografiya vujudga keldi. 
+Siz, 5-sinfda tabiiy geografiyaning juda muhim bo‘limi — «Tabiiy 
+geografiya boshlang‘ich kursi»ni o‘rganasiz.
+Tabiiy geografiyani o‘rganishning aham iyati. Tabiiy geogra­
+fiya Yer yuzi tabiatining holati, uning o‘zgarishi, ro‘y beradigan tabiiy 
+hodisalarni, tabiatdan foydalanganda nimalarga e’tibor berish zarur- 
+ligini o‘rganadi. Shuning uchun Siz, aziz o‘quvchilar, tabiiy geogra- 
+f  iyani boshdanoq puxta o‘rganishga harakat qiling.
+Inson yashashi uchun zarur bo‘lgan hamma narsani -  havo va 
+suvni, oziq-ovqat va foydali qazilmalarni tabiatdan oladi. U uy-joylar, 
+zavodlar, shaharlar quradi, konlarni ochadi, g‘alla, paxta va boshqa 
+ekinlar ekadi, bog‘lar barpo qiladi, chorva mollarini boqadi. Tabiat 
+boyliklaridan unumli foydalanish, uni avaylab asrash uchun esa, albatta, 
+geografiya fanini juda yaxshi bilish zarur.
+Tabiiy geografiya Yer yuzi yoki uning biror joyi tabiatiga ta’- 
+rif berish bilan chegaralanmaydi. Tabiiy geografiya sayyoramiz
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+tabiatining nima uchun xilma-xil ekanligi sabablarini tushuntiradi. 
+Masalan, cho‘l zonalarida yog‘ingarchilikning kam, tog‘li hududlarda 
+esa aksincha, ko‘p bo‘lishini; tog‘lar ustida jazirama yozda ham qor 
+erimasligini; ayrim joylarda yil bo‘yi ob-havo bir xil -  issiq bo‘lishini; 
+boshqa hududlarda esa to‘rtta fasl aniq almashinib turishini tushuntirib 
+beradi.
+Shuningdek, tabiat «kambag‘allashib» ketmasligi, ifloslanmasligi, 
+yerlarni sho‘r bosib, tuproq unumdorligi pasaymasligi, daryolar qurib 
+qolmasligi uchun tabiatdan, uning boyliklaridan qanday foydalanish 
+kerak, qanday ishlarni amalga oshirish zarur, degan savollarga ham 
+javob beradi.
+«Tabiiy geografiya boshlang‘ich kursi»da nim alar o‘rganiladi?
+Siz, Yer yuzi tabiatining asosiy umumiy qonuniyatlarini bilib olasiz, 
+tabiatni, unda ro‘y beruvchi hodisalarni eng oddiy kuzatish usullarini 
+o‘rganasiz.
+«Tabiiy geografiya boshlang‘ich kursi» Sizni 6 -sinfda o‘rgani- 
+ladigan materiklar va okeanlar tabiiy geografiyasini oson o‘zlash- 
+tirishga tayyorlab boradi.
+Qo‘lingizdagi ushbu darslik yettita bobdan iborat. Har bir bobdan 
+muayyan bilimlarni egallaysiz. Geografik xaritalar bobini o‘qib, globus 
+va xaritada Yer yuzasining katta qismlari qanday qilib tasvirlanishini 
+bilib olasiz va ulardan qanday foydalanish mumkin, degan savolga 
+javob beradigan bo‘lasiz.
+edurtm_uz
+Tayanch so‘z va tushunchalar
+Geografiya
+Geograf
+Tabiiy geografiya
+Ijtimoiy-iqtisodiy geografiya 
+Tabiatni muhofaza qilish 
+Yer
+1. «Geografiya» so‘zining ma’nosini ayting.
+2. Geografiya nimani o‘rganadi?
+3. Geografiya qanday yo‘nalishlarga bo‘linadi?
+4. Tabiiy geografiya nimani o‘rganadi?
+5. Geografik bilimlarni o‘rganish inson uchun nimaga 
+kerak?
+5
+GEOGRAFIYA FANI VA UNING RIVOJLANISHI
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIYA FANI VA UNING RIVOJLANISHI
+Q edurtm _uz
+6
+6. Ob-havo va tabiatning boshqa hodisalarini kuzatishni 
+boshlang. Buning uchun «20.. - yil uchun ob-havoni 
+kuzatish daftari»ni tuting. Daftarning birinchi betiga 
+ob-havo hodisalarining shartli belgilarini chizib oling.
+Ob-havo hodisalarining shartli belgilari
+Havo ocliiq 
+^ Kuclili shamol 
+\ j  
+Bulduraq
+•
+Havo bulut 
+J L Quyun
+V
+Do‘l
+Havo yarim bulut 
+-------
+Tuman
+Momaqaldiroq
+(3
+•
+Havo ozgina bulut
+Yomg‘ir
+lutul
+b
+P*
+ъ -t
+£
+\ Shabada 
+lQ<
+Qor
+Qat-qat bulut
+w4 O‘rtacha shamol 
+A
+Jala
+Patsimon bulut
+7. Daftarni ko‘ndalangiga qo‘yib, quyidagi jadvalni chizing. 
+Shundan keyin har kuni ob-havoni kuzatib, jadvalni to‘ldirib 
+boring. Ma’lumot bo‘lmasa, o‘sha ustun ochiq qoladi.
+Kun,
+sana
+Soat
+Havo harorati, 
+°C hisobida
+Havo 
+bosimi, 
+mm Hg 
+hisobi- 
+da
+Shamol
+Bu-
+lut-
+lilik
+Bulut
+turi
+Yog‘in
+turi
+Tabiat-
+dagi
+boshqa
+hodisa-
+lar
+Kuza-
+tilgani
+O‘rta-
+cha
+yo‘na-
+lishi
+tez-
+ligi
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+05.09
+13:00
++28
+—
+718
+Sh
+—
+( 3
+—
+—
+—
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+2- § . GEOG RAFIK KASHFIYOTLAR VA 
+HO ZIRG I ZAMON GEOGRAFIYASI
+Inson hayoti tabiat bilan bog‘liq bo‘lgani uchun kishilar qadim 
+zamonlardanoq o‘zlari yashaydigan joy tabiatini yaxshi bilishga harakat 
+qilishgan. Keyinchalik qayiqlar, yelkanli kemalar yasab, dengizlarda 
+suzishgan, yangi yerlarni kashf qilganlar. Borgan joylari tabiatini, 
+odamlarning yashash tarzini tasvirlab yozishgan. O‘zlari yashaydigan 
+joyning hamda borgan yerlarining eng sodda xaritalarini chizishgan. 
+Shu yo‘l bilan geografik m a’lumotlar to‘plana borgan. Savdo aloqa- 
+larining o‘sishi, harbiy yurishlar, uzoq o‘lkalarga sayohatlar Yer haqi- 
+dagi bilimlarning ko‘payishiga yordam bergan.
+Miloddan avvalgi 3-asrda qadimgi yunon olimi Eratosfen Yerning 
+kattaligini ancha aniq hisoblagan. U dunyoning dastlabki xaritalaridan 
+birini tuzgan. Uning xaritasida Janubiy Yevropa, Shimoliy Afrika va 
+Osiyoning g‘arbiy qismlari tasvirlangan (1-rasm). Bu xaritaga nisbatan 
+ancha mukammalroq xaritani milodiy 2-asrda Ptolemey tuzgan (2- 
+rasm). Unda Yevropa va Osiyoning katta qismi hamda Afrikaning 
+shimoli tasvirlangan.
+Bizning bobokalon olim larim izdan M uham m ad al-Xorazmiy,
+7
+1-rasm. Miloddan avvalgi 3-asrda Eratosfen tuzgan dunyo xaritasi.
+GEOGRAFIYA FANI VA UNING RIVOJLANISHI
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIYA FANI VA UNING RIVOJLANISHI
+Q edurtm _uz
+2-rasm. Milodiy 2-asrda Ptolemey tuzgan dunyo xaritasi.
+Abu Rayhon Beruniy, Nosir Xisrav, Mahmud K oshg‘ariylar ham 
+geografiyaning rivojiga katta hissa qo‘shishgan va dunyo xaritalarini 
+tuzishgan (3-rasm). Muhammad al-Xorazmiy (783-850-yy) «Surat 
+ul-Arz» -  «Yerning tasviri» nomli kitobini yozgan. 973-1048-yillarda 
+yashab o ‘tgan Abu Rayhon Beruniy Yerning o ‘sha vaqtdagi eng 
+mukammal modeli -  Shimoliy yarimshar globusini yasagan va asar- 
+larida Yer sharining narigi tomonida ham quruqlik borligi haqida yozib 
+qoldirgan, dunyo xaritasini tuzgan (4-rasm). Mahmud Koshg‘ariy 
+(milodiy 11-asr) «Devonu lug‘otit turk» asarida ko‘plab geografik joy 
+nomlari va terminlarga izoh yozgan, dunyo xaritasini ishlagan.
+O‘rta osiyolik Nosir Xisrav (1004-1088-yy.) Janubi-g‘arbiy Osiyo 
+va Shimoli-sharqiy Afrikaga sayohat qilib, juda ko‘p geografik m a’lu- 
+motlar to‘plagan. Yetti yil davom etgan ikkita sayohatida 15 ming 
+8 
+kilometr (km)dan ortiq yo‘lni bosib o‘tgan (10-bet 5-rasm).
+Zahiriddin Muhammad Bobur (1483-1530-yy.) «Boburnoma» 
+kitobida Farg‘ona vodiysi, Afg‘oniston, Hindiston tabiati, joy nomlari 
+haqida ko‘plab muhim m a’lumotlar yozib qoldirgan.
+Materiklar va okeanlarning kashf etilishida jasur dengizchi hamda 
+sayyohlarning xizmatlari juda katta bo‘lgan.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+3-rasm. M. Xorazmiyning O ‘rta Osiyo va unga yondosh yerlar xaritasi.
+1492-yilda X.Kolumb boshchiligidagi ekspeditsiya Hindistonga 
+dengiz orqali yo‘l topish maqsadida Ispaniyadan g‘arbga tomon kemada 
+suzib ketadi. U Atlantika okeanini kesib o‘tib, Amerika qirg‘oqlariga 
+yetib bordi. 4 marta uyushtirgan sayohati davomida u Amerika qit’asini 
+kashf qiladi. Yangi qit’aga 1499-1504-yillarda Janubiy Amerikaning 
+shimoliy qismini o‘rgangan Amerigo Vespuchchi nomi berilgan. 
+Portugaliyalik Vasko da Gama 1498-yilda kemalarda Afrikani aylanib, 
+Hindistonga bordi.
+1519-1522-yillarda Fernan M agellan boshchiligidagi ispanlar 
+ekspeditsiyasi kemalarda dunyoni 
+g ‘arbdan sharqqa aylanib chiqdi.
+Tinch okeanni kesib o‘tdi. Natijada 
+Yerning sharsimonligi isbotlandi,
+Yer yuzining katta qismini suv 
+qoplab yotishi aniqlandi.
+1820-yilning yanvarida rus 
+dengizchi sayyohlari F.Bellins- 
+gauzen va M.Lazarev eng uzoqda 
+joylashgan, muzlar bilan qoplanib 
+yotgan Antarktida materigini kashf 
+etishdi.
+H ozirgi vaqtga kelib, Yer 
+yuzida aniqlanmagan, xaritaga tu- 
+4-rasm. Abu Rayhon Beruniyning 
+shirilmagan joy qolmagan. Biroq 
+dunyo xaritasi.
+GEOGRAFIYA FANI VA UNING RIVOJLANISHI
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIYA FANI VA UNING RIVOJLANISHI
+Q edurtm _uz
+NOSIR XISRAV 
+sayohati (XI asr)
+I
+V
+Bayrut
+MISR 
+Quddus 
+. |
+Qazvin11
+Isfahon т.г , 
+Balx
+тэ„„„„ 
+Nishopur
+JMarv
+Qabadiyon
+Basra
+'' * 
+—
+Makka
+ARABISTON
+Mo‘lton
+\
+%
+— Mashhur sayyoh va 
+olim Nosir Xisravning 
+«Safarnoma» asarida 
+ko ‘plab qiziqarli ma ’lu- 
+motlar uchraydi.
+5-rasm. Nosir Xisrav 
+sayohati.
+Yer yuzi tabiatining barcha xususiyatlarini, ayrim tabiiy hodisa- 
+larni, ularning sabab va oqibatlarini olimlar yetarlicha tushuntirib 
+berganlari yo‘q. Shuning uchun geograf olimlar Yer yuzasini, uning 
+tabiatini yanada m ukam m al o ‘rganishni davom  ettirishm oqda. 
+Geograflarning tadqiqotlari natijalaridan xo‘jalikning turli sohalarida 
+keng foydalaniladi.
+Hozirgi vaqtda geograflar o‘zlarining tadqiqotlarida hisoblash 
+texnikasidan, kompyuterlardan, kosmik suratlardan foydalanishmoqda. 
+Endilikda Yer yuzasidagi har bir nuqtaning aniq geografik o‘rnini 
+Yerning sun’iy yo‘ldoshlari yordamida bilib olish mumkin.
+10
+Tayanch so‘z va tushunchalar
+Globus 
+Xarita 
+Kashfiyot
+Tabiat 
+Tadqiqot 
+Sun’iy yo‘ldosh
+Ekspeditsiya 
+M aterik 
+Qit’a
+1. Eratosfen va Ptolemeyning geografiya fani rivojiga 
+qo‘shgan hissalari haqida nimalarni bilasiz?
+2. Beruniy Shimoliy yarimshar globusini yasaganidan 
+keyin qanday muhim xulosaga kelgan?
+3. Hozirgi zamon geograflari nimalarni o‘rganishadi?
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+BOB. YER -  QUYOSH SISTEMASIDAGI SAYYORA
+3- §. QUYOSH, OY VA YULDUZLAR
+Yulduzlar. Tunda osmonga qarasangiz, juda ko‘plab yulduzlar 
+tartibsiz sochilib yotganga o‘xshaydi. Aslida ular osmonda tartibsiz 
+sochilib yotmaydi. Hozirgi vaqtda olimlar rasadxona (observatoriya)- 
+larda yulduzlarning kattaligi, harorati, harakati va moddalar tarkibini, 
+shuningdek, o‘zaro joylashuvini ham o‘rganishmoqda.
+Yulduzlar Yerdan juda uzoqda joylashgan, nihoyatda qizib yotgan 
+osmon yoritgichlaridir. Ularni odamlar qadimdan guruhlarga ajratish- 
+gan va har bir guruhga nom berishgan. Bular yulduz turkumlari deb 
+ataladi. Masalan, Katta Ayiq (Yetti og‘ayni), Kichik Ayiq, Qutb yulduzi 
+(Oltin Qoziq) va boshqalar.
+Bolalar, Sizlar Katta Ayiq yulduzlar turkumini bilsangiz kerak. Ular­
+ni xayolan chiziq bilan tutashtirsangiz shakli cho‘michga o‘xshaydi. 
+Cho‘mich bandidagi ikkinchi yulduz yonida kichik yulduzcha bor. 
+Qadimda jangchilarning ko‘zi o‘tkirligini shu yulduzni ko‘ra olishiga 
+qarab aniqlashgan.
+Katta Ayiq
+Kichik Ayiq
+Oltin Qoziq 
+(Qutb) yulduzi
+f  Shimoliy 
+1 
+nuqta
+11
+Sh
+6-rasm. Qutb (Oltin Qoziq) yulduzini va ufqning shimoliy nuqtasini topish.
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+Q edurtm _uz
+7-rasm. Quyosh sistemasi (Quyosh va uning atrofidagi sayyoralar).
+K o‘rinib turadigan ancha yorug‘ yulduzlardan biri Oltin Qoziq 
+(Qutb) yulduzidir. Bu yulduz hamma vaqt ham osmonda bir joyda — 
+Shimoliy qutb ustida turadi. Oltin Qoziq (Qutb) yulduzini osongina 
+topsa bo‘ladi. Buning uchun Katta Ayiq yulduzlar turkumi — cho‘- 
+michning chekkasidagi ikkita yulduz oralig‘idagi masofani besh marta 
+qo‘yib chiqilsa, Oltin Qoziq yulduziga boradi (11-bet 6-rasm).
+Q uyosh -  Yerga eng yaqin b o‘lgan yulduz -  olov shardir. U 
+Quyosh sistem asining o ‘rtasida joylashgan. Quyosh kattaligi va 
+haroratiga ko‘ra o‘rtacha yulduzlarga teng. Uning massasi (og‘irligi) 
+Yer og‘irligidan salkam 332 ming marta katta, diametri Yer diametridan 
+109 marta uzun. Yuzasidagi harorat salkam +6000 °C. O‘z o‘qi atrofida 
+27 Yer sutkasidan sal k o ‘proq vaqtda bir marta aylanib chiqadi. 
+Quyosh -  Yerdagi yorug‘lik va issiqlik manbayi. Yerdagi o‘simlik va 
+hayvonlarning mavjudligi, tabiatdagi aylanma harakat Quyoshning 
+issiqligi va yorug‘ligi tufaylidir. Uning atrofida 8 ta sayyora aylanib 
+turadi. Bular: Merkuriy, Venera, Yer, Mars, Yupiter, Saturn, Uran, 
+Neptun sayyoralaridir (7-rasm). Sayyoralarning yulduzlardan farqi 
+shuki, ular nur sochmaydi, Quyoshdan tushgan nurni qaytaradi, xolos. 
+Olimlar murakkab asboblar, har xil teleskoplar yordamida sayyoralar
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+8-rasm. Oyning har xil ko‘rinishi: 1 — Oy ko ‘rinmaydi; 2 — Yangi oy; 
+3 — Oyning birinchi choragi; 4 — Chorak kam to ‘lin oy;5 — To ‘lin oy; 
+6 — Qisqarayotgan oy; 7 — Oxirgi chorak; 8 — Tugayotgan oy.
+va ularning y o ‘ldoshlari asosan bir xil m oddalardan tuzilganini 
+aniqlashgan. Ular ham, asosan, Yerda uchraydigan moddalardan 
+tuzilgan ekan. Sayyoralarning yulduzlardan yana bir farqi shuki, ular 
+osmondagi o‘z o‘rinlarini ancha o‘zgartirib turadi.
+Oy — Yerning tabiiy y o ‘ldoshi. Oy o ‘zidan nur sochm aydi, 
+Quyoshdan tushgan nurni qaytaradi. Oy Yer atrofini deyarli bir oyda 
+bir marta aylanib chiqadi. Yer, Quyosh va Oyning osmonda bir-biriga 
+nisbatan joylashgan o‘rniga qarab u bizga har xil ko‘rinadi. Bizga 
+Oyning Quyosh nuri bilan yoritilgan qismigina ko‘rinadi. Agar diqqat 
+bilan qarasangiz, yangi oy o‘roq shaklida bo‘ladi. Endi eslab qoling: 
+yangi oy kechqurun Quyosh botganda g‘arb tomonda ko‘rinadi, eski, 
+13 
+tugayotgan oy esa erta tongda, Quyosh chiqmasdan sharq tomonda 
+ko‘zga tashlanadi (8-rasm). Agar Oy doira shaklida ko‘rinsa, to‘lin oy 
+deyiladi. Oyning 14—15-kunlari to‘lin oy bo‘ladi. Oy tutilishi to‘lin oy 
+kuniga to‘g ‘ri keladi. Oy, Yer, Quyosh osmonda bir chiziqqa to‘g ‘ri 
+kelib qolganda Oy tutiladi. Quyosh, Oy va Yer osmonda bir chiziqda
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+14
+Q edurtm _uz
+turib qolganda esa Quyosh tutiladi. Quyosh va Oyning Yerni tortishi 
+natijasida dengiz hamda okeanlarda davriy ravishda suv qalqishi, ya’ni 
+suvning ko‘tarilib, pasayishi ro‘y beradi. Suvning ko‘tarilib, qaytishi 
+Quyosh tortishiga nisbatan Oy tortganda ikki baravar kuchli bo‘ladi. 
+Odamlar osmon jismlarini kuzatish natijasida Oy va Quyosh taqvim 
+(kalendar)larini tuzishgan, quruqlik va okeanlarda turgan joylarini 
+aniqlashgan.
+Yulduz va Quyoshga qarab  oriyentirlash (dunyo tomonlarini 
+aniqlash). Oltin Qoziq yulduziga qarab shimolga, demak, dunyoning 
+boshqa tomonlariga bo‘lgan yo‘nalishni ham aniqlash mumkin. Agar 
+old tomoningiz bilan shimolga qarab tursangiz, o‘ng tomoningiz sharq, 
+chap tomoningiz g‘arb, orqa tomoningiz janub bo‘ladi (9-rasm). O‘zi 
+turgan joyni ufq tomonlariga nisbatan aniqlash oriyentirlash deyiladi. 
+Shimol, janub, sharq, g‘arb ufqning asosiy tomonlari, shimoli-sharq, 
+shimoli-g‘arb, janubi-sharq va janubi-g‘arb esa oraliq tomonlaridir. 
+Bular yanada kichikroq oraliq tomonlarga bo‘linadi. Masalan, shimol- 
+shimoli-sharq, janub-janubi-sharq (10-rasm).
+Ufq tomonlarini yulduzlarga qarab faqat kechasi aniqlash mumkin. 
+Kunduzi-chi? Kunduzi Quyoshga qarab aniqlasa bo‘ladi. Buning uchun
+9-rasm. Joyda oriyentirlash.
+10-rasm. Ufqning asosiy va oraliq 
+tomonlari.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Quyosh nuri yaxshi tushadigan ochiq, tekis yerga diametri 2 metr 
+bo‘lgan aylana chiziq chiziladi. Aylana o‘rtasiga uzunligi bir yarim metr 
+bo‘lgan tayoq (ustun) qoqib qo‘yiladi. Tayoq soyasi tush vaqtida eng 
+kalta bo‘lib, shimol tomonga yo‘nalgan bo‘ladi. Shimol yo‘nalishining 
+teskari tomoni janub, o‘ng tomon sharq, chap tomon g‘arb bo‘ladi. Shu 
+tariqa oraliq tomonlarni ham aniqlash mumkin.
+edurtm_uz
+Tayanch so‘z va tushunchalar
+Quyosh 
+Quyosh sistemasi 
+Yulduz
+Sayyoralar 
+Oriyentirlash 
+Yulduz turkumi
+Katta Ayiq 
+Oy, Oy tutilishi 
+Qutb yulduzi
+1. Quyosh sistemasidagi sayyoralarning qaysilari Quyoshga 
+eng yaqin va qaysilari eng uzoq joylashgan?
+2. Sayyoralar yulduzlardan nimasi bilan farq qiladi?
+3. Qutb (Oltin Qoziq) yulduzi osmonda qanday topiladi?
+4. Kunduzi Quyoshga qarab ufq tomonlarini qanday aniqlasa 
+bo‘ladi?
+5. Tasavvur qiling, yolg‘iz o‘zingiz o‘ynab yurib adashib 
+qoldingiz. Uyingiz g‘arbda ekanligini bilasiz, deb faraz 
+qilaylik. Siz yuzingiz bilan a) shimolga; b) sharqqa va c) 
+janubga qarab turgan bo‘lsangiz, uyingizga borish uchun 
+qaysi tomonga (ortga, o‘ngga yoki chapga) yurishingiz 
+kerak bo‘ladi? Buni uyingizning hovlisida ota-onangiz yor- 
+damida tajribada sinab ko‘ring.
+15
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+Qedurtm _uz
+► 
+4-§. 
+YERNING SHAKLI VA 0 ‘LCHAM LARI
+Qadim zamonlarda turli joylardagi xalqlar Yerning shakli va kat­
+taligi haqida turlicha tasavvurga ega bo‘lganlar. Qadimgi yunonlar 
+Yer yassi gumbazsimon shaklda bo‘lib, uning atrofini juda yirik daryo -  
+okean o‘rab turadi deb o‘ylashgan. Hindistonda esa Yer yarimshar shak­
+lida bo‘lib, uni fillar ko‘tarib turadi, fillar esa ulkan toshbaqa ustida 
+turadi deb tasavvur qilishgan. Bizning O‘rta Osiyo xalqlari esa Yerni 
+ho‘kizlar ko‘tarib turishadi, ular Yerni bir shoxidan ikkinchi shoxiga 
+olganda yer qimirlaydi deb o‘ylashgan. Lekin kishilarning uzoq-uzoq- 
+larga sayohat qilishi, dengizlarda kemalarda suzishi oqibatida odamlar 
+Yerning dumaloq (sharsimon) ekanligini tasavvur qila boshladilar.
+Yerning sharsimon ekanligini miloddan avvalgi 4-asrda qadimgi 
+yunon olimi Aristotel isbotlagan. U Yerning sharsimonligini asoslovchi 
+quyidagi: dengizda qirg‘oqqa yaqinlashib kelayotgan kemaning avval 
+machtalari, keyin korpusining suvdan ko‘tarilib chiqishi; Oy tutilganda 
+unga tushgan Yer soyasining doira shaklda ekanligi; tekis va ochiq 
+joyda, dengizda odam yuqoriga ko‘tarilgan sari ko‘rinarli ufq (gorizont) 
+ning kengayib borishi; deyarli barcha yirik osmon jismlarining 
+sharsimon shaklda ekanligini dalil sifatida keltiradi. Demak, Yer 
+sharsimon, dumaloq bo‘lsa kerak, degan dastlabki tasavvurning vujudga 
+kelganiga 2400 yildan ko‘proq vaqt bo‘lgan.
+Globus -  Yerning juda kichraytirilgan shakli -  modeli. Yevropada 
+birinchi globusni 
+1492-yilda xaritashunos olim Martin Bexaym 
+yasagan. Uning globusida Amerika, Avstraliya va Antarktida qit’alari 
+ko‘rsatilmagan. Chunki u vaqtda bu qit’alarning borligini yevropaliklar 
+16 
+bilishmas edi. Hozirgi vaqtda Yer yuzasidagi nimalar tasvirlanganiga va 
+katta-kichikligiga ko‘ra har xil globuslar mavjud.
+Dunyodagi katta va mazmuniga ko‘ra yagona bo‘lgan globus- 
+lardan biri «Toshkent globusi» bo‘lib, u Mirzo Ulug‘bek nomidagi 
+O‘zbekiston Milliy universitetida saqlanadi. Uning balandligi ikki 
+yarim metr, aylanasining uzunligi 6 metrga yaqin, og‘irligi (vazni) esa
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+edurtm uz
+490 kilogramm(kg)ni tashkil etadi 
+( 11-rasm).
+G eografik 
+qutblar, 
+ekvator.
+Biror koptok yoki dumaloq sharni 
+olib, aylantirsangiz uning ikki nuq- 
+tasi o‘z joyida, qo‘zg‘almasdan ayla- 
+nadi. Yer aylanganda ham uning 
+qarama-qarshi 
+tomondagi 
+ikkita 
+nuqtasi o‘z joyida aylanadi. Yer­
+ning o‘z joyida turib aylanadigan 
+ikki 
+nuqtasini 
+Yerning 
+qutb lari 
+deyiladi. Ular Yer yuzining qarama- 
+qarshi 
+tomonlarida 
+joylashgan.
+Ularning 
+biri 
+Yerning 
+shimoliy 
+qutbi, 
+ikkinchisi 
+janubiy 
+qutbi 
+deyiladi. Bu qutblarni tutashtiruvchi Yerning markazidan o‘tgan to‘g‘ri 
+chiziq Yerning o ‘qi deb ataladi. Yer qutblaridan barobar uzoqlikda Yer 
+yuzasidan o‘tkazilgan katta aylana chiziqqa ekvator deyiladi. Yer ekva- 
+torining uzunligi 40000 kilometr(km)dan ortiq. Ekvator Yerni ikkita
+yarimsharga -  Shimoliy va Janubiy 
+yarimsharlarga ajratib turadi.
+Yer yuzasida ekvatordan muay- 
+yan bir xil uzoqlikda o‘tkazilgan 
+aylana chiziqlarga parallellar de­
+yiladi. Parallellarning uzunligi ek­
+vatordan qutblarga tomon qisqarib 
+boradi. Shimoliy va Janubiy qutb­
+larni tutashtiruvchi, Yer yuzasidan 
+o‘tkazilgan yarim aylana chiziqlar 
+meridianlar deb ataladi. London 
+shahridagi Grinvich rasadxonasidan 
+o‘tgan meridian Bosh meridian deb
+, 
+„ 
+•, 
+7 
+л и 
+qabul qilingan (12-rasm).
+ekvator, meriaianlar, parallellar. 
+^ 
+^ 
+° 
+v 
+7
+fj/ii Y y a R I ^ s
+12-rasm. Yerning shimoliy qutbi,
+11- rasm. Toshkent globusi.
+2-«Geografiya», 5-sinf.
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+Yerning shakli aniq (ideal) shar shaklida emas. Shimoliy va Janubiy 
+qutblar hamda ular atrofi sharga nisbatan biroz botiqroq. Buning nati­
+jasida Yerning markazidan Yer yuzasigacha bo‘lgan masofa qutblarda 
+6357 km ga teng bo‘lsa, ekvatorda 6378 km ga teng. Yer yuzining 
+umumiy maydoni 510 mln km2 dan ortiq bo‘lib, uning katta qismini 
+suv -  okean va dengizlar qoplagan. Okean va dengizlardagi eng chuqur 
+botiq (Mariana botig‘i) 11022 metr. Quruqlikdagi eng baland tog‘ 
+cho‘qqisi (Jomolungma)ning balandligi 8848 metr. Yer yuzasi ham shar 
+yuzasidek tekis qabariq emas. Demak, Yerning shakli shar emas, balki u 
+o‘ziga xos ko‘rinishga ega bo‘lib, uni geoid deyilsa, to‘g‘ri bo‘ladi.
+edurtm_uz
+18
+Tayanch so‘z va tushunchalar
+Globus 
+Ekvator 
+Parallel
+Meridian 
+Bosh meridian 
+Geoid
+Yer o‘qi 
+sharsimon 
+geografik qutblar
+1. Qadim zamonlarda odamlar Yerni qanday tasavvur 
+qilishgan?
+2. Aristotel Yerning sharsimon ekanligini qanday dalillar bi­
+lan isbot qilgan?
+3. 5-sinf o‘quv atlasi va darslik matnidagi ma’lumotlardan 
+foydalanib quyidagi a) va b) rasmlar qanday tabiiy 
+sharoitda yashovchi xalqlarning Yer haqidagi tasavvuri 
+mahsuli ekanligini aniqlang:
+ш
+ 
+ы
+4. Yerda nechta qutb bor? Tasavvur qiling, siz Shimoliy 
+qutb ustida turibsiz. Sizning istalgan tomoningizda ufq­
+ning qaysi tomoni bo‘ladi?
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+5-§. y e r n i n g  o ‘z  o ‘QI v a  q u y o s h
+ATROFIDA AYLANISHI
+Yerning o‘z o‘qi atrofida aylanishi. Odamlar juda qadim zamon- 
+lardanoq Quyosh har kuni sharqdan chiqib, g‘arb tomonga botishini 
+bilib olganlar. Quyosh chiqib, botgunga qadar o‘tgan yorug‘ vaqt 
+kunduzi va botgandan chiqqunicha o‘tgan qorong‘i vaqt kechasi deb 
+ataladi. Bir kecha bilan bir kunduz sutka deb ataladi. Bir sutka 24 
+soatga teng. Binobarin, Yer o‘z o‘qi atrofida 24 soatda g‘arbdan sharqqa 
+tomon bir marotaba aylanib chiqadi.
+Kecha bilan kunduzning almashinib turishini o‘zingiz tajriba qilib 
+ko‘rishingiz mumkin. Buning uchun kechqurun qorong‘ida koptok 
+yoki sharni olasiz. Ularni chiroq yonida tutib tursangiz, yarmiga nur 
+tushib yorug‘ ko‘rinadi, yarmi esa qorong‘u bo‘ladi. Agar sharni sekin 
+aylantirsangiz yorug‘ va qorong‘u tomonlari almashinadi. Yerda kecha 
+bilan kunduz ham xuddi shunday almashinadi. Chunki Quyosh nuri 
+bir vaqtning o‘zida Yerning hamma tomonini yorita olmaydi, faqat 
+Quyoshga qaragan qismini yoritadi.
+Yerning Quyosh atrofida aylanishi. Yer Quyosh atrofini 365 kun 
+(sutka) va 6 soatda bir marta to‘liq aylanib chiqadi. Hisobga to‘g ‘ri 
+bo‘lishi uchun bir yil 365 kun deb qabul qilingan. Shunda har yili 6 
+soatdan yig‘ilib, 4 yilda 24 soat, ya’ni bir sutka bo‘ladi. Shuning uchun 
+har uch yildan keyin to‘rtinchi yil 366 kun bo‘ladi. Bu yil kabisa yili 
+deyiladi. Shu yili fevral oyi 28 kun emas, 29 kun hisoblanadi.
+Nega yil fasllari almashinib turadi? Buni tushunish uchun 13-rasmni 
+tahlil qilamiz. Rasmda Yerning Quyosh atrofida aylanayotgan oylardagi 
+holati tasvirlangan. Iyun oyida Yerning Shimoliy yarimshar qismi 
+Quyoshga ko‘proq qarab turadi. 22-iyun Quyoshning yozgi turish 
+kuni deyiladi. Bu kuni Quyosh Shimoliy yarimsharda ufq ustida eng 
+19 
+baland ko‘tariladi, kunduz uzun, tun esa qisqa bo‘ladi. Shimoliy qutb 
+atrofidagi yerlarda Quyosh butunlay botmaydi. Shimoliy yarimsharda 
+yoz, Janubiy yarimsharda esa qish bo‘ladi.
+22-dekabr kuni Quyosh Janubiy yarimsharda ufqdan eng baland 
+ko‘tariladi. Janubiy yarimsharni eng ko‘p, Shimoliy yarimsharni esa,
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+aksincha, eng kam yoritadi va isitadi. Shimoliy yarimsharda kunduz 
+eng qisqa, tun esa eng uzun bo‘ladi. Shuning uchun bu kunni Shimoliy 
+yarimsharda Quyoshning qishki turish kuni deyiladi.
+21-mart va 23-sentabr kunlari esa Quyosh ikkala yarimsharni bir 
+xilda yoritadi. Bu kunlarni bahorgi va kuzgi tengkunlik deyiladi.
+Yer yuzida turli fasllarda Quyoshning turlicha baland ko‘tarilishi 
+oqibatida fasllarning almashinishi kishilar hayotiga, o‘simliklarga, hay- 
+vonlar hayotiga katta ta’sir ko‘rsatadi (bolalar, siz yashaydigan joyda 
+turli fasllarda ob-havo qanday bo‘lishini eslang).
+Shimoliy va Janubiy tropiklar, qutbiy doiralar. Bahorgi va kuzgi 
+tengkunliklar vaqtida (21-mart va 23-sentabr kunlari) Quyosh Shimoliy 
+va Janubiy yarimsharni bir xilda yoritadi va isitadi. 22-martdan boshlab 
+Quyosh Yerning Shimoliy yarimshar qismida asta-sekin yuqoriga ko‘- 
+tarila boshlaydi. 22-iyunda Quyosh Shimoliy yarimsharda eng baland 
+ko‘tariladi. Bu vaqtda Quyosh 23,5° shimoliy kenglikda tik tepaga 
+keladi. Bu kenglikdan o‘tgan parallel chizig‘i shimoliy tropik deyiladi. 
+Janubiy yarimshardagi 23,5° dan o‘tgan parallel chizig‘i janubiy tropik 
+deyiladi. Chunki Quyosh 22-dekabr kuni Janubiy yarimsharda shu 
+kenglikda tik tepadan o‘tadi. 22-iyun kuni 66,5° shimoliy kenglikda, 
+22-dekabr kuni 66,5° janubiy kenglikda bir sutka -  24 soat davomida 
+Quyosh botm aydi. Qish faslida esa Quyosh chiqmay, bir sutka
+edurtm_uz
+13-rasm. Yerning 
+Quyosh atrofida 
+yillik aylanishi.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+davomida kechasi bo‘ladi. Bu kengliklardan o‘tgan parallel chiziqlar 
+qutbiy doiralar deyiladi.
+Quyoshning ufqdan turli balandliklarda turishiga bog‘liq ravishda 
+Yer yuzasining turli geografik kengliklari Quyosh nuri bilan turlicha 
+isitilib, turlicha yoritiladi. Buning natijasida Yer yuzida issiqlik 
+mintaqalari vujudga keladi. Yer yuzida bitta issiq, ikkita o‘rtacha 
+issiq (m o‘tadil) va ikkita sovuq mintaqa hosil bo‘ladi (14-rasm). 
+Bu mintaqalar o‘z navbatida yoritilish mintaqalari hamdir. Bizning 
+mamlakatimiz, O ‘zbekiston, Shimoliy yarimsharning o‘rtacha issiq 
+(mo‘tadil) mintaqasida joylashgan. Mamlakatimizda 4 ta yil fasli -  
+bahor, yoz, kuz, qish fasllari bir-biridan aniq farq qilib turadi.
+Tаyanch so‘z vа tushunchаlаr
+Sutkа 
+Kаbisа yili
+Bahorgi va kuzgi tcngkunlik 
+Issiqlik mintаqаlаri 
+Qutbiy doiralar 
+Tropik chiziqlar
+Quyoshning yozgi va qishki turish kunlari
+21
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YER —
+ 
+QUYOSH 
+SISTEMASIDAGI SAYYORA
+Qedurtm _uz
+22
+1. Yer o‘z o‘qi atrofida aylanganda tabiatda qanday hodi- 
+salar ro‘y beradi? Quyosh atrofida aylanganida-chi?
+2. Sutka nima va u qanday hosil bo‘ladi? Bir sutka necha 
+soatdan iborat?
+3. Kabisa yili qanday yil? Bunga sabab nima?
+4. 5-sinf o‘quv atlasidagi «Yarimsharlar tabiiy xaritasi»dan 
+ekvator, Bosh meridian, qutbiy doiralar, tropik chiziqlarni 
+toping va yozuvsiz xaritaga ularni chizib, nomlarini yozib 
+qo‘ying.
+5. Quyidagi jadvalda bo‘sh qolgan kataklarni darslik matni- 
+dan foydalangan holda to‘ldiring:
+Yerning holati
+Siz yashayotgan 
+joyda yilning qaysi 
+fasli bo‘ladi?
+Quyosh qayerda 
+qoq tepada — 
+zenitda bo‘ladi?
+Qutb kuni 
+qayerda 
+kuzatiladi?
+22-iyun -  Quyoshning 
+yozgi turish kuni
+23-sentabr -  kuzgi 
+tengkunlik
+22-dekabr -  
+Quyoshning qishki 
+turish kuni
+21-mart -  bahorgi 
+tengkunlik
+6. Rasmdan foydalangan holda quyidagi top­
+shiriqlarni bajaring:
+a) Shimoliy tropik chizig‘i rasmda qaysi harf 
+bilan belgilangan?
+b) quyida berilgan harflardan qaysi biri bilan 
+ko‘rsatilgan chiziqdan janubda Quyosh umu- 
+man tik tepa (zenit)da bo‘lmaydi?
+c) rasmda harflar bilan ko‘rsatilgan parallel- 
+larning qaysi biri eng uzun?
+d) A nuqtada yoz fasli bo‘lganda, D nuqtada 
+yilning qaysi fasli bo‘ladi?
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+Respublika 
+Ta'lim Markazi
+III b o b . g e o g r a f i k  XARITALAR
+ШШ 6-§. AZIM UT VA MASOFANI 0 ‘LCHASH
+G eografik x arita — insoniyatning buyuk kashfiyoti. Yer yuzi 
+va uning turli qismlarining tabiiy sharoiti, aholisi va uning xo‘jalik 
+faoliyati geografik xaritalarda tasvirlanadi.
+Sayyohlar notanish o‘lkalarda ot-ulovda yuzlab, minglab kilometr 
+yo‘l yurganlar, qayiq va kemalarda dengiz-u okeanlarda suzganlar. Ular 
+ko‘rgan, o‘rgangan, kashf qilgan narsalarni xaritalarga tushirishgan.
+Agarda keng tekis joyga chiqsangiz, siz turgan yer doira shaklda 
+ko‘rinadi. Doira shakldagi tekislikning chetida osmon bilan Yer tutashib 
+turgandek tuyuladi (15-rasm). Ana shu osmon bilan Yer tutashgan chiziq 
+ufq deb ataladi. Sizdan ufqqacha bo‘lgan doira shakldagi tekis yer ufq 
+tekisligi deyiladi.
+Darslikning «Q uyosh, o y  va yulduzlar» mavzusida ufqning
+4 ta asosiy va 4 ta oraliq tomoni hamda bulardan boshqa mayda 
+oraliq tomonlari borligi haqida aytib o‘tilgan edi. Lekin har bir joyda 
+yo‘nalishlar juda ko‘p. Chunonchi, siz turgan joydan biror uy yoki 
+daraxtga tomon yo‘nalish to‘ppa-to‘g‘ri shimolga emas, biroz sharqqa 
+yoki janubi-sharqqa bo‘lsa, Siz bu yo‘nalishni qanday aniqlaysiz? Ana 
+shunday vaqtda azimut yordam beradi.
+15-rasm. Ufq, ufq 
+l0l 
+tekisligi. Ufq tekis-
+Sh.-
+shq
+ligining asosiy va 
+23 
+oraliq tomonlari.
+J- shq.
+GEOGRAFIK 
+XARITALAR
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIK 
+XARITALAR
+Azimut. X o‘sh, azimut nima? Azim ut -  joydagi ikki yo‘nalish 
+orasida hosil bo‘lgan burchak. Bu yo‘nalishlardan biri doim shimolga, 
+ikkinchisi esa biz aniqlashimiz lozim bo‘lgan predmetga (biror da- 
+raxtmi, quduqmi yoki uzoqda joylashgan uymi) yo‘nalgan bo‘ladi (16- 
+rasm). Azimut kompas yordamida aniqlanadi.
+Azimut shimolga yo‘nalishdan boshlab soat millari harakati yo‘na- 
+lishi bo‘yicha hisoblanadi (16-rasmga e’tibor bering). Rasmda da- 
+raxtga yo‘nalish azimuti 45° ga, ko‘prikga yo‘nalish azimuti 125° ga, 
+stadionga yo‘nalish azimuti 225° va uyga yo‘nalish azimuti 310° ga 
+teng ekanini ko‘rasiz.
+M asofani o‘lchash. Biror joyning planini tuzayotganda masofalarni 
+o‘lchashga to‘g‘ri keladi. Bir-biriga yaqin turgan ikki predmet orasidagi 
+m asofani metr yoki ruletka yordam ida o ‘lchash mumkin. Lekin 
+boriladigan joygacha bo‘lgan masofani yoki tabiatdagi ikki predmet 
+oralig‘ini qadamlab o‘lchash qulay.
+Masofani qadamlab o‘lchash uchun o‘z qadamingizning o‘rtacha 
+uzunligini bilishingiz zarur. Qadamning o‘rtacha uzunligini bilish 
+uchun avval 100 metr(m) masofani ruletka bilan o‘lchab olish kerak.
+edurtm_uz
+24
+16-rasm. Azimutni kompas yordamida aniqlash.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Keyin shu masofani odatdagicha qadamlab yurib, necha qadam ekani 
+aniqlanadi. Aytaylik, Siz 100 m masofani 200 qadamda bosib o‘tdingiz. 
+Endi 100 m ni 200 ga b o ‘lasiz. 100 m -  10000 santimetr (cm). 
+10000 : 200 = 50 cm. Demak, Sizning har bir qadamingizning uzunligi 
+50 cm, ya’ni yarim metrga teng ekan.
+Kattaroq masofalarni o‘lchaganda qadamni juftlab hisoblash kerak. 
+Bunda chap oyoq qadamini sanasangiz, sanoq qancha bo‘lsa, masofa 
+shuncha metr bo‘ladi.
+Ikki nuqta orasidagi uzoq masofani, masalan, ikki qishloq orasidagi 
+masofani uni bosib o‘tish uchun sarflangan vaqt orqali ham taxminan 
+aniqlash mumkin. Bunda o ‘rtacha tezlikda qadam tashlab piyoda 
+yuradigan odam bir soatda o‘rtacha 5 kilometr yo‘l bosib o‘tishi 
+mumkinligini unutmaslik lozim.
+M asofani yasam a o‘lchov g‘ild irak  yordam ida o ‘lchasa ham 
+bo‘ladi. Bunday g ‘ildirakni tunukadan qo‘lda yasash ham mumkin. 
+Buning uchun qalin tunukadan diametri 32 cm qilib, doira shaklda 
+g ‘ildirak qirqib olinadi. G ‘ildirak uzunligi 1 metrli dastakka ayla- 
+nadigan qilib mustahkamlanadi. Bu g‘ildirakning bir aylanishi 1 metrga 
+teng. G ‘ildirakning biror yeriga qattiq plyonka yopishtirib qo‘yilsa, 
+g ‘ildirak har bir to‘liq aylanganda o‘qqa tegib, ovoz chiqaradi. Siz 
+uning yordamida g‘ildirak necha marta aylanganini hisoblab borasiz 
+(17-rasm).
+A zim ut bo‘yicha yurish. Sizga yakka turgan daraxtdan 40° li 
+azimut bo‘yicha 200 m, so‘ngra 180° li azimut bo‘yicha 500 m va 330° 
+azimut bo‘yicha 300 m yurish topshirildi deylik.
+Azimut bo‘yicha yurganda ishni quyidagi tartibda boshlash kerak. 
+Avvalo, yakka daraxt yoniga boriladi. So‘ng kompas strelkasini 
+bo‘shatib, uning shimol uchini 0° nuqtasiga to‘g ‘rilanadi. Keyin cho‘p
+edurtm_uz
+17-rasm. Yasama o ‘lchov 
+g ‘ildirak.
+25
+GEOGRAFIK 
+XARITALAR
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIK 
+XARITALAR
+olib (gugurt cho‘pi bo‘laveradi), uni kompas ustiga shunday qo‘yish 
+kerakki, cho‘p strelka markazi bilan 40° li belgini tutashtirsin. Shunda 
+cho‘p yo‘nalishi 40° li azimut yo‘nalishini ko‘rsatadi. Sizning o‘rtacha 
+qadamingiz yarim metr edi. Endi, Siz 200 m yurish uchun 400 qadam 
+tashlaysiz. Keyin to‘xtab kompasni yana oriyentirlaysiz, ya’ni shimolni 
+ko‘rsatuvchi strelkani 0° ga keltirasiz. So‘ng cho‘p bilan 180° belgini 
+strelka markazi bilan tutashtirib, 180° li azimutni topasiz va kerakli 
+masofani yurib o‘tasiz. Keyingi azimut bo‘yicha yurish ham shu 
+tartibda bajariladi.
+edurtm_uz
+Tayanch so‘z va tushunchalar
+Kompas 
+ufq 
+ufq tomonlari
+azim ut 
+M etr 
+Ruletka
+Yasama o‘lchov g‘ildirak 
+Qadamlab o‘lchash
+1. Ufq deb nimaga aytiladi? Ufq tekisligi nima?
+2. Azimut deb nimaga aytiladi? Azimut qaysi asbob yor- 
+damida aniqlanadi?
+3. Ufq tomonlarini kompas yordamida va mahalliy belgilar- 
+ga qarab qanday aniqlash mumkin?
+4. Xurshid va Aziza o‘z uylaridan maktabgacha bo‘lgan 
+masofani o‘lchamoqchi bo‘lishdi. Buning uchun Xur­
+shid yasama o‘lchov g‘ildirakdan, Aziza esa qadamlab 
+o‘lchashdan foydalandi. Aytingchi, ularning qaysi biri 
+masofani o‘lchashda nisbatan aniqroq natijaga erishadi? 
+Nima uchun?
+5. Uyingizdan yaqindagi savdo do‘koni yoki bekatgacha 
+bo‘lgan yo‘nalish azimutini ufqning asosiy va oraliq to- 
+monlaridan foydalanib aniqlang. So‘ngra yasama o‘lchov 
+g‘ildirak yoki qadamlab o‘lchash yordamida uyingizdan 
+savdo do‘koni (yoki bekat)gacha bo‘lgan masofani 
+aniqlang.
+6. Abror uyidan kutubxonagacha bo‘lgan masofani 45 da- 
+qiqa vaqt ichida bosib o‘tdi. Ushbu ma’lumotdan foyda­
+lanib, Abrorning uyi va kutubxona orasidagi masofani 
+aniqlang.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+icnim marKazi
+7 -§. 
+JOY BALANDLIGI
+Q edurtm _uz
+Yer yuzasi kamdan kam joyda tep-tekis bo‘ladi. Tekisliklarda 
+ham uncha katta bo‘lmagan baland-pastliklar uchrab turadi. Yer 
+yuzida baland tog‘lar, baland-past qirlar, keng tekisliklar mavjud. Yer 
+yuzidagi mana shunday notekisliklar relyef deb ataladi. Yana shuni ham 
+bilishimiz kerakki, dengiz va okeanlar tagi notekis -  u yerlarda chuqur 
+botiqlar, keng tekisliklar, hatto tog‘lar bor.
+Yer yuzasidagi notekisliklar(relyef)ni qog‘ozda, ya’ni plan va 
+xaritalarda tasvirlash uchun, avvalo, har bir joyning mutlaq va nisbiy 
+balandligini o‘lchash zarur bo‘ladi.
+Suv yuzasi to‘lqin bo‘lmagan vaqtda tekis turadi. Shuning uchun 
+Yer yuzasidagi mutlaq balandliklar dengiz yuzasidagi suv (sathi)dan 
+hisoblanadi. Odatda dengiz sathi balandligi 0 deb belgilanadi. Ma- 
+salan, O ‘zbekiston poytaxti -  Toshkent shahrining dengiz sathidan 
+o‘rtacha balandligi 400 m. O ‘zbekistondagi eng baland tog‘ -  Hazrati 
+Sulton tog‘ining balandligi 4643 m. Lekin har bir joyning bir-biridan 
+balandligi turlicha. Shuning uchun balandliklarni m utlaq va nisbiy 
+balandliklar deb, ikki xil balandliklarga ajratiladi.
+Nisbiy balandlik. Quruqlikdagi joylarning bir-biriga nisbatan tik 
+balandligi nisbiy balandlik deb ataladi (18-rasm).
+№veUr. Yer yuzasidagi balandliklar nivelir asbobi bilan o‘lchanadi
+27
+18-rasm. Tepalikning nisbiy (qora chiziq) va mutlaq balandligi (oq chiziq).
+GEOGRAFIK 
+XARITALAR
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIK 
+XARITALAR
+28
+Qedurtm_uz
+(19-rasm). Lekin hozirgi vaqtda Yerning sun’iy yo‘ldoshlari yordamida 
+Yer yuzasidagi har bir joyning aniq balandligini o‘lchash mumkin. Har 
+bir joydagi uncha baland bo‘lmagan tepalik balandligini (qo‘lbola) 
+nivelir bilan o‘lchash mumkin. Buning uchun uzunligi 1 metr bo‘lgan 
+to‘g ‘ri tayoq olinadi. Uning uchiga uzunligi 20 cm bo‘lgan taxtacha 
+qoqiladi (20-rasm). Nivelirning tik turganini bilish uchun unga shovun 
+osib qo‘yiladi. Buning uchun taxtachaning o‘rtasiga kichik mix qoqib, 
+shovun ipi unga bog‘lanadi.
+Tepalikning balandligini aniqlash uchun tepalik etagiga nivelirni 
+shovun yordamida tik qilib o‘rnatiladi. Nivelir qilayotgan o‘quvchi
+nivelir taxtachasi b o ‘y l a b  tepalikka qaraydi. 
+Nivelir taxtachasi tepalikning qayeriga to‘g‘ri 
+kelsa, ikkinchi o ‘quvchi tepalikning o ‘sha 
+nuqtasiga qoziq qoqadi. Shundan keyin nivelir 
+qoziq yoniga ko‘chiriladi va keyingi qoziq 
+qoqiladigan nuqta aniqlanadi. Shu tartibda 
+tepalikning eng baland nuqtasigacha o‘lchab 
+chiqiladi. Nivelir necha m arta ko‘chirilgan 
+b o ‘lsa, shu asosida tepalikning balandligi 
+aniqlanadi.
+M utlaq balandlik. Yer yuzidagi har bir 
+joyning dengiz sathidan balandligi m utlaq 
+balandlik deyiladi (18-rasmga qarang). Lekin 
+dengiz va okeanlardagi suv yuzasining Yer 
+markaziga nisbatan balandligi bir xil emas. 
+Shuning uchun biror dengiz yoki okean suvi 
+yuzasi asos qilib olinadi. Bizning mamla- 
+katimizda Boltiq dengizidagi orolda joylashgan 
+K ro n sh ta d t sh a h rid a  o ‘rn a tilg a n  b elg i 
+(«futshtok») «0» balandlik deb qabul qilingan. 
+M am lakatim izdagi ham m a joyning m utlaq 
+balandligi shu belgidan hisoblanadi. Agar
+20-rasm. Qo‘lbola 
+quruqlikda dengiz sathidan ham past joylar
+nivelir.
+19-rasm. Zamonaviy 
+elektron nivelir.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+21-rasm. Tepalik (a) va botiq (b) ning xaritalarda gorizontallar bilan
+tasvirlanishi.
+bo‘lsa, ular balandligi raqami oldiga manfiy (-) belgi qo‘yiladi. 
+Masalan, Qizilqum cho‘lidagi Mingbuloq botig‘ining dengiz sathidan 
+balandligi -12 m.
+Joy planlarida tabiatdagi mahalliy predmetlardan tashqari Yer 
+yuzasining notekisliklari (relyef) ham tasvirlanadi. Relyef joy plan­
+larida va xaritalarda gorizontallar bilan tasvirlanadi. Gorizontallar 
+deb quruqlik yuzasidagi mutlaq balandligi bir xil bo‘lgan nuqtalarni 
+xaritalarda tutashtiruvchi chiziqlarga aytiladi.
+Xaritalarda, ayniqsa, joy planida tepalar ham, chuqurlar ham 
+gorizontallar bilan tasvirlanadi (21-rasm). Yer yuzasi qaysi tomonga 
+qiya b o ‘lsa, gorizontallarga qiya tomonni ko‘rsatuvchi chiziqcha 
+qo‘yiladi. Bu chiziqcha bergshtrix deb ataladi. Bergshtrixga qarab 
+chuqur va tepalar, qiyaliklar ajratib olinadi.
+Yonbag‘irlar juda tik bo‘lsa, planda mayda tishlarga o‘xshagan 
+chiziqlar bilan k o ‘rsatiladi. Jarlar ham shunday chiziqlar bilan
+tasvirlanadi.
+29
+Tayanch so‘z va tushunchalar
+Shovun 
+Nisbiy balandlik
+Nivelir 
+Mutlaq balandlik
+Botiq 
+Tepalik
+GEOGRAFIK 
+XARITALAR
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIK 
+XARITALAR
+Q edurtm _uz
+1. Joyning nisbiy va mutlaq balandligi nima?
+2. Qo‘lbola nivelir yordamida tepalik balandligi qanday 
+aniqlanadi?
+3. Quyidagi topshiriqlarni rasmdan 
+foydalanib bajaring:
+a) rasmda tepalik tasvirlanganmi 
+yoki botiq? Javobingizni asoslang.
+b) «?» belgisi o‘rniga qaysi sonlarni 
+qo‘ysak to‘g‘ri bo‘ladi?
+4. Quyidagi «geografik diktant»da tushirib qoldirilgan 
+so‘zlarning o‘rnini to‘ldiring va matnni o‘qing:
+«Yer yuzasining relyefi ... . Shuning uchun ham baland- 
+liklarni ikkiga -  ... va ... balandliklarga bo‘lib o‘rganamiz. 
+... deb Yer yuzidagi biror bir nuqtaning boshqa bir nuq- 
+tadan tik balandligiga aytiladi. Yer yuzidagi biror nuq­
+taning dengiz sathidan balandligi esa ... deb ataladi. 
+Mamlakatimizdagi hamma joyning mutlaq balandligi ... 
+dengizidagi orolda joylashgan ... shahrida o‘rnatilgan 
+belgidan hisoblanadi. Yer yuzasidagi balandliklar ... as- 
+bobi yordamida o‘lchanadi».
+5. O‘quv atlasidagi «O‘zbekistonning tabiiy xaritasi» dan 
+Hazrati Sulton cho‘qqisi va Mingbuloq botig‘ini toping. 
+Ular qaysi viloyatlarda ekanligini aniqlang.
+8 - §. 
+m a s s h t a b
+30
+Siz o‘rtog‘ingizga avtobus bekatidan uyingizgacha bo‘lgan yo‘lni 
+qog‘ozga chizib ko‘rsatmoqchisiz. Albatta, bu yo‘l uncha uzoq bo‘l- 
+masa ham qog‘ozga sig‘maydi. Demak, yo‘lni kichraytirib chizishga 
+to‘g‘ri keladi. Bunda Sizga masshtab yordam beradi. Masshtab joy- 
+dagi masofaning chizmada va xaritada tasvirlaganda necha marta 
+kichraytirilganligini ko‘rsatuvchi kasr sondir. Avtobus bekatidan Siz- 
+ning uyingizgacha bo‘lgan masofa 600 m. Uni qisqartirib chizmada 
+6 cm qilib chizdingiz. Siz masofani 10000 marta qisqartirdingiz.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+edurtm uz
+1:100 000 ..................Sonli masshtab
+1 cm da 1 km .......... Nomli masshtab
+1000 m 0 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 km
+I.....I 
+I 
+I 
+I 
+I 
+I 
+I 
+I —I-----1
+Chiziqli masshtab
+22-rasm. Masshtab turlari.
+23-rasm. Xaritadagi masofani 
+chiziqli masshtab 
+yordamida aniqlash.
+Shunda masshtab 1:10000 bo‘ladi. Har qanday globus va xaritada 
+uning masshtabi, ya’ni masofalar necha marta qisqartirilgani yozib 
+qo‘yiladi.
+Masshtab uch xil ko‘rinishda bo‘ladi: sonli m asshtab, nom li 
+m asshtab va chiziqli m asshtab (22-rasm).
+Agar masshtab 1 santimetrda 100 metr deb yozilsa, nomli masshtab 
+deb, 1:10000 deb yozilsa, sonli masshtab deb ataladi.
+Chiziqli masshtabdan foydalanish eng qulay. Chiziqli masshtab 
+teng qismlarga bo‘lingan to‘g‘ri chiziq shaklida bo‘ladi.
+Yarimsharlar tabiiy xaritasining sonli masshtabi 1:22000000. Bunda
+1 cm da necha km borligini aniqlash uchun 5 ta nolni o‘chiramiz. 
+Shunda nomli masshtab 1 cm da 220 kilometr bo‘ladi.
+Chiziqli masshtabdan masofani aniqlashda foydalanish uchun sir- 
+kulning ikki uchini xaritadagi oraliq masofa aniqlanishi lozim bo‘lgan 
+nuqtalarga qo‘yib, so‘ng uni masshtabga ham qo‘yiladi. Shunda masofa 
+aniq bo‘ladi (23-rasm).
+Tayanch so‘z va tushunchalar 
+Masshtab 
+Nomli masshtab
+Sonli masshtab 
+chiziqli masshtab
+GEOGRAFIK 
+XARITALAR
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIK 
+XARITALAR
+edurtm uz
+1. Masshtab nima? Uning qanday turlari bor?
+2. Sonli masshtab qanday masshtab, misollar bilan tu- 
+shuntirib bering.
+3. Agar ikki shahar orasidagi 900 km li masofa xaritada
+5 cm ga teng qilib tasvirlangan bo‘lsa, shu xaritaning 
+masshtabini aniqlang.
+4. Masshtabi 1:11000000 bo‘lgan xaritada Toshkent va 
+Samarqand shaharlari orasidagi masofa 3 cm ga teng 
+bo‘lsa, shaharlar orasidagi haqiqiy masofani aniqlang.
+5. 5-sinf o‘quv atlasidagi «Yarimsharlar tabiiy xaritasi»ning 
+m asshtabini k o ‘rib chiqing. Bu xaritaning sonli 
+masshtabini nomli masshtabga aylantiring. So‘ngra Tosh- 
+kentdan ekvatorgacha bo‘lgan eng yaqin masofaning 
+necha km ekanini aniqlang.
+9- §. 
+a m a l iy  m a s h g ‘u l o t
+u fq  tom onlari va ularni joyda aniqlash.
+1. Agar siz yuzingiz bilan janubga qarab turgan bo‘lsangiz, sharq, 
+shimol, janubi-g‘arb va shimoli-sharq yo‘nalishlari sizning qaysi to- 
+moningizda ekanligini aniqlang.
+2. Kun yorug‘ bo‘lishiga qaramasdan Hasan o‘rmonda, Zuhra 
+esa cho‘lda adashib qoldi. Hasan yuzini o‘nglab turgan tomonda 
+daraxtlarning shoxlari kam va siyrak edi. Zuhra qarab turgan tomonda 
+esa Quyosh endi botayotgan edi. O ‘quvchilar, Hasan va Zuhraga 
+ufqning qaysi tomonlariga qarab turganliklarini aniqlashga yordam 
+bering. So‘ngra, ularning o‘ng, chap va orqa tomonlarida ufqning qaysi 
+yo‘nalishlari turishini aniqlang.
+Azimutni kompas yordam ida aniqlash.
+1. Kompas ustiga gugurt cho‘pini qo‘yganimizda uning bir uchi 90° 
+azimutni ko‘rsatsa, gugurtning ikkinchi uchi qanday azimut va ufqning 
+qaysi yo‘nalishini ko‘rsatadi?
+2. O ‘quvchi A nuqtadan B nuqtaga 360° li azimut bo‘yicha 100 
+metr yurdi. U B nuqtadan D nuqtagacha 90° li azimut bo‘yicha yana 
+100 metr yurdi. O‘quvchi D nuqtadan 180° li azimut bo‘yicha yana
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+100 metr yo‘l bosdi va E nuqtaga yetib keldi. Endi o‘quvchi A nuqtaga 
+borishi uchun qanday azimut bo‘yicha necha metr yurishi lozimligini 
+aniqlang va o‘quvchi yurgan yo‘lni chizma ko‘rinishida tasvirlang 
+(eslatma: masshtab 1:5000 bo‘lsin).
+M asofani o‘lchash.
+1. Ikki guruh alpinistlar uylaridan tog‘ etagigacha bo‘lgan masofani 
+o‘lchamoqchi bo‘lishdi. Buning uchun birinchi guruh alpinistlari qa­
+damlab o‘lchashdan, ikkinchi guruh alpinistlari esa yasama o‘lchov 
+g‘ildirakdan foydalanishdi. Aytingchi, ularning qaysi biri masofani o‘l- 
+chashda nisbatan aniqroq natijaga erishadi? Nima uchun?
+2. Abbos va Nigina o‘zlari yashaydigan joydan yangi qurilgan uy- 
+largacha bo‘lgan masofani yasama o‘lchov g‘ildirak hamda qadamlab 
+o ‘lchash yordamida aniqlamoqchi bo‘lishdi. Ular yasama o‘lchov 
+g ‘ildirakning ovozi 75 marta chiqqanini, qadamlar soni esa 150 taga 
+teng bo‘lganligini aniqlashdi. Aziz o‘quvchilar, ularga masofani hisob- 
+lashda yordamlashing.
+3. A va B qishloqlar orasidagi masofani o‘quvchilar 2 soatda bosib 
+o‘tganliklari m a’lum bo‘lsa, qishloqlar orasidagi masofani aniqlang.
+X arita m asshtabidan foydalanib, masofani o‘lchash.
+1. 5-sinf o‘quv atlasidagi «Yarimsharlar tabiiy xaritasi»dan quyi- 
+dagilarni:
+a) xarita masshtabidan foydalanib, Toshkent va Pekin shaharlari 
+oralig‘idagi masofani kilometr hisobida;
+b) Toshkent bilan Qohira oralig‘idagi masofani kilometr hisobida;
+c) Toshkent shahri bilan Shimoliy va Janubiy qutblar oralig‘idagi 
+masofani kilometr hisobida aniqlang.
+2. Toshkentdan Madridgacha bo‘lgan 7500 km li masofa birinchi 
+xaritada 25 cm ga, ikkinchi xaritada esa 5 cm ga teng bo‘lsa, ushbu 
+xaritalarning masshtabini aniqlang.
+10- §. 
+g e o g r a f i k  x a r i t a l a r
+Siz Yerning m odeli -  globusni bilasiz. Globusda m ateriklar, 
+okeanlar, orol hamda yarimorollar shakli ancha aniq, lekin juda kich- 
+raytirilgan holda tasvirlanadi. Globus yordamida Yerning shakli haqida
+3-«Geografiya», 5-sinf.
+33
+GEOGRAFIK 
+XARITALAR
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIK 
+XARITALAR
+yaxshi tasavvur hosil qilish mumkin. Globusda Shimoliy qutb doim 
+yuqori tomonda, Janubiy qutb esa past tomonda ko‘rsatiladi. Yerning 
+aylanish o‘qi esa aslida qanday holatda bo‘lsa, shunday holatda, ya’ni 
+bir tomonga og‘gan holatda tasvirlanadi. Lekin materiklar, okeanlar, 
+dengiz va ko‘llar, tog‘ va tekisliklar juda kichik tasvirlangani uchun 
+ularning aniq shakllari haqida mukammalroq tasavvur hosil qilib 
+bo‘lmaydi.
+G eografik xaritada Yer yuzasi tekis yuzada juda kichraytirilgan 
+holda shartli belgilar bilan tasvirlanadi (atlas xaritalarini, devorga 
+osiladigan xaritalarni ko‘ring). Xaritalarda bir yo‘la butun Yer yuzini 
+ham, uning ayrim qismlarini ham tasvirlash mumkin. Yerning qabariq 
+yuzasi tekis yuzada (qog‘ozda) tasvirlanganda ayrim xatoliklar bo‘ladi. 
+Bunda asosiy xatoliklar ikki xil bo‘ladi: maydon xatoligi va yo‘nalish 
+xatoligi. Masalan, Dunyo xaritasida Shimoliy va Janubiy qutblarga 
+yaqin orollar, dengizlar aslidan ko‘ra kattaroq tasvirlanadi.
+Xaritalarda Yer yuzasidagi hamma narsalarni ko‘rsatib bo‘lmaydi. 
+Shuning uchun xaritalar nimalarni aks ettirishiga qarab har xil bo‘ladi. 
+Geografik xaritalarni shartli ravishda 3 turga bo‘lish mumkin: tabiiy 
+geografik, siyosiy va iqtisodiy-ijtimoiy geografik xaritalar. Tabiiy 
+geografik xaritalar: relyef xaritasi, foydali qazilmalar xaritasi, tuproq- 
+lar xaritasi, o‘simliklar xaritasi, hayvonot dunyosi xaritasi va boshqalar. 
+Masalan, relyef xaritalarida quruqlik yuzasidagi va dengiz ostidagi 
+notekisliklar -  tog‘lar, qirlar, tekisliklar tasvirlanadi.
+0 ‘sim liklar xaritalarida turli hududlardagi o‘simliklar, ularning 
+qayerlarda tarqalganligi ko‘rsatiladi.
+Foydali qazilm alar xaritalarida ko‘mir, neft, gaz, temir rudasi 
+va Yerning boshqa mineral boyliklari qayerlarda joylashganligi shartli 
+belgilar bilan aks ettiriladi.
+Iqlim xaritalarida Yer yuzining qayerida qancha yog‘in yog‘ishi, 
+havo harorati qanday bo‘lishi, shamollar yo‘nalishi ko‘rsatiladi.
+Tabiat zonalari xaritalarida Yer yuzida tabiat zonalarining qanday 
+joylashganligi, bu zonalarda qanday turdagi o‘simliklar o‘sishi, qanday 
+tuproqlar tarqalganligi ko‘rsatiladi.
+Siyosiy x a rita la rd a  dunyodagi davlatlar, siyo siy-m a ’m uriy 
+xaritalarda esa ularning m a’muriy qismlari (viloyatlari, tumanlari, 
+shaharlari), asosiy transport yo‘llari va boshqalar tasvirlanadi.
+edurtm_uz
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Iqtisodiy-ijtim oiy geografik x a ritala rd a  sanoat korxonalari 
+va qishloq xo‘jaligi ekinlari, transport yo‘llari shartli belgilar bilan 
+tasvirlanadi. Bu sanab o‘tilgan barcha xaritalarda m a’lum mavzuga oid 
+geografik narsa (predmet) va hodisalar tasvirlangan bo‘ladi. Shuning 
+uchun bunday xaritalar mavzuli xaritalar deb ataladi (atlas xaritalarini 
+ko‘ring). Geografik xaritalar Dunyo xaritasi, materik va okeanlar 
+xaritasi hamda alohida o‘lkalar, davlatlar xaritalariga bo‘linadi.
+Mavzuli xaritalardan tashqari umumgeografik xaritalar ham bo‘- 
+ladi. Ularda hududning umumiy ko‘rinishi, ya’ni relyef, daryolar, ko‘l- 
+lar, dengizlar, shaharlar, okeanlardagi yirik oqimlar va boshqalar ko‘r- 
+satiladi. Bunday xaritalar tabiiy xaritalar deb ataladi. Tabiiy xaritalar 
+ham har xil bo‘ladi: Dunyo (Yarimsharlar)ning tabiiy xaritasi, alohida 
+materiklarning tabiiy xaritalari, ayrim davlat va o‘lkalarning tabiiy 
+xaritalari (24-rasm).
+Bundan tashqari yozuvsiz xaritalar ham bo‘ladi. Bularda konturlar 
+beriladi, xolos. Ulardan amaliy ishlarni bajarishda foydalaniladi.
+edurtm_uz
+24-rasm. O ‘rta Osiyoning sodda (sxematik) tabiiy xaritasi.
+35
+GEOGRAFIK 
+XARITALAR
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIK 
+XARITALAR
+X aritalarn in g  sh artli belgilari. Xaritalarda turli predmet va 
+hodisalarni tasvirlash uchun xaritaning o‘ziga xos tili hisoblangan 
+shartli belgilardan foydalaniladi.
+Yer yuzasining relyefi xaritalarda har xil hamda to‘q-och ranglar 
+berish bilan tasvirlanadi. Bunda 0 metrdan (dengiz sathidan) 200 
+metrgacha bo‘lgan pasttekisliklar yashil rangga, 200 dan 500 metrgacha 
+baland bo‘lgan qirlar sariq rangga, undan baland yerlar jigarrangga 
+bo‘yaladi. Har bir rang qanday balandlikni bildirishi xaritaning shartli 
+belgisida beriladi. Bunday belgilar balandliklar shkalasi deb ataladi.
+Balandliklar shkalasidan foydalanib, hududdagi har bir nuqtaning 
+balandligini aniqlasa bo‘ladi.
+C huqurliklar shkalasi ham shunday tuzilgan. B a’zi bir tog‘ 
+cho‘qqilarining balandligi, ayrim okean botiqlarining chuqurligi xa­
+rita va globuslarda metr (raqam) bilan ko‘rsatib qo‘yiladi (atlasdagi 
+xaritadan toping). Yer bag‘ridagi foydali qazilmalar (neft, gaz, ko‘mir, 
+temir, oltin, mis, olmos va boshqalar) xaritada maxsus belgilar bilan 
+ko‘rsatiladi.
+Xaritalarda turli obyekt va hodisalarning harakati, siljishi harakat
+edurtm_uz
+36
+25- rasm. Dunyoning sodda tabiiy xaritasi.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+yo‘nalishi belgisi — strelka bilan tasvirlanadi. M asalan, dengiz 
+oqimlari, shamol yo‘nalishi strelkalar yordamida ko‘rsatiladi.
+Aholining irqiy va diniy mansubligi, issiqlik mintaqalari, tabiat 
+zonalari turli ranglar bilan aks ettirilgan bo‘ladi.
+Geografik obyektlar va hodisalar sodda hamda yaxshi ko‘rinadigan 
+qilib tasvirlangan, meridianlar va parellellar berilmagan xaritalar ham 
+bo‘ladi. Ular sodda (sxematik) xaritalar deyiladi. Bunday xaritalarda 
+sayyohlarning bosib o‘tgan yo‘llari, davlatlarning savdo aloqalari, Yer 
+yuzasi relyefining umumiy ko‘rinishi va boshqalar tasvirlanadi (25- 
+rasm).
+edurtm_uz
+Tayanch so‘z va tushunchalar
+Geografik xaritalar 
+Mavzuli xaritalar
+Tabiiy geografik xaritalar 
+Shartli belgilar
+Siyosiy xaritalar 
+Balandliklar shkalasi
+Iqtisodiy-ijtimoiy geografik xaritalar
+1. Geografik xarita nima va u qanday turlarga bo‘linadi?
+2. Relyef xaritalarida nimalar tasvirlanadi?
+3. Iqlim xaritalarida nimalar aks ettiriladi?
+4. Quyidagi jadvalda berilgan ta’riflarga «ha» yoki 
+«yo‘q» deb javob bering va javoblaringizni asoslang:
+Ta’rif
+«Ha»
+«Yo‘q»
+Globusda Janubiy qutb doim yuqori tomonda, Shimoliy qutb 
+esa past tomonda ko‘rsatiladi.
+Tabiiy geografik xaritalarga relyef xaritasi, tuproqlar 
+xaritasini misol qilish mumkin.
+Mavzuli xaritalarda m a’lum mavzuga oid geografik narsa 
+(predmet) va hodisalar tasvirlangan bo‘ladi.
+Xaritalarda turli obyekt va hodisalarning harakati, siljishi 
+nuqtalar bilan tasvirlanadi.
+Xaritalarda turli predmet va hodisalarni tasvirlash uchun xarita­
+ning o‘ziga xos tili hisoblangan konturlardan foydalaniladi.
+37
+GEOGRAFIK 
+XARITALAR
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIK 
+XARITALAR
+'i
+11 -§ . 
+GEOGRAFIK KOORDINATALAR
+Q edurtm _uz
+Y er yuzidagi biror joyni, uning o‘rnini, xarita yoki globusdan 
+qanday topish mumkin? Bolalar, siz shaxmat, shashka taxtasini 
+bilasiz. Undagi har bir katakning o‘rni harf va raqamlar bilan belgilab 
+qo‘yilgan. Bu harf va raqamlar yordamida kerakli katakni osongina 
+topib olasiz. Agar sizlar geografik xarita va globusga e’tibor berib 
+qarasangiz, ularning katakchalar bilan qoplanganini ko‘rasiz. Ular 
+meridian va parallel chiziqlarining kesishishidan hosil bo‘lgan. Xarita 
+va globuslarni qoplagan katakchalarni bir-biridan ajratib turgan 
+chiziqlar to‘ri daraja (gradus) to ‘ri deyiladi.
+Daraja to‘ri yordamida Yer yuzidagi har bir shahar, tog‘ cho‘qqisi, 
+daryo boshlanadigan, quyiladigan joylarni, okean va dengizlardagi 
+orollar o‘rnini aniqlash mumkin.
+AFI 
+Globus va xaritalardagi parallel chiziqlar geografik kenglikni bil- 
+diradi. Geografik kenglik deb ekvatordan berilgan nuqtagacha bo‘lgan 
+meridian yoyining daraja (gradus) hisobidagi kattaligiga aytiladi. 
+Ekvator chizig‘i 0° kenglik deb qabul qilingan. Qutblar kengligi esa 
+90° deb olingan. Globus yoki xaritadagi istalgan nuqtaning geografik 
+kengligini aniqlash uchun uning qaysi parallelda joylashganini bilish 
+zarur. Masalan, Toshkent 40° va 50° parallellar oralig‘ida, aniqrog‘i 
+41° parallelda, Qohira shahri 30°, Kiyev esa 50° parallelda joylashgan. 
+Bu parallellarning hammasi ekvatordan shimolda joylashganligi sababli 
+ularning kengligi shim oliy kenglik deyiladi. Ekvatordan janubda 
+joylashgan nuqtalar (joylar)ning kengligi esa janubiy kenglik deb 
+belgilanadi (26-rasm).
+Lekin har bir parallelda bitta nuqta emas, juda ko‘p nuqtalar bor. 
+Shuning uchun globus va xaritalardagi kerakli nuqtaning o‘rnini aniq- 
+38 
+lashda geografik kenglikni bilishning o‘zi yetarli emas. Buning uchun 
+geografik uzunlikni aniqlash ham zarur. Geografik uzunlik deb Bosh 
+meridiandan berilgan nuqtagacha bo‘lgan parallel yoyining daraja 
+(gradus) hisobidagi uzunligiga aytiladi. London shahri yaqinidagi 
+Grinvich rasadxonasidan o‘tgan meridian Bosh meridian deb qabul 
+qilingan. Geografik uzunlik shu meridiandan parallellar bo‘ylab sharq
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+26-rasm. Geografik kengliklar. 
+27-rasm. Geografik uzunliklar.
+va g ‘arb tomonlarga daraja (gradus) hisobidagi birlikda hisoblab 
+boriladi. Geografik uzunlik 0° dan 180° gacha hisoblanadi. 0° li 
+(Bosh) meridiandan g‘arb tomondagi nuqtalar g ‘arbiy uzunlik, sharq 
+tomondagilari sharqiy uzunlik deyiladi (27-rasm).
+Geografik kengliklar globusda parallellarga Bosh meridian yoniga 
+yozib qo‘yilgan darajalar yordamida aniqlanadi. Geografik uzunliklar 
+esa ekvator chizig‘i ustiga yozib qo‘yilgan darajalar yordamida bilib 
+olinadi. Geografik xaritalarda geografik kenglik darajalari xaritalarning 
+chap va o‘ng chekkasidagi ramkasi (chiziqlar) yoniga, geografik uzun­
+liklar darajalari xaritalarning yuqori va pastki chekkasidagi meridian 
+chiziqlar yoniga yozib qo‘yiladi.
+28-rasm. Geografik koordinatalarni sun’iy y o ‘ldoshlar yordamida aniqlash.
+GEOGRAFIK 
+XARITALAR
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIK 
+XARITALAR
+Yer yuzasidagi har bir nuqtaning kenglik va uzunligi uning geo­
+grafik koordinatasi deb ataladi. Masalan, Toshkentning geografik 
+koordinatasi 41° shimoliy kenglik va 69° sharqiy uzunlikni tashkil 
+etadi.
+Hozirgi kunda geografik koordinatalar Yerning sun’iy yo‘ldoshlari 
+yordamida ishlovchi zamonaviy asboblar, jumladan GPS navigatorlar 
+yordamida ham aniqlanmoqda (39-betdagi 28-rasm).
+edurtm_uz
+Respublika 
+Ta'lim Markazi
+40
+Tаyаnch so‘z vа tushunchаlаr
+Daraja to‘ri 
+Geografik uzunlik 
+Geografik koodinata 
+Janubiy kenglik 
+G‘arbiy uzunlik
+Geografik kenglik 
+Bosh meridian
+Shimoliy kenglik
+Sharqiy uzunlik 
+Yerning sun’iy yo‘ldoshlari
+1. Daraja to‘ri nima? U nima uchun kerak?
+2. Geografik kenglik nima? Geografik uzunlik deb nimaga 
+aytiladi?
+3. O‘quv atlasidagi «Yarimsharlar tabiiy xaritasi»dan Tosh­
+kent va Qohira shaharlari qaysi kenglik va uzunliklarda 
+joylashganligini toping.
+4. Darslik hamda o‘quv atlasidagi ma’lumotlar asosida quyi­
+dagi topshiriqlarni bajaring:
+a) «Tanlang» bandidan foydalanib jumlani to‘ldiring:
+«Geografik kengliklar globusda parallellarga ... yoniga 
+yozib qo‘yilgan darajalar yordamida aniqlanadi. Geografik 
+uzunliklar esa ... ustiga yozib qo‘yilgan darajalar yordamida 
+bilib olinadi».
+Tanlang: Bosh meridian, ekvator chizig‘i.
+b) quyidagi rasmga diqqat bilan qarang va 
+A, B, C harflar bilan belgilangan meri- 
+dianlarni Bosh meridianga eng yaqin joy- 
+lashganidan uzog‘iga qarab jadvalga joy- 
+lashtiring.
+Eng yaqinidan----^  eng uzog‘iga
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+'i
+1 2 -§. AMALIY MASHG‘ULOT
+Q edurtm _uz
+D araja to‘ri yordam ida nuqtaning qaysi yarim sharda joylash- 
+ganligini aniqlash.
+1. 
+Quyidagi chizmalardan foydalanib, D va N nuqtalar qaysi 
+yarim sharlarda joylashganligini aniqlang.
+65c
+55c
+135°
+140°
+2. 
+A nuqta Bosh meridiandan g‘arbda, B nuqta esa sharqda, lekin 
+har ikkala nuqta ham ekvatordan janubda joylashgan bo‘lsa, bu 
+nuqtalarning qaysi yarimsharlarga tegishli ekanligini aniqlang.
+D araja to‘ri yordam ida geografik koordinatalarni aniqlash.
+5-sinf o‘quv atlasidagi «Yarimsharlar tabiiy xaritasi» yoki «Dunyo- 
+ning tabiiy xaritasi»dan:
+1. Toshkent, Nyu-York, Kanberra, Pekin, Rio-de-Janeyro shahar- 
+larining geografik koordinatalarini;
+2. Quyidagi chizmalarda berilgan A va B nuqtalarning geografik 
+koordinatalarini aniqlang.
+41
+GEOGRAFIK 
+XARITALAR
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+GEOGRAFIK 
+XARITALAR
+Q edurtm _uz
+Respublika 
+Ta'lim Markazi
+3. Toshkent va Parij shaharlari bir-biridan necha gradus uzoqlikda 
+joylashganligini aniqlang.
+4. Quyidagi rasm da k o ‘rsatilgan A, B, C va D nuqtalarning 
+geografik koordinatalarini aniqlang.
+Berilgan koordinatalarga qarab xaritadan geografik obyekt- 
+larni (nuqtalarni) topish.
+1. F.Magellanning «Espanyol» nomli kemasi Hind okeanida halo- 
+katga uchradi. Uning geografik koordinatalari 10° janubiy kenglik va 
+60° sharqiy uzunlik ekanligi m a’lum. Bu nuqtani xaritadan toping va 
+qaysi materikdan birinchi bo‘lib ushbu joyga yetib borish va yordam 
+berish mumkinligini aniqlang.
+2. Quyidagi geografik koordinatalarda qaysi geografik obyektlar 
+joylashganligini aniqlang:
+a) 11° janubiy kenglik va 143° sharqiy uzunlik;
+42 
+b) 39° janubiy kenglik va 146° sharqiy uzunlik;
+c) 12° shimoliy kenglik va 72° g‘arbiy uzunlik;
+d) 5° janubiy kenglik va 81° g‘arbiy uzunlik.
+3. 20° shimoliy kenglik va 155° g‘arbiy uzunlik hamda 55° janubiy 
+kenglik va 70° g‘arbiy uzunliklarda qaysi orollar joylashganligini xarita 
+va globusdagi daraja to‘ridan foydalanib aniqlang.
+40° 
+60° 
+%0°
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+IV BOB. YERNING QATTIQ QOBIG‘I — LITOSFERA
+13- §. 
+YERNING ICH K I TUZILISHI
+Yer Quyosh sistemasidagi boshqa sayyoralarga o‘xshab qobiqli 
+tuzilgan. Yerni koinotdan kuzatgan fazogir nimalarni ko‘radi? Yerni 
+hamma tomonidan havo bilan o‘ralganligini va havo qobig‘ida bulutlar 
+suzib yurganini ko‘radi. Bu Yerning havo qobig‘i -  atmosfera. Yana 
+Yer qutblari atrofini juda katta oq dog‘lar -  muz va qorlar qoplab yot- 
+ganini, juda keng maydonni suv -  okean va dengizlar egallaganini 
+ko‘radi. Quruqlikda ham behisob ko‘llar, daryolar ko‘zga tashlanadi. 
+Bular Yerning suv qobig‘i -  gidrosferadir.
+Quruqlikda o‘rmonlar, cho‘llar, ekin dalalari, bog‘lar, shahar va 
+qishloqlar joylashgan. O‘rmonlar, ekinzorlar, shahar-qishloqlar, cho‘l-u 
+dashtlar hamda okeanlar ostida qattiq tog‘ jinslari mavjud. Bu tog‘ 
+jinslari Yerpo‘stini hosil qiladi. Yer po‘sti eng qattiq qobiqdir. Hamma 
+jonzotlar, o‘simliklar, ular yashaydigan muhit esa birgalikda biosfera, 
+ya’ni hayot qobig‘i deb ataladi.
+Yerning tashqi qobiqlari ancha yaxshi o‘rganilgan. Lekin uning 
+chuqur, ichki qismi haqidagi bilimlarimiz juda kam. Yerning ichki qis­
+mini bevosita ko‘rib, ya’ni uning ichiga kirib o‘rganib bo‘lmaydi. Yer 
+ichki qismi vulqonlar otilganda chiqqan moddalarni o‘rganish orqali, 
+yer qimirlash to‘lqinlarining tarqalish xususiyatlariga qarab taxminiy 
+o‘rganiladi. Olimlarning m a’lumotlariga ko‘ra, Yerning markaziy 
+qismida yadro (Yer mag‘zi) bor. Uning diametri 6940 km ga yaqin 
+(29-rasm). Yadroni mantiya deb ataladigan qobiq o‘rab turadi. Uning 
+qalinligi 2860 km ga teng. Mantiyani esa Yer po‘sti qoplagan. U Yer 
+qobiqlaridan eng qattig‘i bo‘lib, o‘rtacha qalinligi 35-40 km, okeanlar 
+tagida 5 km dan, baland tog‘larda 80 km gacha yetadi.
+Olim larning taxm in qilishlaricha, m antiya magniy, tem ir va 
+qo‘rg‘oshindan iborat. Undagi harorat esa 2000 °C va undan ham 
+yuqori. Olimlar Yer ichiga chuqur tushgan sari harorat har 1000 m da 
+33 °C ko‘tarilishini aniqlashgan. Demak, 50 km chuqurlikda harorat 
+1650 °C ga yetadi. Mantiyaning quyi qismlari va yadroda harorat yana
+43
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+Q edurtm _uz
+29-rasm. Yerning ichki tuzilishi.
+ham oshadi. Bunday yuqori haroratda tog‘ jinslari erigan, ya’ni suyuq 
+holatda bo‘lishi kerak edi. Biroq bunday emas. Chunki u chuqurliklarda 
+bosim juda katta. Masalan, 100 km chuqurlikda bosim yer yuzasidagiga 
+qaraganda 13 ming marta katta, ya’ni bo‘yi va eni 1 cm bo‘lgan yuzaga 
+13 tonna kuch bilan bosadi. Shuning uchun mantiyaning quyi qismlari 
+va yadroda tog‘ jinslari qattiq holatda deb taxmin qilinadi.
+Yer yadrosi haqida m a’lumotlarimiz yanada kam. Faqat uning 
+radiusi 3470 km va harorat 4000 °C atrofida ekanini bilamiz, xolos.
+Yerning ichki tuzilishini o‘rganish insonga, uning hayoti uchun 
+zarur bo‘lgan ko‘p savollarga javob topishiga yordam beradi. Masalan, 
+foydali qazilmalar yetarlimi? Nega yer qimirlaydi, uni oldindan aytish 
+mumkinmi? Materiklar siljiydimi? Nega vulqon otiladi kabi savollarga 
+javob topish muhim ahamiyatga egadir.
+Tayanch so‘z va tushunchalar
+Atmosfera 
+Biosfera 
+Yadro
+Gidrosfera 
+Mantiya 
+Yer po‘sti
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+A
+1. Yerning tashqi va ichki qobiqlariga qaysilar kiradi?
+2. Yerning ichiga chuqur tushgan sari harorat qanday o‘zga- 
+radi?
+3. Quyidagi rasmda tasvirlangan Yerning 
+ichki qobiqlarini jadvalga mos ravishda 
+joylashtiring hamda undagi bo‘sh katak- 
+larni to‘ldiring.
+C
+Yerning ichki 
+tuzilishi
+Rasmda
+belgilanishi
+Qalinligi, km 
+hisobida
+Yer po‘sti
+Mantiya
+Tashqi yadro
+Ichki yadro
+4. Yeming sirtiga eng yaqin va eng uzoq qobiqlari 3-top- 
+shiriqdagi rasmda qaysi harflar bilan ko‘rsatilganligini 
+ayting va quyidagi jadvalni to‘ldiring.
+Eng yaqinidan----^  eng uzog‘iga
+5. Agar yer yuzasidagi tog‘ jinslarining o‘rtacha yillik 
+harorati +5 °C bo‘lsa, 2000 metr chuqurlikda harorat 
+taxminan necha °C ga yetadi?
+14- §. LITOSFERA. TO G ‘ JINSLARI
+L itosfera -  Yerning qattiq qobig‘i. Yunoncha «litos» -  tosh, 
+«sphaira» -  shar, ya’ni toshqobiq degan m a’noni anglatadi. Litosferaga 
+Yer po‘sti va mantiyaning yuqori qismi kiradi.
+Yer po‘sti uch qavat tog‘ jinslaridan iborat (30-rasm). Birinchi qa- 
+vatda asosan cho‘kindi jinslar bo‘ladi. Ular -  quruqlikda va suvda 
+jinslarning cho‘kib, o‘tirib qolishidan hosil bo‘ladi. Ular gil, ohaktosh, 
+qum, qumtosh, bo‘r jinslari bo‘lib, qatlam-qatlam holda yotadi. Bu 
+qatlam lar Yerning o ‘tgan zam onlardagi tabiati yozilgan kitobga 
+o‘xshaydi. Bu qatlamlarni o‘rganib, geologlar minglab, millionlab yillar 
+davomida Yerda tabiat qanday bo‘lganini bilib olishadi.
+45
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+QATTIQ 
+QOBIG‘I —
+ 
+LITOSFERA
+Q edurtm _uz
+30-rasm. Yer po ‘stining tuzilishi.
+Bir parcha bo‘r yoki ohaktoshni mikroskopda ko‘rsangiz, uning 
+butunlay mayda jonivorlarning chig‘anog‘i va suyaklari ekanini bilib 
+olasiz. Ular millionlab yillar ilgari suvda yashagan qadimgi jonivorlar 
+va o‘simliklar qoldiqlaridir (31-rasm). Toshko‘mir va neft ham shunday 
+qoldiqlardan hosil bo‘lgan.
+Ikkinchi qavat granitdan iborat. Granit -  magmatik tog‘ jinsi. U Yer 
+qatlamlari orasiga magmaning kirib qolib, sovishidan hosil bo‘lgan. 
+Magmani qaynoq, yonib turgan balchiqqa o‘xshatsa bo‘ladi. U sovib 
+granitga aylanadi. Granit qatlamidan pastda bazalt qatlam joylashgan. 
+Bazalt chuqurdan chiqib kelgan. U granitdan og‘ir, tarkibida temir, 
+magniy, kalsiy mavjud. Granit va bazalt otqindi jinslardir. Bular 
+magmadan hosil bo‘lganligi uchun magmatik jinslar deb ataladi.
+Yer po‘sti materiklar va okean ostida bir xil emas. Materiklarda Yer 
+po‘sti yuqorida ko‘rganimizdek uch qavat. Okeanlar ostida esa ikki 
+qavat. Ya’ni faqat cho‘kindi va bazalt qatlamlaridan iborat.
+Yerning qattiq qobig‘i yaxlit bo‘lmay, alohida-alohida yirik bo‘- 
+laklardan -  plitalardan iborat. Bu bo‘laklarni bir-biridan chuqur darz- 
+lar, yoriqlar ajratib turadi (32-rasm). Litosfera plitalari mantiyaning 
+suyuq jinslari qatlami ustida turli tomonga siljib yuradi. Bir-biriga 
+qarshi yo‘nalishda siljiyotgan plitalar to‘qnashgan joylarda Yer po‘sti 
+bukilib, yoysimon orollarni, tog‘larni, chekka okean botiqlarini hosil 
+qiladi. Bularga And tog‘lari, Yapon orollari, Mariana botig‘ini misol 
+qilib ko‘rsatish mumkin (ularni xaritadan toping).
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+31-rasm. Sayyoramiz- 
+da qadimda yashagan 
+jonivor va o ‘simliklarn- 
+ing qoldig‘i saqlangan 
+cho ‘kindi tog ‘ jinslari.
+Litosfera plitalari bir-biridan ajralayotgan yoki to‘qnashayotgan 
+joylarda ular juda harakatchan bo‘ladi, tez-tez yer qimirlab turadi. 
+K o‘pchilik harakatdagi vulqonlar shu yerlarda joylashgan. Bunday 
+joylar minglab kilometrga cho‘zilgan seysmik mintaqalar (yunoncha 
+«seismos» -  yer qimirlash)ni hosil qiladi (33-rasm). Endi «Litosfera 
+plitalari harakati», «Sayyoramizdagi yirik seysmik mintaqalar» xari- 
+talarini qiyoslab ko‘raylik (32, 33-rasmlar). Shunda eng ko‘p vulqonlar 
+va yer qimirlaydigan mintaqalar litosfera plitalari tutashgan joylarga 
+to‘g‘ri kelishini bilib olasiz. Bulardan eng yiriklari: Tinch okean «olov» 
+halqasi, Alp -  Himolay seysmik mintaqasi.
+Litosfera plitalarining ajralish chegarasi 
+Я 
+t Litosfera plitalarining harakat yo‘nalishi va tezligi, cm/yil
+Litosfera plitalarining 
+to‘qnashish chegaralari
+47
+32-rasm. Litosfera plitalari harakati.
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+a
+^ 
+Har yili Yer ostidan yuz millionlab tonna neft, gaz, ko‘mir, torf
+a  
+hamda temir, mis, aluminiy va boshqa metall rudalari, tuzlar qazib 
+§ 
+olinadi. Ulardan turli m ashinalar, samolyotlar, kemalar, kosmik 
+§ 
+apparatlar yasaladi va harakatga keltiriladi. Deyarli barcha tog‘ jinslari 
+[3 
+mineral boylik hisoblanadi. Mineral boyliklar uch guruhga ajratiladi: 
+yoqilg‘i, rudali, noruda.
+Yoqilg‘i boyliklari, asosan, torf, ko‘mir, neft va gazdan iborat. Torf 
+botqoqliklarda o‘simlik qoldiqlaridan hosil bo‘ladi. Hozirgi vaqtda 
+torf kam ishlatiladi. Uning o‘rniga ko‘mir, neft, gaz tobora ko‘proq 
+yoqilmoqda.
+K o‘mir toshko‘mir va qo‘ng‘ir ko‘mir deb ataluvchi ikki turga 
+bo‘linadi. Toshko‘mir qattiq va yaltiroq bo‘lib, yonganda juda ko‘p 
+48 
+issiqlik beradi. Qo‘ng‘ir ko‘mir nisbatan kamroq issiqlik tarqatadi. 
+O‘zbekistondagi Ohangaron koni ko‘miri qo‘ng‘ir ko‘mir hisoblanadi. 
+Neft va gaz konlari ham cho‘kindi jinslar orasida bo‘ladi. Ular ko‘- 
+pincha birga uchraydi. Neft va gaz Antarktidadan boshqa hamma 
+materiklardan qazib chiqariladi. Neft va gaz dengiz sayozligida ko‘p 
+bo‘ladi.
+Rudali m ineral boyliklarga temir rudalari va rangli metall rudalari 
+kiradi. Qayta ishlangan rudalardan temir, mis, aluminiy, qo‘rg‘oshin,
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+rux ajratib olinadi. Qimmatbaho hisoblangan -  oltin va kumush rangli 
+metallar guruhiga kiradi. Deyarli barcha rudalar Yerning qizib yotgan 
+chuqur qismida hosil bo‘ladi. N oruda foydali qazilmalar ham Yer 
+bag‘rida ko‘plab uchraydi. Ular qatlam-qatlam bo‘lib yotadi. Ba’zan 
+bunday qatlamlarning qalinligi bir necha o‘nlab metrga yetadi. Bunday 
+foydali qazilm alar orasida eng muhimi osh tuzidir. U tozalanib, 
+maydalanib ovqatga va har xil tuzlamalarga ishlatiladi. K o‘p tog‘ 
+jinslaridan qurilish materiallari sifatida foydalaniladi. Mineral boyliklar 
+xaritalarda har xil belgilar bilan ko‘rsatiladi (5-sinf o‘quv atlasidagi 
+«O‘zbekistonning tabiiy xaritasi»dan foydali qazilmalarning shartli 
+belgilarini ko‘rib chiqing). Respublikamizda yangi neft, gaz va oltin 
+konlarining topilganligi va qazib olinayotgani yurtimiz ravnaqiga 
+xizmat qilmoqda.
+edurtm_uz
+Tayanch so‘z va tushunchalar
+Litosfera
+Bazalt
+Seysmik m intaqalar 
+Yoqilg‘i boyliklari 
+Magmatik tog‘ jinslari
+Yer po‘sti 
+Granit
+Tog‘ jinslari 
+Litosfera plitalari 
+Rudali va noruda boyliklar 
+Cho‘kindi jinslar
+1. Litosfera nima va u qanday qatlamlardan iborat?
+2. Yerning o‘tgan zamonlardagi tabiati qanday bo‘lganini 
+olimlar nimalardan bilishadi?
+3. «Mineral boyliklarning turlari» jadvalini to‘ldirishni 
+davom ettiring.
+Mineral boyliklarning turlari
+Yoqilg‘i
+Rudali
+Noruda
+Ko‘mir
+?
+?
+?
+Mis
+?
+Torf
+?
+Kaliy tuzi
+?
+?
+?
+4. Darslik va o‘quv atlasidagi xaritalardan foydalangan 
+holda quyidagilarni bajaring:
+a) yozuvsiz xaritada harflar bilan belgilangan hududlardan
+49
+4-«Geografiya», 5-sinf.
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+Q edurtm _uz
+50
+qaysilari zilzila va vulqon otilishi tez-tez kuzatilmay- 
+digan mintaqalarga tegishli ekanligini;
+b) qaysi harflar bilan belgilangan hududlar seysmik min­
+taqalarga tegishli ekanligini aniqlang.
+5. Quyida berilgan rasmlarda qanday jarayonlar sodir bo‘- 
+layotgani va natijada Yer po‘stida qanday o‘zgarishlar 
+ro‘y berishi mumkinligini darslik matnidagi ma’lumotlar 
+asosida tahlil qiling:
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm _uz
+15-§. 
+YER PO ‘STINING HARAKATLARI 
+^
+Mantiyadagi harakatlar ta’sirida Yer po‘stining ayrim joylari asta-
+joylarni suv qoplab, okean va dengizlar hosil bo‘lgan. Ko‘tarilgan joylar 
+quruqlik bo‘lib, materiklarni, orol va yarimorollarni paydo qilgan. 
+Lekin vaqt o‘tishi bilan okean va dengizlar osti ko‘tarilib quruqlikka 
+aylanishi, aksincha, quruqliklar pasayib, o‘rnini suv bosib dengizga 
+aylanishi mumkin. Biroq bunday o‘zgarishlar o‘nlab, yuzlab million 
+yillarda ro‘y beradi. Yerning ichki kuchlari ta’sirida Yer po‘stida ro‘y 
+beradigan siljish, yorilish, ko‘tarilish, cho‘kish, bukilish harakatlariga 
+tektonik harakatlar deyiladi. Bizning mamlakatimiz O ‘zbekiston 
+o‘rni ham 30 mln yil ilgari dengizdan iborat bo‘lgan. Biz bularni tog‘ 
+jinslari orasidan topiladigan dengizda yashagan hayvonlar qoldiqlari — 
+chig‘anoqlar va suyaklarni o‘rganib bilamiz.
+Yer po‘stining gorizontal harakati natijasida Yer qatlamlari bukilib, 
+burmali tog‘larni, vodiylarni, chuqur okean botiqlarini hosil qiladi. Yer 
+po‘stida yoriqlar vujudga keladi (34-rasm). Masalan, Farg‘ona vodiysi, 
+Tyanshan tog‘lari shunday hosil bo‘lgan. Yer yuzasidagi barcha baland- 
+pastliklar -  tog‘lar, tekislik, qir, vodiy, soy, botiq va boshqalar relyef 
+deb ataladi.
+sekin cho‘kadi, boshqa qismlari esa ko‘tariladi. Chuqur cho‘kkan
+34-
+ko‘i
+mat 
+___  ,____ _______  , _ 1 
+...
+harakatlariyo‘nalishini ko‘rsatadi.
+51
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+edurtm uz
+b)
+Krater
+Vulqon 
+kanali 
+Magma
+Lava
+Vulqon kuli 
+Yon krater
+Vulqon 
+o‘chog‘i
+35-rasm. Vulqon tog‘ining umumiy ko‘rinishi (a) va kesmasi (modeli) (b).
+Yer po‘stida biror joy yorilsa, o‘sha hudud tagida bosim pasayib,
+chuqurdagi qaynoq moddalar suyuqlashib, suyuq jinsga aylanadi.
+U magma deb ataladi. Magma yer yoriqlaridan yuqoriga ko‘tariladi
+va yer yuziga oqib chiqadi. Yer yuziga oqib chiqqan qaynoq suyuq
+modda lava deyiladi. Lava asta sovib, tepa va tog‘larni hosil qiladi.
+Bunday tepa va tog‘lar vulqonlar deb ataladi. vulqonlar otilganda yer
+qimirlaydi, portlashlar ro‘y beradi, gumburlagan ovozlar eshitiladi.
+Vulqonlar konus shaklidagi gumbazsimon
+balandliklarni, tog‘larni hosil qiladi. Bunday
+tog‘larning ustida vulqon og‘zi joylashgan
+bo‘lib, u krater deb ataladi. vulqon og‘zidan
+kul, gaz va toshlar otilib chiqadi (35-rasm).
+vulqonlar otilib turadigan o ‘lkalarda
+va Yer po‘stida yoriqlar bor joylarda issiq
+buloqlar ham uchraydi. Ular hali sovib ul-
+gurm agan lav alar orasidan va chuqur
+yoriqlardan chiqqani uchun qaynoq bo‘ladi.
+Ba’zi issiq buloqlarda suv vaqt-vaqti bilan
+favvora kabi otilib turadi. Bunday buloqlar
+geyzerlar deyiladi (36-rasm).
+Yer p o ‘sti plitalari tutashgan, burma-
+lanish, yorilish, uzilish bo‘layotgan joylarda 
+36-rasm. Vaqti-vaqti bi- 
+, , • , • 
+, , , 
+,, • , 
+, • 
+, 
+• ,
+tab iatn in g eng dahshatli hodisalaridan
+lan otilib turadigan issiq 
+buloqlar -  geyzerlar. 
+b iri -  y er qim irlash lari b o ‘lib tu ra d i.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+0 ‘zbekistonning ham kattagina qismi, ayniqsa, sharqiy, janubiy tog‘li, 
+tog‘ oldi qismlari yer qimirlaydigan mintaqaga kiradi.
+Yer qimirlash (zilzila) Yer po‘stining chuqur qismida -  tog‘ jinslari 
+qatlamlarida to‘satdan ro‘y beradigan sinish, siljish, uzilish va vulqon 
+otishi natijasida sodir bo‘ladi. Yer qimirlash boshlanadigan bu joy 
+yer qimirlash o ‘chog‘i -  gipotsentr deyiladi. Yer qimirlash o‘chog‘i 
+ustidagi joy yer qimirlash markazi -  epitsentr deb yuritiladi. Yer 
+qimirlash markazida eng ko‘p vayronagarchilik bo‘ladi (37-rasm).
+Yer qimirlash (zilzila) harakatlari juda sezuvchan asbob -  seys- 
+mograflarda avtomat ravishda yozib olinadi («seismos» -  yer qimirlash, 
+«grafo» -  yozaman). Seysmogramma (yer qimirlash yozib olingan 
+qog‘oz)larni tahlil qiluvchi olimlar yer qachon qimirlaganini, yer 
+qimirlash o‘chog‘i qancha chuqurda ekanini, yer qimirlash markazida 
+qanday kuch bilan qimirlaganini aniqlashadi.
+Olimlar yer qimirlash (zilzila) kuchini uning binolar va relyefga 
+ta’siriga qarab 12 ballda aniqlashadi. Masalan, 1 va 2 balli zilzilani 
+odamlar sezmaydi. 3, 4 va 5 balli kuchda bo‘lganda ancha sezilarli 
+bo‘lsa ham imoratlarga zarar yetmaydi. 6 va 7 balli zilzila sodir 
+bo‘lganda uy devorlarida yoriqlar paydo bo‘ladi. 8 ballda devorlar 
+yorilib, ba’zi uylar buzilishi mumkin. 9 ball bo‘lganda esa devorlar 
+qulaydi, tomlar bosib qoladi. 10 balli zilzila sodir bo‘lsa, imoratlar
+37-rasm. Yer qimirlash
+o ‘chog ‘i va markazi.
+-  Birinchi seysm ografni 
+xitoylik munajjim Chjan Xen 
+ixtiro qilgan. H ozirgi za- 
+mon seysmografini rus olimi 
+B. B. Golitsin ixtiro qilgan. 
+Ko ‘p  mamlakatlarda shu sey- 
+mografdan foydalaniladi.
+53
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+buzilib ketadi, yerda kengligi 1 m gacha yoriqlar paydo bo‘ladi. 11 va
+12 ball bo‘lganda yer yuzasi relyefi o‘zgaradi. Yerda tik turgan narsa 
+qolmaydi. Shuning uchun 11-12 ballni o‘ta halokatli zilzila deyiladi.
+Keyingi vaqtlarda yer qimirlash kuchi unga sarf bo‘lgan energiya, 
+ya’ni m agnituda birligida ham aniqlanmoqda. Hozirda olimlar yer 
+qimirlashini oldindan aytish ustida tinimsiz ilmiy izlanishlar olib 
+bormoqdalar.
+edurtm_uz
+Tayanch so‘z va tushunchalar
+Tektonik harakatlar 
+Relyef 
+Magma
+Lava 
+vulqon 
+K rater
+Geyzer 
+Epitsentr 
+Gipotsentr
+Seysmograf 
+m agnituda 
+zilzila
+54
+1. Tektonik harakatlar deb qanday harakatlarga aytiladi?
+2. 1966-yil 26-aprelda Toshkentda qattiq yer qimirlagan, 
+uylarning devorlari yorilib ketgan, ayrim binolar qula- 
+gan. Sizningcha, bu yer qimirlash kuchi necha ball 
+bo‘lgan?
+3. Yarimsharlar tabiiy xaritasidan 40° shimoliy kenglik va 
+15° sharqiy uzunlikda joylashgan vulqonni toping va 
+nomini ayting.
+4. Yulqon kesmasi (modeli)da 2, 3, 4 
+va 6 raqamlari bilan nimalar ko‘rsa- 
+tilgan?
+5. Quyida berilgan rasmdagi a) va b) 
+holatlarlarni yaxshilab kuzating.
+Zilzila paytida Aziza qaysi holatda 
+joylashsa, xavfsizroq deb o‘ylaysiz?
+Nima uchun?
+a)
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Q edurtm _uz
+16-§. 
+YER YUZASI RELYEFINING ASOSIY 
+SHAKLLARI
+Globus yoki dunyoning tabiiy xaritasiga bir nazar tashlasangiz, 
+Yer yuzasining juda notekis ekanligini ko‘rasiz. Ba’zi joylar keng 
+tekisliklardan, boshqa joylar esa tog‘li o‘lkalardan iborat. Okeanlar 
+tagi ham quruqliklarga o‘xshagan, juda notekis. Yer yuzasining bunday 
+notekisligiga Yerning ichki kuchlari asosiy sabab bo‘lgan. Bu kuchlar 
+ta ’sirida Yer yuzasining ayrim joylari ko‘tariladi, boshqa joylari 
+cho‘kadi, Yer po‘sti yorilib, lavalar oqib chiqadi, vulqon tog‘larini hosil 
+qiladi. Yer qimirlashlar ham Yer yuzasi relyefini o‘zgartiradi.
+Yer yuzasi relyefini tashqi kuchlar ham o‘zgartiradi. Tashqi kuchlar 
+suv, shamol, muzliklar, Quyosh nuri, organizmlardan iborat. Suv tog‘ 
+jinslarini yemiradi, oqizib ketadi va past, chuqur joylarni to‘ldiradi, 
+vodiylar, daralarni hosil qiladi. Chuqur joylarning o‘rnida tekis yerlar 
+bunyod bo‘ladi. Shamol mayda jinslarni uchirsa ham uzoq vaqtda 
+juda ko‘p miqdordagi qumlarni uyub tashlaydi. Qattiq toshlar kunduzi 
+Quyosh nuridan qiziydi, kechasi soviydi. Natijada yorilib, asta-sekin 
+maydalanib ketadi.
+Xullas, tashqi kuchlar tog‘larni yemirib, chuqurliklarni to‘ldiradi, 
+ya’ni, Yer yuzasidagi baland-pastliklarni tekislaydi. Shunday qilib, ichki 
+kuchlar bilan tashqi kuchlar bir-birlariga butunlay teskari ish bajaradi. 
+Ya’ni ichki kuchlar baland-pastliklar hosil qiladi, tashqi kuchlar esa 
+ularni tekislaydi.
+Materiklar va okeanlar Yer relyefining eng yirik shakllaridir.
+M ateriklar -  Yer po‘stining ko‘tarilib qolgan eng yirik bo‘laklari. 
+Materiklarning katta qismi okean suvlaridan ancha baland ko‘tarilib 
+turadi. Yer sharida 6 ta materik bor. Bular: Yevrosiyo, Afrika, Shimoliy 
+Amerika, Janubiy Amerika, Antarktida va Avstraliya (38-rasm).
+O rol va yarim orollar. Okean va dengizlarda suvdan ko‘tarilib 
+turgan va hamma tomondan suv o‘ragan kichikroq quruqliklar orollar 
+deyiladi. Grenlandiya, Yangi Gvineya, Kalimantan, Madagaskar eng 
+katta orollardir. Agar quruqlik uch tomondan suv bilan o‘ralib, faqat
+55
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+Q edurtm _uz
+38-rasm. Yer yuzidagi materiklar.
+bir tomonidan katta quruqlik bilan tutashgan bo‘lsa, ular yarimorollar 
+deb ataladi. Arabiston, Hindiston, Hindixitoy eng katta yarimorollar 
+hisoblanadi (ularni yarimsharlar tabiiy xaritasidan toping).
+Dunyo okeani -  materiklarni o‘rab turgan va bir-biri bilan tutashib 
+ketgan suvli hudud. Dunyo okeani to‘rtta -  Tinch, Atlantika, Hind va 
+Shimoliy Muz okeanlaridan iborat. Dunyo okeani Yer yuzining 71 foiz 
+(%) ini, quruqlik esa 29 % ini egallagan.
+Tog‘ va tekisliklar quruqlik relyefining asosiy shakllari hisob­
+lanadi. Tog‘lar Yerning ichki kuchlari ta’sirida hosil bo‘ladi. Tekis­
+liklar tog‘larning yemirilishi va yemirilgan jinslarning chuqurliklarni 
+to‘ldirishidan vujudga keladi. Tekisliklar yuzasi tekis yoki biroz past- 
+baland yerlardir. Dunyodagi eng katta tekisliklar: Amazonka, G ‘arbiy 
+Sibir, Sharqiy Yevropa va Turon tekisliklaridir (Bularni xaritadan 
+toping). Yer yuzining dengiz sathidan baland ko‘tarilgan va yer yuzasi 
+notekis bo‘lgan joylariga to g ‘lar deyiladi. Tog‘larning eng baland 
+qismlari to g ‘ ch o ‘qqisi deb ataladi. Dunyodagi eng baland nuqta 
+Himolay tog‘laridagi Jomolungma cho‘qqisi bo‘lib, balandligi 8848 m. 
+Bu cho‘qqini O‘zbekistondan birinchi bo‘lib, 1998-yilning 22-mayida 
+Rustam Rajabov zabt etgan. O‘zbekistonning eng baland nuqtasi esa 
+Hisor tizmasidagi Hazrati Sulton cho‘qqisi (4643 m) hisoblanadi.
+Yer yuzidagi tog‘ va tekisliklarning balandligi har xil bo‘ladi. Agar 
+tekisliklarning dengiz sathidan balandligi 200 m dan oshmasa, ular
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+pasttekislik deyiladi. Tekisliklar balandligi 200 m dan 500 m gacha 
+bo‘lsa, ular qirlar deb ataladi. Ba’zi bir tekisliklarning dengiz sathidan 
+balandligi 500 m dan ham ortiq bo‘ladi. Bunday baland tekisliklar 
+yassitog‘lik deb yuritiladi. Bunga O‘rta Sibir, Braziliya yassitog‘liklari 
+misol bo‘ladi (xaritadan toping). 39-rasmda turli balandlikdagi tekis­
+liklar, qirlar va tog‘lar ko‘rsatilgan.
+Tog‘lar ham balandligiga qarab, past, o‘rtacha, o‘rtacha baland 
+va baland tog‘larga bo‘linadi. Agar tog‘larning balandligi 500 m 
+dan 1000 m gacha bo‘lsa, past tog‘lar; 1000 m dan 2000 m gacha 
+bo‘lsa, o ‘rtacha tog‘lar; 2000 m dan 3000 m gacha bo‘lsa, o ‘rtacha 
+baland tog‘lar; 3000 m dan yuqori bo‘lsa, baland tog‘lar deyiladi. 
+O ‘zbekistondagi Bo‘kantov, Tomditov past tog‘lar, Nurota tog‘lari 
+o‘rtacha baland tog‘lardir (Xaritadan topib, nomlari va balandligini 
+geografiya daftaringizga yozib qo‘ying).
+Ba’zan tog‘lar bir-biriga tutashib, uzoq masofalarga cho‘zilib ketgan
+edurtm_uz
+39-rasm. Yer yuzasining dengiz 
+past t0g‘ 
+sathidan balandligiga qarab har 
+(500-1000 m) 
+xil nom bilan atalishi.
+Qir
+(200-500 m)
+O‘rtacha tog‘ 
+(1000-2000m)
+^  
+Baland tog‘ 
+(3000 m dan 
+baland)
+Botiq 
+(0 metrdan past)
+O‘rtacha baland tog‘ 
+(2000-3000 m)
+57
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+QATTIQ 
+QOBIGT —
+ 
+LITOSFERA
+bo‘ladi. Bunday relyef shakllari tog‘ tizmalari deb ataladi. Ularga And, 
+Kordilyera, O‘rta Osiyodagi Tyanshan, Hisor tizmalari misol bo‘ladi. 
+Juda katta maydonlarni egallagan tog‘ tizmalari, yakka-yakka tog‘lar 
+va vodiylar birgalikda tog‘li o ‘lkalar deyiladi.
+edurtm_uz
+58
+Tayanch so‘z va tushunchalar
+Ichki kuchlar 
+M ateriklar
+okeanlar 
+orollar
+Yarimorollar 
+Tekislik
+Tashqi kuchlar 
+Qir
+Tog‘li o‘lkalar 
+c h o ‘qqi
+Tog‘ tizmalari 
+Tog‘
+1. Materik nima? Orollar va yarimorollar deb nimalarga ay 
+tiladi?
+2. Tekisliklar va tog‘lar balandligiga qarab qanday turlarga 
+bo‘linadi?
+3. Yozuvsiz xaritaga materiklar va ulardagi baland tog‘ 
+hamda eng katta tekisliklarning nomlarini yozing.
+4. Quyidagi rasmda 1, 2, 3 va 4 raqamlari bilan qaysi 
+okeanlarning o‘rni ko‘rsatilgan? Ulardan qaysinisi mam- 
+lakatimizga eng yaqin, qaysi biri eng uzoqda joylashgan?
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+v  b o b . y e r n in g  s u v  q o b i g ‘i — g id r o s f e r a
+17- §. g i d r o s f e r a n i n g  t a r k i b i. 
+d u n y o  o k e a n i
+Yerning suv qobig‘i gidrosfera deb ataladi (yunoncha «hydro» -  
+suv, «sphaira» -  shar degani). Gidrosferada suv uch xil -  suyuq, qattiq 
+(muz) va bug‘ holatida uchraydi. Gidrosfera, asosan, ikki qismdan 
+iborat (quyidagi jadvalga qarang).
+Gidrosfera qismlari
+Suv miqdorining nisbati, % his.
+Suv miqdori, mln. km3
+Dunyo okeani
+96,5
+1340
+Quruqlikdagi suvlar
+3,5
+47,5
+Gidrosferadagi suvning asosiy qismi okeanlarda yig‘ilgan (96,5 %). 
+Biroq bu suv juda sho‘r b o ‘lganligi uchun undan ichishga ham, 
+ekinlarni sug‘orishga ham foydalanib bo‘lmaydi. Quruqlikdagi suvning 
+deyarli yarmi sovuq o‘lkalardagi muzliklarda to‘plangan. Muzliklar 
+suvi chuchuk, toza suv, lekin odamlar yashaydigan joylardan uzoqda 
+bo‘lganligidan foydalanish qiyin. Issiq o‘lkalarning baland tog‘laridagi 
+muzliklar yozda daryolarga suv berib turadi.
+Yer osti suvlari taxminan muzlik suvlaricha bo‘lsa ham, ularning 
+sifati har xil. Sho‘r yer osti suvlari ham ko‘p.
+Yer usti suvlari -  daryo va ko‘llarda to‘plangan. Ularda suv kam. 
+Lekin suv aylanib kelaverganidan insoniyat foydalanishi uchun eng 
+qulay. Yer usti suvlari Yer yuzida juda notekis taqsimlangan. Havodagi 
+suv bug‘lari Yer yuziga yog‘adigan yog‘inlar manbayidir.
+Dunyoda suv to‘xtovsiz aylanma harakatda bo‘ladi. Quyosh nuri 
+okeanlardan juda ko‘p suvni bug‘latadi. Bug‘ning bir qismi okeanlarga 
+yog‘in bo‘lib yog‘adi. Bir qismini shamol quruqliklarga olib ketadi 
+va u yerlarda yog‘in bo‘lib yerga tushadi. Bu suv daryolarga tushib 
+oqadi va yana okeanlarga quyiladi. Suvning okeanlardan havo orqali 
+quruqliklarga va quruqlikdan daryolar orqali yana okeanlarga qaytib 
+keladigan to‘xtovsiz harakati suvning tabiatda aylanishi deyiladi.
+YERNING 
+SUV 
+QOBIG‘I —
+ 
+GIDROSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+SUV 
+QOBIG‘I —
+ 
+GIDROSFERA
+Qedurtm_uz
+60
+Suvning bunday aylanib turishining ahamiyati juda katta. Quruq­
+likda yog‘in yog‘may qo‘ysa nima bo‘lardi? Quruqlikdagi hamma suv 
+bug‘lanib ketib, o‘simliklar qurirdi, hayvonlar qirilib ketardi. Hamma 
+joy qurib qaqshab yotgan cho‘lga aylanar edi.
+Dunyo okeani. Dunyoda okeanlar 4 ta: Tinch, Atlantika, Hind 
+va Shimoliy Muz okeanlari (40-rasm). Ularning hammasi birgalikda 
+Dunyo okeani deb ataladi.
+Tinch okean eng katta va eng chuqur okean. Maydoni butun 
+quruqlik maydonidan katta -  180 mln km2. Eng chuqur joyi Mariana 
+botig‘i -  11022 metr.
+A tlantika okeani kattaligi jihatidan ikkinchi o‘rinda turadi. May­
+doni 91 mln km2. Eng chuqur joyi Puerto-Riko botig‘i -  8742 metr.
+H ind okeani maydonining kattaligiga ko‘ra uchinchi o‘rinda 
+turadi. Uning maydoni 76 mln km2. Eng chuqur joyi Zond botig‘i -  
+7729 metr.
+Shimoliy Muz okeani eng kichik okean -  maydoni 14 mln km2. 
+Eng chuqur joyi -  5527 metr. Bu okean Shimoliy qutb atrofida joy- 
+lashgani tufayli eng sovuq okean hisoblanadi. Ko‘p qismi doimo muz 
+bilan qoplanib yotadi.
+Dengizlar, qo‘ltiqlar, bo‘g‘izlar. Dengizlar okeanlarning kichik 
+qismlari bo‘lib, ulardan yarimorollar, orollar va suv osti qirlari bilan 
+ajralib turadi. Quruqliklarning chekkasiga tutashgan dengizlar chekka 
+dengizlar deyiladi. Masalan, Hind okeanidagi Arabiston dengizi, Tinch 
+okeandagi Bering dengizi. Lekin ayrim dengizlar quruqlikning ichiga 
+ancha kirib borib, okeanlar bilan bo‘g‘izlar orqali tutashgan. Bunday
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+41-rasm. Okean tagi relyefi.
+dengizlar ichki dengizlar deb ataladi. O‘rta dengiz, Qizil dengiz, Qora 
+dengiz ichki dengizlardir.
+Okean, dengiz va ko‘llarda qo‘ltiqlar ham bo‘ladi. Q o‘ltiq deb 
+okean, dengiz va ko‘llarning quruqlik ichkarisiga kirib borgan kichik 
+va sayoz qismlariga aytiladi. Hind okeanining Bengaliya va Fors 
+qo‘ltiqlari, Atlantika okeanining Biskay qo‘ltig‘i bor.
+Okean, dengiz va ko‘llarning ikkita katta qismini tutashtirib tura­
+digan suvli tor yo‘lakka bo‘g ‘iz deyiladi. Masalan, Gibraltar bo‘g‘izi 
+Atlantika okeanini O‘rtayer dengiz bilan tutashtirib turadi.
+O keanlar tagi relyefi. Okeanlar tagi ham quruqliklar yuzasi kabi 
+notekis. Okeanlarning materiklarga tutashgan chekka qismlarida quruq- 
+likning suv tagidagi davomi -  materik sayozligi, ya’ni shelf joylashgan. 
+Uning chuqurligi 200 m dan oshmaydi. Kengligi har xil. Materik 
+sayozliklari foydali qazilmalarga, ayniqsa, neft va gazga boy bo‘ladi.
+200 m etrdan 2500-3000 metr chuqurlikkacha bo‘lgan joylar 
+materik yonbag‘ri deyiladi. Undan chuqurda okean tagi boshlanadi. 
+Okean tagida keng tekisliklar, tog‘lar, juda chuqur botiqlar mavjud. Suv 
+osti tog‘ tizmalari minglab kilometrga cho‘zilgan (41-rasm). Dengiz va 
+okeanlarning chuqurligi exolot deb ataladigan asbob bilan o‘lchanadi 
+(42-rasm). Bunda okean yoki dengiz tubiga qarab exolotdan tovush 
+to‘lqini yuboriladi. Suvda tovush to‘lqini 1 sekundda 1500 m tezlik
+YERNING 
+SUV 
+QOBIGT —
+ 
+GIDROSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+SUV 
+QOBIG‘I —
+ 
+GIDROSFERA
+Qedurtm_uz
+42- rasm. Chuqurlikni exolot yordamida o ‘Ichash -  a); zamonaviy exolot -  b).
+bilan tarqaladi. Tovush to‘lqinining okean yoki dengiz tubiga yetib 
+borib, qaytib kelishiga ketgan vaqt asosida suv havzalarining chuquliklari 
+aniqlanadi. Masalan, okean tubiga yuborilgan tovush to‘lqini 4 sekundda 
+qaytib kelganligi m a’lum bo‘lsa, okeanning chuqurligi quyidagicha 
+topiladi. Tovush to‘lqini yetib borib, qaytib kelishi uchun ketgan vaqt 
+ikkiga bo‘linadi. Chunki tovush to‘lqini bu masofani 2 marta bosib 
+o‘tadi, ya’ni 4 sekund : 2 = 2 sekund. Olingan natijani 1500 m, ya’ni 
+suvda tovush to‘lqinining tarqalish tezligiga ko‘paytiramiz: 2 x 1500 m 
+= 3000 m. Demak, okeanning chuqurligi 3000 m ekan.
+62
+Tayanch so‘z va tushunchalar
+Gidrosfera 
+Dunyo okeani
+Quruqlikdagi suvlar 
+Suvning tabiatda aylanishi 
+Shelf 
+Materik yonbag‘ri 
+Exolot
+1. Gidrosfera nima va u qanday 
+tarkibiy qismlardan iborat?
+2. Qo‘ltiq nima?
+3. B o‘g ‘iz deb nimaga aytiladi?
+4. Quyidagi rasmda tasvirlangan 
+kemaga o ‘rnatilgan exolotdan 
+suv tubiga yuborilgan tovush 
+to‘lqini a) 4 sekundda yetib 
+borgan; b) 6 sekundda qay­
+tib kelgan bo‘lsa, dengizning 
+chuqurligini aniqlang. Qaysi
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+holatda exolotdan yuborilgan tovush to‘lqini yetib borish 
+uchun ko‘proq vaqt sarflagan? Nima uchun?
+5. Darslikdagi ma’lumotlardan foydalangan holda quyidagilarni 
+bajaring:
+a) dengizning chuqurligi 7500 metr bo‘lsa, exolotdan yuborilgan 
+tovush to‘lqini qancha vaqtda dengiz tubiga yetib borishini;
+b) dengizning chuqurligi 6000 metr bo‘lsa, exolotdan yuborilgan 
+tovush to‘lqini qancha vaqtda qaytib kelishini hisoblang.
+18-§. d a r y o l a r
+D aryo nima? Kim daryoni ko‘rgan? Siz o‘zingiz ko‘rgan daryo 
+haqida so‘zlab bering. O‘zan deb ataluvchi chuqurlikda oqayotgan suv 
+oqimi daryo deb ataladi. O ‘zan daryo vodiysining suv oqadigan chuqur 
+qismi hisoblanadi. 43-rasmga qarab daryo vodiysi haqida gapirib 
+bering. Odatda daryolar doim oqib turadi. Lekin iqlimi quruq o‘lkalarda 
+issiq, yog‘in kam vaqtlarda goho qurib qoladigan daryolar ham bor. 
+Ularni vaqtincha qurib qoladigan daryolar deyiladi.
+M a’lumki, har bir daryoning boshi va quyar joyi bo‘ladi. Daryo
+boshlanadigan joy uning manbayi 
+deb ataladi. Yurtimizdagi Sirdaryo 
+va Am udaryo baland to g ‘lardagi 
+qor va m uzliklardan boshlanadi. 
+Volga daryosi tekislikda, Valday 
+qirlarida buloqlardan boshlanadi. 
+Daryolar qayerdan boshlanmasin, 
+ularning irmoqlari bo‘lsa, katta, ser- 
+suv daryolarga aylanadi. Irmoqlar 
+deb bosh (asosiy) daryoga yon 
+tomonlardan kelib quyiladigan ki- 
+chikroq daryolarga aytiladi. Bosh 
+daryo o‘zining barcha irmoqlari bilan 
+birga daryo sistemasini hosil qiladi.
+Ko‘pchilik daryolar okean, den­
+giz, k o ‘l yoki boshqa daryolarga
+43-rasm. Tekislik daryosi va daryo 
+vodiysining ko ‘ndalang kesimi.
+63
+YERNING 
+SUV 
+QOBIGT —
+ 
+GIDROSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+SUV 
+QOBIG‘I —
+ 
+GIDROSFERA
+kelib quyiladi. Daryoning okean, dengiz, ko‘l yoki boshqa daryo- 
+ga quyiladigan joyi daryoning mansabi deyiladi (atlasdagi O ‘z- 
+bekistonning tabiiy xaritasidan Sirdaryo, Amudaryo va Zarafshon 
+daryolarining manbayi va mansabini toping).
+Daryo havzasi va suvayirg‘ich. Yerga shimilishga ulgurmagan 
+va bug‘lanib ketmagan hamma suv daryolarga oqib tushadi. Barcha 
+suvi bir daryoga oqib tushadigan quruqlik maydoni daryo havzasi deb 
+ataladi (44-rasm).
+Hamma daryolarning, hatto eng kichik daryolarning ham o ‘z 
+havzasi bo‘ladi. Amazonka havzasi eng katta daryo bo‘lib, maydoni 
+7 mln km2 dan iborat. Qo‘shni daryolar havzalarini bir-biridan ajratib 
+turadigan chegara suvayirg‘ich deyiladi. Suvayirg‘ichlar tog‘larning 
+cho‘qqilariga, tekisliklarda esa balandroq joylarga to‘g‘ri keladi.
+Tog‘ va tekislik daryolari. Tog‘ daryolari tekislik daryolariga qara- 
+ganda juda tez oqadi, vodiylari tor va chuqur bo‘ladi. Ko‘p daryolar 
+tog‘lardan boshlanib, tekislikka oqib chiqadi va tekislik daryosiga 
+aylanadi. Bunday daryolarga Sirdaryo, Amudaryo va Zarafshon 
+daryolarini misol qilib ko‘rsatish mumkin. Sirdaryo Tyanshan tog‘larida 
+5000 m ga yaqin balandlikdan Norin nomi bilan boshlanadi. Tog‘lar
+edurtm_uz
+64
+44-rasm. Daryo havzasi va uning tarkibiy qismlari.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+45-rasm. Sharshara hosil bo ‘lishi. 
+46-rasm. Niagara sharsharasi.
+orasidagi chuqur daralarda hayqirib oqadi. Tekislikka chiqqanidan keyin 
+keng o‘zanda yoyilib, sekin oqadi. Daryolar tog‘lardan yemirib, oqizib 
+kelgan tog‘ jinslari — katta toshlar o‘zanida cho‘kib qoladi. Daryo 
+tekislikka chiqqanda esa suvdan qum va loyqa cho‘kib qoladi. Daryolar 
+suvidan cho‘kindi jinslarning saralanib cho‘kishi qonuniyatini birinchi 
+bo‘lib Abu Rayhon Beruniy aniqlagan.
+Daryolar suvi baland joylardan otilib tushib, sharsharalarni ho­
+sil qiladi (45-rasm). Dunyodagi eng baland sharshara Janubiy Ame- 
+rikada, Churun daryosidagi Anxel sharsharasi. Uning balandligi 
+1054 m. Lekin suvi ko‘p emas. Eng sersuv sharsharalardan biri -  
+Shimoliy Amerikadagi Niagara sharsharasidir. Bu sharsharada suv 
+48 m balandlikdan otilib tushadi (46-rasm). Yana bir katta sharshara 
+Afrikadagi Viktoriya sharsharasi. Unda suv 120 m balanddan otilib 
+tushadi (bu sharsharalarni yarimsharlar tabiiy xaritasidan toping).
+D aryolarga suv qayerdan keladi? Daryolar yom gir, qor, muz 
+suvlari, buloqlar suvlaridan to‘yinadi. Baland tog‘lardan boshlanadigan 
+daryolar tog‘lardagi muzliklar va qor suvlari bilan to‘yinadi. Ular yozda 
+sersuv bo‘ladi. Amudaryo bilan Zarafshon daryosi ana shunday daryolar 
+hisoblanadi. Ba’zi daryolarga yomg‘ir suvi ham, qor suvi ham, yer osti 
+suvlari ham tushadi. Bunday daryolarni aralash to ‘yinuvchi daryolar 
+deyiladi. Masalan, Sirdaryo shunday daryolar sirasiga kiradi. 
+65
+Daryolar qadim zamonlardan kishilarni chuchuk suv bilan ta’min- 
+laydigan asosiy manba bo‘lib kelgan. Mamlakatimizda suvdan yaxshi- 
+roq foydalanish uchun daryolarga suv omborlari qurilgan, kanal va 
+ariqlar qazilgan, qurg‘oqchil yerlarga suv chiqarilgan. Daryolarga 
+to‘g‘onlar, elektr stansiyalar qurilib, energiyasidan ham foydalaniladi.
+5-«Geografiya», 5-sinf.
+YERNING 
+SUV 
+QOBIGT —
+ 
+GIDROSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+SUV 
+QOBIG‘I —
+ 
+GIDROSFERA
+66
+Qedurtm_uz
+Suvni iflos qilmasdan, tejab-tergab foydalanish har birimizning 
+muqaddas burchimiz hisoblanadi. Buni aslo unutmaylik!
+Tayanch so‘z va tushunchalar
+Daryo 
+O ‘zan
+Suvayirg‘ich 
+Manba
+Daryo havzasi 
+Daryoning to‘yinishi
+Irmoq
+Sharshara
+1. Daryo nima? Daryo havzasi-chi?
+2. Daryo havzasining qanday tarkibiy qismlarini bilasiz?
+3. O‘zbekistondagi qaysi daryolarni bilasiz?
+4. Darslik va o‘quv atlasidagi ma’lumotlardan foydalangan 
+holda quyidagi rasmda A, B, C, D, E, F harflar bilan dar­
+yo havzasining qaysi tarkibiy qismlari ko‘rsatilganligini 
+aniqlang.
+19-§.
+K O ‘L VA M UZLIKLAR. 
+YER OSTI SUVLARI
+K o ‘llar. Quruqlik yuzasida yer usti va yer osti suvlari oqib tusha- 
+digan chuqurliklar ko‘p. Ana shunday tabiiy chuqurliklarda to‘planib 
+qolgan suvga ko‘l deyiladi. Ko‘llar dengizlardan farq qilib, okeanlar 
+bilan tutashmagan bo‘ladi.
+Yer yuzida ko‘llar juda ko‘p. Eng katta ko‘l Kaspiy ko‘li. Uning 
+maydoni 376 ming km2 ni tashkil qiladi. Eng chuqur ko‘l — Baykal. 
+Chuqurligi 1620 m. O ‘rta Osiyodagi eng katta ko‘llardan biri Orol
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+dengizi edi. Hozirgi vaqtda Orol dengizi suvi qurib, maydoni juda 
+kichrayib qolgan.
+Ko‘l suvi to‘ldirgan chuqurliklar har xil yo‘l bilan, ko‘pincha Yer 
+po‘stining asta-sekin pasayishidan hosil bo‘ladi. Yer po‘stining yori- 
+lishidan ham ko‘pincha uzun cho‘zilgan chuqurliklar vujudga keladi. 
+Bunday chuqurliklar suvga to‘lib hosil bo‘lgan ko‘llar tektonik ko‘llar 
+deyiladi. Issiqko‘l va Baykal ko‘llari shunday ko‘llardir.
+Tog‘ daryolari vodiylarida chuqur to ‘g ‘on ko‘llari uchraydi. Ular 
+tog‘lar qulab, vodiyni to‘sib qolishidan vujudga keladi. Pomir tog‘- 
+laridagi Sarez ko‘li shunday hosil bo‘lgan. Tekislikdagi daryolar ilonizi 
+o‘zanlarda oqadigan joylarda eski, qoldiq o‘zanlar suvga to‘lib qolib, 
+o ‘zan ko‘llar paydo bo‘ladi.
+Agar ko‘llarga daryolar quyilsa-yu bironta ham daryo oqib chiq- 
+masa, bunday ko‘l oqmas ko‘l deyiladi. Kaspiy, Orol ko‘llari shunday 
+ko‘llar. Agar k o ‘llardan daryo oqib chiqsa, u oqar k o ‘l deyiladi 
+(47-rasm). Baykal ko‘liga 300 dan ortiq daryo quyiladi va undan bitta 
+katta daryo -  Angara daryosi oqib chiqadi. Baykal -  oqar ko‘l. Odatda 
+iqlimi issiq o‘lkalardagi oqmas ko‘llar suvi sho‘r bo‘ladi. Chunki 
+qo‘shilgan suv bug‘lanib ketib, suvda erigan tuzlar qoladi. Dunyodagi 
+eng sho‘r ko‘l Arabiston yarimorolidagi O ‘lik dengiz. Uning 1 litr 
+suvida 270 grammgacha tuz bor.
+Ko‘llardan inson turli maqsadlarda foydalanadi. Sho‘r ko‘llardan 
+tuz olinadi, sho‘r suv va balchiq ayrim kasalliklarni davolashda qo‘lla- 
+niladi. Chuchuk ko‘llardan baliqchilik, parrandachilikni rivojlantirishda, 
+toza suvidan aholi va xo‘jaliklarni suv bilan ta’minlashda foydalaniladi.
+edurtm_uz
+67
+47-rasm. Oqmas (a) va oqar (b) ko ‘llar.
+YERNING 
+SUV 
+QOBIGT —
+ 
+GIDROSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+SUV 
+QOBIG‘I —
+ 
+GIDROSFERA
+Insonlar sun’iy ko‘llar -  suv 
+omborlarini ham barpo etishadi. 
+U lar, asosan, daryolar suvini 
+tartibga solish va elektr energiyasi 
+olish uchun quriladi.
+M u zlik lar. Q uruqlikda qor 
+to‘planib, hosil bo‘lgan ko‘p yillik 
+muzlar m uzliklar deyiladi. Ular 
+daryo va ko‘llarni qoplab yotgan 
+m uzlardan farq qiladi. Sovuq 
+o‘lkalarda va baland tog‘larda yog‘gan qor erib ulgurmay to‘planadi 
+va zichlashib muzga aylanadi. Tyanshan va Pomir tog‘laridagi muzliklar 
+3500 m dan balandda hosil bo‘ladi (48-rasm).
+Qor yig‘iladigan va muzlik hosil bo‘ladigan balandlikning quyi 
+chegarasi qor chizig‘i deyiladi. Qor chizig‘i qutbiy o‘lkalarda dengiz 
+sathigacha pasayadi. Shuning uchun qutbiy o‘lkalarda -  Antarktida 
+materigi va Shimoliy Muz okeanidagi orollarda dengiz bo‘yidagi yerlar 
+ham muzlik bilan qoplanib yotadi.
+Tog‘lardagi muzliklar bahor kelishi bilan asta erib daryolarga suv 
+beradi. Amudaryo, Sirdaryo va Zarafshon daryolari ko‘p suvini shunday 
+muzliklardan oladi.
+Sizga m a’lumki, sovuq o‘lkalarda muzliklar butun yer yuzasini 
+qoplab yotadi. A ntarktida m aterigi, dunyodagi eng katta orol -  
+Grenlandiya shunday muzliklar bilan qoplangan. Muzning qalinligi esa 
+4 ming metrga yetadi. Muzliklar ham asta-sekin siljib borib, dengiz va 
+okeanlar bo‘yiga kelib qoladi. Bunda muzlik yorilib, bo‘linib, suvga 
+tushadi va suvda suzib yuruvchi katta muz tog‘larini hosil qiladi (49- 
+rasm). Bular aysberglar deyiladi (gollandcha «iys» -  muz, nemischa 
+«berg» -  tog‘ degan m a’nolarni bildiradi). Ba’zi aysberglar juda katta 
+68 
+bo‘ladi. Antarktida qirg‘oqlari yonida kuzatilgan ulkan bir aysbergning 
+uzunligi 170 km, eni 45 km va qalinligi 200 m bo‘lgan. Aysbergning 
+katta qismi suv tagida bo‘ladi. Aysberglar dengiz va okeanlardagi 
+kemalar qatnovi uchun juda xavfli.
+Yer osti suvlari. Yer po‘sti yuza qismidagi tog‘ jinslarining g‘ovak, 
+bo‘shliq va yoriqlaridagi suvlar yer osti suvlari deyiladi. Yer osti suvlari
+lurtm_uz
+48-rasm. Tog‘dagi muzlik.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+a)
+49-rasm. Antarktidadagi muzlik (a) va muzlikdan uzilib tushib, hosil
+bo ‘lgan aysberg (b).
+hosil bo‘lishi uchun quruqlikka yetarli miqdorda yog‘in (qor, yomg‘ir) 
+yog‘ib turishi va yuzadagi tog‘ jinslari suvni chuqurga o‘tkazib yubo- 
+radigan darajada g‘ovak bo‘lishi zarur. Suvning yerga tez yoki sekin 
+shimilishi tog‘ jinslarining g‘ovaklik darajasiga bog‘liq. Masalan, sha- 
+g‘al, qum suvni yaxshi o‘tkazadi. Shuning uchun shag‘al, qum suvni 
+o ‘tkazuvchijinslar deyiladi.
+Granit, ohaktosh, qumtosh, gil singari jinslar suvni yaxshi o‘t- 
+kazmaydi. Shunga ko‘ra ular suvni o ‘tkazmaydigan jinslar deb ata­
+ladi. Yer po‘stining yuza qismidagi tog‘ jinslari qatlam-qatlam bo‘lib 
+yotganligidan yer osti suvlari ham qatlamlar hosil qiladi. G ‘ovak- 
+liklarida suv bo‘lgan qatlamlar suvli qatlamlar deyiladi.
+Ikkita suv o‘tkazmaydigan qatlam orasida joylashgan suv qatlamlar 
+orasidagi suv deb ataladi. Bu qatlam ga suv m azkur qatlam  yer 
+yuzasiga chiqqan joylardan kiradi. Agar tog‘ jinslari qatlamlari tovoq 
+shaklida bo‘lsa, yer osti suvlari bosimli bo‘ladi. Bunday joylarda burg‘
+50-rasm. Yer osti suvlari.
+Artezian quduq.
+A — Grunt suvli qatlam.
+B — Qatlamlar orasidagi 
+bosimli suvli qatlam.
+69
+YERNING 
+SUV 
+QOBIGT —
+ 
+GIDROSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+SUV 
+QOBIG‘I —
+ 
+GIDROSFERA
+Qedurtm_uz
+Respublika 
+Ta'lim Markazi
+51-rasm. Grunt 
+suvi. Buloq hosil 
+bo ‘lishi.
+qudug‘idan suv o‘zi oqib, ba’zan otilib chiqadi. Bunday quduqlar 
+artezian quduqlar deyiladi (69-betdagi 50-rasm).
+Yer yuzasidagi g‘ovak jinslar orasidagi suvlar grunt suvi deb ata­
+ladi. Grunt suvlari sathi qish va bahorda qor erib, yomg‘ir ko‘p yog‘ib 
+turganligi sababli yuqori bo‘ladi. Yozda, kuz boshida esa pasayib qoladi.
+Grunt suvlari tog‘ jinslaridagi g ‘ovaklar orqali past tomonga 
+asta-sekin oqadi. Ular jarlarda, daryo vodiylarida, pastliklarda yer 
+yuzasiga chiqib, buloqlarni hosil qiladi (51-rasm). Hozirgi vaqtda, 
+qishloqlarda, ayniqsa, cho‘llarda juda ko‘p artezian (burg‘) quduqlar 
+qazilgan. Ularning suvi aholi, sanoat korxonalari va qishloq xo‘jaliklari 
+ehtiyojlariga sarflanadi. Yer osti suvlari miqdori chegaralangan. Shu­
+ning uchun ularni tejab, isrof qilmasdan foydalanishimiz zarur.
+Yerning chuqur qatlamlaridagi yer osti suvlari harorati yuqori va 
+tarkibida turli tuzlar hamda minerallar erigan bo‘ladi. Ular mineral 
+suvlar deyiladi. Bunday suvlardan esa turli kasalliklarni davolash 
+uchun foydalaniladi. Ko‘plab davolanish va dam olish maskanlari aynan 
+shunday buloqlar yoniga quriladi. O‘zbekistonda shifobaxsh suvlar 
+ko‘p. Masalan, Toshkent, Chimyon, Chortoq mineral suvlari.
+Suv -  tabiatning inson uchun buyuk ne’mati. Undan isrof va iflos 
+qilmay foydalanish zarur.
+70
+Tayanch so‘z va tushunchalar
+Tektonik ko‘llar 
+o ‘zan ko‘l 
+Buloq
+To‘g‘on ko‘llar 
+o q a r ko‘l 
+oqm as ko‘l
+Suv ombori 
+Artezian suv
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+Muzlik, aysberg 
+Qor chizig‘i
+Yer osti suvlari 
+Grunt suvlari
+m ineral suvlar 
+Artezian quduq
+1. Ko‘l deb nimaga aytiladi?
+2. Ko‘llarning qanday turlarini bilasiz?
+3. Muzliklar qayerda va qanday hosil bo‘ladi?
+4. Yer osti suvlari qanday turlarga bo‘linadi? Mineral suv­
+lar nima maqsadda ishlatiladi?
+5. Quyidagi jadvalda berilgan ko‘llarni guruhlarga ajratish- 
+ni davom ettiring.
+Ko‘llaming
+nomi
+Suv rejimiga ko‘ra turi
+Ko‘l o ‘rnining hosil bo‘lishiga 
+ko‘ra turi
+Oqar
+Oqmas
+Tektonik
+To‘g ‘on
+Baykal
+Orol
++
++
+Balxash
+Sarez
+Kaspiy
+Viktoriya
+2 0 - § . u m u m l a s h t i r u y c h i t a k r o r l a s h  
+^
+Topshiriqlar. I. Quyidagi savollarga javob bering:
+1) Eratosfen va Ptolemey tuzgan dunyo xaritalarida qaysi hududlar 
+aks ettirilgan? Xorazmiy va Beruniy xaritalarida-chi?
+2) Quyosh sistemasiga kiruvchi sayyoralarning nomlarini ayting va 
+Quyoshdan uzoqlashib borish tartibida daftaringizga yozing; 
+71
+3) geografik xaritalarning globuslardan qanday farqi bor? Globus va 
+xaritalardan joyning geografik koordinatasi qanday aniqlanadi?
+4) Yerning ichki tuzilishi qanday?
+5) Dunyo okeani deganda nimani tushunasiz? Eng katta okean 
+qaysi?
+YERNING 
+SUV 
+QOBIG‘I —
+ 
+GIDROSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+SUV 
+QOBIG‘I —
+ 
+GIDROSFERA
+II. 0 ‘tilgan mavzular yuzasidan 15 ta test savoli tuzing va uni 
+yeching. Javoblarni do‘stlaringiz bilan muhokama qiling.
+III. Quyida berilgan rasmda qizil, sariq va qora strelkalar bilan 
+qaysi sayyohlarning sayohat y o ‘llari tasvirlanganligini darslikdan 
+foydalanib aniqlang. Bu sayohatlar nimalarni isbotladi?
+edurtm_uz
+iv. Quyida rasmlari berilgan sayyoralarning nomlarini topib, Yerga 
+yaqin-uzoqligiga qarab ketma-ketlikda joylashtiring.
+a)
+b)
+Yerga nisbatan tutgan o ‘mi
+1
+2
+3
+4
+Belgilanishi
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+v i  BQB. y e r n in g  H A vo QQBIG‘I — ATMQSFERA
+2 1 - § . a t m q s f e r a n in g  t u z i l i s h i
+A tm osferaning aham iyati. Atmosfera -  
+Yerni o ‘rab turgan havo qobig‘i. Yunoncha 
+«atmos» -  bug‘, «sphaira» -  shar m a’nosini 
+bildiradi. Atmosfera Yer bilan birga aylanadi. 
+Yer yuzini samodan keladigan meteor jism - 
+lardan, Quyoshning tirik jonlar uchun zararli 
+b o ‘lgan ultrabinafsha nurlaridan saqlaydi. 
+Atm osfera b o ‘lm aganida Yer yuzi kunduzi 
++ 120 °C gacha qizib, tunda esa -180°, -200 °C 
+gacha sovib ketar edi. Havo qobig‘i Yer yuzini 
+shaffof ko‘rpa kabi asrab turadi.
+Yerning havo qobig‘i, asosan, ikki xil gaz- 
+dan, ya’ni azot va kislorod aralashmasidan ibo­
+rat. Havodagi gazlarning 78 % ini azot, 21 % ini 
+kislorod tashkil etadi. Bulardan tashqari havoda 
+karbonat angidrid, boshqa gazlar, suv bug‘lari, 
+changlar ham bor.
+Azot va kislorod nisbati o‘simliklar ta’sirida 
+saqlanib turadi. Lekin avtom obillardan chi- 
+qadigan is gazi, yirik korxonalardan chiqadigan 
+tutun havoni ifloslaydi. Shuning uchun ham 
+havo tarkibini, uning tozaligini doimo qattiq 
+nazorat qilib turish, ifloslanishining oldini olish 
+zarur. Chunki, insonning sog‘ligi atmosferaning 
+tozaligiga juda bog‘liq.
+Yer havo qobig‘ining yuqori aniq chegarasi 
+yo‘q. Taxminan 2000 km balandda deyiladi. 
+Lekin turli balandlikda havoning tarkibi, haro- 
+rati, zichligi har xil bo‘lib, atmosfera bir qancha 
+qatlamlarga ajratiladi (52-rasm).
+73
+52-rasm.
+ning quyi
+Atmosfera-
+qatlamlari.
+YERNING 
+HAVO 
+QOBIG‘I —
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+HAVO 
+QOBIG‘I —
+ 
+ATMOSFERA
+Troposfera -  atmosferaning quyi qatlami («tropos» -  yunoncha 
+so‘z bo‘lib, aylanmoq, o‘zgarmoq degani). O ‘rtacha qalinligi 10-11 
+kilometr. Qutblar ustida 8-9 km, ekvatorda 17 km gacha yetadi. 
+Havodagi barcha suv bug‘lari shu qatlamda. Bu qatlamda bulutlar 
+paydo b o ‘ladi. Yog‘inlar yog‘adi, ob-havo o ‘zgarib turadi, tirik 
+mavjudotlar shu qatlamda yashaydi. Yuqoriga ko‘tarilgan sari har 1000 
+m da harorat havoning namlik darajasiga bog‘liq ravishda o‘rtacha 6 
+°C ga pasayadi.
+S trato sfera -  (yunoncha «stratum » -  qatlam) troposferadan 
+yuqorida joylashgan. Yuqori chegarasi 50-55 km balandda. Stra- 
+tosferaning quyi qismida harorat -45 °C dan -75 °C gacha pasayadi. 
+Lekin yuqoriga ko‘tarilgan sari havo yana isib, +10 °C gacha ko‘- 
+tariladi.
+Mezosfera, term osfera va ekzosfera -  (yunoncha «mesos» -  o‘rta, 
+«thermos» -  issiq, «exos» -  tashqi) atmosferaning yuqori qatlamlaridir. 
+Bu qatlamlarda havo juda siyrak va koinotdan keladigan nurlar ta’sirida 
+elektr tokini yaxshi o‘tkazadigan bo‘lib qolgan. Qutb yog‘dulari, 
+«Yulduz uchishi» hodisalari shu qatlamlarda ro‘y beradi.
+atm osferani o‘rganish. Inson juda qadim zamonlardan ob-havoni, 
+atmosferada bo‘ladigan hodisalarni kuzatib keladi. Atmosferada ro‘y 
+beradigan ayrim hodisalar havo aynib, yomg‘ir yog‘ishidan, boshqa 
+hodisalar esa havo ochilishi, Quyoshli kunlar bo‘lishidan darak be- 
+rishini odamlar qadimdan anglab olganlar. Inson uchun ob-havoni 
+oldindan bilish juda zarur (Qani ayting-chi, nima uchun zarur?).
+Hozirgi vaqtda atmosfera, unda ro‘y beradigan hodisalar dunyoning 
+turli joylaridagi minglab meteorologik stansiyalarda o‘rganiladi. Bu 
+ishda elektron hisoblash mashinalari, kompyuterlar, havo sharlari, 
+meteorologik raketalar, Yerning sun’iy yo‘ldoshlaridan foydalaniladi. 
+Barcha m a’lumotlar maxsus ilmiy tadqiqot muassasalarida o‘rganilib, 
+74 
+ob-havo xaritalari tuziladi va ob-havoda ro‘y beradigan o‘zgarishlar 
+e’lon qilib turiladi.
+Yer yuzidagi insonlarning, umuman, barcha jonzotlarning, hatto 
+o‘simliklarning hayoti ham atmosfera havosining tozaligiga bog‘liq. 
+Shuning uchun ham havoni ifloslanishdan saqlash har bir odamning 
+muqaddas burchi bo‘lmog‘i kerak.
+edurtm_uz
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+Tayanch so‘z va tushunchalar 
+Atmosfera 
+Troposfera 
+Stratosfera
+Mezosfera 
+Termosfera 
+Ekzosfera
+Kislorod 
+Karbonat angidrid 
+Azot
+«Yulduz uchishi»
+1. «Atmosfera» so‘zining ma’nosini ayting.
+2. Atmosfera nima va u qanday qatlamlardan tuzilgan?
+3. Havo qanday gazlardan tarkib topgan?
+4. Quyidagi ta’riflar atmosferaning qaysi qatlamlari uchun 
+xos?
+№
+Ta’riflar
+Tropo­
+sfera
+Strato­
+sfera
+Mezo­
+sfera
+Termo­
+sfera
+Ekzo­
+sfera
+1
+«Yulduz uchishi» ro‘y beradi
+2
+Samolyotlar parvoz qiladi
+3
+Qutb yog‘dusi kuzatiladi
+4
+Shamol esadi
+5
+Yomg‘ir, qor yog‘adi
+22-§. 
+HAVO HARORATI VA BOSIMI
+H avoning harorati termometr yordamida o‘lchanadi. Termometr 
+yer yuzasidan 2 m balandga, Quyosh nuri tushmaydigan soya joyga 
+o‘rnatiladi. Meteorologik stansiyalarda termometr maxsus meteorologik 
+quti ichiga o‘rnatiladi. Quti ichiga havo erkin kirib-chiqib turadigan 
+qilib ishlanadi. Qutining eshigi shimol tomonda bo‘ladi. Shunda quti 
+eshigi ochilganda Quyosh nuri termometrga tushmaydi. Dunyodagi 
+ko‘pchilik meteorologik stansiyalarda ob-havo holati, shu jumladan, 
+havo harorati har 3 soatda kuzatib turiladi. So‘ngra o‘rtacha harorat 
+75 
+aniqlanadi. Buning uchun sutka davomidagi barcha natijalar qo‘shilib, 
+necha marta kuzatilgan bo‘lsa, shunchaga bo‘linadi. Toshkentda 10 
+apreldagi bir sutkalik kuzatish natijalari quyidagicha deylik: kechasi 
+soat 1 da +6 °C, soat 4 da +4 °C, ertalab soat 7 da +5 °C, soat 10 da 
++ 10 °C, kunduzi soat 13 da +14 °C, soat 16 da +16 °C, kechqurun soat
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+19 da +10 °C, soat 22 da +7 °C. Haroratlar yig‘indisi 72 °C : 8 = 9 °C. 
+Sutkalik o‘rtacha harorat +9 °C ekan. Lekin sutka davomidagi eng 
+yuqori harorat bilan eng past harorat farqi 12 °C ga teng.
+o y lik  o‘rtacha haroratni topish uchun oydagi kunlik o‘rtacha 
+haroratlar qo‘shilib, oyning kunlari soniga bo‘linadi. Yillik o ‘rtacha 
+haroratni topish uchun hamma oylar o‘rtacha harorati qo‘shilib, 12 ga 
+taqsimlanadi.
+Havo haroratini kuzatish uning sutka va yil davomida ancha o‘z- 
+garib turishini ko‘rsatadi. Havoning harorati kunduz kuni soat 14 va 
+15 larda eng yuqori, erta bilan Quyosh chiqishi oldidan esa eng past 
+bo‘lishi aniqlangan. Sutkalik havo haroratining eng yuqori va eng past 
+ko‘rsatkichlari orasidagi farq havo haroratining sutkalik amplitudasi 
+(farqi) deb ataladi. Yil davomidagi eng yuqori harorat bilan eng past 
+harorat orasidagi tafovut esa havo haroratining yillik amplitudasi 
+deyiladi.
+Turli iqlim m intaqalarida havo haroratining sutkalik va yillik 
+amplitudalari har xil bo‘ladi. Haroratning sutkalik o‘zgarishi okean 
+va dengizlar ustida 1-2 °C bo‘lsa, dasht va cho‘llarda 15-20 °C gacha 
+boradi. Yillik amplituda esa ekvator atroflarida 5-10 °C dan oshmaydi. 
+Ekvatordan qutblarga tomon yillik amplituda kattalashib boradi. 
+Masalan, Toshkentda yillik amplituda 28 °C ga teng (iyul oyidagi 
+o‘rtacha harorat +27 °C, yanvar oyidagi o‘rtacha harorat esa -1 °C. 
+Binobarin, yillik farq 28 °C ga teng).
+Haroratning yil davomida o‘zgarishini chizma ko‘rinishida tas- 
+virlash mumkin. Buning uchun bitta vertikal va bitta gorizontal chiziq 
+chiziladi. Vertikal chiziqqa harorat yoziladi. Gorizontal chiziqqa esa oy 
+nomlarining bosh harfi yoziladi. So‘ngra har bir oydagi o‘rtacha harorat 
+belgilanadi (53-rasm).
+Havoning harorati quyosh nurining tik yoki qiya tushishiga, joyning 
+76 
+dengiz sathidan balandligiga ham bog‘liq. Shuning uchun ham ertalab 
+va kechqurun quyosh nuri qiya tushganida havo salqin bo‘ladi. Kunduz 
+kuni, ayniqsa, tush vaqtida quyosh nuri tik tushganida havo harorati 
+ko‘tarilib ketadi.
+Bundan tashqari, havoning harorati joyning dengiz sathidan baland­
+ligiga ham bog‘liq. Yer yuzidan har 1000 metr yuqoriga ko‘tarilganda 
+quruq iqlim sharoitida havo harorati 6 °C ga pasayadi. Masalan,
+edurtm_uz
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+edurtm uz
+53-rasm. Toshkentda 
+havo haroratining yil 
+davomida o ‘zgarishi chiz- 
+masi.
+tekislikda havo harorati +20 °C bo‘lganda, tog‘da 3000 m balandda 
++2 °C, 4000 m balandda esa -4  °C bo‘ladi. Shuning uchun ham baland 
+tog‘larda qor va muzliklar yozda ham erimay turadi.
+Havo bosimi. Havo juda yengil. Dengiz sathida 1 m3 havo atigi 
+1 kg 330 gramm (g) keladi. Lekin 1 cm2 yuzaga 1 kg ga teng bo‘lgan 
+kuch bilan bosadi. Yer yuzasidagi har bir predmet va organizmlarga 
+ham shunday kuch bilan ta’sir ko‘rsatadi.
+Havoning Yer yuzasiga va undagi barcha narsalarga bo‘lgan 
+bosimini havo bosimi deyiladi. Odam bu bosimni sezmaydi, chunki 
+havo bosimi odam tanasidagi ichki bosim bilan bir xil, ya’ni muvoza- 
+natlashgan. Yuqoriga ko‘tarilgan odamga havo bosimining kamayishi 
+seziladi. Agar tog‘da 3000 m balandga ko‘tarilsa, nafas qisiladi, bosh 
+aylanadi, 4000-5000 m balandda burun qonashi, tomirlar yorilishi 
+mumkin.
+Havo bosimi barometr asbobi bilan o‘lchanadi («baros» -  og‘irlik, 
+bosim, «metreo» -  o ‘lchash). Barometr ikki xil bo‘ladi: sim obli 
+barometr va metall barometr -  aneroid (54-rasm).
+Simobli barometr asosan uzunligi 1 m va kengligi 1 cm bo‘lgan 
+shisha naychadan iborat. Naychaning bir uchi berkitilgan bo‘ladi. 
+Shisha naycha m illim etrlarga bo‘lingan. Shisha naychani simobga 
+to ‘ldirib, sim ob solingan idishga ochiq tom oni bilan botirib 
+tik q o ‘yiladi. Sim obli barom etrdan m eteorologik stansiyalarda 
+foydalaniladi. D engiz b o ‘yida havo harorati 0° C b o ‘lganda 
+barom etr naychasidagi simob 760 m illim etr (mm)ni k o ‘rsatadi. 
+Shunda havo bosimi 760 mm simob ustuni bosimi (Hg) ga teng
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+HAVO 
+QOBIG‘I —
+ 
+ATMOSFERA
+760 mm
+a)
+I I
+54-rasm. Simob- 
+li barometr (a) va 
+metall barometr - 
+aneroid (b).
+Qedurtm_uz
+boMadi. Bunday bosim normal (m e’yordagi) 
+bosim deyiladi.
+Dengiz bo‘yidan balandlikka ko‘tariladigan 
+bo‘lsa, har 100 m ko‘tarilganda barometrdagi 
+simob 10 mm pasayadi (yoki har 10 m da 1 
+mm pasayadi). Bosim qanday o ‘zgarishini 
+bilgandan keyin turgan joyimizning baland­
+ligini aniqlashimiz mumkin. Toshkentda havo 
+harorati 0° C, simobli barometr 720 mm Hg ni 
+ko‘rsatayapti. Toshkentning dengiz sathidan 
+balandligi qancha bo‘ladi?
+Tayanch so‘z va tushunchalar
+Havo harorati 
+Termometr
+Havo bosimi 
+Amplituda
+Yillik amplituda 
+Normal bosim
+Yillik o‘rtacha harorat 
+Barometr
+Sutkalik va oylik o‘rtacha harorat
+1. Havo harorati qanday o‘lchanadi?
+2. Sutkalik va oylik o‘rtacha havo harorati qan- 
+day aniqlanadi?
+3. Havo bosimi nima? Eng yuqori havo bosimi 
+qayerda kuzatiladi?
+4. Quyidagi rasmda a, b, c harflar bilan ko‘rsatilgan obyekt- 
+larning qaysi birida havo bosimi eng yuqori bo‘ladi? 
+Qaysi birida havo harorati eng past bo‘ladi? Nima uchun? 
+Javobingizni asoslang.
+78
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+'i
+2 3 - § . 
+AMALIY M ASHG‘ULOT
+Qedurtm_uz
+Havoning sutkalik o‘rtacha haroratini aniqlash. Sizga ma’lumki, 
+havo harorati sutka davomida termometr yordamida har 3 soatda, ya’ni 8 
+marta o‘lchanadi (22-§ ga qarang). Har uch soatda o‘lchangan natijalarini 
+qo‘shib, 8 ga taqsim qilinsa, havoning sutkalik o‘rtacha harorati aniqlanadi.
+Havo haroratining quyidagi o‘lchash natijalari asosida o‘rtacha 
+sutkalik haroratni aniqlang: soat tungi 1 da +4 °C, soat 4 da +3 °C, soat 
+ertalab 7 da +4 °C, soat 10 da +10 °C, kunduzi soat 13 da +15 °C, soat 16 
+da +16 °C, kechqurun soat 19 da +8 °C va kechasi soat 10 da +4 °C.
+Havoning oylik o‘rtacha harorati va yillik amplitudasini aniqlash.
+Buning uchun oy davomidagi sutkalik o‘rtacha haroratlarni qo‘shib, 
+shu oydagi kunlar soniga bo‘linadi. Darslikning 53-rasmida Toshkent 
+shahrida havoning yil davomidagi 12 oydagi o‘rtacha haroratlari tas- 
+virlangan. Siz grafikdan 12 oyning har birida havoning o‘rtacha oylik 
+harorati qancha daraja bo‘lganini aniqlang.
+Shundan keyin eng issiq oy (iyul)dagi o‘rtacha havo haroratidan eng 
+sovuq oy (yanvar)dagi o‘rtacha havo haroratini ayirib, havo haroratining 
+yillik amplitudasi (farqi)ni topasiz.
+Havo harorati va bosimining balandlikka bog‘liq holda o‘zgarishi. 
+Darslikning 22-paragrafidagi ma’lumotlardan foydalanib, quyidagi masa- 
+lalarni yeching:
+a) Yer yuzasidan har 100 metr balandlikka ko‘tarilganda havo bosimi
+10 mm Hg ga pasayishini bilamiz. Toshkentda (dengiz sathidan balandligi 
+400 metr) havo bosimi 720 mm Hg ga teng bo‘lganda Qorjontov tog‘ida 
+(o‘rtacha balandligi 2400 m) havo bosimi necha mm Hg ga teng bo‘ladi?
+b) Toshkentda havo harorati +35 °C bo‘lganda Nurota tog‘ida (o‘rtacha 
+balandligi 1400 m) havo harorati necha daraja bo‘ladi (havo harorati har 
+1000 metr yuqoriga ko‘tarilganda 6 °C ga pasayadi)? 
+79
+c) B nuqtaning mutlaq balandligi 400 m, u yerdagi havo harorati 
++36 °C, havo bosimi 720 mm Hg bo‘lsa, undan 300 metr balandlikdagi 
+C nuqtadagi havo bosimini; 2000 metr balandlikdagi D nuqtadagi havo 
+haroratini; 3000 metr balandlikdagi havo bosimini aniqlang.
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+Qedurtm_uz
+2 4 - § . SHAMOL
+n e g a  sham ol bo‘ladi? Havoning tinch turgan vaqti juda kam 
+bo‘ladi. Yozda kunduz kuni ko‘l, daryo bo‘yida, daraxtzor yoki dala 
+chekkasida o‘tirsangiz, shamol esayotganini, albatta, sezasiz. Bu paytda 
+havo bosim yuqori bo‘lgan joydan past bosimli joyga tomon yer yuzasi 
+bo‘ylab harakatlanadi. Havoning mana shunday gorizontal harakatiga 
+shamol deyiladi.
+Shamol vujudga kelishining asosiy sababi Yer yuzasining turli 
+joylaridagi havo bosimida farq bo‘lishidir. Havo bosimidagi farqqa 
+nima sabab bo‘ladi?
+Quyosh nuri quruqlik va suv yuzasini bir xil isitmaydi. Suv sekin 
+isiydi va asta soviydi. Quruqlik esa tez isib, tez soviydi. Kunduz 
+kuni quruqlik ustidagi havo isib, kengayadi va bosim kamayadi, past 
+bo‘ladi. Ko‘l va dengiz ustidagi havo esa salqin turadi. Havo bosimi 
+katta, yuqori bo‘ladi. Natijada ko‘l va dengiz ustidagi havo quruqlikka 
+tomon harakatlanadi, ya’ni shamol bo‘ladi. Kechasi-chi? Kechasi qu­
+ruqlik tez soviganidan havo bosimi ortib, shamol quruqlikdan dengiz 
+tomonga esadi. Shunday bir kecha-kunduzda o‘z yo‘nalishini ikki marta 
+o‘zgartirib turadigan shamolga briz shamoli deyiladi. Briz fransuzcha 
+«brise» -  shabada degani (55-rasm).
+yer yuzida esadigan asosiy shamollar. Mussonlar. Katta quruq-
+80
+Shamol yo‘nalishi
+------------------- ►
+10 °C
+.761 mm hg
+Tunda
+16 °C
+760 mm hg
+Quruqlik
+Dengiz
+55-rasm. Kunduzgi va tungi briz.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+liklar -  materiklar yozda atrofidagi dengizlarga qaraganda ko‘proq 
+isib ketadi, havo bosimi pasayadi. Dengizlarda esa havo bosimi yuqori 
+bo‘ladi. Natijada butun yoz bo‘yi dengizlardan quruqlikka tomon 
+shamol esadi. Qishda esa quruqlik sovib ketadi, bosim ortadi. Dengiz 
+iliq bo‘ladi. Dengiz ustida bosim pasayadi. Butun qish davomida 
+shamol quruqlikdan dengizga esadi. Mana shunday bir yilda o‘z yo‘na- 
+lishini ikki marta o‘zgartiradigan shamollarga musson shamollari 
+deyiladi (m usson arabcha m avsum  so ‘zidan olingan). M usson 
+shamollari Sharqiy va Janubiy Osiyoda kuchli bo‘ladi. Yozda musson 
+shamollari dengiz ustidan sernam havo keltirgani uchun ham yog‘in 
+ko‘p yog‘adi. Qish vaqtida shamollar Osiyoning quruq o‘rta qismidan 
+dengizlarga tomon esganligi uchun Sharqiy va Janubiy Osiyoda qishda 
+yog‘in juda kam yog‘adi. Havo quruq bo‘ladi.
+Passat sham ollari. Yerning shakli sharsimon bo‘lganligi va uning 
+o‘z o‘qi atrofida aylanishi natijasida Yer yuzida yuqori va past bosimli 
+mintaqalar hosil bo‘ladi (56-rasm). Yer sharining ekvator atroflari 
+Quyoshdan eng ko‘p issiqlik oladi. Shuning uchun bu hududlarda yil 
+bo‘yi havo bosimi past bo‘ladi. Natijada 30° shimoliy va janubiy keng- 
+liklardan ekvatorga qarab doimiy shamollar esib turadi. Yer aylangani 
+sababli bu shamollar ekvator yaqinida g‘arb tomonga burilib ketadi. Bu 
+shamollar passat shamollari deyiladi.
+edurtm_uz
+56-rasm. Yer yuzida doimiy esadigan 
+shamollarning yo ‘nalishi.
+81
+57-rasm. Fluger
+6-«Geografiya», 5-sinf.
+YERNING 
+HAVO 
+QOBIG‘I —
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+0 ‘rta kengliklarda Shimoliy yarimsharda ham, Janubiy yarimsharda 
+ham doim g ‘arb tomondan shamollar esib turadi. Bular G ‘arbiy 
+shamollar deyiladi. Bizning mamlakatimiz -  O‘zbekistonga yog‘in- 
+larni shu shamollar olib keladi. Passat, musson va g ‘arbiy shamollarni 
+sayyoraviy shamollar deyiladi.
+Tog‘li va tog‘ oldi o‘lkalarda dengiz va ko‘llar bo‘yida briz shamo- 
+liga o‘xshagan tog‘-vodiy shamoli esadi. Bu shamol kunduzi tog‘ 
+etagidan tog‘ga, vodiy bo‘ylab pastdan yuqoriga tomon esadi. Kechasi 
+esa yuqoridagi havo tez sovib, bosim oshadi va sovigan havo vodiylar 
+bo‘ylab pastga tomon harakat qiladi (shamol esadi).
+Shamolning yo‘nalishi va kuchini aniqlash. Shamol yonalishini 
+oddiy bayroqcha yordam ida yoki m o‘rilardan chiqayotgan tutun 
+yo‘nalishiga qarab ham aniqlasa bo‘ladi. Shamol qayoqdan kelayotgan 
+bo‘lsa, ufqning o‘sha tomoni nomi bilan ataladi. Masalan, shamol 
+g‘arbdan esayotgan bo‘lsa, g ‘arbiy shamol, shimoli-sharqdan kelayot­
+gan bo‘lsa, shimoli-sharqiy shamol deyiladi va hokazo.
+Esayotgan shamol yo‘nalishi fluger deb ataladigan asbob bilan 
+to‘g‘ri aniqlanadi (81-betdagi 57-rasm). Fluger strelkasi doim shamol 
+kelayotgan tomonga qarab turadi. Strelkadan pastroqqa ufqning 8 
+tomoni (4 ta asosiy tomon va 4 ta oraliq tomon, bular qaysi tomonlar?) 
+ko‘rsatkichi qo‘yiladi. Strelka va ko‘rsatkichlarga qarab, shamol kela­
+yotgan tomon aniqlanadi.
+Shamolning kuchi fluger strelkasidan yuqoriroqqa o‘rnatilgan metall 
+plastinka yordamida aniqlanadi (81-betdagi 56-rasmga qarang). Shamol 
+qancha kuchli bo‘lsa, plastinka shuncha baland ko‘tariladi. Shamolning 
+tezligi anemometr yordamida o‘lchanadi va 1 sekundda necha metr 
+esishi bilan belgilanadi.
+Shamol kuchidan foydalanish. Odamlar juda qadim zamonlardan 
+buyon shamol kuchidan dengizlarda yelkanli kemalarda suzishda, 
+shamol tegirmonlarida foydalanib kelishgan. Hozir ham yelkanli qa- 
+yiqlar mavjud. Lekin hozirgi vaqtda shamol ko‘p esadigan o‘lkalarda 
+shamol elektr stansiyalari qurilib, elektr energiyasi olinadi.
+Lekin ayrim shamol ko‘p esadigan joylarda, ayniqsa, qurg‘oqchil, 
+o‘simlik kam o‘lkalarda shamol qumni uchirib, ekin dalalarini qum 
+bosishiga sabab bo‘ladi. Ba’zi joylarda tuproqni uchirib ketib, qishloq
+edurtm_uz
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+xo‘jaligiga zarar yetkazadi. Ekinzor dalalami shamol dan saqlash uchun 
+odamlar dala ihota daraxtzorlarini bunyod etishadi. Mamlakatimizda 
+ham obod yerlarni qum bosmasligi, to‘zima qumlarni mustahkamlash 
+uchun saksovul, yulg‘un ekib, dala ihota daraxtzorlari, butazorlar 
+bunyod etilgan.
+Havo m assalari nim a? Troposfera havosining harorati, namligi, 
+shamollari va boshqa xususiyatlariga ko‘ra bir-birlaridan farq qiladigan 
+katta qismlari havo massalari deyiladi. Ular juda katta hudud ustida 
+vujudga keladi.
+Yer yuzining turli joylarida bir-biridan farq qiluvchi havo massalari 
+tarkib topadi. Masalan, sovuq mintaqalarda Shimoliy yarimsharda 
+arktika, m o‘tadil mintaqada mo‘tadil, tropik o‘lkalarda tropik, ekvator 
+atrofida ekvatorial havo m assalari hosil bo‘ladi. Havo m assalari 
+okeanlar va quruqlik ustida paydo b o ‘lishiga qarab dengiz va 
+kontinental havo massalariga bo‘linadi.
+edurtm_uz
+Tayanch so‘z va tushunchalar
+Briz shamollari 
+Anemometr 
+Havo massalari 
+Kontinental havo
+Passat shamollari 
+Musson shamollari 
+Dengiz havosi 
+G‘arbiy shamollar
+Fluger
+1. Shamol deb nimaga aytiladi?
+2. G‘arbiy shamol qaysi tomonga esadi?
+3. Shamol yo‘nalishi qaysi asbob yordamida aniqlanadi?
+4. Passat shamollari qanday vujudga keladi?
+5. Quyidagi rasmda a) va b) holatlarda nima aks ettirilgan? 
+Azizbek kunduzi varrak uchirmoqchi. U varragi yaxshi 
+uchishi uchun qaysi holatni tanlagani ma’qul?
+a)
+83
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+► 
+25-§. 
+HAVONING NAM LIGI VAYOG‘INLAR
+h a v o d ag i suv bug‘i. Troposferada doimo suv bug‘i bo‘ladi. Suv 
+bug‘i havoga okean va dengizlardan, quruqlikdagi suvlardan, tuproq va 
+o‘simliklar tarkibidagi suvning bug‘lanishidan ko‘tariladi. Suv bug‘i 
+ko‘zga ko‘rinmaydi. Havodan yengil bo‘ladi.
+Havo o‘zida turli miqdorda suv bug‘larini tutib turishi mumkin. 
+Havoning qancha suv bug‘ini tutib turishi havo haroratiga bog‘liq. Agar 
+havo harorati 0 °C bo‘lsa, 1 m3 havo o‘zida 5 g, +10 °C bo‘lsa, 9 g, 
++20 °C da 17 g va +30 °C bo‘lsa, 30 g suv bug‘ini tutib tura oladi. 
+Demak, havo qanchalik sovuq bo‘lsa, shuncha kam va qanchalik issiq 
+bo‘lsa, shuncha ko‘p suv bug‘ini ushlab tura oladi.
+1 
+m3 havoda mavjud bo‘lgan va gramm hisobida o‘lchanadigan 
+suv bug‘lari m iqdori m utlaq namlik deyiladi. Agar havo o ‘zida 
+mavjud bo‘lgan suv bug‘idan ortiqcha namni sig‘dira olmasa, u namga 
+to ‘yingan havo deyiladi.
+Siz radio va televizordan ob-havo xabarida havoning namligi 
+70 % yoki 80 % deganini ko‘p marta eshitgansiz. Buning ma’nosi 
+nima? Masalan, harorat +30 °C bo‘lganda havoda 15 g, ya’ni havo 
+o‘zida sig‘dirishi mumkin bo‘lgan suv bug‘ining yarmi mavjud. Bunda 
+havoning nisbiy namligi 50 % deyiladi. Namga to‘yingan havoda nisbiy 
+namlik 100 % bo‘ladi. Meteorologik stansiyalarda havo namligi maxsus 
+gigrometr asbobi yordamida o‘lchanadi.
+Bulut. Iliq havo sovisa, u namga to‘yinib, ortiqcha suv bug‘lari juda 
+mayda suv tomchilariga aylanadi. Bulutlar ham tumanga o‘xshab hosil 
+bo‘ladi. Havo yer yuzida isib, yuqori ko‘tariladi. Yuqorida issiq havo 
+soviganda bug‘ mayda suv tomchilariga aylanib, bulutni hosil qiladi. 
+Agar yuqorida harorat 0 °C dan past bo‘lsa, bulut muz zarrachalaridan 
+iborat bo‘ladi. Bulutlarning, asosan, uch turi bo‘ladi: to‘p -to‘p, qat-qat 
+84 
+vapatsimon (58-rasm).
+Isigan havo yer yuzasidan yuqoriga tez ko‘tarilayotganda to‘p- 
+to‘p bulut hosil bo‘ladi. Tag qismi qorayadi va hozir yomg‘ir yog‘ib 
+yuboradigandek tuyuladi. Bunday bulut yomg‘irli to ‘p-to‘p  bulut deyi­
+ladi. To‘p-to‘p bulutlar mamlakatimiz osmonida bahor va yoz boshida 
+ko‘p bo‘ladi. Bunday bulutlardan qattiq yomg‘ir, jala quyadi. Havoni
+edurtm_uz
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+ba’zan qatlamli bir tekis bulut qoplaydi. Bular qat-qat bulutlardir. 
+Quyoshli kunlarda juda balandda ba’zan oq tolalarga o‘xshagan yupqa 
+bulutlarni ko‘rish mumkin. Ularning soyasi ham bo‘lmaydi. Bunday 
+bulutlar patsimon bulutlar deyiladi. Ular ob-havo aynib kelayotganini 
+bildiradi.
+Yog‘inlar. Havodan yer yuzasiga suyuq yoki qattiq holatda 
+tushadigan suvlargayo g ‘inlar deyiladi. Bulutdagi mayda suv tomchilari 
+m a’lum sharoitda bir-biri bilan qo‘shilib, yirik tomchilarga aylanadi va 
+yirik tomchilar yerga yomg‘ir bo‘lib tushadi. Ba’zan iliq havo yuqoriga 
+tez ko‘tarilib, to ‘p-to‘p bulutlarni harorat 0 °C dan past bo‘lgan 
+balandlikka olib chiqib ketadi. Bu balandlikda yom g‘ir tomchilari 
+muzlab d o ‘lga aylanadi. Havo harorati 0 °C dan pasayib ketganda 
+bulut suv tomchilaridan emas, juda mayda ninasimon muzlardan iborat 
+bo‘ladi. Ular bir-birlari bilan qo‘shilib, qor uchqunlarini hosil qiladi.
+Yog‘in faqat bulutdan emas, ochiq havodan ham yog‘adi. Siz bahor, 
+kuz oylarida ertalab shudring tushganini ko‘rgansiz. Shudring hosil 
+bo‘lishiga sabab shuki, kunduzi isigan yer va o‘simliklar kechqurun 
+Quyosh botishi bilan tezda soviydi. Suv bug‘lari tomchilarga aylanib 
+yerga va o‘simliklarga tushadi. Biz buni shudring deymiz. Qish 
+kunlari suv tomchilari muzlab, shudring emas, qirov hosil bo‘ladi.
+Yer yuzasiga yog‘gan yog‘in miqdori yo g ‘in o ‘lchagich asbobi bilan 
+aniqlanadi (59-rasm). Qor qalinligi santimetrlarga bo‘lingan maxsus 
+reyka bilan o‘lchanadi. Bir oy davomida yog‘gan yog‘in yig‘indisi oylik 
+yo g ‘in bo‘ladi. Yil davomidagi yog‘in miqdori qo‘shilib, yillik yo g ‘in 
+miqdorini tashkil etadi. Masalan, Toshkentda bir yil davomida o‘rtacha 
+hisobda 400 mm ga yaqin yog‘in yog‘adi. Eng ko‘p yog‘in fevral, 
+mart oylariga to‘g ‘ri keladi. Ekvator atroflarida esa yog‘ingarchilik yil 
+bo‘yi davom etadi. Eng ko‘p yog‘in Tinch okeandagi Gavayi orollarida 
+yog‘adi. Yillik yog‘in miqdori 14400 mm ga teng. Yog‘inning ko‘p 
+yoki kam yog‘ishi joyning dengizlardan uzoq-yaqinligiga hamda ko‘p 
+85 
+esadigan shamollarga bog‘liq. Tog‘larning nam shamollarga ro‘para 
+yonbag‘irlariga ham yog‘in ko‘p yog‘adi.
+Bizning Vatanimiz -  O ‘zbekiston okean va dengizlardan uzoqda 
+bo‘lganligi uchun yog‘in kam yog‘adi. Ayniqsa, mamlakatimizning 
+g ‘arbiy, shim oli-g‘arbiy tekislik qismlarida yog‘in juda kam. Bir
+edurtm_uz
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+86
+Qedurtm_uz
+58-rasm. Bulutlarning turlari.
+yillik yog‘in miqdori bor-yo‘g‘i 200 mm atrofida bo‘ladi. Shuning 
+uchun ekinlarni sug‘ormasdan dehqonchilik qilib bo‘lmaydi. Lekin 
+mamlakatimizning sharqiy va janubi-sharqiy qismidagi tog‘li hu­
+dudlarda yog‘in ancha ko‘p -  800-900 mm gacha yog‘adi. Shuning 
+uchun tog‘larda o‘simlik ko‘p, suv ancha serob (nega tog‘larda yog‘in
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+k o ‘p y o g ‘adi?). Q ishloq x o ‘jaligi uchun, 
+umuman o‘simliklar uchun yog‘in miqdori, 
+namlik qancha bo‘lishi kerak? Buning uchun 
+namlanish darajasi tusunchasini, uni qanday 
+aniqlashni bilishimiz kerak.
+N am lanish d a ra ja si deb yillik y o g in  
+miqdorining yillik mumkin bo‘lgan bug‘lanish 
+m iqdoriga nisbatiga aytiladi. Ya’ni yillik 
+y o g ‘in m iqdorini yillik m um kin b o ‘lgan 
+bug‘lanish miqdoriga taqsimlab aniqlanadi. 
+M asalan, Toshkent shahrida yillik yog‘in 
+miqdori o‘rtacha 400 mm, mumkin bo‘lgan 
+bug‘lanish esa 1600 mm deylik. Binobarin, 
+namlanish darajasi 400 mm : 1600 mm = 0,25. 
+Odatda, o‘simliklar uchun namlanish darajasi 
+1,1 dan 0,9 gacha bo‘lganda eng qulay sharoit 
+bo‘ladi. Demak, Toshkent shahrida namlik 
+sharoiti qulay emas. Nam yetishmaydi. Shuning uchun ekinlar va 
+daraxtlarni sug‘orib turish zarur.
+59-rasm. Yog‘in 
+o ‘Ichagich.
+Tayanch so‘z va tushunchalar 
+Havoning namligi 
+Mutlaq namlik
+Nisbiy namlik 
+To‘p-to‘p bulut
+Qat-qat bulut 
+Patsimon bulut
+Shudring 
+Qirov
+Tuman 
+Namlanish darajasi
+1. Havoning mutlaq namligini tushuntirib bering.
+2. Bulut nima? Uning qanday turlarini bilasiz?
+3. Yog‘in qanday hosil bo‘ladi?
+4. Quyidagi rasmlarda bulutlarning qaysi turlari ko‘rsa- 
+tilgan? Ularning qaysinisi yer yuzasiga eng yaqin, qaysi 
+eng balandda joylashgan va qaysi biri eng ko‘p yog‘in 
+olib keladi? O‘zbekistonda yoz va qish fasllarida qu- 
+yidagilardan qaysi bulut turi ko‘p uchraydi?
+87
+YERNING 
+HAVO 
+QOBIG‘I —
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+О edurtm_uz
+26-§. 
+AMALIY M ASHG‘u L o T
+I variant. Shamolning yo‘nalishi va kuchini aniqlash.
+Bu amaliy ishni bajarish uchun quyidagilarni bilish zarur:
+1. Shamol nima? Shamol yo‘nalishi qaysi asbob yordamida aniq- 
+lanadi?
+2. Shamolning kuchini qanday aniqlash mumkin?
+Topshiriq. 1) quyidagi holatlardan qaysi birida shamol kuchliroq
+esishini aniqlang va ularni tartib bilan joylashtiring:
+a) 718 mm Hg —► 701 mm Hg
+b) 685 mm Hg 
+— 724 mm Hg
+c) 749 mm Hg —► 726 mm Hg
+d) 678 mm Hg 
+— 693 mm Hg
+2) agar siz yashayotgan hududga shamollar qishda shimoldan, 
+bahorda g‘arb va janubi-g‘arbdan, yozda janubdan essa ularni qanday 
+nomlaymiz?
+II variant. «Sham ollar guli»ni chizish.
+Bu amaliy ishni bajarish uchun quyidagilarni bilish zarur:
+1. «Shamollar guli» nima?
+2. «Shamollar guli»ni qanday chizish mumkin?
+Biror joyda muayyan vaqt (yil, oy, hafta) davomida esgan sha-
+mollarning yo‘nalishini ko‘rsatuvchi chizma «shamollar guli» deb 
+88 
+ataladi. «Shamollar guli» ni chizish uchun biror nuqta belgilanib, unga 
+ufq tomonlari yo‘nalishi chiziqlari chiziladi va shu chiziqlarda shamol- 
+larning esish tomonlari nuqtadan boshlab mutanosib ravishda belgilab 
+chiqiladi. Shunda har bir chiziqning uzunligi shamol shu tomondan 
+esgan kunlar soniga mos bo‘ladi. Shundan so‘ng chiziqlar uchi bir- 
+lashtiriladi va «shamollar guli» hosil bo‘ladi.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Nam una. Termizda bir oy davomida shamollar quyidagi yo‘na- 
+lishlarda esgan: shimoldan 4 kun, shimoli-sharqdan 1 kun, sharqdan 
+3 kun, janubi-sharqdan 5 kun, janubdan 8 kun, janubi-g‘arbdan 6 kun, 
+g‘arbdan 3 kun va shimoli-g‘arbdan 1 kun. Ushbu m a’lumotlar asosida 
+«shamollar guli»ni chizing.
+B ajarish. «Shamollar guli»ni chizish uchun, dastlab masshtab 
+tanlab olamiz. Masalan, masshtab 1 santimetrda 2 kun. Biror nuqta 
+tanlab, undan ufq tomonlarini ko‘rsatuvchi chiziqlarni o‘tkazamiz va 
+masshtab asosida shamol esgan kunlarni chizmaga tushiramiz. Natijada 
+«shamollar guli» hosil bo‘ladi (60-rasm).
+T o p sh iriq . 1) m art oyining 
+dastlabki 15 kunligida Buxoroda 
+shamol quyidagi y o ‘nalishlardan 
+esgan: shimoldan 2 kun, shimoli- 
+sharqdan 1 kun, sharqdan 1 kun, 
+janubi-sharqdan 2 kun, janubdan
+1 kun, ja n u b i-g ‘arbdan 2 kun, 
+g‘arbdan 4 kun, shimoli-g‘arbdan
+2 kun. U shbu m a’lum otlardan 
+foydalanib, «sham ollar guli»ni 
+chizing.
+2) 
+Toshkent shahrida fevral 
+oyining so‘nggi 15 kunligida sha­
+m ol quyidagi y o ‘n alish lard an  
+esgan: shimoldan 3 kun, shimoli- 
+sharqdan 2 kun, sharqdan 1 kun, 
+janubi-sharqdan 1 kun, janubdan 1 kun, janubi-g‘arbdan 2 kun, 
+g ‘arbdan 1 kun, shim oli-g‘arbdan 4 kun. Ushbu m a’lumotlardan 
+foydalanib, «shamollar guli»ni chizing.
+Ill variant. Havo namligini hisoblash.
+Bu amaliy ishni bajarish uchun quyidagilarni bilish zarur:
+1. Havoning mutlaq namligi deb nimaga aytiladi?
+2. Havoning nisbiy namligi deb nimaga aytiladi?
+Topshiriq: 1. Quyidagi jadvalning bo‘sh kataklarini to‘ldiring:
+edurtm_uz
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+HAVO 
+QOBIG‘I —
+ 
+ATMOSFERA
+Qedurtm_uz
+Havoning harorati (°C)
+Mutlaq namligi (g/m3)
+Nisbiy namligi (%)
+0°
+3
++ 10°
+67
++ 20°
+10
++30°
+50
+2. Amaliy ish daftaringizga bugungi ob-havo holatini yozib qo‘ying.
+IV variant. Nam lanish darajasini hisoblash.
+Bu amaliy ishni bajarish uchun quyidagilarni bilish kerak:
+1. Havo namligi deb nimaga aytiladi?
+2. Yillik yog‘in miqdori qanday topiladi?
+3. Bug‘lanish nima?
+4. Namlanish darajasi nima? U qanday aniqlanadi? Quyidagi ma’- 
+lumotlar asosida namlanish darajasini aniqlang. Bo‘sh kataklarni to‘l- 
+diring.
+Joy nomi
+Yillik yog‘in 
+miqdori
+Yillik
+bug‘lanish
+Namlanish
+darajasi
+Amudaryo etagi
+150 mm
+2000 mm
+Sirdaryo viloyati
+250 mm
+1800 mm
+Andijon viloyati
+500 mm
+1500 mm
+Piskom qishlog‘i
+900 mm
+900 mm
+2. 
+O‘simliklar o‘sishi uchun eng qulay namlanish sharoiti qayerda 
+ekani va eng noqulay sharoit qayerda ekani haqida xulosa chiqaring.
+► 
+27-§. OB-HAVO VA IQ LIM
+O b  -havo. Siz radio va televizordan ob-havo m a’lumotlarini deyarli
+90
+har kuni eshitasiz. O‘zingiz ham ob-havoni ko‘p kuzatgansiz. Bularning 
+hammasi ob-havoning vaqt o‘tishi bilan o‘zgarishini va turli joylarda 
+har xil bo‘lishini ko‘rsatadi.
+Ob-havoning asosiy elementlari (belgilari) -  harorat, namlik, 
+shamol va havo bosimidir. Troposferada ob-havo elementlariga bog‘liq 
+ravishda shamol va bulutlar hosil bo‘ladi, yog‘inlar yog‘adi.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Ob-havo deb troposferaning biror joydagi ayni paytdagi yoki 
+m a’lum bir vaqtdagi (sutka, hafta, oy, fasldagi) holatiga aytiladi.
+Ob-havoning barcha elementlari va hodisalari o‘zaro bog‘langan. 
+Biror elementning o ‘zgarishi boshqa elementlarning va butun ob- 
+havoning o‘zgarishiga olib keladi. Masalan, bahorda erta bilan Quyosh 
+chiqishi oldidan havo salqin, shamolsiz bo‘ladi. Quyosh ko‘tarilishi 
+bilan Yer yuzasidagi havo isib yuqoriga k o ‘tariladi, bug‘lanish 
+kuchayadi. Iliq havo yuqoriga ko‘tarilib soviydi. To‘p-to‘p va yomg‘irli 
+to‘p-to‘p bulutlar hosil bo‘ladi. Ba’zan yomg‘ir ham yog‘ib o‘tadi. Agar 
+ob-havo bir necha kun o‘zgarmay bir xilda tursa, uni barqaror ob-havo 
+deyiladi.
+Inson hayoti va mehnat faoliyati uchun ob-havoning qanday bo‘li- 
+shini oldindan bilish juda zarur (Nima uchun zarur?). Ob-havoni ol- 
+dindan aytish uchun troposferaning holati haqidagi m a’lumotlar kerak 
+bo‘ladi. Bunday m a’lumotlar meteorologik stansiyalarda to‘planadi. 
+M a’lumotlar Yerdagi kuzatishdan tashqari, kosmik yo‘ldoshlar va 
+stansiyalardan ham olinadi. Meteorologik markazlarda ob-havo xari- 
+talari tuziladi va shunday xaritalar yordamida ob-havoning qanday 
+bo‘lishi oldindan e’lon qilinadi.
+Iqlim. Ob-havoning biror joyga xos bo‘lgan ko‘pyillik rejimi (ho­
+lati) shu joyning iqlimi deyiladi.
+Iqlimning ta’rifiga harorat va yog‘in miqdori, shamollar, havo 
+massalari, ob-havoning holati haqidagi ko‘pyillik o‘rtacha m a’lumotlar 
+kiradi. Iqlim ta’rifiga yana eng yuqori va eng past harorat, yillik 
+yog‘inning eng ko‘p va eng kam miqdori to‘g‘risidagi ma’lumotlar ham 
+kiritiladi.
+Iqlim haqidagi m a’lumotlar nima uchun kerak? Iqlim har bir joy­
+ning tabiatiga, relyef, daryo va ko‘llar, o‘simlik hamda hayvonot 
+dunyosiga ta’sir ko‘rsatadi. Iqlim haqida bilimga ega bo‘lmasdan turib 
+shahar qurilishi, yo‘l o‘tkazish, to‘g‘on bunyod etish uchun joy tanlash 
+mumkin emas. Qishloq xo‘jaligi ham ko‘p jihatdan iqlimga bog‘liq.
+Har bir joyning iqlimi nimalarga bog‘liq?
+Iqlim avvalo joyning geografik kengligiga bog‘liq.
+Ekvatorga yaqin yerlar Quyoshdan eng ko‘p nur oladi. Qutblarga 
+yaqin o‘lkalarni esa Quyosh eng kam isitadi. Buning oqibatida Yer
+edurtm_uz
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+yuzida issiqlik mintaqalari vujudga keladi (61-rasm). Bular bitta issiq 
+tropik, ikkita m o‘tadil va ikkita sovuq mintaqalardir.
+Okeanlarning uzoq-yaqinligi ham joy iqlimiga ta’sir ko‘rsatadi. 
+Yevropadagi Ispaniya va Gretsiya davlatlari O‘zbekiston bilan bir xil 
+geografik kenglikda joylashgan. Lekin Ispaniya va Gretsiyada qishda 
+havo harorati O ‘zbekistondagidan ancha yuqori bo‘ladi, yog‘in ham 
+ko‘p yog‘adi. Bunga sabab Atlantika okeanidan Ispaniya va Gretsiyaga 
+iliq, sernam havo kelib turishidir. O ‘zbekiston okeandan uzoqda joy­
+lashganligi sababli qishi sovuq va yozi juda issiq bo‘ladi.
+Qishda iliq, yozda salqin va yog‘in ko‘p yog‘adigan, dengizga yaqin 
+joylar iqlimi dengiz iqlimi deyiladi. Qish sovuq, yoz issiq va yog‘in 
+kam yog‘adigan iqlim kontinental iqlim deb yuritiladi (Mamlakatimiz 
+iqlimi qanday iqlim?).
+Iqlimga joyning dengiz sathidan balandligi va tog‘ tizmalarining 
+qanday joylashganligi ham katta ta’sir qiladi.
+edurtm_uz
+92
+Shimoliy tropik
+Ekvator
+Janubiy tropik
+Shimoliy qutbiy doira 
+Shim °Hy qutb
+Janubiy qutbiy doira 
+Janubiy qutb
+"»Ohy
+т 'т°»У
+1,1''Пи9a
+Is.
+fro,
+siq
+111 int.a9a
+Janubjy
+ta 9 a
+61-rasm. Yerning issiqlik mintaqalari.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+edurtm uz
+Tayanch so‘z va tushunchalar
+Ob-havo
+Barqaror ob-havo 
+Kontinental havo 
+Kontinental iqlim
+Beqaror ob-havo 
+Dengiz havosi 
+Dengiz iqlimi 
+Issiqlik mintaqalari
+1. Ob-havo deb nimaga aytiladi?
+2. Ob-havoning o‘zgarishiga nimalar sabab bo‘ladi?
+3. Iqlim nima? Iqlim haqidagi bilimlar nima uchun zarur?
+4. Quyida a) va b) rasmlar bilan ko‘rsatilgan hududlar 
+iqlimi qanday iqlim ekanligini ayting. Bu hududlarda qish 
+va yozda ob-havo qanday bo‘ladi?
+a)
+b)
+5. Quyida berilgan rasmdan foydalanib, Andijonda kel- 
+gusi haftaning dastlabki 5 kunida qanday ob-havo kuti- 
+layotganini aniqlang va daftaringizga yozib qo‘ying.
+6. O‘z joyingizdagi bir kunlik ob-havoni geografiya daf­
+taringizga yozib qo‘ying.
+93
+YERNING 
+HAVO 
+QOBIGT 
+—
+ 
+ATMOSFERA
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+BIOSFERA. INSON 
+VA 
+TABIAT
+94
+Qedurtm_uz
+V I I  B O B . B IO S F E R A . IN S O N  Y A  T A B IA T
+28-§. YERNING HAYOT QO BIG‘I — BIOSFERA
+Sayyoramiz, ya’ni Yer taxminan 4 milliard 600 million yildan 
+beri mavjud. Yerning butun tarixi davomida litosfera, gidrosfera va 
+atmosfera o‘zaro ta’sir etib turgan. Atmosferaning quyi -  troposfera 
+qatlami, butun gidrosfera va litosferaning yuqori 4-5 km li qatla- 
+mining o ‘zaro ta ’siri, ayniqsa, kuchli bo‘lgan. Hayot ham xuddi 
+shu joyda vujudga kelgan. Undagi eng dastlabki hayot belgilari 
+paydo bo‘lganiga taxminan 3 milliard 800 million yilga yaqin vaqt 
+b o ‘lgan. Bular k o ‘zga k o ‘rinm aydigan juda m ayda organizm lar 
+edi. Organizmlar faol bo‘lib, Yer yuzini egallay boshlaganiga esa 
+550-600 mln yil bo‘ldi.
+Organizmlar bir-biri bilan juda yaqin aloqada bo‘ladi va o‘zaro 
+ta’sir etib turadi. Agar ular o‘zaro aloqada bo‘lmaganlarida allaqachon 
+qirilib, yo‘q bo‘lib ketar edi. Masalan, o‘simliklar noorganik modda- 
+lardan organik m oddalar hosil qiladi. Buning uchun ular suv va 
+tuproqdan oziq moddalar (mineral va tuzlar), havodan karbonat angidrid 
+gazini olib, Quyosh nuri ta ’sirida organik m oddalar tayyorlaydi. 
+Hayvonlar esa organik modda tayyorlay olmaydi. Ular o‘simliklar 
+tayyorlagan organik moddalarni yeydilar. Ular o ‘txo‘rlar deyiladi. Ba’zi 
+hayvonlar esa boshqa jonivorlarni yeb kun ko‘radi. Ularni g o ‘shtxo‘r 
+hayvonlar deymiz.
+K o‘zga k o ‘rinm aydigan m ayda organizmlar, y a ’ni m ikroblar 
+o‘simlik va hayvonlar qoldiqlarini chiritib, minerallarga aylantirib turadi. 
+Yerning organik hayot paydo bo‘lgan, yashaydigan va organizmlar 
+o‘zaro ta’sir etib turadigan qobig‘iga biosfera deyiladi («bios» -  hayot, 
+«sphaira» -  shar). Biosferaning qalinligi 30-40 kilometrga yetadi. 
+Odam ham mana shu biosferada yashaydi (62-rasm).
+Yer yuzida tirik organizm larning notekis tarqalganligi. Orga­
+nizmlar quruqlik yuzasida va uning ustida 150 m balandlikkacha 
+bo‘lgan havoda, tuproqda, okean va dengizlar suvining yuzasi hamda 
+150 m chuqurlikkacha bo‘lgan qismlarida eng ko‘p tarqalgan.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+62-rasm. Biosferaning tuzilishi.
+Quruqlikda organizmlarning tarqalishi yorug‘lik, namlik va issiq- 
+likning taqsimlanishiga, y a’ni iqlimga bog‘liq. Sernam ekvatorial 
+o‘rmonlar o‘simlik va hayvonot dunyosiga juda boy. Daraxtlar doimo 
+ko‘m-ko‘k, biri gullayotgan bo‘lsa, boshqasida mevasi pishadi. Negaki, 
+u yerlarda iqlim yil bo‘yi issiq, yog‘in ko‘p yog‘adi.
+Iqlim issiq bo‘lsa-yu nam yetishmasa, bunday hududlar o‘simliklar 
+va hayvonot olamiga boy bo‘lmaydi. Bunga cho‘llar misol bo‘ladi. U 
+yerlarda namni kam bug‘latadigan mayda bargli yoki tukli, tikanakli, 
+ildizlari uzun o‘simliklar o‘sadi (Cho‘lda o‘sadigan qanday o‘sim- 
+liklarni bilasiz?). Cho‘llarda ko‘p hayvonlar uzoq vaqt suvsiz yashay 
+oladi. Cho‘llar faqat issiq joylarda emas, sovuq joylarda ham bor. 
+Antarktidada o‘simlik o‘smaydigan, hayvonlar yashamaydigan joylar 
+anchagina. Bunday joylar qor va muzlik cho‘llari deyiladi.
+Inson va biosfera. Hozirgi odamlarning ajdodlari taxminan 2 mln 
+yil ilgari paydo bo‘lgan. Ibtidoiy odamlar dastlabki davrlarda tabiatga 
+m oslashishga harakat qilishgan. G ‘orlarda yashashgan. Ovchilik, 
+shuningdek, meva va ildizlarni yig‘ish bilan shug‘ullanishgan. U 
+vaqtda kishilar biosferaga ta’sir ko‘rsata olmaganlar. Lekin odamlar 
+olovdan foydalanishni o‘rganib, chorvachilik va dehqonchilik bilan 
+shug‘ullana boshlagach, keyinchalik zavod-fabrikalar qurganlaridan 
+so‘ng biosferaga juda katta ta’sir ko‘rsata boshladi.
+BIOSFERA. INSON 
+VA 
+TABIAT
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+BIOSFERA. INSON 
+VA 
+TABIAT
+Odamlar k o ‘p hayvonlarni qo‘lga o ‘rgatgan. Ularning yangi, 
+sermahsul zotlarini yaratdi, lekin inson ta’sirida ayrim hayvon turlari 
+yo‘qoldi, ayrimlari kamayib bormoqda. Inson ta’sirida iqlim ham asta 
+o‘zgarib borayapti. Odam tabiiy sharoit noqulay yerlarda tabiatni 
+o‘zgartirib, o‘ziga qulay sharoitni ham yaratadi. Mamlakatimizning 
+ko‘p joylari cho‘llardan iborat. Ota-bobolarimiz qadim zamonlardanoq 
+ariqlar qazib, to‘g‘on qurib, daryolardan suv chiqarishni o‘rganishgan. 
+A joyib b o g ‘lar, ekinzorlar bunyod etishgan. Inson tom onidan 
+o‘zgartirilgan, obod qilingan bunday joylar vohalar deb ataladi.
+edurtm_uz
+Tayanch so‘z va tushunchalar
+Organizmlar 
+O‘txo‘r hayvonlar
+Organik modda 
+Go‘shtxo‘r hayvonlar
+Noorganik modda 
+Biosfera
+Cho‘l 
+Vohalar
+1. Biosfera qanday qobiq? Uning qalinligi qancha?
+2. Yerda hayot belgilari qachon paydo bo‘lgan?
+3. Inson paydo bo‘lganidan keyin tabiatga qanday ta’sir 
+ko‘rsatgan?
+4. Biosferaning qaysi qismida organizmlar eng zich tar- 
+qalgan?
+5. Vohalar deb qanday joylarga aytiladi? O‘qituvchingiz 
+yordamida O‘zbekistondagi vohalarni tabiiy xaritadan 
+ko‘rsating va nomlarini daftaringizga yozib qo‘ying.
+29-§. 
+TABIAT ZONALARI
+Tabiatni hosil qiluvchi tarkibiy qismlar -  komponentlar (tog‘ 
+96 
+jinslari, suv, havo, tuproqlar, o‘simliklar va hayvonot dunyosi) tabiatda 
+alohida-alohida, bir-biridan ajralgan holda uchramaydi. Ular bir-biri 
+bilan bog‘lanib ketgan va o‘zaro ta’sir etib turadi. Ular birgalikda tabiat 
+kompleksini, ya’ni tabiiy uyg‘unlikni hosil qiladi. Tabiat kompleksi 
+shunday tabiiy uyg‘unlikki, unda bironta komponent o‘zgarsa, boshqa 
+komponentlar ham o‘zgaradi.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Yer yuzida katta-kichik tabiat komplekslari juda ko‘p. Geografik 
+mintaqalar, tabiat zonalari ham tabiat komplekslaridir.
+Yerning sharsimon shaklda ekanligi sababli Quyoshdan keladigan 
+yorug‘lik va issiqlik Yer yuzida bir xilda taqsimlanmaydi. Uning 
+miqdori ekvator atroflaridan Shimoliy va Janubiy qutblarga tomon 
+kamayib boradi. Buni avvalgi darslardan bilib olgansiz.
+Yer yuzida quruqlik va okeanlar juda notekis taqsimlangan. Yer 
+yuzasining relyefi ham har xil. Bular quruqlik yuzasining Quyosh nuri 
+bilan isitilishiga, havoning haroratiga, shamollarning yo‘nalishiga, 
+yog‘inlarning miqdori va qaysi fasllarda yog‘ishiga ta’sir ko‘rsatadi. 
+Mana shu barcha ta’sirlar natijasida Yer yuzida ekvatordan qutblarga 
+tomon tabiat o‘zgarib boradi. Bu o‘zgarishlar tabiat zonalarini vujudga 
+keltiradi.
+Quruqlikdagi iqlimi, tuproqlari, o‘simlik va hayvonot dunyosi bir- 
+biridan farq qiladigan yirik tabiiy komplekslari tabiat zonalari deb 
+ataladi. «Zona» lotincha so‘z bo‘lib, uzun cho‘zilgan, ensiz yer degan 
+ma’noni bildiradi. Tabiat zonalari ham Yer yuzida ko‘pincha g‘arbdan 
+sharqqa tomon cho‘zilgan bo‘ladi (63-rasm).
+Har bir tabiat zonasi boshqa zonalardan iqlimi, yog‘in miqdori, 
+o‘simliklari, tuproqlari va hayvonot dunyosiga ko‘ra, y a’ni tabiat 
+manzarasi bilan farq qiladi.
+Tabiat zonalari ekvatordan qutblarga tomon almashinib boradi. 
+Asosiy zonalar quyidagilar:
+Sernam  ekvatorial o‘rm onlar zonasi. Ekvator yoni olkalarida 
+havo harorati yil bo‘yi deyarli bir xil, +25 °C atrofida bo‘ladi. Yillik 
+yog‘in miqdori 2000 mm dan oshadi, yil bo‘yi bir xilda taqsimlanadi. 
+Bunday sharoitda sernam, doimiy yashil o ‘rmonlar o‘sadi. Fasllar 
+almashinmaydi, faqat bitta fasl -  yoz bo‘ladi. Bir daraxt gullasa, boshqa 
+daraxtda mevasi pishadi (64-a rasm).
+M avsum iy nam  tro p ik  o ‘rm o n la r zonasi. Bu zona sernam 
+ekvatorial o‘rmonlar zonasini shimol va janub tomonlardan o‘rab turadi. 
+Bu zonada yil ikki faslga bo‘linadi: sernam issiq yoz va quruq issiq 
+qish. Sernam yozda tabiat ekvatorial o‘rmonlardagidan farq qilmaydi. 
+Qurg‘oqchil davrda esa daraxtlar bargini to‘kadi.
+Savannalar va siyrak o‘rm onlar zonasi. Bu zona mavsumiy nam 
+tropik o‘rmonlar zonasiga tutashib turadi. Harorat yuqori bo‘ladi, lekin
+7-«Geografiya», 5-sinf.
+edurtm_uz
+BIOSFERA. INSON 
+VA 
+TABIAT
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+BIOSFERA. INSON 
+VA 
+TABIAT
+Qedurtm_uz
+U 
+Arktika va Antarktidadagi cho‘llar 
+chala с1юП va ch0‘llar
+]  Tundra va о‘rmon-tundra 
+| 
+Savannalar va siyrak o‘rmonlar
+1 Tayga 
+Semam ekvatorial o‘rmonlar
+|-----1-Aralash va keng bargli o‘rmonlar 
+□
+ Mavsumiy nam tropik o‘rmonlar
+□
+Balandlik mintaqalanishi o ‘lkalari
+О rmon-dasht va dashtiar 
+n
+J Subtropik siyrak o‘rmonlar va butazorlar
+63-rasm. Yer yuzidagi tabiat zonalari.
+yog‘in kam, asosan, yoz oylarida yog‘adi. Shuning uchun daraxt kam, 
+baland bo‘yli o‘t-o‘simliklar va butalar o‘sadi. Har xil hayvonlar -  sher 
+va fillar, o‘txo‘r antilopalar, zebra, jirafalar yashaydi (64-d rasm).
+98 
+C hala cho‘l va cho‘llar zonasi. Afrika va Osiyo qit’alarida
+cho‘llar juda katta maydonni egallagan. Cho‘llar yog‘in kam, qur- 
+g‘oqchil o‘lkalarda vujudga keladi. O ‘simliklar siyrak bo‘lib, quruq 
+iqlim sharoitiga moslashgan. Ildizlari uzun, barglari mayda, tanasi 
+tuklar bilan qoplangan b o ‘ladi. Yantoq, saksovul, yulg‘un k o ‘p 
+uchraydi. Cho‘l hayvonlari ham issiq va qurg‘oqchilikka moslashgan.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+£ч..
+% 
+s*f
+•■'■л
+. F
+'
+iff
+64-rasm. Tabiat zonalari: a) -  sernam ekvatorial o ‘rmonlar; 
+b) -  cho‘llar; c) -  muzlik (arktika) cho ‘llari; d) -  savanna.
+Tuya, kiyik, toshbaqa, kaltakesak, ilon, chayon, kemiruvchi hayvonlar 
+ko‘p tarqalgan. Ko‘p joylarni qum bosib yotadi (64-b rasm).
+0 ‘rm on-dasht va dashtlar zonasi. Bu zona Shimoliy yarimsharda 
+keng maydonni egallagan. Janubiy yarimsharning bu kengliklari, 
+asosan, dengiz va okeanlar bilan qoplanganligi uchun dashtlar kam. 
+Dasht zonasida yerlar, asosan, o‘tloqlardan iborat. Bu zona iqlimi, 
+tuproqlari dehqonchilik uchun qulay. Shu sababli bu zona yerlari deyarli 
+to‘liq haydalib, ekinzorlarga aylantirilgan.
+A ralash va keng bargli o‘rm onlari zonasida y o g in  nisbatan 
+ko‘proq -  400-500 mm, qish ancha sovuq, yoz iliq bo‘ladi. Bu zona- 
+ning ko‘p yerlari keng bargli va aralash o‘rmonlar bilan qoplangan. 
+O‘rmonlarda qarag‘ay, qora qarag‘ay, eman, qayin daraxtlari o‘sadi. 
+Hayvonot dunyosiga boy.
+Yerning qutblari atroflarida qish uzun, juda sovuq, yoz qisqa, salqin 
+bo‘ladi. Yevrosiyo va Shimoliy Amerikaning shimoliy qismida juda 
+katta maydonlarni tundra zonasi egallagan. Bu zonada pakana qayin
+BIOSFERA. INSON 
+VA 
+TABIAT
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+BIOSFERA. INSON 
+VA 
+TABIAT
+►
+100
+va qutb toli deb ataluvchi butalar, mox va lishayniklar o‘sadi. Yozda 
+ko‘p qushlar uchib keladi.
+Shimoliy Muz okeanidagi ko‘plab orollar va Antarktidada m uzlik 
+(arktika) cho‘llari zonasi joylashgan bo‘lib, asosan, qor va muzlar 
+bilan qoplangan (64-c rasm).
+Tabiat nafaqat ekvatordan qutblarga, balki tog‘ etagidan cho‘qqisiga 
+tomon ham almashinib boradi. Biz buni balandlik mintaqalanishi deb 
+ataymiz.
+edurtm_uz
+Tayanch so‘z va tushunchalar 
+Tabiat kompleksi 
+Savanna 
+Tundra
+Tabiat zonasi 
+Ekvatorial o‘rmonlar 
+Tropik o‘rmonlar
+Cho‘llar
+Dasht
+Balandlik mintaqalanishi
+1. Tabiat kompleksi nima? Tabiat zonasi-chi?
+2. Tabiat zonalari qanday vujudga keladi?
+3. 64-rasmdagi b) va c) holatlarda tasvirlangan choTlar 
+bir-biridan nimasi bilan farq qiladi?
+4. Bizning mamlakatimiz qaysi zonada joylashgan?
+30-§ . 
+UM UM LASHTIRUVCHI TAKRORLASH
+O ‘quv yili davomida o‘tilgan mavzularning tayanch mazmunini 
+darslik hamda 5-sinf o‘quv atlasi yordamida mustahkamlash va umum- 
+lashtirish yuzasidan suhbat va savol-javob o‘tkaziladi.
+1. Quyidagi sonli masshtablarni nomli masshtablarga aylantirib, km 
+larda ifodalang.
+a) 1:100 000 
+d) 1:500 000
+b) 1:1 000 000 
+e) 1:7 500 000
+c) 1:10 000 000 
+f) 1:2 800 000
+2. Quyidagi holatlarning qaysi birida atmosferaning gaz tarkibi 
+to‘g‘ri berilgan?
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+edurtm uz
+-  Azot
+В -  Kislorod 
+Ы -  Boshqa gazlar
+3. 
+Quyidagi rasmda qaysi shamol turi aks ettilgan? U Yer sharining 
+qaysi hududlarida kuchli esadi?
+Yozda
+Qishda
+Past bosim
+Yuqori bosim 
++
+h ffk 'i ^
+ g 
+Past bosim
+4. Quyidagi a) va b) rasmlarda ob-havoning ikki xil holati berilgan.
+a) holatda havoning harorati +20 °C bo‘lib, 1 m3 havoda 15 gramm,
+b) holatda esa havoning harorati +10 °C bo‘lib, 1 m3 havoda 4 gramm 
+suv bug‘i bor. Aytingchi, ulardan qaysi birida nisbiy namlik yuqori va 
+yog‘in hosil bo‘lish imkoniyati katta? Nima uchun?
+101
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+BIOSFERA. INSON 
+VA 
+TABIAT
+102
+m u s t a q il  o ‘QISH u c h u n  
+in s o n  va t a b ia t
+Hozirgi vaqtda Yer yuzida 7 mlrd 800 mln atrofida odam yashaydi 
+(2020-y). Lekin ular butun Yer yuzida bir xilda taqsimlanmagan. Dunyo 
+aholisining yarmidan ko‘pi Osiyo qit’asida joylashgan. Jonajon Vata- 
+nimiz O‘zbekistonda esa 34 mln dan ortiq odam yashaydi (2020-y).
+Aholining soni o‘zgarib turadi. Aholi sonining ko‘payishi har yili 
+qancha bola tug‘ilib, qancha odam o‘lishiga bog‘liq. Yer yuzida odam 
+paydo bo‘lganiga 2 mln yil bo‘lgan deb taxmin qilishadi. Lekin ilgari 
+odamlar soni juda sekin ko‘paygan. Ilgarilari odamlar turli kasalliklar, 
+urushlar, tabiiy ofatlar natijasida ko‘plab qirilib turgan. Lekin XIX va 
+XX asrlarda tibbiyot fanining rivojlanishi bilan Yer yuzida aholi soni 
+juda tez ko‘paydi.
+Aholi Yer yuzida bir tekisda joylashmagan. Odamlar tabiiy sharoiti 
+inson yashashi, xo‘jalik yuritishi uchun qulay iqlimli tekisliklarda, 
+dengiz bo‘ylarida, vodiylarda o‘rnashib qolgan. Hozirgi vaqtda Xitoy, 
+Hindiston, Amerika Qo‘shma Shtatlari, Indoneziya va Braziliya aholisi 
+eng ko‘p mamlakatlardir.
+Inson o ‘ziga kerakli hamma narsani tabiatdan oladi. Ishlatib 
+bo‘lgan, keraksiz chiqindilarni esa tabiatga chiqarib tashlaydi. Qadim 
+zamonda Yer yuzida odamlar kam, insonning tabiatga ta’siri kuchsiz 
+bo‘lgan vaqtda uning tabiatga yetkazadigan zarari deyarli sezilmas 
+edi. Ilm-fan, texnika rivojlangani sari insonning tabiatga ta’siri juda 
+kuchayib ketdi. Yer yuzida o ‘rmonlar kamaydi, cho‘llar ko‘paydi, 
+havoga ko‘p miqdorda tutun, turli zararli moddalar chiqariladigan, 
+suvga ham chiqindilar tashlanadigan bo‘ldi. Yer po‘sti kavlanib, turli 
+foydali qazilmalar olinmoqda.
+Insonning ta ’siri atm osferada 18-20 km balandlikkacha, Yer 
+yuzidagi, tuproq, o‘simlik va hayvonlarga, Yer po‘stida 3-4 km chu- 
+qurlikkacha, ayniqsa, kuchli bo‘ladi. Biosferaning odam yashaydigan va 
+tabiatga juda katta ta’sir ko‘rsatadigan shu qismi noosfera deb ataladi. 
+Noos -  yunoncha aql degani. Noosfera aqllilar qobig‘i, ya’ni odam 
+yashaydigan qobiq degani.
+edurtm_uz
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Inson tabiatdan olib, foydalanadigan, odamlarning yashashi uchun 
+zarur bo‘lgan barcha narsalar tabiiy resurslar (boyliklar) deb ataladi. 
+Tabiiy boyliklarga quyosh energiyasi, Yerning ichki issiqligi, suv, 
+tuproqlar, foydali qazilmalar, o‘simliklar, hayvonot dunyosi kiradi. 
+Tabiiy resurslar ikkita katta turga bo‘linadi. Bular tugaydigan va 
+tugamaydigan tabiiy resurslardir.
+Tugamaydigan tabiiy resurslarga havo, quyosh issiqligi va yerning 
+ichki energiyasi, tugaydigan boyliklarga ko‘pchilik foydali qazilmalar 
+kiradi. Tabiatda tugaydigan, lekin qayta tiklanadigan boyliklar ham 
+mavjud. Bularga suv, o‘simliklar, hayvonot dunyosi, tuproqlar kiradi.
+Insonning tabiatga ta ’siri. Odamlar qurg‘oqchil o‘lkalarda cho‘l 
+va chala cho‘llarga suv chiqarib, unumdor vohalar bunyod etadi, 
+botqoqliklarni quritib, ekinzor va bog‘larga aylantiradi, mevalar va 
+ekinlarning yangi unumdor turlarini yaratadi. Yovvoyi hayvonlarni 
+qo‘lga o‘rgatadi, yangi zotlarini bunyod etadi. Lekin odamlar tabiatga 
+zararli ta’sir ham ko‘rsatadi. Hozirgi vaqtda Yer yuzida o‘rmonlar 
+kamayib qolgan. Havoga har yili ko‘p miqdorda turli xil zararli gazlar, 
+tutun, chang chiqariladi. Chiqindixonalar ham ko‘payib ketgan, avto- 
+mobillar havoga millionlab tonna zararli gaz chiqaradi. Ana shular 
+ta’sirida Yer yuzida havo harorati ko‘tarilib bormoqda. Shimoliy Muz 
+okeanidagi, Antarktidadagi, tog‘lardagi ko‘p yillik muzlar erib, kamayib 
+bormoqda.
+Tabiat komlekslari o‘zgarmoqda. Ilgarigi o‘rmonlar o‘rniga ko‘p 
+joyda ekin dalalari, shahar va qishloqlar bunyod etilgan. Cho‘l va chala 
+cho‘llar kengayib bormoqda. Mamlakatimizda Orol dengizi qurib, 
+juda kichrayib qoldi. Hozir bu yerlarga cho‘lda o‘sadigan o‘simliklar -  
+saksovul va yulg‘un ekilmoqda.
+Hozirgi vaqtda tabiatni, suv va havoni toza tutish, o‘simlik hamda 
+hayvonlarni, tuproqlarni saqlab qolish, ularni ko‘paytirish, yaxshilash 
+insonlar oldida turgan eng muhim vazifa bo‘lib qoldi. Bu vazifani 
+bajarish uchun tabiiy fanlarni, shu jum ladan, geografiyani puxta 
+o‘rganish, tabiat qonunlariga amal qilish zarur.
+edurtm_uz
+103
+BIOSFERA. INSON 
+VA 
+TABIAT
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+TERMIN 
+VA TUSHUNCHALARNING IZOHLI LUG‘ATI
+104
+Qedurtm_uz
+TERMIN VA TUSHUNCHALARNING IZOHLI LUG‘ATI
+Antarktika — Janubiy qutb atrofidagi
+sovuq o‘lka. Chegarasi 50—60° janubiy 
+kengliklarda joylashgan. Bu mintaqaga 
+Antarktida materigi va uning atrofidagi 
+orollar kiradi.
+Arktika — Shimoliy qutb 
+atrofidagi 
+sovuq 
+o‘lka. 
+Quruqliklar 
+o‘simliksiz 
+sovuq sahrolardan iborat.
+Artezian quduq — suvi yer yuzasiga 
+o‘zi oqib chiqadigan quduq. Ba’zi joylarda 
+suv favvora bo‘lib otilib chiqadi.
+Asr — vaqt o‘lchov birligi. 1 asr yuz 
+yilga teng.
+Atmosfera — Yerni o‘rab olgan havo 
+qobig‘i. Azot, kislorod, karbonat angid- 
+rid va boshqa gazlarning aralashmasi- 
+dan iborat, yuqori chegarasi 2000 km 
+balandlikdan o‘tadi.
+Aysberg — sovuq o‘lkalardagi dengiz 
+va okeanlarda suzib yuradigan muzlar. 
+Quruqliklardagi muzlardan uzilib tushib 
+hosil bo‘ladi.
+Azimut — kuzatuvchidan 
+shimolga 
+yo‘nalish bilan mo‘ljallangan predmetga 
+yo‘nalish orasidagi burchak. Soat mili 
+yo‘nalishi bo‘yicha aniqlanadi.
+Azot — atmosfera havosida eng ko‘p 
+(78 %) tarqalgan gaz.
+Balandlik shkalasi — tabiiy xaritalarda 
+yer yuzasining dengiz sathidan qanchalik 
+balandligini bildiruvchi shartli belgi.
+Batiskaf — chuqur suv ostiga tusha- 
+digan 
+apparat 
+(qurilma). 
+Dengiz 
+va 
+okeanlarning chuqur qismlarini o‘rga- 
+nishda qo‘llaniladi.
+Bazalt — Yer po‘stining chuqur qismida 
+tarqalgan tog‘ jinsi. Yer yuziga vulqon- 
+lardan suyuq holda oqib chiqib qotadi.
+Bergshtrix — xaritalarda yer yuzasi­
+ning qiya tomonini ko‘rsatuvchi belgi 
+(chiziqcha). Gorizontallarga qo‘yiladi.
+Biosfera — Yerning hayot qobig‘i. 
+Atmosferaning 
+quyi 
+qismini, 
+gidro-
+sferaning hammasini va Yer po‘stining 
+yuza qismini o‘z ichiga oladi.
+Briz shamollari -  kunduzi suvdan 
+quruqlikka va kechasi quruqlikdan suv 
+havzasi tomonga esadigan shamollar.
+Buloqlar — Yer osti suvlarining yer 
+yuzasiga tabiiy holda chiqishi. Buloqlar 
+suvli qatlamlar yer yuzasiga chiqib qolgan 
+joylarda hosil bo‘ladi. Vodiylar, jarlar, tog‘ 
+yonbag‘irlari va etaklarida uchraydi.
+Bulut — havodagi juda mayda suv 
+zarrachalari, tomchilari, muz zarrachalari 
+to‘plami. Ular yiriklashib yog‘in bo‘lib 
+tushadi.
+Daryo havzasi — daryoga suv kela- 
+digan, suv yig‘iladigan maydon.
+Dengiz iqlimi — dengiz bo‘yidagi qishi 
+iliq, yozi salqin va yog‘in-sochin ko‘p 
+bo‘ladigan iqlim.
+Dunyo okeani — Yer yuzidagi barcha 
+okeanlar birgalikda dunyo okeani deyi­
+ladi.
+Ekvatorial mintaqa — Yer ekvatori va 
+uning ikki yonida joylashgan geografik 
+mintaqa. Yil bo‘yi bir xil issiq va yog‘in 
+ko‘p bo‘ladi. Tabiiy holda doimiy yashil 
+o‘rmonlar bilan qoplangan.
+Epitsentr — yer 
+qimirlash, 
+zilzila 
+markazi.
+Exolot — dengiz va okeanlarda chu- 
+qurlikni o‘lchaydigan asbob. Exolot den­
+giz ostiga tovush to‘lqinini yuboradi va 
+u yerdan qaytgan tovush to‘lqinini qa­
+bul qiladi. Dengizda tovush bir sekundda 
+1500 metr tezlikda tarqaladi. Tovush 
+yuborilgan vaqt bilan qaytgan vaqt orasi 
+4 sekund, demak, dengiz chuqurligi 3000 
+metr ekan.
+Fluger — shamolning yo‘nalishi va 
+kuchini aniqlaydigan asbob.
+Geografik koordinata — biror nuqta­
+ning Yer yuzidagi o‘rnini aniqlaydigan 
+miqdorlar. Geografik kenglik va uzunlik- 
+dan tarkib topadi.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+d&L Oedurtm-uz
+Ta'lim Markazi
+Geografik m intaqa — Yer yuzasi zonal 
+bo‘linishining eng katta bosqichi. Har bir 
+mintaqa hududida quyosh nuri miqdori 
+har holda teng bo‘ladi. Lekin yog‘in 
+miqdori har xil bo‘lganligidan mintaqada 
+zonalar vujudga keladi.
+Geoid — 
+Yerning haqiqiy shakli. U 
+shar shaklidan farq qiladi.
+Geyzer — yer osti bo‘shliq va yoriq- 
+laridan vaqti-vaqti bilan issiq suv hamda 
+bug‘ otilib turadigan buloqlar.
+Gidrosfera — Yerning suv qobig‘i. 
+Unga okean va dengizlar, daryo va ko‘llar, 
+qor va muzliklar, havodagi suvlar, yer osti 
+suvlari kiradi.
+Gipotsentr — yer qimirlash o‘chog‘i. 
+Odatda Yer po‘stidagi yoriqlarda, burma- 
+lanish, uzilish, siljish bo‘layotgan yerlarda 
+joylashadi.
+Globus — Yerning juda kichraytirib 
+ishlangan sharsimon modeli, masshtabi 
+turli xil bo‘lishi mumkin.
+Gorizontal, gorizontal chiziq — Yer 
+yuzasida bir xil balandlikdagi nuqtalarni 
+xaritada tutashtirib turuvchi chiziq.
+Granit 
+— 
+Yer 
+po‘stida 
+eng 
+ko‘p 
+tarqalgan otqindi tog‘ jinsi.
+G runt suvlari — yer yuzasida tarqalgan 
+g‘ovak tog‘ jinslari orasida joylashgan 
+suvlar. 
+Bunday suvlar mavjud yerlar 
+ko‘pincha zax, sernam bo‘ladi.
+Gumus — tuproq tarkibida tarqalgan 
+chirindi 
+organik 
+moddalar. 
+Tuproqni 
+unumdor qiladi.
+H arakat 
+belgilari 
+— 
+xaritalarda 
+shamollar, okean, dengizlarda oqimlar, 
+yo‘llarda yuk tashish kabi hodisalar 
+yo‘nalishlarini bildiradigan belgilar.
+H arorat amplitudasi — havo, suv va 
+boshqalarning yuqori harorati bilan past 
+harorati orasidagi farq.
+Havo bosimi — atmosfera havosining 
+Yer yuziga beradigan bosimi. Barometr 
+yordamida o‘lchanadi.
+Havo massasi — katta hudud ustida 
+tarkib topgan va o‘zining xususiyatlari -  
+harorati, namligi, shamollari, tiniqligiga
+ko‘ra boshqa joydagi havodan farq qiluvchi 
+havo.
+Havoning namligi — havoda mavjud 
+bo‘lgan suv bug‘lari miqdori. Havoning 
+qancha miqdorda suv bug‘larini tutib 
+turishi uning haroratiga bog‘liq. Issiq 
+havo ko‘proq, sovuq havo kamroq suv 
+bug‘larini o‘zida tutib turadi.
+Iqlim — biror joydagi ob-havoning ko‘p 
+yillik holati. Iqlim Quyosh radiatsiyasi 
+(issiqligi, 
+yorug‘lik), 
+yer 
+yuzasining 
+holati, atmosferadagi havo harakatlariga 
+bog‘liq.
+Issiqlik m intaqalari — Yer sharsimon 
+shaklda bo‘lgani uchun Quyoshdan kela- 
+digan nur turli geografik kengliklarni 
+turlicha isitadi. 
+Natijada Yer yuzida 
+issiqlik mintaqalari hosil bo‘ladi. 2 ta 
+sovuq, 2 ta o‘rtacha (mo‘tadil), 1 ta issiq 
+(tropik) mintaqa hosil bo‘ladi.
+ichki dengiz — quruqlik ichkarisida 
+joylashgan va okean hamda boshqa den­
+gizlar bilan bir yoki bir necha bo‘g‘izlar 
+orqali 
+qo‘shilib 
+turgan 
+dengizlar. 
+Masalan, Qora dengiz, Qizil dengiz.
+ichki kuchlar (endogen kuchlar) — 
+Yer po‘stida tog‘lar hosil bo‘lishi, vulqon 
+otilishi, yer qimirlashiga, cho‘kish va 
+ko‘tarilishlarga sabab bo‘luvchi kuchlar.
+Joy 
+plani 
+— 
+yer 
+yuzasi 
+kichik 
+qismining yirik masshtabda chizilgan 
+chizmasi. Joydagi obyektlar -  daryo, ko‘l, 
+uylar va boshqalar shartli belgilar bilan 
+ko‘rsatiladi.
+Кabisa yili — 366 kunlik yillar kabisa 
+yili deyiladi. Har 4 yilda 1 yil kabisa yili 
+bo‘ladi. 2012, 2016, 2020, 2024, 2028 va 
+h.k. yillar kabisa yili.
+Кompas 
+— 
+dunyo 
+tomonlari 
+aniqlanadigan asbob. Unda nina uchiga 
+strelka (ko‘rsatkich) o‘rnatilgan bo‘lib, u 
+shimol bilan janubni ko‘rsatadi.
+Kontinental havo — quruqlik ustida 
+tarkib 
+topgan, 
+namligi 
+kam, 
+fasliy 
+haroratlar farqi katta bo‘lgan havo.
+Kontinental iqlim — quruqlik iqlimi,
+105
+TERMIN 
+VA TUSHUNCHALARNING IZOHLI LUG‘ATI
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+TERMIN 
+VA TUSHUNCHALARNING IZOHLI LUG‘ATI
+106
+d&L Oedurtm-uz
+Ta'lim Markazi
+qishi sovuq, yozi issiq, yog‘in kam 
+yog‘adigan iqlim.
+Lava — vulqonlar otilganda yer ichi- 
+dan oqib chiqadigan juda issiq, erigan tog‘ 
+jinslari.
+Litosfera — Yerning ustki, qattiq tosh 
+qobig‘i.
+Litosfera plitalari -  litosferaning Yer 
+po‘sti yoriqlari bilan bo‘linib hosil bo‘lgan 
+yirik qismlari.
+Magma — Yerning yuqori mantiyasida 
+murakkab jarayonlar 
+natijasida 
+hosil 
+bo‘lgan yuqori haroratli suyuq modda. 
+Vulqon otilganda yer yuziga chiqib, 
+undan lava (otqindi jinslar) hosil bo‘ladi.
+Masshtab — joy plani, xarita, chizma- 
+lardagi 
+nuqtalar orasidagi uzunlikning 
+joydagi 
+masofalar uzunligiga nisbati. 
+Masshtab uch xil bo‘ladi: sonli, chiziqli va 
+nomli (izohli).
+Manba, 
+daryo 
+boshi 
+— 
+daryo 
+boshlanadigan, suv oladigan joy: tog‘dagi 
+qor, muzlik, buloq, ko‘l, botqoqlik.
+Mantiya -  Yerning Yer po‘sti bilan 
+yadrosi orasidagi qobig‘i.
+Materik sayozligi — materiklarning 
+suv ostidagi davomi. Chuqurligi 200 m 
+gacha, eni 1200-1500 km gacha boradi. 
+Ko‘plab neft, gaz va boshqa konlar bor.
+Mavzuli xaritalar — malum bir xil 
+geografik obyekt va hodisalar tasvir- 
+langan xaritalar. Masalan, iqlim xaritasi, 
+tuproqlar xaritasi.
+Meridian 
+-  
+geografik 
+qutblarni 
+tutashtiruvchi Yer yuzasidan o‘tkazilgan 
+yarim aylana chiziqlar.
+Mezosfera — atmosferaning o‘rta qat- 
+lami. Yer yuzasidan 50-55 km dan 80­
+85 km gacha balandlikda joylashgan. 
+Havo siyrak. Harorat quyi qismida 0 °C 
++10 °C dan, yuqori qismida -90 °C gacha 
+pasayadi.
+Mo‘tadil mintaqalar — 40°-60° shi­
+moliy kengliklar va 42°-55° janubiy keng- 
+liklar orasidagi geografik mintaqalar. 
+Yilning 4 ta fasli aniq ajralib turadi.
+М т е ^  suv — tarkibida erigan holda 
+turli mineral tuzlar mavjud bo‘lgan suv. 
+Masalan, Toshkent mineral suvi.
+Mikroskop — mayda zarralar, mikro - 
+organizmlar, bakteriyalarni katta qilib 
+ko‘rsatadigan asbob.
+Musson shamollari — mavsumiy sha­
+mollar. 
+Qishda quruqlikdan dengizga, 
+yozda dengizdan quruqlikka esadigan 
+shamollar.
+М в д ^  — sovuq o‘lkalar va baland 
+tog‘larda qor to‘planib hosil bo‘lgan 
+muzlar. Masalan, butun Antarktida shun- 
+day muzlik bilan qoplangan.
+М ^ ^  balandlik — yer yuzasidagi har 
+bir joyning dengiz sathidan balandligi.
+М ^ ^  namlik -  1 m3 havodagi suv 
+bug‘ining miqdori. O‘lchov birligi g/m3.
+Nisbiy balandlik — yer yuzasidagi ikki 
+nuqta orasidagi tik balandlik. Masalan, tog‘ 
+etagidan tog‘ cho‘qqisining balandligi.
+nisbiy namlik — muayyan haroratli 
+havoda mavjud bo‘lgan suv bug‘i miqdo- 
+rining shunday haroratli havo to‘yinishi 
+uchun zarur bo‘lgan suv bug‘i miqdoriga 
+nisbati.
+Nivelir — joyning nisbiy balandligini, 
+ya’ni bir nuqtadan ikkinchi nuqtaning 
+qancha 
+balandligini 
+aniqlash 
+uchun 
+ishlatiladigan asbob.
+noruda m itr a l boyliklar — yoqilg‘i 
+va rudali qazilmalardan boshqa barcha 
+foydali qazilmalar, turli tuzlar (osh tuzi, 
+soda).
+Ob-havo — atmosfera quyi qismi -  
+troposferaning 
+biror joydagi 
+ma’lum 
+vaqtdagi 
+holati. Vaqt va masofada tez 
+o‘zgarib turadi.
+Oqar ko‘l — bir yoki bir necha daryo, 
+jilg‘a quyilib, bir daryo oqib chiqib keta- 
+digan ko‘l. Masalan, Baykal, Onega, 
+Sarez ko‘llari.
+Oqmas ko‘l — suvi oqib chiqib ket- 
+maydigan ko‘l. Masalan, Kaspiy dengiz- 
+ko‘li, Balxash, Issiqko‘l.
+Oriyentirlash 
+— 
+kuzatuvchining
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+d&L Oedurtm-uz
+Ta'lim Markazi
+o'zi turgan joyiga nisbatan ufq (dunyo) 
+tomonlarini aniqlashi.
+Orollar — hamma tomondan okean, 
+dengiz, ko‘l, daryo suvlari bilan o‘ralgan 
+kichik quruqliklar.
+Parallel — xaritalar va globusda Yer 
+ekvator chizig‘iga parallel qilib o‘tka- 
+zilgan aylana chiziqlar.
+Passat shamollari — subtropik va 
+tropik mintaqalardan ekvatorial mintaqa- 
+ga tomon esadigan doimiy shamollar.
+Pasttekislik — quruqliklarda balandligi 
+dengiz sathidan 200 metrgacha bo‘lgan 
+tekisliklar. Masalan, Turon, G‘arbiy Sibir 
+pasttekisliklari.
+Qatlamlar orasidagi suv — ikkita 
+suv 
+o‘tkazmaydigan 
+qatlam 
+orasida 
+joylashgan g‘ovak tog‘ jinslari qatla- 
+midagi suv. Bunday suv bosimli bo‘ladi.
+Qirlar — usti yassi yoki salgina gum- 
+bazsimon balandliklar, tepaliklar. Baland­
+ligi dengiz sathidan 200 m dan 500 m 
+gacha bo‘ladi.
+Qirov — erta bahor, kech kuzda va 
+qishda havo harorati 0°C dan pasayib 
+ketishi natijasida tuproq, o‘simlik va 
+boshqa predmetlar ustini qoplaydigan 
+juda mayda muz zarrachalari.
+Qit’a — yirik quruqlik va uning atro- 
+fidagi orollar. 6 ta qit’a bor: Osiyo, Yev- 
+ropa, 
+Amerika, 
+Afrika, 
+Avstraliya, 
+Antarktida.
+Qor chizig‘i — tog‘larda yozda erimay 
+qolgan qorlarning pastki chegarasi. Issiq 
+o‘lkalardan sovuq o‘lkalarga tomon pasa- 
+yib boradi.
+Qutbiy doiralar — Shimoliy va Janubiy 
+yarimsharlarda 66,5° kengliklardan o‘tka- 
+zilgan parallellar. Bu parallellarda yozda 
+1 sutka Quyosh botmaydi, qishda esa 
+1 sutka Quyosh chiqmaydi.
+Qutb kuni — Yer qutblarida yoz faslida 
+6 oy Quyosh botmaydi. Shunday Quyosh 
+botmaydigan davr qutb kuni deyiladi.
+Qutb tuni — Yer qutblarida qish faslida 
+6 oy davomida Quyosh ko‘rinmaydi.
+Quyosh chiqmaydigan shunday davr qutb 
+tuni deyiladi.
+Qutb yulduzi — osmon gumbazining 
+shimoliy 
+nuqtasi yaqinida joylashgan 
+yulduz. Shu yulduzga qarab ufq tomonlari 
+aniqlanadi.
+Quyosh sistemasi — Quyosh, uning 
+atrofida aylanuvchi 8 ta sayyora, ularning 
+yo‘ldoshlari, asteroidlar, kometalar va 
+meteor jismlar.
+Qo‘ltiq — okean, dengiz va ko‘llarning 
+quruqlik ichkarisiga kirib borgan qismi. 
+Masalan, Fors qo‘ltig‘i, Meksika qo‘ltig‘i.
+Rangli metallar — turli xil tabiiy rang- 
+larga va xususiyatlarga ega bo‘lgan metal­
+lar: oltin, kumush, mis, rux, aluminiy va b.
+Relyef — yer yuzasining shakllari -  
+tog‘lar, tekisliklar, qirlar, tepalar, vodiylar, 
+adirlar, soylar va boshqalar majmuyi.
+Rudali mineral boyliklar — tarkibida 
+metallar — temir, mis, kumush va 
+boshqalar mavjud bo‘lgan tog‘ jinslari.
+Sayyoralar — Quyosh atrofida ayla­
+nuvchi eng yirik osmon jismlari.
+Seysmik mintaqalar — yer qimirlash 
+markazlari joylashgan va tez-tez yer qi- 
+mirlab turadigan mintaqalar. Masalan, 
+Alp-Himolay, Tinch okean «olov» halqasi 
+mintaqalari.
+Seysmograf — zilzila vaqtida Yer 
+po‘stida ro‘y beradigan tebranishlarni 
+qayd qiladigan asbob.
+Stratosfera — atmosferaning tropo- 
+sferadan yuqoridagi qatlami. Balandligi
+9-17 km dan 50-55 km gacha. Harorat 
+quyi qismida -45 °C dan -75 °C gacha 
+pasayadi, yuqori qismida +10 °C gacha 
+ko‘tariladi.
+Sutka -  Yer o‘z o‘qi atrofida bir marta 
+to‘liq aylanishi uchun ketgan vaqt.
+Suvayirg‘ich — daryolar, dengizlar, 
+okeanlarga 
+suv 
+keladigan 
+hududlar 
+(havzalar)ni bir-biridan ajratib turadigan 
+chegara.
+Suvli qatlam — Yer po‘stining g‘ovak 
+tog‘ jinslari bo‘shliqlarida, yoriqlarda
+107
+TERMIN 
+VA TUSHUNCHALARNING IZOHLI LUG‘ATI
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+TERMIN 
+VA TUSHUNCHALARNING IZOHLI LUG‘ATI
+108
+d&L Oedurtm-uz
+Ta'lim Markazi
+suv siljib yuradigan qatlami. Bu qatlam 
+yer yuziga chiqqan joylarda buloq hosil 
+bo‘ladi.
+suvni 
+o‘tkazmaydigan 
+jinslar 
+-
+suvni o‘tkazmaydigan yoki juda sekin 
+o‘tkazadigan tog‘ jinslari: gil, granit, 
+marmar va b.
+suvni o‘tkazuvchi jinslar -  suvni 
+singdirib o‘tkazuvchi tog‘ jinslari: shag‘al, 
+qum, ohaktosh, bo‘r va b.
+suvning dunyoda aylanishi — Quyosh 
+issiqligi natijasida okean va dengizlar- 
+dan suv bug‘lanib, ularni shamol quruq- 
+liklarga olib borishi hamda quruqlikda 
+yog‘in bo‘lib yog‘ib, yana okean va 
+dengizlarga oqib kelishi.
+Тabiat -  butun atrofimizni o‘rab olgan 
+tabiiy borliq.
+Тabiat kompleksi — tabiatning o‘zaro 
+ta’sir etib, yagona tabiiy tizim hosil qi- 
+luvchi komponentlari, ya’ni tog‘ jinslari, 
+relyef, iqlim, suvlar, tuproq, o‘simlik va 
+hayvonot dunyosining uyg‘unligi. Har xil 
+kattalikda bo‘ladi: geografik qobiq, geo- 
+grafik mintaqa, tabiat zonasi va b.
+Тabiat komponentlari — tog‘ jins­
+lari, 
+iqlim, 
+suvlar, 
+tuproq, 
+o‘simlik, 
+hayvonot dunyosi. Bular birgalikda tabiat 
+kompleksini hosil qiladi.
+ТаЫ а^ muhofaza qilish — tabiatni 
+toza tutish, saqlash va boyitish uchun 
+qilinadigan barcha ishlar (tadbirlar).
+Тabiat zonasi (geografik zona) — 
+geografik mintaqalar doirasida Quyosh 
+issiqligi va havo namligi ta’sirida o‘sim- 
+liklari, hayvonot dunyosi va tuproqlari 
+bir-biridan farq qiluvchi hududlar.
+Тashqi kuchlar (ekzogen kuchlar) — 
+Quyosh nuri, issiqligi, og‘irlik kuchi, suv, 
+shamol va organizmlar. Bular ta’sirida 
+qattiq tog‘ jinslari nuraydi, maydalanadi, 
+bir joydan boshqa joyga ko‘chadi, tog‘lar 
+pasayadi, chuqurliklar to‘ladi, yer yuzasi 
+tekislanadi.
+Тektonik ko‘l — ko‘l suvi to‘ldirgan 
+chuqurlik, botiq tektonik yo‘l (Yerning
+ichki kuchlari ta’sirida) bilan hosil bo‘lgan 
+bo‘lsa, tektonik ko‘l deyiladi.
+Тog‘lar 
+— 
+Yer 
+po‘stining 
+dengiz 
+sathidan 500 m dan baland bo‘lgan 
+notekisliklari. Tog‘lar burmali, palaxsali, 
+burmali-palaxsali bo‘ladi.
+^ o p ik  iqlim — tropik geografik keng- 
+liklarning yil bo‘yi issiq bo‘ladigan iqlimi.
+Тropik m intaqa — Yerning shimoliy 
+va janubiy yarimsharlarida 20°-30° keng- 
+liklar orasidagi geografik mintaqalar. 
+Cho‘l, chala cho‘l, savanna va tropik 
+o‘rmonlar bor.
+^ o p ik  chiziqlar — ekvatordan shimol 
+va janub tomonlarda 23,5° kengliklar- 
+dan o‘tkazilgan parallel chiziqlar. Bu 
+kengliklarda Quyosh bir yilda bir marta 
+(yozda, Shimoliy yarimsharda 22-iyunda, 
+Janubiy yarimsharda 22-dekarbda) tush 
+vaqtida qoq tepaga -  zenitga keladi.
+Тroposfera — atmosferaning eng past- 
+ki qatlami. Qalinligi 8-9 km dan 17 km 
+gacha. Ob-havodagi barcha harakat va 
+o‘zgarishlar shu qatlamda bo‘ladi.
+^ m a n  — havo soviganida yer yuzasi 
+ustidagi namga to‘yingan havodagi suv 
+bug‘laridan hosil bo‘ladigan juda mayda 
+suv tomchilari.
+^ p r o q  — yer yuzasida joylashgan, 
+unumdorlik 
+xususiyatiga 
+ega 
+bo‘lgan 
+g‘ovak tog‘ jinslari. Tarkibida chirindi 
+va minerallar qancha ko‘p bo‘lsa, tuproq 
+shuncha unumdor bo‘ladi.
+^ ‘g‘on ko‘l — tog‘ qulashi, vulqon 
+lavalari, muzlik morenalari va boshqalar 
+daryo vodiysini to‘sib qolishi natijasida 
+hosil bo‘lgan ko‘llar. Masalan, Pomir 
+tog‘laridagi Sarez ko‘li.
+ufq — ochiq, tekis, keng joyda kuza- 
+tuvchiga 
+osmon 
+gumbazi 
+bilan 
+yer 
+yuzasi tutashgandek ko‘rinadigan aylana 
+shakldagi chiziq.
+voha — cho‘l, chala cho‘l, dashtlarda 
+aholi suv chiqarib, obod qilgan ekinzorlar, 
+bog‘lar bilan qoplangan yerlar. 
+vulqon — Yer po‘stida tektonik hara-
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+katlar natijasida hosil bo'lgan yoriqlardan 
+yer yuziga lava, qaynoq gaz, suv bug‘lari, 
+toshlar, kul otilib chiqishi va ulardan hosil 
+bo‘lgan tog‘lar.
+Yadro (Yer yadrosi) — Yerning mar- 
+kaziy qismi. Radiusi 3470 km ga yaqin. 
+Asosan temirdan 
+iborat deb 
+taxmin 
+qilinadi.
+Yarimorol — uch tomondan suv bilan 
+o‘ralib, faqat bir tomonda katta quruqlik 
+bilan tutashgan yer. Masalan, Hindiston, 
+Qrim, Bolqon, Kamchatka yarimorollari.
+Yassitog‘lar — dengiz sathidan 500 m 
+dan baland bo‘lgan, yer yuzasi tekis yoki 
+biroz to‘lqinsimon bo‘lgan tog‘lar.
+Yerning qutblari — Yer aylanash 
+o‘qining yer yuzasi bilan kesishgan nuq- 
+talari. Ikkita geografik qutb — Shimoliy 
+va Janubiy qutblar mavjud.
+Yer osti suvlari — Yer po‘stining yuza 
+(12-16 km chuqurlikkacha) qismidagi 
+suvlar.
+Yer usti suvlari — quruqlikdagi daryo, 
+ko‘l, botqoqlik, muzlik suvlari.
+Yoqilg‘i mineral boyliklar -  ko‘mir, 
+neft, gaz, torf, slanets foydali qazilmalari.
+Yulduz — o‘ta qizigan gazlardan (plaz- 
+madan) tarkib topgan, o‘zidan koinotga 
+yorug‘lik va issiqlik tarqatib turuvchi, 
+bizning 
+Quyoshga 
+o‘xshagan 
+osmon 
+jismlari.
+0 ‘zan 
+— 
+daryo 
+vodiysining 
+eng 
+past, suv oqadigan chuqur qismi. Katta 
+daryolarda o‘zanning kengligi bir necha
+metrdan yuzlab, minglab metrga boradi.
+0 ‘zan 
+ko‘l 
+— 
+daryolarning 
+eski 
+o‘zanida hosil bo‘lgan ko‘l. Ko‘rinishi 
+ko‘pincha yangi oy shaklida bo‘ladi.
+G‘arbiy shamollar — Yerning shimoliy 
+va janubiy yarimsharlarining o‘rta keng- 
+liklarida troposferaning yuqori qismi va 
+stratosferada g‘arbdan sharqqa esadigan 
+doimiy shamollar.
+Shartli belgilar — joy planlari va 
+xaritalarda tabiiy obyektlar, shaharlar, 
+binolar, ekinzorlar va boshqalarni aks 
+ettiruvchi belgilar.
+Sharshara — daryo suvining o‘zandagi 
+jarliklarda otilib tushishi. Sharsharalar 
+qattiq tog‘ jinslari yer yuzasiga chiqib 
+qolgan joylarda bo‘ladi.
+Shelf — okean va dengizlarning chekka 
+qismlarida joylashgan, chuqurligi 200 m 
+gacha bo‘lgan qismlari -  materiklarning 
+dengizdagi davomi.
+Shudring — namga to‘yingan havo 
+tunda sovib, o‘tlarga va yerdagi boshqa 
+predmetlarga 
+tushib 
+qoladigan 
+suv 
+tomchilari.
+Chekka dengiz — materiklarning chek­
+ka qismlarida joylashgan dengizlar.
+Cho‘kindi jinslar -  dengiz, okean, daryo 
+va past yerlarda suv keltirib yotqizgan 
+tog‘ jinslari. Masalan, shag‘al, gil, loyqa, 
+qum, tuzlar, organik qoldiqlar.
+Cho‘l — iqlimi issiq, yog‘in kam o‘lka- 
+larda vujudga keladigan tabiat kompleksi, 
+zonasi.
+109
+TERMIN 
+VA TUSHUNCHALARNING IZOHLI LUG‘ATI
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+MUNDARIJA
+Darslik bilan qanday ishlash k e ra k ? ................................................................ 3
+I bob. Geografiya fani va uning rivojlanishi...................................................4
+1- §. Kirish. Geograf iya nimani o‘rganadi?..........................................4
+2- §. Geografik kashfiyotlar va hozirgi zamon geografiyasi.................  7
+ii bob. Yer — Quyosh sistemasidagi sayyora ................................................ 11
+3- §. Quyosh, Oy va yulduzlar..................................................................11
+4-§. Yerning shakli va o‘lchamlari........................................................... 16
+5-.§. Yerning o‘z o‘qi va Quyosh atrofida aylanishi.......................... 19
+III bob. geografik x a rita la r............................................................................... 23
+6- §. Azimut va masofani o‘lch ash .........................................................23
+7- §. Joy balandligi......................................................................................27
+8-§. M asshtab.............................................................................................. 30
+9-.§. Amaliy mashg‘u lo t.............................................................................32
+10- §. Geografik xaritalar...........................................................................33
+11- §. Geografik koordinatalar....................................................................38
+12-§. Amaliy mashg‘ulot.............................................................................41
+i v  bob. yerning qattiq qobig‘i — litosfera.....................................................43
+13-.§. Yerning ichki tuzilishi...................................................................... 43
+14- §. Litosfera. Tog‘ jinslari...................................................................... 45
+15- §. Yer po‘stining harakatlari................................................................51
+16- §. Yer yuzasi relyefining asosiy shakllari..........................................55
+v .bob. yerning suv qobig‘i — g id ro sfera.......................................................59
+17- §. Gidrosferaning tarkibi. Dunyo o k eani..........................................59
+18- §. Daryolar.............................................................................................. 63
+19- §. Ko‘l va muzliklar. Yer osti su v lari..............................................66
+20- §. Umumlashtiruvchi takrorlash.........................................................71
+v i bob. yerning havo qobig‘i — atm o sfera...................................................73
+21- §. Atmosferaning tuzilishi....................................................................73
+22- §. Havo harorati va b o sim i................................................................75
+23- §. Amaliy mashg‘u lo t...........................................................................79
+24- §. Shamol.................................................................................................80
+25- §. Havoning namligi va yog‘in lar.....................................................84
+26- §. Amaliy mashg‘u lo t...........................................................................88
+27-§. Ob-havo va iqlim .............................................................................90
+v ii bob. Biosfera. inson va ta b ia t....................................................................94
+110 
+28- §. Yerning hayot qobig‘i — biosfera................................................ 94
+29- §. Tabiat zonalari....................................................................................96
+30- §. Umumlashtiruvchi takrorlash.........................................................100
+Mustaqil o‘qish u ch u n .......................................................................................... 102
+Inson va ta b ia t............................................................................................ 102
+Termin va tushunchalarning izohli lug‘a ti..........................................104
+d&L Oedurtm-uz
+Ta'lim Markazi
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+GULYAMOV PATAXKAMAL NASIROVICH, 
+QURBONNIYOZOV RUSTAM ,
+AVEZOV MUXRIDDIN MAQSUD O‘G‘LI, SAIDOVA NOZIMA PATAXKAMALOVNA
+GEOGRAFIYA
+(Tabiiy geografiya boshlang‘ich kursi)
+Umumiy o‘rta ta’lim maktablarining 5-sinfi uchun darslik
+Qayta ishlangan va to‘ldirilgan 5- nashri
+TOSHKENT — «MITTI YULDUZ» — 2020
+Muharrir — A. Nurmatov 
+Rassom — L.Dabija 
+Texnik muharrir — E.Tolochko 
+Musahhiha — N.Kabirova 
+Sahifalovchi — H.Xo‘jayeva 
+Kartograflar — M.Avezov, U.Ergashev
+Nashriyot litsenziyasi AA ‘0047. 18.03.2020-y. Original-maketdan 
+16.06.2020 bosishga ruxsat etildi. Bichimi 70x90 716.
+Kegli 12 shponli. «Times New Roman» garniturasi. Ofset bosma usulda bosildi. 
+Shartli bosma tabog‘i 8,19. Nashr bosma tabog‘i 7,0.
+Nusxasi 500 940. Buyurtma 20-309.
+Darslikning original maketi «MITTI YULDUZ» nashriyotida 
+qayta nashrga tayyorlandi va unga tegishlidir. Nashriyot ruxsatisiz 
+matn va rasmlardan foydalanish taqiqlanadi.
+Toshkent sh. Navoiy ko‘chasi, 30-uy.
+Tel: 71-244-71-90. e-mail: mitti-yulduz2003@mail.ru
+«O‘ZBEKISTON» NMIU bosmaxonasida bosildi.
+100011, Toshkent shahri, Navoiy ko‘chasi, 30-uy.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+edurtm uz
+Ijaraga berilgan darslik holatini ko‘rsatuvchi jadval
+№
+O‘quvchining 
+ismi, familiyasi
+O‘quv
+yili
+Darslik-
+ning
+olingan-
+dagi
+holati
+Sinf rah- 
+bari-ning 
+imzosi
+Darslik- 
+ning top- 
+shiril-gandagi 
+holati
+Sinf
+rahbari-
+ning
+imzosi
+1
+2
+3
+4
+Darslik ijaraga berilib, o‘quv yili yakunida qaytarib olinganda yuqor- 
+idagi jadval sinf rahbari tomonidan quyidagi baholash mezonlariga
+asosan to‘ldiriladi:
+Yangi
+Darslikning birinchi marotaba foydalanishga berilgandagi holati
+Yaxshi
+Muqova butun, darslikning asosiy qismidan ajralmagan. Barcha 
+varaqlari mavjud, yirtilmagan, ko‘chmagan, betlarida yozuv va
+chiziqlar yo‘q
+Qoniqarli
+Muqova ezilgan, birmuncha chizilib, chetlari yedirilgan, 
+darslikning asosiy qismidan ajralish holati bor, foydalanuvchi 
+tomonidan qoniqarli ta’mirlangan. Ko‘chgan varaqlari qayta 
+ta’mirlangan, ayrim betlariga chiziligan
+Qoniqar-
+siz
+Muqovaga chizilgan, yirtilgan, asosiy qismidan ajralgan 
+yoki butunlay yo‘q, qoniqarsiz ta’mirlangan. Betlari yirtilgan, 
+varaqlari yetishmaydi, chizib, bo‘yab tashlangan. 
+Darslikni tiklab bo‘lmaydi.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+
+Qedurtm_uz
+GULYAMOV PATAXKAMAL NASIROVICH, 
+QURBONNIYOZOV RUSTAM ,
+AVEZOV MUXRIDDIN MAQSUD O‘G‘LI, SAIDOVA NOZIMA PATAXKAMALOVNA
+GEOGRAFIYA
+(Tabiiy geografiya boshlang‘ich kursi)
+Umumiy o‘rta ta’lim maktablarining 5-sinfi uchun darslik
+Qayta ishlangan va to‘ldirilgan 5- nashri
+TOSHKENT — «MITTI YULDUZ» — 2020
+Muharrir — A. Nurmatov 
+Rassom — L.Dabija 
+Texnik muharrir — E.Tolochko 
+Musahhiha — N.Kabirova 
+Sahifalovchi — H.Xo‘jayeva 
+Kartograflar — M.Avezov, U.Ergashev
+Nashriyot litsenziyasi AA ‘0047. 18.03.2020-y. Original-maketdan 
+bosishga ruxsat etildi 16.06.2020. Bichimi 70x90 716.
+Kegli 12 shponli. «Times New Roman» garniturasi. Ofset bosma usulda bosildi. 
+Shartli bosma tabog‘i 8,19. Nashr bosma tabog‘i 7,0.
+Nusxasi 61 088. Buyurtma 20-310.
+Darslikning original maketi «MITTI YULDUZ» nashriyotida 
+qayta nashrga tayyorlandi va unga tegishlidir. Nashriyot ruxsatisiz 
+matn va rasmlardan foydalanish taqiqlanadi.
+Toshkent sh. Navoiy ko‘chasi, 30-uy.
+Tel: 71-244-71-90. e-mail: mitti-yulduz2003@mail.ru
+«O‘ZBEKISTON» NMIU bosmaxonasida bosildi.
+100011, Toshkent shahri, Navoiy ko‘chasi, 30-uy.
+@ELEKTRON_DARSLIKBOT dan yuklab olindi.
+

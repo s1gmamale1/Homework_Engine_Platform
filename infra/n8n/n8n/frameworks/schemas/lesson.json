@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lesson (Stage 01 Extractor output)",
+  "type": "object",
+  "required": ["lesson_id", "subject", "grade", "lang", "source_hash", "title", "body_md", "headings", "vocabulary", "formulas", "worked_examples", "figures", "prerequisites", "word_count"],
+  "properties": {
+    "lesson_id": { "type": "string" },
+    "subject": { "type": "string" },
+    "grade": { "type": "integer", "minimum": 1, "maximum": 11 },
+    "lang": { "type": "string", "enum": ["uz", "ru"] },
+    "source_hash": { "type": "string" },
+    "title": { "type": "string" },
+    "body_md": { "type": "string", "minLength": 200 },
+    "headings": { "type": "array", "items": { "type": "string" } },
+    "vocabulary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["term", "definition_in_source"],
+        "properties": {
+          "term": { "type": "string" },
+          "definition_in_source": { "type": "string" }
+        }
+      }
+    },
+    "formulas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "expression", "context"],
+        "properties": {
+          "name": { "type": "string" },
+          "expression": { "type": "string" },
+          "context": { "type": "string" }
+        }
+      }
+    },
+    "worked_examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["problem", "solution", "source_location"],
+        "properties": {
+          "problem": { "type": "string" },
+          "solution": { "type": "string" },
+          "source_location": { "type": "string" }
+        }
+      }
+    },
+    "figures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["caption", "description", "source_location"],
+        "properties": {
+          "caption": { "type": "string" },
+          "description": { "type": "string" },
+          "source_location": { "type": "string" }
+        }
+      }
+    },
+    "prerequisites": { "type": "array", "items": { "type": "string" } },
+    "word_count": { "type": "integer", "minimum": 1 }
+  }
+}

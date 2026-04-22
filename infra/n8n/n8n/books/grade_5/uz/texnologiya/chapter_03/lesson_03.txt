@@ -1,0 +1,64 @@
+# Energiya va Mexatronika — 3-dars
+
+3-§.
+Gidravlik uzatmalar
+Elektr energiyani ishlab chiqarishning eng keng tarqalgan usuli bu suv asosida
+olinayotgan energiyadir, ya’ni gidroenergetika. Bu energiyani olishda kо‘plab gidravlik
+uzatmalardan foydalaniladi.
+Gidravlika (yunoncha “hidor” va “aulos” – “naycha”) – suyuqliklarning  muvo­
+zanat va harakat qonunlarini oʻrganish bilan shugʻullanadi.
+Suyuqliklar ishtirokida bir mexanizmning ikkinchi mexanizmini harakatga kel­
+tirishiga asoslangan mexanizmlar gidravlik uzatmalar deyiladi.
+Ishlash prinsipiga qarab gidravlik uzat­malar hajmiy va gidrodinamik tur­lar­ga
+bo‘l­i­nadi:
+1. Hajmiy gidravlik uzatmalar haj­miy nasoslar yordamida ishlaydi. Bun­day uzat­
+malarda energiya suyuqlik orqali yetaklovchi valdan statik bosim sifatida uzatilib,
+gidrodvigatelni ishga tushiradi.
+Bu uzatma gidrostatik uzatma ham de­
+yiladi.
+Hajmiy
+gidravlik
+uzatmalarga
+gidro­
+trans­formatorni misol qilib keltirish mumkin
+(4-rasm). Gidrotransformator (Transformator
+lotincha “transformo” – “oʻzgartiraman”) su­
+yuqlik ta’sirida harakatni o‘zgartirib beradigan
+gid­ravlik uzatmadir.
+2. Gidrodinamik uzatmalar parrakli gid­
+ro­mashinalar yordamida ishlaydi. Bu yer­
+da ish g‘ildiraklarga beriladigan bosim na­ti­
+jasida amalga oshiriladi. Bu uzatmalar ba’­zan
+turbouzatma deb ataladi. Bunga sabab ularda
+markazdan qochma nasos va gidravlik tur­
+binalardan birgalikda foydalanilganligidir.
+Gidrodinamik uzatmalarga yuk ko‘tarish
+moslamasi (domkrat)ni misol qilib keltirish
+mumkin (5-rasm).
+Mustahkamlash uchun savollar
+1. Elektr dvigatellar (motorlar) deb nimaga aytiladi?
+2. Batareyalar va ularning turlarini tushuntirib bering.
+3. Nima uchun batareyalarga tushirilgan chiqindi qutisi belgisi ustidan
+taqiq chizig‘i tortib qo‘yiladi?
+4. Ishlatib bo‘lingan batareyalarni utilizatsiya qilish deganda
+nimani tushunasiz?
+4-rasm. Gidrotransformator:
+1 – qulflash muftasi; 2 – turbina g‘il­
+diragi; 3 – nasos g‘ildiragi; 4 – reaktor
+g‘ildiragi; 5 – tishli uzatma.
+1
+2
+3
+4
+5
+
+205
+205
+5-rasm. Yuk ko‘tarish moslamasi (domkrat): 1 – asos; 2 – porshen; 3 – ishchi suyuqlik
+(jidkost); 4 – tayanch nuqtasi; 5 – silindr; 6 – dasta; 7 – nasos; 8 – bosimni pasaytiruvchi
+klapan.
+1. Gidravlika deganda nimani tushunasiz?
+2. Qanday uzatmalar gidravlik uzatmalar deb ataladi?
+3. Ishlash prinsipiga qarab gidravlik uzatmalar qanday turlarga bo‘linadi?
+4. Yuk ko‘tarish moslamasi (domkrat) gidravlik uzatmaning qaysi turiga ki­
+radi? Undan qanday maqsadlarda foydalaniladi?

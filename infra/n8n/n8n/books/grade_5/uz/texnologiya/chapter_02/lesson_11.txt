@@ -1,0 +1,185 @@
+# Servis Xizmati — 11-dars
+
+11-§.
+TIKUV MashinaSIga  iP  o‘rnatish,  mashina
+chok­la­ridan  namunalar  tikish
+Mashinada baxyaqator tikishda nima­larga rioya qilish kerak?
+Tikuv mashinasining ignalari to‘mtoq, qiy­shaygan, mo‘rt bo‘l­mas­ligi kerak.
+Mashinani ishga tay­yorlash ostki va ustki iplarni o‘rnatish bilan boshlanadi.
+Tikayotgan buyum turiga, ya’ni gazlamaning qalin-yupqaligiga qarab igna va
+ip tanlanadi. Igna va ip to‘g‘ri tanlansa ish sifatli bajariladi. Paxta va zig‘ir tolali
+gazlamalarni tikishda 35–50-raqamli iplardan foydalaniladi. Ularning raqami 10
+dan 120 gacha bo‘ladi. Ularning o‘lchamlari raqami ortgan sari ip shuncha ingichka
+bo‘ladi. Ostki ip g‘altakka tikish jarayonining miqdoriga qarab o‘raladi. Har bir tikuv
+mashinasining o‘z g‘altagi  bo‘ladi. Ish jarayonida faqat o‘sha g‘altakni ishlatish
+kerak. Shunda ish sifatli bajariladi.
+
+155
+155
+8-amaliy mashg‘ulot
+Ostki va ustki iplarni o‘rnatish
+1.	 G‘altakni qo‘yish moslamasi.
+2.	 Ipni yo‘naltirgich (orqa).
+3.	 Ipni yo‘naltirgich (old).
+4.	 Ustki ipni taranglovchi
+regulator.
+1
+2
+3
+4
+Ustki ipni o‘rnatish
+5.	 Chegaralovchi prujina.
+6.	 Ipni yo‘naltiruvchi richag.
+7.	 Ip yo‘naltiruvchi.
+8.	 Igna quloqchasi.
+Ostki ipni o‘rnatish
+1. Ustki ip.
+
+
+3. Ostki ip.
+2. Ostki ip yo‘rmasi.
+
+4. Tepki.
+1
+2
+3
+4
+5
+6
+7
+8
+
+156
+156
+Ushbu jarayonni bir necha marotaba takrorlab ko‘ring. So‘ngra bir-biringizni
+tekshiring.
+Har qanday rusumdagi mashinada ishlashdan oldin tikuv mashina­sining ishga
+yaroqli ekanligiga ishonch hosil qilish kerak. Ishni  yakunlagunga qadar tikish
+qoidalariga rioya qiling. Bu sifatli mahsulot yaratish garovidir. Siz qo‘l choklarini
+tikishni o‘rganib oldingiz. Mashina choklari deganda nimani tushunasiz? Agar
+yaxshilab tahlil qilsak, ikkala chok ham bir-biri bilan chambarchas bog‘liq.
+Baxyaqatorning sifatli chiqishida qaviqqatorning o‘rni katta.
+Baxyaqator hosil bo‘lishi uchun ostki ip moki ichi­dagi naychadan, ustki ip
+g‘altakdan keladi. Ignaning ostki va ustki iplari chatishishi natijasida baxyaqator
+hosil bo‘ladi. Baxyaqatorning uzun­ligi buyumning yupqa yoki qalinligiga qarab
+belgilanadi. Buyumni tikish­dan oldin va yakunida baxyaqator mustahkamlanadi.
+Bunda bizga ipni uzun-qisqa qiluvchi mashina moslamasi yordam beradi.
+Tikuv mashinasida baxyaqator tikishda nimalarga rioya qilish
+kerak?
+Tikuv mashinasida ishlashda amal qilinadigan qoidalar
+1. Mashina chokining turi, gazlamaning qalin-yupqaligiga qarab igna va ip
+tanlanadi.
+2.  Ustki va ostki iplarning raqami bir xil bo‘lishi kerak.
+3.  Iplarni o‘rnatish qoidalariga qat’iy rioya qiling.
+4.	 Baxyaqatorning uzunligini tanlashda gazlama­ning rangi, guli, yo‘llariga aha­
+miyat bering.
+5. Tikishdan oldin buyumni ignaning chap to­moniga  qu­lay joylashtiring.
+6. Baxyaqatorni shoshmas­dan qo‘l choki bilan belgilangan chiziq bo‘yicha tiking.
+7. Baxyaqator boshida va yakunida chokni mustah­kam­lashni unutmang.
+
+157
+157
+Mashina chokini bajarish uchun kerakli
+jihozlar: paxta yoki zig‘ir tolali gazlama
+qiytimi (30x30 cm), 40, 50-tikuvchilik ipi,
+mo­ki g‘altagi, qaychi, tikuvchilik bo‘ri, tikuv
+mashinasi.
+Diqqat qiling!
+Mashina chokini
+tikishda gazlamaning
+bo‘ylama ipi bo‘yicha
+baxyaqator yuriting.
+Gazlamaning o‘ngi va
+teskarisiga ahamiyat
+bering.
+T/r
+Chоkning nоmlаnishi vа
+ishning bаjаrilish tаrtibi
+Grаfik ko‘rinishi
+1
+1.	 Biriktirmа chоk –
+buyumning yon, yеlkа
+vа bоshqа qirqimlаrini
+birlаshtirishdа ishlаtilаdi. Ikki
+dеtаl o‘ngini ichkаrigа qаrаtib
+qo‘yilаdi. Qirqimlаri bir-
+birigа to‘g‘rilаnib, qo‘l chоki
+оldidаn  tikilаdi. Qo‘l chоki оlib
+tаshlаnib, dаzmоllаnаdi.
+2.	 Yorib dаzmоllаnаdigаn birik­
+tirmа chоk – buyumning yon,
+yеlkа vа bоshqа qirqimlаrini
+ustidаn tikilаdi. Qo‘l chоki оlib
+tаshlаnib, yorib  dаzmоllаnаdi
+2
+Qo‘ymа chоk –  bir bo‘lаk
+o‘rnigа ikkinchi bo‘lаk o‘ngini
+qo‘yib, ko‘klаb chiqilаdi.
+Тo‘g‘ri ko‘rinishdаgi chоk bilаn
+qirqimdаn 0,5 cm kеnglikdа
+tikilаdi. Кo‘klаsh chоki оlib
+tаshlаnаdi vа dаzmоllаnаdi
+0,5 – 1,5
+
+158
+158
+3
+Оchiq qirqimli buklаmа chоk –
+buyumning qirqimi аvvаl yormа
+chоkdа tikib оlinаdi. Qirqim
+buklаnib, to‘g‘ri qаviqqаtоr
+yurgizilаdi. Кo‘klаsh chоkidаn
+0,1 cm оrаliqdа bахyaqаtоr
+yurgizilаdi. Qo‘l chоki оlib
+tаshlаnib, dаzmоllаnаdi
+4
+Yopiq qirqimli buklаmа chоk –
+bo‘lаk qirqimi tеskаrigа buklаb
+to‘g‘ri qаviqqаtоr yurgizilаdi.
+Buyumning qаlin-yupqаligigа
+qаrаb yanа buklаnаdi, to‘g‘ri
+qаviqqаtоr yurgizilаdi.
+Кo‘klаsh chоkidаn 0,1 cm
+оrаliqdа bахyaqаtоr yurgizilаdi.
+Qo‘l chоki оlib tаshlаnib,
+dаzmоllаnаdi
+Mustahkamlash uchun savol va topshiriqlar
+1.	 Tikuv mashinasida ustki ip o‘rnatish jarayonini gapi­rib bering.
+2.	 Tikuv mashinasida ostki ip o‘rnatish jarayonini so‘zlab bering.
+3.	 Baxyaqator qanday hosil bo‘ladi? Baxyaqatorni mus­tah­kamlash
+de­gan­da nimani tushunasiz?
+4.	 Tikuv mashinasida ishlashda qanday qoidalarga rioya qilish kerak?
+5.	 Mashina choklarini tikish jarayoni qiyinchilik tug‘dirmadimi?
+Q i z i q a r l i   m a ʼ l u m o t
+Uy sharoitida buyumga namlab-isitib ishlov berish jarayonini “bug‘lash
+generatori” yordamida amalga oshirsa bo‘ladi. Аyniqsa, bunday moslamadan
+pardalarni dazmollashda, kostum-shim, paltolarni turgan holatda namlab-
+isitishda foydalansa maqsadga muvofiqdir. Ushbu moslama ish vaqtida
+changni o‘ziga olmaydi. Ekologik jihatdan ishni toza va sifatli bajaradi.
+0,7
+0,1 – 0,2
+
+159
+159
+Buyumni bichish va tikish haqida ma’lumotga ega bo‘lishdan avval kiyimlar
+xususiyatlari haqida qisqacha tanishib olamiz.
+Kiyim – inson tanasini  atrof-muhitning har xil ta’sirlaridan hi­moya qiladi. Kiyim
+deganda ichki kiyim, ko‘ylak, ustki kiyim, bosh ki­yim, poyabzal, qo‘lqop, paypoq
+kabilar tushuniladi. Barcha kiyimlar
+maishiy vazifasiga ko‘ra kundalik,
+tantanali, uy, sport kiyimlariga
+bo‘linadi. Bundan tashqari, max­
+sus, rasmiy, sanitariya kiyim tur­
+lari ham mavjud. Maxsus ish
+kiyimlari ishlab chiqarish xavfi va
+zararlaridan saqlaydi. Ular maxsus
+kostum, plash, kurtka, shim, kom­
+binezonlardan iborat bo‘ladi.
+Bi­chish deb  ma’lum tayyor­
+langan andazani gazlama ustiga
+joylash­tirib, kerakli detallarni
+olishga aytiladi. Qadimda odamlar
+gav­dadan o‘lchov olib bichishni
+2.4. Konstruksiyalash va modellashtirish asoslari
+Kiyim fasonini tikish jarayonida o‘zgartirsa bo‘la­dimi?
+Maxsus kiyim turlari.

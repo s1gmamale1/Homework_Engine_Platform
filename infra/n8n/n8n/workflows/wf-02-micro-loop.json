@@ -1,0 +1,53 @@
+{
+  "name": "NETS WF-02 Micro Loop",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "d4e5f6a7-0002-0002-0002-000000000001",
+      "name": "Start",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "workflowId": { "value": "NETS WF-03 Extractor", "__rl": true, "mode": "name" },
+        "options": {}
+      },
+      "id": "d4e5f6a7-0002-0002-0002-000000000002",
+      "name": "Run Extractor",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "workflowId": { "value": "NETS WF-04 Phase Sessions", "__rl": true, "mode": "name" },
+        "options": {}
+      },
+      "id": "d4e5f6a7-0002-0002-0002-000000000003",
+      "name": "Run Phase Sessions",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "workflowId": { "value": "NETS WF-05 Assembler", "__rl": true, "mode": "name" },
+        "options": {}
+      },
+      "id": "d4e5f6a7-0002-0002-0002-000000000004",
+      "name": "Run Assembler",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 2,
+      "position": [900, 300]
+    }
+  ],
+  "connections": {
+    "Start": {"main": [[{"node": "Run Extractor", "type": "main", "index": 0}]]},
+    "Run Extractor": {"main": [[{"node": "Run Phase Sessions", "type": "main", "index": 0}]]},
+    "Run Phase Sessions": {"main": [[{"node": "Run Assembler", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1"},
+  "active": false
+}

@@ -1,0 +1,42 @@
+# Tasvirlar bilan ishlash — 8-dars
+
+40
+Bo‘g‘irsoq rasmini chizish
+Kichik qahramonimiz Bo‘g‘irsoq bilan tanishing. U
+juda quvnoq va oddiy. Uni chizish uchun rasm chizish
+bo‘yicha o‘zlashtirgan barcha ko‘nikmalaringizdan
+foydalaning. Bu quyidagicha amalga oshiriladi:
+1-mashg‘ulot
+O‘z sherigingiz bilan Bo‘g‘irsoq rasmiga qarang.
+Qahramonimizning turli qismlarini qaysi uskunalar
+yordamida chizish haqida fikr almashing. Uni chizish uchun Line, Brush,
+Shape uskunalaridan, nusxa olish va qayta joylash buyruqlaridan ham
+foydalansa bo‘ladi. Ulardan qayerda foydalana olishingiz mumkinligini eslab
+oling.
+2-mashg‘ulot
+Oʻrgangan barcha uskunalaringizdan foydalanib Bo‘g‘irsoq tasvirini yarating.
+So‘ngra uni belgilab, nusxalang va yoniga qayta joylang. Endi sizda ikkita
+qahramon bor!
+3-mashg‘ulot
+Bo‘g‘irsoq tasvirini mos nom bilan saqlang.
+Ssenariy
+Shaklning konturi va ichki qismini turli ranglarda bo‘yash mumkin. Bu
+vazifani bajarishda Color 1 va Color 2 variantlari qo‘l keladi. Color 1
+chegara chizig‘ini, Color 2 shakl ichini bo‘yashda ishlatiladi. Color 1
+uskunasini bosib, shaklning tashqi chizig‘i uchun istalgan rangni tanlang.
+Keyin Color 2 uskunasi va rang turini ketma-ket tanlang.
+Endi chiziladigan shaklning tashqi chizig‘i va ichki qismi o‘zingiz tanlagan
+alohida ranglarda bo‘ladi.
+Koʻk tashqi chiziq va sariq bilan bo‘yalgan kvadrat chizing. Olovrang tashqi
+chiziq va binafsharangga boʻyalgan doira chizing.
+Masala
+Sichqonchaning
+chap tugmasi
+bosilsa, Brush
+uskunasi Color 1
+rangidan, oʻng
+tugmasi bosilsa,
+Color 2 rangidan
+foydalanadi.
+Maslahat
+@edurtm_uz

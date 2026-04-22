@@ -1,0 +1,54 @@
+# VI bob — 6-dars
+
+Ilmiy tadqiqotlarda moddalar haroratini o‘Ichash uchun laboratoriya
+termometrlaridan foydalaniladi. Laboratoriya termometrlari tibbiyot
+termometrlariga nisbatan haroratningancha keng oraliqdagi qiymatlarini
+o‘lchay oladi.
+Haroratni to‘g‘ri va aniq o'lchash uchun quyidagi tartibga amal qiling:
+1-qadam
+Termometrtik holatda turganiga ishonch hosil qiling.
+2-qadam
+Termometrdagi suyuqliksathini aniqlang.
+3-qadam
+Termometrdagi suyuqliksathi bilan ko'zlaringiz
+birxil balandlikda bo'lsin.
+? A
+4-qadam
+Termometrning suyuqlik sathiga to‘g‘ri keluvchi
+engyaqin daraja ko'rsatkichini aniqlang.
+
+Vaqt o'tishi bilan harorat qanday o'zgarishini qayd qilib borish va uni grafikda
+tasvirlash mumkin. Grafiktajriba natijalaridan xulosa chiqarishga imkon beradi.
+Quyidagi grafikda qizdirilayotgan suv haroratining vaqt o‘tishi bilan o‘zgarishi
+tasvirlangan.
+Vaqt (minut)
+Grafikka diqqat bilan qarang. Grafikning o'sib borgan
+qismini payqadingizmi? Qizdirish vaqtining ortib
+borishi bilan suv harorati ham ortib borgan. Lekin
+haroratningortishi muntazam davom etmagan.
+Suvning harorati 100 °C ga yetgandan so'ng ortishdan
+to‘xtagan. Sizningcha, buningsababi nima?
+
+raqamli
+termometr
+Haroratni aniq o'lchash uchun raqamli
+termometrlardan ham foydalaniladi.
+Muz haroratini o‘lchash uchun
+haroratga sezgirzond raqamli
+termometrga ulanadi.
+Bilimingizni sinab ko‘ring!
+Muzning erish harorati va distillangan
+suvning qaynash haroratini ayting.
+Quyidagi qaysi ko‘nikmalarni egalladingiz?
+Javoblarni daftaringizga belgilang.
+1. Suvning ba’zi xossalarini bayon eta olaman.
+2. Tadqiqot uchun kerakli jihozlarni tanlayman
+va ulardan to‘g‘ri foydalana olaman.
+3. OTchash ishlarini to‘g‘ri va aniq bajara olaman.
+4. Chiziqli grafikdan foydalanib tadqiqot natijalarini
+izohlay olaman.
+5. Tadqiqot natijalaridagi qonuniyatni hamda
+kutilmagan natijalarni aniqlay olaman.
+Mashq daftari
+4.1-amaLiy ish, 39-bet
+zond

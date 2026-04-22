@@ -1,0 +1,10086 @@
+Mashq 
+Mashq 
+daftariga 
+daftariga o‘
+o‘ting 
+ting 
+darslikning tegishli joylariga 
+qoʻyilgan boʻlib, mashq daftari 
+bilan ishlash zarurligini bildiradi.
+Qarang va o‘rganing
+Qarang va o‘rganing
+rukni matematik tushunchalarni 
+rasm orqali tanishtiradi, ularni 
+abstrakt (timsolli) darajada 
+tushunishga yordam beradi.
+Eslang
+Eslang
+rukni oʻquvchilarni yangi 
+mavzuga oid oldin oʻrgangan 
+tayanch bilimlarini 
+takrorlashga yoʻnaltiradi.
+O‘ylab ko‘ring
+O‘ylab ko‘ring
+rukni o‘quvchilarni topshiriq 
+yoki mashqlarni bajarishdan 
+oldin o‘ylashga va mulohaza 
+yuritishga undaydi. 
+Muhokama qiling
+rukni oʻquvchilarni yangi 
+matematik tushunchalarni 
+oʻrganishga tayyorlaydi.
+Oʻqituvchi oʻquvchilarni 
+mavzuga oid rasm yoki video 
+asosida suhbat (muhokama)
+ga jalb qiladi va uni 
+boshqaradi.
+So‘zboshi
+“AHA! Matematika” – qoʻlingizdagi darslikni shunday nomladik. “AHA!” soʻzi, bir tomondan, 
+matematika fani sirlarini kashf qilish jarayonidagi zavqli hayqiriq boʻlsa, ikkinchi tomondan, 
+bu moʻjizakor fanga berilgan “aniq”, “hayratlanarli” va “ajoyib” ta’riflarining bosh harflaridan 
+yasalgan soʻzdir.
+“AHA! Matematika” Oʻzbekiston sharoitiga moslab mahalliylashtirilgan darslikdir.  
+U “Moddiy-rasmli-timsolli” yondashuviga asoslangan boʻlib, AKT yordamida matematik 
+tushunchalarni yaxshiroq oʻrganishga yordam beradi. Darslik tarkibidagi amaliy topshiriqlar 
+matematikani oʻqitish samaradorligini oshirishga xizmat qiladi.
+Darslikdagi ruknlar oʻquvchilarning faol oʻrganishini rivojlantirishga yoʻnaltirilgan. 
+Oʻquvchilar ushbu darslik yordamida nafaqat yangi matematik bilim va koʻnikmalarni 
+oʻzlashtiradi, balki muammoli vaziyatlarda kerak boʻladigan mantiqiy fikrlash va mulohaza 
+yuritish kabi hayotiy koʻnikmalarga ham ega boʻladi.
+Matematika olamiga sayohatingiz qiziqarli va maroqli boʻlsin!
+i
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   3
+
+AKT mashqi
+AKT mashqi
+rukni egallangan bilimlarni 
+maxsus platformadagi axborot 
+texnologiyalaridan foydalangan 
+holda namoyish qilish kerakligini 
+anglatadi.
+Hamrohlar 
+Hamrohlar 
+Madina, Aziza, Akmal, Sardor 
+va Robi – qalin do‘stlar. Ular 
+o‘zlarining fikrlari, takliflari, 
+izohlari va savollari  orqali siz bilan 
+birgalikda matematikani o‘rganadi. 
+Juftlikda ishlang
+Juftlikda ishlang
+rukni oʻquvchilarga bir-
+birining oʻrganganlarini 
+baholash uchun juft 
+boʻlib ishlash sharoitini 
+yaratadi.
+O‘zingizni tekshiring
+O‘zingizni tekshiring
+rukni o‘quvchilarga bilimini 
+tekshirish va o‘z-oʻzini baholashda 
+yordam beradi.
+O‘rganing  
+va bo‘lishing
+rukni oʻquvchilarga muloqot 
+qilish va oʻrgangan bilimlarini 
+bir-birlari bilan boʻlishish 
+imkonini beradi.
+Qo‘lda bajariladigan 
+Qo‘lda bajariladigan 
+mashq
+mashq
+rukni oʻquvchilarni matematik 
+tushunchalarini rivojlantirish uchun 
+maxsus koʻrgazmali materiallardan 
+foydalanishga undaydi.
+Tekshirish
+Tekshirish
+O‘quvchilar masalalar 
+javoblarini tekshirish uchun 
+kalkulyatordan foydalanishi 
+mumkin.
+Bajaring va 
+Bajaring va 
+o‘rganing
+o‘rganing
+ruknida o‘quvchilar 
+mashqlarni bajarish 
+orqali o‘z bilimlarini 
+tekshiradi.
+Masalani  
+yechishda  
+kalkulyatordan 
+foydalanishga 
+ruxsat beriladi.
+ii
+Turmushda 
+Turmushda 
+matematika
+matematika
+rukni oʻquvchilarga kundalik 
+turmushda uchraydigan 
+vaziyatlarda matematikaning 
+qoʻllanishini koʻrsatadi.
+O‘ynang va o‘rganing
+O‘ynang va o‘rganing
+rukni oʻquvchilarda topshiriq va oʻyinlar 
+orqali matematik tushunchalarni 
+mustahkamlaydi.
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   4
+09/08/24   19:30
+
+MUNDARIJA
+NATURAL SONLAR  
+ 1
+Eslang  
+ 2
+1 milliongacha bo‘lgan sonlar  
+ 4
+10 milliongacha bo‘lgan sonlar  
+ 8
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 12
+1
+2
+SONLAR USTIDA TO‘RT AMAL  
+ 13
+Sonni 10, 100 va 1000 ga ko‘paytirish  
+ 14
+Sonni o‘nlik, yuzlik va mingliklarga ko‘paytirish  
+ 19
+Sonni 10, 100 va 1000 ga bo‘lish  
+ 21
+Sonni o‘nlik, yuzlik va mingliklarga bo‘lish  
+ 26
+Qavssiz ifodalarda amallarni bajarish tartibi  
+ 29
+Qavsli ifodalarda amallarni bajarish tartibi  
+ 37
+Matnli masalalar  
+ 39
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 44
+3
+ODDIY KASRLAR  
+ 45
+Sonlarni bo‘lishni kasr ko‘rinishida ifodalash  
+ 46
+Oddiy kasrni o‘nli kasrga aylantirish  
+ 52
+Eslang  
+ 56
+Aralash sonlarni qo‘shish va ayirish  
+ 58
+Eslang  
+ 64
+To‘g‘ri kasrni natural songa ko‘paytirish  
+ 65
+Noto‘g‘ri kasrni natural songa ko‘paytirish  
+ 69
+Ikkita to‘g‘ri kasrni ko‘paytirish  
+ 70
+To‘g‘ri va noto‘g‘ri kasrlarni ko‘paytirish  
+ 75
+Ikkita noto‘g‘ri kasrni ko‘paytirish  
+ 76
+Aralash sonlarni natural songa ko‘paytirish  
+ 79
+Qolgan qismning qismi  
+ 82
+Matnli masalalar  
+ 83
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 88
+iii
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   5
+09/08/24   19:30
+
+4
+UCHBURCHAKNING YUZI  
+ 89
+Eslang  
+ 90
+Uchburchakning asosi va balandligi  
+ 91
+Uchburchakning yuzini topish  
+ 96
+To‘g‘ri to‘rtburchak va uchburchaklardan 
+tuzilgan murakkab shakllarning yuzi  
+ 103
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 108
+5
+HAJM  
+ 109
+Eslang  
+ 110
+Fazoviy jismlarning hajmi  
+ 111
+Uch o‘lchamli panjarada fazoviy jismlarni chizish  
+ 115
+Kvadratli panjarada fazoviy jismlarning turli ko‘rinishlarini chizish   118
+Hajmni santimetr kub va metr kubda o‘lchash  
+ 120
+Kuboid va kubning hajmini topish  
+ 123
+Suyuqlik hajmini santimetr kub va metr kubda o‘lchash  
+ 129
+Matnli masalalar  
+ 131
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 138
+6
+NISBATLAR  
+ 139
+Nisbat tushunchasi  
+ 140
+Teng kuchli nisbatlar  
+ 146
+Berilgan miqdor va nisbatga ko‘ra boshqa miqdorni topish  
+ 155
+Berilgan jami miqdor va nisbatga ko‘ra uning qismlarini topish  
+ 157
+Ikkita miqdorning nisbatiga doir matnli masalalar  
+ 160
+Uchta miqdorning nisbati  
+ 165
+Uchta miqdorning nisbatiga doir matnli masalalar  
+ 168
+O‘ylab ko‘ring. Muammoli topshiriq  
+ 172
+iv
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   6
+09/08/24   19:30
+
+Natural sonlar
+1
+2023-yilda 
+Toshkent shahri 
+aholisi 3 000 000 
+nafardan oshdi.
+1960-yilda
+Toshkent shahri 
+aholisi 1 000 000 
+nafarni tashkil etgan.
+1910-yilda 
+Toshkent shahri  
+aholisi 
+146 000 nafar edi.
+Yillar davomida Toshkent shahri aholisi soni qanday o‘zgarib borgan?
+Muhokama qiling
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   1
+09/08/24   19:30
+
+ 
+100 000 gacha bo‘lgan sonlar
+1  
+10 ta o‘n ming = 100 ming
+ 
+ 
+2  
+ 
+4
+6
+2
+5
+3
+Minglar
+Yuzlar
+O‘nlar
+Birlar
+O‘n minglar
+5 ta o‘n ming 
+yoki 50 000 ni 
+ifodalaydi
+3 ta ming
+yoki 3 000 ni
+ifodalaydi
+4 ta yuz
+yoki 400 ni
+ifodalaydi
+6 ta o‘n yoki
+60 ni
+ifodalaydi
+2 ta bir yoki
+2 ni
+ifodalaydi
+50 000 + 3000 + 400 + 60 + 2 = 53 462
+ 5 0 0 0 0
+2 – birlar xonasida va uning qiymati 2 ga teng.
+6 – o‘nlar xonasida va uning qiymati 60 ga teng.
+4 – yuzlar xonasida va uning qiymati 400 ga teng.
+3 – minglar xonasida va uning qiymati 3000 ga teng.
+5 – o‘n minglar xonasida va uning qiymati 50 000 ga  
+teng.
+ 5 3 4 6 2
+ 3 0 0 0
+ 4 0 0
+ 6 0
+2
+ 
+Raqamlar bilan: 53 462
+ 
+So‘zlar bilan: ellik uch ming to‘rt yuz oltmish ikki
+Eslang
+2
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   2
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   2
+09/08/24   19:30
+09/08/24   19:30
+
+3  43 029, 43 209 va 43 092 sonlarini o‘sish tartibida joylashtiring.
+ 
+ 
+ 
+ 
+43 029  , 43 092  , 43 209  
+ 
+ 
+eng kichik 
+ eng katta
+ 
+ 
+      o‘sish tartibi
+4  Sonli ketma-ketlikning keyingi hadini toping.
+ 
+Ketma-ketlik qanday qonuniyat asosida tuzilgan?
+ 
+Qonuniyat: ketma-ketlikning keyingi hadini topish uchun oldingisidan 1000 ni ayiring.
+ 
+Ketma-ketlikning keyingi hadi 69 395 ga teng.
+5  Quyidagi sonlarni yaxlitlang.
+ 
+Son
+Eng yaqin
+O‘nliklargacha
+Yuzliklargacha
+Mingliklargacha
+2085
+2090
+2100
+2000
+15 562
+15 560
+15 600
+16 000
+192 759
+192 760
+192 800
+193 000
+2 ta yuzlik 0 ta 
+yuzlikdan kattaroq. 
+Demak, yuqoridagilar 
+orasida 43209 – eng 
+katta son.
+Uchala sonda ham 
+43 ta minglik bor.
+2 ta o‘nlik 9 ta 
+o‘nlikdan kichikroq. 
+Demak, bu o‘rinda 
+43029 – eng kichik 
+son.
+70 395
+71 395
+74 395
+73 395
+72 395
+?
+1–4
+Mashq daftariga o‘ting
+4
+4
+4
+3
+3
+3
+0
+2
+0
+2
+0
+9
+9
+9
+2
+4
+4
+3
+3
+0
+0
+2
+9
+9
+2
+4
+4
+4
+3
+3
+3
+0
+2
+0
+2
+0
+9
+9
+9
+2
+M
+Y
+O‘
+B
+O‘M
+M
+Y
+O‘
+B
+O‘M
+M
+Y
+O‘
+B
+O‘M
+3
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   3
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   3
+09/08/24   19:30
+09/08/24   19:30
+
+1  100 000 talab sanang.
+1 milliongacha bo‘lgan sonlar
+Qarang va o‘rganing
+10 ta yuz ming
+1 million
+1 000 000
+10 ta yuz ming = 1000 ta ming = 1 million
+1 million = 1 000 000
+200 000 300 000 400 000 500 000 600 000 700 000 800 000 900 000 1 000 000
+Bitta yuz
+ming
++100 000
+O‘nta 
+yuz ming
+Keling, sanaymiz.
+Bitta yuz ming, ikkita yuz ming,  
+uchta yuz ming, … , o‘nta yuz ming.
+Bir millionda nechta ming bor?
+4
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   4
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   4
+09/08/24   19:30
+09/08/24   19:30
+
+2  Sonli tugmalar yordamida ifodalangan sonni aniqlang.
+ 
+ 
+   
+ 
+ 
+ 
+ 
+6 – birlar xonasida.
+4 – o‘nlar xonasida.
+1 – yuzlar xonasida.
+5 – minglar xonasida.
+2 – o‘n minglar xonasida.
+3 – yuz minglar xonasida.
+ 3 2 5 1 4 6
+ 3 0 0 0 0 0
+ 2 0 0 0 0
+ 5 0 0 0
+ 1 0 0
+ 4 0
+6
+ 
+ 
+Raqamlar bilan: 325 146
+ 
+ 
+So‘zlar bilan: uch yuz yigirma besh 
+ming bir yuz qirq olti
+ 
+1
+4
+6
+2
+5
+Minglar
+Yuzlar
+O‘nlar
+Birlar
+O‘n 
+minglar
+2 ta o‘n
+ming yoki
+20 000 ni
+ifodalaydi
+5 ta ming
+yoki 5000 ni
+ifodalaydi
+1 ta yuz yoki
+100 ni
+ifodalaydi
+4 ta o‘n yoki
+40 ni
+ifodalaydi
+6 ta bir yoki
+6 ni
+ifodalaydi
+3
+3 ta yuz
+ming yoki
+300 000 ni
+ifodalaydi
+Yuz 
+minglar
+325 146 = 300 000 + 20 000 + 5000 + 100 + 40 + 6
+5
+325 146 taqriban
+325 000 ga 
+teng.
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   5
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   5
+09/08/24   19:30
+09/08/24   19:30
+
+Misol
+3  
+700 000 + 4000 + 800 + 30 + 5 = 704 835
+(7 × 100 000) + (4 × 1000) + (8 × 100) + (3 × 10) + (5 × 1) = 704 835
+ 
+Raqamlar bilan: 704 835
+ 
+ 
+So‘zlar bilan: yetti yuz to‘rt ming sakkiz yuz o‘ttiz besh
+4  704 835 = 704 000 + 835
+ 
+ 7 0 4 0 0 0
+ 8 3 5
+ 7 0 4 8 3 5
+Quyidagi sonlarni sonli tugmalardan foydalanib tasvirlang. So‘ng ularni
+o‘qing va so‘zlar bilan yozing. O‘rtog‘ingizning ishini tekshiring.
+a) 
+720 265 
+b) 
+800 040 
+c) 506 203 
+d) 912 738
+Juftlikda ishlang
+704 835 ni 
+ifodalashning
+boshqa yo‘li bormi?
+8 
+3
+5
+0
+4
+Minglar
+Yuzlar
+O‘nlar
+Birlar
+O‘n
+minglar
+7
+yetti yuz to‘rt ming
+Yuz 
+minglar
+sakkiz yuz o‘ttiz besh
+121 212
+Bir yuz yigirma 
+bir ming ikki  
+yuz o‘n ikki
+6
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   6
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   6
+09/08/24   19:30
+09/08/24   19:30
+
+1  Raqamlar bilan yozing. 
+ 
+a) 
+Ikki yuz olti ming 
+ 
+b) 
+Yetti yuz ming to‘qson to‘qqiz
+ 
+c) 
+To‘rt yuz uch ming o‘n
+ 
+d) 
+Uch yuz o‘n to‘rt ming to‘qqiz yuz oltmish yetti
+ 
+e) 
+Sakkiz yuz yigirma ikki ming besh yuz to‘rt
+2  So‘zlar bilan yozing.
+ 
+a) 
+800 200 
+ 
+b) 
+750 040 
+ 
+c) 
+645 279 
+ 
+d) 
+507 507
+ 
+e)  
+480 084 
+3  Tushirib qoldirilgan sonlarni yozing.
+ 
+a) 
+491 862 = 
+ + 862 
+ 
+b) 
+549 607 = 549 000 + 
+ 
+ 
+c) 
+345 660 = 345 000 + 
+ 
+d) 
+823 000 + 943 = 
+ 
+e) 
+ = 681 000 + 526
+Bajaring va o‘rganing
+5–8
+Mashq daftariga o‘ting
+7
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   7
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   7
+09/08/24   19:30
+09/08/24   19:30
+
+1  1 000 000 talab sanang. 
+ 
+ 
+    
+2  Sonlar millionlarda qanday ifodalanadi?
+ 
+a) 
+6 
+2
+7
+9
+4
+Minglar
+Yuzlar
+O‘nlar Birlar
+O‘n
+minglar
+5
+Yuz 
+minglar
+3
+Millionlar
+ 
+  
+          
+3 000 000 + 500 000 + 90 000 + 4000 + 600 + 20 + 7 = 3 594 627
+                 
+ 
+ 
+ 
+ 
+ 
+Raqamlar bilan: 3 594 627
+ 
+ 
+So‘zlar bilan: uch million besh yuz to‘qson to‘rt ming olti yuz yigirma yetti
+ 3 5 9 4 6 2 7
+ 3 0 0 0 0 0 0
+ 5 0 0 0 0 0
+ 9 0 0 0 0
+ 4 0 0 0
+ 6 0 0
+ 2 0
+7
+5 – yuz minglar xonasida.
+3 – millionlar xonasida.
+1 000 000
+1 000 000
+1 000 000
+1 000 000
+1 000 000
+1 000 000
+1 000 000
+1 000 000
+1 000 000
+1 000 000
+Bir 
+million
++1 000 000
+O‘n 
+million
+2 000 000
+Keling, sanaymiz.
+Bir million, ikki million,  
+…, to‘qqiz million,  
+o‘n million.
+Qaysi raqam o‘n minglar 
+xonasida joylashgan?
+Qaysi raqam minglar 
+xonasida joylashgan?
+10 million = 10 000 000
+Qarang va o‘rganing
+8
+10 milliongacha bo‘lgan sonlar
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   8
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   8
+09/08/24   19:30
+09/08/24   19:30
+
+ 
+b) 
+0
+5
+Minglar
+1 
+3
+6
+Yuzlar
+O‘nlar Birlar
+O‘n
+minglar
+2
+Yuz
+minglar
+4
+Millionlar
+to‘rt million
+ikki yuz besh ming
+bir yuz o‘ttiz olti
+ 
+  
+2 raqami 200 000 ni ifodalayapti.
+4 raqami 4 000 000 ni ifodalayapti.
+ 4 0 0 0 0 0 0
+ 2 0 0 0 0 0
+ 5 0 0 0
+ 1 0 0
+ 3 0
+6
+ 4 2 0 5 1 3 6
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Raqamlar bilan: 4 205 136
+ 
+ 
+So‘zlar bilan : to‘rt million ikki yuz besh ming bir yuz o‘ttiz olti
+  
+3  4 205 136 = 4 000 000 + 205 000 + 136
+ 
+ 4 2 0 5 1 3 6
+ 4 0 0 0 0 0 0
+ 2 0 5 0 0 0
+ 1 3 6
+4 205 136 = 4 000 000 + 200 000 + 5000 + 100 + 30 + 6 
+4 205 136 taqriban
+4 000 000 ga teng.
+4 205 136 ni
+ifodalashning
+boshqa yo‘li 
+bormi?
+4 205 136 dagi  
+boshqa raqamlarning  
+qiymati qanday?
+9
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   9
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   9
+09/08/24   19:30
+09/08/24   19:30
+
+Qiziqarli matematika
+Guruh bo‘lib ishlang.
+Har bir guruhga 0 dan 9 gacha bo‘lgan raqamli kartochkalar beriladi.
+1. Kartochkalarni aralashtiring va teskari qilib qo‘ying.
+2. Navbat bilan yettitadan kartochka oling va 7 xonali son tuzing.
+3. Guruhning boshqa aʼzosidan tuzgan soningizni o‘qishni va yozishni so‘rang.
+4. Sonni “0” bilan boshlamang.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Qo‘lda bajariladigan mashq
+O‘rganing va bo‘lishing
+Misol
+ 7
+2
+9
+1
+4
+0
+6
+7 291 406
+Yetti million ikki  
+yuz to‘qson bir  
+ming to‘rt yuz olti
+Guruh bo‘lib ishlang.
+1  
+Kundalik hayotda ishlatiladigan katta sonlarga doir maʼlumotlarni keltiring. 
+Quyidagi misollarning baʼzilarini guruhdoshlaringiz bilan o‘rtoqlashing.
+      
+a) 
+1 milliongacha     
+b) 
+1 milliondan katta va 10 milliondan kichik
+Namuna
+  2024-yilda O‘zbekistonda maktablar soni 10 163 tani tashkil qilgan. 
+  1924-yilda O‘zbekiston aholisi soni taqriban 4 400 000 nafar bo‘lgan.
+2  
+“Bunyodkor” stadioni taqriban 34 000 nafar tomoshabinni sig‘dira oladi.
+Qashqadaryo viloyati aholisi 2023-yilda 3 million 400 ming kishini tashkil 
+qildi. Qashqadaryo viloyati aholisi soni “Bunyodkor” stadioniga sigʻadigan 
+tomoshabinlar soniga qaraganda qanchalik koʻp ekanini guruh aʼzolari bilan  
+birga aniqlang.
+10
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   10
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   10
+09/08/24   19:30
+09/08/24   19:30
+
+1  Raqamlar bilan yozing.
+ 
+a) 
+Bir million besh yuz ming 
+ 
+b) 
+Uch million oltmish besh ming to‘rt yuz sakson bir
+ 
+c) 
+Sakkiz million bir ming o‘n
+ 
+d)  Besh million bir yuz ming ikki yuz yetti
+ 
+e)  
+To‘qqiz million ikki yuz o‘ttiz ming uch yuz oltmish to‘rt
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2  So‘zlar bilan yozing.
+        a)  
+2 360 500 
+ 
+b)  6 000 180 
+ 
+c)  
+3 245 524
+ 
+d)  4 320 016     
+ 
+e)  
+5 570 750  
+3  Tushirib qoldirilgan sonlarni yozing.
+ 
+a) 
+4 276 000 = 
+ + 276 000
+ 
+b) 
+3 000 175 = 3 000 000 + 
+ 
+c) 
+9 000 000 + 402 000 = 
+ 
+d) 
+7 040 005 = 7 000 000 + 
+ + 5
+ 
+e) 
+ = 6 000 000 + 200 000 + 34 
+Men 10 milliongacha bo‘lgan sonlarni raqamlar va so‘zlar yordamida o‘qish va yozishni 
+bilaman.  
+Bajaring va o‘rganing
+O‘zingizni tekshiring
+9–14
+Mashq daftariga o‘ting
+11
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   11
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   11
+09/08/24   19:30
+09/08/24   19:30
+
+ 
+Jadvalda Yevropadagi baʼzi mamlakatlar aholisining 2023-yilgi  
+ 
+ 
+ 
+ 
+taqribiy soni keltirilgan.
+ 
+Jadvaldan foydalanib quyidagi savollarga javob bering.
+ 
+Mamlakat
+Aholi soni
+Belarus Respublikasi
+9 000 000
+Lyuksemburg
+650 000
+Avstriya
+8 960 000
+Norvegiya
+5 470 000
+Islandiya
+380 000
+Shveytsariya
+8 800 000
+ 
+          
+Manba: Worldometers vebsayti
+ 
+a)  
+Qaysi mamlakat aholisi 5 millionga yaqin?
+ 
+ 
+b)  Qaysi mamlakatlar aholisi 1 milliondan kam?
+ 
+ 
+c)  
+Qaysi mamlakatda eng kam aholi yashaydi?
+ 
+d)  Qaysi mamlakatlar aholisi 7 milliondan ko‘p?
+ 
+ 
+e)  
+Qaysi mamlakat aholisi 10 millionga yaqin?
+O‘ylab ko‘ring
+15–18
+Mashq daftariga o‘ting
+12
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   12
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   12
+09/08/24   19:30
+09/08/24   19:30
+
+13
+24 – 6 × 2 ning qiymatini toping.
+Sonlar ustida to‘rt amal
+2
+Bolalar sonli ifodaning qiymatini topishga harakat qilyapti.
+Muhokama qiling
+Mening kalkulyatorim 
+36 ni ko‘rsatyapti.
+Mening kalkulyatorim 
+12 ni ko‘rsatyapti.
+Qaysi amal birinchi 
+bajarilishi kerak?
+6 × 2 = 12
+24 – 12 = 12
+Mening javobim 12.
+24 – 6 = 18
+18 × 2 = 36
+Mening javobim 36.
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   13
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   13
+09/08/24   19:30
+09/08/24   19:30
+
+14
+1  a) 
+2 ni 10 ga ko‘paytiring.  
+b) 10 ni 10 ga ko‘paytiring.
+ 
+ 
+ 
+ 
+ 
+× 10
+10  ×  10  =  100
+ 
+ 
+× 10
+2  ×  10  =  20
+ 
+ 
+ 
+ 
+c) 
+32 ni 10 ga ko‘paytiring. 
+ 
+ 
+ 
+× 10
+32  ×  10  =  320
+ 
+d) 
+124 ni 10 ga ko‘paytiring.
+ 
+ 
+× 10
+124  ×  10  =  1240
+Sonni 10, 100 va 1000 ga ko‘paytirish
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   14
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   14
+09/08/24   19:30
+09/08/24   19:30
+
+15
+2  Sonlarni 10 ga ko‘paytirayotganda qanday qonuniyatga duch keldingiz?
+  
+3  a) 
+2 ni 100 ga ko‘paytiring.
+ 
+ 
+× 10
+2  ×  100  =  2  ×  10  ×  10 
+ 
+ 
+=  200
+× 10
+ 
+ 
+ 
+ 
+ 
+b) 
+10 ni 100 ga ko‘paytiring.
+ 
+ 
+× 10
+10  ×  100  =  10  ×  10  ×  10 
+ 
+ 
+=  1000
+× 10
+ 
+ 
+ 
+ 
+ 
+c) 
+24 ni 100 ga ko‘paytiring.
+ 
+ 
+× 100
+24  ×  100  =  2400
+ 
+ 
+ 
+ 
+6254 va 10 ning 
+ko‘paytmasi 
+nechaga teng?
+100 = 10 × 10
+2 × 10 = 20
+10 × 10 = 100
+32 × 10 = 320
+124 × 10 = 1240
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   15
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   15
+09/08/24   19:30
+09/08/24   19:30
+
+16
+ 
+d) 
+413 ni 100 ga ko‘paytiring.
+ 
+ 
+× 100
+413  ×  100  =  41 300
+ 
+ 
+ 
+4  Sonlarni 100 ga ko‘paytirayotganda qanday qonuniyatga duch keldingiz?
+ 
+ 
+ 
+5  a) 
+3 ni 1000 ga ko‘paytiring.
+ 
+ 
+3  ×  1000 = 3  ×  10  ×  10  ×  10 
+ 
+ 
+= 3000
+× 10
+× 10
+× 10
+ 
+b) 
+10 ni 1000 ga ko‘paytiring.
+ 
+ 
+× 10
+× 10
+10  ×  1000  = 10  ×  10  ×  10  ×  10 
+ 
+ 
+= 10 000
+× 10
+ 
+ 
+1000 = 10 × 10 × 10
+5296 va 100 ning 
+ko‘paytmasi  
+nechaga teng?
+ 
+2 × 100  = 200           
+ 10 × 100  = 1000       
+ 24 × 100  = 2400         
+ 413 × 100  = 41 300
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   16
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   16
+09/08/24   19:30
+09/08/24   19:30
+
+Guruh bo‘lib ishlang.
+Sonni 10, 100 yoki 1000 ga ko‘paytirishni sonli tugmalar bilan tasvirlang va javobni 
+yozing.
+1  a) 43 × 10  
+2  a) 132 × 100     
+3  a) 14 × 1000    
+ 
+b) 10 × 1243 
+ 
+b) 100 × 2304 
+ 
+b) 1000 × 362
+ 
+Sonlarni 10, 100 yoki 1000 ga ko‘paytirganda nimani sezdingiz?
+Misol
+× 10
+21 × 10 = 210
+21 ni 10 ga  
+ko‘paytirsak, 210  
+bo‘ladi.
+21 ni 10 ga ko‘paytiring.
+1 000 000
+Qo‘lda bajariladigan mashq
+17
+ 
+c) 
+32 ni 1000 ga ko‘paytiring.
+ 
+ 
+ 
+ 
+× 1000
+32  ×  1000  =  32 000
+ 
+6  Sonlarni 1000 ga ko‘paytirayotganda qanday qonuniyatga duch keldingiz?
+ 
+ 
+ 
+ 
+3084 va 1000 ning  
+ko‘paytmasi nechaga teng?
+ 
+3 × 1000  = 3000
+ 10 × 1000  = 10 000
+ 32 × 1000  = 32 000
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   17
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   17
+09/08/24   19:30
+09/08/24   19:30
+
+18
+1  Ko‘paytiring.
+ 
+a) 
+53 × 10   
+b) 
+296 × 10   
+ 
+c) 
+10 × 3003 
+d) 
+17 × 100  
+ 
+e) 
+100 × 805    
+f)  
+1932 × 100 
+ 
+g)  
+12 × 1000  
+h)  
+1000 × 463   
+ 
+i) 
+2290 × 100 
+j) 
+1000 × 4008 
+2  Tushirib qoldirilgan sonlarni yozing. 
+ 
+a) 
+648 × 
+ = 6480  
+b) 
+13 × 
+ = 1300 
+ 
+c) 
+59 × 
+ = 59 000 
+d) 
+ × 100 = 45 000
+ 
+e) 
+ × 1000 = 8 030 000 
+f) 
+ × 10 = 728 500
+Turmushda matematika
+1  
+Bayram kuni Halimaga 20 000 so‘m pul berishdi. Kamolaga esa 
+Halimadan 3 marta ko‘proq pul berishdi.  
+Kamola necha so‘m olgan?
+2  
+Avtobusga 55 nafar odam sig‘adi.  
+“Paxtakor” stadioniga esa undan  
+1000 marta ko‘proq odam sig‘adi.  
+“Paxtakor” stadioniga necha  
+nafar odam sig‘adi?
+Bajaring va o‘rganing
+19–20
+Mashq daftariga o‘ting
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   18
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   18
+09/08/24   19:30
+09/08/24   19:30
+
+19
+1  a) 
+43 ni 20 ga ko‘paytiring.
+ 
+ 
+43 × 20 = 43 × 2 × 10
+ 
+ 
+ 
+= 86 × 10
+ 
+ 
+ 
+= 860
+ 
+b) 
+134 ning 60 ga ko‘paytmasini toping.
+ 
+ 
+134 × 60 = 134 × 6 × 10   
+ 
+ 
+ 
+= 804 × 10 
+ 
+ 
+ 
+= 8040  
+2  a) 
+68 ni 400 ga ko‘paytiring.
+ 
+ 
+68 × 400 = 68 × 4 × 100
+ 
+ 
+ 
+= 272 × 100
+ 
+ 
+ 
+= 27 200
+ 
+b) 
+314 va 600 ning ko‘paytmasini  
+ 
+toping.
+ 
+ 
+314 × 600 = 314 × 6 × 100
+ 
+ 
+ 
+= 1884 × 100
+ 
+ 
+ 
+= 188 400
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+60 = 6 × 10 yoki 10 × 6
+Men quyidagi qulay usulda 
+ham ko‘paytira olaman:
+134 × 10
+ 1340 × 6
+ 8040
+43 × 2
+ 86 × 10
+ 860
+Javobning maqbulligini 
+chamalab tekshirish.
+68 × 400
+        
+70 × 400 = 28 000
+68 ×
+68 × 400 ≈ 28 000
+400 ≈ 28 000
+27 200 soni 28 000 ga yaqin. 
+Demak, 27 200 – maqbul javob.
+Avval javobni chamalab topib, keyin 
+koʻpaytiring.
+ 314 × 600
+ 
+       
+300 × 600 = 180 000
+ 314 ×
+314 × 600 ≈ 180 000
+600 ≈ 180 000
+Topilgan javob maqbulmi?
+Bu belgini ko‘rsangiz, javoblarni tekshirish uchun  
+kalkulyatordan foydalaning.
+Tekshirish
+Sonni o‘nlik, yuzlik va mingliklarga ko‘paytirish
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   19
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   19
+09/08/24   19:30
+09/08/24   19:30
+
+20
+3  a) 
+3000 ni 53 ga ko‘paytiring.
+ 
+ 
+3000 × 53 = 1000 × 3 × 53
+ 
+ 
+ 
+= 1000 × 159
+ 
+ 
+ 
+= 159 000
+ 
+ 
+Javob to‘g‘rimi?
+ 
+b) 
+326 ni 7000 ga ko‘paytiring.
+ 
+ 
+326 × 7000 = 326 × 7 × 1000 
+ 
+ 
+ 
+= 2282 × 1000 
+ 
+ 
+ 
+= 2 282 000
+Tekshirish
+Jadvalning 2-qatorida berilgan koʻpaytmalarni oʻrganing va qonuniyatni aniqlang.  
+Aniqlangan qonuniyat asosida boʻsh kataklarni toʻldiring va sherigingiz bilan muhokama 
+qiling.
+× 4
+× 40
+× 400
+× 4000
+7 
+28
+280
+2800
+28 000
+23 
+92
+258 
+1032
+ 
+ 
+ 
+Tekshirish
+Koʻpaytirishni qulay usulda bajaring. Natijaning maqbulligini chamalab tekshiring.
+a) 
+13 × 30     
+b) 
+72 × 40     
+c) 
+241 × 50 
+d) 
+23 × 200     
+e) 
+300 × 64     
+f) 
+227 × 600
+g) 
+155 × 900  
+h) 
+308 × 800
+i) 
+8 × 7000     
+j) 
+6000 × 14
+Javobning maqbulligini 
+chamalab tekshiring.
+ 3000 × 53
+ 
+ 
+ 
+ 
+ 3000 × 50 = 150 000
+ 3000 × 53 ≈ 150 000
+ 3000 × 53 ≈ 150 000
+Juftlikda ishlang
+Bajaring va o‘rganing
+21–24
+Mashq daftariga o‘ting
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   20
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   20
+09/08/24   19:30
+09/08/24   19:30
+
+21
+1  10 ga bo‘lish qoidalarini takrorlang.
+ 
+a) 
+30 ni 10 ga bo‘ling.          
+b) 
+100 ni 10 ga bo‘ling. 
+ 
+ 
+÷ 10
+30  ÷  10  =  3
+ 
+ 
+÷ 10
+100  ÷  10  =  10
+ 
+ 
+c) 
+320 ni 10 ga bo‘ling.
+ 
+ 
+320  ÷  10  =  32
+÷ 10
+ 
+ 
+Tekshirish
+32 × 10 = 320
+ 
+d) 
+2340 ni 10 ga bo‘ling.
+ 
+ 
+2340 ÷ 10  =  234
+÷ 10
+ 
+ 
+Tekshirish
+234 × 10 = 2340
+Sonni 10, 100 va 1000 ga bo‘lish
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   21
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   21
+09/08/24   19:30
+09/08/24   19:30
+
+22
+2  Sonlarni 10 ga bo‘layotganda qanday qonuniyatga duch keldingiz?
+ 
+ 
+30 ÷ 10 = 3 
+100 ÷ 10 = 10
+320 ÷ 10 = 32
+2340 ÷ 10 = 234
+ 
+3  a) 
+200 ni 100 ga bo‘ling.
+ 
+ 
+÷ 10
+÷ 10
+ 
+200  ÷  100  =  200  ÷  10  ÷  10
+ 
+ 
+            =  2
+ 
+ 
+ 
+ 
+Tekshirish
+2 × 100 = 200
+ 
+ 
+b) 
+4100 ni 100 ga bo‘ling.
+ 
+ 
+÷ 100
+4100  ÷  100  =  41
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Tekshirish
+41 × 100 = 4100
+87 300 ni 10 ga bo‘lganda 
+bo‘linma necha chiqadi?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   22
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   22
+09/08/24   19:30
+09/08/24   19:30
+
+23
+ 
+c) 
+15 000 ÷ 100 ning qiymatini toping.  
+ 
+ 
+÷ 100
+15 000  ÷  100  =  150
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Tekshirish
+150 × 100 = 15 000
+ 
+d) 
+245 300 ÷ 100 ning qiymatini toping.
+ 
+ 
+÷ 100
+245 300  ÷  100  =  2453
+ 
+ 
+Tekshirish
+2453 × 100 = 245 300
+4  Sonlarni 100 ga bo‘ling. Qanday qonuniyatga duch keldingiz?
+ 
+ 
+ 
+200 ÷ 100  = 2           
+ 
+4100 ÷ 100  = 41          
+ 15 000 ÷ 100  = 150         
+ 245 300 ÷ 100 = 2453 
+  
+1 504 600 ni 100 ga bo‘lganda  
+bo‘linma necha chiqadi?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   23
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   23
+09/08/24   19:30
+09/08/24   19:30
+
+24
+5  a) 
+3000 ni 1000 ga bo‘ling. 
+ 
+ 
+÷ 10
+3000  ÷  1000  =  3000  ÷  10  ÷  10  ÷  10 
+ 
+                =  3
+÷ 10
+÷ 10
+ 
+ 
+Tekshirish
+3 × 1000 = 3000
+ 
+b) 
+26 000 ni 1000 ga bo‘ling. 
+ 
+ 
+26 000  ÷  1000  =  26
+÷ 1000
+ 
+ 
+Tekshirish
+26 × 1000 = 26 000
+6  Sonlarni 1000 ga bo‘layotganda qanday qonuniyatga duch keldingiz?
+ 
+ 
+3000 ÷ 1000 = 3
+26 000 ÷ 1000 = 26
+                 
+ 
+8 032 000 ni 1000 ga  
+bo‘lganda bo‘linma necha  
+chiqadi?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   24
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   24
+09/08/24   19:30
+09/08/24   19:30
+
+25
+Guruh bo‘lib ishlang.
+Sonlarni 10, 100 yoki 1000 ga bo‘lishni sonli tugmalardan foydalanib bajaring va javobni 
+yozing.
+1  a) 280 ÷ 10  
+2  a) 7400 ÷ 100     
+3  a) 16 000 ÷ 1000    
+ 
+b) 1390 ÷ 10 
+ 
+b) 28 600 ÷ 100 
+ 
+b) 139 000 ÷ 1000  
+Sonlarni 10, 100 yoki 1000 ga bo‘lganda javob bilan bog‘liq qanday qonuniyatni sezdingiz?
+Misol
+410 ni 10 ga bo‘ling.
+÷ 10
+410 ÷ 10 = 41
+410 ni 10 ga bo‘lganda 
+javob 41 chiqadi.
+1  Bo‘lishni bajaring.
+ 
+a) 
+150 ÷ 10     
+b) 
+1930 ÷ 10     
+c) 
+20 740 ÷ 10
+ 
+d) 
+700 ÷ 100     
+e) 
+5600 ÷ 100     
+f) 
+27 300 ÷ 100
+ 
+g) 
+5000 ÷ 1000     
+h) 
+70 000 ÷ 1000     
+i) 
+238 000 ÷ 1000
+2  Tushirib qoldirilgan sonlarni yozing.
+ 
+a) 
+170 ÷ 
+ = 17 
+b) 
+ ÷ 10 = 50 
+ 
+c) 
+ ÷ 10 = 930 
+d) 
+900 ÷ 
+ = 9 
+ 
+e) 
+ ÷ 100 = 12 
+f) 
+ ÷ 100 = 100
+ 
+g) 
+8000 ÷ 
+ = 8 
+h) 
+ ÷ 1000 = 12 
+ 
+i) 
+ ÷ 1000 = 1000
+1 000 000
+Bajaring va o‘rganing
+25–26
+Mashq daftariga o‘ting
+Qo‘lda bajariladigan mashq
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   25
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   25
+09/08/24   19:30
+09/08/24   19:30
+
+26
+ 
+1  a) 
+60 ni 20 ga bo‘ling.
+      
+ 
+60 ÷ 20 = 60 ÷ 10 ÷ 2
+ 
+ 
+ 
+= 6 ÷ 2
+ 
+ 
+ 
+= 3 
+ 
+ 
+Tekshirish
+3 × 20 = 60  
+      
+b)  540 ni 60 ga bo‘ling. 
+ 
+ 
+             
+540 ÷ 60 = 540 ÷ 10 ÷ 6
+                
+ 
+= 54 ÷ 6 
+                                                               
+              
+ 
+= 9 
+ 
+ 
+Tekshirish
+9 × 60 = 540
+ 
+c)  
+2080 ni 80 ga bo‘ling. 
+ 
+ 
+            
+2080 ÷ 80 = 2080 ÷ 10 ÷ 8
+ 
+ 
+                    = 208 ÷ 8
+ 
+ 
+                    = 26
+ 
+ 
+Tekshirish
+60 ÷ 10  6 ÷ 2  3
+Men quyidagi qulay usulda ham bo‘la 
+olaman:
+ 540 ÷ 6
+ 90 ÷ 10  9
+Avval sonlarni chamalab, keyin bo‘ling:
+ 
+       
+2080 ÷  80
+         
+2000 ÷ 100 = 20
+2080 
+2080 ÷ 80 ≈ 20
+ 80 ≈ 20
+Topilgan javob maqbulmi?
+Sonni o‘nlik, yuzlik va mingliklarga bo‘lish
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   26
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   26
+09/08/24   19:30
+09/08/24   19:30
+
+27
+2  a)  
+4800 ni 600 ga bo‘ling. 
+ 
+ 
+            
+4800 ÷ 600 = 4800 ÷ 100 ÷ 6 
+             
+                       = 48 ÷ 6 
+            
+                       = 8 
+ 
+ 
+b)  63 000 ni 700 ga bo‘ling.
+            
+63 000 ÷ 700 = 63 000 ÷ 100 ÷ 7 
+                
+                          = 630 ÷ 7
+ 
+ 
+                          = 90 
+ 
+ 
+Tekshirish
+3  39 000 ni 3 000 ga bo‘ling. 
+        
+ 
+39 000 ÷ 3000 = 39 000 ÷ 1000 ÷ 3 
+             
+                  = 39 ÷ 3
+ 
+ 
+                  = 13            
+ 
+Tekshirish
+39 000 ÷ 1000  39 ÷ 3
+ 13
+Qanday qonuniyatni ko‘ryapsiz?
+ 
+      4800
+00 ÷ 600
+00 = 48 ÷ 6
+ 
+     63 000
+00 ÷ 700
+00 = 630 ÷ 7
+ 
+39 000
+000 ÷ 3000
+000 = 39 ÷ 3
+4800 ÷ 100  48 ÷ 6
+ 8
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   27
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   27
+09/08/24   19:30
+09/08/24   19:30
+
+28
+Jadvalni guruh bo‘lib to‘ldiring.
+Jadvalning 2-qatorida berilgan bo‘linmalarni o‘rganing va qonuniyatni aniqlang. Topilgan 
+qonuniyat asosida bo‘sh kataklarni to‘ldiring va sherigingiz bilan muhokama qiling.
+ 
+÷ 2
+÷ 20
+÷ 200
+÷ 2000
+6000 
+3000
+300
+30
+3
+40 000 
+20 000
+528 000 
+264 000
+Tekshirish
+Boʻlishni qulay usulda bajaring. Natijaning maqbulligini chamalab tekshiring.
+a) 
+90 ÷ 30   
+b) 
+280 ÷ 40   
+c) 
+8100 ÷ 90   
+d)  
+900 ÷ 300       
+e) 
+4200 ÷ 700      
+f) 
+56 000 ÷ 800  
+g)   44 000 ÷ 2000     
+h)  
+690 000 ÷ 6000    
+i) 
+495 000 ÷ 9000 
+j) 
+4 080 000 ÷ 8000  
+a) 
+Men sonlarni:
+ 
+ 
+10, 100 yoki 1000 ga; 
+ 
+ 
+o‘nlik, yuzlik, mingliklarga ko‘paytirishni bilaman. 
+b) 
+Men sonlarni:
+ 
+ 
+10, 100 yoki 1000 ga; 
+ 
+ 
+o‘nlik, yuzlik, mingliklarga bo‘lishni bilaman. 
+Juftlikda ishlang
+Bajaring va o‘rganing
+O‘zingizni tekshiring
+27–30
+Mashq daftariga o‘ting
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   28
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   28
+09/08/24   19:30
+09/08/24   19:30
+
+29
+Faqat qo‘shish va ayirish amali qatnashgan ifodalar
+Faqat qo‘shish va ayirish amali qatnashgan ifodalar
+1  Xonada 10 ta stul bor edi. Farrosh 4 ta stulni olib chiqib, 2 tasini qaytardi. 
+Xonadagi stullar nechta bo‘ldi?
+ 
+ 
+   
+ 
+             
+ 
+ 
+     
+ 10 – 4 = 6
+ 6 + 2 = 8
+ 
+ 
+ 
+     
+10 – 4 + 2
+= 6 + 2
+= 8
+   
+ 
+ 
+Xonada 8 ta stul bo‘ldi.
+Men bu usul bilan bajardim.
+Bu – mening bajarish usulim.
+10 ta stul bor edi
+4 ta stul olib chiqildi.
+8 ta stul bo‘ldi.
+2 ta stul qaytarildi.
+Qavssiz ifodalarda amallarni bajarish tartibi
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   29
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   29
+09/08/24   19:30
+09/08/24   19:30
+
+30
+2  Lobar opa bog‘dan 50 ta olma terib, 20 tasini qo‘shnilariga berdi. So‘ng yana 15 ta 
+olma terdi. Unda jami nechta olma bo‘ldi?
+ 
+ 
+ 
+Unda 45 ta olma bo‘ldi.
+3  Ifodalarning qiymatini toping.
+ 
+a) 
+25 + 32 – 17 = 57 – 17 
+ 
+ 
+ 
+ 
+= 40 
+ 
+ 
+ 
+ 
+ 
+ 
+b)  16 – 12 + 45 – 21 = 4 + 45 – 21
+ 
+ 
+ 
+= 49 – 21
+ 
+ 
+ 
+= 28
+Faqat qo‘shish va ayirishni o‘z ichiga olgan ifodalarda 
+amallar chapdan o‘ngga qarab ketma-ket bajariladi.
+Amallarni bajarish tartibini muhokama qiling va misollarni yeching. So‘ng imkon boʻlsa, 
+kalkulyatordan foydalanib javoblarni tekshiring.
+a) 
+30 – 14 + 4   
+b)  60 + 30 – 18 
+c)  20 + 15 – 30 + 13         
+d)  70 – 20 + 18 – 34 
+Ifodalarning qiymatini toping.
+a) 
+55 + 16 + 27 
+b)  80 – 32 – 38 
+c)  92 – 45 + 66 – 20 
+d)  58 + 39 – 21 – 44
+Birinchi bajarilishi kerak bo‘lgan 
+amalning tagiga chizing.
+Juftlikda ishlang
+Bajaring va o‘rganing
+1-usul
+50 – 20 = 30
+30 + 15 = 45
+2-usul
+50 – 20 + 15 = 30 + 15
+ 
+ 
+ 
+= 45
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   30
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   30
+09/08/24   19:30
+09/08/24   19:30
+
+31
+Faqat ko‘paytirish va bo‘lish amali qatnashgan ifodalar
+Faqat ko‘paytirish va bo‘lish amali qatnashgan ifodalar
+1  Sitora 12 ta pishiriqni teng miqdorda uchta xaltachaga soldi va ikkita xaltachani 
+do‘stlariga berdi. U do‘stlariga nechta pishiriq bergan?
+ 
+ 
+  
+   
+                   
+ 
+ 
+  
+   
+                   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Sitora do‘stlariga 8 ta pishiriq berdi.
+2  Mahmud 5 quti sharbat sotib oldi. Har bir qutida 6 ta sharbat bor edi. U hamma 
+sharbatlarni uchtadan qilib kichik qutilarga solib chiqdi. U jami nechta kichik quti 
+ishlatdi?
+  
+1-usul
+5 × 6 = 30
+30 ÷ 3 = 10
+2-usul
+5 × 6 ÷ 3 = 30 ÷ 3
+ 
+ 
+= 10
+ 
+Mahmud 10 ta kichik quti ishlatdi. 
+ 12 ÷ 3 = 4
+ 4 × 2 = 8
+Bu – mening bajarish usulim.
+12 ÷ 3 × 2
+= 4 × 2
+= 8
+Men bu usul bilan bajardim.
+2 ta xaltachani 
+do‘stlariga berdi.
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   31
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   31
+09/08/24   19:30
+09/08/24   19:30
+
+32
+3  Ifodalarning qiymatini toping.
+ 
+a) 
+24 ÷ 8 × 2 = 3 × 2 
+ 
+ 
+ 
+                 = 6 
+ 
+ 
+ 
+  
+ 
+ 
+b) 
+8 × 30 ÷ 6 × 5 = 240 ÷ 6 × 5
+ 
+ 
+                        = 40 × 5
+ 
+ 
+                        = 200
+Faqat ko‘paytirish va bo‘lish qatnashgan ifodalarda 
+amallar chapdan o‘ngga qarab ketma-ket bajariladi.
+Amallarni bajarish tartibini muhokama qiling va misollarni yeching. So‘ng imkon boʻlsa, 
+kalkulyatordan foydalanib javoblarni tekshiring.
+a) 
+30 ÷ 10 × 2   
+b)  20 × 3 ÷ 5 
+c)  40 × 2 ÷ 5 ÷ 4         
+d)  60 ÷ 5 × 3 × 2  
+1  Ifodalarning qiymatini toping.
+ 
+a) 3 × 6 × 5   
+b)  60 ÷ 3 ÷ 4 
+ 
+c)  7 × 4 ÷ 7        
+d)  120 ÷ 10 × 6
+2  Ifodalarning qiymatini toping.
+ 
+a) 40 ÷ 5 × 9 × 8 
+b) 
+56 × 8 ÷ 7 ÷ 4
+ 
+c)  72 ÷ 9 × 5 ÷ 2        
+d)  9 × 12 ÷ 6 × 30
+Birinchi bajarilishi kerak bo‘lgan 
+amalning tagiga chizing.
+Juftlikda ishlang
+Bajaring va o‘rganing
+31–32
+Mashq daftariga o‘ting
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   32
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   32
+09/08/24   19:30
+09/08/24   19:30
+
+33
+To‘rt amal
+To‘rt amal
+1  Maftunada 26 ta nok bor. U noklarni 4 tadan qilib 5 ta xaltaga solib chiqdi. Nechta 
+nok ortib qoldi?
+ 
+ 
+ 
+6 ta nok ortib qoldi.
+2  Xonada dastlab 16 ta stul bor edi. Laziza opa xonaga yana har birida 8 tadan stul 
+bo‘lgan 3 qator stul olib kirdi. Xonada jami nechta stul bo‘ldi?
+      
+ 
+1-usul
+3 × 8 = 24
+16 + 24 = 40
+2-usul
+16 + 3 × 8 = 16 + 24
+ 
+        = 40
+ 
+Xonada jami 40 ta stul bo‘ldi.
+5 × 4 = 20
+26 – 20 = 6
+Bu – mening bajarish usulim.
+26 – 5 × 4
+= 26 – 20
+= 6
+Men bu usul bilan bajardim.
+? ta nok ortib 
+qolgan
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   33
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   33
+09/08/24   19:30
+09/08/24   19:30
+
+34
+3  Maktab sport maydonida 120 nafar o‘quvchi bor edi. Ular 4 ta guruhga teng 
+bo‘lindi. Har bir guruhdan 18 nafardan o‘quvchi kurash musobaqasiga tanlab 
+olindi. Har bir guruhdan nechta o‘quvchi kurash musobaqasida ishtirok etish 
+uchun tanlanmadi?
+ 
+1-usul
+120 ÷ 4 = 30
+30 – 18 = 12
+2-usul
+120 ÷ 4 – 18 = 30 – 18 
+ 
+ 
+       = 12
+ 
+Har bir guruhdan 12 nafar o‘quvchi kurash musobaqasida ishtirok etish uchun 
+tanlanmadi.
+4  Ifodalarning qiymatini toping.
+ 
+a) 
+80 ÷ 10 – 3 × 2 = 8 – 3 × 2  
+ 
+ 
+ 
+ 
+ 
+= 8 – 6 
+ 
+ 
+ 
+ 
+= 2 
+ 
+ 
+b) 
+90 – 30 × 8 ÷ 4 
+= 90 – 240 ÷ 4
+ 
+ 
+  
+= 90 – 60
+ 
+ 
+  
+= 30
+       
+c) 
+50 × 8 + 15 ÷ 3 = 400 + 15 ÷ 3 
+ 
+ 
+ 
+ 
+= 400 + 5 
+ 
+ 
+ 
+ 
+= 405 
+ 
+ 
+ 
+ 
+ 
+ 
+d) 
+60 – 15 + 12 ÷ 3 × 2 
+= 60 – 15 + 4 × 2
+ 
+ 
+ 
+= 60 – 15 + 8
+ 
+ 
+ 
+= 45 + 8
+ 
+ 
+ 
+= 53
+ 
+Qavslar ishtirok etmagan ifodalarda amallarni bajarish tartibi:
+ Dastlab chapdan o‘ngga ko‘paytirish yoki bo‘lish amallari bajariladi.
+ So‘ng chapdan o‘ngga qo‘shish yoki ayirish amallari bajariladi.
+ 
+ 
+Birinchi bajarilishi kerak bo‘lgan 
+amalning tagiga chizing.
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   34
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   34
+09/08/24   19:30
+09/08/24   19:30
+
+Misol
+2 + 3 × 4 = ?
+ 
+Amallarni bajarish tartibi
+Ifoda 
++
+–
+×
+÷ 
+2 + 3 × 4
+ikkinchi
+birinchi
+Quyida 2 + 3 × 4 misoldagi 
+amallarni kalkulyator 
+qanday tartibda bajarishi 
+ko‘rsatilgan. Kalkulyator 
+dastlab 3 × 4 ni hisoblaydi. 
+So‘ng ko‘paytmaga 2 ni 
+qo‘shadi.
+Tekshirish
+Avval AC tugmasini, keyin 
+2   +  3   ×  4  =
+ 
+tugmalarini bosing.
+35
+Guruh bo‘lib ishlang.
+Quyidagi jadvalda berilgan ifodalarning qiymatini kalkulyatordan foydalanib toping. 
+Amallarni kalkulyatorda bajarish tartibini muhokama qiling.
+Nima uchun amallarni bajarish tartibi muhim ekanini tushuntiring.
+Amallarni bajarish tartibi
+Ifoda
++
+–
+×
+÷ 
+Javob
+8 – 3 × 2
+ikkinchi
+birinchi
+2
+15 + 15 ÷ 5
+12 – 4 + 2
+10 × 5 + 10
+100 ÷ 10 – 5
+4 × 5 + 2 × 6
+20 ÷ 2 – 2 ÷ 1
+4 × 2 – 30 ÷ 6
+ 
+Qo‘lda bajariladigan mashq
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   35
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   35
+09/08/24   19:30
+09/08/24   19:30
+
+36
+Juftlikda muhokama qiling.
+Tenglik to‘g‘ri bo‘lishi uchun bo‘sh joylarga +, –, × yoki ÷ amal belgilaridan mosini 
+yozing. Javoblarni kalkulyatordan foydalanib tekshiring.
+a) 
+5 
+ 3 
+ 4 = 19   
+b)  42 
+ 14 
+ 7 = 40 
+c)  24 
+ 3 
+ 5 
+ 4 = 28         
+d)  16 
+ 10 
+ 2 
+ 5 = 20 
+Ifodalarning qiymatini toping.
+a) 
+7 × 9 – 3 × 3   
+b)  8 + 4 × 3 ÷ 2  
+c) 
+28 – 6 × 2 + 14 
+d)  16 + 36 ÷ 9 × 5  
+e) 
+56 ÷ 7 + 6 × 8  
+f)  
+100 × 10 ÷ 50 + 100  
+g) 
+30 + 30 × 3 ÷ 10 
+h)  25 – 6 × 4 + 1
+i) 
+48 – 40 ÷ 4 × 3 
+j)  
+39 ÷ 3 – 2 × 5 + 1
+Juftlikda ishlang
+Bajaring va o‘rganing
+33–34
+Mashq daftariga o‘ting
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   36
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   36
+09/08/24   19:30
+09/08/24   19:30
+
+37
+To‘rt amal
+To‘rt amal
+1  Lobar opaning 5 ta likopchasi bor. U har bir likopchaga 4 tadan olma va 3 tadan 
+apelsin qo‘ydi. Likopchalarga jami nechta meva qo‘yildi?
+ 
+2  Har birida 6 tadan tuxum bo‘lgan 8 ta quti bor. 
+ 
+Jamila har bir qutidan 2 tadan tuxum oldi. 
+ 
+Qutilarda jami nechta tuxum qoldi?
+ 
+1-usul
+6 – 2 = 4
+8 × 4 = 32
+2-usul
+8 × (6 – 2) = 8 × 4 
+ 
+ 
+ 
+= 32
+ 
+8 ta qutida jami 32 ta tuxum qoldi.
+  Dastlab qavs ichidagi        
+amallarni bajaring.
+4 + 3 = 7 
+7 × 5 = 35
+Bu – mening bajarish usulim.
+(4 + 3) × 5
+= 7 × 5
+= 35
+Men qavslardan foydalanib  bu 
+usulda bajardim.
+Qavsli ifodalarda amallarni bajarish tartibi
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   37
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   37
+09/08/24   19:30
+09/08/24   19:30
+
+38
+3  Ifodalarning qiymatini toping.
+ 
+a) 
+32 – (48 – 24) = 32 – 24 
+ 
+ 
+ 
+ = 8
+ 
+b) 
+32 ÷ (40 ÷ 5) = 32 ÷ 8    
+                                   
+= 4
+ 
+c) 
+(88 – 3) ÷ (15 ÷ 3) = 85 ÷ 5    
+ 
+                                         
+  
+= 17          
+ 
+                                 
+ 
+d) 
+(700 – 150) ÷ 5 ÷ (5 × 2) = 550 ÷ 5 ÷ 10   
+ 
+ 
+ 
+  
+ 
+= 110 ÷ 10 
+ 
+ 
+ 
+  
+ 
+= 11
+ 
+ 
+Qavslar ishtirok etgan ifodalarda amallarni bajarish tartibi:
+ Dastlab qavs ichidagi amallarni bajaring.
+ Keyin chapdan o‘ngga ko‘paytiring yoki bo‘ling.
+ So‘ng chapdan o‘ngga qo‘shing yoki ayiring.
+ 
+Amallarni bajarish tartibini muhokama qiling va ifodalarning qiymatini toping. 
+So‘ng kalkulyatordan foydalanib javoblarni tekshiring.
+a) 
+(38 – 6) × 2   
+ 
+b)  56 ÷ (4 × 2) 
+c) 
+70 – (12 + 43) 
+ 
+d)  (8 × 8) – (20 × 3) 
+e)  (60 ÷ 6) × (5 + 7) – 45 
+ 
+f)  
+5 × (100 ÷ 4) × (4 + 10)
+Ifodalarning qiymatini toping va kalkulyatordan foydalanib javoblarni tekshiring.
+a) 
+27 – (69 – 46)     
+b)  (9970 + 830) ÷ 30
+c) 
+280 ÷ 70 × (15 + 45)    
+d)  108 + (93 – 57) × 8
+Juftlikda ishlang
+Bajaring va o‘rganing
+35–36
+Mashq daftariga o‘ting
+Tekshirish
+Avval AC tugmasini, keyin 
+quyidagi tugmalarni bosing: 
+3   2   –  (   4   8  –  2   4  )   =
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   38
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   38
+09/08/24   19:30
+09/08/24   19:30
+
+39
+1  Yusuf aka har bir qutiga 40 donadan daftar joyladi. U har bir daftarni 3300 so‘mdan 
+sotgan bo‘lsa, 18 quti daftar necha so‘mga sotilgan?
+ 
+18 quti
+40 dona
+40 dona
+1 quti
+ 
+40 × 3300 = 132 000
+   18 × 132 000 = 2 376 000 
+ 
+18 quti daftar 2 376 000 so‘mga sotilgan.
+ 
+2  Tolib aka televizor sotib olmoqchi. U buning uchun dastlab 480 000 so‘m to‘ladi va 
+keyin 12 oy davomida har oy 73 000  so‘mdan to‘laydigan bo‘ldi. Televizorning narxi 
+qancha?
+   
+ 
+?
+73 000
+73 000 73 000
+480 000 so‘m
+ 
+ 
+ 73 000 × 12 = 876 000
+     876 000 + 480 000 = 1 356 000
+ 
+Televizorning narxi 1 356 000 so‘m.
+Matnli masalalar
+ 
+40 ×  3300 × 18
+  
+  
+  
+ 
+   40 × 3000 × 20 = 2 400 000
+ 
+   40 
+ 
+   40 × 3300 
+ 3300 × 18 
+× 18 ≈ 2 400 000
+≈ 2 400 000
+2 376 000 so‘m – to‘g‘ri javob, chunki 
+u 2 400 000 so‘mga yaqin.
+Men masalani quyidagi usulda
+ ham yecha olaman:
+40 × 3300 × 18 = 2 376 000
+Tekshirish
+     Men masalani quyidagi usulda 
+ham yecha olaman: 
+73 000 × 12 + 480 000 = 1 356 000
+Tekshirish
+            Javob to‘g‘rimi?
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   39
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   39
+09/08/24   19:30
+09/08/24   19:30
+
+40
+3  Madina opaning 28 quti tugmasi boʻlib, har bir qutida 200 tadan tugma bor. 
+U 600 ta tugma sotdi va qolgan tugmalarni 40 tadan qilib qopchalarga solib qo‘ydi. 
+U nechta qopchaga tugma solgan? 
+ 
+ 
+?
+1 ta qopcha
+40 ta tugma
+40 ta tugma
+ 
+ 
+200 × 28 = 5600
+ 5600 – 600 = 5000
+ 
+5000 ÷ 40 = 125 
+ 
+ 
+ 
+U 125 ta qopchaga tugma solgan.
+ 
+4  Sarvar amaki 45 yoshda. Uning o‘g‘li Oybek 9 yoshda. Necha yildan keyin Sarvar 
+amaki o‘g‘lidan 4 marta katta bo‘ladi?
+ 
+ 
+45 – 9 = 36
+ 
+Yoshdagi farq 36 yil.
+ 
+Bu yosh farqi hech qachon o‘zgarmaydi.
+   
+ 
+Sarvar  amaki
+Oybek
+36
+ 
+ 
+ 3 bo‘lak = 36
+  1 bo‘lak = 36 ÷ 3 
+ 
+   = 12
+ 
+ 
+Oybek 12 yosh bo‘lganda otasi undan 4 marta katta bo‘ladi.
+ 
+12 – 9 = 3
+ 
+Sarvar amaki uch yildan keyin o‘g‘lidan 4 marta katta bo‘ladi.
+Men masalani quyidagi usulda 
+ham yecha olaman:
+(200 × 28 – 600) ÷ 40 = 125
+Tekshirish
+    Javob to‘g‘rimi?
+Men masalani quyidagi 
+usulda ham yecha olaman: 
+(45 – 9) ÷ 3 – 9 = 3
+Tekshirish
+Javob to‘g‘rimi?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   40
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   40
+09/08/24   19:30
+09/08/24   19:30
+
+41
+Qiziqarli matematika
+5  Dastlab Kamolaning puli Dononikidan 6000 so‘m ko‘p edi. So‘ng Dono Kamolaga 
+8000 so‘m berdi. Endi Kamolaning puli Dononikidan ikki baravar ko‘p bo‘ldi. 
+Kamolada dastlab qancha pul bo‘lgan?
+ 
+ 
+ 
+ 
+1 bo‘lak
+Keyin
+Kamola
+Dono
+8000 
+6000 8000 so‘m
+Oldin
+Kamola
+Dono
+6000 so‘m 
+ 
+ 
+Keyin 
+ 
+1 bo‘lak = (2 × 8000) + 6000
+ 
+ 
+= 22 000 (so‘m)
+ 
+Oldin
+ 
+22 000 + 8000 + 6000 = 36 000 (so‘m)
+ 
+Kamolada dastlab 36 000 so‘m pul bo‘lgan.
+Guruh bo‘lib ishlang.
+Quyidagi masalalarni muhokama qiling va yeching. 
+1  Doʻkondan 205 400 so‘mga 9 ta daftar va 17 ta qalam sotib olindi. Bitta qalam 
+6550 so‘m tursa, bitta daftarning narxini toping.
+2  Tadbirda dastlab 90 nafar oʻgʻil bola va 150 nafar qiz bor edi. Tushga borib 
+tadbirni teng sondagi oʻgʻil bolalar va qizlar tark etdi. Shundan soʻng tadbirda 
+qolgan qizlar soni oʻgʻil bolalar sonidan uch baravar koʻp bo‘ldi. Jami nechta 
+oʻgʻil bola va qizlar tadbirdan ketgan?
+3  Dono va Kamolada jami 478 ta stiker bor edi. Akmal va Donoda esa 232 
+ta stiker bor edi. Kamolaning stikerlari soni Akmalnikidan 4 baravar ko‘p. 
+Donoda nechta stiker bor?
+O‘rganing va bo‘lishing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   41
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   41
+09/08/24   19:30
+09/08/24   19:30
+
+Matnli masalalarni yeching.
+1  O‘quv kursida ishtirok etish uchun 28 nafar o‘quvchi ro‘yxatdan o‘tdi. Har bir o‘quvchi 
+oyiga 50 000 so‘m to‘ladi va kurs 4 oy davom etdi. O‘quv kursi uchun yig‘ilgan 
+umumiy mablag‘ning miqdori qancha? 
+2  Perimetri 272 m bo‘lgan to‘g‘ri to‘rtburchak shaklidagi dalaning eni bo‘yidan 16 m 
+uzun. Dalaning enini toping. 
+3  Jadvalda ko‘ngilochar bog‘dagi chiptalar narxi 
+ko‘rsatilgan. 87 nafar katta yoshli va 96 nafar bola 
+chipta uchun jami qancha pul to‘lashi kerak?  
+ 
+4  Ishchiga haftaning birinchi 5 kuniga 72  000 so‘mdan va shanba kuni uchun 85 000 
+so‘m ish haqi to‘lanadi. Agar ishchi dushanbadan shanbagacha ishlagan bo‘lsa, jami 
+qancha ish haqi olgan?
+5  Jamshid amaki 6 948 000 so‘mga xonadoniga uchta konditsioner o‘rnatdi. U dastlab 
+2 508 000 so‘m to‘ladi va qolgan pulni 24 oy davomida teng miqdorda to‘lab bordi. U 
+har oy qancha pul to‘lagan?
+6  Stol va 7 ta bir xil stul jami 8 550 000 so‘m turadi. Bitta stul stoldan 250 000 so‘m 
+arzonroq bo‘lsa, stolning narxini toping.
+7  Novvoy 308 ta nonni savatlarga 12 tadan soldi. U har bir savat nonni 23 000 so‘mdan, 
+qolgan nonlarning donasini 3000 so‘mdan sotdi. Novvoy nonlarni jami necha so‘mga 
+sotgan?
+8  Akmal va Sardorda dastlab bir xil miqdorda pul bor edi. Har kuni Akmal 6000 so‘m, 
+Sardor 8000 so‘m sarfladi. Bir necha kundan keyin Sardorda 4000 so‘m qoldi, 
+Akmalda esa Sardordan 4 baravar ko‘p pul qoldi. Bolalarning har birida dastlab 
+qanchadan pul bo‘lgan?
+ 
+12 000 so‘m
+4000
+Akmal
+Sardor
+ 
+Masalani yechish uchun chizmali modeldan foydalaning.
+Ko‘ngilochar bog‘
+Kattalar chiptasi
+25  000 so‘m
+Bolalar chiptasi
+13 000 so‘m
+Bajaring va o‘rganing
+37–46
+Mashq daftariga o‘ting
+42
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   42
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   42
+09/08/24   19:30
+09/08/24   19:30
+
+a) Men qavssiz ifodalarda amallarni bajarish tartibini bilaman.  
+b) Men qavsli ifodalarda amallarni bajarish tartibini bilaman.  
+c)  Men to‘rtta amal qatnashgan masalalarni yechishni bilaman.  
+43
+Qiziqarli matematika
+Guruh bo‘lib ishlang.
+Javoblarni guruhdoshlaringiz bilan muhokama qiling. 
+1  10 nafar tennischi bor edi. 
+ 
+Har bir tennischi qolgan 9 nafar raqibi bilan bittadan o‘yin o‘tkazadi. Jami 
+nechta o‘yin rejalashtirilgan? 
+ 
+Jadval tuzing. Rejalashtirilgan o‘yinlarni belgilang va ularni sanang.
+ 
+A
+B
+C
+D 
+E
+F
+G
+H 
+I  
+J
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+2  Jamoa matematika musobaqasida 20 ta savolga javob berib, 120 ball to‘pladi. 
+Har bir to‘g‘ri javob uchun 8 ball beriladi, har bir noto‘g‘ri javob uchun esa  
+2 ball olib tashlanadi. 
+ 
+Jamoa jami nechta savolga to‘g‘ri javob bergan?
+Bu 
+masalalarni 
+yechishning 
+boshqa 
+usullari 
+bormi?
+O‘rganing va bo‘lishing
+O‘zingizni tekshiring
+47–50
+Mashq daftariga o‘ting
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   43
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   43
+09/08/24   19:30
+09/08/24   19:30
+
+Berilgan 4 ta sonni quyidagicha tartiblab, sonlar ketma-ketligi hosil qilindi. 
+ 
+ 
+ 
+ 
+1
+2
+3
+4       
+ 
++ 1    
++ 1    
++ 1 
+ 
+ 
+ 
+1 + 2 + 3 + 4 = 10
+4 ta raqamning yig‘indisi 10 ga teng.
+Boshqa 4 ta sonni xuddi shunday usulda tartiblab, sonlar ketma-ketligi hosil qilindi.
+Berilgan 4 ta sonning yig‘indisi 250 bo‘lsa, ushbu sonlarni toping.
+ 
+       
+       
+       
+ 
++ 1    
++ 1    
++ 1 
+ 
+Sonlar ketma-ketligidagi 
+qonuniyatni toping.
+O‘ylab ko‘ring
+51–54
+Mashq daftariga o‘ting
+44
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   44
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   44
+09/08/24   19:30
+09/08/24   19:30
+
+45
+Sardor, shirin 
+kulchalarning 
+qancha qismi 
+shokoladli?
+Oyim tortni 12 ta 
+bo‘lakka bo‘ldi. 
+Akmal, sening 
+likopchangda 
+tortning qancha 
+bo‘lagi bor?
+Mening 
+likopchamda 
+tortning 
+  1
+4 bo‘lagi bor.
+Himm... 
+ 6
+10  qismimi?
+Oddiy kasrlar
+3
+Bolalar bayramda
+Muhokama qiling
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   45
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   45
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  a)  Pitsa uch nafar bolaga teng bo‘lib berildi. Har bir bola pitsaning qanday 
+ 
+ 
+qismini olgan?
+ 
+ 
+1 butun
+1
+3
+1
+3
+1
+3
+ 
+ 
+1 ta pitsa 3 ta teng qismga bo‘lindi.
+ 
+ 
+1 ÷ 3 = 1
+3 
+ 
+ 
+Har bir bola pitsaning  1
+3  qismini olgan. 
+1
+3  = 1 ÷ 3
+3 nafar bola va 1 ta pitsa bor. 
+Har bir bola pitsaning  1
+3  qismini 
+olgan.
+Sonlarni bo‘lishni kasr ko‘rinishida ifodalash
+46
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   46
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   46
+09/08/24   19:31
+09/08/24   19:31
+
+ 
+b) 2 ta pitsa 3 nafar bolaga teng bo‘lib berildi.
+ 
+ 
+Har bir bola pitsaning qanday qismini olgan? 
+ 
+ 
+2
+3
+2
+3
+2
+3
+    
+2 ta butun
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 ta pitsaning har biri 3 ta teng qismga bo‘lingan.
+ 
+ 
+2 ÷ 3 = 2
+3
+ 
+ 
+Har bir bola pitsaning  2
+3  qismini olgan.
+2 ta pitsa va  3 nafar bola bor. 
+Har bir bola har bir pitsaning 
+1
+3  qismini olgan.
+2
+3 = 2 ÷ 3
+47
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   47
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   47
+09/08/24   19:31
+09/08/24   19:31
+
+2  a) 2 ta tortni 4 nafar bolaga teng bo‘lib bering. Har bir bola tortning qanday  
+ 
+qismini oladi? Javobni oddiy kasr ko‘rinishida ifodalang.
+ 
+ 
+ 
+ 
+2 ta butun
+2
+4
+2
+4
+2
+4
+2
+4
+1
+2
+1
+2
+1
+2
+1
+2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 ta tortning har biri 4 ta teng qismga bo‘lingan.
+ 
+ 
+2 ÷ 4 = 2
+4 
+           
+           = 1
+2 
+      
+ 
+Har bir bola bitta tortning  1
+2  qismini oladi. 
+ 
+ 
+4 nafar bola va 2 ta tort bor. 
+Har bir bola har bir tortning  
+ 1
+4 qismini oladi.
+2
+4 = 2 ÷ 4 
+48
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   48
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   48
+09/08/24   19:31
+09/08/24   19:31
+
+ 
+b) 5 ta tortni 4 nafar bolaga teng bo‘lib bering. Har bir bola tortning qanday  
+ 
+qismini oladi? Javobni aralash son ko‘rinishida ifodalang.
+ 
+ 
+ 
+ 
+5 ta butun
+11
+4
+11
+4
+11
+4
+11
+4
+ 
+ 
+ 
+ 
+ 
+  
+5 ÷ 4 = 5
+4
+ 
+  
+         = 4
+4 + 1
+4 
+ 
+  
+         = 1 1
+4 
+ 
+ 
+Har bir bola 1 1
+4  ta tort oladi. 
+5 ta tort va 4 nafar 
+bola bor. Dastlab  
+har bir bola 1 tadan 
+butun tort oladi. So‘ng 
+5-tortni 4 ta teng 
+bo‘lakka bo‘linadi va 
+har bir bola uning 
+  1
+4 qismini oladi.
+5
+4 = 5 ÷ 4 
+49
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   49
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   49
+09/08/24   19:31
+09/08/24   19:31
+
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang.
+1  
+Har bitta doira bitta quymoqni ifodalaydi.  
+ 
+a) 
+Har bir bola nechta quymoq oladi?
+ 
+ 
+ 
+4 ta quymoqni 3 nafar bolaga teng bo‘lib bering.
+ 
+b) 
+Har bir bola quymoqning qancha qismini oladi?
+ 
+ 
+4 ta quymoqni 6 nafar bolaga teng bo‘lib bering.
+4 ta quymoqni 8 nafar bolaga teng bo‘lib bering.
+ 
+2  
+Bo‘lishning kasrga qanday aloqasi borligini tushuntiring.
+3  6 m uzunlikdagi tasma 10 ta teng bo‘lakka bo‘lindi. Har bir bo‘lakning uzunligi 
+qancha? Javobni oddiy kasr ko‘rinishida ifodalang.
+ 
+ 
+?
+6 m
+ 
+6 ÷ 10 = 6
+10 
+ 
+           = 3
+5 
+ 
+Har bir tasma bo‘lagining uzunligi  3
+5  m.
+Har bir bo‘lak 
+6 metrning 
+  1
+10 qismiga 
+teng.
+Kerakli sondagi 
+quymoqlarnigina 
+teng bo‘laklarga 
+bo‘lish orqali 
+bolalarga 
+quymoqlarni teng 
+boʻlib bering.
+50
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   50
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   50
+09/08/24   19:31
+09/08/24   19:31
+
+Juftlikda ishlang
+Juftlikda muhokama qiling.
+Berilgan masalalardagi kasr va bo‘lish o‘rtasidagi aloqani ko‘rsating.
+a) 12 metrli arqon 3 ta teng bo‘lakka bo‘lingan. Har bir bo‘lakning uzunligi qancha?
+b) 3 metrli arqon 12 ta teng bo‘lakka bo‘lingan. Har bir bo‘lakning uzunligi qancha?
+Bajaring va o‘rganing
+1  a) Bitta pitsani 6 nafar bolaga teng taqsimlab bering.
+             
+Har bir bola pitsaning qancha qismini oladi?
+            
+ 
+b) 3 ta shokoladni 5 nafar bolaga teng taqsimlab bering.
+ 
+ 
+Har bir bola shokoladning qancha qismini oladi?
+ 
+ 
+2  Javobni oddiy kasr ko‘rinishida ifodalang.
+ 
+a) 4 ÷ 6  
+b) 3 ÷ 12        
+c) 6 ÷ 8    
+d) 2 ÷ 10  
+3  Javobni aralash son ko‘rinishida ifodalang.
+      
+Bo‘lish qanday amalga oshirilganini ko‘rsating.
+      
+a) 7 ÷ 4    
+b) 5 ÷ 2  
+c) 20 ÷ 9 
+d) 23 ÷ 6
+Javobingizni sherigingizga tushuntiring.
+55–58
+Mashq daftariga o‘ting
+51
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   51
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   51
+09/08/24   19:31
+09/08/24   19:31
+
+1  3 kg li tort 5 nafar bola o‘rtasida teng taqsimlandi. Har bir bola tortning qancha 
+qismini olgan? Javobni o‘nli kasr ko‘rinishida ifodalang.
+ 
+ 
+1-usul
+ 3 ÷ 5 = 3
+5 
+   
+ = 6
+10 
+   
+ = 0,6
+ 
+ 
+ 
+ 
+2-usul
+ 3 ÷ 5 = 0,6
+ 
+ 
+Har bir bola 0,6 kg tort olgan.
+2  Quyidagi oddiy kasrlarni o‘nli kasr ko‘rinishida ifodalang.
+ 
+a) 
+7
+20 = 35
+100   
+=
+× 5
+× 5
+7
+20
+35
+100
+ 
+b) 
+9
+50 = 18
+100  
+=
+× 2
+× 2
+9
+50
+18
+100
+       
+ 
+ 
+= 0,35   
+ 
+ 
+ 
+= 0,18                                    
+ 
+                                
+ 
+c) 
+13
+25 = 52
+100  
+=
+× 4
+× 4
+13
+25
+52
+100
+ 
+d)  1
+8 = 125
+1000      
+=
+× 125
+× 125
+1
+8
+125
+1000
+                       
+       
+ 
+ 
+= 0,52 
+  
+ 
+ = 0,125
+Kasrni o‘nli kasrga 
+aylantirishda 
+burchak usulida 
+bo‘lishdan ham 
+foydalanish mumkin.
+Maxraji 10, 100 
+yoki 1000 ga teng 
+bo‘lgan teng kuchli 
+kasrni toping.
+30
+3,0
+0
+0,6
+5
+–
+Oddiy kasrni o‘nli kasrga aylantirish
+Qarang va o‘rganing
+52
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   52
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   52
+09/08/24   19:31
+09/08/24   19:31
+
+3-usul
+9
+4 = 4
+4 + 4
+4 + 1
+4  
+ = 2 1
+4
+ = 2,25
+3  a) 
+2
+9 ni o‘nli kasr ko‘rinishida ifodalang. Javobni o‘ndan birlar xonasigacha yaxlitlang.
+ 
+ 
+2
+9 = 0,2   (o‘ndan birlar xonasigacha) 
+ 
+b) 
+6
+11 ni o‘nli kasr ko‘rinishida ifodalang. Javobni yuzdan birlar xonasigacha yaxlitlang.
+ 
+ 
+6
+11 = 0,55   (yuzdan birlar xonasigacha) 
+ 
+4  9
+4 ni o‘nli kasr ko‘rinishida ifodalang.
+1-usul
+9
+4 = 225
+100
+ = 2,25
+ 
+=
+× 25
+× 25
+9
+4
+225
+100
+2-usul
+9
+4 = 9 ÷ 4
+ = 2,25
+ 
+=
+× 25
+× 25
+1
+4
+25
+100
+18
+20
+2
+–
+18
+2,00
+0,22...
+9
+–
+44
+55
+50
+60
+5
+–
+–
+5 5
+6,000
+0,545...
+11
+–
+8
+20
+10
+20
+0
+–
+–
+8
+9,00
+2,25
+4
+–
+53
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   53
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   53
+09/08/24   19:31
+09/08/24   19:31
+
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang.
+a)  
+Berilgan oddiy kasrlarni o‘nli kasrga aylantirish usullarini muhokama qiling.  
+Oddiy kasrlarni o‘nli kasrga aylantirish jarayonida maxrajlar bilan bog‘liq 
+nimani payqadingiz?
+3
+8
+3
+4
+13
+20
+7
+2
+8
+5
+6
+25
+47
+50
+b) 
+Maxraji 3, 6, 7 va 9 bo‘lgan kasrlarni yozing.  
+Kasrlarni o‘nli kasrga aylantirish usullarini muhokama qiling.
+c) 
+b) topshiriqdagi o‘nli kasrlarni yuzdan birlar xonasigacha yaxlitlang.
+ 
+Juftlikda ishlang
+Juftlikda ishlang. 
+1  Quyidagi oddiy kasrlarni o‘nli kasr ko‘rinishida ifodalang.
+ 
+a) 
+1
+11  
+b) 
+2
+11 
+c)  
+3
+11  
+d) 
+4
+11 
+ 
+Yozilgan o‘nli kasrlarda biror qonuniyat bormi?
+2  1-misoldagi qonuniyat asosida quyidagi kasrlarni navbat bilan, kalkulyatordan 
+foydalanmasdan o‘nli kasr ko‘rinishida ifodalang. So‘ng sherigingizning javobini 
+kalkulyatordan foydalanib tekshiring.
+ 
+a) 
+5
+11  
+b) 
+6
+11   
+c)  7
+11  
+d) 
+8
+11 
+Tekshirish
+54
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   54
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   54
+09/08/24   19:31
+09/08/24   19:31
+
+Bajaring va o‘rganing
+1  Quyidagi kasrlarni o‘nli kasr ko‘rinishida ifodalang.
+ 
+a) 
+4
+5  
+b) 
+3
+4  
+c) 
+9
+25 
+ 
+d)  11
+20  
+e) 
+21
+50  
+f) 
+6
+125 
+2  Quyidagi kasrlarni o‘nli kasr ko‘rinishida ifodalang.  
+Javoblarni o‘ndan birlar xonasigacha yaxlitlang.
+ 
+a) 
+7
+3  
+b) 13
+7   
+3  3 ℓ apelsin sharbati 4 ta stakanga teng miqdorda quyildi. Har bir stakanda qancha  
+ 
+apelsin sharbati bor? Javobni o‘nli kasr ko‘rinishida ifodalang.
+4  10 kg shakar 8 ta idishga teng taqsimlandi. Har bir idishda necha kilogramm  
+ 
+ 
+shakar bor? Javobni o‘nli kasr ko‘rinishida ifodalang.
+5  6 kg pechenye 4 nafar bola o‘rtasida teng taqsimlandi. Har bir bola necha kilogramm  
+ 
+pechenye olgan? Javobni o‘nli kasr ko‘rinishida ifodalang.
+O‘zingizni tekshiring
+a) 
+Men sonlarni bo‘lishni kasr ko‘rinishida ifodalashni bilaman.  
+b) 
+Men kasrni o‘nli kasrga aylantirishni bilaman.   
+59–62
+Mashq daftariga o‘ting
+55
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   55
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   55
+09/08/24   19:31
+09/08/24   19:31
+
+Eslang
+Kasrlarni qo‘shish va ayirish
+1  2
+3  va  1
+5  ni qo‘shing.
+ 
+2
+3 + 1
+5 = 10
+15 + 3
+15 
+ 
+ 
+ = 13
+15 
+2  5
+6  dan  3
+4  ni ayiring.
+ 
+5
+6 – 3
+4 = 10
+12 – 9
+12 
+ 
+ 
+ = 1
+12 
+3  Idishda 1
+8 ℓ apelsin sharbati bor. Maftuna ichimlik tayyorlash uchun idishga 9
+10 ℓ 
+suv quydi. Idishdagi ichimlik miqdorini aniqlang. Javobni aralash son ko‘rinishida 
+ifodalang.
+ 
+1
+8 + 9
+10 = 5
+40 + 36
+40 
+              
+= 41
+40
+              
+= 1 1
+40 ℓ
+ 
+Idishdagi ichimlik miqdori  1 1
+40  ℓ.
+3 va 5 ning dastlabki
+umumiy karralisi 15.
+   
+4 va 6 ning dastlabki
+umumiy karralisi 12.
+× 2
+× 2
+5
+6  =  10
+12 
+   
+× 3
+× 3
+3
+4  =  9
+12 
+× 3
+× 3
+1
+5  =  3
+15 
+× 5
+× 5
+2
+3  =  10
+15 
+56
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   56
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   56
+09/08/24   19:31
+09/08/24   19:31
+
+4  Birinchi ustun uzunligi  3
+4  m ga teng va u ikkinchi ustundan  1
+5  m ga uzun bo‘lsa, 
+ikkinchi ustun uzunligini toping.  
+Javobni oddiy kasr ko‘rinishida yozing.
+ 
+3
+4 – 1
+5 = 15
+20 – 4
+20 
+              
+= 11
+20
+ 
+Ikkinchi ustun uzunligi  11
+20  m ga teng.
+5  Dilnoza opa 1 kg kartoshka sotib oldi. U kartoshkalarning  2
+5  qismini taom 
+tayyorlash uchun ishlatdi,  3
+10  qismini esa qo‘shnisiga berdi. Dilnoza opada 
+qancha kartoshka qoldi?
+ 
+Javobni oddiy kasr ko‘rinishida yozing.
+ 
+ 1 – 2
+5 = 3
+5
+        3
+5 – 3
+10 = 6
+10 – 3
+10 
+ 
+ 
+ = 3
+10 
+ 
+Dilnoza opada  3
+10  kg kartoshka qolgan.
+63–64
+Mashq daftariga o‘ting
+57
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   57
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   57
+09/08/24   19:31
+09/08/24   19:31
+
+1  Akmalda 1 1
+2 ta, Sardorda 1 1
+3  ta pitsa bor. Ularda jami qancha pitsa borligini toping. 
+Javobni aralash son ko‘rinishida yozing.
+ 
++
+ 
+ 
+      
+1 1
+2 + 1 1
+3 = 1 3
+6 + 1 2
+6  
+                           = 2 5
+6  
+ 
+Akmal va Sardorda jami 2 5
+6 ta pitsa bor.
+Dastlab  1
+2  va  1
+3  ni umumiy 
+maxraji 6 bo‘lgan kasrlarga 
+almashtiring. So‘ng butun va  
+kasr qismlarini qo‘shing.
+2 va 3 ning dastlabki 
+umumiy karralisi 6.
+× 3
+1
+2   =   3
+6 
+1
+3   =   2
+6 
+× 2
+× 3
+× 2
+Aralash sonlarni qo‘shish va ayirish
+Qarang va o‘rganing
+58
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   58
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   58
+09/08/24   19:31
+09/08/24   19:31
+
+2  Kamolada 1 3
+4 ta, Donoda 1 2
+3 ta tort bor. Ularda jami qancha tort bor? Javobni aralash 
+son ko‘rinishida yozing.
+         1 3
+4 + 1 2
+3  = 1 9
+12 + 1 8
+12  
+                          = 2 17
+12
+ 
+               = 2 + 1 5
+12
+ 
+               = 3 5
+12
+ 
+Kamola va Donoda jami 3 5
+12 ta tort bor.
+3  Birinchi arqonning uzunligi 3 2
+5 m ga teng. Ikkinchi arqon undan 2 m uzun bo‘lsa, 
+ikkinchi arqon uzunligini toping. Javobni aralash son ko‘rinishida yozing.
+3 2
+5 m
+Birinchi arqon
+Ikkinchi arqon
+?
+2 m
+ 
+3 2
+5 + 2 = 5 2
+5 
+ 
+Ikkinchi arqon uzunligi  5 2
+5  m ga teng. 
+17
+12 = 12
+12 + 5
+12 
+ 
+= 1 5
+12
+Noto‘g‘ri kasrni aralash 
+son ko‘rinishida yozing. 
+So‘ng butun va kasr 
+qismlarni qo‘shing.
+Chamalaymiz: 3 + 2 = 5.
+5 2
+5  javobni aniqroq  
+deyishimiz mumkin, chunki  
+u 5 metrga yaqin.
+59
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   59
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   59
+09/08/24   19:31
+09/08/24   19:31
+
+4  Lobar opaning  2 1
+2  ta quymog‘i bor edi. U  1 2
+5  ta quymoqni dugonasiga berdi. Unda 
+qancha quymoq qoldi? Javobni aralash son ko‘rinishida yozing.
+ 
+    
+           
+ 
+2 1
+2 – 1 2
+5 = 2 5
+10 – 1 4
+10         
+ 
+ 
+ 
+= 1 1
+10
+ 
+Lobar opada  1 1
+10  ta quymoq qoldi.
+Javobingizni  
+kalkulyator yordamida 
+tekshiring.
+2 va 5 ning dastlabki 
+umumiy karralisi qaysi son?
+60
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   60
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   60
+09/08/24   19:31
+09/08/24   19:31
+
+5  Dasturxonda  3 1
+6  ta pitsa bor edi. Bolalar  1 2
+3  ta pitsani yeyishdi.  
+Dasturxonda qancha pitsa qoldi? Javobni aralash son ko‘rinishida yozing.
+ 
+3 1
+6 – 1 2
+3 = 3 1
+6 – 1 4
+6  
+ 
+ 
+= 2 7
+6 – 1 4
+6 
+                      
+= 1 3
+6
+                      
+= 1 1
+2
+ 
+Dasturxonda 1 1
+2 ta pitsa qoldi.
+6  Tarvuzning massasi 4 kg. U handalakdan  1 3
+8  kg og‘irroq bo‘lsa, handalakning massasi 
+qancha? Javobni aralash son ko‘rinishida yozing.
+ 
+4 kg
+Tarvuz
+Handalak
+?
+1 3
+8 kg
+ 
+4 – 1 3
+8 = 3 8
+8 – 1 3
+8 
+                  
+= 2 5
+8
+ 
+Handalakning massasi 2 5
+8 kg. 
+ 
+Tekshirish
+3 1
+6 = 2 + 6
+6 + 1
+6
+ 
+= 2 7
+6
+Chamalash: 4 – 1 = 3.
+2  5
+8 kg javobni to‘g‘ri deyish 
+mumkin, chunki u 3 kg ga  
+yaqin.
+61
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   61
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   61
+09/08/24   19:31
+09/08/24   19:31
+
+Guruh bo‘lib ishlang.
+Aralash sonlarni qo‘shish va ayirish uchun kasrli doira bo‘laklaridan foydalaning. 
+Javobingizni kalkulyator yordamida tekshiring.
+a) 
+1 1 
+2  va  1 1
+4 
+b) 
+2 1
+3  va  1 1
+6 
+c) 
+3 2
+3  va  1 5
+9 
+d) 
+2 4
+5  va  2 7
+10 
+Misol
+2 1
+2 + 1 3
+4 = ?   
++
+     
+   
+Tekshirish
+    2 1
+2 + 1 3
+4 = 4 1
+4
+2 1
+2 – 1 3
+4 = ?  
+   
+Tekshirish
+    2 1
+2 – 1 3
+4 = 3
+4
+2  1
+2 + 1 3
+4 
+= 2  2
+4 + 1  3
+4 
+= 3  5
+4 
+= 4  1
+4 
+2  1
+2 – 1  3
+4 
+= 2  2
+4 – 1  3
+4 
+= 1  6
+4 – 1  3
+4 
+= 3
+4 
+Qo‘lda bajariladigan mashq
+62
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   62
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   62
+09/08/24   19:31
+09/08/24   19:31
+
+Bajaring va o‘rganing
+1  Qo‘shing. Javoblarni aralash son ko‘rinishida yozing.
+ 
+a)  3 + 2 5
+6  
+b)  2 2
+5 + 4 1
+4  
+c) 3 2
+3 + 2 4
+5 
+2  Ayiring. Javoblarni oddiy kasr ko‘rinishida yozing.
+ 
+a)  5 – 1 1
+3  
+b)  7 4
+12 – 3 1
+3  
+c) 6 5
+12 – 2 8
+9 
+3  5
+12 ga 2 5
+6  va 1 1
+4 ning ayirmasini qo‘shing. 
+4  Akmal A punktdan B punktgacha  2 1
+5  km,  B punktdan D punktgacha  3 7
+8  km yugurdi. 
+ 
+a) 
+Akmal jami qancha masofaga yugurgan?
+ 
+b) 
+B va D punktlar orasidagi masofa A va B punktlar orasidagi masofadan   
+ 
+  
+qancha uzun?
+ 
+Javoblarni aralash son ko‘rinishida yozing.
+5  Lobar opada  4 3
+4  m mato bor edi. U matoning  2 3
+8  m qismini parda tikish uchun 
+ishlatdi. U yana  3 1
+5  m mato sotib oldi. Lobar opada qancha mato bo‘ldi? Javobni 
+aralash son ko‘rinishida yozing.
+O‘zingizni tekshiring
+a) 
+Men aralash sonlarni kalkulyatordan foydalanib qo‘shishni bilaman.   
+b) Men aralash sonlarni kalkulyatordan foydalanib ayirishni bilaman.   
+65–70
+Mashq daftariga o‘ting
+63
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   63
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   63
+09/08/24   19:31
+09/08/24   19:31
+
+Eslang
+To‘plamning qismi
+1  Kamolada 12 ta marka bor. Ularning  3
+4  qismi – O‘zbekiston markalari.
+ 
+a) 
+Kamolada qancha O‘zbekiston markasi bor?
+ 
+b) 
+Markalarning qanchasi O‘zbekiston markasi emas?
+ 
+ 
+Marka
+Marka
+Marka
+Marka
+Marka
+Marka
+Marka
+Marka
+Marka
+Marka
+Marka
+Marka
+ 
+a) 
+12 ÷ 4 = 3
+ 
+  
+Bitta bo‘lakda 3 ta marka bor.
+ 
+  
+3 × 3 = 9
+ 
+  
+9 ta O‘zbekiston markasi bor.
+ 
+b) 
+12 – 9 = 3        
+ 
+  
+Markalarning 3 tasi O‘zbekiston markasi emas.
+2  Tasmaning  2
+5  qismi qizil rangga bo‘yalgan. Agar bo‘yalgan qismining uzunligi 6 m 
+bo‘lsa, tasmaning umumiy uzunligini toping.
+ 
+ 
+?
+6 m
+ 
+ 2 bo‘lak = 6 m
+ 
+1 bo‘lak = 6 ÷ 2
+  
+ 
+   = 3 m 
+ 
+5 bo‘lak = 5 × 3
+                  
+   = 15 m
+ 
+Tasmaning uzunligi 15 m.  
+12 ning  3
+4  qismi = ?
+12 ta markani 4 ta teng bo‘lakka 
+bo‘ling. Har bir bo‘lakdagi markalar  
+sonini toping. So‘ng uchta  
+bo‘lakdagi markalar sonini toping.
+71–72
+Mashq daftariga o‘ting
+64
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   64
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   64
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  Jami 10 ta shar bor. Agar sharlarning  3
+5  qismi qizil bo‘lsa, nechta qizil shar bor?
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6 ta qizil shar bor.
+qizil
+Biz kasrni songa koʻpaytirishni 
+“qisqartirish” orqali bajarishimiz ham 
+mumkin.
+10 × 
+3
+5 =  3 × 2 = 6
+1
+2
+1-usul
+10 ning 3
+5 qismi = ?
+5 bo‘lak = 10
+ 1 bo‘lak = 10 ÷ 5
+ 
+   = 2
+3 bo‘lak = 3 × 2
+ 
+   = 6
+2-usul
+10 ning 3
+5
+ qismi =10 × 3
+5   
+ 
+               = 2 × 3
+ 
+               = 6
+2
+1
+To‘g‘ri kasrni natural songa ko‘paytirish
+65
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   65
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   65
+09/08/24   19:31
+09/08/24   19:31
+
+2  Konsert zalida jami 150 nafar tomoshabin bor. Ularning  2
+3  qismi – katta 
+yoshdagilar.
+ 
+a) Konsert zalida necha nafar katta yoshli kishi bor?
+ 
+b) Jami nechta bola bor?
+ 
+ 
+? bolalar
+150
+? katta yoshli kishilar
+ 
+a) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Konsert zalida 100 nafar katta yoshli kishi bor.
+ 
+b) 
+ 
+ 
+ 
+ 
+ 
+ 
+Konsert zalida 50 nafar bola bor.
+1-usul
+150 ning 2
+3 qismi = ?
+ 3 bo‘lak = 150
+ 1 bo‘lak = 150 ÷ 3
+ 
+  = 50
+2 bo‘lak = 2 × 50
+ 
+   = 100 
+2-usul
+2-usul
+1-usul
+150 – 100 = 50
+150 ning 2
+3 qismi = 150 × 2
+3 
+             
+                 = 100
+50
+1
+ 
+1 – 2
+3 = 1
+3    
+ 150 ning 1
+3 qismi = 150 × 1
+3
+ 
+  
+  
+50
+1
+= 50
+66
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   66
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   66
+09/08/24   19:31
+09/08/24   19:31
+
+3  5 nafar bola chorak bo‘lakdan tort yedi. Bolalar qancha tort yegan?  
+Javobni aralash son ko‘rinishida yozing.
+ 
+ 
+ 
+1
+4 × 5 = 1 × 5
+4
+                   = 5
+4
+                  
+= 1 1
+4    
+  
+Bolalar 1 1
+4 ta tort yegan.
+4  12 ta stakanning har birida  2
+5 ℓ  dan suv bor. Hamma stakanlardagi suv bitta 
+idishga quyildi. Idishga jami qancha suv quyildi? Javobni aralash son ko‘rinishida 
+yozing.
+ 
+ 
+2
+5 ℓ
+ 
+2
+5 × 12 = 2 × 12
+5
+                   
+= 24
+5
+                  
+= 4 4
+5    
+  
+Idishga 4 4
+5 ℓ suv quyildi.
+67
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   67
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   67
+09/08/24   19:31
+09/08/24   19:31
+
+Juftlikda ishlang
+a) 
+Quyidagi sonlarning doirachalar bilan tasviriga asoslanib,  3
+4 × 20  va  5
+7 × 21 qanday 
+hisoblanishini muhokama qiling.
+ 
+ 
+20 ning  3
+4  qismi = ?
+21 ning  5
+7  qismi = ?
+b) 
+3
+4 × 20  va  5
+7 × 21 ning qiymatlarini toping.
+ 
+Kasrlarni ko‘paytirishdan oldin “qisqartirish” usulining afzalliklarini muhokama 
+qiling. Fikrlaringizni sherigingiz bilan o‘rtoqlashing. 
+             
+Bajaring va o‘rganing
+1  Qiymatini toping.
+            a)    20 ning  2
+5 qismi                            b)     20 × 3
+10   
+              
+2  Hisoblang va javobni aralash son ko‘rinishida ifodalang.
+ 
+ 
+a) 
+3
+4 × 7                                
+b) 9 × 3
+5 
+3  Kvadratning tomoni  5
+8  m ga teng boʻlsa, uning perimetrini toping.
+4  Lobar opada 120 ta tugma bor. Tugmalarning  2
+3  qismi qizil. Unda qancha qizil  
+ 
+ 
+tugma bor?
+5  Istirohat bog‘idagi dam oluvchilarning  3
+5  qismi – bolalar. Istirohat bog‘ida 480 nafar  
+ 
+dam oluvchi bo‘lsa, ularning nechtasi katta yoshlilar? 
+6  Ichida 136 ℓ suv bo‘lgan idish teshilib, suv oqa boshladi. Teshik yopilgunga qadar   
+ 
+suvning  1
+4  qismi oqib ketdi. Idishda qancha suv qolgan?
+73–76
+Mashq daftariga o‘ting
+68
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   68
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   68
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  3
+2 × 2 ning qiymatini toping.
+ 
+ 
+ 
+3
+2 × 2 = 3 
+2  4 va  7
+3 ning ko‘paytmasini toping.
+ 
+ 
+ 
+4 × 7
+3 = 28
+3
+ 
+ 
+= 9 1
+3 
+Bajaring va o‘rganing
+ 
+Ko‘paytmani toping.
+a) 
+5
+2 va 4 
+b) 
+8 va 6
+5        
+ 
+c) 
+7
+3 va 8  
+3
+2 × 2 = 3
+1
+1
+Noto‘g‘ri kasrni natural songa ko‘paytirish
+77–78
+      Mashq daftariga o‘ting
+69
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   69
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   69
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  Kamolada  1
+2 ta pitsa bor edi. U pitsasining  1
+3 qismini dugonasiga berdi.  
+Kamola dugonasiga qancha pitsa bergan?
+ 
+ 
+ 
+ 
+1
+6
+1
+2
+ 
+ 
+1
+2  ning  1
+3  qismi = 1
+2 × 1
+3  
+ 
+ 
+= 1
+6
+ 
+Kamola dugonasiga pitsaning  1
+6  qismini bergan.
+2  Akmal to‘g‘ri to‘rtburchak shaklidagi qog‘ozni rasmda ko‘rsatilganidek uchga bukladi. 
+U qog‘ozning  1
+3  qismini bo‘yadi va bo‘yalgan qog‘ozning  2
+3  qismini qizil rang bilan 
+shtrixladi. Akmal qog‘ozning qancha qismini shtrixlagan?
+ 
+ 
+ 
+1
+3 ning 2
+3 qismi
+ 
+ 
+1
+3  ning  2
+3  qismi = 1
+3 × 2
+3 
+ 
+ 
+= 2
+9  
+ 
+Akmal qog‘ozning  2
+9  qismini shtrixlagan.
+1
+2  ning  1
+3  qismini  
+topish  1
+2 ni uchta  
+teng qismga bo‘lish 
+demakdir.
+Ikkita to‘g‘ri kasrni ko‘paytirish
+70
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   70
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   70
+09/08/24   19:31
+09/08/24   19:31
+
+3  Madina to‘g‘ri to‘rtburchak shaklidagi qog‘ozni rasmda ko‘rsatilganidek 6 ga bukladi. 
+U qog‘ozning  2
+6  qismini bo‘yadi va bo‘yalgan qog‘ozning  1
+2  qismini qizil rang bilan 
+shtrixladi. Madina qog‘ozning qancha qismini shtrixlagan?
+ 
+ 
+2
+6
+2
+6 ning 
+1
+2 qismi
+1
+6
+ 
+ 
+ 
+Madina qog‘ozning 1
+6
+ qismini shtrixlagan.
+2
+6  ning  1
+2  qismi = 2
+12 
+2
+12 = 1
+6 
+2
+6 ning 1
+2 qismi = 2
+6 × 1
+2
+                           = 1
+6 
+1
+1
+71
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   71
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   71
+09/08/24   19:31
+09/08/24   19:31
+
+4  Lobar opada  3
+4  kg un bor edi. U unning  1
+3  qismini tort uchun ishlatdi.
+ 
+a) 
+U qancha un ishlatdi?
+     
+b)  Lobar opada qancha un qoldi?
+     
+Javoblarni oddiy kasr ko‘rinishida ifodalang.
+ 
+a)
+ 
+3
+4 kg
+3
+4 ning 1
+3 qismi 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Lobar opa 1
+4 kg un ishlatdi.
+ 
+b) 
+3
+4 – 1
+4 = 2
+4 
+                  = 1
+2 
+          Lobar opada  1
+2 kg un qoldi.
+ 3
+4 kg
+ 1
+4 kg
+1 kg
+3
+4 ning 1
+3 qismi = 3
+4 × 1
+3
+         = 1
+4 
+1
+1
+ 
+Lobar opa  3
+4  kg unning 
+  2
+3 qismini ishlatmadi. 
+3
+4 × 2
+3 = 1
+2 
+1
+2
+1
+1
+72
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   72
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   72
+09/08/24   19:31
+09/08/24   19:31
+
+5  1
+2 × 4
+5 ko‘paytmani toping. 
+ 
+ 
+ 
+ 
+ 
+Juftlikda ishlang
+Juftlikda muhokama qiling.
+1  Kasrlarni ko‘paytirish jarayonini ko‘rsatish uchun to‘g‘ri to‘rtburchakni tegishli 
+qismlarga bo‘ling va bo‘yang.
+ 
+a) Shaklning  1
+3  qismining  1
+2  qismi                        b) Shaklning  1
+3  qismining  3
+4  qismi
+ 
+ 
+ 
+ 
+ 
+ 
+2  Quyidagi masalalarni qanday yechganingizni do‘stingizga tushuntiring. Javoblarni 
+oddiy kasr ko‘rinishida yozing.
+ 
+a) 
+Idishda  3
+4  ℓ suv bor edi. Kamola suvning  3
+5  qismini choynakka quydi.  
+ 
+Choynakka qancha suv quyilgan?
+ 
+b) 
+4
+5  kg uzum bor edi. Zafar uzumning  3
+8
+  qismini yedi. 
+       
+ 
+Zafar necha kg uzum yegan?
+Suratlarni ko‘paytiring. 
+Maxrajlarni ko‘paytiring. 
+Kasrni qisqarmas  
+ko‘rinishga keltiring.
+Dastlabki umumiy 
+karralisiga bo‘lish 
+orqali kasrni qisqarmas 
+ko‘rinishga keltiring.
+2-usul
+1
+2 × 4
+5 = 1
+2 × 4
+5    
+ 
+= 2
+5 
+1
+2
+1-usul
+1
+2 × 4
+5 = 1 × 4
+2 × 5    
+ 
+= 4
+10 
+ 
+= 2
+5 
+73
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   73
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   73
+09/08/24   19:31
+09/08/24   19:31
+
+Bajaring va o‘rganing
+1  Ko‘paytmani toping.
+ 
+a) 
+2
+3 × 2
+5 
+ 
+b) 1
+3 × 3
+4     
+ 
+c)  
+4
+5 × 5
+6  
+    
+d)  3
+7 × 3
+4       
+2  Ustunning uzunligi  8
+9  m. Dono uning  5
+6  qismini ko‘k rangga bo‘yadi. Ustunning   
+ 
+necha metri ko‘k rangga bo‘yalgan? Javobni oddiy kasr ko‘rinishida yozing.
+3  Tomoni  4
+5  m bo‘lgan kvadratning yuzini toping. Javobni kasr shaklida yozing.
+ 
+   
+4  Akmal kitob sotib olish uchun shaxsiy jamg‘armasining  3
+4  qismini sarfladi.   
+ 
+ 
+Sarflangan pulning  1
+4  qismiga hikoyalar to‘plami sotib oldi. Akmal jamg‘armasining  
+ 
+qancha qismini hikoyalar to‘plami sotib olishga sarfladi?  
+5  Kinoteatrdagi tomoshabinlarning  3
+8  qismi – katta yoshlilar, qolgan qismi – bolalar.
+ 
+Bolalarning  2
+3  qismi esa qizlardan iborat.
+ 
+a) 
+Tomoshabinlarning qancha qismi bolalar?
+ 
+b) 
+Tomoshabinlarning qancha qismi qiz bolalar?
+ 
+c) 
+Tomoshabinlarning qancha qismi o‘g‘il bolalar?
+ 
+Javoblaringizni oddiy kasr ko‘rinishida yozing.
+6  Ichimlik tayyorlash uchun  1
+5
+  ℓ olma sharbati va  3
+4  ℓ suv idishga solib aralashtirildi.  
+ 
+Ichimlikning  1
+2  qismi boshqa idishga quyildi. Birinchi idishda qancha ichimlik qoldi? 
+79–80
+Mashq daftariga o‘ting
+74
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   74
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   74
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  5
+4 × 1
+3 ning qiymatini toping.
+ 
+ 
+5
+4 yoki 1 1
+4 
+5
+4 ning  1
+3  qismi 
+5
+4 × 1
+3 = 5
+12
+2  3
+4 va 8
+7 ning ko‘paytmasini toping.
+ 
+ 
+1-usul
+3
+4 × 8
+7 = 3 × 8
+4 × 7     
+ 
+= 24
+28 
+ 
+= 6
+7 
+2-usul
+3
+4 × 8
+7 = 3 × 2
+7    
+ 
+= 6
+7 
+1
+2
+Bajaring va o‘rganing
+Ko‘paytmani toping. Javoblarni oddiy kasr ko‘rinishida yozing.
+a) 
+2
+5 va 9
+5 
+b) 
+5
+6 va 9
+5 
+c)  
+12
+5  va 2
+3  
+d) 
+15
+7  va 3
+5    
+   
+5
+4  ning  1
+3  qismini topish uchun  
+bir butunning  1
+3  qismini va  1
+4 ning 
+ 1
+3  qismini bo‘yang.
+To‘g‘ri va noto‘g‘ri kasrlarni ko‘paytirish
+81–82
+Mashq daftariga o‘ting
+75
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   75
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   75
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  6
+4 va 8
+3 ning ko‘paytmasini toping.
+ 
+ 
+ 
+2  5
+4 × 3
+2 ko‘paytmani toping.  
+ 
+5
+4 × 3
+2 = 5 × 3
+4 × 2    
+ 
+ 
+= 15
+8  
+ 
+ 
+= 1 7
+8 
+ 
+Juftlikda ishlang
+Quyidagi kasrlarning ko‘paytmasini ikki xil usulda toping.
+a) 
+9
+8 va 4
+3  
+b) 
+6
+5 va 10
+3    
+Qaysi usul qulayroq? Nima uchun?
+5
+4 × 3
+2  ko‘paytmaning 
+qiymatini topish uchun 
+1-usuldan foydalana 
+olamizmi?
+2-usul
+6
+4 × 8
+3 = 6 × 8
+4 × 3     
+ 
+= 48
+12 
+ 
+= 4
+1-usul
+6
+4 × 8
+3 = 6
+4 × 8
+3 
+  
+ 
+= 4
+2
+1
+2
+1
+Ikkita noto‘g‘ri kasrni ko‘paytirish
+Tekshirish
+Tekshirish
+76
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   76
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   76
+09/08/24   19:31
+09/08/24   19:31
+
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang.
+Quyidagi kasrlarning ko‘paytmasini kalkulyatordan foydalanib toping.
+1-to‘plam
+2
+3 × 1
+5   
+3
+8 × 1
+2   
+3
+4 × 2
+3  
+2-to‘plam
+1
+4 × 5
+2    
+4
+5
+ × 5
+4
+   
+24
+5  × 1
+2
+  
+3-to‘plam
+5
+4
+ × 6
+5
+   
+7
+2
+ × 3
+2
+   
+4
+4
+ × 3
+3
+   
+ 
+Qaysi to‘plam uchun quyidagi tasdiqlar to‘g‘ri?
+ 
+Ko‘paytmalar birdan kichik.
+ 
+Ko‘paytmalar ko‘paytuvchilardan kichik.
+ 
+Ko‘paytmalar ichida birdan kichik, birga teng va birdan kattasi bor.
+ 
+Ko‘paytmalarning hech biri birdan kichik emas.
+ 
+Fikrlaringizni guruhdoshlaringiz bilan o‘rtoqlashing.
+77
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   77
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   77
+09/08/24   19:31
+09/08/24   19:31
+
+Qiziqarli matematika
+Uch kishi bo‘lib o‘ynang. 
+1-o‘yinchi istalgan bitta to‘plamdagi savollarga javob beradi.
+2-o‘yinchi ayni vaqtda javoblarni kalkulyatordan foydalanib tekshiradi.
+ 
+Kim javoblarni tezroq topyapti?
+3-o‘yinchi vaqtga qarab turadi. 
+Har bir to‘plamning javoblari topilganidan keyin rollar almashiladi.
+1-to‘plam
+2
+5 × 10
+3  = 
+  
+12
+5  × 3
+4 = 
+ 
+18
+7  × 21
+4  = 
+2-to‘plam
+9
+8 × 2
+3 = 
+   
+15
+4  × 7
+3 = 
+ 
+17
+6  × 2
+9 = 
+ 
+3-to‘plam
+14
+9  × 5
+3 = 
+ 
+20
+7  × 3
+4 = 
+ 
+16
+5  × 3
+8 = 
+ 
+ 
+Javoblarning qaysi birini kalkulyatorsiz topish osonroq?
+Bajaring va o‘rganing
+Ko‘paytiring.
+a) 
+8
+5 × 5
+4   
+b) 
+9
+3 × 10
+3      
+c)  
+13
+6  × 8
+3  
+d) 
+8
+3 × 12
+7        
+83–84
+Mashq daftariga o‘ting
+O‘ynang va o‘rganing
+78
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   78
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   78
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  3 nafar bolaning har biri  1 1
+2  tadan pirog sotib oldi. Ular jami qancha pirog sotib oldi? 
+Javobni aralash kasr ko‘rinishida yozing.
+ 
+ 
+ 
+ 
+1 1
+2 × 3 =  3
+2 × 3
+ 
+ 
+=  9
+2 
+ 
+ 
+=  4 1
+2 
+ 
+Bolalar jami  4 1
+2  ta pirog sotib oldi.   
+ 
+        
+2  Tomoni  3 3
+4  m bo‘lgan kvadratning perimetrini toping.
+ 
+3 3
+4 m
+ 
+3 3
+4 × 4 = 
+1
+15
+4 × 41
+ 
+ 
+ 
+= 15        
+ 
+Kvadratning perimetri 15 m.
+ 
+       
+1  1
+2 = 3
+2
+ 3  3
+4 m = 15
+4  m
+Aralash sonlarni natural songa ko‘paytirish
+Tekshirish
+Tekshirish
+79
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   79
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   79
+09/08/24   19:31
+09/08/24   19:31
+
+3  O‘simliklarni sug‘orish uchun har kuni  2 5
+8  ℓ suv ishlatiladi. 7 kunda sug‘orish uchun 
+qancha suv ishlatiladi? 
+ 
+7 × 2 5
+8 = 7 × 21
+8  
+ 
+ 
+ = 7 × 21
+8
+ 
+ 
+ = 147
+8
+ 
+ 
+ = 18 3
+8 
+ 
+7 kun davomida o‘simliklarni sug‘orish uchun 18 3
+8 ℓ suv ishlatiladi.
+ 
+Juftlikda ishlang
+Ko‘paytiring. Sherigingizning javobini tekshirish uchun boshqa usuldan foydalaning.
+a) 
+6 × 5 1
+4 
+b)     2 1
+3 × 8 
+c) 
+10 × 8 4
+5 
+d) 
+6 4
+9 × 12 
+Qiziqarli matematika
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+Ko‘paytmalar qanday hisoblanishini guruhdoshlaringiz bilan o‘rtoqlashing.
+a) 
+5 1
+3 × 6 
+b) 
+4 2
+5 × 10
+Misol
+2 1
+2 × 4 ning qiymatini toping. 
+1-qadam  Aralash sonni butun va kasr qismlarga ajrating.
+                
+2 1
+2 = 2  va  1
+2 
+2-qadam  Har birini 4 ga ko‘paytiring.
+                
+ 2 × 4 = 8              1
+2 × 4 = 2
+3-qadam  Topilgan ko‘paytmalarni qo‘shing.
+               
+ 8 + 2 = 10            21
+2 × 4 = 10
+Chamalaymiz:
+2 × 7 = 14
+3 × 7 = 21
+18  3
+8  ℓ javobni to‘g‘ri deyish mumkin,  
+chunki u 14 ℓ va 21 ℓ oralig‘ida.
+Javobingizni tekshirish uchun
+kalkulyatordan foydalaning.
+2 5
+8 = 21
+8  
+Endi  2 1
+2
+ × 4 ning 
+qiymatini topish 
+uchun kalkulyatordan 
+foydalaning. 
+80
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   80
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   80
+09/08/24   19:31
+09/08/24   19:31
+
+Bajaring va o‘rganing
+ 
+Ifodalarning qiymatini toping va javobning to‘g‘ri ekanini tekshiring.
+1  Ko‘paytiring.
+      
+a)  
+3 × 4 2
+9 
+   
+b)  
+20 × 5 3
+5  
+     
+c)  
+9 × 7 5
+6 
+ 
+d)  
+1 1
+4 × 24       
+2  Tomoni 5 1
+5 m bo‘lgan kvadratning perimetrini toping.   
+ 
+ 
+ 
+ 
+ 
+ 
+Javobni kasr ko‘rinishida ifodalang. 
+3  Agar bitta g‘ishtning massasi  2  4
+9  kg bo‘lsa, 6 ta g‘ishtning massasi qancha bo‘ladi?  
+ 
+Javobni aralash son ko‘rinishida ifodalang.
+4  Idishning sig‘imi  1 1
+2 ℓ. Shunday idishlarning 15 tasiga qancha suv sig‘adi?   
+ 
+ 
+Javobni kasr ko‘rinishida ifodalang. 
+         
+5  To‘g‘ri to‘rtburchak shaklidagi yer maydonining o‘lchami:  4  2
+5  m va 8 m. Yer  
+ 
+ 
+maydonining yuzini toping. Javobni aralash son ko‘rinishida ifodalang. 
+6  1 kg shirinlik narxi 60 000 so‘m.  3  1
+2  kg shirinlikning narxi qancha? 
+O‘zingizni tekshiring
+a) 
+Men to‘g‘ri kasrni natural songa ko‘paytirishni bilaman.  
+ 
+b) 
+Men noto‘g‘ri kasrni natural songa ko‘paytirishni bilaman.   
+c) 
+Men ikkita to‘g‘ri kasrning ko‘paytmasini topa olaman. 
+   
+d) 
+Men to‘g‘ri kasrni noto‘g‘ri kasrga ko‘paytira olaman.   
+e) 
+Men ikkita noto‘g‘ri kasrning ko‘paytmasini topa olaman.   
+f) 
+Men aralash sonni natural songa ko‘paytira olaman.   
+85–88
+Mashq daftariga o‘ting
+81
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   81
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   81
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  Tasmaning  1
+6  qismi sariq rangga bo‘yalgan. Tasmaning bo‘yalmagan qismining 
+ 2
+5  qismini toping. Javobni oddiy kasr ko‘rinishida ifodalang.
+ 
+?
+Bo‘yalmagan qism 
+1
+6
+ 
+ 
+ 
+Bo‘yalmagan qismning 2
+5 qismi   
+                                                                         = 1
+3 
+2  Tasmaning 1
+4 qismi bo‘yalgan bo‘lsa, bo‘yalmagan qismining  1
+2 qismini toping. 
+Javobni kasr ko‘rinishida ifodalang.
+ 
+ 
+ 
+?
+Bo‘yalmagan qism
+1
+4
+ 
+ Tasmaning bo‘yalmagan qismining  1
+2 qismi 
+ 
+ 
+ 
+ 
+= 3
+4 × 1
+2 
+                                                             = 3
+8
+1 – 1
+6 = 5
+6
+Bo‘yalmagan qism tasmaning 
+  5
+6 qismiga teng.
+1 – 1
+4 = 3
+4
+Bo‘yalmagan qism 
+tasmaning  3
+4  qismiga teng.
+= 5
+6 × 2
+5
+3
+1
+1
+1
+Tekshirish
+Bo‘yalmagan qism = 3
+4 
+1
+4
+3
+8
+Tasmaning bo‘yalmagan qismining 
+1
+2  qismi  3
+8  ga teng.
+89–90
+Mashq daftariga o‘ting
+Qolgan qismning qismi
+82
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   82
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   82
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  Jahongir pulining  1
+4  qismini yo‘lkiraga, qolgan pulining  1
+3  qismini ovqatlanishga 
+sarfladi. U ovqatlanishga jami pulining qancha qismini sarflagan?
+ 
+Ovqatlanish?
+Yo‘lkira
+Qolgan qism
+ 
+  
+1 – 1
+4  = 3
+4 (qolgan qism)
+ 
+3
+4 ning 1
+3 qismi = 3
+4 × 1
+3   
+1
+1
+= 1
+4
+ 
+U jami pulining 1
+4 qismini ovqatlanishga sarflagan. 
+2  Sardorning jami 60 000 so‘m puli bor edi. U pulining  1
+5  qismini simkarta 
+xarid qilishga, qolgan pulining  1
+2  qismini esa batareyka sotib olishga sarfladi. 
+Sardorda qancha pul qoldi?
+ 
+ 
+ 
+ 
+1 – 1 
+5 = 4
+5 (qolgan qism)
+ 4
+5 ning 1
+2 qismi = 4
+5 × 1
+2 
+ 
+                  = 2
+5 (batareyka)
+ 4
+5 – 2
+5 = 2
+5 (qolgan)
+ 
+ 
+ 
+Unda 24 000 so‘m qolgan.
+2
+5 × 60 000 so‘m = 2
+5 × 60 000 so‘m = 24 000 so‘m 
+Chizma-modelda qolgan qismning 
+ 1
+3 qismi butunning 1
+4 qismiga teng. 
+Chizmadan pulning   
+2
+5  qismi qolgani ko‘rinadi.
+1
+12
+Simkarta uchun
+60 000 so‘m
+Qolgan pulning  1
+2  qismi
+(batareyka uchun)
+2
+1
+Matnli masalalar
+83
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   83
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   83
+09/08/24   19:31
+09/08/24   19:31
+
+3  5-sinfda 480 nafar o‘quvchi ta’lim oladi.
+ 
+Ularning  3
+5  qismi qizlar. 
+ 
+O‘g‘il bolalarning  1
+4  qismi ko‘zoynak taqadi.
+ 
+a) 
+Nechta oʻgʻil bola ko‘zoynak taqadi?
+ 
+b) 
+Nechta oʻgʻil bola ko‘zoynak taqmaydi?
+ 
+a)  
+1 – 3
+5 = 2
+5 
+ 
+ 
+O‘quvchilarning  2
+5  qismi o‘g‘il bolalar.
+ 
+ 
+48 nafar oʻgʻil bola ko‘zoynak taqadi.
+ 
+b) 
+ 
+ 
+144 nafar oʻgʻil bola ko‘zoynak taqmaydi.
+Chizma-model 
+masalani tushunish 
+va yechishga yordam 
+beradimi?
+1-usul
+ 
+ 
+ 
+Oʻquvchilarning  1
+10  qismi – ko‘zoynak taqadigan oʻgʻil 
+bolalar.
+1
+10 × 480 = 48
+2-usul
+2
+5 × 480 = 192 
+Jami 192 nafar o‘g‘il 
+bola bor.
+1
+4 × 192 = 48
+1-usul
+1 – 1
+4 = 3
+4  
+Oʻgʻil bolalarning  3
+4  qismi ko‘zoynak taqmaydi.
+2
+5 ning 3
+4 qismi  = 2
+5 × 3
+4 
+ 
+                  = 3
+10 
+O‘quvchilarning  3
+10  qismi – ko‘zoynak taqmaydigan 
+oʻgʻil bolalar.
+3
+10 × 480 = 144
+2-usul
+192 – 48 = 144
+2
+5  ning  1
+4  qismi = 2
+5 × 1
+4 
+                                 = 1
+10 
+2
+1
+1
+2
+84
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   84
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   84
+09/08/24   19:31
+09/08/24   19:31
+
+4  Konsert zalidagi tomoshabinlarning  3
+7  qismini ayollar, qolganlarning  3
+4  qismini erkaklar 
+va erkaklar sonidan 42 nafar kam bo‘lgan bolalar tashkil etadi. Konsert zalida jami 
+nechta tomoshabin bor?
+ 
+ 
+A
+A
+A
+E
+E
+E
+B
+qolgan qism
+?
+ 
+ 3 bo‘lak – 1 bo‘lak = 2 bo‘lak
+                                 2 bo‘lak = 42
+                                 1 bo‘lak = 42 ÷ 2 = 21 
+                                                 
+ 
+Konsert zalida jami 21 nafar bola bor.
+      
+ 
+7 bo‘lak = 7 × 21 
+                            = 147
+ 
+ 
+Konsert zalida jami 147 nafar tomoshabin bor.
+5  Maktabda 1701 nafar o‘quvchi bo‘lib, ularning  3
+7  qismini o‘g‘il bolalar tashkil qiladi.  
+Agar o‘g‘il bolalar soni o‘qituvchilardan 9 marta ko‘p bo‘lsa, maktabda nechta  
+o‘qituvchi bor?
+ 
+3
+7 × 1701 = 729
+ 
+729 nafar o‘g‘il bola bor.
+ 
+729 ÷ 9 = 81
+ 
+81 nafar o‘qituvchi bor.
+6  Qutida qizil, ko‘k, yashil va oq tugmalar bor. Tugmalarning  1
+4  qismi qizil,  1
+3  qismi ko‘k, 
+qolganining  1
+5  qismi yashil.
+ 
+a) 
+Tugmalarning qancha qismi yashil rangda?
+ 
+b) 
+Oq tugmalar yashil tugmalardan 36 ta ko‘p bo‘lsa, jami nechta tugma bor?
+85
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   85
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   85
+09/08/24   19:31
+09/08/24   19:31
+
+ 
+a) 
+1 – 1
+4 – 1
+3 = 12
+12 – 3
+12 – 4
+12 = 5
+12
+ 
+ 
+1
+5 × 5
+12 = 1
+12 
+ 
+ 
+Tugmalarning  1
+12  qismi yashil rangda.
+ 
+b) 
+1 – 7
+12 – 1
+12 = 4
+12
+ 
+ 
+ 
+ 
+2-usul
+ 
+4 bo‘lak – 1 bo‘lak = 3 bo‘lak
+ 
+3 bo‘lak = 36
+ 
+1 bo‘lak = 36 ÷ 3 
+ 
+ = 12
+ 
+12 bo‘lak = 12 × 12 
+ 
+ = 144
+Jami 144 ta tugma bor.
+Q
+Q
+Q
+K
+K
+K
+K
+Y
+O
+O
+O
+O
+Qolgan qismning  4
+5  qismi
+1
+4 + 1
+3 = 7
+12 
+Qolgan qismning 1
+5 qismi
+1-usul
+Tugmalarning  4
+12  qismi oq.
+4
+12 – 1
+12 = 3
+12  
+Tugmalarning  3
+12  qismi 
+ 36
+Tugmalarning  1
+12  qismi 
+ 36 ÷ 3 = 12
+Tugmalarning  12
+12  qismi 
+ 12 × 12 = 144
+Jami 144 ta tugma bor.
+86
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   86
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   86
+09/08/24   19:31
+09/08/24   19:31
+
+Bajaring va o‘rganing
+Matnli masalalarni yeching.
+1  Akmal 18 000 so‘mga hamyon sotib oldi. Bu unda bo‘lgan pulning  3
+10  qismini  
+ 
+ 
+tashkil qildi. Akmalda dastlab qancha pul bo‘lgan?  
+2  Laziza opada 270 ta nok bor edi. Laziza opa ularning  4
+9  qismini qutilarga joyladi   
+ 
+va qolgan noklarning  2
+5  qismini do‘stlariga ulashdi. U do‘stlariga qancha 
+ 
+nok ulashgan?
+3  Madina pulining  5
+12  qismini tufli, qolgan pulning  2
+7  qismini shippak sotib olishga   
+ 
+sarfladi. Shippak narxi 20 000 so‘m bo‘lsa, tuflining narxini toping.
+4  A va B shahar o‘rtasidagi masofa 32 km. Jamshid A shahardan B shahargacha  
+ 
+masofaning  3
+4  qismini yugurib, qolgan masofaning  4
+5  qismini yurib bosib o‘tdi. So‘ng 
+ 
+dam olgani to‘xtadi. U dam olish uchun to‘xtagan nuqta B shahardan qancha  
+ 
+uzoqlikda? Javobni aralash son ko‘rinishida yozing.  
+ 
+A shahar 
+32 km
+Yugurib 
+bosib oʻtilgan 
+masofa
+Yurib bosib 
+oʻtilgan 
+masofa
+ 
+5  Jasur akadagi to‘rtta bankaning har birida  1 1
+2  ℓ meva sharbati bor edi. Jasur aka
+  hamma sharbatni 1 litrlik idishlarga to‘ldirib quydi va ularning har birini 9000    
+ 
+ so‘mdan sotdi. Jasur aka sharbatni jami qancha pulga sotgan?
+6  Ichimlik tayyorlash uchun  1
+2
+  ℓ apelsin sharbatiga  3
+4
+  ℓ suv aralashtirildi.
+ 
+Agar ichimlikning  1
+5
+  qismi ichilgan bo‘lsa, qanchasi qoldi? 
+Men kasrlarni qo‘shish, ayirish va ko‘paytirish amallariga doir masalalarni yechishni 
+bilaman. 
+   
+B shahar
+91–96
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+87
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   87
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   87
+09/08/24   19:31
+09/08/24   19:31
+
+88
+97–100
+Mashq daftariga o‘ting
+O‘ylab ko‘ring
+Sinfda 40 nafar o‘quvchi bo‘lib, ularning  2
+5  qismini qizlar tashkil etadi. Agar o‘g‘il 
+bolalarning  1
+2  qismi va qizlarning  3
+8  qismi suzishni bilsa, quyidagilarni toping: 
+a) 
+O‘quvchilarning qancha qismi suzishni biladi?
+b) 
+O‘quvchilarning nechtasi suzishni bilmaydi?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   88
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   88
+09/08/24   19:31
+09/08/24   19:31
+
+Uchburchakning yuzi
+4
+Bolalar dam olishda
+Muhokama qiling
+Menimcha, 
+varragimning 
+yuzi eng katta.
+Varragimning 
+yuzi Madinadagi 
+varrak yuzidan 
+kattaroqmikan?
+Bu chodirning 
+balandligi 
+qancha?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   89
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   89
+09/08/24   19:31
+09/08/24   19:31
+
+90
+Kvadrat va to‘g‘ri to‘rtburchak
+1  ABCD – to‘g‘ri to‘rtburchak. 
+ 
+AD va BC — to‘g‘ri to‘rtburchakning bo‘yi.        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AB va DC — to‘g‘ri to‘rtburchakning eni.
+AB va BC tomonlar o‘zaro perpendikulyar (AB ⊥ 
+⊥ BC). Yana 
+boshqa o‘zaro perpendikulyar kesmalarni ayta olasizmi?
+ 
+A
+D
+B
+C
+ 
+ 
+To‘g‘ri to‘rtburchakning yuzi = bo‘yi × eni
+2  ABCD – kvadrat. 
+ 
+           AB, BC, CD va AD — kvadratning tomonlari.
+           AB va BC tomonlar o‘zaro perpendikulyar (AB ⊥ 
+⊥ BC).
+ 
+           Yana boshqa o‘zaro perpendikulyar kesmalarni ayta olasizmi?
+ 
+A
+D
+B
+C
+ 
+Kvadratning yuzi = tomoni × tomoni
+ 
+Ikkita to‘g‘ri chiziq 
+to‘g‘ri burchak ostida 
+kesishsa, ular o‘zaro 
+perpendikulyar bo‘ladi.
+Shu sahifadagi to‘g‘ri 
+to‘rtburchak yoki  
+kvadratda AC kesma 
+o‘tkazsangiz, qanday  
+shakllar hosil bo‘ladi?
+115–116
+Mashq daftariga o‘ting
+Eslang
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   90
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   90
+09/08/24   19:31
+09/08/24   19:31
+
+91
+1  ABC uchburchakning 3 ta tomoni va 3 ta burchagi bor.
+ 
+a) 
+ABC uchburchakda BC uning asosi, AC uning balandligi hisoblanadi.  
+      
+ 
+ 
+ 
+ 
+          
+ 
+ 
+ 
+ 
+    
+A
+B
+C
+balandlik
+asos
+     
+ 
+ 
+ 
+ 
+ 
+AC ⊥ 
+⊥ BC
+ 
+ 
+ 
+   
+ 
+ 
+ 
+       
+ 
+ 
+ 
+ 
+ 
+b) DEF uchburchakda EF uning asosi, DG uning balandligi hisoblanadi.
+ 
+ 
+D
+F
+E
+balandlik
+asos
+G
+ 
+ 
+ 
+ 
+ 
+DG ⊥ EF
+ 
+ 
+ 
+ 
+c) 
+WXY uchburchakda XY uning asosi, WZ uning balandligi hisoblanadi.
+ 
+ 
+W
+X
+Z
+balandlik
+asos
+Y
+ 
+ 
+ 
+ 
+ 
+ 
+ WZ ⊥ XY 
+ 
+ 
+   
+Uchburchakning balandligi uning asosiga perpendikulyar bo‘ladi.
+AB, AC va BC – ABC
+uchburchakning
+tomonlari.
+Uchburchakning asosi va balandligi
+Qarang va o‘rganing
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   91
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   91
+09/08/24   19:31
+09/08/24   19:31
+
+2  EFG uchburchakda berilgan asosga tushirilgan balandlikni toping.
+ 
+a) 
+uch
+asos
+E
+G
+F
+H
+EG — uchburchak asosi.
+FH — uchburchak balandligi, chunki 
+FH ⊥ 
+⊥ EG.
+F — uchburchakning asosi qarshisidagi 
+uchi.
+b) 
+E
+asos
+G
+F
+J
+ 
+ 
+EF — uchburchak asosi.
+GJ — uchburchak balandligi,
+chunki GJ ⊥ EF.
+G — uchburchakning asosi qarshisidagi 
+uchi.
+c) 
+E
+asos
+G
+F
+K
+ 
+ 
+ 
+  
+ 
+Uchburchakning asosi uning uchta tomonidan istalgan biri bo‘lishi mumkin.
+O‘tkir burchakli uchburchakning balandligi uning asosi qarshisidagi
+uchidan tushirilgan perpendikulyar kesma uzunligiga teng.
+ 
+FG uchburchakning asosi  
+bo‘lsa, uchburchakning 
+balandligini topa olasizmi?
+92
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   92
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   92
+09/08/24   19:31
+09/08/24   19:31
+
+1  Berilgan ABC uchburchakda AC asos bo‘lsa, BD kesma balandlik bo‘ladimi?
+Javobingizni tushuntiring.
+ 
+ 
+a) 
+ 
+D
+asos
+C
+B
+A
+ 
+  
+b)
+ 
+C
+asos
+A
+B
+D
+ 
+2  Uchburchakning asosi berilgan. To‘g‘ri burchakli chizg‘ichdan foydalanib 
+uchburchaklarning balandligini aniqlang.  
+ 
+ 
+a) 
+ 
+C
+A
+B
+AC – asos.
+b)
+ 
+G
+E
+F
+FG – asos.
+c) 
+    
+KL – asos.
+J
+K
+L
+3  Navbat bilan katakli qog‘ozga turli o‘lchamdagi uchburchaklarni chizing. 
+Sherigingizdan berilgan asosga ko‘ra uchburchaklarning balandligini aniqlashni 
+so‘rang. Zarur holatlarda to‘g‘ri burchakli chizg‘ichdan foydalaning.
+Juftlikda ishlang
+93
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   93
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   93
+09/08/24   19:31
+09/08/24   19:31
+
+1  Berilgan asosga ko‘ra uchburchakning balandligini aniqlang. 
+ 
+a) 
+ 
+C
+A
+B
+ 
+ 
+  
+ 
+ABC uchburchakda AB – asos,
+           
+ – balandlik.
+b) 
+ 
+ 
+F 
+E
+D
+G
+ 
+ 
+DEF uchburchakda DF – asos, 
+           
+ – balandlik.
+c) 
+P 
+Q
+S
+R
+T
+ 
+ 
+ 
+PQR uchburchakda PQ – asos,
+ 
+           
+ – balandlik.
+d) 
+L
+M
+K
+N
+P
+ 
+ 
+KLM uchburchakda LM – asos,
+           
+ – balandlik.
+Bajaring va o‘rganing
+94
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   94
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   94
+09/08/24   19:31
+09/08/24   19:31
+
+2  Berilgan balandlikka ko‘ra uchburchakning asosini aniqlang.
+ 
+a) 
+C
+B
+D
+A
+ 
+ 
+  
+ 
+ABC uchburchakda BD – balandlik,
+           
+ – asos.
+b) 
+F
+H
+G
+E
+ 
+ 
+EFG uchburchakda FH – balandlik,  
+ – asos.
+c) 
+Q
+P
+S
+R
+T
+ 
+ 
+PQR uchburchakda PS – balandlik,
+           
+ – asos.
+d) 
+ 
+W 
+X
+Z
+Y
+U
+V
+ 
+ 
+WXY uchburchakda YZ – balandlik,
+            
+ – asos.
+O‘zingizni tekshiring
+a) 
+Men berilgan asosga ko‘ra uchburchakning balandligini topishni bilaman. 
+  
+b) Men berilgan balandlikka ko‘ra uchburchakning asosini topishni bilaman. 
+  
+117–118
+Mashq daftariga o‘ting
+95
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   95
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   95
+09/08/24   19:31
+09/08/24   19:31
+
+Qarang va o‘rganing
+1  Quyida uchburchakka mos to‘g‘ri to‘rtburchakni aniqlash keltirilgan.
+ 
+ 
+asos
+balandlik
+B
+A
+C
+asos
+asos
+balandlik
+balandlik
+ 
+2  a) 
+ABCD to‘g‘ri to‘rtburchakning bo‘yi 4 cm, eni 6 cm.  
+ 
+ 
+1 cm
+A 1 cm
+B
+D
+C
+ 
+ 
+ 
+ 
+  
+ 
+         
+ 
+      
+ 
+ 
+ 
+ 
+ABCD to‘g‘ri to‘rtburchakning yuzi = 6 × 4 
+ 
+ 
+ 
+ 
+ 
+ 
+        = 24 (cm2)
+ 
+ 
+ACD uchburchak yuzi = 1
+2  × ABCD to‘g‘ri to‘rtburchak yuzi 
+ 
+ 
+ 
+ 
+ = 1
+2 × 24 
+ 
+ 
+ 
+ 
+ = 12 (cm2)
+b)
+ACD uchburchak bilan ABCD 
+to‘g‘ri to‘rtburchakning yuzlari 
+orasida qanday bog‘liqlikni 
+sezdingiz?
+96
+Uchburchakning yuzini topish
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   96
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   96
+09/08/24   19:31
+09/08/24   19:31
+
+b) 
+       
+ 
+ 
+1 cm
+A 1 cm
+B
+D
+C
+E
+F
+A
+B
+D
+C
+E
+F
+ 
+ 
+ABCD to‘g‘ri to‘rtburchak – ACD uchburchakka mos to‘g‘ri to‘rtburchak. 
+ 
+AEFD to‘g‘ri to‘rtburchak yuzi = 1
+2  × ABCD to‘g‘ri to‘rtburchak yuzi 
+ 
+ 
+ 
+ 
+   = 1
+2 × 6 × 4 
+ 
+ 
+ 
+ 
+   = 12 (cm2)
+ 
+ 
+ 
+3
+ 
+1 cm
+P 1 cm
+Q
+S
+R
+T
+P
+Q
+S
+R
+T
+ 
+ 
+  
+ 
+ 
+      
+ 
+PQRS kvadrat – STR uchburchakka mos kvadrat. 
+ 
+STR uchburchak yuzi = 1
+2  × PQRS kvadrat yuzi
+ 
+ 
+ 
+ 
+  = 1
+2 × 4 × 4 
+ 
+ 
+ 
+ 
+  = 8 (cm2)
+97
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   97
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   97
+09/08/24   19:31
+09/08/24   19:31
+
+4  
+1 cm
+E 1 cm
+F
+K
+G
+J
+K
+G
+F
+J
+E
+H
+H
+ 
+ 
+  
+ 
+  
+ 
+ 
+JFGK to‘g‘ri to‘rtburchak – EGK uchburchakka mos to‘g‘ri to‘rtburchak. 
+ 
+EGK uchburchak yuzi = 1
+2  × JFGK to‘g‘ri to‘rtburchak yuzi
+ 
+ 
+  
+  = 1
+2 × 2 × 4 
+ 
+ 
+  
+   = 1
+2 × 8 
+ 
+ 
+  
+   = 4 (cm2)
+Uchburchakning yuzi unga mos to‘g‘ri to‘rtburchak yuzining yarmiga teng.
+Juftlikda ishlang
+Juftlikda muhokama qiling.
+a) 
+Uchburchaklarga mos to‘g‘ri to‘rtburchaklarni chizib ko‘rsating.
+ 
+ 
+ 
+ 
+ 
+  
+asos
+       
+asos
+2-uchburchak
+       
+3-uchburchak
+asos
+1-uchburchak
+98
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   98
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   98
+09/08/24   19:31
+09/08/24   19:31
+
+b) 
+Yuqorida berilgan uchburchaklarning asosi, balandligi va yuzini toping.
+         Uchburchaklarga mos to‘g‘ri to‘rtburchaklarning bo‘yi, eni va yuzi qanday?
+ 
+Javoblaringizni jadvalga yozing.
+Uchbur- 
+chak
+Uchbur-
+chakning 
+asosi (cm)
+Uchbur-
+chakning 
+balandligi 
+(cm)
+Uchbur-
+chakning 
+yuzi (cm2)
+Mos to‘g‘ri 
+to‘rtbur- 
+chak
+To‘g‘ri  
+to‘rtbur-
+chakning 
+bo‘yi (cm)
+To‘g‘ri
+to‘rtbur- 
+chakning 
+eni (cm)
+To‘g‘ri
+to‘rtbur- 
+chakning
+yuzi (cm2)
+1
+1
+2
+2
+3
+3
+ 
+ 
+ 
+Uchburchakning yuzi = 
+ × mos to‘g‘ri to‘rtburchak yuzi
+                                                                  = 
+ × mos to‘g‘ri to‘rtburchakning bo‘yi × eni
+ 
+ 
+ 
+           = 
+ × uchburchakning asosi × balandligi
+ 
+   
+ 
+AKT mashqi
+Uchburchakning yuzi unga mos to‘g‘ri to‘rtburchak yuzining yarmiga teng   
+ 
+ 
+ekanini ko‘rsatish uchun “Uchburchak-to‘g‘ri to‘rtburchak” dasturidan foydalaning. 
+Har bir uchburchak  
+va unga mos to‘g‘ri 
+to‘rtburchakning  
+yuzi o‘rtasida qanday  
+bog‘liqlikni payqadingiz?
+Uchburchakning asosi va balandligi 
+hamda unga mos  
+to‘g‘ri to‘rtburchakning  
+bo‘yi va eni o‘rtasida qanday 
+bog‘liqlikni payqadingiz?
+99
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   99
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   99
+09/08/24   19:31
+09/08/24   19:31
+
+5  Uchburchakning yuzini toping.
+Uchburchakning yuzi = 1
+2  × asosi × balandligi
+ 
+                                  
+ 
+a) 
+ 
+ 
+ 
+ 
+ 
+ 
+3 cm
+4 cm
+A
+B
+C
+ 
+ ABC uchburchakning yuzi =  1
+2 × 4 × 3 
+ 
+ 
+ 
+ 
+ 
+  
+  = 6 (cm2)
+ 
+b) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DEF uchburchakning yuzi = 1
+2 × 10 × 6
+6 cm
+D
+10 cm
+F
+E
+ 
+  
+            = 30 (cm2)
+ 
+c) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+K
+J
+L
+7 cm
+16 cm
+ 
+JKL uchburchakning yuzi = 1
+2 × 7 × 16 
+ 
+ 
+ 
+ 
+  
+           = 56 (cm2)
+ 
+d) 
+ 
+ 
+ 
+ 
+ 
+PQR uchburchakning yuzi = 1
+2 × 24 × 10 
+ 
+ 
+ 
+10 cm
+Q
+P
+R
+24 cm
+ 
+  
+            = 120 (cm2)
+100
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   100
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   100
+09/08/24   19:31
+09/08/24   19:31
+
+Qiziqarli matematika
+AKT mashqi
+Quyidagilarni aniqlash uchun “Uchburchakning yuzi” dasturidan foydalaning.
+a) 
+Asosi ham, balandligi ham teng bo‘lgan uchburchaklarning yuzi teng bo‘ladimi?
+ 
+A
+asos
+C
+B
+A1
+A2
+b)  Uchburchakning balandligi ortsa, uning yuzi qanday o‘zgaradi?
+A1
+asos
+C
+B
+A
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+Sinf xonasidan yuzi 20 cm2 ga teng bo‘lgan uchta turli uchburchak toping. 
+Uchburchaklarning
+balandligi va  
+asosining
+uzunligi qancha? 
+Uchburchaklarga mos 
+to‘g‘ri to‘rtburchak
+tomonlarining uzunligi
+qancha?
+101
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   101
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   101
+09/08/24   19:31
+09/08/24   19:31
+
+Bajaring va o‘rganing
+Bo‘yalgan uchburchaklarning yuzini toping. 
+a) 
+6 cm
+8 cm
+ 
+b) 
+13 cm
+12 cm
+5 cm
+ 
+ 
+ 
+ 
+   
+ 
+c) 
+14 m
+6 m
+ 
+d) 
+25 cm
+40 cm
+15 cm
+ 
+ 
+ 
+   
+e) 
+2 m
+6 m
+10 m
+6 m
+ 
+f) 
+14 m
+12 m
+20 m
+16 m
+ 
+ 
+  
+g) 
+25 m
+7 m
+14 m
+10 m
+ 
+h) 
+9 m
+24 m
+28 m
+ 
+ 
+119–122
+Mashq daftariga o‘ting
+102
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   102
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   102
+09/08/24   19:31
+09/08/24   19:31
+
+1-usul
+2-usul
+Qarang va o‘rganing
+1  PQRS – to‘g‘ri to‘rtburchak, PTUS esa kvadrat. Bo‘yalgan shaklning yuzini toping.
+ 
+P
+T
+S
+U
+R
+B
+A
+6 cm
+6 cm
+10 cm
+Q
+          A kvadratning yuzi = 6 × 6 
+ 
+              = 36 (cm2)
+                                         RU = 10 – 6 
+                                                = 4 (cm)
+B uchburchakning yuzi = 1
+2 × 4 × 6 
+                                                = 12 (cm2)
+     PTRS shaklning yuzi  = 36 + 12  
+ 
+              = 48 (cm2)
+PQRS to‘g‘ri to‘rtburchakning yuzi = 10 × 6
+                                                                       = 60 (cm2)
+ 
+                  TQ = 10 – 6 
+ 
+                         = 4 (cm)
+                 TQR uchburchakning yuzi =  1
+2 × 4 × 6 
+ 
+                        = 12 (cm2)
+                             PTRS shaklning yuzi = 60 – 12 
+ 
+                        = 48 (cm2)
+2  ABCD to‘g‘ri to‘rtburchakning bo‘yalgan qismi yuzini toping. 
+ 
+ 
+ 
+ 
+ 
+ 
+8 cm
+A
+B
+D
+C
+E
+12 cm
+ 
+ ABCD to‘g‘ri to‘rtburchakning yuzi = 12 × 8 
+ 
+ 
+ 
+ 
+                      = 96 (cm2)
+ 
+ 
+   
+ DEC uchburchakning yuzi =  1
+2 × 12 × 8 
+ 
+ 
+ 
+ 
+     = 48 (cm2)
+ 
+ 
+ 
+Bo‘yalgan qismning yuzi = 96 – 48 
+           
+ 
+ 
+  = 48 (cm2)
+To‘g‘ri to‘rtburchak va uchburchaklardan tuzilgan 
+murakkab shakllarning yuzi
+1-usul
+2-usul
+103
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   103
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   103
+09/08/24   19:31
+09/08/24   19:31
+
+3  JKLM to‘g‘ri to‘rtburchak berilgan. Bo‘yalgan uchburchak yuzini toping. 
+ 
+16 cm
+N
+M
+K
+J
+L
+18 cm
+7 cm
+  
+MN kesma KMN uchburchakning asosidir.
+ 
+ 
+ 
+ 
+                                             MN = 16 – 7 = 9 (cm) 
+ 
+ 
+ 
+ 
+                                                                        Bo‘yalgan uchburchak yuzi =  1
+2 × 9 × 18 
+  
+ 
+ 
+ 
+ 
+  
+= 81 (cm2)
+4  Quyidagi rasmda keltirilgan shakl nimalardan tashkil topganini aniqlang va
+ 
+uning yuzini toping.
+ 
+3 cm
+3 cm
+5 cm
+3 cm
+3 cm
+5 cm
+15 cm
+15 cm
+C
+B
+A
+     
+ 
+A uchburchakning yuzi = 1
+2 × 5 × 3 = 7,5 (cm2)          
+ 
+B to‘g‘ri to‘rtburchakning yuzi = 15 × 5 = 75 (cm2)
+ 
+C to‘g‘ri to‘rtburchakning yuzi = 5 × 3 = 15 (cm2)
+ 
+ Shaklning yuzi = 7,5 + 75 + 15 = 97,5 (cm2)
+Men A, B, C va D 
+shakllarning yuzini qo‘shib, 
+umumiy shaklning yuzini  
+topa olaman.
+C
+A
+D
+B
+104
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   104
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   104
+09/08/24   19:31
+09/08/24   19:31
+
+Qiziqarli matematika
+5  Uchburchak, to‘g‘ri to‘rtburchak va kvadratdan tashkil topgan shaklning yuzini          
+ 
+toping. 
+ 
+5 m
+6 m
+6 m
+4 m
+C
+A
+B
+ 
+ A uchburchakning yuzi =  1
+2 × 5 × 4 = 10 (m2)
+ 
+ 
+ 
+  B to‘g‘ri to‘rtburchakning yuzi = 6 × 5 = 30 (m2)
+ 
+ 
+ 
+ C kvadratning yuzi = 6 × 6 = 36 (m2)
+ 
+ 
+ 
+ Shaklning yuzi = 10 + 30 + 36 = 76 (m2)
+O‘rganing va bo‘lishing
+Quyidagi rasmda keltirilgan shakllar nimalardan tashkil topganini aniqlang va 
+ularning yuzini toping. Javobingizni sinfdoshlaringiz bilan o‘rtoqlashing. 
+a) 
+33 cm
+24 cm
+28 cm
+ 
+         b)
+7 m
+8 m
+1 m
+3 m
+4 m
+1 m
+2 m
+2 m
+ 
+ 
+c) 
+15 m
+31 m
+40 m
+6 m
+ 
+ 
+105
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   105
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   105
+09/08/24   19:31
+09/08/24   19:31
+
+Bajaring va o‘rganing
+1  Berilgan shakllardagi bo‘yalgan qismning yuzini toping.  
+ 
+a) ABCD – to‘g‘ri to‘rtburchak. 
+b) EFGH kvadrat va bo‘yalmagan 4 ta
+                                                                                                     uchburchak o‘zaro teng.  
+ 
+  
+14 cm
+30 cm
+16 cm
+A
+B
+D
+C
+18 cm
+18 cm
+E
+F
+H
+G  
+ 
+c) PQRS – to‘g‘ri to‘rtburchak. 
+d) EFGH – kvadrat. 
+ 
+  
+ 
+ 
+ 
+   
+16 cm
+30 cm
+Q
+P
+R
+S
+ 
+ 
+2 cm
+8 cm
+2 cm
+8 cm
+8 cm
+E
+F
+H
+G
+J
+K
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+e) 
+7 cm
+7 cm
+8 cm
+6 cm
+14 cm
+ 
+f) 
+26 m
+7 m
+14 m
+6 m
+5 m
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+106
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   106
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   106
+09/08/24   19:31
+09/08/24   19:31
+
+2  Shakllarning bo‘yalgan qismi yuzini qanday topish mumkinligini tushuntiring.
+ 
+a) 
+ 
+ 
+ 
+b) 
+WXYZ – kvadrat.
+ 
+ 
+6 cm
+4 cm
+4 cm
+4 cm
+4 cm
+6 cm
+4 cm
+ 
+ 
+12 cm
+Z
+Y
+X
+W
+ 
+c) Bo‘yalgan shakl tomoni 2 cm boʻlgan  
+    d) Bo‘yalgan uchburchak 1 cm li
+                  kvadrat panjarada chizilgan.                                    nuqtali panjarada chizilgan. 
+ 
+ 
+2 cm
+2 cm
+ 
+ 
+1 cm
+1 cm
+3  ABHJ, BCDK va KEFG – kvadratlar. Bo‘yalgan ACF uchburchakning yuzini 2 xil usul 
+bilan toping va tushuntiring.
+ 
+12 cm
+6 cm
+A
+B
+E
+D
+K
+J
+C
+H
+4 cm
+G
+F
+ 
+ 
+O‘zingizni tekshiring
+a) 
+Men uchburchakning yuzi unga mos to‘g‘ri to‘rtburchak yuzining yarmiga teng ekanini 
+bilaman. 
+  
+b) Men uchburchakning yuzini qanday topishni bilaman. 
+  
+c) 
+Men kvadrat, to‘g‘ri to‘rtburchak va uchburchaklardan tashkil topgan shaklning yuzini 
+qanday topishni bilaman. 
+  
+123–134
+Mashq daftariga o‘ting
+107
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   107
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   107
+09/08/24   19:32
+09/08/24   19:32
+
+108
+O‘ylab ko‘ring
+A va B kvadratlar berilgan. C shaklni hosil qilish uchun rasmda ko‘rsatilganidek kichkina 
+kvadratning yarmi katta kvadrat bilan yopildi. Hosil bo‘lgan C shaklning yuzini toping.
+B kvadrat
+8 cm
+8 cm
+A kvadrat
+8 cm
+C shakl
+8 cm
+135–138
+Mashq daftariga o‘ting
+C shaklda ko‘rsatilgan kvadratni 4 ta teng
+uchburchakka bo‘la olasizmi? Har bir
+uchburchakning yuzi nechaga teng?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   108
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   108
+09/08/24   19:32
+09/08/24   19:32
+
+Hajm
+5
+Kub hajmini topishning qanday yo‘llari bor?
+Muhokama qiling
+Ushbu kubni hosil 
+qilish uchun nechta 
+kubcha ishlatilgan?
+Bu qutiga 
+shunday 
+kubchalardan 
+nechtasi sig‘adi?
+Bu idishdagi suvning hajmini 
+qanday topsam ekan?
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   109
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   109
+09/08/24   19:32
+09/08/24   19:32
+
+Kub, kuboid, hajm va sig‘im
+1  Kub 6 ta kvadrat shaklidagi yoqlarga ega.
+Kubning barcha qirralari o‘zaro teng bo‘ladi.
+2  Kuboid 6 ta to‘g‘ri to‘rtburchak yoki 4 ta to‘g‘ri to‘rtburchak                                             
+va 2 ta kvadrat shaklidagi yoqlarga ega.
+ 
+3  Idishga solingan suyuqlik muayyan joyni egallaydi.  
+Demak, uning hajmi bor. Suyuqlik hajmi litr yoki millilitrda o‘lchanadi.
+500 ml
+400
+300
+200
+100
+500 ml
+1  
+4  Idishning sig‘imi uni to‘ldirish uchun zarur bo‘ladigan suyuqlik hajmiga teng.
+Kub yoki kuboid fazoda
+muayyan joyni egallagani
+uchun ularning hajmi bor.
+Eslang
+110
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   110
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   110
+09/08/24   19:32
+09/08/24   19:32
+
+1  Bu – birlik kub. Birlik kub o‘lchamlari: 1 birlik × 1 birlik × 1 birlik. 
+     
+Uning hajmi — 1 kub birlikka teng.
+ 
+ 
+                
+1 birlik
+1 birlik
+1 birlik
+2  Quyidagi kub va kuboidlar birlik kublardan yasalgan.
+ 
+a) 
+Bu kub 8 ta birlik kubdan tashkil topgan.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+qirrasi
+ 
+ 
+ 
+ 
+Kubning hajmi = 8 kub birlik.
+ 
+b) 
+Bu kuboid 3 ta birlik kubdan tashkil topgan.
+ 
+ 
+eni
+bo‘yi
+balandligi  
+    
+ 
+ 
+ 
+ 
+Kuboidning hajmi = 3 kub birlik.
+ 
+c) 
+Bu kuboid 10 ta birlik kubdan tashkil topgan.
+ 
+ 
+ 
+ 
+ 
+ 
+Kuboidning hajmi = 10 kub birlik.
+ 
+ 
+ 
+ 
+ 
+          
+ 
+ 
+Birlik kub hajmi u
+egallagan fazo qismining
+hajmiga teng.
+Kuboidning bo‘yi,
+eni va balandligi bor.
+Fazoviy jismlarning hajmi
+Qarang va o‘rganing
+111
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   111
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   111
+09/08/24   19:32
+09/08/24   19:32
+
+3  Quyidagi jismlar birlik kublardan yasalgan. 
+      
+Turli jismlar bir xil hajmga ega bo‘lishi mumkinmi?
+a) 
+ 
+ 
+    
+ 
+ 
+A jism
+ 
+ 
+ 
+Birlik kublar soni 5 ta. 
+ 
+A jism hajmi = 5 kub birlik.
+b) 
+ 
+B jism
+ 
+ 
+Birlik kublar soni 6 ta.
+ 
+ 
+ 
+B jism hajmi = 6 kub birlik.
+c) 
+ 
+ 
+ 
+D jism
+     
+ 
+ 
+ 
+Birlik kublar soni 8 ta. 
+ 
+D jism hajmi = 8 kub birlik.
+d) 
+ 
+ 
+ 
+E jism
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+Birlik kublar soni 6 ta. 
+ 
+E jism hajmi = 6 kub birlik.
+Ko‘rib turganingizdek, A jism eng kichik, D jism eng katta hajmga ega.
+ 
+ 
+ 
+Turli jismlar bir xil hajmga ega bo‘lishi  
+mumkin. Yuqoridagi jismlardan qaysilari  
+bir xil hajmga ega?
+112
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   112
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   112
+09/08/24   19:32
+09/08/24   19:32
+
+Guruh bo‘lib ishlang.
+1  
+a) 
+3 ta birlik kubdan foydalanib ikki xil jism yasang.
+             
+Har bir jismning hajmini aniqlang.
+    
+b) 
+4 ta birlik kubdan foydalanib 4 xil jism yasang.
+             
+Har bir jismning hajmini aniqlang.
+2  
+Quyidagi jismlarni yasash uchun birlik kublardan foydalaning va ularning   
+ 
+hajmini taqqoslang.
+ 
+ 
+ 
+Qaysi jism eng katta hajmga ega? 
+Qaysi jism eng kichik hajmga ega?
+Jism
+Jismni yasash uchun 
+kerak bo‘lgan birlik 
+kublar soni
+Jismning hajmi
+(kub birliklarda)
+  
+X jism
+Y jism
+Z jism
+Qo‘lda bajariladigan mashq
+113
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   113
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   113
+09/08/24   19:32
+09/08/24   19:32
+
+Quyidagi jismlarning hajmini toping.
+a) 
+ 
+b) 
+  
+c) 
+ 
+ 
+        
+ 
+ 
+d)
+ 
+ 
+e)     
+     
+  
+       
+f) 
+     
+a) 
+Men birlik kublardan foydalanib jismlarni yasay olaman.  
+  
+b) Men jismlarning hajmini kub birliklarida o‘lchay olaman.  
+  
+Bajaring va o‘rganing
+139–140
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+114
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   114
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   114
+09/08/24   19:32
+09/08/24   19:32
+
+ 
+1  Kublarni uch o‘lchamli panjarada chizing.
+     
+a) 
+ 
+ 
+                 
+1 birlik
+1 birlik
+1 birlik
+ 
+ 
+ 
+ 
+ 
+ 
+b) 
+  
+ 
+ 
+        
+2 birlik
+2 birlik
+2 birlik
+ 
+c) 
+ 
+            
+  
+4 birlik
+4 birlik
+4 birlik
+Uch o‘lchamli panjarada fazoviy jismlarni chizish
+Qarang va o‘rganing
+115
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   115
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   115
+09/08/24   19:32
+09/08/24   19:32
+
+2  Kuboidlarni uch o‘lchamli panjarada chizing.
+ 
+a) 
+  
+ 
+ 
+            
+1 birlik
+3 birlik
+1 birlik
+ 
+b) 
+ 
+  
+ 
+  
+4 birlik
+2 birlik
+3 birlik
+ 
+c) 
+   
+       
+ 
+     
+5 birlik
+5 birlik
+3 birlik
+    
+ 
+116
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   116
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   116
+09/08/24   19:32
+09/08/24   19:32
+
+Bajaring va o‘rganing
+Quyidagilarni uch o‘lchamli panjarada chizing.
+a) 
+2 birlik
+3 birlik
+1 birlik  b) 
+3 birlik
+3 birlik
+3 birlik
+ c) 
+3 birlik
+2 birlik
+2 birlik
+a) 
+Men uch o‘lchamli panjarada kub chiza olaman. 
+    
+b) Men uch o‘lchamli panjarada kuboid chiza olaman.  
+Guruh bo‘lib ishlang.
+Quyidagi kub va kuboidlarni uch o‘lchamli panjarada ikki xil ko‘rinishda (joylashuvda) 
+chizing va muhokama qiling.
+ 
+        
+a) 
+o‘lchamlari 2 birlik (eni), 2 birlik (bo‘yi), 
+         2 birlik (balandligi) bo‘lgan kub
+b) o‘lchamlari 4 birlik (eni), 4 birlik (bo‘yi), 
+         4 birlik (balandligi) bo‘lgan kub
+d) o‘lchamlari 4 birlik (eni), 1 birlik (bo‘yi), 
+          2 birlik (balandligi) bo‘lgan kuboid
+c) 
+o‘lchamlari 3 birlik (eni), 1 birlik (bo‘yi), 
+         1 birlik (balandligi) bo‘lgan kuboid
+O‘zingizni tekshiring
+141–142
+Mashq daftariga o‘ting
+O‘lchamlari 3 birlik (eni), 3 birlik (bo‘yi), 2 birlik (balandligi) bo‘lgan
+kuboidni ikki xil ko‘rinishda (joylashuvda) chizing.
+3 birlik
+2 birlik
+3 birlik
+2 birlik
+3 birlik
+3 birlik
+Misol
+Qo‘lda bajariladigan mashq
+117
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   117
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   117
+09/08/24   19:32
+09/08/24   19:32
+
+Men yuqoridan 
+qaraganimda 3 ta kvadrat 
+yuzni ko‘raman.
+Men olddan qaraganimda 
+2 ta kvadrat yuzni 
+ko‘raman.
+Men yondan 
+qaraganimda 4 ta kvadrat 
+yuzni ko‘raman.
+Kvadratli panjarada fazoviy jismlarning turli 
+koʻrinishlarini chizish
+Qarang va o‘rganing
+Har bir fazoviy jism birlik kublardan iborat.
+Kvadratli panjarada har bir jismning yuqoridan, olddan va yondan ko‘rinishini chizing. 
+a) 
+yuqoridan ko‘rinishi
+olddan ko‘rinishi
+yondan ko‘rinishi
+ 
+yondan ko‘rinishi
+olddan ko‘rinishi
+yuqoridan ko‘rinishi
+118
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   118
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   118
+09/08/24   19:32
+09/08/24   19:32
+
+b) 
+ 
+yuqoridan ko‘rinishi
+olddan ko‘rinishi
+yondan ko‘rinishi
+ 
+ 
+ 
+yondan ko‘rinishi
+olddan ko‘rinishi
+yuqoridan ko‘rinishi
+Guruh bo‘lib ishlang. Har bir jismning yuqoridan, olddan va yondan ko‘rinishini kvadrat 
+panjarada chizing. 
+a) 
+yuqoridan ko‘rinishi
+yondan ko‘rinishi
+olddan ko‘rinishi
+ 
+b) 
+yuqoridan ko‘rinishi
+yondan ko‘rinishi
+olddan ko‘rinishi
+c) 
+yondan ko‘rinishi
+olddan ko‘rinishi
+yuqoridan ko‘rinishi
+ 
+d) 
+yuqoridan ko‘rinishi
+yondan ko‘rinishi
+olddan ko‘rinishi
+Juftlikda ishlang
+119
+143–144
+Mashq daftariga o‘ting
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   119
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   119
+09/08/24   19:32
+09/08/24   19:32
+
+1  Bu kubning o‘lchamlari: 1 cm, 1 cm, 1 cm. Uni birlik kub sifatida olamiz.
+ 
+     
+1 cm
+1 cm
+1 cm
+    
+         
+ 
+2  Quyidagi jismlar qirrasi 1 cm bo‘lgan kublardan yasalgan.
+a) 
+A jism
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+Birlik kublar soni 6 ta
+ 
+A jismning hajmi = 6 cm3
+b) 
+B jism
+  
+ 
+ 
+ 
+ 
+ 
+Birlik kublar soni 8 ta 
+ 
+B jismning hajmi = 8 cm3
+c) 
+ 
+ 
+C jism
+             
+ 
+   
+ 
+Birlik kublar soni 7 ta
+ 
+C jismning hajmi = 7 cm3
+d) 
+D jism
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+      
+ 
+ 
+Birlik kublar soni 7 ta
+ 
+D jismning hajmi = 7 cm3
+A jism eng kichik hajmga, B jism eng katta hajmga ega.
+Qirrasi 1 cm bo‘lgan birlik kubning hajmi 1 santimetr kub 
+yoki 1 cm3 ga teng.
+Yuqoridagi jismlardan qaysilari
+bir xil hajmga ega?
+Hajmni santimetr kub va metr kubda o‘lchash
+Qarang va o‘rganing
+120
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   120
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   120
+09/08/24   19:32
+09/08/24   19:32
+
+3  Bu kubning o‘lchamlari: 1 m, 1 m, 1 m. Uni birlik kub sifatida olamiz.
+ 
+                               
+ 
+      
+1 m
+1 m
+1 m
+4  Quyidagi jismlar qirrasi 1 m bo‘lgan kublardan yasalgan.
+a) 
+ 
+ 
+W kub
+ 
+ 
+ 
+ 
+    
+   
+    
+ 
+Birlik kublar soni 8 ta
+ 
+W jismning hajmi = 8 m3
+b) 
+ 
+ 
+  
+X kuboid
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Birlik kublar soni 18 ta
+ 
+X jismning hajmi = 18 m3
+c) 
+ 
+ 
+ 
+             
+ 
+ 
+Y kuboid
+ 
+Birlik kublar soni 8 ta
+ 
+Y jismning hajmi = 8 m3
+d) 
+ 
+ 
+ 
+Z jism
+ 
+ 
+ 
+ 
+      
+ 
+Birlik kublar soni 6 ta
+ 
+Z jismning hajmi = 6 m3
+ 
+Qaysi jism eng katta hajmga ega?
+ 
+Qaysi jismlar bir xil hajmga ega?
+Qirrasi 1 m bo‘lgan birlik kubning hajmi 1 metr kub 
+yoki 1 m3 ga teng.
+1 m = 100 cm
+Qirrasi 1 m bo‘lgan kubning hajmi qirrasi  
+1 cm bo‘lgan kubdan kattaroqmi?
+121
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   121
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   121
+09/08/24   19:32
+09/08/24   19:32
+
+Bajaring va o‘rganing
+1  Quyidagi jismlar qirrasi 1 cm bo‘lgan kublardan yasalgan. Jismlarning hajmini 
+santimetr kublarda toping.
+a)
+ 
+ 
+ 
+ 
+    
+b) 
+ 
+    
+ 
+ 
+ 
+2  Quyidagi jismlar qirrasi 1 m bo‘lgan kublardan yasalgan. Jismlarning hajmini metr 
+kublarda toping.
+a) 
+  
+ 
+   
+ 
+ 
+    
+ 
+b)
+a) 
+Men hajmni santimetr kublarda o‘lchashni bilaman. 
+   
+b) Men hajmni metr kublarda o‘lchashni bilaman.  
+O‘zingizni tekshiring
+145–146
+Mashq daftariga o‘ting
+122
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   122
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   122
+09/08/24   19:32
+09/08/24   19:32
+
+Guruh bo‘lib ishlang.
+1  
+Quyidagi kuboidlarni yasash uchun birlik kublardan foydalanilgan. Har bir  
+kuboidning hajmini toping.
+ 
+ 
+ 
+bo‘yi
+eni
+balandligi
+A
+ 
+B
+ 
+ 
+ 
+ 
+C
+ 
+D
+ 
+ 
+ 
+Kuboidlarning hajmini o‘lchashning birlik kublar sonini sanashdan boshqa 
+yana qanday yo‘li bor?
+ 
+Kuboid
+Birlik kublarni sanash
+orqali topilgan hajm
+(kub birliklarda)
+Bo‘yi
+(birliklarda)
+Eni
+(birliklarda)
+Balandligi
+(birliklarda)
+A
+3
+3
+1
+1
+B
+6
+3
+2
+1
+C
+D
+2  
+Kuboid chizing va uning hajmini toping.
+ 
+Kuboidning hajmini topish formulasi qanday?
+Kuboidning hajmi = 
+ × 
+ × 
+ 
+Nima uchun kuboidning hajmi uning bo‘yi, eni  
+va balandligiga bog‘liq?
+Kuboid va kubning hajmini topish
+Qo‘lda bajariladigan mashq
+123
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   123
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   123
+09/08/24   19:32
+09/08/24   19:32
+
+3  
+Quyidagi kublarni yasash uchun birlik kublardan foydalanilgan. Kublarning 
+hajmini toping.
+ 
+a) 
+ 
+ 
+b) 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+   
+W
+ 
+ 
+ 
+X
+ 
+ 
+ 
+ 
+d) 
+ 
+ 
+e) 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+  
+Y
+ 
+ 
+ 
+Z
+Kublarning hajmini o‘lchashning birlik kublar sonini sanashdan boshqa yana 
+qanday yo‘li bor? 
+ 
+ 
+ 
+ 
+ 
+ 
+Kubning hajmi = 
+ × 
+ × 
+ 
+Kub
+Birlik kublarni sanash
+orqali topilgan hajm
+(kub birliklarda) 
+Qirrasi
+(birliklarda)
+Qirrasi
+(birliklarda)
+Qirrasi
+(birliklarda)
+W
+1
+1
+1
+1
+X
+Y
+Z
+124
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   124
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   124
+09/08/24   19:32
+09/08/24   19:32
+
+1  Kuboid yoki kub hajmi quyidagicha topiladi: 
+ 
+ 
+Kuboid hajmi = bo‘yi × eni × balandligi
+ 
+Kub hajmi = qirrasi × qirrasi × qirrasi
+ 
+2  a) 
+O‘lchamlari 3 cm, 2 cm, 3 cm bo‘lgan kuboidning hajmini toping.
+2 cm
+3 cm
+3 cm
+1 cm
+1 cm
+ 
+ 
+ 
+Kuboid hajmi = bo‘yi × eni × balandligi = 3 × 2 × 3 = 18 (cm3)
+                                    
+ 
+b) 
+O‘lchamlari 12 m, 8 m, 4 m bo‘lgan kuboidning hajmini toping.
+4 m
+8 m
+12 m
+ 
+ 
+ 
+Kuboid hajmi = 12 × 8 × 4 = 384 (m3)
+Qarang va o‘rganing
+125
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   125
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   125
+09/08/24   19:32
+09/08/24   19:32
+
+3  a)  
+O‘lchamlari 2 cm, 2 cm, 2 cm bo‘lgan kubning hajmini toping.
+ 
+ 
+2 cm
+2 cm
+2 cm
+ 
+ 
+ 
+ 
+Kub hajmi = qirrasi × qirrasi × qirrasi  
+ 
+ 
+ 
+ 
+= 2 × 2 × 2
+ 
+ 
+ 
+ 
+= 8 cm3
+ 
+b) 
+O‘lchamlari 3 m, 3 m, 3 m bo‘lgan kubning hajmini toping.
+ 
+ 
+3 m
+3 m
+3 m
+ 
+ 
+ 
+ 
+ 
+ 
+Kub hajmi = qirrasi × qirrasi × qirrasi
+ 
+ 
+ 
+ 
+ 
+= 3 × 3 × 3 
+ 
+ 
+ 
+ 
+ 
+= 27 m3
+4  Kuboid shaklidagi shisha idish pastda ko‘rsatilganidek qirrasi 1 cm boʻlgan kublar 
+bilan qisman to‘ldirilgan. Maʼlumotlar asosida idishning hajmini toping.
+ 
+10 cm
+ 
+ Bo‘yi = 10 cm 
+ 
+ 
+ 
+ Eni = 6 cm 
+ 
+ 
+ 
+ Balandligi = 4 cm
+ 
+ 
+ 
+Shisha idish hajmi = 10 × 6 × 4
+ 
+ 
+ 
+                                       = 240 cm3 
+ 
+ 
+ 
+126
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   126
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   126
+09/08/24   19:32
+09/08/24   19:32
+
+Guruh bo‘lib ishlang.
+1  
+Tomoni 1 cm bo‘lgan kvadrat va qirrasi 1 cm bo‘lgan kubni taqqoslang. 
+Kvadratning yuzi va kubning hajmi o‘rtasidagi farqni toping. Qanday farqni 
+payqadingiz?
+2  
+Pol ustida yopishqoq tasmadan foydalanib rasmda ko‘rsatilgandek, tomoni 
+1 m bo‘lgan kvadrat hosil qiling. So‘ng eski gazetalarni o‘rab, uzunligi 1 m bo‘lgan 
+o‘ramlarni qirqib oling. Qirrasi 1 m bo‘lgan kub hosil qilish uchun 12 ta gazeta 
+o‘ramlarini bir-biriga skotch bilan birlashtiring. Kvadratning yuzi va kubning hajmini 
+toping.
+ 
+Xalqaro savdo-sotiqda katta hajmdagi yuklar 
+odatda konteynerlarda tashiladi. Dengiz 
+portlarida har kuni minglab konteynerlar yuk 
+tashuvchi kemaga yuklanadi yoki tushiriladi.
+Konteyner o‘lchami
+Hajmi
+20 futli yuk konteyneri
+33,150 m3
+40 futli yuk konteyneri
+67,700 m3
+Qo‘lda bajariladigan mashq
+Turmushda matematika
+127
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   127
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   127
+09/08/24   19:32
+09/08/24   19:32
+
+Bajaring va o‘rganing
+1  Kuboidlarning hajmini toping.
+ 
+a) 
+3 cm
+2 cm
+5 cm
+ 
+b) 
+10 cm
+12 cm
+5 cm
+2  Kubning hajmini toping.
+ 
+ 
+       
+6 cm
+3  Asosi kvadrat bo‘lgan kuboidning hajmini toping.
+ 
+ 
+ 
+ 
+ 
+ 
+        
+18 cm
+5 cm
+5 cm
+4  Kuboidlarning hajmini toping.
+ 
+a) 
+5 m
+1 m
+7 m
+ 
+b) 
+7 m
+12 m
+4 m
+O‘zingizni tekshiring
+a) 
+Men kub va kuboidni farqlay olaman. 
+  
+b) Men formula yordamida kuboidning hajmini topishni bilaman. 
+ 
+c) 
+Men formula yordamida kubning hajmini topishni bilaman. 
+ 
+147–150
+Mashq daftariga o‘ting
+128
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   128
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   128
+09/08/24   19:32
+09/08/24   19:32
+
+Guruh bo‘lib ishlang.
+1  
+Silindr shaklidagi o‘lchov idishini 1 ℓ suv bilan to‘ldiring. So‘ng undagi suvni
+o‘lchamlari 10 cm, 10 cm, 10 cm bo‘lgan kub shaklidagi idishga quying.
+ 
+a) Idishning hajmi qanday?
+ 
+ 
+Idish hajmi = 
+ cm × 
+ cm × 
+ cm
+            
+                                      = 
+ cm3
+ 
+b)  ml va cm3 o‘rtasida qanday bog‘liqlik bor?
+                 
+ 
+1 ℓ  = 1000 ml
+         
+1000 ml = 
+ cm3
+                   1 ml  = 
+ cm3
+                   1 ℓ  = 
+ cm3
+2  
+Uydan 4 ta bo‘sh idish olib keling. Ularga A, B, C va D harflarini yopishtiring. 
+Idishlarni suv bilan liq to‘ldiring. So‘ng suvni kub shaklidagi idishga quying va har safar 
+suv sathini aniqlang. Formuladan foydalanib har bir idishning sig‘imini toping.
+ 
+ 
+Idish
+Suv hajmi
+(cm3) 
+Idishdagi suv
+hajmi
+Idish
+sig‘imi
+A
+10 × 10 × 
+ = 
+B
+C
+D
+ 
+ 
+10 cm
+10 cm
+10 cm
+1 ℓ
+1 ℓ
+Suyuqliklar hajmini santimetr kub va metr 
+kubda o‘lchash
+Qo‘lda bajariladigan mashq
+129
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   129
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   129
+09/08/24   19:32
+09/08/24   19:32
+
+ 
+1  
+1 ml = 1 cm3  
+ 
+ 
+ 
+ 
+ 
+a) 4 ml = 4 cm3 
+b) 125 ml = 125 cm3
+ 
+c)  27 cm3 = 27 ml 
+d) 308 cm3 = 308 ml
+2  Kuboid shakliga ega idishdagi suv hajmini toping. Javobni millilitrlarda ifodalang.
+ 
+ 
+ 
+15 cm
+22 cm
+7 cm
+ 
+Idishdagi suv hajmi = 22 × 15 × 7
+ 
+ 
+                               = 2310 cm3
+ 
+2310 cm3 = 2310 ml
+ 
+Idishdagi suv hajmi 2310 ml.
+ 
+1  Santimetr kubda ifodalang.
+ 
+a) 
+9 ml = 
+    
+b) 
+159 ml = 
+ 
+ 
+c)  
+6 ℓ = 
+  
+d) 
+8 ℓ 34 ml = 
+ 
+2  Litr va millilitrlarda ifodalang.
+ 
+a)  
+69 cm3 = 
+  
+b)  
+5004 cm3 = 
+ 
+ 
+c)  
+7080 cm3 = 
+  
+d)  
+3105 cm3 = 
+ 
+Bajaring va o‘rganing
+151–152
+Mashq daftariga o‘ting
+Qarang va o‘rganing
+130
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   130
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   130
+09/08/24   19:32
+09/08/24   19:32
+
+ 
+1  O‘lchamlari 30 cm, 16 cm va 23 cm bo‘lgan kuboid shaklidagi idishga suv quyilgan. 
+ 
+ 
+ 
+ 
+ 
+a) 
+Idishdagi suvning hajmi qancha? 
+ 
+b) 
+Idishni to‘ldirish uchun yana qancha 
+                     suv kerak?
+ 
+a)  
+Idishdagi suv hajmi = 30 × 16 × 12
+       
+ 
+                       
+     = 5760 cm3
+ 
+b) 
+ 
+ 
+16 cm
+30 cm
+12 cm
+23 cm
+1-usul
+Idishning hajmi = 30 × 16 × 23
+ 
+ 
+ 
+= 11 040 cm3
+Idishni to‘ldirish uchun kerak bo‘ladigan suv hajmi = 11 040 – 5760 
+ 
+ 
+ 
+ 
+                                                  = 5280 cm3
+2-usul
+Idishning suv bilan to‘lmagan qismi balandligi = 23 – 12
+ 
+ 
+ 
+ 
+  
+                        = 11 cm
+Idishni to‘ldirish uchun kerak bo‘ladigan suv hajmi = 30 × 16 × 11
+  
+ 
+ 
+ 
+                                                  = 5280 cm3
+Matnli masalalar
+Qarang va o‘rganing
+131
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   131
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   131
+09/08/24   19:32
+09/08/24   19:32
+
+2  Mahallada o‘lchamlari 8,5 m, 6 m, 2,5 m bo‘lgan hovuz bor. Hovuzning sig‘imini 
+toping.
+ 
+Hovuzning sig‘imi = 8,5 × 6 × 2,5
+ 
+ 
+                            = 127,5 m3
+3  O‘lchamlari 36 cm, 28 cm, 20 cm bo‘lgan kuboid shaklidagi idish yarmigacha 
+suv bilan to‘ldirilgan. Idishdagi suv bir xil bo‘sh stakanlarga quyildi. Agar har bir 
+stakanning sig‘imi 120 cm3 bo‘lsa, idishdagi suv nechta stakanga quyilgan? 
+ 
+20 cm
+28 cm
+36 cm
+? dona stakan
+ 
+Idishdagi suv hajmi = 1
+2 × 36 × 28 × 20
+ 
+ 
+                    = 10 080 cm3
+Suv bilan to‘ldirilgan stakanlar soni = 10 080 ÷ 120
+ 
+ 
+                                                     = 84
+132
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   132
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   132
+09/08/24   19:32
+09/08/24   19:32
+
+4  O‘lchamlari 32 cm, 20 cm, 18 cm bo‘lgan kuboid shaklidagi idishda dastlab 3,2 ℓ suv 
+bor edi. Keyin idishning  2
+3 qismi suv bilan to‘ldirildi. Idishga qancha suv quyilganini 
+toping. 
+ 
+ 
+18 cm
+20 cm
+32 cm
+ 
+ 
+ 
+ 
+ 
+1-usul
+Idishning 2
+3 qismi to‘ldirilgandagi suv hajmi = 2
+3 × 32 × 20 × 18 
+                                                            
+     = 7680 cm3
+  
+3,2 ℓ  = 3200 ml 
+    
+ = 3200 cm3
+ Idishga quyilgan suv hajmi = 7680 – 3200
+                                                         = 4480 cm3
+2-usul
+Idishning 2
+3 qismi to‘ldirilgandagi suv sathi balandligi = 2
+3 × 18
+  
+                           = 12 cm
+ Idishning 2
+3 qismi to‘ldirilgandagi hajmi = 32 × 20 × 12
+                                                                                   = 7680 cm3 
+                                                                         3,2 ℓ = 3200 ml 
+                                                                                     = 3200 cm3
+ Idishga quyilgan suv hajmi = 7680 – 320 = 4480 cm3
+133
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   133
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   133
+09/08/24   19:32
+09/08/24   19:32
+
+Bajaring va o‘rganing
+Matnli masalalarni yeching.
+1  O‘lchamlari 36 cm, 20 cm, 24 cm bo‘lgan kuboid shaklidagi idishga qanchadir suv   
+ 
+quyilgach, undagi suv sathi 13 cm ni tashkil qilgan.
+ 
+(a)  Idishdagi suvning hajmini toping. 
+  
+(b)  Idishni to‘ldirish uchun kerak bo‘ladigan suv hajmini toping.
+ 
+Javoblarni litr va millilitrlarda ifodalang. 
+           (1 ℓ = 1000 cm3)
+  
+ 
+ 
+24 cm
+13 cm
+36 cm
+20 cm
+2   Katta idishda dastlab 5 ℓ  suv bor edi. Aziza opa idishdagi suvdan o‘lchamlari                    
+ 
+16 cm, 15 cm, 12 cm bo‘lgan kuboid shaklidagi bo‘sh idishga quydi. Idish bir  
+ 
+ 
+tomchi suv to‘kilmasdan liq to‘ldi. Katta idishda qolgan suv miqdorini aniqlang.
+ 
+16 cm
+15 cm
+12 cm
+5 ℓ
+134
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   134
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   134
+09/08/24   19:32
+09/08/24   19:32
+
+3   O‘lchamlari 40 cm, 15 cm, 20 cm bo‘lgan kuboid shaklidagi idishga suv sathi            
+ balandligi 8 cm bo‘lgunga qadar suv quyilgan. Idishni to‘ldirish uchun sig‘imi                   
+ 800 ml bo‘lgan ko‘zada necha marta suv quyish kerak?
+800 ml
+8 cm
+20 cm
+15 cm
+40 cm
+4    6 ta bir xil shisha idishdagi suv o‘lchamlari 24 cm, 20 cm, 18 cm bo‘lgan, kuboid   
+   shaklidagi bo‘sh idishga quyildi. Shunda idishning  2
+3  qismi to‘ldi. Har bir shisha   
+ idishning sig‘imini toping.
+20 cm
+18 cm
+24 cm
+135
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   135
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   135
+09/08/24   19:32
+09/08/24   19:32
+
+5  O‘lchamlari 18 cm, 10 cm, 9 cm bo‘lgan kuboid shaklidagi idishning  4
+5  qismi suv       
+ 
+bilan to‘ldirilgan. So‘ng idishdan 432 ml suv to‘kib tashlandi. Idishda qolgan  
+ 
+ 
+suvning hajmini toping. Javobingizni litrda ifodalang.
+9 cm
+18 cm
+10 cm
+6  Qirrasi 14 cm bo‘lgan kub shaklidagi idish suv bilan to‘ldirilgan. Suvning bir  
+ 
+ 
+qismi o‘lchamlari 18 cm, 16 cm, 16 cm bo‘lgan kuboid shaklidagi idishga yarmi  
+ 
+ 
+to‘lgunicha quyildi. Kub shaklidagi idishda qancha suv qoldi? Javobni santimetr   
+ 
+kubda ifodalang.
+14 cm
+18 cm
+16 cm
+16 cm
+136
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   136
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   136
+09/08/24   19:32
+09/08/24   19:32
+
+7  Azimjon kuboid shaklidagi idishni yarmigacha to‘ldirish uchun 880 cm3 suv quydi.
+Idishning sig‘imini toping va natijani litrda ifodalang.
+8  Olimjonda kuboid shaklidagi ikkita A va B idish bor. A idishning o‘lchamlari: 
+10 cm, 5 cm, 4 cm. B idishning o‘lchamlari: 20 cm, 10 cm, 8 cm. 
+ 
+Olimjonning fikricha, B idishning sig‘imi A idishning sig‘imidan 2 baravar katta.
+Uning fikriga qo‘shilasizmi?
+ 
+10 cm
+20 cm
+8 cm
+B
+5 cm
+10 cm
+4 cm
+A
+O‘zingizni tekshiring
+a) 
+Men litr (yoki ml) va santimetr kub (cm3) o‘rtasidagi bog‘liqlikni bilaman.  
+ 
+b) 
+Men kuboid shaklidagi idishdagi suv hajmini qanday o‘lchashni bilaman.  
+ 
+c) 
+Men suyuqliklar hajmi va sig‘imiga oid masalalarni yechishni bilaman.   
+153–160
+Mashq daftariga o‘ting
+137
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   137
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   137
+09/08/24   19:32
+09/08/24   19:32
+
+O‘ylab ko‘ring
+Jasurbek quyida ko‘rsatilgan shakldagi jismlarni yasash uchun qirrasi 1 cm bo‘lgan 
+kublardan foydalandi. 1-jismda bitta kub joylashgan. 2-jismda kvadrat asos hosil qilish 
+uchun yangi kublar qo‘shilgan. 3-jismda yanada kattaroq kvadrat asos hosil qilish uchun 
+yana bitta qatlam qo‘shilgan. Agar Jasurbek shu usulda qatlamlarni qo‘shishda davom 
+etsa, 6-jismning hajmi qancha bo‘ladi?
+ 
+ 
+1-jism
+2-jism
+3-jism
+4-jism
+kvadrat asoslar
+kvadrat asos
+Qirrasi 1 cm bo‘lgan kublardan iborat har  
+bir qatlam hajmini toping. Jadval tuzing  
+va qonuniyatni aniqlang.
+161–164
+Mashq daftariga o‘ting
+138
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   138
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   138
+09/08/24   19:32
+09/08/24   19:32
+
+Nisbatlar
+6
+Bolalar bayram saylida
+Muhokama qiling
+Agar 2 ta qaymoqli 
+kulcha sotib olsam, nechta 
+shokoladli kulchani bepul 
+olaman?
+Bu yerda 10 ta ko‘katli 
+somsa va 6 ta go‘shtli 
+somsa bor ekan.
+Agar 6 ta bananli shirinlik 
+sotib olsam, nechta olmali 
+shirinlikni bepul olaman?
+ISSIQ 
+SOMSALAR
+Mastura opa 
+shirinliklari
+Karim aka 
+shirin kulchalari
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   139
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   139
+09/08/24   19:32
+09/08/24   19:32
+
+Qarang va o‘rganing
+1  Quyida to‘rtta ko‘k va bitta qizil kepka tasvirlangan.  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+Ko‘k kepkalar sonining qizil kepkalar soniga nisbati 4 : 1 ga teng.
+2  Quyida 2 ta qalam va 3 ta ruchka berilgan.
+ 
+Qalamlar sonining ruchkalar soniga nisbati 2 : 3.
+Ruchkalar sonining 
+qalamlar soniga  
+nisbati 3 : 2 deyishimiz 
+ham mumkin.
+Nisbatlarda 
+o‘lchov birliklari 
+ko‘rsatilmaydi.
+Biz 4 : 1 ni “4 ga 1” deb  
+o‘qiymiz.
+Nisbat tushunchasi
+140
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   140
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   140
+09/08/24   19:32
+09/08/24   19:32
+
+3  5 kg piyoz va 6 kg kartoshka bor. 
+ 
+0
+6 kg 1 kg
+2 kg
+3 kg
+5 kg
+4 kg
+0
+6 kg 1 kg
+2 kg
+3 kg
+5 kg
+4 kg
+ 
+Piyoz massasining kartoshka massasiga nisbati 5 : 6.
+4  5 ℓ olma sharbati va 2 ℓ apelsin sharbati bor. 
+ 
+olma sharbati
+5 ℓ
+4
+3
+2
+1
+apelsin sharbati
+5 ℓ
+4
+3
+2
+1
+ 
+Olma sharbati hajmining apelsin sharbati hajmiga nisbati 5 : 2.
+5  Akmalda 3 ta qizil va 5 ta yashil, jami 8 ta shar bor.
+ 
+Yashil sharlar sonining jami  
+sharlar soniga nisbati qanday?
+Yashil sharlar sonining  
+qizil sharlar soniga nisbati 
+qanday?
+ 
+ 
+Qizil sharlar sonining yashil sharlar soniga nisbati 3 : 5.
+ 
+Qizil sharlar sonining jami sharlar soniga nisbati 3 : 8.
+Piyoz massasining 
+kartoshka  
+massasiga nisbati 
+qanday?
+Olma sharbati  
+hajmining apelsin  
+sharbati hajmiga nisbati 
+qanday?
+141
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   141
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   141
+09/08/24   19:32
+09/08/24   19:32
+
+6  Yeryong‘oq moyi to‘plamining murabbolar to‘plamiga nisbati 3 : 2.
+ 
+Yeryong‘oq
+ moyi
+           g‘oq
+     oyi
+           oq
+      yi
+Yeryong‘oq
+ moyi
+           g‘oq
+     oyi
+           oq
+      yi
+Yeryong‘oq
+ moyi
+           g‘oq
+     oyi
+           oq
+      yi
+Yeryong‘oq
+ moyi
+           g‘oq
+     oyi
+           oq
+      yi
+Yeryong‘oq
+ moyi
+           g‘oq
+     oyi
+           oq
+      yi
+Yeryong‘oq
+ moyi
+           g‘oq
+     oyi
+           oq
+      yi
+7  Paketlarga bir xil miqdordagi mevalar solingan. 3 paket olma va 4 paket apelsin bor. 
+ 
+Apelsinlar
+Olmalar
+7 bo‘lak
+1 bo‘lak
+ 
+ 
+ 
+ 
+Olma paketi sonining apelsin paketi soniga nisbati 3 : 4.
+ 
+Olma paketi sonining jami mevalar paketi soniga nisbati 3 : 7.
+Murabbolar to‘plamining 
+yeryong‘oq  
+moyi to‘plamiga nisbati  
+qanday?
+Apelsin paketi sonining jami  
+mevalar paketi soniga nisbati  
+qanday?
+Yeryong‘oq moyi
+Murabbo
+142
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   142
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   142
+09/08/24   19:32
+09/08/24   19:32
+
+8  Sitora Jamilaga qaraganda 4 marta ko‘p pul jamg‘ardi.
+ 
+Sitora
+Jamila
+ 
+a) 
+Sitora jamg‘argan pulning Jamilaning puliga nisbati qanday?
+ 
+ 
+Sitora jamg‘argan pulning Jamilaning puliga nisbati 4 : 1.
+ 
+b) 
+Jamila jamg‘argan pulning qizlardagi jami pulga nisbati qanday?
+ 
+ 
+Jamila jamg‘argan pulning qizlardagi jami pulga nisbati 1 : 5.
+ 
+Juftlikda ishlang
+Juftlikda muhokama qiling.
+a) 
+Komila ichimlik tayyorlash uchun 1 piyola apelsin sharbatiga 5 piyola suv 
+aralashtirdi. Apelsin sharbati miqdorining suv miqdoriga nisbati qanday?
+ 
+       
+Suv
+Apelsin 
+sharbati
+b) 
+Jamila ichimlik tayyorlash uchun 2 piyola apelsin sharbatiga 5 piyola suv   
+ 
+ 
+aralashtirdi. Apelsin sharbati miqdorining suv miqdoriga nisbati qanday?
+Sitora jamg‘argan pulning 
+qizlardagi jami pulga  
+nisbati qanday?
+Kimning ichimligi 
+shirinroq?
+143
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   143
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   143
+09/08/24   19:32
+09/08/24   19:32
+
+Bajaring va o‘rganing
+1  Quyida 3 ta doira va 5 ta uchburchak berilgan.  
+Doiralar sonining uchburchaklar soniga nisbati   
+ : 
+.
+ 
+ 
+ 
+ 
+2  Quyida 10 ta mol go‘shtili va 7 ta tovuq go‘shtili burger tasvirlangan.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a) 
+Tovuq go‘shtili burgerlarning mol go‘shtili burgerlar soniga nisbati
+ 
+ 
+ : 
+.
+ 
+b) 
+Mol go‘shtili burgerlarning tovuq go‘shtili burgerlar soniga nisbati
+ 
+ 
+ : 
+. 
+3  Quyida 4 ta yashil va 5 ta qizil tugma berilgan.
+ 
+ 
+ 
+a) 
+Yashil tugmalar sonining qizil tugmalar soniga nisbati
+ 
+ 
+ : 
+.  
+ 
+b) 
+Qizil tugmalar sonining yashil tugmalar soniga nisbati  
+ 
+ 
+ : 
+.    
+ 
+c) 
+Qizil tugmalar sonining jami tugmalar soniga nisbati
+ 
+ 
+ : 
+. 
+144
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   144
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   144
+09/08/24   19:32
+09/08/24   19:32
+
+4  Qutilarga ikkitadan meva solindi.
+ 
+Olmalar
+Noklar
+ 
+Nok qutilari sonining olma qutilari soniga nisbati 
+ : 
+.
+5  To‘g‘ri to‘rtburchakning bo‘yi 13 cm, eni 8 cm.
+13 cm
+8 cm
+                       
+    
+ 
+a) 
+To‘g‘ri to‘rtburchak bo‘yining eniga nisbati 
+ : 
+.
+ 
+b) 
+To‘g‘ri to‘rtburchak bo‘yining perimetriga nisbati 
+ : 
+.
+6  Jamila kataklarning baʼzilarini rasmdagidek bo‘yadi. 
+ 
+a) 
+Yashil kataklar sonining oq kataklar soniga nisbati 
+ 
+ 
+ : 
+.
+ 
+b) 
+Oq kataklar sonining jami kataklar soniga nisbati 
+ 
+ 
+ : 
+.
+ 
+c) 
+Jami kataklar sonining yashil kataklar soniga nisbati 
+ 
+ 
+ : 
+.
+165–168
+Mashq daftariga o‘ting
+145
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   145
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   145
+09/08/24   19:32
+09/08/24   19:32
+
+Teng kuchli nisbatlarni aniqlash va qisqarmas ko‘rinishda yozish
+1  a) 
+Quyida 12 ta uchburchak va 8 ta kvadrat berilgan. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Uchburchaklar sonining kvadratlar soniga nisbati 12 : 8. 
+ 
+b) 
+Uchburchak va kvadratlarni ikkitadan qilib guruhlarga ajrating.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Uchburchaklar guruhi sonining kvadratlar guruhi soniga nisbati 6 : 4.
+ 
+c) 
+Uchburchak va kvadratlarni to‘rttadan qilib guruhlarga ajrating.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Uchburchaklar guruhi sonining kvadratlar guruhi soniga nisbati 3 : 2.
+ 
+ 
+12 : 8, 6 : 4 va 3 : 2 teng kuchli nisbatlardir.
+ 
+ 
+12 : 8 = 6 : 4 = 3 : 2.
+ 
+ 
+12 : 8 nisbatning qisqarmas shakli 3 : 2 bo‘ladi.
+Qaysi nisbat uchburchak 
+va kvadratlarning sonini 
+taqqoslayapti?
+12 : 8 nisbat 3 : 2 nisbatga 
+o‘zgartirildi. Uchburchak va 
+kvadratlar soni o‘zgardimi? 
+Teng kuchli nisbatlar
+Qarang va o‘rganing
+146
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   146
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   146
+09/08/24   19:32
+09/08/24   19:32
+
+2  Quyida 4 ta kvadrat va 8 ta doira berilgan.
+ 
+4 : 8 ga teng kuchli nisbatlarni toping.
+ 
+a) 
+4 : 8 nisbatning hadlarini umumiy bo‘luvchiga bo‘lish orqali teng kuchli  
+ 
+ 
+nisbatlarni hosil qiling.
+ 
+ 
+ 
+ 
+ 
+÷ 2
+÷ 2
+=    2 : 4
+4 : 8
+=    1 : 2
+÷ 2
+÷ 2
+4 : 8 = 2 : 4 = 1 : 2   
+1 bo‘lak
+1 bo‘lak
+ 
+ 
+  
+       
+ 
+  
+ 
+ 
+ 
+Demak, 4 : 8, 2 : 4 va 1 : 2 nisbatlar teng kuchli nisbatlardir.  
+ 
+                    
+Nisbatni uning hadlari 
+(sonlari)ni umumiy 
+bo‘luvchiga bo‘lish orqali 
+qisqarmas ko‘rinishga 
+keltirish mumkin.
+4 : 8 nisbatdagi 4 va 8 ni 
+umumiy bo‘luvchi  
+2 ga bo‘lish orqali 2 : 4 
+teng kuchli nisbatni 
+topish mumkin.
+2 : 4 nisbatdagi 2 va  
+4 ni umumiy bo‘luvchi  
+2 ga bo‘lishimiz  
+mumkin. Demak,  
+2 : 4 nisbat 4 : 8  
+nisbatning qisqarmas  
+shakli emas.
+147
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   147
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   147
+09/08/24   19:32
+09/08/24   19:32
+
+ 
+b) 
+4 : 8 nisbatdagi 4 va 8 ni umumiy bo‘luvchi 4 ga bo‘lish orqali nisbatni   
+ 
+ 
+qisqarmas ko‘rinishga keltiring.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 : 8 = 1 : 2
+÷ 4
+= 1 : 2
+4 : 8
+÷4
+  
+       
+ 
+  
+ 
+ 
+ 
+      
+ 
+ 
+4 : 8 nisbatning qisqarmas shakli 1 : 2 nisbatdir.   
+3  Quyidagi nisbatlarni qisqarmas shaklda ifodalang.
+ 
+a) 
+4 : 12 
+ 
+ 
+= 1 : 3
+4 : 12
+÷ 4
+÷ 4
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 : 12 nisbatning qisqarmas shakli 1 : 3 nisbatdir.
+ 
+b) 
+15 : 6 
+ 
+ 
+= 5 : 2
+15 : 6
+÷ 3
+÷ 3
+ 
+ 
+15 : 6 nisbatning qisqarmas shakli 5 : 2 nisbatdir.
+4 va 12 ning umumiy  
+bo‘luvchisi 4. Shuning uchun  
+4 va 12 ni 4 ga bo‘ling.
+15 va 6 ning umumiy  
+bo‘luvchisi 3. Shuning uchun  
+15 va 6 ni 3 ga bo‘ling.
+148
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   148
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   148
+09/08/24   19:32
+09/08/24   19:32
+
+Qiziqarli matematika
+Guruh bo‘lib ishlang.
+Teng kuchli nisbatlarni hosil qilish uchun kublarni ikki xil rangdagi 
+guruhlarga ajrating. Har bitta nisbatning qisqarmas shaklini toping.
+a) 
+6 ta qizil, 12 ta ko‘k kub
+b) 
+4 ta sariq, 20 ta yashil kub
+c) 
+15 ta qizil, 20 ta yashil kub
+Misol
+4 : 6
+2 : 3
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang.
+Sinfxonadagi turli buyumlar sonini taqqoslang va ularning nisbatini ayting. 
+Nisbatni qisqarmas shaklda qanday ifodalaganingizni sinfdoshlaringiz bilan 
+o‘rtoqlashing.
+Misol
+Chizg‘ichlar sonining o‘chirg‘ichlar soniga nisbati 40 : 25.
+40 : 25 = 8 : 5
+40 : 25 nisbatning qisqarmas shakli 8 : 5 nisbat hisoblanadi.
+Qo‘lda bajariladigan mashq
+149
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   149
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   149
+09/08/24   19:32
+09/08/24   19:32
+
+Juftlikda ishlang
+Juftlikda muhokama qiling.
+Stol tennisi va tennis koptoklarining sonini taqqoslash uchun ikki xil nisbatni yozing.
+ 
+Bajaring va o‘rganing
+1  Berilgan nisbatlarni qisqarmas shaklda ifodalang.
+ 
+ 
+ 
+a) 2000 so‘mlik qog‘oz pullar sonining 1000 so‘mlik tangalar soniga nisbati qanday?
+ 
+b) 5000 so‘mlik qog‘oz pullar sonining  2000 so‘mlik qog‘oz pullar soniga nisbati 
+qanday?
+2  Quyida 8 ta ko‘k, 16 ta qizil shar berilgan.
+ 
+Ko‘k sharlar sonining qizil sharlar soniga nisbatini qaysi teng kuchli nisbatlar 
+ifodalaydi? 
+ 
+Nisbatning qisqarmas shakli qanday bo‘ladi? 
+ 
+150
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   150
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   150
+09/08/24   19:33
+09/08/24   19:33
+
+3  Teng kuchli nisbatlarni toping.
+ 
+a) 
+10 : 15
+÷ 5
+÷ 5
+= 
+ : 
+ 
+ 
+b) 
+12 : 27
+÷ 3
+÷ 3
+= 
+ : 
+  
+4  Nisbatlarni qisqarmas shaklda yozing.
+ 
+a) 
+10 : 5 
+b) 
+15 : 18 
+c)  24 : 36
+ 
+d)  15 : 5 
+e) 
+24 : 18 
+f)  
+16 : 10
+5  5-“A” sinfda 22 nafar qiz va 18 nafar o‘g‘il bola o‘qiydi. O‘g‘il bolalar sonining qizlar 
+soniga nisbatini qisqarmas shaklga ifodalang.
+6  Azizning 100 ta, Rahimning esa 250 ta markasi bor. Azizdagi markalar sonining 
+Rahimdagi markalar soniga nisbati qanday? Ushbu nisbatni qisqarmas shaklda 
+ifodalang.
+O‘zingizni tekshiring
+a) 
+Men nisbatlarni qanday yozishni bilaman.   
+ 
+b) 
+Men teng kuchli nisbatlarni qanday topishni bilaman.    
+c) 
+Men nisbatni qisqarmas shaklda ifodalashni bilaman.    
+169–174
+Mashq daftariga o‘ting
+151
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   151
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   151
+09/08/24   19:33
+09/08/24   19:33
+
+Qarang va o‘rganing
+Teng kuchli nisbatlardagi noma’lum hadni topish
+1  5 : 20 = 1 : ?  
+ 
+÷ 5
+= 1  :  4
+ 5  :  20
+÷ 5
+ 
+5 : 20 = 1 : 4
+2  2 : 3 = ?  : 18
+ 
+× 6
+× 6
+= 12   :  18  
+2   :   3
+ 
+2 : 3 = 12 : 18
+3  
+?  : 3 = 20 : 15 
+ 
+÷ 5
+÷ 5
+= ?
+  :  3  
+20  :   15
+ 
+Teng kuchli kasrlardagi 
+tushirib qoldirilgan hadni  
+topish usulini eslang.
+5
+20  =  
+÷ 5
+÷ ÷  5
+1
+Nomaʼlum had: 4.
+Har ikki sonni 6 ga ko‘paytiring.
+Nomaʼlum had 12 ekan.
+Har ikki sonni 5 ga bo‘lib,
+nomaʼlum hadni toping.
+152
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   152
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   152
+09/08/24   19:33
+09/08/24   19:33
+
+4  Ichida 2 ta shokolad va 1 ta ichimlik bo‘lgan paketlar bor. 
+ 
+Rahim, Aziz va Jamila turli xil miqdordagi paketlarni oldi.
+ 
+a) 
+Rahim 3 ta ichimlik olgan.  
+ 
+U nechta shokolad olgan?
+ 
+ 
+× 3
+× 3
+shokolad    ichimlik
+ 
+2   
+:   
+ 1
+= 6     :      3
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Rahim 6 ta shokolad olgan.
+ 
+b) 
+Jamila 12 ta shokolad oldi.  
+ 
+U nechta ichimlik olgan? 
+ 
+ 
+ 
+ 
+ 
+× 6
+× 6
+shokolad       ichimlik 
+ 
+2   
+:   
+ 1
+=  12        :    6
+ 
+ 
+Jamila 6 ta ichimlik olgan. 
+ 
+c) 
+Aziz 4 ta paket oldi.  
+ 
+U nechta shokolad va ichimlik olgan?
+ 
+ 
+ 
+ 
+ 
+ 
+× 4
+× 4
+shokolad       ichimlik 
+ 
+2   
+:   
+ 1
+= 8      :    4
+ 
+ 
+ 
+ 
+ 
+ 
+Aziz 8 ta shokolad va 4 ta ichimlik olgan.
+ 
+ 
+153
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   153
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   153
+09/08/24   19:33
+09/08/24   19:33
+
+Juftlikda ishlang
+ 
+Muhokama qiling.
+1  Berilgan teng kuchli kasrlardagi tushirib qoldirilgan sonni toping.
+ 
+Bu usul teng kuchli nisbatlardagi nomaʼlum hadni topishga o‘xshashmi?
+     
+a) 
+4
+20 = 1   
+b) 
+2
+9 = 18   
+c) 
+3
+4  = 12     
+2  Quyidagi kasr va nisbatlardagi nomaʼlum hadni toping.
+      
+Kasr va nisbatlardagi nomaʼlum hadni topish usuli bir xilmi? 
+     
+a) 
+1
+4 = 24  ,    1 : 4 = 
+ : 24    
+b) 
+7
+21 = 1   ,    7 : 21 = 1 : 
+ 
+Bajaring va o‘rganing
+Nomaʼlum hadni toping.
+a) 
+2 : 7 = 
+ : 28  
+b) 
+ : 5 = 10 : 25  
+c) 
+4 : 9 = 20 : 
+   
+d) 
+3 : 
+ = 18 : 48  
+e) 
+6 : 
+ = 24 : 40 
+f)  
+5 : 4 = 35 : 
+O‘zingizni tekshiring
+Men teng kuchli nisbatlardagi nomaʼlum hadni topishni bilaman.  
+  
+Turmushda matematika
+175–178
+Mashq daftariga o‘ting
+1  
+Qandolatchi bitta tort pishirish uchun har 5 piyola unga 2 bo‘lak  
+ 
+sariyog‘ qo‘shadi. 
+  
+un
+un
+un
+un
+un
+sariyog‘
+sariyog‘
+ 
+3 ta tort tayyorlash uchun qancha un va sariyog‘ kerak bo‘ladi?
+2  
+Sinfingizga dars o‘tadigan o‘qituvchilar sonining o‘quvchilar soniga  
+ 
+nisbati qanday?
+154
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   154
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   154
+09/08/24   19:33
+09/08/24   19:33
+
+Qarang va o‘rganing
+1  Birinchi idishdagi suv hajmining ikkinchi idishdagi suv hajmiga nisbati 4 : 5 ga teng. 
+ 
+Agar birinchi idishda 800 ml suv bo‘lsa, ikkinchi idishdagi suv hajmi necha millilitrga 
+teng?
+ 
+1-usul
+ 
+× 200
+1-idish  :   2-idish
+ 
+ 4  :  5
+× 200
+800  :  1000
+2-usul
+800
+1-idish
+2-idish
+ 
+4 bo‘lak = 800 ml
+ 
+ 1 bo‘lak = 800 ÷ 4 
+ 
+ 
+  = 200 ml
+    
+5 bo‘lak = 5 × 200 
+ 
+ 
+   = 1000 ml
+ 
+Ikkinchi idishdagi suv hajmi 1000 ml.
+2  Sitoradagi markaning Jamiladagi markaga nisbati 3 : 4. Sitorada 18 ta marka bo‘lsa, 
+ikkala qizda jami nechta marka bor?
+ 
+1-usul
+ 
+× 6
+3      :       4
+× 6
+Sitoradagi
+marka  
+Jamiladagi
+marka
+:
+18     :    24
+ 18 + 24 = 42 marka
+2-usul
+ 
+18
+Sitora
+Jamila
+?
+  
+  3 bo‘lak = 18 ta marka
+  
+  1 bo‘lak = 18 ÷ 3 
+           
+  = 6 ta marka
+  
+  7 bo‘lak = 7 × 6  
+ 
+  
+  = 42 ta marka
+      
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+Ikkalalarida 42 ta marka bor.
+Berilgan miqdor va nisbatga ko‘ra 
+boshqa miqdorni topish
+155
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   155
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   155
+09/08/24   19:33
+09/08/24   19:33
+
+Juftlikda ishlang
+Muhokama qiling. 
+Quyidagi jadvalda Azizadagi pulning Salimadagi pulga bo‘lgan turli nisbatlari berilgan.
+Nisbatlar asosida tushirib qoldirilgan miqdorlarni toping.
+Azizaning puli : Salimaning puli
+Azizaning  
+puli
+Salimaning  
+puli
+Pulning umumiy 
+miqdori
+1 : 3
+15 000 so‘m
+20 000 so‘m
+3 : 5
+7500 so‘m
+5 : 7
+2520 so‘m
+Bajaring va o‘rganing
+1  Nomaʼlum miqdor (qiymat)ni toping.
+ 
+a) 
+Birinchi jo‘natma massasining ikkinchi jo‘natma massasiga nisbati 1 : 4 ga teng.
+ 
+b) 
+Birinchi tasma uzunligining ikkinchi tasma uzunligiga nisbati 3 : 6 ga teng.
+ 
+ 
+2  Adham va Bahrom tog‘asi bergan pulni bo‘lishib oldi. Adham olgan pulning Bahrom 
+olgan pulga nisbati 4 : 5. Agar Bahrom 4000 so‘m olgan bo‘lsa, Adham qancha pul 
+olgan? 
+3  Maktabdagi oʻgʻil bolalar sonining qiz bolalar soniga nisbati 5 : 7. Agar maktabda 455 
+nafar qiz bola bor boʻlsa, oʻgʻil bolalar sonini toping. 
+O‘zingizni tekshiring
+Men miqdorning berilgan nisbatdagi qismlarini topishni bilaman.  
+   
+179–180
+Mashq daftariga o‘ting
+156
+4 kg
+1-jo‘natma
+2-jo‘natma
+30 cm
+1-tasma
+2-tasma
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   156
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   156
+09/08/24   19:33
+09/08/24   19:33
+
+Qarang va o‘rganing
+1  Jamila va Sitora 24 ta pishiriqni 3 : 5 nisbatda bo‘lishib oldi.
+ 
+Qizlar nechtadan pishiriq oldi?
+ 
+Sitora
+Jamila
+ 
+Jamila 9 ta, Sitora esa 15 ta pishiriq oldi.
+2  Lobar opa 12 ta olmani 2 : 1 nisbatda ikkita xaltaga soldi. Har bir xaltada nechta 
+olma bor?
+ 
+1-xalta
+2-xalta
+12 ta  
+ 
+ 
+Jami 3 ta bo‘lak berilgan.
+ 
+3 bo‘lak = 12
+ 
+ 1 bo‘lak = 12 ÷ 3
+ 
+ 
+  = 4
+ 
+2 bo‘lak = 2 × 4
+ 
+ 
+  = 8
+ 
+Birinchi xaltada 8 ta, ikkinchi xaltada 4 ta olma bor.
+ 
+2 : 1
+8 : 4
+8 + 4 = 12
+× 4
+× 4
+Tekshirish:
+24
+Jamila
+Sitora
+Tekshirish:
+Pishiriqlarni 8 ta  
+teng guruhga 
+ajratamiz.
+Berilgan jami miqdor va nisbatga ko‘ra 
+uning qismlarini topish
+157
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   157
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   157
+09/08/24   19:33
+09/08/24   19:33
+
+3  Aziz va Rahim 50 000 so‘m pulni bo‘lib oldi. Aziz olgan pulning Rahim olgan pulga 
+nisbati 2 : 3. Rahim qancha pul olgan?
+ 
+Aziz
+50 000 so‘m
+Rahim
+ 
+5 bo‘lak = 50 000 so‘m
+ 
+1 bo‘lak = 50 000 ÷ 5 
+                   
+    = 10 000 so‘m
+ 
+3 bo‘lak = 3 × 10 000
+                
+ 
+ = 30 000 so‘m
+ 
+Rahim 30 000 so‘m olgan.
+Juftlikda ishlang
+Muhokama qiling. 
+Quyidagi jadvalda 12 000 so‘m Hamida va Salima o‘rtasida qanday nisbatda bo‘lib 
+olingani ko‘rsatilgan. Nisbatlar asosida qizlar olgan pul miqdorini toping.
+Jami pul
+Hamidaning puli : Salimaning puli
+Hamidaning 
+puli
+Salimaning 
+puli
+12 000 so‘m
+1 : 2
+12 000 so‘m
+3 : 2
+12 000 so‘m
+5 : 3
+2 : 3
+20 000 : 30 000
+20 000 + 30 000 = 50 000
+× 10 000
+× 10 000
+158
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   158
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   158
+09/08/24   19:33
+09/08/24   19:33
+
+Bajaring va o‘rganing
+1  a) 
+10 000 so‘mni 3 : 7 nisbatda Jasur va Botir o‘rtasida bo‘ling. Har bir bola  
+ 
+ 
+oladigan pul miqdorini toping.
+ 
+ 
+Jasur
+10 000 so‘m
+Botir
+ 
+b) 
+600 ml apelsin sharbatini 8 : 4 nisbatda bo‘ling va har birining hajmini toping. 
+ 
+ 
+600 ml
+2  5-sinfda 90 nafar o‘quvchi bo‘lib, o‘g‘il bolalar sonining qiz bolalar soniga nisbati 3 : 7. 
+ 
+a) 
+O‘g‘il bolalar soni nechta?
+ 
+b) 
+Qiz bolalar soni nechta?
+3  Do‘konda jami 156 ta sutli va shokoladli pechenye bor.  
+Sutli pechenyelar sonining shokoladli pechenyelar soniga nisbati 8 : 5.  
+Do‘konda nechta sutli pechenye bor?
+ 
+181–182
+Mashq daftariga o‘ting
+159
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   159
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   159
+09/08/24   19:33
+09/08/24   19:33
+
+Qarang va o‘rganing
+1  Katakdagi tovuq va o‘rdaklar soni 40 ta. Ulardan 16 tasi – o‘rdak.
+ 
+a) 
+Tovuqlar soni nechta?
+ 
+b) 
+Tovuqlar sonining o‘rdaklar soniga nisbatini toping.
+ 
+ 
+Nisbatni qisqarmas shaklda yozing.
+ 
+                                                                                          
+ 
+a) 
+40 – 16 = 24
+ 
+ 
+24 ta tovuq bor. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+b) 
+  Tovuqlar   :        O‘rdaklar
+  soni            
+soni
+=  
+24  
+:  
+16 
+=  
+3  
+:  
+2
+ 
+ 
+Tovuqlar sonining o‘rdaklar soniga nisbati 3 : 2.
+2  12 ta ko‘k va 18 ta qizil qalam bor.  
+ 
+a) 
+Ko‘k qalamlar sonining qizil qalamlar soniga nisbatini toping.
+ 
+b) 
+Qizil qalamlar sonining jami qalamlar soniga nisbatini toping.
+ 
+a) 
+ 
+ 
+  Ko‘k qalamlar : Qizil qalamlar
+  
+soni                 
+soni
+ = 
+12  
+:  
+18 
+ = 
+2  
+:  
+3
+ 
+ 
+Ko‘k qalamlar sonining qizil qalamlar soniga nisbati 2 : 3.
+ 
+b) 
+  Qizil qalamlar : Jami qalamlar
+  
+soni                 
+soni
+ = 
+18  
+:  
+30 
+ = 
+3  
+:  
+5
+ 
+ 
+Qizil qalamlar sonining jami qalamlar soniga nisbati 3 : 5.
+24 : 16 
+= 3 : 2
+÷ 8
+÷ 8
+Ikkita miqdorning nisbatiga doir matnli 
+masalalar
+160
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   160
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   160
+09/08/24   19:33
+09/08/24   19:33
+
+3  Maktab faollar zalida bir qancha bola bor. Zaldagi o‘g‘il bolalar soni qiz bolalar 
+sonidan 16 nafarga ko‘p va ularning o‘zaro nisbati 5 : 3. Faollar zalida necha nafar qiz 
+bola bor?
+ 
+O‘g‘il bolalar
+Qiz bolalar
+16
+?
+ 
+ 
+ 
+ 
+ 
+ 
+2 bo‘lak = 16
+ 
+ 1 bo‘lak = 16 ÷ 2 
+      
+ 
+   = 8
+        3 bo‘lak = 3 × 8
+                            = 24
+     
+      
+Maktab faollar zalida 24 nafar qiz bola bor.
+4  Sarvar va Farhod 21 000 so‘mni 2 : 5 nisbatda bo‘lib oldi. Sarvar Farhoddan qancha 
+kam pul olgan?
+ 
+21 000 so‘m
+Sarvar
+Farhod
+?
+ 
+ 
+ 
+7 bo‘lak = 21 000 so‘m
+ 
+ 1 bo‘lak = 21 000 ÷ 7 
+             
+   = 3000 so‘m
+ 
+ 3 bo‘lak = 3 × 3000
+               
+   = 9000 so‘m
+ 
+Sarvar Farhoddan 9000 so‘m kam olgan. 
+161
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   161
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   161
+09/08/24   19:33
+09/08/24   19:33
+
+5  Uch nafar bola ota-onasi bilan konsertga bordi. Kattalar chiptasi narxining bolalar 
+chiptasi narxiga nisbati 5 : 3. Ota barcha chiptalar uchun 76 000 so‘m to‘lagan bo‘lsa, 
+kattalar chiptasining narxini toping.
+ 
+ 
+Kattalar chiptasi
+Bolalar chiptasi
+Kattalar chiptasi
+Bolalar chiptasi
+Bolalar chiptasi
+76 000 so‘m
+ 
+ 19 bo‘lak = 76 000 so‘m
+ 
+1 bo‘lak = 76 000 ÷ 19 = 4000 so‘m
+ 
+ 5 bo‘lak = 5 × 4000 = 20 000 so‘m 
+ 
+ 
+ 
+ 
+Kattalar chiptasining narxi 20 000 so‘m.
+6  Jamilada Yunusdan to‘rt marta ko‘p pul bor. Jamilada Yunusning pulidan  21 000 
+so‘m ko‘p pul bor.
+ 
+a) 
+Jamiladagi pulning Yunusdagi pulga nisbati qanday?
+ 
+b) 
+Ularning ikkalasida qancha pul bor?
+ 
+ 
+Jamila
+Yunus
+?
+21 000 so‘m
+ 
+a)  
+Jamiladagi pul miqdorining Yunusdagi pul miqdoriga nisbati 4 : 1.
+ 
+b)       3 bo‘lak  = 21 000 so‘m
+                      1 bo‘lak  = 21 000 ÷ 3 = 7000 so‘m
+                      5 bo‘lak  = 5 × 7000 = 35 000 so‘m
+         
+Ularning ikkalasida 35 000 so‘m pul bor.
+162
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   162
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   162
+09/08/24   19:33
+09/08/24   19:33
+
+Juftlikda ishlang
+Matnli masalalarni birgalikda yeching.
+1  Guldastada 15 ta atirgul va 12 ta lola bor. Guldastadagi atirgullar sonining lolalar 
+soniga nisbatini toping va qisqarmas shaklda ifodalang.
+2  5 ℓ suvga 2 ℓ sharbat qo‘shib, ichimlik tayyorlanadi. Shunday ichimlik tayyorlash 
+uchun 40 ℓ suvga qancha sharbat qo‘shish kerak?
+3  Maktabda 160 nafar o‘g‘il bola bor. Ular sonining qiz bolalar soniga nisbati 2 : 3. 
+ 
+a) 
+Qiz bolalar necha nafar?
+ 
+b) 
+Maktabda necha nafar o‘quvchi bor?
+4  Ota yoshining o‘g‘li yoshiga nisbati 7 : 3. O‘g‘il otasidan 24 yoshga kichik. 
+Otaning yoshini toping.
+Bajaring va o‘rganing
+Matnli masalalarni yeching.
+1  Bayram tadbiridagi o‘g‘il bolalar sonining qiz bolalar soniga nisbati 3 : 2. Tadbirda 
+jami 125 nafar bola ishtirok etmoqda. Tadbirdagi qiz bolalar sonini toping.
+2  15 ta shar 1 : 4 nisbatda ikkita qutiga solindi. Har bir qutidagi sharlar sonini toping.
+3  Mahmud yoshining Anvar yoshiga nisbati 3 : 5. Anvar Mahmuddan 14 yosh katta. 
+Mahmud necha yoshda?
+4  Aziz va Rahim tog‘asi bergan pulni 4 : 7 nisbatda bo‘lishib oldi. Rahim Azizdan 
+6000 so‘m ko‘proq pul oldi. Rahim qancha pul olgan?
+5  42 cm uzunlikdagi tasma 3 : 4 nisbatda 2 ta bo‘lakka bo‘lindi. Tasmaning uzunroq 
+qismi uzunligini toping.
+163
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   163
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   163
+09/08/24   19:33
+09/08/24   19:33
+
+6  Sotib olingan har 5 ta ko‘k ruchkaga 2 ta qizil ruchka qo‘shib beriladi. Agar 20 ta ko‘k 
+ruchka sotib olingan bo‘lsa, ...
+ 
+a) 
+qizil ruchkalar sonining olingan jami ruchkalar soniga nisbati qanday?
+ 
+b) 
+nechta qizil ruchka qo‘shib berilgan?
+ 
+c) 
+ko‘k ruchkalar qizil ruchkalardan nechta ko‘p?
+7  Sitora o‘zidagi tugmalarning rangini ko‘rsatish uchun ustunli diagramma chizdi. 
+Lekin u ko‘k tugmalar sonini ko‘rsatuvchi ustunni chizishni unutdi.
+ 
+Tugmalar
+soni 
+ qizil 
+yashil 
+ko‘k
+80
+70
+60
+50
+40
+30
+20
+10
+0
+Sitoraning tugmalari
+ 
+a)  
+Yashil tugmalar sonining qizil tugmalar soniga nisbati qanday?
+ 
+b)  Yashil tugmalar sonining ko‘k tugmalar soniga nisbati 5 : 7 bo‘lsa,  
+ 
+ 
+ 
+Sitorada nechta ko‘k tugma bor? 
+ 
+c)  
+Qizil tugmalar sonining jami tugmalar soniga nisbati qanday?
+8  Farrux amaki va turmush o‘rtog‘i ikki nafar farzandini hayvonot bog‘iga olib bordi. 
+Hayvonot bog‘iga kirish uchun kattalar chiptasi narxining bolalar chiptasi narxiga 
+nisbati 2 : 1.
+ 
+a) 
+Farrux amaki bitta kattalar chiptasi narxiga nechta bolalar chiptasi sotib olishi  
+ 
+mumkin? Javobingizni tushuntiring.
+ 
+b) 
+Farrux amaki chiptalar uchun jami 96 000 so‘m to‘ladi.  
+ 
+Bitta bolalar chiptasining narxi qancha? 
+ 
+O‘zingizni tekshiring
+Men ikki miqdor nisbatiga doir masalalarni yecha olaman.  
+   
+183–188
+Mashq daftariga o‘ting
+164
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   164
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   164
+09/08/24   19:33
+09/08/24   19:33
+
+Qarang va o‘rganing
+1  a) 
+Quyida 4 ta ko‘k, 6 ta qizil va 12 ta yashil qisqich berilgan. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Ko‘k, qizil va yashil qisqichlar sonining nisbati 4 : 6 : 12. 
+ 
+ 
+b) 
+4, 6 va 12 sonlarining umumiy bo‘luvchisi – 2. 
+ 
+ 
+Qisqichlarni 2 tadan qilib teng guruhlarga bo‘ling.
+              
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 : 3 : 6 nisbatdagi ko‘k, qizil va yashil qisqichlar guruhi paydo bo‘ldi.
+ 
+ 
+4  :  6  :  12
+÷ 2
+= 2  :  3  :  6
+÷ 2
+÷ 2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 : 6 : 12 = 2 : 3 : 6
+  
+ 
+Demak, 4 : 6 : 12 va 2 : 3 : 6 teng kuchli nisbatlardir.
+  
+ 
+2 : 3 : 6 nisbat 4 : 6 : 12 nisbatning qisqarmas shakli bo‘ladi.
+4 : 6 : 12 = 2 : 3 : 6
+165
+Uchta miqdorning nisbati
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   165
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   165
+09/08/24   19:33
+09/08/24   19:33
+
+2  15 : 24 : 18 nisbatni qisqarmas shaklda ifodalang.
+ 
+15  :  24  :  18
+÷ 3
+=   5   :   8   :  6
+÷ 3
+÷ 3
+ 
+ 
+ 
+ 
+5 : 8 : 6 nisbat 15 : 24 : 18 nisbatning qisqarmas shakli bo‘ladi.
+3  Quyidagi teng kuchli nisbatlardagi nomaʼlum hadni toping.
+ 
+a) 
+2 : 4 : 5 = 8 : ?  : 20 
+b) 
+7 : 3 : 4 = ?  : ?  : 28
+ 
+ 
+2  :    4    :   5
+× 4
+=  8  :  16   : 20
+× 4
+× 4
+ 
+ 
+7   :    3    :   4
+× 7
+=    49  :  21  : 28
+× 7
+× 7
+ 
+ 
+ 
+ 
+ 
+2 : 4 : 5 = 8 : 16 : 20 
+ 
+7 : 3 : 4 = 49 : 21 : 28
+ 
+c) 
+?  : 5 : ?  = 24 : 20 : 32
+ 
+ 
+× 4
+6    :   5   :  8  
+ =   24  :  20  :  32
+× 4
+× 4
+ 
+ 
+6 : 5 : 8 = 24 : 20 : 32
+Men ham shu yo‘l 
+bilan bajara olaman.
+  24 : 20 : 32
+  =   6   :  5  :  8
+÷ 4
+÷ 4
+÷ 4
+166
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   166
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   166
+09/08/24   19:33
+09/08/24   19:33
+
+Bajaring va o‘rganing
+1  Nisbatlarni qisqarmas shaklda ifodalang.
+ 
+a) 
+4 : 6 : 30  
+b) 
+10 : 25 : 40  
+ 
+ 
+ 
+c)  
+28 : 16 : 32 
+d)  
+12 : 36 : 18 
+2  Tushirib qoldirilgan sonlarni yozing.
+ 
+a) 
+      5     :   3   :   4  
+b) 
+       8     :     2     :   3
+ 
+ 
+= 
+  :  18  :  24 
+ 
+= 
+  :  
+  :  12
+ 
+c) 
+   
+  :  
+  :   7  
+d) 
+   
+  :    35    :  
+ 
+ 
+ 
+=  12    :    20    :  28 
+ 
+=    6     :     5     :     2
+ 
+e) 
+8  :  9  :  15  =  
+  :  
+  :  30 
+f)  
+  :  
+  :  3  =  30  :  20  :  15   
+   
+ 
+g) 
+4  :  2  :  3  =  32  :  
+  :  
+  
+h)  
+8  :  
+  :  
+  =  24  :  27  :  33 
+     
+O‘zingizni tekshiring
+a) 
+Men 3 ta miqdorning teng kuchli nisbatlaridagi nomaʼlum hadni topishni bilaman.   
+   
+b) 
+Men 3 ta miqdor nisbatini qisqarmas shaklda ifodalashni bilaman.  
+      
+ 
+189–192
+Mashq daftariga o‘ting
+167
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   167
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   167
+09/08/24   19:33
+09/08/24   19:33
+
+Uchta miqdorning nisbatiga doir matnli masalalar
+168
+Qarang va o‘rganing
+1  Sayyora xola o‘g‘lining tug‘ilgan kuni uchun 48 ta xonim, 16 ta somsa va 36 ta manti 
+tayyorladi. Xonimlar sonining somsalar va mantilar soniga nisbati qanday?
+   
+ 
+Xonimlar soni  :    Somsalar soni   :    Mantilar soni  
+ 
+= 
+48 
+: 
+        16               :             36
+= 
+12 
+: 
+        4                :              9
+ 
+Xonimlar sonining somsalar va mantilar soniga nisbati 12 : 4 : 9. 
+2  Arqon 3 : 2 : 5 nisbatda uchta A, B va C bo‘laklarga bo‘lindi. Eng qisqa bo‘lakning 
+uzunligi 14 m ga teng.
+ 
+a) 
+Eng uzun bo‘lakning uzunligini toping.
+ 
+b) 
+Eng uzun va eng qisqa bo‘laklar bir-biridan qanchaga farq qiladi?
+ 
+a) 
+(a) ?
+(b) ?
+A
+B
+C
+14 m
+          
+ 2 bo‘lak = 14 m
+ 1 bo‘lak = 14 ÷ 2 
+                 = 7 m
+ 5 bo‘lak = 5 × 7 
+                 = 35 m
+ 
+ 
+ 
+ 
+Eng uzun arqon bo‘lagi 35 m.
+ 
+ 
+b) 
+1-usul
+ 35 – 14 = 21 
+2-usul
+  5 – 2   = 3
+ 3 bo‘lak = 3 × 7 
+  
+    = 21 m
+ 
+ 
+Eng uzun va eng qisqa bo‘laklar bir-biridan 21 m ga farq qiladi.
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   168
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   168
+09/08/24   19:33
+09/08/24   19:33
+
+169
+3  Aziza, Bahora va Komila jami pulni 5 : 4 : 2 nisbatda bo‘lib olishdi. Aziza Komiladan  
+81 000 so‘m ko‘proq pul olgan bo‘lsa, Bahora qancha pul olgan?
+ 
+Aziza
+Bahora
+Komila
+81 000 so‘m
+?
+ 
+3 bo‘lak = 81 000 so‘m
+ 
+ 
+ 
+  
+1 bo‘lak  = 81 000 ÷ 3
+ 
+ 
+             
+ = 27 000 so‘m
+ 
+ 
+ 
+  
+4 bo‘lak  = 4 × 27
+ 
+ 
+ 
+  
+ = 108 000 so‘m
+ 
+Bahora 108 so‘m olgan.
+4  Azizning 12 ta shari bor. Rahimning sharlari Aziznikidan 8 ta ko‘p, 
+Rustamnikidan esa 6 ta kam. 
+   
+a)  
+Rustamning nechta shari bor?
+   
+b)  Azizdagi sharlarning Rahim va Rustamning sharlariga nisbatini toping.  
+ 
+ 
+Nisbatni qisqarmas shaklda ifodalang.
+ 
+ 
+Aziz
+Rahim
+Rustam
+?
+?
+12
+8
+6
+ 
+a) 
+12 + 8 + 6 = 26
+ 
+ 
+Rustamda 26 ta shar bor.
+    
+         b) 
+12 + 8  = 20
+ 
+ 
+Rahimning 20 ta shari bor.
+ 
+ 
+ 
+Azizning :     Rahimning : Rustamning 
+          
+ 
+sharlari        
+sharlari          
+sharlari
+ 
+ 
+= 
+12         : 
+20 
+:       
+26
+ 
+ 
+=    
+6         : 
+10 
+:        
+13
+ 
+ 
+Azizdagi sharlarning Rahim va Rustamning sharlariga nisbati 6 : 10 : 13.
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   169
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   169
+09/08/24   19:33
+09/08/24   19:33
+
+5  Jamila, Sitora va Halimada jami 36 000 so‘m pul bor. Halima 9000 so‘m pul sarfladi. 
+Jamila sarflagan pullarning  Sitora va Halima sarflagan pullarga nisbati 2 : 3 : 6 ga 
+teng. Shundan keyin uchta qizda bir xil miqdorda pul qoldi. 
+ 
+a) 
+Ular jami qancha pul sarflagan? 
+ 
+b)  Ularda jami qancha pul qoldi?
+ 
+ 
+qolgan pul
+Jamila
+Sitora
+qolgan pul
+9000 so‘m (sarflangan)
+Halima
+qolgan pul
+sarflangan pul
+sarflangan pul 
+36 000 so‘m
+ 
+ 
+a) 
+ 6 bo‘lak = 9000 so‘m
+ 
+         
+ 1 bo‘lak = 9000 ÷ 6 = 1500 so‘m 
+ 
+ 
+                    
+  
+ 
+ 
+ 11 bo‘lak = 11 × 1500 = 16 500 so‘m  
+         
+Ular jami 16 500 so‘m sarflagan.
+ 
+b) 
+36 000 – 16 500 = 19 500 so‘m
+         
+Ularda jami 19 500 so‘m qolgan.
+170
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   170
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   170
+09/08/24   19:33
+09/08/24   19:33
+
+Bajaring va o‘rganing
+Matnli masalalarni yeching.
+1  Uchta savatdagi mevalar massasining nisbati 6 : 5 : 4 ga teng. Savatlardagi jami 
+mevalarning massasi 75 kg bo‘lsa, eng og‘ir savatda qancha meva bor?
+2  Kinoteatrda 54 nafar katta yoshli kishi bo‘lib, ularning zaldagi o‘g‘il va qiz bolalar 
+soniga nisbati 3 : 4 : 6. Qiz bolalar soni o‘g‘il bolalar sonidan necha nafar ko‘p?
+3  Arqon 5 : 2 : 9 nisbatda uchta bo‘lakka bo‘lingan. Eng qisqa bo‘lak uzunligi 18 cm 
+bo‘lsa, arqonning asl uzunligini toping. 
+4  Uchburchakning  tomonlari nisbati 5 : 4 : 7 ga teng. Uchburchakning eng uzun tomoni 
+uzunligi 77 cm bo‘lsa, uning eng qisqa tomoni uzunligini toping.
+5  Ali, Bahrom va Sarvarning stikerlari soni 4 : 6 : 3 nisbatda. Sarvarda 15 ta stiker bo‘lsa, 
+ularda jami nechta stiker bor?
+6  Azizda 80 so‘m, Rahimda undan 50 so‘m ko‘p pul bor. Jasurda Rahimdan 100 so‘m 
+ko‘p pul bo‘lsa, Aziz, Rahim va Jasurdagi pullarning nisbatini toping.
+7  Rasmda uchta bo‘lakka bo‘lingan kvadrat ko‘rsatilgan. X qism yuzining Y qism 
+yuziga nisbati 4 : 1.
+ 
+a) 
+X qism yuzining Z qism yuziga nisbati qanday? Tushuntiring.
+ 
+b) 
+Agar Y qismning yuzi 10 cm2 ga teng bo‘lsa, kvadrat yuzini toping. 
+ 
+ 
+X
+Z
+Y
+O‘zingizni tekshiring
+Men uchta miqdor nisbatiga doir masalalarni yecha olaman. 
+    
+193–200
+Mashq daftariga o‘ting
+171
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   171
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   171
+09/08/24   19:33
+09/08/24   19:33
+
+O‘ylab ko‘ring
+Sohibda o‘zbek va ingliz tilidagi kitoblar bor. Ingliz tilidagi kitoblar sonining
+o‘zbek tilidagi kitoblar soniga nisbati 2 : 5. O‘zbek tilidagi kitoblar
+ingliz tilidagi kitoblardan 15 ta ko‘p bo‘lsa, Sohibda jami nechta kitob bor?
+Ingliz tilidagi kitoblar
+O‘zbek tilidagi kitoblar
+15
+201–204
+Mashq daftariga o‘ting
+?
+172
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   139
+29 MATEMATICS SCHOOLBOOK G5 P1 UZB 220x290 180PG.indd   139
+09/08/24   19:33
+09/08/24   19:33
+

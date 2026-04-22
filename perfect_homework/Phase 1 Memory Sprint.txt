@@ -1,0 +1,105 @@
+Element 1 · KO · Kvadrat tenglamani aniqlash
+
+Savol: Quyidagi tenglamalardan qaysi biri kvadrat tenglama?
+Which of the following is a quadratic equation?
+
+Variantlar:
+
+- A) 3x + 5 = 0
+- B) x² – 7 = 0 ✓
+- C) x³ – x = 0
+- D) 2x + 3y = 0
+
+Teglar: [Bloom: L1 | PISA: L1]
+Ko'nikma: aniqlash, xotira
+
+---
+
+Element 2 · KO · Bosh koeffitsiyent
+
+Savol: 5x² – 3x + 7 = 0 tenglamaning bosh koeffitsiyenti qaysi?
+What is the leading coefficient in 5x² – 3x + 7 = 0?
+
+Variantlar:
+
+- A) 5 ✓
+- B) –3
+- C) 7
+- D) –5
+
+Teglar: [Bloom: L1 | PISA: L1]
+Ko'nikma: terminologiya, xotira
+
+---
+
+Element 3 · To'g'ri / Noto'g'ri · Nima uchun a ≠ 0 muhim
+
+Savol: Tenglama 0·x² + 5x – 2 = 0 kvadrat tenglama hisoblanadi.
+The equation 0·x² + 5x – 2 = 0 is a quadratic equation.
+
+Variantlar:
+
+- To'g'ri
+- Noto'g'ri ✓
+
+Tushuntirish (javobdan keyin): Agar a = 0 bo'lsa, x² yo'qoladi va tenglama chiziqli (linear) bo'lib qoladi. Kvadrat tenglamada a ≠ 0 shart.
+If a = 0, the x² disappears and the equation becomes linear. A quadratic requires a ≠ 0.
+
+Teglar: [Bloom: L2 | PISA: L2]
+Ko'nikma: tanqidiy fikrlash, xotira
+
+---
+
+Element 4 · KO · x² = d uchun ildizlar soni
+
+Savol: x² = 25 tenglamaning nechta haqiqiy ildizi bor?
+How many real roots does the equation x² = 25 have?
+
+Variantlar:
+
+- A) 0
+- B) 1
+- C) 2 ✓
+- D) Cheksiz ko'p (Infinitely many)
+
+Teglar: [Bloom: L2 | PISA: L1]
+Ko'nikma: xotira, qo'llash
+
+---
+
+Element 5 · Ha / Yo'q / Aniq emas · Ildizlar haqida umumiy da'vo
+
+Savol: Quyidagi fikr to'g'rimi?
+Evaluate the statement:
+
+▎ "Har qanday kvadrat tenglama aniq ikkita haqiqiy ildizga ega."
+▎ "Every quadratic equation has exactly two real roots."
+
+Variantlar:
+
+- Ha (Yes)
+- Yo'q (No) ✓
+- Aniq emas (Not given)
+
+Tushuntirish (javobdan keyin): Kvadrat tenglama 0, 1, yoki 2 ta haqiqiy ildizga ega bo'lishi mumkin — x² = d misolida d < 0 bo'lsa, haqiqiy ildiz yo'q.
+A quadratic can have 0, 1, or 2 real roots — for x² = d with d < 0, there are no real roots.
+
+Teglar: [Bloom: L2 | PISA: L2]
+Ko'nikma: tanqidiy fikrlash, xotira
+
+---
+
+Element 6 · KO · Ozod hadni aniqlash
+
+Savol: –7x² – 13x + 8 = 0 tenglamaning ozod hadi qaysi?
+What is the free term in –7x² – 13x + 8 = 0?
+
+Variantlar:
+
+- A) –7
+- B) –13
+- C) 8 ✓
+- D) x²
+
+Teglar: [Bloom: L1 | PISA: L1]
+Ko'nikma: terminologiya, xotira

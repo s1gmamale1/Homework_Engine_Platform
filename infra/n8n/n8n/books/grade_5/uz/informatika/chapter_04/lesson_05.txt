@@ -1,0 +1,63 @@
+# Dasturlash — 5-dars
+
+80
+5-amaliy ko‘nikma
+Spraytni oldinga harakatlantirish
+Labirint boʻylab yurish uchun koʻrsatmalar yozib chiqiladi. Endi uni bajarish
+uchun Scratch yordamida kompyuter dasturi yozish mumkin.
+Scratch dasturi Spraytlarni boshqarish imkonini beruvchi dasturdir.
+Dastur kodi yordamida Spraytni harakatga keltirish mumkin.
+Scratch dasturi ishga tushganda quyidagi koʻrinishda boʻladi:
+5.1-mashg‘ulot
+Yashil bayroq tanlanganida mushuk Spraytini oldinga harakatlantiradigan
+dastur kodi yozmoqchisiz. Buning uchun:
+1.	Mushuk Spraytini belgilang.
+2.	Yuqoridan Events menyusini tanlang.
+3.	 Blokni kod
+sahifasiga olib keling va joylang.
+Scratch:
+Spraytlarni
+boshqarishda
+bloklardan
+foydalanib
+dasturlar yaratish
+imkonini beruvchi
+dasturiy taʼminot.
+Sprayt:
+boshqarish
+va unga kod
+qoʻshish mumkin
+boʻlgan Scratch
+dasturidagi
+obyekt. Masalan:
+Kalit soʻzlar
+Dasturni
+muntazam saqlab
+borish kerak.
+Menyu bo‘limidagi
+File, keyin Save
+tugmasi bosiladi.
+Fayl uchun mos
+nom beriladi.
+Maslahat
+@edurtm_uz
+
+81
+Dasturlash
+4	 Motion menyusini tanlang.
+5	 Kod sahifasiga Move 10 steps blokini olib boring. Keyin uni Yashil bayroq
+blokining quyi qismiga joylang. U o‘sha yerga joylashadi.
+Yashil bayroq ustiga bosing va nima yuz berishini ko‘ring.
+5.2-mashg‘ulot
+Qadamlar sonini oʻzgartiring.
+20 qiymatini yozsa, nima boʻladi? 50 yoki 100 yozsangiz-chi?
+Sprayt obyekti
+sahnadan
+tashqariga
+chiqib keta
+boshlasa, uning
+ustiga bosish
+va sichqoncha
+bilan tortib
+orqaga qaytarish
+mumkin.

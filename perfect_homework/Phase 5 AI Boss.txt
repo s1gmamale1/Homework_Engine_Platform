@@ -1,0 +1,309 @@
+---
+
+Data schema — §22 specific
+
+Layer 1 · Per question
+
+┌──────────────────────┬────────┬──────────────────────────────┐
+│        Field         │  Type  │            Source            │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ question_id          │ string │ e.g., p4-yashil-q3           │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ phase_id             │ enum   │ 1, 3, 4, 6                   │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ bloom_level          │ L1-L5  │ tagged at design             │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ pisa_level           │ L1-L4  │ tagged at design             │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ skill_tags           │ array  │ see skill taxonomy below     │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ correct              │ bool   │ student answer vs expected   │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ time_seconds         │ int    │                              │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ attempts             │ int    │ retries used                 │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ hints_used           │ int    │ 0-3                          │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ capture_submitted    │ bool   │ for calc items               │
+├──────────────────────┼────────┼──────────────────────────────┤
+│ capture_rubric_score │ 0-5    │ if captured (from AI vision) │
+└──────────────────────┴────────┴──────────────────────────────┘
+
+Layer 2 · Per phase
+
+┌───────────────────────┬───────────────────────────────────────┐
+│         Field         │                Purpose                │
+├───────────────────────┼───────────────────────────────────────┤
+│ phase_score_pct       │ (correct × weight) / (total × weight) │
+├───────────────────────┼───────────────────────────────────────┤
+│ phase_time_seconds    │ sum of question times                 │
+├───────────────────────┼───────────────────────────────────────┤
+│ phase_skill_breakdown │ {memory: 80%, translation: 60%, ...}  │
+├───────────────────────┼───────────────────────────────────────┤
+│ phase_completed       │ bool                                  │
+└───────────────────────┴───────────────────────────────────────┘
+
+Layer 3 · Session
+
+┌───────────────────┬──────────────────────────────────────┐
+│       Field       │                Source                │
+├───────────────────┼──────────────────────────────────────┤
+│ session_id        │ UUID                                 │
+├───────────────────┼──────────────────────────────────────┤
+│ lesson_id         │ uz-alg-g8-s22                        │
+├───────────────────┼──────────────────────────────────────┤
+│ overall_score_pct │ weighted sum of phase scores         │
+├───────────────────┼──────────────────────────────────────┤
+│ passed            │ overall_score_pct ≥ 60               │
+├───────────────────┼──────────────────────────────────────┤
+│ vs_student_avg    │ delta                                │
+├───────────────────┼──────────────────────────────────────┤
+│ skill_deltas      │ changes since prior session          │
+├───────────────────┼──────────────────────────────────────┤
+│ route_decision    │ enum (advance / improve / remediate) │
+└───────────────────┴──────────────────────────────────────┘
+
+---
+
+Skill taxonomy for §22
+
+Six axes. Every question tagged with primary + optional secondary.
+
+┌───────────────────┬───────────────────────────────────────────────────┬────────────────────────────────────────────────────────────────────┐
+│       Axis        │                 What it measures                  │                            §22 moments                             │
+├───────────────────┼───────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+│ Memory            │ Pattern recognition, vocab recall, formula recall │ Coefficient identification, quadratic recognition, term↔definition │
+├───────────────────┼───────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+│ Translation       │ Word problem → equation                           │ Phase 4 Q1, Phase 6 Q1                                             │
+├───────────────────┼───────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+│ Problem-Solving   │ Apply procedure to find answer                    │ Adaptive Quiz, solve steps in scenarios                            │
+├───────────────────┼───────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+│ Critical Thinking │ Judge validity, filter, explain why               │ Why Chain, root-filter questions                                   │
+├───────────────────┼───────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+│ Application       │ Use concept in a new context                      │ Phase 4 report, Phase 6 apply                                      │
+├───────────────────┼───────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+│ Metacognition     │ Reason about the method itself                    │ Phase 4 Q6, Phase 6 Q6                                             │
+└───────────────────┴───────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────┘
+
+Question → skill map (summary)
+
+┌─────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│      Phase      │                                               Dominant skills                                               │
+├─────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 1 Memory Sprint │ Memory (4), Critical Thinking (2)                                                                           │
+├─────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 3 Adaptive Quiz │ Problem-Solving (8), Application (8)                                                                        │
+├─────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 3 Why Chain     │ Critical Thinking (3), Metacognition (3)                                                                    │
+├─────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 3 Memory Match  │ Memory (8)                                                                                                  │
+├─────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 4 Yashil Makon  │ Translation (1), Problem-Solving (1), Critical Thinking (1), Application (2), Metacognition (1)             │
+├─────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 6 Metro panel   │ Translation (1), Memory (1), Problem-Solving (1), Critical Thinking (1), Application (1), Metacognition (1) │
+└─────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Full-stack coverage across all 6 axes. No skill undertrained.
+
+---
+
+Phase weights (for overall score)
+
+┌───────────────────┬────────┬─────────────────────┐
+│       Phase       │ Weight │      Rationale      │
+├───────────────────┼────────┼─────────────────────┤
+│ 1 Memory Sprint   │  10%   │ Warm-up; low stakes │
+├───────────────────┼────────┼─────────────────────┤
+│ 3 Game Breaks     │  30%   │ Real practice       │
+├───────────────────┼────────┼─────────────────────┤
+│ 4 Real-Life       │  30%   │ Transfer — heavy    │
+├───────────────────┼────────┼─────────────────────┤
+│ 6 Final Challenge │  30%   │ Summative           │
+├───────────────────┼────────┼─────────────────────┤
+│ Total             │  100%  │ 60% to pass         │
+└───────────────────┴────────┴─────────────────────┘
+
+Phases 0-A, 0-B, 7 are not graded — they're learning / analytics layers.
+
+---
+
+Routing algorithm
+
+on homework completion:
+
+```
+compute overall_score_pct (weighted)
+compute per-skill scores from question skill_tags
+
+if overall_score_pct >= 60:
+  status = PASSED
+  update student subject_avg
+  if overall_score_pct > prior_subject_avg:
+    mark IMPROVEMENT (positive signal)
+  enqueue next lesson (§23)
+
+else:
+  status = REMEDIATION_REQUIRED
+  weakest_skill = argmin(skill_scores)
+  failed_questions = [q where correct == false]
+
+  remediation_queue:
+    1. re-show Preview panels mapped to weakest_skill
+    2. re-show Flash Card cluster mapped to weakest_skill
+    3. regenerate easier variants of failed_questions
+    4. re-attempt with hint ladder enabled
+
+  do NOT advance to §23 until remediation score >= 60
+```
+
+---
+
+Skill → remediation content map (for routing)
+
+If student fails on this skill, re-route to this content:
+
+┌───────────────────┬──────────────────────────────────────┬──────────────────────┬───────────────────────────────────────────────────┐
+│       Skill       │           Re-show Preview            │ Re-show Flash Cards  │                    Re-practice                    │
+├───────────────────┼──────────────────────────────────────┼──────────────────────┼───────────────────────────────────────────────────┤
+│ Memory            │ Panel 1 (Summary)                    │ Cluster A (Names)    │ Memory Match Blitz variant                        │
+├───────────────────┼──────────────────────────────────────┼──────────────────────┼───────────────────────────────────────────────────┤
+│ Translation       │ Panel 3 (Origin — shows modeling)    │ —                    │ Phase 4 word-problem variant with smaller numbers │
+├───────────────────┼──────────────────────────────────────┼──────────────────────┼───────────────────────────────────────────────────┤
+│ Problem-Solving   │ Panel 2 ① (factor-pair algorithm)    │ Cluster B (Formulas) │ Adaptive Quiz easy-tier only                      │
+├───────────────────┼──────────────────────────────────────┼──────────────────────┼───────────────────────────────────────────────────┤
+│ Critical Thinking │ Panel 2 ② (two answers, one reality) │ Cluster D (Insights) │ Why Chain shortened                               │
+├───────────────────┼──────────────────────────────────────┼──────────────────────┼───────────────────────────────────────────────────┤
+│ Application       │ Panel 4 (Real-Life)                  │ —                    │ Phase 4 scenario variant                          │
+├───────────────────┼──────────────────────────────────────┼──────────────────────┼───────────────────────────────────────────────────┤
+│ Metacognition     │ Panel 5 (Why You Need This)          │ —                    │ Phase 6 Q6 style reflect variant                  │
+└───────────────────┴──────────────────────────────────────┴──────────────────────┴───────────────────────────────────────────────────┘
+
+---
+
+Failed-question variant generator
+
+For each failed question, the remediation engine serves an easier variant with the same skill tag:
+
+┌────────────────────────────────────────┬──────────────────────────────────────────────┐
+│                Original                │                   Variant                    │
+├────────────────────────────────────────┼──────────────────────────────────────────────┤
+│ Adaptive Quiz A4: x² = 20 (irrational) │ x² = 16 (clean integer)                      │
+├────────────────────────────────────────┼──────────────────────────────────────────────┤
+│ Adaptive Quiz A6: x² + 5x + 6 = 0      │ x² + 3x + 2 = 0 (smaller pair)               │
+├────────────────────────────────────────┼──────────────────────────────────────────────┤
+│ Phase 4 Q3: x² + 60x – 43 200 = 0      │ x² + 10x – 600 = 0 (smaller, same structure) │
+├────────────────────────────────────────┼──────────────────────────────────────────────┤
+│ Phase 6 Q3: x² + 3x – 180 = 0          │ x² + 2x – 24 = 0 (scaled down)               │
+└────────────────────────────────────────┴──────────────────────────────────────────────┘
+
+Rule: variant's skill tag = original's skill tag. Same Bloom level. Smaller numbers / cleaner roots.
+
+---
+
+Student-facing end screen (minimal UI)
+
+After Phase 6 completion and silent Phase 7 computation:
+
+✓ §22 tugadi
+
+```
+Sizning balingiz: 78 / 100
+O'tdi? Ha (min 60)
+
+Ko'nikmalar:
+  Xotira             █████████ 90%
+  Tarjima            ██████    60%
+  Masala yechish     ████████  80%
+  Tanqidiy fikrlash  ███████   70%
+  Qo'llash           ████████  80%
+  Metakognitsiya     ██████    60%
+
+Keyingi dars: §23 — Chala kvadrat tenglamalar
+
+[Davom etish]
+```
+
+If overall < 60%:
+
+§22 qayta ishlash kerak
+
+```
+Sizning balingiz: 52 / 100
+Zaif ko'nikmalar: Tarjima, Metakognitsiya
+
+Qayta o'qish:
+  1. Panel 3 (Kelib chiqishi) — masalani tenglamaga ko'chirish
+  2. Flash Card Cluster C
+  3. 3 ta osonroq mashq
+
+[Boshlash]
+```
+
+---
+
+Telemetry for framework QA (not student-facing)
+
+Since §22 is our reference implementation, we collect extra signal:
+
+┌────────────────────────────────┬────────────────────────────────────────────────┐
+│             Metric             │                    Purpose                     │
+├────────────────────────────────┼────────────────────────────────────────────────┤
+│ Per-question time distribution │ Spot problems that are too slow (>2× expected) │
+├────────────────────────────────┼────────────────────────────────────────────────┤
+│ Capture failure rate           │ Is camera/vision pipeline working?             │
+├────────────────────────────────┼────────────────────────────────────────────────┤
+│ Hint ladder usage              │ Which questions need hints most often?         │
+├────────────────────────────────┼────────────────────────────────────────────────┤
+│ Preview scroll depth per panel │ Did students engage with panels, or skim?      │
+├────────────────────────────────┼────────────────────────────────────────────────┤
+│ Quit/drop-off rate per phase   │ Where do students abandon?                     │
+├────────────────────────────────┼────────────────────────────────────────────────┤
+│ Reproducibility diff           │ Generate §22 3× — how consistent is output?    │
+└────────────────────────────────┴────────────────────────────────────────────────┘
+
+This metadata feeds back to content improvement, not routing.
+
+---
+
+Compliance & architecture check
+
+┌──────────────────────────────────────┬────────┐
+│                 Rule                 │ Status │
+├──────────────────────────────────────┼────────┤
+│ Silent (no student prose)            │ ✅     │
+├──────────────────────────────────────┼────────┤
+│ 60% pass threshold                   │ ✅     │
+├──────────────────────────────────────┼────────┤
+│ Compared to student subject avg      │ ✅     │
+├──────────────────────────────────────┼────────┤
+│ Skill extraction (6 axes)            │ ✅     │
+├──────────────────────────────────────┼────────┤
+│ Duolingo-style re-route on fail      │ ✅     │
+├──────────────────────────────────────┼────────┤
+│ Data layers 1-3 defined              │ ✅     │
+├──────────────────────────────────────┼────────┤
+│ Telemetry layer for §22 as reference │ ✅     │
+├──────────────────────────────────────┼────────┤
+│ No forward-chapter leakage           │ ✅     │
+└──────────────────────────────────────┴────────┘
+
+---
+
+Advisor flags
+
+1. Phase weights are my proposal, not locked. I picked 10/30/30/30 to reflect Concept Intro cognitive load. If you want Phase 6 to dominate (summative-heavy), try 10/25/25/40. Or flat 25/25/25/25. Calibrate
+against real pilot data from §22.
+2. Metacognition axis is new — wasn't in the original skill list you mentioned. I added it because Phase 4 Q6 and Phase 6 Q6 hit L5 evaluation which doesn't fit cleanly in the other 5 axes. Confirm you want
+it in the taxonomy.
+3. Capture rubric score (0-5 from AI vision) is currently a per-question field but not yet factored into overall_score_pct. Options:
+- Ignore rubric score (binary correct/wrong only) ← current
+- Include as a modifier (e.g., capture < 3 = partial credit)
+- Gate credit on capture (no answer counted without valid capture)
+4. Weakest-skill routing assumes single worst skill. If student fails on two skills equally, we pick one arbitrarily. Could switch to "route to all skills below 60%" but that multiplies remediation load. My
+vote: single worst skill, serially.
+5. Variant generator is hand-specced here. For production, this needs a rule-based generator (parameters: keep Bloom/PISA same, scale coefficients by 0.3-0.6, preserve skill tag). Pilot data from §22 would
+calibrate the scaling.
+6. Student-facing end screen is the ONLY Phase 7 UI. It replaces the older UNIFIED "reflection journal" that had student-written prose. Cleaner, less friction, less data pollution.
+
+---

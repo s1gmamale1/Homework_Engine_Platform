@@ -1,0 +1,77 @@
+# Tasvirlar bilan ishlash — 6-dars
+
+35
+Tasvirlar bilan ishlash
+Fill uskunasini tanlab, sichqoncha kursori kanvasga olib kelinadi. Kursor
+kichik bo‘yoq chelagi ko‘rinishida paydo bo‘ladi.
+Bo‘yoq chelagi shakl oʻrtasiga keltirilib, sichqonchaning chap tugmasi
+bosiladi.
+Shaklning ichki qismi tanlangan rangga bo‘yaladi.
+5.1-mashg‘ulot
+Uchta turli shakl chizing.
+Birinchi shaklni qizil rang bilan bo‘yang.
+Ikkinchi shaklni sariq rang bilan bo‘yang.
+Uchinchi shaklni yashil rang bilan bo‘yang.
+6–amaliy ko‘nikma
+Tasvir qismlaridan nusxa olish, kesib tashlash yoki
+joylashtirish
+Tasvirning biror qismidan nusxa olish mumkin. Bu amal tasvirda istalgan
+predmetni bir martadan koʻp qoʻllashda bajariladi.
+Tasvirning biror qismidan nusxa olish uchun avval uni belgilash kerak. Buni
+yoki toʻgʻri toʻrtburchak shaklidagi, Select uskunasi yoki erkin shakldagi
+Select uskunasi orqali bajarish mumkin.
+Copy: butun
+tasvirni
+hammasini yoki
+uning belgilangan
+qismini nusxalash.
+Select:
+butun tasvirni
+uning bir qismini
+toʻrtburchak yoki
+boshqa shaklda
+ajratib belgilash.
+Kalit soʻzlar
+@edurtm_uz
+
+36
+Tasvir qismini nusxalash uchun Select uskunasidan mosini tanlang.
+Sichqoncha kursori tasvirning nusxa olinishi kerak boʻlgan qismi yoniga
+keltiriladi.
+Sichqonchaning chap tugmasi bosiladi. Agar Rectangular Select
+uskunasidan foydalanilsa, nusxa olinmoqchi boʻlgan qism atrofiga
+toʻrtburchak joylashtirish uchun sichqoncha o‘ng tomonga harakatlantiriladi.
+Agar Free-form Selection uskunasidan foydalanilsa, nusxa olinmoqchi
+boʻlgan qism atrofi chizib chiqiladi.
+Tasvirning belgilangan qismi atrofida maydon chizig‘i paydo bo‘ladi.
+Copy buyrug‘i bosiladi va belgilangan qism Clipboardga nusxalanadi.
+Agar nusxa
+olinmoqchi
+boʻlgan qism
+kvadrat yoki
+toʻrtburchak
+shaklida boʻlsa,
+Rectangular
+Selection
+uskunasi
+tanlanadi.
+Shaklning boshqa
+istalgan bir
+qismini belgilash
+uchun Free-
+form Selection
+uskunasidan
+foydalangan
+ma’qul.
+Maslahat
+Paste:
+nusxalangan
+tasvirni kanvasga
+joylash.
+Kalit soʻz
+Free-form
+ishlatilganda
+belgilash
+chizig‘ining boshi
+va oxiri tutashishi
+kerak.

@@ -1,0 +1,291 @@
+{
+  "name": "NETS Main Pipeline",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "node-001",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "rule": { "interval": [{"field": "hours", "hoursInterval": 1}] }
+      },
+      "id": "node-002",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [240, 480]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT task_id::text AS task_id, subject, grade, lang, lesson_id, pdf_uri FROM nets_task_queue WHERE status='pending' ORDER BY subject, grade, lang, lesson_id LIMIT 1",
+        "options": {}
+      },
+      "id": "node-003",
+      "name": "Pull One Task",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [460, 380],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {"caseSensitive": true},
+          "conditions": [
+            {
+              "leftValue": "={{ $json.task_id || '' }}",
+              "rightValue": "",
+              "operator": {"type": "string", "operation": "notEmpty"}
+            }
+          ]
+        }
+      },
+      "id": "node-003b",
+      "name": "Has Task?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [680, 380]
+    },
+    {
+      "parameters": {
+        "jsCode": "const t = $input.item.json;\nif (!t.task_id) throw new Error('No task_id in input: ' + JSON.stringify(t));\nreturn [{ json: {\n  task_id: String(t.task_id),\n  lesson_id: String(t.lesson_id),\n  subject: String(t.subject),\n  grade: Number(t.grade),\n  lang: String(t.lang),\n  pdf_uri: String(t.pdf_uri)\n}}];"
+      },
+      "id": "node-004",
+      "name": "Set Task",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE nets_task_queue SET status='extracting', updated_at=now() WHERE task_id='{{ $json.task_id }}'::uuid",
+        "options": {}
+      },
+      "id": "node-005",
+      "name": "Mark Extracting",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [1120, 300],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "jsCode": "const task = $('Set Task').item.json;\n\nconst fs = require('fs');\nlet systemPrompt = 'You are a curriculum extraction assistant. Extract structured lesson content from the provided textbook PDF text.';\ntry { systemPrompt = fs.readFileSync('/home/node/nets/frameworks/system/extraction.md', 'utf8'); } catch(e) {}\n\nlet outputSchema = '{}';\ntry { outputSchema = fs.readFileSync('/home/node/nets/frameworks/schemas/lesson.json', 'utf8'); } catch(e) {}\n\nlet pdfContent = 'PDF content unavailable';\ntry {\n  const buf = fs.readFileSync(task.pdf_uri);\n  pdfContent = buf.slice(0, 60000).toString('latin1');\n} catch(e) {\n  pdfContent = 'Could not read PDF: ' + e.message;\n}\n\nconst payload = {\n  model: 'kimi-k2.5',\n  messages: [\n    { role: 'system', content: systemPrompt },\n    { role: 'user', content: `CONTEXT: subject=${task.subject}, grade=${task.grade}, lang=${task.lang}\\n\\nINPUT PDF CONTENT:\\n${pdfContent}\\n\\nTASK: Extract the FIRST THEME/CHAPTER only. Return JSON matching this schema exactly:\\n${outputSchema}` }\n  ],\n  response_format: { type: 'json_object' },\n  temperature: 1,\n  max_tokens: 16000\n};\n\nreturn [{ json: { payload, task_id: task.task_id, lesson_id: task.lesson_id, subject: task.subject, grade: task.grade, lang: task.lang, pdf_uri: task.pdf_uri, call_start: Date.now() } }];"
+      },
+      "id": "node-006",
+      "name": "Build Extraction Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1340, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.moonshot.ai/v1/chat/completions",
+        "sendHeaders": true,
+        "specifyHeaders": "keypair",
+        "headerParameters": {
+          "parameters": [
+            {"name": "Authorization", "value": "Bearer sk-pJEISM5dnKSswgqkChu3vpLAAXZS1Yx0GdqXQdcpESZvuC2X"},
+            {"name": "Content-Type", "value": "application/json"}
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify($json.payload) }}"
+      },
+      "id": "node-007",
+      "name": "Kimi Extract",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [1560, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $json;\nconst meta = $('Build Extraction Prompt').item.json;\n\nlet lessonJson;\ntry {\n  lessonJson = JSON.parse(response.choices[0].message.content);\n} catch(e) {\n  throw new Error('Invalid JSON from extraction: ' + e.message);\n}\n\nconst fs = require('fs');\ntry { fs.mkdirSync('/home/node/nets/nets-output', { recursive: true }); } catch(e) {}\nconst lessonPath = `/home/node/nets/nets-output/${meta.lesson_id}_lesson.json`;\nfs.writeFileSync(lessonPath, JSON.stringify(lessonJson, null, 2));\n\nconst tokensIn = response.usage?.prompt_tokens || 0;\nconst tokensOut = response.usage?.completion_tokens || 0;\nconst costUsd = (tokensIn * 0.60 + tokensOut * 2.50) / 1000000;\n\nreturn [{ json: {\n  lesson_path: lessonPath,\n  task_id: meta.task_id,\n  lesson_id: meta.lesson_id,\n  subject: meta.subject,\n  grade: meta.grade,\n  lang: meta.lang,\n  pdf_uri: meta.pdf_uri,\n  tokens_in: tokensIn,\n  tokens_out: tokensOut,\n  cost_usd: costUsd\n}}];"
+      },
+      "id": "node-008",
+      "name": "Parse & Save Lesson",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1780, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_lessons (lesson_id, subject, grade, lang, pdf_uri, md_uri, extracted_at) VALUES ('{{ $json.lesson_id }}', '{{ $json.subject }}', {{ $json.grade }}, '{{ $json.lang }}', '{{ $json.pdf_uri }}', '{{ $json.lesson_path }}', now()) ON CONFLICT (lesson_id) DO UPDATE SET md_uri=EXCLUDED.md_uri, extracted_at=now()",
+        "options": {}
+      },
+      "id": "node-009",
+      "name": "Save Lesson to DB",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [2000, 300],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "jsCode": "const task = $('Parse & Save Lesson').item.json;\nconst phases = [\n  { id: 'phase_0a', name: 'Theme Preview',      game_refs: [] },\n  { id: 'phase_0b', name: 'Flash Cards',         game_refs: [] },\n  { id: 'phase_1',  name: 'Memory Sprint',       game_refs: [] },\n  { id: 'phase_2',  name: 'Story Mode',          game_refs: [] },\n  { id: 'phase_3',  name: 'Game Breaks',         game_refs: ['tile_match','codebreaker','tic_tac_toe'] },\n  { id: 'phase_4',  name: 'Real-Life Challenge', game_refs: [] },\n  { id: 'phase_5',  name: 'Consolidation',       game_refs: [] },\n  { id: 'phase_6',  name: 'Final Boss',          game_refs: [] },\n  { id: 'phase_7',  name: 'Reflection',          game_refs: [] }\n];\nreturn phases.map(p => ({ json: {\n  task_id: task.task_id,\n  lesson_id: task.lesson_id,\n  subject: task.subject,\n  grade: task.grade,\n  lang: task.lang,\n  lesson_path: task.lesson_path,\n  phase_id: p.id,\n  phase_name: p.name,\n  game_refs: p.game_refs\n} }));"
+      },
+      "id": "node-010",
+      "name": "Build Phase List",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2220, 300]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "node-011",
+      "name": "Loop Phases",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [2440, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.item.json;\nconst fs = require('fs');\n\nlet basePrompt = 'You are a NETS homework phase generator.';\nlet unifiedSchema = '';\nlet subjectFramework = '';\nlet phaseSpec = '';\nlet outputSchema = '{}';\nlet gameContent = '';\n\ntry { basePrompt = fs.readFileSync('/home/node/nets/frameworks/system/phase_worker_base.md', 'utf8'); } catch(e) {}\ntry { unifiedSchema = fs.readFileSync('/home/node/nets/frameworks/unified/schema.md', 'utf8'); } catch(e) {}\ntry { subjectFramework = fs.readFileSync('/home/node/nets/frameworks/subjects/matematika.md', 'utf8'); } catch(e) {}\ntry { phaseSpec = fs.readFileSync(`/home/node/nets/frameworks/unified/${item.phase_id}.md`, 'utf8'); } catch(e) { phaseSpec = `Phase: ${item.phase_id}`; }\ntry { outputSchema = fs.readFileSync(`/home/node/nets/frameworks/schemas/${item.phase_id}.json`, 'utf8'); } catch(e) {}\n\nlet lessonJson = '{}';\ntry { lessonJson = fs.readFileSync(item.lesson_path, 'utf8'); } catch(e) {}\n\nif (item.game_refs && item.game_refs.length > 0) {\n  item.game_refs.forEach(g => {\n    try { gameContent += fs.readFileSync(`/home/node/nets/frameworks/games/${g}.md`, 'utf8') + '\\n\\n'; } catch(e) {}\n  });\n}\n\nconst systemMessage = [\n  '## LAYER 1: SYSTEM INVARIANTS\\n' + basePrompt,\n  unifiedSchema ? ('## LAYER 2: UNIFIED FRAMEWORK SCHEMA\\n' + unifiedSchema) : '',\n  subjectFramework ? ('## LAYER 3: SUBJECT FRAMEWORK\\n' + subjectFramework) : '',\n  phaseSpec ? ('## LAYER 4: PHASE SPECIFICATION\\n' + phaseSpec) : '',\n  gameContent ? ('## LAYER 5: GAME MECHANICS\\n' + gameContent) : ''\n].filter(Boolean).join('\\n\\n---\\n\\n');\n\nconst userMessage = [\n  `## LAYER 6: LESSON CONTENT\\n${lessonJson}`,\n  `## LAYER 7: TASK CONTEXT\\n{\"grade\": ${item.grade}, \"lang\": \"${item.lang}\", \"subject\": \"${item.subject}\", \"lesson_id\": \"${item.lesson_id}\", \"phase_id\": \"${item.phase_id}\"}`,\n  `## LAYER 8: TASK\\nProduce the ${item.phase_name} phase deliverable. Return ONLY valid JSON matching this schema exactly:\\n${outputSchema}`\n].join('\\n\\n---\\n\\n');\n\nconst payload = {\n  model: 'kimi-k2.5',\n  messages: [\n    { role: 'system', content: systemMessage },\n    { role: 'user', content: userMessage }\n  ],\n  response_format: { type: 'json_object' },\n  temperature: 1,\n  max_tokens: 16000\n};\n\nreturn [{ json: { payload, task_id: item.task_id, lesson_id: item.lesson_id, phase_id: item.phase_id, phase_name: item.phase_name, subject: item.subject, grade: item.grade, lang: item.lang, lesson_path: item.lesson_path, call_start: Date.now() } }];"
+      },
+      "id": "node-012",
+      "name": "Compose Phase Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2660, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.moonshot.ai/v1/chat/completions",
+        "sendHeaders": true,
+        "specifyHeaders": "keypair",
+        "headerParameters": {
+          "parameters": [
+            {"name": "Authorization", "value": "Bearer sk-pJEISM5dnKSswgqkChu3vpLAAXZS1Yx0GdqXQdcpESZvuC2X"},
+            {"name": "Content-Type", "value": "application/json"}
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify($json.payload) }}"
+      },
+      "id": "node-013",
+      "name": "Kimi Phase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [2880, 200]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $json;\nconst meta = $('Compose Phase Prompt').item.json;\n\nlet phaseJson;\ntry {\n  let raw = response.choices[0].message.content || '';\n  raw = raw.replace(/^\\s*```json\\s*/i, '').replace(/^\\s*```\\s*/i, '').replace(/\\s*```\\s*$/i, '').trim();\n  if (!raw) throw new Error('empty response from model');\n  phaseJson = JSON.parse(raw);\n} catch(e) {\n  throw new Error(`Phase ${meta.phase_id} invalid JSON: ` + e.message);\n}\n\nconst tokensIn = response.usage?.prompt_tokens || 0;\nconst tokensOut = response.usage?.completion_tokens || 0;\nconst costUsd = (tokensIn * 0.60 + tokensOut * 2.50) / 1000000;\nconst latency = Date.now() - meta.call_start;\nconst phaseJsonStr = JSON.stringify(phaseJson).replace(/'/g, \"''\");\n\nreturn [{ json: {\n  phase_output_json: phaseJsonStr,\n  task_id: meta.task_id,\n  lesson_id: meta.lesson_id,\n  phase_id: meta.phase_id,\n  subject: meta.subject,\n  grade: meta.grade,\n  lang: meta.lang,\n  lesson_path: meta.lesson_path,\n  tokens_in: tokensIn,\n  tokens_out: tokensOut,\n  cost_usd: costUsd,\n  latency_ms: latency\n}}];"
+      },
+      "id": "node-014",
+      "name": "Parse Phase Output",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [3100, 200]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_phase_outputs (task_id, lesson_id, phase_id, output_json, schema_valid, tokens_in, tokens_out, cost_usd, latency_ms) VALUES ('{{ $json.task_id }}'::uuid, '{{ $json.lesson_id }}', '{{ $json.phase_id }}', '{{ $json.phase_output_json }}'::jsonb, true, {{ $json.tokens_in }}, {{ $json.tokens_out }}, {{ $json.cost_usd }}, {{ $json.latency_ms }}) ON CONFLICT (lesson_id, phase_id) DO UPDATE SET output_json=EXCLUDED.output_json, tokens_in=EXCLUDED.tokens_in, tokens_out=EXCLUDED.tokens_out, cost_usd=EXCLUDED.cost_usd",
+        "options": {}
+      },
+      "id": "node-015",
+      "name": "Save Phase to DB",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [3320, 200],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT po.task_id::text AS task_id, po.lesson_id, po.phase_id, po.output_json FROM nets_phase_outputs po WHERE po.lesson_id='{{ $json.lesson_id }}' ORDER BY CASE po.phase_id WHEN 'phase_0a' THEN 1 WHEN 'phase_0b' THEN 2 WHEN 'phase_1' THEN 3 WHEN 'phase_2' THEN 4 WHEN 'phase_3' THEN 5 WHEN 'phase_4' THEN 6 WHEN 'phase_5' THEN 7 WHEN 'phase_6' THEN 8 WHEN 'phase_7' THEN 9 END",
+        "options": {}
+      },
+      "id": "node-016",
+      "name": "Load All Phases",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [3540, 380],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const allRows = $input.all();\nif (allRows.length === 0) throw new Error('No phase outputs found in DB');\n\nconst task_id = allRows[0].json.task_id;\nconst lesson_id = allRows[0].json.lesson_id;\n\nconst phases = {};\nallRows.forEach(row => { phases[row.json.phase_id] = row.json.output_json; });\n\nconst p0a = phases.phase_0a || {};\nconst p0b = phases.phase_0b || {};\nconst p1  = phases.phase_1  || {};\nconst p2  = phases.phase_2  || {};\nconst p3  = phases.phase_3  || {};\nconst p4  = phases.phase_4  || {};\nconst p5  = phases.phase_5  || {};\nconst p6  = phases.phase_6  || {};\nconst p7  = phases.phase_7  || {};\n\nlet md = [];\nmd.push(`# NETS Uy Vazifasi — Matematika, ${lesson_id}`);\nmd.push('');\n\nmd.push('---\\n## PHASE 0-A: MAVZU KO\\'RIGI');\nif (p0a.gate_quote) { md.push(`> *\"${p0a.gate_quote.text}\"* — ${p0a.gate_quote.author}`); md.push(''); }\n(p0a.panels || []).forEach(p => { md.push(`### Panel ${p.panel_number}: ${p.title}`); md.push(p.content || ''); md.push(''); });\nif (p0a.bost_goal) md.push(`**Bugungi Maqsad:** ${p0a.bost_goal}\\n`);\n\nmd.push('---\\n## PHASE 0-B: FLASH KARTALAR');\n(p0b.cards || []).forEach(c => { md.push(`- **${c.front_text}** → ${c.back_text}`); });\nmd.push('');\n\nmd.push('---\\n## PHASE 1: XOTIRA SPRINTI');\n(p1.items || []).forEach(item => {\n  md.push(`${item.item_number}. ${item.question_text}`);\n  if (item.options) item.options.forEach((o, i) => md.push(`   ${String.fromCharCode(65+i)}) ${o}`));\n  md.push(`   **Javob:** ${item.correct_answer}`);\n  md.push('');\n});\n\nmd.push('---\\n## PHASE 2: HIKOYA REJIMI');\n(p2.segments || []).forEach(seg => {\n  md.push(seg.narrative_text || '');\n  md.push('');\n  if (seg.checkpoint) {\n    const cp = seg.checkpoint;\n    md.push(`**Savol:** ${cp.question}`);\n    if (cp.options) cp.options.forEach((o,i) => md.push(`${String.fromCharCode(65+i)}) ${o}`));\n    md.push(`**Javob:** ${cp.correct_answer}`);\n    if (cp.explanation) md.push(`*${cp.explanation}*`);\n    md.push('');\n  }\n});\n\nmd.push('---\\n## PHASE 3: O\\'YIN TANAFFUSLARI');\n(p3.games || []).forEach(game => {\n  md.push(`### ${game.slot}-o'yin: ${game.game_name}`);\n  (game.items || []).forEach(item => {\n    if (item.question_or_prompt) md.push(`${item.item_number}. ${item.question_or_prompt}`);\n    else if (item.left_item) md.push(`${item.pair_number}. ${item.left_item} — ${item.right_item}`);\n    if (item.correct_answer) md.push(`   **Javob:** ${item.correct_answer}`);\n    md.push('');\n  });\n});\n\nmd.push('---\\n## PHASE 4: HAYOTIY VAZIFA');\nif (p4.scenario_text) md.push(p4.scenario_text + '\\n');\n(p4.questions || []).forEach(q => {\n  md.push(`${q.question_number}. ${q.question_text}`);\n  md.push(`   **Javob:** ${q.correct_answer}`);\n  md.push('');\n});\n\nmd.push('---\\n## PHASE 5: MUSTAHKAMLASH');\nif (p5.technique_chosen) md.push(`**Usul:** ${p5.technique_chosen}`);\nif (p5.mnemonic_exercise) md.push(p5.mnemonic_exercise);\nmd.push('');\n\nmd.push('---\\n## PHASE 6: YAKUNIY BOSS');\n(p6.questions || []).forEach(q => {\n  md.push(`${q.question_number}. [${(q.difficulty||'').toUpperCase()} | ${q.damage_hp} HP] ${q.question_text}`);\n  if (q.hint_text) md.push(`   *Yordam: ${q.hint_text}*`);\n  md.push(`   **Javob:** ${q.correct_answer}`);\n  md.push('');\n});\n\nmd.push('---\\n## PHASE 7: FIKRLASH');\nif (p7.session_summary) { p7.session_summary.forEach(s => md.push(`- ${s}`)); md.push(''); }\n(p7.reflection_prompts || []).forEach(p => { const t = typeof p === 'string' ? p : p.prompt_text; md.push(`• ${t}`); });\nif (p7.spaced_rep_schedule) { const s = p7.spaced_rep_schedule; md.push(`\\n**Qayta ko'rish:** ${s.day1} → ${s.day3} → ${s.day7} → ${s.day21}`); }\n\nconst fs = require('fs');\nconst mdPath = `/home/node/nets/nets-output/${lesson_id}_homework.md`;\nfs.writeFileSync(mdPath, md.join('\\n'));\n\nreturn [{ json: { md_path: mdPath, task_id, lesson_id } }];"
+      },
+      "id": "node-017",
+      "name": "Assemble Homework",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [3760, 380]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE nets_task_queue SET status='done', updated_at=now() WHERE task_id='{{ $json.task_id }}'::uuid",
+        "options": {}
+      },
+      "id": "node-018",
+      "name": "Mark Done",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [3980, 380],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_session_log (task_id, stage, event, payload) VALUES ('{{ $json.task_id }}'::uuid, 'assemble', 'success', '{\"md_path\": \"{{ $json.md_path }}\"}'::jsonb)",
+        "options": {}
+      },
+      "id": "node-019",
+      "name": "Log Done",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [4200, 380],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {"main": [[{"node": "Pull One Task", "type": "main", "index": 0}]]},
+    "Schedule Trigger": {"main": [[{"node": "Pull One Task", "type": "main", "index": 0}]]},
+    "Pull One Task": {"main": [[{"node": "Has Task?", "type": "main", "index": 0}]]},
+    "Has Task?": {"main": [
+      [{"node": "Set Task", "type": "main", "index": 0}],
+      []
+    ]},
+    "Set Task": {"main": [[{"node": "Mark Extracting", "type": "main", "index": 0}]]},
+    "Mark Extracting": {"main": [[{"node": "Build Extraction Prompt", "type": "main", "index": 0}]]},
+    "Build Extraction Prompt": {"main": [[{"node": "Kimi Extract", "type": "main", "index": 0}]]},
+    "Kimi Extract": {"main": [[{"node": "Parse & Save Lesson", "type": "main", "index": 0}]]},
+    "Parse & Save Lesson": {"main": [[{"node": "Save Lesson to DB", "type": "main", "index": 0}]]},
+    "Save Lesson to DB": {"main": [[{"node": "Build Phase List", "type": "main", "index": 0}]]},
+    "Build Phase List": {"main": [[{"node": "Loop Phases", "type": "main", "index": 0}]]},
+    "Loop Phases": {"main": [
+      [{"node": "Load All Phases", "type": "main", "index": 0}],
+      [{"node": "Compose Phase Prompt", "type": "main", "index": 0}]
+    ]},
+    "Compose Phase Prompt": {"main": [[{"node": "Kimi Phase", "type": "main", "index": 0}]]},
+    "Kimi Phase": {"main": [[{"node": "Parse Phase Output", "type": "main", "index": 0}]]},
+    "Parse Phase Output": {"main": [[{"node": "Save Phase to DB", "type": "main", "index": 0}]]},
+    "Save Phase to DB": {"main": [[{"node": "Loop Phases", "type": "main", "index": 0}]]},
+    "Load All Phases": {"main": [[{"node": "Assemble Homework", "type": "main", "index": 0}]]},
+    "Assemble Homework": {"main": [[{"node": "Mark Done", "type": "main", "index": 0}]]},
+    "Mark Done": {"main": [[{"node": "Log Done", "type": "main", "index": 0}]]},
+    "Log Done": {"main": [[]]}
+  },
+  "settings": {"executionOrder": "v1"},
+  "active": false
+}

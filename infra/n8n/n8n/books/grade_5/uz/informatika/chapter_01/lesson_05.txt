@@ -1,0 +1,76 @@
+# Matnli hujjat bilan ishlash — 5-dars
+
+12
+Matnni koʻchirish
+Biror so‘z yoki jumlani boshqa joyga qayta yozish kerak bo‘lsa, matnni
+ko‘chirish imkoniyati qo‘l keladi.
+Buning uchun kerakli matnni belgilab, sichqonchaning oʻng tugmasi bosiladi.
+Bunda menyu ochiladi. Sichqonchaning chap tugmasidan foydalanib,
+menyudagi Cut buyrug‘i tanlanadi. Natijada matn joyidan “kesib” olinadi.
+Ushbu hujjatda men kiritgan bir nechta matn bor. Matn bilan ishlash ko‘nikmalarim rivojlanyapti.
+Men yangi bilimlarni o‘rganyapman.
+Ushbu matn bu yerda qolishini xohlamayman. Uni hujjatning boshiga ko‘chirmoqchiman.
+Kesilgan matn Clipboardda saqlanadi.
+Bu matnni sahifaga qayta kiritish uchun sichqoncha kursori kerakli joyga
+qo‘yilib, sichqonchaning oʻng tugmasi bosiladi va avvalgi menyu ochiladi.
+Sichqonchaning chap tugmasi yordamida menyuning Paste bo‘limidagi
+birinchi buyruq tanlanadi. Shunda matn yangi joyda paydo boʻladi.
+Menyu:
+ekranda ochilib,
+buyruqlar
+roʻyxatini taqdim
+etuvchi oyna.
+Cut: belgilangan
+matnni “kesib
+olib”, vaqtincha
+xotiraga saqlash.
+Clipboard:
+kompyuterning
+vaqtincha xotirasi.
+Kesib yoki
+nusxa olingan
+har qanday
+matn qayta
+joylangunga
+qadar shu yerda
+saqlanadi.
+Paste: vaqtincha
+xotiraga
+nusxalangan
+matnni sahifaga
+qayta joylash.
+Kalit soʻzlar
+@edurtm_uz
+
+13
+Matnli hujjat bilan ishlash
+Bitta matnni hujjatning ikki qismiga joylash uchun Cut va Paste buyruqlari
+bilan bajarilgan amallar ketma-ketligiga rioya qilinadi. Nusxalashda
+menyudan Cut oʻrniga Copy buyrug‘i tanlanadi. Bu buyruq belgilangan
+matnni sahifadan o‘chirmagan holda Clipboardga nusxalaydi.
+Shundan so‘ng Paste buyrug‘i bilan matnni sahifaning istalgan qismiga
+joylash mumkin.
+3.1-mashg‘ulot
+Hujjatingizda joylashgan “qiziqarli” soʻzini harfma-harf oʻchiring va
+oʻrniga “hayajonli” soʻzini kiriting.
+3.2-mashg‘ulot
+Hujjatingizdan “foydali” soʻzini to‘liq belgilab oʻchiring va oʻrniga “yaroqli”
+soʻzini kiriting.
+3.3-mashg‘ulot
+Sahifa davomiga quyidagi gapni kiriting:
+Men matn bilan ishlash ko‘nikmalarimni namoyish etish maqsadida shu
+gapni ko‘chiraman.
+Mazkur gapni hujjatning boshiga koʻchiring.
+3.4-mashg‘ulot
+Men shu gapdan nusxa olib, hujjatimning boshiga joylamoqchiman.
+Mazkur gapdan nusxa olib, hujjatning boshiga joylang.
+Copy: belgilagan
+matnni
+Clipboardga
+saqlab olish.
+Ushbu amal
+bajarilganda
+matn
+sahifangizda ham
+saqlanib qoladi.
+Kalit soʻz

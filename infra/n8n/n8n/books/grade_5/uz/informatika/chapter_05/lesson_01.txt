@@ -1,0 +1,78 @@
+# Qidirish tizimlarida ishlash — 1-dars
+
+Qidirish tizimlarida ishlash
+Bu modulda quyidagilarni oʻrganasiz:
+1
+Ma’lumotlarni topish uchun tugma, menyu va indekslardan foydalanish
+2
+Maʼlumotlarni qidirish uchun kalit soʻzlardan foydalanish
+3
+Tadqiqotingiz uchun dalillar to‘plash
+4
+Mos kalit soʻzlardan foydalanish
+5
+Kerakli natijalarni tanlash
+Bu modulda yakuniy loyiha uchun qidirish koʻnikmalarini shakllantirasiz.
+Loyihada yoʻqolib ketish xavfi ostida boʻlgan ikki turdagi hayvonlar — oqayiqlar
+va yana biror hayvon haqida axborot beruvchi ma’lumot jadvalini yaratasiz.
+Istalgan hayvonni tanlang. Ma’lumot jadvali qiziqarli bo‘lishi uchun har ikki
+hayvon haqidagi maʼlumotlarni qidirib topishingiz kerak.
+Shuningdek, quyidagilarni bilib olasiz:
+•	 veb brauzerlar va qidirish tizimlari nima ekani, ular orasidagi farqlar;
+•	 ma’lumotlarni qidirish uchun savol va kalit soʻzlardan foydalanish;
+•	 qidirish tizimidan foydalanganda xavfsizlikni ta’minlash;
+•	 amalga oshirilayotgan tadqiqot uchun dalillar to‘plash.
+90
+5
+@edurtm_uz
+
+91
+Darsni boshlashdan avval
+Quyidagilarni bilishingiz kerak:
+•	 qidirish tizimi nima ekani;
+•	 qidirish tizimidan foydalanish.
+Kirish
+Qidirish tizimidan qanchalik yaxshi foydalana olasiz?
+Butunjahon internet tarmog‘i (WWW)da ma’lumotlarni qidirish, yangi va
+qiziqarli mavzularni o‘rganish zavqlidir.
+U yerda vazifalaringizni yakunlash uchun kerak boʻladigan axborotlarni tez va
+oson topish mumkin.
+Butunjahon internet tarmog‘ida ma’lumotlarni qidirish uchun 2 ta dasturiy
+vosita kerak boʻladi: veb brauzer va qidirish tizimi.
+Qidirish tizimidan samarali foydalana olish va kerakli maʼlumot uchun eng yaxshi
+qidirish natijalarini tanlay bilish juda muhim ko‘nikmadir.
+Maʼlumotlar:
+biror narsa yoki
+shaxs haqida
+oʻrganish mumkin
+boʻlgan faktlar.
+Butunjahon
+internet tarmog‘i
+(WWW): internet
+orqali kirish
+mumkin boʻlgan
+veb sahifalar
+toʻplami.
+Veb brauzer:
+veb sahifalarni
+topib ochuvchi,
+tarjima qiluvchi
+va ko‘rsatuvchi
+dasturiy
+ta’minotning bir
+qismi.
+Qidirish tizimi:
+butunjahon
+internet
+tarmog‘idagi
+veb saytlarning
+yirik ma’lumotlar
+bazasidan qidirish
+dasturi.
+Qidirish
+natijalari: qidirish
+tizimi tomonidan
+topilgan
+sahifalarga linklar
+roʻyxati.
+Kalit soʻzlar

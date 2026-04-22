@@ -1,0 +1,113 @@
+# Dasturlash — 2-dars
+
+74
+•	 ketma-ketlik nima ekani;
+•	 vazifalarni bajarish yoki muammoni yechish uchun ketma-ketlikka amal qila
+olish.
+Masalan, quyidagi sodda ketma-ketlikni bajaring:
+1.	Toʻrt marta sakrang va o‘tirib turing.
+2.	Polga oʻtiring.
+3.	 Uch marta qarsak chaling.
+4.	 Oʻrningizdan turing.
+5.	 Turgan joyingizda aylaning.
+Kirish
+Kompyuterlar Software deb ataluvchi dasturlarni ishga tushiradi.
+Dasturlar koʻrsatmalar yoki buyruqlardan tashkil topgan bo‘lib, ular kompyuter
+qanday vazifalar bajarishi kerakligini ko‘rsatadi.
+Koʻrsatmalar dastur kodida yozilgan bo‘ladi.
+Dastur:
+kompyuter
+qanday vazifalarni
+bajarishini
+bildiruvchi
+koʻrsatmalar
+ketma-ketligi.
+Software:
+turli vazifalarni
+bajarish imkonini
+beruvchi
+dasturi.
+Ko‘rsatma:
+biror harakat
+bajarilishiga
+qo‘yilgan talab.
+Buyruq: odatda
+dasturda amalga
+oshirish kerak
+boʻlgan vazifa.
+Dastur kodi:
+qanday vazifa
+bajarishi
+kerakligini
+ko‘rsatuvchi
+buyruqlar
+to‘plami.
+Kalit soʻzlar
+1-amaliy ko‘nikma
+Robot bo‘ling
+Tasavvur qiling, siz robotsiz. Quyidagilarni bajaring:
+•	 oʻrningizdan turing;
+•	 atrofingizga qarang;
+•	 eshik tomonga yuring.
+Aniq koʻrsatmalar toʻplamidan foydalanib buni qanday amalga
+oshirganingizni aytib bering.
+1.1-mashg‘ulot
+Eshik oldiga yetib borish uchun koʻrsatmalarni
+yozing.
+Koʻrsatmalaringiz quyidagicha boʻlishi mumkin:
+•	 xonaning old tomoniga qarab turing;
+•	 oldinga uch qadam tashlang;
+•	 chapga buriling;
+•	 oldinga bir qadam tashlang.
+@edurtm_uz
+
+75
+Dasturlash
+DIQQAT!
+Ko‘rsatmalarni
+bajarishda
+boshqalarni
+turtib
+yubormaslik
+uchun ehtiyot
+bo‘lish kerak.
+Hayotda ham
+labirint o‘yinlari
+mavjud.
+•	 Makkajoʻxori
+labirinti
+makkajoʻxori
+maydonida
+o‘tkaziladi.
+Odatda ular
+turistlarni jalb
+qilish uchun
+yetishtiriladi.
+•	 Xempton Kort
+labirinti shu
+nomdagi saroy
+hududida
+o‘suvchi yashil
+devordan
+iborat labirint.
+Bilasizmi?
+2-amaliy ko‘nikma
+Robotni labirint boʻylab harakatlantirish
+Tasavvur qiling, siz labirint orasidan yurish uchun koʻrsatmalarga amal
+qilayotgan robotsiz. Quyidagi labirintga qarang.
+“START” deb yozilgan yashil katakdan boshlash kerak.
+END
+START
+Har bir rangli katak bir boʻshliqni bildiradi. Siz faqat rangli kataklarda
+(kulrang, yashil, sariq va qizil) harakatlana olasiz.
+Koʻrsatmalarni bajarib, eshik oldigacha yetib bora oldingizmi?
+Agar eshik oldiga yetib bormagan boʻlsangiz, koʻrsatmalarni qaytadan
+tuzib chiqing va yana urinib ko‘ring. Eshik oldiga yetib borgunga qadar
+bajarishda davom eting.
+Barakalla!
+Bu siz yaratgan birinchi koʻrsatmalar ketma-ketligi edi.
+1.2-mashg‘ulot
+Ko‘rsatmalaringizga amal qilish osonroq boʻlishi mumkin, chunki ularni
+o‘zingiz tuzgansiz. Bu safar doʻstingiz bilan o‘rin va ko‘rsatmalaringizni
+almashing. Ko‘rsatmalarga amal qiling va eshik oldiga borishingizni sinab
+koʻring. Doʻstingiz ham buni bajara oldimi?

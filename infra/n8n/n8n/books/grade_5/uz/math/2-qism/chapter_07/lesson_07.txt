@@ -1,0 +1,473 @@
+# O'lchov birliklarini almashtirish
+
+21
+2  Quyidagi o‘lchov birliklarini kichkinasiga almashtiring.
+ 
+a) 
+0,9 m  = 0,9 × 100
+ 
+ 
+ = 90 cm
+b) 
+4,7 m  = 4,7 × 100
+ 
+ 
+ = 470 cm
+c) 
+1,8 km = 1,8 × 1000
+ 
+ 
+= 1800 m
+d) 
+5,64 km = 5,64 × 1000
+ 
+ 
+= 5640 m
+e) 
+19,3 kg = 19,3 × 1000
+ 
+ 
+= 19 300 g
+f) 
+2,42 kg = 2,42 × 1000
+ 
+ 
+= 2420 g
+g) 
+4,06 ℓ = 4,06 × 1000
+ 
+ 
+= 4060 ml
+h) 
+8,314 ℓ = 8,314 × 1000
+ 
+ 
+= 8314 ml
+3  Quyidagi o‘lchov birliklarini kattasiga almashtiring.
+ 
+a) 
+78 cm  = 78 ÷ 100
+ 
+ 
+ = 0,78 m
+b) 
+5 cm = 5 ÷ 100
+ 
+ 
+= 0,05 m
+c) 
+60 m = 60 ÷ 1000
+ 
+ 
+= 0,06 km
+d) 
+132 m = 132 ÷ 1000
+ 
+ 
+= 0,132 km
+e) 
+64 g = 64 ÷ 1000
+ 
+ 
+ = 0,064 kg
+f) 
+2176 g = 2176 ÷ 1000
+ 
+ 
+= 2,176 kg
+g) 
+20 ml = 20 ÷ 1000
+ 
+ 
+= 0,02 ℓ
+h) 
+509 ml = 509 ÷ 1000
+ 
+ 
+= 0,509 ℓ
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   21
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   21
+13/11/24   14:49
+13/11/24   14:49
+
+22
+4  a) 
+Metrda ifodalang. 
+ 
+ 
+6 m 47 cm = 6 m + 47 cm       
+                       
+= 6 m + 0,47 m  
+ 
+                      
+= 6,47 m                                    
+         
+     
+b) 
+Kilometrda ifodalang. 
+ 
+ 
+6 km 13 m = 6 km + 0,013 km
+ 
+ 
+ 
+= 6,013 km    
+        c)  
+Kilogrammda ifodalang. 
+ 
+ 
+4 kg 250 g = 4 kg + 250 g 
+                               
+= 4 kg + 0,25 kg
+                                
+= 4,25 kg
+ 
+d)  Litrda ifodalang. 
+ 
+ 
+7 ℓ 5 ml = 7 ℓ + 5 ml
+                         
+= 7 ℓ + 0,005 ℓ
+                            
+= 7,005 ℓ
+5  a) 
+Metr va santimetrda ifodalang.
+ 
+ 
+5,04 m = 5 m + 0,04 m
+ 
+ 
+ 
+= 5 m 4 cm
+ 
+b) 
+Kilometr va metrda ifodalang. 
+ 
+ 
+8,35 km = 8 km + 0,35 km
+ 
+ 
+ 
+= 8 km 350 m
+ 
+1 m = 100 cm
+ 0,04 m  = 0,04 × 100
+ 
+ = 4 cm
+    1 km = 1000 m
+ 0,35 km  = 0,35 × 1000
+ 
+ = 350 m
+   1 km = 1000 m
+ 13 m = 13 ÷ 1000
+ 
+ = 0,013 km
+ 
+    1 kg = 1000 g
+ 
+250 g = 250 ÷ 1000
+ 
+= 0,25 kg
+ 1 ℓ = 1000 ml
+ 5 ml = 5 ÷ 1000
+ 
+ = 0,005 ℓ
+      1 m = 100 cm
+  47 cm = 47 ÷ 100
+ 
+= 0,47 m
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   22
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   22
+13/11/24   14:49
+13/11/24   14:49
+
+23
+Qiziqarli matematika
+ 
+c) 
+Kilogramm va grammda ifodalang.
+ 
+ 
+10,408 kg = 10 kg + 0,408 kg
+ 
+ 
+ 
+= 10 kg 408 g
+ 
+d) 
+Litr va millilitrda ifodalang.
+ 
+ 
+24,6 ℓ = 24 ℓ + 0,6 ℓ
+ 
+ 
+ 
+= 24 ℓ 600 ml
+                1 kg = 1000 g
+        0,408 kg = 0,408 × 1000
+  
+= 408 g
+ 
+1 ℓ = 1000 ml
+ 
+0,6 ℓ = 0,6 × 1000
+ 
+ = 600 ml
+O‘rganing va bo‘lishing
+Guruh bo‘lib ishlang. 
+1   Turli o‘lchov birliklariga doir hayotiy misollar keltiring (masalan: cm, m, km, g, 
+kg, ml va ℓ). Qaysi o‘lchov birliklari ishlatilganini boshqalarga ayting.
+ 
+Namuna
+a) 
+Avtomobil dvigatelining sig‘imi 1600 cm3.
+b) 
+Jomolungma cho‘qqisi dengiz sathidan 8848 m balandlikda joylashgan.
+2   Suvning litrdagi hajmini millilitrga o‘tkazish uchun shkalali o‘lchov idishi va 
+stakandan foydalaning. Natijalarni jadvalga yozing.
+ 
+Litrdagi hajmi
+Millilitrdagi hajmi
+Keling, buni aniqlash 
+uchun suvni shkalali 
+stakanga quyib 
+ko‘ramiz.
+Shkalali o‘lchov idishida 
+0,2 ℓ suv bor. Idishdagi 
+suvning millilitrdagi hajmi 
+qancha?
+ 50 ml 
+ 100 ml 
+ 150 ml 
+200 ml 
+250 ml 
+1 ℓ
+0,2 ℓ
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   23
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   23
+13/11/24   14:49
+13/11/24   14:49
+
+24
+Qiziqarli matematika
+O‘ynang va o‘rganing
+Juftliklarga bo‘linib o‘ynang.
+Dastlab har bir o‘quvchiga bittadan loto varag‘i tarqatiladi. So‘ng har bir juftlikka 
+bir dastadan turli miqdorlar yozilgan kartochkalar bo‘lib beriladi. Kartochkalar 
+teskari qilib juftliklar oldiga qo‘yiladi.
+O‘quvchilar bir vaqtning o‘zida bittadan kartochka ochishadi. Agar kartochka va  
+loto varag‘idagi miqdorlar teng bo‘lsa, loto varag‘idagi miqdor o‘chiriladi. Ko‘proq 
+o‘chirgan o‘quvchi g‘olib bo‘ladi.
+Namuna
+0,625 kg
+10,02 m
+10 020 g
+Kartochkalar
+Loto varag‘i
+625 m
+10,02 kg
+1 ℓ 625 ml
+1,10 ℓ
+1002 cm
+6,02 m
+10 000 m
+625 g
+1,02 km
+Juftlikda ishlang
+a) 
+Do‘stingiz bilan Muhokama qiling.
+ 
+Ko‘rsatilgan harflarga qanday miqdor mos keladi?
+ 
+0 m 
+A 
+1000 m 
+                         D           2000 m
+0 km   
+0,5 km   
+1 km  
+B  
+C  
+2 km
+b) 
+Do‘stingiz bilan boshqa o‘lchov birliklari uchun (masalan: ℓ va ml, kg va g, m va  
+ 
+ 
+cm) ham yuqoridagi kabi savollar tuzing. Tuzgan savollaringizni boshqa  
+ 
+ 
+ 
+sinfdoshingizga ham bering. 
+ 
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   24
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   24
+13/11/24   14:49
+13/11/24   14:49
+
+25
+Bajaring va o‘rganing
+1  Santimetrda ifodalang.
+ 
+a) 
+0,54 m  
+b)  
+3,1 m 
+c)  10,05 m
+2  Metrda ifodalang.
+ 
+a) 
+0,23 km 
+b)  
+4,5 km 
+c)  12,06 km
+ 
+d) 
+6 cm 
+e)  
+19 cm 
+f)  
+212 cm
+3  Kilometrda ifodalang.
+ 
+a) 
+75 m 
+b)  
+104 m 
+c)  9310 m
+4  Grammda ifodalang.
+ 
+a) 
+2,6 kg 
+b)  
+0,042 kg 
+c)  15 kg 16 g
+5  Kilogrammda ifodalang.
+ 
+a) 
+30 g  
+b)  
+278 g 
+c)  7040 g
+6  Millilitrda ifodalang.
+ 
+a) 
+7 ℓ 
+b)  
+9,03 ℓ 
+c)  16 ℓ 8 ml
+7  Litrda ifodalang.
+ 
+a) 
+372 ml 
+b)  
+12 ml 
+c)  5989 ml
+8  Kilogramm va grammda ifodalang.
+ 
+a) 
+9,5 kg 
+b)  
+2,03 kg 
+c)  15,672 kg
+21–26
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+a) 
+Men o‘nli kasrda ifodalangan katta o‘lchov birligini kichikroq o‘lchov birligiga
+ 
+almashtirishni bilaman.  
+b)  
+Men kichik o‘lchov birligini katta o‘lchov birligiga almashtirishni va uni
+ 
+o‘nli kasrda ifodalashni bilaman.  
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   25
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   25
+13/11/24   14:49
+13/11/24   14:49
+
+26
+Matnli masalalar
+Qarang va o‘rganing
+1  Idishda dastlab 5 ℓ suv bor edi. Undan har gal 150 millilitrdan 11 marta suv quyib 
+olindi. Idishda qancha suv qoldi? 
+ 
+Javobni litrda ifodalang.
+ 
+150 × 11 = 1650 
+ 
+Demak, idishdan jami 1650 ml suv olingan.
+ 
+ 5 ℓ = 5000 ml  
+5000 – 1650 
+= 3350 
+ 
+ 
+  
+ 
+3350 ml  = 3350 ÷ 1000 
+ 
+ 
+  
+ 
+ 
+ 
+= 3,35 ℓ
+ 
+Idishda 3,35 ℓ suv qoldi.
+2  Dastlab ishchida 150 m sim bor edi. U 73,6 m sim ishlatdi va qolganini 40 ta teng 
+bo‘lakka bo‘ldi.  
+ 
+Sim bo‘laklarining har biri necha santimetr uzunlikda bo‘lgan?
+ 
+ 150 – 73,6 = 76,4 m
+ 
+ 76,4 ÷ 40  = 1,91 m 
+ 
+ 
+1,91 m  = 1,91 × 100 
+               
+ = 191 cm
+ 
+Sim bo‘laklarining har biri 191 cm uzunlikda bo‘lgan.   
+ 150 –  73,6
+ 
+  
+ 150  –  70 = 80
+ 80 ÷ 40 = 2 m
+  
+ 
+ = 200 cm
+191 cm uzunlikning  200 cm 
+ga yaqinligidan javobning 
+to‘g‘riligiga ishonch hosil 
+qilish mumkin.
+AC tugmasini bosing.
+So‘ng quyidagi tugmalarni bosing:  
+Buni quyidagicha hisoblash ham mumkin:
+(150 – 73,6) ÷ 40 × 100 = 191
+Tekshirish
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+(    1    5    0    –     7    3    ,     6     )     ÷    4    0    ×    1    0    0    =
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   26
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   26
+13/11/24   14:49
+13/11/24   14:49
+

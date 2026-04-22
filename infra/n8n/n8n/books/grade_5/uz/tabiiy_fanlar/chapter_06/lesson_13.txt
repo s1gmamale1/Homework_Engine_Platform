@@ -1,0 +1,36 @@
+# VI bob — 13-dars
+
+5.2
+Kuch chizmalari
+Mavzuni o'rganish davomida:
+• jismga, hatto u tinch holatda bo’lsa ham, bir nechta kuch ta’sir qilishi mumkinligini
+o’rganasiz;
+• jismga ta’sir qilayotgan turli kuchlarni ko’rsatish uchun kuch chizmalaridan foydalanasiz;
+• ilmiy tushunchani izohlashda modeldan foydalanasiz;
+• ilmiy savol qo’yasiz va unga javob topishga yordam beradigan eng yaxshi
+tadqiqot metodini tanlaysiz;
+• amaliy ishni bajarish davomida yuzaga kelishi mumkin bo’lgan xavflarni hamda ularni
+kamaytirish yo’llarini bayon etasiz;
+• turli tadqiqot metodlarining o’ziga xos xususiyatlarini anglaysiz.
+etamiz!
+1. 0‘qituvchingiz boshchiligida maktab binosi atrofida sayr qiling.
+2. Harakatlanayotgan va harakatlanmayotgan ikkita jismni aniqlang.
+3. Jismlarni kuzating. Quyidagi savollarni muhokama qiling:
+a) Jismlarning har biriga qanday kuchlar ta’sir qilmoqda?
+b) Bu kuchlarni chizmada qanday ko'rsatgan bo‘lar edingiz?
+
+Birgalikda СЙЩОЗЙЙ
+Jismlarga ta’sir qilayotgan kuchlarni chizmada qanday ko‘rsatamiz?
+Jismga, hatto u tinch holatda bo‘lsa ham, bir nechta kuch ta’sir qilishi mumkin. Har
+xil kuchlarni, shuningdek, jismga ta’sir qiluvchi kuchlarning kattaligi va yo'nalishini
+kuch chizmasi yordamida ko‘rsatishimiz mumkin.
+Rasmda stulda o'tirgan o'quvchi qiz tasvirlangan. Strelkalar har bir kuchning
+yo‘nalishini ko'rsatadi. Strelkaning uzunligi esa kuchning kattaligini ifodalaydi.
+gravitatsiya
+kuchi
+tayanchning
+reaksiya kuchi
+Gravitatsiya kuchi pastga, tayanchning reaksiya kuchi esa yuqoriga
+yo‘nalgan. Bu kuchlar qarama-qarshi yo'nalishda juft bo‘lib ta’sir qiladi.
+Atrofingizga qarang. Tinch holatda turgan jismlarga ta’sir qiluvchi
+kuchlarga misol keltiring.

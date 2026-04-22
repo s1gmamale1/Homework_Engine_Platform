@@ -1,0 +1,52 @@
+# Diagrammalar bilan ishlash — 10-dars
+
+66
+Doiraning eng
+katta boʻlagi
+topiladi va uni
+izohlaydigan
+legendaga e’tibor
+qaratiladi.
+Maslahat
+Bu ham eng katta
+raqamli qiymat
+kabidir.
+10.2-mashg‘ulot
+Savollarga javob berish uchun doirasimon diagrammadan foydalaning.
+1.	 Qaysi bo‘lak eng katta qiymatga ega?
+2.	Qaysi bo‘lak eng kichik qiymatga ega?
+3.	 Qaysi bo‘lak doiraning eng katta ulushiga ega?
+4.	 Bo‘laklarni eng kichik qiymatdan eng katta qiymat tomon o‘sish tartibida
+yozib chiqing.
+Yoqtirgan fanlaringiz
+O‘qituvchi o‘quvchilardan ular
+yoqtirgan fan haqida so‘ramoqda.
+Ssenariy
+@edurtm_uz
+
+67
+Diagrammalar bilan ishlash
+1-mashg‘ulot
+Quyidagi axborotlarni saqlovchi maʼlumotlar jadvalini yarating:
+informatika va AT, tarix, geografiya, matematika va boshqalar.
+Yana ikkita xohlagan faningizni qoʻshishingiz mumkin.
+2-mashg‘ulot
+Sinfdoshlaringizdan yoqtirgan fani qaysi ekanini soʻrang.
+Maʼlumotlar jadvaliga to‘plangan ma’lumotlarni yozib chiqing.
+3-mashg‘ulot
+Ushbu ma’lumotlarni ifodalash uchun ustunli va doirasimon diagrammadan
+qay biri mos kelishini tanlang.
+Sinfdoshlaringizning har biri yoqtirgan fanni koʻrsatuvchi diagramma
+yarating.
+4-mashg‘ulot
+Diagramma uchun o‘zingizga qulay sarlavha tanlang.
+Agar ustunli diagramma yaratgan boʻlsangiz, oʻq chiziq yorliqlarini qoʻshing.
+Agar doirasimon diagramma yaratgan boʻlsangiz, ulush legendasini qoʻshing
+(agar Microsoft Excel buni avtomatik tarzda bajarmagan boʻlsa).
+5-mashg‘ulot
+Quyidagi savollarning javobini daftaringizga yozing.
+1.	Eng ko‘p tanlangan fan qaysi bo‘ldi?
+2.	Eng kam tanlangan fan qaysi bo‘ldi?
+3.	 O‘quvchilarga yoqadigan fanlar ichida bir xil qiymatga ega bo‘lganlari
+ham bormi?
+4.	Sinfning yarmidan koʻpiga yoqadigan fan qaysi ekan?

@@ -1,0 +1,43 @@
+# Diagrammalar bilan ishlash — 2-dars
+
+47
+Diagrammalar bilan ishlash
+Axborotning qiymatini hisoblash
+Ma’lumotlarni guruhlarga ajratgach, har bir guruhdagi axborot miqdori
+hisoblanadi. Bu bir guruhdagi obyektlarning umumiy qiymatidir.
+Axborotni hisoblash uchun sanoq yoki ma’lumot jadvali yaratiladi.
+2.1-mashg‘ulot
+Quyidagi vazifani daftaringizda bajaring.
+Koʻplab obyektlarni hisoblash uchun sanoq jadvali yordam beradi.
+Sanayotganingizda har bir obyekt uchun belgi qoʻyib keting. Beshtaga
+yetganingizda toʻrt chiziq ustidan bir chiziq torting. Masalan:
+Koʻplab alohida chiziqlarni sanagandan koʻra beshtadan hisoblagan osonroq.
+Nechta
+belgi aks etgan?
+2.2-mashg‘ulot
+Sanoq jadvalida siz sanagan barcha guruhlar aks etadi, shuningdek,
+obyektlar miqdorini alohida belgilashingiz uchun alohida kataklar ham
+beriladi.
+2-amaliy ko‘nikma
+@edurtm_uz
+
+48
+Quyidagi sanoq jadvalida yuqorida tasvirlangan hayvonlar to‘plami uchun
+guruhlar yozilgan.
+Tasvirdagi har bir hayvon sonini bilish uchun ularni sanab chiqing va jadvalni
+sanoq belgilari bilan to‘ldiring.
+Hayvonlar turi
+Sanoq
+Jirafa
+Sher
+Pingvin
+Yoʻlbars
+Fil
+2.3-mashg‘ulot
+Maʼlumotlar jadvali har bir guruhda nechtadan hayvon borligini koʻrsatadi.
+Har bir hayvon sonini hisoblab, umumiy qiymatni yozish orqali quyidagi
+jadvalni toʻldirib chiqing. Natijada ularning miqdorini bilib olasiz.
+Jadvaldagi har bir hayvonning jami miqdorini yozish uchun
+2.2-mashg‘ulotdagi sanoqdan foydalaning.
+Jami
+Fil

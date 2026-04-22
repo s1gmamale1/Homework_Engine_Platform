@@ -1,0 +1,61 @@
+# Diagrammalar bilan ishlash — 3-dars
+
+49
+Diagrammalar bilan ishlash
+2.4-mashg‘ulot
+Quyidagi vazifani daftaringizda bajaring.
+Tasvirdagi mevalar uchun maʼlumotlar jadvalini toʻldiring.
+1.	 Tasvirdagi ranglarning nomini 1-ustunga yozing.
+2.	Har bir rang uchun sanoqni 2-ustunga yozing.
+3.	 Har bir rang uchun jami miqdor ko‘rsatkichini 3-ustunga yozing.
+Rang (1)
+Sanoq (2)
+Jami (3)
+@edurtm_uz
+
+50
+Piktogramma:
+ma’lum obyektni
+belgilash uchun
+qo‘llangan tasvir.
+Kalit soʻz
+Piktogramma yaratish
+Maʼlumotlarni taqdim etish (koʻrsatish) uchun piktogrammadan
+foydalaniladi. Piktogramma bitta tasvir orqali bir yoki koʻproq maʼlumotni
+ifodalash uchun qoʻllanadi. Masalan, bitta tasvir oʻnta sherni aks ettirishi
+mumkin. Piktogramma har bir tasvir nimani anglatishini ko‘rsatuvchi ramzga
+ega. Masalan, ikkita sher quyidagicha ifodalanadi:
+Ramz
+= bitta sher
+Ushbu tasvirdagi meva piktogrammasini
+quyidagicha yarating:
+1.	 Mevalar guruhini yozing.
+2.	Har bir meva tasvirini xuddi shu miqdorda
+chizing. To‘plamda banan bor, demak,
+sizga uchta banan tasviri kerak.
+Bitta tasvir = bitta meva
+3-amaliy ko‘nikma
+
+51
+3.1-mashg‘ulot
+Ushbu piktogramma nimani anglatadi?
+= bitta pingvin
+3.2-mashg‘ulot
+Qogʻozga uchta olmani ifodalovchi piktogramma chizing.
+Ramz qoʻshishni yoddan chiqarmang.
+3.3-mashg‘ulot
+Qogʻozga tasvirdagi hayvonlar sonini ifodalovchi piktogramma chizing.
+Piktogrammalar
+gorizontal
+yoki vertikal
+ko‘rinishda
+bo‘ladi. Ular
+albatta qandaydir
+mazmun
+anglatishi kerak.
+Maslahat
+Tasvirlar sifatidan
+xavotir olmang.
+Axir bu tasviriy
+san’at fanidan
+imtihon emas-ku!

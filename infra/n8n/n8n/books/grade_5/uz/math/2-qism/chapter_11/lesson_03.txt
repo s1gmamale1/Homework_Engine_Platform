@@ -1,0 +1,267 @@
+# Vertikal burchaklar
+
+97
+3  KL va MN – to‘g‘ri chiziqlar. Noma’lum burchaklarni toping. 
+ 
+M
+K
+53°
+L
+b
+a
+c
+ 
+∠ a = 180° − 53° 
+       
+ 
+= 127°
+ 
+∠ b = 53° 
+                                                
+ 
+∠ c = ∠ a
+       
+ 
+= 127°
+4  PQ va RS – to‘g‘ri chiziqlar. ∠a, ∠b va ∠c ni toping.
+ 
+ 
+28°
+a
+c
+P
+R
+Q
+S
+78°
+b
+∠ a va ∠ c – vertikal 
+burchaklar.
+Demak, ∠ a = ∠ c.
+Noma’lum burchaklarni topishda
+burchakning qaysi xossalaridan
+foydalanasiz?
+∠ b = ?
+b
+P
+Q
+R
+28°
+S
+∠ c = ?
+c
+Q
+R
+28°
+S
+78°
+∠ a ni qanday topish
+mumkin?
+a
+53°
+N
+K
+M
+∠ a = ?
+a
+P
+Q
+R
+28°
+N
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   97
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   97
+13/11/24   14:51
+13/11/24   14:51
+
+98
+Guruh bo‘lib ishlang.
+Ikkita tayoq olib, ularning o‘rtasini mix bilan mahkamlang. 
+Transportir bilan vertikal burchaklarni o‘lchang.
+Tayoqlarni burib, burchaklar o‘lchamini o‘zgartiring va hosil bo‘lgan burchaklarni 
+qaytadan o‘lchang. 
+ 
+ 
+d
+a
+c
+b
+ 
+d
+a
+c
+b
+Qanday o‘zgarishni sezdingiz? Muhokama qiling.
+a) 
+∠ a = ∠ b  o‘rinlimi? ∠ c = ∠ d -chi?
+b)  ∠ a + ∠ c = ∠ b + ∠ d  o‘rinlimi? 
+c)  ∠ a + ∠ d = ∠ b + ∠ c o‘rinlimi? 
+Juftlikda ishlang
+Sherigingiz bilan Muhokama qiling.
+AOD va BOE kesishuvchi to‘g‘ri chiziqlar berilgan. 
+a) 
+Vertikal burchaklar juftligini aniqlang.
+b) ∠ EOF = ∠ DOC. Bu burchaklar vertikalmi? Tushuntiring.
+ 
+ 
+ 
+F
+75°
+O
+E
+D
+C
+A
+B
+34°
+71°
+75°
+71°
+34°
+ 
+Qo‘lda bajariladigan mashq
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   98
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   98
+13/11/24   14:51
+13/11/24   14:51
+
+99
+Turmushda matematika
+Dazmol taxtasiga qarab vertikal
+burchaklarni ayting. Uyingizdagi yana
+qaysi jihozlarda vertikal burchaklarni
+ko‘rish mumkin?
+Bajaring va o‘rganing
+a)  
+AOB va COD – to‘g‘ri chiziqlar. 
+ 
+Qaysi burchak AOC burchakka teng?
+50°
+D
+B
+C
+A
+O
+b) 
+EOF va GOH – to‘g‘ri chiziqlar. 
+        Qaysi burchak GOF burchakka teng?
+140°
+H
+F
+G
+E
+O
+c) 
+MN, OP va QR – to‘g‘ri chiziqlar. 
+ 
+∠ g va ∠ h larni toping.
+46°
+R
+h
+g
+O
+92°
+M
+P
+Q
+N
+d) 
+GH va KL – to‘g‘ri chiziqlar. 
+   
+∠ d, ∠ e va ∠ f  larni toping.
+ 
+e
+68°
+H
+f
+d
+L
+G
+K
+ 
+137–140
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   99
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   99
+13/11/24   14:51
+13/11/24   14:51
+
+100
+Qarang va o‘rganing
+ 
+1  Nuqta atrofida bir marta to‘liq aylanishdan 360° li burchak hosil bo‘ladi. 
+ 
+ 
+2  Quyidagi chizmalarda AB va CD perpendikulyar to‘g‘ri chiziqlar berilgan.
+ 
+∠ w, ∠ x, ∠ y va ∠ z – to‘g‘ri burchaklar.
+ 
+  
+ 
+A
+B
+D
+C
+w
+x
+y
+z
+ 
+A
+C
+B
+D
+z
+x
+w
+y
+ 
+ 
+ 
+ 
+∠ w + ∠ x + ∠ y + ∠ z = 4 × 90° 
+                                    
+ 
+= 360° 
+3  ∠ a, ∠ b, ∠ c va ∠ d – O nuqta atrofidagi burchaklar.
+ 
+Ularning yig‘indisini toping. 
+ 
+ 
+ 
+ 
+∠ a = 60°
+ 
+d
+b
+a
+c
+O
+ ∠ b = 70°
+ 
+ 
+ 
+∠ c = 130°
+ 
+ 
+ 
+∠ d = 100°
+ 
+ 
+ 
+∠ a + ∠ b + ∠ c + ∠ d = 60° + 70° + 130° + 100°
+                                     
+ 
+= 360°
+Nuqta atrofidagi burchaklar yig‘indisi 360° ga teng.
+∠ w  va ∠ x, ∠ y va ∠ z qo‘shni
+burchaklar juftligini tashkil qiladi.
+∠ w + ∠ x = 180°
+∠ y + ∠ z = 180°
+Demak, ∠ w + ∠ x + ∠ y + ∠ z = 360°.
+Nuqta atrofidagi burchaklar
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   100
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   100
+13/11/24   14:51
+13/11/24   14:51
+

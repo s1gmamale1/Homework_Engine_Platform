@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NETS · Phase 1 & 3 Full Demo</title>
+    <style>
+        :root {
+            --bg: #f8fbff;
+            --surface: rgba(255, 255, 255, 0.84);
+            --surface-strong: rgba(255, 255, 255, 0.96);
+            --text: #17324d;
+            --text-muted: #6f88a3;
+            --accent: #63b8ff;
+            --accent-glow: rgba(99, 184, 255, 0.32);
+            --line: #8fd0ff;
+            --dot: #d9e9f8;
+            --success: #35c66f;
+            --danger: #ef6b73;
+            --shadow-card: 0 10px 30px rgba(99, 184, 255, 0.12);
+            --safe-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 15% 20%, rgba(143, 208, 255, 0.22), transparent 28%),
+                radial-gradient(circle at 85% 18%, rgba(99, 184, 255, 0.14), transparent 24%),
+                radial-gradient(circle at 50% 85%, rgba(180, 223, 255, 0.2), transparent 32%),
+                linear-gradient(180deg, #ffffff 0%, #f5faff 100%);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: manipulation;
+        }
+
+        #bg-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .geo-shape {
+            position: absolute;
+            fill: none;
+            stroke: var(--accent);
+            stroke-width: 1.1;
+            opacity: 0.34;
+            filter: drop-shadow(0 0 8px var(--accent-glow));
+            animation: float 25s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            33% { transform: translate(40px, -60px) rotate(120deg) scale(1.1); }
+            66% { transform: translate(-30px, 20px) rotate(240deg) scale(0.9); }
+            100% { transform: translate(0, 0) rotate(360deg) scale(1); }
+        }
+
+        #app {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .screen {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 420ms ease;
+        }
+
+        .screen.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 28px;
+            border: 1px solid rgba(99, 184, 255, 0.28);
+            box-shadow: 0 16px 44px rgba(141, 180, 212, 0.16), var(--shadow-card);
+            backdrop-filter: blur(14px);
+        }
+
+        .final-card,
+        .phase-card,
+        .result-card {
+            width: min(84vw, 460px);
+            min-height: 190px;
+            padding: 28px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .final-text,
+        .phase-text,
+        .result-title {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.45;
+            color: var(--accent);
+            text-shadow: 0 0 15px var(--accent-glow);
+            opacity: 0;
+            animation: fadeInUp 700ms ease forwards;
+        }
+
+        .phase-anchor {
+            position: absolute;
+            top: 28px;
+            right: 28px;
+            width: min(42vw, 240px);
+            min-height: 72px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transform-origin: top right;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .phase-anchor.show {
+            opacity: 1;
+            animation: anchor-in 850ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .phase-anchor .phase-text {
+            animation: none;
+            opacity: 1;
+            font-size: 16px;
+            line-height: 1.35;
+        }
+
+        @keyframes anchor-in {
+            from { transform: translate(-18vw, 18vh) scale(1.45); }
+            to { transform: translate(0, 0) scale(1); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeOutDown {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(12px); }
+        }
+
+        #action-button {
+            position: fixed;
+            left: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+            overflow: hidden;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .btn-text {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 17px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 250ms ease;
+        }
+
+        .state-line {
+            width: 32vw;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+            pointer-events: none;
+            bottom: calc(20px + var(--safe-bottom));
+            transform: translateX(-50%);
+            opacity: 0.6;
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .state-pill {
+            width: 65vw;
+            max-width: 320px;
+            height: 54px;
+            background: var(--accent);
+            border-radius: 27px;
+            bottom: calc(24px + var(--safe-bottom));
+            transform: translateX(-50%);
+            box-shadow: 0 0 25px var(--accent-glow);
+        }
+
+        .state-pill .btn-text { opacity: 1; }
+
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scale(1.0); box-shadow: 0 0 15px var(--accent-glow); }
+            50% { transform: translateX(-50%) scale(1.05); box-shadow: 0 0 30px var(--accent-glow); }
+            100% { transform: translateX(-50%) scale(1.0); box-shadow: 0 0 15px var(--accent-glow); }
+        }
+
+        .pulse { animation: pulse 2s infinite ease-in-out; }
+
+        #quiz-shell {
+            position: absolute;
+            inset: 0;
+            padding: 110px 20px 130px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 500ms ease;
+        }
+
+        #quiz-shell.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .question-box {
+            width: min(86vw, 620px);
+            min-height: 220px;
+            padding: 24px 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 14px;
+            background: var(--surface-strong);
+            border-radius: 28px;
+            border: 1px solid rgba(99, 184, 255, 0.24);
+            box-shadow: 0 14px 34px rgba(141, 180, 212, 0.14), var(--shadow-card);
+            opacity: 0;
+            transform: translateY(18px) scale(0.98);
+            transition: opacity 500ms ease, transform 500ms ease;
+        }
+
+        .question-box.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .question-box.out {
+            animation: fadeOutDown 320ms ease forwards;
+        }
+
+        .option-btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: min(38vw, 280px);
+            min-height: 84px;
+            padding: 16px 18px;
+            border-radius: 24px;
+            border: 1px solid rgba(99, 184, 255, 0.24);
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 12px 28px rgba(141, 180, 212, 0.14), var(--shadow-card);
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.35;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%) scale(0.15);
+            opacity: 0;
+            transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .option-btn.visible { opacity: 1; }
+        .option-btn.correct { background: rgba(53, 198, 111, 0.14); border-color: rgba(53, 198, 111, 0.7); color: #17864a; }
+        .option-btn.wrong { background: rgba(239, 107, 115, 0.12); border-color: rgba(239, 107, 115, 0.66); color: #c3535d; }
+        .option-btn.merging { width: 50vw; max-width: 300px; min-height: 6px; height: 6px; padding: 0; border-radius: 3px; background: var(--accent); color: transparent; font-size: 0; }
+
+        /* GAME BREAK EXTENSIONS */
+        .quiz-option {
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 12px;
+            background: var(--surface-strong);
+            border: 1px solid rgba(99, 184, 255, 0.2);
+            border-radius: 16px;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 250ms ease;
+            text-align: left;
+        }
+        .quiz-option.correct { background: var(--success); color: white; }
+        .quiz-option.wrong { background: var(--danger); color: white; }
+
+        .why-node {
+            background: var(--surface-strong);
+            padding: 20px;
+            border-radius: 24px;
+            border-left: 5px solid var(--accent);
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-card);
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 500ms ease;
+        }
+        .why-node.show { opacity: 1; transform: translateX(0); }
+
+        .ttt-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            width: min(85vw, 320px);
+            margin: 20px auto;
+        }
+        .ttt-cell {
+            aspect-ratio: 1;
+            background: var(--surface-strong);
+            border-radius: 16px;
+            border: 2px solid rgba(99, 184, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--accent);
+            cursor: pointer;
+            transition: all 300ms ease;
+        }
+        .ttt-cell.taken { pointer-events: none; }
+        .ttt-cell.ai { color: var(--danger); }
+
+        @media (max-width: 640px) {
+            .final-card, .phase-card, .result-card { width: 90vw; padding: 24px 18px; }
+            .option-btn { width: 42vw; min-height: 74px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="bg-canvas">
+        <svg class="geo-shape" width="160" height="160" style="top: 10%; left: 8%;">
+            <circle cx="80" cy="80" r="54"></circle>
+            <circle cx="80" cy="80" r="72" stroke-dasharray="4 10"></circle>
+        </svg>
+        <svg class="geo-shape" width="240" height="240" style="top: 58%; left: 5%; animation-duration: 30s;">
+            <polygon points="120,24 210,78 210,168 120,220 30,168 30,78"></polygon>
+        </svg>
+    </div>
+
+    <div id="app">
+        <!-- PHASE 1: MEMORY SPRINT -->
+        <div id="screen-final" class="screen active">
+            <div class="card final-card">
+                <div class="final-text">Siz tugattingiz. Flash kartalar yakunlandi.</div>
+            </div>
+        </div>
+
+        <div id="screen-phase" class="screen">
+            <div class="card phase-card" id="phase-center-card"><div class="phase-text">Memory Sprint</div></div>
+            <div class="card phase-anchor" id="phase-anchor"><div class="phase-text">Memory Sprint</div></div>
+            <div id="quiz-shell">
+                <div class="question-box" id="question-box">
+                    <div class="question-title" id="question-title" style="font-size: 20px; font-weight: 700;"></div>
+                    <div id="question-subtitle" style="font-size: 14px; color: var(--text-muted);"></div>
+                </div>
+                <div class="answer-zone" style="position: relative; width: 100%; height: 300px; margin-top: 20px;">
+                    <button class="option-btn" id="opt-0"></button>
+                    <button class="option-btn" id="opt-1"></button>
+                    <button class="option-btn" id="opt-2"></button>
+                    <button class="option-btn" id="opt-3"></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="screen-result" class="screen">
+            <div class="card result-card">
+                <div class="result-title">Memory Sprint tugadi</div>
+                <div id="result-score" style="font-size: 48px; font-weight: 800; color: var(--accent); margin: 10px 0;"></div>
+                <div id="result-copy" style="font-size: 16px; text-align: center;"></div>
+            </div>
+        </div>
+
+        <!-- PHASE 3: GAME BREAKS -->
+        <div id="screen-gb1" class="screen">
+            <div class="caption" style="margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;">Game Break 1 · Adaptive Quiz</div>
+            <div class="card" style="width: min(90vw, 500px); padding: 24px;">
+                <div id="aq-question" style="font-weight: 700; font-size: 18px; margin-bottom: 20px;"></div>
+                <div id="aq-options"></div>
+            </div>
+        </div>
+
+        <div id="screen-gb2" class="screen">
+            <div class="caption" style="margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;">Game Break 2 · Why Chain</div>
+            <div id="why-container" style="width: min(90vw, 500px);"></div>
+        </div>
+
+        <div id="screen-gb3" class="screen">
+            <div class="caption" style="margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;">Game Break 3 · Tic Tac Toe AI</div>
+            <div id="ttt-status" style="margin-bottom: 15px; font-weight: 700; color: var(--accent);">Sizning navbatingiz (X)</div>
+            <div class="ttt-grid" id="ttt-grid"></div>
+        </div>
+
+        <!-- SHARED ACTION BUTTON -->
+        <div id="action-button" class="state-line">
+            <span class="btn-text" id="btn-text"></span>
+        </div>
+    </div>
+
+    <script>
+        const QUESTIONS = [
+            {
+                type: "KO",
+                prompt: "Quyidagi tenglamalardan qaysi biri kvadrat tenglama?",
+                subtitle: "Which of the following is a quadratic equation?",
+                tags: "[Bloom: L1 | PISA: L1]",
+                explain: "Ko'nikma: aniqlash, xotira",
+                options: ["3x + 5 = 0", "x² – 7 = 0", "x³ – x = 0", "2x + 3y = 0"],
+                correct: 1
+            },
+            {
+                type: "KO",
+                prompt: "5x² – 3x + 7 = 0 tenglamaning bosh koeffitsiyenti qaysi?",
+                subtitle: "What is the leading coefficient in 5x² – 3x + 7 = 0?",
+                tags: "[Bloom: L1 | PISA: L1]",
+                explain: "Ko'nikma: terminologiya, xotira",
+                options: ["5", "–3", "7", "–5"],
+                correct: 0
+            },
+            {
+                type: "To\u02bcg\u02bcri / Noto\u02bcg\u02bcri",
+                prompt: "0·x² + 5x – 2 = 0 kvadrat tenglama hisoblanadi.",
+                subtitle: "The equation 0·x² + 5x – 2 = 0 is a quadratic equation.",
+                tags: "[Bloom: L2 | PISA: L2]",
+                explain: "Agar a = 0 bo\u02bcsa, x² yo\u02bcqoladi va tenglama chiziqli bo\u02bclib qoladi.",
+                options: ["To\u02bcg\u02bcri", "Noto\u02bcg\u02bcri", "Faqat ba\u02bczan", "Aniq emas"],
+                correct: 1
+            },
+            {
+                type: "KO",
+                prompt: "x² = 25 tenglamaning nechta haqiqiy ildizi bor?",
+                subtitle: "How many real roots does the equation x² = 25 have?",
+                tags: "[Bloom: L2 | PISA: L1]",
+                explain: "Ko'nikma: xotira, qo'llash",
+                options: ["0", "1", "2", "Cheksiz ko\u02bcop"],
+                correct: 2
+            },
+            {
+                type: "Ha / Yo\u02bcq / Aniq emas",
+                prompt: "\"Har qanday kvadrat tenglama aniq ikkita haqiqiy ildizga ega\" fikri to\u02bcg\u02bcrimi?",
+                subtitle: "Evaluate the statement: Every quadratic equation has exactly two real roots.",
+                tags: "[Bloom: L2 | PISA: L2]",
+                explain: "Kvadrat tenglama 0, 1 yoki 2 ta haqiqiy ildizga ega bo\u02bclib qoladi.",
+                options: ["Ha", "Yo\u02bcq", "Aniq emas", "Faqat x²=d da"],
+                correct: 1
+            },
+            {
+                type: "KO",
+                prompt: "–7x² – 13x + 8 = 0 tenglamaning ozod hadi qaysi?",
+                subtitle: "What is the free term in –7x² – 13x + 8 = 0?",
+                tags: "[Bloom: L1 | PISA: L1]",
+                explain: "Ko'nikma: terminologiya, xotira",
+                options: ["–7", "–13", "8", "x²"],
+                correct: 2
+            }
+        ];
+
+        const AQ_QUESTIONS = [
+            { q: "x² – 16 = 0 bo'lsa, x nechaga teng?", a: ["x = 4", "x = ±4", "x = -4"], c: 1 },
+            { q: "x² + 4x + 4 = 0 tenglamaning nechta yechimi bor?", a: ["1 ta", "2 ta", "0 ta"], c: 0 }
+        ];
+
+        const WHY_CHAIN = [
+            "Nega kvadrat tenglamaning ildizlari soni 2 tadan ko'p bo'la olmaydi?",
+            "Nega x² = d tenglamada d < 0 bo'lsa, haqiqiy ildizlar yo'q?"
+        ];
+
+        const TTT_MATH = ["√49", "2³", "x²=1", "5*3", "10-2", "8+4", "√81", "3*4", "√25"];
+
+        const state = {
+            stage: 0, index: 0, score: 0, isAnimating: false,
+            aqIndex: 0, whyIndex: 0,
+            tttBoard: Array(9).fill(null), tttActive: true
+        };
+
+        const btn = document.getElementById('action-button');
+        const btnText = document.getElementById('btn-text');
+        const screens = {
+            final: document.getElementById('screen-final'),
+            phase: document.getElementById('screen-phase'),
+            result: document.getElementById('screen-result'),
+            gb1: document.getElementById('screen-gb1'),
+            gb2: document.getElementById('screen-gb2'),
+            gb3: document.getElementById('screen-gb3')
+        };
+
+        const expandedPositions = [{left:'25%',top:'20%'},{left:'75%',top:'20%'},{left:'25%',top:'70%'},{left:'75%',top:'70%'}];
+
+        function showButton(label) {
+            btn.className = 'state-pill pulse';
+            btnText.textContent = label;
+            btnText.style.opacity = '1';
+        }
+
+        function hideButton() {
+            btn.className = 'state-line';
+            btnText.style.opacity = '0';
+        }
+
+        function init() {
+            btn.addEventListener('click', handleAction);
+            document.querySelectorAll('.option-btn').forEach((b, i) => b.onclick = () => handleAnswer(i));
+            setTimeout(() => showButton('Keyingi'), 1000);
+        }
+
+        function handleAction() {
+            if (state.isAnimating) return;
+            if (state.stage === 0) startSprint();
+            else if (state.stage === 2) startGB1();
+            else if (state.stage === 3) startGB2();
+            else if (state.stage === 4) startGB3();
+            else if (state.stage === 5) alert("Dars yakunlandi!");
+        }
+
+        function startSprint() {
+            hideButton();
+            screens.final.classList.remove('active');
+            screens.phase.classList.add('active');
+            setTimeout(() => {
+                document.getElementById('phase-center-card').style.animation = 'fadeOutDown 500ms forwards';
+                document.getElementById('phase-anchor').classList.add('show');
+                document.getElementById('quiz-shell').style.opacity = '1';
+                document.getElementById('quiz-shell').style.pointerEvents = 'auto';
+                renderQuestion();
+                state.stage = 1;
+            }, 1000);
+        }
+
+        function renderQuestion() {
+            const q = QUESTIONS[state.index];
+            document.getElementById('question-title').textContent = q.prompt;
+            document.getElementById('question-subtitle').textContent = q.subtitle;
+            document.querySelectorAll('.option-btn').forEach((b, i) => {
+                b.textContent = q.options[i];
+                b.className = 'option-btn visible';
+                b.style.left = expandedPositions[i].left;
+                b.style.top = expandedPositions[i].top;
+                b.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
+        }
+
+        function handleAnswer(idx) {
+            if (state.isAnimating) return;
+            state.isAnimating = true;
+            const correct = QUESTIONS[state.index].correct;
+            if (idx === correct) state.score++;
+            document.getElementById(`opt-${idx}`).classList.add(idx === correct ? 'correct' : 'wrong');
+            setTimeout(() => {
+                state.index++;
+                if (state.index < QUESTIONS.length) { renderQuestion(); state.isAnimating = false; }
+                else finishSprint();
+            }, 800);
+        }
+
+        function finishSprint() {
+            screens.phase.classList.remove('active');
+            screens.result.classList.add('active');
+            document.getElementById('result-score').textContent = `${state.score} / ${QUESTIONS.length}`;
+            document.getElementById('result-copy').textContent = "Yaxshi natija! Endi amaliyotga o'tamiz.";
+            state.stage = 2; state.isAnimating = false;
+            setTimeout(() => showButton('Game Break Boshlash'), 1500);
+        }
+
+        function startGB1() {
+            hideButton(); screens.result.classList.remove('active'); screens.gb1.classList.add('active');
+            state.stage = 3; renderAQ();
+        }
+
+        function renderAQ() {
+            const q = AQ_QUESTIONS[state.aqIndex];
+            document.getElementById('aq-question').textContent = q.q;
+            const cont = document.getElementById('aq-options'); cont.innerHTML = '';
+            q.a.forEach((ans, i) => {
+                const b = document.createElement('button'); b.className = 'quiz-option'; b.textContent = ans;
+                b.onclick = () => {
+                    if (i === q.c) {
+                        b.classList.add('correct');
+                        setTimeout(() => {
+                            state.aqIndex++;
+                            if (state.aqIndex < AQ_QUESTIONS.length) renderAQ();
+                            else showButton('Keyingi O\'yin');
+                        }, 600);
+                    } else b.classList.add('wrong');
+                };
+                cont.appendChild(b);
+            });
+        }
+
+        function startGB2() {
+            hideButton(); screens.gb1.classList.remove('active'); screens.gb2.classList.add('active');
+            state.stage = 4; renderWhy();
+        }
+
+        function renderWhy() {
+            const node = document.createElement('div'); node.className = 'why-node';
+            node.innerHTML = `<strong>Nega?</strong><br>${WHY_CHAIN[state.whyIndex]}`;
+            node.onclick = () => {
+                state.whyIndex++;
+                if (state.whyIndex < WHY_CHAIN.length) renderWhy();
+                else showButton('So\'nggi O\'yin');
+            };
+            document.getElementById('why-container').appendChild(node);
+            setTimeout(() => node.classList.add('show'), 50);
+        }
+
+        function startGB3() {
+            hideButton(); screens.gb2.classList.remove('active'); screens.gb3.classList.add('active');
+            state.stage = 5; renderTTT();
+        }
+
+        function renderTTT() {
+            const grid = document.getElementById('ttt-grid'); grid.innerHTML = '';
+            state.tttBoard.forEach((cell, i) => {
+                const d = document.createElement('div'); d.className = 'ttt-cell' + (cell==='O'?' ai':'');
+                d.textContent = cell || ''; d.onclick = () => {
+                    if (!cell && state.tttActive) {
+                        const ans = prompt(`Hujayra ${i+1}: ${TTT_MATH[i]} nechaga teng?`);
+                        if (ans) { state.tttBoard[i] = 'X'; renderTTT(); checkWin(); if (state.tttActive) setTimeout(makeAIMove, 600); }
+                    }
+                };
+                grid.appendChild(d);
+            });
+        }
+
+        function makeAIMove() {
+            const empty = state.tttBoard.map((c,i)=>c===null?i:null).filter(c=>c!==null);
+            if (empty.length > 0) { state.tttBoard[empty[0]] = 'O'; renderTTT(); checkWin(); }
+        }
+
+        function checkWin() {
+            const wins = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+            for (let w of wins) if (state.tttBoard[w[0]] && state.tttBoard[w[0]]===state.tttBoard[w[1]] && state.tttBoard[w[0]]===state.tttBoard[w[2]]) {
+                state.tttActive = false; document.getElementById('ttt-status').textContent = state.tttBoard[w[0]]==='X'?'G\'alaba!':'AI yutdi!';
+                showButton('Yakunlash'); return;
+            }
+            if (!state.tttBoard.includes(null)) { state.tttActive = false; document.getElementById('ttt-status').textContent = "Durang!"; showButton('Yakunlash'); }
+        }
+
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

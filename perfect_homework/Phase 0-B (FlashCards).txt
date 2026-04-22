@@ -1,0 +1,274 @@
+                        ┌───────────────────────┐
+                        │   KVADRAT TENGLAMA    │
+                        │    ax² + bx + c = 0   │
+                        └──────────┬────────────┘
+                                   │
+    ┌──────────────┬───────────────┼───────────────┬──────────────┐
+    │              │               │               │              │
+ [NAMES]       [FORMULAS]    [DECISIONS]    [KEY INSIGHTS]
+ 4 cards       4 cards       2 cards        2 cards
+    │              │               │               │
+ 01 Quad eqn    05 Std form    09 Method      11 Two answers
+ 02 a, b, c     06 x² = d      10 Root count     one reality
+ 03 Root        07 Diff of                    12 ± symbol
+ 04 Arith sqrt     squares
+                08 Factor
+                   template
+                   
+                   ---
+  Kartalar to'plami (12 ta karta)
+
+  KLASTER A · NOMLAR
+
+  ┌─ KARTA 01 · Kvadrat Tenglama ───────────────┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │  ┌─────────────────────────────┐             │
+  │  │      KVADRAT TENGLAMA       │             │
+  │  │      ax² + bx + c = 0       │             │
+  │  └─────────────────────────────┘             │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │  Noma'lumning kvadratda uchragan tenglama.   │
+  │  Standart shakl: ax² + bx + c = 0,           │
+  │  bunda a ≠ 0.                                │
+  │                                              │
+  │  🧠 Yodlash usuli: "kvadrat" so'zi lotincha  │
+  │  quadratus = "kvadratlangan" dan keladi —    │
+  │  Bobilliklar bu tenglamalarni so'zma-so'z    │
+  │  kvadratlar chizib yechishgan.               │
+  └──────────────────────────────────────────────┘
+
+  ┌─ KARTA 02 · Kvadrat Tenglamaning Qismlari ──┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │       KVADRAT TENGLAMANING QISMLARI          │
+  │                                              │
+  │        3 x² +  5 x  +  2  =  0               │
+  │        │      │       │                      │
+  │        a      b       c                      │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │  a  = bosh koeffitsiyent  (yetakchi)         │
+  │       — x² oldidagi son                      │
+  │                                              │
+  │  b  = ikkinchi koeffitsiyent  (o'rta)        │
+  │       — x oldidagi son                       │
+  │                                              │
+  │  c  = ozod had  (erkin had / konstanta)      │
+  │       — yolg'iz turgan son, x bog'liq emas   │
+  │                                              │
+  │  🧠 Yodlash usuli: "ozod" erkin degani —     │
+  │  erkin hadni x zanjirlab qo'ymaydi.          │
+  └──────────────────────────────────────────────┘
+
+  ┌─ KARTA 03 · Ildiz ──────────────────────────┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │       ILDIZ  (root)                          │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │  x ning tenglamani to'g'ri qiladigan qiymati.│
+  │  Agar uni qo'ysangiz, ikkala tomon mos keladi.│
+  │                                              │
+  │  Kvadrat tenglamaning bo'lishi mumkin:       │
+  │   • 2 ta ildiz   (eng keng tarqalgan)        │
+  │   • 1 ta ildiz   (maxsus holat)              │
+  │   • 0 ta ildiz   (haqiqiy yechim yo'q)       │
+  │                                              │
+  │  🧠 Yodlash usuli: "ildiz" = ildiz (o'simlik │
+  │  ildizi kabi). Yechim tenglamani nolda       │
+  │  "ildizlaydi".                               │
+  └──────────────────────────────────────────────┘
+
+  ┌─ KARTA 04 · Arifmetik Kvadrat Ildiz ────────┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │       ARIFMETIK KVADRAT ILDIZ                │
+  │       √d                                     │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │  Konventsiya bo'yicha, √d faqat MUSBAT       │
+  │  ildizni anglatadi.                          │
+  │                                              │
+  │   √25 = 5          EMAS  ±5                   │
+  │   √64 = 8          EMAS  ±8                   │
+  │                                              │
+  │  Manfiy ildiz, kerak bo'lganda, –√d sifatida │
+  │  yoziladi.                                   │
+  │                                              │
+  │  🧠 Yodlash usuli: √ belgisi va'da — "sizga  │
+  │  musbatnigina beraman, boshqa narsa emas."   │
+  └──────────────────────────────────────────────┘
+
+  ---
+  KLASTER B · FORMULALAR
+
+  ┌─ KARTA 05 · Standart Shakl ─────────────────┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │       KVADRAT TENGLAMA · STANDART SHAKL      │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │       ax² + bx + c = 0                       │
+  │                                              │
+  │       a, b, c ∈ ℝ                            │
+  │       a ≠ 0                                  │
+  │                                              │
+  │  🧠 Yodlash usuli: a ≠ 0 juda muhim — agar   │
+  │  a = 0 bo'lsa, x² yo'qoladi va bu faqat      │
+  │  chiziqli tenglama bo'ladi, kvadrat emas.    │
+  └──────────────────────────────────────────────┘
+
+  ┌─ KARTA 06 · Sodda Holat x² = d ──────────────┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │       x² = d   →   x = ?                     │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │       x₁,₂ = ±√d    (d ≥ 0 bo'lganda)        │
+  │                                              │
+  │  Uch holat:                                  │
+  │                                              │
+  │    d > 0      d = 0      d < 0               │
+  │   ● ─── ●     ───●───    ─── ─── ───          │
+  │  ikki ildiz   bitta ildiz   haqiqiy ildiz yo'q│
+  │                                              │
+  │  🧠 Yodlash usuli: parabola y = x² gorizontal  │
+  │  d chizig'ini 2, 1 yoki 0 joyda kesadi.      │
+  └──────────────────────────────────────────────┘
+
+  ┌─ KARTA 07 · Kvadratlar Ayirmasi ─────────────┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │       KVADRATLAR AYIRMASI                    │
+  │       a² – b² = ?                            │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │       a² – b² = (a – b)(a + b)               │
+  │                                              │
+  │  Quyidagilarni ko'paytuvchilarga ajratishda  │
+  │  ishlatiladi:                                │
+  │       x² – 64 = (x – 8)(x + 8)               │
+  │       x² – d  = (x – √d)(x + √d)             │
+  │                                              │
+  │  🧠 Yodlash usuli: ikki kvadrat orasida bitta │
+  │  minus belgisi — har doim yig'indi × ayirma   │
+  │  ko'rinishida ajraladi.                      │
+  └──────────────────────────────────────────────┘
+
+  ┌─ KARTA 08 · Ko'paytuvchilarga Ajratish Andozasi ─┐
+  │                                                  │
+  │  OLD TOMONI                                      │
+  │       x² + bx + c = ( ? )( ? )                   │
+  │                                                  │
+  │  ORQA TOMONI                                      │
+  │  Quyidagi shartlarni qanoatlantiruvchi p, q     │
+  │  sonlarini toping:                               │
+  │                                                  │
+  │       p + q  =  b   (o'rta koeffitsient)         │
+  │       p · q  =  c   (ozod had)                   │
+  │                                                  │
+  │  Keyin:                                          │
+  │       x² + bx + c = (x + p)(x + q)               │
+  │                                                  │
+  │  🧠 Yodlash usuli: "yig'indi = o'rta,            │
+  │  ko'paytma = oxirgi." Ko'paytuvchi juftlarining  │
+  │  qisqa jadvalini tuzing, to'g'ri juft yagona.    │
+  └──────────────────────────────────────────────────┘
+
+  ---
+  KLASTER C · QAROR QOIDALARI
+
+  ┌─ KARTA 09 · Usul Tanlash ────────────────────┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │       QAYSI USULNI TANLASH?                  │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │   Tenglama quyidagicha ko'rinadi…  Foydalaning…│
+  │   ─────────────────────────────    ────────────│
+  │   x² = d   (2 ta had)              ikkala tomondan│
+  │                                    kvadrat ildiz │
+  │                                              │
+  │   ax² + bx + c = 0                 ko'paytuvchilarga│
+  │   (3 ta had)                       ajratish, yoki keyin│
+  │                                    kvadrat tenglama │
+  │                                    formulasi        │
+  │                                              │
+  │  🧠 Yodlash usuli: ikki had → √. Uch had → (  )( │
+  │  ).                                          │
+  └──────────────────────────────────────────────┘
+
+  ┌─ KARTA 10 · x² = d uchun Ildizlar Soni ─────┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │       x² = d   nechta ildiz?                 │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │                                              │
+  │     d > 0   →  2 ta haqiqiy ildiz   ( x = ±√d )│
+  │     d = 0   →  1 ta ildiz           ( x = 0 )  │
+  │     d < 0   →  0 ta haqiqiy ildiz   (bo'sh)    │
+  │                                              │
+  │  Tasvir (parabola y = x² vs. gorizontal d):  │
+  │                                              │
+  │       │  ╲           ╱                       │
+  │       │   ╲         ╱                        │
+  │     d ┼────●───────●────   d > 0 (2 marta kesadi│
+  │       │    ╲╲     ╱╱                         │
+  │       │     ╲╲   ╱╱                          │
+  │       │      ╲╲_╱╱                           │
+  │       │                                      │
+  │                                              │
+  │  🧠 Yodlash usuli: haqiqiy sonning kvadrati   │
+  │  hech qachon manfiy bo'lmaydi, shuning uchun  │
+  │  d < 0 ning haqiqiy javobi yo'q.              │
+  └──────────────────────────────────────────────┘
+
+  ---
+  KLASTER D · ASOSIY TUSHUNCHALAR
+
+  ┌─ KARTA 11 · Ikki Javob, Bir Haqiqat ─────────┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │       IKKI JAVOB, BIR HAQIQAT                │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │  Kvadrat tenglamalar odatda IKKI             │
+  │  matematik yechim beradi. Tenglama           │
+  │  kontekstni bilmaydi.                        │
+  │                                              │
+  │  Siz haqiqiy dunyo qoidalari bo'yicha        │
+  │  filtrlaysiz:                                │
+  │   • uzunliklar manfiy bo'lishi mumkin emas   │
+  │   • vaqt manfiy bo'lishi mumkin emas         │
+  │   • sonlar butun bo'lishi kerak              │
+  │                                              │
+  │  Matematika ikkisini ham topshiradi → siz    │
+  │  fizik jihatdan to'g'ri bo'lganini saqlaysiz.│
+  │                                              │
+  │  🧠 Yodlash usuli: ikkala javob ham matematik │
+  │  jihatdan to'g'ri — biri fizik jihatdan      │
+  │  mumkin emas. Bu xato emas, balki xususiyat. │
+  └──────────────────────────────────────────────┘
+
+  ┌─ KARTA 12 · ± Belgisi ──────────────────────┐
+  │                                              │
+  │  OLD TOMONI                                  │
+  │       ±   (plyus-minus)                      │
+  │                                              │
+  │  ORQA TOMONI                                  │
+  │  "Shu sonning musbat VA manfiy versiyasi"    │
+  │  degan qisqacha yozilish.                    │
+  │                                              │
+  │   x = ±5    degani    x = 5  YOKI  x = –5    │
+  │   x₁,₂ = ±√d   ikkala ildizni bitta           │
+  │                qatorda jamlaydi              │
+  │                                              │
+  │  🧠 Yodlash usuli: bitta belgi, ikki javob.   │
+  │  Muammoni yechayotganda IKKISINI ham         │
+  │  sanab o'tishni unutmang.                    │
+  └──────────────────────────────────────────────┘
+
+  ---

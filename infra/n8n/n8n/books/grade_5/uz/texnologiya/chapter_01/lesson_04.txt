@@ -1,0 +1,72 @@
+# Texnologiya va Dizayn — 4-dars
+
+4-§.
+Texnikaning asosiy konstruktiv elementlari.
+Texnikaning ishchi organlari
+Hayotimiz davomida turli xil mashina va mexanizmlarga duch kelamiz. Biz ular
+bilan hamma joyda uchrashamiz: transportda, uyda, ishda.
+Mashina o‘z vazifasini bajara olishi uchun ishchi (ijrochi) organi bo‘la­di. Uning
+tuzilishi mashinaning vazifasiga va ishlash sharoi­tiga bog‘­liq­dir. Masalan, ventilator­
+ning ishchi organi – parragi, ekska­vator­ning ishchi organi – kovshi, avtomobilning
+ishchi organi – g‘ildi­raklari hisoblanadi.
+Mashinalar ishchi organlari yordamida ko‘zlangan foydali ishlarni ba­ja­radi.
+Mashinaning ishchi organini dvigatel harakatga keltiradi.
+Harakat dvigateldan ishchi organga maxsus uzatmalar
+orqali o‘tadi. Bu jarayonda ko‘proq mexanik uzatmalar­
+dan, ya’ni tasmali, zanjirli, tishli, chervyakli, friksion va
+reykali uzatmalardan foydalaniladi.
+Tasmali uzatma – mashina mexanizm­larida aylan­
+ma harakatni bir valdan ikkin­chi valga tasma yordamida
+uzatuvchi mexa­nizm.
+Mustahkamlash uchun savollar
+1. Texnik obyekt deganda nimani tushunasiz?
+2. Texnik tizim deb nimaga aytiladi?
+3. Mashina, mexanizm va detalning bir-biridan farqi nimada?
+4. Texnologik mashinalar tasnifini tushuntirib bering.
+
+12
+12
+Tasmali uzatma vallarga oʻrnatilgan shkiv­lar va
+tasmalardan iborat. Tasmalar tipi­ga qarab yassi, ponasimon,
+doiraviy kesimli va boshqa tasmali xillarga boʻlinadi.
+Zanjirli uzatma – bir valdan ikkinchi valga aylan­ma
+harakatni uzatuvchi zanjirli mexanizm.
+U ikkala valga mustahkam о‘rnatilgan tishli g‘ildi­
+rak­lar (yul­duzchalar)ga kiydirilgan
+berk zanjir halqadan iborat bo‘ladi.
+Tishli uzatma – aylan­ma harakatni ilgarilanma ha­ra­kat­ga
+yoki aksincha ay­lan­tirib beradigan, yo boʻl­ma­sa, aylanma harakat
+uzatadigan 3 zvenoli mexa­nizm.
+Tishli uzatmaning silindrik, konussimon, toʻlqin­simon va
+boshqa shaklli turlari boʻladi.
+Chervyakli uzatma – vint (cherv­
+yak) va u bilan ilashadigan chervyak
+gʻildiragi vosita­sida ay­qash vallarga
+aylanma hara­kat uza­tadigan mexanizm. Harakat cherv­
+yakdagi trapetsional rezba bilan gʻildi­rakning yoysimon
+tishlari orasidagi ila­shish kuchi natijasida uzatiladi.
+Chervyak rezbasining kirimlar soniga kо‘ra bir, ikki va
+toʻrt kirimli, rezba oʻrami shakliga koʻra arximed spiralli,
+botiq profilli va boshqa xillarga boʻlinadi.
+Friksion uzatma (diskli, silindrli, konusli) – oʻqlari parallel va kesi­shuv­chi vallar
+orasida harakatni uza­tish, aylan­ma harakatni vintli va ilgarila­nma harakatga aylan­
+tiruvchi mexanizm.
+Reykali uzatma – ay­lan­ma harakatni ilgari­lan­ma (yo­
+ki tes­karisi) harakatga ay­lan­tirish uchun xizmat qi­la­digan
+mexanizm. U silindrik tish­
+li g‘ildirak va tishli rey­kadan
+tashkil topgan.
+Agar harakatning uzatilishi
+suyuqlik yoki gazlar ishtirokida
+amal­ga oshsa, bunday uzatmalar
+gidravlik
+yoki
+pnevmatik
+uzatmalar deyiladi.
+1. Mashina ishchi organi deganda nimani tushunasiz?
+2. Ishchi organning tuzilishi nimalarga bog‘liq bо‘ladi?
+3. Mexanik uzatmalarning qanday turlarini bilasiz?
+4. Qanday uzatmalar gidravlik uzatmalar deyiladi?
+
+13
+13

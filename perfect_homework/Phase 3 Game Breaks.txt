@@ -1,0 +1,204 @@
+O'yin 1 — Adaptiv Viktorina (8 ta element zaxirasi, har bir seansda 5-7 ta ko'rsatiladi)
+
+Har bir javobda suratga olish talab etiladi. IRT algoritmi avvalgi to'g'rilikka qarab keyingi elementni tanlaydi. Oson darajadan boshlab, u yerdan oshadi/kamaytiradi.
+
+Oson daraja — L2
+
+Element A1
+
+- Savol: Yeching: x² = 81
+- Kutilgan: x₁,₂ = ±9
+- Suratda ko'rsatilishi kerak: x = ±√81 = ±9
+- Teglar: [Bloom: L2 | PISA: L1]
+
+Element A2
+
+- Savol: Yeching: x² = 0
+- Kutilgan: x = 0 (bitta ildiz)
+- Suratda ko'rsatilishi kerak: x² = 0 → x = 0
+- Teglar: [Bloom: L2 | PISA: L1]
+
+Element A3
+
+- Savol: Yeching: x² + 16 = 0
+- Kutilgan: haqiqiy ildiz yo'q (no real roots)
+- Suratda ko'rsatilishi kerak: x² = –16 < 0 → haqiqiy ildiz yo'q
+- Teglar: [Bloom: L2 | PISA: L2]
+
+O'rta daraja — L3
+
+Element A4
+
+- Savol: Yeching: x² = 20
+- Kutilgan: x₁,₂ = ±2√5
+- Suratda ko'rsatilishi kerak: x = ±√20 = ±√(4·5) = ±2√5
+- Teglar: [Bloom: L3 | PISA: L2]
+- Ko'nikma: irrational ildizlarni soddalashtirish
+
+Element A5
+
+- Savol: Yeching: x² – 49 = 0
+- Kutilgan: x₁ = 7, x₂ = –7
+- Suratda ko'rsatilishi kerak: x² – 49 = (x – 7)(x + 7) = 0 → x = ±7
+- Teglar: [Bloom: L3 | PISA: L2]
+- Ko'nikma: kvadratlar ayirmasi
+
+Element A6
+
+- Savol: Yeching: x² + 5x + 6 = 0
+- Kutilgan: x₁ = –2, x₂ = –3
+- Suratda ko'rsatilishi kerak: p + q = 5, p · q = 6 → (2, 3); (x + 2)(x + 3) = 0 → x = –2 yoki –3
+- Teglar: [Bloom: L3 | PISA: L3]
+- Ko'nikma: ko'paytuvchi-juft usuli (Oldindan ko'rish 2-Paneli ① da o'rgatilgan)
+
+Qiyin daraja — L3-L4
+
+Element A7
+
+- Savol: Yeching: x² + 10x – 24 = 0
+- Kutilgan: x₁ = 2, x₂ = –12
+- Suratda ko'rsatilishi kerak: p + q = 10, p · q = –24 → (–2, 12); (x – 2)(x + 12) = 0 → x = 2 yoki –12
+- Teglar: [Bloom: L3 | PISA: L3]
+- Eslatma: bu darslikning o'z 1-muammosi. Oldindan ko'rishdan to'liq aylanib keladi.
+
+Element A8
+
+- Savol: Yeching: x² – 3x – 10 = 0
+- Kutilgan: x₁ = 5, x₂ = –2
+- Suratda ko'rsatilishi kerak: p + q = –3, p · q = –10 → (–5, 2); (x – 5)(x + 2) = 0 → x = 5 yoki –2
+- Teglar: [Bloom: L4 | PISA: L3]
+- Ko'nikma: aralash ishorali ko'paytuvchi-juft usuli
+
+Suratga olish mezonlari (har bir elementga qo'llaniladi)
+
+AI vision baholovchi suratni quyidagilar uchun tekshiradi:
+
+1. O'quvchi asl tenglamani yozgan
+2. Yechish usulini ko'rsatuvchi kamida bitta oraliq qadam
+3. Yakuniy javob kutilganiga mos keladi
+4. Yozuv o'qilishi mumkin (aks holda → qayta suratga olish so'rovi)
+
+4 tadan 3 ta bo'lsa o'tadi. Javob to'g'ri bo'lsa, lekin ish ko'rsatilmagan bo'lsa, qisman ball (o'qituvchi panelida "ishni ko'rsating" belgisi bilan belgilansin).
+
+---
+
+O'yin 2 — Nima Zanjiri (3 ta zanjir, suratga olish yo'q)
+
+3-darajali chuqurlikdagi Sokrat dialogi. AI o'quvchi o'zgarmas qiymatga yetgunicha so'raydi. Suratga olish talab etilmaydi — faqat tushunchaviy.
+
+Zanjir 1 — Nega a ≠ 0?
+
+┌───────┬─────────────────────────────────────────────────────────┬─────────────────────────────────────────────┐
+│ Daraja│                          Tergov                         │            Kutilgan o'quvchi javobi          │
+├───────┼─────────────────────────────────────────────────────────┼─────────────────────────────────────────────┤
+│  L1   │ "Nega a nolga teng bo'lishi mumkin emas?"             │ "Chunki u holda x² yo'qoladi."              │
+├───────┼─────────────────────────────────────────────────────────┼─────────────────────────────────────────────┤
+│  L2   │ "Agar x² yo'qolsa, tenglama qanday ko'rinishga keladi?"│ "Chiziqli tenglama (bx + c = 0)."           │
+├───────┼─────────────────────────────────────────────────────────┼─────────────────────────────────────────────┤
+│  L3   │ "Demak, tenglamani aynan kvadrat qiladigan narsa nima?"│ "x² hadining mavjudligi — ikkinchi daraja." │
+└───────┴─────────────────────────────────────────────────────────┴─────────────────────────────────────────────┘
+
+O'zgarmas qiymat: x² kvadratni kvadrat qiladigan narsa.
+Teglar: [Bloom: L3 | PISA: L3]
+
+Zanjir 2 — Nega ikkita ildiz?
+
+┌───────┬────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────┐
+│ Daraja│                       Tergov                       │                             Maqsad                              │
+├───────┼────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────┤
+│  L1   │ "Nega kvadrat tenglama odatda ikkita javobga ega?" │ "Chunki musbat va manfiy son bir xil musbatga kvadrat bo'ladi." │
+├───────┼────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────┤
+│  L2   │ "Qaysi amal bu ikkilikni hosil qiladi?"            │ "Kvadratga ko'tarish — u belgini yashiradi."                    │
+├───────┼────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────┤
+│  L3   │ "Unda x va x² o'rtasida qanday bog'liqlik bor?"    │ "x² x ning belgisini bilmaydi. Qaytarish uchun ± kerak."        │
+└───────┴────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────┘
+
+O'zgarmas qiymat: Kvadratga ko'tarish belgini yo'q qiladi; teskari aylantirish uchun ± kerak.
+Teglar: [Bloom: L4 | PISA: L3]
+
+Zanjir 3 — Nega yechimni rad etamiz?
+
+┌───────┬──────────────────────────────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Daraja│                                            Tergov                                            │                                              Maqsad                                               │
+├───────┼──────────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  L1   │ "Agar to'rtburchak yuzi haqidagi tenglama x = 2 va x = –12 bersa, nega biz –12 ni          │ "Chunki uzunlik manfiy bo'la olmaydi."                                                            │
+│       │ tashlaymiz?"                                                                                 │                                                                                                   │
+├───────┼──────────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  L2   │ "Ammo matematik jihatdan ikkala javob ham to'g'ri. Farqi qayerda?"                           │ "Matematika masala kontekstini bilmaydi; haqiqiy olamda fizik cheklovlar bor."                    │
+├───────┼──────────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  L3   │ "Demak, tenglama va masala o'rtasida qanday bog'liqlik?"                                     │ "Tenglama matematik javoblarni beradi; masalaning konteksti qaysi biri haqiqiy ekanligini         │
+│       │                                                                                              │ filtrlaydi."                                                                                      │
+└───────┴──────────────────────────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+O'zgarmas qiymat: Matematik dunyo va masala dunyosi alohida; kontekst filtrlaydi.
+Teglar: [Bloom: L4 | PISA: L4]
+
+---
+
+O'yin 3 — Xotira Moslash Tezligi (8 ta juft, suratga olish yo'q)
+
+4×4 panjara = 16 ta karta = 8 ta juft. Ikkita kartani bosing, tan olish savoli bilan tasdiqlang. Yechish talab etilmaydi.
+
+┌─────┬──────────────────┬───────────────────────────────────────┬───────────────────────────────────────────┐
+│  #  │      Karta A     │                Karta B                │              Tasdiqlash savoli            │
+├─────┼──────────────────┼───────────────────────────────────────┼───────────────────────────────────────────┤
+│ 1   │ a                │ bosh koeffitsiyent                    │ "x² oldidagi son nima deyiladi?"          │
+├─────┼──────────────────┼───────────────────────────────────────┼───────────────────────────────────────────┤
+│ 2   │ b                │ ikkinchi koeffitsiyent                │ "x oldidagi son nima deyiladi?"           │
+├─────┼──────────────────┼───────────────────────────────────────┼───────────────────────────────────────────┤
+│ 3   │ c                │ ozod had                              │ "Harfsiz sonning nomi nima?"              │
+├─────┼──────────────────┼───────────────────────────────────────┼───────────────────────────────────────────┤
+│ 4   │ ildiz            │ "tenglamani to'g'ri qiladigan qiymat" │ "Ildiz nima?"                             │
+├─────┼──────────────────┼───────────────────────────────────────┼───────────────────────────────────────────┤
+│ 5   │ ax² + bx + c = 0 │ standart shakl                        │ "Kvadrat tenglamaning asosiy ko'rinishi?" │
+├─────┼──────────────────┼───────────────────────────────────────┼───────────────────────────────────────────┤
+│ 6   │ ±                │ "plyus yoki minus"                    │ "± belgisi nimani anglatadi?"             │
+├─────┼──────────────────┼───────────────────────────────────────┼───────────────────────────────────────────┤
+│ 7   │ x² = d, d > 0    │ "2 ta haqiqiy ildiz"                  │ "d musbat bo'lsa, nechta ildiz?"          │
+├─────┼──────────────────┼───────────────────────────────────────┼───────────────────────────────────────────┤
+│ 8   │ x² = d, d < 0    │ "haqiqiy ildiz yo'q"                  │ "d manfiy bo'lsa, nechta haqiqiy ildiz?"  │
+└─────┴──────────────────┴───────────────────────────────────────┴───────────────────────────────────────────┘
+
+Teglar: [Bloom: L1-L2 | PISA: L1]
+
+---
+
+Vaqt byudjeti
+
+┌─────────────────────────────────────────────────┬────────────────┐
+│                      O'yin                      │ Taxminiy vaqt  │
+├─────────────────────────────────────────────────┼────────────────┤
+│ Adaptiv Viktorina (5-7 ta element × ~2 daqiqa suratga olish bilan) │ 10-14 daqiqa   │
+├─────────────────────────────────────────────────┼────────────────┤
+│ Nima Zanjiri (3 ta zanjir × ~90 soniya)         │ 4-5 daqiqa     │
+├─────────────────────────────────────────────────┼────────────────┤
+│ Xotira Moslash Tezligi (8 ta juft × ~15 soniya + aylanishlar) │ 3-4 daqiqa     │
+├─────────────────────────────────────────────────┼────────────────┤
+│ 3-Faza jami                                     │ ~18-23 daqiqa  │
+└─────────────────────────────────────────────────┴────────────────┘
+
+Yangilangan §22 uy vazifasi maqsadiga mos (~90 daqiqa jami).
+
+---
+
+Ramka muvofiqlik tekshiruvi
+
+┌──────────────────────────────────────────────────────────┬────────────────────────────────────────────┐
+│                           Qoida                          │                   Holat                    │
+├──────────────────────────────────────────────────────────┼────────────────────────────────────────────┤
+│ 3-Faza Bloom diapazoni L2-L4                             │ ✅ (barcha elementlarda L2/L3/L4 aralashmasi)│
+├──────────────────────────────────────────────────────────┼────────────────────────────────────────────┤
+│ Har bir element [Bloom | PISA] bilan teglangan           │ ✅                                         │
+├──────────────────────────────────────────────────────────┼────────────────────────────────────────────┤
+│ Olmosh: Siz, hech qachon sen                             │ ✅ (Yeching, uchun, va h.k. — neytral/rasmiy)│
+├──────────────────────────────────────────────────────────┼────────────────────────────────────────────┤
+│ Faqat joriy bob                                          │ ✅ (diskriminant yo'q, formula yo'q, Viet yo'q)│
+├──────────────────────────────────────────────────────────┼────────────────────────────────────────────┤
+│ Aniq Fanlar qoidasi: Adaptiv Viktorina majburiy + suratga olish │ ✅                                         │
+├──────────────────────────────────────────────────────────┼────────────────────────────────────────────┤
+│ Hisoblashsiz o'yinlar (Nima Zanjiri, Xotira Moslash) suratga olish talab etmagan │ ✅                    │
+├──────────────────────────────────────────────────────────┼────────────────────────────────────────────┤
+│ Darslik sodiqligi (o'ylab topilgan o'quv dasturi yo'q)  │ ✅                                         │
+└──────────────────────────────────────────────────────────┴────────────────────────────────────────────┘
+
+---

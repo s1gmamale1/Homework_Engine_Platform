@@ -1,0 +1,37 @@
+# Musiqa — 13-dars
+
+13-mavzu: Sahnaviy musiqa janrlari
+Sahnaviy musiqa janrlari
+Alisher Navoiy nomidagi Davlat Akademik Katta teatri
+Muqimiy nomidagi O‘zbek davlat musiqali teatri
+Teatr - bu adabiyot, musiqa, tasviriy san’at, xoreografiya, vokal va shu
+kabilarni o‘z ichiga olgan san’at turi. Teatr namoyishlari (spektakllar)da
+ko'pincha real hayotda sodir bo‘layotgan voqealaraks ettiriladi.
+Aktyor, raqqosa yoki qo‘shiqchi tomonidan amalga oshiriladigan
+harakatlar teatrda ifoda etishning asosiy vositasi hisoblanadi. Raqqosa
+raqsga tushadi, xonanda qo‘shiq kuylaydi, aktyor so'zlaydi va harakat qiladi.
+Qo‘g‘irchoq teatrida esa aktyorlar qo‘l va oyoqlari yordamida qo‘g‘irchoqlarni
+sahnada “jonlantiradilar”.
+
+13-mavzu: Sahnaviy musiqa janrlarl
+Opera - bu eng murakkab teatr janrlaridan biri. Opera spektakllarida
+musiqa, aktyorlik harakati, dekoratsiya va liboslar hamda dirijor rahbarligidagi
+orkestr ijrosi birgalikda namoyon bo‘ladi. Opera qo'shiqchisi o'z
+qahramonining obrazi va xarakterini qo‘shiq orqali ifodalaydi. Vokal
+san’atkorga o'z harakatlarini to'liq ifodalashga va asardagi boshqa
+qahramonlar bilan muloqot qilishga yordam beradi. Operadagi dirijor
+orkestrga rahbarlik qiladi va xonandalarning o'z vaqtida sahnaga chiqishiga,
+bir xil temp va dinamikani saqlab turishiga yordam beradi.
+Balet-teatr san’atining yana birjanri bo'lib, unda asardagi
+% # qahramonlarning harakati va xarakteri raqs orqali ifodalanadi. Balet
+' /■ spektaklida aktyorlik mahorati, sahna ko'rinishi va liboslardan foydalaniladi.
+Spektaklning musiqiy bezagi dirijor rahbarligidagi orkestr tomonidan amalga
+oshiriladi.
+Operetta - bu musiqa, qo'shiq, sahna harakati va raqsni o'zida
+birlashtirgan musiqali teatr janr.i. lining operadan farqi shundaki, bunday
+spektakllar vaqt jihatidan qisqaroq bo'lib, quvnoq va komediya xarakteriga
+ega bo'ladi.
+Myuzikl - qo'shiq kuylash, raqsga tushish, so'zlash va turli shou
+ko'rinishlari (tomoshalar)ni o'z ichiga olgan janr. Lining opera, balet va
+operettadan farqi shundaki, unda harakatlar ham kuylash, ham raqsga
+tushish orqali ifoda etiladi.

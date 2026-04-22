@@ -1,0 +1,67 @@
+{
+  "topic": "Around the World",
+  "learning_objectives": [
+    "Dunyo davlatlari nomlarini bilish va aytilishini o'rganish (Brazil, China, Colombia, France, Italy, Mexico, Russia, Spain, the UK, the US)",
+    "\"Be from\" strukturasini ishlatib, qayerdan ekanlikni ifodalash va so'rash (Where are you from? I'm from...)",
+    "\"Was/were\" fe'llaridan foydalanib, tug'ilgan sana va joy haqida gaplashish (When/Where were you born?)"
+  ],
+  "key_concepts": [
+    {
+      "term": "Countries",
+      "definition": "Braziliya, Xitoy, Kolumbiya, Frantsiya, Italiya, Meksika, Rossiya, Ispaniya, Birlashgan Qirollik, AQSh"
+    },
+    {
+      "term": "Be from",
+      "definition": "...dan bo'lish (I'm from Russia, He's from Brazil, We're from France)"
+    },
+    {
+      "term": "Past simple of be (was/were)",
+      "definition": "O'tgan zamonda bo'lganlikni ifodalaydi. I/he/she was, you/we/they were"
+    },
+    {
+      "term": "Date of birth",
+      "definition": "Tug'ilgan sana (on April 24th, 2006). Ordinal sonlar: 1st, 2nd, 3rd, 4th..."
+    },
+    {
+      "term": "Place of birth",
+      "definition": "Tug'ilgan joy (in the United Kingdom, in Spain)"
+    }
+  ],
+  "worked_examples": [
+    {
+      "problem": "Where is Rosa from?",
+      "solution": "She's from the United States."
+    },
+    {
+      "problem": "When was Alex born?",
+      "solution": "He was born on April 24th, 2006."
+    },
+    {
+      "problem": "Is Anton from Italy?",
+      "solution": "No, he isn't. He's from Russia."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "Where are Jules and Denis from?",
+      "answer": "They're from France."
+    },
+    {
+      "question": "Which country has a yellow, blue, and red flag?",
+      "answer": "Colombia."
+    },
+    {
+      "question": "When is Carla's birthday?",
+      "answer": "On April 24th (in April)."
+    },
+    {
+      "question": "Where was Carla born?",
+      "answer": "She was born in Spain."
+    },
+    {
+      "question": "Where are you from? (Ask and answer)",
+      "answer": "I'm from [country]."
+    }
+  ],
+  "summary": "Bu darsda o'quvchilar dunyo davlatlari bilan tanishib, ular haqida so'zlashadi. \"Where are you from?\" bilan o'z kelish joylari va \"When/Where were you born?\" bilan tug'ilgan sana/joylari haqida ma'lumot berishni o'rganadilar. Was/were fe'llari va ordinal sonlar bilan ishlash mashq qilinadi."
+}

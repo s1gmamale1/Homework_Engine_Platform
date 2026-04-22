@@ -1,0 +1,86 @@
+# Matnli hujjat bilan ishlash — 1-dars
+
+Matnli hujjat bilan ishlash
+Bu modulda quyidagilarni o‘rganasiz:
+1
+Klaviatura yoki boshqa qurilma yordamida sodda soʻzlarni kiritish
+2
+Matnni belgilash va tahrirlash
+3
+Sichqoncha yoki boshqa boshqaruv qurilmasi yordamida asosiy
+ikonkalarni (masalan, printerda chop etish, saqlash) tanlash
+4
+Hujjatlarni nomlash, saqlash va qayta tiklash
+5
+Matnni tekshirishda samarali usullardan foydalanish
+1
+@edurtm_uz
+
+7
+Kirish
+Matn bilan ishlash ― matn yozish yoki hujjatdagi matnni oʻzgartirish orqali
+elektron hujjatlar yaratish jarayonidir. Kelgusida samarali faoliyat olib borishni
+istasangiz, matn bilan ishlash ko‘nikmasini puxta egallashingiz zarur.
+Chunki maktab vazifalarini bajarishdan tortib, orzungizdagi kasb bilan
+shug‘ullanish jarayonida ham matnlar bilan ishlashingizga to‘g‘ri keladi.
+Bu ko‘nikma yordamida asosan elektron pochta yoki shu kabi elektron aloqa
+vositalari orqali boshqalarga yuborish uchun elektron hujjat yaratiladi. Ushbu
+ko‘nikmani egallash sizga elektron hujjat nusxasini saqlab qo‘yish va istalgan
+vaqtda o‘zgartirish imkonini ham beradi.
+Bu modulda Microsoft Word matn bilan ishlash dasturidan foydalanishni
+o‘rganasiz. Albatta, matn bilan ishlovchi boshqa dasturlar ham mavjud va
+ulardan istaganingizni qo‘llashingiz mumkin. Bu dasturlarning tugmalari va
+ikonkalari ham bir-biriga o‘xshab ketadi.
+DIQQAT!
+Kompyuterdan foydalanganda xavfsizlik texnikasiga rioya qilish kerak.
+Masalan, kompyuter yoniga biror yegulik yoki ichimlik qo‘ymang. Aytaylik,
+ichimlikni kompyuterga bexosdan toʻkib yuborishingiz, natijada elektr toki
+urishi yoki jarohatlanishingiz mumkin.
+Shuningdek, klaviatura tugmalari orasiga tushib qolgan yegulik ishning
+to‘xtab qolishiga olib kelishi ham mumkin.
+Kompyuteringizga ulanadigan simlarga hech qachon tegmang. Agar
+kompyuterda biror muammo yuzaga kelsa, oʻqituvchingizga ayting.
+Sichqonchadan foydalanish
+Matn yozishni boshlash joyini tanlash va tahrir
+qilinadigan matnni belgilash uchun sichqonchadan
+foydalaniladi.
+Sichqonchani harakatlantirganda ekranda uning kursori
+ham siljiganini koʻrasiz.
+1-amaliy ko‘nikma
+Matn bilan
+ishlash:
+matn yozish
+va tahrirlash
+ko‘nikmasi.
+Matn:
+klaviaturadagi
+tugmalarni
+bosganingizda
+ekranda paydo
+bo‘luvchi harf
+va soʻzlar
+jamlanmasi.
+Dasturiy
+taʼminot:
+kompyuterda
+turli vazifalarni
+bajaruvchi dastur,
+masalan, matn
+bilan ishlash
+dasturi.
+Ikonka: tasvir,
+so‘z yoki tasvir
+va so‘zdan iborat
+belgi.
+Tugmalar:
+klaviaturada
+joylashgan barcha
+tugmalar.
+Kalit soʻzlar
+Sichqoncha:
+kompyuterning
+ekrandagi
+kursorni
+harakatlantiruvchi
+qurilmasi.
+Kalit soʻz

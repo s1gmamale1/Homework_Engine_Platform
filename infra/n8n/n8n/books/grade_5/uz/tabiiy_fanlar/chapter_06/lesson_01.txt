@@ -1,0 +1,63 @@
+# VI bob — 1-dars
+
+modda suyuq holatdan gazsimon
+holatga o'tadi.
+gazsimon modda
+zarrasi
+suyuq modda
+51
+
+Kundalik hayotda bug'lanish jarayoniga
+ko‘p duch kelamiz. Soch quritkichdan
+foydalanganda sochdagi suv zarralari
+issiq havo sababli qiziydi va suv bug'iga
+aylanadi.
+Inyeksiyadan oldin dezinfeksiya qilish
+maqsadida teriga spirt surtiladi. Teriga
+surtilgan spirt tanadan issiqlik olib,
+tez bug'lanadi. Natijada teri soviydi va
+uningsezuvchanligi kamayadi.
+Sovitkichlar bo'lmagan davrlarda odamlar ichimlik suvini
+sirlanmagan sopol idishlarda saqlagan. Bunda sopol idishdagi
+mayda ti rq ish lar orqali sizib chiqqan suv bugcla nishi tufayli
+ko'za va undagi suv sovuq holda saqlangan. Shu tarzda
+odamlar issiq kunda ham sovuq suv ichgan.
+Ho'l kiyimlar dorga ilib qo'yilganda
+kiyimdagi suv zarralari bug'lanib, havoga
+uchib chiqadi va suv bug'iga aylanadi.
+Natijada kiyimlar quriydi.
+
+Bug‘lanish tezligiga qanday omillar ta’sir qiladi?
+Bug‘lanishning qanchalik tez yoki sekin ro‘y berishi bugHanish tezligi bilan
+aniqlanadi. Bug‘lanish tezligiga turli omillar ta’sir qilishi mumkin.
+Biz bug'lanish tezligiga ta’sir qiluvchi omillarni aniqlash uchun tadqiqot
+o'tkazishimiz mumkin. Quyidagi vaziyatlarga e’tibor qarating.
+Kiyimlar shamol esayotganda tez
+quriydimiyoki shamol bo‘lmagandami?
+Kiyimlar issiq kunda tez quriydimi
+yoki sovuq (salqin) kundami?
+Kiyimlar bir-biriga yaqin ilib qo‘yilganda
+tez quriydimi yoki bir-biridan uzoqroq
+joylashtirilgandami?
+
+Nazorat qilinadigan tajriba o'tkazish davomida natijaga ta’sir etuvchi omillar
+(kattaliklar, o‘zgaruvchilar)ni hisobga olish zarur. To‘g‘ri xulosa chiqarish uchun bir
+vaqtning o‘zida faqat bitta o'zgaruvchining qiymatini o'zgartirish kerak.
+Tadqiqotchi tomonidan qiymati o'zgartiriladigan o'zgaruvchi erklio‘zgaruvchi
+deb ataladi.
+Quyidagi tajribada erkli o‘zgaruvchining ta’siri tadqiq etilmoqda.
+Kiyim 35 °C haroratda
+quritilmoqda.
+Kiyim 25 °C haroratda
+Tajriba davomida erkli o'zgaruvchi qiymatiga bog'liq ravishda o'zgaradigan kattalik
+erksiz о ‘zga ru vch i d ey i I a d i.
+Bug'lanish tezligiga
+atrof-muhit haroratining
+ta’sirini o'rganish uchun
+o'tkazilgan tajribada harorat
+erkli o'zgaruvchi hisoblanadi.
+Ushbu tajribada kiyim
+qurishi uchun ketgan
+vaqt erksiz o'zgaruvchi
+hisoblanadi.
+54

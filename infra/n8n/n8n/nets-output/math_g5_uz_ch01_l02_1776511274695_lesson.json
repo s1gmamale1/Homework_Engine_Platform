@@ -1,0 +1,60 @@
+{
+  "topic": "1 milliongacha bo'lgan sonlar",
+  "learning_objectives": [
+    "1 milliongacha bo'lgan sonlarni raqam va so'zlar bilan to'g'ri yozishni o'rganish",
+    "Sonlarning o'rni (minglar, o'n minglar, yuz minglar) tushunchasini anglash",
+    "Sonlarni yoyilgan shaklda ifodalashni bilish",
+    "Million atrofidagi sonlar bilan tanishish"
+  ],
+  "key_concepts": [
+    {
+      "term": "O'rni (Place value)",
+      "definition": "Sonlarda raqamlarning o'rniga qarab qiymati o'zgaradi: birlar, o'nlar, yuzlar, minglar, o'n minglar, yuz minglar."
+    },
+    {
+      "term": "Yoyilgan shakl (Expanded form)",
+      "definition": "Sonni har bir raqamning o'rniga mos keluvchi qiymatlar yig'indisi sifatida yozish, masalan: 325 146 = 300 000 + 20 000 + 5 000 + 100 + 40 + 6."
+    },
+    {
+      "term": "Million",
+      "definition": "1 000 000 (bir million) - katta sonlarni ifodalash uchun yangi o'lchov birligi."
+    }
+  ],
+  "worked_examples": [
+    {
+      "problem": "Sonli tugmalar yordamida 325 146 sonini o'rni bo'yicha tahlil qiling va so'zlar bilan yozing.",
+      "solution": "3 - yuz minglar (300 000), 2 - o'n minglar (20 000), 5 - minglar (5 000), 1 - yuzlar (100), 4 - o'nlar (40), 6 - birlar (6). So'zlar bilan: uch yuz yigirma besh ming bir yuz qirq olti."
+    },
+    {
+      "problem": "700 000 + 4 000 + 800 + 30 + 5 ni raqamlar bilan yozing va so'zlar bilan ifodalang.",
+      "solution": "Raqamlar bilan: 704 835. So'zlar bilan: yetti yuz to'rt ming sakkiz yuz o'ttiz besh."
+    },
+    {
+      "problem": "3 594 627 sonini o'rni bo'yicha tahlil qiling.",
+      "solution": "3 million, 5 yuz ming, 90 ming, 4 ming, 6 yuz, 20 yetti. Yoyilgan shaklda: 3 000 000 + 500 000 + 90 000 + 4 000 + 600 + 20 + 7."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "Raqamlar bilan yozing: Ikki yuz olti ming",
+      "answer": "206 000"
+    },
+    {
+      "question": "So'zlar bilan yozing: 645 279",
+      "answer": "Olti yuz qirq besh ming ikki yuz yetmish to'qqiz"
+    },
+    {
+      "question": "Tushirib qoldirilgan sonni yozing: 491 862 = ... + 862",
+      "answer": "491 000"
+    },
+    {
+      "question": "Hisoblang: 823 000 + 943 = ...",
+      "answer": "823 943"
+    },
+    {
+      "question": "Raqamlar bilan yozing: Uch yuz o'n to'rt ming to'qqiz yuz oltmish yetti",
+      "answer": "314 967"
+    }
+  ],
+  "summary": "Ushbu darsda 1 milliongacha bo'lgan sonlarni o'qish, yozish va ularning o'rni (place value) tushunchasi o'rganildi. Sonlarni raqamlar va so'zlar bilan ifodalash, shuningdek yoyilgan shaklga keltirish ko'nikmalari shakllantirildi. Million atrofidagi sonlar bilan tanishish orqali katta sonlarga yo'l ochildi."
+}

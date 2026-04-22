@@ -1,0 +1,107 @@
+# Texnologiya va Dizayn — 10-dars
+
+10-§.
+Yog‘ochga ishlov berish stanoklari
+va ularning turlari
+Duradgorlik ustaxonalarida STD–120 tipidagi yog‘ochga ishlov beruvchi tokarlik
+sta­noklari ishlatiladi.
+Yog‘ochga ishlov beruvchi tokarlik stanoklari yordamida yog‘och materiallar­dan
+har xil aylanish sirtlarga ega bo‘lgan detallar, shakldor buyumlar tayyorlanadi.
+STD–120 tipidagi yog‘ochga ishlov beruvchi tokarlik stanogining aso­siy uzellari
+stanina, oldingi babka, ketingi babka, tirgak, o‘yuvchi mos­lama bo‘lib, uning yordamida
+o‘yish-teshish ishlari bajariladi (31-rasm).
+Yog‘ochga ishlov beriladigan tokarlik dast­
+gohining asosiy qismi yo‘naltirgichli stanina (3)
+bo‘lib, u ikkita tayanch pan­jalarga o‘rnatiladi.
+Staninaga oldingi va ketingi bab­ka hamda tut­
+qichli g‘aladon joylashgan. Ishchi mexanizmlar
+himoya ekrani bilan o‘ralgan qirqish zonasini (ish
+maydonini) hosil qiladi.
+Oldingi babka ishlanadigan yo­g‘och mate­
+riallarni tutib turadi va uni aylanma harakatga
+keltiradi (32-rasm).
+Ketingi babka uzun o‘lchamli yo­g‘och­larni
+markazda tutib turish va keskich (parma)larni
+o‘rnatish imkonini beradi (33-rasm).
+1
+6
+5
+2
+3
+4
+31-rasm. STD–120 tokarlik stanogining tuzilishi:
+1 – asos; 2 – elektr dvigateli; 3 – stanina; 4 – tasmali uzatmaning to‘sig‘i;
+5 – magnitli ishga tushirgich; 6 – alohida yoritkich; 7 – oldingi babka; 8 – plan­shaybali
+shpindel; 9 – tirgak; 10 – ketingi babka; 11 – shaffof himoya ekrani.
+32-rasm. Oldingi babkaning tuzilishi:
+1 – korpus; 2 – shpin­del; 3 – ikki pog‘o­nali
+shkiv; 4 – pona­simon tasma; 5 – sharchali
+podshipnik; 6 – qotirgich bolt.
+1
+2
+3
+4
+7
+5
+6
+9
+11
+10
+8
+
+31
+31
+Yo‘nish, qirqish vaqtida iskanalarni tutib (tirab) turish maqsadida tirgakdan
+foydalaniladi (34-rasm).
+Yog‘ochga ishlov beradigan tokarlik stanoklarida yo‘nish, qirqish ishlari maxsus
+tokarlik iskanalari yordamida bajariladi (35-rasm).
+Duradgorlik ishlarida turli stanoklardan foydalaniladi. Shuning uchun quyidagi
+xavfsizlik texnikasi qoidalarini bilish va ularga amal qilish shart:
+1.	 Yorug‘lik ish o‘rniga o‘ng tomondan tushishi, ish o‘rnida tabiiy yorug‘lik
+yetarlicha bo‘lishi kerak.
+2.	 Materiallarni stanok staninasiga, mexanizm yoki to‘siqlar ustiga qo‘ymaslik ta­
+lab etiladi.
+3.	 Stanok va mexanizmlarning detallari, staninalari, qopqoqlari, to‘siq­lari sinma­
+gan, g‘adir-budursiz bo‘lishi kerak.
+4.	 Elektr dvigateli qulflanadigan yashik yoki maxsus to‘siq bilan yopilishi kerak.
+5.	 Stanoklarning tishli, tasmali va boshqa uzatmalari, disk arralari, pichoqli vallari
+maxsus qopqoqlar bilan berkitilishi kerak.
+6.	 Stanokning aylanayotgan ish qismlarini qo‘l yoki boshqa biror narsa bilan
+to‘xtatmaslik kerak.
+7.	 Stanokni to‘xtatmasdan turib ishlangan sirtning silliqligini qo‘l bilan tek­
+shirmaslik kerak.
+8.	 Ish vaqtida maxsus kiyimda bo‘lish va himoya ko‘zoynagini taqib ishlash talab
+etiladi.
+34-rasm. Tirgakning tuzilishi:
+1 – asos; 2 – keskich tayanchi;
+3 – stopor dasta; 4 – siquvchi
+maxovik.
+33-rasm. Ketingi babkaning tuzilishi:
+1 – korpus; 2 – markazli pinol;
+3 – qisqich; 4 – vint mexanizmi;
+5 – maxovik; 6 – qotirgich vint,
+7 – siquvchi taxtacha.
+a) yо‘nuvchi  	                                                      b) qirquvchi
+35-rasm. Tokarlik iskanalari.
+3
+5
+4
+6
+7
+1
+2
+1
+Tutqichlar
+2
+3
+4
+
+32
+32
+Mustahkamlash uchun savollar
+1. STD–120 tipidagi yog‘ochga ishlov beruvchi tokarlik stanogi tuzilishi
+jihatidan qanday qismlarga bо‘linadi?
+2. Staninaning vazifasi nimadan iborat?
+3. Oldingi va ketingi babkalarning bir-biridan farqi nimada?
+4. Stanoklarda ishlaganda amal qilinadigan xavfsizlik texnikasi qoidalari
+nimalar­dan iborat?

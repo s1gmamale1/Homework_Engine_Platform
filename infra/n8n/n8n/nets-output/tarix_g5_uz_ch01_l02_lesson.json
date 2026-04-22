@@ -1,0 +1,72 @@
+{
+  "topic": "Kalendarlar tarixi",
+  "learning_objectives": [
+    "Kalendarning ta'rifi, vazifasi va ahamiyatini tushunish",
+    "Misr, Yuliy va Grigorian kalendarlarining yaratilishi, xususiyatlari va farqlarini o'rganish",
+    "Kabisa yili (366 kun)ning paydo bo'lish sabablarini tushunish",
+    "Kalendarlardagi xatoliklarning qanday bartaraf etilganini tahlil qilish"
+  ],
+  "key_concepts": [
+    {
+      "term": "Kalendar",
+      "definition": "Vaqtni kunlarga, haftalarga, oylarga va yillarga bo'lib hisoblash tizimi; yil, oy va kunlarning nomlari yozib qo'yilgan jadval"
+    },
+    {
+      "term": "Yil",
+      "definition": "Yerning Quyosh atrofida bir marta aylanib chiqishi uchun ketadigan vaqt o'lchov birligi (365 kun, har 4 yilda 366 kun)"
+    },
+    {
+      "term": "Misr kalendari",
+      "definition": "Dastlabki kalendar; Nil daryosi toshqini asosida 365 kun (12 ta 30 kunlik oy + 5 kun bayram) deb hisoblangan, har 4 yilda 6 soatlik xatolik sababli 1 kunga farq qilgan"
+    },
+    {
+      "term": "Yuliy kalendari",
+      "definition": "Mil.av. 46-yilda Yuliy Sezar tomonidan joriy etilgan kalendar; har 4 yilda fevral 29 kun (kabisa kuni) bo'ladi, biroq har 400 yilda 3 kunlik xatolikka ega"
+    },
+    {
+      "term": "Grigorian kalendari",
+      "definition": "1582-yilda Rim papasi Grigoriy XIII tomonidan joriy etilgan kalendar; Yuliy kalendaridagi 10 kunlik farqni bartaraf etish uchun 4-oktabrdan 15-oktabrga o'tilgan, har 400 yilda 97 marta kabisa kuni bo'ladi"
+    },
+    {
+      "term": "Tengkunlik",
+      "definition": "Kunduz va tun 12 soatga teng bo'ladigan kun (21-mart va 23-sentabr yaqinlarida)"
+    }
+  ],
+  "worked_examples": [
+    {
+      "problem": "Misr kalendarida yil 365 kun deb hisoblansa-da, haqiqatda qancha farq mavjud edi va bu qanday oqibatga olib keldi?",
+      "solution": "Misrliklar yilni 365 kun deb hisoblashgan, lekin haqiqiy yil 365 kun 6 soatni tashkil etadi. Bu 6 soatlik farq har 4 yilda 24 soat (1 sutka) xatolikni hosil qildi."
+    },
+    {
+      "problem": "Yuliy kalendari bo'yicha har 400 yilda necha kunlik xatolik yuzaga keldi va 1582-yilga kelib bu qanday natijaga olib keldi?",
+      "solution": "Yuliy kalendari bo'yicha yil hisobi har 400 yilda 3 kunga orqada qolib bordi. 1582-yilga kelib bu xatolik 10 kunni tashkil etdi va bahorgi tengkunlik 21-mart o'rniga 11-martga to'g'ri kelib qoldi."
+    },
+    {
+      "problem": "Grigorian kalendarida kabisa yili qandai aniqlanadi?",
+      "solution": "Grigorian kalendarida har 400 yilda 97 marta (emas, 100 marta) kabisa yuli bo'ladi. Shuningdek, 400 ga karrali yillarda kabisa yuli saqlanadi, lekin 100 ga karrali biroq 400 ga karrali bo'lmagan yillarda kabisa kuni tashlab yuboriladi."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "Kalendar – bu ...?",
+      "answer": "Vaqtni kunlarga, haftalarga, oylarga va yillarga bo'lib hisoblash tizimi"
+    },
+    {
+      "question": "Nima uchun bir yil 365 yoki 366 kundan iborat?",
+      "answer": "Yerning Quyosh atrofida to'liq aylanishi 365 kun 6 soatni tashkil etadi. Har 4 yilda bu 6 soatlik qoldiqlar 24 soatni (1 kun) tashkil qiladi va kabisa yili (366 kun) paydo bo'ladi."
+    },
+    {
+      "question": "Misr kalendaridagi xatolik qanday kunni tashkil etgan?",
+      "answer": "Har 4 yilda 1 kunlik (24 soatlik) xatolikni tashkil etgan, chunki yil hisobida 6 soatlik farq e'tiborga olinmagan."
+    },
+    {
+      "question": "Grigorian kalendari qaysi yilda qabul qilindi va nima uchun?",
+      "answer": "1582-yilda qabul qilindi. Sababi: Yuliy kalendaridagi xatolik tufayli bahorgi tengkunlik 21-mart o'rniga 11-martga to'g'ri kelib qolgan edi va bu 10 kunlik farqni bartaraf etish zarur edi."
+    },
+    {
+      "question": "Yuliy va Grigorian kalendarlarining asosiy farqi nimadan iborat?",
+      "answer": "Yuliy kalendari har 4 yilda bir marta kabisa kunini qo'shsa-da, har 400 yilda 3 kunlik xatolikka ega edi. Grigorian kalendari esa har 400 yilda 97 marta (100 emas) kabisa kuni qo'shish orqali bu xatolikni bartaraf etdi."
+    }
+  ],
+  "summary": "Darsda kalendarlarning tarixi va evolyutsiyasi ko'rib chiqildi. Qadimgi Misrda Nil daryosi toshqini asosida yaratilgan 365 kunlik kalendar, keyin Yuliy Sezar tomonidan joriy etilgan va har 4 yilda kabisa kuni qo'shilgan Yuliy kalendari haqida ma'lumot berildi. Yuliy kalendaridagi xatolik (har 400 yilda 3 kun) 1582-yilda 10 kunlik farq hosil qilgan va Rim papasi Grigoriy XIII tomonidan yangi kalendar joriy etilgan. Grigorian kalendari 10 kunni tashlab yuborish va har 400 yilda 97 marta kabisa yili qilish orqali aniqroq hisoblash imkonini berdi va hozirgi kunda O'zbekiston va dunyoning ko'p davlatlarida qo'llanilmoqda."
+}

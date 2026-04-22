@@ -1,0 +1,72 @@
+{
+  "topic": "Tarix fani nimani o'rganadi? — Tarixiy manbalar",
+  "learning_objectives": [
+    "Tarix fanining predmeti va maqsadini tushunish",
+    "Tarixiy manbalar turlarini va ahamiyatini bilish",
+    "Moddiy va yozma manbalar o'rtasidagi farqlarni ajratish",
+    "Vatan tarixi uchun muhim qadimgi yozma manbalarni aniqlash"
+  ],
+  "key_concepts": [
+    {
+      "term": "Tarix",
+      "definition": "O'tmish haqidagi fan; arabcha so'z bo'lib 'o'tmish' yoki 'o'tgan voqealar haqida hikoya' degan ma'nolarni anglatadi"
+    },
+    {
+      "term": "Tarixiy manba",
+      "definition": "Tarixdan ma'lumot beruvchi barcha tarixiy narsalar va yozib qoldirilgan turli xil hujjatlar hamda kitoblar"
+    },
+    {
+      "term": "Moddiy (ashyoviy) manba",
+      "definition": "Qadimgi odamlarning suyak qoldiqlari, turarjoylar, qal'alar, tangalar, gerblar, muhrlar va mehnat qurollari kabi fizik qoldiqlardan iborat manbalar"
+    },
+    {
+      "term": "Yozma manba",
+      "definition": "Qoyatosh bitiklari, hayvon terisi va daraxt po'stlog'iga yozilgan yozuvlar, qo'lyozmalar, kitoblar va arxiv hujjatlari"
+    },
+    {
+      "term": "Arxiv",
+      "definition": "Eski hujjatlar va yozma yodgorliklar saqlanadigan joy"
+    },
+    {
+      "term": "Tarixiy hujjatlar",
+      "definition": "Tarixiy voqea va hodisalar haqida guvohlik beruvchi, arxivlarda saqlanayotgan qaydnomalar va suratlar"
+    }
+  ],
+  "worked_examples": [
+    {
+      "problem": "Tarixiy manbalar necha turga bo'linadi va ular qanday nomlanadi?",
+      "solution": "Ikki asosiy turga bo'linadi: moddiy (ashyoviy) manbalar va yozma manbalar."
+    },
+    {
+      "problem": "Moddiy manbalarni kim va qanday usulda topadi?",
+      "solution": "Arxeologlar o'tmishda odamlar yashagan deb taxmin qilingan manzilgohlarda qazish ishlarini olib borib, turli ashyolarni topadi va ularning yaratilgan vaqtini aniqlaydi."
+    },
+    {
+      "problem": "O'zbekiston tarixiga oid eng qadimgi yozma manba qaysi?",
+      "solution": "Avesto kitobi; unda qadimgi tariximizga oid qimmatli ma'lumotlar mavjud."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "Tarix fani nima haqidagi ma'lumot beradi?",
+      "answer": "Odamlarning eng qadimgi zamonlardan to hozirgacha bosib o'tgan hayot yo'li, bugungi hayotni qanday qurganligi haqida ma'lumot beradi."
+    },
+    {
+      "question": "Moddiy manbalarga uchta misol keltiring.",
+      "answer": "Suyak qoldiqlari, turarjoylarning qoldiqlari, zarb etilgan tangalar, mehnat qurollari, gerblar va muhrlar."
+    },
+    {
+      "question": "Yozma manbalar qanday materiallarga yozilgan bo'lishi mumkin?",
+      "answer": "Qoyatosh va qattiq buyumlarga o'yilgan bitiklar, hayvon terisi, daraxt po'stlog'i va qog'ozga yozilgan yozuvlar."
+    },
+    {
+      "question": "Moddiy va yozma manbalar o'rtasidagi asosiy farq nima?",
+      "answer": "Moddiy manbalar jismoniy ashyolar (suyak, qurol, idishlar)dan iborat bo'lsa, yozma manbalar belgilar va yozuvlar shaklida saqlanadi."
+    },
+    {
+      "question": "Arxiv nima va u nimani saqlaydi?",
+      "answer": "Arxiv eski hujjatlar va yozma yodgorliklar saqlanadigan joy bo'lib, tarixiy voqealar haqida guvohlik beruvchi qaydnomalar va suratlarni saqlaydi."
+    }
+  ],
+  "summary": "Tarix fani odamlarning qadimgi zamonlardan hozirgacha bo'lgan hayot yo'lini o'rganadi. Bu fan tarixiy manbalar asosida yaratiladi: moddiy (ashyoviy) manbalar (arxeologik qoldiqlar) va yozma manbalar (bitiklar, kitoblar, hujjatlar). O'zbekiston tarixini o'rganishda Avesto, qadimgi Xorazm, Sug'd, Baqtriya va turkiy yozuvlardagi manbalar katta ahamiyatga ega."
+}

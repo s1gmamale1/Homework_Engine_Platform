@@ -1,0 +1,114 @@
+{
+  "name": "NETS WF-04 Phase Sessions",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "b2c3d4e5-0004-0004-0004-000000000001",
+      "name": "Start",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [240, 400]
+    },
+    {
+      "parameters": {
+        "jsCode": "const task = $('Start').item.json;\nconst phases = [\n  { id: 'phase_0a', name: 'Theme Preview',        game_refs: [] },\n  { id: 'phase_0b', name: 'Flash Cards',           game_refs: [] },\n  { id: 'phase_1',  name: 'Memory Sprint',         game_refs: [] },\n  { id: 'phase_2',  name: 'Story Mode',            game_refs: [] },\n  { id: 'phase_3',  name: 'Game Breaks',           game_refs: ['tile_match','codebreaker','tic_tac_toe'] },\n  { id: 'phase_4',  name: 'Real-Life Challenge',   game_refs: [] },\n  { id: 'phase_5',  name: 'Consolidation',         game_refs: [] },\n  { id: 'phase_6',  name: 'Final Boss',            game_refs: [] },\n  { id: 'phase_7',  name: 'Reflection',            game_refs: [] }\n];\nreturn phases.map(p => ({ json: { ...task, phase_id: p.id, phase_name: p.name, game_refs: p.game_refs } }));"
+      },
+      "id": "b2c3d4e5-0004-0004-0004-000000000002",
+      "name": "Build Phase List",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 400]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "b2c3d4e5-0004-0004-0004-000000000003",
+      "name": "Loop Phases",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [680, 400]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $json;\nconst fs = require('fs');\n\nconst basePrompt = fs.readFileSync('/home/node/nets/frameworks/system/phase_worker_base.md', 'utf8');\nconst unifiedSchema = fs.readFileSync('/home/node/nets/frameworks/unified/schema.md', 'utf8');\nconst subjectFramework = fs.readFileSync('/home/node/nets/frameworks/subjects/matematika.md', 'utf8');\nconst phaseSpec = fs.readFileSync(`/home/node/nets/frameworks/unified/${item.phase_id}.md`, 'utf8');\nconst lessonJson = fs.readFileSync(`/home/node/nets/nets-output/${item.lesson_id}_lesson.json`, 'utf8');\nconst outputSchema = fs.readFileSync(`/home/node/nets/frameworks/schemas/${item.phase_id}.json`, 'utf8');\n\nlet gameContent = '';\nif (item.game_refs && item.game_refs.length > 0) {\n  item.game_refs.forEach(g => {\n    try { gameContent += fs.readFileSync(`/home/node/nets/frameworks/games/${g}.md`, 'utf8') + '\\n\\n'; } catch(e) {}\n  });\n}\n\nconst systemMessage = [\n  '## LAYER 1: SYSTEM INVARIANTS\\n' + basePrompt,\n  '## LAYER 2: UNIFIED FRAMEWORK SCHEMA\\n' + unifiedSchema,\n  '## LAYER 3: SUBJECT FRAMEWORK\\n' + subjectFramework,\n  '## LAYER 4: PHASE SPECIFICATION\\n' + phaseSpec,\n  gameContent ? ('## LAYER 5: GAME MECHANICS\\n' + gameContent) : ''\n].filter(Boolean).join('\\n\\n---\\n\\n');\n\nconst userMessage = [\n  `## LAYER 6: LESSON CONTENT\\n${lessonJson}`,\n  `## LAYER 7: TASK CONTEXT\\n{\"grade\": ${item.grade}, \"lang\": \"${item.lang}\", \"subject\": \"${item.subject}\", \"lesson_id\": \"${item.lesson_id}\", \"phase_id\": \"${item.phase_id}\"}`,\n  `## LAYER 8: TASK\\nProduce the ${item.phase_name} phase deliverable. Return ONLY valid JSON matching this schema exactly:\\n${outputSchema}`\n].join('\\n\\n---\\n\\n');\n\nconst payload = {\n  model: 'kimi-k2-0711-preview',\n  messages: [\n    { role: 'system', content: systemMessage },\n    { role: 'user', content: userMessage }\n  ],\n  response_format: { type: 'json_object' },\n  temperature: 0.3,\n  max_tokens: 8000\n};\n\nreturn [{ json: { payload, ...item, prompt_hash: Buffer.from(systemMessage).toString('base64').substring(0,32), call_start: Date.now() } }];"
+      },
+      "id": "b2c3d4e5-0004-0004-0004-000000000004",
+      "name": "Compose Phase Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 400]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.moonshot.cn/v1/chat/completions",
+        "sendHeaders": true,
+        "specifyHeaders": "keypair",
+        "headerParameters": {
+          "parameters": [
+            {"name": "Authorization", "value": "Bearer sk-pJEISM5dnKSswgqkChu3vpLAAXZS1Yx0GdqXQdcpESZvuC2X"},
+            {"name": "Content-Type", "value": "application/json"}
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify($json.payload) }}"
+      },
+      "id": "b2c3d4e5-0004-0004-0004-000000000005",
+      "name": "Call Kimi API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [1120, 400]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $json;\nconst meta = $('Compose Phase Prompt').item.json;\n\nlet phaseJson;\ntry {\n  phaseJson = JSON.parse(response.choices[0].message.content);\n} catch(e) {\n  throw new Error(`Phase ${meta.phase_id} invalid JSON: ` + e.message);\n}\n\nconst tokensIn = response.usage?.prompt_tokens || 0;\nconst tokensOut = response.usage?.completion_tokens || 0;\nconst costUsd = (tokensIn * 0.60 + tokensOut * 2.50) / 1000000;\nconst cacheHit = response.usage?.prompt_cache_hit_tokens ? (response.usage.prompt_cache_hit_tokens / tokensIn * 100) : 0;\nconst latency = Date.now() - meta.call_start;\n\nreturn [{ json: {\n  phase_output: phaseJson,\n  task_id: meta.task_id,\n  lesson_id: meta.lesson_id,\n  phase_id: meta.phase_id,\n  tokens_in: tokensIn,\n  tokens_out: tokensOut,\n  cost_usd: costUsd,\n  cache_hit_pct: cacheHit,\n  latency_ms: latency,\n  prompt_hash: meta.prompt_hash\n}}];"
+      },
+      "id": "b2c3d4e5-0004-0004-0004-000000000006",
+      "name": "Validate Phase Output",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1340, 400]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_phase_outputs (task_id, lesson_id, phase_id, output_json, schema_valid, prompt_hash, tokens_in, tokens_out, cost_usd, latency_ms, cache_hit_pct) VALUES ('{{ $json.task_id }}', '{{ $json.lesson_id }}', '{{ $json.phase_id }}', '{{ JSON.stringify($json.phase_output) }}'::jsonb, true, '{{ $json.prompt_hash }}', {{ $json.tokens_in }}, {{ $json.tokens_out }}, {{ $json.cost_usd }}, {{ $json.latency_ms }}, {{ $json.cache_hit_pct }}) ON CONFLICT (lesson_id, phase_id) DO UPDATE SET output_json=EXCLUDED.output_json, tokens_in=EXCLUDED.tokens_in, tokens_out=EXCLUDED.tokens_out, cost_usd=EXCLUDED.cost_usd",
+        "options": {}
+      },
+      "id": "b2c3d4e5-0004-0004-0004-000000000007",
+      "name": "Save Phase to DB",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [1560, 400],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO nets_session_log (task_id, stage, phase_id, event, payload) VALUES ('{{ $json.task_id }}', 'phase', '{{ $json.phase_id }}', 'success', '{\"tokens_in\": {{ $json.tokens_in }}, \"cost_usd\": {{ $json.cost_usd }}, \"cache_hit_pct\": {{ $json.cache_hit_pct }}, \"latency_ms\": {{ $json.latency_ms }}}'::jsonb)",
+        "options": {}
+      },
+      "id": "b2c3d4e5-0004-0004-0004-000000000008",
+      "name": "Log Phase",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [1780, 400],
+      "credentials": {"postgres": {"id": "1", "name": "NETS Postgres"}}
+    }
+  ],
+  "connections": {
+    "Start": {"main": [[{"node": "Build Phase List", "type": "main", "index": 0}]]},
+    "Build Phase List": {"main": [[{"node": "Loop Phases", "type": "main", "index": 0}]]},
+    "Loop Phases": {"main": [[{"node": "Compose Phase Prompt", "type": "main", "index": 0}]]},
+    "Compose Phase Prompt": {"main": [[{"node": "Call Kimi API", "type": "main", "index": 0}]]},
+    "Call Kimi API": {"main": [[{"node": "Validate Phase Output", "type": "main", "index": 0}]]},
+    "Validate Phase Output": {"main": [[{"node": "Save Phase to DB", "type": "main", "index": 0}]]},
+    "Save Phase to DB": {"main": [[{"node": "Log Phase", "type": "main", "index": 0}, {"node": "Loop Phases", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1"},
+  "active": false
+}

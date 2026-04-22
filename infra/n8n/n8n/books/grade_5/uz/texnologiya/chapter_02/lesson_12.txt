@@ -1,0 +1,120 @@
+# Servis Xizmati — 12-dars
+
+12-§.
+Buyumni  bichish  va  tikish  haqida  ma’lumot  berish
+
+160
+160
+o‘rgangunlariga qadar, gazlamani bichmasdan
+tanaga yopib, belbog‘, bog‘ich, arqonlar bilan
+bellari, yenglariga bog‘lab qulaylik hosil qil­
+ganlar. Keyinchalik  tananing o‘ziga gazlamani
+qo‘yib, bichilgan. Davrlar o‘tib,  vitochka, yeng,
+yoqa kabi detallar kiyimning o‘ziga yopishtirib
+qo‘yilgan. Ushbu metod “Mulyaj metodi” bo‘lib,
+hozirgacha undan foydalanilib kelinadi.
+Ishlab chiqarish sanoatlari kirib kelgach,
+erkaklar kiyimini tikishda gavdadan o‘lchov
+olishga ehtiyoj paydo bo‘lgan. Ungacha ham
+ti­kuvchilar, albatta, gavdadan o‘lchov olib
+bichishgan. Lekin yagona o‘l­chov olish metodi
+bo‘lmagan. XIX asr o‘rtalariga kelib, “Gavdadan
+o‘lchov olib bichish yagona metodikasi” shakl­
+lantirildi. Bichish ja­rayoni za­monga moslab,
+izlanishlar natijasida ta­komillashib kel­moqda.
+Gavdaga mos fason tanlash usullari.
+
+161
+161
+Endi “modellash” va “konstruksiyalash” haqida.  Har qanday buyumni bichishdan
+oldin tanlangan fasoniga qarab uning eskizi tayyorlanadi. Ushbu bosqichga badiiy
+modellash deyiladi. Olingan o‘lchov asosida  hisoblash formulasida o‘z o‘lchovini
+topib andaza chizishga konstruksiyalash deyiladi. Hisoblash yo‘li orqali taxlama,
+koketka, burma, cho‘ntak va boshqa qir­qimlarni tayyorlash texnik modellash
+deyiladi. Albatta, bu ishlarni avval modelyer-rassom, so‘ngra konstruktorlar bajaradi.
+Uy sharoitida esa modelyer ham, rassom ham, konstruktor ham o‘zingiz bo‘lasiz.
+Shuning uchun  kiyim tikishda quyidagi ketma-ketlikka rioya qilishingiz kerak.
+Kiyim tikishda ketma-ketlik qoidasi
+1.	 Kiyim turi, yosh xususiyati, faslga moslab gazlama va fason tan­lanadi.
+2.	 Maqsad aniqlab olingach, gavdadan o‘lchov olinadi.
+3.	 Olingan o‘lchov bo‘yicha hisoblash formulasi tayyorlanadi.
+4.	 Hisoblash formulasi asosida andaza tayyorlanadi.
+5.	 Andaza eskizidan foydalanib modellashtiriladi.
+6.	 Asosiy andaza bo‘yicha modellashtiriladi.
+7.	 Tanlangan gazlamaning xossalari o‘rganiladi.
+8.	 Gazlama ustiga andaza joylashtiriladi.
+9.	 Buyum bichiladi va tartib bo‘yicha tikiladi.
+10.	 Tayyor buyum pardozlanadi.
+Q i z i q a r l i  m a ʼ l u m o t
+Ishlab chiqarish korxonalarida bi­
+chish jara­yonini zamonaviy avto­mat­
+lash­tirilgan kompleks mashina amalga
+oshi­radi. Bichish jarayoni vakuum
+ostida gaz­lamalarni bir necha qatlab
+bajariladi. Bu jarayonni xalq tilida
+“Qatlama xa­mir” deb ham atashadi.
+25–30 qavatdan iborat gazlamaning
+qalinligi 5 cm, aniq bichimi 1 cm ga­
+cha bo‘ladi.
+11 – Texnologiya,  5-sinf
+
+162
+162
+Tikish. Fason bo‘yicha bichilgan kiyimni tikish uchun jarayonga mas’uliyat
+bilan yondashish talab qilinadi. Bichilgan kiyimni to‘g‘ridan to‘g‘ri tikib tu­
+gatmasdan, kiydirib ko‘rish jarayonlarini ham o‘tkazish lozim. Kiydirib
+ko‘rish ja­ra­yonida gavdadagi tabiiy kamchiliklarni yopib ketish uchun biroz
+kashfiyotchilik mahoratini ko‘rsata olish, ya’ni qo‘l ishlaridan foydalanish
+mumkin bo‘ladi. Bu insonning yuzidagi, yurish-turishidagi kayfiyatini
+ko‘tarishga, atrofdagilardan maqtov eshitishiga sabab bo‘ladi. Ishda erishilgan
+muvaffaqiyat ma’naviy dunyomizni boyitadi. Qolaversa, dizayner-tikuvchi
+kasbiga ham mehr uyg‘otadi.
+Mustahkamlash uchun savol va topshiriqlar
+1.	 Kiyim va uning turlari haqida gapirib bering.
+2.	 Kiyimni bichish qanday jarayonlarni o‘z ichiga qamrab oladi?
+3.	 Kiyimni kiydirib ko‘rish orqali nimalarni aniqlaymiz?
+4.	 Sizda ushbu mavzu bilan aloqador qaysi kasbga  qiziqish bor?
+Bichish-tikish jarayoni.                          Bichiq detallarga ishlov berish.
+
+163
+163
+Kiyimni tikishdan oldin aniq muhandislik hisobi bo‘lishi lozim. Bu faqat ishlab
+chiqarish korxonalari uchun emas, balki o‘zingiz, oddiy uy sharoitida tikiladigan kiyim-
+kechak uchun ham kerak.
+Buning uchun santimetrli tasma
+yordamida kiyim tikilayotgan ki­
+shining o‘lchovi olinadi. Bu ishni
+bajarayotganda u tovonlarini yerga
+qo‘yib, oyoqlarini juftlab, gavdani
+tabiiy holatda bo‘sh qo‘yib, tinch
+turishi kerak. Bunda o‘lchov aniq
+bo‘lishi uchun u imkon qadar tanaga
+yopishib turadigan kiyimda bo‘lishi
+kerak. Gavdadan o‘lchov olishdan
+avval bel chizig‘i va boshqa asosiy
+nuqtalar belgilab olinadi. Bitta
+rezinka belga gorizontal qilib, ik­
+kinchisi esa yelkadan tushi­riladi.
+Rezinka
+o‘rniga
+tasma,
+chilvir
+ish­latsa ham bo‘ladi. O‘lcha­na­
+yotganda san­ti­metrli tasmani tort­
+may, bo‘­shashtirmay, old to­mondan
+tu­tash­ti­riladi. Yelka, yeng, kiyim
+uzunligi o‘ng tomondan o‘lchanadi.
+Aylana o‘lchovlari to‘liq o‘lchanib, gavda  o‘lchamining teng yarmi yoziladi. Uzunlik
+o‘lchovlari, yelka kengligi, bilak manjet aylanasi to‘liq yoziladi. Kiyim yelka chokining
+bo‘yin asosi nuqtasiga, qo‘l tanaga ulanadigan joydagi yelka nuqtasiga alohida ahamiyat
+berish kerak. Chunki ko‘p o‘lchamlar shu nuqtadan
+boshlanib, shu nuqtada tugallanadi. Bu nuqtalarning
+o‘rni o‘zgarmas bo‘lsagina kiyim bexato chiqadi.
+Ro‘mol uchun hisoblash formulasi va chizmasi
+Chizma chizish uchun tikuvchilik chiz­g‘ichi,
+uchburchak chizg‘ich, qalam, o‘chir­g‘ich kerak
+bo‘ladi.
+В
+В1
+В 2
+Fartuk va ro‘mol uchun o‘lchov olish qoidasi.

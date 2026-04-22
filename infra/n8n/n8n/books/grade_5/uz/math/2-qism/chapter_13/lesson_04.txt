@@ -1,0 +1,405 @@
+# To'rtburchakning noma'lum burchaklari
+
+151
+2  PQRS – romb va ∠ QRS = 135°. ∠ p, ∠ q va ∠ s ni toping.
+    
+p
+135°
+q
+s
+S
+R
+Q
+P
+ 
+ 
+∠ p = 135°
+ 
+∠ q = 180° – 135°
+ 
+ 
+= 45°
+ 
+∠ s = ∠ q
+ 
+ 
+= 45°
+3  ABCD trapetsiyada AB || DC. ∠ a va ∠ c ni toping.
+    
+78°
+c
+125°
+a
+B
+A
+C
+D
+ 
+ 
+ 
+ 
+∠ a = 180° – 78°   
+ 
+     = 102° 
+ 
+∠ c = 180° – 125°   
+ 
+      = 55° 
+Rombning qarama-qarshi burchaklari teng. 
+Qolgan ikkita burchagini topish mumkinmi?
+Yon tomoniga yopishgan 
+burchaklar yig‘indisi 180° ga teng.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   151
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   151
+13/11/24   14:52
+13/11/24   14:52
+
+152
+4  PQRS – parallelogramm. ∠p ni toping.
+ 
+ 
+ 
+ 
+Q
+P
+R
+S
+p
+51°
+ 
+  
+  
+ 
+ 
+∠ QRS = 180° – 90° – 51°
+ 
+ 
+ 
+ = 39°
+ 
+ 
+ 
+∠ p = ∠ QRS 
+ 
+ 
+ 
+ = 39°
+5  EFGH rombda  ∠ FEH = 40°. ∠ FHG ni toping. 
+    
+ 
+H
+40°
+F
+G
+E
+ 
+ 
+ 
+ 
+∠ FGH = ∠ FEH
+ 
+ 
+ = 40°
+ 
+ 
+180° – 40° = 140°
+ 
+ 
+∠ FHG = 140° ÷ 2
+            
+ = 70°
+ 
+ 
+Parallelogrammning qarama-
+qarshi burchaklari teng.
+Uchburchakning 
+burchaklari yig‘indisi 180° 
+ga teng.
+GH = GF bo‘lgani uchun HFG teng 
+yonli uchburchakdir.
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   152
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   152
+13/11/24   14:52
+13/11/24   14:52
+
+153
+6  ABCD trapetsiyada AB || DC. Agar ACD teng yonli uchburchak bo‘lsa, ∠ y  ni toping.
+ 
+A
+y
+100°
+74°
+B
+D
+C
+ 
+∠ DAC = 74°  
+ 
+ 
+ 
+∠ ACD  = 180° – 74° – 74°
+ 
+ 
+ 
+ 
+ = 32° 
+ 
+ 
+ 
+ 
+∠ y = 180° – 100° – 32°
+ 
+ 
+ 
+ 
+ = 48°
+ 
+ 
+ 
+ 
+7  EFGH trapetsiyada EF || HG. ∠ x ni toping.
+ 
+x
+30°
+126°
+F
+E
+G
+H
+ 
+∠ x = 180° – 126° – 30°
+ 
+ 
+ 
+ 
+ = 24°
+ 
+ 
+  
+8  ABCD – romb. ∠ ABC ni toping.
+ 
+ 
+ 
+ 
+∠ ADC = 360° – 280°
+ 
+ 
+ 
+ 
+ = 80°
+ 
+D
+C
+B
+A
+280°
+ 
+ ∠ ABC = 80° 
+Trapetsiyaning yon tomoniga yopishgan 
+burchaklari yig‘indisi  
+180° ga teng. 
+126° + 30° + ∠ x = 180°
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   153
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   153
+13/11/24   14:52
+13/11/24   14:52
+
+154
+To‘rtburchakning barcha 
+burchaklari yig‘indisi 
+nechaga teng?
+Juftlikda ishlang
+Navbati bilan noma’lum burchaklarni toping. 
+Javobni qanday topganingizni do‘stingizga tushuntirib bering.
+a) 
+ABCD parallelogrammda ∠ ABC = 50° va ∠ ADB = 25°. ∠ ADC va ∠ BCD ni toping.
+ 
+ 
+ 
+A
+C
+50°
+25°
+D
+B
+b) 
+PQRS rombda ∠ PQR = 48° va ∠ PSQ = 24°. ∠ PSR va ∠ QRS ni toping.
+ 
+ 
+ S
+R
+Q
+P
+24°
+48°
+c) 
+WXYZ trapetsiyada WX || ZY. Agar WXY – teng yonli uchburchak, WX = XY va                 
+∠ WXY = 110° bo‘lsa, ∠ y  ni toping.
+ 
+W
+y
+110°
+X
+Z
+Y
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   154
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   154
+13/11/24   14:52
+13/11/24   14:52
+
+155
+Bajaring va o‘rganing
+1  Belgilangan noma’lum burchaklarni toping.
+    
+a) 
+ABCD – parallelogramm. 
+b) 
+ABCD – parallelogramm. 
+ 
+ 
+ 
+b
+118°
+a
+B
+A
+C
+D
+ 
+ 
+C
+A
+147°
+b
+D
+B
+E
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2  Quyidagi romblarning belgilangan noma’lum burchaklarini toping.
+ 
+a) 
+B
+D
+A
+C
+a
+d
+b
+137°
+ 
+b) 
+S
+P
+Q
+s
+r
+55°
+R
+ 
+ 
+ 
+3  Quyidagi trapetsiyalarning kichik harf bilan belgilangan noma’lum burchaklarini 
+toping.
+ 
+a) 
+d
+110°
+G
+E
+H
+F 
+b) 
+PQ va RST – to‘g‘ri chiziqlar.
+ 
+ 
+  
+ 
+T
+R
+Q
+P
+148°
+e
+S
+ 
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   155
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   155
+13/11/24   14:52
+13/11/24   14:52
+
+156
+ 
+c) 
+C
+B
+A
+D
+75°
+130°
+j
+ d) 
+ 
+F
+E
+D
+H
+k
+m
+125°
+G
+ 
+e) 
+K
+J
+a
+65°
+23°
+M
+50°
+L
+N
+ 
+f) 
+ 
+ 
+  
+    
+P
+78°
+88°
+s
+Q
+R
+S
+177–180
+Mashq daftariga o‘ting
+O‘zingizni tekshiring
+Men parallelogramm, romb va trapetsiyalarning noma’lum burchaklarini 
+topishni bilaman.   
+O‘ylab ko‘ring
+Rasmda AB || DC bo‘lgan ABCD trapetsiya berilgan. ADG – teng yonli uchburchak. 
+AD = AG va ∠ ADG = 65°. ∠ x ni toping.
+C
+B
+65°
+x
+G
+A
+D
+181–182
+Mashq daftariga o‘ting
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   156
+51 MATEMATICS SCHOOLBOOK G5 P2 UZB 220x290 164PG 1.indd   156
+13/11/24   14:52
+13/11/24   14:52
+

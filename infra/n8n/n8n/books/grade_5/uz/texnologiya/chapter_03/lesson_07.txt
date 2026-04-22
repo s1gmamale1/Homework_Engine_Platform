@@ -1,0 +1,108 @@
+# Energiya va Mexatronika — 7-dars
+
+7-§.
+Robotlarning  atrof-muhit  bilan
+o‘zaro  ALOQASI
+Keyingi vaqtlarda robotlarning yangi-yangi turlari paydo bo‘layotganligi haqida
+ko‘p eshitgansiz. Ulardan sanoatda, maishiy turmushda, shuningdek, hayotimizning
+turli sohalari: ta’lim, tibbiyot, sport va hatto aviatsiyada foydalaniladi. Robot texnikasi,
+ayniqsa, axborot texnologiyalari asrida jadal rivojlana boshladi.
+“Robot” so‘zi chex yozuvchisi Karel Chapek va uning ukasi Yozef tomonidan
+o‘ylab topilgan hamda birinchi marta 1920-yilda Chapekning “Rossum universal
+robotlari” pyesasida tilga olingan. Sanoat robotlari paydo bo‘lgunicha robotlar
+odamlarga o‘xshash bo‘lishi kerak deb hisoblangan. Bugungi kunda odamlarga
+o‘xshash robotlar androidlar deb ataladi.
+“Robot” so‘zi, (chex tilida “robot” – ixtiyorsiz mehnat yoki “rob” – qul) – odatda,
+inson mehnati yoki jonivorlar vositasida amalga oshirilgan ishlab chiqarish va boshqa
+soha jarayonlari uchun mo‘ljallangan avtomatik qurilma ma’nosini bildiradi.
+Robotlar, asosan, 3 turga bo‘linadi:
+1. Qat’iy dastur asosida ishlaydigan robotlar.
+2. Odam (operator) boshqaradigan robotlar.
+3. Sun’iy intellektli (integralli) robotlar.
+Ish bajarish turiga qarab, robot manipulatorlar, axborot uzatuvchi robot,
+odimlovchi robot va boshqalarga bo‘linadi.
+
+218
+218
+8-§.
+Asosiy  algoritmik  konstruksiyalar
+Siz o‘zi yura oladigan, gapira oladigan, kuladigan robotlarni yi­g‘ishni xohlaysiz­mi?
+U holda Sizga Otto nomli robotni yig‘ishni taklif qilamiz.
+Otto – bu o‘zi nima? Otto bu har kim yig‘a oladigan interfaol robotdir.
+Siz Otto robotini yig‘ish jarayonida hozirgi zamon texnoliyasida qo‘llaniladigan
+bir qancha elektron qismlar, sezuvchi sensorlar bilan yaqindan tanishasiz.
+Bundan tashqari, Otto – yig‘ma robot jamlanmasini nafaqat yig‘ish, balki “Arduino.
+IDE” dasturlash tili orqali kompyuter yordamida dasturlashtirish bilan ham tanishib
+olasiz. Robotni dasturlash orqali unga turli xil harakatlarni bajartirish mumkin.
+Otto robotini yig‘ish va dasturlashning umuman murakkab tomonlari yo‘q.
+Chunki Sizga robotning barcha asosiy algoritmik konstruksiyalari va dasturi hamda
+yo‘riqnomasi oldindan taqdim qilinadi va tushuntirib beriladi. Quyida Otto yig‘ma
+robotining asosiy algoritmik konstruksiyalari bilan tanishib chiqamiz.
+Mexatronika sohasi rivojlanib borishi natijasida sanoat robotlari bilan bir qatorda
+turli xil robot turlari (maishiy robotlar, qidiruvchi robotlar, nanorobotlar yoki nanobotlar
+(juda ham kichik hajmli robotlar)) ham paydo bo‘lmoqda. Bundan ko‘rinadiki, robotlar
+nafaqat odamlarga o‘xshash bo‘lishi kerak, balki turli shakl va ko‘rinishlarda ham
+bo‘lishi mumkin.
+Uy-ro‘zg‘orga yordamchi – avtomatik changyutkichlar, xonadon­larda mustaqil
+kundalik yumushlarni amalga oshiradigan robot-dastyorlar, zamonaviy turda
+dasturlashtirilgan oshxona jihozlari katta ommaviylik kasb etib bormoqda (11-rasm).
+Shuni ishonch bilan aytish mumkinki, mexatronika sohasi shunday jadal tusda
+rivojlanib borsa, yaqin orada har birimizning o‘z xususiy aql­li robotimiz bo‘lishi
+mumkin.
+Mustahkamlash uchun savollar
+1. Robot so‘zining lug‘aviy ma’nosi nima?
+2. Robotlarning qanday turlarini bilasiz?
+3. Robotlar faqat odamlarga o‘xshash bo‘ladimi yoki boshqa ko‘ri­nish­larda ham
+bo‘lishi mumkinmi?
+Kir yuvish mashinasi
+Changyutkich
+
+Multivarka
+Robot-oynaartkich
+11-rasm. Robototexnika asosida ishlaydigan uskunalar.
+
+219
+219
+T/r
+Asosiy konstruksiyalar
+ko‘rinishi
+Konstruksiyalar
+nomi
+1
+2
+3
+4
+5
+Chap va o‘ng oyoq qismlari ×1
+Kalta uchli qotirgich
+(shurup) ×4
+Uzun uchli qotirgich
+(shurup) ×8
+Tizza qismi ×1
+Gavda qismi ×1
+Servo motor SG90 9 g ×4
+
+220
+220
+6
+7
+8
+9
+10
+11
+12
+13
+Elektr quvvati manbayi
+bloki (AA) ×1
+Ovoz chiqaruvchi modul
+(Buzzer 5V) ×1
+Arduino nano ×1
+Arduino nano shield ×1
+Ultratovushli masofa aniqlagich
+sensori HC-SR04 ×1
+Bosh qismi ×1
+Blutus (Bluetooth) ×1
+Kichik USB kabel ulagich ×1
+
+221
+221

@@ -1,0 +1,61 @@
+# Geografik xaritalar — 12-dars
+
+26-rasm. Geografik kengliklar.
+27-rasm. Geografik uzunliklar.
+va g ‘arb tomonlarga daraja (gradus) hisobidagi birlikda hisoblab
+boriladi. Geografik uzunlik 0° dan 180° gacha hisoblanadi. 0° li
+(Bosh) meridiandan g‘arb tomondagi nuqtalar g ‘arbiy uzunlik, sharq
+tomondagilari sharqiy uzunlik deyiladi (27-rasm).
+Geografik kengliklar globusda parallellarga Bosh meridian yoniga
+yozib qo‘yilgan darajalar yordamida aniqlanadi. Geografik uzunliklar
+esa ekvator chizig‘i ustiga yozib qo‘yilgan darajalar yordamida bilib
+olinadi. Geografik xaritalarda geografik kenglik darajalari xaritalarning
+chap va o‘ng chekkasidagi ramkasi (chiziqlar) yoniga, geografik uzun­
+liklar darajalari xaritalarning yuqori va pastki chekkasidagi meridian
+chiziqlar yoniga yozib qo‘yiladi.
+28-rasm. Geografik koordinatalarni sun’iy y o ‘ldoshlar yordamida aniqlash.
+GEOGRAFIK
+XARITALAR
+
+Yer yuzasidagi har bir nuqtaning kenglik va uzunligi uning geo­
+grafik koordinatasi deb ataladi. Masalan, Toshkentning geografik
+koordinatasi 41° shimoliy kenglik va 69° sharqiy uzunlikni tashkil
+etadi.
+Hozirgi kunda geografik koordinatalar Yerning sun’iy yo‘ldoshlari
+yordamida ishlovchi zamonaviy asboblar, jumladan GPS navigatorlar
+yordamida ham aniqlanmoqda (39-betdagi 28-rasm).
+edurtm_uz
+Respublika
+Ta'lim Markazi
+40
+Tаyаnch so‘z vа tushunchаlаr
+Daraja to‘ri
+Geografik uzunlik
+Geografik koodinata
+Janubiy kenglik
+G‘arbiy uzunlik
+Geografik kenglik
+Bosh meridian
+Shimoliy kenglik
+Sharqiy uzunlik
+Yerning sun’iy yo‘ldoshlari
+1. Daraja to‘ri nima? U nima uchun kerak?
+2. Geografik kenglik nima? Geografik uzunlik deb nimaga
+aytiladi?
+3. O‘quv atlasidagi «Yarimsharlar tabiiy xaritasi»dan Tosh­
+kent va Qohira shaharlari qaysi kenglik va uzunliklarda
+joylashganligini toping.
+4. Darslik hamda o‘quv atlasidagi ma’lumotlar asosida quyi­
+dagi topshiriqlarni bajaring:
+a) «Tanlang» bandidan foydalanib jumlani to‘ldiring:
+«Geografik kengliklar globusda parallellarga ... yoniga
+yozib qo‘yilgan darajalar yordamida aniqlanadi. Geografik
+uzunliklar esa ... ustiga yozib qo‘yilgan darajalar yordamida
+bilib olinadi».
+Tanlang: Bosh meridian, ekvator chizig‘i.
+b) quyidagi rasmga diqqat bilan qarang va
+A, B, C harflar bilan belgilangan meri-
+dianlarni Bosh meridianga eng yaqin joy-
+lashganidan uzog‘iga qarab jadvalga joy-
+lashtiring.
+Eng yaqinidan----^  eng uzog‘iga

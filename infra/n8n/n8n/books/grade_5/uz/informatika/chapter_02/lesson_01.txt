@@ -1,0 +1,66 @@
+# Tasvirlar bilan ishlash — 1-dars
+
+Tasvirlar bilan ishlash
+Bu moduldagi raqamli tasvir bilan ishlash ko‘nikmalari yordamida yakuniy
+loyihangizni ishlab chiqasiz. Siz quyidagi ko‘nikmalarni egallaysiz:
+•	 turli qiziqarli va foydali ko‘nikmalardan foydalanib tasvirlarni yaratish va
+tahrirlash;
+•	 chiziq va moʻyqalam uskunalari yordamida tasvirlar yaratish;
+•	 Pencil uskunasidan (sichqoncha yordamida qoʻl harakatlari bilan tasvir
+yaratish uchun qoʻllanadigan uskuna) foydalanish;
+•	 shakllar yaratish va ularni bo‘yash;
+•	 tasvirlarni nusxalash, oʻchirish;
+•	 tahrirlangan tasvirlarni saqlash;
+•	 kino qahramoningizni yaratish.
+Shuningdek, quyidagilarni bilib olasiz:
+•	 konturi va ichi har xil rangga bo‘yalgan shakllar yaratish.
+Bu modulda quyidagilarni oʻrganasiz:
+1
+Tasvir yoki shablonlar yaratishda sodda shakl va chiziqlardan
+foydalanish
+2
+Vizual effektlardan foydalanib tasvirlarni tahrirlash
+3
+Toʻgʻri chiziq va geometrik shakllardan foydalanib mavjud tasvirlarni
+boyitish
+4
+Tasvir yoki uning ma’lum qismidan nusxa olish yoki uni oʻchirish
+5
+Tahrirlangan tasvirlarni saqlashda Save as buyrug‘idan foydalanish
+Darsni boshlashdan avval
+Quyidagilarni bilishingiz kerak:
+•	 sichqonchadan foydalanish, uning kursorini ekran boʻylab harakatlantirish,
+tugmalarning vazifalarini bilish;
+•	 dasturiy taʼminot (kompyuter dasturlari)ni bilish va ishga tushirish.
+2
+@edurtm_uz
+
+25
+Kirish
+Tasvirlar yaratish va ularni tahrirlash ― juda qiziq mashg‘ulot. Bu ko‘nikma
+sizga boshqalar chizgan tasvirni o‘zgartirish emas, balki tasvirlaringizni o‘zingiz
+istagandek yaratish imkoniyatini beradi. Ko‘nikmalaringizni ishga solgan holda
+yaratgan tasviringizga qarab cheksiz zavq olasiz.
+Bu modulda dasturiy taʼminot sifatida Microsoft Paint dan foydalanish mumkin.
+Microsoft Paint ― grafik materiallar yaratish va tahrirlashga mo‘ljallangan
+dasturiy taʼminot. Bu dasturda tasvir yaratishga yordam beruvchi koʻplab
+uskunalar mavjud.
+Tasvir bilan ishlovchi boshqa dasturiy taʼminotlar ham bor. Siz istalgan dasturni
+ishlatib ko‘rishingiz mumkin. Ularning interfeyslaridagi tugma, ikonka va
+uskunalar bir-biriga o‘xshaydi.
+Grafika:
+kompyuter
+yordamida
+yaratilgan
+tasvirlarning
+umumiy nomi.
+Ikonka:
+muayyan vazifaga
+mo‘ljallangan
+tugma yoki belgi.
+Kalit soʻzlar
+Tahrirlash:
+rasmga
+oʻzgartirishlar
+kiritish.
+Kalit soʻz

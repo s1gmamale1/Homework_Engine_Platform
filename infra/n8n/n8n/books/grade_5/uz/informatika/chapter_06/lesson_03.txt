@@ -1,0 +1,66 @@
+# Elektron pochtada ishlash — 3-dars
+
+109
+Elektron pochtada ishlash
+Yangi elektron xat yozish
+Bu mashg‘ulotda o‘qituvchiga elektron xat yuboriladi. Bu elektron xat
+doʻstlar va oila haqida boʻladi.
+Elektron pochta akkaunti shunday koʻrinishga ega boʻladi.
+1.1-mashg‘ulot
+Avval elektron pochta akkauntingizga kiring.
+Yangi xat yozish uchun Compose tugmasini bosing.
+Gmail xizmatida yangi xat yozish uchun “New Message” oynasi ochiladi.
+1-amaliy ko‘nikma
+Compose: yangi
+elektron xat
+yozish buyrug‘i.
+Kalit soʻz
+Nusxasi (cc):
+nusxa qismidagi
+elektron pochta
+manzillariga
+yuborilgan xat
+nusxasi. Nusxani
+olganlarning
+barchasi xatni
+ko‘radi.
+@edurtm_uz
+
+110
+1.2-mashg‘ulot
+Subject maydoniga elektron xatning sarlavhasi yoziladi. Qabul qiluvchi
+inson elektron xatning nima haqida ekanini bilishi uchun sarlavhada aniq
+gap va qisqa ma’lumot yozilgan bo‘lishi kerak.
+Subject soʻzi bor maydon ustiga bosing hamda “Oilam va doʻstlarim” deya
+yozing.
+1.3-mashg‘ulot
+Subjectning quyi qismida joylashgan maydon xabaringiz yoziladigan joydir.
+1.1-mashg‘ulotdagi xatingiz asosida oʻqituvchingizga xabar yozing.
+Oilangiz va doʻstlaringiz haqida qiziq ma’lumotlarni oʻqituvchingizga aytib
+bering.
+Elektron xatingizni tegishli salomlashuv so‘zlari bilan boshlab, xayrlashuv
+so‘zlari bilan yakunlang. Misol uchun:
+Hurmatli Odil Omonovich,
+Sizga oilam va doʻstlarim haqida aytib bermoqchiman. Men onam va
+otam bilan birga yashayman. Mening katta opam bor, ismi Ra’no.
+Maktabdagi eng yaqin doʻstimning ismi Sa’diya va biz bir sinfda
+oʻqiymiz. Mening Aziza, Kamron va Jalol kabi koʻplab doʻstlarim bor.
+Hurmat bilan,
+Jamila
+“Subject”
+maydoni:
+elektron xatga
+muqaddima
+yoki sarlavha
+yoziladigan joy.
+Bu qabul qiluvchi
+kirish papkasida
+bir koʻrishdayoq
+xatning
+mazmunini bilib
+olishi uchun
+kerak.
+Qabul qiluvchi:
+elektron xatni
+oluvchi shaxs.
+Kalit soʻzlar

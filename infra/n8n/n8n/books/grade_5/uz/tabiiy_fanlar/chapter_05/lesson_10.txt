@@ -1,0 +1,45 @@
+# V bob — 10-dars
+
+Buglanish va
+kondensatsiya
+Mavzuni o‘rganish davomida:
+• bug ‘ la n ish va kondensatsiya jarayon la ri n i tavsiflaysiz;
+• jarayonni izohlashda modeldan foydalanasiz;
+• nazorat qilinadigan tajriba rejasini tuzasiz va uch xil o'zgaruvchini aniqlaysiz;
+• tadqiqot uchun kerakLi jihozlarni tanlaysiz hamda ulardan to‘g‘ri foydalanasiz;
+• amaliy ishni bajarish davomida yuzaga kelishi mumkin bo'lgan xavflarni hamda ularni
+kamaytirish yo'Llarini bayon etasiz;
+• egallagan bilimlaringizni qo'llab tajriba natijalarini bashorat qilasiz;
+• ishonchli natijalar olish uchun kuzatishlarni takrorlash zarurligi yuzasidan
+qaror qabul qilasiz;
+• amaliy ishni bajarish davomida xavfsizlik qoidalariga rioya qilasiz;
+• o'lchash ishlarini to‘g‘ri va aniq bajarasiz;
+• kuzatish natijalarini taqdim etish uchun jadval tuzasiz;
+• turli tadqiqot metodlarining oziga xos xususiyatlarini anglaysiz;
+• tabiiy fanlar yutuqlaridan kundalik hayotda foydalanilishini bayon etasiz.
+etamiz!
+Suv tomchilari qanday paydo bo‘ladi?
+Sizga kerak bo'ladi:
+• ko'zgu.
+1. Ko‘zguni og'zingizga yaqin luting.
+2. Ko‘zguga qaragan holda og‘zingizni oching va nafas chiqaring.
+3. Nimani kuzatdingiz? Kuzatilgan hodisaningsababi nima deb o£ylaysiz?
+4. Ko‘zguni bir necha minutga chetroqqa olib qo'ying.
+5. Endi nimani kuzatdingiz? Nima uchun bunday bo‘ldi?
+
+Birgalikda
+Bug‘lanish vaqtida nima yuz beradi?
+Yomg'irli kunda suv ko'lmaklari hosil bo‘ladi. Yomg‘ir tingandan so'ng, biroz vaqt
+o'tib, ularyo'qolib qoladi. Nima uchun?
+Ko'lmakdagi suv atrofdan issiqlik olgach, suvbug‘ideb ataladigan gazsimon
+holatga o‘tadi. Suv bug'i havoga ko'tariladi. Suyuqlikning gazsimon holatga o'tish
+jarayoni bug‘lanish deb ataladi. Bug'lanish har qanday haroratda ro‘y beradi.
+Ko‘lmaklar bug‘lanish tufayli ma’lum vaqtdan so'ng qurib qoladi.
+Bug'lanish vaqtida nima ro‘y berishini tushuntirish uchun modda tuzilishi modelidan
+foydalanish mumkin.
+Bug'lanish vaqtida suyuqlik sirtidagi
+zarralar atrofdan issiqlik olishi
+tufayli suyuqlikdan chiqib ketadi.
+Suyuqlikning bug'lanish jarayonida
+issiqlik yutiladi. Bug'lanish natijasida
+modda suyuq holatdan gazsimon

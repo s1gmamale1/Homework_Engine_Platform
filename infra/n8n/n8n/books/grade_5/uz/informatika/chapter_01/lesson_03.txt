@@ -1,0 +1,59 @@
+# Matnli hujjat bilan ishlash — 3-dars
+
+9
+Matnli hujjat bilan ishlash
+Soʻz yozish
+Soʻz yozish uchun shu soʻz tarkibidagi harflar klaviatura tugmalari orasidan
+topiladi va tartib bilan bosiladi. Bosilgan harflar ketma-ketligi ekranda paydo
+bo‘ladi va so‘z yasaladi. Harflar, shuningdek, belgilar deb ham ataladi.
+Odatda gap boshidagi birinchi soʻzning birinchi harfi bosh harfga o‘zgarib
+qoladi. Sababi Microsoft Word dasturi har bir gapning birinchi harfini bosh
+harfga avtomatik almashtirishga sozlangan.
+Bosh harflarda yozish
+So‘zni bosh harf bilan yozish uchun Shift tugmasini bosib turgan holatda
+so‘zning birinchi harfi yoziladi. Harf ekranda paydo bo‘lgach, Shift tugmasi
+qo‘yib yuboriladi.
+Shift
+Birdan ortiq harfni bosh harf bilan yozish uchun Caps Lock tugmasi
+qo‘l keladi. Bu tugma bir marta bosib qo‘yilsa, matn so‘zlari bosh harfda
+kiritiladi. Harflarni kichik ko‘rinishga o‘tkazish uchun Caps Lock tugmasi
+qayta bosiladi.
+Soʻz va gaplar orasida probel qoldirish
+Tugal so‘z yoki gapdan keyin bo‘sh joy qoldirish uchun klaviaturaning pastki
+qatoridagi Space (probel) tugmasi bosiladi.
+Space
+Matn qismlari orasida bo‘sh qator qoldirish uchun (masalan, yangi
+xatboshida) tugallangan jumladan keyin Enter tugmasi bosiladi. Natijada
+matn kursori pastga, hujjatning keyingi qatoriga tushadi va yangi xatboshi
+boshlanadi.
+Enter
+Tinish belgilarini yozish
+Hujjat matnini yozish jarayonida tinish belgilaridan foydalaniladi. Vergul va
+nuqta eng keng tarqalgan tinish belgilaridir.
+Belgi: harf,
+raqam, simvol,
+tinish belgisi va
+boshqalar.
+Bosh harf:
+odatda gap
+boshida
+keladigan katta
+harf.
+Shift:
+klaviaturaning
+ma’lum
+vazifalarga
+mo‘ljallangan
+tugmasi.
+Caps Lock:
+bosh harflarni
+yozishga
+Space:
+pastki qatorida
+joylashgan eng
+uzun tugma. U
+soʻzlar orasiga
+probel qo‘yish
+uchun ishlatiladi.
+Kalit soʻzlar
+@edurtm_uz
