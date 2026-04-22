@@ -36,8 +36,7 @@ You are building the Game Breaks (Phase 3) for a Kimyo homework session. This is
 
 ## Games to AVOID for Kimyo
 
-- Word Ladder — linguistic game with no chemical reasoning value
-- Connect Four, Tic Tac Toe — no three-scale or safety content
+- Tic Tac Toe — no three-scale or safety content
 - Speed Match with names only — no observable-to-symbolic translation, no reasoning
 - Worked Examples without observable phenomenon — formula-first presentation violates the Observable Before Theory rule
 

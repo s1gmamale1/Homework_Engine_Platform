@@ -38,10 +38,8 @@ You are building the Game Breaks (Phase 3) for a Geometry homework session. This
 
 ## Games to AVOID for Geometry
 
-- Word Ladder — linguistic, no geometric value
-- Why Chain — Socratic text dialogue without diagrams does not work for geometry
 - Speed Match with numbers only — no geometric reasoning
-- Connect Four, Tic Tac Toe — low value for proof-based content
+- Tic Tac Toe — low value for proof-based content
 - Worked Examples without diagrams — text-only worked examples do not work in geometry
 
 ---

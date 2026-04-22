@@ -74,7 +74,7 @@ Pick based on what fits the chapter:
 
 - Every item tagged: `[Bloom: LX | PISA: LX]`
 - Notebook Capture is built into Adaptive Quiz — not a separate game
-- No frozen/removed games: no Why Chain, Territory Conquest, Connect Four, Word Ladder, Puzzle Lock, Reaction Chain, Blackjack, Bridge Builder, Minefield Navigator, Escape Room, Codebreaker
+- No frozen/removed games: no Territory Conquest, Puzzle Lock, Reaction Chain, Blackjack, Bridge Builder, Minefield Navigator, Escape Room, Codebreaker
 - Current chapter content only
 - Language: Uzbek, "Siz" formal
 - Visuals: If a game item needs a diagram (graph, shape, equation visual), generate inline SVG. Keep simple — under 200×150px.
