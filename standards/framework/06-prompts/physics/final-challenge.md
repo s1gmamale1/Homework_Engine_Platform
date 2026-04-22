@@ -71,3 +71,4 @@ Every question tagged: `[Bloom: LX | PISA: LX | Damage: -XX HP]`
 - All answers require units
 - Hints cost HP
 - Language: Uzbek, "Siz" formal
+- Visuals: Generate inline SVG for diagram-reading questions (force diagrams, circuits, graphs, data tables). Place SVG inside the question.

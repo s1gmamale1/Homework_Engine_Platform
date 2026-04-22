@@ -93,3 +93,4 @@ Show WHY the correct answer is correct. Route back to relevant concept.
 - All answers require units
 - Hints cost HP, not free
 - Language: Uzbek, "Siz" formal
+- Visuals: Generate inline SVG for diagram-reading questions (force diagrams, graphs, tables). Place SVG inside the question.

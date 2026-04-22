@@ -109,5 +109,5 @@ End with BOST goal: "Bugun [actual topic] haqida nimani bilmoqchisiz?" — store
 - Every panel: two-layer explanation (formal + "Sodda so'zlar bilan:")
 - All answers include units.
 - No bazaar/village cliches. Modern professional contexts only.
-- Visuals in brackets: [Force diagram: ...], [Circuit: ...], [Graph: ...]
+- Visuals: Generate actual SVG code inline where diagrams are needed. Priority: SVG > Mermaid > ASCII. Use SVG for: force diagrams, circuit diagrams, motion diagrams, graphs (distance-time, velocity-time), wave diagrams, energy bar charts. Use Mermaid for: concept maps, process flowcharts. Keep SVGs under 300×200px, legible on mobile. Place SVG immediately after the text it illustrates.
 - Bidirectional: at least one example goes observation→formula, at least one goes formula→prediction.

@@ -80,4 +80,4 @@ If NO formula in this chapter (purely conceptual):
 - Every panel uses two-layer explanation: formal first, then "Sodda so'zlar bilan:"
 - All numerical answers include units (N, m/s, kg, J, V, A, Ω).
 - No bazaar/village cliches. Modern contexts only.
-- Visuals described in brackets: [Force diagram: F=10N arrow pointing right on 5kg block], [Circuit: battery + resistor + ammeter in series], [Graph: distance vs time, straight line through origin].
+- Visuals: Generate actual SVG code inline where diagrams are needed. Priority: SVG > Mermaid > ASCII. Use SVG for: force diagrams, circuit diagrams, motion diagrams, graphs (distance-time, velocity-time), wave diagrams, energy bar charts. Use Mermaid for: concept maps, process flowcharts. Keep SVGs under 300×200px, legible on mobile. Place SVG immediately after the text it illustrates.
