@@ -48,11 +48,49 @@ Flash Cards are a reference deck. Nothing more. No stories, no hooks, no questio
 - **B1:** + past continuous, present perfect, will, 1st conditional, modals (should/might/could)
 - **B2:** full arsenal — all tenses, inversion, cleft, participles, modal perfects
 
-## Card format
+## Card format — READ THIS CAREFULLY
 
-**Front:** Term name, target word, or grammar pattern name. Max 10 words.
+Flash cards are a **reference deck** — the student reads them BEFORE the homework starts and can return to them anytime. They are **NOT** fill-in-the-blank exercises.
 
-**Back:** 45–75 words. The gap the textbook doesn't explain + the fix + ≥1 UZ parallel or hook. Include stress pattern (oOo / Ooo / ooO), IPA, and UZ/RU mis-stress default for any qualifying word (B1+ levels only). Show grammar formulas algebraically.
+**CRITICAL — the output must never contain any of these labels:**
+- `GAP:` / `FIX:` / `Note:` / `Rule:` / `Answer:`
+- `__________` (blanks for the student to fill in)
+- Sentence frames like "She ______ (not get)…"
+
+A card is a *name + teaching*, not a *quiz question + answer*. If your output shows a sentence with a blank the student has to complete, you are building a Sentence Fill game (Phase 3), not a flash card — start over.
+
+---
+
+### Front (every card)
+
+A **single term, word, phrase, or grammar-pattern name**. Max 10 words. No sentence, no gap, no question mark.
+
+Examples of valid fronts:
+- `photographer` (single word — stress trap)
+- `magazine vs магазин` (false friend pair)
+- `Past simple — negative formula` (grammar pattern name)
+- `work experience` (uncountable compound noun)
+- `earn / win / gain` (verb register triplet)
+
+Examples of **invalid** fronts (never do this):
+- `She _____ (not get) any money for work.` — that's a Sentence Fill item
+- `Did you earn any money?` — that's a Memory Sprint question
+- `GAP: __________` — never use the word GAP on a flash card
+
+### Back (every card)
+
+45–75 words of **pure teaching** — the hidden rule, the stress pattern, the false-friend warning, the register note, the grammar formula, the UZ↔EN bridge. No blanks, no "correct answer" reveal.
+
+Back content types (pick the ones that fit the front term):
+1. **IPA + stress dots** (`/rɪˈsepʃənɪst/ — oOoo`) + UZ/RU mis-stress trap (B1+ only)
+2. **False friend contrast** (magazine ≠ магазин — what it really means in English)
+3. **Register note** (formal/informal, spoken/written, where you'd use it)
+4. **Collocation list** (3–5 phrases the word naturally appears in)
+5. **Grammar formula in algebraic form** (`subject + didn't + base verb`) + one-line "why this form exists"
+6. **UZ↔EN bridge** explaining how Uzbek maps (or doesn't map) to the English structure
+7. **Spelling trap** (silent letter, -y→-ied, double consonant, -ance vs -ence)
+
+The Back should **teach**, not test. Imagine the student opening the card before the homework — they should finish reading and think *"Ah, now I understand why this works."*
 
 ## Split
 
@@ -61,27 +99,73 @@ Flash Cards are a reference deck. Nothing more. No stories, no hooks, no questio
 
 Split is 7 + 3 at every level — only per-card content density changes (see density ladder above).
 
-## Examples
+## Examples (use these exact shapes — Front = name, Back = teaching)
 
-> **Vocab card (Stress trap)**
-> Front: `photograph` vs `photographer`
-> Back: /ˈfoʊtəɡræf/ = **Ooo** (FO-to-graf). Photographer = /fəˈtɒɡrəfər/ = **oOoo** (fo-TO-gra-fer). UZ/RU default puts stress on the last syllable → both wrong. The suffix -er shifts stress one syllable left. Rule: longer form, stress moves.
+### Card 1 — Stress trap (vocabulary)
 
-> **Vocab card (False friend)**
-> Front: `magazine` ≠ магазин
-> Back: In English *magazine* = a periodical (Vogue, National Geographic). Магазин = *shop* / *store* in English. Saying "I went to the magazine" = you visited a library, not a shop. Always write: "I went to the **shop**." UZ: do'kon = shop; jurnal = magazine.
+```
+┌─────────────────────────────────────────────────────┐
+│  photograph   vs   photographer                     │
+├─────────────────────────────────────────────────────┤
+│  /ˈfoʊtəɡræf/   =  Ooo   (FO-to-graf)               │
+│  /fəˈtɒɡrəfər/  =  oOoo  (fo-TO-gra-fer)            │
+│                                                     │
+│  UZ/RU default stresses the last syllable on both   │
+│  — wrong both times. The suffix "-er" shifts        │
+│  stress one syllable to the LEFT.                   │
+│                                                     │
+│  Rule: longer form, stress moves.                   │
+└─────────────────────────────────────────────────────┘
+```
 
-> **Grammar card (formula)**
-> Front: Present perfect formula
-> Back: `subject + have/has + V3 (+ ever/yet/already/just)`. The textbook shows "She has visited Paris" without naming the pattern. Why this form: it bridges a past action to a present result — the *result* matters, not the exact time. UZ parallel: "u borgan" (she has gone / she went) — English separates them; Uzbek doesn't.
+### Card 2 — False friend (vocabulary)
+
+```
+┌─────────────────────────────────────────────────────┐
+│  magazine   ≠   магазин                             │
+├─────────────────────────────────────────────────────┤
+│  EN magazine  =  a periodical (Vogue, Nat Geo).     │
+│  RU магазин   =  a shop / a store in English.       │
+│                                                     │
+│  "I went to the magazine" = you visited a library,  │
+│  not a shop. Always write: "I went to the shop."    │
+│                                                     │
+│  UZ:  do'kon = shop  ·  jurnal = magazine.          │
+└─────────────────────────────────────────────────────┘
+```
+
+### Card 8 — Grammar formula (pattern name + algebra)
+
+```
+┌─────────────────────────────────────────────────────┐
+│  Past simple — negative formula                     │
+├─────────────────────────────────────────────────────┤
+│  subject + didn't + base verb                       │
+│                                                     │
+│  The textbook shows "She didn't get any money"      │
+│  without naming the pattern. Why this form: English │
+│  splits past-negative into helper "did" + base,     │
+│  while Uzbek uses a single suffix "-ma-di".         │
+│                                                     │
+│  UZ: ishla-madi = didn't work.                      │
+│  Never say "she no got" — English requires "did".   │
+└─────────────────────────────────────────────────────┘
+```
+
+**Note on the examples above:** the Front is always just a name. The Back never shows a blank. No "GAP:" label anywhere. No fill-in. Pure reference.
 
 ## Rules
 
 **Parameters:** question/card/word counts from the CEFR level table (set by classify.md). Cultural anchors (pro-roles, locations) from the grade (set by instruction.md Step 3).
 
 - One concept per card — no compound explanations
-- Front = name only. Back = gap + fix + UZ parallel. Nothing else.
+- Front = term/word/formula NAME only. No sentence. No blank. No question mark.
+- Back = pure teaching (IPA, stress, UZ bridge, formula, register, collocation). NO sentence with a blank. NO "correct answer" reveal.
+- **NEVER** use the labels `GAP:` / `FIX:` / `Note:` / `Rule:` / `Answer:` on the card
+- **NEVER** include `__________` blanks — those belong to Sentence Fill (Phase 3), not Flash Cards
 - NO practice problems, NO questions, NO hooks, NO stories
+- If a card looks like a fill-in-the-blank with a "correct answer" below it — DELETE and rewrite as a reference card
+- Skip simple dictionary-style vocabulary (receptionist = a person at a reception). Only build a card if there is a real TRAP to warn about (stress, false friend, register, collocation, spelling, grammar formula)
 - Language: student-friendly English on the front; UZ bridge in back uses formal "Siz" phrasing
 - Cover every formula and trap the student will encounter in the homework phases
 - Cards are returnable throughout the session — student can check them anytime
