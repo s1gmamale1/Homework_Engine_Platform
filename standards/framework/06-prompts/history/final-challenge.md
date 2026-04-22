@@ -6,7 +6,6 @@ You are building the Final Challenge (Phase 6) for a History homework session. T
 
 - Textbook lesson content (extracted in orchestrator Step 1)
 - All previous phase outputs (Preview, Flash Cards, Sprint, Games, Consolidation)
-- Grade: G5–G11
 - Subject: `O'zbekiston Tarixi` or `Jahon Tarixi`
 
 ## Output
@@ -17,11 +16,7 @@ You are building the Final Challenge (Phase 6) for a History homework session. T
 
 ## HP and Damage
 
-| Grade band | HP |
-|---|:-:|
-| G1–G4 | 50 |
-| G5–G8 | **100** |
-| G9–G11 | 150 |
+**HP pool: 100 (fixed).**
 
 | Difficulty | Damage | Distribution (per 5 Qs) |
 |---|:-:|:-:|
@@ -29,9 +24,9 @@ You are building the Final Challenge (Phase 6) for a History homework session. T
 | Medium | −20 HP | 40% (2 Qs) |
 | Hard | −30 HP | 20% (1 Q) |
 
-**Damage values are FIXED** — Easy = **exactly −10 HP**, Medium = **exactly −20 HP**, Hard = **exactly −30 HP**. Never use −15, −25, −40, or any other value. If you need different total HP for G1–4 (50 HP) or G9–11 (150 HP), adjust the question COUNT, not the damage values.
+**Damage values are FIXED** — Easy = **exactly −10 HP**, Medium = **exactly −20 HP**, Hard = **exactly −30 HP**. Never use −15, −25, −40, or any other value.
 
-Total damage across 5 questions = 100 HP = full boss defeat for G5–G8.
+Total damage across 5 questions = 100 HP = full boss defeat.
 
 ---
 
@@ -44,14 +39,7 @@ Every question carries inline tags: `[Bloom: LX | PISA: Reading/Creative Thinkin
 - ≥1 **causal-framework application** (apply the framework named in Preview Panel 2 to explain a specific lesson event).
 - ≥1 **evaluation/synthesis** question at the Hard tier (judge success/failure of a figure or decision with evidence from multiple sources).
 
-**Question type restrictions by grade band:**
-
-| Grade band | Allowed formats |
-|---|---|
-| G1–G4 | Multiple choice + short answer (up to 30% MC) |
-| **G5–G11** | **Short answer + open reasoning. NO multiple choice.** |
-
-For G5–G11 (our default), every question is open response. No MC.
+**Question format:** Short answer + open reasoning. **NO multiple choice.** Every question is open response.
 
 **Difficulty scaling:**
 - **Easy (−10):** direct recall or single-step understanding (identify a figure, name a reform, date recognition)
@@ -60,7 +48,7 @@ For G5–G11 (our default), every question is open response. No MC.
 
 ---
 
-## Example set (G8 — 100 HP)
+## Example set (100 HP)
 
 *(Numbers refer to a generic History lesson. Actual content comes from the specific lesson.)*
 
@@ -125,7 +113,7 @@ If student HP reaches 0 before all questions correct:
 ## Rules
 
 - **Exactly 5 questions** with 40/40/20 distribution (2 Easy + 2 Medium + 1 Hard).
-- **G5–G11: no multiple choice.** Open response only.
+- **No multiple choice.** Open response only.
 - **≥1 primary source analysis question** required for History.
 - **≥1 causal-framework application** required.
 - **Hard question** must require synthesis (evaluation, counterfactual, multi-source) — not just harder recall.

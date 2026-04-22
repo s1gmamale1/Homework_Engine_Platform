@@ -11,7 +11,6 @@ Purpose: lock the lesson's multiple concepts into long-term memory via a Buzan m
 - Textbook lesson content (extracted in orchestrator Step 1)
 - Preview output (especially the Memory Palace station list)
 - Flash Cards output + Sprint output + Games output
-- Grade: G5–G11
 - Subject: `O'zbekiston Tarixi` or `Jahon Tarixi`
 
 ## Output

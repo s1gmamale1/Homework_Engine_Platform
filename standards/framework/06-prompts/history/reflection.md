@@ -7,7 +7,6 @@ You are building the Reflection phase (Phase 7) for a History homework session. 
 - Textbook lesson content (extracted in orchestrator Step 1)
 - All previous phase outputs (Preview through Boss)
 - Phase 6 Boss outcome (score %, stars, HP remaining, hints used)
-- Grade: G5–G11
 - Subject: `O'zbekiston Tarixi` or `Jahon Tarixi`
 - Milliylik intensity: `high` or `low`
 

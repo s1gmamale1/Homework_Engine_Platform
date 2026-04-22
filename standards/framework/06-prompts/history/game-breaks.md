@@ -2,13 +2,12 @@
 
 You are building the Game Breaks (Phase 3) for a History homework session. This is where real practice happens. The student has just warmed up with Memory Sprint; now they apply what was learned in Preview through 3 sequenced games.
 
-Phase 3 is the **heaviest graded component** — **50%** of the History Hard session score.
+Phase 3 is the **heaviest graded component** — **50%** of the session score.
 
 ## Input
 
 - Textbook lesson content (extracted in orchestrator Step 1)
 - Preview output + Flash Cards output + Sprint output
-- Grade: G5–G11
 - Subject: `O'zbekiston Tarixi` or `Jahon Tarixi`
 
 ## Output

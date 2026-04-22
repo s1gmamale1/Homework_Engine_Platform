@@ -7,7 +7,6 @@ History skips Panel 4 (Origin / Real-Life Research) — the lesson's narrative I
 ## Input
 
 - Textbook lesson content (extracted in orchestrator Step 1 — Uzbek, narrative-dense)
-- Grade: G5–G11
 - Subject: `O'zbekiston Tarixi` or `Jahon Tarixi`
 - Milliylik intensity: `high` (O'zbekiston — default) or `low` (Jahon — minimal national framing)
 
@@ -17,7 +16,7 @@ Ordered sections in Uzbek, formal "Siz" throughout. Never "sen":
 
 1. Gate Quote
 2. Panel 1 — Xulosa (Summary)
-3. Panel 2 — Yaxshiroq tushuntirish (Better Explanation) + Mermaid mind map
+3. Panel 2 — Yaxshiroq tushuntirish (Better Explanation) + optional Mermaid mind map
 4. Panel 3 — Namunalar / Birlamchi manba (Primary Source)
 5. Memory Palace build (5–10 stations)
 6. Panel 6 — Nega bu muhim (Why This Matters) + BOST learning-goal prompt
@@ -35,23 +34,27 @@ Format: block quote + author + 5-second "Davom etish" lock note.
 
 ## Panel 1 — Xulosa (Summary)
 
-Reframe the lesson's dominant arc (4–6 causal stages). Bold key figures, dates, places.
+Full-depth narrative of the lesson. **Every fact from the textbook must be represented — no cherry-picking, no padding.**
 
-- **Qatlam 1 — Rasmiy izoh:** Full-depth narrative, 3–4 paragraphs. Every fact from textbook.
-- **Qatlam 2 — Sodda so'zlar:** One paragraph — compress the arc to an N-stage skeleton + forward hook to next chapter.
-
-Both layers mandatory (Panel 1 is in the 1–4 range where two-layer is required).
+- Paragraph count is driven by lesson density — one paragraph per major lesson beat (event, figure, reform, turning point). A content-dense chapter may need 6–8 paragraphs; a lighter chapter may need 3–4. Do NOT artificially compress or pad.
+- Bold key figures, dates, and places on first mention.
+- Write as continuous narrative — no Qatlam labels, no sub-sections.
+- Trace the lesson's full causal arc from opening to closing.
 
 ## Panel 2 — Yaxshiroq tushuntirish (Better Explanation)
 
-Name the ONE causal framework that the textbook does NOT explicitly name but governs the lesson (e.g., "nomadic↔sedentary tension", "center-periphery dynamic", "religious-secular power balance"). Explain how that framework answers 3–5 puzzling lesson questions at once.
+This panel's job is to **clarify what's confusing and fill gaps the textbook left**. Not to introduce new material — to make the existing material easier to grasp.
 
-- **Qatlam 1:** Name the framework, state it, apply it to 3–5 specific lesson questions (why did X happen? why did Y fail?).
-- **Qatlam 2:** Plain imagery — one vivid concrete metaphor for the framework.
+Address **3–5 specific confusion points** from the lesson:
+- Terms the textbook uses without defining clearly
+- Implicit assumptions the textbook makes
+- Context the textbook skipped
+- Relationships the textbook doesn't spell out (e.g., "why did X lead to Y?")
+- Complex mechanisms simplified to everyday language
 
-Render the framework as a **Mermaid mind map** inside this panel (`graph TD`, `graph LR`, or `mindmap`). 6–12 nodes max. Nodes in Uzbek.
+Each clarification should be concrete — name the confusing thing, then explain it plainly. Do NOT produce a taxonomy or list of types. Do NOT restate content from Panel 1.
 
-Both layers mandatory.
+**Mermaid mind map — OPTIONAL.** Include only when the lesson contains a legitimately complex structure (causal chain, hierarchy, timeline, cause-effect web) that a visual clarifies. Skip when prose is enough. If included: `graph TD`, `graph LR`, or `mindmap`, 6–12 nodes max, labels in Uzbek, quote-wrap labels with special chars (`"..."`), **always close the Mermaid code block with ` ``` ` before the next section.**
 
 ## Panel 3 — Namunalar / Birlamchi manba (Primary Source)
 
@@ -62,8 +65,6 @@ Analyze it with **2 takeaways**:
 2. What causal consequence did it trigger (or illustrate)?
 
 End with a **Tarixchining metodi (Historian's Method)** teaching moment: teach the student to ask "Why did this author record *this particular event*?" Emphasize that primary sources show truth, but selected truth.
-
-Layer 2 NOT required (Panel 3 is single-layer — spec allows optional for Panels 5–8, analytical content doesn't need simplification).
 
 ## Memory Palace
 
@@ -102,8 +103,6 @@ Close with **BOST learning-goal prompt**:
 >
 > *(1–2 sentences. Resurfaced in Phase 7 Reflection.)*
 
-Layer 2 NOT required.
-
 ---
 
 ## Rules
@@ -111,8 +110,8 @@ Layer 2 NOT required.
 - **Language:** Uzbek, "Siz" always. Average sentence ≤16 words.
 - **History terms:** Uzbek with original in parentheses on first use (`ulus (mulk)`, `xoqon (oliy hukmdor)`). Subsequent uses in Uzbek only.
 - **Textbook fidelity:** every fact from the source lesson. Never invent names, dates, quotes. If a date isn't in the textbook, don't add it.
-- **Two-layer explanation:** mandatory on Panels 1 + 2; optional (skip by default) on Panel 3, 6.
-- **Mind map:** Panel 2 only. Mermaid DSL. Max 12 nodes. Labels in Uzbek. Quote-wrap labels with special chars (`"..."`). **Always close the Mermaid code block with ` ``` ` before writing the next panel — verify the closing backticks exist before emitting.**
+- **All panels single-layer.** No Qatlam 1 / Qatlam 2 split anywhere. Write each panel as continuous, focused content.
+- **Mind map:** Panel 2 only, and **optional** — include only when a visual genuinely clarifies complex structure. Mermaid DSL, max 12 nodes, labels in Uzbek, quote-wrap labels with special chars (`"..."`). **Always close the Mermaid code block with ` ``` ` before writing the next section — verify the closing backticks exist before emitting.**
 - **Memory Palace:** must be thematic to the lesson's geography/era. Not a generic "your house" palace.
 - **No Panel 4.** Never emit an Origin panel for History.
 - **Images:** specify as placeholders, never generate URLs or inline data. Format:
