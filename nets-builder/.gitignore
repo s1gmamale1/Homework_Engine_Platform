@@ -1,0 +1,35 @@
+# Secrets — never commit
+.env
+claw_api_service.json
+*.key
+*.pem
+
+# Runtime data
+nets.db
+nets.db-wal
+nets.db-shm
+*.sqlite
+*.sqlite3
+data/*.db
+
+# Logs
+uvicorn.log
+uvicorn.err
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
