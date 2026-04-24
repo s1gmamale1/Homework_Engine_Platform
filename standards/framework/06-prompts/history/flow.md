@@ -8,6 +8,17 @@ preview → flashcards → memory-sprint → game-breaks → consolidation? → 
 
 All sessions run the same 7-phase flow. **Consolidation (Phase 5) is conditional** on ≥2 interlocking concepts — almost always builds for History.
 
+### Single vs double lessons
+
+**Scope:** Only `O'zbekiston Tarixi 7-sinf` uses the 2-class-period convention. All other grades and both Jahon Tarixi grades → always **single** → pipeline runs once. Skip split detection entirely for non-matching inputs.
+
+Within scope (`O'zbekiston Tarixi 7-sinf`), detect lesson length from the chapter header:
+
+- **`N-mavzu:` → `single`** → pipeline runs **once** → 1 homework
+- **`N-M-mavzular:` → `double`** → pipeline runs **twice** (Part 1 + Part 2) → 2 homeworks
+
+For `double`, the extraction is page-halved (front-loaded on odd page counts) with seam-snap to the nearest textbook callout within ±1 page. Part 2 carries Part 1's Memory Palace stations + BOST goal forward. See `instruction.md` Step 1.5 for the full split rule.
+
 | Step | Prompt | Output |
 |------|--------|--------|
 | 1 | `preview.md` | 4 panels (1, 2, 3, 6) + gate quote + Memory Palace (5–10 thematic stations) |
@@ -37,6 +48,7 @@ Orchestrator: `instruction.md` handles extraction → parameters → phase build
 ## Notes
 
 - **Covers:** O'zbekiston Tarixi (G5–11) + Jahon Tarixi (G6–11)
+- **Split lessons:** `N-M-mavzular:` chapters produce 2 homeworks (one per class period). **Scope: only `O'zbekiston Tarixi 7-sinf`** — this convention does not exist elsewhere. Pages halved with seam-snap to nearest callout; Memory Palace and BOST goal carry from Part 1 to Part 2.
 - **Subject parameter:** `O'zbekiston Tarixi` or `Jahon Tarixi` — passed to every phase prompt
 - **Milliylik intensity:** `high` (O'zbekiston, 55/45 national/global) or `low` (Jahon, 20/80)
 - **Games:** Tile Match + Memory Match + Sentence Fill. Default Pool only — dual-catalog rule waived for History v1 because Interactive games (Why Chain, Territory Conquest, Reaction Chain) are frozen to v2+. No Adaptive Quiz, no Notebook Capture (non-calc family).

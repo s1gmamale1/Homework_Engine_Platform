@@ -68,6 +68,26 @@ End with a **Tarixchining metodi (Historian's Method)** teaching moment: teach t
 
 ## Memory Palace
 
+**If `part == 2` (double-lesson second homework):** Begin with a ~60-second **recap walk** of Part 1 stations before adding new ones. Format:
+
+```
+### Xotira saroyini davom ettiramiz
+
+1-qismda Siz shu bekatlarga borgansiz:
+
+- **1-Bekat: [Part 1 station 1 name]** — [one-line anchor: key figure + event]
+- **2-Bekat: [Part 1 station 2 name]** — [one-line anchor]
+- ...
+
+Endi saroyni davom ettiramiz. Yangi bekatlar 2-qismdan boshlanadi.
+```
+
+Then number Part 2 stations starting from **N+1** (where N is the last Part 1 station). Do not renumber from 1. Do not rebuild Part 1 station imagery — just list them. New Part 2 stations get full Tasvir + Yodda treatment below.
+
+**For `part == 1` or `single`:** start numbering from 1 normally.
+
+---
+
 Pick a **thematic palace** anchored to the lesson's dominant location or era:
 - Mongol successor states → Silk Road caravan stops
 - French Revolution → Paris landmarks (Bastille → Versailles → Concorde)

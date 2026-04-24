@@ -126,3 +126,6 @@ If student HP reaches 0 before all questions correct:
 - **Weight:** Phase 6 = 40% of session score.
 - **PISA tag MUST include L level.** Write `Reading L1`, `Reading L2`, `Creative Thinking L2`, etc. Never just `Reading` or `Creative Thinking` alone.
 - **Output ONLY Phase 6 content.** Do NOT include Phase 7 Reflection, closing messages, XP awards, or Milliylik statements. Phase 7 is a separate prompt invocation with its own output.
+- **Split-lesson rules:**
+  - **If `part == 1` (first homework of a double lesson):** No forward leak. Boss questions must draw only from Part 1 content (Part 1's pages, figures, events, quotes). Never reference Part 2 material the student hasn't studied yet.
+  - **If `part == 2` (second homework of a double lesson):** Boss **may** (optional, not required) include **one synthesis question at the Hard tier** that spans Part 1 + Part 2 — e.g., evaluating a multi-part causal arc, comparing Part 1 and Part 2 figures, or judging outcomes across both halves. If included, still counts as the single Hard question in the 40/40/20 distribution; do not add a sixth question.

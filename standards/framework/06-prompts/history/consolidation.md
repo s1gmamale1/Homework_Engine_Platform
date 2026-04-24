@@ -55,6 +55,8 @@ Pick ONE based on the lesson's content structure:
 
 Use the stations from Preview's palace. **Do not invent new stations in Phase 5.**
 
+**If `part == 2` (double-lesson second homework):** walk the **full combined palace** — all Part 1 stations in order, then all Part 2 stations in order. Do not skip Part 1 stations even though they were built in the previous homework. The Part 1 station list is provided as input. Apply the station walkthrough format below to every station in the combined sequence.
+
 For each station:
 
 ```

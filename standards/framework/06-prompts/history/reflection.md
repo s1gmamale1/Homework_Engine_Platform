@@ -41,6 +41,14 @@ Options: **Ha** / **Qisman** / **Hali emas**
 
 Not scored. Logged for teacher dashboard as aggregate theme only.
 
+**If `part == 2` (double-lesson second homework):** mirror **both** Part 1 and Part 2 goals. Format:
+
+> *"1-qismda Siz shunday maqsad qoʻygan edingiz: '[Part 1 BOST goal text]'. Yetdingizmi?* **Ha / Qisman / Hali emas**
+>
+> *2-qismda esa: '[Part 2 BOST goal text]'. Yetdingizmi?* **Ha / Qisman / Hali emas***"
+
+The Part 1 BOST goal text is provided as pipeline input to Part 2. Do not invent or rephrase it — use it verbatim.
+
 ### 3. One thinking question
 
 Rotate across sessions. Pick ONE of these History-appropriate prompts:
