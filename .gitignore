@@ -20,6 +20,7 @@ __pycache__/
 *.zip
 *.pdf
 textbooks/
+Homework-builder/
 
 # OS
 .DS_Store
