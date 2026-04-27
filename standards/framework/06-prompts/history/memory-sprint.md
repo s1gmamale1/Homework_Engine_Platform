@@ -8,6 +8,7 @@ This is NOT real practice. No reasoning chains, no source analysis, no multi-ste
 
 - Textbook lesson content (extracted in orchestrator Step 1)
 - Preview output + Flash Cards output (from previous steps)
+- Grade: G5–G11
 - Subject: `O'zbekiston Tarixi` or `Jahon Tarixi`
 
 ## Output

@@ -7,6 +7,7 @@ You are building the Reflection phase (Phase 7) for a History homework session. 
 - Textbook lesson content (extracted in orchestrator Step 1)
 - All previous phase outputs (Preview through Boss)
 - Phase 6 Boss outcome (score %, stars, HP remaining, hints used)
+- Grade: G5–G11
 - Subject: `O'zbekiston Tarixi` or `Jahon Tarixi`
 - Milliylik intensity: `high` or `low`
 
@@ -40,14 +41,6 @@ Resurface the learning goal the student wrote at the end of Preview Panel 6.
 Options: **Ha** / **Qisman** / **Hali emas**
 
 Not scored. Logged for teacher dashboard as aggregate theme only.
-
-**If `part == 2` (double-lesson second homework):** mirror **both** Part 1 and Part 2 goals. Format:
-
-> *"1-qismda Siz shunday maqsad qoʻygan edingiz: '[Part 1 BOST goal text]'. Yetdingizmi?* **Ha / Qisman / Hali emas**
->
-> *2-qismda esa: '[Part 2 BOST goal text]'. Yetdingizmi?* **Ha / Qisman / Hali emas***"
-
-The Part 1 BOST goal text is provided as pipeline input to Part 2. Do not invent or rephrase it — use it verbatim.
 
 ### 3. One thinking question
 

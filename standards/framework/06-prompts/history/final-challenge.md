@@ -6,6 +6,7 @@ You are building the Final Challenge (Phase 6) for a History homework session. T
 
 - Textbook lesson content (extracted in orchestrator Step 1)
 - All previous phase outputs (Preview, Flash Cards, Sprint, Games, Consolidation)
+- Grade: G5–G11
 - Subject: `O'zbekiston Tarixi` or `Jahon Tarixi`
 
 ## Output
@@ -16,7 +17,11 @@ You are building the Final Challenge (Phase 6) for a History homework session. T
 
 ## HP and Damage
 
-**HP pool: 100 (fixed).**
+| Grade band | HP |
+|---|:-:|
+| G1–G4 | 50 |
+| G5–G8 | **100** |
+| G9–G11 | 150 |
 
 | Difficulty | Damage | Distribution (per 5 Qs) |
 |---|:-:|:-:|
@@ -24,9 +29,9 @@ You are building the Final Challenge (Phase 6) for a History homework session. T
 | Medium | −20 HP | 40% (2 Qs) |
 | Hard | −30 HP | 20% (1 Q) |
 
-**Damage values are FIXED** — Easy = **exactly −10 HP**, Medium = **exactly −20 HP**, Hard = **exactly −30 HP**. Never use −15, −25, −40, or any other value.
+**Damage values are FIXED** — Easy = **exactly −10 HP**, Medium = **exactly −20 HP**, Hard = **exactly −30 HP**. Never use −15, −25, −40, or any other value. If you need different total HP for G1–4 (50 HP) or G9–11 (150 HP), adjust the question COUNT, not the damage values.
 
-Total damage across 5 questions = 100 HP = full boss defeat.
+Total damage across 5 questions = 100 HP = full boss defeat for G5–G8.
 
 ---
 
@@ -39,7 +44,14 @@ Every question carries inline tags: `[Bloom: LX | PISA: Reading/Creative Thinkin
 - ≥1 **causal-framework application** (apply the framework named in Preview Panel 2 to explain a specific lesson event).
 - ≥1 **evaluation/synthesis** question at the Hard tier (judge success/failure of a figure or decision with evidence from multiple sources).
 
-**Question format:** Short answer + open reasoning. **NO multiple choice.** Every question is open response.
+**Question type restrictions by grade band:**
+
+| Grade band | Allowed formats |
+|---|---|
+| G1–G4 | Multiple choice + short answer (up to 30% MC) |
+| **G5–G11** | **Short answer + open reasoning. NO multiple choice.** |
+
+For G5–G11 (our default), every question is open response. No MC.
 
 **Difficulty scaling:**
 - **Easy (−10):** direct recall or single-step understanding (identify a figure, name a reform, date recognition)
@@ -48,7 +60,7 @@ Every question carries inline tags: `[Bloom: LX | PISA: Reading/Creative Thinkin
 
 ---
 
-## Example set (100 HP)
+## Example set (G8 — 100 HP)
 
 *(Numbers refer to a generic History lesson. Actual content comes from the specific lesson.)*
 
@@ -113,7 +125,7 @@ If student HP reaches 0 before all questions correct:
 ## Rules
 
 - **Exactly 5 questions** with 40/40/20 distribution (2 Easy + 2 Medium + 1 Hard).
-- **No multiple choice.** Open response only.
+- **G5–G11: no multiple choice.** Open response only.
 - **≥1 primary source analysis question** required for History.
 - **≥1 causal-framework application** required.
 - **Hard question** must require synthesis (evaluation, counterfactual, multi-source) — not just harder recall.
@@ -126,6 +138,3 @@ If student HP reaches 0 before all questions correct:
 - **Weight:** Phase 6 = 40% of session score.
 - **PISA tag MUST include L level.** Write `Reading L1`, `Reading L2`, `Creative Thinking L2`, etc. Never just `Reading` or `Creative Thinking` alone.
 - **Output ONLY Phase 6 content.** Do NOT include Phase 7 Reflection, closing messages, XP awards, or Milliylik statements. Phase 7 is a separate prompt invocation with its own output.
-- **Split-lesson rules:**
-  - **If `part == 1` (first homework of a double lesson):** No forward leak. Boss questions must draw only from Part 1 content (Part 1's pages, figures, events, quotes). Never reference Part 2 material the student hasn't studied yet.
-  - **If `part == 2` (second homework of a double lesson):** Boss **may** (optional, not required) include **one synthesis question at the Hard tier** that spans Part 1 + Part 2 — e.g., evaluating a multi-part causal arc, comparing Part 1 and Part 2 figures, or judging outcomes across both halves. If included, still counts as the single Hard question in the 40/40/20 distribution; do not add a sixth question.

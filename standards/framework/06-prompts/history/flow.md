@@ -1,39 +1,28 @@
 # History — Prompt Flow
 
-## Flow
+History is always Hard mode. There is no Easy pipeline — every chapter is narrative with causal chains, and the full 6-component structure applies regardless of content.
+
+No classify step needed.
+
+---
+
+## Hard (6 phases — always)
 
 ```
-preview → flashcards → memory-sprint → game-breaks → consolidation? → final-challenge → reflection
+instruction → preview → flashcards → memory-sprint → game-breaks → consolidation? → final-challenge → reflection
 ```
-
-All sessions run the same 7-phase flow. **Consolidation (Phase 5) is conditional** on ≥2 interlocking concepts — almost always builds for History.
-
-### Single vs double lessons
-
-**Scope:** Only `O'zbekiston Tarixi 7-sinf` uses the 2-class-period convention. All other grades and both Jahon Tarixi grades → always **single** → pipeline runs once. Skip split detection entirely for non-matching inputs.
-
-Within scope (`O'zbekiston Tarixi 7-sinf`), detect lesson length from the chapter header:
-
-- **`N-mavzu:` → `single`** → pipeline runs **once** → 1 homework
-- **`N-M-mavzular:` → `double`** → pipeline runs **twice** (Part 1 + Part 2) → 2 homeworks
-
-For `double`, the extraction is page-halved (front-loaded on odd page counts) with seam-snap to the nearest textbook callout within ±1 page. Part 2 carries Part 1's Memory Palace stations + BOST goal forward. See `instruction.md` Step 1.5 for the full split rule.
 
 | Step | Prompt | Output |
 |------|--------|--------|
-| 1 | `preview.md` | 4 panels (1, 2, 3, 6) + gate quote + Memory Palace (5–10 thematic stations) |
-| 2 | `flashcards.md` | 8 cards in 3 clusters (Names / Frameworks / Modern Echoes) with Xotira tasviri on every card |
-| 3 | `memory-sprint.md` | 7 tap-only items: 3 MC + 2 T/F + 2 YNNG, ≥1 "Aytilmagan" correct, Buzan Primacy ordering |
-| 4 | `game-breaks.md` | 3 games: Tile Match (cause↔effect) + Memory Match (⭐ Von Restorff anchor on Slot 2) + Sentence Fill (≥1 source-quote fill) |
-| 5 | `consolidation.md` | Memory Palace full walkthrough — all stations, self-check per station, final verification prompt (SKIP if single-concept lesson) |
-| 6 | `final-challenge.md` | Boss fight, 5 questions, 100 HP, damage −10/−20/−30, NO multiple choice, ≥1 primary source analysis, ≥1 causal-framework question, Hint 3s = diagnostic questions |
-| 7 | `reflection.md` | 5 parts: summary + BOST goal mirror + thinking question + spaced repetition + Milliylik/TEFCAS closing line |
+| 1 | `preview.md` | 4 panels: Narrative, Causal Framework, Primary Sources, Why This Matters |
+| 2 | `flashcards.md` | 3 clusters: Names, Frameworks, Modern Echoes |
+| 3 | `memory-sprint.md` | 7 items: MC/TF/YNNG, tap-only |
+| 4 | `game-breaks.md` | 3 games: Tile Match (mandatory) + Memory Match + Sentence Fill |
+| 5 | `consolidation.md` | Memory Palace / Link System (SKIP if single concept) |
+| 6 | `final-challenge.md` | Boss fight, 5 questions, HP: G5-8=100, G9-11=150 |
+| 7 | `reflection.md` | Summary + question + spaced rep + closing |
 
-**Skipped phases** (never built for History):
-
-- Phase 2 Reading — language-family only
-- Phase 4 Real-Life — narrative absorbs transfer
-- Panel 4 Origin — the lesson's narrative IS the origin
+**Skipped:** Reading (narrative IS the content), Real-Life (no separate transfer needed).
 
 ---
 
@@ -41,19 +30,13 @@ For `double`, the extraction is page-halved (front-loaded on odd page counts) wi
 
 All phase outputs are assembled into a single `.md` file — that is the final homework. Each phase becomes a section in order.
 
-Orchestrator: `instruction.md` handles extraction → parameters → phase build loop → verification checklist.
-
 ---
 
 ## Notes
 
-- **Covers:** O'zbekiston Tarixi (G5–11) + Jahon Tarixi (G6–11)
-- **Split lessons:** `N-M-mavzular:` chapters produce 2 homeworks (one per class period). **Scope: only `O'zbekiston Tarixi 7-sinf`** — this convention does not exist elsewhere. Pages halved with seam-snap to nearest callout; Memory Palace and BOST goal carry from Part 1 to Part 2.
-- **Subject parameter:** `O'zbekiston Tarixi` or `Jahon Tarixi` — passed to every phase prompt
-- **Milliylik intensity:** `high` (O'zbekiston, 55/45 national/global) or `low` (Jahon, 20/80)
-- **Games:** Tile Match + Memory Match + Sentence Fill. Default Pool only — dual-catalog rule waived for History v1 because Interactive games (Why Chain, Territory Conquest, Reaction Chain) are frozen to v2+. No Adaptive Quiz, no Notebook Capture (non-calc family).
-- **Teaching:** Buzan-heavy recall scaffolding — Memory Palace built in Preview, walked in Consolidation; Xotira tasviri hooks on every flashcard; primary source analysis + Historian's Method in Panel 3
-- **Weights:** Sprint 10% + Games 50% + Boss 40% = 100% graded
-- **Pass threshold:** 60% overall
-- **Boss format:** short answer + open reasoning only (no multiple choice); Hint 3s are diagnostic questions, never answer templates
-- **All content in Uzbek, "Siz" formal; never "sen".** Pipeline/meta language stays English.
+- Covers: Tarix G5-7, O'zbekiston Tarixi G8-11, Jahon Tarixi G8-11
+- No Adaptive Quiz — History uses Tile Match, Memory Match, Sentence Fill only
+- No Notebook Capture — no calculations
+- Teaching: narrative IS content, causal chains, primary source analysis
+- Milliylik ratio: O'zbekiston 55/45 national/global, Jahon 20/80
+- All content in Uzbek, "Siz" formal

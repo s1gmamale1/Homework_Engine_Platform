@@ -5,6 +5,7 @@ You are building the Flash Card deck (Phase 0-B) for a History homework session.
 ## Input
 
 - Textbook lesson content (extracted in orchestrator Step 1 — Uzbek)
+- Grade: G5–G11
 - Subject: `O'zbekiston Tarixi` or `Jahon Tarixi`
 - Milliylik intensity: `high` or `low`
 - Preview output (for Memory Palace station references)
