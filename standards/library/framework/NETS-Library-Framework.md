@@ -1,11 +1,13 @@
 # NETS Library Framework — Subject Classification & Content Catalog
 
-**Version:** 0.4 — Draft (Buzan integration, reviewed)
-**Date:** 2026-04-11
+**Version:** 0.6 — Draft (family membership changes)
+**Date:** 2026-04-14
+**Changelog v0.6:** Moved Chemistry and Physics from Aniq Fanlar to Tabiat Fanlari. Moved Informatics from Aniq Fanlar to Tarbiya/Sanat. Moved Civic Prep (CHQBT/NВП) from Ijtimoiy Fanlari to Tarbiya/Sanat. Removed Blackjack 21 from game system. Aniq Fanlar is now pure math only.
+**Changelog v0.5:** Updated dependency from UNIFIED to UNIFIED-Buzan. Added National Pride cross-family inheritance note (Part 8). Added GRADING-SYSTEM.md as Layer 4 dependency. No changes to family definitions, mechanic tables, boss formats, or Buzan integration.
 **Changelog v0.4:** Fixed TEFCAS/IRT relationship, renamed Phase 0 to Pre-Session, removed speculative features from main body, fixed SMASHIN' SCOPE terminology, removed duplicate summary, updated Weekly PISA to all-tier, added Radiance Score implementation contract.
 **Changelog v0.3:** Added Part 7 — Buzan Cognitive Science Integration (TEFCAS engine as core difficulty logic, memory systems Link/Peg/Major/Memory Palace/SMASHIN' SCOPE/SEM3, BOST study technique mapped to Phase 0-A/0-B, Mind Mapping 7 Laws with G5-G6 WM-respecting adaptations, speed reading eye-tracking/chunking/sub-vocalization with UI/UX metrics, radiant navigation architecture, anti-cheat radiance score, quantifiable metrics table with 16+ empirical values). Updated version header. Added Buzan research wave to completed list.
 **Changelog v0.2:** Added `{lang}` to content addressing schema (bilingual system). Raised L2 unlock threshold from 70% to 80% (flow-state headroom). Replaced L3 label "Sinovga tayyorlan" with "Ustoz yo'li" (SOUL Principle 3 — hidden difficulty). Added ADR-pending markers for Literature and Informatics family placement. Added PE/Movement Breaks clarification. Added ADR requirement for DTM full-exam Assessment Mode. Added Lyceum Delta citation to Gemini research. Defined quality check criteria. Added cost estimate. Added formative completion gates for Creative Lab and Music Production. Added multi-path UX note. Flagged monthly Basic PISA as proposal requiring product decision. Updated scope declaration.
-**Depends on:** `NETS-Homework-Engine-UNIFIED.md` v2.0 (Layer 0), `NETS-System-Design-v1.md` (Layer 1)
+**Depends on:** `NETS-Homework-Engine-UNIFIED-Buzan.md` v2.0 (Layer 0), `NETS-System-Design-v1.md` (Layer 1), `GRADING-SYSTEM.md` v1.0 (Layer 4)
 **Scope:** Library architecture — classification, levels, paths, catalog hierarchy, and placement guidance. Basic/Premium tier overlay mechanics are defined separately in the Tier Overlay spec; placement suggestions in Part 6 describe where library content surfaces in the product but do not define tier pricing or gating rules.
 
 ---
@@ -35,9 +37,6 @@ This is the scale mechanism. 5 families → 29 subjects → ~110 subject×grade 
 | Geometry | Geometriya | Геометрия | G7-9 | Split from Matematika |
 | Algebra & Analysis | Algebra va analiz asoslari | Алгебра | G10-11 | Advanced continuation |
 | Geometry (advanced) | Geometriya | Геометрия | G10-11 | Advanced continuation |
-| Physics | Fizika | Физика | G7-11 | |
-| Chemistry | Kimyo | Химия | G7-11 | |
-| Informatics | Informatika / Dasturlash / Robototexnika | Информатика | G5-11 | Includes programming track at G11. **ADR-pending:** default placement is Aniq Fanlar (algorithmic thinking, formal notation). If G5 Informatics framework reveals cognitive demands are more creative/constructive than derivation-based, raise ADR for reclassification. See System Design v1 §10 #2. |
 
 **What this family teaches:** Formal reasoning. Every concept in Aniq Fanlar is either (a) a definition/axiom, (b) a derivation from prior concepts, or (c) an application of a derived rule to solve a specific problem. The family builds the student's ability to move fluently between concrete representations (objects, diagrams), symbolic notation (formulas, equations), and verbal reasoning ("because X, therefore Y").
 
@@ -150,6 +149,8 @@ This is the scale mechanism. 5 families → 29 subjects → ~110 subject×grade 
 | Subject | UZ Name | RU Name | Grade Range | Notes |
 |---------|---------|---------|-------------|-------|
 | Biology | Biologiya | Биология | G5-11 | |
+| Physics | Fizika | Физика | G7-11 | Moved from Aniq Fanlar — natural science (experimentation, observation, causal models) |
+| Chemistry | Kimyo | Химия | G7-11 | Moved from Aniq Fanlar — cognitive demands align with natural sciences |
 | Geography | Geografiya | География | G5-11 | |
 | Combined Science | Science / Tabiiy fanlar / Естествознание | Естествознание | G5-6 | Transitional combined science before split |
 | Astronomy | Astronomiya | Астраномия | G11 only | |
@@ -211,7 +212,6 @@ This is the scale mechanism. 5 families → 29 subjects → ~110 subject×grade 
 | Law | Huquq | Право | G8-11 | |
 | Economy | Iqtisodiy bilim asoslari / Iqtisodiyot | Экономика | G8-11 | |
 | Entrepreneurship | Tadbirkorlik | Основы предпринимательства | G11 only | |
-| Civic Prep | CHQBT (G10 UZ) / NВП (G10-11 RU) | Основы пред. / НВП | G10-11 | Military/civic preparation |
 
 **What this family teaches:** How human systems work — institutions, events, laws, economies, and the reasoning required to navigate them. Unlike Aniq Fanlar (where answers are derivable) or Tabiat Fanlari (where answers are observable), Ijtimoiy Fanlari deals with interpretive truth: multiple valid perspectives, source reliability, and principled reasoning under uncertainty.
 
@@ -267,10 +267,12 @@ This is the scale mechanism. 5 families → 29 subjects → ~110 subject×grade 
 | Music | Musiqa | Музыка | G5-9 | |
 | Visual Art | Tasviriy san'at | ИЗО | G5-9 | |
 | Technology | Texnologiya | Технология | G5-11 | Practical skills, crafts, digital literacy |
+| Informatics | Informatika / Dasturlash / Robototexnika | Информатика | G5-11 | Moved from Aniq Fanlar — G5 content is more creative/constructive than derivation-based. Includes programming track at G11. |
 | Physical Education | Jismoniy tarbiya | Физкультура | All grades | **EXCLUDED from Library content** — no video lessons. Note: Movement Break mechanics remain mandatory in all family sessions for Grades 1-4 per UNIFIED spec §5. PE has no standalone Library content, but its mechanics are embedded in the session engine. |
 | Drafting | Chizmachilik | Черчение | G8-9 only | Technical drawing |
 | Spirituality | Ma'naviyat asoslari | — | G5-10 UZ only | No RU equivalent |
 | Future Hour | kelajak soati / час будущего | час будущего | All grades | Career awareness, future skills |
+| Civic Prep | CHQBT (G10 UZ) / NВП (G10-11 RU) | НВП | G10-11 | Moved from Ijtimoiy Fanlari — military/civic preparation, not producing gamified homework |
 
 **What this family teaches:** Expression, appreciation, and formation — not derivation or analysis. The cognitive demand is fundamentally different: students are not proving theorems or analyzing sources; they are creating, responding, moving, and reflecting. The family intentionally uses minimal gamification because over-gamifying character education or physical education produces the extrinsic-reward plateau problem documented in developmental psychology research.
 
@@ -1321,6 +1323,8 @@ All initial research gaps have been filled by Gemini's three research waves:
 | Russian-language subject mappings | Some RU subjects have no UZ equivalent (e.g., немецкий язык G11) | Low |
 | Group Mind Map multiplayer UX | Collaborative study session design patterns | Low — future feature |
 
+**Note:** XP measures effort. The Learning Curve Grade (Level, Velocity, Efficiency, Attempts) measures learning progress. See `standards/framework/GRADING-SYSTEM.md` for the grading overlay that sits on top of all mechanics. XP remains as the student-facing reward; the Learning Curve Grade is the teacher/parent-facing assessment.
+
 ---
 
 *End of Part 6: Placement Suggestions*
@@ -1622,6 +1626,30 @@ G5 students have a Working Memory ceiling of ~4-5 chunks. Mind maps are the dire
 - Part 5: Library Catalog Hierarchy (tree structure, addressing, tagging, production pipeline)
 - Part 6: Placement Suggestions (PISA lessons, courses, extended content, supplemental libraries, teacher dashboard)
 - Part 7: **Buzan Cognitive Science Integration** — TEFCAS learning cycle (complementary to IRT), memory systems (Link/Peg/Major/Memory Palace/SMASHIN' SCOPE), BOST study technique, Mind Mapping laws + G5 adaptations, speed reading (implementable subset), Radiance Score anti-cheat (with implementation contract)
+- Part 8: **National Pride — Cross-Family Inheritance** — 55/45 origin balance, 20% task injection, gate quotes, Wise Status titles, Third Renaissance closing (inherited from UNIFIED-Buzan Section 1.5)
+
+---
+
+## Part 8: National Pride — Cross-Family Inheritance
+
+All 5 subject families inherit the National Pride & Progress Module ("Milliy G'urur va Taraqqiyot") from UNIFIED-Buzan Section 1.5. These rules apply uniformly across families and are NOT overridable per-family:
+
+| Rule | Applies to | Excluded from |
+|------|-----------|---------------|
+| **55/45 Origin Balance** — Rolling 10-item window: ~55% Uzbekistan references, ~45% global | All content across all families | — |
+| **20% Task Injection** — Every 5th task gets national pride framing | Phases 1, 2, 4, 5, 7 | Phase 3 (Game Breaks), Phase 6 (Final Boss) |
+| **70/30 Type Balance** — At XP milestones (30% and 60% session progress): 70% facts, 30% quotes | Break screens between phases | — |
+| **Gate Quote** — Wisdom quote displayed in Phase 0-A with 5-second skip lock | Phase 0-A (Theme Preview) | — |
+| **Wise Status Titles** — 30% of Phase 4 tasks assign professional titles ("Bosh Muhandis") | Phase 4 (Real-Life Challenge) | — |
+| **Third Renaissance Closing** — Session closing line in Phase 7 | Phase 7 (Reflection) | — |
+
+**Content production rule:** When producing homework for any family, the 55/45 ratio applies to Real-Life Challenge scenarios, Story Mode cultural references, and Memory Sprint prior-chapter questions. The content agent inherits these ratios from UNIFIED-Buzan — do not hardcode them in family-specific frameworks.
+
+**Data source:** `standards/system/narrative/quotes_database.json` (600 quotes), `standards/system/narrative/Bilarmidingiz_faktlar.md` (300 facts), `standards/system/narrative/task_injections.json` (injection rules).
+
+For full specification, see UNIFIED-Buzan Section 1.5.
+
+---
 
 **Total estimated library at production scale: ~125,500 content items**
 **Research waves completed:** 4 (DTM/IELTS, Olympiad/Lyceum/IT, Employer/Market, Buzan Cognitive Science)

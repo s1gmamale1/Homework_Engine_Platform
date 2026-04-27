@@ -1,3 +1,55 @@
+---
+⚠️ ARCHIVED — v2.0-final (frozen 2026-04-21)
+This monolithic specification has been decomposed into the layered component architecture.
+See `NETS-Framework-Architecture.md` for the new structure.
+Content has been distributed to component files — use those as the authoritative source.
+This file is preserved as a historical reference and for traceability.
+---
+
+## Section → Component mapping
+
+| UNIFIED Section | Component file |
+|-----------------|---------------|
+| §1 Core Principles | `00-core/core-principles.md` |
+| §2 Content Architecture | `00-core/content-architecture.md` |
+| §3 PISA Framework | `00-core/pisa-framework.md` |
+| §4.4 Theme Preview | `01-phases/phase-0a-preview.md` |
+| §4.5 Flash Cards | `01-phases/phase-0b-flashcards.md` |
+| §5.1 Memory Sprint | `01-phases/phase-01-memory-sprint.md` |
+| §5.2 Story Mode | `01-phases/phase-02-reading.md` (reframed as Reading, Language-only) |
+| §5.3 Game Breaks | `01-phases/phase-03-game-breaks.md` |
+| §5.4 Real-Life | `01-phases/phase-04-real-life.md` |
+| §5.5 Consolidation | `01-phases/phase-05-consolidation.md` |
+| §5.6 Final Boss | `01-phases/phase-06-final-challenge.md` |
+| §5.7 Reflection | `01-phases/phase-07-reflection.md` |
+| §6-20 Game Mechanics | Unchanged — `standards/library/catalog/` |
+| §7 PISA Progression | Merged into `00-core/pisa-framework.md` |
+| §8 Creative Thinking | Merged into `00-core/pisa-framework.md` |
+| §9 Difficulty Engine | `00-core/difficulty-adaptation.md` |
+| §10 Content Pipeline | `05-builder/homework-builder.md` |
+| §11 Gamification | `00-core/gamification-economy.md` |
+| §12 Edge Cases | `00-core/edge-cases-recovery.md` |
+| §13 Anti-Cheat | `00-core/anti-cheat.md` |
+| §14 Teacher Controls | `00-core/teacher-controls.md` |
+| §15 Integration | `00-core/integration-points.md` |
+| §16 JSON Schema | `05-builder/output-schema.md` |
+| §17 Grade Matrix | `04-difficulty/per-family-difficulty.md` + `02-families/*.md` |
+| §18 AI Constraints | `00-core/ai-constraints.md` |
+| §19 Bilingual | `02-families/family-til-fanlar.md` |
+| §20 Citations | `00-core/research-citations.md` |
+| §A Data Flow | `01-phases/phase-07-reflection.md` |
+| §B Reconciliation | Stays here (historical) |
+| NEW: Easy/Hard modes | `03-modes/easy-mode.md` + `03-modes/hard-mode.md` |
+| NEW: Family adapters | `02-families/family-*.md` |
+| NEW: Skill taxonomy | `00-core/skill-taxonomy.md` |
+| NEW: Capture rule | `00-core/capture-rule.md` |
+| NEW: Routing algorithm | `00-core/routing-algorithm.md` |
+| NEW: Context policy | `00-core/context-policy.md` |
+| NEW: Variant generator | `00-core/variant-generator.md` |
+| NEW: Teaching methodology | `02-families/family-aniq-fanlar.md` §TM (family-specific) |
+
+---
+
 # NETS Homework Engine — Unified Specification
 
 **Version 2.0 — April 2, 2026**

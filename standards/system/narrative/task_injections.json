@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "subject_group": "STEM",
+    "role": "Bosh Muhandis (Chief Engineer)",
+    "heritage_hook": "Mirzo Ulug'bek o'z observatoriyasini qurishda har bir millimetrni aniq hisoblagan.",
+    "closing": "Sizning bugungi hisob-kitobingiz Yangi O'zbekistonning kelajakdagi inshootlari poydevoridir.",
+    "tone": "Wise/Professional"
+  },
+  {
+    "id": 2,
+    "subject_group": "Economics",
+    "role": "Strategik Tahlilchi (Strategic Analyst)",
+    "heritage_hook": "Buyuk Ipak Yo'li davrida savdogarlar resurslarni boshqarishda dunyoni hayratga solganlar.",
+    "closing": "Iqtisodiy barqarorlik — millat qudratidir. Sizning aniq tahlilingiz bu qudratning bir qismidir.",
+    "tone": "Wise/Professional"
+  },
+  {
+    "id": 3,
+    "subject_group": "Science",
+    "role": "Laboratoriya Rahbari (Head of Lab)",
+    "heritage_hook": "Ibn Sino 'Tib qonunlari'da kuzatuv va mantiqni hamma narsadan ustun qo'ygan.",
+    "closing": "Ilmiy izlanish — haqiqatni topish yo'lidir. Bugungi tadqiqotingiz bilan ushbu yo'lni davom ettiryapsiz.",
+    "tone": "Wise/Professional"
+  },
+  {
+    "id": 4,
+    "subject_group": "Language/Literature",
+    "role": "Diplomat va Matnshunos (Diplomat & Linguist)",
+    "heritage_hook": "Alisher Navoiy so'z qudrati bilan butun bir xalqning ma'naviyatini yuksaltirgan.",
+    "closing": "So'z — eng o'tkir qurol. Sizning tahlilingiz ona tilimizning boyligini dunyoga ko'rsatadi.",
+    "tone": "Wise/Professional"
+  },
+  {
+    "id": 5,
+    "subject_group": "History",
+    "role": "Arxivchi va Tarixshunos (Archivist & Historian)",
+    "heritage_hook": "Tarixni bilish — kelajakni ko'ra olish demakdir.",
+    "closing": "Siz nafaqat o'tmishni o'rganyapsiz, balki kelajak avlodlar uchun ibrat xulosalarini chiqaryapsiz.",
+    "tone": "Wise/Professional"
+  }
+]
