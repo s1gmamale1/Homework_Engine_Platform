@@ -16,7 +16,7 @@ For the formal rules (formulas, axis definitions, 3-pass median, escalation chai
 
 ## How the 2-axis rubric works (read this before the open phases)
 
-Sections 4, 5b, and 6 are graded with **the same 2-axis rubric**. The rubric is the engine; the only thing that varies between phases is what "the answer" looks like. Once you understand the rubric, every open-phase example below follows the same logic.
+Sections 4 and 6 are graded with **the same 2-axis rubric**. The rubric is the engine; the only thing that varies between phases is what "the answer" looks like. Once you understand the rubric, every open-phase example below follows the same logic. (Phase 5 Consolidation is **not graded** — see Section 5 below.)
 
 ### The two axes
 
@@ -176,7 +176,7 @@ Notice: **the right numerical answer alone earns 25%.** That's the AMR's whole r
 
 ### How to read the per-phase examples below
 
-For Phase 4, 5b, and 6, every worked example uses the same machinery:
+For Phase 4 and 6, every worked example uses the same machinery:
 
 1. Student writes a response.
 2. The same prompt goes to the grader 3× in parallel.
@@ -184,7 +184,7 @@ For Phase 4, 5b, and 6, every worked example uses the same machinery:
 4. `((a1 + a2) / 2) × 25` is the item score.
 5. Phase score = mean of all items in that phase.
 
-The phase-specific examples below show how the **content** of "the right answer" changes (a Real-Life problem vs. a Boss problem vs. a Consolidation comparison), but the rubric never changes.
+The phase-specific examples below show how the **content** of "the right answer" changes (a Real-Life problem vs. a Boss problem), but the rubric never changes.
 
 ---
 
@@ -198,7 +198,7 @@ The phase-specific examples below show how the **content** of "the right answer"
 | 2 | Story Mode | ✅ light | Pass/fail per checkpoint | Yes |
 | 3 | Game Breaks | ✅ | Closed accuracy per game, mean across games | Yes |
 | 4 | Real-Life Challenge | ✅ | 2-axis rubric × 3-pass median | Yes |
-| 5 | Consolidation | ✅ conditional | Reminders ungraded; 2–3 open items rubric-graded | Yes (if present) |
+| 5 | Consolidation | ❌ | Memory-tree recap + 1-minute self-check; ungraded by design | No |
 | 6 | Final Boss | ✅ | 2-axis rubric per item; HP overlay separate | Yes |
 | 7 | Reflection | ❌ | Participation only | No |
 
@@ -454,43 +454,30 @@ If `confidence < 80%`, the runtime escalates to the next-tier model (e.g. `moons
 
 ## Section 5 — Consolidation
 
-**Graded?** Conditionally.
-**Method:** Phase 5 has two sub-parts:
-- **5a — Reminders / micro-recap.** Ungraded. Pure exposure (notes the student rereads).
-- **5b — 2–3 open consolidation questions.** Each rubric-graded with the **same 2-axis rubric × 3-pass median** as Phase 4.
+**Graded?** No.
+**Method:** Engagement signals only — `time_on_phase`, `bullets_viewed`, `self_check_revealed`. The runtime records that the student saw the Memory Tree and revealed the self-check answers; nothing about *what* they thought is scored.
 
-**Why conditional:** If the lesson covers a single concept, Phase 5 is **skipped entirely** (the engine sets `consolidation: { skipped: true }` in the homework data). A single-concept lesson doesn't need consolidation across topics.
+**Why not graded:** Phase 5 is the cognitive cool-down between the high-load Phase 4 and the high-stakes Phase 6 Boss. Its job is to **organize what was learned into a single mental schema** ("burchak uchi qayerda?" → ichkarida (+) / tashqarida (−) / ustida (yarim)) — not to test mastery. Mastery is tested in Phases 1, 3, 4 and 6. Consolidation is a recap and a memory-aid, and grading the recap would push students to skim it strategically rather than absorb it.
 
-**When skipped:** Phase 5 contributes nothing to the session average. Mean is taken over phases 1, 2, 3, 4, 6 only.
+**What the student sees:**
+- A Memory Tree with 3 vertex-location branches.
+- 3 short self-check fill-ins ("Agar burchak aylanadan uzoqda yotsa, yoylar qiymati bir-biridan ____.") with the answers shown after a button tap.
+- A "Chuqur nafas oling" closing line that transitions into Phase 6.
 
-### Worked example — multi-concept lesson (NOT skipped)
-
-The lesson covered both **inscribed angle** and **secant–secant external angle**. Phase 5b asks the student to compare them:
-
-**Question 5b.1.** "An inscribed angle and an external secant–secant angle both intercept the same arc pair. Which is bigger and why?"
-
-**Student response:**
-> "Ichki burchak yarim yoyga teng (yoy_1 / 2). Tashqi burchak (yoy_1 − yoy_2) / 2 — ya'ni ikkala yoyning farqining yarmi. Tashqi burchak kichikroq, chunki ayrim yoy chegirib olinadi."
-
-- 3-pass median: A1 = 4, A2 = 3
-- Item score: `((4 + 3) / 2) × 25 = 87.5%` — Mastered band
-
-**Question 5b.2.** A second comparison item, scored 75%.
-
-**Phase 5 score (mean of 5b items):** `(87.5 + 75) / 2 = 81.25%` — Proficient band.
-
-**Report card line:**
-```
-Phase 5  Consolidation   81% (item1=88 · item2=75)  Proficient ↗
+**What gets recorded:**
+```json
+{ "phase": "5", "time_on_phase_s": 62, "bullets_viewed": 3, "self_check_revealed": true, "completed": true }
 ```
 
-### Worked example — single-concept lesson (SKIPPED)
+**What does NOT get recorded:**
+- No score
+- No axis values
+- No correct/incorrect verdict on the self-check fills
+- No contribution to the session score
 
-The lesson covered only the inscribed angle theorem. The homework producer marks `consolidation: { skipped: true }`.
+**Report card:** Phase 5 line is omitted from the AMR scorecard. The session score is computed over Phases 1, 3, 4, 6 only (Phase 2 Story Mode is the light pass/fail one).
 
-**Student experience:** Phase 5 doesn't appear in the UI. The session jumps from Phase 4 to Phase 6.
-
-**Report card:** Phase 5 line is omitted. Session average computed over remaining phases.
+**Producer note:** The legacy `consolidation: { skipped: true }` flag is no longer required — Phase 5 is now uniformly non-graded whether the lesson is single-concept or multi-concept. Single-concept lessons can still skip the Memory Tree entirely if the producer judges it doesn't add cognitive value.
 
 ---
 
@@ -571,12 +558,12 @@ Phase 7  Reflection      ✓ Completed (73s)
 
 ```
 session_score = mean of all SCORED phase scores
-              = mean(phase_1, phase_2, phase_3, phase_4, phase_5_if_present, phase_6)
+              = mean(phase_1, phase_2, phase_3, phase_4, phase_6)
 ```
 
-**Excluded from the mean:** 0-A, 0-B, 5 (if `skipped: true`), 7. Those contribute engagement signals only.
+**Excluded from the mean:** 0-A, 0-B, **5**, 7. Those contribute engagement signals only.
 
-### Worked example — full session, Phase 5 present
+### Worked example — full session
 
 | Phase | Score | Included? |
 |---|---|---|
@@ -586,11 +573,11 @@ session_score = mean of all SCORED phase scores
 | 2 | 75% | ✓ |
 | 3 | 76% | ✓ |
 | 4 | 100% | ✓ |
-| 5 | 81% | ✓ |
+| 5 | n/a | No (recap, ungraded by design) |
 | 6 | 80% | ✓ |
 | 7 | n/a | No |
 
-**Session score:** `(67 + 75 + 76 + 100 + 81 + 80) / 6 = 79.8%` — Proficient band.
+**Session score:** `(67 + 75 + 76 + 100 + 80) / 5 = 79.6%` — Proficient band.
 
 **Uzbek 10-point label:** **8 — Juda yaxshi.**
 
@@ -640,8 +627,9 @@ PHASE 4 (Real-Life Challenge)
   score = ((a1_median + a2_median) / 2) × 25
 
 PHASE 5 (Consolidation)
-  score = mean(item_1, item_2, ...) using same 2-axis rubric
-  IF skipped → excluded from session mean
+  score = n/a — recap phase, not graded
+  always excluded from session mean
+  engagement-only: { time_on_phase_s, bullets_viewed, self_check_revealed }
 
 PHASE 6 (Final Boss)
   score = mean(item_1, item_2, ...) using same 2-axis rubric
@@ -659,8 +647,7 @@ SESSION
 |---|---|
 | 0-A Theme Preview | Curiosity hook — grading kills curiosity |
 | 0-B Flash Cards | Pre-loading vocabulary — testing recognition before learning is unfair |
-| 5a Reminders (within Phase 5) | Pure recap exposure |
-| 5 entirely (when single-concept lesson) | Producer flag `consolidation: { skipped: true }` |
+| 5 Consolidation (entire phase) | Cognitive cool-down + memory schema — grading the recap pushes skimming over absorption |
 | 7 Reflection | Metacognition — grading kills honesty |
 
 These are policy, not implementation laziness. **Do not grade them.**
