@@ -2,22 +2,22 @@
 
 ## 1. What is the issue?
 
-* Location: Preview, Origin, Industry Application, Real-Life/Mission, Why This Matters, and subject-specific examples.
-* Affects: All subjects, especially History, Biology, Physics, Math/Algebra, English, and Origin panels.
+* Location: Case-Based Preview, Practice Arc, Boss Arena, Reflection, and subject-specific examples anywhere in the flow.
+* Affects: All subjects, especially History, Biology, Physics, Math/Algebra, English.
 * Student result: Students notice Uzbek names, places, or references that feel pasted in instead of useful.
 * Teacher/product result: Content looks quota-filled and AI-generated, even when the explanation is technically correct.
 
 ## 2. How is it happening?
 
 * Current mechanic: Some prompts use a fixed national/local context expectation, such as a 55/45 national/global ratio.
-* Current prompt behavior: The AI tries to satisfy “Uzbek context” by adding names, places, scholars, or local settings.
+* Current prompt behavior: The AI tries to satisfy "Uzbek context" by adding names, places, scholars, or local settings.
 * Current flow behavior: Local context appears even when it does not change the task, answer, reasoning, or student action.
 * Missing requirement: No strict gate that asks whether the local context actually affects the learning task.
 
 ## 3. Why was it used originally?
 
 * Original purpose: Make homework feel relevant to Uzbek public-school students.
-* What it solved: Prevented content from feeling fully foreign or disconnected from the student’s environment.
+* What it solved: Prevented content from feeling fully foreign or disconnected from the student's environment.
 * What is still valuable: Local context is useful when it makes the concept easier to imagine, calculate, compare, remember, or reason about.
 * What no longer works: A fixed ratio turns Uzbek context into a quota. The model adds decoration to comply.
 
@@ -25,7 +25,7 @@
 
 * Type: Content quality / cultural relevance / prompt logic.
 * Severity: P0 Readjust.
-* Evidence level: High — Issue 27 identifies that Uzbek context can feel forced and proposes using local context only when it naturally improves understanding. 
+* Evidence level: High — Issue 27 identifies that Uzbek context can feel forced and proposes using local context only when it naturally improves understanding.
 
 ## 5. Solution options
 
@@ -48,7 +48,7 @@
 
 * Why this solution: Option C directly fixes the root cause. The problem is not local context itself; the problem is quota-driven local context.
 * Better than alternatives because: It keeps Uzbek relevance when useful, but removes decorative name/place insertion.
-* Existing pieces we can reuse: Current local-context rules, Milliylik idea, subject examples, Origin guardrails from Issue 26.
+* Existing pieces we can reuse: Current local-context rules, Milliylik idea, subject examples.
 * Real-life reference/pattern: Good localization changes the task or understanding. Bad localization only swaps names or places.
 
 ## 7. Implementation concept
@@ -60,18 +60,19 @@
   * Add the **swap test** as the main gate:
 
     ```text
-    If you can swap the Uzbek name/place for a generic name/place without changing the cognitive task, remove the Uzbek reference.
+    If you can swap the Uzbek name/place for a generic name/place 
+    without changing the cognitive task, remove the Uzbek reference.
     ```
 
   * Allow Uzbek/local context only in three cases:
 
-    * **Units, currency, or measurements** affect the task, such as so‘m, local distances, or familiar quantities.
+    * **Units, currency, or measurements** affect the task, such as so'm, local distances, or familiar quantities.
     * **Geography affects the answer**, such as climate, terrain, region, water, agriculture, or language environment.
     * **Cultural assumption changes the reasoning**, such as mahalla structure, school context, food ingredients, family/community roles, or local practice.
 
-  * Forbid decorative Uzbek scholar attribution in Origin panels unless there is a documented source.
+  * Forbid decorative Uzbek scholar attribution unless there is a documented source.
 
-* Where it belongs: All subject prompts, especially Preview, Origin, Industry Application, Real-Life/Mission, and Why This Matters.
+* Where it belongs: All subject prompts across Case-Based Preview, Practice Arc, Boss Arena, and Reflection.
 
 * What needs to change:
 
@@ -87,16 +88,63 @@
   * Uzbek public-school relevance stays as the product goal.
   * Textbook fidelity stays the main source rule.
 
+### Worked examples — the swap test in practice
+
+**BAD (fails swap test — remove the local reference):**
+
+```text
+"Aziza 12 metr sim sotib oldi. Har bir ramka uchun 1.5 metr kerak."
+```
+
+Swap "Aziza" for "Maria" or "the student" — problem works identically. Name is decoration. Use neutral phrasing.
+
+**BAD (fails swap test — remove the location):**
+
+```text
+"Toshkent IT Parkda dasturchi 8 ta server o'rnatdi."
+```
+
+Swap "Toshkent IT Park" for "the office" — math, answer, reasoning unchanged. Setting is decoration.
+
+**GOOD (passes — geography affects the answer):**
+
+```text
+"Toshkentdan Samarqandgacha 308 km. Avtomobil soatiga 80 km tezlikda yursa..."
+```
+
+Swap to "Paris to Lyon" — distance changes (465 km), answer changes. Local geography is integral.
+
+**GOOD (passes — local currency affects calculation):**
+
+```text
+"Bir kg olma 12 000 so'm. 2.5 kg uchun necha so'm to'lanadi?"
+```
+
+Swap so'm for USD — students don't have currency intuition for USD prices. Currency is integral to estimation skill.
+
+**GOOD (passes — cultural assumption changes reasoning):**
+
+```text
+"Mahalla yig'inida 30 oila qatnashdi. Har bir oilada o'rtacha 5 kishi..."
+```
+
+Swap "mahalla" for "neighborhood meeting" — family-size assumption shifts. Cultural unit is integral to the demographic reasoning.
+
 ## 8. Risks
 
 * Possible downside: The model may still add Uzbek context under uncertainty because it was previously encouraged to do so.
-* How to reduce it: Test sample outputs after the change. If local references still appear often without passing the swap test, strengthen the rule: “Default to neutral context unless one of the three allowed cases applies.”
+* How to reduce it: Test sample outputs after the change. If local references still appear often without passing the swap test, strengthen the rule: "Default to neutral context unless one of the three allowed cases applies."
 
 ## 9. Success criteria
 
-* We know it worked when:
+**Quantitative test** (on 20 random sample outputs per subject):
 
-  * Decorative name swaps disappear.
-  * Forced IT Park, Samarkand, Bukhara, Chorsu, Yashil Makon, or similar settings disappear unless they affect the task.
-  * Uzbek scholar references in Origin panels are source-supported or removed.
-  * Local context appears only when it changes what the student observes, calculates, compares, decides, or remembers.
+* Local references appear in ≤40% of cases (down from current ~80%+).
+* Every kept local reference passes the swap test (sampling 5 randomly per subject).
+* Zero undocumented Uzbek scholar attributions in any section.
+* Zero forced "modern professional Uzbek" settings (IT Park, Yashil Makon, Chorsu) that fail the swap test.
+
+**Qualitative test:**
+
+* Local context appears only when it changes what the student observes, calculates, compares, decides, or remembers.
+* Removing the local reference from a passing example would make the problem worse, not just differently-named.
